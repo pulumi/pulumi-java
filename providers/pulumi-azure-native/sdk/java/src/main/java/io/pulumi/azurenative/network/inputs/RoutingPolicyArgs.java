@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutingPolicyArgs() {
-        this.destinations = Output.empty();
-        this.name = Output.empty();
-        this.nextHop = Output.empty();
+        this.destinations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nextHop = Codegen.empty();
     }
 
     public static Builder builder() {

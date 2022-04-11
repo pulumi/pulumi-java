@@ -14,6 +14,7 @@ import io.pulumi.awsnative.cloudformation.inputs.StackSetStackInstancesArgs;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> administrationRoleARN;
 
     public Output<String> getAdministrationRoleARN() {
-        return this.administrationRoleARN == null ? Output.empty() : this.administrationRoleARN;
+        return this.administrationRoleARN == null ? Codegen.empty() : this.administrationRoleARN;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StackSetAutoDeploymentArgs> autoDeployment;
 
     public Output<StackSetAutoDeploymentArgs> getAutoDeployment() {
-        return this.autoDeployment == null ? Output.empty() : this.autoDeployment;
+        return this.autoDeployment == null ? Codegen.empty() : this.autoDeployment;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StackSetCallAs> callAs;
 
     public Output<StackSetCallAs> getCallAs() {
-        return this.callAs == null ? Output.empty() : this.callAs;
+        return this.callAs == null ? Codegen.empty() : this.callAs;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackSetCapability>> capabilities;
 
     public Output<List<StackSetCapability>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> executionRoleName;
 
     public Output<String> getExecutionRoleName() {
-        return this.executionRoleName == null ? Output.empty() : this.executionRoleName;
+        return this.executionRoleName == null ? Codegen.empty() : this.executionRoleName;
     }
 
     /**
@@ -98,14 +99,14 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedExecutionPropertiesArgs> managedExecution;
 
     public Output<ManagedExecutionPropertiesArgs> getManagedExecution() {
-        return this.managedExecution == null ? Output.empty() : this.managedExecution;
+        return this.managedExecution == null ? Codegen.empty() : this.managedExecution;
     }
 
     @Import(name="operationPreferences")
       private final @Nullable Output<StackSetOperationPreferencesArgs> operationPreferences;
 
     public Output<StackSetOperationPreferencesArgs> getOperationPreferences() {
-        return this.operationPreferences == null ? Output.empty() : this.operationPreferences;
+        return this.operationPreferences == null ? Codegen.empty() : this.operationPreferences;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackSetParameterArgs>> parameters;
 
     public Output<List<StackSetParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackSetStackInstancesArgs>> stackInstancesGroup;
 
     public Output<List<StackSetStackInstancesArgs>> getStackInstancesGroup() {
-        return this.stackInstancesGroup == null ? Output.empty() : this.stackInstancesGroup;
+        return this.stackInstancesGroup == null ? Codegen.empty() : this.stackInstancesGroup;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stackSetName;
 
     public Output<String> getStackSetName() {
-        return this.stackSetName == null ? Output.empty() : this.stackSetName;
+        return this.stackSetName == null ? Codegen.empty() : this.stackSetName;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackSetTagArgs>> tags;
 
     public Output<List<StackSetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateBody;
 
     public Output<String> getTemplateBody() {
-        return this.templateBody == null ? Output.empty() : this.templateBody;
+        return this.templateBody == null ? Codegen.empty() : this.templateBody;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateURL;
 
     public Output<String> getTemplateURL() {
-        return this.templateURL == null ? Output.empty() : this.templateURL;
+        return this.templateURL == null ? Codegen.empty() : this.templateURL;
     }
 
     public StackSetArgs(
@@ -219,21 +220,21 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackSetArgs() {
-        this.administrationRoleARN = Output.empty();
-        this.autoDeployment = Output.empty();
-        this.callAs = Output.empty();
-        this.capabilities = Output.empty();
-        this.description = Output.empty();
-        this.executionRoleName = Output.empty();
-        this.managedExecution = Output.empty();
-        this.operationPreferences = Output.empty();
-        this.parameters = Output.empty();
-        this.permissionModel = Output.empty();
-        this.stackInstancesGroup = Output.empty();
-        this.stackSetName = Output.empty();
-        this.tags = Output.empty();
-        this.templateBody = Output.empty();
-        this.templateURL = Output.empty();
+        this.administrationRoleARN = Codegen.empty();
+        this.autoDeployment = Codegen.empty();
+        this.callAs = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.description = Codegen.empty();
+        this.executionRoleName = Codegen.empty();
+        this.managedExecution = Codegen.empty();
+        this.operationPreferences = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.permissionModel = Codegen.empty();
+        this.stackInstancesGroup = Codegen.empty();
+        this.stackSetName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateBody = Codegen.empty();
+        this.templateURL = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -289,7 +290,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder administrationRoleARN(@Nullable String administrationRoleARN) {
-            this.administrationRoleARN = Output.ofNullable(administrationRoleARN);
+            this.administrationRoleARN = Codegen.ofNullable(administrationRoleARN);
             return this;
         }
         public Builder autoDeployment(@Nullable Output<StackSetAutoDeploymentArgs> autoDeployment) {
@@ -297,7 +298,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoDeployment(@Nullable StackSetAutoDeploymentArgs autoDeployment) {
-            this.autoDeployment = Output.ofNullable(autoDeployment);
+            this.autoDeployment = Codegen.ofNullable(autoDeployment);
             return this;
         }
         public Builder callAs(@Nullable Output<StackSetCallAs> callAs) {
@@ -305,7 +306,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder callAs(@Nullable StackSetCallAs callAs) {
-            this.callAs = Output.ofNullable(callAs);
+            this.callAs = Codegen.ofNullable(callAs);
             return this;
         }
         public Builder capabilities(@Nullable Output<List<StackSetCapability>> capabilities) {
@@ -313,7 +314,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable List<StackSetCapability> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(StackSetCapability... capabilities) {
@@ -324,7 +325,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionRoleName(@Nullable Output<String> executionRoleName) {
@@ -332,7 +333,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionRoleName(@Nullable String executionRoleName) {
-            this.executionRoleName = Output.ofNullable(executionRoleName);
+            this.executionRoleName = Codegen.ofNullable(executionRoleName);
             return this;
         }
         public Builder managedExecution(@Nullable Output<ManagedExecutionPropertiesArgs> managedExecution) {
@@ -340,7 +341,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedExecution(@Nullable ManagedExecutionPropertiesArgs managedExecution) {
-            this.managedExecution = Output.ofNullable(managedExecution);
+            this.managedExecution = Codegen.ofNullable(managedExecution);
             return this;
         }
         public Builder operationPreferences(@Nullable Output<StackSetOperationPreferencesArgs> operationPreferences) {
@@ -348,7 +349,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationPreferences(@Nullable StackSetOperationPreferencesArgs operationPreferences) {
-            this.operationPreferences = Output.ofNullable(operationPreferences);
+            this.operationPreferences = Codegen.ofNullable(operationPreferences);
             return this;
         }
         public Builder parameters(@Nullable Output<List<StackSetParameterArgs>> parameters) {
@@ -356,7 +357,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<StackSetParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(StackSetParameterArgs... parameters) {
@@ -375,7 +376,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackInstancesGroup(@Nullable List<StackSetStackInstancesArgs> stackInstancesGroup) {
-            this.stackInstancesGroup = Output.ofNullable(stackInstancesGroup);
+            this.stackInstancesGroup = Codegen.ofNullable(stackInstancesGroup);
             return this;
         }
         public Builder stackInstancesGroup(StackSetStackInstancesArgs... stackInstancesGroup) {
@@ -386,7 +387,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stackSetName(@Nullable String stackSetName) {
-            this.stackSetName = Output.ofNullable(stackSetName);
+            this.stackSetName = Codegen.ofNullable(stackSetName);
             return this;
         }
         public Builder tags(@Nullable Output<List<StackSetTagArgs>> tags) {
@@ -394,7 +395,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<StackSetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(StackSetTagArgs... tags) {
@@ -405,7 +406,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateBody(@Nullable String templateBody) {
-            this.templateBody = Output.ofNullable(templateBody);
+            this.templateBody = Codegen.ofNullable(templateBody);
             return this;
         }
         public Builder templateURL(@Nullable Output<String> templateURL) {
@@ -413,7 +414,7 @@ public final class StackSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateURL(@Nullable String templateURL) {
-            this.templateURL = Output.ofNullable(templateURL);
+            this.templateURL = Codegen.ofNullable(templateURL);
             return this;
         }        public StackSetArgs build() {
             return new StackSetArgs(administrationRoleARN, autoDeployment, callAs, capabilities, description, executionRoleName, managedExecution, operationPreferences, parameters, permissionModel, stackInstancesGroup, stackSetName, tags, templateBody, templateURL);

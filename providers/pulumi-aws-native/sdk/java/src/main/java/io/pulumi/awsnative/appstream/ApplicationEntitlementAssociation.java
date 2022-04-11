@@ -8,6 +8,7 @@ import io.pulumi.awsnative.appstream.ApplicationEntitlementAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -58,7 +59,7 @@ public class ApplicationEntitlementAssociation extends io.pulumi.resources.Custo
      * @param options A bag of options that control this resource's behavior.
      */
     public ApplicationEntitlementAssociation(String name, ApplicationEntitlementAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:appstream:ApplicationEntitlementAssociation", name, args == null ? ApplicationEntitlementAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:appstream:ApplicationEntitlementAssociation", name, args == null ? ApplicationEntitlementAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApplicationEntitlementAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> serverSideTokenCheck;
 
     public Output<Boolean> getServerSideTokenCheck() {
-        return this.serverSideTokenCheck == null ? Output.empty() : this.serverSideTokenCheck;
+        return this.serverSideTokenCheck == null ? Codegen.empty() : this.serverSideTokenCheck;
     }
 
     public IdentityPoolCognitoIdentityProviderArgs(
@@ -58,9 +59,9 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
     }
 
     private IdentityPoolCognitoIdentityProviderArgs() {
-        this.clientId = Output.empty();
-        this.providerName = Output.empty();
-        this.serverSideTokenCheck = Output.empty();
+        this.clientId = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.serverSideTokenCheck = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder providerName(@Nullable Output<String> providerName) {
@@ -100,7 +101,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder serverSideTokenCheck(@Nullable Output<Boolean> serverSideTokenCheck) {
@@ -108,7 +109,7 @@ public final class IdentityPoolCognitoIdentityProviderArgs extends io.pulumi.res
             return this;
         }
         public Builder serverSideTokenCheck(@Nullable Boolean serverSideTokenCheck) {
-            this.serverSideTokenCheck = Output.ofNullable(serverSideTokenCheck);
+            this.serverSideTokenCheck = Codegen.ofNullable(serverSideTokenCheck);
             return this;
         }        public IdentityPoolCognitoIdentityProviderArgs build() {
             return new IdentityPoolCognitoIdentityProviderArgs(clientId, providerName, serverSideTokenCheck);

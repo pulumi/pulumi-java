@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiState;
@@ -168,7 +169,7 @@ public class Api extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Api(String name, ApiArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/api:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/api:Api", name, args == null ? ApiArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Api(String name, Output<String> id, @Nullable ApiState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

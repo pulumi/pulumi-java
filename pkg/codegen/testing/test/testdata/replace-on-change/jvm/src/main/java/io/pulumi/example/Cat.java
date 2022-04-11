@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.CatArgs;
 import io.pulumi.example.God;
 import io.pulumi.example.Utilities;
@@ -70,7 +71,7 @@ public class Cat extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cat(String name, @Nullable CatArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Cat", name, args == null ? CatArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::Cat", name, args == null ? CatArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Cat(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

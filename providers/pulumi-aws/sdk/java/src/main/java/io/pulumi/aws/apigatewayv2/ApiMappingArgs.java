@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiMappingKey;
 
     public Output<String> getApiMappingKey() {
-        return this.apiMappingKey == null ? Output.empty() : this.apiMappingKey;
+        return this.apiMappingKey == null ? Codegen.empty() : this.apiMappingKey;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiMappingArgs() {
-        this.apiId = Output.empty();
-        this.apiMappingKey = Output.empty();
-        this.domainName = Output.empty();
-        this.stage = Output.empty();
+        this.apiId = Codegen.empty();
+        this.apiMappingKey = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.stage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class ApiMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiMappingKey(@Nullable String apiMappingKey) {
-            this.apiMappingKey = Output.ofNullable(apiMappingKey);
+            this.apiMappingKey = Codegen.ofNullable(apiMappingKey);
             return this;
         }
         public Builder domainName(Output<String> domainName) {

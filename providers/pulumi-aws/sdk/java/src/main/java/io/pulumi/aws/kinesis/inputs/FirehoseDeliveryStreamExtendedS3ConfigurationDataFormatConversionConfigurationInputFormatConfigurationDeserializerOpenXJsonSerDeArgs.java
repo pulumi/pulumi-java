@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<Boolean> caseInsensitive;
 
     public Output<Boolean> getCaseInsensitive() {
-        return this.caseInsensitive == null ? Output.empty() : this.caseInsensitive;
+        return this.caseInsensitive == null ? Codegen.empty() : this.caseInsensitive;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<Map<String,String>> columnToJsonKeyMappings;
 
     public Output<Map<String,String>> getColumnToJsonKeyMappings() {
-        return this.columnToJsonKeyMappings == null ? Output.empty() : this.columnToJsonKeyMappings;
+        return this.columnToJsonKeyMappings == null ? Codegen.empty() : this.columnToJsonKeyMappings;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores;
 
     public Output<Boolean> getConvertDotsInJsonKeysToUnderscores() {
-        return this.convertDotsInJsonKeysToUnderscores == null ? Output.empty() : this.convertDotsInJsonKeysToUnderscores;
+        return this.convertDotsInJsonKeysToUnderscores == null ? Codegen.empty() : this.convertDotsInJsonKeysToUnderscores;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs(
@@ -59,9 +60,9 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs() {
-        this.caseInsensitive = Output.empty();
-        this.columnToJsonKeyMappings = Output.empty();
-        this.convertDotsInJsonKeysToUnderscores = Output.empty();
+        this.caseInsensitive = Codegen.empty();
+        this.columnToJsonKeyMappings = Codegen.empty();
+        this.convertDotsInJsonKeysToUnderscores = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder caseInsensitive(@Nullable Boolean caseInsensitive) {
-            this.caseInsensitive = Output.ofNullable(caseInsensitive);
+            this.caseInsensitive = Codegen.ofNullable(caseInsensitive);
             return this;
         }
         public Builder columnToJsonKeyMappings(@Nullable Output<Map<String,String>> columnToJsonKeyMappings) {
@@ -101,7 +102,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder columnToJsonKeyMappings(@Nullable Map<String,String> columnToJsonKeyMappings) {
-            this.columnToJsonKeyMappings = Output.ofNullable(columnToJsonKeyMappings);
+            this.columnToJsonKeyMappings = Codegen.ofNullable(columnToJsonKeyMappings);
             return this;
         }
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Output<Boolean> convertDotsInJsonKeysToUnderscores) {
@@ -109,7 +110,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder convertDotsInJsonKeysToUnderscores(@Nullable Boolean convertDotsInJsonKeysToUnderscores) {
-            this.convertDotsInJsonKeysToUnderscores = Output.ofNullable(convertDotsInJsonKeysToUnderscores);
+            this.convertDotsInJsonKeysToUnderscores = Codegen.ofNullable(convertDotsInJsonKeysToUnderscores);
             return this;
         }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationInputFormatConfigurationDeserializerOpenXJsonSerDeArgs(caseInsensitive, columnToJsonKeyMappings, convertDotsInJsonKeysToUnderscores);

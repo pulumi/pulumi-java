@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatabaseInstanceRestoreBackupContextGetArgs(
@@ -59,9 +60,9 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
     }
 
     private DatabaseInstanceRestoreBackupContextGetArgs() {
-        this.backupRunId = Output.empty();
-        this.instanceId = Output.empty();
-        this.project = Output.empty();
+        this.backupRunId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -109,7 +110,7 @@ public final class DatabaseInstanceRestoreBackupContextGetArgs extends io.pulumi
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatabaseInstanceRestoreBackupContextGetArgs build() {
             return new DatabaseInstanceRestoreBackupContextGetArgs(backupRunId, instanceId, project);

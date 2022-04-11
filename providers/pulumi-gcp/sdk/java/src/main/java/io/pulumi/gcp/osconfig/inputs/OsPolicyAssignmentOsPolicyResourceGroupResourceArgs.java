@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs;
@@ -26,7 +27,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> exec;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs> getExec() {
-        return this.exec == null ? Output.empty() : this.exec;
+        return this.exec == null ? Codegen.empty() : this.exec;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> pkg;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs> getPkg() {
-        return this.pkg == null ? Output.empty() : this.pkg;
+        return this.pkg == null ? Codegen.empty() : this.pkg;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> getRepository() {
-        return this.repository == null ? Output.empty() : this.repository;
+        return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(
@@ -87,11 +88,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceArgs() {
-        this.exec = Output.empty();
-        this.file = Output.empty();
-        this.id = Output.empty();
-        this.pkg = Output.empty();
-        this.repository = Output.empty();
+        this.exec = Codegen.empty();
+        this.file = Codegen.empty();
+        this.id = Codegen.empty();
+        this.pkg = Codegen.empty();
+        this.repository = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
             return this;
         }
         public Builder exec(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecArgs exec) {
-            this.exec = Output.ofNullable(exec);
+            this.exec = Codegen.ofNullable(exec);
             return this;
         }
         public Builder file(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs> file) {
@@ -135,7 +136,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
             return this;
         }
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -151,7 +152,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
             return this;
         }
         public Builder pkg(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgArgs pkg) {
-            this.pkg = Output.ofNullable(pkg);
+            this.pkg = Codegen.ofNullable(pkg);
             return this;
         }
         public Builder repository(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs> repository) {
@@ -159,7 +160,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceArgs extends i
             return this;
         }
         public Builder repository(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs repository) {
-            this.repository = Output.ofNullable(repository);
+            this.repository = Codegen.ofNullable(repository);
             return this;
         }        public OsPolicyAssignmentOsPolicyResourceGroupResourceArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceArgs(exec, file, id, pkg, repository);

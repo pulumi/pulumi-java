@@ -9,6 +9,7 @@ import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<TrackSelectionArgs>> clearTracks;
 
     public Output<List<TrackSelectionArgs>> getClearTracks() {
-        return this.clearTracks == null ? Output.empty() : this.clearTracks;
+        return this.clearTracks == null ? Codegen.empty() : this.clearTracks;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<StreamingPolicyContentKeysArgs> contentKeys;
 
     public Output<StreamingPolicyContentKeysArgs> getContentKeys() {
-        return this.contentKeys == null ? Output.empty() : this.contentKeys;
+        return this.contentKeys == null ? Codegen.empty() : this.contentKeys;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<CencDrmConfigurationArgs> drm;
 
     public Output<CencDrmConfigurationArgs> getDrm() {
-        return this.drm == null ? Output.empty() : this.drm;
+        return this.drm == null ? Codegen.empty() : this.drm;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<EnabledProtocolsArgs> enabledProtocols;
 
     public Output<EnabledProtocolsArgs> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
+        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 
     public CommonEncryptionCencArgs(
@@ -78,10 +79,10 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
     }
 
     private CommonEncryptionCencArgs() {
-        this.clearTracks = Output.empty();
-        this.contentKeys = Output.empty();
-        this.drm = Output.empty();
-        this.enabledProtocols = Output.empty();
+        this.clearTracks = Codegen.empty();
+        this.contentKeys = Codegen.empty();
+        this.drm = Codegen.empty();
+        this.enabledProtocols = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder clearTracks(@Nullable List<TrackSelectionArgs> clearTracks) {
-            this.clearTracks = Output.ofNullable(clearTracks);
+            this.clearTracks = Codegen.ofNullable(clearTracks);
             return this;
         }
         public Builder clearTracks(TrackSelectionArgs... clearTracks) {
@@ -126,7 +127,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder contentKeys(@Nullable StreamingPolicyContentKeysArgs contentKeys) {
-            this.contentKeys = Output.ofNullable(contentKeys);
+            this.contentKeys = Codegen.ofNullable(contentKeys);
             return this;
         }
         public Builder drm(@Nullable Output<CencDrmConfigurationArgs> drm) {
@@ -134,7 +135,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder drm(@Nullable CencDrmConfigurationArgs drm) {
-            this.drm = Output.ofNullable(drm);
+            this.drm = Codegen.ofNullable(drm);
             return this;
         }
         public Builder enabledProtocols(@Nullable Output<EnabledProtocolsArgs> enabledProtocols) {
@@ -142,7 +143,7 @@ public final class CommonEncryptionCencArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabledProtocols(@Nullable EnabledProtocolsArgs enabledProtocols) {
-            this.enabledProtocols = Output.ofNullable(enabledProtocols);
+            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
             return this;
         }        public CommonEncryptionCencArgs build() {
             return new CommonEncryptionCencArgs(clearTracks, contentKeys, drm, enabledProtocols);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.RunAsCredentialAssociationPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<RunAsCredentialAssociationPropertyArgs> credential;
 
     public Output<RunAsCredentialAssociationPropertyArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> hybridRunbookWorkerGroupName;
 
     public Output<String> getHybridRunbookWorkerGroupName() {
-        return this.hybridRunbookWorkerGroupName == null ? Output.empty() : this.hybridRunbookWorkerGroupName;
+        return this.hybridRunbookWorkerGroupName == null ? Codegen.empty() : this.hybridRunbookWorkerGroupName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
     }
 
     private HybridRunbookWorkerGroupArgs() {
-        this.automationAccountName = Output.empty();
-        this.credential = Output.empty();
-        this.hybridRunbookWorkerGroupName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.hybridRunbookWorkerGroupName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder credential(@Nullable RunAsCredentialAssociationPropertyArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder hybridRunbookWorkerGroupName(@Nullable Output<String> hybridRunbookWorkerGroupName) {
@@ -124,7 +125,7 @@ public final class HybridRunbookWorkerGroupArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder hybridRunbookWorkerGroupName(@Nullable String hybridRunbookWorkerGroupName) {
-            this.hybridRunbookWorkerGroupName = Output.ofNullable(hybridRunbookWorkerGroupName);
+            this.hybridRunbookWorkerGroupName = Codegen.ofNullable(hybridRunbookWorkerGroupName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestVirtualMachineArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> justification;
 
     public Output<String> getJustification() {
-        return this.justification == null ? Output.empty() : this.justification;
+        return this.justification == null ? Codegen.empty() : this.justification;
     }
 
     /**
@@ -68,10 +69,10 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
     }
 
     private JitNetworkAccessRequestArgs() {
-        this.justification = Output.empty();
-        this.requestor = Output.empty();
-        this.startTimeUtc = Output.empty();
-        this.virtualMachines = Output.empty();
+        this.justification = Codegen.empty();
+        this.requestor = Codegen.empty();
+        this.startTimeUtc = Codegen.empty();
+        this.virtualMachines = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder justification(@Nullable String justification) {
-            this.justification = Output.ofNullable(justification);
+            this.justification = Codegen.ofNullable(justification);
             return this;
         }
         public Builder requestor(Output<String> requestor) {

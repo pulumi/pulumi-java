@@ -5,6 +5,7 @@ package io.pulumi.aws.redshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     public ClusterLoggingArgs(
@@ -59,9 +60,9 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterLoggingArgs() {
-        this.bucketName = Output.empty();
-        this.enable = Output.empty();
-        this.s3KeyPrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder enable(Output<Boolean> enable) {
@@ -109,7 +110,7 @@ public final class ClusterLoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }        public ClusterLoggingArgs build() {
             return new ClusterLoggingArgs(bucketName, enable, s3KeyPrefix);

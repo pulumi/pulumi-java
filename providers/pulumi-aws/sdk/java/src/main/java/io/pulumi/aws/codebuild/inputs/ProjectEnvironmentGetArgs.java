@@ -7,6 +7,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentEnvironmentVariableGetAr
 import io.pulumi.aws.codebuild.inputs.ProjectEnvironmentRegistryCredentialGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> environmentVariables;
 
     public Output<List<ProjectEnvironmentEnvironmentVariableGetArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> imagePullCredentialsType;
 
     public Output<String> getImagePullCredentialsType() {
-        return this.imagePullCredentialsType == null ? Output.empty() : this.imagePullCredentialsType;
+        return this.imagePullCredentialsType == null ? Codegen.empty() : this.imagePullCredentialsType;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> privilegedMode;
 
     public Output<Boolean> getPrivilegedMode() {
-        return this.privilegedMode == null ? Output.empty() : this.privilegedMode;
+        return this.privilegedMode == null ? Codegen.empty() : this.privilegedMode;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential;
 
     public Output<ProjectEnvironmentRegistryCredentialGetArgs> getRegistryCredential() {
-        return this.registryCredential == null ? Output.empty() : this.registryCredential;
+        return this.registryCredential == null ? Codegen.empty() : this.registryCredential;
     }
 
     /**
@@ -126,14 +127,14 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
     }
 
     private ProjectEnvironmentGetArgs() {
-        this.certificate = Output.empty();
-        this.computeType = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.image = Output.empty();
-        this.imagePullCredentialsType = Output.empty();
-        this.privilegedMode = Output.empty();
-        this.registryCredential = Output.empty();
-        this.type = Output.empty();
+        this.certificate = Codegen.empty();
+        this.computeType = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.image = Codegen.empty();
+        this.imagePullCredentialsType = Codegen.empty();
+        this.privilegedMode = Codegen.empty();
+        this.registryCredential = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder computeType(Output<String> computeType) {
@@ -191,7 +192,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder environmentVariables(@Nullable List<ProjectEnvironmentEnvironmentVariableGetArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(ProjectEnvironmentEnvironmentVariableGetArgs... environmentVariables) {
@@ -210,7 +211,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder imagePullCredentialsType(@Nullable String imagePullCredentialsType) {
-            this.imagePullCredentialsType = Output.ofNullable(imagePullCredentialsType);
+            this.imagePullCredentialsType = Codegen.ofNullable(imagePullCredentialsType);
             return this;
         }
         public Builder privilegedMode(@Nullable Output<Boolean> privilegedMode) {
@@ -218,7 +219,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder privilegedMode(@Nullable Boolean privilegedMode) {
-            this.privilegedMode = Output.ofNullable(privilegedMode);
+            this.privilegedMode = Codegen.ofNullable(privilegedMode);
             return this;
         }
         public Builder registryCredential(@Nullable Output<ProjectEnvironmentRegistryCredentialGetArgs> registryCredential) {
@@ -226,7 +227,7 @@ public final class ProjectEnvironmentGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder registryCredential(@Nullable ProjectEnvironmentRegistryCredentialGetArgs registryCredential) {
-            this.registryCredential = Output.ofNullable(registryCredential);
+            this.registryCredential = Codegen.ofNullable(registryCredential);
             return this;
         }
         public Builder type(Output<String> type) {

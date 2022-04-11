@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> port;
 
     public Output<String> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> processServerId;
 
     public Output<String> getProcessServerId() {
-        return this.processServerId == null ? Output.empty() : this.processServerId;
+        return this.processServerId == null ? Codegen.empty() : this.processServerId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> runAsAccountId;
 
     public Output<String> getRunAsAccountId() {
-        return this.runAsAccountId == null ? Output.empty() : this.runAsAccountId;
+        return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
     }
 
     public AddVCenterRequestPropertiesArgs(
@@ -87,11 +88,11 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
     }
 
     private AddVCenterRequestPropertiesArgs() {
-        this.friendlyName = Output.empty();
-        this.ipAddress = Output.empty();
-        this.port = Output.empty();
-        this.processServerId = Output.empty();
-        this.runAsAccountId = Output.empty();
+        this.friendlyName = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.port = Codegen.empty();
+        this.processServerId = Codegen.empty();
+        this.runAsAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -135,7 +136,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder port(@Nullable Output<String> port) {
@@ -143,7 +144,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder port(@Nullable String port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder processServerId(@Nullable Output<String> processServerId) {
@@ -151,7 +152,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder processServerId(@Nullable String processServerId) {
-            this.processServerId = Output.ofNullable(processServerId);
+            this.processServerId = Codegen.ofNullable(processServerId);
             return this;
         }
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
@@ -159,7 +160,7 @@ public final class AddVCenterRequestPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Output.ofNullable(runAsAccountId);
+            this.runAsAccountId = Codegen.ofNullable(runAsAccountId);
             return this;
         }        public AddVCenterRequestPropertiesArgs build() {
             return new AddVCenterRequestPropertiesArgs(friendlyName, ipAddress, port, processServerId, runAsAccountId);

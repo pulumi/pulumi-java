@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> highBoost;
 
     public Output<Boolean> getHighBoost() {
-        return this.highBoost == null ? Output.empty() : this.highBoost;
+        return this.highBoost == null ? Codegen.empty() : this.highBoost;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> lowBoost;
 
     public Output<Boolean> getLowBoost() {
-        return this.lowBoost == null ? Output.empty() : this.lowBoost;
+        return this.lowBoost == null ? Codegen.empty() : this.lowBoost;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> lufs;
 
     public Output<Double> getLufs() {
-        return this.lufs == null ? Output.empty() : this.lufs;
+        return this.lufs == null ? Codegen.empty() : this.lufs;
     }
 
     public AudioArgs(
@@ -62,9 +63,9 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AudioArgs() {
-        this.highBoost = Output.empty();
-        this.lowBoost = Output.empty();
-        this.lufs = Output.empty();
+        this.highBoost = Codegen.empty();
+        this.lowBoost = Codegen.empty();
+        this.lufs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder highBoost(@Nullable Boolean highBoost) {
-            this.highBoost = Output.ofNullable(highBoost);
+            this.highBoost = Codegen.ofNullable(highBoost);
             return this;
         }
         public Builder lowBoost(@Nullable Output<Boolean> lowBoost) {
@@ -104,7 +105,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lowBoost(@Nullable Boolean lowBoost) {
-            this.lowBoost = Output.ofNullable(lowBoost);
+            this.lowBoost = Codegen.ofNullable(lowBoost);
             return this;
         }
         public Builder lufs(@Nullable Output<Double> lufs) {
@@ -112,7 +113,7 @@ public final class AudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lufs(@Nullable Double lufs) {
-            this.lufs = Output.ofNullable(lufs);
+            this.lufs = Codegen.ofNullable(lufs);
             return this;
         }        public AudioArgs build() {
             return new AudioArgs(highBoost, lowBoost, lufs);

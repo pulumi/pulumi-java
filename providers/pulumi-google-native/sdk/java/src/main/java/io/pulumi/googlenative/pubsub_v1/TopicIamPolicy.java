@@ -6,6 +6,7 @@ package io.pulumi.googlenative.pubsub_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.TopicIamPolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class TopicIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicIamPolicy(String name, TopicIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:pubsub/v1:TopicIamPolicy", name, args == null ? TopicIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:pubsub/v1:TopicIamPolicy", name, args == null ? TopicIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TopicIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
     }
 
     private DataIntegrationScheduleConfigArgs() {
-        this.firstExecutionFrom = Output.empty();
-        this.object = Output.empty();
-        this.scheduleExpression = Output.empty();
+        this.firstExecutionFrom = Codegen.empty();
+        this.object = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
     }
 
     public static Builder builder() {

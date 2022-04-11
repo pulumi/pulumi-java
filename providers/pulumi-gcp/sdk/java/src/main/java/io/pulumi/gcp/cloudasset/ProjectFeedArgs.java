@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudasset.inputs.ProjectFeedConditionArgs;
 import io.pulumi.gcp.cloudasset.inputs.ProjectFeedFeedOutputConfigArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> assetNames;
 
     public Output<List<String>> getAssetNames() {
-        return this.assetNames == null ? Output.empty() : this.assetNames;
+        return this.assetNames == null ? Codegen.empty() : this.assetNames;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> assetTypes;
 
     public Output<List<String>> getAssetTypes() {
-        return this.assetTypes == null ? Output.empty() : this.assetTypes;
+        return this.assetTypes == null ? Codegen.empty() : this.assetTypes;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> billingProject;
 
     public Output<String> getBillingProject() {
-        return this.billingProject == null ? Output.empty() : this.billingProject;
+        return this.billingProject == null ? Codegen.empty() : this.billingProject;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectFeedConditionArgs> condition;
 
     public Output<ProjectFeedConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ProjectFeedArgs(
@@ -143,14 +144,14 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectFeedArgs() {
-        this.assetNames = Output.empty();
-        this.assetTypes = Output.empty();
-        this.billingProject = Output.empty();
-        this.condition = Output.empty();
-        this.contentType = Output.empty();
-        this.feedId = Output.empty();
-        this.feedOutputConfig = Output.empty();
-        this.project = Output.empty();
+        this.assetNames = Codegen.empty();
+        this.assetTypes = Codegen.empty();
+        this.billingProject = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.feedId = Codegen.empty();
+        this.feedOutputConfig = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetNames(@Nullable List<String> assetNames) {
-            this.assetNames = Output.ofNullable(assetNames);
+            this.assetNames = Codegen.ofNullable(assetNames);
             return this;
         }
         public Builder assetNames(String... assetNames) {
@@ -203,7 +204,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetTypes(@Nullable List<String> assetTypes) {
-            this.assetTypes = Output.ofNullable(assetTypes);
+            this.assetTypes = Codegen.ofNullable(assetTypes);
             return this;
         }
         public Builder assetTypes(String... assetTypes) {
@@ -214,7 +215,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingProject(@Nullable String billingProject) {
-            this.billingProject = Output.ofNullable(billingProject);
+            this.billingProject = Codegen.ofNullable(billingProject);
             return this;
         }
         public Builder condition(@Nullable Output<ProjectFeedConditionArgs> condition) {
@@ -222,7 +223,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable ProjectFeedConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -230,7 +231,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder feedId(Output<String> feedId) {
@@ -254,7 +255,7 @@ public final class ProjectFeedArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ProjectFeedArgs build() {
             return new ProjectFeedArgs(assetNames, assetTypes, billingProject, condition, contentType, feedId, feedOutputConfig, project);

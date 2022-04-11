@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class TopicRuleDynamodbv2PutItemGetArgs extends io.pulumi.resources
     }
 
     private TopicRuleDynamodbv2PutItemGetArgs() {
-        this.tableName = Output.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {

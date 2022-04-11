@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
       private final @Nullable Output<String> objectVersion;
 
     public Output<String> getObjectVersion() {
-        return this.objectVersion == null ? Output.empty() : this.objectVersion;
+        return this.objectVersion == null ? Codegen.empty() : this.objectVersion;
     }
 
     public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs(
@@ -57,9 +58,9 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
     }
 
     private ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs() {
-        this.bucketArn = Output.empty();
-        this.fileKey = Output.empty();
-        this.objectVersion = Output.empty();
+        this.bucketArn = Codegen.empty();
+        this.fileKey = Codegen.empty();
+        this.objectVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ApplicationApplicationConfigurationApplicationCodeConfigurati
             return this;
         }
         public Builder objectVersion(@Nullable String objectVersion) {
-            this.objectVersion = Output.ofNullable(objectVersion);
+            this.objectVersion = Codegen.ofNullable(objectVersion);
             return this;
         }        public ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs build() {
             return new ApplicationApplicationConfigurationApplicationCodeConfigurationCodeContentS3ContentLocationGetArgs(bucketArn, fileKey, objectVersion);

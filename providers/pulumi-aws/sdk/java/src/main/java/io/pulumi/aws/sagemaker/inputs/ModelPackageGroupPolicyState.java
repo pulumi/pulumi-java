@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> modelPackageGroupName;
 
     public Output<String> getModelPackageGroupName() {
-        return this.modelPackageGroupName == null ? Output.empty() : this.modelPackageGroupName;
+        return this.modelPackageGroupName == null ? Codegen.empty() : this.modelPackageGroupName;
     }
 
     @Import(name="resourcePolicy")
       private final @Nullable Output<String> resourcePolicy;
 
     public Output<String> getResourcePolicy() {
-        return this.resourcePolicy == null ? Output.empty() : this.resourcePolicy;
+        return this.resourcePolicy == null ? Codegen.empty() : this.resourcePolicy;
     }
 
     public ModelPackageGroupPolicyState(
@@ -40,8 +41,8 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
     }
 
     private ModelPackageGroupPolicyState() {
-        this.modelPackageGroupName = Output.empty();
-        this.resourcePolicy = Output.empty();
+        this.modelPackageGroupName = Codegen.empty();
+        this.resourcePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder modelPackageGroupName(@Nullable String modelPackageGroupName) {
-            this.modelPackageGroupName = Output.ofNullable(modelPackageGroupName);
+            this.modelPackageGroupName = Codegen.ofNullable(modelPackageGroupName);
             return this;
         }
         public Builder resourcePolicy(@Nullable Output<String> resourcePolicy) {
@@ -79,7 +80,7 @@ public final class ModelPackageGroupPolicyState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourcePolicy(@Nullable String resourcePolicy) {
-            this.resourcePolicy = Output.ofNullable(resourcePolicy);
+            this.resourcePolicy = Codegen.ofNullable(resourcePolicy);
             return this;
         }        public ModelPackageGroupPolicyState build() {
             return new ModelPackageGroupPolicyState(modelPackageGroupName, resourcePolicy);

@@ -12,6 +12,7 @@ import io.pulumi.aws.iam.OpenIdConnectProvider;
 import io.pulumi.aws.iam.Role;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.VpcCni;
 import io.pulumi.eks.inputs.ClusterNodeGroupOptionsArgs;
 import io.pulumi.kubernetes.core_v1.ConfigMap;
@@ -36,7 +37,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Provider> awsProvider;
 
     public Output<Provider> getAwsProvider() {
-        return this.awsProvider == null ? Output.empty() : this.awsProvider;
+        return this.awsProvider == null ? Codegen.empty() : this.awsProvider;
     }
 
     @Import(name="cluster", required=true)
@@ -57,14 +58,14 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ConfigMap> eksNodeAccess;
 
     public Output<ConfigMap> getEksNodeAccess() {
-        return this.eksNodeAccess == null ? Output.empty() : this.eksNodeAccess;
+        return this.eksNodeAccess == null ? Codegen.empty() : this.eksNodeAccess;
     }
 
     @Import(name="encryptionConfig")
       private final @Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig;
 
     public Output<ClusterEncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="endpoint", required=true)
@@ -78,7 +79,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FargateProfile> fargateProfile;
 
     public Output<FargateProfile> getFargateProfile() {
-        return this.fargateProfile == null ? Output.empty() : this.fargateProfile;
+        return this.fargateProfile == null ? Codegen.empty() : this.fargateProfile;
     }
 
     @Import(name="instanceRoles", required=true)
@@ -92,7 +93,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> kubeconfig;
 
     public Output<Object> getKubeconfig() {
-        return this.kubeconfig == null ? Output.empty() : this.kubeconfig;
+        return this.kubeconfig == null ? Codegen.empty() : this.kubeconfig;
     }
 
     @Import(name="nodeGroupOptions", required=true)
@@ -106,21 +107,21 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> nodeSecurityGroupTags;
 
     public Output<Map<String,String>> getNodeSecurityGroupTags() {
-        return this.nodeSecurityGroupTags == null ? Output.empty() : this.nodeSecurityGroupTags;
+        return this.nodeSecurityGroupTags == null ? Codegen.empty() : this.nodeSecurityGroupTags;
     }
 
     @Import(name="oidcProvider")
       private final @Nullable Output<OpenIdConnectProvider> oidcProvider;
 
     public Output<OpenIdConnectProvider> getOidcProvider() {
-        return this.oidcProvider == null ? Output.empty() : this.oidcProvider;
+        return this.oidcProvider == null ? Codegen.empty() : this.oidcProvider;
     }
 
     @Import(name="privateSubnetIds")
       private final @Nullable Output<List<String>> privateSubnetIds;
 
     public Output<List<String>> getPrivateSubnetIds() {
-        return this.privateSubnetIds == null ? Output.empty() : this.privateSubnetIds;
+        return this.privateSubnetIds == null ? Codegen.empty() : this.privateSubnetIds;
     }
 
     @Import(name="provider", required=true)
@@ -134,14 +135,14 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> publicSubnetIds;
 
     public Output<List<String>> getPublicSubnetIds() {
-        return this.publicSubnetIds == null ? Output.empty() : this.publicSubnetIds;
+        return this.publicSubnetIds == null ? Codegen.empty() : this.publicSubnetIds;
     }
 
     @Import(name="storageClasses")
       private final @Nullable Output<Map<String,StorageClass>> storageClasses;
 
     public Output<Map<String,StorageClass>> getStorageClasses() {
-        return this.storageClasses == null ? Output.empty() : this.storageClasses;
+        return this.storageClasses == null ? Codegen.empty() : this.storageClasses;
     }
 
     @Import(name="subnetIds", required=true)
@@ -155,14 +156,14 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcCni")
       private final @Nullable Output<VpcCni> vpcCni;
 
     public Output<VpcCni> getVpcCni() {
-        return this.vpcCni == null ? Output.empty() : this.vpcCni;
+        return this.vpcCni == null ? Codegen.empty() : this.vpcCni;
     }
 
     @Import(name="vpcId", required=true)
@@ -216,26 +217,26 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CoreDataArgs() {
-        this.awsProvider = Output.empty();
-        this.cluster = Output.empty();
-        this.clusterSecurityGroup = Output.empty();
-        this.eksNodeAccess = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.endpoint = Output.empty();
-        this.fargateProfile = Output.empty();
-        this.instanceRoles = Output.empty();
-        this.kubeconfig = Output.empty();
-        this.nodeGroupOptions = Output.empty();
-        this.nodeSecurityGroupTags = Output.empty();
-        this.oidcProvider = Output.empty();
-        this.privateSubnetIds = Output.empty();
-        this.provider = Output.empty();
-        this.publicSubnetIds = Output.empty();
-        this.storageClasses = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.vpcCni = Output.empty();
-        this.vpcId = Output.empty();
+        this.awsProvider = Codegen.empty();
+        this.cluster = Codegen.empty();
+        this.clusterSecurityGroup = Codegen.empty();
+        this.eksNodeAccess = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.fargateProfile = Codegen.empty();
+        this.instanceRoles = Codegen.empty();
+        this.kubeconfig = Codegen.empty();
+        this.nodeGroupOptions = Codegen.empty();
+        this.nodeSecurityGroupTags = Codegen.empty();
+        this.oidcProvider = Codegen.empty();
+        this.privateSubnetIds = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.publicSubnetIds = Codegen.empty();
+        this.storageClasses = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcCni = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -301,7 +302,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsProvider(@Nullable Provider awsProvider) {
-            this.awsProvider = Output.ofNullable(awsProvider);
+            this.awsProvider = Codegen.ofNullable(awsProvider);
             return this;
         }
         public Builder cluster(Output<Cluster> cluster) {
@@ -325,7 +326,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eksNodeAccess(@Nullable ConfigMap eksNodeAccess) {
-            this.eksNodeAccess = Output.ofNullable(eksNodeAccess);
+            this.eksNodeAccess = Codegen.ofNullable(eksNodeAccess);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<ClusterEncryptionConfigArgs> encryptionConfig) {
@@ -333,7 +334,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable ClusterEncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder endpoint(Output<String> endpoint) {
@@ -349,7 +350,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fargateProfile(@Nullable FargateProfile fargateProfile) {
-            this.fargateProfile = Output.ofNullable(fargateProfile);
+            this.fargateProfile = Codegen.ofNullable(fargateProfile);
             return this;
         }
         public Builder instanceRoles(Output<List<Role>> instanceRoles) {
@@ -368,7 +369,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kubeconfig(@Nullable Object kubeconfig) {
-            this.kubeconfig = Output.ofNullable(kubeconfig);
+            this.kubeconfig = Codegen.ofNullable(kubeconfig);
             return this;
         }
         public Builder nodeGroupOptions(Output<ClusterNodeGroupOptionsArgs> nodeGroupOptions) {
@@ -384,7 +385,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeSecurityGroupTags(@Nullable Map<String,String> nodeSecurityGroupTags) {
-            this.nodeSecurityGroupTags = Output.ofNullable(nodeSecurityGroupTags);
+            this.nodeSecurityGroupTags = Codegen.ofNullable(nodeSecurityGroupTags);
             return this;
         }
         public Builder oidcProvider(@Nullable Output<OpenIdConnectProvider> oidcProvider) {
@@ -392,7 +393,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oidcProvider(@Nullable OpenIdConnectProvider oidcProvider) {
-            this.oidcProvider = Output.ofNullable(oidcProvider);
+            this.oidcProvider = Codegen.ofNullable(oidcProvider);
             return this;
         }
         public Builder privateSubnetIds(@Nullable Output<List<String>> privateSubnetIds) {
@@ -400,7 +401,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateSubnetIds(@Nullable List<String> privateSubnetIds) {
-            this.privateSubnetIds = Output.ofNullable(privateSubnetIds);
+            this.privateSubnetIds = Codegen.ofNullable(privateSubnetIds);
             return this;
         }
         public Builder privateSubnetIds(String... privateSubnetIds) {
@@ -419,7 +420,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicSubnetIds(@Nullable List<String> publicSubnetIds) {
-            this.publicSubnetIds = Output.ofNullable(publicSubnetIds);
+            this.publicSubnetIds = Codegen.ofNullable(publicSubnetIds);
             return this;
         }
         public Builder publicSubnetIds(String... publicSubnetIds) {
@@ -430,7 +431,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageClasses(@Nullable Map<String,StorageClass> storageClasses) {
-            this.storageClasses = Output.ofNullable(storageClasses);
+            this.storageClasses = Codegen.ofNullable(storageClasses);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -449,7 +450,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcCni(@Nullable Output<VpcCni> vpcCni) {
@@ -457,7 +458,7 @@ public final class CoreDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcCni(@Nullable VpcCni vpcCni) {
-            this.vpcCni = Output.ofNullable(vpcCni);
+            this.vpcCni = Codegen.ofNullable(vpcCni);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

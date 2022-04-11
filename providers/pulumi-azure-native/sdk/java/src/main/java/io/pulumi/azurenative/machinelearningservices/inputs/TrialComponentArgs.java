@@ -10,6 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -33,7 +34,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> codeId;
 
     public Output<String> getCodeId() {
-        return this.codeId == null ? Output.empty() : this.codeId;
+        return this.codeId == null ? Codegen.empty() : this.codeId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> distribution;
 
     public Output<Object> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings;
 
     public Output<Map<String,InputDataBindingArgs>> getInputDataBindings() {
-        return this.inputDataBindings == null ? Output.empty() : this.inputDataBindings;
+        return this.inputDataBindings == null ? Codegen.empty() : this.inputDataBindings;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings;
 
     public Output<Map<String,OutputDataBindingArgs>> getOutputDataBindings() {
-        return this.outputDataBindings == null ? Output.empty() : this.outputDataBindings;
+        return this.outputDataBindings == null ? Codegen.empty() : this.outputDataBindings;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public TrialComponentArgs(
@@ -134,14 +135,14 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrialComponentArgs() {
-        this.codeId = Output.empty();
-        this.command = Output.empty();
-        this.distribution = Output.empty();
-        this.environmentId = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.inputDataBindings = Output.empty();
-        this.outputDataBindings = Output.empty();
-        this.timeout = Output.empty();
+        this.codeId = Codegen.empty();
+        this.command = Codegen.empty();
+        this.distribution = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.inputDataBindings = Codegen.empty();
+        this.outputDataBindings = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = Output.ofNullable(codeId);
+            this.codeId = Codegen.ofNullable(codeId);
             return this;
         }
         public Builder command(Output<String> command) {
@@ -199,7 +200,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distribution(@Nullable Object distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder environmentId(@Nullable Output<String> environmentId) {
@@ -207,7 +208,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
@@ -215,7 +216,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder inputDataBindings(@Nullable Output<Map<String,InputDataBindingArgs>> inputDataBindings) {
@@ -223,7 +224,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingArgs> inputDataBindings) {
-            this.inputDataBindings = Output.ofNullable(inputDataBindings);
+            this.inputDataBindings = Codegen.ofNullable(inputDataBindings);
             return this;
         }
         public Builder outputDataBindings(@Nullable Output<Map<String,OutputDataBindingArgs>> outputDataBindings) {
@@ -231,7 +232,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingArgs> outputDataBindings) {
-            this.outputDataBindings = Output.ofNullable(outputDataBindings);
+            this.outputDataBindings = Codegen.ofNullable(outputDataBindings);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -239,7 +240,7 @@ public final class TrialComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public TrialComponentArgs build() {
             return new TrialComponentArgs(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);

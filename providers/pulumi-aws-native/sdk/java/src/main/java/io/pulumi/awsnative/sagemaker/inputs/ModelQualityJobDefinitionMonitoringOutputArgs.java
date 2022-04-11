@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionS3OutputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ModelQualityJobDefinitionMonitoringOutputArgs extends io.pulu
     }
 
     private ModelQualityJobDefinitionMonitoringOutputArgs() {
-        this.s3Output = Output.empty();
+        this.s3Output = Codegen.empty();
     }
 
     public static Builder builder() {

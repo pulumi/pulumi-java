@@ -9,6 +9,7 @@ import io.pulumi.aws.appstream.inputs.StackStorageConnectorArgs;
 import io.pulumi.aws.appstream.inputs.StackUserSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackAccessEndpointArgs>> accessEndpoints;
 
     public Output<List<StackAccessEndpointArgs>> getAccessEndpoints() {
-        return this.accessEndpoints == null ? Output.empty() : this.accessEndpoints;
+        return this.accessEndpoints == null ? Codegen.empty() : this.accessEndpoints;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StackApplicationSettingsArgs> applicationSettings;
 
     public Output<StackApplicationSettingsArgs> getApplicationSettings() {
-        return this.applicationSettings == null ? Output.empty() : this.applicationSettings;
+        return this.applicationSettings == null ? Codegen.empty() : this.applicationSettings;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> embedHostDomains;
 
     public Output<List<String>> getEmbedHostDomains() {
-        return this.embedHostDomains == null ? Output.empty() : this.embedHostDomains;
+        return this.embedHostDomains == null ? Codegen.empty() : this.embedHostDomains;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> feedbackUrl;
 
     public Output<String> getFeedbackUrl() {
-        return this.feedbackUrl == null ? Output.empty() : this.feedbackUrl;
+        return this.feedbackUrl == null ? Codegen.empty() : this.feedbackUrl;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> redirectUrl;
 
     public Output<String> getRedirectUrl() {
-        return this.redirectUrl == null ? Output.empty() : this.redirectUrl;
+        return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
     }
 
     /**
@@ -112,14 +113,14 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackStorageConnectorArgs>> storageConnectors;
 
     public Output<List<StackStorageConnectorArgs>> getStorageConnectors() {
-        return this.storageConnectors == null ? Output.empty() : this.storageConnectors;
+        return this.storageConnectors == null ? Codegen.empty() : this.storageConnectors;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StackUserSettingArgs>> userSettings;
 
     public Output<List<StackUserSettingArgs>> getUserSettings() {
-        return this.userSettings == null ? Output.empty() : this.userSettings;
+        return this.userSettings == null ? Codegen.empty() : this.userSettings;
     }
 
     public StackArgs(
@@ -159,17 +160,17 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StackArgs() {
-        this.accessEndpoints = Output.empty();
-        this.applicationSettings = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.embedHostDomains = Output.empty();
-        this.feedbackUrl = Output.empty();
-        this.name = Output.empty();
-        this.redirectUrl = Output.empty();
-        this.storageConnectors = Output.empty();
-        this.tags = Output.empty();
-        this.userSettings = Output.empty();
+        this.accessEndpoints = Codegen.empty();
+        this.applicationSettings = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.embedHostDomains = Codegen.empty();
+        this.feedbackUrl = Codegen.empty();
+        this.name = Codegen.empty();
+        this.redirectUrl = Codegen.empty();
+        this.storageConnectors = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessEndpoints(@Nullable List<StackAccessEndpointArgs> accessEndpoints) {
-            this.accessEndpoints = Output.ofNullable(accessEndpoints);
+            this.accessEndpoints = Codegen.ofNullable(accessEndpoints);
             return this;
         }
         public Builder accessEndpoints(StackAccessEndpointArgs... accessEndpoints) {
@@ -228,7 +229,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationSettings(@Nullable StackApplicationSettingsArgs applicationSettings) {
-            this.applicationSettings = Output.ofNullable(applicationSettings);
+            this.applicationSettings = Codegen.ofNullable(applicationSettings);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -236,7 +237,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -244,7 +245,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder embedHostDomains(@Nullable Output<List<String>> embedHostDomains) {
@@ -252,7 +253,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder embedHostDomains(@Nullable List<String> embedHostDomains) {
-            this.embedHostDomains = Output.ofNullable(embedHostDomains);
+            this.embedHostDomains = Codegen.ofNullable(embedHostDomains);
             return this;
         }
         public Builder embedHostDomains(String... embedHostDomains) {
@@ -263,7 +264,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder feedbackUrl(@Nullable String feedbackUrl) {
-            this.feedbackUrl = Output.ofNullable(feedbackUrl);
+            this.feedbackUrl = Codegen.ofNullable(feedbackUrl);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -271,7 +272,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
@@ -279,7 +280,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Output.ofNullable(redirectUrl);
+            this.redirectUrl = Codegen.ofNullable(redirectUrl);
             return this;
         }
         public Builder storageConnectors(@Nullable Output<List<StackStorageConnectorArgs>> storageConnectors) {
@@ -287,7 +288,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageConnectors(@Nullable List<StackStorageConnectorArgs> storageConnectors) {
-            this.storageConnectors = Output.ofNullable(storageConnectors);
+            this.storageConnectors = Codegen.ofNullable(storageConnectors);
             return this;
         }
         public Builder storageConnectors(StackStorageConnectorArgs... storageConnectors) {
@@ -298,7 +299,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userSettings(@Nullable Output<List<StackUserSettingArgs>> userSettings) {
@@ -306,7 +307,7 @@ public final class StackArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSettings(@Nullable List<StackUserSettingArgs> userSettings) {
-            this.userSettings = Output.ofNullable(userSettings);
+            this.userSettings = Codegen.ofNullable(userSettings);
             return this;
         }
         public Builder userSettings(StackUserSettingArgs... userSettings) {

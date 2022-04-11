@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> clientId;
 
     public Output<Object> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> connectionProperties;
 
     public Output<Object> getConnectionProperties() {
-        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
+        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> host;
 
     public Output<Object> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> redirectUri;
 
     public Output<Object> getRedirectUri() {
-        return this.redirectUri == null ? Output.empty() : this.redirectUri;
+        return this.redirectUri == null ? Codegen.empty() : this.redirectUri;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> useEncryptedEndpoints;
 
     public Output<Object> getUseEncryptedEndpoints() {
-        return this.useEncryptedEndpoints == null ? Output.empty() : this.useEncryptedEndpoints;
+        return this.useEncryptedEndpoints == null ? Codegen.empty() : this.useEncryptedEndpoints;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> useHostVerification;
 
     public Output<Object> getUseHostVerification() {
-        return this.useHostVerification == null ? Output.empty() : this.useHostVerification;
+        return this.useHostVerification == null ? Codegen.empty() : this.useHostVerification;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> usePeerVerification;
 
     public Output<Object> getUsePeerVerification() {
-        return this.usePeerVerification == null ? Output.empty() : this.usePeerVerification;
+        return this.usePeerVerification == null ? Codegen.empty() : this.usePeerVerification;
     }
 
     public SquareLinkedServiceArgs(
@@ -213,20 +214,20 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
     }
 
     private SquareLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.connectVia = Output.empty();
-        this.connectionProperties = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.host = Output.empty();
-        this.parameters = Output.empty();
-        this.redirectUri = Output.empty();
-        this.type = Output.empty();
-        this.useEncryptedEndpoints = Output.empty();
-        this.useHostVerification = Output.empty();
-        this.usePeerVerification = Output.empty();
+        this.annotations = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.connectionProperties = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.host = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.redirectUri = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useEncryptedEndpoints = Codegen.empty();
+        this.useHostVerification = Codegen.empty();
+        this.usePeerVerification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -280,7 +281,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -291,7 +292,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
@@ -299,7 +300,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -307,7 +308,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
@@ -315,7 +316,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Output.ofNullable(connectionProperties);
+            this.connectionProperties = Codegen.ofNullable(connectionProperties);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -323,7 +324,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -331,7 +332,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder host(@Nullable Output<Object> host) {
@@ -339,7 +340,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder host(@Nullable Object host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -347,7 +348,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder redirectUri(@Nullable Output<Object> redirectUri) {
@@ -355,7 +356,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder redirectUri(@Nullable Object redirectUri) {
-            this.redirectUri = Output.ofNullable(redirectUri);
+            this.redirectUri = Codegen.ofNullable(redirectUri);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -371,7 +372,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder useEncryptedEndpoints(@Nullable Object useEncryptedEndpoints) {
-            this.useEncryptedEndpoints = Output.ofNullable(useEncryptedEndpoints);
+            this.useEncryptedEndpoints = Codegen.ofNullable(useEncryptedEndpoints);
             return this;
         }
         public Builder useHostVerification(@Nullable Output<Object> useHostVerification) {
@@ -379,7 +380,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder useHostVerification(@Nullable Object useHostVerification) {
-            this.useHostVerification = Output.ofNullable(useHostVerification);
+            this.useHostVerification = Codegen.ofNullable(useHostVerification);
             return this;
         }
         public Builder usePeerVerification(@Nullable Output<Object> usePeerVerification) {
@@ -387,7 +388,7 @@ public final class SquareLinkedServiceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder usePeerVerification(@Nullable Object usePeerVerification) {
-            this.usePeerVerification = Output.ofNullable(usePeerVerification);
+            this.usePeerVerification = Codegen.ofNullable(usePeerVerification);
             return this;
         }        public SquareLinkedServiceArgs build() {
             return new SquareLinkedServiceArgs(annotations, clientId, clientSecret, connectVia, connectionProperties, description, encryptedCredential, host, parameters, redirectUri, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);

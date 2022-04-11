@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.policy_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
       private final @Nullable Output<List<IDRangeArgs>> ranges;
 
     public Output<List<IDRangeArgs>> getRanges() {
-        return this.ranges == null ? Output.empty() : this.ranges;
+        return this.ranges == null ? Codegen.empty() : this.ranges;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
       private final @Nullable Output<String> rule;
 
     public Output<String> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     public SupplementalGroupsStrategyOptionsArgs(
@@ -50,8 +51,8 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
     }
 
     private SupplementalGroupsStrategyOptionsArgs() {
-        this.ranges = Output.empty();
-        this.rule = Output.empty();
+        this.ranges = Codegen.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
             return this;
         }
         public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
-            this.ranges = Output.ofNullable(ranges);
+            this.ranges = Codegen.ofNullable(ranges);
             return this;
         }
         public Builder ranges(IDRangeArgs... ranges) {
@@ -92,7 +93,7 @@ public final class SupplementalGroupsStrategyOptionsArgs extends io.pulumi.resou
             return this;
         }
         public Builder rule(@Nullable String rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }        public SupplementalGroupsStrategyOptionsArgs build() {
             return new SupplementalGroupsStrategyOptionsArgs(ranges, rule);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesGetArgs;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
       private final @Nullable Output<WorkflowTemplateParameterValidationRegexGetArgs> regex;
 
     public Output<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
       private final @Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
     public Output<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public WorkflowTemplateParameterValidationGetArgs(
@@ -45,8 +46,8 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
     }
 
     private WorkflowTemplateParameterValidationGetArgs() {
-        this.regex = Output.empty();
-        this.values = Output.empty();
+        this.regex = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
             return this;
         }
         public Builder regex(@Nullable WorkflowTemplateParameterValidationRegexGetArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder values(@Nullable Output<WorkflowTemplateParameterValidationValuesGetArgs> values) {
@@ -84,7 +85,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
             return this;
         }
         public Builder values(@Nullable WorkflowTemplateParameterValidationValuesGetArgs values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }        public WorkflowTemplateParameterValidationGetArgs build() {
             return new WorkflowTemplateParameterValidationGetArgs(regex, values);

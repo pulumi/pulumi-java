@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class InstanceTemplateConfidentialInstanceConfigArgs extends io.pul
     }
 
     private InstanceTemplateConfidentialInstanceConfigArgs() {
-        this.enableConfidentialCompute = Output.empty();
+        this.enableConfidentialCompute = Codegen.empty();
     }
 
     public static Builder builder() {

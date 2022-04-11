@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateName;
 
     public Output<String> getCertificateName() {
-        return this.certificateName == null ? Output.empty() : this.certificateName;
+        return this.certificateName == null ? Codegen.empty() : this.certificateName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isExportable;
 
     public Output<Boolean> getIsExportable() {
-        return this.isExportable == null ? Output.empty() : this.isExportable;
+        return this.isExportable == null ? Codegen.empty() : this.isExportable;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public CertificateArgs(
@@ -123,14 +124,14 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.automationAccountName = Output.empty();
-        this.base64Value = Output.empty();
-        this.certificateName = Output.empty();
-        this.description = Output.empty();
-        this.isExportable = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.thumbprint = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.base64Value = Codegen.empty();
+        this.certificateName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isExportable = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateName(@Nullable String certificateName) {
-            this.certificateName = Output.ofNullable(certificateName);
+            this.certificateName = Codegen.ofNullable(certificateName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -196,7 +197,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isExportable(@Nullable Output<Boolean> isExportable) {
@@ -204,7 +205,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isExportable(@Nullable Boolean isExportable) {
-            this.isExportable = Output.ofNullable(isExportable);
+            this.isExportable = Codegen.ofNullable(isExportable);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -228,7 +229,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public CertificateArgs build() {
             return new CertificateArgs(automationAccountName, base64Value, certificateName, description, isExportable, name, resourceGroupName, thumbprint);

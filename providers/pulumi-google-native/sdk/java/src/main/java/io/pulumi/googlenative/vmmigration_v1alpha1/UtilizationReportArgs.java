@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.UtilizationReportTimeFrame;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationInfoArgs;
 import java.lang.String;
@@ -25,28 +26,28 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     @Import(name="sourceId", required=true)
@@ -64,7 +65,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<UtilizationReportTimeFrame> timeFrame;
 
     public Output<UtilizationReportTimeFrame> getTimeFrame() {
-        return this.timeFrame == null ? Output.empty() : this.timeFrame;
+        return this.timeFrame == null ? Codegen.empty() : this.timeFrame;
     }
 
     @Import(name="utilizationReportId", required=true)
@@ -82,7 +83,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<VmUtilizationInfoArgs>> vms;
 
     public Output<List<VmUtilizationInfoArgs>> getVms() {
-        return this.vms == null ? Output.empty() : this.vms;
+        return this.vms == null ? Codegen.empty() : this.vms;
     }
 
     public UtilizationReportArgs(
@@ -105,14 +106,14 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UtilizationReportArgs() {
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.sourceId = Output.empty();
-        this.timeFrame = Output.empty();
-        this.utilizationReportId = Output.empty();
-        this.vms = Output.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.timeFrame = Codegen.empty();
+        this.utilizationReportId = Codegen.empty();
+        this.vms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -162,7 +163,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -170,7 +171,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -178,7 +179,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sourceId(Output<String> sourceId) {
@@ -194,7 +195,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timeFrame(@Nullable UtilizationReportTimeFrame timeFrame) {
-            this.timeFrame = Output.ofNullable(timeFrame);
+            this.timeFrame = Codegen.ofNullable(timeFrame);
             return this;
         }
         public Builder utilizationReportId(Output<String> utilizationReportId) {
@@ -210,7 +211,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vms(@Nullable List<VmUtilizationInfoArgs> vms) {
-            this.vms = Output.ofNullable(vms);
+            this.vms = Codegen.ofNullable(vms);
             return this;
         }
         public Builder vms(VmUtilizationInfoArgs... vms) {

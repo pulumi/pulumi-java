@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
+        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     public AzureSqlProtectionPolicyArgs(
@@ -66,9 +67,9 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private AzureSqlProtectionPolicyArgs() {
-        this.backupManagementType = Output.empty();
-        this.protectedItemsCount = Output.empty();
-        this.retentionPolicy = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.protectedItemsCount = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
@@ -116,7 +117,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }        public AzureSqlProtectionPolicyArgs build() {
             return new AzureSqlProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy);

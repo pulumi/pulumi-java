@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> administratorType;
 
     public Output<String> getAdministratorType() {
-        return this.administratorType == null ? Output.empty() : this.administratorType;
+        return this.administratorType == null ? Codegen.empty() : this.administratorType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> sid;
 
     public Output<String> getSid() {
-        return this.sid == null ? Output.empty() : this.sid;
+        return this.sid == null ? Codegen.empty() : this.sid;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
     }
 
     private WorkspaceSqlAadAdminArgs() {
-        this.administratorType = Output.empty();
-        this.login = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sid = Output.empty();
-        this.tenantId = Output.empty();
-        this.workspaceName = Output.empty();
+        this.administratorType = Codegen.empty();
+        this.login = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder administratorType(@Nullable String administratorType) {
-            this.administratorType = Output.ofNullable(administratorType);
+            this.administratorType = Codegen.ofNullable(administratorType);
             return this;
         }
         public Builder login(@Nullable Output<String> login) {
@@ -147,7 +148,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder login(@Nullable String login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -163,7 +164,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sid(@Nullable String sid) {
-            this.sid = Output.ofNullable(sid);
+            this.sid = Codegen.ofNullable(sid);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -171,7 +172,7 @@ public final class WorkspaceSqlAadAdminArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

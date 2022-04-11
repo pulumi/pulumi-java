@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -49,7 +50,7 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> sharePassword;
 
     public Output<String> getSharePassword() {
-        return this.sharePassword == null ? Output.empty() : this.sharePassword;
+        return this.sharePassword == null ? Codegen.empty() : this.sharePassword;
     }
 
     /**
@@ -68,17 +69,17 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
         Output<String> resourceGroupId,
         @Nullable Output<String> sharePassword,
         Output<String> stagingStorageAccountId) {
-        this.dataAccountType = dataAccountType == null ? Output.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
+        this.dataAccountType = dataAccountType == null ? Codegen.ofNullable("StorageAccount") : Objects.requireNonNull(dataAccountType, "expected parameter 'dataAccountType' to be non-null");
         this.resourceGroupId = Objects.requireNonNull(resourceGroupId, "expected parameter 'resourceGroupId' to be non-null");
         this.sharePassword = sharePassword;
         this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId, "expected parameter 'stagingStorageAccountId' to be non-null");
     }
 
     private ManagedDiskDetailsArgs() {
-        this.dataAccountType = Output.empty();
-        this.resourceGroupId = Output.empty();
-        this.sharePassword = Output.empty();
-        this.stagingStorageAccountId = Output.empty();
+        this.dataAccountType = Codegen.empty();
+        this.resourceGroupId = Codegen.empty();
+        this.sharePassword = Codegen.empty();
+        this.stagingStorageAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ManagedDiskDetailsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sharePassword(@Nullable String sharePassword) {
-            this.sharePassword = Output.ofNullable(sharePassword);
+            this.sharePassword = Codegen.ofNullable(sharePassword);
             return this;
         }
         public Builder stagingStorageAccountId(Output<String> stagingStorageAccountId) {

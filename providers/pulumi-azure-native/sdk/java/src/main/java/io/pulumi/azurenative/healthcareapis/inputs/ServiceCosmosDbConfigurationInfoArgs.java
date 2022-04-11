@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
       private final @Nullable Output<String> keyVaultKeyUri;
 
     public Output<String> getKeyVaultKeyUri() {
-        return this.keyVaultKeyUri == null ? Output.empty() : this.keyVaultKeyUri;
+        return this.keyVaultKeyUri == null ? Codegen.empty() : this.keyVaultKeyUri;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> offerThroughput;
 
     public Output<Integer> getOfferThroughput() {
-        return this.offerThroughput == null ? Output.empty() : this.offerThroughput;
+        return this.offerThroughput == null ? Codegen.empty() : this.offerThroughput;
     }
 
     public ServiceCosmosDbConfigurationInfoArgs(
@@ -49,8 +50,8 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
     }
 
     private ServiceCosmosDbConfigurationInfoArgs() {
-        this.keyVaultKeyUri = Output.empty();
-        this.offerThroughput = Output.empty();
+        this.keyVaultKeyUri = Codegen.empty();
+        this.offerThroughput = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
             return this;
         }
         public Builder keyVaultKeyUri(@Nullable String keyVaultKeyUri) {
-            this.keyVaultKeyUri = Output.ofNullable(keyVaultKeyUri);
+            this.keyVaultKeyUri = Codegen.ofNullable(keyVaultKeyUri);
             return this;
         }
         public Builder offerThroughput(@Nullable Output<Integer> offerThroughput) {
@@ -88,7 +89,7 @@ public final class ServiceCosmosDbConfigurationInfoArgs extends io.pulumi.resour
             return this;
         }
         public Builder offerThroughput(@Nullable Integer offerThroughput) {
-            this.offerThroughput = Output.ofNullable(offerThroughput);
+            this.offerThroughput = Codegen.ofNullable(offerThroughput);
             return this;
         }        public ServiceCosmosDbConfigurationInfoArgs build() {
             return new ServiceCosmosDbConfigurationInfoArgs(keyVaultKeyUri, offerThroughput);

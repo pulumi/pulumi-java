@@ -6,6 +6,7 @@ package io.pulumi.aws.redshift.inputs;
 import io.pulumi.aws.redshift.inputs.SecurityGroupIngressGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress;
 
     public Output<List<SecurityGroupIngressGetArgs>> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -46,22 +47,22 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SecurityGroupState(
         @Nullable Output<String> description,
         @Nullable Output<List<SecurityGroupIngressGetArgs>> ingress,
         @Nullable Output<String> name) {
-        this.description = description == null ? Output.ofNullable("Managed by Pulumi") : description;
+        this.description = description == null ? Codegen.ofNullable("Managed by Pulumi") : description;
         this.ingress = ingress;
         this.name = name;
     }
 
     private SecurityGroupState() {
-        this.description = Output.empty();
-        this.ingress = Output.empty();
-        this.name = Output.empty();
+        this.description = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ingress(@Nullable Output<List<SecurityGroupIngressGetArgs>> ingress) {
@@ -101,7 +102,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingress(@Nullable List<SecurityGroupIngressGetArgs> ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder ingress(SecurityGroupIngressGetArgs... ingress) {
@@ -112,7 +113,7 @@ public final class SecurityGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SecurityGroupState build() {
             return new SecurityGroupState(description, ingress, name);

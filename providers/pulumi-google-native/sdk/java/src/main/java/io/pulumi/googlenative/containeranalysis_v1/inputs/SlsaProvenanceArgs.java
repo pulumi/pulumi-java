@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.MaterialArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaBuilderArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SlsaMetadataArgs;
@@ -26,7 +27,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SlsaBuilderArgs> builder;
 
     public Output<SlsaBuilderArgs> getBuilder() {
-        return this.builder == null ? Output.empty() : this.builder;
+        return this.builder == null ? Codegen.empty() : this.builder;
     }
 
     /**
@@ -37,14 +38,14 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MaterialArgs>> materials;
 
     public Output<List<MaterialArgs>> getMaterials() {
-        return this.materials == null ? Output.empty() : this.materials;
+        return this.materials == null ? Codegen.empty() : this.materials;
     }
 
     @Import(name="metadata")
       private final @Nullable Output<SlsaMetadataArgs> metadata;
 
     public Output<SlsaMetadataArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SlsaRecipeArgs> recipe;
 
     public Output<SlsaRecipeArgs> getRecipe() {
-        return this.recipe == null ? Output.empty() : this.recipe;
+        return this.recipe == null ? Codegen.empty() : this.recipe;
     }
 
     public SlsaProvenanceArgs(
@@ -70,10 +71,10 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SlsaProvenanceArgs() {
-        this.builder = Output.empty();
-        this.materials = Output.empty();
-        this.metadata = Output.empty();
-        this.recipe = Output.empty();
+        this.builder = Codegen.empty();
+        this.materials = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.recipe = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder builder(@Nullable SlsaBuilderArgs builder) {
-            this.builder = Output.ofNullable(builder);
+            this.builder = Codegen.ofNullable(builder);
             return this;
         }
         public Builder materials(@Nullable Output<List<MaterialArgs>> materials) {
@@ -115,7 +116,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder materials(@Nullable List<MaterialArgs> materials) {
-            this.materials = Output.ofNullable(materials);
+            this.materials = Codegen.ofNullable(materials);
             return this;
         }
         public Builder materials(MaterialArgs... materials) {
@@ -126,7 +127,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable SlsaMetadataArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder recipe(@Nullable Output<SlsaRecipeArgs> recipe) {
@@ -134,7 +135,7 @@ public final class SlsaProvenanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recipe(@Nullable SlsaRecipeArgs recipe) {
-            this.recipe = Output.ofNullable(recipe);
+            this.recipe = Codegen.ofNullable(recipe);
             return this;
         }        public SlsaProvenanceArgs build() {
             return new SlsaProvenanceArgs(builder, materials, metadata, recipe);

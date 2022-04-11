@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> blackhole;
 
     public Output<Boolean> getBlackhole() {
-        return this.blackhole == null ? Output.empty() : this.blackhole;
+        return this.blackhole == null ? Codegen.empty() : this.blackhole;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
+        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
+        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transitGatewayRouteTableId;
 
     public Output<String> getTransitGatewayRouteTableId() {
-        return this.transitGatewayRouteTableId == null ? Output.empty() : this.transitGatewayRouteTableId;
+        return this.transitGatewayRouteTableId == null ? Codegen.empty() : this.transitGatewayRouteTableId;
     }
 
     public RouteState(
@@ -71,10 +72,10 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.blackhole = Output.empty();
-        this.destinationCidrBlock = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayRouteTableId = Output.empty();
+        this.blackhole = Codegen.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayRouteTableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blackhole(@Nullable Boolean blackhole) {
-            this.blackhole = Output.ofNullable(blackhole);
+            this.blackhole = Codegen.ofNullable(blackhole);
             return this;
         }
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
@@ -116,7 +117,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
@@ -124,7 +125,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
             return this;
         }
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
@@ -132,7 +133,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
+            this.transitGatewayRouteTableId = Codegen.ofNullable(transitGatewayRouteTableId);
             return this;
         }        public RouteState build() {
             return new RouteState(blackhole, destinationCidrBlock, transitGatewayAttachmentId, transitGatewayRouteTableId);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class CustomServiceTelemetryGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     public CustomServiceTelemetryGetArgs(@Nullable Output<String> resourceName) {
@@ -32,7 +33,7 @@ public final class CustomServiceTelemetryGetArgs extends io.pulumi.resources.Res
     }
 
     private CustomServiceTelemetryGetArgs() {
-        this.resourceName = Output.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -60,7 +61,7 @@ public final class CustomServiceTelemetryGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }        public CustomServiceTelemetryGetArgs build() {
             return new CustomServiceTelemetryGetArgs(resourceName);

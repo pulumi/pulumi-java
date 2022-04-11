@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public PeriodicTimerSourceInfoArgs(
@@ -61,9 +62,9 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
     }
 
     private PeriodicTimerSourceInfoArgs() {
-        this.schedule = Output.empty();
-        this.startTime = Output.empty();
-        this.topic = Output.empty();
+        this.schedule = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class PeriodicTimerSourceInfoArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public PeriodicTimerSourceInfoArgs build() {
             return new PeriodicTimerSourceInfoArgs(schedule, startTime, topic);

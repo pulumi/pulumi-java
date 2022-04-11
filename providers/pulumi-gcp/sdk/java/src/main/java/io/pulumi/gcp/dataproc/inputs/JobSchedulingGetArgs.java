@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class JobSchedulingGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobSchedulingGetArgs() {
-        this.maxFailuresPerHour = Output.empty();
-        this.maxFailuresTotal = Output.empty();
+        this.maxFailuresPerHour = Codegen.empty();
+        this.maxFailuresTotal = Codegen.empty();
     }
 
     public static Builder builder() {

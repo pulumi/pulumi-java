@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class NodePoolNodeConfigGuestAcceleratorArgs extends io.pulumi.reso
       private final @Nullable Output<String> gpuPartitionSize;
 
     public Output<String> getGpuPartitionSize() {
-        return this.gpuPartitionSize == null ? Output.empty() : this.gpuPartitionSize;
+        return this.gpuPartitionSize == null ? Codegen.empty() : this.gpuPartitionSize;
     }
 
     @Import(name="type", required=true)
@@ -46,9 +47,9 @@ public final class NodePoolNodeConfigGuestAcceleratorArgs extends io.pulumi.reso
     }
 
     private NodePoolNodeConfigGuestAcceleratorArgs() {
-        this.count = Output.empty();
-        this.gpuPartitionSize = Output.empty();
-        this.type = Output.empty();
+        this.count = Codegen.empty();
+        this.gpuPartitionSize = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class NodePoolNodeConfigGuestAcceleratorArgs extends io.pulumi.reso
             return this;
         }
         public Builder gpuPartitionSize(@Nullable String gpuPartitionSize) {
-            this.gpuPartitionSize = Output.ofNullable(gpuPartitionSize);
+            this.gpuPartitionSize = Codegen.ofNullable(gpuPartitionSize);
             return this;
         }
         public Builder type(Output<String> type) {

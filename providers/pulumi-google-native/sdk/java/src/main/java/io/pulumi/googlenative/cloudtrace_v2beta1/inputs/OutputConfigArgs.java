@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     public OutputConfigArgs(@Nullable Output<String> destination) {
@@ -34,7 +35,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OutputConfigArgs() {
-        this.destination = Output.empty();
+        this.destination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }        public OutputConfigArgs build() {
             return new OutputConfigArgs(destination);

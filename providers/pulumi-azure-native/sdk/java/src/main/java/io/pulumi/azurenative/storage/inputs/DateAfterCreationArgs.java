@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DateAfterCreationArgs() {
-        this.daysAfterCreationGreaterThan = Output.empty();
+        this.daysAfterCreationGreaterThan = Codegen.empty();
     }
 
     public static Builder builder() {

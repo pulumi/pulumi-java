@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicebus;
 import io.pulumi.azurenative.servicebus.enums.EntityStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> autoDeleteOnIdle;
 
     public Output<String> getAutoDeleteOnIdle() {
-        return this.autoDeleteOnIdle == null ? Output.empty() : this.autoDeleteOnIdle;
+        return this.autoDeleteOnIdle == null ? Codegen.empty() : this.autoDeleteOnIdle;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deadLetteringOnMessageExpiration;
 
     public Output<Boolean> getDeadLetteringOnMessageExpiration() {
-        return this.deadLetteringOnMessageExpiration == null ? Output.empty() : this.deadLetteringOnMessageExpiration;
+        return this.deadLetteringOnMessageExpiration == null ? Codegen.empty() : this.deadLetteringOnMessageExpiration;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultMessageTimeToLive;
 
     public Output<String> getDefaultMessageTimeToLive() {
-        return this.defaultMessageTimeToLive == null ? Output.empty() : this.defaultMessageTimeToLive;
+        return this.defaultMessageTimeToLive == null ? Codegen.empty() : this.defaultMessageTimeToLive;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> duplicateDetectionHistoryTimeWindow;
 
     public Output<String> getDuplicateDetectionHistoryTimeWindow() {
-        return this.duplicateDetectionHistoryTimeWindow == null ? Output.empty() : this.duplicateDetectionHistoryTimeWindow;
+        return this.duplicateDetectionHistoryTimeWindow == null ? Codegen.empty() : this.duplicateDetectionHistoryTimeWindow;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableBatchedOperations;
 
     public Output<Boolean> getEnableBatchedOperations() {
-        return this.enableBatchedOperations == null ? Output.empty() : this.enableBatchedOperations;
+        return this.enableBatchedOperations == null ? Codegen.empty() : this.enableBatchedOperations;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableExpress;
 
     public Output<Boolean> getEnableExpress() {
-        return this.enableExpress == null ? Output.empty() : this.enableExpress;
+        return this.enableExpress == null ? Codegen.empty() : this.enableExpress;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enablePartitioning;
 
     public Output<Boolean> getEnablePartitioning() {
-        return this.enablePartitioning == null ? Output.empty() : this.enablePartitioning;
+        return this.enablePartitioning == null ? Codegen.empty() : this.enablePartitioning;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> forwardDeadLetteredMessagesTo;
 
     public Output<String> getForwardDeadLetteredMessagesTo() {
-        return this.forwardDeadLetteredMessagesTo == null ? Output.empty() : this.forwardDeadLetteredMessagesTo;
+        return this.forwardDeadLetteredMessagesTo == null ? Codegen.empty() : this.forwardDeadLetteredMessagesTo;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> forwardTo;
 
     public Output<String> getForwardTo() {
-        return this.forwardTo == null ? Output.empty() : this.forwardTo;
+        return this.forwardTo == null ? Codegen.empty() : this.forwardTo;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lockDuration;
 
     public Output<String> getLockDuration() {
-        return this.lockDuration == null ? Output.empty() : this.lockDuration;
+        return this.lockDuration == null ? Codegen.empty() : this.lockDuration;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxDeliveryCount;
 
     public Output<Integer> getMaxDeliveryCount() {
-        return this.maxDeliveryCount == null ? Output.empty() : this.maxDeliveryCount;
+        return this.maxDeliveryCount == null ? Codegen.empty() : this.maxDeliveryCount;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxSizeInMegabytes;
 
     public Output<Integer> getMaxSizeInMegabytes() {
-        return this.maxSizeInMegabytes == null ? Output.empty() : this.maxSizeInMegabytes;
+        return this.maxSizeInMegabytes == null ? Codegen.empty() : this.maxSizeInMegabytes;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requiresDuplicateDetection;
 
     public Output<Boolean> getRequiresDuplicateDetection() {
-        return this.requiresDuplicateDetection == null ? Output.empty() : this.requiresDuplicateDetection;
+        return this.requiresDuplicateDetection == null ? Codegen.empty() : this.requiresDuplicateDetection;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requiresSession;
 
     public Output<Boolean> getRequiresSession() {
-        return this.requiresSession == null ? Output.empty() : this.requiresSession;
+        return this.requiresSession == null ? Codegen.empty() : this.requiresSession;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EntityStatus> status;
 
     public Output<EntityStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public QueueArgs(
@@ -255,24 +256,24 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.autoDeleteOnIdle = Output.empty();
-        this.deadLetteringOnMessageExpiration = Output.empty();
-        this.defaultMessageTimeToLive = Output.empty();
-        this.duplicateDetectionHistoryTimeWindow = Output.empty();
-        this.enableBatchedOperations = Output.empty();
-        this.enableExpress = Output.empty();
-        this.enablePartitioning = Output.empty();
-        this.forwardDeadLetteredMessagesTo = Output.empty();
-        this.forwardTo = Output.empty();
-        this.lockDuration = Output.empty();
-        this.maxDeliveryCount = Output.empty();
-        this.maxSizeInMegabytes = Output.empty();
-        this.namespaceName = Output.empty();
-        this.queueName = Output.empty();
-        this.requiresDuplicateDetection = Output.empty();
-        this.requiresSession = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.status = Output.empty();
+        this.autoDeleteOnIdle = Codegen.empty();
+        this.deadLetteringOnMessageExpiration = Codegen.empty();
+        this.defaultMessageTimeToLive = Codegen.empty();
+        this.duplicateDetectionHistoryTimeWindow = Codegen.empty();
+        this.enableBatchedOperations = Codegen.empty();
+        this.enableExpress = Codegen.empty();
+        this.enablePartitioning = Codegen.empty();
+        this.forwardDeadLetteredMessagesTo = Codegen.empty();
+        this.forwardTo = Codegen.empty();
+        this.lockDuration = Codegen.empty();
+        this.maxDeliveryCount = Codegen.empty();
+        this.maxSizeInMegabytes = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.queueName = Codegen.empty();
+        this.requiresDuplicateDetection = Codegen.empty();
+        this.requiresSession = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -334,7 +335,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoDeleteOnIdle(@Nullable String autoDeleteOnIdle) {
-            this.autoDeleteOnIdle = Output.ofNullable(autoDeleteOnIdle);
+            this.autoDeleteOnIdle = Codegen.ofNullable(autoDeleteOnIdle);
             return this;
         }
         public Builder deadLetteringOnMessageExpiration(@Nullable Output<Boolean> deadLetteringOnMessageExpiration) {
@@ -342,7 +343,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetteringOnMessageExpiration(@Nullable Boolean deadLetteringOnMessageExpiration) {
-            this.deadLetteringOnMessageExpiration = Output.ofNullable(deadLetteringOnMessageExpiration);
+            this.deadLetteringOnMessageExpiration = Codegen.ofNullable(deadLetteringOnMessageExpiration);
             return this;
         }
         public Builder defaultMessageTimeToLive(@Nullable Output<String> defaultMessageTimeToLive) {
@@ -350,7 +351,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultMessageTimeToLive(@Nullable String defaultMessageTimeToLive) {
-            this.defaultMessageTimeToLive = Output.ofNullable(defaultMessageTimeToLive);
+            this.defaultMessageTimeToLive = Codegen.ofNullable(defaultMessageTimeToLive);
             return this;
         }
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable Output<String> duplicateDetectionHistoryTimeWindow) {
@@ -358,7 +359,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder duplicateDetectionHistoryTimeWindow(@Nullable String duplicateDetectionHistoryTimeWindow) {
-            this.duplicateDetectionHistoryTimeWindow = Output.ofNullable(duplicateDetectionHistoryTimeWindow);
+            this.duplicateDetectionHistoryTimeWindow = Codegen.ofNullable(duplicateDetectionHistoryTimeWindow);
             return this;
         }
         public Builder enableBatchedOperations(@Nullable Output<Boolean> enableBatchedOperations) {
@@ -366,7 +367,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableBatchedOperations(@Nullable Boolean enableBatchedOperations) {
-            this.enableBatchedOperations = Output.ofNullable(enableBatchedOperations);
+            this.enableBatchedOperations = Codegen.ofNullable(enableBatchedOperations);
             return this;
         }
         public Builder enableExpress(@Nullable Output<Boolean> enableExpress) {
@@ -374,7 +375,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableExpress(@Nullable Boolean enableExpress) {
-            this.enableExpress = Output.ofNullable(enableExpress);
+            this.enableExpress = Codegen.ofNullable(enableExpress);
             return this;
         }
         public Builder enablePartitioning(@Nullable Output<Boolean> enablePartitioning) {
@@ -382,7 +383,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enablePartitioning(@Nullable Boolean enablePartitioning) {
-            this.enablePartitioning = Output.ofNullable(enablePartitioning);
+            this.enablePartitioning = Codegen.ofNullable(enablePartitioning);
             return this;
         }
         public Builder forwardDeadLetteredMessagesTo(@Nullable Output<String> forwardDeadLetteredMessagesTo) {
@@ -390,7 +391,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forwardDeadLetteredMessagesTo(@Nullable String forwardDeadLetteredMessagesTo) {
-            this.forwardDeadLetteredMessagesTo = Output.ofNullable(forwardDeadLetteredMessagesTo);
+            this.forwardDeadLetteredMessagesTo = Codegen.ofNullable(forwardDeadLetteredMessagesTo);
             return this;
         }
         public Builder forwardTo(@Nullable Output<String> forwardTo) {
@@ -398,7 +399,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forwardTo(@Nullable String forwardTo) {
-            this.forwardTo = Output.ofNullable(forwardTo);
+            this.forwardTo = Codegen.ofNullable(forwardTo);
             return this;
         }
         public Builder lockDuration(@Nullable Output<String> lockDuration) {
@@ -406,7 +407,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lockDuration(@Nullable String lockDuration) {
-            this.lockDuration = Output.ofNullable(lockDuration);
+            this.lockDuration = Codegen.ofNullable(lockDuration);
             return this;
         }
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
@@ -414,7 +415,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxDeliveryCount(@Nullable Integer maxDeliveryCount) {
-            this.maxDeliveryCount = Output.ofNullable(maxDeliveryCount);
+            this.maxDeliveryCount = Codegen.ofNullable(maxDeliveryCount);
             return this;
         }
         public Builder maxSizeInMegabytes(@Nullable Output<Integer> maxSizeInMegabytes) {
@@ -422,7 +423,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxSizeInMegabytes(@Nullable Integer maxSizeInMegabytes) {
-            this.maxSizeInMegabytes = Output.ofNullable(maxSizeInMegabytes);
+            this.maxSizeInMegabytes = Codegen.ofNullable(maxSizeInMegabytes);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {
@@ -438,7 +439,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }
         public Builder requiresDuplicateDetection(@Nullable Output<Boolean> requiresDuplicateDetection) {
@@ -446,7 +447,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiresDuplicateDetection(@Nullable Boolean requiresDuplicateDetection) {
-            this.requiresDuplicateDetection = Output.ofNullable(requiresDuplicateDetection);
+            this.requiresDuplicateDetection = Codegen.ofNullable(requiresDuplicateDetection);
             return this;
         }
         public Builder requiresSession(@Nullable Output<Boolean> requiresSession) {
@@ -454,7 +455,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requiresSession(@Nullable Boolean requiresSession) {
-            this.requiresSession = Output.ofNullable(requiresSession);
+            this.requiresSession = Codegen.ofNullable(requiresSession);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -470,7 +471,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable EntityStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public QueueArgs build() {
             return new QueueArgs(autoDeleteOnIdle, deadLetteringOnMessageExpiration, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, forwardDeadLetteredMessagesTo, forwardTo, lockDuration, maxDeliveryCount, maxSizeInMegabytes, namespaceName, queueName, requiresDuplicateDetection, requiresSession, resourceGroupName, status);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class JobPlacementGetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> clusterUuid;
 
     public Output<String> getClusterUuid() {
-        return this.clusterUuid == null ? Output.empty() : this.clusterUuid;
+        return this.clusterUuid == null ? Codegen.empty() : this.clusterUuid;
     }
 
     public JobPlacementGetArgs(
@@ -36,8 +37,8 @@ public final class JobPlacementGetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private JobPlacementGetArgs() {
-        this.clusterName = Output.empty();
-        this.clusterUuid = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.clusterUuid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class JobPlacementGetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clusterUuid(@Nullable String clusterUuid) {
-            this.clusterUuid = Output.ofNullable(clusterUuid);
+            this.clusterUuid = Codegen.ofNullable(clusterUuid);
             return this;
         }        public JobPlacementGetArgs build() {
             return new JobPlacementGetArgs(clusterName, clusterUuid);

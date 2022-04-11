@@ -5,6 +5,7 @@ package io.pulumi.gcp.container;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.AwsClusterAuthorizationArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterControlPlaneArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterFleetArgs;
@@ -27,7 +28,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public AwsClusterArgs(
@@ -153,16 +154,16 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AwsClusterArgs() {
-        this.annotations = Output.empty();
-        this.authorization = Output.empty();
-        this.awsRegion = Output.empty();
-        this.controlPlane = Output.empty();
-        this.description = Output.empty();
-        this.fleet = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networking = Output.empty();
-        this.project = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authorization = Codegen.empty();
+        this.awsRegion = Codegen.empty();
+        this.controlPlane = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fleet = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networking = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder authorization(Output<AwsClusterAuthorizationArgs> authorization) {
@@ -240,7 +241,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fleet(Output<AwsClusterFleetArgs> fleet) {
@@ -264,7 +265,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networking(Output<AwsClusterNetworkingArgs> networking) {
@@ -280,7 +281,7 @@ public final class AwsClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public AwsClusterArgs build() {
             return new AwsClusterArgs(annotations, authorization, awsRegion, controlPlane, description, fleet, location, name, networking, project);

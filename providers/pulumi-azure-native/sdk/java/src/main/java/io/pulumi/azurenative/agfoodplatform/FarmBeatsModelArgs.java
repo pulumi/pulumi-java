@@ -5,6 +5,7 @@ package io.pulumi.azurenative.agfoodplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> farmBeatsResourceName;
 
     public Output<String> getFarmBeatsResourceName() {
-        return this.farmBeatsResourceName == null ? Output.empty() : this.farmBeatsResourceName;
+        return this.farmBeatsResourceName == null ? Codegen.empty() : this.farmBeatsResourceName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FarmBeatsModelArgs(
@@ -71,10 +72,10 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FarmBeatsModelArgs() {
-        this.farmBeatsResourceName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.farmBeatsResourceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder farmBeatsResourceName(@Nullable String farmBeatsResourceName) {
-            this.farmBeatsResourceName = Output.ofNullable(farmBeatsResourceName);
+            this.farmBeatsResourceName = Codegen.ofNullable(farmBeatsResourceName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -116,7 +117,7 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -132,7 +133,7 @@ public final class FarmBeatsModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public FarmBeatsModelArgs build() {
             return new FarmBeatsModelArgs(farmBeatsResourceName, location, resourceGroupName, tags);

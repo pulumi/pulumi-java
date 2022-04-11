@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataflow.FlexTemplateJobArgs;
 import io.pulumi.gcp.dataflow.inputs.FlexTemplateJobState;
@@ -225,7 +226,7 @@ public class FlexTemplateJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlexTemplateJob(String name, FlexTemplateJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataflow/flexTemplateJob:FlexTemplateJob", name, args == null ? FlexTemplateJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataflow/flexTemplateJob:FlexTemplateJob", name, args == null ? FlexTemplateJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlexTemplateJob(String name, Output<String> id, @Nullable FlexTemplateJobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

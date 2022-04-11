@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 import io.pulumi.aws.elasticsearch.inputs.DomainClusterConfigZoneAwarenessConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> dedicatedMasterCount;
 
     public Output<Integer> getDedicatedMasterCount() {
-        return this.dedicatedMasterCount == null ? Output.empty() : this.dedicatedMasterCount;
+        return this.dedicatedMasterCount == null ? Codegen.empty() : this.dedicatedMasterCount;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> dedicatedMasterEnabled;
 
     public Output<Boolean> getDedicatedMasterEnabled() {
-        return this.dedicatedMasterEnabled == null ? Output.empty() : this.dedicatedMasterEnabled;
+        return this.dedicatedMasterEnabled == null ? Codegen.empty() : this.dedicatedMasterEnabled;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> dedicatedMasterType;
 
     public Output<String> getDedicatedMasterType() {
-        return this.dedicatedMasterType == null ? Output.empty() : this.dedicatedMasterType;
+        return this.dedicatedMasterType == null ? Codegen.empty() : this.dedicatedMasterType;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> warmCount;
 
     public Output<Integer> getWarmCount() {
-        return this.warmCount == null ? Output.empty() : this.warmCount;
+        return this.warmCount == null ? Codegen.empty() : this.warmCount;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> warmEnabled;
 
     public Output<Boolean> getWarmEnabled() {
-        return this.warmEnabled == null ? Output.empty() : this.warmEnabled;
+        return this.warmEnabled == null ? Codegen.empty() : this.warmEnabled;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> warmType;
 
     public Output<String> getWarmType() {
-        return this.warmType == null ? Output.empty() : this.warmType;
+        return this.warmType == null ? Codegen.empty() : this.warmType;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig;
 
     public Output<DomainClusterConfigZoneAwarenessConfigGetArgs> getZoneAwarenessConfig() {
-        return this.zoneAwarenessConfig == null ? Output.empty() : this.zoneAwarenessConfig;
+        return this.zoneAwarenessConfig == null ? Codegen.empty() : this.zoneAwarenessConfig;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> zoneAwarenessEnabled;
 
     public Output<Boolean> getZoneAwarenessEnabled() {
-        return this.zoneAwarenessEnabled == null ? Output.empty() : this.zoneAwarenessEnabled;
+        return this.zoneAwarenessEnabled == null ? Codegen.empty() : this.zoneAwarenessEnabled;
     }
 
     public DomainClusterConfigGetArgs(
@@ -151,16 +152,16 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private DomainClusterConfigGetArgs() {
-        this.dedicatedMasterCount = Output.empty();
-        this.dedicatedMasterEnabled = Output.empty();
-        this.dedicatedMasterType = Output.empty();
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.warmCount = Output.empty();
-        this.warmEnabled = Output.empty();
-        this.warmType = Output.empty();
-        this.zoneAwarenessConfig = Output.empty();
-        this.zoneAwarenessEnabled = Output.empty();
+        this.dedicatedMasterCount = Codegen.empty();
+        this.dedicatedMasterEnabled = Codegen.empty();
+        this.dedicatedMasterType = Codegen.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.warmCount = Codegen.empty();
+        this.warmEnabled = Codegen.empty();
+        this.warmType = Codegen.empty();
+        this.zoneAwarenessConfig = Codegen.empty();
+        this.zoneAwarenessEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dedicatedMasterCount(@Nullable Integer dedicatedMasterCount) {
-            this.dedicatedMasterCount = Output.ofNullable(dedicatedMasterCount);
+            this.dedicatedMasterCount = Codegen.ofNullable(dedicatedMasterCount);
             return this;
         }
         public Builder dedicatedMasterEnabled(@Nullable Output<Boolean> dedicatedMasterEnabled) {
@@ -214,7 +215,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dedicatedMasterEnabled(@Nullable Boolean dedicatedMasterEnabled) {
-            this.dedicatedMasterEnabled = Output.ofNullable(dedicatedMasterEnabled);
+            this.dedicatedMasterEnabled = Codegen.ofNullable(dedicatedMasterEnabled);
             return this;
         }
         public Builder dedicatedMasterType(@Nullable Output<String> dedicatedMasterType) {
@@ -222,7 +223,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dedicatedMasterType(@Nullable String dedicatedMasterType) {
-            this.dedicatedMasterType = Output.ofNullable(dedicatedMasterType);
+            this.dedicatedMasterType = Codegen.ofNullable(dedicatedMasterType);
             return this;
         }
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
@@ -230,7 +231,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -238,7 +239,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder warmCount(@Nullable Output<Integer> warmCount) {
@@ -246,7 +247,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder warmCount(@Nullable Integer warmCount) {
-            this.warmCount = Output.ofNullable(warmCount);
+            this.warmCount = Codegen.ofNullable(warmCount);
             return this;
         }
         public Builder warmEnabled(@Nullable Output<Boolean> warmEnabled) {
@@ -254,7 +255,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder warmEnabled(@Nullable Boolean warmEnabled) {
-            this.warmEnabled = Output.ofNullable(warmEnabled);
+            this.warmEnabled = Codegen.ofNullable(warmEnabled);
             return this;
         }
         public Builder warmType(@Nullable Output<String> warmType) {
@@ -262,7 +263,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder warmType(@Nullable String warmType) {
-            this.warmType = Output.ofNullable(warmType);
+            this.warmType = Codegen.ofNullable(warmType);
             return this;
         }
         public Builder zoneAwarenessConfig(@Nullable Output<DomainClusterConfigZoneAwarenessConfigGetArgs> zoneAwarenessConfig) {
@@ -270,7 +271,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder zoneAwarenessConfig(@Nullable DomainClusterConfigZoneAwarenessConfigGetArgs zoneAwarenessConfig) {
-            this.zoneAwarenessConfig = Output.ofNullable(zoneAwarenessConfig);
+            this.zoneAwarenessConfig = Codegen.ofNullable(zoneAwarenessConfig);
             return this;
         }
         public Builder zoneAwarenessEnabled(@Nullable Output<Boolean> zoneAwarenessEnabled) {
@@ -278,7 +279,7 @@ public final class DomainClusterConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder zoneAwarenessEnabled(@Nullable Boolean zoneAwarenessEnabled) {
-            this.zoneAwarenessEnabled = Output.ofNullable(zoneAwarenessEnabled);
+            this.zoneAwarenessEnabled = Codegen.ofNullable(zoneAwarenessEnabled);
             return this;
         }        public DomainClusterConfigGetArgs build() {
             return new DomainClusterConfigGetArgs(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);

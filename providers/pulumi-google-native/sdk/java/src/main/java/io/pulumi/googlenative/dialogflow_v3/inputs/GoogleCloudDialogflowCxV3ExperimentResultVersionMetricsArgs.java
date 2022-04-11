@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultMetricArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> metrics;
 
     public Output<List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
       private final @Nullable Output<Integer> sessionCount;
 
     public Output<Integer> getSessionCount() {
-        return this.sessionCount == null ? Output.empty() : this.sessionCount;
+        return this.sessionCount == null ? Codegen.empty() : this.sessionCount;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs(
@@ -64,9 +65,9 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
     }
 
     private GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs() {
-        this.metrics = Output.empty();
-        this.sessionCount = Output.empty();
-        this.version = Output.empty();
+        this.metrics = Codegen.empty();
+        this.sessionCount = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
             return this;
         }
         public Builder metrics(@Nullable List<GoogleCloudDialogflowCxV3ExperimentResultMetricArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(GoogleCloudDialogflowCxV3ExperimentResultMetricArgs... metrics) {
@@ -109,7 +110,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
             return this;
         }
         public Builder sessionCount(@Nullable Integer sessionCount) {
-            this.sessionCount = Output.ofNullable(sessionCount);
+            this.sessionCount = Codegen.ofNullable(sessionCount);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -117,7 +118,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs e
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs(metrics, sessionCount, version);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.inputs.DirectLineChannelPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DirectLineChannelPropertiesArgs> properties;
 
     public Output<DirectLineChannelPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public DirectLineChannelArgs(
@@ -71,15 +72,15 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
         @Nullable Output<DirectLineChannelPropertiesArgs> properties) {
         this.channelName = Objects.requireNonNull(channelName, "expected parameter 'channelName' to be non-null");
         this.etag = etag;
-        this.location = location == null ? Output.ofNullable("global") : location;
+        this.location = location == null ? Codegen.ofNullable("global") : location;
         this.properties = properties;
     }
 
     private DirectLineChannelArgs() {
-        this.channelName = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
+        this.channelName = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -129,7 +130,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<DirectLineChannelPropertiesArgs> properties) {
@@ -137,7 +138,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder properties(@Nullable DirectLineChannelPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public DirectLineChannelArgs build() {
             return new DirectLineChannelArgs(channelName, etag, location, properties);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ptrdname;
 
     public Output<String> getPtrdname() {
-        return this.ptrdname == null ? Output.empty() : this.ptrdname;
+        return this.ptrdname == null ? Codegen.empty() : this.ptrdname;
     }
 
     public PtrRecordArgs(@Nullable Output<String> ptrdname) {
@@ -34,7 +35,7 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PtrRecordArgs() {
-        this.ptrdname = Output.empty();
+        this.ptrdname = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ptrdname(@Nullable String ptrdname) {
-            this.ptrdname = Output.ofNullable(ptrdname);
+            this.ptrdname = Codegen.ofNullable(ptrdname);
             return this;
         }        public PtrRecordArgs build() {
             return new PtrRecordArgs(ptrdname);

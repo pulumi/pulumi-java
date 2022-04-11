@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> workGroup;
 
     public Output<String> getWorkGroup() {
-        return this.workGroup == null ? Output.empty() : this.workGroup;
+        return this.workGroup == null ? Codegen.empty() : this.workGroup;
     }
 
     public DataSourceParametersAthenaGetArgs(@Nullable Output<String> workGroup) {
@@ -30,7 +31,7 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
     }
 
     private DataSourceParametersAthenaGetArgs() {
-        this.workGroup = Output.empty();
+        this.workGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DataSourceParametersAthenaGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = Output.ofNullable(workGroup);
+            this.workGroup = Codegen.ofNullable(workGroup);
             return this;
         }        public DataSourceParametersAthenaGetArgs build() {
             return new DataSourceParametersAthenaGetArgs(workGroup);

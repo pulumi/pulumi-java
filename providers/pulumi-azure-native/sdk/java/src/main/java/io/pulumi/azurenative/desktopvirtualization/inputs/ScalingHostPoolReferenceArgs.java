@@ -5,6 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> hostPoolArmPath;
 
     public Output<String> getHostPoolArmPath() {
-        return this.hostPoolArmPath == null ? Output.empty() : this.hostPoolArmPath;
+        return this.hostPoolArmPath == null ? Codegen.empty() : this.hostPoolArmPath;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> scalingPlanEnabled;
 
     public Output<Boolean> getScalingPlanEnabled() {
-        return this.scalingPlanEnabled == null ? Output.empty() : this.scalingPlanEnabled;
+        return this.scalingPlanEnabled == null ? Codegen.empty() : this.scalingPlanEnabled;
     }
 
     public ScalingHostPoolReferenceArgs(
@@ -49,8 +50,8 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
     }
 
     private ScalingHostPoolReferenceArgs() {
-        this.hostPoolArmPath = Output.empty();
-        this.scalingPlanEnabled = Output.empty();
+        this.hostPoolArmPath = Codegen.empty();
+        this.scalingPlanEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder hostPoolArmPath(@Nullable String hostPoolArmPath) {
-            this.hostPoolArmPath = Output.ofNullable(hostPoolArmPath);
+            this.hostPoolArmPath = Codegen.ofNullable(hostPoolArmPath);
             return this;
         }
         public Builder scalingPlanEnabled(@Nullable Output<Boolean> scalingPlanEnabled) {
@@ -88,7 +89,7 @@ public final class ScalingHostPoolReferenceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder scalingPlanEnabled(@Nullable Boolean scalingPlanEnabled) {
-            this.scalingPlanEnabled = Output.ofNullable(scalingPlanEnabled);
+            this.scalingPlanEnabled = Codegen.ofNullable(scalingPlanEnabled);
             return this;
         }        public ScalingHostPoolReferenceArgs build() {
             return new ScalingHostPoolReferenceArgs(hostPoolArmPath, scalingPlanEnabled);

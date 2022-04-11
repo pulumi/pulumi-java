@@ -5,6 +5,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
+        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minCapacity;
 
     public Output<Integer> getMinCapacity() {
-        return this.minCapacity == null ? Output.empty() : this.minCapacity;
+        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scalableDimension;
 
     public Output<String> getScalableDimension() {
-        return this.scalableDimension == null ? Output.empty() : this.scalableDimension;
+        return this.scalableDimension == null ? Codegen.empty() : this.scalableDimension;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceNamespace;
 
     public Output<String> getServiceNamespace() {
-        return this.serviceNamespace == null ? Output.empty() : this.serviceNamespace;
+        return this.serviceNamespace == null ? Codegen.empty() : this.serviceNamespace;
     }
 
     public TargetState(
@@ -97,12 +98,12 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetState() {
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
-        this.resourceId = Output.empty();
-        this.roleArn = Output.empty();
-        this.scalableDimension = Output.empty();
-        this.serviceNamespace = Output.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.scalableDimension = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Output.ofNullable(maxCapacity);
+            this.maxCapacity = Codegen.ofNullable(maxCapacity);
             return this;
         }
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
@@ -148,7 +149,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Output.ofNullable(minCapacity);
+            this.minCapacity = Codegen.ofNullable(minCapacity);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -156,7 +157,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -164,7 +165,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder scalableDimension(@Nullable Output<String> scalableDimension) {
@@ -172,7 +173,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scalableDimension(@Nullable String scalableDimension) {
-            this.scalableDimension = Output.ofNullable(scalableDimension);
+            this.scalableDimension = Codegen.ofNullable(scalableDimension);
             return this;
         }
         public Builder serviceNamespace(@Nullable Output<String> serviceNamespace) {
@@ -180,7 +181,7 @@ public final class TargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceNamespace(@Nullable String serviceNamespace) {
-            this.serviceNamespace = Output.ofNullable(serviceNamespace);
+            this.serviceNamespace = Codegen.ofNullable(serviceNamespace);
             return this;
         }        public TargetState build() {
             return new TargetState(maxCapacity, minCapacity, resourceId, roleArn, scalableDimension, serviceNamespace);

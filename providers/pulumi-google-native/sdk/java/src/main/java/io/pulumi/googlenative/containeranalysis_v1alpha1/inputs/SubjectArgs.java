@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> digest;
 
     public Output<Map<String,String>> getDigest() {
-        return this.digest == null ? Output.empty() : this.digest;
+        return this.digest == null ? Codegen.empty() : this.digest;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SubjectArgs(
@@ -49,8 +50,8 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubjectArgs() {
-        this.digest = Output.empty();
-        this.name = Output.empty();
+        this.digest = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder digest(@Nullable Map<String,String> digest) {
-            this.digest = Output.ofNullable(digest);
+            this.digest = Codegen.ofNullable(digest);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SubjectArgs build() {
             return new SubjectArgs(digest, name);

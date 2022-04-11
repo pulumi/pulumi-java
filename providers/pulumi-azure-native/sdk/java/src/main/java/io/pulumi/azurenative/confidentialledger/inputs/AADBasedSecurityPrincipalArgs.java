@@ -7,6 +7,7 @@ import io.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
     public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {
-        return this.ledgerRoleName == null ? Output.empty() : this.ledgerRoleName;
+        return this.ledgerRoleName == null ? Codegen.empty() : this.ledgerRoleName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public AADBasedSecurityPrincipalArgs(
@@ -63,9 +64,9 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
     }
 
     private AADBasedSecurityPrincipalArgs() {
-        this.ledgerRoleName = Output.empty();
-        this.principalId = Output.empty();
-        this.tenantId = Output.empty();
+        this.ledgerRoleName = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
-            this.ledgerRoleName = Output.ofNullable(ledgerRoleName);
+            this.ledgerRoleName = Codegen.ofNullable(ledgerRoleName);
             return this;
         }
         public Builder principalId(@Nullable Output<String> principalId) {
@@ -105,7 +106,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -113,7 +114,7 @@ public final class AADBasedSecurityPrincipalArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public AADBasedSecurityPrincipalArgs build() {
             return new AADBasedSecurityPrincipalArgs(ledgerRoleName, principalId, tenantId);

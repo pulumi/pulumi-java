@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> queryVariables;
 
     public Output<Map<String,String>> getQueryVariables() {
-        return this.queryVariables == null ? Output.empty() : this.queryVariables;
+        return this.queryVariables == null ? Codegen.empty() : this.queryVariables;
     }
 
     public SparkSqlBatchArgs(
@@ -63,9 +64,9 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SparkSqlBatchArgs() {
-        this.jarFileUris = Output.empty();
-        this.queryFileUri = Output.empty();
-        this.queryVariables = Output.empty();
+        this.jarFileUris = Codegen.empty();
+        this.queryFileUri = Codegen.empty();
+        this.queryVariables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -116,7 +117,7 @@ public final class SparkSqlBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryVariables(@Nullable Map<String,String> queryVariables) {
-            this.queryVariables = Output.ofNullable(queryVariables);
+            this.queryVariables = Codegen.ofNullable(queryVariables);
             return this;
         }        public SparkSqlBatchArgs build() {
             return new SparkSqlBatchArgs(jarFileUris, queryFileUri, queryVariables);

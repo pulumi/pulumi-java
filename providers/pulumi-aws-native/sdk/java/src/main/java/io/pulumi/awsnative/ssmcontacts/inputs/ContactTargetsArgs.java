@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ssmcontacts.inputs.ContactChannelTargetInfoArgs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,14 +24,14 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContactChannelTargetInfoArgs> channelTargetInfo;
 
     public Output<ContactChannelTargetInfoArgs> getChannelTargetInfo() {
-        return this.channelTargetInfo == null ? Output.empty() : this.channelTargetInfo;
+        return this.channelTargetInfo == null ? Codegen.empty() : this.channelTargetInfo;
     }
 
     @Import(name="contactTargetInfo")
       private final @Nullable Output<ContactTargetInfoArgs> contactTargetInfo;
 
     public Output<ContactTargetInfoArgs> getContactTargetInfo() {
-        return this.contactTargetInfo == null ? Output.empty() : this.contactTargetInfo;
+        return this.contactTargetInfo == null ? Codegen.empty() : this.contactTargetInfo;
     }
 
     public ContactTargetsArgs(
@@ -41,8 +42,8 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactTargetsArgs() {
-        this.channelTargetInfo = Output.empty();
-        this.contactTargetInfo = Output.empty();
+        this.channelTargetInfo = Codegen.empty();
+        this.contactTargetInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channelTargetInfo(@Nullable ContactChannelTargetInfoArgs channelTargetInfo) {
-            this.channelTargetInfo = Output.ofNullable(channelTargetInfo);
+            this.channelTargetInfo = Codegen.ofNullable(channelTargetInfo);
             return this;
         }
         public Builder contactTargetInfo(@Nullable Output<ContactTargetInfoArgs> contactTargetInfo) {
@@ -80,7 +81,7 @@ public final class ContactTargetsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactTargetInfo(@Nullable ContactTargetInfoArgs contactTargetInfo) {
-            this.contactTargetInfo = Output.ofNullable(contactTargetInfo);
+            this.contactTargetInfo = Codegen.ofNullable(contactTargetInfo);
             return this;
         }        public ContactTargetsArgs build() {
             return new ContactTargetsArgs(channelTargetInfo, contactTargetInfo);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigGetArgs;
 import java.util.Objects;
@@ -46,8 +47,8 @@ public final class AuthorityConfigGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AuthorityConfigGetArgs() {
-        this.subjectConfig = Output.empty();
-        this.x509Config = Output.empty();
+        this.subjectConfig = Codegen.empty();
+        this.x509Config = Codegen.empty();
     }
 
     public static Builder builder() {

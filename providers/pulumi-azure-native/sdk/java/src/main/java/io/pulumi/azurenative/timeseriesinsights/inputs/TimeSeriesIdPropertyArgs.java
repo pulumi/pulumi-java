@@ -7,6 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.PropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,PropertyType>> type;
 
     public Output<Either<String,PropertyType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public TimeSeriesIdPropertyArgs(
@@ -50,8 +51,8 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
     }
 
     private TimeSeriesIdPropertyArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,PropertyType>> type) {
@@ -89,7 +90,7 @@ public final class TimeSeriesIdPropertyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable Either<String,PropertyType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public TimeSeriesIdPropertyArgs build() {
             return new TimeSeriesIdPropertyArgs(name, type);

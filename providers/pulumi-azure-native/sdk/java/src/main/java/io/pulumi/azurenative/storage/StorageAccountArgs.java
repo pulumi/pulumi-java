@@ -20,6 +20,7 @@ import io.pulumi.azurenative.storage.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -39,7 +40,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessTier> accessTier;
 
     public Output<AccessTier> getAccessTier() {
-        return this.accessTier == null ? Output.empty() : this.accessTier;
+        return this.accessTier == null ? Codegen.empty() : this.accessTier;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowBlobPublicAccess;
 
     public Output<Boolean> getAllowBlobPublicAccess() {
-        return this.allowBlobPublicAccess == null ? Output.empty() : this.allowBlobPublicAccess;
+        return this.allowBlobPublicAccess == null ? Codegen.empty() : this.allowBlobPublicAccess;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowSharedKeyAccess;
 
     public Output<Boolean> getAllowSharedKeyAccess() {
-        return this.allowSharedKeyAccess == null ? Output.empty() : this.allowSharedKeyAccess;
+        return this.allowSharedKeyAccess == null ? Codegen.empty() : this.allowSharedKeyAccess;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication;
 
     public Output<AzureFilesIdentityBasedAuthenticationArgs> getAzureFilesIdentityBasedAuthentication() {
-        return this.azureFilesIdentityBasedAuthentication == null ? Output.empty() : this.azureFilesIdentityBasedAuthentication;
+        return this.azureFilesIdentityBasedAuthentication == null ? Codegen.empty() : this.azureFilesIdentityBasedAuthentication;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CustomDomainArgs> customDomain;
 
     public Output<CustomDomainArgs> getCustomDomain() {
-        return this.customDomain == null ? Output.empty() : this.customDomain;
+        return this.customDomain == null ? Codegen.empty() : this.customDomain;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableHttpsTrafficOnly;
 
     public Output<Boolean> getEnableHttpsTrafficOnly() {
-        return this.enableHttpsTrafficOnly == null ? Output.empty() : this.enableHttpsTrafficOnly;
+        return this.enableHttpsTrafficOnly == null ? Codegen.empty() : this.enableHttpsTrafficOnly;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableNfsV3;
 
     public Output<Boolean> getEnableNfsV3() {
-        return this.enableNfsV3 == null ? Output.empty() : this.enableNfsV3;
+        return this.enableNfsV3 == null ? Codegen.empty() : this.enableNfsV3;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionArgs> encryption;
 
     public Output<EncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isHnsEnabled;
 
     public Output<Boolean> getIsHnsEnabled() {
-        return this.isHnsEnabled == null ? Output.empty() : this.isHnsEnabled;
+        return this.isHnsEnabled == null ? Codegen.empty() : this.isHnsEnabled;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyPolicyArgs> keyPolicy;
 
     public Output<KeyPolicyArgs> getKeyPolicy() {
-        return this.keyPolicy == null ? Output.empty() : this.keyPolicy;
+        return this.keyPolicy == null ? Codegen.empty() : this.keyPolicy;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,LargeFileSharesState>> largeFileSharesState;
 
     public Output<Either<String,LargeFileSharesState>> getLargeFileSharesState() {
-        return this.largeFileSharesState == null ? Output.empty() : this.largeFileSharesState;
+        return this.largeFileSharesState == null ? Codegen.empty() : this.largeFileSharesState;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion;
 
     public Output<Either<String,MinimumTlsVersion>> getMinimumTlsVersion() {
-        return this.minimumTlsVersion == null ? Output.empty() : this.minimumTlsVersion;
+        return this.minimumTlsVersion == null ? Codegen.empty() : this.minimumTlsVersion;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
     public Output<NetworkRuleSetArgs> getNetworkRuleSet() {
-        return this.networkRuleSet == null ? Output.empty() : this.networkRuleSet;
+        return this.networkRuleSet == null ? Codegen.empty() : this.networkRuleSet;
     }
 
     /**
@@ -248,7 +249,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RoutingPreferenceArgs> routingPreference;
 
     public Output<RoutingPreferenceArgs> getRoutingPreference() {
-        return this.routingPreference == null ? Output.empty() : this.routingPreference;
+        return this.routingPreference == null ? Codegen.empty() : this.routingPreference;
     }
 
     /**
@@ -259,7 +260,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SasPolicyArgs> sasPolicy;
 
     public Output<SasPolicyArgs> getSasPolicy() {
-        return this.sasPolicy == null ? Output.empty() : this.sasPolicy;
+        return this.sasPolicy == null ? Codegen.empty() : this.sasPolicy;
     }
 
     /**
@@ -281,7 +282,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public StorageAccountArgs(
@@ -334,29 +335,29 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.accessTier = Output.empty();
-        this.accountName = Output.empty();
-        this.allowBlobPublicAccess = Output.empty();
-        this.allowSharedKeyAccess = Output.empty();
-        this.azureFilesIdentityBasedAuthentication = Output.empty();
-        this.customDomain = Output.empty();
-        this.enableHttpsTrafficOnly = Output.empty();
-        this.enableNfsV3 = Output.empty();
-        this.encryption = Output.empty();
-        this.extendedLocation = Output.empty();
-        this.identity = Output.empty();
-        this.isHnsEnabled = Output.empty();
-        this.keyPolicy = Output.empty();
-        this.kind = Output.empty();
-        this.largeFileSharesState = Output.empty();
-        this.location = Output.empty();
-        this.minimumTlsVersion = Output.empty();
-        this.networkRuleSet = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routingPreference = Output.empty();
-        this.sasPolicy = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.accessTier = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.allowBlobPublicAccess = Codegen.empty();
+        this.allowSharedKeyAccess = Codegen.empty();
+        this.azureFilesIdentityBasedAuthentication = Codegen.empty();
+        this.customDomain = Codegen.empty();
+        this.enableHttpsTrafficOnly = Codegen.empty();
+        this.enableNfsV3 = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.extendedLocation = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.isHnsEnabled = Codegen.empty();
+        this.keyPolicy = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.largeFileSharesState = Codegen.empty();
+        this.location = Codegen.empty();
+        this.minimumTlsVersion = Codegen.empty();
+        this.networkRuleSet = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routingPreference = Codegen.empty();
+        this.sasPolicy = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -428,7 +429,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessTier(@Nullable AccessTier accessTier) {
-            this.accessTier = Output.ofNullable(accessTier);
+            this.accessTier = Codegen.ofNullable(accessTier);
             return this;
         }
         public Builder accountName(@Nullable Output<String> accountName) {
@@ -436,7 +437,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder allowBlobPublicAccess(@Nullable Output<Boolean> allowBlobPublicAccess) {
@@ -444,7 +445,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowBlobPublicAccess(@Nullable Boolean allowBlobPublicAccess) {
-            this.allowBlobPublicAccess = Output.ofNullable(allowBlobPublicAccess);
+            this.allowBlobPublicAccess = Codegen.ofNullable(allowBlobPublicAccess);
             return this;
         }
         public Builder allowSharedKeyAccess(@Nullable Output<Boolean> allowSharedKeyAccess) {
@@ -452,7 +453,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowSharedKeyAccess(@Nullable Boolean allowSharedKeyAccess) {
-            this.allowSharedKeyAccess = Output.ofNullable(allowSharedKeyAccess);
+            this.allowSharedKeyAccess = Codegen.ofNullable(allowSharedKeyAccess);
             return this;
         }
         public Builder azureFilesIdentityBasedAuthentication(@Nullable Output<AzureFilesIdentityBasedAuthenticationArgs> azureFilesIdentityBasedAuthentication) {
@@ -460,7 +461,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder azureFilesIdentityBasedAuthentication(@Nullable AzureFilesIdentityBasedAuthenticationArgs azureFilesIdentityBasedAuthentication) {
-            this.azureFilesIdentityBasedAuthentication = Output.ofNullable(azureFilesIdentityBasedAuthentication);
+            this.azureFilesIdentityBasedAuthentication = Codegen.ofNullable(azureFilesIdentityBasedAuthentication);
             return this;
         }
         public Builder customDomain(@Nullable Output<CustomDomainArgs> customDomain) {
@@ -468,7 +469,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDomain(@Nullable CustomDomainArgs customDomain) {
-            this.customDomain = Output.ofNullable(customDomain);
+            this.customDomain = Codegen.ofNullable(customDomain);
             return this;
         }
         public Builder enableHttpsTrafficOnly(@Nullable Output<Boolean> enableHttpsTrafficOnly) {
@@ -476,7 +477,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableHttpsTrafficOnly(@Nullable Boolean enableHttpsTrafficOnly) {
-            this.enableHttpsTrafficOnly = Output.ofNullable(enableHttpsTrafficOnly);
+            this.enableHttpsTrafficOnly = Codegen.ofNullable(enableHttpsTrafficOnly);
             return this;
         }
         public Builder enableNfsV3(@Nullable Output<Boolean> enableNfsV3) {
@@ -484,7 +485,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableNfsV3(@Nullable Boolean enableNfsV3) {
-            this.enableNfsV3 = Output.ofNullable(enableNfsV3);
+            this.enableNfsV3 = Codegen.ofNullable(enableNfsV3);
             return this;
         }
         public Builder encryption(@Nullable Output<EncryptionArgs> encryption) {
@@ -492,7 +493,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
@@ -500,7 +501,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -508,7 +509,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder isHnsEnabled(@Nullable Output<Boolean> isHnsEnabled) {
@@ -516,7 +517,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isHnsEnabled(@Nullable Boolean isHnsEnabled) {
-            this.isHnsEnabled = Output.ofNullable(isHnsEnabled);
+            this.isHnsEnabled = Codegen.ofNullable(isHnsEnabled);
             return this;
         }
         public Builder keyPolicy(@Nullable Output<KeyPolicyArgs> keyPolicy) {
@@ -524,7 +525,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyPolicy(@Nullable KeyPolicyArgs keyPolicy) {
-            this.keyPolicy = Output.ofNullable(keyPolicy);
+            this.keyPolicy = Codegen.ofNullable(keyPolicy);
             return this;
         }
         public Builder kind(Output<Either<String,Kind>> kind) {
@@ -540,7 +541,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder largeFileSharesState(@Nullable Either<String,LargeFileSharesState> largeFileSharesState) {
-            this.largeFileSharesState = Output.ofNullable(largeFileSharesState);
+            this.largeFileSharesState = Codegen.ofNullable(largeFileSharesState);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -548,7 +549,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder minimumTlsVersion(@Nullable Output<Either<String,MinimumTlsVersion>> minimumTlsVersion) {
@@ -556,7 +557,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimumTlsVersion(@Nullable Either<String,MinimumTlsVersion> minimumTlsVersion) {
-            this.minimumTlsVersion = Output.ofNullable(minimumTlsVersion);
+            this.minimumTlsVersion = Codegen.ofNullable(minimumTlsVersion);
             return this;
         }
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
@@ -564,7 +565,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkRuleSet(@Nullable NetworkRuleSetArgs networkRuleSet) {
-            this.networkRuleSet = Output.ofNullable(networkRuleSet);
+            this.networkRuleSet = Codegen.ofNullable(networkRuleSet);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -580,7 +581,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingPreference(@Nullable RoutingPreferenceArgs routingPreference) {
-            this.routingPreference = Output.ofNullable(routingPreference);
+            this.routingPreference = Codegen.ofNullable(routingPreference);
             return this;
         }
         public Builder sasPolicy(@Nullable Output<SasPolicyArgs> sasPolicy) {
@@ -588,7 +589,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sasPolicy(@Nullable SasPolicyArgs sasPolicy) {
-            this.sasPolicy = Output.ofNullable(sasPolicy);
+            this.sasPolicy = Codegen.ofNullable(sasPolicy);
             return this;
         }
         public Builder sku(Output<SkuArgs> sku) {
@@ -604,7 +605,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public StorageAccountArgs build() {
             return new StorageAccountArgs(accessTier, accountName, allowBlobPublicAccess, allowSharedKeyAccess, azureFilesIdentityBasedAuthentication, customDomain, enableHttpsTrafficOnly, enableNfsV3, encryption, extendedLocation, identity, isHnsEnabled, keyPolicy, kind, largeFileSharesState, location, minimumTlsVersion, networkRuleSet, resourceGroupName, routingPreference, sasPolicy, sku, tags);

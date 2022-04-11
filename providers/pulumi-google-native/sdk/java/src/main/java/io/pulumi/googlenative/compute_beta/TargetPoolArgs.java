@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.TargetPoolSessionAffinity;
 import java.lang.Double;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupPool;
 
     public Output<String> getBackupPool() {
-        return this.backupPool == null ? Output.empty() : this.backupPool;
+        return this.backupPool == null ? Codegen.empty() : this.backupPool;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> failoverRatio;
 
     public Output<Double> getFailoverRatio() {
-        return this.failoverRatio == null ? Output.empty() : this.failoverRatio;
+        return this.failoverRatio == null ? Codegen.empty() : this.failoverRatio;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> healthChecks;
 
     public Output<List<String>> getHealthChecks() {
-        return this.healthChecks == null ? Output.empty() : this.healthChecks;
+        return this.healthChecks == null ? Codegen.empty() : this.healthChecks;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> instances;
 
     public Output<List<String>> getInstances() {
-        return this.instances == null ? Output.empty() : this.instances;
+        return this.instances == null ? Codegen.empty() : this.instances;
     }
 
     /**
@@ -80,14 +81,14 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
@@ -101,7 +102,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TargetPoolSessionAffinity> sessionAffinity;
 
     public Output<TargetPoolSessionAffinity> getSessionAffinity() {
-        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
+        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
     public TargetPoolArgs(
@@ -139,16 +140,16 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TargetPoolArgs() {
-        this.backupPool = Output.empty();
-        this.description = Output.empty();
-        this.failoverRatio = Output.empty();
-        this.healthChecks = Output.empty();
-        this.instances = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.sessionAffinity = Output.empty();
+        this.backupPool = Codegen.empty();
+        this.description = Codegen.empty();
+        this.failoverRatio = Codegen.empty();
+        this.healthChecks = Codegen.empty();
+        this.instances = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sessionAffinity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPool(@Nullable String backupPool) {
-            this.backupPool = Output.ofNullable(backupPool);
+            this.backupPool = Codegen.ofNullable(backupPool);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -202,7 +203,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
@@ -210,7 +211,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failoverRatio(@Nullable Double failoverRatio) {
-            this.failoverRatio = Output.ofNullable(failoverRatio);
+            this.failoverRatio = Codegen.ofNullable(failoverRatio);
             return this;
         }
         public Builder healthChecks(@Nullable Output<List<String>> healthChecks) {
@@ -218,7 +219,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthChecks(@Nullable List<String> healthChecks) {
-            this.healthChecks = Output.ofNullable(healthChecks);
+            this.healthChecks = Codegen.ofNullable(healthChecks);
             return this;
         }
         public Builder healthChecks(String... healthChecks) {
@@ -229,7 +230,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instances(@Nullable List<String> instances) {
-            this.instances = Output.ofNullable(instances);
+            this.instances = Codegen.ofNullable(instances);
             return this;
         }
         public Builder instances(String... instances) {
@@ -240,7 +241,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -248,7 +249,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -264,7 +265,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sessionAffinity(@Nullable Output<TargetPoolSessionAffinity> sessionAffinity) {
@@ -272,7 +273,7 @@ public final class TargetPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionAffinity(@Nullable TargetPoolSessionAffinity sessionAffinity) {
-            this.sessionAffinity = Output.ofNullable(sessionAffinity);
+            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
             return this;
         }        public TargetPoolArgs build() {
             return new TargetPoolArgs(backupPool, description, failoverRatio, healthChecks, instances, name, project, region, requestId, sessionAffinity);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v1.inputs.CrossVersionObjectReferenceArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> minReplicas;
 
     public Output<Integer> getMinReplicas() {
-        return this.minReplicas == null ? Output.empty() : this.minReplicas;
+        return this.minReplicas == null ? Codegen.empty() : this.minReplicas;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> targetCPUUtilizationPercentage;
 
     public Output<Integer> getTargetCPUUtilizationPercentage() {
-        return this.targetCPUUtilizationPercentage == null ? Output.empty() : this.targetCPUUtilizationPercentage;
+        return this.targetCPUUtilizationPercentage == null ? Codegen.empty() : this.targetCPUUtilizationPercentage;
     }
 
     public HorizontalPodAutoscalerSpecArgs(
@@ -75,10 +76,10 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
     }
 
     private HorizontalPodAutoscalerSpecArgs() {
-        this.maxReplicas = Output.empty();
-        this.minReplicas = Output.empty();
-        this.scaleTargetRef = Output.empty();
-        this.targetCPUUtilizationPercentage = Output.empty();
+        this.maxReplicas = Codegen.empty();
+        this.minReplicas = Codegen.empty();
+        this.scaleTargetRef = Codegen.empty();
+        this.targetCPUUtilizationPercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder minReplicas(@Nullable Integer minReplicas) {
-            this.minReplicas = Output.ofNullable(minReplicas);
+            this.minReplicas = Codegen.ofNullable(minReplicas);
             return this;
         }
         public Builder scaleTargetRef(Output<CrossVersionObjectReferenceArgs> scaleTargetRef) {
@@ -136,7 +137,7 @@ public final class HorizontalPodAutoscalerSpecArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder targetCPUUtilizationPercentage(@Nullable Integer targetCPUUtilizationPercentage) {
-            this.targetCPUUtilizationPercentage = Output.ofNullable(targetCPUUtilizationPercentage);
+            this.targetCPUUtilizationPercentage = Codegen.ofNullable(targetCPUUtilizationPercentage);
             return this;
         }        public HorizontalPodAutoscalerSpecArgs build() {
             return new HorizontalPodAutoscalerSpecArgs(maxReplicas, minReplicas, scaleTargetRef, targetCPUUtilizationPercentage);

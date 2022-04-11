@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cidr;
 
     public Output<String> getCidr() {
-        return this.cidr == null ? Output.empty() : this.cidr;
+        return this.cidr == null ? Codegen.empty() : this.cidr;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> netmaskLength;
 
     public Output<Integer> getNetmaskLength() {
-        return this.netmaskLength == null ? Output.empty() : this.netmaskLength;
+        return this.netmaskLength == null ? Codegen.empty() : this.netmaskLength;
     }
 
     public IPAMAllocationArgs(
@@ -63,10 +64,10 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPAMAllocationArgs() {
-        this.cidr = Output.empty();
-        this.description = Output.empty();
-        this.ipamPoolId = Output.empty();
-        this.netmaskLength = Output.empty();
+        this.cidr = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ipamPoolId = Codegen.empty();
+        this.netmaskLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidr(@Nullable String cidr) {
-            this.cidr = Output.ofNullable(cidr);
+            this.cidr = Codegen.ofNullable(cidr);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -108,7 +109,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipamPoolId(Output<String> ipamPoolId) {
@@ -124,7 +125,7 @@ public final class IPAMAllocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder netmaskLength(@Nullable Integer netmaskLength) {
-            this.netmaskLength = Output.ofNullable(netmaskLength);
+            this.netmaskLength = Codegen.ofNullable(netmaskLength);
             return this;
         }        public IPAMAllocationArgs build() {
             return new IPAMAllocationArgs(cidr, description, ipamPoolId, netmaskLength);

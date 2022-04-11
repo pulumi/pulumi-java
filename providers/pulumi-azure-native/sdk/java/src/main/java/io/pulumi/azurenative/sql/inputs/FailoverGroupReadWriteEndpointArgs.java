@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.ReadWriteEndpointFailoverPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -40,7 +41,7 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> failoverWithDataLossGracePeriodMinutes;
 
     public Output<Integer> getFailoverWithDataLossGracePeriodMinutes() {
-        return this.failoverWithDataLossGracePeriodMinutes == null ? Output.empty() : this.failoverWithDataLossGracePeriodMinutes;
+        return this.failoverWithDataLossGracePeriodMinutes == null ? Codegen.empty() : this.failoverWithDataLossGracePeriodMinutes;
     }
 
     public FailoverGroupReadWriteEndpointArgs(
@@ -51,8 +52,8 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
     }
 
     private FailoverGroupReadWriteEndpointArgs() {
-        this.failoverPolicy = Output.empty();
-        this.failoverWithDataLossGracePeriodMinutes = Output.empty();
+        this.failoverPolicy = Codegen.empty();
+        this.failoverWithDataLossGracePeriodMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class FailoverGroupReadWriteEndpointArgs extends io.pulumi.resource
             return this;
         }
         public Builder failoverWithDataLossGracePeriodMinutes(@Nullable Integer failoverWithDataLossGracePeriodMinutes) {
-            this.failoverWithDataLossGracePeriodMinutes = Output.ofNullable(failoverWithDataLossGracePeriodMinutes);
+            this.failoverWithDataLossGracePeriodMinutes = Codegen.ofNullable(failoverWithDataLossGracePeriodMinutes);
             return this;
         }        public FailoverGroupReadWriteEndpointArgs build() {
             return new FailoverGroupReadWriteEndpointArgs(failoverPolicy, failoverWithDataLossGracePeriodMinutes);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioEncryptionConfigurationArgs
 import io.pulumi.awsnative.nimblestudio.inputs.StudioTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StudioEncryptionConfigurationArgs> studioEncryptionConfiguration;
 
     public Output<StudioEncryptionConfigurationArgs> getStudioEncryptionConfiguration() {
-        return this.studioEncryptionConfiguration == null ? Output.empty() : this.studioEncryptionConfiguration;
+        return this.studioEncryptionConfiguration == null ? Codegen.empty() : this.studioEncryptionConfiguration;
     }
 
     /**
@@ -53,14 +54,14 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> studioName;
 
     public Output<String> getStudioName() {
-        return this.studioName == null ? Output.empty() : this.studioName;
+        return this.studioName == null ? Codegen.empty() : this.studioName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<StudioTagsArgs> tags;
 
     public Output<StudioTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -90,12 +91,12 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudioArgs() {
-        this.adminRoleArn = Output.empty();
-        this.displayName = Output.empty();
-        this.studioEncryptionConfiguration = Output.empty();
-        this.studioName = Output.empty();
-        this.tags = Output.empty();
-        this.userRoleArn = Output.empty();
+        this.adminRoleArn = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.studioEncryptionConfiguration = Codegen.empty();
+        this.studioName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder studioEncryptionConfiguration(@Nullable StudioEncryptionConfigurationArgs studioEncryptionConfiguration) {
-            this.studioEncryptionConfiguration = Output.ofNullable(studioEncryptionConfiguration);
+            this.studioEncryptionConfiguration = Codegen.ofNullable(studioEncryptionConfiguration);
             return this;
         }
         public Builder studioName(@Nullable Output<String> studioName) {
@@ -157,7 +158,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder studioName(@Nullable String studioName) {
-            this.studioName = Output.ofNullable(studioName);
+            this.studioName = Codegen.ofNullable(studioName);
             return this;
         }
         public Builder tags(@Nullable Output<StudioTagsArgs> tags) {
@@ -165,7 +166,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable StudioTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userRoleArn(Output<String> userRoleArn) {

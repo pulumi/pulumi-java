@@ -6,6 +6,7 @@ package io.pulumi.awsnative.batch;
 import io.pulumi.awsnative.batch.inputs.SchedulingPolicyFairsharePolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SchedulingPolicyFairsharePolicyArgs> fairsharePolicy;
 
     public Output<SchedulingPolicyFairsharePolicyArgs> getFairsharePolicy() {
-        return this.fairsharePolicy == null ? Output.empty() : this.fairsharePolicy;
+        return this.fairsharePolicy == null ? Codegen.empty() : this.fairsharePolicy;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SchedulingPolicyArgs(
@@ -55,9 +56,9 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SchedulingPolicyArgs() {
-        this.fairsharePolicy = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.fairsharePolicy = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fairsharePolicy(@Nullable SchedulingPolicyFairsharePolicyArgs fairsharePolicy) {
-            this.fairsharePolicy = Output.ofNullable(fairsharePolicy);
+            this.fairsharePolicy = Codegen.ofNullable(fairsharePolicy);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -97,7 +98,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Object> tags) {
@@ -105,7 +106,7 @@ public final class SchedulingPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Object tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SchedulingPolicyArgs build() {
             return new SchedulingPolicyArgs(fairsharePolicy, name, tags);

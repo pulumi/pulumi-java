@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -74,10 +75,10 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private OptimizedAutoscaleArgs() {
-        this.isEnabled = Output.empty();
-        this.maximum = Output.empty();
-        this.minimum = Output.empty();
-        this.version = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.maximum = Codegen.empty();
+        this.minimum = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {

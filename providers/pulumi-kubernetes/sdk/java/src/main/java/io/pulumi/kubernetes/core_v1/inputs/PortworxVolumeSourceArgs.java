@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
     }
 
     private PortworxVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.readOnly = Output.empty();
-        this.volumeID = Output.empty();
+        this.fsType = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.volumeID = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -104,7 +105,7 @@ public final class PortworxVolumeSourceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder volumeID(Output<String> volumeID) {

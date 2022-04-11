@@ -7,6 +7,7 @@ import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsPublicAccessB
 import io.pulumi.aws.s3control.inputs.MultiRegionAccessPointDetailsRegionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
       private final @Nullable Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> publicAccessBlock;
 
     public Output<MultiRegionAccessPointDetailsPublicAccessBlockGetArgs> getPublicAccessBlock() {
-        return this.publicAccessBlock == null ? Output.empty() : this.publicAccessBlock;
+        return this.publicAccessBlock == null ? Codegen.empty() : this.publicAccessBlock;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
     }
 
     private MultiRegionAccessPointDetailsGetArgs() {
-        this.name = Output.empty();
-        this.publicAccessBlock = Output.empty();
-        this.regions = Output.empty();
+        this.name = Codegen.empty();
+        this.publicAccessBlock = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class MultiRegionAccessPointDetailsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder publicAccessBlock(@Nullable MultiRegionAccessPointDetailsPublicAccessBlockGetArgs publicAccessBlock) {
-            this.publicAccessBlock = Output.ofNullable(publicAccessBlock);
+            this.publicAccessBlock = Codegen.ofNullable(publicAccessBlock);
             return this;
         }
         public Builder regions(Output<List<MultiRegionAccessPointDetailsRegionGetArgs>> regions) {

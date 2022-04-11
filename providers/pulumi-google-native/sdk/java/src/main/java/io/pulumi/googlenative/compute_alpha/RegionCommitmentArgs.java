@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.RegionCommitmentCategory;
 import io.pulumi.googlenative.compute_alpha.enums.RegionCommitmentPlan;
 import io.pulumi.googlenative.compute_alpha.enums.RegionCommitmentType;
@@ -30,7 +31,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
-        return this.autoRenew == null ? Output.empty() : this.autoRenew;
+        return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RegionCommitmentCategory> category;
 
     public Output<RegionCommitmentCategory> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<LicenseResourceCommitmentArgs> licenseResource;
 
     public Output<LicenseResourceCommitmentArgs> getLicenseResource() {
-        return this.licenseResource == null ? Output.empty() : this.licenseResource;
+        return this.licenseResource == null ? Codegen.empty() : this.licenseResource;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> mergeSourceCommitments;
 
     public Output<List<String>> getMergeSourceCommitments() {
-        return this.mergeSourceCommitments == null ? Output.empty() : this.mergeSourceCommitments;
+        return this.mergeSourceCommitments == null ? Codegen.empty() : this.mergeSourceCommitments;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -96,14 +97,14 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RegionCommitmentPlan> plan;
 
     public Output<RegionCommitmentPlan> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
@@ -117,7 +118,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ReservationArgs>> reservations;
 
     public Output<List<ReservationArgs>> getReservations() {
-        return this.reservations == null ? Output.empty() : this.reservations;
+        return this.reservations == null ? Codegen.empty() : this.reservations;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ResourceCommitmentArgs>> resources;
 
     public Output<List<ResourceCommitmentArgs>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> splitSourceCommitment;
 
     public Output<String> getSplitSourceCommitment() {
-        return this.splitSourceCommitment == null ? Output.empty() : this.splitSourceCommitment;
+        return this.splitSourceCommitment == null ? Codegen.empty() : this.splitSourceCommitment;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RegionCommitmentType> type;
 
     public Output<RegionCommitmentType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RegionCommitmentArgs(
@@ -196,20 +197,20 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegionCommitmentArgs() {
-        this.autoRenew = Output.empty();
-        this.category = Output.empty();
-        this.description = Output.empty();
-        this.licenseResource = Output.empty();
-        this.mergeSourceCommitments = Output.empty();
-        this.name = Output.empty();
-        this.plan = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.reservations = Output.empty();
-        this.resources = Output.empty();
-        this.splitSourceCommitment = Output.empty();
-        this.type = Output.empty();
+        this.autoRenew = Codegen.empty();
+        this.category = Codegen.empty();
+        this.description = Codegen.empty();
+        this.licenseResource = Codegen.empty();
+        this.mergeSourceCommitments = Codegen.empty();
+        this.name = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.reservations = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.splitSourceCommitment = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -263,7 +264,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Output.ofNullable(autoRenew);
+            this.autoRenew = Codegen.ofNullable(autoRenew);
             return this;
         }
         public Builder category(@Nullable Output<RegionCommitmentCategory> category) {
@@ -271,7 +272,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder category(@Nullable RegionCommitmentCategory category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -279,7 +280,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder licenseResource(@Nullable Output<LicenseResourceCommitmentArgs> licenseResource) {
@@ -287,7 +288,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder licenseResource(@Nullable LicenseResourceCommitmentArgs licenseResource) {
-            this.licenseResource = Output.ofNullable(licenseResource);
+            this.licenseResource = Codegen.ofNullable(licenseResource);
             return this;
         }
         public Builder mergeSourceCommitments(@Nullable Output<List<String>> mergeSourceCommitments) {
@@ -295,7 +296,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mergeSourceCommitments(@Nullable List<String> mergeSourceCommitments) {
-            this.mergeSourceCommitments = Output.ofNullable(mergeSourceCommitments);
+            this.mergeSourceCommitments = Codegen.ofNullable(mergeSourceCommitments);
             return this;
         }
         public Builder mergeSourceCommitments(String... mergeSourceCommitments) {
@@ -306,7 +307,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder plan(@Nullable Output<RegionCommitmentPlan> plan) {
@@ -314,7 +315,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder plan(@Nullable RegionCommitmentPlan plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -322,7 +323,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -338,7 +339,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder reservations(@Nullable Output<List<ReservationArgs>> reservations) {
@@ -346,7 +347,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder reservations(@Nullable List<ReservationArgs> reservations) {
-            this.reservations = Output.ofNullable(reservations);
+            this.reservations = Codegen.ofNullable(reservations);
             return this;
         }
         public Builder reservations(ReservationArgs... reservations) {
@@ -357,7 +358,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resources(@Nullable List<ResourceCommitmentArgs> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(ResourceCommitmentArgs... resources) {
@@ -368,7 +369,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder splitSourceCommitment(@Nullable String splitSourceCommitment) {
-            this.splitSourceCommitment = Output.ofNullable(splitSourceCommitment);
+            this.splitSourceCommitment = Codegen.ofNullable(splitSourceCommitment);
             return this;
         }
         public Builder type(@Nullable Output<RegionCommitmentType> type) {
@@ -376,7 +377,7 @@ public final class RegionCommitmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable RegionCommitmentType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RegionCommitmentArgs build() {
             return new RegionCommitmentArgs(autoRenew, category, description, licenseResource, mergeSourceCommitments, name, plan, project, region, requestId, reservations, resources, splitSourceCommitment, type);

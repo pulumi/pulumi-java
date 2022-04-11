@@ -8,6 +8,7 @@ import io.pulumi.azurenative.synapse.enums.EventHubDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Either<String,Compression>> compression;
 
     public Output<Either<String,Compression>> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> dataConnectionName;
 
     public Output<String> getDataConnectionName() {
-        return this.dataConnectionName == null ? Output.empty() : this.dataConnectionName;
+        return this.dataConnectionName == null ? Codegen.empty() : this.dataConnectionName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Either<String,EventHubDataFormat>> dataFormat;
 
     public Output<Either<String,EventHubDataFormat>> getDataFormat() {
-        return this.dataFormat == null ? Output.empty() : this.dataFormat;
+        return this.dataFormat == null ? Codegen.empty() : this.dataFormat;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> eventSystemProperties;
 
     public Output<List<String>> getEventSystemProperties() {
-        return this.eventSystemProperties == null ? Output.empty() : this.eventSystemProperties;
+        return this.eventSystemProperties == null ? Codegen.empty() : this.eventSystemProperties;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> mappingRuleName;
 
     public Output<String> getMappingRuleName() {
-        return this.mappingRuleName == null ? Output.empty() : this.mappingRuleName;
+        return this.mappingRuleName == null ? Codegen.empty() : this.mappingRuleName;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -205,20 +206,20 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
     }
 
     private EventHubDataConnectionArgs() {
-        this.compression = Output.empty();
-        this.consumerGroup = Output.empty();
-        this.dataConnectionName = Output.empty();
-        this.dataFormat = Output.empty();
-        this.databaseName = Output.empty();
-        this.eventHubResourceId = Output.empty();
-        this.eventSystemProperties = Output.empty();
-        this.kind = Output.empty();
-        this.kustoPoolName = Output.empty();
-        this.location = Output.empty();
-        this.mappingRuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tableName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.compression = Codegen.empty();
+        this.consumerGroup = Codegen.empty();
+        this.dataConnectionName = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.eventHubResourceId = Codegen.empty();
+        this.eventSystemProperties = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.kustoPoolName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mappingRuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -272,7 +273,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder compression(@Nullable Either<String,Compression> compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder consumerGroup(Output<String> consumerGroup) {
@@ -288,7 +289,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dataConnectionName(@Nullable String dataConnectionName) {
-            this.dataConnectionName = Output.ofNullable(dataConnectionName);
+            this.dataConnectionName = Codegen.ofNullable(dataConnectionName);
             return this;
         }
         public Builder dataFormat(@Nullable Output<Either<String,EventHubDataFormat>> dataFormat) {
@@ -296,7 +297,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dataFormat(@Nullable Either<String,EventHubDataFormat> dataFormat) {
-            this.dataFormat = Output.ofNullable(dataFormat);
+            this.dataFormat = Codegen.ofNullable(dataFormat);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -320,7 +321,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder eventSystemProperties(@Nullable List<String> eventSystemProperties) {
-            this.eventSystemProperties = Output.ofNullable(eventSystemProperties);
+            this.eventSystemProperties = Codegen.ofNullable(eventSystemProperties);
             return this;
         }
         public Builder eventSystemProperties(String... eventSystemProperties) {
@@ -347,7 +348,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mappingRuleName(@Nullable Output<String> mappingRuleName) {
@@ -355,7 +356,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder mappingRuleName(@Nullable String mappingRuleName) {
-            this.mappingRuleName = Output.ofNullable(mappingRuleName);
+            this.mappingRuleName = Codegen.ofNullable(mappingRuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -371,7 +372,7 @@ public final class EventHubDataConnectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

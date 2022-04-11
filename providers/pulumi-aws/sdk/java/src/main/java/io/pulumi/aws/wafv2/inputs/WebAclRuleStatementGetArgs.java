@@ -19,6 +19,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementSqliMatchStatementGetArgs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementXssMatchStatementGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -35,7 +36,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementAndStatementGetArgs> andStatement;
 
     public Output<WebAclRuleStatementAndStatementGetArgs> getAndStatement() {
-        return this.andStatement == null ? Output.empty() : this.andStatement;
+        return this.andStatement == null ? Codegen.empty() : this.andStatement;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementByteMatchStatementGetArgs> byteMatchStatement;
 
     public Output<WebAclRuleStatementByteMatchStatementGetArgs> getByteMatchStatement() {
-        return this.byteMatchStatement == null ? Output.empty() : this.byteMatchStatement;
+        return this.byteMatchStatement == null ? Codegen.empty() : this.byteMatchStatement;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementGeoMatchStatementGetArgs> geoMatchStatement;
 
     public Output<WebAclRuleStatementGeoMatchStatementGetArgs> getGeoMatchStatement() {
-        return this.geoMatchStatement == null ? Output.empty() : this.geoMatchStatement;
+        return this.geoMatchStatement == null ? Codegen.empty() : this.geoMatchStatement;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement;
 
     public Output<WebAclRuleStatementIpSetReferenceStatementGetArgs> getIpSetReferenceStatement() {
-        return this.ipSetReferenceStatement == null ? Output.empty() : this.ipSetReferenceStatement;
+        return this.ipSetReferenceStatement == null ? Codegen.empty() : this.ipSetReferenceStatement;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementLabelMatchStatementGetArgs> labelMatchStatement;
 
     public Output<WebAclRuleStatementLabelMatchStatementGetArgs> getLabelMatchStatement() {
-        return this.labelMatchStatement == null ? Output.empty() : this.labelMatchStatement;
+        return this.labelMatchStatement == null ? Codegen.empty() : this.labelMatchStatement;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementManagedRuleGroupStatementGetArgs> managedRuleGroupStatement;
 
     public Output<WebAclRuleStatementManagedRuleGroupStatementGetArgs> getManagedRuleGroupStatement() {
-        return this.managedRuleGroupStatement == null ? Output.empty() : this.managedRuleGroupStatement;
+        return this.managedRuleGroupStatement == null ? Codegen.empty() : this.managedRuleGroupStatement;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementNotStatementGetArgs> notStatement;
 
     public Output<WebAclRuleStatementNotStatementGetArgs> getNotStatement() {
-        return this.notStatement == null ? Output.empty() : this.notStatement;
+        return this.notStatement == null ? Codegen.empty() : this.notStatement;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementOrStatementGetArgs> orStatement;
 
     public Output<WebAclRuleStatementOrStatementGetArgs> getOrStatement() {
-        return this.orStatement == null ? Output.empty() : this.orStatement;
+        return this.orStatement == null ? Codegen.empty() : this.orStatement;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementGetArgs> rateBasedStatement;
 
     public Output<WebAclRuleStatementRateBasedStatementGetArgs> getRateBasedStatement() {
-        return this.rateBasedStatement == null ? Output.empty() : this.rateBasedStatement;
+        return this.rateBasedStatement == null ? Codegen.empty() : this.rateBasedStatement;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement;
 
     public Output<WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs> getRegexPatternSetReferenceStatement() {
-        return this.regexPatternSetReferenceStatement == null ? Output.empty() : this.regexPatternSetReferenceStatement;
+        return this.regexPatternSetReferenceStatement == null ? Codegen.empty() : this.regexPatternSetReferenceStatement;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementGetArgs> ruleGroupReferenceStatement;
 
     public Output<WebAclRuleStatementRuleGroupReferenceStatementGetArgs> getRuleGroupReferenceStatement() {
-        return this.ruleGroupReferenceStatement == null ? Output.empty() : this.ruleGroupReferenceStatement;
+        return this.ruleGroupReferenceStatement == null ? Codegen.empty() : this.ruleGroupReferenceStatement;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementSizeConstraintStatementGetArgs> sizeConstraintStatement;
 
     public Output<WebAclRuleStatementSizeConstraintStatementGetArgs> getSizeConstraintStatement() {
-        return this.sizeConstraintStatement == null ? Output.empty() : this.sizeConstraintStatement;
+        return this.sizeConstraintStatement == null ? Codegen.empty() : this.sizeConstraintStatement;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementSqliMatchStatementGetArgs> sqliMatchStatement;
 
     public Output<WebAclRuleStatementSqliMatchStatementGetArgs> getSqliMatchStatement() {
-        return this.sqliMatchStatement == null ? Output.empty() : this.sqliMatchStatement;
+        return this.sqliMatchStatement == null ? Codegen.empty() : this.sqliMatchStatement;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<WebAclRuleStatementXssMatchStatementGetArgs> xssMatchStatement;
 
     public Output<WebAclRuleStatementXssMatchStatementGetArgs> getXssMatchStatement() {
-        return this.xssMatchStatement == null ? Output.empty() : this.xssMatchStatement;
+        return this.xssMatchStatement == null ? Codegen.empty() : this.xssMatchStatement;
     }
 
     public WebAclRuleStatementGetArgs(
@@ -213,20 +214,20 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
     }
 
     private WebAclRuleStatementGetArgs() {
-        this.andStatement = Output.empty();
-        this.byteMatchStatement = Output.empty();
-        this.geoMatchStatement = Output.empty();
-        this.ipSetReferenceStatement = Output.empty();
-        this.labelMatchStatement = Output.empty();
-        this.managedRuleGroupStatement = Output.empty();
-        this.notStatement = Output.empty();
-        this.orStatement = Output.empty();
-        this.rateBasedStatement = Output.empty();
-        this.regexPatternSetReferenceStatement = Output.empty();
-        this.ruleGroupReferenceStatement = Output.empty();
-        this.sizeConstraintStatement = Output.empty();
-        this.sqliMatchStatement = Output.empty();
-        this.xssMatchStatement = Output.empty();
+        this.andStatement = Codegen.empty();
+        this.byteMatchStatement = Codegen.empty();
+        this.geoMatchStatement = Codegen.empty();
+        this.ipSetReferenceStatement = Codegen.empty();
+        this.labelMatchStatement = Codegen.empty();
+        this.managedRuleGroupStatement = Codegen.empty();
+        this.notStatement = Codegen.empty();
+        this.orStatement = Codegen.empty();
+        this.rateBasedStatement = Codegen.empty();
+        this.regexPatternSetReferenceStatement = Codegen.empty();
+        this.ruleGroupReferenceStatement = Codegen.empty();
+        this.sizeConstraintStatement = Codegen.empty();
+        this.sqliMatchStatement = Codegen.empty();
+        this.xssMatchStatement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -280,7 +281,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder andStatement(@Nullable WebAclRuleStatementAndStatementGetArgs andStatement) {
-            this.andStatement = Output.ofNullable(andStatement);
+            this.andStatement = Codegen.ofNullable(andStatement);
             return this;
         }
         public Builder byteMatchStatement(@Nullable Output<WebAclRuleStatementByteMatchStatementGetArgs> byteMatchStatement) {
@@ -288,7 +289,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder byteMatchStatement(@Nullable WebAclRuleStatementByteMatchStatementGetArgs byteMatchStatement) {
-            this.byteMatchStatement = Output.ofNullable(byteMatchStatement);
+            this.byteMatchStatement = Codegen.ofNullable(byteMatchStatement);
             return this;
         }
         public Builder geoMatchStatement(@Nullable Output<WebAclRuleStatementGeoMatchStatementGetArgs> geoMatchStatement) {
@@ -296,7 +297,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder geoMatchStatement(@Nullable WebAclRuleStatementGeoMatchStatementGetArgs geoMatchStatement) {
-            this.geoMatchStatement = Output.ofNullable(geoMatchStatement);
+            this.geoMatchStatement = Codegen.ofNullable(geoMatchStatement);
             return this;
         }
         public Builder ipSetReferenceStatement(@Nullable Output<WebAclRuleStatementIpSetReferenceStatementGetArgs> ipSetReferenceStatement) {
@@ -304,7 +305,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ipSetReferenceStatement(@Nullable WebAclRuleStatementIpSetReferenceStatementGetArgs ipSetReferenceStatement) {
-            this.ipSetReferenceStatement = Output.ofNullable(ipSetReferenceStatement);
+            this.ipSetReferenceStatement = Codegen.ofNullable(ipSetReferenceStatement);
             return this;
         }
         public Builder labelMatchStatement(@Nullable Output<WebAclRuleStatementLabelMatchStatementGetArgs> labelMatchStatement) {
@@ -312,7 +313,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder labelMatchStatement(@Nullable WebAclRuleStatementLabelMatchStatementGetArgs labelMatchStatement) {
-            this.labelMatchStatement = Output.ofNullable(labelMatchStatement);
+            this.labelMatchStatement = Codegen.ofNullable(labelMatchStatement);
             return this;
         }
         public Builder managedRuleGroupStatement(@Nullable Output<WebAclRuleStatementManagedRuleGroupStatementGetArgs> managedRuleGroupStatement) {
@@ -320,7 +321,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder managedRuleGroupStatement(@Nullable WebAclRuleStatementManagedRuleGroupStatementGetArgs managedRuleGroupStatement) {
-            this.managedRuleGroupStatement = Output.ofNullable(managedRuleGroupStatement);
+            this.managedRuleGroupStatement = Codegen.ofNullable(managedRuleGroupStatement);
             return this;
         }
         public Builder notStatement(@Nullable Output<WebAclRuleStatementNotStatementGetArgs> notStatement) {
@@ -328,7 +329,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder notStatement(@Nullable WebAclRuleStatementNotStatementGetArgs notStatement) {
-            this.notStatement = Output.ofNullable(notStatement);
+            this.notStatement = Codegen.ofNullable(notStatement);
             return this;
         }
         public Builder orStatement(@Nullable Output<WebAclRuleStatementOrStatementGetArgs> orStatement) {
@@ -336,7 +337,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder orStatement(@Nullable WebAclRuleStatementOrStatementGetArgs orStatement) {
-            this.orStatement = Output.ofNullable(orStatement);
+            this.orStatement = Codegen.ofNullable(orStatement);
             return this;
         }
         public Builder rateBasedStatement(@Nullable Output<WebAclRuleStatementRateBasedStatementGetArgs> rateBasedStatement) {
@@ -344,7 +345,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder rateBasedStatement(@Nullable WebAclRuleStatementRateBasedStatementGetArgs rateBasedStatement) {
-            this.rateBasedStatement = Output.ofNullable(rateBasedStatement);
+            this.rateBasedStatement = Codegen.ofNullable(rateBasedStatement);
             return this;
         }
         public Builder regexPatternSetReferenceStatement(@Nullable Output<WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs> regexPatternSetReferenceStatement) {
@@ -352,7 +353,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder regexPatternSetReferenceStatement(@Nullable WebAclRuleStatementRegexPatternSetReferenceStatementGetArgs regexPatternSetReferenceStatement) {
-            this.regexPatternSetReferenceStatement = Output.ofNullable(regexPatternSetReferenceStatement);
+            this.regexPatternSetReferenceStatement = Codegen.ofNullable(regexPatternSetReferenceStatement);
             return this;
         }
         public Builder ruleGroupReferenceStatement(@Nullable Output<WebAclRuleStatementRuleGroupReferenceStatementGetArgs> ruleGroupReferenceStatement) {
@@ -360,7 +361,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ruleGroupReferenceStatement(@Nullable WebAclRuleStatementRuleGroupReferenceStatementGetArgs ruleGroupReferenceStatement) {
-            this.ruleGroupReferenceStatement = Output.ofNullable(ruleGroupReferenceStatement);
+            this.ruleGroupReferenceStatement = Codegen.ofNullable(ruleGroupReferenceStatement);
             return this;
         }
         public Builder sizeConstraintStatement(@Nullable Output<WebAclRuleStatementSizeConstraintStatementGetArgs> sizeConstraintStatement) {
@@ -368,7 +369,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sizeConstraintStatement(@Nullable WebAclRuleStatementSizeConstraintStatementGetArgs sizeConstraintStatement) {
-            this.sizeConstraintStatement = Output.ofNullable(sizeConstraintStatement);
+            this.sizeConstraintStatement = Codegen.ofNullable(sizeConstraintStatement);
             return this;
         }
         public Builder sqliMatchStatement(@Nullable Output<WebAclRuleStatementSqliMatchStatementGetArgs> sqliMatchStatement) {
@@ -376,7 +377,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sqliMatchStatement(@Nullable WebAclRuleStatementSqliMatchStatementGetArgs sqliMatchStatement) {
-            this.sqliMatchStatement = Output.ofNullable(sqliMatchStatement);
+            this.sqliMatchStatement = Codegen.ofNullable(sqliMatchStatement);
             return this;
         }
         public Builder xssMatchStatement(@Nullable Output<WebAclRuleStatementXssMatchStatementGetArgs> xssMatchStatement) {
@@ -384,7 +385,7 @@ public final class WebAclRuleStatementGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder xssMatchStatement(@Nullable WebAclRuleStatementXssMatchStatementGetArgs xssMatchStatement) {
-            this.xssMatchStatement = Output.ofNullable(xssMatchStatement);
+            this.xssMatchStatement = Codegen.ofNullable(xssMatchStatement);
             return this;
         }        public WebAclRuleStatementGetArgs build() {
             return new WebAclRuleStatementGetArgs(andStatement, byteMatchStatement, geoMatchStatement, ipSetReferenceStatement, labelMatchStatement, managedRuleGroupStatement, notStatement, orStatement, rateBasedStatement, regexPatternSetReferenceStatement, ruleGroupReferenceStatement, sizeConstraintStatement, sqliMatchStatement, xssMatchStatement);

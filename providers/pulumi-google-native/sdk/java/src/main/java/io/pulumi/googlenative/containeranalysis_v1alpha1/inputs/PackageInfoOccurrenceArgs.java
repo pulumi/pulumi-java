@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> filename;
 
     public Output<String> getFilename() {
-        return this.filename == null ? Output.empty() : this.filename;
+        return this.filename == null ? Codegen.empty() : this.filename;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<LicenseArgs> licenseConcluded;
 
     public Output<LicenseArgs> getLicenseConcluded() {
-        return this.licenseConcluded == null ? Output.empty() : this.licenseConcluded;
+        return this.licenseConcluded == null ? Codegen.empty() : this.licenseConcluded;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> sourceInfo;
 
     public Output<String> getSourceInfo() {
-        return this.sourceInfo == null ? Output.empty() : this.sourceInfo;
+        return this.sourceInfo == null ? Codegen.empty() : this.sourceInfo;
     }
 
     public PackageInfoOccurrenceArgs(
@@ -88,11 +89,11 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
     }
 
     private PackageInfoOccurrenceArgs() {
-        this.comment = Output.empty();
-        this.filename = Output.empty();
-        this.id = Output.empty();
-        this.licenseConcluded = Output.empty();
-        this.sourceInfo = Output.empty();
+        this.comment = Codegen.empty();
+        this.filename = Codegen.empty();
+        this.id = Codegen.empty();
+        this.licenseConcluded = Codegen.empty();
+        this.sourceInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder filename(@Nullable Output<String> filename) {
@@ -136,7 +137,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filename(@Nullable String filename) {
-            this.filename = Output.ofNullable(filename);
+            this.filename = Codegen.ofNullable(filename);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -144,7 +145,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder licenseConcluded(@Nullable Output<LicenseArgs> licenseConcluded) {
@@ -152,7 +153,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder licenseConcluded(@Nullable LicenseArgs licenseConcluded) {
-            this.licenseConcluded = Output.ofNullable(licenseConcluded);
+            this.licenseConcluded = Codegen.ofNullable(licenseConcluded);
             return this;
         }
         public Builder sourceInfo(@Nullable Output<String> sourceInfo) {
@@ -160,7 +161,7 @@ public final class PackageInfoOccurrenceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sourceInfo(@Nullable String sourceInfo) {
-            this.sourceInfo = Output.ofNullable(sourceInfo);
+            this.sourceInfo = Codegen.ofNullable(sourceInfo);
             return this;
         }        public PackageInfoOccurrenceArgs build() {
             return new PackageInfoOccurrenceArgs(comment, filename, id, licenseConcluded, sourceInfo);

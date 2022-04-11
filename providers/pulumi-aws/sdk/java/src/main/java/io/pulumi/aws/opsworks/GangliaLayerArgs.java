@@ -7,6 +7,7 @@ import io.pulumi.aws.opsworks.inputs.GangliaLayerCloudwatchConfigurationArgs;
 import io.pulumi.aws.opsworks.inputs.GangliaLayerEbsVolumeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoAssignElasticIps;
 
     public Output<Boolean> getAutoAssignElasticIps() {
-        return this.autoAssignElasticIps == null ? Output.empty() : this.autoAssignElasticIps;
+        return this.autoAssignElasticIps == null ? Codegen.empty() : this.autoAssignElasticIps;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoAssignPublicIps;
 
     public Output<Boolean> getAutoAssignPublicIps() {
-        return this.autoAssignPublicIps == null ? Output.empty() : this.autoAssignPublicIps;
+        return this.autoAssignPublicIps == null ? Codegen.empty() : this.autoAssignPublicIps;
     }
 
     /**
@@ -50,28 +51,28 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoHealing;
 
     public Output<Boolean> getAutoHealing() {
-        return this.autoHealing == null ? Output.empty() : this.autoHealing;
+        return this.autoHealing == null ? Codegen.empty() : this.autoHealing;
     }
 
     @Import(name="cloudwatchConfiguration")
       private final @Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration;
 
     public Output<GangliaLayerCloudwatchConfigurationArgs> getCloudwatchConfiguration() {
-        return this.cloudwatchConfiguration == null ? Output.empty() : this.cloudwatchConfiguration;
+        return this.cloudwatchConfiguration == null ? Codegen.empty() : this.cloudwatchConfiguration;
     }
 
     @Import(name="customConfigureRecipes")
       private final @Nullable Output<List<String>> customConfigureRecipes;
 
     public Output<List<String>> getCustomConfigureRecipes() {
-        return this.customConfigureRecipes == null ? Output.empty() : this.customConfigureRecipes;
+        return this.customConfigureRecipes == null ? Codegen.empty() : this.customConfigureRecipes;
     }
 
     @Import(name="customDeployRecipes")
       private final @Nullable Output<List<String>> customDeployRecipes;
 
     public Output<List<String>> getCustomDeployRecipes() {
-        return this.customDeployRecipes == null ? Output.empty() : this.customDeployRecipes;
+        return this.customDeployRecipes == null ? Codegen.empty() : this.customDeployRecipes;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customInstanceProfileArn;
 
     public Output<String> getCustomInstanceProfileArn() {
-        return this.customInstanceProfileArn == null ? Output.empty() : this.customInstanceProfileArn;
+        return this.customInstanceProfileArn == null ? Codegen.empty() : this.customInstanceProfileArn;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customJson;
 
     public Output<String> getCustomJson() {
-        return this.customJson == null ? Output.empty() : this.customJson;
+        return this.customJson == null ? Codegen.empty() : this.customJson;
     }
 
     /**
@@ -104,28 +105,28 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> customSecurityGroupIds;
 
     public Output<List<String>> getCustomSecurityGroupIds() {
-        return this.customSecurityGroupIds == null ? Output.empty() : this.customSecurityGroupIds;
+        return this.customSecurityGroupIds == null ? Codegen.empty() : this.customSecurityGroupIds;
     }
 
     @Import(name="customSetupRecipes")
       private final @Nullable Output<List<String>> customSetupRecipes;
 
     public Output<List<String>> getCustomSetupRecipes() {
-        return this.customSetupRecipes == null ? Output.empty() : this.customSetupRecipes;
+        return this.customSetupRecipes == null ? Codegen.empty() : this.customSetupRecipes;
     }
 
     @Import(name="customShutdownRecipes")
       private final @Nullable Output<List<String>> customShutdownRecipes;
 
     public Output<List<String>> getCustomShutdownRecipes() {
-        return this.customShutdownRecipes == null ? Output.empty() : this.customShutdownRecipes;
+        return this.customShutdownRecipes == null ? Codegen.empty() : this.customShutdownRecipes;
     }
 
     @Import(name="customUndeployRecipes")
       private final @Nullable Output<List<String>> customUndeployRecipes;
 
     public Output<List<String>> getCustomUndeployRecipes() {
-        return this.customUndeployRecipes == null ? Output.empty() : this.customUndeployRecipes;
+        return this.customUndeployRecipes == null ? Codegen.empty() : this.customUndeployRecipes;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> drainElbOnShutdown;
 
     public Output<Boolean> getDrainElbOnShutdown() {
-        return this.drainElbOnShutdown == null ? Output.empty() : this.drainElbOnShutdown;
+        return this.drainElbOnShutdown == null ? Codegen.empty() : this.drainElbOnShutdown;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes;
 
     public Output<List<GangliaLayerEbsVolumeArgs>> getEbsVolumes() {
-        return this.ebsVolumes == null ? Output.empty() : this.ebsVolumes;
+        return this.ebsVolumes == null ? Codegen.empty() : this.ebsVolumes;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> elasticLoadBalancer;
 
     public Output<String> getElasticLoadBalancer() {
-        return this.elasticLoadBalancer == null ? Output.empty() : this.elasticLoadBalancer;
+        return this.elasticLoadBalancer == null ? Codegen.empty() : this.elasticLoadBalancer;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> installUpdatesOnBoot;
 
     public Output<Boolean> getInstallUpdatesOnBoot() {
-        return this.installUpdatesOnBoot == null ? Output.empty() : this.installUpdatesOnBoot;
+        return this.installUpdatesOnBoot == null ? Codegen.empty() : this.installUpdatesOnBoot;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> instanceShutdownTimeout;
 
     public Output<Integer> getInstanceShutdownTimeout() {
-        return this.instanceShutdownTimeout == null ? Output.empty() : this.instanceShutdownTimeout;
+        return this.instanceShutdownTimeout == null ? Codegen.empty() : this.instanceShutdownTimeout;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> systemPackages;
 
     public Output<List<String>> getSystemPackages() {
-        return this.systemPackages == null ? Output.empty() : this.systemPackages;
+        return this.systemPackages == null ? Codegen.empty() : this.systemPackages;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     /**
@@ -257,7 +258,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useEbsOptimizedInstances;
 
     public Output<Boolean> getUseEbsOptimizedInstances() {
-        return this.useEbsOptimizedInstances == null ? Output.empty() : this.useEbsOptimizedInstances;
+        return this.useEbsOptimizedInstances == null ? Codegen.empty() : this.useEbsOptimizedInstances;
     }
 
     /**
@@ -268,7 +269,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public GangliaLayerArgs(
@@ -325,31 +326,31 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GangliaLayerArgs() {
-        this.autoAssignElasticIps = Output.empty();
-        this.autoAssignPublicIps = Output.empty();
-        this.autoHealing = Output.empty();
-        this.cloudwatchConfiguration = Output.empty();
-        this.customConfigureRecipes = Output.empty();
-        this.customDeployRecipes = Output.empty();
-        this.customInstanceProfileArn = Output.empty();
-        this.customJson = Output.empty();
-        this.customSecurityGroupIds = Output.empty();
-        this.customSetupRecipes = Output.empty();
-        this.customShutdownRecipes = Output.empty();
-        this.customUndeployRecipes = Output.empty();
-        this.drainElbOnShutdown = Output.empty();
-        this.ebsVolumes = Output.empty();
-        this.elasticLoadBalancer = Output.empty();
-        this.installUpdatesOnBoot = Output.empty();
-        this.instanceShutdownTimeout = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.stackId = Output.empty();
-        this.systemPackages = Output.empty();
-        this.tags = Output.empty();
-        this.url = Output.empty();
-        this.useEbsOptimizedInstances = Output.empty();
-        this.username = Output.empty();
+        this.autoAssignElasticIps = Codegen.empty();
+        this.autoAssignPublicIps = Codegen.empty();
+        this.autoHealing = Codegen.empty();
+        this.cloudwatchConfiguration = Codegen.empty();
+        this.customConfigureRecipes = Codegen.empty();
+        this.customDeployRecipes = Codegen.empty();
+        this.customInstanceProfileArn = Codegen.empty();
+        this.customJson = Codegen.empty();
+        this.customSecurityGroupIds = Codegen.empty();
+        this.customSetupRecipes = Codegen.empty();
+        this.customShutdownRecipes = Codegen.empty();
+        this.customUndeployRecipes = Codegen.empty();
+        this.drainElbOnShutdown = Codegen.empty();
+        this.ebsVolumes = Codegen.empty();
+        this.elasticLoadBalancer = Codegen.empty();
+        this.installUpdatesOnBoot = Codegen.empty();
+        this.instanceShutdownTimeout = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.stackId = Codegen.empty();
+        this.systemPackages = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.url = Codegen.empty();
+        this.useEbsOptimizedInstances = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -425,7 +426,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoAssignElasticIps(@Nullable Boolean autoAssignElasticIps) {
-            this.autoAssignElasticIps = Output.ofNullable(autoAssignElasticIps);
+            this.autoAssignElasticIps = Codegen.ofNullable(autoAssignElasticIps);
             return this;
         }
         public Builder autoAssignPublicIps(@Nullable Output<Boolean> autoAssignPublicIps) {
@@ -433,7 +434,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoAssignPublicIps(@Nullable Boolean autoAssignPublicIps) {
-            this.autoAssignPublicIps = Output.ofNullable(autoAssignPublicIps);
+            this.autoAssignPublicIps = Codegen.ofNullable(autoAssignPublicIps);
             return this;
         }
         public Builder autoHealing(@Nullable Output<Boolean> autoHealing) {
@@ -441,7 +442,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoHealing(@Nullable Boolean autoHealing) {
-            this.autoHealing = Output.ofNullable(autoHealing);
+            this.autoHealing = Codegen.ofNullable(autoHealing);
             return this;
         }
         public Builder cloudwatchConfiguration(@Nullable Output<GangliaLayerCloudwatchConfigurationArgs> cloudwatchConfiguration) {
@@ -449,7 +450,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudwatchConfiguration(@Nullable GangliaLayerCloudwatchConfigurationArgs cloudwatchConfiguration) {
-            this.cloudwatchConfiguration = Output.ofNullable(cloudwatchConfiguration);
+            this.cloudwatchConfiguration = Codegen.ofNullable(cloudwatchConfiguration);
             return this;
         }
         public Builder customConfigureRecipes(@Nullable Output<List<String>> customConfigureRecipes) {
@@ -457,7 +458,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customConfigureRecipes(@Nullable List<String> customConfigureRecipes) {
-            this.customConfigureRecipes = Output.ofNullable(customConfigureRecipes);
+            this.customConfigureRecipes = Codegen.ofNullable(customConfigureRecipes);
             return this;
         }
         public Builder customConfigureRecipes(String... customConfigureRecipes) {
@@ -468,7 +469,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customDeployRecipes(@Nullable List<String> customDeployRecipes) {
-            this.customDeployRecipes = Output.ofNullable(customDeployRecipes);
+            this.customDeployRecipes = Codegen.ofNullable(customDeployRecipes);
             return this;
         }
         public Builder customDeployRecipes(String... customDeployRecipes) {
@@ -479,7 +480,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customInstanceProfileArn(@Nullable String customInstanceProfileArn) {
-            this.customInstanceProfileArn = Output.ofNullable(customInstanceProfileArn);
+            this.customInstanceProfileArn = Codegen.ofNullable(customInstanceProfileArn);
             return this;
         }
         public Builder customJson(@Nullable Output<String> customJson) {
@@ -487,7 +488,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customJson(@Nullable String customJson) {
-            this.customJson = Output.ofNullable(customJson);
+            this.customJson = Codegen.ofNullable(customJson);
             return this;
         }
         public Builder customSecurityGroupIds(@Nullable Output<List<String>> customSecurityGroupIds) {
@@ -495,7 +496,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customSecurityGroupIds(@Nullable List<String> customSecurityGroupIds) {
-            this.customSecurityGroupIds = Output.ofNullable(customSecurityGroupIds);
+            this.customSecurityGroupIds = Codegen.ofNullable(customSecurityGroupIds);
             return this;
         }
         public Builder customSecurityGroupIds(String... customSecurityGroupIds) {
@@ -506,7 +507,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customSetupRecipes(@Nullable List<String> customSetupRecipes) {
-            this.customSetupRecipes = Output.ofNullable(customSetupRecipes);
+            this.customSetupRecipes = Codegen.ofNullable(customSetupRecipes);
             return this;
         }
         public Builder customSetupRecipes(String... customSetupRecipes) {
@@ -517,7 +518,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customShutdownRecipes(@Nullable List<String> customShutdownRecipes) {
-            this.customShutdownRecipes = Output.ofNullable(customShutdownRecipes);
+            this.customShutdownRecipes = Codegen.ofNullable(customShutdownRecipes);
             return this;
         }
         public Builder customShutdownRecipes(String... customShutdownRecipes) {
@@ -528,7 +529,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customUndeployRecipes(@Nullable List<String> customUndeployRecipes) {
-            this.customUndeployRecipes = Output.ofNullable(customUndeployRecipes);
+            this.customUndeployRecipes = Codegen.ofNullable(customUndeployRecipes);
             return this;
         }
         public Builder customUndeployRecipes(String... customUndeployRecipes) {
@@ -539,7 +540,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder drainElbOnShutdown(@Nullable Boolean drainElbOnShutdown) {
-            this.drainElbOnShutdown = Output.ofNullable(drainElbOnShutdown);
+            this.drainElbOnShutdown = Codegen.ofNullable(drainElbOnShutdown);
             return this;
         }
         public Builder ebsVolumes(@Nullable Output<List<GangliaLayerEbsVolumeArgs>> ebsVolumes) {
@@ -547,7 +548,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ebsVolumes(@Nullable List<GangliaLayerEbsVolumeArgs> ebsVolumes) {
-            this.ebsVolumes = Output.ofNullable(ebsVolumes);
+            this.ebsVolumes = Codegen.ofNullable(ebsVolumes);
             return this;
         }
         public Builder ebsVolumes(GangliaLayerEbsVolumeArgs... ebsVolumes) {
@@ -558,7 +559,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticLoadBalancer(@Nullable String elasticLoadBalancer) {
-            this.elasticLoadBalancer = Output.ofNullable(elasticLoadBalancer);
+            this.elasticLoadBalancer = Codegen.ofNullable(elasticLoadBalancer);
             return this;
         }
         public Builder installUpdatesOnBoot(@Nullable Output<Boolean> installUpdatesOnBoot) {
@@ -566,7 +567,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder installUpdatesOnBoot(@Nullable Boolean installUpdatesOnBoot) {
-            this.installUpdatesOnBoot = Output.ofNullable(installUpdatesOnBoot);
+            this.installUpdatesOnBoot = Codegen.ofNullable(installUpdatesOnBoot);
             return this;
         }
         public Builder instanceShutdownTimeout(@Nullable Output<Integer> instanceShutdownTimeout) {
@@ -574,7 +575,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceShutdownTimeout(@Nullable Integer instanceShutdownTimeout) {
-            this.instanceShutdownTimeout = Output.ofNullable(instanceShutdownTimeout);
+            this.instanceShutdownTimeout = Codegen.ofNullable(instanceShutdownTimeout);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -582,7 +583,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder password(Output<String> password) {
@@ -606,7 +607,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemPackages(@Nullable List<String> systemPackages) {
-            this.systemPackages = Output.ofNullable(systemPackages);
+            this.systemPackages = Codegen.ofNullable(systemPackages);
             return this;
         }
         public Builder systemPackages(String... systemPackages) {
@@ -617,7 +618,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -625,7 +626,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }
         public Builder useEbsOptimizedInstances(@Nullable Output<Boolean> useEbsOptimizedInstances) {
@@ -633,7 +634,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useEbsOptimizedInstances(@Nullable Boolean useEbsOptimizedInstances) {
-            this.useEbsOptimizedInstances = Output.ofNullable(useEbsOptimizedInstances);
+            this.useEbsOptimizedInstances = Codegen.ofNullable(useEbsOptimizedInstances);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -641,7 +642,7 @@ public final class GangliaLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public GangliaLayerArgs build() {
             return new GangliaLayerArgs(autoAssignElasticIps, autoAssignPublicIps, autoHealing, cloudwatchConfiguration, customConfigureRecipes, customDeployRecipes, customInstanceProfileArn, customJson, customSecurityGroupIds, customSetupRecipes, customShutdownRecipes, customUndeployRecipes, drainElbOnShutdown, ebsVolumes, elasticLoadBalancer, installUpdatesOnBoot, instanceShutdownTimeout, name, password, stackId, systemPackages, tags, url, useEbsOptimizedInstances, username);

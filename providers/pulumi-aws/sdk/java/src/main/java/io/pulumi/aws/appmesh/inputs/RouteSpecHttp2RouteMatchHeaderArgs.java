@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.RouteSpecHttp2RouteMatchHeaderMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> invert;
 
     public Output<Boolean> getInvert() {
-        return this.invert == null ? Output.empty() : this.invert;
+        return this.invert == null ? Codegen.empty() : this.invert;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends io.pulumi.resource
       private final @Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match;
 
     public Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> getMatch() {
-        return this.match == null ? Output.empty() : this.match;
+        return this.match == null ? Codegen.empty() : this.match;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends io.pulumi.resource
     }
 
     private RouteSpecHttp2RouteMatchHeaderArgs() {
-        this.invert = Output.empty();
-        this.match = Output.empty();
-        this.name = Output.empty();
+        this.invert = Codegen.empty();
+        this.match = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends io.pulumi.resource
             return this;
         }
         public Builder invert(@Nullable Boolean invert) {
-            this.invert = Output.ofNullable(invert);
+            this.invert = Codegen.ofNullable(invert);
             return this;
         }
         public Builder match(@Nullable Output<RouteSpecHttp2RouteMatchHeaderMatchArgs> match) {
@@ -101,7 +102,7 @@ public final class RouteSpecHttp2RouteMatchHeaderArgs extends io.pulumi.resource
             return this;
         }
         public Builder match(@Nullable RouteSpecHttp2RouteMatchHeaderMatchArgs match) {
-            this.match = Output.ofNullable(match);
+            this.match = Codegen.ofNullable(match);
             return this;
         }
         public Builder name(Output<String> name) {

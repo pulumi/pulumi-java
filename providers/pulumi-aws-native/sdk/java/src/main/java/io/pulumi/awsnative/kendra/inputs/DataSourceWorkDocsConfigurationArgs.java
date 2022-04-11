@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,28 +22,28 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> crawlComments;
 
     public Output<Boolean> getCrawlComments() {
-        return this.crawlComments == null ? Output.empty() : this.crawlComments;
+        return this.crawlComments == null ? Codegen.empty() : this.crawlComments;
     }
 
     @Import(name="exclusionPatterns")
       private final @Nullable Output<List<String>> exclusionPatterns;
 
     public Output<List<String>> getExclusionPatterns() {
-        return this.exclusionPatterns == null ? Output.empty() : this.exclusionPatterns;
+        return this.exclusionPatterns == null ? Codegen.empty() : this.exclusionPatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
+        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="inclusionPatterns")
       private final @Nullable Output<List<String>> inclusionPatterns;
 
     public Output<List<String>> getInclusionPatterns() {
-        return this.inclusionPatterns == null ? Output.empty() : this.inclusionPatterns;
+        return this.inclusionPatterns == null ? Codegen.empty() : this.inclusionPatterns;
     }
 
     @Import(name="organizationId", required=true)
@@ -56,7 +57,7 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> useChangeLog;
 
     public Output<Boolean> getUseChangeLog() {
-        return this.useChangeLog == null ? Output.empty() : this.useChangeLog;
+        return this.useChangeLog == null ? Codegen.empty() : this.useChangeLog;
     }
 
     public DataSourceWorkDocsConfigurationArgs(
@@ -75,12 +76,12 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     }
 
     private DataSourceWorkDocsConfigurationArgs() {
-        this.crawlComments = Output.empty();
-        this.exclusionPatterns = Output.empty();
-        this.fieldMappings = Output.empty();
-        this.inclusionPatterns = Output.empty();
-        this.organizationId = Output.empty();
-        this.useChangeLog = Output.empty();
+        this.crawlComments = Codegen.empty();
+        this.exclusionPatterns = Codegen.empty();
+        this.fieldMappings = Codegen.empty();
+        this.inclusionPatterns = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.useChangeLog = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder crawlComments(@Nullable Boolean crawlComments) {
-            this.crawlComments = Output.ofNullable(crawlComments);
+            this.crawlComments = Codegen.ofNullable(crawlComments);
             return this;
         }
         public Builder exclusionPatterns(@Nullable Output<List<String>> exclusionPatterns) {
@@ -126,7 +127,7 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder exclusionPatterns(@Nullable List<String> exclusionPatterns) {
-            this.exclusionPatterns = Output.ofNullable(exclusionPatterns);
+            this.exclusionPatterns = Codegen.ofNullable(exclusionPatterns);
             return this;
         }
         public Builder exclusionPatterns(String... exclusionPatterns) {
@@ -137,7 +138,7 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.ofNullable(fieldMappings);
+            this.fieldMappings = Codegen.ofNullable(fieldMappings);
             return this;
         }
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
@@ -148,7 +149,7 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder inclusionPatterns(@Nullable List<String> inclusionPatterns) {
-            this.inclusionPatterns = Output.ofNullable(inclusionPatterns);
+            this.inclusionPatterns = Codegen.ofNullable(inclusionPatterns);
             return this;
         }
         public Builder inclusionPatterns(String... inclusionPatterns) {
@@ -167,7 +168,7 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder useChangeLog(@Nullable Boolean useChangeLog) {
-            this.useChangeLog = Output.ofNullable(useChangeLog);
+            this.useChangeLog = Codegen.ofNullable(useChangeLog);
             return this;
         }        public DataSourceWorkDocsConfigurationArgs build() {
             return new DataSourceWorkDocsConfigurationArgs(crawlComments, exclusionPatterns, fieldMappings, inclusionPatterns, organizationId, useChangeLog);

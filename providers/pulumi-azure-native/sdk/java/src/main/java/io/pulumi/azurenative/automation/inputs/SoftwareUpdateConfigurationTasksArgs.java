@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.inputs.TaskPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
       private final @Nullable Output<TaskPropertiesArgs> postTask;
 
     public Output<TaskPropertiesArgs> getPostTask() {
-        return this.postTask == null ? Output.empty() : this.postTask;
+        return this.postTask == null ? Codegen.empty() : this.postTask;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
       private final @Nullable Output<TaskPropertiesArgs> preTask;
 
     public Output<TaskPropertiesArgs> getPreTask() {
-        return this.preTask == null ? Output.empty() : this.preTask;
+        return this.preTask == null ? Codegen.empty() : this.preTask;
     }
 
     public SoftwareUpdateConfigurationTasksArgs(
@@ -48,8 +49,8 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
     }
 
     private SoftwareUpdateConfigurationTasksArgs() {
-        this.postTask = Output.empty();
-        this.preTask = Output.empty();
+        this.postTask = Codegen.empty();
+        this.preTask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
             return this;
         }
         public Builder postTask(@Nullable TaskPropertiesArgs postTask) {
-            this.postTask = Output.ofNullable(postTask);
+            this.postTask = Codegen.ofNullable(postTask);
             return this;
         }
         public Builder preTask(@Nullable Output<TaskPropertiesArgs> preTask) {
@@ -87,7 +88,7 @@ public final class SoftwareUpdateConfigurationTasksArgs extends io.pulumi.resour
             return this;
         }
         public Builder preTask(@Nullable TaskPropertiesArgs preTask) {
-            this.preTask = Output.ofNullable(preTask);
+            this.preTask = Codegen.ofNullable(preTask);
             return this;
         }        public SoftwareUpdateConfigurationTasksArgs build() {
             return new SoftwareUpdateConfigurationTasksArgs(postTask, preTask);

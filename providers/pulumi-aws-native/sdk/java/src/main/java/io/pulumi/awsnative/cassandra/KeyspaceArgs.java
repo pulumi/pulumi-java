@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cassandra;
 import io.pulumi.awsnative.cassandra.inputs.KeyspaceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,14 +25,14 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyspaceName;
 
     public Output<String> getKeyspaceName() {
-        return this.keyspaceName == null ? Output.empty() : this.keyspaceName;
+        return this.keyspaceName == null ? Codegen.empty() : this.keyspaceName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<KeyspaceTagArgs>> tags;
 
     public Output<List<KeyspaceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public KeyspaceArgs(
@@ -42,8 +43,8 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyspaceArgs() {
-        this.keyspaceName = Output.empty();
-        this.tags = Output.empty();
+        this.keyspaceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -73,7 +74,7 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyspaceName(@Nullable String keyspaceName) {
-            this.keyspaceName = Output.ofNullable(keyspaceName);
+            this.keyspaceName = Codegen.ofNullable(keyspaceName);
             return this;
         }
         public Builder tags(@Nullable Output<List<KeyspaceTagArgs>> tags) {
@@ -81,7 +82,7 @@ public final class KeyspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<KeyspaceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(KeyspaceTagArgs... tags) {

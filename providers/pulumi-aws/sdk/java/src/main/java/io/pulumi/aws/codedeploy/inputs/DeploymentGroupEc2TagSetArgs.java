@@ -6,6 +6,7 @@ package io.pulumi.aws.codedeploy.inputs;
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupEc2TagSetEc2TagFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters;
 
     public Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> getEc2TagFilters() {
-        return this.ec2TagFilters == null ? Output.empty() : this.ec2TagFilters;
+        return this.ec2TagFilters == null ? Codegen.empty() : this.ec2TagFilters;
     }
 
     public DeploymentGroupEc2TagSetArgs(@Nullable Output<List<DeploymentGroupEc2TagSetEc2TagFilterArgs>> ec2TagFilters) {
@@ -31,7 +32,7 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
     }
 
     private DeploymentGroupEc2TagSetArgs() {
-        this.ec2TagFilters = Output.empty();
+        this.ec2TagFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class DeploymentGroupEc2TagSetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder ec2TagFilters(@Nullable List<DeploymentGroupEc2TagSetEc2TagFilterArgs> ec2TagFilters) {
-            this.ec2TagFilters = Output.ofNullable(ec2TagFilters);
+            this.ec2TagFilters = Codegen.ofNullable(ec2TagFilters);
             return this;
         }
         public Builder ec2TagFilters(DeploymentGroupEc2TagSetEc2TagFilterArgs... ec2TagFilters) {

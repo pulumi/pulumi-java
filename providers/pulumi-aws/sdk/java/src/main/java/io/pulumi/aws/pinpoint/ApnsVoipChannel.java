@@ -9,6 +9,7 @@ import io.pulumi.aws.pinpoint.inputs.ApnsVoipChannelState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -184,7 +185,7 @@ public class ApnsVoipChannel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApnsVoipChannel(String name, ApnsVoipChannelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:pinpoint/apnsVoipChannel:ApnsVoipChannel", name, args == null ? ApnsVoipChannelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:pinpoint/apnsVoipChannel:ApnsVoipChannel", name, args == null ? ApnsVoipChannelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApnsVoipChannel(String name, Output<String> id, @Nullable ApnsVoipChannelState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

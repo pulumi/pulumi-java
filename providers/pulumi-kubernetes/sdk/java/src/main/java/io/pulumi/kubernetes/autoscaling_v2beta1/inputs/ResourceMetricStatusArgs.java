@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> currentAverageUtilization;
 
     public Output<Integer> getCurrentAverageUtilization() {
-        return this.currentAverageUtilization == null ? Output.empty() : this.currentAverageUtilization;
+        return this.currentAverageUtilization == null ? Codegen.empty() : this.currentAverageUtilization;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
     }
 
     private ResourceMetricStatusArgs() {
-        this.currentAverageUtilization = Output.empty();
-        this.currentAverageValue = Output.empty();
-        this.name = Output.empty();
+        this.currentAverageUtilization = Codegen.empty();
+        this.currentAverageValue = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder currentAverageUtilization(@Nullable Integer currentAverageUtilization) {
-            this.currentAverageUtilization = Output.ofNullable(currentAverageUtilization);
+            this.currentAverageUtilization = Codegen.ofNullable(currentAverageUtilization);
             return this;
         }
         public Builder currentAverageValue(Output<String> currentAverageValue) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.ConnectionPhysicalConnectionRequirementsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> connectionProperties;
 
     public Output<Map<String,String>> getConnectionProperties() {
-        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
+        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectionType;
 
     public Output<String> getConnectionType() {
-        return this.connectionType == null ? Output.empty() : this.connectionType;
+        return this.connectionType == null ? Codegen.empty() : this.connectionType;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> matchCriterias;
 
     public Output<List<String>> getMatchCriterias() {
-        return this.matchCriterias == null ? Output.empty() : this.matchCriterias;
+        return this.matchCriterias == null ? Codegen.empty() : this.matchCriterias;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ConnectionPhysicalConnectionRequirementsGetArgs> physicalConnectionRequirements;
 
     public Output<ConnectionPhysicalConnectionRequirementsGetArgs> getPhysicalConnectionRequirements() {
-        return this.physicalConnectionRequirements == null ? Output.empty() : this.physicalConnectionRequirements;
+        return this.physicalConnectionRequirements == null ? Codegen.empty() : this.physicalConnectionRequirements;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ConnectionState(
@@ -151,16 +152,16 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.arn = Output.empty();
-        this.catalogId = Output.empty();
-        this.connectionProperties = Output.empty();
-        this.connectionType = Output.empty();
-        this.description = Output.empty();
-        this.matchCriterias = Output.empty();
-        this.name = Output.empty();
-        this.physicalConnectionRequirements = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.catalogId = Codegen.empty();
+        this.connectionProperties = Codegen.empty();
+        this.connectionType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.matchCriterias = Codegen.empty();
+        this.name = Codegen.empty();
+        this.physicalConnectionRequirements = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder catalogId(@Nullable Output<String> catalogId) {
@@ -214,7 +215,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder connectionProperties(@Nullable Output<Map<String,String>> connectionProperties) {
@@ -222,7 +223,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionProperties(@Nullable Map<String,String> connectionProperties) {
-            this.connectionProperties = Output.ofNullable(connectionProperties);
+            this.connectionProperties = Codegen.ofNullable(connectionProperties);
             return this;
         }
         public Builder connectionType(@Nullable Output<String> connectionType) {
@@ -230,7 +231,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionType(@Nullable String connectionType) {
-            this.connectionType = Output.ofNullable(connectionType);
+            this.connectionType = Codegen.ofNullable(connectionType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -238,7 +239,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder matchCriterias(@Nullable Output<List<String>> matchCriterias) {
@@ -246,7 +247,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder matchCriterias(@Nullable List<String> matchCriterias) {
-            this.matchCriterias = Output.ofNullable(matchCriterias);
+            this.matchCriterias = Codegen.ofNullable(matchCriterias);
             return this;
         }
         public Builder matchCriterias(String... matchCriterias) {
@@ -257,7 +258,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder physicalConnectionRequirements(@Nullable Output<ConnectionPhysicalConnectionRequirementsGetArgs> physicalConnectionRequirements) {
@@ -265,7 +266,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder physicalConnectionRequirements(@Nullable ConnectionPhysicalConnectionRequirementsGetArgs physicalConnectionRequirements) {
-            this.physicalConnectionRequirements = Output.ofNullable(physicalConnectionRequirements);
+            this.physicalConnectionRequirements = Codegen.ofNullable(physicalConnectionRequirements);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -273,7 +274,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -281,7 +282,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ConnectionState build() {
             return new ConnectionState(arn, catalogId, connectionProperties, connectionType, description, matchCriterias, name, physicalConnectionRequirements, tags, tagsAll);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> generation;
 
     public Output<String> getGeneration() {
-        return this.generation == null ? Output.empty() : this.generation;
+        return this.generation == null ? Codegen.empty() : this.generation;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
     }
 
     private TriggerBuildSourceStorageSourceGetArgs() {
-        this.bucket = Output.empty();
-        this.generation = Output.empty();
-        this.object = Output.empty();
+        this.bucket = Codegen.empty();
+        this.generation = Codegen.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class TriggerBuildSourceStorageSourceGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder generation(@Nullable String generation) {
-            this.generation = Output.ofNullable(generation);
+            this.generation = Codegen.ofNullable(generation);
             return this;
         }
         public Builder object(Output<String> object) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -47,7 +48,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> cpsLimit;
 
     public Output<Integer> getCpsLimit() {
-        return this.cpsLimit == null ? Output.empty() : this.cpsLimit;
+        return this.cpsLimit == null ? Codegen.empty() : this.cpsLimit;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> defaultPhoneNumber;
 
     public Output<String> getDefaultPhoneNumber() {
-        return this.defaultPhoneNumber == null ? Output.empty() : this.defaultPhoneNumber;
+        return this.defaultPhoneNumber == null ? Codegen.empty() : this.defaultPhoneNumber;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> disabled;
 
     public Output<Boolean> getDisabled() {
-        return this.disabled == null ? Output.empty() : this.disabled;
+        return this.disabled == null ? Codegen.empty() : this.disabled;
     }
 
     /**
@@ -99,12 +100,12 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
     }
 
     private VoiceConnectorTerminationArgs() {
-        this.callingRegions = Output.empty();
-        this.cidrAllowLists = Output.empty();
-        this.cpsLimit = Output.empty();
-        this.defaultPhoneNumber = Output.empty();
-        this.disabled = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.callingRegions = Codegen.empty();
+        this.cidrAllowLists = Codegen.empty();
+        this.cpsLimit = Codegen.empty();
+        this.defaultPhoneNumber = Codegen.empty();
+        this.disabled = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder cpsLimit(@Nullable Integer cpsLimit) {
-            this.cpsLimit = Output.ofNullable(cpsLimit);
+            this.cpsLimit = Codegen.ofNullable(cpsLimit);
             return this;
         }
         public Builder defaultPhoneNumber(@Nullable Output<String> defaultPhoneNumber) {
@@ -172,7 +173,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder defaultPhoneNumber(@Nullable String defaultPhoneNumber) {
-            this.defaultPhoneNumber = Output.ofNullable(defaultPhoneNumber);
+            this.defaultPhoneNumber = Codegen.ofNullable(defaultPhoneNumber);
             return this;
         }
         public Builder disabled(@Nullable Output<Boolean> disabled) {
@@ -180,7 +181,7 @@ public final class VoiceConnectorTerminationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder disabled(@Nullable Boolean disabled) {
-            this.disabled = Output.ofNullable(disabled);
+            this.disabled = Codegen.ofNullable(disabled);
             return this;
         }
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {

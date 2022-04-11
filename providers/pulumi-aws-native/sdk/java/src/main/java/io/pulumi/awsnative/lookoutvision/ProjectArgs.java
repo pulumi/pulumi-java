@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lookoutvision;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectName;
 
     public Output<String> getProjectName() {
-        return this.projectName == null ? Output.empty() : this.projectName;
+        return this.projectName == null ? Codegen.empty() : this.projectName;
     }
 
     public ProjectArgs(@Nullable Output<String> projectName) {
@@ -26,7 +27,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.projectName = Output.empty();
+        this.projectName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectName(@Nullable String projectName) {
-            this.projectName = Output.ofNullable(projectName);
+            this.projectName = Codegen.ofNullable(projectName);
             return this;
         }        public ProjectArgs build() {
             return new ProjectArgs(projectName);

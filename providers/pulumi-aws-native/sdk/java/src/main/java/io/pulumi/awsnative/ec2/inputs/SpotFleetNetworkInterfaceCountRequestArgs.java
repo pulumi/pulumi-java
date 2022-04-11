@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
       private final @Nullable Output<Integer> max;
 
     public Output<Integer> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     @Import(name="min")
       private final @Nullable Output<Integer> min;
 
     public Output<Integer> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     public SpotFleetNetworkInterfaceCountRequestArgs(
@@ -36,8 +37,8 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
     }
 
     private SpotFleetNetworkInterfaceCountRequestArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
             return this;
         }
         public Builder max(@Nullable Integer max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder min(@Nullable Output<Integer> min) {
@@ -75,7 +76,7 @@ public final class SpotFleetNetworkInterfaceCountRequestArgs extends io.pulumi.r
             return this;
         }
         public Builder min(@Nullable Integer min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }        public SpotFleetNetworkInterfaceCountRequestArgs build() {
             return new SpotFleetNetworkInterfaceCountRequestArgs(max, min);

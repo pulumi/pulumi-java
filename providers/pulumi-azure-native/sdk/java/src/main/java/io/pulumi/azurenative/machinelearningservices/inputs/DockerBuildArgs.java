@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DockerImagePlatformArgs> platform;
 
     public Output<DockerImagePlatformArgs> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     public DockerBuildArgs(
@@ -79,10 +80,10 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DockerBuildArgs() {
-        this.context = Output.empty();
-        this.dockerSpecificationType = Output.empty();
-        this.dockerfile = Output.empty();
-        this.platform = Output.empty();
+        this.context = Codegen.empty();
+        this.dockerSpecificationType = Codegen.empty();
+        this.dockerfile = Codegen.empty();
+        this.platform = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder dockerSpecificationType(Output<String> dockerSpecificationType) {
@@ -140,7 +141,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable DockerImagePlatformArgs platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }        public DockerBuildArgs build() {
             return new DockerBuildArgs(context, dockerSpecificationType, dockerfile, platform);

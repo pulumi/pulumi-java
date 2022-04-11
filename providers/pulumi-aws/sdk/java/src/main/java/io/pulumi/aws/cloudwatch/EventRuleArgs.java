@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
-        return this.eventBusName == null ? Output.empty() : this.eventBusName;
+        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventPattern;
 
     public Output<String> getEventPattern() {
-        return this.eventPattern == null ? Output.empty() : this.eventPattern;
+        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isEnabled;
 
     public Output<Boolean> getIsEnabled() {
-        return this.isEnabled == null ? Output.empty() : this.isEnabled;
+        return this.isEnabled == null ? Codegen.empty() : this.isEnabled;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheduleExpression;
 
     public Output<String> getScheduleExpression() {
-        return this.scheduleExpression == null ? Output.empty() : this.scheduleExpression;
+        return this.scheduleExpression == null ? Codegen.empty() : this.scheduleExpression;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EventRuleArgs(
@@ -137,15 +138,15 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventRuleArgs() {
-        this.description = Output.empty();
-        this.eventBusName = Output.empty();
-        this.eventPattern = Output.empty();
-        this.isEnabled = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.roleArn = Output.empty();
-        this.scheduleExpression = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.eventBusName = Codegen.empty();
+        this.eventPattern = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.scheduleExpression = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder eventBusName(@Nullable Output<String> eventBusName) {
@@ -197,7 +198,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Output.ofNullable(eventBusName);
+            this.eventBusName = Codegen.ofNullable(eventBusName);
             return this;
         }
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
@@ -205,7 +206,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Output.ofNullable(eventPattern);
+            this.eventPattern = Codegen.ofNullable(eventPattern);
             return this;
         }
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
@@ -213,7 +214,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isEnabled(@Nullable Boolean isEnabled) {
-            this.isEnabled = Output.ofNullable(isEnabled);
+            this.isEnabled = Codegen.ofNullable(isEnabled);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -229,7 +230,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -237,7 +238,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder scheduleExpression(@Nullable Output<String> scheduleExpression) {
@@ -245,7 +246,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleExpression(@Nullable String scheduleExpression) {
-            this.scheduleExpression = Output.ofNullable(scheduleExpression);
+            this.scheduleExpression = Codegen.ofNullable(scheduleExpression);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -253,7 +254,7 @@ public final class EventRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public EventRuleArgs build() {
             return new EventRuleArgs(description, eventBusName, eventPattern, isEnabled, name, namePrefix, roleArn, scheduleExpression, tags);

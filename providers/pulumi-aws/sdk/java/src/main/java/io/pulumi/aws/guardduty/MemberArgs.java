@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableEmailNotification;
 
     public Output<Boolean> getDisableEmailNotification() {
-        return this.disableEmailNotification == null ? Output.empty() : this.disableEmailNotification;
+        return this.disableEmailNotification == null ? Codegen.empty() : this.disableEmailNotification;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invitationMessage;
 
     public Output<String> getInvitationMessage() {
-        return this.invitationMessage == null ? Output.empty() : this.invitationMessage;
+        return this.invitationMessage == null ? Codegen.empty() : this.invitationMessage;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
-        return this.invite == null ? Output.empty() : this.invite;
+        return this.invite == null ? Codegen.empty() : this.invite;
     }
 
     public MemberArgs(
@@ -97,12 +98,12 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberArgs() {
-        this.accountId = Output.empty();
-        this.detectorId = Output.empty();
-        this.disableEmailNotification = Output.empty();
-        this.email = Output.empty();
-        this.invitationMessage = Output.empty();
-        this.invite = Output.empty();
+        this.accountId = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.disableEmailNotification = Codegen.empty();
+        this.email = Codegen.empty();
+        this.invitationMessage = Codegen.empty();
+        this.invite = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableEmailNotification(@Nullable Boolean disableEmailNotification) {
-            this.disableEmailNotification = Output.ofNullable(disableEmailNotification);
+            this.disableEmailNotification = Codegen.ofNullable(disableEmailNotification);
             return this;
         }
         public Builder email(Output<String> email) {
@@ -172,7 +173,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invitationMessage(@Nullable String invitationMessage) {
-            this.invitationMessage = Output.ofNullable(invitationMessage);
+            this.invitationMessage = Codegen.ofNullable(invitationMessage);
             return this;
         }
         public Builder invite(@Nullable Output<Boolean> invite) {
@@ -180,7 +181,7 @@ public final class MemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Output.ofNullable(invite);
+            this.invite = Codegen.ofNullable(invite);
             return this;
         }        public MemberArgs build() {
             return new MemberArgs(accountId, detectorId, disableEmailNotification, email, invitationMessage, invite);

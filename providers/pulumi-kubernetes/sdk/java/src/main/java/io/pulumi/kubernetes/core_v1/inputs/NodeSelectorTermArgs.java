@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchExpressions;
 
     public Output<List<NodeSelectorRequirementArgs>> getMatchExpressions() {
-        return this.matchExpressions == null ? Output.empty() : this.matchExpressions;
+        return this.matchExpressions == null ? Codegen.empty() : this.matchExpressions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<NodeSelectorRequirementArgs>> matchFields;
 
     public Output<List<NodeSelectorRequirementArgs>> getMatchFields() {
-        return this.matchFields == null ? Output.empty() : this.matchFields;
+        return this.matchFields == null ? Codegen.empty() : this.matchFields;
     }
 
     public NodeSelectorTermArgs(
@@ -49,8 +50,8 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NodeSelectorTermArgs() {
-        this.matchExpressions = Output.empty();
-        this.matchFields = Output.empty();
+        this.matchExpressions = Codegen.empty();
+        this.matchFields = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder matchExpressions(@Nullable List<NodeSelectorRequirementArgs> matchExpressions) {
-            this.matchExpressions = Output.ofNullable(matchExpressions);
+            this.matchExpressions = Codegen.ofNullable(matchExpressions);
             return this;
         }
         public Builder matchExpressions(NodeSelectorRequirementArgs... matchExpressions) {
@@ -91,7 +92,7 @@ public final class NodeSelectorTermArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder matchFields(@Nullable List<NodeSelectorRequirementArgs> matchFields) {
-            this.matchFields = Output.ofNullable(matchFields);
+            this.matchFields = Codegen.ofNullable(matchFields);
             return this;
         }
         public Builder matchFields(NodeSelectorRequirementArgs... matchFields) {

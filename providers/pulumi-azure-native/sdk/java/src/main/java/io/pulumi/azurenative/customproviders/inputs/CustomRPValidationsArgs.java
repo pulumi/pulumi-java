@@ -7,6 +7,7 @@ import io.pulumi.azurenative.customproviders.enums.ValidationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<String,ValidationType>> validationType;
 
     public Output<Either<String,ValidationType>> getValidationType() {
-        return this.validationType == null ? Output.empty() : this.validationType;
+        return this.validationType == null ? Codegen.empty() : this.validationType;
     }
 
     public CustomRPValidationsArgs(
@@ -50,8 +51,8 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
     }
 
     private CustomRPValidationsArgs() {
-        this.specification = Output.empty();
-        this.validationType = Output.empty();
+        this.specification = Codegen.empty();
+        this.validationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class CustomRPValidationsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder validationType(@Nullable Either<String,ValidationType> validationType) {
-            this.validationType = Output.ofNullable(validationType);
+            this.validationType = Codegen.ofNullable(validationType);
             return this;
         }        public CustomRPValidationsArgs build() {
             return new CustomRPValidationsArgs(specification, validationType);

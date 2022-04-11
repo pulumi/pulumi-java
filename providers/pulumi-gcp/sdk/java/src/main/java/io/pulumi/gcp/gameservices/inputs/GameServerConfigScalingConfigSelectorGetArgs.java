@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends io.pulum
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public GameServerConfigScalingConfigSelectorGetArgs(@Nullable Output<Map<String,String>> labels) {
@@ -31,7 +32,7 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends io.pulum
     }
 
     private GameServerConfigScalingConfigSelectorGetArgs() {
-        this.labels = Output.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class GameServerConfigScalingConfigSelectorGetArgs extends io.pulum
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public GameServerConfigScalingConfigSelectorGetArgs build() {
             return new GameServerConfigScalingConfigSelectorGetArgs(labels);

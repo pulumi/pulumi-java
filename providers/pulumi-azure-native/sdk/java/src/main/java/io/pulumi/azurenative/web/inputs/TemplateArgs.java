@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.DaprArgs;
 import io.pulumi.azurenative.web.inputs.ScaleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Output.empty() : this.containers;
+        return this.containers == null ? Codegen.empty() : this.containers;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DaprArgs> dapr;
 
     public Output<DaprArgs> getDapr() {
-        return this.dapr == null ? Output.empty() : this.dapr;
+        return this.dapr == null ? Codegen.empty() : this.dapr;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> revisionSuffix;
 
     public Output<String> getRevisionSuffix() {
-        return this.revisionSuffix == null ? Output.empty() : this.revisionSuffix;
+        return this.revisionSuffix == null ? Codegen.empty() : this.revisionSuffix;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScaleArgs> scale;
 
     public Output<ScaleArgs> getScale() {
-        return this.scale == null ? Output.empty() : this.scale;
+        return this.scale == null ? Codegen.empty() : this.scale;
     }
 
     public TemplateArgs(
@@ -80,10 +81,10 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.containers = Output.empty();
-        this.dapr = Output.empty();
-        this.revisionSuffix = Output.empty();
-        this.scale = Output.empty();
+        this.containers = Codegen.empty();
+        this.dapr = Codegen.empty();
+        this.revisionSuffix = Codegen.empty();
+        this.scale = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Output.ofNullable(containers);
+            this.containers = Codegen.ofNullable(containers);
             return this;
         }
         public Builder containers(ContainerArgs... containers) {
@@ -128,7 +129,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dapr(@Nullable DaprArgs dapr) {
-            this.dapr = Output.ofNullable(dapr);
+            this.dapr = Codegen.ofNullable(dapr);
             return this;
         }
         public Builder revisionSuffix(@Nullable Output<String> revisionSuffix) {
@@ -136,7 +137,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revisionSuffix(@Nullable String revisionSuffix) {
-            this.revisionSuffix = Output.ofNullable(revisionSuffix);
+            this.revisionSuffix = Codegen.ofNullable(revisionSuffix);
             return this;
         }
         public Builder scale(@Nullable Output<ScaleArgs> scale) {
@@ -144,7 +145,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scale(@Nullable ScaleArgs scale) {
-            this.scale = Output.ofNullable(scale);
+            this.scale = Codegen.ofNullable(scale);
             return this;
         }        public TemplateArgs build() {
             return new TemplateArgs(containers, dapr, revisionSuffix, scale);

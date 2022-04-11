@@ -7,6 +7,7 @@ import io.pulumi.azurenative.deviceupdate.inputs.GroupConnectivityInformationArg
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<GroupConnectivityInformationArgs>> groupConnectivityInformation;
 
     public Output<List<GroupConnectivityInformationArgs>> getGroupConnectivityInformation() {
-        return this.groupConnectivityInformation == null ? Output.empty() : this.groupConnectivityInformation;
+        return this.groupConnectivityInformation == null ? Codegen.empty() : this.groupConnectivityInformation;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState;
 
     public Output<PrivateLinkServiceConnectionStateArgs> getRemotePrivateLinkServiceConnectionState() {
-        return this.remotePrivateLinkServiceConnectionState == null ? Output.empty() : this.remotePrivateLinkServiceConnectionState;
+        return this.remotePrivateLinkServiceConnectionState == null ? Codegen.empty() : this.remotePrivateLinkServiceConnectionState;
     }
 
     public PrivateLinkServiceProxyArgs(
@@ -64,9 +65,9 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
     }
 
     private PrivateLinkServiceProxyArgs() {
-        this.groupConnectivityInformation = Output.empty();
-        this.id = Output.empty();
-        this.remotePrivateLinkServiceConnectionState = Output.empty();
+        this.groupConnectivityInformation = Codegen.empty();
+        this.id = Codegen.empty();
+        this.remotePrivateLinkServiceConnectionState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupConnectivityInformation(@Nullable List<GroupConnectivityInformationArgs> groupConnectivityInformation) {
-            this.groupConnectivityInformation = Output.ofNullable(groupConnectivityInformation);
+            this.groupConnectivityInformation = Codegen.ofNullable(groupConnectivityInformation);
             return this;
         }
         public Builder groupConnectivityInformation(GroupConnectivityInformationArgs... groupConnectivityInformation) {
@@ -109,7 +110,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder remotePrivateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> remotePrivateLinkServiceConnectionState) {
@@ -117,7 +118,7 @@ public final class PrivateLinkServiceProxyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder remotePrivateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStateArgs remotePrivateLinkServiceConnectionState) {
-            this.remotePrivateLinkServiceConnectionState = Output.ofNullable(remotePrivateLinkServiceConnectionState);
+            this.remotePrivateLinkServiceConnectionState = Codegen.ofNullable(remotePrivateLinkServiceConnectionState);
             return this;
         }        public PrivateLinkServiceProxyArgs build() {
             return new PrivateLinkServiceProxyArgs(groupConnectivityInformation, id, remotePrivateLinkServiceConnectionState);

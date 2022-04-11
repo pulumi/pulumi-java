@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkmanager.inputs.LinkBandwidthArgs;
 import io.pulumi.awsnative.networkmanager.inputs.LinkTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provider;
 
     public Output<String> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LinkTagArgs>> tags;
 
     public Output<List<LinkTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public LinkArgs(
@@ -112,13 +113,13 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkArgs() {
-        this.bandwidth = Output.empty();
-        this.description = Output.empty();
-        this.globalNetworkId = Output.empty();
-        this.provider = Output.empty();
-        this.siteId = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.bandwidth = Codegen.empty();
+        this.description = Codegen.empty();
+        this.globalNetworkId = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.siteId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder globalNetworkId(Output<String> globalNetworkId) {
@@ -182,7 +183,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provider(@Nullable String provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }
         public Builder siteId(Output<String> siteId) {
@@ -198,7 +199,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<LinkTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LinkTagArgs... tags) {
@@ -209,7 +210,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public LinkArgs build() {
             return new LinkArgs(bandwidth, description, globalNetworkId, provider, siteId, tags, type);

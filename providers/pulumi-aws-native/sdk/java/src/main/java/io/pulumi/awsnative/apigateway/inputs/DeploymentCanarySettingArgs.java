@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -24,7 +25,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Double> percentTraffic;
 
     public Output<Double> getPercentTraffic() {
-        return this.percentTraffic == null ? Output.empty() : this.percentTraffic;
+        return this.percentTraffic == null ? Codegen.empty() : this.percentTraffic;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Object> stageVariableOverrides;
 
     public Output<Object> getStageVariableOverrides() {
-        return this.stageVariableOverrides == null ? Output.empty() : this.stageVariableOverrides;
+        return this.stageVariableOverrides == null ? Codegen.empty() : this.stageVariableOverrides;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> useStageCache;
 
     public Output<Boolean> getUseStageCache() {
-        return this.useStageCache == null ? Output.empty() : this.useStageCache;
+        return this.useStageCache == null ? Codegen.empty() : this.useStageCache;
     }
 
     public DeploymentCanarySettingArgs(
@@ -59,9 +60,9 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
     }
 
     private DeploymentCanarySettingArgs() {
-        this.percentTraffic = Output.empty();
-        this.stageVariableOverrides = Output.empty();
-        this.useStageCache = Output.empty();
+        this.percentTraffic = Codegen.empty();
+        this.stageVariableOverrides = Codegen.empty();
+        this.useStageCache = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder percentTraffic(@Nullable Double percentTraffic) {
-            this.percentTraffic = Output.ofNullable(percentTraffic);
+            this.percentTraffic = Codegen.ofNullable(percentTraffic);
             return this;
         }
         public Builder stageVariableOverrides(@Nullable Output<Object> stageVariableOverrides) {
@@ -101,7 +102,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder stageVariableOverrides(@Nullable Object stageVariableOverrides) {
-            this.stageVariableOverrides = Output.ofNullable(stageVariableOverrides);
+            this.stageVariableOverrides = Codegen.ofNullable(stageVariableOverrides);
             return this;
         }
         public Builder useStageCache(@Nullable Output<Boolean> useStageCache) {
@@ -109,7 +110,7 @@ public final class DeploymentCanarySettingArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder useStageCache(@Nullable Boolean useStageCache) {
-            this.useStageCache = Output.ofNullable(useStageCache);
+            this.useStageCache = Codegen.ofNullable(useStageCache);
             return this;
         }        public DeploymentCanarySettingArgs build() {
             return new DeploymentCanarySettingArgs(percentTraffic, stageVariableOverrides, useStageCache);

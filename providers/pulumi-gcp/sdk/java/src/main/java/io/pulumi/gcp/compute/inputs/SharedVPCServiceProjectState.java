@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> hostProject;
 
     public Output<String> getHostProject() {
-        return this.hostProject == null ? Output.empty() : this.hostProject;
+        return this.hostProject == null ? Codegen.empty() : this.hostProject;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> serviceProject;
 
     public Output<String> getServiceProject() {
-        return this.serviceProject == null ? Output.empty() : this.serviceProject;
+        return this.serviceProject == null ? Codegen.empty() : this.serviceProject;
     }
 
     public SharedVPCServiceProjectState(
@@ -44,8 +45,8 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
     }
 
     private SharedVPCServiceProjectState() {
-        this.hostProject = Output.empty();
-        this.serviceProject = Output.empty();
+        this.hostProject = Codegen.empty();
+        this.serviceProject = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder hostProject(@Nullable String hostProject) {
-            this.hostProject = Output.ofNullable(hostProject);
+            this.hostProject = Codegen.ofNullable(hostProject);
             return this;
         }
         public Builder serviceProject(@Nullable Output<String> serviceProject) {
@@ -83,7 +84,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder serviceProject(@Nullable String serviceProject) {
-            this.serviceProject = Output.ofNullable(serviceProject);
+            this.serviceProject = Codegen.ofNullable(serviceProject);
             return this;
         }        public SharedVPCServiceProjectState build() {
             return new SharedVPCServiceProjectState(hostProject, serviceProject);

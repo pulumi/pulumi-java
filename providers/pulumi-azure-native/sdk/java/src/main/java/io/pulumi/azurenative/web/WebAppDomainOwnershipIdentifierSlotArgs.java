@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
       private final @Nullable Output<String> domainOwnershipIdentifierName;
 
     public Output<String> getDomainOwnershipIdentifierName() {
-        return this.domainOwnershipIdentifierName == null ? Output.empty() : this.domainOwnershipIdentifierName;
+        return this.domainOwnershipIdentifierName == null ? Codegen.empty() : this.domainOwnershipIdentifierName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public WebAppDomainOwnershipIdentifierSlotArgs(
@@ -96,12 +97,12 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
     }
 
     private WebAppDomainOwnershipIdentifierSlotArgs() {
-        this.domainOwnershipIdentifierName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.slot = Output.empty();
-        this.value = Output.empty();
+        this.domainOwnershipIdentifierName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.slot = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
             return this;
         }
         public Builder domainOwnershipIdentifierName(@Nullable String domainOwnershipIdentifierName) {
-            this.domainOwnershipIdentifierName = Output.ofNullable(domainOwnershipIdentifierName);
+            this.domainOwnershipIdentifierName = Codegen.ofNullable(domainOwnershipIdentifierName);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -147,7 +148,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -179,7 +180,7 @@ public final class WebAppDomainOwnershipIdentifierSlotArgs extends io.pulumi.res
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public WebAppDomainOwnershipIdentifierSlotArgs build() {
             return new WebAppDomainOwnershipIdentifierSlotArgs(domainOwnershipIdentifierName, kind, name, resourceGroupName, slot, value);

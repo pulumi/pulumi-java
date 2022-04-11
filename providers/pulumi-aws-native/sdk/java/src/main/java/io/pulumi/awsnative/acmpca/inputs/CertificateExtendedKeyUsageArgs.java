@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> extendedKeyUsageObjectIdentifier;
 
     public Output<String> getExtendedKeyUsageObjectIdentifier() {
-        return this.extendedKeyUsageObjectIdentifier == null ? Output.empty() : this.extendedKeyUsageObjectIdentifier;
+        return this.extendedKeyUsageObjectIdentifier == null ? Codegen.empty() : this.extendedKeyUsageObjectIdentifier;
     }
 
     @Import(name="extendedKeyUsageType")
       private final @Nullable Output<String> extendedKeyUsageType;
 
     public Output<String> getExtendedKeyUsageType() {
-        return this.extendedKeyUsageType == null ? Output.empty() : this.extendedKeyUsageType;
+        return this.extendedKeyUsageType == null ? Codegen.empty() : this.extendedKeyUsageType;
     }
 
     public CertificateExtendedKeyUsageArgs(
@@ -40,8 +41,8 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
     }
 
     private CertificateExtendedKeyUsageArgs() {
-        this.extendedKeyUsageObjectIdentifier = Output.empty();
-        this.extendedKeyUsageType = Output.empty();
+        this.extendedKeyUsageObjectIdentifier = Codegen.empty();
+        this.extendedKeyUsageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder extendedKeyUsageObjectIdentifier(@Nullable String extendedKeyUsageObjectIdentifier) {
-            this.extendedKeyUsageObjectIdentifier = Output.ofNullable(extendedKeyUsageObjectIdentifier);
+            this.extendedKeyUsageObjectIdentifier = Codegen.ofNullable(extendedKeyUsageObjectIdentifier);
             return this;
         }
         public Builder extendedKeyUsageType(@Nullable Output<String> extendedKeyUsageType) {
@@ -79,7 +80,7 @@ public final class CertificateExtendedKeyUsageArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder extendedKeyUsageType(@Nullable String extendedKeyUsageType) {
-            this.extendedKeyUsageType = Output.ofNullable(extendedKeyUsageType);
+            this.extendedKeyUsageType = Codegen.ofNullable(extendedKeyUsageType);
             return this;
         }        public CertificateExtendedKeyUsageArgs build() {
             return new CertificateExtendedKeyUsageArgs(extendedKeyUsageObjectIdentifier, extendedKeyUsageType);

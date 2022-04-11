@@ -7,6 +7,7 @@ import io.pulumi.awsnative.datasync.inputs.LocationSMBMountOptionsArgs;
 import io.pulumi.awsnative.datasync.inputs.LocationSMBTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,14 +37,14 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     @Import(name="mountOptions")
       private final @Nullable Output<LocationSMBMountOptionsArgs> mountOptions;
 
     public Output<LocationSMBMountOptionsArgs> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LocationSMBTagArgs>> tags;
 
     public Output<List<LocationSMBTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -121,14 +122,14 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationSMBArgs() {
-        this.agentArns = Output.empty();
-        this.domain = Output.empty();
-        this.mountOptions = Output.empty();
-        this.password = Output.empty();
-        this.serverHostname = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.user = Output.empty();
+        this.agentArns = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.mountOptions = Codegen.empty();
+        this.password = Codegen.empty();
+        this.serverHostname = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder mountOptions(@Nullable Output<LocationSMBMountOptionsArgs> mountOptions) {
@@ -189,7 +190,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountOptions(@Nullable LocationSMBMountOptionsArgs mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder password(Output<String> password) {
@@ -221,7 +222,7 @@ public final class LocationSMBArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<LocationSMBTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(LocationSMBTagArgs... tags) {

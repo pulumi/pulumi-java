@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> header;
 
     public Output<String> getHeader() {
-        return this.header == null ? Output.empty() : this.header;
+        return this.header == null ? Codegen.empty() : this.header;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> query;
 
     public Output<String> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> valuePrefix;
 
     public Output<String> getValuePrefix() {
-        return this.valuePrefix == null ? Output.empty() : this.valuePrefix;
+        return this.valuePrefix == null ? Codegen.empty() : this.valuePrefix;
     }
 
     public JwtLocationArgs(
@@ -61,9 +62,9 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JwtLocationArgs() {
-        this.header = Output.empty();
-        this.query = Output.empty();
-        this.valuePrefix = Output.empty();
+        this.header = Codegen.empty();
+        this.query = Codegen.empty();
+        this.valuePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder header(@Nullable String header) {
-            this.header = Output.ofNullable(header);
+            this.header = Codegen.ofNullable(header);
             return this;
         }
         public Builder query(@Nullable Output<String> query) {
@@ -103,7 +104,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder query(@Nullable String query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder valuePrefix(@Nullable Output<String> valuePrefix) {
@@ -111,7 +112,7 @@ public final class JwtLocationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valuePrefix(@Nullable String valuePrefix) {
-            this.valuePrefix = Output.ofNullable(valuePrefix);
+            this.valuePrefix = Codegen.ofNullable(valuePrefix);
             return this;
         }        public JwtLocationArgs build() {
             return new JwtLocationArgs(header, query, valuePrefix);

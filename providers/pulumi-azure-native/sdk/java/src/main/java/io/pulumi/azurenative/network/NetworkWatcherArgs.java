@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> networkWatcherName;
 
     public Output<String> getNetworkWatcherName() {
-        return this.networkWatcherName == null ? Output.empty() : this.networkWatcherName;
+        return this.networkWatcherName == null ? Codegen.empty() : this.networkWatcherName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkWatcherArgs(
@@ -84,11 +85,11 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkWatcherArgs() {
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.networkWatcherName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkWatcherName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -132,7 +133,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkWatcherName(@Nullable Output<String> networkWatcherName) {
@@ -140,7 +141,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkWatcherName(@Nullable String networkWatcherName) {
-            this.networkWatcherName = Output.ofNullable(networkWatcherName);
+            this.networkWatcherName = Codegen.ofNullable(networkWatcherName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class NetworkWatcherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public NetworkWatcherArgs build() {
             return new NetworkWatcherArgs(id, location, networkWatcherName, resourceGroupName, tags);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -21,49 +22,49 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="availabilityZoneId")
       private final @Nullable Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
-        return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
+        return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
     }
 
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     @Import(name="instancePlatform")
       private final @Nullable Output<String> instancePlatform;
 
     public Output<String> getInstancePlatform() {
-        return this.instancePlatform == null ? Output.empty() : this.instancePlatform;
+        return this.instancePlatform == null ? Codegen.empty() : this.instancePlatform;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="priority")
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="weight")
       private final @Nullable Output<Double> weight;
 
     public Output<Double> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public CapacityReservationFleetInstanceTypeSpecificationArgs(
@@ -84,13 +85,13 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     }
 
     private CapacityReservationFleetInstanceTypeSpecificationArgs() {
-        this.availabilityZone = Output.empty();
-        this.availabilityZoneId = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.instancePlatform = Output.empty();
-        this.instanceType = Output.empty();
-        this.priority = Output.empty();
-        this.weight = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.availabilityZoneId = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.instancePlatform = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder availabilityZoneId(@Nullable Output<String> availabilityZoneId) {
@@ -138,7 +139,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
+            this.availabilityZoneId = Codegen.ofNullable(availabilityZoneId);
             return this;
         }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
@@ -146,7 +147,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder instancePlatform(@Nullable Output<String> instancePlatform) {
@@ -154,7 +155,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder instancePlatform(@Nullable String instancePlatform) {
-            this.instancePlatform = Output.ofNullable(instancePlatform);
+            this.instancePlatform = Codegen.ofNullable(instancePlatform);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -162,7 +163,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -170,7 +171,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder weight(@Nullable Output<Double> weight) {
@@ -178,7 +179,7 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             return this;
         }
         public Builder weight(@Nullable Double weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public CapacityReservationFleetInstanceTypeSpecificationArgs build() {
             return new CapacityReservationFleetInstanceTypeSpecificationArgs(availabilityZone, availabilityZoneId, ebsOptimized, instancePlatform, instanceType, priority, weight);

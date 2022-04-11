@@ -5,6 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
       private final @Nullable Output<String> accessMethodType;
 
     public Output<String> getAccessMethodType() {
-        return this.accessMethodType == null ? Output.empty() : this.accessMethodType;
+        return this.accessMethodType == null ? Codegen.empty() : this.accessMethodType;
     }
 
     @Import(name="customObjectIdentifier")
       private final @Nullable Output<String> customObjectIdentifier;
 
     public Output<String> getCustomObjectIdentifier() {
-        return this.customObjectIdentifier == null ? Output.empty() : this.customObjectIdentifier;
+        return this.customObjectIdentifier == null ? Codegen.empty() : this.customObjectIdentifier;
     }
 
     public CertificateAuthorityAccessMethodArgs(
@@ -40,8 +41,8 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
     }
 
     private CertificateAuthorityAccessMethodArgs() {
-        this.accessMethodType = Output.empty();
-        this.customObjectIdentifier = Output.empty();
+        this.accessMethodType = Codegen.empty();
+        this.customObjectIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
             return this;
         }
         public Builder accessMethodType(@Nullable String accessMethodType) {
-            this.accessMethodType = Output.ofNullable(accessMethodType);
+            this.accessMethodType = Codegen.ofNullable(accessMethodType);
             return this;
         }
         public Builder customObjectIdentifier(@Nullable Output<String> customObjectIdentifier) {
@@ -79,7 +80,7 @@ public final class CertificateAuthorityAccessMethodArgs extends io.pulumi.resour
             return this;
         }
         public Builder customObjectIdentifier(@Nullable String customObjectIdentifier) {
-            this.customObjectIdentifier = Output.ofNullable(customObjectIdentifier);
+            this.customObjectIdentifier = Codegen.ofNullable(customObjectIdentifier);
             return this;
         }        public CertificateAuthorityAccessMethodArgs build() {
             return new CertificateAuthorityAccessMethodArgs(accessMethodType, customObjectIdentifier);

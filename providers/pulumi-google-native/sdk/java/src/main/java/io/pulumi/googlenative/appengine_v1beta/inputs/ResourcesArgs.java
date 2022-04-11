@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1beta.inputs.VolumeArgs;
 import java.lang.Double;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> diskGb;
 
     public Output<Double> getDiskGb() {
-        return this.diskGb == null ? Output.empty() : this.diskGb;
+        return this.diskGb == null ? Codegen.empty() : this.diskGb;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyReference;
 
     public Output<String> getKmsKeyReference() {
-        return this.kmsKeyReference == null ? Output.empty() : this.kmsKeyReference;
+        return this.kmsKeyReference == null ? Codegen.empty() : this.kmsKeyReference;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> memoryGb;
 
     public Output<Double> getMemoryGb() {
-        return this.memoryGb == null ? Output.empty() : this.memoryGb;
+        return this.memoryGb == null ? Codegen.empty() : this.memoryGb;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public ResourcesArgs(
@@ -90,11 +91,11 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourcesArgs() {
-        this.cpu = Output.empty();
-        this.diskGb = Output.empty();
-        this.kmsKeyReference = Output.empty();
-        this.memoryGb = Output.empty();
-        this.volumes = Output.empty();
+        this.cpu = Codegen.empty();
+        this.diskGb = Codegen.empty();
+        this.kmsKeyReference = Codegen.empty();
+        this.memoryGb = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder diskGb(@Nullable Output<Double> diskGb) {
@@ -138,7 +139,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskGb(@Nullable Double diskGb) {
-            this.diskGb = Output.ofNullable(diskGb);
+            this.diskGb = Codegen.ofNullable(diskGb);
             return this;
         }
         public Builder kmsKeyReference(@Nullable Output<String> kmsKeyReference) {
@@ -146,7 +147,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyReference(@Nullable String kmsKeyReference) {
-            this.kmsKeyReference = Output.ofNullable(kmsKeyReference);
+            this.kmsKeyReference = Codegen.ofNullable(kmsKeyReference);
             return this;
         }
         public Builder memoryGb(@Nullable Output<Double> memoryGb) {
@@ -154,7 +155,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memoryGb(@Nullable Double memoryGb) {
-            this.memoryGb = Output.ofNullable(memoryGb);
+            this.memoryGb = Codegen.ofNullable(memoryGb);
             return this;
         }
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
@@ -162,7 +163,7 @@ public final class ResourcesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(VolumeArgs... volumes) {

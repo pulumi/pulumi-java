@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storagecache.enums.NfsAccessRuleScope;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -41,7 +42,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> anonymousGID;
 
     public Output<String> getAnonymousGID() {
-        return this.anonymousGID == null ? Output.empty() : this.anonymousGID;
+        return this.anonymousGID == null ? Codegen.empty() : this.anonymousGID;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> anonymousUID;
 
     public Output<String> getAnonymousUID() {
-        return this.anonymousUID == null ? Output.empty() : this.anonymousUID;
+        return this.anonymousUID == null ? Codegen.empty() : this.anonymousUID;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> rootSquash;
 
     public Output<Boolean> getRootSquash() {
-        return this.rootSquash == null ? Output.empty() : this.rootSquash;
+        return this.rootSquash == null ? Codegen.empty() : this.rootSquash;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> submountAccess;
 
     public Output<Boolean> getSubmountAccess() {
-        return this.submountAccess == null ? Output.empty() : this.submountAccess;
+        return this.submountAccess == null ? Codegen.empty() : this.submountAccess;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> suid;
 
     public Output<Boolean> getSuid() {
-        return this.suid == null ? Output.empty() : this.suid;
+        return this.suid == null ? Codegen.empty() : this.suid;
     }
 
     public NfsAccessRuleArgs(
@@ -130,14 +131,14 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NfsAccessRuleArgs() {
-        this.access = Output.empty();
-        this.anonymousGID = Output.empty();
-        this.anonymousUID = Output.empty();
-        this.filter = Output.empty();
-        this.rootSquash = Output.empty();
-        this.scope = Output.empty();
-        this.submountAccess = Output.empty();
-        this.suid = Output.empty();
+        this.access = Codegen.empty();
+        this.anonymousGID = Codegen.empty();
+        this.anonymousUID = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.rootSquash = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.submountAccess = Codegen.empty();
+        this.suid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -187,7 +188,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder anonymousGID(@Nullable String anonymousGID) {
-            this.anonymousGID = Output.ofNullable(anonymousGID);
+            this.anonymousGID = Codegen.ofNullable(anonymousGID);
             return this;
         }
         public Builder anonymousUID(@Nullable Output<String> anonymousUID) {
@@ -195,7 +196,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder anonymousUID(@Nullable String anonymousUID) {
-            this.anonymousUID = Output.ofNullable(anonymousUID);
+            this.anonymousUID = Codegen.ofNullable(anonymousUID);
             return this;
         }
         public Builder filter(@Nullable Output<String> filter) {
@@ -203,7 +204,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder rootSquash(@Nullable Output<Boolean> rootSquash) {
@@ -211,7 +212,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootSquash(@Nullable Boolean rootSquash) {
-            this.rootSquash = Output.ofNullable(rootSquash);
+            this.rootSquash = Codegen.ofNullable(rootSquash);
             return this;
         }
         public Builder scope(Output<Either<String,NfsAccessRuleScope>> scope) {
@@ -227,7 +228,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder submountAccess(@Nullable Boolean submountAccess) {
-            this.submountAccess = Output.ofNullable(submountAccess);
+            this.submountAccess = Codegen.ofNullable(submountAccess);
             return this;
         }
         public Builder suid(@Nullable Output<Boolean> suid) {
@@ -235,7 +236,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suid(@Nullable Boolean suid) {
-            this.suid = Output.ofNullable(suid);
+            this.suid = Codegen.ofNullable(suid);
             return this;
         }        public NfsAccessRuleArgs build() {
             return new NfsAccessRuleArgs(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);

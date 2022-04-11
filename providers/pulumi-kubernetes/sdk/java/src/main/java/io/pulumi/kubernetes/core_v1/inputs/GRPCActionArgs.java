@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public GRPCActionArgs(
@@ -47,8 +48,8 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GRPCActionArgs() {
-        this.port = Output.empty();
-        this.service = Output.empty();
+        this.port = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class GRPCActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public GRPCActionArgs build() {
             return new GRPCActionArgs(port, service);

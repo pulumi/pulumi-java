@@ -5,6 +5,7 @@ package io.pulumi.aws.codeartifact.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> assetSizeBytes;
 
     public Output<Integer> getAssetSizeBytes() {
-        return this.assetSizeBytes == null ? Output.empty() : this.assetSizeBytes;
+        return this.assetSizeBytes == null ? Codegen.empty() : this.assetSizeBytes;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdTime;
 
     public Output<String> getCreatedTime() {
-        return this.createdTime == null ? Output.empty() : this.createdTime;
+        return this.createdTime == null ? Codegen.empty() : this.createdTime;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> repositoryCount;
 
     public Output<Integer> getRepositoryCount() {
-        return this.repositoryCount == null ? Output.empty() : this.repositoryCount;
+        return this.repositoryCount == null ? Codegen.empty() : this.repositoryCount;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public DomainState(
@@ -137,15 +138,15 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainState() {
-        this.arn = Output.empty();
-        this.assetSizeBytes = Output.empty();
-        this.createdTime = Output.empty();
-        this.domain = Output.empty();
-        this.encryptionKey = Output.empty();
-        this.owner = Output.empty();
-        this.repositoryCount = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.assetSizeBytes = Codegen.empty();
+        this.createdTime = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.repositoryCount = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder assetSizeBytes(@Nullable Output<Integer> assetSizeBytes) {
@@ -197,7 +198,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetSizeBytes(@Nullable Integer assetSizeBytes) {
-            this.assetSizeBytes = Output.ofNullable(assetSizeBytes);
+            this.assetSizeBytes = Codegen.ofNullable(assetSizeBytes);
             return this;
         }
         public Builder createdTime(@Nullable Output<String> createdTime) {
@@ -205,7 +206,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdTime(@Nullable String createdTime) {
-            this.createdTime = Output.ofNullable(createdTime);
+            this.createdTime = Codegen.ofNullable(createdTime);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -213,7 +214,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
@@ -221,7 +222,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -229,7 +230,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder repositoryCount(@Nullable Output<Integer> repositoryCount) {
@@ -237,7 +238,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryCount(@Nullable Integer repositoryCount) {
-            this.repositoryCount = Output.ofNullable(repositoryCount);
+            this.repositoryCount = Codegen.ofNullable(repositoryCount);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -245,7 +246,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -253,7 +254,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public DomainState build() {
             return new DomainState(arn, assetSizeBytes, createdTime, domain, encryptionKey, owner, repositoryCount, tags, tagsAll);

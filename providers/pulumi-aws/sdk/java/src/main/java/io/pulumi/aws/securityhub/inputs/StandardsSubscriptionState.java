@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> standardsArn;
 
     public Output<String> getStandardsArn() {
-        return this.standardsArn == null ? Output.empty() : this.standardsArn;
+        return this.standardsArn == null ? Codegen.empty() : this.standardsArn;
     }
 
     public StandardsSubscriptionState(@Nullable Output<String> standardsArn) {
@@ -30,7 +31,7 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
     }
 
     private StandardsSubscriptionState() {
-        this.standardsArn = Output.empty();
+        this.standardsArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class StandardsSubscriptionState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder standardsArn(@Nullable String standardsArn) {
-            this.standardsArn = Output.ofNullable(standardsArn);
+            this.standardsArn = Codegen.ofNullable(standardsArn);
             return this;
         }        public StandardsSubscriptionState build() {
             return new StandardsSubscriptionState(standardsArn);

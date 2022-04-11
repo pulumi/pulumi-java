@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class DatasetDeltaTimeSessionWindowConfigurationArgs extends io.pul
     }
 
     private DatasetDeltaTimeSessionWindowConfigurationArgs() {
-        this.timeoutInMinutes = Output.empty();
+        this.timeoutInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {

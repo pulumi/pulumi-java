@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
       private final @Nullable Output<SubResourceArgs> workspaceId;
 
     public Output<SubResourceArgs> getWorkspaceId() {
-        return this.workspaceId == null ? Output.empty() : this.workspaceId;
+        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
     public FirewallPolicyLogAnalyticsWorkspaceArgs(
@@ -49,8 +50,8 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
     }
 
     private FirewallPolicyLogAnalyticsWorkspaceArgs() {
-        this.region = Output.empty();
-        this.workspaceId = Output.empty();
+        this.region = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder workspaceId(@Nullable Output<SubResourceArgs> workspaceId) {
@@ -88,7 +89,7 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends io.pulumi.res
             return this;
         }
         public Builder workspaceId(@Nullable SubResourceArgs workspaceId) {
-            this.workspaceId = Output.ofNullable(workspaceId);
+            this.workspaceId = Codegen.ofNullable(workspaceId);
             return this;
         }        public FirewallPolicyLogAnalyticsWorkspaceArgs build() {
             return new FirewallPolicyLogAnalyticsWorkspaceArgs(region, workspaceId);

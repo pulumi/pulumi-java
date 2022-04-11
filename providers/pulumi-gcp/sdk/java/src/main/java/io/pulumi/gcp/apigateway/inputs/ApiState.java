@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> managedService;
 
     public Output<String> getManagedService() {
-        return this.managedService == null ? Output.empty() : this.managedService;
+        return this.managedService == null ? Codegen.empty() : this.managedService;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ApiState(
@@ -112,13 +113,13 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiState() {
-        this.apiId = Output.empty();
-        this.createTime = Output.empty();
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.managedService = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.apiId = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.managedService = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -166,7 +167,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -174,7 +175,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -182,7 +183,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder managedService(@Nullable Output<String> managedService) {
@@ -190,7 +191,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedService(@Nullable String managedService) {
-            this.managedService = Output.ofNullable(managedService);
+            this.managedService = Codegen.ofNullable(managedService);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -198,7 +199,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -206,7 +207,7 @@ public final class ApiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ApiState build() {
             return new ApiState(apiId, createTime, displayName, labels, managedService, name, project);

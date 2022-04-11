@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.SubsettingPolicy;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubsettingPolicy> policy;
 
     public Output<SubsettingPolicy> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public SubsettingArgs(@Nullable Output<SubsettingPolicy> policy) {
@@ -30,7 +31,7 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubsettingArgs() {
-        this.policy = Output.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SubsettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable SubsettingPolicy policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public SubsettingArgs build() {
             return new SubsettingArgs(policy);

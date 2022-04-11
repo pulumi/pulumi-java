@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.RegionSslCertificateType;
 import io.pulumi.googlenative.compute_v1.inputs.SslCertificateManagedSslCertificateArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SslCertificateSelfManagedSslCertificateArgs;
@@ -25,7 +26,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<SslCertificateManagedSslCertificateArgs> managed;
 
     public Output<SslCertificateManagedSslCertificateArgs> getManaged() {
-        return this.managed == null ? Output.empty() : this.managed;
+        return this.managed == null ? Codegen.empty() : this.managed;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="region", required=true)
@@ -90,7 +91,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
 
     public Output<SslCertificateSelfManagedSslCertificateArgs> getSelfManaged() {
-        return this.selfManaged == null ? Output.empty() : this.selfManaged;
+        return this.selfManaged == null ? Codegen.empty() : this.selfManaged;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<RegionSslCertificateType> type;
 
     public Output<RegionSslCertificateType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RegionSslCertificateArgs(
@@ -139,16 +140,16 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
     }
 
     private RegionSslCertificateArgs() {
-        this.certificate = Output.empty();
-        this.description = Output.empty();
-        this.managed = Output.empty();
-        this.name = Output.empty();
-        this.privateKey = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.selfManaged = Output.empty();
-        this.type = Output.empty();
+        this.certificate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.managed = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.selfManaged = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -202,7 +203,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder managed(@Nullable Output<SslCertificateManagedSslCertificateArgs> managed) {
@@ -210,7 +211,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder managed(@Nullable SslCertificateManagedSslCertificateArgs managed) {
-            this.managed = Output.ofNullable(managed);
+            this.managed = Codegen.ofNullable(managed);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -218,7 +219,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -226,7 +227,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -234,7 +235,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -250,7 +251,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder selfManaged(@Nullable Output<SslCertificateSelfManagedSslCertificateArgs> selfManaged) {
@@ -258,7 +259,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder selfManaged(@Nullable SslCertificateSelfManagedSslCertificateArgs selfManaged) {
-            this.selfManaged = Output.ofNullable(selfManaged);
+            this.selfManaged = Codegen.ofNullable(selfManaged);
             return this;
         }
         public Builder type(@Nullable Output<RegionSslCertificateType> type) {
@@ -266,7 +267,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable RegionSslCertificateType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RegionSslCertificateArgs build() {
             return new RegionSslCertificateArgs(certificate, description, managed, name, privateKey, project, region, requestId, selfManaged, type);

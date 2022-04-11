@@ -5,6 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class LocationEFSEc2ConfigArgs extends io.pulumi.resources.Resource
     }
 
     private LocationEFSEc2ConfigArgs() {
-        this.securityGroupArns = Output.empty();
-        this.subnetArn = Output.empty();
+        this.securityGroupArns = Codegen.empty();
+        this.subnetArn = Codegen.empty();
     }
 
     public static Builder builder() {

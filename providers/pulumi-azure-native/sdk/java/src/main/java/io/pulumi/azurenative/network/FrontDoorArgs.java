@@ -13,6 +13,7 @@ import io.pulumi.azurenative.network.inputs.RoutingRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -32,7 +33,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BackendPoolArgs>> backendPools;
 
     public Output<List<BackendPoolArgs>> getBackendPools() {
-        return this.backendPools == null ? Output.empty() : this.backendPools;
+        return this.backendPools == null ? Codegen.empty() : this.backendPools;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackendPoolsSettingsArgs> backendPoolsSettings;
 
     public Output<BackendPoolsSettingsArgs> getBackendPoolsSettings() {
-        return this.backendPoolsSettings == null ? Output.empty() : this.backendPoolsSettings;
+        return this.backendPoolsSettings == null ? Codegen.empty() : this.backendPoolsSettings;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,FrontDoorEnabledState>> enabledState;
 
     public Output<Either<String,FrontDoorEnabledState>> getEnabledState() {
-        return this.enabledState == null ? Output.empty() : this.enabledState;
+        return this.enabledState == null ? Codegen.empty() : this.enabledState;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> frontDoorName;
 
     public Output<String> getFrontDoorName() {
-        return this.frontDoorName == null ? Output.empty() : this.frontDoorName;
+        return this.frontDoorName == null ? Codegen.empty() : this.frontDoorName;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints;
 
     public Output<List<FrontendEndpointArgs>> getFrontendEndpoints() {
-        return this.frontendEndpoints == null ? Output.empty() : this.frontendEndpoints;
+        return this.frontendEndpoints == null ? Codegen.empty() : this.frontendEndpoints;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HealthProbeSettingsModelArgs>> healthProbeSettings;
 
     public Output<List<HealthProbeSettingsModelArgs>> getHealthProbeSettings() {
-        return this.healthProbeSettings == null ? Output.empty() : this.healthProbeSettings;
+        return this.healthProbeSettings == null ? Codegen.empty() : this.healthProbeSettings;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LoadBalancingSettingsModelArgs>> loadBalancingSettings;
 
     public Output<List<LoadBalancingSettingsModelArgs>> getLoadBalancingSettings() {
-        return this.loadBalancingSettings == null ? Output.empty() : this.loadBalancingSettings;
+        return this.loadBalancingSettings == null ? Codegen.empty() : this.loadBalancingSettings;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RoutingRuleArgs>> routingRules;
 
     public Output<List<RoutingRuleArgs>> getRoutingRules() {
-        return this.routingRules == null ? Output.empty() : this.routingRules;
+        return this.routingRules == null ? Codegen.empty() : this.routingRules;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FrontDoorArgs(
@@ -184,18 +185,18 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FrontDoorArgs() {
-        this.backendPools = Output.empty();
-        this.backendPoolsSettings = Output.empty();
-        this.enabledState = Output.empty();
-        this.friendlyName = Output.empty();
-        this.frontDoorName = Output.empty();
-        this.frontendEndpoints = Output.empty();
-        this.healthProbeSettings = Output.empty();
-        this.loadBalancingSettings = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routingRules = Output.empty();
-        this.tags = Output.empty();
+        this.backendPools = Codegen.empty();
+        this.backendPoolsSettings = Codegen.empty();
+        this.enabledState = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.frontDoorName = Codegen.empty();
+        this.frontendEndpoints = Codegen.empty();
+        this.healthProbeSettings = Codegen.empty();
+        this.loadBalancingSettings = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routingRules = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -245,7 +246,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backendPools(@Nullable List<BackendPoolArgs> backendPools) {
-            this.backendPools = Output.ofNullable(backendPools);
+            this.backendPools = Codegen.ofNullable(backendPools);
             return this;
         }
         public Builder backendPools(BackendPoolArgs... backendPools) {
@@ -256,7 +257,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backendPoolsSettings(@Nullable BackendPoolsSettingsArgs backendPoolsSettings) {
-            this.backendPoolsSettings = Output.ofNullable(backendPoolsSettings);
+            this.backendPoolsSettings = Codegen.ofNullable(backendPoolsSettings);
             return this;
         }
         public Builder enabledState(@Nullable Output<Either<String,FrontDoorEnabledState>> enabledState) {
@@ -264,7 +265,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledState(@Nullable Either<String,FrontDoorEnabledState> enabledState) {
-            this.enabledState = Output.ofNullable(enabledState);
+            this.enabledState = Codegen.ofNullable(enabledState);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -272,7 +273,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder frontDoorName(@Nullable Output<String> frontDoorName) {
@@ -280,7 +281,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frontDoorName(@Nullable String frontDoorName) {
-            this.frontDoorName = Output.ofNullable(frontDoorName);
+            this.frontDoorName = Codegen.ofNullable(frontDoorName);
             return this;
         }
         public Builder frontendEndpoints(@Nullable Output<List<FrontendEndpointArgs>> frontendEndpoints) {
@@ -288,7 +289,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frontendEndpoints(@Nullable List<FrontendEndpointArgs> frontendEndpoints) {
-            this.frontendEndpoints = Output.ofNullable(frontendEndpoints);
+            this.frontendEndpoints = Codegen.ofNullable(frontendEndpoints);
             return this;
         }
         public Builder frontendEndpoints(FrontendEndpointArgs... frontendEndpoints) {
@@ -299,7 +300,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthProbeSettings(@Nullable List<HealthProbeSettingsModelArgs> healthProbeSettings) {
-            this.healthProbeSettings = Output.ofNullable(healthProbeSettings);
+            this.healthProbeSettings = Codegen.ofNullable(healthProbeSettings);
             return this;
         }
         public Builder healthProbeSettings(HealthProbeSettingsModelArgs... healthProbeSettings) {
@@ -310,7 +311,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancingSettings(@Nullable List<LoadBalancingSettingsModelArgs> loadBalancingSettings) {
-            this.loadBalancingSettings = Output.ofNullable(loadBalancingSettings);
+            this.loadBalancingSettings = Codegen.ofNullable(loadBalancingSettings);
             return this;
         }
         public Builder loadBalancingSettings(LoadBalancingSettingsModelArgs... loadBalancingSettings) {
@@ -321,7 +322,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -337,7 +338,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingRules(@Nullable List<RoutingRuleArgs> routingRules) {
-            this.routingRules = Output.ofNullable(routingRules);
+            this.routingRules = Codegen.ofNullable(routingRules);
             return this;
         }
         public Builder routingRules(RoutingRuleArgs... routingRules) {
@@ -348,7 +349,7 @@ public final class FrontDoorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public FrontDoorArgs build() {
             return new FrontDoorArgs(backendPools, backendPoolsSettings, enabledState, friendlyName, frontDoorName, frontendEndpoints, healthProbeSettings, loadBalancingSettings, location, resourceGroupName, routingRules, tags);

@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
+        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> loadBalancerPort;
 
     public Output<Integer> getLoadBalancerPort() {
-        return this.loadBalancerPort == null ? Output.empty() : this.loadBalancerPort;
+        return this.loadBalancerPort == null ? Codegen.empty() : this.loadBalancerPort;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> policyNames;
 
     public Output<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Output.empty() : this.policyNames;
+        return this.policyNames == null ? Codegen.empty() : this.policyNames;
     }
 
     public ListenerPolicyState(
@@ -59,9 +60,9 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private ListenerPolicyState() {
-        this.loadBalancerName = Output.empty();
-        this.loadBalancerPort = Output.empty();
-        this.policyNames = Output.empty();
+        this.loadBalancerName = Codegen.empty();
+        this.loadBalancerPort = Codegen.empty();
+        this.policyNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Output.ofNullable(loadBalancerName);
+            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
             return this;
         }
         public Builder loadBalancerPort(@Nullable Output<Integer> loadBalancerPort) {
@@ -101,7 +102,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder loadBalancerPort(@Nullable Integer loadBalancerPort) {
-            this.loadBalancerPort = Output.ofNullable(loadBalancerPort);
+            this.loadBalancerPort = Codegen.ofNullable(loadBalancerPort);
             return this;
         }
         public Builder policyNames(@Nullable Output<List<String>> policyNames) {
@@ -109,7 +110,7 @@ public final class ListenerPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Output.ofNullable(policyNames);
+            this.policyNames = Codegen.ofNullable(policyNames);
             return this;
         }
         public Builder policyNames(String... policyNames) {

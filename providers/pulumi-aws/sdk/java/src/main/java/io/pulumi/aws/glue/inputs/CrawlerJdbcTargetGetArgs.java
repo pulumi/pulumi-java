@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> exclusions;
 
     public Output<List<String>> getExclusions() {
-        return this.exclusions == null ? Output.empty() : this.exclusions;
+        return this.exclusions == null ? Codegen.empty() : this.exclusions;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
     }
 
     private CrawlerJdbcTargetGetArgs() {
-        this.connectionName = Output.empty();
-        this.exclusions = Output.empty();
-        this.path = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.exclusions = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class CrawlerJdbcTargetGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder exclusions(@Nullable List<String> exclusions) {
-            this.exclusions = Output.ofNullable(exclusions);
+            this.exclusions = Codegen.ofNullable(exclusions);
             return this;
         }
         public Builder exclusions(String... exclusions) {

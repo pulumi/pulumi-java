@@ -6,6 +6,7 @@ package io.pulumi.foo.nested_module;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.foo.Utilities;
 import io.pulumi.foo.nested_module.ResourceArgs;
 import java.lang.String;
@@ -43,7 +44,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, @Nullable ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("foo:nested/module:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("foo:nested/module:Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

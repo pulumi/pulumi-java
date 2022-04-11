@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,String>> disks;
 
     public Output<Map<String,String>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,String>> externalIPs;
 
     public Output<Map<String,String>> getExternalIPs() {
-        return this.externalIPs == null ? Output.empty() : this.externalIPs;
+        return this.externalIPs == null ? Codegen.empty() : this.externalIPs;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,String>> internalIPs;
 
     public Output<Map<String,String>> getInternalIPs() {
-        return this.internalIPs == null ? Output.empty() : this.internalIPs;
+        return this.internalIPs == null ? Codegen.empty() : this.internalIPs;
     }
 
     public StatefulPolicyPreservedStateArgs(
@@ -62,9 +63,9 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
     }
 
     private StatefulPolicyPreservedStateArgs() {
-        this.disks = Output.empty();
-        this.externalIPs = Output.empty();
-        this.internalIPs = Output.empty();
+        this.disks = Codegen.empty();
+        this.externalIPs = Codegen.empty();
+        this.internalIPs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder disks(@Nullable Map<String,String> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder externalIPs(@Nullable Output<Map<String,String>> externalIPs) {
@@ -104,7 +105,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder externalIPs(@Nullable Map<String,String> externalIPs) {
-            this.externalIPs = Output.ofNullable(externalIPs);
+            this.externalIPs = Codegen.ofNullable(externalIPs);
             return this;
         }
         public Builder internalIPs(@Nullable Output<Map<String,String>> internalIPs) {
@@ -112,7 +113,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder internalIPs(@Nullable Map<String,String> internalIPs) {
-            this.internalIPs = Output.ofNullable(internalIPs);
+            this.internalIPs = Codegen.ofNullable(internalIPs);
             return this;
         }        public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks, externalIPs, internalIPs);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> endpoints;
 
     public Output<List<String>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lunName;
 
     public Output<String> getLunName() {
-        return this.lunName == null ? Output.empty() : this.lunName;
+        return this.lunName == null ? Codegen.empty() : this.lunName;
     }
 
     public DiskPoolVolumeArgs(
@@ -49,8 +50,8 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskPoolVolumeArgs() {
-        this.endpoints = Output.empty();
-        this.lunName = Output.empty();
+        this.endpoints = Codegen.empty();
+        this.lunName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoints(@Nullable List<String> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(String... endpoints) {
@@ -91,7 +92,7 @@ public final class DiskPoolVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lunName(@Nullable String lunName) {
-            this.lunName = Output.ofNullable(lunName);
+            this.lunName = Codegen.ofNullable(lunName);
             return this;
         }        public DiskPoolVolumeArgs build() {
             return new DiskPoolVolumeArgs(endpoints, lunName);

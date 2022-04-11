@@ -5,6 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> automatedSnapshotStartHour;
 
     public Output<Integer> getAutomatedSnapshotStartHour() {
-        return this.automatedSnapshotStartHour == null ? Output.empty() : this.automatedSnapshotStartHour;
+        return this.automatedSnapshotStartHour == null ? Codegen.empty() : this.automatedSnapshotStartHour;
     }
 
     public DomainSnapshotOptionsArgs(@Nullable Output<Integer> automatedSnapshotStartHour) {
@@ -26,7 +27,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainSnapshotOptionsArgs() {
-        this.automatedSnapshotStartHour = Output.empty();
+        this.automatedSnapshotStartHour = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DomainSnapshotOptionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder automatedSnapshotStartHour(@Nullable Integer automatedSnapshotStartHour) {
-            this.automatedSnapshotStartHour = Output.ofNullable(automatedSnapshotStartHour);
+            this.automatedSnapshotStartHour = Codegen.ofNullable(automatedSnapshotStartHour);
             return this;
         }        public DomainSnapshotOptionsArgs build() {
             return new DomainSnapshotOptionsArgs(automatedSnapshotStartHour);

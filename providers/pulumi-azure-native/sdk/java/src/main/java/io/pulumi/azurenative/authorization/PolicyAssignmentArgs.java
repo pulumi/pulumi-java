@@ -10,6 +10,7 @@ import io.pulumi.azurenative.authorization.inputs.ParameterValuesValueArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,EnforcementMode>> enforcementMode;
 
     public Output<Either<String,EnforcementMode>> getEnforcementMode() {
-        return this.enforcementMode == null ? Output.empty() : this.enforcementMode;
+        return this.enforcementMode == null ? Codegen.empty() : this.enforcementMode;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages;
 
     public Output<List<NonComplianceMessageArgs>> getNonComplianceMessages() {
-        return this.nonComplianceMessages == null ? Output.empty() : this.nonComplianceMessages;
+        return this.nonComplianceMessages == null ? Codegen.empty() : this.nonComplianceMessages;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> notScopes;
 
     public Output<List<String>> getNotScopes() {
-        return this.notScopes == null ? Output.empty() : this.notScopes;
+        return this.notScopes == null ? Codegen.empty() : this.notScopes;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,ParameterValuesValueArgs>> parameters;
 
     public Output<Map<String,ParameterValuesValueArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> policyAssignmentName;
 
     public Output<String> getPolicyAssignmentName() {
-        return this.policyAssignmentName == null ? Output.empty() : this.policyAssignmentName;
+        return this.policyAssignmentName == null ? Codegen.empty() : this.policyAssignmentName;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> policyDefinitionId;
 
     public Output<String> getPolicyDefinitionId() {
-        return this.policyDefinitionId == null ? Output.empty() : this.policyDefinitionId;
+        return this.policyDefinitionId == null ? Codegen.empty() : this.policyDefinitionId;
     }
 
     /**
@@ -182,18 +183,18 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyAssignmentArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.enforcementMode = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.nonComplianceMessages = Output.empty();
-        this.notScopes = Output.empty();
-        this.parameters = Output.empty();
-        this.policyAssignmentName = Output.empty();
-        this.policyDefinitionId = Output.empty();
-        this.scope = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.enforcementMode = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.nonComplianceMessages = Codegen.empty();
+        this.notScopes = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.policyAssignmentName = Codegen.empty();
+        this.policyDefinitionId = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -251,7 +252,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder enforcementMode(@Nullable Output<Either<String,EnforcementMode>> enforcementMode) {
@@ -259,7 +260,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enforcementMode(@Nullable Either<String,EnforcementMode> enforcementMode) {
-            this.enforcementMode = Output.ofNullable(enforcementMode);
+            this.enforcementMode = Codegen.ofNullable(enforcementMode);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -267,7 +268,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -275,7 +276,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -283,7 +284,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder nonComplianceMessages(@Nullable Output<List<NonComplianceMessageArgs>> nonComplianceMessages) {
@@ -291,7 +292,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder nonComplianceMessages(@Nullable List<NonComplianceMessageArgs> nonComplianceMessages) {
-            this.nonComplianceMessages = Output.ofNullable(nonComplianceMessages);
+            this.nonComplianceMessages = Codegen.ofNullable(nonComplianceMessages);
             return this;
         }
         public Builder nonComplianceMessages(NonComplianceMessageArgs... nonComplianceMessages) {
@@ -302,7 +303,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder notScopes(@Nullable List<String> notScopes) {
-            this.notScopes = Output.ofNullable(notScopes);
+            this.notScopes = Codegen.ofNullable(notScopes);
             return this;
         }
         public Builder notScopes(String... notScopes) {
@@ -313,7 +314,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterValuesValueArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder policyAssignmentName(@Nullable Output<String> policyAssignmentName) {
@@ -321,7 +322,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policyAssignmentName(@Nullable String policyAssignmentName) {
-            this.policyAssignmentName = Output.ofNullable(policyAssignmentName);
+            this.policyAssignmentName = Codegen.ofNullable(policyAssignmentName);
             return this;
         }
         public Builder policyDefinitionId(@Nullable Output<String> policyDefinitionId) {
@@ -329,7 +330,7 @@ public final class PolicyAssignmentArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder policyDefinitionId(@Nullable String policyDefinitionId) {
-            this.policyDefinitionId = Output.ofNullable(policyDefinitionId);
+            this.policyDefinitionId = Codegen.ofNullable(policyDefinitionId);
             return this;
         }
         public Builder scope(Output<String> scope) {

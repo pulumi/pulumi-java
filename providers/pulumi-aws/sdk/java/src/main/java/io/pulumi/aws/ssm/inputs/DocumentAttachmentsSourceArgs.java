@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
     }
 
     private DocumentAttachmentsSourceArgs() {
-        this.key = Output.empty();
-        this.name = Output.empty();
-        this.values = Output.empty();
+        this.key = Codegen.empty();
+        this.name = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DocumentAttachmentsSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder values(Output<List<String>> values) {

@@ -16,6 +16,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainCredentialsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AutoBackupSettingsArgs> autoBackupSettings;
 
     public Output<AutoBackupSettingsArgs> getAutoBackupSettings() {
-        return this.autoBackupSettings == null ? Output.empty() : this.autoBackupSettings;
+        return this.autoBackupSettings == null ? Codegen.empty() : this.autoBackupSettings;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings;
 
     public Output<AutoPatchingSettingsArgs> getAutoPatchingSettings() {
-        return this.autoPatchingSettings == null ? Output.empty() : this.autoPatchingSettings;
+        return this.autoPatchingSettings == null ? Codegen.empty() : this.autoPatchingSettings;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
 
     public Output<KeyVaultCredentialSettingsArgs> getKeyVaultCredentialSettings() {
-        return this.keyVaultCredentialSettings == null ? Output.empty() : this.keyVaultCredentialSettings;
+        return this.keyVaultCredentialSettings == null ? Codegen.empty() : this.keyVaultCredentialSettings;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
 
     public Output<ServerConfigurationsManagementSettingsArgs> getServerConfigurationsManagementSettings() {
-        return this.serverConfigurationsManagementSettings == null ? Output.empty() : this.serverConfigurationsManagementSettings;
+        return this.serverConfigurationsManagementSettings == null ? Codegen.empty() : this.serverConfigurationsManagementSettings;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> sqlImageOffer;
 
     public Output<String> getSqlImageOffer() {
-        return this.sqlImageOffer == null ? Output.empty() : this.sqlImageOffer;
+        return this.sqlImageOffer == null ? Codegen.empty() : this.sqlImageOffer;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,SqlImageSku>> sqlImageSku;
 
     public Output<Either<String,SqlImageSku>> getSqlImageSku() {
-        return this.sqlImageSku == null ? Output.empty() : this.sqlImageSku;
+        return this.sqlImageSku == null ? Codegen.empty() : this.sqlImageSku;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,SqlManagementMode>> sqlManagement;
 
     public Output<Either<String,SqlManagementMode>> getSqlManagement() {
-        return this.sqlManagement == null ? Output.empty() : this.sqlManagement;
+        return this.sqlManagement == null ? Codegen.empty() : this.sqlManagement;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
 
     public Output<Either<String,SqlServerLicenseType>> getSqlServerLicenseType() {
-        return this.sqlServerLicenseType == null ? Output.empty() : this.sqlServerLicenseType;
+        return this.sqlServerLicenseType == null ? Codegen.empty() : this.sqlServerLicenseType;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> sqlVirtualMachineGroupResourceId;
 
     public Output<String> getSqlVirtualMachineGroupResourceId() {
-        return this.sqlVirtualMachineGroupResourceId == null ? Output.empty() : this.sqlVirtualMachineGroupResourceId;
+        return this.sqlVirtualMachineGroupResourceId == null ? Codegen.empty() : this.sqlVirtualMachineGroupResourceId;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> sqlVirtualMachineName;
 
     public Output<String> getSqlVirtualMachineName() {
-        return this.sqlVirtualMachineName == null ? Output.empty() : this.sqlVirtualMachineName;
+        return this.sqlVirtualMachineName == null ? Codegen.empty() : this.sqlVirtualMachineName;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings;
 
     public Output<StorageConfigurationSettingsArgs> getStorageConfigurationSettings() {
-        return this.storageConfigurationSettings == null ? Output.empty() : this.storageConfigurationSettings;
+        return this.storageConfigurationSettings == null ? Codegen.empty() : this.storageConfigurationSettings;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> virtualMachineResourceId;
 
     public Output<String> getVirtualMachineResourceId() {
-        return this.virtualMachineResourceId == null ? Output.empty() : this.virtualMachineResourceId;
+        return this.virtualMachineResourceId == null ? Codegen.empty() : this.virtualMachineResourceId;
     }
 
     /**
@@ -210,7 +211,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 
     public Output<WsfcDomainCredentialsArgs> getWsfcDomainCredentials() {
-        return this.wsfcDomainCredentials == null ? Output.empty() : this.wsfcDomainCredentials;
+        return this.wsfcDomainCredentials == null ? Codegen.empty() : this.wsfcDomainCredentials;
     }
 
     public SqlVirtualMachineArgs(
@@ -251,23 +252,23 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SqlVirtualMachineArgs() {
-        this.autoBackupSettings = Output.empty();
-        this.autoPatchingSettings = Output.empty();
-        this.identity = Output.empty();
-        this.keyVaultCredentialSettings = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverConfigurationsManagementSettings = Output.empty();
-        this.sqlImageOffer = Output.empty();
-        this.sqlImageSku = Output.empty();
-        this.sqlManagement = Output.empty();
-        this.sqlServerLicenseType = Output.empty();
-        this.sqlVirtualMachineGroupResourceId = Output.empty();
-        this.sqlVirtualMachineName = Output.empty();
-        this.storageConfigurationSettings = Output.empty();
-        this.tags = Output.empty();
-        this.virtualMachineResourceId = Output.empty();
-        this.wsfcDomainCredentials = Output.empty();
+        this.autoBackupSettings = Codegen.empty();
+        this.autoPatchingSettings = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.keyVaultCredentialSettings = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverConfigurationsManagementSettings = Codegen.empty();
+        this.sqlImageOffer = Codegen.empty();
+        this.sqlImageSku = Codegen.empty();
+        this.sqlManagement = Codegen.empty();
+        this.sqlServerLicenseType = Codegen.empty();
+        this.sqlVirtualMachineGroupResourceId = Codegen.empty();
+        this.sqlVirtualMachineName = Codegen.empty();
+        this.storageConfigurationSettings = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualMachineResourceId = Codegen.empty();
+        this.wsfcDomainCredentials = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -327,7 +328,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder autoBackupSettings(@Nullable AutoBackupSettingsArgs autoBackupSettings) {
-            this.autoBackupSettings = Output.ofNullable(autoBackupSettings);
+            this.autoBackupSettings = Codegen.ofNullable(autoBackupSettings);
             return this;
         }
         public Builder autoPatchingSettings(@Nullable Output<AutoPatchingSettingsArgs> autoPatchingSettings) {
@@ -335,7 +336,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder autoPatchingSettings(@Nullable AutoPatchingSettingsArgs autoPatchingSettings) {
-            this.autoPatchingSettings = Output.ofNullable(autoPatchingSettings);
+            this.autoPatchingSettings = Codegen.ofNullable(autoPatchingSettings);
             return this;
         }
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
@@ -343,7 +344,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyVaultCredentialSettings(@Nullable Output<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings) {
@@ -351,7 +352,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keyVaultCredentialSettings(@Nullable KeyVaultCredentialSettingsArgs keyVaultCredentialSettings) {
-            this.keyVaultCredentialSettings = Output.ofNullable(keyVaultCredentialSettings);
+            this.keyVaultCredentialSettings = Codegen.ofNullable(keyVaultCredentialSettings);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -359,7 +360,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -375,7 +376,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serverConfigurationsManagementSettings(@Nullable ServerConfigurationsManagementSettingsArgs serverConfigurationsManagementSettings) {
-            this.serverConfigurationsManagementSettings = Output.ofNullable(serverConfigurationsManagementSettings);
+            this.serverConfigurationsManagementSettings = Codegen.ofNullable(serverConfigurationsManagementSettings);
             return this;
         }
         public Builder sqlImageOffer(@Nullable Output<String> sqlImageOffer) {
@@ -383,7 +384,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sqlImageOffer(@Nullable String sqlImageOffer) {
-            this.sqlImageOffer = Output.ofNullable(sqlImageOffer);
+            this.sqlImageOffer = Codegen.ofNullable(sqlImageOffer);
             return this;
         }
         public Builder sqlImageSku(@Nullable Output<Either<String,SqlImageSku>> sqlImageSku) {
@@ -391,7 +392,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sqlImageSku(@Nullable Either<String,SqlImageSku> sqlImageSku) {
-            this.sqlImageSku = Output.ofNullable(sqlImageSku);
+            this.sqlImageSku = Codegen.ofNullable(sqlImageSku);
             return this;
         }
         public Builder sqlManagement(@Nullable Output<Either<String,SqlManagementMode>> sqlManagement) {
@@ -399,7 +400,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sqlManagement(@Nullable Either<String,SqlManagementMode> sqlManagement) {
-            this.sqlManagement = Output.ofNullable(sqlManagement);
+            this.sqlManagement = Codegen.ofNullable(sqlManagement);
             return this;
         }
         public Builder sqlServerLicenseType(@Nullable Output<Either<String,SqlServerLicenseType>> sqlServerLicenseType) {
@@ -407,7 +408,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sqlServerLicenseType(@Nullable Either<String,SqlServerLicenseType> sqlServerLicenseType) {
-            this.sqlServerLicenseType = Output.ofNullable(sqlServerLicenseType);
+            this.sqlServerLicenseType = Codegen.ofNullable(sqlServerLicenseType);
             return this;
         }
         public Builder sqlVirtualMachineGroupResourceId(@Nullable Output<String> sqlVirtualMachineGroupResourceId) {
@@ -415,7 +416,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sqlVirtualMachineGroupResourceId(@Nullable String sqlVirtualMachineGroupResourceId) {
-            this.sqlVirtualMachineGroupResourceId = Output.ofNullable(sqlVirtualMachineGroupResourceId);
+            this.sqlVirtualMachineGroupResourceId = Codegen.ofNullable(sqlVirtualMachineGroupResourceId);
             return this;
         }
         public Builder sqlVirtualMachineName(@Nullable Output<String> sqlVirtualMachineName) {
@@ -423,7 +424,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder sqlVirtualMachineName(@Nullable String sqlVirtualMachineName) {
-            this.sqlVirtualMachineName = Output.ofNullable(sqlVirtualMachineName);
+            this.sqlVirtualMachineName = Codegen.ofNullable(sqlVirtualMachineName);
             return this;
         }
         public Builder storageConfigurationSettings(@Nullable Output<StorageConfigurationSettingsArgs> storageConfigurationSettings) {
@@ -431,7 +432,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder storageConfigurationSettings(@Nullable StorageConfigurationSettingsArgs storageConfigurationSettings) {
-            this.storageConfigurationSettings = Output.ofNullable(storageConfigurationSettings);
+            this.storageConfigurationSettings = Codegen.ofNullable(storageConfigurationSettings);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -439,7 +440,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualMachineResourceId(@Nullable Output<String> virtualMachineResourceId) {
@@ -447,7 +448,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder virtualMachineResourceId(@Nullable String virtualMachineResourceId) {
-            this.virtualMachineResourceId = Output.ofNullable(virtualMachineResourceId);
+            this.virtualMachineResourceId = Codegen.ofNullable(virtualMachineResourceId);
             return this;
         }
         public Builder wsfcDomainCredentials(@Nullable Output<WsfcDomainCredentialsArgs> wsfcDomainCredentials) {
@@ -455,7 +456,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder wsfcDomainCredentials(@Nullable WsfcDomainCredentialsArgs wsfcDomainCredentials) {
-            this.wsfcDomainCredentials = Output.ofNullable(wsfcDomainCredentials);
+            this.wsfcDomainCredentials = Codegen.ofNullable(wsfcDomainCredentials);
             return this;
         }        public SqlVirtualMachineArgs build() {
             return new SqlVirtualMachineArgs(autoBackupSettings, autoPatchingSettings, identity, keyVaultCredentialSettings, location, resourceGroupName, serverConfigurationsManagementSettings, sqlImageOffer, sqlImageSku, sqlManagement, sqlServerLicenseType, sqlVirtualMachineGroupResourceId, sqlVirtualMachineName, storageConfigurationSettings, tags, virtualMachineResourceId, wsfcDomainCredentials);

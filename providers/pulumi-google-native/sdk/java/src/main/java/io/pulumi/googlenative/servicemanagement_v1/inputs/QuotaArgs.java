@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MetricRuleArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.QuotaLimitArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<QuotaLimitArgs>> limits;
 
     public Output<List<QuotaLimitArgs>> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetricRuleArgs>> metricRules;
 
     public Output<List<MetricRuleArgs>> getMetricRules() {
-        return this.metricRules == null ? Output.empty() : this.metricRules;
+        return this.metricRules == null ? Codegen.empty() : this.metricRules;
     }
 
     public QuotaArgs(
@@ -50,8 +51,8 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuotaArgs() {
-        this.limits = Output.empty();
-        this.metricRules = Output.empty();
+        this.limits = Codegen.empty();
+        this.metricRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder limits(@Nullable List<QuotaLimitArgs> limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }
         public Builder limits(QuotaLimitArgs... limits) {
@@ -92,7 +93,7 @@ public final class QuotaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricRules(@Nullable List<MetricRuleArgs> metricRules) {
-            this.metricRules = Output.ofNullable(metricRules);
+            this.metricRules = Codegen.ofNullable(metricRules);
             return this;
         }
         public Builder metricRules(MetricRuleArgs... metricRules) {

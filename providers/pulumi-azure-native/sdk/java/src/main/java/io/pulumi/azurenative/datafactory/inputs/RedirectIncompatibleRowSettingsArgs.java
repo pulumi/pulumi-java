@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
       private final @Nullable Output<Object> path;
 
     public Output<Object> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public RedirectIncompatibleRowSettingsArgs(
@@ -48,8 +49,8 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
     }
 
     private RedirectIncompatibleRowSettingsArgs() {
-        this.linkedServiceName = Output.empty();
-        this.path = Output.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class RedirectIncompatibleRowSettingsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder path(@Nullable Object path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public RedirectIncompatibleRowSettingsArgs build() {
             return new RedirectIncompatibleRowSettingsArgs(linkedServiceName, path);

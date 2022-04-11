@@ -6,6 +6,7 @@ package io.pulumi.googlenative.retail_v2beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.retail_v2beta.ServingConfigArgs;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse;
@@ -281,7 +282,7 @@ public class ServingConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServingConfig(String name, ServingConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:retail/v2beta:ServingConfig", name, args == null ? ServingConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:retail/v2beta:ServingConfig", name, args == null ? ServingConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServingConfig(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

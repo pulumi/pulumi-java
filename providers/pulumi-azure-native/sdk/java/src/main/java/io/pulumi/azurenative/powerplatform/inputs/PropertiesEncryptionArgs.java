@@ -8,6 +8,7 @@ import io.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVault;
 
     public Output<KeyVaultPropertiesArgs> getKeyVault() {
-        return this.keyVault == null ? Output.empty() : this.keyVault;
+        return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public PropertiesEncryptionArgs(
@@ -51,8 +52,8 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
     }
 
     private PropertiesEncryptionArgs() {
-        this.keyVault = Output.empty();
-        this.state = Output.empty();
+        this.keyVault = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder keyVault(@Nullable KeyVaultPropertiesArgs keyVault) {
-            this.keyVault = Output.ofNullable(keyVault);
+            this.keyVault = Codegen.ofNullable(keyVault);
             return this;
         }
         public Builder state(@Nullable Output<Either<String,State>> state) {
@@ -90,7 +91,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public PropertiesEncryptionArgs build() {
             return new PropertiesEncryptionArgs(keyVault, state);

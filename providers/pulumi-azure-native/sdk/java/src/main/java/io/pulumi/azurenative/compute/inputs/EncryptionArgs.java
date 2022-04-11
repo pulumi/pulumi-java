@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.EncryptionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> diskEncryptionSetId;
 
     public Output<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
+        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EncryptionType>> type;
 
     public Output<Either<String,EncryptionType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public EncryptionArgs(
@@ -50,8 +51,8 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EncryptionArgs() {
-        this.diskEncryptionSetId = Output.empty();
-        this.type = Output.empty();
+        this.diskEncryptionSetId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,EncryptionType>> type) {
@@ -89,7 +90,7 @@ public final class EncryptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,EncryptionType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public EncryptionArgs build() {
             return new EncryptionArgs(diskEncryptionSetId, type);

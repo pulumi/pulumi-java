@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigArgs;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig;
 
     public Output<WorkerPoolNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig;
 
     public Output<WorkerPoolWorkerConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Output.empty() : this.workerConfig;
+        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
     public WorkerPoolArgs(
@@ -113,13 +114,13 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkerPoolArgs() {
-        this.annotations = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networkConfig = Output.empty();
-        this.project = Output.empty();
-        this.workerConfig = Output.empty();
+        this.annotations = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.workerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -167,7 +168,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -183,7 +184,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkConfig(@Nullable Output<WorkerPoolNetworkConfigArgs> networkConfig) {
@@ -191,7 +192,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfig(@Nullable WorkerPoolNetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -199,7 +200,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder workerConfig(@Nullable Output<WorkerPoolWorkerConfigArgs> workerConfig) {
@@ -207,7 +208,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerConfig(@Nullable WorkerPoolWorkerConfigArgs workerConfig) {
-            this.workerConfig = Output.ofNullable(workerConfig);
+            this.workerConfig = Codegen.ofNullable(workerConfig);
             return this;
         }        public WorkerPoolArgs build() {
             return new WorkerPoolArgs(annotations, displayName, location, name, networkConfig, project, workerConfig);

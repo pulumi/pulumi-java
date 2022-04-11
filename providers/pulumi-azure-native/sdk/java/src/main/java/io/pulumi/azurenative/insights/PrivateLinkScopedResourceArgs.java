@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> linkedResourceId;
 
     public Output<String> getLinkedResourceId() {
-        return this.linkedResourceId == null ? Output.empty() : this.linkedResourceId;
+        return this.linkedResourceId == null ? Codegen.empty() : this.linkedResourceId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
     }
 
     private PrivateLinkScopedResourceArgs() {
-        this.linkedResourceId = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scopeName = Output.empty();
+        this.linkedResourceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scopeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder linkedResourceId(@Nullable String linkedResourceId) {
-            this.linkedResourceId = Output.ofNullable(linkedResourceId);
+            this.linkedResourceId = Codegen.ofNullable(linkedResourceId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -115,7 +116,7 @@ public final class PrivateLinkScopedResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

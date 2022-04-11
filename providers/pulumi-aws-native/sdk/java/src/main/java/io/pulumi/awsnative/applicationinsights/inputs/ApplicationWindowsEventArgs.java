@@ -6,6 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +62,7 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> patternSet;
 
     public Output<String> getPatternSet() {
-        return this.patternSet == null ? Output.empty() : this.patternSet;
+        return this.patternSet == null ? Codegen.empty() : this.patternSet;
     }
 
     public ApplicationWindowsEventArgs(
@@ -76,10 +77,10 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
     }
 
     private ApplicationWindowsEventArgs() {
-        this.eventLevels = Output.empty();
-        this.eventName = Output.empty();
-        this.logGroupName = Output.empty();
-        this.patternSet = Output.empty();
+        this.eventLevels = Codegen.empty();
+        this.eventName = Codegen.empty();
+        this.logGroupName = Codegen.empty();
+        this.patternSet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ApplicationWindowsEventArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder patternSet(@Nullable String patternSet) {
-            this.patternSet = Output.ofNullable(patternSet);
+            this.patternSet = Codegen.ofNullable(patternSet);
             return this;
         }        public ApplicationWindowsEventArgs build() {
             return new ApplicationWindowsEventArgs(eventLevels, eventName, logGroupName, patternSet);

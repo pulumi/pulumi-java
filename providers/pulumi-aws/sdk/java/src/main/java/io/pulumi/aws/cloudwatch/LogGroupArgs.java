@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
+        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LogGroupArgs(
@@ -89,11 +90,11 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogGroupArgs() {
-        this.kmsKeyId = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.retentionInDays = Output.empty();
-        this.tags = Output.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.retentionInDays = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -137,7 +138,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -145,7 +146,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
@@ -153,7 +154,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Output.ofNullable(retentionInDays);
+            this.retentionInDays = Codegen.ofNullable(retentionInDays);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -161,7 +162,7 @@ public final class LogGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LogGroupArgs build() {
             return new LogGroupArgs(kmsKeyId, name, namePrefix, retentionInDays, tags);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipMemberKeyArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipPreferredMemberKeyArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipRoleArgs;
@@ -38,7 +39,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<GroupMembershipMemberKeyArgs> memberKey;
 
     public Output<GroupMembershipMemberKeyArgs> getMemberKey() {
-        return this.memberKey == null ? Output.empty() : this.memberKey;
+        return this.memberKey == null ? Codegen.empty() : this.memberKey;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey;
 
     public Output<GroupMembershipPreferredMemberKeyArgs> getPreferredMemberKey() {
-        return this.preferredMemberKey == null ? Output.empty() : this.preferredMemberKey;
+        return this.preferredMemberKey == null ? Codegen.empty() : this.preferredMemberKey;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GroupMembershipArgs() {
-        this.group = Output.empty();
-        this.memberKey = Output.empty();
-        this.preferredMemberKey = Output.empty();
-        this.roles = Output.empty();
+        this.group = Codegen.empty();
+        this.memberKey = Codegen.empty();
+        this.preferredMemberKey = Codegen.empty();
+        this.roles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder memberKey(@Nullable GroupMembershipMemberKeyArgs memberKey) {
-            this.memberKey = Output.ofNullable(memberKey);
+            this.memberKey = Codegen.ofNullable(memberKey);
             return this;
         }
         public Builder preferredMemberKey(@Nullable Output<GroupMembershipPreferredMemberKeyArgs> preferredMemberKey) {
@@ -131,7 +132,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder preferredMemberKey(@Nullable GroupMembershipPreferredMemberKeyArgs preferredMemberKey) {
-            this.preferredMemberKey = Output.ofNullable(preferredMemberKey);
+            this.preferredMemberKey = Codegen.ofNullable(preferredMemberKey);
             return this;
         }
         public Builder roles(Output<List<GroupMembershipRoleArgs>> roles) {

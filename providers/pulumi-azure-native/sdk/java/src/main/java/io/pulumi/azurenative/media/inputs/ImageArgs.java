@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyFrameInterval;
 
     public Output<String> getKeyFrameInterval() {
-        return this.keyFrameInterval == null ? Output.empty() : this.keyFrameInterval;
+        return this.keyFrameInterval == null ? Codegen.empty() : this.keyFrameInterval;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> range;
 
     public Output<String> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> step;
 
     public Output<String> getStep() {
-        return this.step == null ? Output.empty() : this.step;
+        return this.step == null ? Codegen.empty() : this.step;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StretchMode>> stretchMode;
 
     public Output<Either<String,StretchMode>> getStretchMode() {
-        return this.stretchMode == null ? Output.empty() : this.stretchMode;
+        return this.stretchMode == null ? Codegen.empty() : this.stretchMode;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VideoSyncMode>> syncMode;
 
     public Output<Either<String,VideoSyncMode>> getSyncMode() {
-        return this.syncMode == null ? Output.empty() : this.syncMode;
+        return this.syncMode == null ? Codegen.empty() : this.syncMode;
     }
 
     public ImageArgs(
@@ -130,14 +131,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.keyFrameInterval = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.range = Output.empty();
-        this.start = Output.empty();
-        this.step = Output.empty();
-        this.stretchMode = Output.empty();
-        this.syncMode = Output.empty();
+        this.keyFrameInterval = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.range = Codegen.empty();
+        this.start = Codegen.empty();
+        this.step = Codegen.empty();
+        this.stretchMode = Codegen.empty();
+        this.syncMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
-            this.keyFrameInterval = Output.ofNullable(keyFrameInterval);
+            this.keyFrameInterval = Codegen.ofNullable(keyFrameInterval);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -187,7 +188,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -203,7 +204,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder range(@Nullable String range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder start(Output<String> start) {
@@ -219,7 +220,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder step(@Nullable String step) {
-            this.step = Output.ofNullable(step);
+            this.step = Codegen.ofNullable(step);
             return this;
         }
         public Builder stretchMode(@Nullable Output<Either<String,StretchMode>> stretchMode) {
@@ -227,7 +228,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stretchMode(@Nullable Either<String,StretchMode> stretchMode) {
-            this.stretchMode = Output.ofNullable(stretchMode);
+            this.stretchMode = Codegen.ofNullable(stretchMode);
             return this;
         }
         public Builder syncMode(@Nullable Output<Either<String,VideoSyncMode>> syncMode) {
@@ -235,7 +236,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncMode(@Nullable Either<String,VideoSyncMode> syncMode) {
-            this.syncMode = Output.ofNullable(syncMode);
+            this.syncMode = Codegen.ofNullable(syncMode);
             return this;
         }        public ImageArgs build() {
             return new ImageArgs(keyFrameInterval, label, odataType, range, start, step, stretchMode, syncMode);

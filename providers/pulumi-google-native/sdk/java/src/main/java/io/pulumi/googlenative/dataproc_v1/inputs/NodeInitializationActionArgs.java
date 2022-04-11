@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> executionTimeout;
 
     public Output<String> getExecutionTimeout() {
-        return this.executionTimeout == null ? Output.empty() : this.executionTimeout;
+        return this.executionTimeout == null ? Codegen.empty() : this.executionTimeout;
     }
 
     public NodeInitializationActionArgs(
@@ -48,8 +49,8 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
     }
 
     private NodeInitializationActionArgs() {
-        this.executableFile = Output.empty();
-        this.executionTimeout = Output.empty();
+        this.executableFile = Codegen.empty();
+        this.executionTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class NodeInitializationActionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder executionTimeout(@Nullable String executionTimeout) {
-            this.executionTimeout = Output.ofNullable(executionTimeout);
+            this.executionTimeout = Codegen.ofNullable(executionTimeout);
             return this;
         }        public NodeInitializationActionArgs build() {
             return new NodeInitializationActionArgs(executableFile, executionTimeout);

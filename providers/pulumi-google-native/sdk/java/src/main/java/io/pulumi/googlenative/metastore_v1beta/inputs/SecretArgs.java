@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudSecret;
 
     public Output<String> getCloudSecret() {
-        return this.cloudSecret == null ? Output.empty() : this.cloudSecret;
+        return this.cloudSecret == null ? Codegen.empty() : this.cloudSecret;
     }
 
     public SecretArgs(@Nullable Output<String> cloudSecret) {
@@ -34,7 +35,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.cloudSecret = Output.empty();
+        this.cloudSecret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudSecret(@Nullable String cloudSecret) {
-            this.cloudSecret = Output.ofNullable(cloudSecret);
+            this.cloudSecret = Codegen.ofNullable(cloudSecret);
             return this;
         }        public SecretArgs build() {
             return new SecretArgs(cloudSecret);

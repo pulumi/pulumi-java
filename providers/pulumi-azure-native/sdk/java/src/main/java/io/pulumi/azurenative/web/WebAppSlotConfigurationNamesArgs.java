@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> appSettingNames;
 
     public Output<List<String>> getAppSettingNames() {
-        return this.appSettingNames == null ? Output.empty() : this.appSettingNames;
+        return this.appSettingNames == null ? Codegen.empty() : this.appSettingNames;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> azureStorageConfigNames;
 
     public Output<List<String>> getAzureStorageConfigNames() {
-        return this.azureStorageConfigNames == null ? Output.empty() : this.azureStorageConfigNames;
+        return this.azureStorageConfigNames == null ? Codegen.empty() : this.azureStorageConfigNames;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> connectionStringNames;
 
     public Output<List<String>> getConnectionStringNames() {
-        return this.connectionStringNames == null ? Output.empty() : this.connectionStringNames;
+        return this.connectionStringNames == null ? Codegen.empty() : this.connectionStringNames;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
     }
 
     private WebAppSlotConfigurationNamesArgs() {
-        this.appSettingNames = Output.empty();
-        this.azureStorageConfigNames = Output.empty();
-        this.connectionStringNames = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.appSettingNames = Codegen.empty();
+        this.azureStorageConfigNames = Codegen.empty();
+        this.connectionStringNames = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder appSettingNames(@Nullable List<String> appSettingNames) {
-            this.appSettingNames = Output.ofNullable(appSettingNames);
+            this.appSettingNames = Codegen.ofNullable(appSettingNames);
             return this;
         }
         public Builder appSettingNames(String... appSettingNames) {
@@ -151,7 +152,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder azureStorageConfigNames(@Nullable List<String> azureStorageConfigNames) {
-            this.azureStorageConfigNames = Output.ofNullable(azureStorageConfigNames);
+            this.azureStorageConfigNames = Codegen.ofNullable(azureStorageConfigNames);
             return this;
         }
         public Builder azureStorageConfigNames(String... azureStorageConfigNames) {
@@ -162,7 +163,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder connectionStringNames(@Nullable List<String> connectionStringNames) {
-            this.connectionStringNames = Output.ofNullable(connectionStringNames);
+            this.connectionStringNames = Codegen.ofNullable(connectionStringNames);
             return this;
         }
         public Builder connectionStringNames(String... connectionStringNames) {
@@ -173,7 +174,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apps_v1.inputs.StatefulSetConditionArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> collisionCount;
 
     public Output<Integer> getCollisionCount() {
-        return this.collisionCount == null ? Output.empty() : this.collisionCount;
+        return this.collisionCount == null ? Codegen.empty() : this.collisionCount;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<StatefulSetConditionArgs>> conditions;
 
     public Output<List<StatefulSetConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> currentReplicas;
 
     public Output<Integer> getCurrentReplicas() {
-        return this.currentReplicas == null ? Output.empty() : this.currentReplicas;
+        return this.currentReplicas == null ? Codegen.empty() : this.currentReplicas;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> currentRevision;
 
     public Output<String> getCurrentRevision() {
-        return this.currentRevision == null ? Output.empty() : this.currentRevision;
+        return this.currentRevision == null ? Codegen.empty() : this.currentRevision;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> readyReplicas;
 
     public Output<Integer> getReadyReplicas() {
-        return this.readyReplicas == null ? Output.empty() : this.readyReplicas;
+        return this.readyReplicas == null ? Codegen.empty() : this.readyReplicas;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> updateRevision;
 
     public Output<String> getUpdateRevision() {
-        return this.updateRevision == null ? Output.empty() : this.updateRevision;
+        return this.updateRevision == null ? Codegen.empty() : this.updateRevision;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> updatedReplicas;
 
     public Output<Integer> getUpdatedReplicas() {
-        return this.updatedReplicas == null ? Output.empty() : this.updatedReplicas;
+        return this.updatedReplicas == null ? Codegen.empty() : this.updatedReplicas;
     }
 
     public StatefulSetStatusArgs(
@@ -155,16 +156,16 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
     }
 
     private StatefulSetStatusArgs() {
-        this.availableReplicas = Output.empty();
-        this.collisionCount = Output.empty();
-        this.conditions = Output.empty();
-        this.currentReplicas = Output.empty();
-        this.currentRevision = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.readyReplicas = Output.empty();
-        this.replicas = Output.empty();
-        this.updateRevision = Output.empty();
-        this.updatedReplicas = Output.empty();
+        this.availableReplicas = Codegen.empty();
+        this.collisionCount = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.currentReplicas = Codegen.empty();
+        this.currentRevision = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.readyReplicas = Codegen.empty();
+        this.replicas = Codegen.empty();
+        this.updateRevision = Codegen.empty();
+        this.updatedReplicas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -218,7 +219,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder collisionCount(@Nullable Integer collisionCount) {
-            this.collisionCount = Output.ofNullable(collisionCount);
+            this.collisionCount = Codegen.ofNullable(collisionCount);
             return this;
         }
         public Builder conditions(@Nullable Output<List<StatefulSetConditionArgs>> conditions) {
@@ -226,7 +227,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder conditions(@Nullable List<StatefulSetConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(StatefulSetConditionArgs... conditions) {
@@ -237,7 +238,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder currentReplicas(@Nullable Integer currentReplicas) {
-            this.currentReplicas = Output.ofNullable(currentReplicas);
+            this.currentReplicas = Codegen.ofNullable(currentReplicas);
             return this;
         }
         public Builder currentRevision(@Nullable Output<String> currentRevision) {
@@ -245,7 +246,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder currentRevision(@Nullable String currentRevision) {
-            this.currentRevision = Output.ofNullable(currentRevision);
+            this.currentRevision = Codegen.ofNullable(currentRevision);
             return this;
         }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
@@ -253,7 +254,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder readyReplicas(@Nullable Output<Integer> readyReplicas) {
@@ -261,7 +262,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder readyReplicas(@Nullable Integer readyReplicas) {
-            this.readyReplicas = Output.ofNullable(readyReplicas);
+            this.readyReplicas = Codegen.ofNullable(readyReplicas);
             return this;
         }
         public Builder replicas(Output<Integer> replicas) {
@@ -277,7 +278,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder updateRevision(@Nullable String updateRevision) {
-            this.updateRevision = Output.ofNullable(updateRevision);
+            this.updateRevision = Codegen.ofNullable(updateRevision);
             return this;
         }
         public Builder updatedReplicas(@Nullable Output<Integer> updatedReplicas) {
@@ -285,7 +286,7 @@ public final class StatefulSetStatusArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder updatedReplicas(@Nullable Integer updatedReplicas) {
-            this.updatedReplicas = Output.ofNullable(updatedReplicas);
+            this.updatedReplicas = Codegen.ofNullable(updatedReplicas);
             return this;
         }        public StatefulSetStatusArgs build() {
             return new StatefulSetStatusArgs(availableReplicas, collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);

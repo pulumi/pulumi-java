@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.APIServiceArgs;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.APIServiceSpec;
@@ -107,7 +108,7 @@ public class APIService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public APIService(String name, @Nullable APIServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:apiregistration.k8s.io/v1beta1:APIService", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:apiregistration.k8s.io/v1beta1:APIService", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private APIService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

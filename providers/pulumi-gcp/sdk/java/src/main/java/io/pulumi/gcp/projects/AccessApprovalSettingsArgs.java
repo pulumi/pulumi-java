@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.projects.inputs.AccessApprovalSettingsEnrolledServiceArgs;
 import java.lang.String;
 import java.util.List;
@@ -41,7 +42,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> notificationEmails;
 
     public Output<List<String>> getNotificationEmails() {
-        return this.notificationEmails == null ? Output.empty() : this.notificationEmails;
+        return this.notificationEmails == null ? Codegen.empty() : this.notificationEmails;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
 
     @Deprecated /* Deprecated in favor of `project_id` */
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -85,10 +86,10 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private AccessApprovalSettingsArgs() {
-        this.enrolledServices = Output.empty();
-        this.notificationEmails = Output.empty();
-        this.project = Output.empty();
-        this.projectId = Output.empty();
+        this.enrolledServices = Codegen.empty();
+        this.notificationEmails = Codegen.empty();
+        this.project = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder notificationEmails(@Nullable List<String> notificationEmails) {
-            this.notificationEmails = Output.ofNullable(notificationEmails);
+            this.notificationEmails = Codegen.ofNullable(notificationEmails);
             return this;
         }
         public Builder notificationEmails(String... notificationEmails) {
@@ -144,7 +145,7 @@ public final class AccessApprovalSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder projectId(Output<String> projectId) {

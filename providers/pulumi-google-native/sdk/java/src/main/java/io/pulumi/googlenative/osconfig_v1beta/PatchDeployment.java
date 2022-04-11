@@ -6,6 +6,7 @@ package io.pulumi.googlenative.osconfig_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.osconfig_v1beta.PatchDeploymentArgs;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.OneTimeScheduleResponse;
@@ -213,7 +214,7 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PatchDeployment(String name, PatchDeploymentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:osconfig/v1beta:PatchDeployment", name, args == null ? PatchDeploymentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:osconfig/v1beta:PatchDeployment", name, args == null ? PatchDeploymentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PatchDeployment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

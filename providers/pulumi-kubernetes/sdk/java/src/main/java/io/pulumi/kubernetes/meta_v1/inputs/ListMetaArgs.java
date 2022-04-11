@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> continue_;
 
     public Output<String> getContinue_() {
-        return this.continue_ == null ? Output.empty() : this.continue_;
+        return this.continue_ == null ? Codegen.empty() : this.continue_;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> remainingItemCount;
 
     public Output<Integer> getRemainingItemCount() {
-        return this.remainingItemCount == null ? Output.empty() : this.remainingItemCount;
+        return this.remainingItemCount == null ? Codegen.empty() : this.remainingItemCount;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceVersion;
 
     public Output<String> getResourceVersion() {
-        return this.resourceVersion == null ? Output.empty() : this.resourceVersion;
+        return this.resourceVersion == null ? Codegen.empty() : this.resourceVersion;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public ListMetaArgs(
@@ -77,10 +78,10 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListMetaArgs() {
-        this.continue_ = Output.empty();
-        this.remainingItemCount = Output.empty();
-        this.resourceVersion = Output.empty();
-        this.selfLink = Output.empty();
+        this.continue_ = Codegen.empty();
+        this.remainingItemCount = Codegen.empty();
+        this.resourceVersion = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder continue_(@Nullable String continue_) {
-            this.continue_ = Output.ofNullable(continue_);
+            this.continue_ = Codegen.ofNullable(continue_);
             return this;
         }
         public Builder remainingItemCount(@Nullable Output<Integer> remainingItemCount) {
@@ -122,7 +123,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remainingItemCount(@Nullable Integer remainingItemCount) {
-            this.remainingItemCount = Output.ofNullable(remainingItemCount);
+            this.remainingItemCount = Codegen.ofNullable(remainingItemCount);
             return this;
         }
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
@@ -130,7 +131,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceVersion(@Nullable String resourceVersion) {
-            this.resourceVersion = Output.ofNullable(resourceVersion);
+            this.resourceVersion = Codegen.ofNullable(resourceVersion);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -138,7 +139,7 @@ public final class ListMetaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public ListMetaArgs build() {
             return new ListMetaArgs(continue_, remainingItemCount, resourceVersion, selfLink);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> messageGroupId;
 
     public Output<String> getMessageGroupId() {
-        return this.messageGroupId == null ? Output.empty() : this.messageGroupId;
+        return this.messageGroupId == null ? Codegen.empty() : this.messageGroupId;
     }
 
     public EventTargetSqsTargetGetArgs(@Nullable Output<String> messageGroupId) {
@@ -30,7 +31,7 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
     }
 
     private EventTargetSqsTargetGetArgs() {
-        this.messageGroupId = Output.empty();
+        this.messageGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EventTargetSqsTargetGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder messageGroupId(@Nullable String messageGroupId) {
-            this.messageGroupId = Output.ofNullable(messageGroupId);
+            this.messageGroupId = Codegen.ofNullable(messageGroupId);
             return this;
         }        public EventTargetSqsTargetGetArgs build() {
             return new EventTargetSqsTargetGetArgs(messageGroupId);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> keyVaultId;
 
     public Output<String> getKeyVaultId() {
-        return this.keyVaultId == null ? Output.empty() : this.keyVaultId;
+        return this.keyVaultId == null ? Codegen.empty() : this.keyVaultId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> keyVaultUri;
 
     public Output<String> getKeyVaultUri() {
-        return this.keyVaultUri == null ? Output.empty() : this.keyVaultUri;
+        return this.keyVaultUri == null ? Codegen.empty() : this.keyVaultUri;
     }
 
     public SiteAgentPropertiesArgs(
@@ -48,8 +49,8 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private SiteAgentPropertiesArgs() {
-        this.keyVaultId = Output.empty();
-        this.keyVaultUri = Output.empty();
+        this.keyVaultId = Codegen.empty();
+        this.keyVaultUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder keyVaultId(@Nullable String keyVaultId) {
-            this.keyVaultId = Output.ofNullable(keyVaultId);
+            this.keyVaultId = Codegen.ofNullable(keyVaultId);
             return this;
         }
         public Builder keyVaultUri(@Nullable Output<String> keyVaultUri) {
@@ -87,7 +88,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
-            this.keyVaultUri = Output.ofNullable(keyVaultUri);
+            this.keyVaultUri = Codegen.ofNullable(keyVaultUri);
             return this;
         }        public SiteAgentPropertiesArgs build() {
             return new SiteAgentPropertiesArgs(keyVaultId, keyVaultUri);

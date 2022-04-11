@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> icmpCode;
 
     public Output<Integer> getIcmpCode() {
-        return this.icmpCode == null ? Output.empty() : this.icmpCode;
+        return this.icmpCode == null ? Codegen.empty() : this.icmpCode;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> icmpType;
 
     public Output<Integer> getIcmpType() {
-        return this.icmpType == null ? Output.empty() : this.icmpType;
+        return this.icmpType == null ? Codegen.empty() : this.icmpType;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> ipv6CidrBlock;
 
     public Output<String> getIpv6CidrBlock() {
-        return this.ipv6CidrBlock == null ? Output.empty() : this.ipv6CidrBlock;
+        return this.ipv6CidrBlock == null ? Codegen.empty() : this.ipv6CidrBlock;
     }
 
     /**
@@ -138,15 +139,15 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
     }
 
     private NetworkAclIngressArgs() {
-        this.action = Output.empty();
-        this.cidrBlock = Output.empty();
-        this.fromPort = Output.empty();
-        this.icmpCode = Output.empty();
-        this.icmpType = Output.empty();
-        this.ipv6CidrBlock = Output.empty();
-        this.protocol = Output.empty();
-        this.ruleNo = Output.empty();
-        this.toPort = Output.empty();
+        this.action = Codegen.empty();
+        this.cidrBlock = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.icmpCode = Codegen.empty();
+        this.icmpType = Codegen.empty();
+        this.ipv6CidrBlock = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.ruleNo = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -198,7 +199,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder fromPort(Output<Integer> fromPort) {
@@ -214,7 +215,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder icmpCode(@Nullable Integer icmpCode) {
-            this.icmpCode = Output.ofNullable(icmpCode);
+            this.icmpCode = Codegen.ofNullable(icmpCode);
             return this;
         }
         public Builder icmpType(@Nullable Output<Integer> icmpType) {
@@ -222,7 +223,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder icmpType(@Nullable Integer icmpType) {
-            this.icmpType = Output.ofNullable(icmpType);
+            this.icmpType = Codegen.ofNullable(icmpType);
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable Output<String> ipv6CidrBlock) {
@@ -230,7 +231,7 @@ public final class NetworkAclIngressArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ipv6CidrBlock(@Nullable String ipv6CidrBlock) {
-            this.ipv6CidrBlock = Output.ofNullable(ipv6CidrBlock);
+            this.ipv6CidrBlock = Codegen.ofNullable(ipv6CidrBlock);
             return this;
         }
         public Builder protocol(Output<String> protocol) {

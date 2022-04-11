@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -60,7 +61,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fixedCpeUri;
 
     public Output<String> getFixedCpeUri() {
-        return this.fixedCpeUri == null ? Output.empty() : this.fixedCpeUri;
+        return this.fixedCpeUri == null ? Codegen.empty() : this.fixedCpeUri;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fixedPackage;
 
     public Output<String> getFixedPackage() {
-        return this.fixedPackage == null ? Output.empty() : this.fixedPackage;
+        return this.fixedPackage == null ? Codegen.empty() : this.fixedPackage;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> packageType;
 
     public Output<String> getPackageType() {
-        return this.packageType == null ? Output.empty() : this.packageType;
+        return this.packageType == null ? Codegen.empty() : this.packageType;
     }
 
     public PackageIssueArgs(
@@ -114,13 +115,13 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageIssueArgs() {
-        this.affectedCpeUri = Output.empty();
-        this.affectedPackage = Output.empty();
-        this.affectedVersion = Output.empty();
-        this.fixedCpeUri = Output.empty();
-        this.fixedPackage = Output.empty();
-        this.fixedVersion = Output.empty();
-        this.packageType = Output.empty();
+        this.affectedCpeUri = Codegen.empty();
+        this.affectedPackage = Codegen.empty();
+        this.affectedVersion = Codegen.empty();
+        this.fixedCpeUri = Codegen.empty();
+        this.fixedPackage = Codegen.empty();
+        this.fixedVersion = Codegen.empty();
+        this.packageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedCpeUri(@Nullable String fixedCpeUri) {
-            this.fixedCpeUri = Output.ofNullable(fixedCpeUri);
+            this.fixedCpeUri = Codegen.ofNullable(fixedCpeUri);
             return this;
         }
         public Builder fixedPackage(@Nullable Output<String> fixedPackage) {
@@ -192,7 +193,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fixedPackage(@Nullable String fixedPackage) {
-            this.fixedPackage = Output.ofNullable(fixedPackage);
+            this.fixedPackage = Codegen.ofNullable(fixedPackage);
             return this;
         }
         public Builder fixedVersion(Output<VersionArgs> fixedVersion) {
@@ -208,7 +209,7 @@ public final class PackageIssueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageType(@Nullable String packageType) {
-            this.packageType = Output.ofNullable(packageType);
+            this.packageType = Codegen.ofNullable(packageType);
             return this;
         }        public PackageIssueArgs build() {
             return new PackageIssueArgs(affectedCpeUri, affectedPackage, affectedVersion, fixedCpeUri, fixedPackage, fixedVersion, packageType);

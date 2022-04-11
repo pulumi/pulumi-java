@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificati
       private final @Nullable Output<Integer> blockDurationMinutes;
 
     public Output<Integer> getBlockDurationMinutes() {
-        return this.blockDurationMinutes == null ? Output.empty() : this.blockDurationMinutes;
+        return this.blockDurationMinutes == null ? Codegen.empty() : this.blockDurationMinutes;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificati
     }
 
     private ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificationArgs() {
-        this.allocationStrategy = Output.empty();
-        this.blockDurationMinutes = Output.empty();
-        this.timeoutAction = Output.empty();
-        this.timeoutDurationMinutes = Output.empty();
+        this.allocationStrategy = Codegen.empty();
+        this.blockDurationMinutes = Codegen.empty();
+        this.timeoutAction = Codegen.empty();
+        this.timeoutDurationMinutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ClusterMasterInstanceFleetLaunchSpecificationsSpotSpecificati
             return this;
         }
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
+            this.blockDurationMinutes = Codegen.ofNullable(blockDurationMinutes);
             return this;
         }
         public Builder timeoutAction(Output<String> timeoutAction) {

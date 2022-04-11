@@ -5,6 +5,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> stage;
 
     public Output<String> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> throttle;
 
     public Output<Object> getThrottle() {
-        return this.throttle == null ? Output.empty() : this.throttle;
+        return this.throttle == null ? Codegen.empty() : this.throttle;
     }
 
     public UsagePlanApiStageArgs(
@@ -58,9 +59,9 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
     }
 
     private UsagePlanApiStageArgs() {
-        this.apiId = Output.empty();
-        this.stage = Output.empty();
-        this.throttle = Output.empty();
+        this.apiId = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.throttle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder stage(@Nullable Output<String> stage) {
@@ -100,7 +101,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder stage(@Nullable String stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }
         public Builder throttle(@Nullable Output<Object> throttle) {
@@ -108,7 +109,7 @@ public final class UsagePlanApiStageArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder throttle(@Nullable Object throttle) {
-            this.throttle = Output.ofNullable(throttle);
+            this.throttle = Codegen.ofNullable(throttle);
             return this;
         }        public UsagePlanApiStageArgs build() {
             return new UsagePlanApiStageArgs(apiId, stage, throttle);

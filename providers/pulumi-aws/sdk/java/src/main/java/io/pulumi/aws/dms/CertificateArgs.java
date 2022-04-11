@@ -5,6 +5,7 @@ package io.pulumi.aws.dms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificatePem;
 
     public Output<String> getCertificatePem() {
-        return this.certificatePem == null ? Output.empty() : this.certificatePem;
+        return this.certificatePem == null ? Codegen.empty() : this.certificatePem;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateWallet;
 
     public Output<String> getCertificateWallet() {
-        return this.certificateWallet == null ? Output.empty() : this.certificateWallet;
+        return this.certificateWallet == null ? Codegen.empty() : this.certificateWallet;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CertificateArgs(
@@ -71,10 +72,10 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.certificateId = Output.empty();
-        this.certificatePem = Output.empty();
-        this.certificateWallet = Output.empty();
-        this.tags = Output.empty();
+        this.certificateId = Codegen.empty();
+        this.certificatePem = Codegen.empty();
+        this.certificateWallet = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificatePem(@Nullable String certificatePem) {
-            this.certificatePem = Output.ofNullable(certificatePem);
+            this.certificatePem = Codegen.ofNullable(certificatePem);
             return this;
         }
         public Builder certificateWallet(@Nullable Output<String> certificateWallet) {
@@ -124,7 +125,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateWallet(@Nullable String certificateWallet) {
-            this.certificateWallet = Output.ofNullable(certificateWallet);
+            this.certificateWallet = Codegen.ofNullable(certificateWallet);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -132,7 +133,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CertificateArgs build() {
             return new CertificateArgs(certificateId, certificatePem, certificateWallet, tags);

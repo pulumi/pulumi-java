@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigee;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvGroupArgs;
 import io.pulumi.gcp.apigee.inputs.EnvGroupState;
@@ -106,7 +107,7 @@ public class EnvGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EnvGroup(String name, EnvGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/envGroup:EnvGroup", name, args == null ? EnvGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigee/envGroup:EnvGroup", name, args == null ? EnvGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnvGroup(String name, Output<String> id, @Nullable EnvGroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

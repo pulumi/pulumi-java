@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> userAssignedIdentity;
 
     public Output<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
+        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 
     public CMKIdentityDefinitionArgs(@Nullable Output<String> userAssignedIdentity) {
@@ -34,7 +35,7 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
     }
 
     private CMKIdentityDefinitionArgs() {
-        this.userAssignedIdentity = Output.empty();
+        this.userAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
             return this;
         }        public CMKIdentityDefinitionArgs build() {
             return new CMKIdentityDefinitionArgs(userAssignedIdentity);

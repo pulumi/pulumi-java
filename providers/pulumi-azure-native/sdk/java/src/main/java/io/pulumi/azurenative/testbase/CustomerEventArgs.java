@@ -6,6 +6,7 @@ package io.pulumi.azurenative.testbase;
 import io.pulumi.azurenative.testbase.inputs.NotificationEventReceiverArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerEventName;
 
     public Output<String> getCustomerEventName() {
-        return this.customerEventName == null ? Output.empty() : this.customerEventName;
+        return this.customerEventName == null ? Codegen.empty() : this.customerEventName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomerEventArgs() {
-        this.customerEventName = Output.empty();
-        this.eventName = Output.empty();
-        this.receivers = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.testBaseAccountName = Output.empty();
+        this.customerEventName = Codegen.empty();
+        this.eventName = Codegen.empty();
+        this.receivers = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.testBaseAccountName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class CustomerEventArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerEventName(@Nullable String customerEventName) {
-            this.customerEventName = Output.ofNullable(customerEventName);
+            this.customerEventName = Codegen.ofNullable(customerEventName);
             return this;
         }
         public Builder eventName(Output<String> eventName) {

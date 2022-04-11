@@ -11,6 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -46,7 +47,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
+        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> schedulePolicy;
 
     public Output<Object> getSchedulePolicy() {
-        return this.schedulePolicy == null ? Output.empty() : this.schedulePolicy;
+        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
     public MabProtectionPolicyArgs(
@@ -83,10 +84,10 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private MabProtectionPolicyArgs() {
-        this.backupManagementType = Output.empty();
-        this.protectedItemsCount = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.schedulePolicy = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.protectedItemsCount = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.schedulePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
@@ -136,7 +137,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
@@ -144,7 +145,7 @@ public final class MabProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Output.ofNullable(schedulePolicy);
+            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
             return this;
         }        public MabProtectionPolicyArgs build() {
             return new MabProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy);

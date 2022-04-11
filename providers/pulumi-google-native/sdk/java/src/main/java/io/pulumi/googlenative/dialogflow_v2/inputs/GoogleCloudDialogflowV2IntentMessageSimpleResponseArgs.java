@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
       private final @Nullable Output<String> displayText;
 
     public Output<String> getDisplayText() {
-        return this.displayText == null ? Output.empty() : this.displayText;
+        return this.displayText == null ? Codegen.empty() : this.displayText;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
       private final @Nullable Output<String> ssml;
 
     public Output<String> getSsml() {
-        return this.ssml == null ? Output.empty() : this.ssml;
+        return this.ssml == null ? Codegen.empty() : this.ssml;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
       private final @Nullable Output<String> textToSpeech;
 
     public Output<String> getTextToSpeech() {
-        return this.textToSpeech == null ? Output.empty() : this.textToSpeech;
+        return this.textToSpeech == null ? Codegen.empty() : this.textToSpeech;
     }
 
     public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs(
@@ -61,9 +62,9 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
     }
 
     private GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs() {
-        this.displayText = Output.empty();
-        this.ssml = Output.empty();
-        this.textToSpeech = Output.empty();
+        this.displayText = Codegen.empty();
+        this.ssml = Codegen.empty();
+        this.textToSpeech = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
             return this;
         }
         public Builder displayText(@Nullable String displayText) {
-            this.displayText = Output.ofNullable(displayText);
+            this.displayText = Codegen.ofNullable(displayText);
             return this;
         }
         public Builder ssml(@Nullable Output<String> ssml) {
@@ -103,7 +104,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
             return this;
         }
         public Builder ssml(@Nullable String ssml) {
-            this.ssml = Output.ofNullable(ssml);
+            this.ssml = Codegen.ofNullable(ssml);
             return this;
         }
         public Builder textToSpeech(@Nullable Output<String> textToSpeech) {
@@ -111,7 +112,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
             return this;
         }
         public Builder textToSpeech(@Nullable String textToSpeech) {
-            this.textToSpeech = Output.ofNullable(textToSpeech);
+            this.textToSpeech = Codegen.ofNullable(textToSpeech);
             return this;
         }        public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs(displayText, ssml, textToSpeech);

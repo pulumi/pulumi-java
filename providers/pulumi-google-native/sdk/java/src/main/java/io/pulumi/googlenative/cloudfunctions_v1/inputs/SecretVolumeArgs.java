@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.SecretVersionArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mountPath;
 
     public Output<String> getMountPath() {
-        return this.mountPath == null ? Output.empty() : this.mountPath;
+        return this.mountPath == null ? Codegen.empty() : this.mountPath;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecretVersionArgs>> versions;
 
     public Output<List<SecretVersionArgs>> getVersions() {
-        return this.versions == null ? Output.empty() : this.versions;
+        return this.versions == null ? Codegen.empty() : this.versions;
     }
 
     public SecretVolumeArgs(
@@ -76,10 +77,10 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretVolumeArgs() {
-        this.mountPath = Output.empty();
-        this.project = Output.empty();
-        this.secret = Output.empty();
-        this.versions = Output.empty();
+        this.mountPath = Codegen.empty();
+        this.project = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.versions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountPath(@Nullable String mountPath) {
-            this.mountPath = Output.ofNullable(mountPath);
+            this.mountPath = Codegen.ofNullable(mountPath);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -121,7 +122,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder secret(@Nullable Output<String> secret) {
@@ -129,7 +130,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder versions(@Nullable Output<List<SecretVersionArgs>> versions) {
@@ -137,7 +138,7 @@ public final class SecretVolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versions(@Nullable List<SecretVersionArgs> versions) {
-            this.versions = Output.ofNullable(versions);
+            this.versions = Codegen.ofNullable(versions);
             return this;
         }
         public Builder versions(SecretVersionArgs... versions) {

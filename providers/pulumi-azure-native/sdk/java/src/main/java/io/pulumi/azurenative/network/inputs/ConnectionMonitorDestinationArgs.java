@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public ConnectionMonitorDestinationArgs(
@@ -62,9 +63,9 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
     }
 
     private ConnectionMonitorDestinationArgs() {
-        this.address = Output.empty();
-        this.port = Output.empty();
-        this.resourceId = Output.empty();
+        this.address = Codegen.empty();
+        this.port = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -104,7 +105,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -112,7 +113,7 @@ public final class ConnectionMonitorDestinationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public ConnectionMonitorDestinationArgs build() {
             return new ConnectionMonitorDestinationArgs(address, port, resourceId);

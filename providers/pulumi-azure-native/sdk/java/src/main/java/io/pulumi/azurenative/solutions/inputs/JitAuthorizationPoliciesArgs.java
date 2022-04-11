@@ -5,6 +5,7 @@ package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
     }
 
     private JitAuthorizationPoliciesArgs() {
-        this.principalId = Output.empty();
-        this.roleDefinitionId = Output.empty();
+        this.principalId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.plant.tree_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.outputs.Container;
 import io.pulumi.plant.tree_v1.RubberTreeArgs;
@@ -71,7 +72,7 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RubberTree(String name, RubberTreeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("plant:tree/v1:RubberTree", name, args == null ? RubberTreeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RubberTree(String name, Output<String> id, @Nullable RubberTreeState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

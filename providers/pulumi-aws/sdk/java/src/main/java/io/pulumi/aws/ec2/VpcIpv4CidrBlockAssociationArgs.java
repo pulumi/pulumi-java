@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> cidrBlock;
 
     public Output<String> getCidrBlock() {
-        return this.cidrBlock == null ? Output.empty() : this.cidrBlock;
+        return this.cidrBlock == null ? Codegen.empty() : this.cidrBlock;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> ipv4IpamPoolId;
 
     public Output<String> getIpv4IpamPoolId() {
-        return this.ipv4IpamPoolId == null ? Output.empty() : this.ipv4IpamPoolId;
+        return this.ipv4IpamPoolId == null ? Codegen.empty() : this.ipv4IpamPoolId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> ipv4NetmaskLength;
 
     public Output<Integer> getIpv4NetmaskLength() {
-        return this.ipv4NetmaskLength == null ? Output.empty() : this.ipv4NetmaskLength;
+        return this.ipv4NetmaskLength == null ? Codegen.empty() : this.ipv4NetmaskLength;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
     }
 
     private VpcIpv4CidrBlockAssociationArgs() {
-        this.cidrBlock = Output.empty();
-        this.ipv4IpamPoolId = Output.empty();
-        this.ipv4NetmaskLength = Output.empty();
-        this.vpcId = Output.empty();
+        this.cidrBlock = Codegen.empty();
+        this.ipv4IpamPoolId = Codegen.empty();
+        this.ipv4NetmaskLength = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cidrBlock(@Nullable String cidrBlock) {
-            this.cidrBlock = Output.ofNullable(cidrBlock);
+            this.cidrBlock = Codegen.ofNullable(cidrBlock);
             return this;
         }
         public Builder ipv4IpamPoolId(@Nullable Output<String> ipv4IpamPoolId) {
@@ -116,7 +117,7 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ipv4IpamPoolId(@Nullable String ipv4IpamPoolId) {
-            this.ipv4IpamPoolId = Output.ofNullable(ipv4IpamPoolId);
+            this.ipv4IpamPoolId = Codegen.ofNullable(ipv4IpamPoolId);
             return this;
         }
         public Builder ipv4NetmaskLength(@Nullable Output<Integer> ipv4NetmaskLength) {
@@ -124,7 +125,7 @@ public final class VpcIpv4CidrBlockAssociationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ipv4NetmaskLength(@Nullable Integer ipv4NetmaskLength) {
-            this.ipv4NetmaskLength = Output.ofNullable(ipv4NetmaskLength);
+            this.ipv4NetmaskLength = Codegen.ofNullable(ipv4NetmaskLength);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

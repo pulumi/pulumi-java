@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> generation;
 
     public Output<String> getGeneration() {
-        return this.generation == null ? Output.empty() : this.generation;
+        return this.generation == null ? Codegen.empty() : this.generation;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {
-        return this.object == null ? Output.empty() : this.object;
+        return this.object == null ? Codegen.empty() : this.object;
     }
 
     public StorageSourceManifestArgs(
@@ -61,9 +62,9 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
     }
 
     private StorageSourceManifestArgs() {
-        this.bucket = Output.empty();
-        this.generation = Output.empty();
-        this.object = Output.empty();
+        this.bucket = Codegen.empty();
+        this.generation = Codegen.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder generation(@Nullable Output<String> generation) {
@@ -103,7 +104,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder generation(@Nullable String generation) {
-            this.generation = Output.ofNullable(generation);
+            this.generation = Codegen.ofNullable(generation);
             return this;
         }
         public Builder object(@Nullable Output<String> object) {
@@ -111,7 +112,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder object(@Nullable String object) {
-            this.object = Output.ofNullable(object);
+            this.object = Codegen.ofNullable(object);
             return this;
         }        public StorageSourceManifestArgs build() {
             return new StorageSourceManifestArgs(bucket, generation, object);

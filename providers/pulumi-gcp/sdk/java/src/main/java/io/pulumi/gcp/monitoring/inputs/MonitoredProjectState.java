@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> metricsScope;
 
     public Output<String> getMetricsScope() {
-        return this.metricsScope == null ? Output.empty() : this.metricsScope;
+        return this.metricsScope == null ? Codegen.empty() : this.metricsScope;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public MonitoredProjectState(
@@ -57,9 +58,9 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
     }
 
     private MonitoredProjectState() {
-        this.createTime = Output.empty();
-        this.metricsScope = Output.empty();
-        this.name = Output.empty();
+        this.createTime = Codegen.empty();
+        this.metricsScope = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder metricsScope(@Nullable Output<String> metricsScope) {
@@ -99,7 +100,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder metricsScope(@Nullable String metricsScope) {
-            this.metricsScope = Output.ofNullable(metricsScope);
+            this.metricsScope = Codegen.ofNullable(metricsScope);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -107,7 +108,7 @@ public final class MonitoredProjectState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public MonitoredProjectState build() {
             return new MonitoredProjectState(createTime, metricsScope, name);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.inputs.MetricTriggerArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -48,8 +49,8 @@ public final class ScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScaleRuleArgs() {
-        this.metricTrigger = Output.empty();
-        this.scaleAction = Output.empty();
+        this.metricTrigger = Codegen.empty();
+        this.scaleAction = Codegen.empty();
     }
 
     public static Builder builder() {

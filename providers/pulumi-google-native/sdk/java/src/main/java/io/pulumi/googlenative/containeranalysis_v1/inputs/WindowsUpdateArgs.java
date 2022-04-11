@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.CategoryArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.IdentityArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CategoryArgs>> categories;
 
     public Output<List<CategoryArgs>> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> kbArticleIds;
 
     public Output<List<String>> getKbArticleIds() {
-        return this.kbArticleIds == null ? Output.empty() : this.kbArticleIds;
+        return this.kbArticleIds == null ? Codegen.empty() : this.kbArticleIds;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastPublishedTimestamp;
 
     public Output<String> getLastPublishedTimestamp() {
-        return this.lastPublishedTimestamp == null ? Output.empty() : this.lastPublishedTimestamp;
+        return this.lastPublishedTimestamp == null ? Codegen.empty() : this.lastPublishedTimestamp;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> supportUrl;
 
     public Output<String> getSupportUrl() {
-        return this.supportUrl == null ? Output.empty() : this.supportUrl;
+        return this.supportUrl == null ? Codegen.empty() : this.supportUrl;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public WindowsUpdateArgs(
@@ -116,13 +117,13 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WindowsUpdateArgs() {
-        this.categories = Output.empty();
-        this.description = Output.empty();
-        this.identity = Output.empty();
-        this.kbArticleIds = Output.empty();
-        this.lastPublishedTimestamp = Output.empty();
-        this.supportUrl = Output.empty();
-        this.title = Output.empty();
+        this.categories = Codegen.empty();
+        this.description = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.kbArticleIds = Codegen.empty();
+        this.lastPublishedTimestamp = Codegen.empty();
+        this.supportUrl = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder categories(@Nullable List<CategoryArgs> categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder categories(CategoryArgs... categories) {
@@ -173,7 +174,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -181,7 +182,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder kbArticleIds(@Nullable Output<List<String>> kbArticleIds) {
@@ -189,7 +190,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kbArticleIds(@Nullable List<String> kbArticleIds) {
-            this.kbArticleIds = Output.ofNullable(kbArticleIds);
+            this.kbArticleIds = Codegen.ofNullable(kbArticleIds);
             return this;
         }
         public Builder kbArticleIds(String... kbArticleIds) {
@@ -200,7 +201,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastPublishedTimestamp(@Nullable String lastPublishedTimestamp) {
-            this.lastPublishedTimestamp = Output.ofNullable(lastPublishedTimestamp);
+            this.lastPublishedTimestamp = Codegen.ofNullable(lastPublishedTimestamp);
             return this;
         }
         public Builder supportUrl(@Nullable Output<String> supportUrl) {
@@ -208,7 +209,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportUrl(@Nullable String supportUrl) {
-            this.supportUrl = Output.ofNullable(supportUrl);
+            this.supportUrl = Codegen.ofNullable(supportUrl);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -216,7 +217,7 @@ public final class WindowsUpdateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public WindowsUpdateArgs build() {
             return new WindowsUpdateArgs(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);

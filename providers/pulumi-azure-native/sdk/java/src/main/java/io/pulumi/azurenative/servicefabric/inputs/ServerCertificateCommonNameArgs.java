@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
     }
 
     private ServerCertificateCommonNameArgs() {
-        this.certificateCommonName = Output.empty();
-        this.certificateIssuerThumbprint = Output.empty();
+        this.certificateCommonName = Codegen.empty();
+        this.certificateIssuerThumbprint = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.sagemaker.inputs.DomainCustomImageArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainResourceSpecArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
       private final @Nullable Output<List<DomainCustomImageArgs>> customImages;
 
     public Output<List<DomainCustomImageArgs>> getCustomImages() {
-        return this.customImages == null ? Output.empty() : this.customImages;
+        return this.customImages == null ? Codegen.empty() : this.customImages;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
       private final @Nullable Output<DomainResourceSpecArgs> defaultResourceSpec;
 
     public Output<DomainResourceSpecArgs> getDefaultResourceSpec() {
-        return this.defaultResourceSpec == null ? Output.empty() : this.defaultResourceSpec;
+        return this.defaultResourceSpec == null ? Codegen.empty() : this.defaultResourceSpec;
     }
 
     public DomainKernelGatewayAppSettingsArgs(
@@ -50,8 +51,8 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
     }
 
     private DomainKernelGatewayAppSettingsArgs() {
-        this.customImages = Output.empty();
-        this.defaultResourceSpec = Output.empty();
+        this.customImages = Codegen.empty();
+        this.defaultResourceSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder customImages(@Nullable List<DomainCustomImageArgs> customImages) {
-            this.customImages = Output.ofNullable(customImages);
+            this.customImages = Codegen.ofNullable(customImages);
             return this;
         }
         public Builder customImages(DomainCustomImageArgs... customImages) {
@@ -92,7 +93,7 @@ public final class DomainKernelGatewayAppSettingsArgs extends io.pulumi.resource
             return this;
         }
         public Builder defaultResourceSpec(@Nullable DomainResourceSpecArgs defaultResourceSpec) {
-            this.defaultResourceSpec = Output.ofNullable(defaultResourceSpec);
+            this.defaultResourceSpec = Codegen.ofNullable(defaultResourceSpec);
             return this;
         }        public DomainKernelGatewayAppSettingsArgs build() {
             return new DomainKernelGatewayAppSettingsArgs(customImages, defaultResourceSpec);

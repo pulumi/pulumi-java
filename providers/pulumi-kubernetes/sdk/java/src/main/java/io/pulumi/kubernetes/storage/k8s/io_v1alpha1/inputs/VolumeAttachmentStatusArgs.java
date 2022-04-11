@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeErrorArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<VolumeErrorArgs> attachError;
 
     public Output<VolumeErrorArgs> getAttachError() {
-        return this.attachError == null ? Output.empty() : this.attachError;
+        return this.attachError == null ? Codegen.empty() : this.attachError;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> attachmentMetadata;
 
     public Output<Map<String,String>> getAttachmentMetadata() {
-        return this.attachmentMetadata == null ? Output.empty() : this.attachmentMetadata;
+        return this.attachmentMetadata == null ? Codegen.empty() : this.attachmentMetadata;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<VolumeErrorArgs> detachError;
 
     public Output<VolumeErrorArgs> getDetachError() {
-        return this.detachError == null ? Output.empty() : this.detachError;
+        return this.detachError == null ? Codegen.empty() : this.detachError;
     }
 
     public VolumeAttachmentStatusArgs(
@@ -77,10 +78,10 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
     }
 
     private VolumeAttachmentStatusArgs() {
-        this.attachError = Output.empty();
-        this.attached = Output.empty();
-        this.attachmentMetadata = Output.empty();
-        this.detachError = Output.empty();
+        this.attachError = Codegen.empty();
+        this.attached = Codegen.empty();
+        this.attachmentMetadata = Codegen.empty();
+        this.detachError = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder attachError(@Nullable VolumeErrorArgs attachError) {
-            this.attachError = Output.ofNullable(attachError);
+            this.attachError = Codegen.ofNullable(attachError);
             return this;
         }
         public Builder attached(Output<Boolean> attached) {
@@ -130,7 +131,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder attachmentMetadata(@Nullable Map<String,String> attachmentMetadata) {
-            this.attachmentMetadata = Output.ofNullable(attachmentMetadata);
+            this.attachmentMetadata = Codegen.ofNullable(attachmentMetadata);
             return this;
         }
         public Builder detachError(@Nullable Output<VolumeErrorArgs> detachError) {
@@ -138,7 +139,7 @@ public final class VolumeAttachmentStatusArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder detachError(@Nullable VolumeErrorArgs detachError) {
-            this.detachError = Output.ofNullable(detachError);
+            this.detachError = Codegen.ofNullable(detachError);
             return this;
         }        public VolumeAttachmentStatusArgs build() {
             return new VolumeAttachmentStatusArgs(attachError, attached, attachmentMetadata, detachError);

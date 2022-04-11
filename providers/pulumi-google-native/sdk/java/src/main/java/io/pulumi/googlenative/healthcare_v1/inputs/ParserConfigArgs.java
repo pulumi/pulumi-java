@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1.enums.ParserConfigVersion;
 import io.pulumi.googlenative.healthcare_v1.inputs.SchemaPackageArgs;
 import java.lang.Boolean;
@@ -29,7 +30,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowNullHeader;
 
     public Output<Boolean> getAllowNullHeader() {
-        return this.allowNullHeader == null ? Output.empty() : this.allowNullHeader;
+        return this.allowNullHeader == null ? Codegen.empty() : this.allowNullHeader;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchemaPackageArgs> schema;
 
     public Output<SchemaPackageArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> segmentTerminator;
 
     public Output<String> getSegmentTerminator() {
-        return this.segmentTerminator == null ? Output.empty() : this.segmentTerminator;
+        return this.segmentTerminator == null ? Codegen.empty() : this.segmentTerminator;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ParserConfigVersion> version;
 
     public Output<ParserConfigVersion> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ParserConfigArgs(
@@ -77,10 +78,10 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParserConfigArgs() {
-        this.allowNullHeader = Output.empty();
-        this.schema = Output.empty();
-        this.segmentTerminator = Output.empty();
-        this.version = Output.empty();
+        this.allowNullHeader = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.segmentTerminator = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowNullHeader(@Nullable Boolean allowNullHeader) {
-            this.allowNullHeader = Output.ofNullable(allowNullHeader);
+            this.allowNullHeader = Codegen.ofNullable(allowNullHeader);
             return this;
         }
         public Builder schema(@Nullable Output<SchemaPackageArgs> schema) {
@@ -122,7 +123,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable SchemaPackageArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder segmentTerminator(@Nullable Output<String> segmentTerminator) {
@@ -130,7 +131,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder segmentTerminator(@Nullable String segmentTerminator) {
-            this.segmentTerminator = Output.ofNullable(segmentTerminator);
+            this.segmentTerminator = Codegen.ofNullable(segmentTerminator);
             return this;
         }
         public Builder version(@Nullable Output<ParserConfigVersion> version) {
@@ -138,7 +139,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable ParserConfigVersion version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ParserConfigArgs build() {
             return new ParserConfigArgs(allowNullHeader, schema, segmentTerminator, version);

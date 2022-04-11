@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupIPSetForwardedIPConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RuleGroupIPSetReferenceStatementArgs extends io.pulumi.resour
       private final @Nullable Output<RuleGroupIPSetForwardedIPConfigurationArgs> iPSetForwardedIPConfig;
 
     public Output<RuleGroupIPSetForwardedIPConfigurationArgs> getIPSetForwardedIPConfig() {
-        return this.iPSetForwardedIPConfig == null ? Output.empty() : this.iPSetForwardedIPConfig;
+        return this.iPSetForwardedIPConfig == null ? Codegen.empty() : this.iPSetForwardedIPConfig;
     }
 
     public RuleGroupIPSetReferenceStatementArgs(
@@ -37,8 +38,8 @@ public final class RuleGroupIPSetReferenceStatementArgs extends io.pulumi.resour
     }
 
     private RuleGroupIPSetReferenceStatementArgs() {
-        this.arn = Output.empty();
-        this.iPSetForwardedIPConfig = Output.empty();
+        this.arn = Codegen.empty();
+        this.iPSetForwardedIPConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class RuleGroupIPSetReferenceStatementArgs extends io.pulumi.resour
             return this;
         }
         public Builder iPSetForwardedIPConfig(@Nullable RuleGroupIPSetForwardedIPConfigurationArgs iPSetForwardedIPConfig) {
-            this.iPSetForwardedIPConfig = Output.ofNullable(iPSetForwardedIPConfig);
+            this.iPSetForwardedIPConfig = Codegen.ofNullable(iPSetForwardedIPConfig);
             return this;
         }        public RuleGroupIPSetReferenceStatementArgs build() {
             return new RuleGroupIPSetReferenceStatementArgs(arn, iPSetForwardedIPConfig);

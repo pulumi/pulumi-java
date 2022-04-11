@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> associationId;
 
     public Output<String> getAssociationId() {
-        return this.associationId == null ? Output.empty() : this.associationId;
+        return this.associationId == null ? Codegen.empty() : this.associationId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
-        return this.clientVpnEndpointId == null ? Output.empty() : this.clientVpnEndpointId;
+        return this.clientVpnEndpointId == null ? Codegen.empty() : this.clientVpnEndpointId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public NetworkAssociationState(
@@ -97,12 +98,12 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
     }
 
     private NetworkAssociationState() {
-        this.associationId = Output.empty();
-        this.clientVpnEndpointId = Output.empty();
-        this.securityGroups = Output.empty();
-        this.status = Output.empty();
-        this.subnetId = Output.empty();
-        this.vpcId = Output.empty();
+        this.associationId = Codegen.empty();
+        this.clientVpnEndpointId = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.status = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder associationId(@Nullable String associationId) {
-            this.associationId = Output.ofNullable(associationId);
+            this.associationId = Codegen.ofNullable(associationId);
             return this;
         }
         public Builder clientVpnEndpointId(@Nullable Output<String> clientVpnEndpointId) {
@@ -148,7 +149,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
+            this.clientVpnEndpointId = Codegen.ofNullable(clientVpnEndpointId);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -156,7 +157,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -167,7 +168,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -175,7 +176,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -183,7 +184,7 @@ public final class NetworkAssociationState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public NetworkAssociationState build() {
             return new NetworkAssociationState(associationId, clientVpnEndpointId, securityGroups, status, subnetId, vpcId);

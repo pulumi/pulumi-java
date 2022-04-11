@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -69,10 +70,10 @@ public final class RdsDbInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RdsDbInstanceArgs() {
-        this.dbPassword = Output.empty();
-        this.dbUser = Output.empty();
-        this.rdsDbInstanceArn = Output.empty();
-        this.stackId = Output.empty();
+        this.dbPassword = Codegen.empty();
+        this.dbUser = Codegen.empty();
+        this.rdsDbInstanceArn = Codegen.empty();
+        this.stackId = Codegen.empty();
     }
 
     public static Builder builder() {

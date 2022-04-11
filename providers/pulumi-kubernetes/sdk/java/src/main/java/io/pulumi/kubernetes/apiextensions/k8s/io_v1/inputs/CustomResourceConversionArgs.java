@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookConversionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<WebhookConversionArgs> webhook;
 
     public Output<WebhookConversionArgs> getWebhook() {
-        return this.webhook == null ? Output.empty() : this.webhook;
+        return this.webhook == null ? Codegen.empty() : this.webhook;
     }
 
     public CustomResourceConversionArgs(
@@ -50,8 +51,8 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
     }
 
     private CustomResourceConversionArgs() {
-        this.strategy = Output.empty();
-        this.webhook = Output.empty();
+        this.strategy = Codegen.empty();
+        this.webhook = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class CustomResourceConversionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder webhook(@Nullable WebhookConversionArgs webhook) {
-            this.webhook = Output.ofNullable(webhook);
+            this.webhook = Codegen.ofNullable(webhook);
             return this;
         }        public CustomResourceConversionArgs build() {
             return new CustomResourceConversionArgs(strategy, webhook);

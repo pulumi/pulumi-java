@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.ShareAccessType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class UserAccessRightArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UserAccessRightArgs() {
-        this.accessType = Output.empty();
-        this.userId = Output.empty();
+        this.accessType = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {

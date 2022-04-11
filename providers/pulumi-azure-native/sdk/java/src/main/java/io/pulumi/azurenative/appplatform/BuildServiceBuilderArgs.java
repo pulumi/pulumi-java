@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.BuilderPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> builderName;
 
     public Output<String> getBuilderName() {
-        return this.builderName == null ? Output.empty() : this.builderName;
+        return this.builderName == null ? Codegen.empty() : this.builderName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<BuilderPropertiesArgs> properties;
 
     public Output<BuilderPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
     }
 
     private BuildServiceBuilderArgs() {
-        this.buildServiceName = Output.empty();
-        this.builderName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.buildServiceName = Codegen.empty();
+        this.builderName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder builderName(@Nullable String builderName) {
-            this.builderName = Output.ofNullable(builderName);
+            this.builderName = Codegen.ofNullable(builderName);
             return this;
         }
         public Builder properties(@Nullable Output<BuilderPropertiesArgs> properties) {
@@ -140,7 +141,7 @@ public final class BuildServiceBuilderArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder properties(@Nullable BuilderPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

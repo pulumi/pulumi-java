@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs exten
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs exten
       private final @Nullable Output<Integer> percentage;
 
     public Output<Integer> getPercentage() {
-        return this.percentage == null ? Output.empty() : this.percentage;
+        return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 
     public DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs(
@@ -44,8 +45,8 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs exten
     }
 
     private DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs() {
-        this.interval = Output.empty();
-        this.percentage = Output.empty();
+        this.interval = Codegen.empty();
+        this.percentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs exten
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder percentage(@Nullable Output<Integer> percentage) {
@@ -83,7 +84,7 @@ public final class DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs exten
             return this;
         }
         public Builder percentage(@Nullable Integer percentage) {
-            this.percentage = Output.ofNullable(percentage);
+            this.percentage = Codegen.ofNullable(percentage);
             return this;
         }        public DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs build() {
             return new DeploymentConfigTrafficRoutingConfigTimeBasedLinearArgs(interval, percentage);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appconfiguration;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyValueName;
 
     public Output<String> getKeyValueName() {
-        return this.keyValueName == null ? Output.empty() : this.keyValueName;
+        return this.keyValueName == null ? Codegen.empty() : this.keyValueName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public KeyValueArgs(
@@ -98,12 +99,12 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyValueArgs() {
-        this.configStoreName = Output.empty();
-        this.contentType = Output.empty();
-        this.keyValueName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.value = Output.empty();
+        this.configStoreName = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.keyValueName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder keyValueName(@Nullable Output<String> keyValueName) {
@@ -157,7 +158,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyValueName(@Nullable String keyValueName) {
-            this.keyValueName = Output.ofNullable(keyValueName);
+            this.keyValueName = Codegen.ofNullable(keyValueName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -173,7 +174,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -181,7 +182,7 @@ public final class KeyValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public KeyValueArgs build() {
             return new KeyValueArgs(configStoreName, contentType, keyValueName, resourceGroupName, tags, value);

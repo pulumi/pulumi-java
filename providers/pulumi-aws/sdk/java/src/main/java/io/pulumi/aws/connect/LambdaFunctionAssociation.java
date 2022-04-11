@@ -9,6 +9,7 @@ import io.pulumi.aws.connect.inputs.LambdaFunctionAssociationState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -80,7 +81,7 @@ public class LambdaFunctionAssociation extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public LambdaFunctionAssociation(String name, LambdaFunctionAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:connect/lambdaFunctionAssociation:LambdaFunctionAssociation", name, args == null ? LambdaFunctionAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:connect/lambdaFunctionAssociation:LambdaFunctionAssociation", name, args == null ? LambdaFunctionAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LambdaFunctionAssociation(String name, Output<String> id, @Nullable LambdaFunctionAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

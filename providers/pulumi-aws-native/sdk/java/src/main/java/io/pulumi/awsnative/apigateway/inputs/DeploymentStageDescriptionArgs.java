@@ -9,6 +9,7 @@ import io.pulumi.awsnative.apigateway.inputs.DeploymentMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -31,7 +32,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<DeploymentAccessLogSettingArgs> accessLogSetting;
 
     public Output<DeploymentAccessLogSettingArgs> getAccessLogSetting() {
-        return this.accessLogSetting == null ? Output.empty() : this.accessLogSetting;
+        return this.accessLogSetting == null ? Codegen.empty() : this.accessLogSetting;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> cacheClusterEnabled;
 
     public Output<Boolean> getCacheClusterEnabled() {
-        return this.cacheClusterEnabled == null ? Output.empty() : this.cacheClusterEnabled;
+        return this.cacheClusterEnabled == null ? Codegen.empty() : this.cacheClusterEnabled;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> cacheClusterSize;
 
     public Output<String> getCacheClusterSize() {
-        return this.cacheClusterSize == null ? Output.empty() : this.cacheClusterSize;
+        return this.cacheClusterSize == null ? Codegen.empty() : this.cacheClusterSize;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> cacheDataEncrypted;
 
     public Output<Boolean> getCacheDataEncrypted() {
-        return this.cacheDataEncrypted == null ? Output.empty() : this.cacheDataEncrypted;
+        return this.cacheDataEncrypted == null ? Codegen.empty() : this.cacheDataEncrypted;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> cacheTtlInSeconds;
 
     public Output<Integer> getCacheTtlInSeconds() {
-        return this.cacheTtlInSeconds == null ? Output.empty() : this.cacheTtlInSeconds;
+        return this.cacheTtlInSeconds == null ? Codegen.empty() : this.cacheTtlInSeconds;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> cachingEnabled;
 
     public Output<Boolean> getCachingEnabled() {
-        return this.cachingEnabled == null ? Output.empty() : this.cachingEnabled;
+        return this.cachingEnabled == null ? Codegen.empty() : this.cachingEnabled;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<DeploymentCanarySettingArgs> canarySetting;
 
     public Output<DeploymentCanarySettingArgs> getCanarySetting() {
-        return this.canarySetting == null ? Output.empty() : this.canarySetting;
+        return this.canarySetting == null ? Codegen.empty() : this.canarySetting;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> clientCertificateId;
 
     public Output<String> getClientCertificateId() {
-        return this.clientCertificateId == null ? Output.empty() : this.clientCertificateId;
+        return this.clientCertificateId == null ? Codegen.empty() : this.clientCertificateId;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
     public Output<Boolean> getDataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Output.empty() : this.dataTraceEnabled;
+        return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> documentationVersion;
 
     public Output<String> getDocumentationVersion() {
-        return this.documentationVersion == null ? Output.empty() : this.documentationVersion;
+        return this.documentationVersion == null ? Codegen.empty() : this.documentationVersion;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
-        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
+        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings;
 
     public Output<List<DeploymentMethodSettingArgs>> getMethodSettings() {
-        return this.methodSettings == null ? Output.empty() : this.methodSettings;
+        return this.methodSettings == null ? Codegen.empty() : this.methodSettings;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> metricsEnabled;
 
     public Output<Boolean> getMetricsEnabled() {
-        return this.metricsEnabled == null ? Output.empty() : this.metricsEnabled;
+        return this.metricsEnabled == null ? Codegen.empty() : this.metricsEnabled;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<DeploymentTagArgs>> tags;
 
     public Output<List<DeploymentTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
     public Output<Integer> getThrottlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Output.empty() : this.throttlingBurstLimit;
+        return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
     }
 
     /**
@@ -207,7 +208,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Double> throttlingRateLimit;
 
     public Output<Double> getThrottlingRateLimit() {
-        return this.throttlingRateLimit == null ? Output.empty() : this.throttlingRateLimit;
+        return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
     }
 
     /**
@@ -218,7 +219,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> tracingEnabled;
 
     public Output<Boolean> getTracingEnabled() {
-        return this.tracingEnabled == null ? Output.empty() : this.tracingEnabled;
+        return this.tracingEnabled == null ? Codegen.empty() : this.tracingEnabled;
     }
 
     /**
@@ -229,7 +230,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> variables;
 
     public Output<Object> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     public DeploymentStageDescriptionArgs(
@@ -274,25 +275,25 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
     }
 
     private DeploymentStageDescriptionArgs() {
-        this.accessLogSetting = Output.empty();
-        this.cacheClusterEnabled = Output.empty();
-        this.cacheClusterSize = Output.empty();
-        this.cacheDataEncrypted = Output.empty();
-        this.cacheTtlInSeconds = Output.empty();
-        this.cachingEnabled = Output.empty();
-        this.canarySetting = Output.empty();
-        this.clientCertificateId = Output.empty();
-        this.dataTraceEnabled = Output.empty();
-        this.description = Output.empty();
-        this.documentationVersion = Output.empty();
-        this.loggingLevel = Output.empty();
-        this.methodSettings = Output.empty();
-        this.metricsEnabled = Output.empty();
-        this.tags = Output.empty();
-        this.throttlingBurstLimit = Output.empty();
-        this.throttlingRateLimit = Output.empty();
-        this.tracingEnabled = Output.empty();
-        this.variables = Output.empty();
+        this.accessLogSetting = Codegen.empty();
+        this.cacheClusterEnabled = Codegen.empty();
+        this.cacheClusterSize = Codegen.empty();
+        this.cacheDataEncrypted = Codegen.empty();
+        this.cacheTtlInSeconds = Codegen.empty();
+        this.cachingEnabled = Codegen.empty();
+        this.canarySetting = Codegen.empty();
+        this.clientCertificateId = Codegen.empty();
+        this.dataTraceEnabled = Codegen.empty();
+        this.description = Codegen.empty();
+        this.documentationVersion = Codegen.empty();
+        this.loggingLevel = Codegen.empty();
+        this.methodSettings = Codegen.empty();
+        this.metricsEnabled = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throttlingBurstLimit = Codegen.empty();
+        this.throttlingRateLimit = Codegen.empty();
+        this.tracingEnabled = Codegen.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -356,7 +357,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder accessLogSetting(@Nullable DeploymentAccessLogSettingArgs accessLogSetting) {
-            this.accessLogSetting = Output.ofNullable(accessLogSetting);
+            this.accessLogSetting = Codegen.ofNullable(accessLogSetting);
             return this;
         }
         public Builder cacheClusterEnabled(@Nullable Output<Boolean> cacheClusterEnabled) {
@@ -364,7 +365,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cacheClusterEnabled(@Nullable Boolean cacheClusterEnabled) {
-            this.cacheClusterEnabled = Output.ofNullable(cacheClusterEnabled);
+            this.cacheClusterEnabled = Codegen.ofNullable(cacheClusterEnabled);
             return this;
         }
         public Builder cacheClusterSize(@Nullable Output<String> cacheClusterSize) {
@@ -372,7 +373,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cacheClusterSize(@Nullable String cacheClusterSize) {
-            this.cacheClusterSize = Output.ofNullable(cacheClusterSize);
+            this.cacheClusterSize = Codegen.ofNullable(cacheClusterSize);
             return this;
         }
         public Builder cacheDataEncrypted(@Nullable Output<Boolean> cacheDataEncrypted) {
@@ -380,7 +381,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cacheDataEncrypted(@Nullable Boolean cacheDataEncrypted) {
-            this.cacheDataEncrypted = Output.ofNullable(cacheDataEncrypted);
+            this.cacheDataEncrypted = Codegen.ofNullable(cacheDataEncrypted);
             return this;
         }
         public Builder cacheTtlInSeconds(@Nullable Output<Integer> cacheTtlInSeconds) {
@@ -388,7 +389,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cacheTtlInSeconds(@Nullable Integer cacheTtlInSeconds) {
-            this.cacheTtlInSeconds = Output.ofNullable(cacheTtlInSeconds);
+            this.cacheTtlInSeconds = Codegen.ofNullable(cacheTtlInSeconds);
             return this;
         }
         public Builder cachingEnabled(@Nullable Output<Boolean> cachingEnabled) {
@@ -396,7 +397,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cachingEnabled(@Nullable Boolean cachingEnabled) {
-            this.cachingEnabled = Output.ofNullable(cachingEnabled);
+            this.cachingEnabled = Codegen.ofNullable(cachingEnabled);
             return this;
         }
         public Builder canarySetting(@Nullable Output<DeploymentCanarySettingArgs> canarySetting) {
@@ -404,7 +405,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder canarySetting(@Nullable DeploymentCanarySettingArgs canarySetting) {
-            this.canarySetting = Output.ofNullable(canarySetting);
+            this.canarySetting = Codegen.ofNullable(canarySetting);
             return this;
         }
         public Builder clientCertificateId(@Nullable Output<String> clientCertificateId) {
@@ -412,7 +413,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder clientCertificateId(@Nullable String clientCertificateId) {
-            this.clientCertificateId = Output.ofNullable(clientCertificateId);
+            this.clientCertificateId = Codegen.ofNullable(clientCertificateId);
             return this;
         }
         public Builder dataTraceEnabled(@Nullable Output<Boolean> dataTraceEnabled) {
@@ -420,7 +421,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
+            this.dataTraceEnabled = Codegen.ofNullable(dataTraceEnabled);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -428,7 +429,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentationVersion(@Nullable Output<String> documentationVersion) {
@@ -436,7 +437,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder documentationVersion(@Nullable String documentationVersion) {
-            this.documentationVersion = Output.ofNullable(documentationVersion);
+            this.documentationVersion = Codegen.ofNullable(documentationVersion);
             return this;
         }
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
@@ -444,7 +445,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Output.ofNullable(loggingLevel);
+            this.loggingLevel = Codegen.ofNullable(loggingLevel);
             return this;
         }
         public Builder methodSettings(@Nullable Output<List<DeploymentMethodSettingArgs>> methodSettings) {
@@ -452,7 +453,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder methodSettings(@Nullable List<DeploymentMethodSettingArgs> methodSettings) {
-            this.methodSettings = Output.ofNullable(methodSettings);
+            this.methodSettings = Codegen.ofNullable(methodSettings);
             return this;
         }
         public Builder methodSettings(DeploymentMethodSettingArgs... methodSettings) {
@@ -463,7 +464,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder metricsEnabled(@Nullable Boolean metricsEnabled) {
-            this.metricsEnabled = Output.ofNullable(metricsEnabled);
+            this.metricsEnabled = Codegen.ofNullable(metricsEnabled);
             return this;
         }
         public Builder tags(@Nullable Output<List<DeploymentTagArgs>> tags) {
@@ -471,7 +472,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tags(@Nullable List<DeploymentTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DeploymentTagArgs... tags) {
@@ -482,7 +483,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
+            this.throttlingBurstLimit = Codegen.ofNullable(throttlingBurstLimit);
             return this;
         }
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
@@ -490,7 +491,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
+            this.throttlingRateLimit = Codegen.ofNullable(throttlingRateLimit);
             return this;
         }
         public Builder tracingEnabled(@Nullable Output<Boolean> tracingEnabled) {
@@ -498,7 +499,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tracingEnabled(@Nullable Boolean tracingEnabled) {
-            this.tracingEnabled = Output.ofNullable(tracingEnabled);
+            this.tracingEnabled = Codegen.ofNullable(tracingEnabled);
             return this;
         }
         public Builder variables(@Nullable Output<Object> variables) {
@@ -506,7 +507,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder variables(@Nullable Object variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }        public DeploymentStageDescriptionArgs build() {
             return new DeploymentStageDescriptionArgs(accessLogSetting, cacheClusterEnabled, cacheClusterSize, cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, canarySetting, clientCertificateId, dataTraceEnabled, description, documentationVersion, loggingLevel, methodSettings, metricsEnabled, tags, throttlingBurstLimit, throttlingRateLimit, tracingEnabled, variables);

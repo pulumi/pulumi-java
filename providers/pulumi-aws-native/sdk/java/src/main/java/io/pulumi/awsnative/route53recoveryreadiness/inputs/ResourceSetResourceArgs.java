@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetDNSTargetResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,14 +29,14 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> componentId;
 
     public Output<String> getComponentId() {
-        return this.componentId == null ? Output.empty() : this.componentId;
+        return this.componentId == null ? Codegen.empty() : this.componentId;
     }
 
     @Import(name="dnsTargetResource")
       private final @Nullable Output<ResourceSetDNSTargetResourceArgs> dnsTargetResource;
 
     public Output<ResourceSetDNSTargetResourceArgs> getDnsTargetResource() {
-        return this.dnsTargetResource == null ? Output.empty() : this.dnsTargetResource;
+        return this.dnsTargetResource == null ? Codegen.empty() : this.dnsTargetResource;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> readinessScopes;
 
     public Output<List<String>> getReadinessScopes() {
-        return this.readinessScopes == null ? Output.empty() : this.readinessScopes;
+        return this.readinessScopes == null ? Codegen.empty() : this.readinessScopes;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     public ResourceSetResourceArgs(
@@ -72,10 +73,10 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ResourceSetResourceArgs() {
-        this.componentId = Output.empty();
-        this.dnsTargetResource = Output.empty();
-        this.readinessScopes = Output.empty();
-        this.resourceArn = Output.empty();
+        this.componentId = Codegen.empty();
+        this.dnsTargetResource = Codegen.empty();
+        this.readinessScopes = Codegen.empty();
+        this.resourceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder componentId(@Nullable String componentId) {
-            this.componentId = Output.ofNullable(componentId);
+            this.componentId = Codegen.ofNullable(componentId);
             return this;
         }
         public Builder dnsTargetResource(@Nullable Output<ResourceSetDNSTargetResourceArgs> dnsTargetResource) {
@@ -117,7 +118,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder dnsTargetResource(@Nullable ResourceSetDNSTargetResourceArgs dnsTargetResource) {
-            this.dnsTargetResource = Output.ofNullable(dnsTargetResource);
+            this.dnsTargetResource = Codegen.ofNullable(dnsTargetResource);
             return this;
         }
         public Builder readinessScopes(@Nullable Output<List<String>> readinessScopes) {
@@ -125,7 +126,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder readinessScopes(@Nullable List<String> readinessScopes) {
-            this.readinessScopes = Output.ofNullable(readinessScopes);
+            this.readinessScopes = Codegen.ofNullable(readinessScopes);
             return this;
         }
         public Builder readinessScopes(String... readinessScopes) {
@@ -136,7 +137,7 @@ public final class ResourceSetResourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }        public ResourceSetResourceArgs build() {
             return new ResourceSetResourceArgs(componentId, dnsTargetResource, readinessScopes, resourceArn);

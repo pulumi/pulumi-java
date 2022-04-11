@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
       private final @Nullable Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> parameters;
 
     public Output<List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
     }
 
     private FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorGetArgs() {
-        this.parameters = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigur
             return this;
         }
         public Builder parameters(@Nullable List<FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(FirehoseDeliveryStreamRedshiftConfigurationProcessingConfigurationProcessorParameterGetArgs... parameters) {

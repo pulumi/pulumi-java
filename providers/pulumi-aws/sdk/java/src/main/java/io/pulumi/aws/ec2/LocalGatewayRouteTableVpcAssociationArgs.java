@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class LocalGatewayRouteTableVpcAssociationArgs extends io.pulumi.re
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class LocalGatewayRouteTableVpcAssociationArgs extends io.pulumi.re
     }
 
     private LocalGatewayRouteTableVpcAssociationArgs() {
-        this.localGatewayRouteTableId = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.localGatewayRouteTableId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class LocalGatewayRouteTableVpcAssociationArgs extends io.pulumi.re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

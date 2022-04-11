@@ -6,6 +6,7 @@ package io.pulumi.aws.mwaa.inputs;
 import io.pulumi.aws.mwaa.inputs.EnvironmentLastUpdatedErrorGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,14 +26,14 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> createdAt;
 
     public Output<String> getCreatedAt() {
-        return this.createdAt == null ? Output.empty() : this.createdAt;
+        return this.createdAt == null ? Codegen.empty() : this.createdAt;
     }
 
     @Import(name="errors")
       private final @Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors;
 
     public Output<List<EnvironmentLastUpdatedErrorGetArgs>> getErrors() {
-        return this.errors == null ? Output.empty() : this.errors;
+        return this.errors == null ? Codegen.empty() : this.errors;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public EnvironmentLastUpdatedGetArgs(
@@ -56,9 +57,9 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
     }
 
     private EnvironmentLastUpdatedGetArgs() {
-        this.createdAt = Output.empty();
-        this.errors = Output.empty();
-        this.status = Output.empty();
+        this.createdAt = Codegen.empty();
+        this.errors = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder createdAt(@Nullable String createdAt) {
-            this.createdAt = Output.ofNullable(createdAt);
+            this.createdAt = Codegen.ofNullable(createdAt);
             return this;
         }
         public Builder errors(@Nullable Output<List<EnvironmentLastUpdatedErrorGetArgs>> errors) {
@@ -98,7 +99,7 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder errors(@Nullable List<EnvironmentLastUpdatedErrorGetArgs> errors) {
-            this.errors = Output.ofNullable(errors);
+            this.errors = Codegen.ofNullable(errors);
             return this;
         }
         public Builder errors(EnvironmentLastUpdatedErrorGetArgs... errors) {
@@ -109,7 +110,7 @@ public final class EnvironmentLastUpdatedGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public EnvironmentLastUpdatedGetArgs build() {
             return new EnvironmentLastUpdatedGetArgs(createdAt, errors, status);

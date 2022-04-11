@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudasset.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public FolderFeedConditionArgs(
@@ -73,10 +74,10 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
     }
 
     private FolderFeedConditionArgs() {
-        this.description = Output.empty();
-        this.expression = Output.empty();
-        this.location = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.location = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expression(Output<String> expression) {
@@ -126,7 +127,7 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -134,7 +135,7 @@ public final class FolderFeedConditionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public FolderFeedConditionArgs build() {
             return new FolderFeedConditionArgs(description, expression, location, title);

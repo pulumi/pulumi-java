@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class TableColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableColumnArgs() {
-        this.columnName = Output.empty();
-        this.columnType = Output.empty();
+        this.columnName = Codegen.empty();
+        this.columnType = Codegen.empty();
     }
 
     public static Builder builder() {

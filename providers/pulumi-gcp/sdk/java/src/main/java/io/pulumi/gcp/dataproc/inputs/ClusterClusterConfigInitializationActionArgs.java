@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
       private final @Nullable Output<Integer> timeoutSec;
 
     public Output<Integer> getTimeoutSec() {
-        return this.timeoutSec == null ? Output.empty() : this.timeoutSec;
+        return this.timeoutSec == null ? Codegen.empty() : this.timeoutSec;
     }
 
     public ClusterClusterConfigInitializationActionArgs(
@@ -48,8 +49,8 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
     }
 
     private ClusterClusterConfigInitializationActionArgs() {
-        this.script = Output.empty();
-        this.timeoutSec = Output.empty();
+        this.script = Codegen.empty();
+        this.timeoutSec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
             return this;
         }
         public Builder timeoutSec(@Nullable Integer timeoutSec) {
-            this.timeoutSec = Output.ofNullable(timeoutSec);
+            this.timeoutSec = Codegen.ofNullable(timeoutSec);
             return this;
         }        public ClusterClusterConfigInitializationActionArgs build() {
             return new ClusterClusterConfigInitializationActionArgs(script, timeoutSec);

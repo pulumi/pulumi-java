@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datashare.enums.ShareKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ShareKind>> shareKind;
 
     public Output<Either<String,ShareKind>> getShareKind() {
-        return this.shareKind == null ? Output.empty() : this.shareKind;
+        return this.shareKind == null ? Codegen.empty() : this.shareKind;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
-        return this.shareName == null ? Output.empty() : this.shareName;
+        return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> terms;
 
     public Output<String> getTerms() {
-        return this.terms == null ? Output.empty() : this.terms;
+        return this.terms == null ? Codegen.empty() : this.terms;
     }
 
     public ShareArgs(
@@ -98,12 +99,12 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShareArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareKind = Output.empty();
-        this.shareName = Output.empty();
-        this.terms = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareKind = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.terms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -165,7 +166,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareKind(@Nullable Either<String,ShareKind> shareKind) {
-            this.shareKind = Output.ofNullable(shareKind);
+            this.shareKind = Codegen.ofNullable(shareKind);
             return this;
         }
         public Builder shareName(@Nullable Output<String> shareName) {
@@ -173,7 +174,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Output.ofNullable(shareName);
+            this.shareName = Codegen.ofNullable(shareName);
             return this;
         }
         public Builder terms(@Nullable Output<String> terms) {
@@ -181,7 +182,7 @@ public final class ShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terms(@Nullable String terms) {
-            this.terms = Output.ofNullable(terms);
+            this.terms = Codegen.ofNullable(terms);
             return this;
         }        public ShareArgs build() {
             return new ShareArgs(accountName, description, resourceGroupName, shareKind, shareName, terms);

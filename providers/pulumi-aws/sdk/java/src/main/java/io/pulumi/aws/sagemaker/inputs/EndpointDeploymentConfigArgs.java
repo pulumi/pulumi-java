@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigAutoRollbackConfig
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> autoRollbackConfiguration;
 
     public Output<EndpointDeploymentConfigAutoRollbackConfigurationArgs> getAutoRollbackConfiguration() {
-        return this.autoRollbackConfiguration == null ? Output.empty() : this.autoRollbackConfiguration;
+        return this.autoRollbackConfiguration == null ? Codegen.empty() : this.autoRollbackConfiguration;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
     }
 
     private EndpointDeploymentConfigArgs() {
-        this.autoRollbackConfiguration = Output.empty();
-        this.blueGreenUpdatePolicy = Output.empty();
+        this.autoRollbackConfiguration = Codegen.empty();
+        this.blueGreenUpdatePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class EndpointDeploymentConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder autoRollbackConfiguration(@Nullable EndpointDeploymentConfigAutoRollbackConfigurationArgs autoRollbackConfiguration) {
-            this.autoRollbackConfiguration = Output.ofNullable(autoRollbackConfiguration);
+            this.autoRollbackConfiguration = Codegen.ofNullable(autoRollbackConfiguration);
             return this;
         }
         public Builder blueGreenUpdatePolicy(Output<EndpointDeploymentConfigBlueGreenUpdatePolicyArgs> blueGreenUpdatePolicy) {

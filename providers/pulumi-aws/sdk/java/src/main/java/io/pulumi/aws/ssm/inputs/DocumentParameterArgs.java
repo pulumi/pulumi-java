@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -29,7 +30,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,14 +41,14 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public DocumentParameterArgs(
@@ -62,10 +63,10 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DocumentParameterArgs() {
-        this.defaultValue = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -107,7 +108,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -115,7 +116,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -123,7 +124,7 @@ public final class DocumentParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public DocumentParameterArgs build() {
             return new DocumentParameterArgs(defaultValue, description, name, type);

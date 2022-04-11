@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ReusableConfigValuesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class ReusableConfigWrapperArgs extends io.pulumi.resources.Resourc
     }
 
     private ReusableConfigWrapperArgs() {
-        this.reusableConfig = Output.empty();
-        this.reusableConfigValues = Output.empty();
+        this.reusableConfig = Codegen.empty();
+        this.reusableConfigValues = Codegen.empty();
     }
 
     public static Builder builder() {

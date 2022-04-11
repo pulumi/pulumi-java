@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public NumberLessThanAdvancedFilterArgs(
@@ -63,9 +64,9 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
     }
 
     private NumberLessThanAdvancedFilterArgs() {
-        this.key = Output.empty();
-        this.operatorType = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.operatorType = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder operatorType(Output<String> operatorType) {
@@ -113,7 +114,7 @@ public final class NumberLessThanAdvancedFilterArgs extends io.pulumi.resources.
             return this;
         }
         public Builder value(@Nullable Double value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public NumberLessThanAdvancedFilterArgs build() {
             return new NumberLessThanAdvancedFilterArgs(key, operatorType, value);

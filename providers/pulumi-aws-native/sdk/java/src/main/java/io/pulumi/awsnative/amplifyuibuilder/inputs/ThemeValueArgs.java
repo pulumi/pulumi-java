@@ -6,6 +6,7 @@ package io.pulumi.awsnative.amplifyuibuilder.inputs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValuesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ThemeValuesArgs>> children;
 
     public Output<List<ThemeValuesArgs>> getChildren() {
-        return this.children == null ? Output.empty() : this.children;
+        return this.children == null ? Codegen.empty() : this.children;
     }
 
     @Import(name="value")
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ThemeValueArgs(
@@ -38,8 +39,8 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeValueArgs() {
-        this.children = Output.empty();
-        this.value = Output.empty();
+        this.children = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder children(@Nullable List<ThemeValuesArgs> children) {
-            this.children = Output.ofNullable(children);
+            this.children = Codegen.ofNullable(children);
             return this;
         }
         public Builder children(ThemeValuesArgs... children) {
@@ -80,7 +81,7 @@ public final class ThemeValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ThemeValueArgs build() {
             return new ThemeValueArgs(children, value);

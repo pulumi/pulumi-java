@@ -8,6 +8,7 @@ import io.pulumi.azurenative.botservice.enums.PublicNetworkAccess;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +33,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> allSettings;
 
     public Output<Map<String,String>> getAllSettings() {
-        return this.allSettings == null ? Output.empty() : this.allSettings;
+        return this.allSettings == null ? Codegen.empty() : this.allSettings;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appPasswordHint;
 
     public Output<String> getAppPasswordHint() {
-        return this.appPasswordHint == null ? Output.empty() : this.appPasswordHint;
+        return this.appPasswordHint == null ? Codegen.empty() : this.appPasswordHint;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cmekKeyVaultUrl;
 
     public Output<String> getCmekKeyVaultUrl() {
-        return this.cmekKeyVaultUrl == null ? Output.empty() : this.cmekKeyVaultUrl;
+        return this.cmekKeyVaultUrl == null ? Codegen.empty() : this.cmekKeyVaultUrl;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> developerAppInsightKey;
 
     public Output<String> getDeveloperAppInsightKey() {
-        return this.developerAppInsightKey == null ? Output.empty() : this.developerAppInsightKey;
+        return this.developerAppInsightKey == null ? Codegen.empty() : this.developerAppInsightKey;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> developerAppInsightsApiKey;
 
     public Output<String> getDeveloperAppInsightsApiKey() {
-        return this.developerAppInsightsApiKey == null ? Output.empty() : this.developerAppInsightsApiKey;
+        return this.developerAppInsightsApiKey == null ? Codegen.empty() : this.developerAppInsightsApiKey;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> developerAppInsightsApplicationId;
 
     public Output<String> getDeveloperAppInsightsApplicationId() {
-        return this.developerAppInsightsApplicationId == null ? Output.empty() : this.developerAppInsightsApplicationId;
+        return this.developerAppInsightsApplicationId == null ? Codegen.empty() : this.developerAppInsightsApplicationId;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableLocalAuth;
 
     public Output<Boolean> getDisableLocalAuth() {
-        return this.disableLocalAuth == null ? Output.empty() : this.disableLocalAuth;
+        return this.disableLocalAuth == null ? Codegen.empty() : this.disableLocalAuth;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iconUrl;
 
     public Output<String> getIconUrl() {
-        return this.iconUrl == null ? Output.empty() : this.iconUrl;
+        return this.iconUrl == null ? Codegen.empty() : this.iconUrl;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isCmekEnabled;
 
     public Output<Boolean> getIsCmekEnabled() {
-        return this.isCmekEnabled == null ? Output.empty() : this.isCmekEnabled;
+        return this.isCmekEnabled == null ? Codegen.empty() : this.isCmekEnabled;
     }
 
     /**
@@ -164,7 +165,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isStreamingSupported;
 
     public Output<Boolean> getIsStreamingSupported() {
-        return this.isStreamingSupported == null ? Output.empty() : this.isStreamingSupported;
+        return this.isStreamingSupported == null ? Codegen.empty() : this.isStreamingSupported;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> luisAppIds;
 
     public Output<List<String>> getLuisAppIds() {
-        return this.luisAppIds == null ? Output.empty() : this.luisAppIds;
+        return this.luisAppIds == null ? Codegen.empty() : this.luisAppIds;
     }
 
     /**
@@ -186,7 +187,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> luisKey;
 
     public Output<String> getLuisKey() {
-        return this.luisKey == null ? Output.empty() : this.luisKey;
+        return this.luisKey == null ? Codegen.empty() : this.luisKey;
     }
 
     /**
@@ -197,7 +198,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> manifestUrl;
 
     public Output<String> getManifestUrl() {
-        return this.manifestUrl == null ? Output.empty() : this.manifestUrl;
+        return this.manifestUrl == null ? Codegen.empty() : this.manifestUrl;
     }
 
     /**
@@ -219,7 +220,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> msaAppMSIResourceId;
 
     public Output<String> getMsaAppMSIResourceId() {
-        return this.msaAppMSIResourceId == null ? Output.empty() : this.msaAppMSIResourceId;
+        return this.msaAppMSIResourceId == null ? Codegen.empty() : this.msaAppMSIResourceId;
     }
 
     /**
@@ -230,7 +231,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> msaAppTenantId;
 
     public Output<String> getMsaAppTenantId() {
-        return this.msaAppTenantId == null ? Output.empty() : this.msaAppTenantId;
+        return this.msaAppTenantId == null ? Codegen.empty() : this.msaAppTenantId;
     }
 
     /**
@@ -241,7 +242,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,MsaAppType>> msaAppType;
 
     public Output<Either<String,MsaAppType>> getMsaAppType() {
-        return this.msaAppType == null ? Output.empty() : this.msaAppType;
+        return this.msaAppType == null ? Codegen.empty() : this.msaAppType;
     }
 
     /**
@@ -252,7 +253,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> openWithHint;
 
     public Output<String> getOpenWithHint() {
-        return this.openWithHint == null ? Output.empty() : this.openWithHint;
+        return this.openWithHint == null ? Codegen.empty() : this.openWithHint;
     }
 
     /**
@@ -263,7 +264,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -274,7 +275,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -285,7 +286,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publishingCredentials;
 
     public Output<String> getPublishingCredentials() {
-        return this.publishingCredentials == null ? Output.empty() : this.publishingCredentials;
+        return this.publishingCredentials == null ? Codegen.empty() : this.publishingCredentials;
     }
 
     /**
@@ -296,7 +297,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schemaTransformationVersion;
 
     public Output<String> getSchemaTransformationVersion() {
-        return this.schemaTransformationVersion == null ? Output.empty() : this.schemaTransformationVersion;
+        return this.schemaTransformationVersion == null ? Codegen.empty() : this.schemaTransformationVersion;
     }
 
     /**
@@ -307,7 +308,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageResourceId;
 
     public Output<String> getStorageResourceId() {
-        return this.storageResourceId == null ? Output.empty() : this.storageResourceId;
+        return this.storageResourceId == null ? Codegen.empty() : this.storageResourceId;
     }
 
     public BotPropertiesArgs(
@@ -349,7 +350,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
         this.endpoint = Objects.requireNonNull(endpoint, "expected parameter 'endpoint' to be non-null");
         this.iconUrl = iconUrl;
         this.isCmekEnabled = isCmekEnabled;
-        this.isStreamingSupported = isStreamingSupported == null ? Output.ofNullable(false) : isStreamingSupported;
+        this.isStreamingSupported = isStreamingSupported == null ? Codegen.ofNullable(false) : isStreamingSupported;
         this.luisAppIds = luisAppIds;
         this.luisKey = luisKey;
         this.manifestUrl = manifestUrl;
@@ -366,32 +367,32 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotPropertiesArgs() {
-        this.allSettings = Output.empty();
-        this.appPasswordHint = Output.empty();
-        this.cmekKeyVaultUrl = Output.empty();
-        this.description = Output.empty();
-        this.developerAppInsightKey = Output.empty();
-        this.developerAppInsightsApiKey = Output.empty();
-        this.developerAppInsightsApplicationId = Output.empty();
-        this.disableLocalAuth = Output.empty();
-        this.displayName = Output.empty();
-        this.endpoint = Output.empty();
-        this.iconUrl = Output.empty();
-        this.isCmekEnabled = Output.empty();
-        this.isStreamingSupported = Output.empty();
-        this.luisAppIds = Output.empty();
-        this.luisKey = Output.empty();
-        this.manifestUrl = Output.empty();
-        this.msaAppId = Output.empty();
-        this.msaAppMSIResourceId = Output.empty();
-        this.msaAppTenantId = Output.empty();
-        this.msaAppType = Output.empty();
-        this.openWithHint = Output.empty();
-        this.parameters = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.publishingCredentials = Output.empty();
-        this.schemaTransformationVersion = Output.empty();
-        this.storageResourceId = Output.empty();
+        this.allSettings = Codegen.empty();
+        this.appPasswordHint = Codegen.empty();
+        this.cmekKeyVaultUrl = Codegen.empty();
+        this.description = Codegen.empty();
+        this.developerAppInsightKey = Codegen.empty();
+        this.developerAppInsightsApiKey = Codegen.empty();
+        this.developerAppInsightsApplicationId = Codegen.empty();
+        this.disableLocalAuth = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.iconUrl = Codegen.empty();
+        this.isCmekEnabled = Codegen.empty();
+        this.isStreamingSupported = Codegen.empty();
+        this.luisAppIds = Codegen.empty();
+        this.luisKey = Codegen.empty();
+        this.manifestUrl = Codegen.empty();
+        this.msaAppId = Codegen.empty();
+        this.msaAppMSIResourceId = Codegen.empty();
+        this.msaAppTenantId = Codegen.empty();
+        this.msaAppType = Codegen.empty();
+        this.openWithHint = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.publishingCredentials = Codegen.empty();
+        this.schemaTransformationVersion = Codegen.empty();
+        this.storageResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -469,7 +470,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allSettings(@Nullable Map<String,String> allSettings) {
-            this.allSettings = Output.ofNullable(allSettings);
+            this.allSettings = Codegen.ofNullable(allSettings);
             return this;
         }
         public Builder appPasswordHint(@Nullable Output<String> appPasswordHint) {
@@ -477,7 +478,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appPasswordHint(@Nullable String appPasswordHint) {
-            this.appPasswordHint = Output.ofNullable(appPasswordHint);
+            this.appPasswordHint = Codegen.ofNullable(appPasswordHint);
             return this;
         }
         public Builder cmekKeyVaultUrl(@Nullable Output<String> cmekKeyVaultUrl) {
@@ -485,7 +486,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cmekKeyVaultUrl(@Nullable String cmekKeyVaultUrl) {
-            this.cmekKeyVaultUrl = Output.ofNullable(cmekKeyVaultUrl);
+            this.cmekKeyVaultUrl = Codegen.ofNullable(cmekKeyVaultUrl);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -493,7 +494,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder developerAppInsightKey(@Nullable Output<String> developerAppInsightKey) {
@@ -501,7 +502,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder developerAppInsightKey(@Nullable String developerAppInsightKey) {
-            this.developerAppInsightKey = Output.ofNullable(developerAppInsightKey);
+            this.developerAppInsightKey = Codegen.ofNullable(developerAppInsightKey);
             return this;
         }
         public Builder developerAppInsightsApiKey(@Nullable Output<String> developerAppInsightsApiKey) {
@@ -509,7 +510,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder developerAppInsightsApiKey(@Nullable String developerAppInsightsApiKey) {
-            this.developerAppInsightsApiKey = Output.ofNullable(developerAppInsightsApiKey);
+            this.developerAppInsightsApiKey = Codegen.ofNullable(developerAppInsightsApiKey);
             return this;
         }
         public Builder developerAppInsightsApplicationId(@Nullable Output<String> developerAppInsightsApplicationId) {
@@ -517,7 +518,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder developerAppInsightsApplicationId(@Nullable String developerAppInsightsApplicationId) {
-            this.developerAppInsightsApplicationId = Output.ofNullable(developerAppInsightsApplicationId);
+            this.developerAppInsightsApplicationId = Codegen.ofNullable(developerAppInsightsApplicationId);
             return this;
         }
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
@@ -525,7 +526,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableLocalAuth(@Nullable Boolean disableLocalAuth) {
-            this.disableLocalAuth = Output.ofNullable(disableLocalAuth);
+            this.disableLocalAuth = Codegen.ofNullable(disableLocalAuth);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -549,7 +550,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iconUrl(@Nullable String iconUrl) {
-            this.iconUrl = Output.ofNullable(iconUrl);
+            this.iconUrl = Codegen.ofNullable(iconUrl);
             return this;
         }
         public Builder isCmekEnabled(@Nullable Output<Boolean> isCmekEnabled) {
@@ -557,7 +558,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCmekEnabled(@Nullable Boolean isCmekEnabled) {
-            this.isCmekEnabled = Output.ofNullable(isCmekEnabled);
+            this.isCmekEnabled = Codegen.ofNullable(isCmekEnabled);
             return this;
         }
         public Builder isStreamingSupported(@Nullable Output<Boolean> isStreamingSupported) {
@@ -565,7 +566,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isStreamingSupported(@Nullable Boolean isStreamingSupported) {
-            this.isStreamingSupported = Output.ofNullable(isStreamingSupported);
+            this.isStreamingSupported = Codegen.ofNullable(isStreamingSupported);
             return this;
         }
         public Builder luisAppIds(@Nullable Output<List<String>> luisAppIds) {
@@ -573,7 +574,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder luisAppIds(@Nullable List<String> luisAppIds) {
-            this.luisAppIds = Output.ofNullable(luisAppIds);
+            this.luisAppIds = Codegen.ofNullable(luisAppIds);
             return this;
         }
         public Builder luisAppIds(String... luisAppIds) {
@@ -584,7 +585,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder luisKey(@Nullable String luisKey) {
-            this.luisKey = Output.ofNullable(luisKey);
+            this.luisKey = Codegen.ofNullable(luisKey);
             return this;
         }
         public Builder manifestUrl(@Nullable Output<String> manifestUrl) {
@@ -592,7 +593,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manifestUrl(@Nullable String manifestUrl) {
-            this.manifestUrl = Output.ofNullable(manifestUrl);
+            this.manifestUrl = Codegen.ofNullable(manifestUrl);
             return this;
         }
         public Builder msaAppId(Output<String> msaAppId) {
@@ -608,7 +609,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msaAppMSIResourceId(@Nullable String msaAppMSIResourceId) {
-            this.msaAppMSIResourceId = Output.ofNullable(msaAppMSIResourceId);
+            this.msaAppMSIResourceId = Codegen.ofNullable(msaAppMSIResourceId);
             return this;
         }
         public Builder msaAppTenantId(@Nullable Output<String> msaAppTenantId) {
@@ -616,7 +617,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msaAppTenantId(@Nullable String msaAppTenantId) {
-            this.msaAppTenantId = Output.ofNullable(msaAppTenantId);
+            this.msaAppTenantId = Codegen.ofNullable(msaAppTenantId);
             return this;
         }
         public Builder msaAppType(@Nullable Output<Either<String,MsaAppType>> msaAppType) {
@@ -624,7 +625,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msaAppType(@Nullable Either<String,MsaAppType> msaAppType) {
-            this.msaAppType = Output.ofNullable(msaAppType);
+            this.msaAppType = Codegen.ofNullable(msaAppType);
             return this;
         }
         public Builder openWithHint(@Nullable Output<String> openWithHint) {
@@ -632,7 +633,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder openWithHint(@Nullable String openWithHint) {
-            this.openWithHint = Output.ofNullable(openWithHint);
+            this.openWithHint = Codegen.ofNullable(openWithHint);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -640,7 +641,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -648,7 +649,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder publishingCredentials(@Nullable Output<String> publishingCredentials) {
@@ -656,7 +657,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishingCredentials(@Nullable String publishingCredentials) {
-            this.publishingCredentials = Output.ofNullable(publishingCredentials);
+            this.publishingCredentials = Codegen.ofNullable(publishingCredentials);
             return this;
         }
         public Builder schemaTransformationVersion(@Nullable Output<String> schemaTransformationVersion) {
@@ -664,7 +665,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaTransformationVersion(@Nullable String schemaTransformationVersion) {
-            this.schemaTransformationVersion = Output.ofNullable(schemaTransformationVersion);
+            this.schemaTransformationVersion = Codegen.ofNullable(schemaTransformationVersion);
             return this;
         }
         public Builder storageResourceId(@Nullable Output<String> storageResourceId) {
@@ -672,7 +673,7 @@ public final class BotPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageResourceId(@Nullable String storageResourceId) {
-            this.storageResourceId = Output.ofNullable(storageResourceId);
+            this.storageResourceId = Codegen.ofNullable(storageResourceId);
             return this;
         }        public BotPropertiesArgs build() {
             return new BotPropertiesArgs(allSettings, appPasswordHint, cmekKeyVaultUrl, description, developerAppInsightKey, developerAppInsightsApiKey, developerAppInsightsApplicationId, disableLocalAuth, displayName, endpoint, iconUrl, isCmekEnabled, isStreamingSupported, luisAppIds, luisKey, manifestUrl, msaAppId, msaAppMSIResourceId, msaAppTenantId, msaAppType, openWithHint, parameters, publicNetworkAccess, publishingCredentials, schemaTransformationVersion, storageResourceId);

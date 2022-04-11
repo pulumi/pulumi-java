@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> attachedTo;
 
     public Output<String> getAttachedTo() {
-        return this.attachedTo == null ? Output.empty() : this.attachedTo;
+        return this.attachedTo == null ? Codegen.empty() : this.attachedTo;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> attachmentState;
 
     public Output<String> getAttachmentState() {
-        return this.attachmentState == null ? Output.empty() : this.attachmentState;
+        return this.attachmentState == null ? Codegen.empty() : this.attachmentState;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> iOPS;
 
     public Output<Integer> getIOPS() {
-        return this.iOPS == null ? Output.empty() : this.iOPS;
+        return this.iOPS == null ? Codegen.empty() : this.iOPS;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isSystemDisk;
 
     public Output<Boolean> getIsSystemDisk() {
-        return this.isSystemDisk == null ? Output.empty() : this.isSystemDisk;
+        return this.isSystemDisk == null ? Codegen.empty() : this.isSystemDisk;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sizeInGb;
 
     public Output<String> getSizeInGb() {
-        return this.sizeInGb == null ? Output.empty() : this.sizeInGb;
+        return this.sizeInGb == null ? Codegen.empty() : this.sizeInGb;
     }
 
     public InstanceDiskArgs(
@@ -115,13 +116,13 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceDiskArgs() {
-        this.attachedTo = Output.empty();
-        this.attachmentState = Output.empty();
-        this.diskName = Output.empty();
-        this.iOPS = Output.empty();
-        this.isSystemDisk = Output.empty();
-        this.path = Output.empty();
-        this.sizeInGb = Output.empty();
+        this.attachedTo = Codegen.empty();
+        this.attachmentState = Codegen.empty();
+        this.diskName = Codegen.empty();
+        this.iOPS = Codegen.empty();
+        this.isSystemDisk = Codegen.empty();
+        this.path = Codegen.empty();
+        this.sizeInGb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attachedTo(@Nullable String attachedTo) {
-            this.attachedTo = Output.ofNullable(attachedTo);
+            this.attachedTo = Codegen.ofNullable(attachedTo);
             return this;
         }
         public Builder attachmentState(@Nullable Output<String> attachmentState) {
@@ -169,7 +170,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attachmentState(@Nullable String attachmentState) {
-            this.attachmentState = Output.ofNullable(attachmentState);
+            this.attachmentState = Codegen.ofNullable(attachmentState);
             return this;
         }
         public Builder diskName(Output<String> diskName) {
@@ -185,7 +186,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iOPS(@Nullable Integer iOPS) {
-            this.iOPS = Output.ofNullable(iOPS);
+            this.iOPS = Codegen.ofNullable(iOPS);
             return this;
         }
         public Builder isSystemDisk(@Nullable Output<Boolean> isSystemDisk) {
@@ -193,7 +194,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isSystemDisk(@Nullable Boolean isSystemDisk) {
-            this.isSystemDisk = Output.ofNullable(isSystemDisk);
+            this.isSystemDisk = Codegen.ofNullable(isSystemDisk);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -209,7 +210,7 @@ public final class InstanceDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeInGb(@Nullable String sizeInGb) {
-            this.sizeInGb = Output.ofNullable(sizeInGb);
+            this.sizeInGb = Codegen.ofNullable(sizeInGb);
             return this;
         }        public InstanceDiskArgs build() {
             return new InstanceDiskArgs(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);

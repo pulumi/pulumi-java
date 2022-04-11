@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> scheduledDateTime;
 
     public Output<String> getScheduledDateTime() {
-        return this.scheduledDateTime == null ? Output.empty() : this.scheduledDateTime;
+        return this.scheduledDateTime == null ? Codegen.empty() : this.scheduledDateTime;
     }
 
     public JobDeliveryInfoArgs(@Nullable Output<String> scheduledDateTime) {
@@ -34,7 +35,7 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private JobDeliveryInfoArgs() {
-        this.scheduledDateTime = Output.empty();
+        this.scheduledDateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class JobDeliveryInfoArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder scheduledDateTime(@Nullable String scheduledDateTime) {
-            this.scheduledDateTime = Output.ofNullable(scheduledDateTime);
+            this.scheduledDateTime = Codegen.ofNullable(scheduledDateTime);
             return this;
         }        public JobDeliveryInfoArgs build() {
             return new JobDeliveryInfoArgs(scheduledDateTime);

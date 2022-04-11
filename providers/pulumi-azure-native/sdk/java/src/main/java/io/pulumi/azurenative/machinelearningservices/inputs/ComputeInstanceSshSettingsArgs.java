@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.SshPublicAccess;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> adminPublicKey;
 
     public Output<String> getAdminPublicKey() {
-        return this.adminPublicKey == null ? Output.empty() : this.adminPublicKey;
+        return this.adminPublicKey == null ? Codegen.empty() : this.adminPublicKey;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess;
 
     public Output<Either<String,SshPublicAccess>> getSshPublicAccess() {
-        return this.sshPublicAccess == null ? Output.empty() : this.sshPublicAccess;
+        return this.sshPublicAccess == null ? Codegen.empty() : this.sshPublicAccess;
     }
 
     public ComputeInstanceSshSettingsArgs(
@@ -50,8 +51,8 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
     }
 
     private ComputeInstanceSshSettingsArgs() {
-        this.adminPublicKey = Output.empty();
-        this.sshPublicAccess = Output.empty();
+        this.adminPublicKey = Codegen.empty();
+        this.sshPublicAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder adminPublicKey(@Nullable String adminPublicKey) {
-            this.adminPublicKey = Output.ofNullable(adminPublicKey);
+            this.adminPublicKey = Codegen.ofNullable(adminPublicKey);
             return this;
         }
         public Builder sshPublicAccess(@Nullable Output<Either<String,SshPublicAccess>> sshPublicAccess) {
@@ -89,7 +90,7 @@ public final class ComputeInstanceSshSettingsArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sshPublicAccess(@Nullable Either<String,SshPublicAccess> sshPublicAccess) {
-            this.sshPublicAccess = Output.ofNullable(sshPublicAccess);
+            this.sshPublicAccess = Codegen.ofNullable(sshPublicAccess);
             return this;
         }        public ComputeInstanceSshSettingsArgs build() {
             return new ComputeInstanceSshSettingsArgs(adminPublicKey, sshPublicAccess);

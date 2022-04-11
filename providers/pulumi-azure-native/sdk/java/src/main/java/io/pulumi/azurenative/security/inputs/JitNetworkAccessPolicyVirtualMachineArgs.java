@@ -6,6 +6,7 @@ package io.pulumi.azurenative.security.inputs;
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessPortRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
       private final @Nullable Output<String> publicIpAddress;
 
     public Output<String> getPublicIpAddress() {
-        return this.publicIpAddress == null ? Output.empty() : this.publicIpAddress;
+        return this.publicIpAddress == null ? Codegen.empty() : this.publicIpAddress;
     }
 
     public JitNetworkAccessPolicyVirtualMachineArgs(
@@ -59,9 +60,9 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
     }
 
     private JitNetworkAccessPolicyVirtualMachineArgs() {
-        this.id = Output.empty();
-        this.ports = Output.empty();
-        this.publicIpAddress = Output.empty();
+        this.id = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.publicIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class JitNetworkAccessPolicyVirtualMachineArgs extends io.pulumi.re
             return this;
         }
         public Builder publicIpAddress(@Nullable String publicIpAddress) {
-            this.publicIpAddress = Output.ofNullable(publicIpAddress);
+            this.publicIpAddress = Codegen.ofNullable(publicIpAddress);
             return this;
         }        public JitNetworkAccessPolicyVirtualMachineArgs build() {
             return new JitNetworkAccessPolicyVirtualMachineArgs(id, ports, publicIpAddress);

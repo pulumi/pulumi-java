@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> contentTypesToCompress;
 
     public Output<List<String>> getContentTypesToCompress() {
-        return this.contentTypesToCompress == null ? Output.empty() : this.contentTypesToCompress;
+        return this.contentTypesToCompress == null ? Codegen.empty() : this.contentTypesToCompress;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> isCompressionEnabled;
 
     public Output<Boolean> getIsCompressionEnabled() {
-        return this.isCompressionEnabled == null ? Output.empty() : this.isCompressionEnabled;
+        return this.isCompressionEnabled == null ? Codegen.empty() : this.isCompressionEnabled;
     }
 
     public CompressionSettingsArgs(
@@ -50,8 +51,8 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private CompressionSettingsArgs() {
-        this.contentTypesToCompress = Output.empty();
-        this.isCompressionEnabled = Output.empty();
+        this.contentTypesToCompress = Codegen.empty();
+        this.isCompressionEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder contentTypesToCompress(@Nullable List<String> contentTypesToCompress) {
-            this.contentTypesToCompress = Output.ofNullable(contentTypesToCompress);
+            this.contentTypesToCompress = Codegen.ofNullable(contentTypesToCompress);
             return this;
         }
         public Builder contentTypesToCompress(String... contentTypesToCompress) {
@@ -92,7 +93,7 @@ public final class CompressionSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder isCompressionEnabled(@Nullable Boolean isCompressionEnabled) {
-            this.isCompressionEnabled = Output.ofNullable(isCompressionEnabled);
+            this.isCompressionEnabled = Codegen.ofNullable(isCompressionEnabled);
             return this;
         }        public CompressionSettingsArgs build() {
             return new CompressionSettingsArgs(contentTypesToCompress, isCompressionEnabled);

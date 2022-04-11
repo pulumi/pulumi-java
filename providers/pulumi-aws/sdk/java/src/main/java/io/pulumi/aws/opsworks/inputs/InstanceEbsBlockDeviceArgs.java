@@ -5,6 +5,7 @@ package io.pulumi.aws.opsworks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     @Import(name="deviceName", required=true)
@@ -34,28 +35,28 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public InstanceEbsBlockDeviceArgs(
@@ -74,12 +75,12 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
     }
 
     private InstanceEbsBlockDeviceArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.deviceName = Output.empty();
-        this.iops = Output.empty();
-        this.snapshotId = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -133,7 +134,7 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -141,7 +142,7 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -149,7 +150,7 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -157,7 +158,7 @@ public final class InstanceEbsBlockDeviceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public InstanceEbsBlockDeviceArgs build() {
             return new InstanceEbsBlockDeviceArgs(deleteOnTermination, deviceName, iops, snapshotId, volumeSize, volumeType);

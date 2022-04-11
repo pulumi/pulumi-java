@@ -22,6 +22,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -271,7 +272,7 @@ public class PartnerTopicEventSubscription extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public PartnerTopicEventSubscription(String name, PartnerTopicEventSubscriptionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:eventgrid:PartnerTopicEventSubscription", name, args == null ? PartnerTopicEventSubscriptionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:eventgrid:PartnerTopicEventSubscription", name, args == null ? PartnerTopicEventSubscriptionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PartnerTopicEventSubscription(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

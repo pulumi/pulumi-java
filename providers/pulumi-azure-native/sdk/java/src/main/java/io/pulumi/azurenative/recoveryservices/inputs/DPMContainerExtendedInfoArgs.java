@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> lastRefreshedAt;
 
     public Output<String> getLastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Output.empty() : this.lastRefreshedAt;
+        return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 
     public DPMContainerExtendedInfoArgs(@Nullable Output<String> lastRefreshedAt) {
@@ -34,7 +35,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     }
 
     private DPMContainerExtendedInfoArgs() {
-        this.lastRefreshedAt = Output.empty();
+        this.lastRefreshedAt = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
+            this.lastRefreshedAt = Codegen.ofNullable(lastRefreshedAt);
             return this;
         }        public DPMContainerExtendedInfoArgs build() {
             return new DPMContainerExtendedInfoArgs(lastRefreshedAt);

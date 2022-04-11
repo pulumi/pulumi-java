@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class DeliveryStreamHttpEndpointCommonAttributeArgs extends io.pulu
     }
 
     private DeliveryStreamHttpEndpointCommonAttributeArgs() {
-        this.attributeName = Output.empty();
-        this.attributeValue = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.attributeValue = Codegen.empty();
     }
 
     public static Builder builder() {

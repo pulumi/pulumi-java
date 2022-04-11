@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.BitbucketServerSecretsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> bitbucketServerConfigId;
 
     public Output<String> getBitbucketServerConfigId() {
-        return this.bitbucketServerConfigId == null ? Output.empty() : this.bitbucketServerConfigId;
+        return this.bitbucketServerConfigId == null ? Codegen.empty() : this.bitbucketServerConfigId;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,14 +82,14 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> peeredNetwork;
 
     public Output<String> getPeeredNetwork() {
-        return this.peeredNetwork == null ? Output.empty() : this.peeredNetwork;
+        return this.peeredNetwork == null ? Codegen.empty() : this.peeredNetwork;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> sslCa;
 
     public Output<String> getSslCa() {
-        return this.sslCa == null ? Output.empty() : this.sslCa;
+        return this.sslCa == null ? Codegen.empty() : this.sslCa;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public BitbucketServerConfigArgs(
@@ -150,17 +151,17 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private BitbucketServerConfigArgs() {
-        this.apiKey = Output.empty();
-        this.bitbucketServerConfigId = Output.empty();
-        this.createTime = Output.empty();
-        this.hostUri = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.peeredNetwork = Output.empty();
-        this.project = Output.empty();
-        this.secrets = Output.empty();
-        this.sslCa = Output.empty();
-        this.username = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.bitbucketServerConfigId = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.hostUri = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peeredNetwork = Codegen.empty();
+        this.project = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.sslCa = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder bitbucketServerConfigId(@Nullable String bitbucketServerConfigId) {
-            this.bitbucketServerConfigId = Output.ofNullable(bitbucketServerConfigId);
+            this.bitbucketServerConfigId = Codegen.ofNullable(bitbucketServerConfigId);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -224,7 +225,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder hostUri(Output<String> hostUri) {
@@ -240,7 +241,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -248,7 +249,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peeredNetwork(@Nullable Output<String> peeredNetwork) {
@@ -256,7 +257,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder peeredNetwork(@Nullable String peeredNetwork) {
-            this.peeredNetwork = Output.ofNullable(peeredNetwork);
+            this.peeredNetwork = Codegen.ofNullable(peeredNetwork);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -264,7 +265,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder secrets(Output<BitbucketServerSecretsArgs> secrets) {
@@ -280,7 +281,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sslCa(@Nullable String sslCa) {
-            this.sslCa = Output.ofNullable(sslCa);
+            this.sslCa = Codegen.ofNullable(sslCa);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -288,7 +289,7 @@ public final class BitbucketServerConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public BitbucketServerConfigArgs build() {
             return new BitbucketServerConfigArgs(apiKey, bitbucketServerConfigId, createTime, hostUri, location, name, peeredNetwork, project, secrets, sslCa, username);

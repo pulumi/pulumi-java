@@ -5,6 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ListenerDefaultActionForwardTargetGroupArgs extends io.pulumi
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public ListenerDefaultActionForwardTargetGroupArgs(
@@ -45,8 +46,8 @@ public final class ListenerDefaultActionForwardTargetGroupArgs extends io.pulumi
     }
 
     private ListenerDefaultActionForwardTargetGroupArgs() {
-        this.arn = Output.empty();
-        this.weight = Output.empty();
+        this.arn = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ListenerDefaultActionForwardTargetGroupArgs extends io.pulumi
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public ListenerDefaultActionForwardTargetGroupArgs build() {
             return new ListenerDefaultActionForwardTargetGroupArgs(arn, weight);

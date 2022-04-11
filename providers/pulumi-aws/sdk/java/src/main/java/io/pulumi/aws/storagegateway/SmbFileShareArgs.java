@@ -6,6 +6,7 @@ package io.pulumi.aws.storagegateway;
 import io.pulumi.aws.storagegateway.inputs.SmbFileShareCacheAttributesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> accessBasedEnumeration;
 
     public Output<Boolean> getAccessBasedEnumeration() {
-        return this.accessBasedEnumeration == null ? Output.empty() : this.accessBasedEnumeration;
+        return this.accessBasedEnumeration == null ? Codegen.empty() : this.accessBasedEnumeration;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> adminUserLists;
 
     public Output<List<String>> getAdminUserLists() {
-        return this.adminUserLists == null ? Output.empty() : this.adminUserLists;
+        return this.adminUserLists == null ? Codegen.empty() : this.adminUserLists;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> auditDestinationArn;
 
     public Output<String> getAuditDestinationArn() {
-        return this.auditDestinationArn == null ? Output.empty() : this.auditDestinationArn;
+        return this.auditDestinationArn == null ? Codegen.empty() : this.auditDestinationArn;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authentication;
 
     public Output<String> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bucketRegion;
 
     public Output<String> getBucketRegion() {
-        return this.bucketRegion == null ? Output.empty() : this.bucketRegion;
+        return this.bucketRegion == null ? Codegen.empty() : this.bucketRegion;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes;
 
     public Output<SmbFileShareCacheAttributesArgs> getCacheAttributes() {
-        return this.cacheAttributes == null ? Output.empty() : this.cacheAttributes;
+        return this.cacheAttributes == null ? Codegen.empty() : this.cacheAttributes;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> caseSensitivity;
 
     public Output<String> getCaseSensitivity() {
-        return this.caseSensitivity == null ? Output.empty() : this.caseSensitivity;
+        return this.caseSensitivity == null ? Codegen.empty() : this.caseSensitivity;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultStorageClass;
 
     public Output<String> getDefaultStorageClass() {
-        return this.defaultStorageClass == null ? Output.empty() : this.defaultStorageClass;
+        return this.defaultStorageClass == null ? Codegen.empty() : this.defaultStorageClass;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileShareName;
 
     public Output<String> getFileShareName() {
-        return this.fileShareName == null ? Output.empty() : this.fileShareName;
+        return this.fileShareName == null ? Codegen.empty() : this.fileShareName;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> guessMimeTypeEnabled;
 
     public Output<Boolean> getGuessMimeTypeEnabled() {
-        return this.guessMimeTypeEnabled == null ? Output.empty() : this.guessMimeTypeEnabled;
+        return this.guessMimeTypeEnabled == null ? Codegen.empty() : this.guessMimeTypeEnabled;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> invalidUserLists;
 
     public Output<List<String>> getInvalidUserLists() {
-        return this.invalidUserLists == null ? Output.empty() : this.invalidUserLists;
+        return this.invalidUserLists == null ? Codegen.empty() : this.invalidUserLists;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> kmsEncrypted;
 
     public Output<Boolean> getKmsEncrypted() {
-        return this.kmsEncrypted == null ? Output.empty() : this.kmsEncrypted;
+        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notificationPolicy;
 
     public Output<String> getNotificationPolicy() {
-        return this.notificationPolicy == null ? Output.empty() : this.notificationPolicy;
+        return this.notificationPolicy == null ? Codegen.empty() : this.notificationPolicy;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectAcl;
 
     public Output<String> getObjectAcl() {
-        return this.objectAcl == null ? Output.empty() : this.objectAcl;
+        return this.objectAcl == null ? Codegen.empty() : this.objectAcl;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> oplocksEnabled;
 
     public Output<Boolean> getOplocksEnabled() {
-        return this.oplocksEnabled == null ? Output.empty() : this.oplocksEnabled;
+        return this.oplocksEnabled == null ? Codegen.empty() : this.oplocksEnabled;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requesterPays;
 
     public Output<Boolean> getRequesterPays() {
-        return this.requesterPays == null ? Output.empty() : this.requesterPays;
+        return this.requesterPays == null ? Codegen.empty() : this.requesterPays;
     }
 
     /**
@@ -257,7 +258,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> smbAclEnabled;
 
     public Output<Boolean> getSmbAclEnabled() {
-        return this.smbAclEnabled == null ? Output.empty() : this.smbAclEnabled;
+        return this.smbAclEnabled == null ? Codegen.empty() : this.smbAclEnabled;
     }
 
     /**
@@ -268,7 +269,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -279,7 +280,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> validUserLists;
 
     public Output<List<String>> getValidUserLists() {
-        return this.validUserLists == null ? Output.empty() : this.validUserLists;
+        return this.validUserLists == null ? Codegen.empty() : this.validUserLists;
     }
 
     /**
@@ -290,7 +291,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcEndpointDnsName;
 
     public Output<String> getVpcEndpointDnsName() {
-        return this.vpcEndpointDnsName == null ? Output.empty() : this.vpcEndpointDnsName;
+        return this.vpcEndpointDnsName == null ? Codegen.empty() : this.vpcEndpointDnsName;
     }
 
     public SmbFileShareArgs(
@@ -347,31 +348,31 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SmbFileShareArgs() {
-        this.accessBasedEnumeration = Output.empty();
-        this.adminUserLists = Output.empty();
-        this.auditDestinationArn = Output.empty();
-        this.authentication = Output.empty();
-        this.bucketRegion = Output.empty();
-        this.cacheAttributes = Output.empty();
-        this.caseSensitivity = Output.empty();
-        this.defaultStorageClass = Output.empty();
-        this.fileShareName = Output.empty();
-        this.gatewayArn = Output.empty();
-        this.guessMimeTypeEnabled = Output.empty();
-        this.invalidUserLists = Output.empty();
-        this.kmsEncrypted = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.locationArn = Output.empty();
-        this.notificationPolicy = Output.empty();
-        this.objectAcl = Output.empty();
-        this.oplocksEnabled = Output.empty();
-        this.readOnly = Output.empty();
-        this.requesterPays = Output.empty();
-        this.roleArn = Output.empty();
-        this.smbAclEnabled = Output.empty();
-        this.tags = Output.empty();
-        this.validUserLists = Output.empty();
-        this.vpcEndpointDnsName = Output.empty();
+        this.accessBasedEnumeration = Codegen.empty();
+        this.adminUserLists = Codegen.empty();
+        this.auditDestinationArn = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.bucketRegion = Codegen.empty();
+        this.cacheAttributes = Codegen.empty();
+        this.caseSensitivity = Codegen.empty();
+        this.defaultStorageClass = Codegen.empty();
+        this.fileShareName = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
+        this.guessMimeTypeEnabled = Codegen.empty();
+        this.invalidUserLists = Codegen.empty();
+        this.kmsEncrypted = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.locationArn = Codegen.empty();
+        this.notificationPolicy = Codegen.empty();
+        this.objectAcl = Codegen.empty();
+        this.oplocksEnabled = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.requesterPays = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.smbAclEnabled = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.validUserLists = Codegen.empty();
+        this.vpcEndpointDnsName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -447,7 +448,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessBasedEnumeration(@Nullable Boolean accessBasedEnumeration) {
-            this.accessBasedEnumeration = Output.ofNullable(accessBasedEnumeration);
+            this.accessBasedEnumeration = Codegen.ofNullable(accessBasedEnumeration);
             return this;
         }
         public Builder adminUserLists(@Nullable Output<List<String>> adminUserLists) {
@@ -455,7 +456,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminUserLists(@Nullable List<String> adminUserLists) {
-            this.adminUserLists = Output.ofNullable(adminUserLists);
+            this.adminUserLists = Codegen.ofNullable(adminUserLists);
             return this;
         }
         public Builder adminUserLists(String... adminUserLists) {
@@ -466,7 +467,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auditDestinationArn(@Nullable String auditDestinationArn) {
-            this.auditDestinationArn = Output.ofNullable(auditDestinationArn);
+            this.auditDestinationArn = Codegen.ofNullable(auditDestinationArn);
             return this;
         }
         public Builder authentication(@Nullable Output<String> authentication) {
@@ -474,7 +475,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable String authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder bucketRegion(@Nullable Output<String> bucketRegion) {
@@ -482,7 +483,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketRegion(@Nullable String bucketRegion) {
-            this.bucketRegion = Output.ofNullable(bucketRegion);
+            this.bucketRegion = Codegen.ofNullable(bucketRegion);
             return this;
         }
         public Builder cacheAttributes(@Nullable Output<SmbFileShareCacheAttributesArgs> cacheAttributes) {
@@ -490,7 +491,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheAttributes(@Nullable SmbFileShareCacheAttributesArgs cacheAttributes) {
-            this.cacheAttributes = Output.ofNullable(cacheAttributes);
+            this.cacheAttributes = Codegen.ofNullable(cacheAttributes);
             return this;
         }
         public Builder caseSensitivity(@Nullable Output<String> caseSensitivity) {
@@ -498,7 +499,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caseSensitivity(@Nullable String caseSensitivity) {
-            this.caseSensitivity = Output.ofNullable(caseSensitivity);
+            this.caseSensitivity = Codegen.ofNullable(caseSensitivity);
             return this;
         }
         public Builder defaultStorageClass(@Nullable Output<String> defaultStorageClass) {
@@ -506,7 +507,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultStorageClass(@Nullable String defaultStorageClass) {
-            this.defaultStorageClass = Output.ofNullable(defaultStorageClass);
+            this.defaultStorageClass = Codegen.ofNullable(defaultStorageClass);
             return this;
         }
         public Builder fileShareName(@Nullable Output<String> fileShareName) {
@@ -514,7 +515,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileShareName(@Nullable String fileShareName) {
-            this.fileShareName = Output.ofNullable(fileShareName);
+            this.fileShareName = Codegen.ofNullable(fileShareName);
             return this;
         }
         public Builder gatewayArn(Output<String> gatewayArn) {
@@ -530,7 +531,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder guessMimeTypeEnabled(@Nullable Boolean guessMimeTypeEnabled) {
-            this.guessMimeTypeEnabled = Output.ofNullable(guessMimeTypeEnabled);
+            this.guessMimeTypeEnabled = Codegen.ofNullable(guessMimeTypeEnabled);
             return this;
         }
         public Builder invalidUserLists(@Nullable Output<List<String>> invalidUserLists) {
@@ -538,7 +539,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invalidUserLists(@Nullable List<String> invalidUserLists) {
-            this.invalidUserLists = Output.ofNullable(invalidUserLists);
+            this.invalidUserLists = Codegen.ofNullable(invalidUserLists);
             return this;
         }
         public Builder invalidUserLists(String... invalidUserLists) {
@@ -549,7 +550,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
+            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -557,7 +558,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder locationArn(Output<String> locationArn) {
@@ -573,7 +574,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationPolicy(@Nullable String notificationPolicy) {
-            this.notificationPolicy = Output.ofNullable(notificationPolicy);
+            this.notificationPolicy = Codegen.ofNullable(notificationPolicy);
             return this;
         }
         public Builder objectAcl(@Nullable Output<String> objectAcl) {
@@ -581,7 +582,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectAcl(@Nullable String objectAcl) {
-            this.objectAcl = Output.ofNullable(objectAcl);
+            this.objectAcl = Codegen.ofNullable(objectAcl);
             return this;
         }
         public Builder oplocksEnabled(@Nullable Output<Boolean> oplocksEnabled) {
@@ -589,7 +590,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oplocksEnabled(@Nullable Boolean oplocksEnabled) {
-            this.oplocksEnabled = Output.ofNullable(oplocksEnabled);
+            this.oplocksEnabled = Codegen.ofNullable(oplocksEnabled);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -597,7 +598,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder requesterPays(@Nullable Output<Boolean> requesterPays) {
@@ -605,7 +606,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requesterPays(@Nullable Boolean requesterPays) {
-            this.requesterPays = Output.ofNullable(requesterPays);
+            this.requesterPays = Codegen.ofNullable(requesterPays);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -621,7 +622,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smbAclEnabled(@Nullable Boolean smbAclEnabled) {
-            this.smbAclEnabled = Output.ofNullable(smbAclEnabled);
+            this.smbAclEnabled = Codegen.ofNullable(smbAclEnabled);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -629,7 +630,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder validUserLists(@Nullable Output<List<String>> validUserLists) {
@@ -637,7 +638,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validUserLists(@Nullable List<String> validUserLists) {
-            this.validUserLists = Output.ofNullable(validUserLists);
+            this.validUserLists = Codegen.ofNullable(validUserLists);
             return this;
         }
         public Builder validUserLists(String... validUserLists) {
@@ -648,7 +649,7 @@ public final class SmbFileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcEndpointDnsName(@Nullable String vpcEndpointDnsName) {
-            this.vpcEndpointDnsName = Output.ofNullable(vpcEndpointDnsName);
+            this.vpcEndpointDnsName = Codegen.ofNullable(vpcEndpointDnsName);
             return this;
         }        public SmbFileShareArgs build() {
             return new SmbFileShareArgs(accessBasedEnumeration, adminUserLists, auditDestinationArn, authentication, bucketRegion, cacheAttributes, caseSensitivity, defaultStorageClass, fileShareName, gatewayArn, guessMimeTypeEnabled, invalidUserLists, kmsEncrypted, kmsKeyArn, locationArn, notificationPolicy, objectAcl, oplocksEnabled, readOnly, requesterPays, roleArn, smbAclEnabled, tags, validUserLists, vpcEndpointDnsName);

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.machinelearning.inputs.OutputPortArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +35,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,InputPortArgs>> inputPorts;
 
     public Output<Map<String,InputPortArgs>> getInputPorts() {
-        return this.inputPorts == null ? Output.empty() : this.inputPorts;
+        return this.inputPorts == null ? Codegen.empty() : this.inputPorts;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,OutputPortArgs>> outputPorts;
 
     public Output<Map<String,OutputPortArgs>> getOutputPorts() {
-        return this.outputPorts == null ? Output.empty() : this.outputPorts;
+        return this.outputPorts == null ? Codegen.empty() : this.outputPorts;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
     public Output<List<ModuleAssetParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -134,14 +135,14 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetItemArgs() {
-        this.id = Output.empty();
-        this.inputPorts = Output.empty();
-        this.locationInfo = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.outputPorts = Output.empty();
-        this.parameters = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.inputPorts = Codegen.empty();
+        this.locationInfo = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputPorts = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder inputPorts(@Nullable Output<Map<String,InputPortArgs>> inputPorts) {
@@ -191,7 +192,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputPorts(@Nullable Map<String,InputPortArgs> inputPorts) {
-            this.inputPorts = Output.ofNullable(inputPorts);
+            this.inputPorts = Codegen.ofNullable(inputPorts);
             return this;
         }
         public Builder locationInfo(Output<BlobLocationArgs> locationInfo) {
@@ -207,7 +208,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -223,7 +224,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputPorts(@Nullable Map<String,OutputPortArgs> outputPorts) {
-            this.outputPorts = Output.ofNullable(outputPorts);
+            this.outputPorts = Codegen.ofNullable(outputPorts);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
@@ -231,7 +232,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ModuleAssetParameterArgs... parameters) {

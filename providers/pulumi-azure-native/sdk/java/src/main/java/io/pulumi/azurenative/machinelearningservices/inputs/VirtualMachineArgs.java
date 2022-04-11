@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachinePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> computeLocation;
 
     public Output<String> getComputeLocation() {
-        return this.computeLocation == null ? Output.empty() : this.computeLocation;
+        return this.computeLocation == null ? Codegen.empty() : this.computeLocation;
     }
 
     /**
@@ -50,14 +51,14 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="properties")
       private final @Nullable Output<VirtualMachinePropertiesArgs> properties;
 
     public Output<VirtualMachinePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public VirtualMachineArgs(
@@ -85,11 +86,11 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualMachineArgs() {
-        this.computeLocation = Output.empty();
-        this.computeType = Output.empty();
-        this.description = Output.empty();
-        this.properties = Output.empty();
-        this.resourceId = Output.empty();
+        this.computeLocation = Codegen.empty();
+        this.computeType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computeLocation(@Nullable String computeLocation) {
-            this.computeLocation = Output.ofNullable(computeLocation);
+            this.computeLocation = Codegen.ofNullable(computeLocation);
             return this;
         }
         public Builder computeType(Output<String> computeType) {
@@ -141,7 +142,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder properties(@Nullable Output<VirtualMachinePropertiesArgs> properties) {
@@ -149,7 +150,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable VirtualMachinePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -157,7 +158,7 @@ public final class VirtualMachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public VirtualMachineArgs build() {
             return new VirtualMachineArgs(computeLocation, computeType, description, properties, resourceId);

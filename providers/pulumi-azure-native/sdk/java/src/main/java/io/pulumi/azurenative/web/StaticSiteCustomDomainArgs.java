@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> validationMethod;
 
     public Output<String> getValidationMethod() {
-        return this.validationMethod == null ? Output.empty() : this.validationMethod;
+        return this.validationMethod == null ? Codegen.empty() : this.validationMethod;
     }
 
     public StaticSiteCustomDomainArgs(
@@ -79,15 +80,15 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
         this.kind = kind;
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.validationMethod = validationMethod == null ? Output.ofNullable("cname-delegation") : validationMethod;
+        this.validationMethod = validationMethod == null ? Codegen.ofNullable("cname-delegation") : validationMethod;
     }
 
     private StaticSiteCustomDomainArgs() {
-        this.domainName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.validationMethod = Output.empty();
+        this.domainName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.validationMethod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -131,7 +132,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -155,7 +156,7 @@ public final class StaticSiteCustomDomainArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder validationMethod(@Nullable String validationMethod) {
-            this.validationMethod = Output.ofNullable(validationMethod);
+            this.validationMethod = Codegen.ofNullable(validationMethod);
             return this;
         }        public StaticSiteCustomDomainArgs build() {
             return new StaticSiteCustomDomainArgs(domainName, kind, name, resourceGroupName, validationMethod);

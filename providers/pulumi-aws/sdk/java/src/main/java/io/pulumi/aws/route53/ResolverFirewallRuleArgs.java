@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> blockOverrideDnsType;
 
     public Output<String> getBlockOverrideDnsType() {
-        return this.blockOverrideDnsType == null ? Output.empty() : this.blockOverrideDnsType;
+        return this.blockOverrideDnsType == null ? Codegen.empty() : this.blockOverrideDnsType;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> blockOverrideDomain;
 
     public Output<String> getBlockOverrideDomain() {
-        return this.blockOverrideDomain == null ? Output.empty() : this.blockOverrideDomain;
+        return this.blockOverrideDomain == null ? Codegen.empty() : this.blockOverrideDomain;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> blockOverrideTtl;
 
     public Output<Integer> getBlockOverrideTtl() {
-        return this.blockOverrideTtl == null ? Output.empty() : this.blockOverrideTtl;
+        return this.blockOverrideTtl == null ? Codegen.empty() : this.blockOverrideTtl;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> blockResponse;
 
     public Output<String> getBlockResponse() {
-        return this.blockResponse == null ? Output.empty() : this.blockResponse;
+        return this.blockResponse == null ? Codegen.empty() : this.blockResponse;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -136,15 +137,15 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
     }
 
     private ResolverFirewallRuleArgs() {
-        this.action = Output.empty();
-        this.blockOverrideDnsType = Output.empty();
-        this.blockOverrideDomain = Output.empty();
-        this.blockOverrideTtl = Output.empty();
-        this.blockResponse = Output.empty();
-        this.firewallDomainListId = Output.empty();
-        this.firewallRuleGroupId = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
+        this.action = Codegen.empty();
+        this.blockOverrideDnsType = Codegen.empty();
+        this.blockOverrideDomain = Codegen.empty();
+        this.blockOverrideTtl = Codegen.empty();
+        this.blockResponse = Codegen.empty();
+        this.firewallDomainListId = Codegen.empty();
+        this.firewallRuleGroupId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder blockOverrideDnsType(@Nullable String blockOverrideDnsType) {
-            this.blockOverrideDnsType = Output.ofNullable(blockOverrideDnsType);
+            this.blockOverrideDnsType = Codegen.ofNullable(blockOverrideDnsType);
             return this;
         }
         public Builder blockOverrideDomain(@Nullable Output<String> blockOverrideDomain) {
@@ -204,7 +205,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder blockOverrideDomain(@Nullable String blockOverrideDomain) {
-            this.blockOverrideDomain = Output.ofNullable(blockOverrideDomain);
+            this.blockOverrideDomain = Codegen.ofNullable(blockOverrideDomain);
             return this;
         }
         public Builder blockOverrideTtl(@Nullable Output<Integer> blockOverrideTtl) {
@@ -212,7 +213,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder blockOverrideTtl(@Nullable Integer blockOverrideTtl) {
-            this.blockOverrideTtl = Output.ofNullable(blockOverrideTtl);
+            this.blockOverrideTtl = Codegen.ofNullable(blockOverrideTtl);
             return this;
         }
         public Builder blockResponse(@Nullable Output<String> blockResponse) {
@@ -220,7 +221,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder blockResponse(@Nullable String blockResponse) {
-            this.blockResponse = Output.ofNullable(blockResponse);
+            this.blockResponse = Codegen.ofNullable(blockResponse);
             return this;
         }
         public Builder firewallDomainListId(Output<String> firewallDomainListId) {
@@ -244,7 +245,7 @@ public final class ResolverFirewallRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(Output<Integer> priority) {

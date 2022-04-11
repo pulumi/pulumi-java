@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +22,7 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
       private final @Nullable Output<Boolean> crawlAttachments;
 
     public Output<Boolean> getCrawlAttachments() {
-        return this.crawlAttachments == null ? Output.empty() : this.crawlAttachments;
+        return this.crawlAttachments == null ? Codegen.empty() : this.crawlAttachments;
     }
 
     @Import(name="documentDataFieldName", required=true)
@@ -35,28 +36,28 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
       private final @Nullable Output<String> documentTitleFieldName;
 
     public Output<String> getDocumentTitleFieldName() {
-        return this.documentTitleFieldName == null ? Output.empty() : this.documentTitleFieldName;
+        return this.documentTitleFieldName == null ? Codegen.empty() : this.documentTitleFieldName;
     }
 
     @Import(name="excludeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> excludeAttachmentFilePatterns;
 
     public Output<List<String>> getExcludeAttachmentFilePatterns() {
-        return this.excludeAttachmentFilePatterns == null ? Output.empty() : this.excludeAttachmentFilePatterns;
+        return this.excludeAttachmentFilePatterns == null ? Codegen.empty() : this.excludeAttachmentFilePatterns;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
+        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     @Import(name="includeAttachmentFilePatterns")
       private final @Nullable Output<List<String>> includeAttachmentFilePatterns;
 
     public Output<List<String>> getIncludeAttachmentFilePatterns() {
-        return this.includeAttachmentFilePatterns == null ? Output.empty() : this.includeAttachmentFilePatterns;
+        return this.includeAttachmentFilePatterns == null ? Codegen.empty() : this.includeAttachmentFilePatterns;
     }
 
     public DataSourceServiceNowServiceCatalogConfigurationArgs(
@@ -75,12 +76,12 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
     }
 
     private DataSourceServiceNowServiceCatalogConfigurationArgs() {
-        this.crawlAttachments = Output.empty();
-        this.documentDataFieldName = Output.empty();
-        this.documentTitleFieldName = Output.empty();
-        this.excludeAttachmentFilePatterns = Output.empty();
-        this.fieldMappings = Output.empty();
-        this.includeAttachmentFilePatterns = Output.empty();
+        this.crawlAttachments = Codegen.empty();
+        this.documentDataFieldName = Codegen.empty();
+        this.documentTitleFieldName = Codegen.empty();
+        this.excludeAttachmentFilePatterns = Codegen.empty();
+        this.fieldMappings = Codegen.empty();
+        this.includeAttachmentFilePatterns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
             return this;
         }
         public Builder crawlAttachments(@Nullable Boolean crawlAttachments) {
-            this.crawlAttachments = Output.ofNullable(crawlAttachments);
+            this.crawlAttachments = Codegen.ofNullable(crawlAttachments);
             return this;
         }
         public Builder documentDataFieldName(Output<String> documentDataFieldName) {
@@ -134,7 +135,7 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
             return this;
         }
         public Builder documentTitleFieldName(@Nullable String documentTitleFieldName) {
-            this.documentTitleFieldName = Output.ofNullable(documentTitleFieldName);
+            this.documentTitleFieldName = Codegen.ofNullable(documentTitleFieldName);
             return this;
         }
         public Builder excludeAttachmentFilePatterns(@Nullable Output<List<String>> excludeAttachmentFilePatterns) {
@@ -142,7 +143,7 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
             return this;
         }
         public Builder excludeAttachmentFilePatterns(@Nullable List<String> excludeAttachmentFilePatterns) {
-            this.excludeAttachmentFilePatterns = Output.ofNullable(excludeAttachmentFilePatterns);
+            this.excludeAttachmentFilePatterns = Codegen.ofNullable(excludeAttachmentFilePatterns);
             return this;
         }
         public Builder excludeAttachmentFilePatterns(String... excludeAttachmentFilePatterns) {
@@ -153,7 +154,7 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
             return this;
         }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.ofNullable(fieldMappings);
+            this.fieldMappings = Codegen.ofNullable(fieldMappings);
             return this;
         }
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {
@@ -164,7 +165,7 @@ public final class DataSourceServiceNowServiceCatalogConfigurationArgs extends i
             return this;
         }
         public Builder includeAttachmentFilePatterns(@Nullable List<String> includeAttachmentFilePatterns) {
-            this.includeAttachmentFilePatterns = Output.ofNullable(includeAttachmentFilePatterns);
+            this.includeAttachmentFilePatterns = Codegen.ofNullable(includeAttachmentFilePatterns);
             return this;
         }
         public Builder includeAttachmentFilePatterns(String... includeAttachmentFilePatterns) {

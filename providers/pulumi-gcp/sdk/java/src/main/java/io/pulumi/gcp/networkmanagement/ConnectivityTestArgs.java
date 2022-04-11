@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkmanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestDestinationArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestSourceArgs;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> relatedProjects;
 
     public Output<List<String>> getRelatedProjects() {
-        return this.relatedProjects == null ? Output.empty() : this.relatedProjects;
+        return this.relatedProjects == null ? Codegen.empty() : this.relatedProjects;
     }
 
     /**
@@ -162,14 +163,14 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConnectivityTestArgs() {
-        this.description = Output.empty();
-        this.destination = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.protocol = Output.empty();
-        this.relatedProjects = Output.empty();
-        this.source = Output.empty();
+        this.description = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.relatedProjects = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destination(Output<ConnectivityTestDestinationArgs> destination) {
@@ -227,7 +228,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -235,7 +236,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -243,7 +244,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -251,7 +252,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder relatedProjects(@Nullable Output<List<String>> relatedProjects) {
@@ -259,7 +260,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder relatedProjects(@Nullable List<String> relatedProjects) {
-            this.relatedProjects = Output.ofNullable(relatedProjects);
+            this.relatedProjects = Codegen.ofNullable(relatedProjects);
             return this;
         }
         public Builder relatedProjects(String... relatedProjects) {

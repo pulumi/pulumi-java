@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> targetPrefix;
 
     public Output<String> getTargetPrefix() {
-        return this.targetPrefix == null ? Output.empty() : this.targetPrefix;
+        return this.targetPrefix == null ? Codegen.empty() : this.targetPrefix;
     }
 
     public BucketLoggingGetArgs(
@@ -44,8 +45,8 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketLoggingGetArgs() {
-        this.targetBucket = Output.empty();
-        this.targetPrefix = Output.empty();
+        this.targetBucket = Codegen.empty();
+        this.targetPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class BucketLoggingGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder targetPrefix(@Nullable String targetPrefix) {
-            this.targetPrefix = Output.ofNullable(targetPrefix);
+            this.targetPrefix = Codegen.ofNullable(targetPrefix);
             return this;
         }        public BucketLoggingGetArgs build() {
             return new BucketLoggingGetArgs(targetBucket, targetPrefix);

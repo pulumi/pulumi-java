@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.TagKeyArgs;
 import java.lang.String;
@@ -152,7 +153,7 @@ public class TagKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagKey(String name, TagKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudresourcemanager/v3:TagKey", name, args == null ? TagKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudresourcemanager/v3:TagKey", name, args == null ? TagKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

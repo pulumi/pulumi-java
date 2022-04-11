@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -75,10 +76,10 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RecurrentScheduleArgs() {
-        this.days = Output.empty();
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.timeZone = Output.empty();
+        this.days = Codegen.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {

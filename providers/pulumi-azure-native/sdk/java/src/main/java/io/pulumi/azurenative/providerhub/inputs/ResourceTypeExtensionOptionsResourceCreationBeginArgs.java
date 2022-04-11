@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.ExtensionOptionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +22,14 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
       private final @Nullable Output<List<Either<String,ExtensionOptionType>>> request;
 
     public Output<List<Either<String,ExtensionOptionType>>> getRequest() {
-        return this.request == null ? Output.empty() : this.request;
+        return this.request == null ? Codegen.empty() : this.request;
     }
 
     @Import(name="response")
       private final @Nullable Output<List<Either<String,ExtensionOptionType>>> response;
 
     public Output<List<Either<String,ExtensionOptionType>>> getResponse() {
-        return this.response == null ? Output.empty() : this.response;
+        return this.response == null ? Codegen.empty() : this.response;
     }
 
     public ResourceTypeExtensionOptionsResourceCreationBeginArgs(
@@ -39,8 +40,8 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
     }
 
     private ResourceTypeExtensionOptionsResourceCreationBeginArgs() {
-        this.request = Output.empty();
-        this.response = Output.empty();
+        this.request = Codegen.empty();
+        this.response = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -70,7 +71,7 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
             return this;
         }
         public Builder request(@Nullable List<Either<String,ExtensionOptionType>> request) {
-            this.request = Output.ofNullable(request);
+            this.request = Codegen.ofNullable(request);
             return this;
         }
         public Builder request(Either<String,ExtensionOptionType>... request) {
@@ -81,7 +82,7 @@ public final class ResourceTypeExtensionOptionsResourceCreationBeginArgs extends
             return this;
         }
         public Builder response(@Nullable List<Either<String,ExtensionOptionType>> response) {
-            this.response = Output.ofNullable(response);
+            this.response = Codegen.ofNullable(response);
             return this;
         }
         public Builder response(Either<String,ExtensionOptionType>... response) {

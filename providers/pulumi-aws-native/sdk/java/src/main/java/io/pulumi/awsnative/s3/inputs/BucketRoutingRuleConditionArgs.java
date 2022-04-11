@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> httpErrorCodeReturnedEquals;
 
     public Output<String> getHttpErrorCodeReturnedEquals() {
-        return this.httpErrorCodeReturnedEquals == null ? Output.empty() : this.httpErrorCodeReturnedEquals;
+        return this.httpErrorCodeReturnedEquals == null ? Codegen.empty() : this.httpErrorCodeReturnedEquals;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> keyPrefixEquals;
 
     public Output<String> getKeyPrefixEquals() {
-        return this.keyPrefixEquals == null ? Output.empty() : this.keyPrefixEquals;
+        return this.keyPrefixEquals == null ? Codegen.empty() : this.keyPrefixEquals;
     }
 
     public BucketRoutingRuleConditionArgs(
@@ -48,8 +49,8 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
     }
 
     private BucketRoutingRuleConditionArgs() {
-        this.httpErrorCodeReturnedEquals = Output.empty();
-        this.keyPrefixEquals = Output.empty();
+        this.httpErrorCodeReturnedEquals = Codegen.empty();
+        this.keyPrefixEquals = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder httpErrorCodeReturnedEquals(@Nullable String httpErrorCodeReturnedEquals) {
-            this.httpErrorCodeReturnedEquals = Output.ofNullable(httpErrorCodeReturnedEquals);
+            this.httpErrorCodeReturnedEquals = Codegen.ofNullable(httpErrorCodeReturnedEquals);
             return this;
         }
         public Builder keyPrefixEquals(@Nullable Output<String> keyPrefixEquals) {
@@ -87,7 +88,7 @@ public final class BucketRoutingRuleConditionArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder keyPrefixEquals(@Nullable String keyPrefixEquals) {
-            this.keyPrefixEquals = Output.ofNullable(keyPrefixEquals);
+            this.keyPrefixEquals = Codegen.ofNullable(keyPrefixEquals);
             return this;
         }        public BucketRoutingRuleConditionArgs build() {
             return new BucketRoutingRuleConditionArgs(httpErrorCodeReturnedEquals, keyPrefixEquals);

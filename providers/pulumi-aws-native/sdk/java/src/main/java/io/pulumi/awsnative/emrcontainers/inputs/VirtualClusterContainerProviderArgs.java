@@ -6,6 +6,7 @@ package io.pulumi.awsnative.emrcontainers.inputs;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -53,9 +54,9 @@ public final class VirtualClusterContainerProviderArgs extends io.pulumi.resourc
     }
 
     private VirtualClusterContainerProviderArgs() {
-        this.id = Output.empty();
-        this.info = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.info = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

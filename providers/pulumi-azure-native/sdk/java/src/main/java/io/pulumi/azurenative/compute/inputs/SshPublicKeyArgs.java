@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyData;
 
     public Output<String> getKeyData() {
-        return this.keyData == null ? Output.empty() : this.keyData;
+        return this.keyData == null ? Codegen.empty() : this.keyData;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public SshPublicKeyArgs(
@@ -48,8 +49,8 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshPublicKeyArgs() {
-        this.keyData = Output.empty();
-        this.path = Output.empty();
+        this.keyData = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyData(@Nullable String keyData) {
-            this.keyData = Output.ofNullable(keyData);
+            this.keyData = Codegen.ofNullable(keyData);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -87,7 +88,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(keyData, path);

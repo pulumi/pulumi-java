@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public QueueAppEngineRoutingOverrideArgs(
@@ -74,10 +75,10 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
     }
 
     private QueueAppEngineRoutingOverrideArgs() {
-        this.host = Output.empty();
-        this.instance = Output.empty();
-        this.service = Output.empty();
-        this.version = Output.empty();
+        this.host = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.service = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -119,7 +120,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -127,7 +128,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -135,7 +136,7 @@ public final class QueueAppEngineRoutingOverrideArgs extends io.pulumi.resources
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public QueueAppEngineRoutingOverrideArgs build() {
             return new QueueAppEngineRoutingOverrideArgs(host, instance, service, version);

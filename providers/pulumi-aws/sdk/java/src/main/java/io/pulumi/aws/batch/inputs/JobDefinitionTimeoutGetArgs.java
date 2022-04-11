@@ -5,6 +5,7 @@ package io.pulumi.aws.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> attemptDurationSeconds;
 
     public Output<Integer> getAttemptDurationSeconds() {
-        return this.attemptDurationSeconds == null ? Output.empty() : this.attemptDurationSeconds;
+        return this.attemptDurationSeconds == null ? Codegen.empty() : this.attemptDurationSeconds;
     }
 
     public JobDefinitionTimeoutGetArgs(@Nullable Output<Integer> attemptDurationSeconds) {
@@ -30,7 +31,7 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
     }
 
     private JobDefinitionTimeoutGetArgs() {
-        this.attemptDurationSeconds = Output.empty();
+        this.attemptDurationSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class JobDefinitionTimeoutGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder attemptDurationSeconds(@Nullable Integer attemptDurationSeconds) {
-            this.attemptDurationSeconds = Output.ofNullable(attemptDurationSeconds);
+            this.attemptDurationSeconds = Codegen.ofNullable(attemptDurationSeconds);
             return this;
         }        public JobDefinitionTimeoutGetArgs build() {
             return new JobDefinitionTimeoutGetArgs(attemptDurationSeconds);

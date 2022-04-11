@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class InstanceAccessControlAttributeConfigurationAccessControlAttri
     }
 
     private InstanceAccessControlAttributeConfigurationAccessControlAttributeValueArgs() {
-        this.source = Output.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {

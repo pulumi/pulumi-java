@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
       private final @Nullable Output<String> nodeGroupId;
 
     public Output<String> getNodeGroupId() {
-        return this.nodeGroupId == null ? Output.empty() : this.nodeGroupId;
+        return this.nodeGroupId == null ? Codegen.empty() : this.nodeGroupId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
       private final @Nullable Output<List<String>> preferredAvailabilityZones;
 
     public Output<List<String>> getPreferredAvailabilityZones() {
-        return this.preferredAvailabilityZones == null ? Output.empty() : this.preferredAvailabilityZones;
+        return this.preferredAvailabilityZones == null ? Codegen.empty() : this.preferredAvailabilityZones;
     }
 
     public GlobalReplicationGroupReshardingConfigurationArgs(
@@ -45,8 +46,8 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
     }
 
     private GlobalReplicationGroupReshardingConfigurationArgs() {
-        this.nodeGroupId = Output.empty();
-        this.preferredAvailabilityZones = Output.empty();
+        this.nodeGroupId = Codegen.empty();
+        this.preferredAvailabilityZones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
             return this;
         }
         public Builder nodeGroupId(@Nullable String nodeGroupId) {
-            this.nodeGroupId = Output.ofNullable(nodeGroupId);
+            this.nodeGroupId = Codegen.ofNullable(nodeGroupId);
             return this;
         }
         public Builder preferredAvailabilityZones(@Nullable Output<List<String>> preferredAvailabilityZones) {
@@ -84,7 +85,7 @@ public final class GlobalReplicationGroupReshardingConfigurationArgs extends io.
             return this;
         }
         public Builder preferredAvailabilityZones(@Nullable List<String> preferredAvailabilityZones) {
-            this.preferredAvailabilityZones = Output.ofNullable(preferredAvailabilityZones);
+            this.preferredAvailabilityZones = Codegen.ofNullable(preferredAvailabilityZones);
             return this;
         }
         public Builder preferredAvailabilityZones(String... preferredAvailabilityZones) {

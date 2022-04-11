@@ -6,6 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.ResourceDataSyncS3DestinationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination;
 
     public Output<ResourceDataSyncS3DestinationGetArgs> getS3Destination() {
-        return this.s3Destination == null ? Output.empty() : this.s3Destination;
+        return this.s3Destination == null ? Codegen.empty() : this.s3Destination;
     }
 
     public ResourceDataSyncState(
@@ -45,8 +46,8 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
     }
 
     private ResourceDataSyncState() {
-        this.name = Output.empty();
-        this.s3Destination = Output.empty();
+        this.name = Codegen.empty();
+        this.s3Destination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder s3Destination(@Nullable Output<ResourceDataSyncS3DestinationGetArgs> s3Destination) {
@@ -84,7 +85,7 @@ public final class ResourceDataSyncState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder s3Destination(@Nullable ResourceDataSyncS3DestinationGetArgs s3Destination) {
-            this.s3Destination = Output.ofNullable(s3Destination);
+            this.s3Destination = Codegen.ofNullable(s3Destination);
             return this;
         }        public ResourceDataSyncState build() {
             return new ResourceDataSyncState(name, s3Destination);

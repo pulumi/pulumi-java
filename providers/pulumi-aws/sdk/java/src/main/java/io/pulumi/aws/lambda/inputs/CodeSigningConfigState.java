@@ -7,6 +7,7 @@ import io.pulumi.aws.lambda.inputs.CodeSigningConfigAllowedPublishersGetArgs;
 import io.pulumi.aws.lambda.inputs.CodeSigningConfigPoliciesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CodeSigningConfigAllowedPublishersGetArgs> allowedPublishers;
 
     public Output<CodeSigningConfigAllowedPublishersGetArgs> getAllowedPublishers() {
-        return this.allowedPublishers == null ? Output.empty() : this.allowedPublishers;
+        return this.allowedPublishers == null ? Codegen.empty() : this.allowedPublishers;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> configId;
 
     public Output<String> getConfigId() {
-        return this.configId == null ? Output.empty() : this.configId;
+        return this.configId == null ? Codegen.empty() : this.configId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> lastModified;
 
     public Output<String> getLastModified() {
-        return this.lastModified == null ? Output.empty() : this.lastModified;
+        return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CodeSigningConfigPoliciesGetArgs> policies;
 
     public Output<CodeSigningConfigPoliciesGetArgs> getPolicies() {
-        return this.policies == null ? Output.empty() : this.policies;
+        return this.policies == null ? Codegen.empty() : this.policies;
     }
 
     public CodeSigningConfigState(
@@ -98,12 +99,12 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
     }
 
     private CodeSigningConfigState() {
-        this.allowedPublishers = Output.empty();
-        this.arn = Output.empty();
-        this.configId = Output.empty();
-        this.description = Output.empty();
-        this.lastModified = Output.empty();
-        this.policies = Output.empty();
+        this.allowedPublishers = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.configId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.lastModified = Codegen.empty();
+        this.policies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder allowedPublishers(@Nullable CodeSigningConfigAllowedPublishersGetArgs allowedPublishers) {
-            this.allowedPublishers = Output.ofNullable(allowedPublishers);
+            this.allowedPublishers = Codegen.ofNullable(allowedPublishers);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -149,7 +150,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder configId(@Nullable Output<String> configId) {
@@ -157,7 +158,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder configId(@Nullable String configId) {
-            this.configId = Output.ofNullable(configId);
+            this.configId = Codegen.ofNullable(configId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -165,7 +166,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder lastModified(@Nullable Output<String> lastModified) {
@@ -173,7 +174,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Output.ofNullable(lastModified);
+            this.lastModified = Codegen.ofNullable(lastModified);
             return this;
         }
         public Builder policies(@Nullable Output<CodeSigningConfigPoliciesGetArgs> policies) {
@@ -181,7 +182,7 @@ public final class CodeSigningConfigState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policies(@Nullable CodeSigningConfigPoliciesGetArgs policies) {
-            this.policies = Output.ofNullable(policies);
+            this.policies = Codegen.ofNullable(policies);
             return this;
         }        public CodeSigningConfigState build() {
             return new CodeSigningConfigState(allowedPublishers, arn, configId, description, lastModified, policies);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.connect.inputs.UserPhoneConfigArgs;
 import io.pulumi.awsnative.connect.inputs.UserTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> directoryUserId;
 
     public Output<String> getDirectoryUserId() {
-        return this.directoryUserId == null ? Output.empty() : this.directoryUserId;
+        return this.directoryUserId == null ? Codegen.empty() : this.directoryUserId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hierarchyGroupArn;
 
     public Output<String> getHierarchyGroupArn() {
-        return this.hierarchyGroupArn == null ? Output.empty() : this.hierarchyGroupArn;
+        return this.hierarchyGroupArn == null ? Codegen.empty() : this.hierarchyGroupArn;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UserIdentityInfoArgs> identityInfo;
 
     public Output<UserIdentityInfoArgs> getIdentityInfo() {
-        return this.identityInfo == null ? Output.empty() : this.identityInfo;
+        return this.identityInfo == null ? Codegen.empty() : this.identityInfo;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserTagArgs>> tags;
 
     public Output<List<UserTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -152,16 +153,16 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.directoryUserId = Output.empty();
-        this.hierarchyGroupArn = Output.empty();
-        this.identityInfo = Output.empty();
-        this.instanceArn = Output.empty();
-        this.password = Output.empty();
-        this.phoneConfig = Output.empty();
-        this.routingProfileArn = Output.empty();
-        this.securityProfileArns = Output.empty();
-        this.tags = Output.empty();
-        this.username = Output.empty();
+        this.directoryUserId = Codegen.empty();
+        this.hierarchyGroupArn = Codegen.empty();
+        this.identityInfo = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.password = Codegen.empty();
+        this.phoneConfig = Codegen.empty();
+        this.routingProfileArn = Codegen.empty();
+        this.securityProfileArns = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryUserId(@Nullable String directoryUserId) {
-            this.directoryUserId = Output.ofNullable(directoryUserId);
+            this.directoryUserId = Codegen.ofNullable(directoryUserId);
             return this;
         }
         public Builder hierarchyGroupArn(@Nullable Output<String> hierarchyGroupArn) {
@@ -215,7 +216,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hierarchyGroupArn(@Nullable String hierarchyGroupArn) {
-            this.hierarchyGroupArn = Output.ofNullable(hierarchyGroupArn);
+            this.hierarchyGroupArn = Codegen.ofNullable(hierarchyGroupArn);
             return this;
         }
         public Builder identityInfo(@Nullable Output<UserIdentityInfoArgs> identityInfo) {
@@ -223,7 +224,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identityInfo(@Nullable UserIdentityInfoArgs identityInfo) {
-            this.identityInfo = Output.ofNullable(identityInfo);
+            this.identityInfo = Codegen.ofNullable(identityInfo);
             return this;
         }
         public Builder instanceArn(Output<String> instanceArn) {
@@ -239,7 +240,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder phoneConfig(Output<UserPhoneConfigArgs> phoneConfig) {
@@ -274,7 +275,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<UserTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(UserTagArgs... tags) {

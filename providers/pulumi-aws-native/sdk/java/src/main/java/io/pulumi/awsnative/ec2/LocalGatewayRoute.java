@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.LocalGatewayRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -110,7 +111,7 @@ public class LocalGatewayRoute extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocalGatewayRoute(String name, LocalGatewayRouteArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:LocalGatewayRoute", name, args == null ? LocalGatewayRouteArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:LocalGatewayRoute", name, args == null ? LocalGatewayRouteArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocalGatewayRoute(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

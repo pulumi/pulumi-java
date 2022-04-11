@@ -14,6 +14,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -387,7 +388,7 @@ public class Machine extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Machine(String name, MachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:hybridcompute:Machine", name, args == null ? MachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:hybridcompute:Machine", name, args == null ? MachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Machine(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

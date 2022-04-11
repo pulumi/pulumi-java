@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> policyArn;
 
     public Output<String> getPolicyArn() {
-        return this.policyArn == null ? Output.empty() : this.policyArn;
+        return this.policyArn == null ? Codegen.empty() : this.policyArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public UserPolicyAttachmentState(
@@ -44,8 +45,8 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
     }
 
     private UserPolicyAttachmentState() {
-        this.policyArn = Output.empty();
-        this.user = Output.empty();
+        this.policyArn = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class UserPolicyAttachmentState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder policyArn(@Nullable String policyArn) {
-            this.policyArn = Output.ofNullable(policyArn);
+            this.policyArn = Codegen.ofNullable(policyArn);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyDailyCycleArgs;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyHourlyCycleArgs;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyWeeklyCycleArgs;
@@ -24,21 +25,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
       private final @Nullable Output<ResourcePolicyDailyCycleArgs> dailySchedule;
 
     public Output<ResourcePolicyDailyCycleArgs> getDailySchedule() {
-        return this.dailySchedule == null ? Output.empty() : this.dailySchedule;
+        return this.dailySchedule == null ? Codegen.empty() : this.dailySchedule;
     }
 
     @Import(name="hourlySchedule")
       private final @Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule;
 
     public Output<ResourcePolicyHourlyCycleArgs> getHourlySchedule() {
-        return this.hourlySchedule == null ? Output.empty() : this.hourlySchedule;
+        return this.hourlySchedule == null ? Codegen.empty() : this.hourlySchedule;
     }
 
     @Import(name="weeklySchedule")
       private final @Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
 
     public Output<ResourcePolicyWeeklyCycleArgs> getWeeklySchedule() {
-        return this.weeklySchedule == null ? Output.empty() : this.weeklySchedule;
+        return this.weeklySchedule == null ? Codegen.empty() : this.weeklySchedule;
     }
 
     public ResourcePolicySnapshotSchedulePolicyScheduleArgs(
@@ -51,9 +52,9 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleArgs() {
-        this.dailySchedule = Output.empty();
-        this.hourlySchedule = Output.empty();
-        this.weeklySchedule = Output.empty();
+        this.dailySchedule = Codegen.empty();
+        this.hourlySchedule = Codegen.empty();
+        this.weeklySchedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
             return this;
         }
         public Builder dailySchedule(@Nullable ResourcePolicyDailyCycleArgs dailySchedule) {
-            this.dailySchedule = Output.ofNullable(dailySchedule);
+            this.dailySchedule = Codegen.ofNullable(dailySchedule);
             return this;
         }
         public Builder hourlySchedule(@Nullable Output<ResourcePolicyHourlyCycleArgs> hourlySchedule) {
@@ -93,7 +94,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
             return this;
         }
         public Builder hourlySchedule(@Nullable ResourcePolicyHourlyCycleArgs hourlySchedule) {
-            this.hourlySchedule = Output.ofNullable(hourlySchedule);
+            this.hourlySchedule = Codegen.ofNullable(hourlySchedule);
             return this;
         }
         public Builder weeklySchedule(@Nullable Output<ResourcePolicyWeeklyCycleArgs> weeklySchedule) {
@@ -101,7 +102,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
             return this;
         }
         public Builder weeklySchedule(@Nullable ResourcePolicyWeeklyCycleArgs weeklySchedule) {
-            this.weeklySchedule = Output.ofNullable(weeklySchedule);
+            this.weeklySchedule = Codegen.ofNullable(weeklySchedule);
             return this;
         }        public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleArgs(dailySchedule, hourlySchedule, weeklySchedule);

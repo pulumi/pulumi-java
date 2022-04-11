@@ -5,6 +5,7 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     public BillingAccountBucketConfigArgs(
@@ -84,11 +85,11 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
     }
 
     private BillingAccountBucketConfigArgs() {
-        this.billingAccount = Output.empty();
-        this.bucketId = Output.empty();
-        this.description = Output.empty();
-        this.location = Output.empty();
-        this.retentionDays = Output.empty();
+        this.billingAccount = Codegen.empty();
+        this.bucketId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.location = Codegen.empty();
+        this.retentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -156,7 +157,7 @@ public final class BillingAccountBucketConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }        public BillingAccountBucketConfigArgs build() {
             return new BillingAccountBucketConfigArgs(billingAccount, bucketId, description, location, retentionDays);

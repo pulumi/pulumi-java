@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1.inputs.GoogleCloudHealthcareV1FhirBigQueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> bigqueryDestination;
 
     public Output<GoogleCloudHealthcareV1FhirBigQueryDestinationArgs> getBigqueryDestination() {
-        return this.bigqueryDestination == null ? Output.empty() : this.bigqueryDestination;
+        return this.bigqueryDestination == null ? Codegen.empty() : this.bigqueryDestination;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
+        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
     public StreamConfigArgs(
@@ -50,8 +51,8 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamConfigArgs() {
-        this.bigqueryDestination = Output.empty();
-        this.resourceTypes = Output.empty();
+        this.bigqueryDestination = Codegen.empty();
+        this.resourceTypes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bigqueryDestination(@Nullable GoogleCloudHealthcareV1FhirBigQueryDestinationArgs bigqueryDestination) {
-            this.bigqueryDestination = Output.ofNullable(bigqueryDestination);
+            this.bigqueryDestination = Codegen.ofNullable(bigqueryDestination);
             return this;
         }
         public Builder resourceTypes(@Nullable Output<List<String>> resourceTypes) {
@@ -89,7 +90,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Output.ofNullable(resourceTypes);
+            this.resourceTypes = Codegen.ofNullable(resourceTypes);
             return this;
         }
         public Builder resourceTypes(String... resourceTypes) {

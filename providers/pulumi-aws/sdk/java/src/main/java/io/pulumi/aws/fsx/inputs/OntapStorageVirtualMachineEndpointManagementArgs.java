@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class OntapStorageVirtualMachineEndpointManagementArgs extends io.p
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class OntapStorageVirtualMachineEndpointManagementArgs extends io.p
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     public OntapStorageVirtualMachineEndpointManagementArgs(
@@ -45,8 +46,8 @@ public final class OntapStorageVirtualMachineEndpointManagementArgs extends io.p
     }
 
     private OntapStorageVirtualMachineEndpointManagementArgs() {
-        this.dnsName = Output.empty();
-        this.ipAddresses = Output.empty();
+        this.dnsName = Codegen.empty();
+        this.ipAddresses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OntapStorageVirtualMachineEndpointManagementArgs extends io.p
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
@@ -84,7 +85,7 @@ public final class OntapStorageVirtualMachineEndpointManagementArgs extends io.p
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {

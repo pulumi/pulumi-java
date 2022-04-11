@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1VersionVariantsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
       private final @Nullable Output<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants;
 
     public Output<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> getVersionVariants() {
-        return this.versionVariants == null ? Output.empty() : this.versionVariants;
+        return this.versionVariants == null ? Codegen.empty() : this.versionVariants;
     }
 
     public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
     }
 
     private GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs() {
-        this.condition = Output.empty();
-        this.versionVariants = Output.empty();
+        this.condition = Codegen.empty();
+        this.versionVariants = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3beta1VersionVariantsArgs> versionVariants) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs extend
             return this;
         }
         public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3beta1VersionVariantsArgs versionVariants) {
-            this.versionVariants = Output.ofNullable(versionVariants);
+            this.versionVariants = Codegen.ofNullable(versionVariants);
             return this;
         }        public GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentDefinitionArgs(condition, versionVariants);

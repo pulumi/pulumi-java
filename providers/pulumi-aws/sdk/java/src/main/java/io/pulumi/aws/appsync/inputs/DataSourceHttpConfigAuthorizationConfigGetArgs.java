@@ -6,6 +6,7 @@ package io.pulumi.aws.appsync.inputs;
 import io.pulumi.aws.appsync.inputs.DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
       private final @Nullable Output<String> authorizationType;
 
     public Output<String> getAuthorizationType() {
-        return this.authorizationType == null ? Output.empty() : this.authorizationType;
+        return this.authorizationType == null ? Codegen.empty() : this.authorizationType;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
       private final @Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig;
 
     public Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> getAwsIamConfig() {
-        return this.awsIamConfig == null ? Output.empty() : this.awsIamConfig;
+        return this.awsIamConfig == null ? Codegen.empty() : this.awsIamConfig;
     }
 
     public DataSourceHttpConfigAuthorizationConfigGetArgs(
@@ -45,8 +46,8 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
     }
 
     private DataSourceHttpConfigAuthorizationConfigGetArgs() {
-        this.authorizationType = Output.empty();
-        this.awsIamConfig = Output.empty();
+        this.authorizationType = Codegen.empty();
+        this.awsIamConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
             return this;
         }
         public Builder authorizationType(@Nullable String authorizationType) {
-            this.authorizationType = Output.ofNullable(authorizationType);
+            this.authorizationType = Codegen.ofNullable(authorizationType);
             return this;
         }
         public Builder awsIamConfig(@Nullable Output<DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs> awsIamConfig) {
@@ -84,7 +85,7 @@ public final class DataSourceHttpConfigAuthorizationConfigGetArgs extends io.pul
             return this;
         }
         public Builder awsIamConfig(@Nullable DataSourceHttpConfigAuthorizationConfigAwsIamConfigGetArgs awsIamConfig) {
-            this.awsIamConfig = Output.ofNullable(awsIamConfig);
+            this.awsIamConfig = Codegen.ofNullable(awsIamConfig);
             return this;
         }        public DataSourceHttpConfigAuthorizationConfigGetArgs build() {
             return new DataSourceHttpConfigAuthorizationConfigGetArgs(authorizationType, awsIamConfig);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.enums.Action;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Action>> action;
 
     public Output<Either<String,Action>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPRuleArgs() {
-        this.action = Output.empty();
-        this.iPAddressOrRange = Output.empty();
+        this.action = Codegen.empty();
+        this.iPAddressOrRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class IPRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable Either<String,Action> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder iPAddressOrRange(Output<String> iPAddressOrRange) {

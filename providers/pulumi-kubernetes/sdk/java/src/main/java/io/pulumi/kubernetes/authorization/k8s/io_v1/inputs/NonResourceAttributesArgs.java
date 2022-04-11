@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> verb;
 
     public Output<String> getVerb() {
-        return this.verb == null ? Output.empty() : this.verb;
+        return this.verb == null ? Codegen.empty() : this.verb;
     }
 
     public NonResourceAttributesArgs(
@@ -48,8 +49,8 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
     }
 
     private NonResourceAttributesArgs() {
-        this.path = Output.empty();
-        this.verb = Output.empty();
+        this.path = Codegen.empty();
+        this.verb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder verb(@Nullable Output<String> verb) {
@@ -87,7 +88,7 @@ public final class NonResourceAttributesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder verb(@Nullable String verb) {
-            this.verb = Output.ofNullable(verb);
+            this.verb = Codegen.ofNullable(verb);
             return this;
         }        public NonResourceAttributesArgs build() {
             return new NonResourceAttributesArgs(path, verb);

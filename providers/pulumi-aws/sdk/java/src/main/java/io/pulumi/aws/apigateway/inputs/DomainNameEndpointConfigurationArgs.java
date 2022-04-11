@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class DomainNameEndpointConfigurationArgs extends io.pulumi.resourc
     }
 
     private DomainNameEndpointConfigurationArgs() {
-        this.types = Output.empty();
+        this.types = Codegen.empty();
     }
 
     public static Builder builder() {

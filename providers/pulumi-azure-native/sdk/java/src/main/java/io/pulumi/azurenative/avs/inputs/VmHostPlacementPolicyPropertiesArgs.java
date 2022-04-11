@@ -8,6 +8,7 @@ import io.pulumi.azurenative.avs.enums.PlacementPolicyState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +42,7 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<Either<String,PlacementPolicyState>> state;
 
     public Output<Either<String,PlacementPolicyState>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -105,12 +106,12 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
     }
 
     private VmHostPlacementPolicyPropertiesArgs() {
-        this.affinityType = Output.empty();
-        this.displayName = Output.empty();
-        this.hostMembers = Output.empty();
-        this.state = Output.empty();
-        this.type = Output.empty();
-        this.vmMembers = Output.empty();
+        this.affinityType = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.hostMembers = Codegen.empty();
+        this.state = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vmMembers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder hostMembers(Output<List<String>> hostMembers) {
@@ -175,7 +176,7 @@ public final class VmHostPlacementPolicyPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder state(@Nullable Either<String,PlacementPolicyState> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder type(Output<String> type) {

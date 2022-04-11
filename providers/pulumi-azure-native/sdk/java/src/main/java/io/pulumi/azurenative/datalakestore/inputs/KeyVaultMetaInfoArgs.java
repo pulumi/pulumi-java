@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class KeyVaultMetaInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KeyVaultMetaInfoArgs() {
-        this.encryptionKeyName = Output.empty();
-        this.encryptionKeyVersion = Output.empty();
-        this.keyVaultResourceId = Output.empty();
+        this.encryptionKeyName = Codegen.empty();
+        this.encryptionKeyVersion = Codegen.empty();
+        this.keyVaultResourceId = Codegen.empty();
     }
 
     public static Builder builder() {

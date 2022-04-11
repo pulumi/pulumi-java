@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectBucketConfigArgs;
 import io.pulumi.gcp.logging.inputs.ProjectBucketConfigState;
@@ -154,7 +155,7 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectBucketConfig(String name, ProjectBucketConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, args == null ? ProjectBucketConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, args == null ? ProjectBucketConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectBucketConfig(String name, Output<String> id, @Nullable ProjectBucketConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> internalIpOnly;
 
     public Output<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
+        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
     public Output<List<String>> getServiceAccountScopes() {
-        return this.serviceAccountScopes == null ? Output.empty() : this.serviceAccountScopes;
+        return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public ClusterClusterConfigGceClusterConfigArgs(
@@ -159,15 +160,15 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
     }
 
     private ClusterClusterConfigGceClusterConfigArgs() {
-        this.internalIpOnly = Output.empty();
-        this.metadata = Output.empty();
-        this.network = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceAccountScopes = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.subnetwork = Output.empty();
-        this.tags = Output.empty();
-        this.zone = Output.empty();
+        this.internalIpOnly = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.network = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceAccountScopes = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -211,7 +212,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Output.ofNullable(internalIpOnly);
+            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -219,7 +220,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -227,7 +228,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -235,7 +236,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
@@ -243,7 +244,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
+            this.serviceAccountScopes = Codegen.ofNullable(serviceAccountScopes);
             return this;
         }
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
@@ -254,7 +255,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable ClusterClusterConfigGceClusterConfigShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -262,7 +263,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -270,7 +271,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -281,7 +282,7 @@ public final class ClusterClusterConfigGceClusterConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public ClusterClusterConfigGceClusterConfigArgs build() {
             return new ClusterClusterConfigGceClusterConfigArgs(internalIpOnly, metadata, network, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetwork, tags, zone);

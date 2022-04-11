@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionDiskIamBindingArgs;
 import io.pulumi.gcp.compute.inputs.RegionDiskIamBindingState;
@@ -161,7 +162,7 @@ public class RegionDiskIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionDiskIamBinding(String name, RegionDiskIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionDiskIamBinding:RegionDiskIamBinding", name, args == null ? RegionDiskIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionDiskIamBinding:RegionDiskIamBinding", name, args == null ? RegionDiskIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionDiskIamBinding(String name, Output<String> id, @Nullable RegionDiskIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

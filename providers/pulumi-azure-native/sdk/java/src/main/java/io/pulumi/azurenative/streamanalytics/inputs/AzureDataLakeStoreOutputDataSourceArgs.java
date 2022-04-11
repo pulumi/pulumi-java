@@ -5,6 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> dateFormat;
 
     public Output<String> getDateFormat() {
-        return this.dateFormat == null ? Output.empty() : this.dateFormat;
+        return this.dateFormat == null ? Codegen.empty() : this.dateFormat;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> filePathPrefix;
 
     public Output<String> getFilePathPrefix() {
-        return this.filePathPrefix == null ? Output.empty() : this.filePathPrefix;
+        return this.filePathPrefix == null ? Codegen.empty() : this.filePathPrefix;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {
-        return this.refreshToken == null ? Output.empty() : this.refreshToken;
+        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> timeFormat;
 
     public Output<String> getTimeFormat() {
-        return this.timeFormat == null ? Output.empty() : this.timeFormat;
+        return this.timeFormat == null ? Codegen.empty() : this.timeFormat;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> tokenUserDisplayName;
 
     public Output<String> getTokenUserDisplayName() {
-        return this.tokenUserDisplayName == null ? Output.empty() : this.tokenUserDisplayName;
+        return this.tokenUserDisplayName == null ? Codegen.empty() : this.tokenUserDisplayName;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
       private final @Nullable Output<String> tokenUserPrincipalName;
 
     public Output<String> getTokenUserPrincipalName() {
-        return this.tokenUserPrincipalName == null ? Output.empty() : this.tokenUserPrincipalName;
+        return this.tokenUserPrincipalName == null ? Codegen.empty() : this.tokenUserPrincipalName;
     }
 
     /**
@@ -140,15 +141,15 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
     }
 
     private AzureDataLakeStoreOutputDataSourceArgs() {
-        this.accountName = Output.empty();
-        this.dateFormat = Output.empty();
-        this.filePathPrefix = Output.empty();
-        this.refreshToken = Output.empty();
-        this.tenantId = Output.empty();
-        this.timeFormat = Output.empty();
-        this.tokenUserDisplayName = Output.empty();
-        this.tokenUserPrincipalName = Output.empty();
-        this.type = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dateFormat = Codegen.empty();
+        this.filePathPrefix = Codegen.empty();
+        this.refreshToken = Codegen.empty();
+        this.tenantId = Codegen.empty();
+        this.timeFormat = Codegen.empty();
+        this.tokenUserDisplayName = Codegen.empty();
+        this.tokenUserPrincipalName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder dateFormat(@Nullable Output<String> dateFormat) {
@@ -200,7 +201,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder dateFormat(@Nullable String dateFormat) {
-            this.dateFormat = Output.ofNullable(dateFormat);
+            this.dateFormat = Codegen.ofNullable(dateFormat);
             return this;
         }
         public Builder filePathPrefix(@Nullable Output<String> filePathPrefix) {
@@ -208,7 +209,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder filePathPrefix(@Nullable String filePathPrefix) {
-            this.filePathPrefix = Output.ofNullable(filePathPrefix);
+            this.filePathPrefix = Codegen.ofNullable(filePathPrefix);
             return this;
         }
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
@@ -216,7 +217,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Output.ofNullable(refreshToken);
+            this.refreshToken = Codegen.ofNullable(refreshToken);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -224,7 +225,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }
         public Builder timeFormat(@Nullable Output<String> timeFormat) {
@@ -232,7 +233,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder timeFormat(@Nullable String timeFormat) {
-            this.timeFormat = Output.ofNullable(timeFormat);
+            this.timeFormat = Codegen.ofNullable(timeFormat);
             return this;
         }
         public Builder tokenUserDisplayName(@Nullable Output<String> tokenUserDisplayName) {
@@ -240,7 +241,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder tokenUserDisplayName(@Nullable String tokenUserDisplayName) {
-            this.tokenUserDisplayName = Output.ofNullable(tokenUserDisplayName);
+            this.tokenUserDisplayName = Codegen.ofNullable(tokenUserDisplayName);
             return this;
         }
         public Builder tokenUserPrincipalName(@Nullable Output<String> tokenUserPrincipalName) {
@@ -248,7 +249,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             return this;
         }
         public Builder tokenUserPrincipalName(@Nullable String tokenUserPrincipalName) {
-            this.tokenUserPrincipalName = Output.ofNullable(tokenUserPrincipalName);
+            this.tokenUserPrincipalName = Codegen.ofNullable(tokenUserPrincipalName);
             return this;
         }
         public Builder type(Output<String> type) {

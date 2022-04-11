@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> scanOnPush;
 
     public Output<Boolean> getScanOnPush() {
-        return this.scanOnPush == null ? Output.empty() : this.scanOnPush;
+        return this.scanOnPush == null ? Codegen.empty() : this.scanOnPush;
     }
 
     public RepositoryImageScanningConfigurationArgs(@Nullable Output<Boolean> scanOnPush) {
@@ -30,7 +31,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     }
 
     private RepositoryImageScanningConfigurationArgs() {
-        this.scanOnPush = Output.empty();
+        this.scanOnPush = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder scanOnPush(@Nullable Boolean scanOnPush) {
-            this.scanOnPush = Output.ofNullable(scanOnPush);
+            this.scanOnPush = Codegen.ofNullable(scanOnPush);
             return this;
         }        public RepositoryImageScanningConfigurationArgs build() {
             return new RepositoryImageScanningConfigurationArgs(scanOnPush);

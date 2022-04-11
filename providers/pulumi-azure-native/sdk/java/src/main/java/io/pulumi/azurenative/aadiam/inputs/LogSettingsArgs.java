@@ -8,6 +8,7 @@ import io.pulumi.azurenative.aadiam.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Category>> category;
 
     public Output<Either<String,Category>> getCategory() {
-        return this.category == null ? Output.empty() : this.category;
+        return this.category == null ? Codegen.empty() : this.category;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetentionPolicyArgs> retentionPolicy;
 
     public Output<RetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     public LogSettingsArgs(
@@ -65,9 +66,9 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogSettingsArgs() {
-        this.category = Output.empty();
-        this.enabled = Output.empty();
-        this.retentionPolicy = Output.empty();
+        this.category = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder category(@Nullable Either<String,Category> category) {
-            this.category = Output.ofNullable(category);
+            this.category = Codegen.ofNullable(category);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -115,7 +116,7 @@ public final class LogSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable RetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }        public LogSettingsArgs build() {
             return new LogSettingsArgs(category, enabled, retentionPolicy);

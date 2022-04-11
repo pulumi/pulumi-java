@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.KnownPerfCounterDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> counterSpecifiers;
 
     public Output<List<String>> getCounterSpecifiers() {
-        return this.counterSpecifiers == null ? Output.empty() : this.counterSpecifiers;
+        return this.counterSpecifiers == null ? Codegen.empty() : this.counterSpecifiers;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> samplingFrequencyInSeconds;
 
     public Output<Integer> getSamplingFrequencyInSeconds() {
-        return this.samplingFrequencyInSeconds == null ? Output.empty() : this.samplingFrequencyInSeconds;
+        return this.samplingFrequencyInSeconds == null ? Codegen.empty() : this.samplingFrequencyInSeconds;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Output.empty() : this.streams;
+        return this.streams == null ? Codegen.empty() : this.streams;
     }
 
     public PerfCounterDataSourceArgs(
@@ -83,10 +84,10 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
     }
 
     private PerfCounterDataSourceArgs() {
-        this.counterSpecifiers = Output.empty();
-        this.name = Output.empty();
-        this.samplingFrequencyInSeconds = Output.empty();
-        this.streams = Output.empty();
+        this.counterSpecifiers = Codegen.empty();
+        this.name = Codegen.empty();
+        this.samplingFrequencyInSeconds = Codegen.empty();
+        this.streams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder counterSpecifiers(@Nullable List<String> counterSpecifiers) {
-            this.counterSpecifiers = Output.ofNullable(counterSpecifiers);
+            this.counterSpecifiers = Codegen.ofNullable(counterSpecifiers);
             return this;
         }
         public Builder counterSpecifiers(String... counterSpecifiers) {
@@ -131,7 +132,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder samplingFrequencyInSeconds(@Nullable Output<Integer> samplingFrequencyInSeconds) {
@@ -139,7 +140,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder samplingFrequencyInSeconds(@Nullable Integer samplingFrequencyInSeconds) {
-            this.samplingFrequencyInSeconds = Output.ofNullable(samplingFrequencyInSeconds);
+            this.samplingFrequencyInSeconds = Codegen.ofNullable(samplingFrequencyInSeconds);
             return this;
         }
         public Builder streams(@Nullable Output<List<Either<String,KnownPerfCounterDataSourceStreams>>> streams) {
@@ -147,7 +148,7 @@ public final class PerfCounterDataSourceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder streams(@Nullable List<Either<String,KnownPerfCounterDataSourceStreams>> streams) {
-            this.streams = Output.ofNullable(streams);
+            this.streams = Codegen.ofNullable(streams);
             return this;
         }
         public Builder streams(Either<String,KnownPerfCounterDataSourceStreams>... streams) {

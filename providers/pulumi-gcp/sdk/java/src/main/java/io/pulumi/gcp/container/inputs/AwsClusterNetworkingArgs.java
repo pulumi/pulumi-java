@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class AwsClusterNetworkingArgs extends io.pulumi.resources.Resource
     }
 
     private AwsClusterNetworkingArgs() {
-        this.podAddressCidrBlocks = Output.empty();
-        this.serviceAddressCidrBlocks = Output.empty();
-        this.vpcId = Output.empty();
+        this.podAddressCidrBlocks = Codegen.empty();
+        this.serviceAddressCidrBlocks = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -11,6 +11,7 @@ import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -150,7 +151,7 @@ public class Integration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Integration(String name, IntegrationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:customerprofiles:Integration", name, args == null ? IntegrationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:customerprofiles:Integration", name, args == null ? IntegrationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Integration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

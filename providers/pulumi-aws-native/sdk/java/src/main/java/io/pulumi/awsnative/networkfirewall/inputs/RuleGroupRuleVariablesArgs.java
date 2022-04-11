@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Object> iPSets;
 
     public Output<Object> getIPSets() {
-        return this.iPSets == null ? Output.empty() : this.iPSets;
+        return this.iPSets == null ? Codegen.empty() : this.iPSets;
     }
 
     @Import(name="portSets")
       private final @Nullable Output<Object> portSets;
 
     public Output<Object> getPortSets() {
-        return this.portSets == null ? Output.empty() : this.portSets;
+        return this.portSets == null ? Codegen.empty() : this.portSets;
     }
 
     public RuleGroupRuleVariablesArgs(
@@ -36,8 +37,8 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
     }
 
     private RuleGroupRuleVariablesArgs() {
-        this.iPSets = Output.empty();
-        this.portSets = Output.empty();
+        this.iPSets = Codegen.empty();
+        this.portSets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder iPSets(@Nullable Object iPSets) {
-            this.iPSets = Output.ofNullable(iPSets);
+            this.iPSets = Codegen.ofNullable(iPSets);
             return this;
         }
         public Builder portSets(@Nullable Output<Object> portSets) {
@@ -75,7 +76,7 @@ public final class RuleGroupRuleVariablesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder portSets(@Nullable Object portSets) {
-            this.portSets = Output.ofNullable(portSets);
+            this.portSets = Codegen.ofNullable(portSets);
             return this;
         }        public RuleGroupRuleVariablesArgs build() {
             return new RuleGroupRuleVariablesArgs(iPSets, portSets);

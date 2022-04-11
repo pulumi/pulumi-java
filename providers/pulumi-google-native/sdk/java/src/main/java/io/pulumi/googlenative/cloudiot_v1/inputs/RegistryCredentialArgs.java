@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate;
 
     public Output<PublicKeyCertificateArgs> getPublicKeyCertificate() {
-        return this.publicKeyCertificate == null ? Output.empty() : this.publicKeyCertificate;
+        return this.publicKeyCertificate == null ? Codegen.empty() : this.publicKeyCertificate;
     }
 
     public RegistryCredentialArgs(@Nullable Output<PublicKeyCertificateArgs> publicKeyCertificate) {
@@ -34,7 +35,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RegistryCredentialArgs() {
-        this.publicKeyCertificate = Output.empty();
+        this.publicKeyCertificate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder publicKeyCertificate(@Nullable PublicKeyCertificateArgs publicKeyCertificate) {
-            this.publicKeyCertificate = Output.ofNullable(publicKeyCertificate);
+            this.publicKeyCertificate = Codegen.ofNullable(publicKeyCertificate);
             return this;
         }        public RegistryCredentialArgs build() {
             return new RegistryCredentialArgs(publicKeyCertificate);

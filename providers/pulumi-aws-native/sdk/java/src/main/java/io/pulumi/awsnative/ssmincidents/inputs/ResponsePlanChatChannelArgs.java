@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> chatbotSns;
 
     public Output<List<String>> getChatbotSns() {
-        return this.chatbotSns == null ? Output.empty() : this.chatbotSns;
+        return this.chatbotSns == null ? Codegen.empty() : this.chatbotSns;
     }
 
     public ResponsePlanChatChannelArgs(@Nullable Output<List<String>> chatbotSns) {
@@ -31,7 +32,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
     }
 
     private ResponsePlanChatChannelArgs() {
-        this.chatbotSns = Output.empty();
+        this.chatbotSns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ResponsePlanChatChannelArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder chatbotSns(@Nullable List<String> chatbotSns) {
-            this.chatbotSns = Output.ofNullable(chatbotSns);
+            this.chatbotSns = Codegen.ofNullable(chatbotSns);
             return this;
         }
         public Builder chatbotSns(String... chatbotSns) {

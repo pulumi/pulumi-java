@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueRegexFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
       private final @Nullable Output<BotSlotValueRegexFilterArgs> regexFilter;
 
     public Output<BotSlotValueRegexFilterArgs> getRegexFilter() {
-        return this.regexFilter == null ? Output.empty() : this.regexFilter;
+        return this.regexFilter == null ? Codegen.empty() : this.regexFilter;
     }
 
     @Import(name="resolutionStrategy", required=true)
@@ -41,8 +42,8 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
     }
 
     private BotSlotValueSelectionSettingArgs() {
-        this.regexFilter = Output.empty();
-        this.resolutionStrategy = Output.empty();
+        this.regexFilter = Codegen.empty();
+        this.resolutionStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
             return this;
         }
         public Builder regexFilter(@Nullable BotSlotValueRegexFilterArgs regexFilter) {
-            this.regexFilter = Output.ofNullable(regexFilter);
+            this.regexFilter = Codegen.ofNullable(regexFilter);
             return this;
         }
         public Builder resolutionStrategy(Output<BotSlotValueResolutionStrategy> resolutionStrategy) {

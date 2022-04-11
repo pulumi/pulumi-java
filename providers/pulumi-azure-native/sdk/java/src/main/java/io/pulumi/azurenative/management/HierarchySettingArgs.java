@@ -5,6 +5,7 @@ package io.pulumi.azurenative.management;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> defaultManagementGroup;
 
     public Output<String> getDefaultManagementGroup() {
-        return this.defaultManagementGroup == null ? Output.empty() : this.defaultManagementGroup;
+        return this.defaultManagementGroup == null ? Codegen.empty() : this.defaultManagementGroup;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> requireAuthorizationForGroupCreation;
 
     public Output<Boolean> getRequireAuthorizationForGroupCreation() {
-        return this.requireAuthorizationForGroupCreation == null ? Output.empty() : this.requireAuthorizationForGroupCreation;
+        return this.requireAuthorizationForGroupCreation == null ? Codegen.empty() : this.requireAuthorizationForGroupCreation;
     }
 
     public HierarchySettingArgs(
@@ -58,9 +59,9 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HierarchySettingArgs() {
-        this.defaultManagementGroup = Output.empty();
-        this.groupId = Output.empty();
-        this.requireAuthorizationForGroupCreation = Output.empty();
+        this.defaultManagementGroup = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.requireAuthorizationForGroupCreation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder defaultManagementGroup(@Nullable String defaultManagementGroup) {
-            this.defaultManagementGroup = Output.ofNullable(defaultManagementGroup);
+            this.defaultManagementGroup = Codegen.ofNullable(defaultManagementGroup);
             return this;
         }
         public Builder groupId(Output<String> groupId) {
@@ -108,7 +109,7 @@ public final class HierarchySettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requireAuthorizationForGroupCreation(@Nullable Boolean requireAuthorizationForGroupCreation) {
-            this.requireAuthorizationForGroupCreation = Output.ofNullable(requireAuthorizationForGroupCreation);
+            this.requireAuthorizationForGroupCreation = Codegen.ofNullable(requireAuthorizationForGroupCreation);
             return this;
         }        public HierarchySettingArgs build() {
             return new HierarchySettingArgs(defaultManagementGroup, groupId, requireAuthorizationForGroupCreation);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryDateShardedSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecGetArgs;
@@ -27,7 +28,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs;
 
     public Output<List<EntryBigqueryDateShardedSpecGetArgs>> getBigqueryDateShardedSpecs() {
-        return this.bigqueryDateShardedSpecs == null ? Output.empty() : this.bigqueryDateShardedSpecs;
+        return this.bigqueryDateShardedSpecs == null ? Codegen.empty() : this.bigqueryDateShardedSpecs;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs;
 
     public Output<List<EntryBigqueryTableSpecGetArgs>> getBigqueryTableSpecs() {
-        return this.bigqueryTableSpecs == null ? Output.empty() : this.bigqueryTableSpecs;
+        return this.bigqueryTableSpecs == null ? Codegen.empty() : this.bigqueryTableSpecs;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> entryGroup;
 
     public Output<String> getEntryGroup() {
-        return this.entryGroup == null ? Output.empty() : this.entryGroup;
+        return this.entryGroup == null ? Codegen.empty() : this.entryGroup;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> entryId;
 
     public Output<String> getEntryId() {
-        return this.entryId == null ? Output.empty() : this.entryId;
+        return this.entryId == null ? Codegen.empty() : this.entryId;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec;
 
     public Output<EntryGcsFilesetSpecGetArgs> getGcsFilesetSpec() {
-        return this.gcsFilesetSpec == null ? Output.empty() : this.gcsFilesetSpec;
+        return this.gcsFilesetSpec == null ? Codegen.empty() : this.gcsFilesetSpec;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> integratedSystem;
 
     public Output<String> getIntegratedSystem() {
-        return this.integratedSystem == null ? Output.empty() : this.integratedSystem;
+        return this.integratedSystem == null ? Codegen.empty() : this.integratedSystem;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkedResource;
 
     public Output<String> getLinkedResource() {
-        return this.linkedResource == null ? Output.empty() : this.linkedResource;
+        return this.linkedResource == null ? Codegen.empty() : this.linkedResource;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userSpecifiedSystem;
 
     public Output<String> getUserSpecifiedSystem() {
-        return this.userSpecifiedSystem == null ? Output.empty() : this.userSpecifiedSystem;
+        return this.userSpecifiedSystem == null ? Codegen.empty() : this.userSpecifiedSystem;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userSpecifiedType;
 
     public Output<String> getUserSpecifiedType() {
-        return this.userSpecifiedType == null ? Output.empty() : this.userSpecifiedType;
+        return this.userSpecifiedType == null ? Codegen.empty() : this.userSpecifiedType;
     }
 
     public EntryState(
@@ -225,20 +226,20 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntryState() {
-        this.bigqueryDateShardedSpecs = Output.empty();
-        this.bigqueryTableSpecs = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.entryGroup = Output.empty();
-        this.entryId = Output.empty();
-        this.gcsFilesetSpec = Output.empty();
-        this.integratedSystem = Output.empty();
-        this.linkedResource = Output.empty();
-        this.name = Output.empty();
-        this.schema = Output.empty();
-        this.type = Output.empty();
-        this.userSpecifiedSystem = Output.empty();
-        this.userSpecifiedType = Output.empty();
+        this.bigqueryDateShardedSpecs = Codegen.empty();
+        this.bigqueryTableSpecs = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entryGroup = Codegen.empty();
+        this.entryId = Codegen.empty();
+        this.gcsFilesetSpec = Codegen.empty();
+        this.integratedSystem = Codegen.empty();
+        this.linkedResource = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userSpecifiedSystem = Codegen.empty();
+        this.userSpecifiedType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -292,7 +293,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bigqueryDateShardedSpecs(@Nullable List<EntryBigqueryDateShardedSpecGetArgs> bigqueryDateShardedSpecs) {
-            this.bigqueryDateShardedSpecs = Output.ofNullable(bigqueryDateShardedSpecs);
+            this.bigqueryDateShardedSpecs = Codegen.ofNullable(bigqueryDateShardedSpecs);
             return this;
         }
         public Builder bigqueryDateShardedSpecs(EntryBigqueryDateShardedSpecGetArgs... bigqueryDateShardedSpecs) {
@@ -303,7 +304,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bigqueryTableSpecs(@Nullable List<EntryBigqueryTableSpecGetArgs> bigqueryTableSpecs) {
-            this.bigqueryTableSpecs = Output.ofNullable(bigqueryTableSpecs);
+            this.bigqueryTableSpecs = Codegen.ofNullable(bigqueryTableSpecs);
             return this;
         }
         public Builder bigqueryTableSpecs(EntryBigqueryTableSpecGetArgs... bigqueryTableSpecs) {
@@ -314,7 +315,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -322,7 +323,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entryGroup(@Nullable Output<String> entryGroup) {
@@ -330,7 +331,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entryGroup(@Nullable String entryGroup) {
-            this.entryGroup = Output.ofNullable(entryGroup);
+            this.entryGroup = Codegen.ofNullable(entryGroup);
             return this;
         }
         public Builder entryId(@Nullable Output<String> entryId) {
@@ -338,7 +339,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entryId(@Nullable String entryId) {
-            this.entryId = Output.ofNullable(entryId);
+            this.entryId = Codegen.ofNullable(entryId);
             return this;
         }
         public Builder gcsFilesetSpec(@Nullable Output<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec) {
@@ -346,7 +347,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsFilesetSpec(@Nullable EntryGcsFilesetSpecGetArgs gcsFilesetSpec) {
-            this.gcsFilesetSpec = Output.ofNullable(gcsFilesetSpec);
+            this.gcsFilesetSpec = Codegen.ofNullable(gcsFilesetSpec);
             return this;
         }
         public Builder integratedSystem(@Nullable Output<String> integratedSystem) {
@@ -354,7 +355,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integratedSystem(@Nullable String integratedSystem) {
-            this.integratedSystem = Output.ofNullable(integratedSystem);
+            this.integratedSystem = Codegen.ofNullable(integratedSystem);
             return this;
         }
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
@@ -362,7 +363,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedResource(@Nullable String linkedResource) {
-            this.linkedResource = Output.ofNullable(linkedResource);
+            this.linkedResource = Codegen.ofNullable(linkedResource);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -370,7 +371,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -378,7 +379,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -386,7 +387,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
@@ -394,7 +395,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
-            this.userSpecifiedSystem = Output.ofNullable(userSpecifiedSystem);
+            this.userSpecifiedSystem = Codegen.ofNullable(userSpecifiedSystem);
             return this;
         }
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
@@ -402,7 +403,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
-            this.userSpecifiedType = Output.ofNullable(userSpecifiedType);
+            this.userSpecifiedType = Codegen.ofNullable(userSpecifiedType);
             return this;
         }        public EntryState build() {
             return new EntryState(bigqueryDateShardedSpecs, bigqueryTableSpecs, description, displayName, entryGroup, entryId, gcsFilesetSpec, integratedSystem, linkedResource, name, schema, type, userSpecifiedSystem, userSpecifiedType);

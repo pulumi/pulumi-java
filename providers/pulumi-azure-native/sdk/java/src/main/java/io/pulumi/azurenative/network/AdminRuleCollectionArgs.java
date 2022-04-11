@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.NetworkManagerSecurityGroupItemArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<NetworkManagerSecurityGroupItemArgs>> appliesToGroups;
 
     public Output<List<NetworkManagerSecurityGroupItemArgs>> getAppliesToGroups() {
-        return this.appliesToGroups == null ? Output.empty() : this.appliesToGroups;
+        return this.appliesToGroups == null ? Codegen.empty() : this.appliesToGroups;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> ruleCollectionName;
 
     public Output<String> getRuleCollectionName() {
-        return this.ruleCollectionName == null ? Output.empty() : this.ruleCollectionName;
+        return this.ruleCollectionName == null ? Codegen.empty() : this.ruleCollectionName;
     }
 
     public AdminRuleCollectionArgs(
@@ -111,13 +112,13 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
     }
 
     private AdminRuleCollectionArgs() {
-        this.appliesToGroups = Output.empty();
-        this.configurationName = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.networkManagerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleCollectionName = Output.empty();
+        this.appliesToGroups = Codegen.empty();
+        this.configurationName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.networkManagerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleCollectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder appliesToGroups(@Nullable List<NetworkManagerSecurityGroupItemArgs> appliesToGroups) {
-            this.appliesToGroups = Output.ofNullable(appliesToGroups);
+            this.appliesToGroups = Codegen.ofNullable(appliesToGroups);
             return this;
         }
         public Builder appliesToGroups(NetworkManagerSecurityGroupItemArgs... appliesToGroups) {
@@ -176,7 +177,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -184,7 +185,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder networkManagerName(Output<String> networkManagerName) {
@@ -208,7 +209,7 @@ public final class AdminRuleCollectionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ruleCollectionName(@Nullable String ruleCollectionName) {
-            this.ruleCollectionName = Output.ofNullable(ruleCollectionName);
+            this.ruleCollectionName = Codegen.ofNullable(ruleCollectionName);
             return this;
         }        public AdminRuleCollectionArgs build() {
             return new AdminRuleCollectionArgs(appliesToGroups, configurationName, description, displayName, networkManagerName, resourceGroupName, ruleCollectionName);

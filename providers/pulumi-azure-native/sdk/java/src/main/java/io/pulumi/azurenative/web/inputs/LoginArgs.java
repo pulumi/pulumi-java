@@ -9,6 +9,7 @@ import io.pulumi.azurenative.web.inputs.NonceArgs;
 import io.pulumi.azurenative.web.inputs.TokenStoreArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedExternalRedirectUrls;
 
     public Output<List<String>> getAllowedExternalRedirectUrls() {
-        return this.allowedExternalRedirectUrls == null ? Output.empty() : this.allowedExternalRedirectUrls;
+        return this.allowedExternalRedirectUrls == null ? Codegen.empty() : this.allowedExternalRedirectUrls;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CookieExpirationArgs> cookieExpiration;
 
     public Output<CookieExpirationArgs> getCookieExpiration() {
-        return this.cookieExpiration == null ? Output.empty() : this.cookieExpiration;
+        return this.cookieExpiration == null ? Codegen.empty() : this.cookieExpiration;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NonceArgs> nonce;
 
     public Output<NonceArgs> getNonce() {
-        return this.nonce == null ? Output.empty() : this.nonce;
+        return this.nonce == null ? Codegen.empty() : this.nonce;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> preserveUrlFragmentsForLogins;
 
     public Output<Boolean> getPreserveUrlFragmentsForLogins() {
-        return this.preserveUrlFragmentsForLogins == null ? Output.empty() : this.preserveUrlFragmentsForLogins;
+        return this.preserveUrlFragmentsForLogins == null ? Codegen.empty() : this.preserveUrlFragmentsForLogins;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LoginRoutesArgs> routes;
 
     public Output<LoginRoutesArgs> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TokenStoreArgs> tokenStore;
 
     public Output<TokenStoreArgs> getTokenStore() {
-        return this.tokenStore == null ? Output.empty() : this.tokenStore;
+        return this.tokenStore == null ? Codegen.empty() : this.tokenStore;
     }
 
     public LoginArgs(
@@ -108,12 +109,12 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoginArgs() {
-        this.allowedExternalRedirectUrls = Output.empty();
-        this.cookieExpiration = Output.empty();
-        this.nonce = Output.empty();
-        this.preserveUrlFragmentsForLogins = Output.empty();
-        this.routes = Output.empty();
-        this.tokenStore = Output.empty();
+        this.allowedExternalRedirectUrls = Codegen.empty();
+        this.cookieExpiration = Codegen.empty();
+        this.nonce = Codegen.empty();
+        this.preserveUrlFragmentsForLogins = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.tokenStore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedExternalRedirectUrls(@Nullable List<String> allowedExternalRedirectUrls) {
-            this.allowedExternalRedirectUrls = Output.ofNullable(allowedExternalRedirectUrls);
+            this.allowedExternalRedirectUrls = Codegen.ofNullable(allowedExternalRedirectUrls);
             return this;
         }
         public Builder allowedExternalRedirectUrls(String... allowedExternalRedirectUrls) {
@@ -162,7 +163,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cookieExpiration(@Nullable CookieExpirationArgs cookieExpiration) {
-            this.cookieExpiration = Output.ofNullable(cookieExpiration);
+            this.cookieExpiration = Codegen.ofNullable(cookieExpiration);
             return this;
         }
         public Builder nonce(@Nullable Output<NonceArgs> nonce) {
@@ -170,7 +171,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nonce(@Nullable NonceArgs nonce) {
-            this.nonce = Output.ofNullable(nonce);
+            this.nonce = Codegen.ofNullable(nonce);
             return this;
         }
         public Builder preserveUrlFragmentsForLogins(@Nullable Output<Boolean> preserveUrlFragmentsForLogins) {
@@ -178,7 +179,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preserveUrlFragmentsForLogins(@Nullable Boolean preserveUrlFragmentsForLogins) {
-            this.preserveUrlFragmentsForLogins = Output.ofNullable(preserveUrlFragmentsForLogins);
+            this.preserveUrlFragmentsForLogins = Codegen.ofNullable(preserveUrlFragmentsForLogins);
             return this;
         }
         public Builder routes(@Nullable Output<LoginRoutesArgs> routes) {
@@ -186,7 +187,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable LoginRoutesArgs routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder tokenStore(@Nullable Output<TokenStoreArgs> tokenStore) {
@@ -194,7 +195,7 @@ public final class LoginArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tokenStore(@Nullable TokenStoreArgs tokenStore) {
-            this.tokenStore = Output.ofNullable(tokenStore);
+            this.tokenStore = Codegen.ofNullable(tokenStore);
             return this;
         }        public LoginArgs build() {
             return new LoginArgs(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);

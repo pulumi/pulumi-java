@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> error;
 
     public Output<String> getError() {
-        return this.error == null ? Output.empty() : this.error;
+        return this.error == null ? Codegen.empty() : this.error;
     }
 
     public SchematizedDataArgs(
@@ -48,8 +49,8 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SchematizedDataArgs() {
-        this.data = Output.empty();
-        this.error = Output.empty();
+        this.data = Codegen.empty();
+        this.error = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder error(@Nullable Output<String> error) {
@@ -87,7 +88,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder error(@Nullable String error) {
-            this.error = Output.ofNullable(error);
+            this.error = Codegen.ofNullable(error);
             return this;
         }        public SchematizedDataArgs build() {
             return new SchematizedDataArgs(data, error);

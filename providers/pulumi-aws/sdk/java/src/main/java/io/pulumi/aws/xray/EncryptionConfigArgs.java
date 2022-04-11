@@ -5,6 +5,7 @@ package io.pulumi.aws.xray;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncryptionConfigArgs() {
-        this.keyId = Output.empty();
-        this.type = Output.empty();
+        this.keyId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder type(Output<String> type) {

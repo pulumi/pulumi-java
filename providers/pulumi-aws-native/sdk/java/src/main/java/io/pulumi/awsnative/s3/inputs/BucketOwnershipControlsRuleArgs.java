@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketOwnershipControlsRuleObjectOwnership;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
       private final @Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership;
 
     public Output<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
-        return this.objectOwnership == null ? Output.empty() : this.objectOwnership;
+        return this.objectOwnership == null ? Codegen.empty() : this.objectOwnership;
     }
 
     public BucketOwnershipControlsRuleArgs(@Nullable Output<BucketOwnershipControlsRuleObjectOwnership> objectOwnership) {
@@ -30,7 +31,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
     }
 
     private BucketOwnershipControlsRuleArgs() {
-        this.objectOwnership = Output.empty();
+        this.objectOwnership = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class BucketOwnershipControlsRuleArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder objectOwnership(@Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership) {
-            this.objectOwnership = Output.ofNullable(objectOwnership);
+            this.objectOwnership = Codegen.ofNullable(objectOwnership);
             return this;
         }        public BucketOwnershipControlsRuleArgs build() {
             return new BucketOwnershipControlsRuleArgs(objectOwnership);

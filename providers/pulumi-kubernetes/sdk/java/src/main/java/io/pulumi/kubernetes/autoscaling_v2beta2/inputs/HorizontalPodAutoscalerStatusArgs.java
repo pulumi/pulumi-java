@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.HorizontalPodAutoscalerConditionArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricStatusArgs;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<List<HorizontalPodAutoscalerConditionArgs>> conditions;
 
     public Output<List<HorizontalPodAutoscalerConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<List<MetricStatusArgs>> currentMetrics;
 
     public Output<List<MetricStatusArgs>> getCurrentMetrics() {
-        return this.currentMetrics == null ? Output.empty() : this.currentMetrics;
+        return this.currentMetrics == null ? Codegen.empty() : this.currentMetrics;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<String> lastScaleTime;
 
     public Output<String> getLastScaleTime() {
-        return this.lastScaleTime == null ? Output.empty() : this.lastScaleTime;
+        return this.lastScaleTime == null ? Codegen.empty() : this.lastScaleTime;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     public HorizontalPodAutoscalerStatusArgs(
@@ -104,12 +105,12 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
     }
 
     private HorizontalPodAutoscalerStatusArgs() {
-        this.conditions = Output.empty();
-        this.currentMetrics = Output.empty();
-        this.currentReplicas = Output.empty();
-        this.desiredReplicas = Output.empty();
-        this.lastScaleTime = Output.empty();
-        this.observedGeneration = Output.empty();
+        this.conditions = Codegen.empty();
+        this.currentMetrics = Codegen.empty();
+        this.currentReplicas = Codegen.empty();
+        this.desiredReplicas = Codegen.empty();
+        this.lastScaleTime = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder conditions(@Nullable List<HorizontalPodAutoscalerConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(HorizontalPodAutoscalerConditionArgs... conditions) {
@@ -158,7 +159,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder currentMetrics(@Nullable List<MetricStatusArgs> currentMetrics) {
-            this.currentMetrics = Output.ofNullable(currentMetrics);
+            this.currentMetrics = Codegen.ofNullable(currentMetrics);
             return this;
         }
         public Builder currentMetrics(MetricStatusArgs... currentMetrics) {
@@ -185,7 +186,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder lastScaleTime(@Nullable String lastScaleTime) {
-            this.lastScaleTime = Output.ofNullable(lastScaleTime);
+            this.lastScaleTime = Codegen.ofNullable(lastScaleTime);
             return this;
         }
         public Builder observedGeneration(@Nullable Output<Integer> observedGeneration) {
@@ -193,7 +194,7 @@ public final class HorizontalPodAutoscalerStatusArgs extends io.pulumi.resources
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }        public HorizontalPodAutoscalerStatusArgs build() {
             return new HorizontalPodAutoscalerStatusArgs(conditions, currentMetrics, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);

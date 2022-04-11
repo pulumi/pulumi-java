@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.MigrationJobState;
 import io.pulumi.googlenative.datamigration_v1beta1.enums.MigrationJobType;
 import io.pulumi.googlenative.datamigration_v1beta1.inputs.DatabaseTypeArgs;
@@ -40,7 +41,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatabaseTypeArgs> destinationDatabase;
 
     public Output<DatabaseTypeArgs> getDestinationDatabase() {
-        return this.destinationDatabase == null ? Output.empty() : this.destinationDatabase;
+        return this.destinationDatabase == null ? Codegen.empty() : this.destinationDatabase;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dumpPath;
 
     public Output<String> getDumpPath() {
-        return this.dumpPath == null ? Output.empty() : this.dumpPath;
+        return this.dumpPath == null ? Codegen.empty() : this.dumpPath;
     }
 
     /**
@@ -73,14 +74,14 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="migrationJobId", required=true)
@@ -98,21 +99,21 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity;
 
     public Output<ReverseSshConnectivityArgs> getReverseSshConnectivity() {
-        return this.reverseSshConnectivity == null ? Output.empty() : this.reverseSshConnectivity;
+        return this.reverseSshConnectivity == null ? Codegen.empty() : this.reverseSshConnectivity;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatabaseTypeArgs> sourceDatabase;
 
     public Output<DatabaseTypeArgs> getSourceDatabase() {
-        return this.sourceDatabase == null ? Output.empty() : this.sourceDatabase;
+        return this.sourceDatabase == null ? Codegen.empty() : this.sourceDatabase;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MigrationJobState> state;
 
     public Output<MigrationJobState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity;
 
     public Output<StaticIpConnectivityArgs> getStaticIpConnectivity() {
-        return this.staticIpConnectivity == null ? Output.empty() : this.staticIpConnectivity;
+        return this.staticIpConnectivity == null ? Codegen.empty() : this.staticIpConnectivity;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VpcPeeringConnectivityArgs> vpcPeeringConnectivity;
 
     public Output<VpcPeeringConnectivityArgs> getVpcPeeringConnectivity() {
-        return this.vpcPeeringConnectivity == null ? Output.empty() : this.vpcPeeringConnectivity;
+        return this.vpcPeeringConnectivity == null ? Codegen.empty() : this.vpcPeeringConnectivity;
     }
 
     public MigrationJobArgs(
@@ -230,23 +231,23 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MigrationJobArgs() {
-        this.destination = Output.empty();
-        this.destinationDatabase = Output.empty();
-        this.displayName = Output.empty();
-        this.dumpPath = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.migrationJobId = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.reverseSshConnectivity = Output.empty();
-        this.source = Output.empty();
-        this.sourceDatabase = Output.empty();
-        this.state = Output.empty();
-        this.staticIpConnectivity = Output.empty();
-        this.type = Output.empty();
-        this.vpcPeeringConnectivity = Output.empty();
+        this.destination = Codegen.empty();
+        this.destinationDatabase = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.dumpPath = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.migrationJobId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.reverseSshConnectivity = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceDatabase = Codegen.empty();
+        this.state = Codegen.empty();
+        this.staticIpConnectivity = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vpcPeeringConnectivity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -314,7 +315,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationDatabase(@Nullable DatabaseTypeArgs destinationDatabase) {
-            this.destinationDatabase = Output.ofNullable(destinationDatabase);
+            this.destinationDatabase = Codegen.ofNullable(destinationDatabase);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -322,7 +323,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder dumpPath(@Nullable Output<String> dumpPath) {
@@ -330,7 +331,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dumpPath(@Nullable String dumpPath) {
-            this.dumpPath = Output.ofNullable(dumpPath);
+            this.dumpPath = Codegen.ofNullable(dumpPath);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -338,7 +339,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -346,7 +347,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder migrationJobId(Output<String> migrationJobId) {
@@ -362,7 +363,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -370,7 +371,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -378,7 +379,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder reverseSshConnectivity(@Nullable Output<ReverseSshConnectivityArgs> reverseSshConnectivity) {
@@ -386,7 +387,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reverseSshConnectivity(@Nullable ReverseSshConnectivityArgs reverseSshConnectivity) {
-            this.reverseSshConnectivity = Output.ofNullable(reverseSshConnectivity);
+            this.reverseSshConnectivity = Codegen.ofNullable(reverseSshConnectivity);
             return this;
         }
         public Builder source(Output<String> source) {
@@ -402,7 +403,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDatabase(@Nullable DatabaseTypeArgs sourceDatabase) {
-            this.sourceDatabase = Output.ofNullable(sourceDatabase);
+            this.sourceDatabase = Codegen.ofNullable(sourceDatabase);
             return this;
         }
         public Builder state(@Nullable Output<MigrationJobState> state) {
@@ -410,7 +411,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable MigrationJobState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder staticIpConnectivity(@Nullable Output<StaticIpConnectivityArgs> staticIpConnectivity) {
@@ -418,7 +419,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder staticIpConnectivity(@Nullable StaticIpConnectivityArgs staticIpConnectivity) {
-            this.staticIpConnectivity = Output.ofNullable(staticIpConnectivity);
+            this.staticIpConnectivity = Codegen.ofNullable(staticIpConnectivity);
             return this;
         }
         public Builder type(Output<MigrationJobType> type) {
@@ -434,7 +435,7 @@ public final class MigrationJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcPeeringConnectivity(@Nullable VpcPeeringConnectivityArgs vpcPeeringConnectivity) {
-            this.vpcPeeringConnectivity = Output.ofNullable(vpcPeeringConnectivity);
+            this.vpcPeeringConnectivity = Codegen.ofNullable(vpcPeeringConnectivity);
             return this;
         }        public MigrationJobArgs build() {
             return new MigrationJobArgs(destination, destinationDatabase, displayName, dumpPath, labels, location, migrationJobId, name, project, requestId, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, vpcPeeringConnectivity);

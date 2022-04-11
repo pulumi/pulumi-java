@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
       private final @Nullable Output<String> peerAccountId;
 
     public Output<String> getPeerAccountId() {
-        return this.peerAccountId == null ? Output.empty() : this.peerAccountId;
+        return this.peerAccountId == null ? Codegen.empty() : this.peerAccountId;
     }
 
     @Import(name="peerRegion")
       private final @Nullable Output<String> peerRegion;
 
     public Output<String> getPeerRegion() {
-        return this.peerRegion == null ? Output.empty() : this.peerRegion;
+        return this.peerRegion == null ? Codegen.empty() : this.peerRegion;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
       private final @Nullable Output<String> peerTransitGatewayId;
 
     public Output<String> getPeerTransitGatewayId() {
-        return this.peerTransitGatewayId == null ? Output.empty() : this.peerTransitGatewayId;
+        return this.peerTransitGatewayId == null ? Codegen.empty() : this.peerTransitGatewayId;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
+        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
       private final @Nullable Output<String> transitGatewayId;
 
     public Output<String> getTransitGatewayId() {
-        return this.transitGatewayId == null ? Output.empty() : this.transitGatewayId;
+        return this.transitGatewayId == null ? Codegen.empty() : this.transitGatewayId;
     }
 
     public TransitGatewayPeeringAttachmentAccepterState(
@@ -106,13 +107,13 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
     }
 
     private TransitGatewayPeeringAttachmentAccepterState() {
-        this.peerAccountId = Output.empty();
-        this.peerRegion = Output.empty();
-        this.peerTransitGatewayId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayId = Output.empty();
+        this.peerAccountId = Codegen.empty();
+        this.peerRegion = Codegen.empty();
+        this.peerTransitGatewayId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder peerAccountId(@Nullable String peerAccountId) {
-            this.peerAccountId = Output.ofNullable(peerAccountId);
+            this.peerAccountId = Codegen.ofNullable(peerAccountId);
             return this;
         }
         public Builder peerRegion(@Nullable Output<String> peerRegion) {
@@ -160,7 +161,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder peerRegion(@Nullable String peerRegion) {
-            this.peerRegion = Output.ofNullable(peerRegion);
+            this.peerRegion = Codegen.ofNullable(peerRegion);
             return this;
         }
         public Builder peerTransitGatewayId(@Nullable Output<String> peerTransitGatewayId) {
@@ -168,7 +169,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder peerTransitGatewayId(@Nullable String peerTransitGatewayId) {
-            this.peerTransitGatewayId = Output.ofNullable(peerTransitGatewayId);
+            this.peerTransitGatewayId = Codegen.ofNullable(peerTransitGatewayId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -176,7 +177,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -184,7 +185,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
@@ -192,7 +193,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
             return this;
         }
         public Builder transitGatewayId(@Nullable Output<String> transitGatewayId) {
@@ -200,7 +201,7 @@ public final class TransitGatewayPeeringAttachmentAccepterState extends io.pulum
             return this;
         }
         public Builder transitGatewayId(@Nullable String transitGatewayId) {
-            this.transitGatewayId = Output.ofNullable(transitGatewayId);
+            this.transitGatewayId = Codegen.ofNullable(transitGatewayId);
             return this;
         }        public TransitGatewayPeeringAttachmentAccepterState build() {
             return new TransitGatewayPeeringAttachmentAccepterState(peerAccountId, peerRegion, peerTransitGatewayId, tags, tagsAll, transitGatewayAttachmentId, transitGatewayId);

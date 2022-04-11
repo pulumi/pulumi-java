@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> expirationSeconds;
 
     public Output<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
+        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
     }
 
     private ServiceAccountTokenProjectionArgs() {
-        this.audience = Output.empty();
-        this.expirationSeconds = Output.empty();
-        this.path = Output.empty();
+        this.audience = Codegen.empty();
+        this.expirationSeconds = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder expirationSeconds(@Nullable Output<Integer> expirationSeconds) {
@@ -104,7 +105,7 @@ public final class ServiceAccountTokenProjectionArgs extends io.pulumi.resources
             return this;
         }
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Output.ofNullable(expirationSeconds);
+            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
             return this;
         }
         public Builder path(Output<String> path) {

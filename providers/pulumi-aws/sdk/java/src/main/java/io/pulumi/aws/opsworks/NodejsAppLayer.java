@@ -11,6 +11,7 @@ import io.pulumi.aws.opsworks.outputs.NodejsAppLayerEbsVolume;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -351,7 +352,7 @@ public class NodejsAppLayer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodejsAppLayer(String name, NodejsAppLayerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:opsworks/nodejsAppLayer:NodejsAppLayer", name, args == null ? NodejsAppLayerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:opsworks/nodejsAppLayer:NodejsAppLayer", name, args == null ? NodejsAppLayerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodejsAppLayer(String name, Output<String> id, @Nullable NodejsAppLayerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

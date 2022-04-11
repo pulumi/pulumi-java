@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
       private final @Nullable Output<String> hostRedirect;
 
     public Output<String> getHostRedirect() {
-        return this.hostRedirect == null ? Output.empty() : this.hostRedirect;
+        return this.hostRedirect == null ? Codegen.empty() : this.hostRedirect;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
       private final @Nullable Output<Boolean> httpsRedirect;
 
     public Output<Boolean> getHttpsRedirect() {
-        return this.httpsRedirect == null ? Output.empty() : this.httpsRedirect;
+        return this.httpsRedirect == null ? Codegen.empty() : this.httpsRedirect;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
       private final @Nullable Output<String> pathRedirect;
 
     public Output<String> getPathRedirect() {
-        return this.pathRedirect == null ? Output.empty() : this.pathRedirect;
+        return this.pathRedirect == null ? Codegen.empty() : this.pathRedirect;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
       private final @Nullable Output<String> prefixRedirect;
 
     public Output<String> getPrefixRedirect() {
-        return this.prefixRedirect == null ? Output.empty() : this.prefixRedirect;
+        return this.prefixRedirect == null ? Codegen.empty() : this.prefixRedirect;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
       private final @Nullable Output<String> redirectResponseCode;
 
     public Output<String> getRedirectResponseCode() {
-        return this.redirectResponseCode == null ? Output.empty() : this.redirectResponseCode;
+        return this.redirectResponseCode == null ? Codegen.empty() : this.redirectResponseCode;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
       private final @Nullable Output<Boolean> stripQuery;
 
     public Output<Boolean> getStripQuery() {
-        return this.stripQuery == null ? Output.empty() : this.stripQuery;
+        return this.stripQuery == null ? Codegen.empty() : this.stripQuery;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs(
@@ -104,12 +105,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs() {
-        this.hostRedirect = Output.empty();
-        this.httpsRedirect = Output.empty();
-        this.pathRedirect = Output.empty();
-        this.prefixRedirect = Output.empty();
-        this.redirectResponseCode = Output.empty();
-        this.stripQuery = Output.empty();
+        this.hostRedirect = Codegen.empty();
+        this.httpsRedirect = Codegen.empty();
+        this.pathRedirect = Codegen.empty();
+        this.prefixRedirect = Codegen.empty();
+        this.redirectResponseCode = Codegen.empty();
+        this.stripQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             return this;
         }
         public Builder hostRedirect(@Nullable String hostRedirect) {
-            this.hostRedirect = Output.ofNullable(hostRedirect);
+            this.hostRedirect = Codegen.ofNullable(hostRedirect);
             return this;
         }
         public Builder httpsRedirect(@Nullable Output<Boolean> httpsRedirect) {
@@ -155,7 +156,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             return this;
         }
         public Builder httpsRedirect(@Nullable Boolean httpsRedirect) {
-            this.httpsRedirect = Output.ofNullable(httpsRedirect);
+            this.httpsRedirect = Codegen.ofNullable(httpsRedirect);
             return this;
         }
         public Builder pathRedirect(@Nullable Output<String> pathRedirect) {
@@ -163,7 +164,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             return this;
         }
         public Builder pathRedirect(@Nullable String pathRedirect) {
-            this.pathRedirect = Output.ofNullable(pathRedirect);
+            this.pathRedirect = Codegen.ofNullable(pathRedirect);
             return this;
         }
         public Builder prefixRedirect(@Nullable Output<String> prefixRedirect) {
@@ -171,7 +172,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             return this;
         }
         public Builder prefixRedirect(@Nullable String prefixRedirect) {
-            this.prefixRedirect = Output.ofNullable(prefixRedirect);
+            this.prefixRedirect = Codegen.ofNullable(prefixRedirect);
             return this;
         }
         public Builder redirectResponseCode(@Nullable Output<String> redirectResponseCode) {
@@ -179,7 +180,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             return this;
         }
         public Builder redirectResponseCode(@Nullable String redirectResponseCode) {
-            this.redirectResponseCode = Output.ofNullable(redirectResponseCode);
+            this.redirectResponseCode = Codegen.ofNullable(redirectResponseCode);
             return this;
         }
         public Builder stripQuery(@Nullable Output<Boolean> stripQuery) {
@@ -187,7 +188,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs
             return this;
         }
         public Builder stripQuery(@Nullable Boolean stripQuery) {
-            this.stripQuery = Output.ofNullable(stripQuery);
+            this.stripQuery = Codegen.ofNullable(stripQuery);
             return this;
         }        public EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleUrlRedirectGetArgs(hostRedirect, httpsRedirect, pathRedirect, prefixRedirect, redirectResponseCode, stripQuery);

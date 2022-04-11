@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> hostName;
 
     public Output<String> getHostName() {
-        return this.hostName == null ? Output.empty() : this.hostName;
+        return this.hostName == null ? Codegen.empty() : this.hostName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> httpRedirectCode;
 
     public Output<String> getHttpRedirectCode() {
-        return this.httpRedirectCode == null ? Output.empty() : this.httpRedirectCode;
+        return this.httpRedirectCode == null ? Codegen.empty() : this.httpRedirectCode;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<BucketRedirectRuleProtocol> protocol;
 
     public Output<BucketRedirectRuleProtocol> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> replaceKeyPrefixWith;
 
     public Output<String> getReplaceKeyPrefixWith() {
-        return this.replaceKeyPrefixWith == null ? Output.empty() : this.replaceKeyPrefixWith;
+        return this.replaceKeyPrefixWith == null ? Codegen.empty() : this.replaceKeyPrefixWith;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> replaceKeyWith;
 
     public Output<String> getReplaceKeyWith() {
-        return this.replaceKeyWith == null ? Output.empty() : this.replaceKeyWith;
+        return this.replaceKeyWith == null ? Codegen.empty() : this.replaceKeyWith;
     }
 
     public BucketRedirectRuleArgs(
@@ -88,11 +89,11 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BucketRedirectRuleArgs() {
-        this.hostName = Output.empty();
-        this.httpRedirectCode = Output.empty();
-        this.protocol = Output.empty();
-        this.replaceKeyPrefixWith = Output.empty();
-        this.replaceKeyWith = Output.empty();
+        this.hostName = Codegen.empty();
+        this.httpRedirectCode = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.replaceKeyPrefixWith = Codegen.empty();
+        this.replaceKeyWith = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder hostName(@Nullable String hostName) {
-            this.hostName = Output.ofNullable(hostName);
+            this.hostName = Codegen.ofNullable(hostName);
             return this;
         }
         public Builder httpRedirectCode(@Nullable Output<String> httpRedirectCode) {
@@ -136,7 +137,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder httpRedirectCode(@Nullable String httpRedirectCode) {
-            this.httpRedirectCode = Output.ofNullable(httpRedirectCode);
+            this.httpRedirectCode = Codegen.ofNullable(httpRedirectCode);
             return this;
         }
         public Builder protocol(@Nullable Output<BucketRedirectRuleProtocol> protocol) {
@@ -144,7 +145,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder protocol(@Nullable BucketRedirectRuleProtocol protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder replaceKeyPrefixWith(@Nullable Output<String> replaceKeyPrefixWith) {
@@ -152,7 +153,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder replaceKeyPrefixWith(@Nullable String replaceKeyPrefixWith) {
-            this.replaceKeyPrefixWith = Output.ofNullable(replaceKeyPrefixWith);
+            this.replaceKeyPrefixWith = Codegen.ofNullable(replaceKeyPrefixWith);
             return this;
         }
         public Builder replaceKeyWith(@Nullable Output<String> replaceKeyWith) {
@@ -160,7 +161,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder replaceKeyWith(@Nullable String replaceKeyWith) {
-            this.replaceKeyWith = Output.ofNullable(replaceKeyWith);
+            this.replaceKeyWith = Codegen.ofNullable(replaceKeyWith);
             return this;
         }        public BucketRedirectRuleArgs build() {
             return new BucketRedirectRuleArgs(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);

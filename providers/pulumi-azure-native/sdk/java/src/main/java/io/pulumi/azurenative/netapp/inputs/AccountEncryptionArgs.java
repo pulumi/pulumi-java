@@ -5,6 +5,7 @@ package io.pulumi.azurenative.netapp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> keySource;
 
     public Output<String> getKeySource() {
-        return this.keySource == null ? Output.empty() : this.keySource;
+        return this.keySource == null ? Codegen.empty() : this.keySource;
     }
 
     public AccountEncryptionArgs(@Nullable Output<String> keySource) {
@@ -34,7 +35,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccountEncryptionArgs() {
-        this.keySource = Output.empty();
+        this.keySource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keySource(@Nullable String keySource) {
-            this.keySource = Output.ofNullable(keySource);
+            this.keySource = Codegen.ofNullable(keySource);
             return this;
         }        public AccountEncryptionArgs build() {
             return new AccountEncryptionArgs(keySource);

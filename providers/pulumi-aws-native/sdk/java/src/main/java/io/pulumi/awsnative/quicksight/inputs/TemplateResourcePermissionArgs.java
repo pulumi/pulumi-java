@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,8 +63,8 @@ public final class TemplateResourcePermissionArgs extends io.pulumi.resources.Re
     }
 
     private TemplateResourcePermissionArgs() {
-        this.actions = Output.empty();
-        this.principal = Output.empty();
+        this.actions = Codegen.empty();
+        this.principal = Codegen.empty();
     }
 
     public static Builder builder() {

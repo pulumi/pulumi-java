@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> partitionColumnName;
 
     public Output<Object> getPartitionColumnName() {
-        return this.partitionColumnName == null ? Output.empty() : this.partitionColumnName;
+        return this.partitionColumnName == null ? Codegen.empty() : this.partitionColumnName;
     }
 
     public SapHanaPartitionSettingsArgs(@Nullable Output<Object> partitionColumnName) {
@@ -34,7 +35,7 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private SapHanaPartitionSettingsArgs() {
-        this.partitionColumnName = Output.empty();
+        this.partitionColumnName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SapHanaPartitionSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder partitionColumnName(@Nullable Object partitionColumnName) {
-            this.partitionColumnName = Output.ofNullable(partitionColumnName);
+            this.partitionColumnName = Codegen.ofNullable(partitionColumnName);
             return this;
         }        public SapHanaPartitionSettingsArgs build() {
             return new SapHanaPartitionSettingsArgs(partitionColumnName);

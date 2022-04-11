@@ -5,6 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZoneId;
 
     public Output<String> getAvailabilityZoneId() {
-        return this.availabilityZoneId == null ? Output.empty() : this.availabilityZoneId;
+        return this.availabilityZoneId == null ? Codegen.empty() : this.availabilityZoneId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZoneName;
 
     public Output<String> getAvailabilityZoneName() {
-        return this.availabilityZoneName == null ? Output.empty() : this.availabilityZoneName;
+        return this.availabilityZoneName == null ? Codegen.empty() : this.availabilityZoneName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileSystemArn;
 
     public Output<String> getFileSystemArn() {
-        return this.fileSystemArn == null ? Output.empty() : this.fileSystemArn;
+        return this.fileSystemArn == null ? Codegen.empty() : this.fileSystemArn;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
-        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
+        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mountTargetDnsName;
 
     public Output<String> getMountTargetDnsName() {
-        return this.mountTargetDnsName == null ? Output.empty() : this.mountTargetDnsName;
+        return this.mountTargetDnsName == null ? Codegen.empty() : this.mountTargetDnsName;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public MountTargetState(
@@ -164,17 +165,17 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MountTargetState() {
-        this.availabilityZoneId = Output.empty();
-        this.availabilityZoneName = Output.empty();
-        this.dnsName = Output.empty();
-        this.fileSystemArn = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.ipAddress = Output.empty();
-        this.mountTargetDnsName = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.ownerId = Output.empty();
-        this.securityGroups = Output.empty();
-        this.subnetId = Output.empty();
+        this.availabilityZoneId = Codegen.empty();
+        this.availabilityZoneName = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.fileSystemArn = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.mountTargetDnsName = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZoneId(@Nullable String availabilityZoneId) {
-            this.availabilityZoneId = Output.ofNullable(availabilityZoneId);
+            this.availabilityZoneId = Codegen.ofNullable(availabilityZoneId);
             return this;
         }
         public Builder availabilityZoneName(@Nullable Output<String> availabilityZoneName) {
@@ -230,7 +231,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZoneName(@Nullable String availabilityZoneName) {
-            this.availabilityZoneName = Output.ofNullable(availabilityZoneName);
+            this.availabilityZoneName = Codegen.ofNullable(availabilityZoneName);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -238,7 +239,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder fileSystemArn(@Nullable Output<String> fileSystemArn) {
@@ -246,7 +247,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemArn(@Nullable String fileSystemArn) {
-            this.fileSystemArn = Output.ofNullable(fileSystemArn);
+            this.fileSystemArn = Codegen.ofNullable(fileSystemArn);
             return this;
         }
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
@@ -254,7 +255,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Output.ofNullable(fileSystemId);
+            this.fileSystemId = Codegen.ofNullable(fileSystemId);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -262,7 +263,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder mountTargetDnsName(@Nullable Output<String> mountTargetDnsName) {
@@ -270,7 +271,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountTargetDnsName(@Nullable String mountTargetDnsName) {
-            this.mountTargetDnsName = Output.ofNullable(mountTargetDnsName);
+            this.mountTargetDnsName = Codegen.ofNullable(mountTargetDnsName);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -278,7 +279,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -286,7 +287,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -294,7 +295,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -305,7 +306,7 @@ public final class MountTargetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public MountTargetState build() {
             return new MountTargetState(availabilityZoneId, availabilityZoneName, dnsName, fileSystemArn, fileSystemId, ipAddress, mountTargetDnsName, networkInterfaceId, ownerId, securityGroups, subnetId);

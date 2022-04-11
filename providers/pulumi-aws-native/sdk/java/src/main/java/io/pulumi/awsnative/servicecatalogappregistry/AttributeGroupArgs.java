@@ -6,6 +6,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 import io.pulumi.awsnative.servicecatalogappregistry.inputs.AttributeGroupTagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -42,14 +43,14 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<AttributeGroupTagsArgs> tags;
 
     public Output<AttributeGroupTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AttributeGroupArgs(
@@ -64,10 +65,10 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttributeGroupArgs() {
-        this.attributes = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.attributes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -117,7 +118,7 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<AttributeGroupTagsArgs> tags) {
@@ -125,7 +126,7 @@ public final class AttributeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable AttributeGroupTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AttributeGroupArgs build() {
             return new AttributeGroupArgs(attributes, description, name, tags);

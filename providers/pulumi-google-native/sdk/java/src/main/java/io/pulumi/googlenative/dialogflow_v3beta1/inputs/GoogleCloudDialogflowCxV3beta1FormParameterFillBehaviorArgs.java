@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentArgs;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> repromptEventHandlers;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs>> getRepromptEventHandlers() {
-        return this.repromptEventHandlers == null ? Output.empty() : this.repromptEventHandlers;
+        return this.repromptEventHandlers == null ? Codegen.empty() : this.repromptEventHandlers;
     }
 
     public GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
     }
 
     private GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs() {
-        this.initialPromptFulfillment = Output.empty();
-        this.repromptEventHandlers = Output.empty();
+        this.initialPromptFulfillment = Codegen.empty();
+        this.repromptEventHandlers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3beta1FormParameterFillBehaviorArgs e
             return this;
         }
         public Builder repromptEventHandlers(@Nullable List<GoogleCloudDialogflowCxV3beta1EventHandlerArgs> repromptEventHandlers) {
-            this.repromptEventHandlers = Output.ofNullable(repromptEventHandlers);
+            this.repromptEventHandlers = Codegen.ofNullable(repromptEventHandlers);
             return this;
         }
         public Builder repromptEventHandlers(GoogleCloudDialogflowCxV3beta1EventHandlerArgs... repromptEventHandlers) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> bottomPixels;
 
     public Output<Integer> getBottomPixels() {
-        return this.bottomPixels == null ? Output.empty() : this.bottomPixels;
+        return this.bottomPixels == null ? Codegen.empty() : this.bottomPixels;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> leftPixels;
 
     public Output<Integer> getLeftPixels() {
-        return this.leftPixels == null ? Output.empty() : this.leftPixels;
+        return this.leftPixels == null ? Codegen.empty() : this.leftPixels;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> rightPixels;
 
     public Output<Integer> getRightPixels() {
-        return this.rightPixels == null ? Output.empty() : this.rightPixels;
+        return this.rightPixels == null ? Codegen.empty() : this.rightPixels;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> topPixels;
 
     public Output<Integer> getTopPixels() {
-        return this.topPixels == null ? Output.empty() : this.topPixels;
+        return this.topPixels == null ? Codegen.empty() : this.topPixels;
     }
 
     public CropArgs(
@@ -74,10 +75,10 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CropArgs() {
-        this.bottomPixels = Output.empty();
-        this.leftPixels = Output.empty();
-        this.rightPixels = Output.empty();
-        this.topPixels = Output.empty();
+        this.bottomPixels = Codegen.empty();
+        this.leftPixels = Codegen.empty();
+        this.rightPixels = Codegen.empty();
+        this.topPixels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bottomPixels(@Nullable Integer bottomPixels) {
-            this.bottomPixels = Output.ofNullable(bottomPixels);
+            this.bottomPixels = Codegen.ofNullable(bottomPixels);
             return this;
         }
         public Builder leftPixels(@Nullable Output<Integer> leftPixels) {
@@ -119,7 +120,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder leftPixels(@Nullable Integer leftPixels) {
-            this.leftPixels = Output.ofNullable(leftPixels);
+            this.leftPixels = Codegen.ofNullable(leftPixels);
             return this;
         }
         public Builder rightPixels(@Nullable Output<Integer> rightPixels) {
@@ -127,7 +128,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rightPixels(@Nullable Integer rightPixels) {
-            this.rightPixels = Output.ofNullable(rightPixels);
+            this.rightPixels = Codegen.ofNullable(rightPixels);
             return this;
         }
         public Builder topPixels(@Nullable Output<Integer> topPixels) {
@@ -135,7 +136,7 @@ public final class CropArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topPixels(@Nullable Integer topPixels) {
-            this.topPixels = Output.ofNullable(topPixels);
+            this.topPixels = Codegen.ofNullable(topPixels);
             return this;
         }        public CropArgs build() {
             return new CropArgs(bottomPixels, leftPixels, rightPixels, topPixels);

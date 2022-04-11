@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
       private final @Nullable Output<List<String>> allowedDeviceManagementLevels;
 
     public Output<List<String>> getAllowedDeviceManagementLevels() {
-        return this.allowedDeviceManagementLevels == null ? Output.empty() : this.allowedDeviceManagementLevels;
+        return this.allowedDeviceManagementLevels == null ? Codegen.empty() : this.allowedDeviceManagementLevels;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
       private final @Nullable Output<List<String>> allowedEncryptionStatuses;
 
     public Output<List<String>> getAllowedEncryptionStatuses() {
-        return this.allowedEncryptionStatuses == null ? Output.empty() : this.allowedEncryptionStatuses;
+        return this.allowedEncryptionStatuses == null ? Codegen.empty() : this.allowedEncryptionStatuses;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
       private final @Nullable Output<List<AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs>> osConstraints;
 
     public Output<List<AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs>> getOsConstraints() {
-        return this.osConstraints == null ? Output.empty() : this.osConstraints;
+        return this.osConstraints == null ? Codegen.empty() : this.osConstraints;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
       private final @Nullable Output<Boolean> requireAdminApproval;
 
     public Output<Boolean> getRequireAdminApproval() {
-        return this.requireAdminApproval == null ? Output.empty() : this.requireAdminApproval;
+        return this.requireAdminApproval == null ? Codegen.empty() : this.requireAdminApproval;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
       private final @Nullable Output<Boolean> requireCorpOwned;
 
     public Output<Boolean> getRequireCorpOwned() {
-        return this.requireCorpOwned == null ? Output.empty() : this.requireCorpOwned;
+        return this.requireCorpOwned == null ? Codegen.empty() : this.requireCorpOwned;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
       private final @Nullable Output<Boolean> requireScreenLock;
 
     public Output<Boolean> getRequireScreenLock() {
-        return this.requireScreenLock == null ? Output.empty() : this.requireScreenLock;
+        return this.requireScreenLock == null ? Codegen.empty() : this.requireScreenLock;
     }
 
     public AccessLevelBasicConditionDevicePolicyGetArgs(
@@ -106,12 +107,12 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
     }
 
     private AccessLevelBasicConditionDevicePolicyGetArgs() {
-        this.allowedDeviceManagementLevels = Output.empty();
-        this.allowedEncryptionStatuses = Output.empty();
-        this.osConstraints = Output.empty();
-        this.requireAdminApproval = Output.empty();
-        this.requireCorpOwned = Output.empty();
-        this.requireScreenLock = Output.empty();
+        this.allowedDeviceManagementLevels = Codegen.empty();
+        this.allowedEncryptionStatuses = Codegen.empty();
+        this.osConstraints = Codegen.empty();
+        this.requireAdminApproval = Codegen.empty();
+        this.requireCorpOwned = Codegen.empty();
+        this.requireScreenLock = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
             return this;
         }
         public Builder allowedDeviceManagementLevels(@Nullable List<String> allowedDeviceManagementLevels) {
-            this.allowedDeviceManagementLevels = Output.ofNullable(allowedDeviceManagementLevels);
+            this.allowedDeviceManagementLevels = Codegen.ofNullable(allowedDeviceManagementLevels);
             return this;
         }
         public Builder allowedDeviceManagementLevels(String... allowedDeviceManagementLevels) {
@@ -160,7 +161,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
             return this;
         }
         public Builder allowedEncryptionStatuses(@Nullable List<String> allowedEncryptionStatuses) {
-            this.allowedEncryptionStatuses = Output.ofNullable(allowedEncryptionStatuses);
+            this.allowedEncryptionStatuses = Codegen.ofNullable(allowedEncryptionStatuses);
             return this;
         }
         public Builder allowedEncryptionStatuses(String... allowedEncryptionStatuses) {
@@ -171,7 +172,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
             return this;
         }
         public Builder osConstraints(@Nullable List<AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs> osConstraints) {
-            this.osConstraints = Output.ofNullable(osConstraints);
+            this.osConstraints = Codegen.ofNullable(osConstraints);
             return this;
         }
         public Builder osConstraints(AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs... osConstraints) {
@@ -182,7 +183,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
             return this;
         }
         public Builder requireAdminApproval(@Nullable Boolean requireAdminApproval) {
-            this.requireAdminApproval = Output.ofNullable(requireAdminApproval);
+            this.requireAdminApproval = Codegen.ofNullable(requireAdminApproval);
             return this;
         }
         public Builder requireCorpOwned(@Nullable Output<Boolean> requireCorpOwned) {
@@ -190,7 +191,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
             return this;
         }
         public Builder requireCorpOwned(@Nullable Boolean requireCorpOwned) {
-            this.requireCorpOwned = Output.ofNullable(requireCorpOwned);
+            this.requireCorpOwned = Codegen.ofNullable(requireCorpOwned);
             return this;
         }
         public Builder requireScreenLock(@Nullable Output<Boolean> requireScreenLock) {
@@ -198,7 +199,7 @@ public final class AccessLevelBasicConditionDevicePolicyGetArgs extends io.pulum
             return this;
         }
         public Builder requireScreenLock(@Nullable Boolean requireScreenLock) {
-            this.requireScreenLock = Output.ofNullable(requireScreenLock);
+            this.requireScreenLock = Codegen.ofNullable(requireScreenLock);
             return this;
         }        public AccessLevelBasicConditionDevicePolicyGetArgs build() {
             return new AccessLevelBasicConditionDevicePolicyGetArgs(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);

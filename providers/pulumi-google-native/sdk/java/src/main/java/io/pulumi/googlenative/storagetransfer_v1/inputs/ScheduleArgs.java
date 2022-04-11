@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.DateArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.TimeOfDayArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TimeOfDayArgs> endTimeOfDay;
 
     public Output<TimeOfDayArgs> getEndTimeOfDay() {
-        return this.endTimeOfDay == null ? Output.empty() : this.endTimeOfDay;
+        return this.endTimeOfDay == null ? Codegen.empty() : this.endTimeOfDay;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repeatInterval;
 
     public Output<String> getRepeatInterval() {
-        return this.repeatInterval == null ? Output.empty() : this.repeatInterval;
+        return this.repeatInterval == null ? Codegen.empty() : this.repeatInterval;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DateArgs> scheduleEndDate;
 
     public Output<DateArgs> getScheduleEndDate() {
-        return this.scheduleEndDate == null ? Output.empty() : this.scheduleEndDate;
+        return this.scheduleEndDate == null ? Codegen.empty() : this.scheduleEndDate;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TimeOfDayArgs> startTimeOfDay;
 
     public Output<TimeOfDayArgs> getStartTimeOfDay() {
-        return this.startTimeOfDay == null ? Output.empty() : this.startTimeOfDay;
+        return this.startTimeOfDay == null ? Codegen.empty() : this.startTimeOfDay;
     }
 
     public ScheduleArgs(
@@ -89,11 +90,11 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.endTimeOfDay = Output.empty();
-        this.repeatInterval = Output.empty();
-        this.scheduleEndDate = Output.empty();
-        this.scheduleStartDate = Output.empty();
-        this.startTimeOfDay = Output.empty();
+        this.endTimeOfDay = Codegen.empty();
+        this.repeatInterval = Codegen.empty();
+        this.scheduleEndDate = Codegen.empty();
+        this.scheduleStartDate = Codegen.empty();
+        this.startTimeOfDay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTimeOfDay(@Nullable TimeOfDayArgs endTimeOfDay) {
-            this.endTimeOfDay = Output.ofNullable(endTimeOfDay);
+            this.endTimeOfDay = Codegen.ofNullable(endTimeOfDay);
             return this;
         }
         public Builder repeatInterval(@Nullable Output<String> repeatInterval) {
@@ -137,7 +138,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repeatInterval(@Nullable String repeatInterval) {
-            this.repeatInterval = Output.ofNullable(repeatInterval);
+            this.repeatInterval = Codegen.ofNullable(repeatInterval);
             return this;
         }
         public Builder scheduleEndDate(@Nullable Output<DateArgs> scheduleEndDate) {
@@ -145,7 +146,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleEndDate(@Nullable DateArgs scheduleEndDate) {
-            this.scheduleEndDate = Output.ofNullable(scheduleEndDate);
+            this.scheduleEndDate = Codegen.ofNullable(scheduleEndDate);
             return this;
         }
         public Builder scheduleStartDate(Output<DateArgs> scheduleStartDate) {
@@ -161,7 +162,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTimeOfDay(@Nullable TimeOfDayArgs startTimeOfDay) {
-            this.startTimeOfDay = Output.ofNullable(startTimeOfDay);
+            this.startTimeOfDay = Codegen.ofNullable(startTimeOfDay);
             return this;
         }        public ScheduleArgs build() {
             return new ScheduleArgs(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);

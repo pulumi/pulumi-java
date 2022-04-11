@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> principalId;
 
     public Output<String> getPrincipalId() {
-        return this.principalId == null ? Output.empty() : this.principalId;
+        return this.principalId == null ? Codegen.empty() : this.principalId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> principalName;
 
     public Output<String> getPrincipalName() {
-        return this.principalName == null ? Output.empty() : this.principalName;
+        return this.principalName == null ? Codegen.empty() : this.principalName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public UserIdentityArgs(
@@ -87,11 +88,11 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserIdentityArgs() {
-        this.appId = Output.empty();
-        this.objectId = Output.empty();
-        this.principalId = Output.empty();
-        this.principalName = Output.empty();
-        this.tenantId = Output.empty();
+        this.appId = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.principalName = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder objectId(@Nullable Output<String> objectId) {
@@ -135,7 +136,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }
         public Builder principalId(@Nullable Output<String> principalId) {
@@ -143,7 +144,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principalId(@Nullable String principalId) {
-            this.principalId = Output.ofNullable(principalId);
+            this.principalId = Codegen.ofNullable(principalId);
             return this;
         }
         public Builder principalName(@Nullable Output<String> principalName) {
@@ -151,7 +152,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principalName(@Nullable String principalName) {
-            this.principalName = Output.ofNullable(principalName);
+            this.principalName = Codegen.ofNullable(principalName);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -159,7 +160,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public UserIdentityArgs build() {
             return new UserIdentityArgs(appId, objectId, principalId, principalName, tenantId);

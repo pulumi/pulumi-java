@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authToken;
 
     public Output<String> getAuthToken() {
-        return this.authToken == null ? Output.empty() : this.authToken;
+        return this.authToken == null ? Codegen.empty() : this.authToken;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
-        return this.repository == null ? Output.empty() : this.repository;
+        return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     public RGitHubPackageArgs(
@@ -44,8 +45,8 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RGitHubPackageArgs() {
-        this.authToken = Output.empty();
-        this.repository = Output.empty();
+        this.authToken = Codegen.empty();
+        this.repository = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authToken(@Nullable String authToken) {
-            this.authToken = Output.ofNullable(authToken);
+            this.authToken = Codegen.ofNullable(authToken);
             return this;
         }
         public Builder repository(@Nullable Output<String> repository) {
@@ -83,7 +84,7 @@ public final class RGitHubPackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repository(@Nullable String repository) {
-            this.repository = Output.ofNullable(repository);
+            this.repository = Codegen.ofNullable(repository);
             return this;
         }        public RGitHubPackageArgs build() {
             return new RGitHubPackageArgs(authToken, repository);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> publishCaCert;
 
     public Output<Boolean> getPublishCaCert() {
-        return this.publishCaCert == null ? Output.empty() : this.publishCaCert;
+        return this.publishCaCert == null ? Codegen.empty() : this.publishCaCert;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> publishCrl;
 
     public Output<Boolean> getPublishCrl() {
-        return this.publishCrl == null ? Output.empty() : this.publishCrl;
+        return this.publishCrl == null ? Codegen.empty() : this.publishCrl;
     }
 
     public PublishingOptionsArgs(
@@ -48,8 +49,8 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PublishingOptionsArgs() {
-        this.publishCaCert = Output.empty();
-        this.publishCrl = Output.empty();
+        this.publishCaCert = Codegen.empty();
+        this.publishCrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publishCaCert(@Nullable Boolean publishCaCert) {
-            this.publishCaCert = Output.ofNullable(publishCaCert);
+            this.publishCaCert = Codegen.ofNullable(publishCaCert);
             return this;
         }
         public Builder publishCrl(@Nullable Output<Boolean> publishCrl) {
@@ -87,7 +88,7 @@ public final class PublishingOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder publishCrl(@Nullable Boolean publishCrl) {
-            this.publishCrl = Output.ofNullable(publishCrl);
+            this.publishCrl = Codegen.ofNullable(publishCrl);
             return this;
         }        public PublishingOptionsArgs build() {
             return new PublishingOptionsArgs(publishCaCert, publishCrl);

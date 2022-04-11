@@ -6,6 +6,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 import io.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> admin;
 
     public Output<String> getAdmin() {
-        return this.admin == null ? Output.empty() : this.admin;
+        return this.admin == null ? Codegen.empty() : this.admin;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<BasicLoginInformationArgs> basicLoginInformation;
 
     public Output<BasicLoginInformationArgs> getBasicLoginInformation() {
-        return this.basicLoginInformation == null ? Output.empty() : this.basicLoginInformation;
+        return this.basicLoginInformation == null ? Codegen.empty() : this.basicLoginInformation;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> dataControllerId;
 
     public Output<String> getDataControllerId() {
-        return this.dataControllerId == null ? Output.empty() : this.dataControllerId;
+        return this.dataControllerId == null ? Codegen.empty() : this.dataControllerId;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> k8sRaw;
 
     public Output<Object> getK8sRaw() {
-        return this.k8sRaw == null ? Output.empty() : this.k8sRaw;
+        return this.k8sRaw == null ? Codegen.empty() : this.k8sRaw;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> lastUploadedDate;
 
     public Output<String> getLastUploadedDate() {
-        return this.lastUploadedDate == null ? Output.empty() : this.lastUploadedDate;
+        return this.lastUploadedDate == null ? Codegen.empty() : this.lastUploadedDate;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public SqlManagedInstancePropertiesArgs(
@@ -115,13 +116,13 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
     }
 
     private SqlManagedInstancePropertiesArgs() {
-        this.admin = Output.empty();
-        this.basicLoginInformation = Output.empty();
-        this.dataControllerId = Output.empty();
-        this.endTime = Output.empty();
-        this.k8sRaw = Output.empty();
-        this.lastUploadedDate = Output.empty();
-        this.startTime = Output.empty();
+        this.admin = Codegen.empty();
+        this.basicLoginInformation = Codegen.empty();
+        this.dataControllerId = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.k8sRaw = Codegen.empty();
+        this.lastUploadedDate = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder admin(@Nullable String admin) {
-            this.admin = Output.ofNullable(admin);
+            this.admin = Codegen.ofNullable(admin);
             return this;
         }
         public Builder basicLoginInformation(@Nullable Output<BasicLoginInformationArgs> basicLoginInformation) {
@@ -169,7 +170,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder basicLoginInformation(@Nullable BasicLoginInformationArgs basicLoginInformation) {
-            this.basicLoginInformation = Output.ofNullable(basicLoginInformation);
+            this.basicLoginInformation = Codegen.ofNullable(basicLoginInformation);
             return this;
         }
         public Builder dataControllerId(@Nullable Output<String> dataControllerId) {
@@ -177,7 +178,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dataControllerId(@Nullable String dataControllerId) {
-            this.dataControllerId = Output.ofNullable(dataControllerId);
+            this.dataControllerId = Codegen.ofNullable(dataControllerId);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -185,7 +186,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder k8sRaw(@Nullable Output<Object> k8sRaw) {
@@ -193,7 +194,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder k8sRaw(@Nullable Object k8sRaw) {
-            this.k8sRaw = Output.ofNullable(k8sRaw);
+            this.k8sRaw = Codegen.ofNullable(k8sRaw);
             return this;
         }
         public Builder lastUploadedDate(@Nullable Output<String> lastUploadedDate) {
@@ -201,7 +202,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder lastUploadedDate(@Nullable String lastUploadedDate) {
-            this.lastUploadedDate = Output.ofNullable(lastUploadedDate);
+            this.lastUploadedDate = Codegen.ofNullable(lastUploadedDate);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -209,7 +210,7 @@ public final class SqlManagedInstancePropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public SqlManagedInstancePropertiesArgs build() {
             return new SqlManagedInstancePropertiesArgs(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, startTime);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.mediapackage.inputs.ChannelLogConfigurationArgs;
 import io.pulumi.awsnative.mediapackage.inputs.ChannelTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs;
 
     public Output<ChannelLogConfigurationArgs> getEgressAccessLogs() {
-        return this.egressAccessLogs == null ? Output.empty() : this.egressAccessLogs;
+        return this.egressAccessLogs == null ? Codegen.empty() : this.egressAccessLogs;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs;
 
     public Output<ChannelLogConfigurationArgs> getIngressAccessLogs() {
-        return this.ingressAccessLogs == null ? Output.empty() : this.ingressAccessLogs;
+        return this.ingressAccessLogs == null ? Codegen.empty() : this.ingressAccessLogs;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ChannelTagArgs>> tags;
 
     public Output<List<ChannelTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ChannelArgs(
@@ -73,10 +74,10 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.description = Output.empty();
-        this.egressAccessLogs = Output.empty();
-        this.ingressAccessLogs = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.egressAccessLogs = Codegen.empty();
+        this.ingressAccessLogs = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder egressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> egressAccessLogs) {
@@ -118,7 +119,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egressAccessLogs(@Nullable ChannelLogConfigurationArgs egressAccessLogs) {
-            this.egressAccessLogs = Output.ofNullable(egressAccessLogs);
+            this.egressAccessLogs = Codegen.ofNullable(egressAccessLogs);
             return this;
         }
         public Builder ingressAccessLogs(@Nullable Output<ChannelLogConfigurationArgs> ingressAccessLogs) {
@@ -126,7 +127,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingressAccessLogs(@Nullable ChannelLogConfigurationArgs ingressAccessLogs) {
-            this.ingressAccessLogs = Output.ofNullable(ingressAccessLogs);
+            this.ingressAccessLogs = Codegen.ofNullable(ingressAccessLogs);
             return this;
         }
         public Builder tags(@Nullable Output<List<ChannelTagArgs>> tags) {
@@ -134,7 +135,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ChannelTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ChannelTagArgs... tags) {

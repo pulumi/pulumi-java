@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> revision;
 
     public Output<Integer> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateId;
 
     public Output<String> getUpdateId() {
-        return this.updateId == null ? Output.empty() : this.updateId;
+        return this.updateId == null ? Codegen.empty() : this.updateId;
     }
 
     public IdentityArgs(
@@ -49,8 +50,8 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IdentityArgs() {
-        this.revision = Output.empty();
-        this.updateId = Output.empty();
+        this.revision = Codegen.empty();
+        this.updateId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }
         public Builder updateId(@Nullable Output<String> updateId) {
@@ -88,7 +89,7 @@ public final class IdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateId(@Nullable String updateId) {
-            this.updateId = Output.ofNullable(updateId);
+            this.updateId = Codegen.ofNullable(updateId);
             return this;
         }        public IdentityArgs build() {
             return new IdentityArgs(revision, updateId);

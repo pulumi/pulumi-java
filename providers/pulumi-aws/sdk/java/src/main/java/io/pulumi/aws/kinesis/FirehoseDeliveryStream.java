@@ -17,6 +17,7 @@ import io.pulumi.aws.kinesis.outputs.FirehoseDeliveryStreamSplunkConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -276,7 +277,7 @@ public class FirehoseDeliveryStream extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirehoseDeliveryStream(String name, FirehoseDeliveryStreamArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:kinesis/firehoseDeliveryStream:FirehoseDeliveryStream", name, args == null ? FirehoseDeliveryStreamArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:kinesis/firehoseDeliveryStream:FirehoseDeliveryStream", name, args == null ? FirehoseDeliveryStreamArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirehoseDeliveryStream(String name, Output<String> id, @Nullable FirehoseDeliveryStreamState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

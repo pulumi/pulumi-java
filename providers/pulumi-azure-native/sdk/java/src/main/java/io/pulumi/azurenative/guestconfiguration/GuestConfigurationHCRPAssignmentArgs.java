@@ -6,6 +6,7 @@ package io.pulumi.azurenative.guestconfiguration;
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationAssignmentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
       private final @Nullable Output<String> guestConfigurationAssignmentName;
 
     public Output<String> getGuestConfigurationAssignmentName() {
-        return this.guestConfigurationAssignmentName == null ? Output.empty() : this.guestConfigurationAssignmentName;
+        return this.guestConfigurationAssignmentName == null ? Codegen.empty() : this.guestConfigurationAssignmentName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
       private final @Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties;
 
     public Output<GuestConfigurationAssignmentPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
     }
 
     private GuestConfigurationHCRPAssignmentArgs() {
-        this.guestConfigurationAssignmentName = Output.empty();
-        this.location = Output.empty();
-        this.machineName = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.guestConfigurationAssignmentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.machineName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
             return this;
         }
         public Builder guestConfigurationAssignmentName(@Nullable String guestConfigurationAssignmentName) {
-            this.guestConfigurationAssignmentName = Output.ofNullable(guestConfigurationAssignmentName);
+            this.guestConfigurationAssignmentName = Codegen.ofNullable(guestConfigurationAssignmentName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -148,7 +149,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder machineName(Output<String> machineName) {
@@ -164,7 +165,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<GuestConfigurationAssignmentPropertiesArgs> properties) {
@@ -172,7 +173,7 @@ public final class GuestConfigurationHCRPAssignmentArgs extends io.pulumi.resour
             return this;
         }
         public Builder properties(@Nullable GuestConfigurationAssignmentPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

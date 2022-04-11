@@ -7,6 +7,7 @@ import io.pulumi.azurenative.operationsmanagement.inputs.SolutionPlanArgs;
 import io.pulumi.azurenative.operationsmanagement.inputs.SolutionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SolutionPlanArgs> plan;
 
     public Output<SolutionPlanArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SolutionPropertiesArgs> properties;
 
     public Output<SolutionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> solutionName;
 
     public Output<String> getSolutionName() {
-        return this.solutionName == null ? Output.empty() : this.solutionName;
+        return this.solutionName == null ? Codegen.empty() : this.solutionName;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SolutionArgs(
@@ -99,12 +100,12 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SolutionArgs() {
-        this.location = Output.empty();
-        this.plan = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.solutionName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.plan = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.solutionName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder plan(@Nullable Output<SolutionPlanArgs> plan) {
@@ -150,7 +151,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder plan(@Nullable SolutionPlanArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder properties(@Nullable Output<SolutionPropertiesArgs> properties) {
@@ -158,7 +159,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable SolutionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -174,7 +175,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder solutionName(@Nullable String solutionName) {
-            this.solutionName = Output.ofNullable(solutionName);
+            this.solutionName = Codegen.ofNullable(solutionName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -182,7 +183,7 @@ public final class SolutionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SolutionArgs build() {
             return new SolutionArgs(location, plan, properties, resourceGroupName, solutionName, tags);

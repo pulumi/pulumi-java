@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.DiskConfigurationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
     public Output<Either<String,DiskConfigurationType>> getDiskConfigurationType() {
-        return this.diskConfigurationType == null ? Output.empty() : this.diskConfigurationType;
+        return this.diskConfigurationType == null ? Codegen.empty() : this.diskConfigurationType;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> diskCount;
 
     public Output<Integer> getDiskCount() {
-        return this.diskCount == null ? Output.empty() : this.diskCount;
+        return this.diskCount == null ? Codegen.empty() : this.diskCount;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> startingDeviceId;
 
     public Output<Integer> getStartingDeviceId() {
-        return this.startingDeviceId == null ? Output.empty() : this.startingDeviceId;
+        return this.startingDeviceId == null ? Codegen.empty() : this.startingDeviceId;
     }
 
     public SqlStorageUpdateSettingsArgs(
@@ -64,9 +65,9 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private SqlStorageUpdateSettingsArgs() {
-        this.diskConfigurationType = Output.empty();
-        this.diskCount = Output.empty();
-        this.startingDeviceId = Output.empty();
+        this.diskConfigurationType = Codegen.empty();
+        this.diskCount = Codegen.empty();
+        this.startingDeviceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diskConfigurationType(@Nullable Either<String,DiskConfigurationType> diskConfigurationType) {
-            this.diskConfigurationType = Output.ofNullable(diskConfigurationType);
+            this.diskConfigurationType = Codegen.ofNullable(diskConfigurationType);
             return this;
         }
         public Builder diskCount(@Nullable Output<Integer> diskCount) {
@@ -106,7 +107,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder diskCount(@Nullable Integer diskCount) {
-            this.diskCount = Output.ofNullable(diskCount);
+            this.diskCount = Codegen.ofNullable(diskCount);
             return this;
         }
         public Builder startingDeviceId(@Nullable Output<Integer> startingDeviceId) {
@@ -114,7 +115,7 @@ public final class SqlStorageUpdateSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder startingDeviceId(@Nullable Integer startingDeviceId) {
-            this.startingDeviceId = Output.ofNullable(startingDeviceId);
+            this.startingDeviceId = Codegen.ofNullable(startingDeviceId);
             return this;
         }        public SqlStorageUpdateSettingsArgs build() {
             return new SqlStorageUpdateSettingsArgs(diskConfigurationType, diskCount, startingDeviceId);

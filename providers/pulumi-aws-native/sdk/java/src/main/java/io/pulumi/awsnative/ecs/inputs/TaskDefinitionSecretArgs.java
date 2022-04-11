@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
     }
 
     private TaskDefinitionSecretArgs() {
-        this.name = Output.empty();
-        this.valueFrom = Output.empty();
+        this.name = Codegen.empty();
+        this.valueFrom = Codegen.empty();
     }
 
     public static Builder builder() {

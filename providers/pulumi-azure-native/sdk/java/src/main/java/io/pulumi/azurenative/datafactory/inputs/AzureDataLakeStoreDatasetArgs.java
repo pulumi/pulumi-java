@@ -14,6 +14,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParquetFormatArgs;
 import io.pulumi.azurenative.datafactory.inputs.TextFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<DatasetCompressionArgs> compression;
 
     public Output<DatasetCompressionArgs> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> fileName;
 
     public Output<Object> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<DatasetFolderArgs> folder;
 
     public Output<DatasetFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> format;
 
     public Output<Object> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> schema;
 
     public Output<Object> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> structure;
 
     public Output<Object> getStructure() {
-        return this.structure == null ? Output.empty() : this.structure;
+        return this.structure == null ? Codegen.empty() : this.structure;
     }
 
     /**
@@ -191,18 +192,18 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
     }
 
     private AzureDataLakeStoreDatasetArgs() {
-        this.annotations = Output.empty();
-        this.compression = Output.empty();
-        this.description = Output.empty();
-        this.fileName = Output.empty();
-        this.folder = Output.empty();
-        this.folderPath = Output.empty();
-        this.format = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.parameters = Output.empty();
-        this.schema = Output.empty();
-        this.structure = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.format = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.structure = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -252,7 +253,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -263,7 +264,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder compression(@Nullable DatasetCompressionArgs compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -271,7 +272,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fileName(@Nullable Output<Object> fileName) {
@@ -279,7 +280,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
@@ -287,7 +288,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder folder(@Nullable DatasetFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder folderPath(@Nullable Output<Object> folderPath) {
@@ -295,7 +296,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder format(@Nullable Output<Object> format) {
@@ -303,7 +304,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder format(@Nullable Object format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -319,7 +320,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder schema(@Nullable Output<Object> schema) {
@@ -327,7 +328,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder schema(@Nullable Object schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder structure(@Nullable Output<Object> structure) {
@@ -335,7 +336,7 @@ public final class AzureDataLakeStoreDatasetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder structure(@Nullable Object structure) {
-            this.structure = Output.ofNullable(structure);
+            this.structure = Codegen.ofNullable(structure);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkconnectivity;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedInterconnectAttachmentsArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedVpnTunnelsArgs;
@@ -26,7 +27,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments;
 
     public Output<SpokeLinkedInterconnectAttachmentsArgs> getLinkedInterconnectAttachments() {
-        return this.linkedInterconnectAttachments == null ? Output.empty() : this.linkedInterconnectAttachments;
+        return this.linkedInterconnectAttachments == null ? Codegen.empty() : this.linkedInterconnectAttachments;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances;
 
     public Output<SpokeLinkedRouterApplianceInstancesArgs> getLinkedRouterApplianceInstances() {
-        return this.linkedRouterApplianceInstances == null ? Output.empty() : this.linkedRouterApplianceInstances;
+        return this.linkedRouterApplianceInstances == null ? Codegen.empty() : this.linkedRouterApplianceInstances;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels;
 
     public Output<SpokeLinkedVpnTunnelsArgs> getLinkedVpnTunnels() {
-        return this.linkedVpnTunnels == null ? Output.empty() : this.linkedVpnTunnels;
+        return this.linkedVpnTunnels == null ? Codegen.empty() : this.linkedVpnTunnels;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public SpokeArgs(
@@ -139,15 +140,15 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SpokeArgs() {
-        this.description = Output.empty();
-        this.hub = Output.empty();
-        this.labels = Output.empty();
-        this.linkedInterconnectAttachments = Output.empty();
-        this.linkedRouterApplianceInstances = Output.empty();
-        this.linkedVpnTunnels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.description = Codegen.empty();
+        this.hub = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.linkedInterconnectAttachments = Codegen.empty();
+        this.linkedRouterApplianceInstances = Codegen.empty();
+        this.linkedVpnTunnels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hub(Output<String> hub) {
@@ -207,7 +208,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder linkedInterconnectAttachments(@Nullable Output<SpokeLinkedInterconnectAttachmentsArgs> linkedInterconnectAttachments) {
@@ -215,7 +216,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedInterconnectAttachments(@Nullable SpokeLinkedInterconnectAttachmentsArgs linkedInterconnectAttachments) {
-            this.linkedInterconnectAttachments = Output.ofNullable(linkedInterconnectAttachments);
+            this.linkedInterconnectAttachments = Codegen.ofNullable(linkedInterconnectAttachments);
             return this;
         }
         public Builder linkedRouterApplianceInstances(@Nullable Output<SpokeLinkedRouterApplianceInstancesArgs> linkedRouterApplianceInstances) {
@@ -223,7 +224,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedRouterApplianceInstances(@Nullable SpokeLinkedRouterApplianceInstancesArgs linkedRouterApplianceInstances) {
-            this.linkedRouterApplianceInstances = Output.ofNullable(linkedRouterApplianceInstances);
+            this.linkedRouterApplianceInstances = Codegen.ofNullable(linkedRouterApplianceInstances);
             return this;
         }
         public Builder linkedVpnTunnels(@Nullable Output<SpokeLinkedVpnTunnelsArgs> linkedVpnTunnels) {
@@ -231,7 +232,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedVpnTunnels(@Nullable SpokeLinkedVpnTunnelsArgs linkedVpnTunnels) {
-            this.linkedVpnTunnels = Output.ofNullable(linkedVpnTunnels);
+            this.linkedVpnTunnels = Codegen.ofNullable(linkedVpnTunnels);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -247,7 +248,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -255,7 +256,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public SpokeArgs build() {
             return new SpokeArgs(description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project);

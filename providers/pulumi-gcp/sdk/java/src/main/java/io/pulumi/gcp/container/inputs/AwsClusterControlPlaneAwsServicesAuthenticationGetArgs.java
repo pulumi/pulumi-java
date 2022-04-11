@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
       private final @Nullable Output<String> roleSessionName;
 
     public Output<String> getRoleSessionName() {
-        return this.roleSessionName == null ? Output.empty() : this.roleSessionName;
+        return this.roleSessionName == null ? Codegen.empty() : this.roleSessionName;
     }
 
     public AwsClusterControlPlaneAwsServicesAuthenticationGetArgs(
@@ -44,8 +45,8 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
     }
 
     private AwsClusterControlPlaneAwsServicesAuthenticationGetArgs() {
-        this.roleArn = Output.empty();
-        this.roleSessionName = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.roleSessionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationGetArgs extend
             return this;
         }
         public Builder roleSessionName(@Nullable String roleSessionName) {
-            this.roleSessionName = Output.ofNullable(roleSessionName);
+            this.roleSessionName = Codegen.ofNullable(roleSessionName);
             return this;
         }        public AwsClusterControlPlaneAwsServicesAuthenticationGetArgs build() {
             return new AwsClusterControlPlaneAwsServicesAuthenticationGetArgs(roleArn, roleSessionName);

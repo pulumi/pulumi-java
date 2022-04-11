@@ -5,6 +5,7 @@ package io.pulumi.random;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -37,7 +38,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> resultCount;
 
     public Output<Integer> getResultCount() {
-        return this.resultCount == null ? Output.empty() : this.resultCount;
+        return this.resultCount == null ? Codegen.empty() : this.resultCount;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> seed;
 
     public Output<String> getSeed() {
-        return this.seed == null ? Output.empty() : this.seed;
+        return this.seed == null ? Codegen.empty() : this.seed;
     }
 
     public RandomShuffleArgs(
@@ -74,10 +75,10 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomShuffleArgs() {
-        this.inputs = Output.empty();
-        this.keepers = Output.empty();
-        this.resultCount = Output.empty();
-        this.seed = Output.empty();
+        this.inputs = Codegen.empty();
+        this.keepers = Codegen.empty();
+        this.resultCount = Codegen.empty();
+        this.seed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder resultCount(@Nullable Output<Integer> resultCount) {
@@ -130,7 +131,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resultCount(@Nullable Integer resultCount) {
-            this.resultCount = Output.ofNullable(resultCount);
+            this.resultCount = Codegen.ofNullable(resultCount);
             return this;
         }
         public Builder seed(@Nullable Output<String> seed) {
@@ -138,7 +139,7 @@ public final class RandomShuffleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder seed(@Nullable String seed) {
-            this.seed = Output.ofNullable(seed);
+            this.seed = Codegen.ofNullable(seed);
             return this;
         }        public RandomShuffleArgs build() {
             return new RandomShuffleArgs(inputs, keepers, resultCount, seed);

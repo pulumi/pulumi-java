@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.enums.CaPoolTier;
 import io.pulumi.googlenative.privateca_v1.inputs.IssuancePolicyArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.PublishingOptionsArgs;
@@ -33,7 +34,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IssuancePolicyArgs> issuancePolicy;
 
     public Output<IssuancePolicyArgs> getIssuancePolicy() {
-        return this.issuancePolicy == null ? Output.empty() : this.issuancePolicy;
+        return this.issuancePolicy == null ? Codegen.empty() : this.issuancePolicy;
     }
 
     /**
@@ -44,21 +45,21 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PublishingOptionsArgs> publishingOptions;
 
     public Output<PublishingOptionsArgs> getPublishingOptions() {
-        return this.publishingOptions == null ? Output.empty() : this.publishingOptions;
+        return this.publishingOptions == null ? Codegen.empty() : this.publishingOptions;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -110,14 +111,14 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CaPoolArgs() {
-        this.caPoolId = Output.empty();
-        this.issuancePolicy = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.publishingOptions = Output.empty();
-        this.requestId = Output.empty();
-        this.tier = Output.empty();
+        this.caPoolId = Codegen.empty();
+        this.issuancePolicy = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.publishingOptions = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issuancePolicy(@Nullable IssuancePolicyArgs issuancePolicy) {
-            this.issuancePolicy = Output.ofNullable(issuancePolicy);
+            this.issuancePolicy = Codegen.ofNullable(issuancePolicy);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -175,7 +176,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -183,7 +184,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -191,7 +192,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder publishingOptions(@Nullable Output<PublishingOptionsArgs> publishingOptions) {
@@ -199,7 +200,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishingOptions(@Nullable PublishingOptionsArgs publishingOptions) {
-            this.publishingOptions = Output.ofNullable(publishingOptions);
+            this.publishingOptions = Codegen.ofNullable(publishingOptions);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -207,7 +208,7 @@ public final class CaPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder tier(Output<CaPoolTier> tier) {

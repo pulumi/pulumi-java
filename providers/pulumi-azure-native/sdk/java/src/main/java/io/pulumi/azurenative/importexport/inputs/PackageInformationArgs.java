@@ -5,6 +5,7 @@ package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -74,10 +75,10 @@ public final class PackageInformationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private PackageInformationArgs() {
-        this.carrierName = Output.empty();
-        this.driveCount = Output.empty();
-        this.shipDate = Output.empty();
-        this.trackingNumber = Output.empty();
+        this.carrierName = Codegen.empty();
+        this.driveCount = Codegen.empty();
+        this.shipDate = Codegen.empty();
+        this.trackingNumber = Codegen.empty();
     }
 
     public static Builder builder() {

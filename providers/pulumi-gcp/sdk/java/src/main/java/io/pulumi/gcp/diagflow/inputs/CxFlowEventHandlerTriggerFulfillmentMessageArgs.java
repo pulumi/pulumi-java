@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxFlowEventHandlerTriggerFulfillmentMessageTextArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageArgs extends io.pu
       private final @Nullable Output<CxFlowEventHandlerTriggerFulfillmentMessageTextArgs> text;
 
     public Output<CxFlowEventHandlerTriggerFulfillmentMessageTextArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public CxFlowEventHandlerTriggerFulfillmentMessageArgs(@Nullable Output<CxFlowEventHandlerTriggerFulfillmentMessageTextArgs> text) {
@@ -30,7 +31,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageArgs extends io.pu
     }
 
     private CxFlowEventHandlerTriggerFulfillmentMessageArgs() {
-        this.text = Output.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CxFlowEventHandlerTriggerFulfillmentMessageArgs extends io.pu
             return this;
         }
         public Builder text(@Nullable CxFlowEventHandlerTriggerFulfillmentMessageTextArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public CxFlowEventHandlerTriggerFulfillmentMessageArgs build() {
             return new CxFlowEventHandlerTriggerFulfillmentMessageArgs(text);

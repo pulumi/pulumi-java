@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
       private final @Nullable Output<String> redirectSiteKey;
 
     public Output<String> getRedirectSiteKey() {
-        return this.redirectSiteKey == null ? Output.empty() : this.redirectSiteKey;
+        return this.redirectSiteKey == null ? Codegen.empty() : this.redirectSiteKey;
     }
 
     public SecurityPolicyRecaptchaOptionsConfigArgs(@Nullable Output<String> redirectSiteKey) {
@@ -30,7 +31,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
     }
 
     private SecurityPolicyRecaptchaOptionsConfigArgs() {
-        this.redirectSiteKey = Output.empty();
+        this.redirectSiteKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
             return this;
         }
         public Builder redirectSiteKey(@Nullable String redirectSiteKey) {
-            this.redirectSiteKey = Output.ofNullable(redirectSiteKey);
+            this.redirectSiteKey = Codegen.ofNullable(redirectSiteKey);
             return this;
         }        public SecurityPolicyRecaptchaOptionsConfigArgs build() {
             return new SecurityPolicyRecaptchaOptionsConfigArgs(redirectSiteKey);

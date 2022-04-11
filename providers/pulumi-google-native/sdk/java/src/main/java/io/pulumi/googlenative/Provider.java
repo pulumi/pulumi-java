@@ -6,6 +6,7 @@ package io.pulumi.googlenative;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ProviderArgs;
 import io.pulumi.googlenative.Utilities;
 import java.lang.String;
@@ -82,7 +83,7 @@ public class Provider extends io.pulumi.resources.ProviderResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Provider(String name, @Nullable ProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native", name, args == null ? ProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private static io.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.CustomResourceOptions options, @Nullable Output<String> id) {

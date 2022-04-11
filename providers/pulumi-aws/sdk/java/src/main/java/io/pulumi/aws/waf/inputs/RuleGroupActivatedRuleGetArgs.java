@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.RuleGroupActivatedRuleActionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,7 +58,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RuleGroupActivatedRuleGetArgs(
@@ -72,10 +73,10 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
     }
 
     private RuleGroupActivatedRuleGetArgs() {
-        this.action = Output.empty();
-        this.priority = Output.empty();
-        this.ruleId = Output.empty();
-        this.type = Output.empty();
+        this.action = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class RuleGroupActivatedRuleGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RuleGroupActivatedRuleGetArgs build() {
             return new RuleGroupActivatedRuleGetArgs(action, priority, ruleId, type);

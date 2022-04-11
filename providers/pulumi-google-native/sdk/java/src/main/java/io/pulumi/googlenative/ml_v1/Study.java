@@ -6,6 +6,7 @@ package io.pulumi.googlenative.ml_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.StudyArgs;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__StudyConfigResponse;
@@ -112,7 +113,7 @@ public class Study extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Study(String name, StudyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:ml/v1:Study", name, args == null ? StudyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:ml/v1:Study", name, args == null ? StudyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Study(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

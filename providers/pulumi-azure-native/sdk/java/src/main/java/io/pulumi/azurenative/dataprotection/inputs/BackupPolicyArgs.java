@@ -8,6 +8,7 @@ import io.pulumi.azurenative.dataprotection.inputs.AzureRetentionRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,9 +65,9 @@ public final class BackupPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPolicyArgs() {
-        this.datasourceTypes = Output.empty();
-        this.objectType = Output.empty();
-        this.policyRules = Output.empty();
+        this.datasourceTypes = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.policyRules = Codegen.empty();
     }
 
     public static Builder builder() {

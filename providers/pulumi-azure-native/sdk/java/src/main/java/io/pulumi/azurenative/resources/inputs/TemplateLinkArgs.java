@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentVersion;
 
     public Output<String> getContentVersion() {
-        return this.contentVersion == null ? Output.empty() : this.contentVersion;
+        return this.contentVersion == null ? Codegen.empty() : this.contentVersion;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queryString;
 
     public Output<String> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> relativePath;
 
     public Output<String> getRelativePath() {
-        return this.relativePath == null ? Output.empty() : this.relativePath;
+        return this.relativePath == null ? Codegen.empty() : this.relativePath;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public TemplateLinkArgs(
@@ -87,11 +88,11 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateLinkArgs() {
-        this.contentVersion = Output.empty();
-        this.id = Output.empty();
-        this.queryString = Output.empty();
-        this.relativePath = Output.empty();
-        this.uri = Output.empty();
+        this.contentVersion = Codegen.empty();
+        this.id = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.relativePath = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentVersion(@Nullable String contentVersion) {
-            this.contentVersion = Output.ofNullable(contentVersion);
+            this.contentVersion = Codegen.ofNullable(contentVersion);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -135,7 +136,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder queryString(@Nullable Output<String> queryString) {
@@ -143,7 +144,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryString(@Nullable String queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder relativePath(@Nullable Output<String> relativePath) {
@@ -151,7 +152,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relativePath(@Nullable String relativePath) {
-            this.relativePath = Output.ofNullable(relativePath);
+            this.relativePath = Codegen.ofNullable(relativePath);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -159,7 +160,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public TemplateLinkArgs build() {
             return new TemplateLinkArgs(contentVersion, id, queryString, relativePath, uri);

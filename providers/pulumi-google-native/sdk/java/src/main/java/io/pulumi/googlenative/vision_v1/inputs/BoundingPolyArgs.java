@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vision_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.vision_v1.inputs.NormalizedVertexArgs;
 import io.pulumi.googlenative.vision_v1.inputs.VertexArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NormalizedVertexArgs>> normalizedVertices;
 
     public Output<List<NormalizedVertexArgs>> getNormalizedVertices() {
-        return this.normalizedVertices == null ? Output.empty() : this.normalizedVertices;
+        return this.normalizedVertices == null ? Codegen.empty() : this.normalizedVertices;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VertexArgs>> vertices;
 
     public Output<List<VertexArgs>> getVertices() {
-        return this.vertices == null ? Output.empty() : this.vertices;
+        return this.vertices == null ? Codegen.empty() : this.vertices;
     }
 
     public BoundingPolyArgs(
@@ -50,8 +51,8 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BoundingPolyArgs() {
-        this.normalizedVertices = Output.empty();
-        this.vertices = Output.empty();
+        this.normalizedVertices = Codegen.empty();
+        this.vertices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder normalizedVertices(@Nullable List<NormalizedVertexArgs> normalizedVertices) {
-            this.normalizedVertices = Output.ofNullable(normalizedVertices);
+            this.normalizedVertices = Codegen.ofNullable(normalizedVertices);
             return this;
         }
         public Builder normalizedVertices(NormalizedVertexArgs... normalizedVertices) {
@@ -92,7 +93,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vertices(@Nullable List<VertexArgs> vertices) {
-            this.vertices = Output.ofNullable(vertices);
+            this.vertices = Codegen.ofNullable(vertices);
             return this;
         }
         public Builder vertices(VertexArgs... vertices) {

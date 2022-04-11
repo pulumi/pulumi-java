@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class WirelessDeviceOtaaV10xArgs extends io.pulumi.resources.Resour
     }
 
     private WirelessDeviceOtaaV10xArgs() {
-        this.appEui = Output.empty();
-        this.appKey = Output.empty();
+        this.appEui = Codegen.empty();
+        this.appKey = Codegen.empty();
     }
 
     public static Builder builder() {

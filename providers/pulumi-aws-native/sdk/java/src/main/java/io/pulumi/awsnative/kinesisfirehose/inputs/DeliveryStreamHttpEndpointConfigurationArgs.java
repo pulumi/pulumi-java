@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
       private final @Nullable Output<String> accessKey;
 
     public Output<String> getAccessKey() {
-        return this.accessKey == null ? Output.empty() : this.accessKey;
+        return this.accessKey == null ? Codegen.empty() : this.accessKey;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="url", required=true)
@@ -45,9 +46,9 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
     }
 
     private DeliveryStreamHttpEndpointConfigurationArgs() {
-        this.accessKey = Output.empty();
-        this.name = Output.empty();
-        this.url = Output.empty();
+        this.accessKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder accessKey(@Nullable String accessKey) {
-            this.accessKey = Output.ofNullable(accessKey);
+            this.accessKey = Codegen.ofNullable(accessKey);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class DeliveryStreamHttpEndpointConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder url(Output<String> url) {

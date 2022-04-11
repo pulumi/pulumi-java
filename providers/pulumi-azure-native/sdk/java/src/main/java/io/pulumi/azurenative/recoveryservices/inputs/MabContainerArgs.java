@@ -9,6 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.MabContainerExtendedInfoArg
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -33,7 +34,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> agentVersion;
 
     public Output<String> getAgentVersion() {
-        return this.agentVersion == null ? Output.empty() : this.agentVersion;
+        return this.agentVersion == null ? Codegen.empty() : this.agentVersion;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
+        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> canReRegister;
 
     public Output<Boolean> getCanReRegister() {
-        return this.canReRegister == null ? Output.empty() : this.canReRegister;
+        return this.canReRegister == null ? Codegen.empty() : this.canReRegister;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> containerHealthState;
 
     public Output<String> getContainerHealthState() {
-        return this.containerHealthState == null ? Output.empty() : this.containerHealthState;
+        return this.containerHealthState == null ? Codegen.empty() : this.containerHealthState;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> containerId;
 
     public Output<Double> getContainerId() {
-        return this.containerId == null ? Output.empty() : this.containerId;
+        return this.containerId == null ? Codegen.empty() : this.containerId;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MabContainerExtendedInfoArgs> extendedInfo;
 
     public Output<MabContainerExtendedInfoArgs> getExtendedInfo() {
-        return this.extendedInfo == null ? Output.empty() : this.extendedInfo;
+        return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> healthStatus;
 
     public Output<String> getHealthStatus() {
-        return this.healthStatus == null ? Output.empty() : this.healthStatus;
+        return this.healthStatus == null ? Codegen.empty() : this.healthStatus;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails;
 
     public Output<List<MABContainerHealthDetailsArgs>> getMabContainerHealthDetails() {
-        return this.mabContainerHealthDetails == null ? Output.empty() : this.mabContainerHealthDetails;
+        return this.mabContainerHealthDetails == null ? Codegen.empty() : this.mabContainerHealthDetails;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> protectedItemCount;
 
     public Output<Double> getProtectedItemCount() {
-        return this.protectedItemCount == null ? Output.empty() : this.protectedItemCount;
+        return this.protectedItemCount == null ? Codegen.empty() : this.protectedItemCount;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> registrationStatus;
 
     public Output<String> getRegistrationStatus() {
-        return this.registrationStatus == null ? Output.empty() : this.registrationStatus;
+        return this.registrationStatus == null ? Codegen.empty() : this.registrationStatus;
     }
 
     public MabContainerArgs(
@@ -189,18 +190,18 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MabContainerArgs() {
-        this.agentVersion = Output.empty();
-        this.backupManagementType = Output.empty();
-        this.canReRegister = Output.empty();
-        this.containerHealthState = Output.empty();
-        this.containerId = Output.empty();
-        this.containerType = Output.empty();
-        this.extendedInfo = Output.empty();
-        this.friendlyName = Output.empty();
-        this.healthStatus = Output.empty();
-        this.mabContainerHealthDetails = Output.empty();
-        this.protectedItemCount = Output.empty();
-        this.registrationStatus = Output.empty();
+        this.agentVersion = Codegen.empty();
+        this.backupManagementType = Codegen.empty();
+        this.canReRegister = Codegen.empty();
+        this.containerHealthState = Codegen.empty();
+        this.containerId = Codegen.empty();
+        this.containerType = Codegen.empty();
+        this.extendedInfo = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.healthStatus = Codegen.empty();
+        this.mabContainerHealthDetails = Codegen.empty();
+        this.protectedItemCount = Codegen.empty();
+        this.registrationStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentVersion(@Nullable String agentVersion) {
-            this.agentVersion = Output.ofNullable(agentVersion);
+            this.agentVersion = Codegen.ofNullable(agentVersion);
             return this;
         }
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
@@ -258,7 +259,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Output.ofNullable(backupManagementType);
+            this.backupManagementType = Codegen.ofNullable(backupManagementType);
             return this;
         }
         public Builder canReRegister(@Nullable Output<Boolean> canReRegister) {
@@ -266,7 +267,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder canReRegister(@Nullable Boolean canReRegister) {
-            this.canReRegister = Output.ofNullable(canReRegister);
+            this.canReRegister = Codegen.ofNullable(canReRegister);
             return this;
         }
         public Builder containerHealthState(@Nullable Output<String> containerHealthState) {
@@ -274,7 +275,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerHealthState(@Nullable String containerHealthState) {
-            this.containerHealthState = Output.ofNullable(containerHealthState);
+            this.containerHealthState = Codegen.ofNullable(containerHealthState);
             return this;
         }
         public Builder containerId(@Nullable Output<Double> containerId) {
@@ -282,7 +283,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerId(@Nullable Double containerId) {
-            this.containerId = Output.ofNullable(containerId);
+            this.containerId = Codegen.ofNullable(containerId);
             return this;
         }
         public Builder containerType(Output<String> containerType) {
@@ -298,7 +299,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedInfo(@Nullable MabContainerExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Output.ofNullable(extendedInfo);
+            this.extendedInfo = Codegen.ofNullable(extendedInfo);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -306,7 +307,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
@@ -314,7 +315,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthStatus(@Nullable String healthStatus) {
-            this.healthStatus = Output.ofNullable(healthStatus);
+            this.healthStatus = Codegen.ofNullable(healthStatus);
             return this;
         }
         public Builder mabContainerHealthDetails(@Nullable Output<List<MABContainerHealthDetailsArgs>> mabContainerHealthDetails) {
@@ -322,7 +323,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsArgs> mabContainerHealthDetails) {
-            this.mabContainerHealthDetails = Output.ofNullable(mabContainerHealthDetails);
+            this.mabContainerHealthDetails = Codegen.ofNullable(mabContainerHealthDetails);
             return this;
         }
         public Builder mabContainerHealthDetails(MABContainerHealthDetailsArgs... mabContainerHealthDetails) {
@@ -333,7 +334,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
-            this.protectedItemCount = Output.ofNullable(protectedItemCount);
+            this.protectedItemCount = Codegen.ofNullable(protectedItemCount);
             return this;
         }
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
@@ -341,7 +342,7 @@ public final class MabContainerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationStatus(@Nullable String registrationStatus) {
-            this.registrationStatus = Output.ofNullable(registrationStatus);
+            this.registrationStatus = Codegen.ofNullable(registrationStatus);
             return this;
         }        public MabContainerArgs build() {
             return new MabContainerArgs(agentVersion, backupManagementType, canReRegister, containerHealthState, containerId, containerType, extendedInfo, friendlyName, healthStatus, mabContainerHealthDetails, protectedItemCount, registrationStatus);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
       private final @Nullable Output<String> next;
 
     public Output<String> getNext() {
-        return this.next == null ? Output.empty() : this.next;
+        return this.next == null ? Codegen.empty() : this.next;
     }
 
     @Import(name="roleArn", required=true)
@@ -63,11 +64,11 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
     }
 
     private PipelineDeviceRegistryEnrichArgs() {
-        this.attribute = Output.empty();
-        this.name = Output.empty();
-        this.next = Output.empty();
-        this.roleArn = Output.empty();
-        this.thingName = Output.empty();
+        this.attribute = Codegen.empty();
+        this.name = Codegen.empty();
+        this.next = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.thingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class PipelineDeviceRegistryEnrichArgs extends io.pulumi.resources.
             return this;
         }
         public Builder next(@Nullable String next) {
-            this.next = Output.ofNullable(next);
+            this.next = Codegen.ofNullable(next);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

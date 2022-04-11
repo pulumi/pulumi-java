@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> backendService;
 
     public Output<String> getBackendService() {
-        return this.backendService == null ? Output.empty() : this.backendService;
+        return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> proxyBind;
 
     public Output<Boolean> getProxyBind() {
-        return this.proxyBind == null ? Output.empty() : this.proxyBind;
+        return this.proxyBind == null ? Codegen.empty() : this.proxyBind;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> proxyHeader;
 
     public Output<String> getProxyHeader() {
-        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
+        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> proxyId;
 
     public Output<Integer> getProxyId() {
-        return this.proxyId == null ? Output.empty() : this.proxyId;
+        return this.proxyId == null ? Codegen.empty() : this.proxyId;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     public TargetTCPProxyState(
@@ -148,15 +149,15 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private TargetTCPProxyState() {
-        this.backendService = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.proxyBind = Output.empty();
-        this.proxyHeader = Output.empty();
-        this.proxyId = Output.empty();
-        this.selfLink = Output.empty();
+        this.backendService = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.proxyBind = Codegen.empty();
+        this.proxyHeader = Codegen.empty();
+        this.proxyId = Codegen.empty();
+        this.selfLink = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Output.ofNullable(backendService);
+            this.backendService = Codegen.ofNullable(backendService);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -208,7 +209,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -216,7 +217,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -224,7 +225,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -232,7 +233,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder proxyBind(@Nullable Output<Boolean> proxyBind) {
@@ -240,7 +241,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder proxyBind(@Nullable Boolean proxyBind) {
-            this.proxyBind = Output.ofNullable(proxyBind);
+            this.proxyBind = Codegen.ofNullable(proxyBind);
             return this;
         }
         public Builder proxyHeader(@Nullable Output<String> proxyHeader) {
@@ -248,7 +249,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder proxyHeader(@Nullable String proxyHeader) {
-            this.proxyHeader = Output.ofNullable(proxyHeader);
+            this.proxyHeader = Codegen.ofNullable(proxyHeader);
             return this;
         }
         public Builder proxyId(@Nullable Output<Integer> proxyId) {
@@ -256,7 +257,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder proxyId(@Nullable Integer proxyId) {
-            this.proxyId = Output.ofNullable(proxyId);
+            this.proxyId = Codegen.ofNullable(proxyId);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -264,7 +265,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }        public TargetTCPProxyState build() {
             return new TargetTCPProxyState(backendService, creationTimestamp, description, name, project, proxyBind, proxyHeader, proxyId, selfLink);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class InstanceFromTemplateNetworkPerformanceConfigArgs extends io.p
     }
 
     private InstanceFromTemplateNetworkPerformanceConfigArgs() {
-        this.totalEgressBandwidthTier = Output.empty();
+        this.totalEgressBandwidthTier = Codegen.empty();
     }
 
     public static Builder builder() {

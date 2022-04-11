@@ -10,6 +10,7 @@ import io.pulumi.aws.rds.outputs.GlobalClusterGlobalClusterMember;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -224,7 +225,7 @@ public class GlobalCluster extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GlobalCluster(String name, GlobalClusterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:rds/globalCluster:GlobalCluster", name, args == null ? GlobalClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:rds/globalCluster:GlobalCluster", name, args == null ? GlobalClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GlobalCluster(String name, Output<String> id, @Nullable GlobalClusterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

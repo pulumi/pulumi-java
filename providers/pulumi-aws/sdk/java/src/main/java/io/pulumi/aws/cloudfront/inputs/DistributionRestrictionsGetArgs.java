@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.DistributionRestrictionsGeoRestrictionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class DistributionRestrictionsGetArgs extends io.pulumi.resources.R
     }
 
     private DistributionRestrictionsGetArgs() {
-        this.geoRestriction = Output.empty();
+        this.geoRestriction = Codegen.empty();
     }
 
     public static Builder builder() {

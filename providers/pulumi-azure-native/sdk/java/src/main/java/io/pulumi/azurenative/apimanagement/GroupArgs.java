@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.GroupType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalId;
 
     public Output<String> getExternalId() {
-        return this.externalId == null ? Output.empty() : this.externalId;
+        return this.externalId == null ? Codegen.empty() : this.externalId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GroupType> type;
 
     public Output<GroupType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public GroupArgs(
@@ -110,13 +111,13 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.externalId = Output.empty();
-        this.groupId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.externalId = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -172,7 +173,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalId(@Nullable String externalId) {
-            this.externalId = Output.ofNullable(externalId);
+            this.externalId = Codegen.ofNullable(externalId);
             return this;
         }
         public Builder groupId(@Nullable Output<String> groupId) {
@@ -180,7 +181,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -204,7 +205,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable GroupType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public GroupArgs build() {
             return new GroupArgs(description, displayName, externalId, groupId, resourceGroupName, serviceName, type);

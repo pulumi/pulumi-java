@@ -6,6 +6,7 @@ package io.pulumi.aws.waf;
 import io.pulumi.aws.waf.inputs.RegexMatchSetRegexMatchTupleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples;
 
     public Output<List<RegexMatchSetRegexMatchTupleArgs>> getRegexMatchTuples() {
-        return this.regexMatchTuples == null ? Output.empty() : this.regexMatchTuples;
+        return this.regexMatchTuples == null ? Codegen.empty() : this.regexMatchTuples;
     }
 
     public RegexMatchSetArgs(
@@ -46,8 +47,8 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegexMatchSetArgs() {
-        this.name = Output.empty();
-        this.regexMatchTuples = Output.empty();
+        this.name = Codegen.empty();
+        this.regexMatchTuples = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regexMatchTuples(@Nullable Output<List<RegexMatchSetRegexMatchTupleArgs>> regexMatchTuples) {
@@ -85,7 +86,7 @@ public final class RegexMatchSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regexMatchTuples(@Nullable List<RegexMatchSetRegexMatchTupleArgs> regexMatchTuples) {
-            this.regexMatchTuples = Output.ofNullable(regexMatchTuples);
+            this.regexMatchTuples = Codegen.ofNullable(regexMatchTuples);
             return this;
         }
         public Builder regexMatchTuples(RegexMatchSetRegexMatchTupleArgs... regexMatchTuples) {

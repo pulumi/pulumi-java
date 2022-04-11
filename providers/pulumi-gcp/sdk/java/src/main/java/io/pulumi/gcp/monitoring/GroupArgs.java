@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isCluster;
 
     public Output<Boolean> getIsCluster() {
-        return this.isCluster == null ? Output.empty() : this.isCluster;
+        return this.isCluster == null ? Codegen.empty() : this.isCluster;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentName;
 
     public Output<String> getParentName() {
-        return this.parentName == null ? Output.empty() : this.parentName;
+        return this.parentName == null ? Codegen.empty() : this.parentName;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public GroupArgs(
@@ -91,11 +92,11 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.displayName = Output.empty();
-        this.filter = Output.empty();
-        this.isCluster = Output.empty();
-        this.parentName = Output.empty();
-        this.project = Output.empty();
+        this.displayName = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.isCluster = Codegen.empty();
+        this.parentName = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Output.ofNullable(isCluster);
+            this.isCluster = Codegen.ofNullable(isCluster);
             return this;
         }
         public Builder parentName(@Nullable Output<String> parentName) {
@@ -155,7 +156,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentName(@Nullable String parentName) {
-            this.parentName = Output.ofNullable(parentName);
+            this.parentName = Codegen.ofNullable(parentName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -163,7 +164,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public GroupArgs build() {
             return new GroupArgs(displayName, filter, isCluster, parentName, project);

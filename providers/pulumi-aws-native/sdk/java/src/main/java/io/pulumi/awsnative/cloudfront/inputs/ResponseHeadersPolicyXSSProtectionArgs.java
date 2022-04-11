@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
       private final @Nullable Output<Boolean> modeBlock;
 
     public Output<Boolean> getModeBlock() {
-        return this.modeBlock == null ? Output.empty() : this.modeBlock;
+        return this.modeBlock == null ? Codegen.empty() : this.modeBlock;
     }
 
     @Import(name="override", required=true)
@@ -40,7 +41,7 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
       private final @Nullable Output<String> reportUri;
 
     public Output<String> getReportUri() {
-        return this.reportUri == null ? Output.empty() : this.reportUri;
+        return this.reportUri == null ? Codegen.empty() : this.reportUri;
     }
 
     public ResponseHeadersPolicyXSSProtectionArgs(
@@ -55,10 +56,10 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
     }
 
     private ResponseHeadersPolicyXSSProtectionArgs() {
-        this.modeBlock = Output.empty();
-        this.override = Output.empty();
-        this.protection = Output.empty();
-        this.reportUri = Output.empty();
+        this.modeBlock = Codegen.empty();
+        this.override = Codegen.empty();
+        this.protection = Codegen.empty();
+        this.reportUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder modeBlock(@Nullable Boolean modeBlock) {
-            this.modeBlock = Output.ofNullable(modeBlock);
+            this.modeBlock = Codegen.ofNullable(modeBlock);
             return this;
         }
         public Builder override(Output<Boolean> override) {
@@ -116,7 +117,7 @@ public final class ResponseHeadersPolicyXSSProtectionArgs extends io.pulumi.reso
             return this;
         }
         public Builder reportUri(@Nullable String reportUri) {
-            this.reportUri = Output.ofNullable(reportUri);
+            this.reportUri = Codegen.ofNullable(reportUri);
             return this;
         }        public ResponseHeadersPolicyXSSProtectionArgs build() {
             return new ResponseHeadersPolicyXSSProtectionArgs(modeBlock, override, protection, reportUri);

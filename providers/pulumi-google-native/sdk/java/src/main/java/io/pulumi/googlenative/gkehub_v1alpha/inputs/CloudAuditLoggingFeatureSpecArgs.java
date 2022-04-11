@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> allowlistedServiceAccounts;
 
     public Output<List<String>> getAllowlistedServiceAccounts() {
-        return this.allowlistedServiceAccounts == null ? Output.empty() : this.allowlistedServiceAccounts;
+        return this.allowlistedServiceAccounts == null ? Codegen.empty() : this.allowlistedServiceAccounts;
     }
 
     public CloudAuditLoggingFeatureSpecArgs(@Nullable Output<List<String>> allowlistedServiceAccounts) {
@@ -35,7 +36,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
     }
 
     private CloudAuditLoggingFeatureSpecArgs() {
-        this.allowlistedServiceAccounts = Output.empty();
+        this.allowlistedServiceAccounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CloudAuditLoggingFeatureSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allowlistedServiceAccounts(@Nullable List<String> allowlistedServiceAccounts) {
-            this.allowlistedServiceAccounts = Output.ofNullable(allowlistedServiceAccounts);
+            this.allowlistedServiceAccounts = Codegen.ofNullable(allowlistedServiceAccounts);
             return this;
         }
         public Builder allowlistedServiceAccounts(String... allowlistedServiceAccounts) {

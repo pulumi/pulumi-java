@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> interfaceString;
 
     public Output<String> getInterfaceString() {
-        return this.interfaceString == null ? Output.empty() : this.interfaceString;
+        return this.interfaceString == null ? Codegen.empty() : this.interfaceString;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ModuleAssetParameterArgs>> parameters;
 
     public Output<List<ModuleAssetParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public ModeValueInfoArgs(
@@ -50,8 +51,8 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModeValueInfoArgs() {
-        this.interfaceString = Output.empty();
-        this.parameters = Output.empty();
+        this.interfaceString = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interfaceString(@Nullable String interfaceString) {
-            this.interfaceString = Output.ofNullable(interfaceString);
+            this.interfaceString = Codegen.ofNullable(interfaceString);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ModuleAssetParameterArgs>> parameters) {
@@ -89,7 +90,7 @@ public final class ModeValueInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<ModuleAssetParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ModuleAssetParameterArgs... parameters) {

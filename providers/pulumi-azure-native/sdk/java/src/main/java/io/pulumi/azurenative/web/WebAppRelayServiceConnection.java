@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -135,7 +136,7 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppRelayServiceConnection(String name, WebAppRelayServiceConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppRelayServiceConnection", name, args == null ? WebAppRelayServiceConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppRelayServiceConnection", name, args == null ? WebAppRelayServiceConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppRelayServiceConnection(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

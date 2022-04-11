@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class OSPolicyResourcePackageResourceGooGetArgs extends io.pulumi.r
     }
 
     private OSPolicyResourcePackageResourceGooGetArgs() {
-        this.name = Output.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

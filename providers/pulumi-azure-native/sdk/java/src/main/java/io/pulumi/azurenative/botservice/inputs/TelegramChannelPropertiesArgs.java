@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> isValidated;
 
     public Output<Boolean> getIsValidated() {
-        return this.isValidated == null ? Output.empty() : this.isValidated;
+        return this.isValidated == null ? Codegen.empty() : this.isValidated;
     }
 
     public TelegramChannelPropertiesArgs(
@@ -62,9 +63,9 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private TelegramChannelPropertiesArgs() {
-        this.accessToken = Output.empty();
-        this.isEnabled = Output.empty();
-        this.isValidated = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.isValidated = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {
@@ -112,7 +113,7 @@ public final class TelegramChannelPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder isValidated(@Nullable Boolean isValidated) {
-            this.isValidated = Output.ofNullable(isValidated);
+            this.isValidated = Codegen.ofNullable(isValidated);
             return this;
         }        public TelegramChannelPropertiesArgs build() {
             return new TelegramChannelPropertiesArgs(accessToken, isEnabled, isValidated);

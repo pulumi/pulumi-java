@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,14 +47,14 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public TunnelInstanceIAMPolicyArgs(
@@ -68,10 +69,10 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private TunnelInstanceIAMPolicyArgs() {
-        this.instance = Output.empty();
-        this.policyData = Output.empty();
-        this.project = Output.empty();
-        this.zone = Output.empty();
+        this.instance = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.project = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -129,7 +130,7 @@ public final class TunnelInstanceIAMPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public TunnelInstanceIAMPolicyArgs build() {
             return new TunnelInstanceIAMPolicyArgs(instance, policyData, project, zone);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.redis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> hours;
 
     public Output<Integer> getHours() {
-        return this.hours == null ? Output.empty() : this.hours;
+        return this.hours == null ? Codegen.empty() : this.hours;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minutes;
 
     public Output<Integer> getMinutes() {
-        return this.minutes == null ? Output.empty() : this.minutes;
+        return this.minutes == null ? Codegen.empty() : this.minutes;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
-        return this.nanos == null ? Output.empty() : this.nanos;
+        return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> seconds;
 
     public Output<Integer> getSeconds() {
-        return this.seconds == null ? Output.empty() : this.seconds;
+        return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 
     public TimeOfDayArgs(
@@ -74,10 +75,10 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TimeOfDayArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.nanos = Output.empty();
-        this.seconds = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.nanos = Codegen.empty();
+        this.seconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hours(@Nullable Integer hours) {
-            this.hours = Output.ofNullable(hours);
+            this.hours = Codegen.ofNullable(hours);
             return this;
         }
         public Builder minutes(@Nullable Output<Integer> minutes) {
@@ -119,7 +120,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minutes(@Nullable Integer minutes) {
-            this.minutes = Output.ofNullable(minutes);
+            this.minutes = Codegen.ofNullable(minutes);
             return this;
         }
         public Builder nanos(@Nullable Output<Integer> nanos) {
@@ -127,7 +128,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Output.ofNullable(nanos);
+            this.nanos = Codegen.ofNullable(nanos);
             return this;
         }
         public Builder seconds(@Nullable Output<Integer> seconds) {
@@ -135,7 +136,7 @@ public final class TimeOfDayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder seconds(@Nullable Integer seconds) {
-            this.seconds = Output.ofNullable(seconds);
+            this.seconds = Codegen.ofNullable(seconds);
             return this;
         }        public TimeOfDayArgs build() {
             return new TimeOfDayArgs(hours, minutes, nanos, seconds);

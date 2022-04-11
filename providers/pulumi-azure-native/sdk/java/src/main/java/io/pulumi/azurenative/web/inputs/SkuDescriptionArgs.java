@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.CapabilityArgs;
 import io.pulumi.azurenative.web.inputs.SkuCapacityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CapabilityArgs>> capabilities;
 
     public Output<List<CapabilityArgs>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
-        return this.family == null ? Output.empty() : this.family;
+        return this.family == null ? Codegen.empty() : this.family;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuCapacityArgs> skuCapacity;
 
     public Output<SkuCapacityArgs> getSkuCapacity() {
-        return this.skuCapacity == null ? Output.empty() : this.skuCapacity;
+        return this.skuCapacity == null ? Codegen.empty() : this.skuCapacity;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public SkuDescriptionArgs(
@@ -130,14 +131,14 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuDescriptionArgs() {
-        this.capabilities = Output.empty();
-        this.capacity = Output.empty();
-        this.family = Output.empty();
-        this.locations = Output.empty();
-        this.name = Output.empty();
-        this.size = Output.empty();
-        this.skuCapacity = Output.empty();
-        this.tier = Output.empty();
+        this.capabilities = Codegen.empty();
+        this.capacity = Codegen.empty();
+        this.family = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.size = Codegen.empty();
+        this.skuCapacity = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capabilities(@Nullable List<CapabilityArgs> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(CapabilityArgs... capabilities) {
@@ -190,7 +191,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder family(@Nullable Output<String> family) {
@@ -198,7 +199,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder family(@Nullable String family) {
-            this.family = Output.ofNullable(family);
+            this.family = Codegen.ofNullable(family);
             return this;
         }
         public Builder locations(@Nullable Output<List<String>> locations) {
@@ -206,7 +207,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -217,7 +218,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder size(@Nullable Output<String> size) {
@@ -225,7 +226,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder skuCapacity(@Nullable Output<SkuCapacityArgs> skuCapacity) {
@@ -233,7 +234,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skuCapacity(@Nullable SkuCapacityArgs skuCapacity) {
-            this.skuCapacity = Output.ofNullable(skuCapacity);
+            this.skuCapacity = Codegen.ofNullable(skuCapacity);
             return this;
         }
         public Builder tier(@Nullable Output<String> tier) {
@@ -241,7 +242,7 @@ public final class SkuDescriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public SkuDescriptionArgs build() {
             return new SkuDescriptionArgs(capabilities, capacity, family, locations, name, size, skuCapacity, tier);

@@ -9,6 +9,7 @@ import io.pulumi.aws.appconfig.inputs.DeploymentStrategyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -194,7 +195,7 @@ public class DeploymentStrategy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentStrategy(String name, DeploymentStrategyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, args == null ? DeploymentStrategyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appconfig/deploymentStrategy:DeploymentStrategy", name, args == null ? DeploymentStrategyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeploymentStrategy(String name, Output<String> id, @Nullable DeploymentStrategyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

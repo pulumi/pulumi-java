@@ -9,6 +9,7 @@ import io.pulumi.aws.datasync.inputs.LocationFsxLustreState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -165,7 +166,7 @@ public class LocationFsxLustre extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LocationFsxLustre(String name, LocationFsxLustreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:datasync/locationFsxLustre:LocationFsxLustre", name, args == null ? LocationFsxLustreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:datasync/locationFsxLustre:LocationFsxLustre", name, args == null ? LocationFsxLustreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LocationFsxLustre(String name, Output<String> id, @Nullable LocationFsxLustreState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

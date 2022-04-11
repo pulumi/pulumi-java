@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ProjectMetadataArgs;
 import io.pulumi.gcp.compute.inputs.ProjectMetadataState;
@@ -90,7 +91,7 @@ public class ProjectMetadata extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectMetadata(String name, ProjectMetadataArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/projectMetadata:ProjectMetadata", name, args == null ? ProjectMetadataArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/projectMetadata:ProjectMetadata", name, args == null ? ProjectMetadataArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectMetadata(String name, Output<String> id, @Nullable ProjectMetadataState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

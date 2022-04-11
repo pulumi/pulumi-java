@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.VolumeNodeResourcesArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VolumeNodeResourcesArgs> allocatable;
 
     public Output<VolumeNodeResourcesArgs> getAllocatable() {
-        return this.allocatable == null ? Output.empty() : this.allocatable;
+        return this.allocatable == null ? Codegen.empty() : this.allocatable;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> topologyKeys;
 
     public Output<List<String>> getTopologyKeys() {
-        return this.topologyKeys == null ? Output.empty() : this.topologyKeys;
+        return this.topologyKeys == null ? Codegen.empty() : this.topologyKeys;
     }
 
     public CSINodeDriverArgs(
@@ -76,10 +77,10 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CSINodeDriverArgs() {
-        this.allocatable = Output.empty();
-        this.name = Output.empty();
-        this.nodeID = Output.empty();
-        this.topologyKeys = Output.empty();
+        this.allocatable = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodeID = Codegen.empty();
+        this.topologyKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allocatable(@Nullable VolumeNodeResourcesArgs allocatable) {
-            this.allocatable = Output.ofNullable(allocatable);
+            this.allocatable = Codegen.ofNullable(allocatable);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -137,7 +138,7 @@ public final class CSINodeDriverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topologyKeys(@Nullable List<String> topologyKeys) {
-            this.topologyKeys = Output.ofNullable(topologyKeys);
+            this.topologyKeys = Codegen.ofNullable(topologyKeys);
             return this;
         }
         public Builder topologyKeys(String... topologyKeys) {

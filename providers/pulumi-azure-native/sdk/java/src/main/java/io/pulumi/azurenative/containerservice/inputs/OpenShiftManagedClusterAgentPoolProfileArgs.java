@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerservice.enums.OpenShiftContainerServiceVMS
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -53,7 +54,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
       private final @Nullable Output<Either<String,OSType>> osType;
 
     public Output<Either<String,OSType>> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
       private final @Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role;
 
     public Output<Either<String,OpenShiftAgentPoolProfileRole>> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
       private final @Nullable Output<String> subnetCidr;
 
     public Output<String> getSubnetCidr() {
-        return this.subnetCidr == null ? Output.empty() : this.subnetCidr;
+        return this.subnetCidr == null ? Codegen.empty() : this.subnetCidr;
     }
 
     /**
@@ -100,17 +101,17 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
         this.name = Objects.requireNonNull(name, "expected parameter 'name' to be non-null");
         this.osType = osType;
         this.role = role;
-        this.subnetCidr = subnetCidr == null ? Output.ofNullable("10.0.0.0/24") : subnetCidr;
+        this.subnetCidr = subnetCidr == null ? Codegen.ofNullable("10.0.0.0/24") : subnetCidr;
         this.vmSize = Objects.requireNonNull(vmSize, "expected parameter 'vmSize' to be non-null");
     }
 
     private OpenShiftManagedClusterAgentPoolProfileArgs() {
-        this.count = Output.empty();
-        this.name = Output.empty();
-        this.osType = Output.empty();
-        this.role = Output.empty();
-        this.subnetCidr = Output.empty();
-        this.vmSize = Output.empty();
+        this.count = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.role = Codegen.empty();
+        this.subnetCidr = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
             return this;
         }
         public Builder osType(@Nullable Either<String,OSType> osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder role(@Nullable Output<Either<String,OpenShiftAgentPoolProfileRole>> role) {
@@ -172,7 +173,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
             return this;
         }
         public Builder role(@Nullable Either<String,OpenShiftAgentPoolProfileRole> role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder subnetCidr(@Nullable Output<String> subnetCidr) {
@@ -180,7 +181,7 @@ public final class OpenShiftManagedClusterAgentPoolProfileArgs extends io.pulumi
             return this;
         }
         public Builder subnetCidr(@Nullable String subnetCidr) {
-            this.subnetCidr = Output.ofNullable(subnetCidr);
+            this.subnetCidr = Codegen.ofNullable(subnetCidr);
             return this;
         }
         public Builder vmSize(Output<Either<String,OpenShiftContainerServiceVMSize>> vmSize) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class StackUserSettingGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private StackUserSettingGetArgs() {
-        this.action = Output.empty();
-        this.permission = Output.empty();
+        this.action = Codegen.empty();
+        this.permission = Codegen.empty();
     }
 
     public static Builder builder() {

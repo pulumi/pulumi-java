@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1beta.enums.NetworkInstanceIpMode;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> forwardedPorts;
 
     public Output<List<String>> getForwardedPorts() {
-        return this.forwardedPorts == null ? Output.empty() : this.forwardedPorts;
+        return this.forwardedPorts == null ? Codegen.empty() : this.forwardedPorts;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkInstanceIpMode> instanceIpMode;
 
     public Output<NetworkInstanceIpMode> getInstanceIpMode() {
-        return this.instanceIpMode == null ? Output.empty() : this.instanceIpMode;
+        return this.instanceIpMode == null ? Codegen.empty() : this.instanceIpMode;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceTag;
 
     public Output<String> getInstanceTag() {
-        return this.instanceTag == null ? Output.empty() : this.instanceTag;
+        return this.instanceTag == null ? Codegen.empty() : this.instanceTag;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> sessionAffinity;
 
     public Output<Boolean> getSessionAffinity() {
-        return this.sessionAffinity == null ? Output.empty() : this.sessionAffinity;
+        return this.sessionAffinity == null ? Codegen.empty() : this.sessionAffinity;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetworkName;
 
     public Output<String> getSubnetworkName() {
-        return this.subnetworkName == null ? Output.empty() : this.subnetworkName;
+        return this.subnetworkName == null ? Codegen.empty() : this.subnetworkName;
     }
 
     public NetworkArgs(
@@ -103,12 +104,12 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkArgs() {
-        this.forwardedPorts = Output.empty();
-        this.instanceIpMode = Output.empty();
-        this.instanceTag = Output.empty();
-        this.name = Output.empty();
-        this.sessionAffinity = Output.empty();
-        this.subnetworkName = Output.empty();
+        this.forwardedPorts = Codegen.empty();
+        this.instanceIpMode = Codegen.empty();
+        this.instanceTag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sessionAffinity = Codegen.empty();
+        this.subnetworkName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forwardedPorts(@Nullable List<String> forwardedPorts) {
-            this.forwardedPorts = Output.ofNullable(forwardedPorts);
+            this.forwardedPorts = Codegen.ofNullable(forwardedPorts);
             return this;
         }
         public Builder forwardedPorts(String... forwardedPorts) {
@@ -157,7 +158,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceIpMode(@Nullable NetworkInstanceIpMode instanceIpMode) {
-            this.instanceIpMode = Output.ofNullable(instanceIpMode);
+            this.instanceIpMode = Codegen.ofNullable(instanceIpMode);
             return this;
         }
         public Builder instanceTag(@Nullable Output<String> instanceTag) {
@@ -165,7 +166,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceTag(@Nullable String instanceTag) {
-            this.instanceTag = Output.ofNullable(instanceTag);
+            this.instanceTag = Codegen.ofNullable(instanceTag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -173,7 +174,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sessionAffinity(@Nullable Output<Boolean> sessionAffinity) {
@@ -181,7 +182,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionAffinity(@Nullable Boolean sessionAffinity) {
-            this.sessionAffinity = Output.ofNullable(sessionAffinity);
+            this.sessionAffinity = Codegen.ofNullable(sessionAffinity);
             return this;
         }
         public Builder subnetworkName(@Nullable Output<String> subnetworkName) {
@@ -189,7 +190,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetworkName(@Nullable String subnetworkName) {
-            this.subnetworkName = Output.ofNullable(subnetworkName);
+            this.subnetworkName = Codegen.ofNullable(subnetworkName);
             return this;
         }        public NetworkArgs build() {
             return new NetworkArgs(forwardedPorts, instanceIpMode, instanceTag, name, sessionAffinity, subnetworkName);

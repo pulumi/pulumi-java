@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StorageAccountArgs>> storageaccounts;
 
     public Output<List<StorageAccountArgs>> getStorageaccounts() {
-        return this.storageaccounts == null ? Output.empty() : this.storageaccounts;
+        return this.storageaccounts == null ? Codegen.empty() : this.storageaccounts;
     }
 
     public StorageProfileArgs(@Nullable Output<List<StorageAccountArgs>> storageaccounts) {
@@ -35,7 +36,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageProfileArgs() {
-        this.storageaccounts = Output.empty();
+        this.storageaccounts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageaccounts(@Nullable List<StorageAccountArgs> storageaccounts) {
-            this.storageaccounts = Output.ofNullable(storageaccounts);
+            this.storageaccounts = Codegen.ofNullable(storageaccounts);
             return this;
         }
         public Builder storageaccounts(StorageAccountArgs... storageaccounts) {

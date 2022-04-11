@@ -5,6 +5,7 @@ package io.pulumi.googlenative.translate_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.translate_v3beta1.inputs.GcsSourceArgs;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private GlossaryInputConfigArgs() {
-        this.gcsSource = Output.empty();
+        this.gcsSource = Codegen.empty();
     }
 
     public static Builder builder() {

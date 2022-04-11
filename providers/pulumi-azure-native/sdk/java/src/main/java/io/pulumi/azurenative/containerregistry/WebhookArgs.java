@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerregistry.enums.WebhookStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> customHeaders;
 
     public Output<Map<String,String>> getCustomHeaders() {
-        return this.customHeaders == null ? Output.empty() : this.customHeaders;
+        return this.customHeaders == null ? Codegen.empty() : this.customHeaders;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WebhookStatus>> status;
 
     public Output<Either<String,WebhookStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> webhookName;
 
     public Output<String> getWebhookName() {
-        return this.webhookName == null ? Output.empty() : this.webhookName;
+        return this.webhookName == null ? Codegen.empty() : this.webhookName;
     }
 
     public WebhookArgs(
@@ -153,16 +154,16 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebhookArgs() {
-        this.actions = Output.empty();
-        this.customHeaders = Output.empty();
-        this.location = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.serviceUri = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.webhookName = Output.empty();
+        this.actions = Codegen.empty();
+        this.customHeaders = Codegen.empty();
+        this.location = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.serviceUri = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.webhookName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customHeaders(@Nullable Map<String,String> customHeaders) {
-            this.customHeaders = Output.ofNullable(customHeaders);
+            this.customHeaders = Codegen.ofNullable(customHeaders);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -227,7 +228,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder registryName(Output<String> registryName) {
@@ -251,7 +252,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder serviceUri(Output<String> serviceUri) {
@@ -267,7 +268,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,WebhookStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -275,7 +276,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder webhookName(@Nullable Output<String> webhookName) {
@@ -283,7 +284,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookName(@Nullable String webhookName) {
-            this.webhookName = Output.ofNullable(webhookName);
+            this.webhookName = Codegen.ofNullable(webhookName);
             return this;
         }        public WebhookArgs build() {
             return new WebhookArgs(actions, customHeaders, location, registryName, resourceGroupName, scope, serviceUri, status, tags, webhookName);

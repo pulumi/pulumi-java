@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsupport_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     public CaseClassificationArgs(
@@ -48,8 +49,8 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CaseClassificationArgs() {
-        this.displayName = Output.empty();
-        this.id = Output.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -87,7 +88,7 @@ public final class CaseClassificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }        public CaseClassificationArgs build() {
             return new CaseClassificationArgs(displayName, id);

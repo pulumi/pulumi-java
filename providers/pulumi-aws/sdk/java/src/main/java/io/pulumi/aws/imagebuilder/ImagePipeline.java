@@ -11,6 +11,7 @@ import io.pulumi.aws.imagebuilder.outputs.ImagePipelineSchedule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -293,7 +294,7 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImagePipeline(String name, ImagePipelineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:imagebuilder/imagePipeline:ImagePipeline", name, args == null ? ImagePipelineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:imagebuilder/imagePipeline:ImagePipeline", name, args == null ? ImagePipelineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImagePipeline(String name, Output<String> id, @Nullable ImagePipelineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

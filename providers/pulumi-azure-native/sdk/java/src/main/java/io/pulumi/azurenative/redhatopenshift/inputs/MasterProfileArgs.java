@@ -5,6 +5,7 @@ package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public MasterProfileArgs(
@@ -48,8 +49,8 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MasterProfileArgs() {
-        this.subnetId = Output.empty();
-        this.vmSize = Output.empty();
+        this.subnetId = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder vmSize(@Nullable Output<String> vmSize) {
@@ -87,7 +88,7 @@ public final class MasterProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public MasterProfileArgs build() {
             return new MasterProfileArgs(subnetId, vmSize);

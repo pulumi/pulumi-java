@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.StatusCauseArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StatusCauseArgs>> causes;
 
     public Output<List<StatusCauseArgs>> getCauses() {
-        return this.causes == null ? Output.empty() : this.causes;
+        return this.causes == null ? Codegen.empty() : this.causes;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retryAfterSeconds;
 
     public Output<Integer> getRetryAfterSeconds() {
-        return this.retryAfterSeconds == null ? Output.empty() : this.retryAfterSeconds;
+        return this.retryAfterSeconds == null ? Codegen.empty() : this.retryAfterSeconds;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public StatusDetailsArgs(
@@ -103,12 +104,12 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatusDetailsArgs() {
-        this.causes = Output.empty();
-        this.group = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.retryAfterSeconds = Output.empty();
-        this.uid = Output.empty();
+        this.causes = Codegen.empty();
+        this.group = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.retryAfterSeconds = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder causes(@Nullable List<StatusCauseArgs> causes) {
-            this.causes = Output.ofNullable(causes);
+            this.causes = Codegen.ofNullable(causes);
             return this;
         }
         public Builder causes(StatusCauseArgs... causes) {
@@ -157,7 +158,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -165,7 +166,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -173,7 +174,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder retryAfterSeconds(@Nullable Output<Integer> retryAfterSeconds) {
@@ -181,7 +182,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryAfterSeconds(@Nullable Integer retryAfterSeconds) {
-            this.retryAfterSeconds = Output.ofNullable(retryAfterSeconds);
+            this.retryAfterSeconds = Codegen.ofNullable(retryAfterSeconds);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -189,7 +190,7 @@ public final class StatusDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public StatusDetailsArgs build() {
             return new StatusDetailsArgs(causes, group, kind, name, retryAfterSeconds, uid);

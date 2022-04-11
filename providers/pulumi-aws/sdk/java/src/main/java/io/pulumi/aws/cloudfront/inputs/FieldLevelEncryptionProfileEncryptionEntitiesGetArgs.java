@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
       private final @Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items;
 
     public Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public FieldLevelEncryptionProfileEncryptionEntitiesGetArgs(@Nullable Output<List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs>> items) {
@@ -27,7 +28,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
     }
 
     private FieldLevelEncryptionProfileEncryptionEntitiesGetArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class FieldLevelEncryptionProfileEncryptionEntitiesGetArgs extends 
             return this;
         }
         public Builder items(@Nullable List<FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(FieldLevelEncryptionProfileEncryptionEntitiesItemGetArgs... items) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> keyVaultResourceArmId;
 
     public Output<String> getKeyVaultResourceArmId() {
-        return this.keyVaultResourceArmId == null ? Output.empty() : this.keyVaultResourceArmId;
+        return this.keyVaultResourceArmId == null ? Codegen.empty() : this.keyVaultResourceArmId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> secretIdentifier;
 
     public Output<String> getSecretIdentifier() {
-        return this.secretIdentifier == null ? Output.empty() : this.secretIdentifier;
+        return this.secretIdentifier == null ? Codegen.empty() : this.secretIdentifier;
     }
 
     public DiskEncryptionKeyInfoArgs(
@@ -48,8 +49,8 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
     }
 
     private DiskEncryptionKeyInfoArgs() {
-        this.keyVaultResourceArmId = Output.empty();
-        this.secretIdentifier = Output.empty();
+        this.keyVaultResourceArmId = Codegen.empty();
+        this.secretIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder keyVaultResourceArmId(@Nullable String keyVaultResourceArmId) {
-            this.keyVaultResourceArmId = Output.ofNullable(keyVaultResourceArmId);
+            this.keyVaultResourceArmId = Codegen.ofNullable(keyVaultResourceArmId);
             return this;
         }
         public Builder secretIdentifier(@Nullable Output<String> secretIdentifier) {
@@ -87,7 +88,7 @@ public final class DiskEncryptionKeyInfoArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
-            this.secretIdentifier = Output.ofNullable(secretIdentifier);
+            this.secretIdentifier = Codegen.ofNullable(secretIdentifier);
             return this;
         }        public DiskEncryptionKeyInfoArgs build() {
             return new DiskEncryptionKeyInfoArgs(keyVaultResourceArmId, secretIdentifier);

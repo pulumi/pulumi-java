@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ContainerArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.VolumeArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> activeDeadlineSeconds;
 
     public Output<String> getActiveDeadlineSeconds() {
-        return this.activeDeadlineSeconds == null ? Output.empty() : this.activeDeadlineSeconds;
+        return this.activeDeadlineSeconds == null ? Codegen.empty() : this.activeDeadlineSeconds;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Output.empty() : this.containers;
+        return this.containers == null ? Codegen.empty() : this.containers;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restartPolicy;
 
     public Output<String> getRestartPolicy() {
-        return this.restartPolicy == null ? Output.empty() : this.restartPolicy;
+        return this.restartPolicy == null ? Codegen.empty() : this.restartPolicy;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccountName;
 
     public Output<String> getServiceAccountName() {
-        return this.serviceAccountName == null ? Output.empty() : this.serviceAccountName;
+        return this.serviceAccountName == null ? Codegen.empty() : this.serviceAccountName;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> terminationGracePeriodSeconds;
 
     public Output<String> getTerminationGracePeriodSeconds() {
-        return this.terminationGracePeriodSeconds == null ? Output.empty() : this.terminationGracePeriodSeconds;
+        return this.terminationGracePeriodSeconds == null ? Codegen.empty() : this.terminationGracePeriodSeconds;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VolumeArgs>> volumes;
 
     public Output<List<VolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public InstanceSpecArgs(
@@ -103,12 +104,12 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceSpecArgs() {
-        this.activeDeadlineSeconds = Output.empty();
-        this.containers = Output.empty();
-        this.restartPolicy = Output.empty();
-        this.serviceAccountName = Output.empty();
-        this.terminationGracePeriodSeconds = Output.empty();
-        this.volumes = Output.empty();
+        this.activeDeadlineSeconds = Codegen.empty();
+        this.containers = Codegen.empty();
+        this.restartPolicy = Codegen.empty();
+        this.serviceAccountName = Codegen.empty();
+        this.terminationGracePeriodSeconds = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activeDeadlineSeconds(@Nullable String activeDeadlineSeconds) {
-            this.activeDeadlineSeconds = Output.ofNullable(activeDeadlineSeconds);
+            this.activeDeadlineSeconds = Codegen.ofNullable(activeDeadlineSeconds);
             return this;
         }
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
@@ -154,7 +155,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Output.ofNullable(containers);
+            this.containers = Codegen.ofNullable(containers);
             return this;
         }
         public Builder containers(ContainerArgs... containers) {
@@ -165,7 +166,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restartPolicy(@Nullable String restartPolicy) {
-            this.restartPolicy = Output.ofNullable(restartPolicy);
+            this.restartPolicy = Codegen.ofNullable(restartPolicy);
             return this;
         }
         public Builder serviceAccountName(@Nullable Output<String> serviceAccountName) {
@@ -173,7 +174,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountName(@Nullable String serviceAccountName) {
-            this.serviceAccountName = Output.ofNullable(serviceAccountName);
+            this.serviceAccountName = Codegen.ofNullable(serviceAccountName);
             return this;
         }
         public Builder terminationGracePeriodSeconds(@Nullable Output<String> terminationGracePeriodSeconds) {
@@ -181,7 +182,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terminationGracePeriodSeconds(@Nullable String terminationGracePeriodSeconds) {
-            this.terminationGracePeriodSeconds = Output.ofNullable(terminationGracePeriodSeconds);
+            this.terminationGracePeriodSeconds = Codegen.ofNullable(terminationGracePeriodSeconds);
             return this;
         }
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
@@ -189,7 +190,7 @@ public final class InstanceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumes(@Nullable List<VolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(VolumeArgs... volumes) {

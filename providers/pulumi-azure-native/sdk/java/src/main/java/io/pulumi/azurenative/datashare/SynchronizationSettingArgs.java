@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datashare.enums.SynchronizationSettingKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -68,7 +69,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> synchronizationSettingName;
 
     public Output<String> getSynchronizationSettingName() {
-        return this.synchronizationSettingName == null ? Output.empty() : this.synchronizationSettingName;
+        return this.synchronizationSettingName == null ? Codegen.empty() : this.synchronizationSettingName;
     }
 
     public SynchronizationSettingArgs(
@@ -85,11 +86,11 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
     }
 
     private SynchronizationSettingArgs() {
-        this.accountName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareName = Output.empty();
-        this.synchronizationSettingName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.synchronizationSettingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class SynchronizationSettingArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder synchronizationSettingName(@Nullable String synchronizationSettingName) {
-            this.synchronizationSettingName = Output.ofNullable(synchronizationSettingName);
+            this.synchronizationSettingName = Codegen.ofNullable(synchronizationSettingName);
             return this;
         }        public SynchronizationSettingArgs build() {
             return new SynchronizationSettingArgs(accountName, kind, resourceGroupName, shareName, synchronizationSettingName);

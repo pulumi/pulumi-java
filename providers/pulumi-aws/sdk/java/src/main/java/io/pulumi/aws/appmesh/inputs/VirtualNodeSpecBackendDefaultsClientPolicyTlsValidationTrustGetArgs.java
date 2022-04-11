@@ -8,6 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTl
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> getAcm() {
-        return this.acm == null ? Output.empty() : this.acm;
+        return this.acm == null ? Codegen.empty() : this.acm;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
       private final @Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
     public Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> getSds() {
-        return this.sds == null ? Output.empty() : this.sds;
+        return this.sds == null ? Codegen.empty() : this.sds;
     }
 
     public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs(
@@ -59,9 +60,9 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
     }
 
     private VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs() {
-        this.acm = Output.empty();
-        this.file = Output.empty();
-        this.sds = Output.empty();
+        this.acm = Codegen.empty();
+        this.file = Codegen.empty();
+        this.sds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
             return this;
         }
         public Builder acm(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
-            this.acm = Output.ofNullable(acm);
+            this.acm = Codegen.ofNullable(acm);
             return this;
         }
         public Builder file(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
@@ -101,7 +102,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
             return this;
         }
         public Builder file(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder sds(@Nullable Output<VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
@@ -109,7 +110,7 @@ public final class VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustG
             return this;
         }
         public Builder sds(@Nullable VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
-            this.sds = Output.ofNullable(sds);
+            this.sds = Codegen.ofNullable(sds);
             return this;
         }        public VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs build() {
             return new VirtualNodeSpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs(acm, file, sds);

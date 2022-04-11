@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamPolicyState;
@@ -143,7 +144,7 @@ public class WebTypeAppEngingIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public WebTypeAppEngingIamPolicy(String name, WebTypeAppEngingIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webTypeAppEngingIamPolicy:WebTypeAppEngingIamPolicy", name, args == null ? WebTypeAppEngingIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webTypeAppEngingIamPolicy:WebTypeAppEngingIamPolicy", name, args == null ? WebTypeAppEngingIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebTypeAppEngingIamPolicy(String name, Output<String> id, @Nullable WebTypeAppEngingIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

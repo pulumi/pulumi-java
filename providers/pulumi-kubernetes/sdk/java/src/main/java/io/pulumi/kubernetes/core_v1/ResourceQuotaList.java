@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.core_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.ResourceQuotaListArgs;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceQuota;
@@ -99,7 +100,7 @@ public class ResourceQuotaList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourceQuotaList(String name, ResourceQuotaListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:core/v1:ResourceQuotaList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:core/v1:ResourceQuotaList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourceQuotaList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +20,21 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="contentBase64")
       private final @Nullable Output<String> contentBase64;
 
     public Output<String> getContentBase64() {
-        return this.contentBase64 == null ? Output.empty() : this.contentBase64;
+        return this.contentBase64 == null ? Codegen.empty() : this.contentBase64;
     }
 
     @Import(name="executable")
       private final @Nullable Output<Boolean> executable;
 
     public Output<Boolean> getExecutable() {
-        return this.executable == null ? Output.empty() : this.executable;
+        return this.executable == null ? Codegen.empty() : this.executable;
     }
 
     @Import(name="file", required=true)
@@ -47,14 +48,14 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     @Import(name="sourceHash")
       private final @Nullable Output<String> sourceHash;
 
     public Output<String> getSourceHash() {
-        return this.sourceHash == null ? Output.empty() : this.sourceHash;
+        return this.sourceHash == null ? Codegen.empty() : this.sourceHash;
     }
 
     public ContainerUploadGetArgs(
@@ -73,12 +74,12 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ContainerUploadGetArgs() {
-        this.content = Output.empty();
-        this.contentBase64 = Output.empty();
-        this.executable = Output.empty();
-        this.file = Output.empty();
-        this.source = Output.empty();
-        this.sourceHash = Output.empty();
+        this.content = Codegen.empty();
+        this.contentBase64 = Codegen.empty();
+        this.executable = Codegen.empty();
+        this.file = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceHash = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder contentBase64(@Nullable Output<String> contentBase64) {
@@ -124,7 +125,7 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder contentBase64(@Nullable String contentBase64) {
-            this.contentBase64 = Output.ofNullable(contentBase64);
+            this.contentBase64 = Codegen.ofNullable(contentBase64);
             return this;
         }
         public Builder executable(@Nullable Output<Boolean> executable) {
@@ -132,7 +133,7 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder executable(@Nullable Boolean executable) {
-            this.executable = Output.ofNullable(executable);
+            this.executable = Codegen.ofNullable(executable);
             return this;
         }
         public Builder file(Output<String> file) {
@@ -148,7 +149,7 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder sourceHash(@Nullable Output<String> sourceHash) {
@@ -156,7 +157,7 @@ public final class ContainerUploadGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sourceHash(@Nullable String sourceHash) {
-            this.sourceHash = Output.ofNullable(sourceHash);
+            this.sourceHash = Codegen.ofNullable(sourceHash);
             return this;
         }        public ContainerUploadGetArgs build() {
             return new ContainerUploadGetArgs(content, contentBase64, executable, file, source, sourceHash);

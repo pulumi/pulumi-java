@@ -9,6 +9,7 @@ import io.pulumi.aws.serverlessrepository.inputs.CloudFormationStackState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -165,7 +166,7 @@ public class CloudFormationStack extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CloudFormationStack(String name, CloudFormationStackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:serverlessrepository/cloudFormationStack:CloudFormationStack", name, args == null ? CloudFormationStackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:serverlessrepository/cloudFormationStack:CloudFormationStack", name, args == null ? CloudFormationStackArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloudFormationStack(String name, Output<String> id, @Nullable CloudFormationStackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

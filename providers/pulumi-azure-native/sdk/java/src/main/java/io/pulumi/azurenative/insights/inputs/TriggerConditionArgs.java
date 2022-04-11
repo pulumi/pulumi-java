@@ -8,6 +8,7 @@ import io.pulumi.azurenative.insights.inputs.LogMetricTriggerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<LogMetricTriggerArgs> metricTrigger;
 
     public Output<LogMetricTriggerArgs> getMetricTrigger() {
-        return this.metricTrigger == null ? Output.empty() : this.metricTrigger;
+        return this.metricTrigger == null ? Codegen.empty() : this.metricTrigger;
     }
 
     /**
@@ -65,9 +66,9 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TriggerConditionArgs() {
-        this.metricTrigger = Output.empty();
-        this.threshold = Output.empty();
-        this.thresholdOperator = Output.empty();
+        this.metricTrigger = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.thresholdOperator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class TriggerConditionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metricTrigger(@Nullable LogMetricTriggerArgs metricTrigger) {
-            this.metricTrigger = Output.ofNullable(metricTrigger);
+            this.metricTrigger = Codegen.ofNullable(metricTrigger);
             return this;
         }
         public Builder threshold(Output<Double> threshold) {

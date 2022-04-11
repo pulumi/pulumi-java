@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.DateArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -25,42 +26,42 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> booleanValue;
 
     public Output<Boolean> getBooleanValue() {
-        return this.booleanValue == null ? Output.empty() : this.booleanValue;
+        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
     @Import(name="dateValue")
       private final @Nullable Output<DateArgs> dateValue;
 
     public Output<DateArgs> getDateValue() {
-        return this.dateValue == null ? Output.empty() : this.dateValue;
+        return this.dateValue == null ? Codegen.empty() : this.dateValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
-        return this.doubleValue == null ? Output.empty() : this.doubleValue;
+        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="integerValue")
       private final @Nullable Output<String> integerValue;
 
     public Output<String> getIntegerValue() {
-        return this.integerValue == null ? Output.empty() : this.integerValue;
+        return this.integerValue == null ? Codegen.empty() : this.integerValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     @Import(name="timestampValue")
       private final @Nullable Output<String> timestampValue;
 
     public Output<String> getTimestampValue() {
-        return this.timestampValue == null ? Output.empty() : this.timestampValue;
+        return this.timestampValue == null ? Codegen.empty() : this.timestampValue;
     }
 
     public ValueArgs(
@@ -79,12 +80,12 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ValueArgs() {
-        this.booleanValue = Output.empty();
-        this.dateValue = Output.empty();
-        this.doubleValue = Output.empty();
-        this.integerValue = Output.empty();
-        this.stringValue = Output.empty();
-        this.timestampValue = Output.empty();
+        this.booleanValue = Codegen.empty();
+        this.dateValue = Codegen.empty();
+        this.doubleValue = Codegen.empty();
+        this.integerValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
+        this.timestampValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Output.ofNullable(booleanValue);
+            this.booleanValue = Codegen.ofNullable(booleanValue);
             return this;
         }
         public Builder dateValue(@Nullable Output<DateArgs> dateValue) {
@@ -130,7 +131,7 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dateValue(@Nullable DateArgs dateValue) {
-            this.dateValue = Output.ofNullable(dateValue);
+            this.dateValue = Codegen.ofNullable(dateValue);
             return this;
         }
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
@@ -138,7 +139,7 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Output.ofNullable(doubleValue);
+            this.doubleValue = Codegen.ofNullable(doubleValue);
             return this;
         }
         public Builder integerValue(@Nullable Output<String> integerValue) {
@@ -146,7 +147,7 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder integerValue(@Nullable String integerValue) {
-            this.integerValue = Output.ofNullable(integerValue);
+            this.integerValue = Codegen.ofNullable(integerValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -154,7 +155,7 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }
         public Builder timestampValue(@Nullable Output<String> timestampValue) {
@@ -162,7 +163,7 @@ public final class ValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timestampValue(@Nullable String timestampValue) {
-            this.timestampValue = Output.ofNullable(timestampValue);
+            this.timestampValue = Codegen.ofNullable(timestampValue);
             return this;
         }        public ValueArgs build() {
             return new ValueArgs(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);

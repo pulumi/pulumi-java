@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     public ServiceAccountArgs(
@@ -49,8 +50,8 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceAccountArgs() {
-        this.email = Output.empty();
-        this.scopes = Output.empty();
+        this.email = Codegen.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder scopes(@Nullable Output<List<String>> scopes) {
@@ -88,7 +89,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {

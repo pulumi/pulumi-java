@@ -8,6 +8,7 @@ import io.pulumi.awsnative.robomaker.SimulationApplicationVersionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -72,7 +73,7 @@ public class SimulationApplicationVersion extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SimulationApplicationVersion(String name, SimulationApplicationVersionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:robomaker:SimulationApplicationVersion", name, args == null ? SimulationApplicationVersionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:robomaker:SimulationApplicationVersion", name, args == null ? SimulationApplicationVersionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SimulationApplicationVersion(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

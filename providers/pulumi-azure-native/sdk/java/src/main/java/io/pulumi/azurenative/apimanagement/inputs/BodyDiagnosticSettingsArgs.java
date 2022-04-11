@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> bytes;
 
     public Output<Integer> getBytes() {
-        return this.bytes == null ? Output.empty() : this.bytes;
+        return this.bytes == null ? Codegen.empty() : this.bytes;
     }
 
     public BodyDiagnosticSettingsArgs(@Nullable Output<Integer> bytes) {
@@ -34,7 +35,7 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private BodyDiagnosticSettingsArgs() {
-        this.bytes = Output.empty();
+        this.bytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bytes(@Nullable Integer bytes) {
-            this.bytes = Output.ofNullable(bytes);
+            this.bytes = Codegen.ofNullable(bytes);
             return this;
         }        public BodyDiagnosticSettingsArgs build() {
             return new BodyDiagnosticSettingsArgs(bytes);

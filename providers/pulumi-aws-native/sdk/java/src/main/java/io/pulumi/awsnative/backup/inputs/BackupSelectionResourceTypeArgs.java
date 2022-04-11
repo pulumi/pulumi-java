@@ -7,6 +7,7 @@ import io.pulumi.awsnative.backup.inputs.BackupSelectionConditionResourceTypeArg
 import io.pulumi.awsnative.backup.inputs.BackupSelectionResourceTypeConditionsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
       private final @Nullable Output<BackupSelectionResourceTypeConditionsPropertiesArgs> conditions;
 
     public Output<BackupSelectionResourceTypeConditionsPropertiesArgs> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     @Import(name="iamRoleArn", required=true)
@@ -35,21 +36,21 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<BackupSelectionConditionResourceTypeArgs>> listOfTags;
 
     public Output<List<BackupSelectionConditionResourceTypeArgs>> getListOfTags() {
-        return this.listOfTags == null ? Output.empty() : this.listOfTags;
+        return this.listOfTags == null ? Codegen.empty() : this.listOfTags;
     }
 
     @Import(name="notResources")
       private final @Nullable Output<List<String>> notResources;
 
     public Output<List<String>> getNotResources() {
-        return this.notResources == null ? Output.empty() : this.notResources;
+        return this.notResources == null ? Codegen.empty() : this.notResources;
     }
 
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     @Import(name="selectionName", required=true)
@@ -75,12 +76,12 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
     }
 
     private BackupSelectionResourceTypeArgs() {
-        this.conditions = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.listOfTags = Output.empty();
-        this.notResources = Output.empty();
-        this.resources = Output.empty();
-        this.selectionName = Output.empty();
+        this.conditions = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.listOfTags = Codegen.empty();
+        this.notResources = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.selectionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder conditions(@Nullable BackupSelectionResourceTypeConditionsPropertiesArgs conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder iamRoleArn(Output<String> iamRoleArn) {
@@ -134,7 +135,7 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder listOfTags(@Nullable List<BackupSelectionConditionResourceTypeArgs> listOfTags) {
-            this.listOfTags = Output.ofNullable(listOfTags);
+            this.listOfTags = Codegen.ofNullable(listOfTags);
             return this;
         }
         public Builder listOfTags(BackupSelectionConditionResourceTypeArgs... listOfTags) {
@@ -145,7 +146,7 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder notResources(@Nullable List<String> notResources) {
-            this.notResources = Output.ofNullable(notResources);
+            this.notResources = Codegen.ofNullable(notResources);
             return this;
         }
         public Builder notResources(String... notResources) {
@@ -156,7 +157,7 @@ public final class BackupSelectionResourceTypeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

@@ -12,6 +12,7 @@ import io.pulumi.aws.sagemaker.outputs.EndpointConfigurationProductionVariant;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -168,7 +169,7 @@ public class EndpointConfiguration extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointConfiguration(String name, EndpointConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/endpointConfiguration:EndpointConfiguration", name, args == null ? EndpointConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/endpointConfiguration:EndpointConfiguration", name, args == null ? EndpointConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EndpointConfiguration(String name, Output<String> id, @Nullable EndpointConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

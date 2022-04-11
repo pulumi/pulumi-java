@@ -6,6 +6,7 @@ package io.pulumi.awsnative.aps;
 import io.pulumi.awsnative.aps.inputs.WorkspaceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alertManagerDefinition;
 
     public Output<String> getAlertManagerDefinition() {
-        return this.alertManagerDefinition == null ? Output.empty() : this.alertManagerDefinition;
+        return this.alertManagerDefinition == null ? Codegen.empty() : this.alertManagerDefinition;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alias;
 
     public Output<String> getAlias() {
-        return this.alias == null ? Output.empty() : this.alias;
+        return this.alias == null ? Codegen.empty() : this.alias;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkspaceTagArgs>> tags;
 
     public Output<List<WorkspaceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public WorkspaceArgs(
@@ -59,9 +60,9 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.alertManagerDefinition = Output.empty();
-        this.alias = Output.empty();
-        this.tags = Output.empty();
+        this.alertManagerDefinition = Codegen.empty();
+        this.alias = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alertManagerDefinition(@Nullable String alertManagerDefinition) {
-            this.alertManagerDefinition = Output.ofNullable(alertManagerDefinition);
+            this.alertManagerDefinition = Codegen.ofNullable(alertManagerDefinition);
             return this;
         }
         public Builder alias(@Nullable Output<String> alias) {
@@ -101,7 +102,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alias(@Nullable String alias) {
-            this.alias = Output.ofNullable(alias);
+            this.alias = Codegen.ofNullable(alias);
             return this;
         }
         public Builder tags(@Nullable Output<List<WorkspaceTagArgs>> tags) {
@@ -109,7 +110,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<WorkspaceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(WorkspaceTagArgs... tags) {

@@ -15,6 +15,7 @@ import io.pulumi.azurenative.containerregistry.inputs.TriggerPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -36,7 +37,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AgentPropertiesArgs> agentConfiguration;
 
     public Output<AgentPropertiesArgs> getAgentConfiguration() {
-        return this.agentConfiguration == null ? Output.empty() : this.agentConfiguration;
+        return this.agentConfiguration == null ? Codegen.empty() : this.agentConfiguration;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> agentPoolName;
 
     public Output<String> getAgentPoolName() {
-        return this.agentPoolName == null ? Output.empty() : this.agentPoolName;
+        return this.agentPoolName == null ? Codegen.empty() : this.agentPoolName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CredentialsArgs> credentials;
 
     public Output<CredentialsArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isSystemTask;
 
     public Output<Boolean> getIsSystemTask() {
-        return this.isSystemTask == null ? Output.empty() : this.isSystemTask;
+        return this.isSystemTask == null ? Codegen.empty() : this.isSystemTask;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logTemplate;
 
     public Output<String> getLogTemplate() {
-        return this.logTemplate == null ? Output.empty() : this.logTemplate;
+        return this.logTemplate == null ? Codegen.empty() : this.logTemplate;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PlatformPropertiesArgs> platform;
 
     public Output<PlatformPropertiesArgs> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TaskStatus>> status;
 
     public Output<Either<String,TaskStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> step;
 
     public Output<Object> getStep() {
-        return this.step == null ? Output.empty() : this.step;
+        return this.step == null ? Codegen.empty() : this.step;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> taskName;
 
     public Output<String> getTaskName() {
-        return this.taskName == null ? Output.empty() : this.taskName;
+        return this.taskName == null ? Codegen.empty() : this.taskName;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TriggerPropertiesArgs> trigger;
 
     public Output<TriggerPropertiesArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public TaskArgs(
@@ -225,7 +226,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         this.agentPoolName = agentPoolName;
         this.credentials = credentials;
         this.identity = identity;
-        this.isSystemTask = isSystemTask == null ? Output.ofNullable(false) : isSystemTask;
+        this.isSystemTask = isSystemTask == null ? Codegen.ofNullable(false) : isSystemTask;
         this.location = location;
         this.logTemplate = logTemplate;
         this.platform = platform;
@@ -235,27 +236,27 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
         this.step = step;
         this.tags = tags;
         this.taskName = taskName;
-        this.timeout = timeout == null ? Output.ofNullable(3600) : timeout;
+        this.timeout = timeout == null ? Codegen.ofNullable(3600) : timeout;
         this.trigger = trigger;
     }
 
     private TaskArgs() {
-        this.agentConfiguration = Output.empty();
-        this.agentPoolName = Output.empty();
-        this.credentials = Output.empty();
-        this.identity = Output.empty();
-        this.isSystemTask = Output.empty();
-        this.location = Output.empty();
-        this.logTemplate = Output.empty();
-        this.platform = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.status = Output.empty();
-        this.step = Output.empty();
-        this.tags = Output.empty();
-        this.taskName = Output.empty();
-        this.timeout = Output.empty();
-        this.trigger = Output.empty();
+        this.agentConfiguration = Codegen.empty();
+        this.agentPoolName = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.isSystemTask = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logTemplate = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.step = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taskName = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -313,7 +314,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentConfiguration(@Nullable AgentPropertiesArgs agentConfiguration) {
-            this.agentConfiguration = Output.ofNullable(agentConfiguration);
+            this.agentConfiguration = Codegen.ofNullable(agentConfiguration);
             return this;
         }
         public Builder agentPoolName(@Nullable Output<String> agentPoolName) {
@@ -321,7 +322,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentPoolName(@Nullable String agentPoolName) {
-            this.agentPoolName = Output.ofNullable(agentPoolName);
+            this.agentPoolName = Codegen.ofNullable(agentPoolName);
             return this;
         }
         public Builder credentials(@Nullable Output<CredentialsArgs> credentials) {
@@ -329,7 +330,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable CredentialsArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
@@ -337,7 +338,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder isSystemTask(@Nullable Output<Boolean> isSystemTask) {
@@ -345,7 +346,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isSystemTask(@Nullable Boolean isSystemTask) {
-            this.isSystemTask = Output.ofNullable(isSystemTask);
+            this.isSystemTask = Codegen.ofNullable(isSystemTask);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -353,7 +354,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logTemplate(@Nullable Output<String> logTemplate) {
@@ -361,7 +362,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logTemplate(@Nullable String logTemplate) {
-            this.logTemplate = Output.ofNullable(logTemplate);
+            this.logTemplate = Codegen.ofNullable(logTemplate);
             return this;
         }
         public Builder platform(@Nullable Output<PlatformPropertiesArgs> platform) {
@@ -369,7 +370,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable PlatformPropertiesArgs platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder registryName(Output<String> registryName) {
@@ -393,7 +394,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,TaskStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder step(@Nullable Output<Object> step) {
@@ -401,7 +402,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder step(@Nullable Object step) {
-            this.step = Output.ofNullable(step);
+            this.step = Codegen.ofNullable(step);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -409,7 +410,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder taskName(@Nullable Output<String> taskName) {
@@ -417,7 +418,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskName(@Nullable String taskName) {
-            this.taskName = Output.ofNullable(taskName);
+            this.taskName = Codegen.ofNullable(taskName);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -425,7 +426,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder trigger(@Nullable Output<TriggerPropertiesArgs> trigger) {
@@ -433,7 +434,7 @@ public final class TaskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trigger(@Nullable TriggerPropertiesArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public TaskArgs build() {
             return new TaskArgs(agentConfiguration, agentPoolName, credentials, identity, isSystemTask, location, logTemplate, platform, registryName, resourceGroupName, status, step, tags, taskName, timeout, trigger);

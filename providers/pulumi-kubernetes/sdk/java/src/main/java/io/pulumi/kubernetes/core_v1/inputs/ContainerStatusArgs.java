@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> containerID;
 
     public Output<String> getContainerID() {
-        return this.containerID == null ? Output.empty() : this.containerID;
+        return this.containerID == null ? Codegen.empty() : this.containerID;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ContainerStateArgs> lastState;
 
     public Output<ContainerStateArgs> getLastState() {
-        return this.lastState == null ? Output.empty() : this.lastState;
+        return this.lastState == null ? Codegen.empty() : this.lastState;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> started;
 
     public Output<Boolean> getStarted() {
-        return this.started == null ? Output.empty() : this.started;
+        return this.started == null ? Codegen.empty() : this.started;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ContainerStateArgs> state;
 
     public Output<ContainerStateArgs> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public ContainerStatusArgs(
@@ -142,15 +143,15 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContainerStatusArgs() {
-        this.containerID = Output.empty();
-        this.image = Output.empty();
-        this.imageID = Output.empty();
-        this.lastState = Output.empty();
-        this.name = Output.empty();
-        this.ready = Output.empty();
-        this.restartCount = Output.empty();
-        this.started = Output.empty();
-        this.state = Output.empty();
+        this.containerID = Codegen.empty();
+        this.image = Codegen.empty();
+        this.imageID = Codegen.empty();
+        this.lastState = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ready = Codegen.empty();
+        this.restartCount = Codegen.empty();
+        this.started = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder containerID(@Nullable String containerID) {
-            this.containerID = Output.ofNullable(containerID);
+            this.containerID = Codegen.ofNullable(containerID);
             return this;
         }
         public Builder image(Output<String> image) {
@@ -218,7 +219,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder lastState(@Nullable ContainerStateArgs lastState) {
-            this.lastState = Output.ofNullable(lastState);
+            this.lastState = Codegen.ofNullable(lastState);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -250,7 +251,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder started(@Nullable Boolean started) {
-            this.started = Output.ofNullable(started);
+            this.started = Codegen.ofNullable(started);
             return this;
         }
         public Builder state(@Nullable Output<ContainerStateArgs> state) {
@@ -258,7 +259,7 @@ public final class ContainerStatusArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder state(@Nullable ContainerStateArgs state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public ContainerStatusArgs build() {
             return new ContainerStatusArgs(containerID, image, imageID, lastState, name, ready, restartCount, started, state);

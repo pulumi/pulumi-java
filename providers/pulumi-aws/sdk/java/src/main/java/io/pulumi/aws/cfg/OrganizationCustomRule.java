@@ -9,6 +9,7 @@ import io.pulumi.aws.cfg.inputs.OrganizationCustomRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -224,7 +225,7 @@ public class OrganizationCustomRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationCustomRule(String name, OrganizationCustomRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/organizationCustomRule:OrganizationCustomRule", name, args == null ? OrganizationCustomRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/organizationCustomRule:OrganizationCustomRule", name, args == null ? OrganizationCustomRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationCustomRule(String name, Output<String> id, @Nullable OrganizationCustomRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

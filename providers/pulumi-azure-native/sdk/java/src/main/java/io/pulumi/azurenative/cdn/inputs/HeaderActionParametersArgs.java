@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cdn.enums.HeaderAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -57,7 +58,7 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public HeaderActionParametersArgs(
@@ -72,10 +73,10 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
     }
 
     private HeaderActionParametersArgs() {
-        this.headerAction = Output.empty();
-        this.headerName = Output.empty();
-        this.odataType = Output.empty();
-        this.value = Output.empty();
+        this.headerAction = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public HeaderActionParametersArgs build() {
             return new HeaderActionParametersArgs(headerAction, headerName, odataType, value);

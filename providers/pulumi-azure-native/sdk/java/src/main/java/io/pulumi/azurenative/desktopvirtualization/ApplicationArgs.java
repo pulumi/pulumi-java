@@ -8,6 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.enums.RemoteApplicationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> applicationName;
 
     public Output<String> getApplicationName() {
-        return this.applicationName == null ? Output.empty() : this.applicationName;
+        return this.applicationName == null ? Codegen.empty() : this.applicationName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,RemoteApplicationType>> applicationType;
 
     public Output<Either<String,RemoteApplicationType>> getApplicationType() {
-        return this.applicationType == null ? Output.empty() : this.applicationType;
+        return this.applicationType == null ? Codegen.empty() : this.applicationType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> commandLineArguments;
 
     public Output<String> getCommandLineArguments() {
-        return this.commandLineArguments == null ? Output.empty() : this.commandLineArguments;
+        return this.commandLineArguments == null ? Codegen.empty() : this.commandLineArguments;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filePath;
 
     public Output<String> getFilePath() {
-        return this.filePath == null ? Output.empty() : this.filePath;
+        return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> iconIndex;
 
     public Output<Integer> getIconIndex() {
-        return this.iconIndex == null ? Output.empty() : this.iconIndex;
+        return this.iconIndex == null ? Codegen.empty() : this.iconIndex;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iconPath;
 
     public Output<String> getIconPath() {
-        return this.iconPath == null ? Output.empty() : this.iconPath;
+        return this.iconPath == null ? Codegen.empty() : this.iconPath;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> msixPackageApplicationId;
 
     public Output<String> getMsixPackageApplicationId() {
-        return this.msixPackageApplicationId == null ? Output.empty() : this.msixPackageApplicationId;
+        return this.msixPackageApplicationId == null ? Codegen.empty() : this.msixPackageApplicationId;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> msixPackageFamilyName;
 
     public Output<String> getMsixPackageFamilyName() {
-        return this.msixPackageFamilyName == null ? Output.empty() : this.msixPackageFamilyName;
+        return this.msixPackageFamilyName == null ? Codegen.empty() : this.msixPackageFamilyName;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> showInPortal;
 
     public Output<Boolean> getShowInPortal() {
-        return this.showInPortal == null ? Output.empty() : this.showInPortal;
+        return this.showInPortal == null ? Codegen.empty() : this.showInPortal;
     }
 
     public ApplicationArgs(
@@ -205,20 +206,20 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApplicationArgs() {
-        this.applicationGroupName = Output.empty();
-        this.applicationName = Output.empty();
-        this.applicationType = Output.empty();
-        this.commandLineArguments = Output.empty();
-        this.commandLineSetting = Output.empty();
-        this.description = Output.empty();
-        this.filePath = Output.empty();
-        this.friendlyName = Output.empty();
-        this.iconIndex = Output.empty();
-        this.iconPath = Output.empty();
-        this.msixPackageApplicationId = Output.empty();
-        this.msixPackageFamilyName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.showInPortal = Output.empty();
+        this.applicationGroupName = Codegen.empty();
+        this.applicationName = Codegen.empty();
+        this.applicationType = Codegen.empty();
+        this.commandLineArguments = Codegen.empty();
+        this.commandLineSetting = Codegen.empty();
+        this.description = Codegen.empty();
+        this.filePath = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.iconIndex = Codegen.empty();
+        this.iconPath = Codegen.empty();
+        this.msixPackageApplicationId = Codegen.empty();
+        this.msixPackageFamilyName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.showInPortal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -280,7 +281,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationName(@Nullable String applicationName) {
-            this.applicationName = Output.ofNullable(applicationName);
+            this.applicationName = Codegen.ofNullable(applicationName);
             return this;
         }
         public Builder applicationType(@Nullable Output<Either<String,RemoteApplicationType>> applicationType) {
@@ -288,7 +289,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationType(@Nullable Either<String,RemoteApplicationType> applicationType) {
-            this.applicationType = Output.ofNullable(applicationType);
+            this.applicationType = Codegen.ofNullable(applicationType);
             return this;
         }
         public Builder commandLineArguments(@Nullable Output<String> commandLineArguments) {
@@ -296,7 +297,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commandLineArguments(@Nullable String commandLineArguments) {
-            this.commandLineArguments = Output.ofNullable(commandLineArguments);
+            this.commandLineArguments = Codegen.ofNullable(commandLineArguments);
             return this;
         }
         public Builder commandLineSetting(Output<Either<String,CommandLineSetting>> commandLineSetting) {
@@ -312,7 +313,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder filePath(@Nullable Output<String> filePath) {
@@ -320,7 +321,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Output.ofNullable(filePath);
+            this.filePath = Codegen.ofNullable(filePath);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -328,7 +329,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder iconIndex(@Nullable Output<Integer> iconIndex) {
@@ -336,7 +337,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iconIndex(@Nullable Integer iconIndex) {
-            this.iconIndex = Output.ofNullable(iconIndex);
+            this.iconIndex = Codegen.ofNullable(iconIndex);
             return this;
         }
         public Builder iconPath(@Nullable Output<String> iconPath) {
@@ -344,7 +345,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iconPath(@Nullable String iconPath) {
-            this.iconPath = Output.ofNullable(iconPath);
+            this.iconPath = Codegen.ofNullable(iconPath);
             return this;
         }
         public Builder msixPackageApplicationId(@Nullable Output<String> msixPackageApplicationId) {
@@ -352,7 +353,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msixPackageApplicationId(@Nullable String msixPackageApplicationId) {
-            this.msixPackageApplicationId = Output.ofNullable(msixPackageApplicationId);
+            this.msixPackageApplicationId = Codegen.ofNullable(msixPackageApplicationId);
             return this;
         }
         public Builder msixPackageFamilyName(@Nullable Output<String> msixPackageFamilyName) {
@@ -360,7 +361,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder msixPackageFamilyName(@Nullable String msixPackageFamilyName) {
-            this.msixPackageFamilyName = Output.ofNullable(msixPackageFamilyName);
+            this.msixPackageFamilyName = Codegen.ofNullable(msixPackageFamilyName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -376,7 +377,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder showInPortal(@Nullable Boolean showInPortal) {
-            this.showInPortal = Output.ofNullable(showInPortal);
+            this.showInPortal = Codegen.ofNullable(showInPortal);
             return this;
         }        public ApplicationArgs build() {
             return new ApplicationArgs(applicationGroupName, applicationName, applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconIndex, iconPath, msixPackageApplicationId, msixPackageFamilyName, resourceGroupName, showInPortal);

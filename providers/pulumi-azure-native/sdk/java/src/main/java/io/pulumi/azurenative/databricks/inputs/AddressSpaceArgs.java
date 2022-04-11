@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> addressPrefixes;
 
     public Output<List<String>> getAddressPrefixes() {
-        return this.addressPrefixes == null ? Output.empty() : this.addressPrefixes;
+        return this.addressPrefixes == null ? Codegen.empty() : this.addressPrefixes;
     }
 
     public AddressSpaceArgs(@Nullable Output<List<String>> addressPrefixes) {
@@ -35,7 +36,7 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddressSpaceArgs() {
-        this.addressPrefixes = Output.empty();
+        this.addressPrefixes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class AddressSpaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressPrefixes(@Nullable List<String> addressPrefixes) {
-            this.addressPrefixes = Output.ofNullable(addressPrefixes);
+            this.addressPrefixes = Codegen.ofNullable(addressPrefixes);
             return this;
         }
         public Builder addressPrefixes(String... addressPrefixes) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> pointInTime;
 
     public Output<String> getPointInTime() {
-        return this.pointInTime == null ? Output.empty() : this.pointInTime;
+        return this.pointInTime == null ? Codegen.empty() : this.pointInTime;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
     }
 
     private DatabaseInstanceCloneArgs() {
-        this.pointInTime = Output.empty();
-        this.sourceInstanceName = Output.empty();
+        this.pointInTime = Codegen.empty();
+        this.sourceInstanceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatabaseInstanceCloneArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder pointInTime(@Nullable String pointInTime) {
-            this.pointInTime = Output.ofNullable(pointInTime);
+            this.pointInTime = Codegen.ofNullable(pointInTime);
             return this;
         }
         public Builder sourceInstanceName(Output<String> sourceInstanceName) {

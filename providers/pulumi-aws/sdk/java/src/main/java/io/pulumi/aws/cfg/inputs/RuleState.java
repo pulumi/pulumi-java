@@ -7,6 +7,7 @@ import io.pulumi.aws.cfg.inputs.RuleScopeGetArgs;
 import io.pulumi.aws.cfg.inputs.RuleSourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> inputParameters;
 
     public Output<String> getInputParameters() {
-        return this.inputParameters == null ? Output.empty() : this.inputParameters;
+        return this.inputParameters == null ? Codegen.empty() : this.inputParameters;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maximumExecutionFrequency;
 
     public Output<String> getMaximumExecutionFrequency() {
-        return this.maximumExecutionFrequency == null ? Output.empty() : this.maximumExecutionFrequency;
+        return this.maximumExecutionFrequency == null ? Codegen.empty() : this.maximumExecutionFrequency;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ruleId;
 
     public Output<String> getRuleId() {
-        return this.ruleId == null ? Output.empty() : this.ruleId;
+        return this.ruleId == null ? Codegen.empty() : this.ruleId;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuleScopeGetArgs> scope;
 
     public Output<RuleScopeGetArgs> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuleSourceGetArgs> source;
 
     public Output<RuleSourceGetArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public RuleState(
@@ -151,16 +152,16 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.inputParameters = Output.empty();
-        this.maximumExecutionFrequency = Output.empty();
-        this.name = Output.empty();
-        this.ruleId = Output.empty();
-        this.scope = Output.empty();
-        this.source = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.inputParameters = Codegen.empty();
+        this.maximumExecutionFrequency = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleId = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.source = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -214,7 +215,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder inputParameters(@Nullable Output<String> inputParameters) {
@@ -222,7 +223,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputParameters(@Nullable String inputParameters) {
-            this.inputParameters = Output.ofNullable(inputParameters);
+            this.inputParameters = Codegen.ofNullable(inputParameters);
             return this;
         }
         public Builder maximumExecutionFrequency(@Nullable Output<String> maximumExecutionFrequency) {
@@ -230,7 +231,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maximumExecutionFrequency(@Nullable String maximumExecutionFrequency) {
-            this.maximumExecutionFrequency = Output.ofNullable(maximumExecutionFrequency);
+            this.maximumExecutionFrequency = Codegen.ofNullable(maximumExecutionFrequency);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -238,7 +239,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleId(@Nullable Output<String> ruleId) {
@@ -246,7 +247,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleId(@Nullable String ruleId) {
-            this.ruleId = Output.ofNullable(ruleId);
+            this.ruleId = Codegen.ofNullable(ruleId);
             return this;
         }
         public Builder scope(@Nullable Output<RuleScopeGetArgs> scope) {
@@ -254,7 +255,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable RuleScopeGetArgs scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder source(@Nullable Output<RuleSourceGetArgs> source) {
@@ -262,7 +263,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable RuleSourceGetArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -270,7 +271,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -278,7 +279,7 @@ public final class RuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public RuleState build() {
             return new RuleState(arn, description, inputParameters, maximumExecutionFrequency, name, ruleId, scope, source, tags, tagsAll);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.enums.Protocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> allowedSourceAddressPrefix;
 
     public Output<String> getAllowedSourceAddressPrefix() {
-        return this.allowedSourceAddressPrefix == null ? Output.empty() : this.allowedSourceAddressPrefix;
+        return this.allowedSourceAddressPrefix == null ? Codegen.empty() : this.allowedSourceAddressPrefix;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> allowedSourceAddressPrefixes;
 
     public Output<List<String>> getAllowedSourceAddressPrefixes() {
-        return this.allowedSourceAddressPrefixes == null ? Output.empty() : this.allowedSourceAddressPrefixes;
+        return this.allowedSourceAddressPrefixes == null ? Codegen.empty() : this.allowedSourceAddressPrefixes;
     }
 
     /**
@@ -79,11 +80,11 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
     }
 
     private JitNetworkAccessPortRuleArgs() {
-        this.allowedSourceAddressPrefix = Output.empty();
-        this.allowedSourceAddressPrefixes = Output.empty();
-        this.maxRequestAccessDuration = Output.empty();
-        this.number = Output.empty();
-        this.protocol = Output.empty();
+        this.allowedSourceAddressPrefix = Codegen.empty();
+        this.allowedSourceAddressPrefixes = Codegen.empty();
+        this.maxRequestAccessDuration = Codegen.empty();
+        this.number = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedSourceAddressPrefix(@Nullable String allowedSourceAddressPrefix) {
-            this.allowedSourceAddressPrefix = Output.ofNullable(allowedSourceAddressPrefix);
+            this.allowedSourceAddressPrefix = Codegen.ofNullable(allowedSourceAddressPrefix);
             return this;
         }
         public Builder allowedSourceAddressPrefixes(@Nullable Output<List<String>> allowedSourceAddressPrefixes) {
@@ -127,7 +128,7 @@ public final class JitNetworkAccessPortRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedSourceAddressPrefixes(@Nullable List<String> allowedSourceAddressPrefixes) {
-            this.allowedSourceAddressPrefixes = Output.ofNullable(allowedSourceAddressPrefixes);
+            this.allowedSourceAddressPrefixes = Codegen.ofNullable(allowedSourceAddressPrefixes);
             return this;
         }
         public Builder allowedSourceAddressPrefixes(String... allowedSourceAddressPrefixes) {

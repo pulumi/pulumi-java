@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.CustomResourceDefinitionListArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinition;
@@ -91,7 +92,7 @@ public class CustomResourceDefinitionList extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public CustomResourceDefinitionList(String name, CustomResourceDefinitionListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:apiextensions.k8s.io/v1beta1:CustomResourceDefinitionList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:apiextensions.k8s.io/v1beta1:CustomResourceDefinitionList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private CustomResourceDefinitionList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

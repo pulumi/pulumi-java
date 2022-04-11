@@ -10,6 +10,7 @@ import io.pulumi.awsnative.quicksight.inputs.AnalysisSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.AnalysisTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -42,7 +43,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AnalysisErrorArgs>> errors;
 
     public Output<List<AnalysisErrorArgs>> getErrors() {
-        return this.errors == null ? Output.empty() : this.errors;
+        return this.errors == null ? Codegen.empty() : this.errors;
     }
 
     /**
@@ -53,14 +54,14 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<AnalysisParametersArgs> parameters;
 
     public Output<AnalysisParametersArgs> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AnalysisResourcePermissionArgs>> permissions;
 
     public Output<List<AnalysisResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sourceEntity", required=true)
@@ -95,7 +96,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AnalysisTagArgs>> tags;
 
     public Output<List<AnalysisTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> themeArn;
 
     public Output<String> getThemeArn() {
-        return this.themeArn == null ? Output.empty() : this.themeArn;
+        return this.themeArn == null ? Codegen.empty() : this.themeArn;
     }
 
     public AnalysisArgs(
@@ -131,15 +132,15 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnalysisArgs() {
-        this.analysisId = Output.empty();
-        this.awsAccountId = Output.empty();
-        this.errors = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.permissions = Output.empty();
-        this.sourceEntity = Output.empty();
-        this.tags = Output.empty();
-        this.themeArn = Output.empty();
+        this.analysisId = Codegen.empty();
+        this.awsAccountId = Codegen.empty();
+        this.errors = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.sourceEntity = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.themeArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errors(@Nullable List<AnalysisErrorArgs> errors) {
-            this.errors = Output.ofNullable(errors);
+            this.errors = Codegen.ofNullable(errors);
             return this;
         }
         public Builder errors(AnalysisErrorArgs... errors) {
@@ -210,7 +211,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<AnalysisParametersArgs> parameters) {
@@ -218,7 +219,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable AnalysisParametersArgs parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder permissions(@Nullable Output<List<AnalysisResourcePermissionArgs>> permissions) {
@@ -226,7 +227,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<AnalysisResourcePermissionArgs> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(AnalysisResourcePermissionArgs... permissions) {
@@ -245,7 +246,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<AnalysisTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(AnalysisTagArgs... tags) {
@@ -256,7 +257,7 @@ public final class AnalysisArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder themeArn(@Nullable String themeArn) {
-            this.themeArn = Output.ofNullable(themeArn);
+            this.themeArn = Codegen.ofNullable(themeArn);
             return this;
         }        public AnalysisArgs build() {
             return new AnalysisArgs(analysisId, awsAccountId, errors, name, parameters, permissions, sourceEntity, tags, themeArn);

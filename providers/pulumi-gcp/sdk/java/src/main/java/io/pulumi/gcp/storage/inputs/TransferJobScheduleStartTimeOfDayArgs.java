@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -69,10 +70,10 @@ public final class TransferJobScheduleStartTimeOfDayArgs extends io.pulumi.resou
     }
 
     private TransferJobScheduleStartTimeOfDayArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
-        this.nanos = Output.empty();
-        this.seconds = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
+        this.nanos = Codegen.empty();
+        this.seconds = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public PrivateLinkServiceConnectionStateArgs(
@@ -48,8 +49,8 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     }
 
     private PrivateLinkServiceConnectionStateArgs() {
-        this.description = Output.empty();
-        this.status = Output.empty();
+        this.description = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -87,7 +88,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public PrivateLinkServiceConnectionStateArgs build() {
             return new PrivateLinkServiceConnectionStateArgs(description, status);

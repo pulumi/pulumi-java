@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyWeeklyCycleDayOfWeekArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
     public Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {
-        return this.dayOfWeeks == null ? Output.empty() : this.dayOfWeeks;
+        return this.dayOfWeeks == null ? Codegen.empty() : this.dayOfWeeks;
     }
 
     public ResourcePolicyWeeklyCycleArgs(@Nullable Output<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks) {
@@ -35,7 +36,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
     }
 
     private ResourcePolicyWeeklyCycleArgs() {
-        this.dayOfWeeks = Output.empty();
+        this.dayOfWeeks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder dayOfWeeks(@Nullable List<ResourcePolicyWeeklyCycleDayOfWeekArgs> dayOfWeeks) {
-            this.dayOfWeeks = Output.ofNullable(dayOfWeeks);
+            this.dayOfWeeks = Codegen.ofNullable(dayOfWeeks);
             return this;
         }
         public Builder dayOfWeeks(ResourcePolicyWeeklyCycleDayOfWeekArgs... dayOfWeeks) {

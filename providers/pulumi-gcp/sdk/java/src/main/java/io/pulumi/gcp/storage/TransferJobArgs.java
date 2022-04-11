@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecArgs;
 import java.lang.String;
@@ -36,7 +37,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TransferJobScheduleArgs> schedule;
 
     public Output<TransferJobScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransferJobArgs() {
-        this.description = Output.empty();
-        this.project = Output.empty();
-        this.schedule = Output.empty();
-        this.status = Output.empty();
-        this.transferSpec = Output.empty();
+        this.description = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.status = Codegen.empty();
+        this.transferSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schedule(@Nullable Output<TransferJobScheduleArgs> schedule) {
@@ -142,7 +143,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable TransferJobScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -150,7 +151,7 @@ public final class TransferJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder transferSpec(Output<TransferJobTransferSpecArgs> transferSpec) {

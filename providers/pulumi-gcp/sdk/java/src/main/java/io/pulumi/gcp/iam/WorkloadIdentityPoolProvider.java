@@ -6,6 +6,7 @@ package io.pulumi.gcp.iam;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iam.WorkloadIdentityPoolProviderArgs;
 import io.pulumi.gcp.iam.inputs.WorkloadIdentityPoolProviderState;
@@ -355,7 +356,7 @@ public class WorkloadIdentityPoolProvider extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public WorkloadIdentityPoolProvider(String name, WorkloadIdentityPoolProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iam/workloadIdentityPoolProvider:WorkloadIdentityPoolProvider", name, args == null ? WorkloadIdentityPoolProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iam/workloadIdentityPoolProvider:WorkloadIdentityPoolProvider", name, args == null ? WorkloadIdentityPoolProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WorkloadIdentityPoolProvider(String name, Output<String> id, @Nullable WorkloadIdentityPoolProviderState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

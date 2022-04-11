@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.IdentityNotificationTopicState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -108,7 +109,7 @@ public class IdentityNotificationTopic extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public IdentityNotificationTopic(String name, IdentityNotificationTopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/identityNotificationTopic:IdentityNotificationTopic", name, args == null ? IdentityNotificationTopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IdentityNotificationTopic(String name, Output<String> id, @Nullable IdentityNotificationTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

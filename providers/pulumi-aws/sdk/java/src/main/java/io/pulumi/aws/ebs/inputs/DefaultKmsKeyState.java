@@ -5,6 +5,7 @@ package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DefaultKmsKeyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {
-        return this.keyArn == null ? Output.empty() : this.keyArn;
+        return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 
     public DefaultKmsKeyState(@Nullable Output<String> keyArn) {
@@ -30,7 +31,7 @@ public final class DefaultKmsKeyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DefaultKmsKeyState() {
-        this.keyArn = Output.empty();
+        this.keyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DefaultKmsKeyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Output.ofNullable(keyArn);
+            this.keyArn = Codegen.ofNullable(keyArn);
             return this;
         }        public DefaultKmsKeyState build() {
             return new DefaultKmsKeyState(keyArn);

@@ -8,6 +8,7 @@ import io.pulumi.aws.glue.inputs.JobExecutionPropertyGetArgs;
 import io.pulumi.aws.glue.inputs.JobNotificationPropertyGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobCommandGetArgs> command;
 
     public Output<JobCommandGetArgs> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> connections;
 
     public Output<List<String>> getConnections() {
-        return this.connections == null ? Output.empty() : this.connections;
+        return this.connections == null ? Codegen.empty() : this.connections;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> defaultArguments;
 
     public Output<Map<String,String>> getDefaultArguments() {
-        return this.defaultArguments == null ? Output.empty() : this.defaultArguments;
+        return this.defaultArguments == null ? Codegen.empty() : this.defaultArguments;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobExecutionPropertyGetArgs> executionProperty;
 
     public Output<JobExecutionPropertyGetArgs> getExecutionProperty() {
-        return this.executionProperty == null ? Output.empty() : this.executionProperty;
+        return this.executionProperty == null ? Codegen.empty() : this.executionProperty;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> glueVersion;
 
     public Output<String> getGlueVersion() {
-        return this.glueVersion == null ? Output.empty() : this.glueVersion;
+        return this.glueVersion == null ? Codegen.empty() : this.glueVersion;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maxCapacity;
 
     public Output<Double> getMaxCapacity() {
-        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
+        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxRetries;
 
     public Output<Integer> getMaxRetries() {
-        return this.maxRetries == null ? Output.empty() : this.maxRetries;
+        return this.maxRetries == null ? Codegen.empty() : this.maxRetries;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> nonOverridableArguments;
 
     public Output<Map<String,String>> getNonOverridableArguments() {
-        return this.nonOverridableArguments == null ? Output.empty() : this.nonOverridableArguments;
+        return this.nonOverridableArguments == null ? Codegen.empty() : this.nonOverridableArguments;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobNotificationPropertyGetArgs> notificationProperty;
 
     public Output<JobNotificationPropertyGetArgs> getNotificationProperty() {
-        return this.notificationProperty == null ? Output.empty() : this.notificationProperty;
+        return this.notificationProperty == null ? Codegen.empty() : this.notificationProperty;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> numberOfWorkers;
 
     public Output<Integer> getNumberOfWorkers() {
-        return this.numberOfWorkers == null ? Output.empty() : this.numberOfWorkers;
+        return this.numberOfWorkers == null ? Codegen.empty() : this.numberOfWorkers;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
+        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -205,7 +206,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -216,7 +217,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> timeout;
 
     public Output<Integer> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     /**
@@ -227,7 +228,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workerType;
 
     public Output<String> getWorkerType() {
-        return this.workerType == null ? Output.empty() : this.workerType;
+        return this.workerType == null ? Codegen.empty() : this.workerType;
     }
 
     public JobState(
@@ -272,25 +273,25 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobState() {
-        this.arn = Output.empty();
-        this.command = Output.empty();
-        this.connections = Output.empty();
-        this.defaultArguments = Output.empty();
-        this.description = Output.empty();
-        this.executionProperty = Output.empty();
-        this.glueVersion = Output.empty();
-        this.maxCapacity = Output.empty();
-        this.maxRetries = Output.empty();
-        this.name = Output.empty();
-        this.nonOverridableArguments = Output.empty();
-        this.notificationProperty = Output.empty();
-        this.numberOfWorkers = Output.empty();
-        this.roleArn = Output.empty();
-        this.securityConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.timeout = Output.empty();
-        this.workerType = Output.empty();
+        this.arn = Codegen.empty();
+        this.command = Codegen.empty();
+        this.connections = Codegen.empty();
+        this.defaultArguments = Codegen.empty();
+        this.description = Codegen.empty();
+        this.executionProperty = Codegen.empty();
+        this.glueVersion = Codegen.empty();
+        this.maxCapacity = Codegen.empty();
+        this.maxRetries = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nonOverridableArguments = Codegen.empty();
+        this.notificationProperty = Codegen.empty();
+        this.numberOfWorkers = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.securityConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.timeout = Codegen.empty();
+        this.workerType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -354,7 +355,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder command(@Nullable Output<JobCommandGetArgs> command) {
@@ -362,7 +363,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable JobCommandGetArgs command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder connections(@Nullable Output<List<String>> connections) {
@@ -370,7 +371,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connections(@Nullable List<String> connections) {
-            this.connections = Output.ofNullable(connections);
+            this.connections = Codegen.ofNullable(connections);
             return this;
         }
         public Builder connections(String... connections) {
@@ -381,7 +382,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultArguments(@Nullable Map<String,String> defaultArguments) {
-            this.defaultArguments = Output.ofNullable(defaultArguments);
+            this.defaultArguments = Codegen.ofNullable(defaultArguments);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -389,7 +390,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionProperty(@Nullable Output<JobExecutionPropertyGetArgs> executionProperty) {
@@ -397,7 +398,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionProperty(@Nullable JobExecutionPropertyGetArgs executionProperty) {
-            this.executionProperty = Output.ofNullable(executionProperty);
+            this.executionProperty = Codegen.ofNullable(executionProperty);
             return this;
         }
         public Builder glueVersion(@Nullable Output<String> glueVersion) {
@@ -405,7 +406,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder glueVersion(@Nullable String glueVersion) {
-            this.glueVersion = Output.ofNullable(glueVersion);
+            this.glueVersion = Codegen.ofNullable(glueVersion);
             return this;
         }
         public Builder maxCapacity(@Nullable Output<Double> maxCapacity) {
@@ -413,7 +414,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxCapacity(@Nullable Double maxCapacity) {
-            this.maxCapacity = Output.ofNullable(maxCapacity);
+            this.maxCapacity = Codegen.ofNullable(maxCapacity);
             return this;
         }
         public Builder maxRetries(@Nullable Output<Integer> maxRetries) {
@@ -421,7 +422,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxRetries(@Nullable Integer maxRetries) {
-            this.maxRetries = Output.ofNullable(maxRetries);
+            this.maxRetries = Codegen.ofNullable(maxRetries);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -429,7 +430,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nonOverridableArguments(@Nullable Output<Map<String,String>> nonOverridableArguments) {
@@ -437,7 +438,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nonOverridableArguments(@Nullable Map<String,String> nonOverridableArguments) {
-            this.nonOverridableArguments = Output.ofNullable(nonOverridableArguments);
+            this.nonOverridableArguments = Codegen.ofNullable(nonOverridableArguments);
             return this;
         }
         public Builder notificationProperty(@Nullable Output<JobNotificationPropertyGetArgs> notificationProperty) {
@@ -445,7 +446,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationProperty(@Nullable JobNotificationPropertyGetArgs notificationProperty) {
-            this.notificationProperty = Output.ofNullable(notificationProperty);
+            this.notificationProperty = Codegen.ofNullable(notificationProperty);
             return this;
         }
         public Builder numberOfWorkers(@Nullable Output<Integer> numberOfWorkers) {
@@ -453,7 +454,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numberOfWorkers(@Nullable Integer numberOfWorkers) {
-            this.numberOfWorkers = Output.ofNullable(numberOfWorkers);
+            this.numberOfWorkers = Codegen.ofNullable(numberOfWorkers);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -461,7 +462,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
@@ -469,7 +470,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Output.ofNullable(securityConfiguration);
+            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -477,7 +478,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -485,7 +486,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder timeout(@Nullable Output<Integer> timeout) {
@@ -493,7 +494,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeout(@Nullable Integer timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }
         public Builder workerType(@Nullable Output<String> workerType) {
@@ -501,7 +502,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerType(@Nullable String workerType) {
-            this.workerType = Output.ofNullable(workerType);
+            this.workerType = Codegen.ofNullable(workerType);
             return this;
         }        public JobState build() {
             return new JobState(arn, command, connections, defaultArguments, description, executionProperty, glueVersion, maxCapacity, maxRetries, name, nonOverridableArguments, notificationProperty, numberOfWorkers, roleArn, securityConfiguration, tags, tagsAll, timeout, workerType);

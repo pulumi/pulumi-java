@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.CollectorBodyAgentSpnPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails;
 
     public Output<CollectorBodyAgentSpnPropertiesArgs> getSpnDetails() {
-        return this.spnDetails == null ? Output.empty() : this.spnDetails;
+        return this.spnDetails == null ? Codegen.empty() : this.spnDetails;
     }
 
     public CollectorAgentPropertiesArgs(@Nullable Output<CollectorBodyAgentSpnPropertiesArgs> spnDetails) {
@@ -26,7 +27,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private CollectorAgentPropertiesArgs() {
-        this.spnDetails = Output.empty();
+        this.spnDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class CollectorAgentPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder spnDetails(@Nullable CollectorBodyAgentSpnPropertiesArgs spnDetails) {
-            this.spnDetails = Output.ofNullable(spnDetails);
+            this.spnDetails = Codegen.ofNullable(spnDetails);
             return this;
         }        public CollectorAgentPropertiesArgs build() {
             return new CollectorAgentPropertiesArgs(spnDetails);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultLimit;
 
     public Output<String> getDefaultLimit() {
-        return this.defaultLimit == null ? Output.empty() : this.defaultLimit;
+        return this.defaultLimit == null ? Codegen.empty() : this.defaultLimit;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> duration;
 
     public Output<String> getDuration() {
-        return this.duration == null ? Output.empty() : this.duration;
+        return this.duration == null ? Codegen.empty() : this.duration;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> freeTier;
 
     public Output<String> getFreeTier() {
-        return this.freeTier == null ? Output.empty() : this.freeTier;
+        return this.freeTier == null ? Codegen.empty() : this.freeTier;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maxLimit;
 
     public Output<String> getMaxLimit() {
-        return this.maxLimit == null ? Output.empty() : this.maxLimit;
+        return this.maxLimit == null ? Codegen.empty() : this.maxLimit;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metric;
 
     public Output<String> getMetric() {
-        return this.metric == null ? Output.empty() : this.metric;
+        return this.metric == null ? Codegen.empty() : this.metric;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> values;
 
     public Output<Map<String,String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public QuotaLimitArgs(
@@ -153,16 +154,16 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuotaLimitArgs() {
-        this.defaultLimit = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.duration = Output.empty();
-        this.freeTier = Output.empty();
-        this.maxLimit = Output.empty();
-        this.metric = Output.empty();
-        this.name = Output.empty();
-        this.unit = Output.empty();
-        this.values = Output.empty();
+        this.defaultLimit = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.freeTier = Codegen.empty();
+        this.maxLimit = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.name = Codegen.empty();
+        this.unit = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultLimit(@Nullable String defaultLimit) {
-            this.defaultLimit = Output.ofNullable(defaultLimit);
+            this.defaultLimit = Codegen.ofNullable(defaultLimit);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -216,7 +217,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -224,7 +225,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder duration(@Nullable Output<String> duration) {
@@ -232,7 +233,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder duration(@Nullable String duration) {
-            this.duration = Output.ofNullable(duration);
+            this.duration = Codegen.ofNullable(duration);
             return this;
         }
         public Builder freeTier(@Nullable Output<String> freeTier) {
@@ -240,7 +241,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder freeTier(@Nullable String freeTier) {
-            this.freeTier = Output.ofNullable(freeTier);
+            this.freeTier = Codegen.ofNullable(freeTier);
             return this;
         }
         public Builder maxLimit(@Nullable Output<String> maxLimit) {
@@ -248,7 +249,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxLimit(@Nullable String maxLimit) {
-            this.maxLimit = Output.ofNullable(maxLimit);
+            this.maxLimit = Codegen.ofNullable(maxLimit);
             return this;
         }
         public Builder metric(@Nullable Output<String> metric) {
@@ -256,7 +257,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metric(@Nullable String metric) {
-            this.metric = Output.ofNullable(metric);
+            this.metric = Codegen.ofNullable(metric);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -264,7 +265,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder unit(@Nullable Output<String> unit) {
@@ -272,7 +273,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }
         public Builder values(@Nullable Output<Map<String,String>> values) {
@@ -280,7 +281,7 @@ public final class QuotaLimitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder values(@Nullable Map<String,String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }        public QuotaLimitArgs build() {
             return new QuotaLimitArgs(defaultLimit, description, displayName, duration, freeTier, maxLimit, metric, name, unit, values);

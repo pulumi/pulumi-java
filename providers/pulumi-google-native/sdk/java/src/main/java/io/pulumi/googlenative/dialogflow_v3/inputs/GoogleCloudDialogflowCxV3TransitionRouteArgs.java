@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
       private final @Nullable Output<String> intent;
 
     public Output<String> getIntent() {
-        return this.intent == null ? Output.empty() : this.intent;
+        return this.intent == null ? Codegen.empty() : this.intent;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
       private final @Nullable Output<String> targetFlow;
 
     public Output<String> getTargetFlow() {
-        return this.targetFlow == null ? Output.empty() : this.targetFlow;
+        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
       private final @Nullable Output<String> targetPage;
 
     public Output<String> getTargetPage() {
-        return this.targetPage == null ? Output.empty() : this.targetPage;
+        return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
       private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
     public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
+        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 
     public GoogleCloudDialogflowCxV3TransitionRouteArgs(
@@ -88,11 +89,11 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowCxV3TransitionRouteArgs() {
-        this.condition = Output.empty();
-        this.intent = Output.empty();
-        this.targetFlow = Output.empty();
-        this.targetPage = Output.empty();
-        this.triggerFulfillment = Output.empty();
+        this.condition = Codegen.empty();
+        this.intent = Codegen.empty();
+        this.targetFlow = Codegen.empty();
+        this.targetPage = Codegen.empty();
+        this.triggerFulfillment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder intent(@Nullable Output<String> intent) {
@@ -136,7 +137,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             return this;
         }
         public Builder intent(@Nullable String intent) {
-            this.intent = Output.ofNullable(intent);
+            this.intent = Codegen.ofNullable(intent);
             return this;
         }
         public Builder targetFlow(@Nullable Output<String> targetFlow) {
@@ -144,7 +145,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             return this;
         }
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Output.ofNullable(targetFlow);
+            this.targetFlow = Codegen.ofNullable(targetFlow);
             return this;
         }
         public Builder targetPage(@Nullable Output<String> targetPage) {
@@ -152,7 +153,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             return this;
         }
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Output.ofNullable(targetPage);
+            this.targetPage = Codegen.ofNullable(targetPage);
             return this;
         }
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment) {
@@ -160,7 +161,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             return this;
         }
         public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3FulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
             return this;
         }        public GoogleCloudDialogflowCxV3TransitionRouteArgs build() {
             return new GoogleCloudDialogflowCxV3TransitionRouteArgs(condition, intent, targetFlow, targetPage, triggerFulfillment);

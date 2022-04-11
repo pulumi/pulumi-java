@@ -8,6 +8,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRuleDestinationHttpUrlDestinationSumm
 import io.pulumi.awsnative.iot.inputs.TopicRuleDestinationVpcDestinationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
 
     public Output<TopicRuleDestinationHttpUrlDestinationSummaryArgs> getHttpUrlProperties() {
-        return this.httpUrlProperties == null ? Output.empty() : this.httpUrlProperties;
+        return this.httpUrlProperties == null ? Codegen.empty() : this.httpUrlProperties;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TopicRuleDestinationStatus> status;
 
     public Output<TopicRuleDestinationStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
 
     public Output<TopicRuleDestinationVpcDestinationPropertiesArgs> getVpcProperties() {
-        return this.vpcProperties == null ? Output.empty() : this.vpcProperties;
+        return this.vpcProperties == null ? Codegen.empty() : this.vpcProperties;
     }
 
     public TopicRuleDestinationArgs(
@@ -59,9 +60,9 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
     }
 
     private TopicRuleDestinationArgs() {
-        this.httpUrlProperties = Output.empty();
-        this.status = Output.empty();
-        this.vpcProperties = Output.empty();
+        this.httpUrlProperties = Codegen.empty();
+        this.status = Codegen.empty();
+        this.vpcProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder httpUrlProperties(@Nullable TopicRuleDestinationHttpUrlDestinationSummaryArgs httpUrlProperties) {
-            this.httpUrlProperties = Output.ofNullable(httpUrlProperties);
+            this.httpUrlProperties = Codegen.ofNullable(httpUrlProperties);
             return this;
         }
         public Builder status(@Nullable Output<TopicRuleDestinationStatus> status) {
@@ -101,7 +102,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder status(@Nullable TopicRuleDestinationStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder vpcProperties(@Nullable Output<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties) {
@@ -109,7 +110,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder vpcProperties(@Nullable TopicRuleDestinationVpcDestinationPropertiesArgs vpcProperties) {
-            this.vpcProperties = Output.ofNullable(vpcProperties);
+            this.vpcProperties = Codegen.ofNullable(vpcProperties);
             return this;
         }        public TopicRuleDestinationArgs build() {
             return new TopicRuleDestinationArgs(httpUrlProperties, status, vpcProperties);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> locked;
 
     public Output<Boolean> getLocked() {
-        return this.locked == null ? Output.empty() : this.locked;
+        return this.locked == null ? Codegen.empty() : this.locked;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     public LockConfigArgs(
@@ -49,8 +50,8 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LockConfigArgs() {
-        this.locked = Output.empty();
-        this.reason = Output.empty();
+        this.locked = Codegen.empty();
+        this.reason = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locked(@Nullable Boolean locked) {
-            this.locked = Output.ofNullable(locked);
+            this.locked = Codegen.ofNullable(locked);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -88,7 +89,7 @@ public final class LockConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }        public LockConfigArgs build() {
             return new LockConfigArgs(locked, reason);

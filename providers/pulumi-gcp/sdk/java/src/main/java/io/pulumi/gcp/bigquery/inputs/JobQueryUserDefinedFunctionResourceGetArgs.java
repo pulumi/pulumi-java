@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class JobQueryUserDefinedFunctionResourceGetArgs extends io.pulumi.
       private final @Nullable Output<String> inlineCode;
 
     public Output<String> getInlineCode() {
-        return this.inlineCode == null ? Output.empty() : this.inlineCode;
+        return this.inlineCode == null ? Codegen.empty() : this.inlineCode;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class JobQueryUserDefinedFunctionResourceGetArgs extends io.pulumi.
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     public JobQueryUserDefinedFunctionResourceGetArgs(
@@ -45,8 +46,8 @@ public final class JobQueryUserDefinedFunctionResourceGetArgs extends io.pulumi.
     }
 
     private JobQueryUserDefinedFunctionResourceGetArgs() {
-        this.inlineCode = Output.empty();
-        this.resourceUri = Output.empty();
+        this.inlineCode = Codegen.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class JobQueryUserDefinedFunctionResourceGetArgs extends io.pulumi.
             return this;
         }
         public Builder inlineCode(@Nullable String inlineCode) {
-            this.inlineCode = Output.ofNullable(inlineCode);
+            this.inlineCode = Codegen.ofNullable(inlineCode);
             return this;
         }
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
@@ -84,7 +85,7 @@ public final class JobQueryUserDefinedFunctionResourceGetArgs extends io.pulumi.
             return this;
         }
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }        public JobQueryUserDefinedFunctionResourceGetArgs build() {
             return new JobQueryUserDefinedFunctionResourceGetArgs(inlineCode, resourceUri);

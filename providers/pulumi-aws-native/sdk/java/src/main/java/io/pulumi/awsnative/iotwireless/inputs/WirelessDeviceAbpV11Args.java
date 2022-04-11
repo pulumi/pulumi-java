@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotwireless.inputs;
 import io.pulumi.awsnative.iotwireless.inputs.WirelessDeviceSessionKeysAbpV11Args;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -36,8 +37,8 @@ public final class WirelessDeviceAbpV11Args extends io.pulumi.resources.Resource
     }
 
     private WirelessDeviceAbpV11Args() {
-        this.devAddr = Output.empty();
-        this.sessionKeys = Output.empty();
+        this.devAddr = Codegen.empty();
+        this.sessionKeys = Codegen.empty();
     }
 
     public static Builder builder() {

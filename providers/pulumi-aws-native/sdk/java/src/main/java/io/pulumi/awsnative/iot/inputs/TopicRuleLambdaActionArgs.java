@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> functionArn;
 
     public Output<String> getFunctionArn() {
-        return this.functionArn == null ? Output.empty() : this.functionArn;
+        return this.functionArn == null ? Codegen.empty() : this.functionArn;
     }
 
     public TopicRuleLambdaActionArgs(@Nullable Output<String> functionArn) {
@@ -26,7 +27,7 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
     }
 
     private TopicRuleLambdaActionArgs() {
-        this.functionArn = Output.empty();
+        this.functionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class TopicRuleLambdaActionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder functionArn(@Nullable String functionArn) {
-            this.functionArn = Output.ofNullable(functionArn);
+            this.functionArn = Codegen.ofNullable(functionArn);
             return this;
         }        public TopicRuleLambdaActionArgs build() {
             return new TopicRuleLambdaActionArgs(functionArn);

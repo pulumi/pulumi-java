@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
       private final @Nullable Output<String> actionsRequired;
 
     public Output<String> getActionsRequired() {
-        return this.actionsRequired == null ? Output.empty() : this.actionsRequired;
+        return this.actionsRequired == null ? Codegen.empty() : this.actionsRequired;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
     }
 
     private PrivateLinkServiceConnectionStateArgs() {
-        this.actionsRequired = Output.empty();
-        this.description = Output.empty();
-        this.status = Output.empty();
+        this.actionsRequired = Codegen.empty();
+        this.description = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             return this;
         }
         public Builder actionsRequired(@Nullable String actionsRequired) {
-            this.actionsRequired = Output.ofNullable(actionsRequired);
+            this.actionsRequired = Codegen.ofNullable(actionsRequired);
             return this;
         }
         public Builder description(Output<String> description) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicebus.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
     public Output<Either<String,NetworkRuleIPAction>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ipMask;
 
     public Output<String> getIpMask() {
-        return this.ipMask == null ? Output.empty() : this.ipMask;
+        return this.ipMask == null ? Codegen.empty() : this.ipMask;
     }
 
     public NWRuleSetIpRulesArgs(
@@ -50,8 +51,8 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NWRuleSetIpRulesArgs() {
-        this.action = Output.empty();
-        this.ipMask = Output.empty();
+        this.action = Codegen.empty();
+        this.ipMask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder ipMask(@Nullable Output<String> ipMask) {
@@ -89,7 +90,7 @@ public final class NWRuleSetIpRulesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ipMask(@Nullable String ipMask) {
-            this.ipMask = Output.ofNullable(ipMask);
+            this.ipMask = Codegen.ofNullable(ipMask);
             return this;
         }        public NWRuleSetIpRulesArgs build() {
             return new NWRuleSetIpRulesArgs(action, ipMask);

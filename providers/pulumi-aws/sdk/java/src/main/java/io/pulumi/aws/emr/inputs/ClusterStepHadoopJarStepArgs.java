@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> mainClass;
 
     public Output<String> getMainClass() {
-        return this.mainClass == null ? Output.empty() : this.mainClass;
+        return this.mainClass == null ? Codegen.empty() : this.mainClass;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public ClusterStepHadoopJarStepArgs(
@@ -72,10 +73,10 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
     }
 
     private ClusterStepHadoopJarStepArgs() {
-        this.args = Output.empty();
-        this.jar = Output.empty();
-        this.mainClass = Output.empty();
-        this.properties = Output.empty();
+        this.args = Codegen.empty();
+        this.jar = Codegen.empty();
+        this.mainClass = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -128,7 +129,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder mainClass(@Nullable String mainClass) {
-            this.mainClass = Output.ofNullable(mainClass);
+            this.mainClass = Codegen.ofNullable(mainClass);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -136,7 +137,7 @@ public final class ClusterStepHadoopJarStepArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public ClusterStepHadoopJarStepArgs build() {
             return new ClusterStepHadoopJarStepArgs(args, jar, mainClass, properties);

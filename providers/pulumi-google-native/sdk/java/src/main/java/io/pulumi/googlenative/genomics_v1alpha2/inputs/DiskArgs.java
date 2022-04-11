@@ -5,6 +5,7 @@ package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.genomics_v1alpha2.enums.DiskType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mountPoint;
 
     public Output<String> getMountPoint() {
-        return this.mountPoint == null ? Output.empty() : this.mountPoint;
+        return this.mountPoint == null ? Codegen.empty() : this.mountPoint;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> sizeGb;
 
     public Output<Integer> getSizeGb() {
-        return this.sizeGb == null ? Output.empty() : this.sizeGb;
+        return this.sizeGb == null ? Codegen.empty() : this.sizeGb;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     /**
@@ -103,12 +104,12 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiskArgs() {
-        this.mountPoint = Output.empty();
-        this.name = Output.empty();
-        this.readOnly = Output.empty();
-        this.sizeGb = Output.empty();
-        this.source = Output.empty();
-        this.type = Output.empty();
+        this.mountPoint = Codegen.empty();
+        this.name = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.sizeGb = Codegen.empty();
+        this.source = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountPoint(@Nullable String mountPoint) {
-            this.mountPoint = Output.ofNullable(mountPoint);
+            this.mountPoint = Codegen.ofNullable(mountPoint);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -162,7 +163,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder sizeGb(@Nullable Output<Integer> sizeGb) {
@@ -170,7 +171,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeGb(@Nullable Integer sizeGb) {
-            this.sizeGb = Output.ofNullable(sizeGb);
+            this.sizeGb = Codegen.ofNullable(sizeGb);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -178,7 +179,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }
         public Builder type(Output<DiskType> type) {

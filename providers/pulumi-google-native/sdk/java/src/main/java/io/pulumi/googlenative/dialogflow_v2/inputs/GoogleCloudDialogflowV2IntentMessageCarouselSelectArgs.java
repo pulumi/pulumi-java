@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageCarouselSelectItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs extend
     }
 
     private GoogleCloudDialogflowV2IntentMessageCarouselSelectArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {

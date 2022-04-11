@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> contentHandlingStrategy;
 
     public Output<String> getContentHandlingStrategy() {
-        return this.contentHandlingStrategy == null ? Output.empty() : this.contentHandlingStrategy;
+        return this.contentHandlingStrategy == null ? Codegen.empty() : this.contentHandlingStrategy;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
     public Output<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
+        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> templateSelectionExpression;
 
     public Output<String> getTemplateSelectionExpression() {
-        return this.templateSelectionExpression == null ? Output.empty() : this.templateSelectionExpression;
+        return this.templateSelectionExpression == null ? Codegen.empty() : this.templateSelectionExpression;
     }
 
     public IntegrationResponseArgs(
@@ -97,12 +98,12 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     }
 
     private IntegrationResponseArgs() {
-        this.apiId = Output.empty();
-        this.contentHandlingStrategy = Output.empty();
-        this.integrationId = Output.empty();
-        this.integrationResponseKey = Output.empty();
-        this.responseTemplates = Output.empty();
-        this.templateSelectionExpression = Output.empty();
+        this.apiId = Codegen.empty();
+        this.contentHandlingStrategy = Codegen.empty();
+        this.integrationId = Codegen.empty();
+        this.integrationResponseKey = Codegen.empty();
+        this.responseTemplates = Codegen.empty();
+        this.templateSelectionExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder contentHandlingStrategy(@Nullable String contentHandlingStrategy) {
-            this.contentHandlingStrategy = Output.ofNullable(contentHandlingStrategy);
+            this.contentHandlingStrategy = Codegen.ofNullable(contentHandlingStrategy);
             return this;
         }
         public Builder integrationId(Output<String> integrationId) {
@@ -172,7 +173,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Output.ofNullable(responseTemplates);
+            this.responseTemplates = Codegen.ofNullable(responseTemplates);
             return this;
         }
         public Builder templateSelectionExpression(@Nullable Output<String> templateSelectionExpression) {
@@ -180,7 +181,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder templateSelectionExpression(@Nullable String templateSelectionExpression) {
-            this.templateSelectionExpression = Output.ofNullable(templateSelectionExpression);
+            this.templateSelectionExpression = Codegen.ofNullable(templateSelectionExpression);
             return this;
         }        public IntegrationResponseArgs build() {
             return new IntegrationResponseArgs(apiId, contentHandlingStrategy, integrationId, integrationResponseKey, responseTemplates, templateSelectionExpression);

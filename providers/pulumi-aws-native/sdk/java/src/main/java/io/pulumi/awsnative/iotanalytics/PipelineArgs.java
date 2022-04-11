@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.PipelineActivityArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,14 +29,14 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pipelineName;
 
     public Output<String> getPipelineName() {
-        return this.pipelineName == null ? Output.empty() : this.pipelineName;
+        return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PipelineTagArgs>> tags;
 
     public Output<List<PipelineTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PipelineArgs(
@@ -48,9 +49,9 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.pipelineActivities = Output.empty();
-        this.pipelineName = Output.empty();
-        this.tags = Output.empty();
+        this.pipelineActivities = Codegen.empty();
+        this.pipelineName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Output.ofNullable(pipelineName);
+            this.pipelineName = Codegen.ofNullable(pipelineName);
             return this;
         }
         public Builder tags(@Nullable Output<List<PipelineTagArgs>> tags) {
@@ -101,7 +102,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PipelineTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PipelineTagArgs... tags) {

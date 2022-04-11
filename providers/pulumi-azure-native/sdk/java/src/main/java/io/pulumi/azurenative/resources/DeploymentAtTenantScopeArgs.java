@@ -6,6 +6,7 @@ package io.pulumi.azurenative.resources;
 import io.pulumi.azurenative.resources.inputs.DeploymentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> deploymentName;
 
     public Output<String> getDeploymentName() {
-        return this.deploymentName == null ? Output.empty() : this.deploymentName;
+        return this.deploymentName == null ? Codegen.empty() : this.deploymentName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeploymentAtTenantScopeArgs(
@@ -72,10 +73,10 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
     }
 
     private DeploymentAtTenantScopeArgs() {
-        this.deploymentName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
+        this.deploymentName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deploymentName(@Nullable String deploymentName) {
-            this.deploymentName = Output.ofNullable(deploymentName);
+            this.deploymentName = Codegen.ofNullable(deploymentName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -117,7 +118,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<DeploymentPropertiesArgs> properties) {
@@ -133,7 +134,7 @@ public final class DeploymentAtTenantScopeArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DeploymentAtTenantScopeArgs build() {
             return new DeploymentAtTenantScopeArgs(deploymentName, location, properties, tags);

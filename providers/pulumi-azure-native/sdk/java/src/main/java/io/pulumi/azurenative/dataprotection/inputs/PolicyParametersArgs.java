@@ -6,6 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.AzureOperationalStoreParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList;
 
     public Output<List<AzureOperationalStoreParametersArgs>> getDataStoreParametersList() {
-        return this.dataStoreParametersList == null ? Output.empty() : this.dataStoreParametersList;
+        return this.dataStoreParametersList == null ? Codegen.empty() : this.dataStoreParametersList;
     }
 
     public PolicyParametersArgs(@Nullable Output<List<AzureOperationalStoreParametersArgs>> dataStoreParametersList) {
@@ -35,7 +36,7 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PolicyParametersArgs() {
-        this.dataStoreParametersList = Output.empty();
+        this.dataStoreParametersList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class PolicyParametersArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataStoreParametersList(@Nullable List<AzureOperationalStoreParametersArgs> dataStoreParametersList) {
-            this.dataStoreParametersList = Output.ofNullable(dataStoreParametersList);
+            this.dataStoreParametersList = Codegen.ofNullable(dataStoreParametersList);
             return this;
         }
         public Builder dataStoreParametersList(AzureOperationalStoreParametersArgs... dataStoreParametersList) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventPattern;
 
     public Output<String> getEventPattern() {
-        return this.eventPattern == null ? Output.empty() : this.eventPattern;
+        return this.eventPattern == null ? Codegen.empty() : this.eventPattern;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     public EventArchiveArgs(
@@ -84,11 +85,11 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventArchiveArgs() {
-        this.description = Output.empty();
-        this.eventPattern = Output.empty();
-        this.eventSourceArn = Output.empty();
-        this.name = Output.empty();
-        this.retentionDays = Output.empty();
+        this.description = Codegen.empty();
+        this.eventPattern = Codegen.empty();
+        this.eventSourceArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.retentionDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder eventPattern(@Nullable Output<String> eventPattern) {
@@ -132,7 +133,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventPattern(@Nullable String eventPattern) {
-            this.eventPattern = Output.ofNullable(eventPattern);
+            this.eventPattern = Codegen.ofNullable(eventPattern);
             return this;
         }
         public Builder eventSourceArn(Output<String> eventSourceArn) {
@@ -148,7 +149,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
@@ -156,7 +157,7 @@ public final class EventArchiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }        public EventArchiveArgs build() {
             return new EventArchiveArgs(description, eventPattern, eventSourceArn, name, retentionDays);

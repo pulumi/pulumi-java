@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ProjectEnvironmentRegistryCredentialArgs extends io.pulumi.re
     }
 
     private ProjectEnvironmentRegistryCredentialArgs() {
-        this.credential = Output.empty();
-        this.credentialProvider = Output.empty();
+        this.credential = Codegen.empty();
+        this.credentialProvider = Codegen.empty();
     }
 
     public static Builder builder() {

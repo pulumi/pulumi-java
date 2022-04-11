@@ -5,6 +5,7 @@ package io.pulumi.docker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.VolumeLabelArgs;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
-        return this.driver == null ? Output.empty() : this.driver;
+        return this.driver == null ? Codegen.empty() : this.driver;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> driverOpts;
 
     public Output<Map<String,Object>> getDriverOpts() {
-        return this.driverOpts == null ? Output.empty() : this.driverOpts;
+        return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VolumeLabelArgs>> labels;
 
     public Output<List<VolumeLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public VolumeArgs(
@@ -74,10 +75,10 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeArgs() {
-        this.driver = Output.empty();
-        this.driverOpts = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
+        this.driver = Codegen.empty();
+        this.driverOpts = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driver(@Nullable String driver) {
-            this.driver = Output.ofNullable(driver);
+            this.driver = Codegen.ofNullable(driver);
             return this;
         }
         public Builder driverOpts(@Nullable Output<Map<String,Object>> driverOpts) {
@@ -119,7 +120,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder driverOpts(@Nullable Map<String,Object> driverOpts) {
-            this.driverOpts = Output.ofNullable(driverOpts);
+            this.driverOpts = Codegen.ofNullable(driverOpts);
             return this;
         }
         public Builder labels(@Nullable Output<List<VolumeLabelArgs>> labels) {
@@ -127,7 +128,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<VolumeLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(VolumeLabelArgs... labels) {
@@ -138,7 +139,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public VolumeArgs build() {
             return new VolumeArgs(driver, driverOpts, labels, name);

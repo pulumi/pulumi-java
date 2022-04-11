@@ -24,6 +24,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -253,7 +254,7 @@ public class VirtualMachineImageTemplate extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public VirtualMachineImageTemplate(String name, VirtualMachineImageTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:virtualmachineimages:VirtualMachineImageTemplate", name, args == null ? VirtualMachineImageTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VirtualMachineImageTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

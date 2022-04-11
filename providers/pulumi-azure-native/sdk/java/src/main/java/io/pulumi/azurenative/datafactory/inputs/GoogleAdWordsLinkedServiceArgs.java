@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,GoogleAdWordsAuthenticationType>> authenticationType;
 
     public Output<Either<String,GoogleAdWordsAuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> clientCustomerID;
 
     public Output<Object> getClientCustomerID() {
-        return this.clientCustomerID == null ? Output.empty() : this.clientCustomerID;
+        return this.clientCustomerID == null ? Codegen.empty() : this.clientCustomerID;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> clientId;
 
     public Output<Object> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> connectionProperties;
 
     public Output<Object> getConnectionProperties() {
-        return this.connectionProperties == null ? Output.empty() : this.connectionProperties;
+        return this.connectionProperties == null ? Codegen.empty() : this.connectionProperties;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getDeveloperToken() {
-        return this.developerToken == null ? Output.empty() : this.developerToken;
+        return this.developerToken == null ? Codegen.empty() : this.developerToken;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> email;
 
     public Output<Object> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> keyFilePath;
 
     public Output<Object> getKeyFilePath() {
-        return this.keyFilePath == null ? Output.empty() : this.keyFilePath;
+        return this.keyFilePath == null ? Codegen.empty() : this.keyFilePath;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getRefreshToken() {
-        return this.refreshToken == null ? Output.empty() : this.refreshToken;
+        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> trustedCertPath;
 
     public Output<Object> getTrustedCertPath() {
-        return this.trustedCertPath == null ? Output.empty() : this.trustedCertPath;
+        return this.trustedCertPath == null ? Codegen.empty() : this.trustedCertPath;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> useSystemTrustStore;
 
     public Output<Object> getUseSystemTrustStore() {
-        return this.useSystemTrustStore == null ? Output.empty() : this.useSystemTrustStore;
+        return this.useSystemTrustStore == null ? Codegen.empty() : this.useSystemTrustStore;
     }
 
     public GoogleAdWordsLinkedServiceArgs(
@@ -253,23 +254,23 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
     }
 
     private GoogleAdWordsLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.authenticationType = Output.empty();
-        this.clientCustomerID = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.connectVia = Output.empty();
-        this.connectionProperties = Output.empty();
-        this.description = Output.empty();
-        this.developerToken = Output.empty();
-        this.email = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.keyFilePath = Output.empty();
-        this.parameters = Output.empty();
-        this.refreshToken = Output.empty();
-        this.trustedCertPath = Output.empty();
-        this.type = Output.empty();
-        this.useSystemTrustStore = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.clientCustomerID = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.connectionProperties = Codegen.empty();
+        this.description = Codegen.empty();
+        this.developerToken = Codegen.empty();
+        this.email = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.keyFilePath = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.refreshToken = Codegen.empty();
+        this.trustedCertPath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useSystemTrustStore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -329,7 +330,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -340,7 +341,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,GoogleAdWordsAuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder clientCustomerID(@Nullable Output<Object> clientCustomerID) {
@@ -348,7 +349,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder clientCustomerID(@Nullable Object clientCustomerID) {
-            this.clientCustomerID = Output.ofNullable(clientCustomerID);
+            this.clientCustomerID = Codegen.ofNullable(clientCustomerID);
             return this;
         }
         public Builder clientId(@Nullable Output<Object> clientId) {
@@ -356,7 +357,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder clientId(@Nullable Object clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clientSecret) {
@@ -364,7 +365,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -372,7 +373,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder connectionProperties(@Nullable Output<Object> connectionProperties) {
@@ -380,7 +381,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder connectionProperties(@Nullable Object connectionProperties) {
-            this.connectionProperties = Output.ofNullable(connectionProperties);
+            this.connectionProperties = Codegen.ofNullable(connectionProperties);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -388,7 +389,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder developerToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> developerToken) {
@@ -396,7 +397,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> developerToken) {
-            this.developerToken = Output.ofNullable(developerToken);
+            this.developerToken = Codegen.ofNullable(developerToken);
             return this;
         }
         public Builder email(@Nullable Output<Object> email) {
@@ -404,7 +405,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder email(@Nullable Object email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -412,7 +413,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder keyFilePath(@Nullable Output<Object> keyFilePath) {
@@ -420,7 +421,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder keyFilePath(@Nullable Object keyFilePath) {
-            this.keyFilePath = Output.ofNullable(keyFilePath);
+            this.keyFilePath = Codegen.ofNullable(keyFilePath);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -428,7 +429,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder refreshToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> refreshToken) {
@@ -436,7 +437,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> refreshToken) {
-            this.refreshToken = Output.ofNullable(refreshToken);
+            this.refreshToken = Codegen.ofNullable(refreshToken);
             return this;
         }
         public Builder trustedCertPath(@Nullable Output<Object> trustedCertPath) {
@@ -444,7 +445,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
-            this.trustedCertPath = Output.ofNullable(trustedCertPath);
+            this.trustedCertPath = Codegen.ofNullable(trustedCertPath);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -460,7 +461,7 @@ public final class GoogleAdWordsLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
-            this.useSystemTrustStore = Output.ofNullable(useSystemTrustStore);
+            this.useSystemTrustStore = Codegen.ofNullable(useSystemTrustStore);
             return this;
         }        public GoogleAdWordsLinkedServiceArgs build() {
             return new GoogleAdWordsLinkedServiceArgs(annotations, authenticationType, clientCustomerID, clientId, clientSecret, connectVia, connectionProperties, description, developerToken, email, encryptedCredential, keyFilePath, parameters, refreshToken, trustedCertPath, type, useSystemTrustStore);

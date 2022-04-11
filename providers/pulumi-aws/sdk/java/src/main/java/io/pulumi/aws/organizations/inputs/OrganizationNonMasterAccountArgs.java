@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public OrganizationNonMasterAccountArgs(
@@ -83,11 +84,11 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
     }
 
     private OrganizationNonMasterAccountArgs() {
-        this.arn = Output.empty();
-        this.email = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
+        this.arn = Codegen.empty();
+        this.email = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -131,7 +132,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -139,7 +140,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -155,7 +156,7 @@ public final class OrganizationNonMasterAccountArgs extends io.pulumi.resources.
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public OrganizationNonMasterAccountArgs build() {
             return new OrganizationNonMasterAccountArgs(arn, email, id, name, status);

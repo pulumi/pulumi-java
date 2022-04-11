@@ -6,6 +6,7 @@ package io.pulumi.aws.ecr.inputs;
 import io.pulumi.aws.ecr.inputs.RegistryScanningConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
       private final @Nullable Output<String> registryId;
 
     public Output<String> getRegistryId() {
-        return this.registryId == null ? Output.empty() : this.registryId;
+        return this.registryId == null ? Codegen.empty() : this.registryId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
       private final @Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules;
 
     public Output<List<RegistryScanningConfigurationRuleGetArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
       private final @Nullable Output<String> scanType;
 
     public Output<String> getScanType() {
-        return this.scanType == null ? Output.empty() : this.scanType;
+        return this.scanType == null ? Codegen.empty() : this.scanType;
     }
 
     public RegistryScanningConfigurationState(
@@ -59,9 +60,9 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
     }
 
     private RegistryScanningConfigurationState() {
-        this.registryId = Output.empty();
-        this.rules = Output.empty();
-        this.scanType = Output.empty();
+        this.registryId = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.scanType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
             return this;
         }
         public Builder registryId(@Nullable String registryId) {
-            this.registryId = Output.ofNullable(registryId);
+            this.registryId = Codegen.ofNullable(registryId);
             return this;
         }
         public Builder rules(@Nullable Output<List<RegistryScanningConfigurationRuleGetArgs>> rules) {
@@ -101,7 +102,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
             return this;
         }
         public Builder rules(@Nullable List<RegistryScanningConfigurationRuleGetArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RegistryScanningConfigurationRuleGetArgs... rules) {
@@ -112,7 +113,7 @@ public final class RegistryScanningConfigurationState extends io.pulumi.resource
             return this;
         }
         public Builder scanType(@Nullable String scanType) {
-            this.scanType = Output.ofNullable(scanType);
+            this.scanType = Codegen.ofNullable(scanType);
             return this;
         }        public RegistryScanningConfigurationState build() {
             return new RegistryScanningConfigurationState(registryId, rules, scanType);

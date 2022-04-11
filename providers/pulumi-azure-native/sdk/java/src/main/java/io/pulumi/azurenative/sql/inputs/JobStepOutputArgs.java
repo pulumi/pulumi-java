@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sql.enums.JobStepOutputType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -50,7 +51,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
+        return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schemaName;
 
     public Output<String> getSchemaName() {
-        return this.schemaName == null ? Output.empty() : this.schemaName;
+        return this.schemaName == null ? Codegen.empty() : this.schemaName;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,JobStepOutputType>> type;
 
     public Output<Either<String,JobStepOutputType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public JobStepOutputArgs(
@@ -120,7 +121,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
         this.credential = Objects.requireNonNull(credential, "expected parameter 'credential' to be non-null");
         this.databaseName = Objects.requireNonNull(databaseName, "expected parameter 'databaseName' to be non-null");
         this.resourceGroupName = resourceGroupName;
-        this.schemaName = schemaName == null ? Output.ofNullable("dbo") : schemaName;
+        this.schemaName = schemaName == null ? Codegen.ofNullable("dbo") : schemaName;
         this.serverName = Objects.requireNonNull(serverName, "expected parameter 'serverName' to be non-null");
         this.subscriptionId = subscriptionId;
         this.tableName = Objects.requireNonNull(tableName, "expected parameter 'tableName' to be non-null");
@@ -128,14 +129,14 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStepOutputArgs() {
-        this.credential = Output.empty();
-        this.databaseName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaName = Output.empty();
-        this.serverName = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tableName = Output.empty();
-        this.type = Output.empty();
+        this.credential = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Output.ofNullable(resourceGroupName);
+            this.resourceGroupName = Codegen.ofNullable(resourceGroupName);
             return this;
         }
         public Builder schemaName(@Nullable Output<String> schemaName) {
@@ -201,7 +202,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaName(@Nullable String schemaName) {
-            this.schemaName = Output.ofNullable(schemaName);
+            this.schemaName = Codegen.ofNullable(schemaName);
             return this;
         }
         public Builder serverName(Output<String> serverName) {
@@ -217,7 +218,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tableName(Output<String> tableName) {
@@ -233,7 +234,7 @@ public final class JobStepOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,JobStepOutputType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public JobStepOutputArgs build() {
             return new JobStepOutputArgs(credential, databaseName, resourceGroupName, schemaName, serverName, subscriptionId, tableName, type);

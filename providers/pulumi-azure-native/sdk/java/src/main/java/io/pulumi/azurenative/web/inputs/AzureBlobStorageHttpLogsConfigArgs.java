@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
+        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
       private final @Nullable Output<String> sasUrl;
 
     public Output<String> getSasUrl() {
-        return this.sasUrl == null ? Output.empty() : this.sasUrl;
+        return this.sasUrl == null ? Codegen.empty() : this.sasUrl;
     }
 
     public AzureBlobStorageHttpLogsConfigArgs(
@@ -65,9 +66,9 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
     }
 
     private AzureBlobStorageHttpLogsConfigArgs() {
-        this.enabled = Output.empty();
-        this.retentionInDays = Output.empty();
-        this.sasUrl = Output.empty();
+        this.enabled = Codegen.empty();
+        this.retentionInDays = Codegen.empty();
+        this.sasUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
@@ -107,7 +108,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Output.ofNullable(retentionInDays);
+            this.retentionInDays = Codegen.ofNullable(retentionInDays);
             return this;
         }
         public Builder sasUrl(@Nullable Output<String> sasUrl) {
@@ -115,7 +116,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder sasUrl(@Nullable String sasUrl) {
-            this.sasUrl = Output.ofNullable(sasUrl);
+            this.sasUrl = Codegen.ofNullable(sasUrl);
             return this;
         }        public AzureBlobStorageHttpLogsConfigArgs build() {
             return new AzureBlobStorageHttpLogsConfigArgs(enabled, retentionInDays, sasUrl);

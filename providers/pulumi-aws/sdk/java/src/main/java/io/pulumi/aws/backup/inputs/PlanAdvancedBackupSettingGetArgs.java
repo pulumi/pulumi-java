@@ -5,6 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class PlanAdvancedBackupSettingGetArgs extends io.pulumi.resources.
     }
 
     private PlanAdvancedBackupSettingGetArgs() {
-        this.backupOptions = Output.empty();
-        this.resourceType = Output.empty();
+        this.backupOptions = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {

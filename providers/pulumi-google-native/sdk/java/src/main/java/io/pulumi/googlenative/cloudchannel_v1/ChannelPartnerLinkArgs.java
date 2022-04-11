@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.enums.ChannelPartnerLinkLinkState;
 import java.lang.String;
 import java.util.Objects;
@@ -53,9 +54,9 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ChannelPartnerLinkArgs() {
-        this.accountId = Output.empty();
-        this.linkState = Output.empty();
-        this.resellerCloudIdentityId = Output.empty();
+        this.accountId = Codegen.empty();
+        this.linkState = Codegen.empty();
+        this.resellerCloudIdentityId = Codegen.empty();
     }
 
     public static Builder builder() {

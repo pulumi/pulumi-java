@@ -6,6 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.InstanceGroupEbsConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> autoscalingPolicy;
 
     public Output<String> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
+        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bidPrice;
 
     public Output<String> getBidPrice() {
-        return this.bidPrice == null ? Output.empty() : this.bidPrice;
+        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> configurationsJson;
 
     public Output<String> getConfigurationsJson() {
-        return this.configurationsJson == null ? Output.empty() : this.configurationsJson;
+        return this.configurationsJson == null ? Codegen.empty() : this.configurationsJson;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
     public Output<List<InstanceGroupEbsConfigGetArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
+        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -114,21 +115,21 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="runningInstanceCount")
       private final @Nullable Output<Integer> runningInstanceCount;
 
     public Output<Integer> getRunningInstanceCount() {
-        return this.runningInstanceCount == null ? Output.empty() : this.runningInstanceCount;
+        return this.runningInstanceCount == null ? Codegen.empty() : this.runningInstanceCount;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public InstanceGroupState(
@@ -157,17 +158,17 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceGroupState() {
-        this.autoscalingPolicy = Output.empty();
-        this.bidPrice = Output.empty();
-        this.clusterId = Output.empty();
-        this.configurationsJson = Output.empty();
-        this.ebsConfigs = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.name = Output.empty();
-        this.runningInstanceCount = Output.empty();
-        this.status = Output.empty();
+        this.autoscalingPolicy = Codegen.empty();
+        this.bidPrice = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.configurationsJson = Codegen.empty();
+        this.ebsConfigs = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.runningInstanceCount = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
-            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
             return this;
         }
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
@@ -223,7 +224,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Output.ofNullable(bidPrice);
+            this.bidPrice = Codegen.ofNullable(bidPrice);
             return this;
         }
         public Builder clusterId(@Nullable Output<String> clusterId) {
@@ -231,7 +232,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder configurationsJson(@Nullable Output<String> configurationsJson) {
@@ -239,7 +240,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationsJson(@Nullable String configurationsJson) {
-            this.configurationsJson = Output.ofNullable(configurationsJson);
+            this.configurationsJson = Codegen.ofNullable(configurationsJson);
             return this;
         }
         public Builder ebsConfigs(@Nullable Output<List<InstanceGroupEbsConfigGetArgs>> ebsConfigs) {
@@ -247,7 +248,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ebsConfigs(@Nullable List<InstanceGroupEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Output.ofNullable(ebsConfigs);
+            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
             return this;
         }
         public Builder ebsConfigs(InstanceGroupEbsConfigGetArgs... ebsConfigs) {
@@ -258,7 +259,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
@@ -266,7 +267,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -274,7 +275,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -282,7 +283,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder runningInstanceCount(@Nullable Output<Integer> runningInstanceCount) {
@@ -290,7 +291,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runningInstanceCount(@Nullable Integer runningInstanceCount) {
-            this.runningInstanceCount = Output.ofNullable(runningInstanceCount);
+            this.runningInstanceCount = Codegen.ofNullable(runningInstanceCount);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -298,7 +299,7 @@ public final class InstanceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public InstanceGroupState build() {
             return new InstanceGroupState(autoscalingPolicy, bidPrice, clusterId, configurationsJson, ebsConfigs, ebsOptimized, instanceCount, instanceType, name, runningInstanceCount, status);

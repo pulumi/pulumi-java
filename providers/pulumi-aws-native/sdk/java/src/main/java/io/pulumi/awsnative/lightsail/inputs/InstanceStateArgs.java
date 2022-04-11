@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public InstanceStateArgs(
@@ -49,8 +50,8 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceStateArgs() {
-        this.code = Output.empty();
-        this.name = Output.empty();
+        this.code = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder code(@Nullable Integer code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class InstanceStateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public InstanceStateArgs build() {
             return new InstanceStateArgs(code, name);

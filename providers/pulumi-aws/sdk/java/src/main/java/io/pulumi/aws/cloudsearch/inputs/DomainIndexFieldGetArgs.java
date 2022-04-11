@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> analysisScheme;
 
     public Output<String> getAnalysisScheme() {
-        return this.analysisScheme == null ? Output.empty() : this.analysisScheme;
+        return this.analysisScheme == null ? Codegen.empty() : this.analysisScheme;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> facet;
 
     public Output<Boolean> getFacet() {
-        return this.facet == null ? Output.empty() : this.facet;
+        return this.facet == null ? Codegen.empty() : this.facet;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> highlight;
 
     public Output<Boolean> getHighlight() {
-        return this.highlight == null ? Output.empty() : this.highlight;
+        return this.highlight == null ? Codegen.empty() : this.highlight;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> return_;
 
     public Output<Boolean> getReturn_() {
-        return this.return_ == null ? Output.empty() : this.return_;
+        return this.return_ == null ? Codegen.empty() : this.return_;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> search;
 
     public Output<Boolean> getSearch() {
-        return this.search == null ? Output.empty() : this.search;
+        return this.search == null ? Codegen.empty() : this.search;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> sort;
 
     public Output<Boolean> getSort() {
-        return this.sort == null ? Output.empty() : this.sort;
+        return this.sort == null ? Codegen.empty() : this.sort;
     }
 
     /**
@@ -136,15 +137,15 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private DomainIndexFieldGetArgs() {
-        this.analysisScheme = Output.empty();
-        this.defaultValue = Output.empty();
-        this.facet = Output.empty();
-        this.highlight = Output.empty();
-        this.name = Output.empty();
-        this.return_ = Output.empty();
-        this.search = Output.empty();
-        this.sort = Output.empty();
-        this.type = Output.empty();
+        this.analysisScheme = Codegen.empty();
+        this.defaultValue = Codegen.empty();
+        this.facet = Codegen.empty();
+        this.highlight = Codegen.empty();
+        this.name = Codegen.empty();
+        this.return_ = Codegen.empty();
+        this.search = Codegen.empty();
+        this.sort = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder analysisScheme(@Nullable String analysisScheme) {
-            this.analysisScheme = Output.ofNullable(analysisScheme);
+            this.analysisScheme = Codegen.ofNullable(analysisScheme);
             return this;
         }
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
@@ -196,7 +197,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder facet(@Nullable Output<Boolean> facet) {
@@ -204,7 +205,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder facet(@Nullable Boolean facet) {
-            this.facet = Output.ofNullable(facet);
+            this.facet = Codegen.ofNullable(facet);
             return this;
         }
         public Builder highlight(@Nullable Output<Boolean> highlight) {
@@ -212,7 +213,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder highlight(@Nullable Boolean highlight) {
-            this.highlight = Output.ofNullable(highlight);
+            this.highlight = Codegen.ofNullable(highlight);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -228,7 +229,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder return_(@Nullable Boolean return_) {
-            this.return_ = Output.ofNullable(return_);
+            this.return_ = Codegen.ofNullable(return_);
             return this;
         }
         public Builder search(@Nullable Output<Boolean> search) {
@@ -236,7 +237,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder search(@Nullable Boolean search) {
-            this.search = Output.ofNullable(search);
+            this.search = Codegen.ofNullable(search);
             return this;
         }
         public Builder sort(@Nullable Output<Boolean> sort) {
@@ -244,7 +245,7 @@ public final class DomainIndexFieldGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sort(@Nullable Boolean sort) {
-            this.sort = Output.ofNullable(sort);
+            this.sort = Codegen.ofNullable(sort);
             return this;
         }
         public Builder type(Output<String> type) {

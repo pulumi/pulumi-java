@@ -6,6 +6,7 @@ package io.pulumi.aws.chime.inputs;
 import io.pulumi.aws.chime.inputs.VoiceConnectorTerminationCredentialsCredentialGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
       private final @Nullable Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> credentials;
 
     public Output<List<VoiceConnectorTerminationCredentialsCredentialGetArgs>> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
       private final @Nullable Output<String> voiceConnectorId;
 
     public Output<String> getVoiceConnectorId() {
-        return this.voiceConnectorId == null ? Output.empty() : this.voiceConnectorId;
+        return this.voiceConnectorId == null ? Codegen.empty() : this.voiceConnectorId;
     }
 
     public VoiceConnectorTerminationCredentialsState(
@@ -46,8 +47,8 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
     }
 
     private VoiceConnectorTerminationCredentialsState() {
-        this.credentials = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.credentials = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
             return this;
         }
         public Builder credentials(@Nullable List<VoiceConnectorTerminationCredentialsCredentialGetArgs> credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder credentials(VoiceConnectorTerminationCredentialsCredentialGetArgs... credentials) {
@@ -88,7 +89,7 @@ public final class VoiceConnectorTerminationCredentialsState extends io.pulumi.r
             return this;
         }
         public Builder voiceConnectorId(@Nullable String voiceConnectorId) {
-            this.voiceConnectorId = Output.ofNullable(voiceConnectorId);
+            this.voiceConnectorId = Codegen.ofNullable(voiceConnectorId);
             return this;
         }        public VoiceConnectorTerminationCredentialsState build() {
             return new VoiceConnectorTerminationCredentialsState(credentials, voiceConnectorId);

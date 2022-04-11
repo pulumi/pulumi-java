@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1.inputs.DestinationArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.SourceArgs;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DestinationArgs>> destinations;
 
     public Output<List<DestinationArgs>> getDestinations() {
-        return this.destinations == null ? Output.empty() : this.destinations;
+        return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SourceArgs>> sources;
 
     public Output<List<SourceArgs>> getSources() {
-        return this.sources == null ? Output.empty() : this.sources;
+        return this.sources == null ? Codegen.empty() : this.sources;
     }
 
     public RuleArgs(
@@ -50,8 +51,8 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RuleArgs() {
-        this.destinations = Output.empty();
-        this.sources = Output.empty();
+        this.destinations = Codegen.empty();
+        this.sources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinations(@Nullable List<DestinationArgs> destinations) {
-            this.destinations = Output.ofNullable(destinations);
+            this.destinations = Codegen.ofNullable(destinations);
             return this;
         }
         public Builder destinations(DestinationArgs... destinations) {
@@ -92,7 +93,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sources(@Nullable List<SourceArgs> sources) {
-            this.sources = Output.ofNullable(sources);
+            this.sources = Codegen.ofNullable(sources);
             return this;
         }
         public Builder sources(SourceArgs... sources) {

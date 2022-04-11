@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.FlowSchemaArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.FlowSchemaSpec;
@@ -115,7 +116,7 @@ public class FlowSchema extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowSchema(String name, @Nullable FlowSchemaArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:FlowSchema", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:FlowSchema", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlowSchema(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

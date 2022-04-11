@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.ParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Object> defaultValue;
 
     public Output<Object> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
     }
 
     private ParameterSpecificationArgs() {
-        this.defaultValue = Output.empty();
-        this.type = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ParameterSpecificationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder defaultValue(@Nullable Object defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder type(Output<Either<String,ParameterType>> type) {

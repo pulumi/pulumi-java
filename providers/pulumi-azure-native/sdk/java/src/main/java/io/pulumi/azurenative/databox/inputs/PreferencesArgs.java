@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databox.inputs.EncryptionPreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.TransportPreferencesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionPreferencesArgs> encryptionPreferences;
 
     public Output<EncryptionPreferencesArgs> getEncryptionPreferences() {
-        return this.encryptionPreferences == null ? Output.empty() : this.encryptionPreferences;
+        return this.encryptionPreferences == null ? Codegen.empty() : this.encryptionPreferences;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> preferredDataCenterRegion;
 
     public Output<List<String>> getPreferredDataCenterRegion() {
-        return this.preferredDataCenterRegion == null ? Output.empty() : this.preferredDataCenterRegion;
+        return this.preferredDataCenterRegion == null ? Codegen.empty() : this.preferredDataCenterRegion;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TransportPreferencesArgs> transportPreferences;
 
     public Output<TransportPreferencesArgs> getTransportPreferences() {
-        return this.transportPreferences == null ? Output.empty() : this.transportPreferences;
+        return this.transportPreferences == null ? Codegen.empty() : this.transportPreferences;
     }
 
     public PreferencesArgs(
@@ -64,9 +65,9 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PreferencesArgs() {
-        this.encryptionPreferences = Output.empty();
-        this.preferredDataCenterRegion = Output.empty();
-        this.transportPreferences = Output.empty();
+        this.encryptionPreferences = Codegen.empty();
+        this.preferredDataCenterRegion = Codegen.empty();
+        this.transportPreferences = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionPreferences(@Nullable EncryptionPreferencesArgs encryptionPreferences) {
-            this.encryptionPreferences = Output.ofNullable(encryptionPreferences);
+            this.encryptionPreferences = Codegen.ofNullable(encryptionPreferences);
             return this;
         }
         public Builder preferredDataCenterRegion(@Nullable Output<List<String>> preferredDataCenterRegion) {
@@ -106,7 +107,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preferredDataCenterRegion(@Nullable List<String> preferredDataCenterRegion) {
-            this.preferredDataCenterRegion = Output.ofNullable(preferredDataCenterRegion);
+            this.preferredDataCenterRegion = Codegen.ofNullable(preferredDataCenterRegion);
             return this;
         }
         public Builder preferredDataCenterRegion(String... preferredDataCenterRegion) {
@@ -117,7 +118,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transportPreferences(@Nullable TransportPreferencesArgs transportPreferences) {
-            this.transportPreferences = Output.ofNullable(transportPreferences);
+            this.transportPreferences = Codegen.ofNullable(transportPreferences);
             return this;
         }        public PreferencesArgs build() {
             return new PreferencesArgs(encryptionPreferences, preferredDataCenterRegion, transportPreferences);

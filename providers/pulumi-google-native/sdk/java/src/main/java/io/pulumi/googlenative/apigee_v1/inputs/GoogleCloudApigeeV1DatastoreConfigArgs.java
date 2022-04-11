@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
-        return this.datasetName == null ? Output.empty() : this.datasetName;
+        return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
       private final @Nullable Output<String> tablePrefix;
 
     public Output<String> getTablePrefix() {
-        return this.tablePrefix == null ? Output.empty() : this.tablePrefix;
+        return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
     }
 
     public GoogleCloudApigeeV1DatastoreConfigArgs(
@@ -87,11 +88,11 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
     }
 
     private GoogleCloudApigeeV1DatastoreConfigArgs() {
-        this.bucketName = Output.empty();
-        this.datasetName = Output.empty();
-        this.path = Output.empty();
-        this.project = Output.empty();
-        this.tablePrefix = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.datasetName = Codegen.empty();
+        this.path = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tablePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder datasetName(@Nullable Output<String> datasetName) {
@@ -135,7 +136,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Output.ofNullable(datasetName);
+            this.datasetName = Codegen.ofNullable(datasetName);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -143,7 +144,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder project(Output<String> project) {
@@ -159,7 +160,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Output.ofNullable(tablePrefix);
+            this.tablePrefix = Codegen.ofNullable(tablePrefix);
             return this;
         }        public GoogleCloudApigeeV1DatastoreConfigArgs build() {
             return new GoogleCloudApigeeV1DatastoreConfigArgs(bucketName, datasetName, path, project, tablePrefix);

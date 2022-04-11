@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxAgentArgs;
 import io.pulumi.gcp.diagflow.inputs.CxAgentState;
@@ -282,7 +283,7 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CxAgent(String name, CxAgentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/cxAgent:CxAgent", name, args == null ? CxAgentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/cxAgent:CxAgent", name, args == null ? CxAgentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CxAgent(String name, Output<String> id, @Nullable CxAgentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

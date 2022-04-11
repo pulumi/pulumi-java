@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> groupIds;
 
     public Output<List<String>> getGroupIds() {
-        return this.groupIds == null ? Output.empty() : this.groupIds;
+        return this.groupIds == null ? Codegen.empty() : this.groupIds;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.groupIds = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
+        this.groupIds = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder groupIds(@Nullable List<String> groupIds) {
-            this.groupIds = Output.ofNullable(groupIds);
+            this.groupIds = Codegen.ofNullable(groupIds);
             return this;
         }
         public Builder groupIds(String... groupIds) {

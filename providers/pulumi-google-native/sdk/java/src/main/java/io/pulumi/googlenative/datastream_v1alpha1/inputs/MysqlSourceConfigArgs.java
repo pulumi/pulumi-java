@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlRdbmsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MysqlRdbmsArgs> allowlist;
 
     public Output<MysqlRdbmsArgs> getAllowlist() {
-        return this.allowlist == null ? Output.empty() : this.allowlist;
+        return this.allowlist == null ? Codegen.empty() : this.allowlist;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MysqlRdbmsArgs> rejectlist;
 
     public Output<MysqlRdbmsArgs> getRejectlist() {
-        return this.rejectlist == null ? Output.empty() : this.rejectlist;
+        return this.rejectlist == null ? Codegen.empty() : this.rejectlist;
     }
 
     public MysqlSourceConfigArgs(
@@ -48,8 +49,8 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private MysqlSourceConfigArgs() {
-        this.allowlist = Output.empty();
-        this.rejectlist = Output.empty();
+        this.allowlist = Codegen.empty();
+        this.rejectlist = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder allowlist(@Nullable MysqlRdbmsArgs allowlist) {
-            this.allowlist = Output.ofNullable(allowlist);
+            this.allowlist = Codegen.ofNullable(allowlist);
             return this;
         }
         public Builder rejectlist(@Nullable Output<MysqlRdbmsArgs> rejectlist) {
@@ -87,7 +88,7 @@ public final class MysqlSourceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rejectlist(@Nullable MysqlRdbmsArgs rejectlist) {
-            this.rejectlist = Output.ofNullable(rejectlist);
+            this.rejectlist = Codegen.ofNullable(rejectlist);
             return this;
         }        public MysqlSourceConfigArgs build() {
             return new MysqlSourceConfigArgs(allowlist, rejectlist);

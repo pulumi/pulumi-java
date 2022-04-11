@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> documentation;
 
     public Output<String> getDocumentation() {
-        return this.documentation == null ? Output.empty() : this.documentation;
+        return this.documentation == null ? Codegen.empty() : this.documentation;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> serverUrl;
 
     public Output<String> getServerUrl() {
-        return this.serverUrl == null ? Output.empty() : this.serverUrl;
+        return this.serverUrl == null ? Codegen.empty() : this.serverUrl;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GatewayApiMetadataPropertiesArgs(
@@ -87,11 +88,11 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
     }
 
     private GatewayApiMetadataPropertiesArgs() {
-        this.description = Output.empty();
-        this.documentation = Output.empty();
-        this.serverUrl = Output.empty();
-        this.title = Output.empty();
-        this.version = Output.empty();
+        this.description = Codegen.empty();
+        this.documentation = Codegen.empty();
+        this.serverUrl = Codegen.empty();
+        this.title = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder documentation(@Nullable Output<String> documentation) {
@@ -135,7 +136,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder documentation(@Nullable String documentation) {
-            this.documentation = Output.ofNullable(documentation);
+            this.documentation = Codegen.ofNullable(documentation);
             return this;
         }
         public Builder serverUrl(@Nullable Output<String> serverUrl) {
@@ -143,7 +144,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder serverUrl(@Nullable String serverUrl) {
-            this.serverUrl = Output.ofNullable(serverUrl);
+            this.serverUrl = Codegen.ofNullable(serverUrl);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -151,7 +152,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -159,7 +160,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GatewayApiMetadataPropertiesArgs build() {
             return new GatewayApiMetadataPropertiesArgs(description, documentation, serverUrl, title, version);

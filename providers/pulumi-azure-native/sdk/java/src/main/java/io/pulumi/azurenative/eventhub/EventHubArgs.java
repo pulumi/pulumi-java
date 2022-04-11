@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventhub.enums.EntityStatus;
 import io.pulumi.azurenative.eventhub.inputs.CaptureDescriptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CaptureDescriptionArgs> captureDescription;
 
     public Output<CaptureDescriptionArgs> getCaptureDescription() {
-        return this.captureDescription == null ? Output.empty() : this.captureDescription;
+        return this.captureDescription == null ? Codegen.empty() : this.captureDescription;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
-        return this.eventHubName == null ? Output.empty() : this.eventHubName;
+        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> messageRetentionInDays;
 
     public Output<Double> getMessageRetentionInDays() {
-        return this.messageRetentionInDays == null ? Output.empty() : this.messageRetentionInDays;
+        return this.messageRetentionInDays == null ? Codegen.empty() : this.messageRetentionInDays;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> partitionCount;
 
     public Output<Double> getPartitionCount() {
-        return this.partitionCount == null ? Output.empty() : this.partitionCount;
+        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EntityStatus> status;
 
     public Output<EntityStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public EventHubArgs(
@@ -112,13 +113,13 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventHubArgs() {
-        this.captureDescription = Output.empty();
-        this.eventHubName = Output.empty();
-        this.messageRetentionInDays = Output.empty();
-        this.namespaceName = Output.empty();
-        this.partitionCount = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.status = Output.empty();
+        this.captureDescription = Codegen.empty();
+        this.eventHubName = Codegen.empty();
+        this.messageRetentionInDays = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.partitionCount = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder captureDescription(@Nullable CaptureDescriptionArgs captureDescription) {
-            this.captureDescription = Output.ofNullable(captureDescription);
+            this.captureDescription = Codegen.ofNullable(captureDescription);
             return this;
         }
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
@@ -166,7 +167,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Output.ofNullable(eventHubName);
+            this.eventHubName = Codegen.ofNullable(eventHubName);
             return this;
         }
         public Builder messageRetentionInDays(@Nullable Output<Double> messageRetentionInDays) {
@@ -174,7 +175,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messageRetentionInDays(@Nullable Double messageRetentionInDays) {
-            this.messageRetentionInDays = Output.ofNullable(messageRetentionInDays);
+            this.messageRetentionInDays = Codegen.ofNullable(messageRetentionInDays);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {
@@ -190,7 +191,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionCount(@Nullable Double partitionCount) {
-            this.partitionCount = Output.ofNullable(partitionCount);
+            this.partitionCount = Codegen.ofNullable(partitionCount);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -206,7 +207,7 @@ public final class EventHubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable EntityStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public EventHubArgs build() {
             return new EventHubArgs(captureDescription, eventHubName, messageRetentionInDays, namespaceName, partitionCount, resourceGroupName, status);

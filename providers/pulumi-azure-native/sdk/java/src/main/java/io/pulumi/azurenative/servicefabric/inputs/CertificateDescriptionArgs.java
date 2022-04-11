@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> thumbprintSecondary;
 
     public Output<String> getThumbprintSecondary() {
-        return this.thumbprintSecondary == null ? Output.empty() : this.thumbprintSecondary;
+        return this.thumbprintSecondary == null ? Codegen.empty() : this.thumbprintSecondary;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> x509StoreName;
 
     public Output<String> getX509StoreName() {
-        return this.x509StoreName == null ? Output.empty() : this.x509StoreName;
+        return this.x509StoreName == null ? Codegen.empty() : this.x509StoreName;
     }
 
     public CertificateDescriptionArgs(
@@ -61,9 +62,9 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
     }
 
     private CertificateDescriptionArgs() {
-        this.thumbprint = Output.empty();
-        this.thumbprintSecondary = Output.empty();
-        this.x509StoreName = Output.empty();
+        this.thumbprint = Codegen.empty();
+        this.thumbprintSecondary = Codegen.empty();
+        this.x509StoreName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
-            this.thumbprintSecondary = Output.ofNullable(thumbprintSecondary);
+            this.thumbprintSecondary = Codegen.ofNullable(thumbprintSecondary);
             return this;
         }
         public Builder x509StoreName(@Nullable Output<String> x509StoreName) {
@@ -111,7 +112,7 @@ public final class CertificateDescriptionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder x509StoreName(@Nullable String x509StoreName) {
-            this.x509StoreName = Output.ofNullable(x509StoreName);
+            this.x509StoreName = Codegen.ofNullable(x509StoreName);
             return this;
         }        public CertificateDescriptionArgs build() {
             return new CertificateDescriptionArgs(thumbprint, thumbprintSecondary, x509StoreName);

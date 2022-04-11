@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ecs.inputs;
 import io.pulumi.awsnative.ecs.inputs.TaskSetAwsVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
 
     public Output<TaskSetAwsVpcConfigurationArgs> getAwsVpcConfiguration() {
-        return this.awsVpcConfiguration == null ? Output.empty() : this.awsVpcConfiguration;
+        return this.awsVpcConfiguration == null ? Codegen.empty() : this.awsVpcConfiguration;
     }
 
     public TaskSetNetworkConfigurationArgs(@Nullable Output<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration) {
@@ -30,7 +31,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     private TaskSetNetworkConfigurationArgs() {
-        this.awsVpcConfiguration = Output.empty();
+        this.awsVpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder awsVpcConfiguration(@Nullable TaskSetAwsVpcConfigurationArgs awsVpcConfiguration) {
-            this.awsVpcConfiguration = Output.ofNullable(awsVpcConfiguration);
+            this.awsVpcConfiguration = Codegen.ofNullable(awsVpcConfiguration);
             return this;
         }        public TaskSetNetworkConfigurationArgs build() {
             return new TaskSetNetworkConfigurationArgs(awsVpcConfiguration);

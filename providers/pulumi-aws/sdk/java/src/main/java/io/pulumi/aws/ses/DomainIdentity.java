@@ -9,6 +9,7 @@ import io.pulumi.aws.ses.inputs.DomainIdentityState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -105,7 +106,7 @@ public class DomainIdentity extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainIdentity(String name, DomainIdentityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/domainIdentity:DomainIdentity", name, args == null ? DomainIdentityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/domainIdentity:DomainIdentity", name, args == null ? DomainIdentityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainIdentity(String name, Output<String> id, @Nullable DomainIdentityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

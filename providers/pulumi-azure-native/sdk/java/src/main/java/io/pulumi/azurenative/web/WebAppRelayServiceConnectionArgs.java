@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,28 +20,28 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> biztalkUri;
 
     public Output<String> getBiztalkUri() {
-        return this.biztalkUri == null ? Output.empty() : this.biztalkUri;
+        return this.biztalkUri == null ? Codegen.empty() : this.biztalkUri;
     }
 
     @Import(name="entityConnectionString")
       private final @Nullable Output<String> entityConnectionString;
 
     public Output<String> getEntityConnectionString() {
-        return this.entityConnectionString == null ? Output.empty() : this.entityConnectionString;
+        return this.entityConnectionString == null ? Codegen.empty() : this.entityConnectionString;
     }
 
     @Import(name="entityName")
       private final @Nullable Output<String> entityName;
 
     public Output<String> getEntityName() {
-        return this.entityName == null ? Output.empty() : this.entityName;
+        return this.entityName == null ? Codegen.empty() : this.entityName;
     }
 
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="resourceConnectionString")
       private final @Nullable Output<String> resourceConnectionString;
 
     public Output<String> getResourceConnectionString() {
-        return this.resourceConnectionString == null ? Output.empty() : this.resourceConnectionString;
+        return this.resourceConnectionString == null ? Codegen.empty() : this.resourceConnectionString;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     public WebAppRelayServiceConnectionArgs(
@@ -121,16 +122,16 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
     }
 
     private WebAppRelayServiceConnectionArgs() {
-        this.biztalkUri = Output.empty();
-        this.entityConnectionString = Output.empty();
-        this.entityName = Output.empty();
-        this.hostname = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
-        this.resourceConnectionString = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceType = Output.empty();
+        this.biztalkUri = Codegen.empty();
+        this.entityConnectionString = Codegen.empty();
+        this.entityName = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
+        this.resourceConnectionString = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder biztalkUri(@Nullable String biztalkUri) {
-            this.biztalkUri = Output.ofNullable(biztalkUri);
+            this.biztalkUri = Codegen.ofNullable(biztalkUri);
             return this;
         }
         public Builder entityConnectionString(@Nullable Output<String> entityConnectionString) {
@@ -184,7 +185,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder entityConnectionString(@Nullable String entityConnectionString) {
-            this.entityConnectionString = Output.ofNullable(entityConnectionString);
+            this.entityConnectionString = Codegen.ofNullable(entityConnectionString);
             return this;
         }
         public Builder entityName(@Nullable Output<String> entityName) {
@@ -192,7 +193,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder entityName(@Nullable String entityName) {
-            this.entityName = Output.ofNullable(entityName);
+            this.entityName = Codegen.ofNullable(entityName);
             return this;
         }
         public Builder hostname(@Nullable Output<String> hostname) {
@@ -200,7 +201,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -208,7 +209,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -224,7 +225,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder resourceConnectionString(@Nullable Output<String> resourceConnectionString) {
@@ -232,7 +233,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourceConnectionString(@Nullable String resourceConnectionString) {
-            this.resourceConnectionString = Output.ofNullable(resourceConnectionString);
+            this.resourceConnectionString = Codegen.ofNullable(resourceConnectionString);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -248,7 +249,7 @@ public final class WebAppRelayServiceConnectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }        public WebAppRelayServiceConnectionArgs build() {
             return new WebAppRelayServiceConnectionArgs(biztalkUri, entityConnectionString, entityName, hostname, kind, name, port, resourceConnectionString, resourceGroupName, resourceType);

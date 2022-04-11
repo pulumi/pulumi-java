@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.ProjectRepoIdArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectRepoIdArgs> projectRepoId;
 
     public Output<ProjectRepoIdArgs> getProjectRepoId() {
-        return this.projectRepoId == null ? Output.empty() : this.projectRepoId;
+        return this.projectRepoId == null ? Codegen.empty() : this.projectRepoId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public RepoIdArgs(
@@ -49,8 +50,8 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepoIdArgs() {
-        this.projectRepoId = Output.empty();
-        this.uid = Output.empty();
+        this.projectRepoId = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectRepoId(@Nullable ProjectRepoIdArgs projectRepoId) {
-            this.projectRepoId = Output.ofNullable(projectRepoId);
+            this.projectRepoId = Codegen.ofNullable(projectRepoId);
             return this;
         }
         public Builder uid(@Nullable Output<String> uid) {
@@ -88,7 +89,7 @@ public final class RepoIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public RepoIdArgs build() {
             return new RepoIdArgs(projectRepoId, uid);

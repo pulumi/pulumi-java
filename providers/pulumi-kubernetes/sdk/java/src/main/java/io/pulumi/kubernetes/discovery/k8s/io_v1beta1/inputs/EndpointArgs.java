@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointConditionsArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.inputs.EndpointHintsArgs;
@@ -42,7 +43,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointConditionsArgs> conditions;
 
     public Output<EndpointConditionsArgs> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointHintsArgs> hints;
 
     public Output<EndpointHintsArgs> getHints() {
-        return this.hints == null ? Output.empty() : this.hints;
+        return this.hints == null ? Codegen.empty() : this.hints;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nodeName;
 
     public Output<String> getNodeName() {
-        return this.nodeName == null ? Output.empty() : this.nodeName;
+        return this.nodeName == null ? Codegen.empty() : this.nodeName;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ObjectReferenceArgs> targetRef;
 
     public Output<ObjectReferenceArgs> getTargetRef() {
-        return this.targetRef == null ? Output.empty() : this.targetRef;
+        return this.targetRef == null ? Codegen.empty() : this.targetRef;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> topology;
 
     public Output<Map<String,String>> getTopology() {
-        return this.topology == null ? Output.empty() : this.topology;
+        return this.topology == null ? Codegen.empty() : this.topology;
     }
 
     public EndpointArgs(
@@ -125,13 +126,13 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.addresses = Output.empty();
-        this.conditions = Output.empty();
-        this.hints = Output.empty();
-        this.hostname = Output.empty();
-        this.nodeName = Output.empty();
-        this.targetRef = Output.empty();
-        this.topology = Output.empty();
+        this.addresses = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.hints = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.nodeName = Codegen.empty();
+        this.targetRef = Codegen.empty();
+        this.topology = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable EndpointConditionsArgs conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder hints(@Nullable Output<EndpointHintsArgs> hints) {
@@ -190,7 +191,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hints(@Nullable EndpointHintsArgs hints) {
-            this.hints = Output.ofNullable(hints);
+            this.hints = Codegen.ofNullable(hints);
             return this;
         }
         public Builder hostname(@Nullable Output<String> hostname) {
@@ -198,7 +199,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder nodeName(@Nullable Output<String> nodeName) {
@@ -206,7 +207,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeName(@Nullable String nodeName) {
-            this.nodeName = Output.ofNullable(nodeName);
+            this.nodeName = Codegen.ofNullable(nodeName);
             return this;
         }
         public Builder targetRef(@Nullable Output<ObjectReferenceArgs> targetRef) {
@@ -214,7 +215,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetRef(@Nullable ObjectReferenceArgs targetRef) {
-            this.targetRef = Output.ofNullable(targetRef);
+            this.targetRef = Codegen.ofNullable(targetRef);
             return this;
         }
         public Builder topology(@Nullable Output<Map<String,String>> topology) {
@@ -222,7 +223,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topology(@Nullable Map<String,String> topology) {
-            this.topology = Output.ofNullable(topology);
+            this.topology = Codegen.ofNullable(topology);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(addresses, conditions, hints, hostname, nodeName, targetRef, topology);

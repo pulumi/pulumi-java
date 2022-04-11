@@ -5,6 +5,7 @@ package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> featurePolicy;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs> getFeaturePolicy() {
-        return this.featurePolicy == null ? Output.empty() : this.featurePolicy;
+        return this.featurePolicy == null ? Codegen.empty() : this.featurePolicy;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,14 +57,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public InstanceArgs(
@@ -80,11 +81,11 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.featurePolicy = Output.empty();
-        this.instanceId = Output.empty();
-        this.location = Output.empty();
-        this.parent = Output.empty();
-        this.project = Output.empty();
+        this.featurePolicy = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder featurePolicy(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs featurePolicy) {
-            this.featurePolicy = Output.ofNullable(featurePolicy);
+            this.featurePolicy = Codegen.ofNullable(featurePolicy);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -128,7 +129,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -136,7 +137,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -144,7 +145,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -152,7 +153,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(featurePolicy, instanceId, location, parent, project);

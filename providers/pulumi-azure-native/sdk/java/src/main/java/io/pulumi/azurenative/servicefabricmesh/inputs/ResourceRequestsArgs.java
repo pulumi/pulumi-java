@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class ResourceRequestsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceRequestsArgs() {
-        this.cpu = Output.empty();
-        this.memoryInGB = Output.empty();
+        this.cpu = Codegen.empty();
+        this.memoryInGB = Codegen.empty();
     }
 
     public static Builder builder() {

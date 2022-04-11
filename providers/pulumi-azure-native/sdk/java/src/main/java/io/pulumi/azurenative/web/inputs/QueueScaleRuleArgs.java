@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
     public Output<List<ScaleRuleAuthArgs>> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> queueLength;
 
     public Output<Integer> getQueueLength() {
-        return this.queueLength == null ? Output.empty() : this.queueLength;
+        return this.queueLength == null ? Codegen.empty() : this.queueLength;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     public QueueScaleRuleArgs(
@@ -64,9 +65,9 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueScaleRuleArgs() {
-        this.auth = Output.empty();
-        this.queueLength = Output.empty();
-        this.queueName = Output.empty();
+        this.auth = Codegen.empty();
+        this.queueLength = Codegen.empty();
+        this.queueName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder auth(ScaleRuleAuthArgs... auth) {
@@ -109,7 +110,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueLength(@Nullable Integer queueLength) {
-            this.queueLength = Output.ofNullable(queueLength);
+            this.queueLength = Codegen.ofNullable(queueLength);
             return this;
         }
         public Builder queueName(@Nullable Output<String> queueName) {
@@ -117,7 +118,7 @@ public final class QueueScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }        public QueueScaleRuleArgs build() {
             return new QueueScaleRuleArgs(auth, queueLength, queueName);

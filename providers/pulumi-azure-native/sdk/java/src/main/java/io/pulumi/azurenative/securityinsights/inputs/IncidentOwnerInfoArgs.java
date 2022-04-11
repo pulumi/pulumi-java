@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> assignedTo;
 
     public Output<String> getAssignedTo() {
-        return this.assignedTo == null ? Output.empty() : this.assignedTo;
+        return this.assignedTo == null ? Codegen.empty() : this.assignedTo;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> objectId;
 
     public Output<String> getObjectId() {
-        return this.objectId == null ? Output.empty() : this.objectId;
+        return this.objectId == null ? Codegen.empty() : this.objectId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> userPrincipalName;
 
     public Output<String> getUserPrincipalName() {
-        return this.userPrincipalName == null ? Output.empty() : this.userPrincipalName;
+        return this.userPrincipalName == null ? Codegen.empty() : this.userPrincipalName;
     }
 
     public IncidentOwnerInfoArgs(
@@ -74,10 +75,10 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IncidentOwnerInfoArgs() {
-        this.assignedTo = Output.empty();
-        this.email = Output.empty();
-        this.objectId = Output.empty();
-        this.userPrincipalName = Output.empty();
+        this.assignedTo = Codegen.empty();
+        this.email = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.userPrincipalName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder assignedTo(@Nullable String assignedTo) {
-            this.assignedTo = Output.ofNullable(assignedTo);
+            this.assignedTo = Codegen.ofNullable(assignedTo);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -119,7 +120,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder objectId(@Nullable Output<String> objectId) {
@@ -127,7 +128,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder objectId(@Nullable String objectId) {
-            this.objectId = Output.ofNullable(objectId);
+            this.objectId = Codegen.ofNullable(objectId);
             return this;
         }
         public Builder userPrincipalName(@Nullable Output<String> userPrincipalName) {
@@ -135,7 +136,7 @@ public final class IncidentOwnerInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
-            this.userPrincipalName = Output.ofNullable(userPrincipalName);
+            this.userPrincipalName = Codegen.ofNullable(userPrincipalName);
             return this;
         }        public IncidentOwnerInfoArgs build() {
             return new IncidentOwnerInfoArgs(assignedTo, email, objectId, userPrincipalName);

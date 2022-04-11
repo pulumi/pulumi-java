@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public FleetRuntimeConfigurationServerProcessArgs(
@@ -58,9 +59,9 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
     }
 
     private FleetRuntimeConfigurationServerProcessArgs() {
-        this.concurrentExecutions = Output.empty();
-        this.launchPath = Output.empty();
-        this.parameters = Output.empty();
+        this.concurrentExecutions = Codegen.empty();
+        this.launchPath = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class FleetRuntimeConfigurationServerProcessArgs extends io.pulumi.
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public FleetRuntimeConfigurationServerProcessArgs build() {
             return new FleetRuntimeConfigurationServerProcessArgs(concurrentExecutions, launchPath, parameters);

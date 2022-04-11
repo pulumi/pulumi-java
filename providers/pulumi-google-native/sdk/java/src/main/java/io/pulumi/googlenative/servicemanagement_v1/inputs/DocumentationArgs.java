@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DocumentationRuleArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.PageArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> documentationRootUrl;
 
     public Output<String> getDocumentationRootUrl() {
-        return this.documentationRootUrl == null ? Output.empty() : this.documentationRootUrl;
+        return this.documentationRootUrl == null ? Codegen.empty() : this.documentationRootUrl;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> overview;
 
     public Output<String> getOverview() {
-        return this.overview == null ? Output.empty() : this.overview;
+        return this.overview == null ? Codegen.empty() : this.overview;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PageArgs>> pages;
 
     public Output<List<PageArgs>> getPages() {
-        return this.pages == null ? Output.empty() : this.pages;
+        return this.pages == null ? Codegen.empty() : this.pages;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DocumentationRuleArgs>> rules;
 
     public Output<List<DocumentationRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceRootUrl;
 
     public Output<String> getServiceRootUrl() {
-        return this.serviceRootUrl == null ? Output.empty() : this.serviceRootUrl;
+        return this.serviceRootUrl == null ? Codegen.empty() : this.serviceRootUrl;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> summary;
 
     public Output<String> getSummary() {
-        return this.summary == null ? Output.empty() : this.summary;
+        return this.summary == null ? Codegen.empty() : this.summary;
     }
 
     public DocumentationArgs(
@@ -103,12 +104,12 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DocumentationArgs() {
-        this.documentationRootUrl = Output.empty();
-        this.overview = Output.empty();
-        this.pages = Output.empty();
-        this.rules = Output.empty();
-        this.serviceRootUrl = Output.empty();
-        this.summary = Output.empty();
+        this.documentationRootUrl = Codegen.empty();
+        this.overview = Codegen.empty();
+        this.pages = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.serviceRootUrl = Codegen.empty();
+        this.summary = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentationRootUrl(@Nullable String documentationRootUrl) {
-            this.documentationRootUrl = Output.ofNullable(documentationRootUrl);
+            this.documentationRootUrl = Codegen.ofNullable(documentationRootUrl);
             return this;
         }
         public Builder overview(@Nullable Output<String> overview) {
@@ -154,7 +155,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overview(@Nullable String overview) {
-            this.overview = Output.ofNullable(overview);
+            this.overview = Codegen.ofNullable(overview);
             return this;
         }
         public Builder pages(@Nullable Output<List<PageArgs>> pages) {
@@ -162,7 +163,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pages(@Nullable List<PageArgs> pages) {
-            this.pages = Output.ofNullable(pages);
+            this.pages = Codegen.ofNullable(pages);
             return this;
         }
         public Builder pages(PageArgs... pages) {
@@ -173,7 +174,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<DocumentationRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(DocumentationRuleArgs... rules) {
@@ -184,7 +185,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRootUrl(@Nullable String serviceRootUrl) {
-            this.serviceRootUrl = Output.ofNullable(serviceRootUrl);
+            this.serviceRootUrl = Codegen.ofNullable(serviceRootUrl);
             return this;
         }
         public Builder summary(@Nullable Output<String> summary) {
@@ -192,7 +193,7 @@ public final class DocumentationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder summary(@Nullable String summary) {
-            this.summary = Output.ofNullable(summary);
+            this.summary = Codegen.ofNullable(summary);
             return this;
         }        public DocumentationArgs build() {
             return new DocumentationArgs(documentationRootUrl, overview, pages, rules, serviceRootUrl, summary);

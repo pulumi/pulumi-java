@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     public ResourceAnnotationArgs(@Nullable Output<String> label) {
@@ -34,7 +35,7 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourceAnnotationArgs() {
-        this.label = Output.empty();
+        this.label = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }        public ResourceAnnotationArgs build() {
             return new ResourceAnnotationArgs(label);

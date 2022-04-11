@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public LoadBalancerAccessLogsArgs(
@@ -58,9 +59,9 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
     }
 
     private LoadBalancerAccessLogsArgs() {
-        this.bucket = Output.empty();
-        this.enabled = Output.empty();
-        this.prefix = Output.empty();
+        this.bucket = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -108,7 +109,7 @@ public final class LoadBalancerAccessLogsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public LoadBalancerAccessLogsArgs build() {
             return new LoadBalancerAccessLogsArgs(bucket, enabled, prefix);

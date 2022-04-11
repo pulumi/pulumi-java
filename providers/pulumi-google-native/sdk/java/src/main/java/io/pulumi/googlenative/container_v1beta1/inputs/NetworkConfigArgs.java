@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.NetworkConfigDatapathProvider;
 import io.pulumi.googlenative.container_v1beta1.enums.NetworkConfigPrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.container_v1beta1.inputs.DNSConfigArgs;
@@ -31,7 +32,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkConfigDatapathProvider> datapathProvider;
 
     public Output<NetworkConfigDatapathProvider> getDatapathProvider() {
-        return this.datapathProvider == null ? Output.empty() : this.datapathProvider;
+        return this.datapathProvider == null ? Codegen.empty() : this.datapathProvider;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus;
 
     public Output<DefaultSnatStatusArgs> getDefaultSnatStatus() {
-        return this.defaultSnatStatus == null ? Output.empty() : this.defaultSnatStatus;
+        return this.defaultSnatStatus == null ? Codegen.empty() : this.defaultSnatStatus;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DNSConfigArgs> dnsConfig;
 
     public Output<DNSConfigArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
+        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableIntraNodeVisibility;
 
     public Output<Boolean> getEnableIntraNodeVisibility() {
-        return this.enableIntraNodeVisibility == null ? Output.empty() : this.enableIntraNodeVisibility;
+        return this.enableIntraNodeVisibility == null ? Codegen.empty() : this.enableIntraNodeVisibility;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableL4ilbSubsetting;
 
     public Output<Boolean> getEnableL4ilbSubsetting() {
-        return this.enableL4ilbSubsetting == null ? Output.empty() : this.enableL4ilbSubsetting;
+        return this.enableL4ilbSubsetting == null ? Codegen.empty() : this.enableL4ilbSubsetting;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Output<NetworkConfigPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
+        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig;
 
     public Output<ServiceExternalIPsConfigArgs> getServiceExternalIpsConfig() {
-        return this.serviceExternalIpsConfig == null ? Output.empty() : this.serviceExternalIpsConfig;
+        return this.serviceExternalIpsConfig == null ? Codegen.empty() : this.serviceExternalIpsConfig;
     }
 
     public NetworkConfigArgs(
@@ -118,13 +119,13 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkConfigArgs() {
-        this.datapathProvider = Output.empty();
-        this.defaultSnatStatus = Output.empty();
-        this.dnsConfig = Output.empty();
-        this.enableIntraNodeVisibility = Output.empty();
-        this.enableL4ilbSubsetting = Output.empty();
-        this.privateIpv6GoogleAccess = Output.empty();
-        this.serviceExternalIpsConfig = Output.empty();
+        this.datapathProvider = Codegen.empty();
+        this.defaultSnatStatus = Codegen.empty();
+        this.dnsConfig = Codegen.empty();
+        this.enableIntraNodeVisibility = Codegen.empty();
+        this.enableL4ilbSubsetting = Codegen.empty();
+        this.privateIpv6GoogleAccess = Codegen.empty();
+        this.serviceExternalIpsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datapathProvider(@Nullable NetworkConfigDatapathProvider datapathProvider) {
-            this.datapathProvider = Output.ofNullable(datapathProvider);
+            this.datapathProvider = Codegen.ofNullable(datapathProvider);
             return this;
         }
         public Builder defaultSnatStatus(@Nullable Output<DefaultSnatStatusArgs> defaultSnatStatus) {
@@ -172,7 +173,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultSnatStatus(@Nullable DefaultSnatStatusArgs defaultSnatStatus) {
-            this.defaultSnatStatus = Output.ofNullable(defaultSnatStatus);
+            this.defaultSnatStatus = Codegen.ofNullable(defaultSnatStatus);
             return this;
         }
         public Builder dnsConfig(@Nullable Output<DNSConfigArgs> dnsConfig) {
@@ -180,7 +181,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsConfig(@Nullable DNSConfigArgs dnsConfig) {
-            this.dnsConfig = Output.ofNullable(dnsConfig);
+            this.dnsConfig = Codegen.ofNullable(dnsConfig);
             return this;
         }
         public Builder enableIntraNodeVisibility(@Nullable Output<Boolean> enableIntraNodeVisibility) {
@@ -188,7 +189,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableIntraNodeVisibility(@Nullable Boolean enableIntraNodeVisibility) {
-            this.enableIntraNodeVisibility = Output.ofNullable(enableIntraNodeVisibility);
+            this.enableIntraNodeVisibility = Codegen.ofNullable(enableIntraNodeVisibility);
             return this;
         }
         public Builder enableL4ilbSubsetting(@Nullable Output<Boolean> enableL4ilbSubsetting) {
@@ -196,7 +197,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableL4ilbSubsetting(@Nullable Boolean enableL4ilbSubsetting) {
-            this.enableL4ilbSubsetting = Output.ofNullable(enableL4ilbSubsetting);
+            this.enableL4ilbSubsetting = Codegen.ofNullable(enableL4ilbSubsetting);
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable Output<NetworkConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
@@ -204,7 +205,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable NetworkConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
         public Builder serviceExternalIpsConfig(@Nullable Output<ServiceExternalIPsConfigArgs> serviceExternalIpsConfig) {
@@ -212,7 +213,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceExternalIpsConfig(@Nullable ServiceExternalIPsConfigArgs serviceExternalIpsConfig) {
-            this.serviceExternalIpsConfig = Output.ofNullable(serviceExternalIpsConfig);
+            this.serviceExternalIpsConfig = Codegen.ofNullable(serviceExternalIpsConfig);
             return this;
         }        public NetworkConfigArgs build() {
             return new NetworkConfigArgs(datapathProvider, defaultSnatStatus, dnsConfig, enableIntraNodeVisibility, enableL4ilbSubsetting, privateIpv6GoogleAccess, serviceExternalIpsConfig);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> primaryKey;
 
     public Output<String> getPrimaryKey() {
-        return this.primaryKey == null ? Output.empty() : this.primaryKey;
+        return this.primaryKey == null ? Codegen.empty() : this.primaryKey;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> secondaryKey;
 
     public Output<String> getSecondaryKey() {
-        return this.secondaryKey == null ? Output.empty() : this.secondaryKey;
+        return this.secondaryKey == null ? Codegen.empty() : this.secondaryKey;
     }
 
     public CreateServiceRequestKeysArgs(
@@ -48,8 +49,8 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
     }
 
     private CreateServiceRequestKeysArgs() {
-        this.primaryKey = Output.empty();
-        this.secondaryKey = Output.empty();
+        this.primaryKey = Codegen.empty();
+        this.secondaryKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder primaryKey(@Nullable String primaryKey) {
-            this.primaryKey = Output.ofNullable(primaryKey);
+            this.primaryKey = Codegen.ofNullable(primaryKey);
             return this;
         }
         public Builder secondaryKey(@Nullable Output<String> secondaryKey) {
@@ -87,7 +88,7 @@ public final class CreateServiceRequestKeysArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder secondaryKey(@Nullable String secondaryKey) {
-            this.secondaryKey = Output.ofNullable(secondaryKey);
+            this.secondaryKey = Codegen.ofNullable(secondaryKey);
             return this;
         }        public CreateServiceRequestKeysArgs build() {
             return new CreateServiceRequestKeysArgs(primaryKey, secondaryKey);

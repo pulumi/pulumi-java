@@ -10,6 +10,7 @@ import io.pulumi.awsnative.forecast.inputs.SchemaPropertiesArgs;
 import io.pulumi.awsnative.forecast.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataFrequency;
 
     public Output<String> getDataFrequency() {
-        return this.dataFrequency == null ? Output.empty() : this.dataFrequency;
+        return this.dataFrequency == null ? Codegen.empty() : this.dataFrequency;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
-        return this.datasetName == null ? Output.empty() : this.datasetName;
+        return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionConfigPropertiesArgs> encryptionConfig;
 
     public Output<EncryptionConfigPropertiesArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     @Import(name="schema", required=true)
@@ -82,7 +83,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TagsItemPropertiesArgs>> tags;
 
     public Output<List<TagsItemPropertiesArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DatasetArgs(
@@ -103,13 +104,13 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetArgs() {
-        this.dataFrequency = Output.empty();
-        this.datasetName = Output.empty();
-        this.datasetType = Output.empty();
-        this.domain = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.schema = Output.empty();
-        this.tags = Output.empty();
+        this.dataFrequency = Codegen.empty();
+        this.datasetName = Codegen.empty();
+        this.datasetType = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataFrequency(@Nullable String dataFrequency) {
-            this.dataFrequency = Output.ofNullable(dataFrequency);
+            this.dataFrequency = Codegen.ofNullable(dataFrequency);
             return this;
         }
         public Builder datasetName(@Nullable Output<String> datasetName) {
@@ -157,7 +158,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Output.ofNullable(datasetName);
+            this.datasetName = Codegen.ofNullable(datasetName);
             return this;
         }
         public Builder datasetType(Output<DatasetType> datasetType) {
@@ -181,7 +182,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigPropertiesArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder schema(Output<SchemaPropertiesArgs> schema) {
@@ -197,7 +198,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TagsItemPropertiesArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TagsItemPropertiesArgs... tags) {

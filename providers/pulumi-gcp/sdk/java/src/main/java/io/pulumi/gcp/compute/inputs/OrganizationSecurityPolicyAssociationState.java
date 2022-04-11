@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
-        return this.attachmentId == null ? Output.empty() : this.attachmentId;
+        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     public OrganizationSecurityPolicyAssociationState(
@@ -70,10 +71,10 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
     }
 
     private OrganizationSecurityPolicyAssociationState() {
-        this.attachmentId = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.policyId = Output.empty();
+        this.attachmentId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
             return this;
         }
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Output.ofNullable(attachmentId);
+            this.attachmentId = Codegen.ofNullable(attachmentId);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -115,7 +116,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyId(@Nullable Output<String> policyId) {
@@ -131,7 +132,7 @@ public final class OrganizationSecurityPolicyAssociationState extends io.pulumi.
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }        public OrganizationSecurityPolicyAssociationState build() {
             return new OrganizationSecurityPolicyAssociationState(attachmentId, displayName, name, policyId);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> idleDuration;
 
     public Output<String> getIdleDuration() {
-        return this.idleDuration == null ? Output.empty() : this.idleDuration;
+        return this.idleDuration == null ? Codegen.empty() : this.idleDuration;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> skipOsAdaptation;
 
     public Output<Boolean> getSkipOsAdaptation() {
-        return this.skipOsAdaptation == null ? Output.empty() : this.skipOsAdaptation;
+        return this.skipOsAdaptation == null ? Codegen.empty() : this.skipOsAdaptation;
     }
 
     public SchedulePolicyArgs(
@@ -49,8 +50,8 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchedulePolicyArgs() {
-        this.idleDuration = Output.empty();
-        this.skipOsAdaptation = Output.empty();
+        this.idleDuration = Codegen.empty();
+        this.skipOsAdaptation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleDuration(@Nullable String idleDuration) {
-            this.idleDuration = Output.ofNullable(idleDuration);
+            this.idleDuration = Codegen.ofNullable(idleDuration);
             return this;
         }
         public Builder skipOsAdaptation(@Nullable Output<Boolean> skipOsAdaptation) {
@@ -88,7 +89,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipOsAdaptation(@Nullable Boolean skipOsAdaptation) {
-            this.skipOsAdaptation = Output.ofNullable(skipOsAdaptation);
+            this.skipOsAdaptation = Codegen.ofNullable(skipOsAdaptation);
             return this;
         }        public SchedulePolicyArgs build() {
             return new SchedulePolicyArgs(idleDuration, skipOsAdaptation);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> keyVaultUrl;
 
     public Output<String> getKeyVaultUrl() {
-        return this.keyVaultUrl == null ? Output.empty() : this.keyVaultUrl;
+        return this.keyVaultUrl == null ? Codegen.empty() : this.keyVaultUrl;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public WorkspaceKeyDetailsArgs(
@@ -48,8 +49,8 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkspaceKeyDetailsArgs() {
-        this.keyVaultUrl = Output.empty();
-        this.name = Output.empty();
+        this.keyVaultUrl = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = Output.ofNullable(keyVaultUrl);
+            this.keyVaultUrl = Codegen.ofNullable(keyVaultUrl);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -87,7 +88,7 @@ public final class WorkspaceKeyDetailsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public WorkspaceKeyDetailsArgs build() {
             return new WorkspaceKeyDetailsArgs(keyVaultUrl, name);

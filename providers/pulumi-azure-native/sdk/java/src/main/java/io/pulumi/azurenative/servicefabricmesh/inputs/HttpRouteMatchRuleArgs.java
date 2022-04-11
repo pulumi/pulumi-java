@@ -7,6 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchHeaderArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchPathArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<HttpRouteMatchHeaderArgs>> headers;
 
     public Output<List<HttpRouteMatchHeaderArgs>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private HttpRouteMatchRuleArgs() {
-        this.headers = Output.empty();
-        this.path = Output.empty();
+        this.headers = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class HttpRouteMatchRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder headers(@Nullable List<HttpRouteMatchHeaderArgs> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder headers(HttpRouteMatchHeaderArgs... headers) {

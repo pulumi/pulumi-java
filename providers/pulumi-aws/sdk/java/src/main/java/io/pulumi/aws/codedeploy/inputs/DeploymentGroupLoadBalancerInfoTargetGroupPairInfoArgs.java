@@ -8,6 +8,7 @@ import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGrou
 import io.pulumi.aws.codedeploy.inputs.DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
       private final @Nullable Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> testTrafficRoute;
 
     public Output<DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs> getTestTrafficRoute() {
-        return this.testTrafficRoute == null ? Output.empty() : this.testTrafficRoute;
+        return this.testTrafficRoute == null ? Codegen.empty() : this.testTrafficRoute;
     }
 
     public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs(
@@ -60,9 +61,9 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
     }
 
     private DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs() {
-        this.prodTrafficRoute = Output.empty();
-        this.targetGroups = Output.empty();
-        this.testTrafficRoute = Output.empty();
+        this.prodTrafficRoute = Codegen.empty();
+        this.targetGroups = Codegen.empty();
+        this.testTrafficRoute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs extend
             return this;
         }
         public Builder testTrafficRoute(@Nullable DeploymentGroupLoadBalancerInfoTargetGroupPairInfoTestTrafficRouteArgs testTrafficRoute) {
-            this.testTrafficRoute = Output.ofNullable(testTrafficRoute);
+            this.testTrafficRoute = Codegen.ofNullable(testTrafficRoute);
             return this;
         }        public DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs build() {
             return new DeploymentGroupLoadBalancerInfoTargetGroupPairInfoArgs(prodTrafficRoute, targetGroups, testTrafficRoute);

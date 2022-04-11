@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> sourceNatActiveIps;
 
     public Output<List<String>> getSourceNatActiveIps() {
-        return this.sourceNatActiveIps == null ? Output.empty() : this.sourceNatActiveIps;
+        return this.sourceNatActiveIps == null ? Codegen.empty() : this.sourceNatActiveIps;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> sourceNatDrainIps;
 
     public Output<List<String>> getSourceNatDrainIps() {
-        return this.sourceNatDrainIps == null ? Output.empty() : this.sourceNatDrainIps;
+        return this.sourceNatDrainIps == null ? Codegen.empty() : this.sourceNatDrainIps;
     }
 
     public RouterNatRuleActionArgs(
@@ -45,8 +46,8 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private RouterNatRuleActionArgs() {
-        this.sourceNatActiveIps = Output.empty();
-        this.sourceNatDrainIps = Output.empty();
+        this.sourceNatActiveIps = Codegen.empty();
+        this.sourceNatDrainIps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceNatActiveIps(@Nullable List<String> sourceNatActiveIps) {
-            this.sourceNatActiveIps = Output.ofNullable(sourceNatActiveIps);
+            this.sourceNatActiveIps = Codegen.ofNullable(sourceNatActiveIps);
             return this;
         }
         public Builder sourceNatActiveIps(String... sourceNatActiveIps) {
@@ -87,7 +88,7 @@ public final class RouterNatRuleActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceNatDrainIps(@Nullable List<String> sourceNatDrainIps) {
-            this.sourceNatDrainIps = Output.ofNullable(sourceNatDrainIps);
+            this.sourceNatDrainIps = Codegen.ofNullable(sourceNatDrainIps);
             return this;
         }
         public Builder sourceNatDrainIps(String... sourceNatDrainIps) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.connect;
 import io.pulumi.aws.connect.inputs.QueueOutboundCallerConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxContacts;
 
     public Output<Integer> getMaxContacts() {
-        return this.maxContacts == null ? Output.empty() : this.maxContacts;
+        return this.maxContacts == null ? Codegen.empty() : this.maxContacts;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig;
 
     public Output<QueueOutboundCallerConfigArgs> getOutboundCallerConfig() {
-        return this.outboundCallerConfig == null ? Output.empty() : this.outboundCallerConfig;
+        return this.outboundCallerConfig == null ? Codegen.empty() : this.outboundCallerConfig;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> quickConnectIds;
 
     public Output<List<String>> getQuickConnectIds() {
-        return this.quickConnectIds == null ? Output.empty() : this.quickConnectIds;
+        return this.quickConnectIds == null ? Codegen.empty() : this.quickConnectIds;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public QueueArgs(
@@ -152,16 +153,16 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueueArgs() {
-        this.description = Output.empty();
-        this.hoursOfOperationId = Output.empty();
-        this.instanceId = Output.empty();
-        this.maxContacts = Output.empty();
-        this.name = Output.empty();
-        this.outboundCallerConfig = Output.empty();
-        this.quickConnectIds = Output.empty();
-        this.status = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.description = Codegen.empty();
+        this.hoursOfOperationId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.maxContacts = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outboundCallerConfig = Codegen.empty();
+        this.quickConnectIds = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hoursOfOperationId(Output<String> hoursOfOperationId) {
@@ -231,7 +232,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxContacts(@Nullable Integer maxContacts) {
-            this.maxContacts = Output.ofNullable(maxContacts);
+            this.maxContacts = Codegen.ofNullable(maxContacts);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -239,7 +240,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outboundCallerConfig(@Nullable Output<QueueOutboundCallerConfigArgs> outboundCallerConfig) {
@@ -247,7 +248,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outboundCallerConfig(@Nullable QueueOutboundCallerConfigArgs outboundCallerConfig) {
-            this.outboundCallerConfig = Output.ofNullable(outboundCallerConfig);
+            this.outboundCallerConfig = Codegen.ofNullable(outboundCallerConfig);
             return this;
         }
         public Builder quickConnectIds(@Nullable Output<List<String>> quickConnectIds) {
@@ -255,7 +256,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quickConnectIds(@Nullable List<String> quickConnectIds) {
-            this.quickConnectIds = Output.ofNullable(quickConnectIds);
+            this.quickConnectIds = Codegen.ofNullable(quickConnectIds);
             return this;
         }
         public Builder quickConnectIds(String... quickConnectIds) {
@@ -266,7 +267,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -274,7 +275,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -282,7 +283,7 @@ public final class QueueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public QueueArgs build() {
             return new QueueArgs(description, hoursOfOperationId, instanceId, maxContacts, name, outboundCallerConfig, quickConnectIds, status, tags, tagsAll);

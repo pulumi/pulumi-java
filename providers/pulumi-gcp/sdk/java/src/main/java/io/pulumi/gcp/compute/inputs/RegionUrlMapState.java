@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapDefaultUrlRedirectGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapHostRuleGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherGetArgs;
@@ -28,7 +29,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultService;
 
     public Output<String> getDefaultService() {
-        return this.defaultService == null ? Output.empty() : this.defaultService;
+        return this.defaultService == null ? Codegen.empty() : this.defaultService;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RegionUrlMapDefaultUrlRedirectGetArgs> defaultUrlRedirect;
 
     public Output<RegionUrlMapDefaultUrlRedirectGetArgs> getDefaultUrlRedirect() {
-        return this.defaultUrlRedirect == null ? Output.empty() : this.defaultUrlRedirect;
+        return this.defaultUrlRedirect == null ? Codegen.empty() : this.defaultUrlRedirect;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RegionUrlMapHostRuleGetArgs>> hostRules;
 
     public Output<List<RegionUrlMapHostRuleGetArgs>> getHostRules() {
-        return this.hostRules == null ? Output.empty() : this.hostRules;
+        return this.hostRules == null ? Codegen.empty() : this.hostRules;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> mapId;
 
     public Output<Integer> getMapId() {
-        return this.mapId == null ? Output.empty() : this.mapId;
+        return this.mapId == null ? Codegen.empty() : this.mapId;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RegionUrlMapPathMatcherGetArgs>> pathMatchers;
 
     public Output<List<RegionUrlMapPathMatcherGetArgs>> getPathMatchers() {
-        return this.pathMatchers == null ? Output.empty() : this.pathMatchers;
+        return this.pathMatchers == null ? Codegen.empty() : this.pathMatchers;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RegionUrlMapTestGetArgs>> tests;
 
     public Output<List<RegionUrlMapTestGetArgs>> getTests() {
-        return this.tests == null ? Output.empty() : this.tests;
+        return this.tests == null ? Codegen.empty() : this.tests;
     }
 
     public RegionUrlMapState(
@@ -205,19 +206,19 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegionUrlMapState() {
-        this.creationTimestamp = Output.empty();
-        this.defaultService = Output.empty();
-        this.defaultUrlRedirect = Output.empty();
-        this.description = Output.empty();
-        this.fingerprint = Output.empty();
-        this.hostRules = Output.empty();
-        this.mapId = Output.empty();
-        this.name = Output.empty();
-        this.pathMatchers = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.selfLink = Output.empty();
-        this.tests = Output.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.defaultService = Codegen.empty();
+        this.defaultUrlRedirect = Codegen.empty();
+        this.description = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.hostRules = Codegen.empty();
+        this.mapId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pathMatchers = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.tests = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -269,7 +270,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder defaultService(@Nullable Output<String> defaultService) {
@@ -277,7 +278,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultService(@Nullable String defaultService) {
-            this.defaultService = Output.ofNullable(defaultService);
+            this.defaultService = Codegen.ofNullable(defaultService);
             return this;
         }
         public Builder defaultUrlRedirect(@Nullable Output<RegionUrlMapDefaultUrlRedirectGetArgs> defaultUrlRedirect) {
@@ -285,7 +286,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultUrlRedirect(@Nullable RegionUrlMapDefaultUrlRedirectGetArgs defaultUrlRedirect) {
-            this.defaultUrlRedirect = Output.ofNullable(defaultUrlRedirect);
+            this.defaultUrlRedirect = Codegen.ofNullable(defaultUrlRedirect);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -293,7 +294,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -301,7 +302,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder hostRules(@Nullable Output<List<RegionUrlMapHostRuleGetArgs>> hostRules) {
@@ -309,7 +310,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostRules(@Nullable List<RegionUrlMapHostRuleGetArgs> hostRules) {
-            this.hostRules = Output.ofNullable(hostRules);
+            this.hostRules = Codegen.ofNullable(hostRules);
             return this;
         }
         public Builder hostRules(RegionUrlMapHostRuleGetArgs... hostRules) {
@@ -320,7 +321,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mapId(@Nullable Integer mapId) {
-            this.mapId = Output.ofNullable(mapId);
+            this.mapId = Codegen.ofNullable(mapId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -328,7 +329,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pathMatchers(@Nullable Output<List<RegionUrlMapPathMatcherGetArgs>> pathMatchers) {
@@ -336,7 +337,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathMatchers(@Nullable List<RegionUrlMapPathMatcherGetArgs> pathMatchers) {
-            this.pathMatchers = Output.ofNullable(pathMatchers);
+            this.pathMatchers = Codegen.ofNullable(pathMatchers);
             return this;
         }
         public Builder pathMatchers(RegionUrlMapPathMatcherGetArgs... pathMatchers) {
@@ -347,7 +348,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -355,7 +356,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -363,7 +364,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder tests(@Nullable Output<List<RegionUrlMapTestGetArgs>> tests) {
@@ -371,7 +372,7 @@ public final class RegionUrlMapState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tests(@Nullable List<RegionUrlMapTestGetArgs> tests) {
-            this.tests = Output.ofNullable(tests);
+            this.tests = Codegen.ofNullable(tests);
             return this;
         }
         public Builder tests(RegionUrlMapTestGetArgs... tests) {

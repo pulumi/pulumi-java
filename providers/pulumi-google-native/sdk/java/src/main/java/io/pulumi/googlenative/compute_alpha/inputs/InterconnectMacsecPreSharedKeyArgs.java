@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public InterconnectMacsecPreSharedKeyArgs(
@@ -48,8 +49,8 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
     }
 
     private InterconnectMacsecPreSharedKeyArgs() {
-        this.name = Output.empty();
-        this.startTime = Output.empty();
+        this.name = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class InterconnectMacsecPreSharedKeyArgs extends io.pulumi.resource
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public InterconnectMacsecPreSharedKeyArgs build() {
             return new InterconnectMacsecPreSharedKeyArgs(name, startTime);

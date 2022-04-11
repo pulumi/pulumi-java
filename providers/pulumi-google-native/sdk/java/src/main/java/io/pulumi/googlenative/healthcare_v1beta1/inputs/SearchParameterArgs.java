@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> canonicalUrl;
 
     public Output<String> getCanonicalUrl() {
-        return this.canonicalUrl == null ? Output.empty() : this.canonicalUrl;
+        return this.canonicalUrl == null ? Codegen.empty() : this.canonicalUrl;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> parameter;
 
     public Output<String> getParameter() {
-        return this.parameter == null ? Output.empty() : this.parameter;
+        return this.parameter == null ? Codegen.empty() : this.parameter;
     }
 
     public SearchParameterArgs(
@@ -48,8 +49,8 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private SearchParameterArgs() {
-        this.canonicalUrl = Output.empty();
-        this.parameter = Output.empty();
+        this.canonicalUrl = Codegen.empty();
+        this.parameter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder canonicalUrl(@Nullable String canonicalUrl) {
-            this.canonicalUrl = Output.ofNullable(canonicalUrl);
+            this.canonicalUrl = Codegen.ofNullable(canonicalUrl);
             return this;
         }
         public Builder parameter(@Nullable Output<String> parameter) {
@@ -87,7 +88,7 @@ public final class SearchParameterArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder parameter(@Nullable String parameter) {
-            this.parameter = Output.ofNullable(parameter);
+            this.parameter = Codegen.ofNullable(parameter);
             return this;
         }        public SearchParameterArgs build() {
             return new SearchParameterArgs(canonicalUrl, parameter);

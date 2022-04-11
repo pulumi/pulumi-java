@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecConfigArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecDnsConfigArgs;
 import io.pulumi.docker.inputs.ServiceTaskSpecContainerSpecHealthcheckArgs;
@@ -29,70 +30,70 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     @Import(name="commands")
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
-        return this.commands == null ? Output.empty() : this.commands;
+        return this.commands == null ? Codegen.empty() : this.commands;
     }
 
     @Import(name="configs")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecConfigArgs>> configs;
 
     public Output<List<ServiceTaskSpecContainerSpecConfigArgs>> getConfigs() {
-        return this.configs == null ? Output.empty() : this.configs;
+        return this.configs == null ? Codegen.empty() : this.configs;
     }
 
     @Import(name="dir")
       private final @Nullable Output<String> dir;
 
     public Output<String> getDir() {
-        return this.dir == null ? Output.empty() : this.dir;
+        return this.dir == null ? Codegen.empty() : this.dir;
     }
 
     @Import(name="dnsConfig")
       private final @Nullable Output<ServiceTaskSpecContainerSpecDnsConfigArgs> dnsConfig;
 
     public Output<ServiceTaskSpecContainerSpecDnsConfigArgs> getDnsConfig() {
-        return this.dnsConfig == null ? Output.empty() : this.dnsConfig;
+        return this.dnsConfig == null ? Codegen.empty() : this.dnsConfig;
     }
 
     @Import(name="env")
       private final @Nullable Output<Map<String,String>> env;
 
     public Output<Map<String,String>> getEnv() {
-        return this.env == null ? Output.empty() : this.env;
+        return this.env == null ? Codegen.empty() : this.env;
     }
 
     @Import(name="groups")
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
-        return this.groups == null ? Output.empty() : this.groups;
+        return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     @Import(name="healthcheck")
       private final @Nullable Output<ServiceTaskSpecContainerSpecHealthcheckArgs> healthcheck;
 
     public Output<ServiceTaskSpecContainerSpecHealthcheckArgs> getHealthcheck() {
-        return this.healthcheck == null ? Output.empty() : this.healthcheck;
+        return this.healthcheck == null ? Codegen.empty() : this.healthcheck;
     }
 
     @Import(name="hostname")
       private final @Nullable Output<String> hostname;
 
     public Output<String> getHostname() {
-        return this.hostname == null ? Output.empty() : this.hostname;
+        return this.hostname == null ? Codegen.empty() : this.hostname;
     }
 
     @Import(name="hosts")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecHostArgs>> hosts;
 
     public Output<List<ServiceTaskSpecContainerSpecHostArgs>> getHosts() {
-        return this.hosts == null ? Output.empty() : this.hosts;
+        return this.hosts == null ? Codegen.empty() : this.hosts;
     }
 
     @Import(name="image", required=true)
@@ -106,63 +107,63 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
       private final @Nullable Output<String> isolation;
 
     public Output<String> getIsolation() {
-        return this.isolation == null ? Output.empty() : this.isolation;
+        return this.isolation == null ? Codegen.empty() : this.isolation;
     }
 
     @Import(name="labels")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecLabelArgs>> labels;
 
     public Output<List<ServiceTaskSpecContainerSpecLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="mounts")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecMountArgs>> mounts;
 
     public Output<List<ServiceTaskSpecContainerSpecMountArgs>> getMounts() {
-        return this.mounts == null ? Output.empty() : this.mounts;
+        return this.mounts == null ? Codegen.empty() : this.mounts;
     }
 
     @Import(name="privileges")
       private final @Nullable Output<ServiceTaskSpecContainerSpecPrivilegesArgs> privileges;
 
     public Output<ServiceTaskSpecContainerSpecPrivilegesArgs> getPrivileges() {
-        return this.privileges == null ? Output.empty() : this.privileges;
+        return this.privileges == null ? Codegen.empty() : this.privileges;
     }
 
     @Import(name="readOnly")
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     @Import(name="secrets")
       private final @Nullable Output<List<ServiceTaskSpecContainerSpecSecretArgs>> secrets;
 
     public Output<List<ServiceTaskSpecContainerSpecSecretArgs>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     @Import(name="stopGracePeriod")
       private final @Nullable Output<String> stopGracePeriod;
 
     public Output<String> getStopGracePeriod() {
-        return this.stopGracePeriod == null ? Output.empty() : this.stopGracePeriod;
+        return this.stopGracePeriod == null ? Codegen.empty() : this.stopGracePeriod;
     }
 
     @Import(name="stopSignal")
       private final @Nullable Output<String> stopSignal;
 
     public Output<String> getStopSignal() {
-        return this.stopSignal == null ? Output.empty() : this.stopSignal;
+        return this.stopSignal == null ? Codegen.empty() : this.stopSignal;
     }
 
     @Import(name="user")
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public ServiceTaskSpecContainerSpecArgs(
@@ -209,26 +210,26 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
     }
 
     private ServiceTaskSpecContainerSpecArgs() {
-        this.args = Output.empty();
-        this.commands = Output.empty();
-        this.configs = Output.empty();
-        this.dir = Output.empty();
-        this.dnsConfig = Output.empty();
-        this.env = Output.empty();
-        this.groups = Output.empty();
-        this.healthcheck = Output.empty();
-        this.hostname = Output.empty();
-        this.hosts = Output.empty();
-        this.image = Output.empty();
-        this.isolation = Output.empty();
-        this.labels = Output.empty();
-        this.mounts = Output.empty();
-        this.privileges = Output.empty();
-        this.readOnly = Output.empty();
-        this.secrets = Output.empty();
-        this.stopGracePeriod = Output.empty();
-        this.stopSignal = Output.empty();
-        this.user = Output.empty();
+        this.args = Codegen.empty();
+        this.commands = Codegen.empty();
+        this.configs = Codegen.empty();
+        this.dir = Codegen.empty();
+        this.dnsConfig = Codegen.empty();
+        this.env = Codegen.empty();
+        this.groups = Codegen.empty();
+        this.healthcheck = Codegen.empty();
+        this.hostname = Codegen.empty();
+        this.hosts = Codegen.empty();
+        this.image = Codegen.empty();
+        this.isolation = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.mounts = Codegen.empty();
+        this.privileges = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.stopGracePeriod = Codegen.empty();
+        this.stopSignal = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -294,7 +295,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -305,7 +306,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Output.ofNullable(commands);
+            this.commands = Codegen.ofNullable(commands);
             return this;
         }
         public Builder commands(String... commands) {
@@ -316,7 +317,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder configs(@Nullable List<ServiceTaskSpecContainerSpecConfigArgs> configs) {
-            this.configs = Output.ofNullable(configs);
+            this.configs = Codegen.ofNullable(configs);
             return this;
         }
         public Builder configs(ServiceTaskSpecContainerSpecConfigArgs... configs) {
@@ -327,7 +328,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dir(@Nullable String dir) {
-            this.dir = Output.ofNullable(dir);
+            this.dir = Codegen.ofNullable(dir);
             return this;
         }
         public Builder dnsConfig(@Nullable Output<ServiceTaskSpecContainerSpecDnsConfigArgs> dnsConfig) {
@@ -335,7 +336,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dnsConfig(@Nullable ServiceTaskSpecContainerSpecDnsConfigArgs dnsConfig) {
-            this.dnsConfig = Output.ofNullable(dnsConfig);
+            this.dnsConfig = Codegen.ofNullable(dnsConfig);
             return this;
         }
         public Builder env(@Nullable Output<Map<String,String>> env) {
@@ -343,7 +344,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder env(@Nullable Map<String,String> env) {
-            this.env = Output.ofNullable(env);
+            this.env = Codegen.ofNullable(env);
             return this;
         }
         public Builder groups(@Nullable Output<List<String>> groups) {
@@ -351,7 +352,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Output.ofNullable(groups);
+            this.groups = Codegen.ofNullable(groups);
             return this;
         }
         public Builder groups(String... groups) {
@@ -362,7 +363,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder healthcheck(@Nullable ServiceTaskSpecContainerSpecHealthcheckArgs healthcheck) {
-            this.healthcheck = Output.ofNullable(healthcheck);
+            this.healthcheck = Codegen.ofNullable(healthcheck);
             return this;
         }
         public Builder hostname(@Nullable Output<String> hostname) {
@@ -370,7 +371,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hostname(@Nullable String hostname) {
-            this.hostname = Output.ofNullable(hostname);
+            this.hostname = Codegen.ofNullable(hostname);
             return this;
         }
         public Builder hosts(@Nullable Output<List<ServiceTaskSpecContainerSpecHostArgs>> hosts) {
@@ -378,7 +379,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder hosts(@Nullable List<ServiceTaskSpecContainerSpecHostArgs> hosts) {
-            this.hosts = Output.ofNullable(hosts);
+            this.hosts = Codegen.ofNullable(hosts);
             return this;
         }
         public Builder hosts(ServiceTaskSpecContainerSpecHostArgs... hosts) {
@@ -397,7 +398,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder isolation(@Nullable String isolation) {
-            this.isolation = Output.ofNullable(isolation);
+            this.isolation = Codegen.ofNullable(isolation);
             return this;
         }
         public Builder labels(@Nullable Output<List<ServiceTaskSpecContainerSpecLabelArgs>> labels) {
@@ -405,7 +406,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder labels(@Nullable List<ServiceTaskSpecContainerSpecLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(ServiceTaskSpecContainerSpecLabelArgs... labels) {
@@ -416,7 +417,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder mounts(@Nullable List<ServiceTaskSpecContainerSpecMountArgs> mounts) {
-            this.mounts = Output.ofNullable(mounts);
+            this.mounts = Codegen.ofNullable(mounts);
             return this;
         }
         public Builder mounts(ServiceTaskSpecContainerSpecMountArgs... mounts) {
@@ -427,7 +428,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder privileges(@Nullable ServiceTaskSpecContainerSpecPrivilegesArgs privileges) {
-            this.privileges = Output.ofNullable(privileges);
+            this.privileges = Codegen.ofNullable(privileges);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -435,7 +436,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secrets(@Nullable Output<List<ServiceTaskSpecContainerSpecSecretArgs>> secrets) {
@@ -443,7 +444,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder secrets(@Nullable List<ServiceTaskSpecContainerSpecSecretArgs> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(ServiceTaskSpecContainerSpecSecretArgs... secrets) {
@@ -454,7 +455,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder stopGracePeriod(@Nullable String stopGracePeriod) {
-            this.stopGracePeriod = Output.ofNullable(stopGracePeriod);
+            this.stopGracePeriod = Codegen.ofNullable(stopGracePeriod);
             return this;
         }
         public Builder stopSignal(@Nullable Output<String> stopSignal) {
@@ -462,7 +463,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder stopSignal(@Nullable String stopSignal) {
-            this.stopSignal = Output.ofNullable(stopSignal);
+            this.stopSignal = Codegen.ofNullable(stopSignal);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -470,7 +471,7 @@ public final class ServiceTaskSpecContainerSpecArgs extends io.pulumi.resources.
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public ServiceTaskSpecContainerSpecArgs build() {
             return new ServiceTaskSpecContainerSpecArgs(args, commands, configs, dir, dnsConfig, env, groups, healthcheck, hostname, hosts, image, isolation, labels, mounts, privileges, readOnly, secrets, stopGracePeriod, stopSignal, user);

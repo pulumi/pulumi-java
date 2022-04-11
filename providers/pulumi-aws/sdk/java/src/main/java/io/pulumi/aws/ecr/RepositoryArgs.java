@@ -7,6 +7,7 @@ import io.pulumi.aws.ecr.inputs.RepositoryEncryptionConfigurationArgs;
 import io.pulumi.aws.ecr.inputs.RepositoryImageScanningConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RepositoryEncryptionConfigurationArgs>> encryptionConfigurations;
 
     public Output<List<RepositoryEncryptionConfigurationArgs>> getEncryptionConfigurations() {
-        return this.encryptionConfigurations == null ? Output.empty() : this.encryptionConfigurations;
+        return this.encryptionConfigurations == null ? Codegen.empty() : this.encryptionConfigurations;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
     public Output<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
-        return this.imageScanningConfiguration == null ? Output.empty() : this.imageScanningConfiguration;
+        return this.imageScanningConfiguration == null ? Codegen.empty() : this.imageScanningConfiguration;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageTagMutability;
 
     public Output<String> getImageTagMutability() {
-        return this.imageTagMutability == null ? Output.empty() : this.imageTagMutability;
+        return this.imageTagMutability == null ? Codegen.empty() : this.imageTagMutability;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RepositoryArgs(
@@ -87,11 +88,11 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.encryptionConfigurations = Output.empty();
-        this.imageScanningConfiguration = Output.empty();
-        this.imageTagMutability = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.encryptionConfigurations = Codegen.empty();
+        this.imageScanningConfiguration = Codegen.empty();
+        this.imageTagMutability = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfigurations(@Nullable List<RepositoryEncryptionConfigurationArgs> encryptionConfigurations) {
-            this.encryptionConfigurations = Output.ofNullable(encryptionConfigurations);
+            this.encryptionConfigurations = Codegen.ofNullable(encryptionConfigurations);
             return this;
         }
         public Builder encryptionConfigurations(RepositoryEncryptionConfigurationArgs... encryptionConfigurations) {
@@ -138,7 +139,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageScanningConfiguration(@Nullable RepositoryImageScanningConfigurationArgs imageScanningConfiguration) {
-            this.imageScanningConfiguration = Output.ofNullable(imageScanningConfiguration);
+            this.imageScanningConfiguration = Codegen.ofNullable(imageScanningConfiguration);
             return this;
         }
         public Builder imageTagMutability(@Nullable Output<String> imageTagMutability) {
@@ -146,7 +147,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageTagMutability(@Nullable String imageTagMutability) {
-            this.imageTagMutability = Output.ofNullable(imageTagMutability);
+            this.imageTagMutability = Codegen.ofNullable(imageTagMutability);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -154,7 +155,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -162,7 +163,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RepositoryArgs build() {
             return new RepositoryArgs(encryptionConfigurations, imageScanningConfiguration, imageTagMutability, name, tags);

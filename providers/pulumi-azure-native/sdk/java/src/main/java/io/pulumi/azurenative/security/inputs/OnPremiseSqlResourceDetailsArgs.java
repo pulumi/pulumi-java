@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -113,13 +114,13 @@ public final class OnPremiseSqlResourceDetailsArgs extends io.pulumi.resources.R
     }
 
     private OnPremiseSqlResourceDetailsArgs() {
-        this.databaseName = Output.empty();
-        this.machineName = Output.empty();
-        this.serverName = Output.empty();
-        this.source = Output.empty();
-        this.sourceComputerId = Output.empty();
-        this.vmuuid = Output.empty();
-        this.workspaceId = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.machineName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceComputerId = Codegen.empty();
+        this.vmuuid = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {

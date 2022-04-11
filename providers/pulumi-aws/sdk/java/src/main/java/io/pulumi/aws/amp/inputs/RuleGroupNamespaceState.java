@@ -5,6 +5,7 @@ package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {
-        return this.workspaceId == null ? Output.empty() : this.workspaceId;
+        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
     public RuleGroupNamespaceState(
@@ -57,9 +58,9 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
     }
 
     private RuleGroupNamespaceState() {
-        this.data = Output.empty();
-        this.name = Output.empty();
-        this.workspaceId = Output.empty();
+        this.data = Codegen.empty();
+        this.name = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -99,7 +100,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
@@ -107,7 +108,7 @@ public final class RuleGroupNamespaceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Output.ofNullable(workspaceId);
+            this.workspaceId = Codegen.ofNullable(workspaceId);
             return this;
         }        public RuleGroupNamespaceState build() {
             return new RuleGroupNamespaceState(data, name, workspaceId);

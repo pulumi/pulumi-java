@@ -10,6 +10,7 @@ import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -107,7 +108,7 @@ public class Analyzer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Analyzer(String name, AnalyzerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:accessanalyzer:Analyzer", name, args == null ? AnalyzerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:accessanalyzer:Analyzer", name, args == null ? AnalyzerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Analyzer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

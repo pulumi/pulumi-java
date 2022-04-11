@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1.inputs.SqlServerDatabaseDetailsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> charset;
 
     public Output<String> getCharset() {
-        return this.charset == null ? Output.empty() : this.charset;
+        return this.charset == null ? Codegen.empty() : this.charset;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> collation;
 
     public Output<String> getCollation() {
-        return this.collation == null ? Output.empty() : this.collation;
+        return this.collation == null ? Codegen.empty() : this.collation;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -89,14 +90,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     @Import(name="sqlserverDatabaseDetails")
       private final @Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 
     public Output<SqlServerDatabaseDetailsArgs> getSqlserverDatabaseDetails() {
-        return this.sqlserverDatabaseDetails == null ? Output.empty() : this.sqlserverDatabaseDetails;
+        return this.sqlserverDatabaseDetails == null ? Codegen.empty() : this.sqlserverDatabaseDetails;
     }
 
     public DatabaseArgs(
@@ -119,14 +120,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.charset = Output.empty();
-        this.collation = Output.empty();
-        this.instance = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.sqlserverDatabaseDetails = Output.empty();
+        this.charset = Codegen.empty();
+        this.collation = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.sqlserverDatabaseDetails = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder charset(@Nullable String charset) {
-            this.charset = Output.ofNullable(charset);
+            this.charset = Codegen.ofNullable(charset);
             return this;
         }
         public Builder collation(@Nullable Output<String> collation) {
@@ -176,7 +177,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collation(@Nullable String collation) {
-            this.collation = Output.ofNullable(collation);
+            this.collation = Codegen.ofNullable(collation);
             return this;
         }
         public Builder instance(Output<String> instance) {
@@ -192,7 +193,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -200,7 +201,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -208,7 +209,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -216,7 +217,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder sqlserverDatabaseDetails(@Nullable Output<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails) {
@@ -224,7 +225,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlserverDatabaseDetails(@Nullable SqlServerDatabaseDetailsArgs sqlserverDatabaseDetails) {
-            this.sqlserverDatabaseDetails = Output.ofNullable(sqlserverDatabaseDetails);
+            this.sqlserverDatabaseDetails = Codegen.ofNullable(sqlserverDatabaseDetails);
             return this;
         }        public DatabaseArgs build() {
             return new DatabaseArgs(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);

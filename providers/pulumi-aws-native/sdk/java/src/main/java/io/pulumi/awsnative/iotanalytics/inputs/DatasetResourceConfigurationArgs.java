@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -36,8 +37,8 @@ public final class DatasetResourceConfigurationArgs extends io.pulumi.resources.
     }
 
     private DatasetResourceConfigurationArgs() {
-        this.computeType = Output.empty();
-        this.volumeSizeInGB = Output.empty();
+        this.computeType = Codegen.empty();
+        this.volumeSizeInGB = Codegen.empty();
     }
 
     public static Builder builder() {

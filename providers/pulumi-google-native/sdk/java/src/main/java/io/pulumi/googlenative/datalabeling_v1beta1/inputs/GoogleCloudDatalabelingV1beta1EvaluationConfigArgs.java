@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
     public Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {
-        return this.boundingBoxEvaluationOptions == null ? Output.empty() : this.boundingBoxEvaluationOptions;
+        return this.boundingBoxEvaluationOptions == null ? Codegen.empty() : this.boundingBoxEvaluationOptions;
     }
 
     public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(@Nullable Output<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
     }
 
     private GoogleCloudDatalabelingV1beta1EvaluationConfigArgs() {
-        this.boundingBoxEvaluationOptions = Output.empty();
+        this.boundingBoxEvaluationOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
             return this;
         }
         public Builder boundingBoxEvaluationOptions(@Nullable GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs boundingBoxEvaluationOptions) {
-            this.boundingBoxEvaluationOptions = Output.ofNullable(boundingBoxEvaluationOptions);
+            this.boundingBoxEvaluationOptions = Codegen.ofNullable(boundingBoxEvaluationOptions);
             return this;
         }        public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(boundingBoxEvaluationOptions);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsTimingArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
-        return this.paths == null ? Output.empty() : this.paths;
+        return this.paths == null ? Codegen.empty() : this.paths;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<TriggerBuildArtifactsObjectsTimingArgs>> timings;
 
     public Output<List<TriggerBuildArtifactsObjectsTimingArgs>> getTimings() {
-        return this.timings == null ? Output.empty() : this.timings;
+        return this.timings == null ? Codegen.empty() : this.timings;
     }
 
     public TriggerBuildArtifactsObjectsArgs(
@@ -63,9 +64,9 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
     }
 
     private TriggerBuildArtifactsObjectsArgs() {
-        this.location = Output.empty();
-        this.paths = Output.empty();
-        this.timings = Output.empty();
+        this.location = Codegen.empty();
+        this.paths = Codegen.empty();
+        this.timings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder paths(@Nullable Output<List<String>> paths) {
@@ -105,7 +106,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Output.ofNullable(paths);
+            this.paths = Codegen.ofNullable(paths);
             return this;
         }
         public Builder paths(String... paths) {
@@ -116,7 +117,7 @@ public final class TriggerBuildArtifactsObjectsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder timings(@Nullable List<TriggerBuildArtifactsObjectsTimingArgs> timings) {
-            this.timings = Output.ofNullable(timings);
+            this.timings = Codegen.ofNullable(timings);
             return this;
         }
         public Builder timings(TriggerBuildArtifactsObjectsTimingArgs... timings) {

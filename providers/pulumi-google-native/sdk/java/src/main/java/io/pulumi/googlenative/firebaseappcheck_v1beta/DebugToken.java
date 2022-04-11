@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebaseappcheck_v1beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaseappcheck_v1beta.DebugTokenArgs;
 import java.lang.String;
@@ -82,7 +83,7 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DebugToken(String name, DebugTokenArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebaseappcheck/v1beta:DebugToken", name, args == null ? DebugTokenArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebaseappcheck/v1beta:DebugToken", name, args == null ? DebugTokenArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DebugToken(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

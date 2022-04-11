@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentTypeId;
 
     public Output<String> getContentTypeId() {
-        return this.contentTypeId == null ? Output.empty() : this.contentTypeId;
+        return this.contentTypeId == null ? Codegen.empty() : this.contentTypeId;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentTypeArgs() {
-        this.contentTypeId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
+        this.contentTypeId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ContentTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentTypeId(@Nullable String contentTypeId) {
-            this.contentTypeId = Output.ofNullable(contentTypeId);
+            this.contentTypeId = Codegen.ofNullable(contentTypeId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

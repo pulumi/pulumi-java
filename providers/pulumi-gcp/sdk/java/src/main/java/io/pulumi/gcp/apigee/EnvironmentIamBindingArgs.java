@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.apigee.inputs.EnvironmentIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<EnvironmentIamBindingConditionArgs> condition;
 
     public Output<EnvironmentIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -75,11 +76,11 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
     }
 
     private EnvironmentIamBindingArgs() {
-        this.condition = Output.empty();
-        this.envId = Output.empty();
-        this.members = Output.empty();
-        this.orgId = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.envId = Codegen.empty();
+        this.members = Codegen.empty();
+        this.orgId = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class EnvironmentIamBindingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder condition(@Nullable EnvironmentIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder envId(Output<String> envId) {

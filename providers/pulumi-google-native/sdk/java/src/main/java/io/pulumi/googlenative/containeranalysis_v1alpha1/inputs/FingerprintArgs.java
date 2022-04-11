@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> v1Name;
 
     public Output<String> getV1Name() {
-        return this.v1Name == null ? Output.empty() : this.v1Name;
+        return this.v1Name == null ? Codegen.empty() : this.v1Name;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> v2Blob;
 
     public Output<List<String>> getV2Blob() {
-        return this.v2Blob == null ? Output.empty() : this.v2Blob;
+        return this.v2Blob == null ? Codegen.empty() : this.v2Blob;
     }
 
     public FingerprintArgs(
@@ -49,8 +50,8 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FingerprintArgs() {
-        this.v1Name = Output.empty();
-        this.v2Blob = Output.empty();
+        this.v1Name = Codegen.empty();
+        this.v2Blob = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder v1Name(@Nullable String v1Name) {
-            this.v1Name = Output.ofNullable(v1Name);
+            this.v1Name = Codegen.ofNullable(v1Name);
             return this;
         }
         public Builder v2Blob(@Nullable Output<List<String>> v2Blob) {
@@ -88,7 +89,7 @@ public final class FingerprintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder v2Blob(@Nullable List<String> v2Blob) {
-            this.v2Blob = Output.ofNullable(v2Blob);
+            this.v2Blob = Codegen.ofNullable(v2Blob);
             return this;
         }
         public Builder v2Blob(String... v2Blob) {

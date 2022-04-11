@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.InstanceViewStatusArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<InstanceViewStatusArgs> colocationStatus;
 
     public Output<InstanceViewStatusArgs> getColocationStatus() {
-        return this.colocationStatus == null ? Output.empty() : this.colocationStatus;
+        return this.colocationStatus == null ? Codegen.empty() : this.colocationStatus;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> proximityPlacementGroupName;
 
     public Output<String> getProximityPlacementGroupName() {
-        return this.proximityPlacementGroupName == null ? Output.empty() : this.proximityPlacementGroupName;
+        return this.proximityPlacementGroupName == null ? Codegen.empty() : this.proximityPlacementGroupName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType;
 
     public Output<Either<String,ProximityPlacementGroupType>> getProximityPlacementGroupType() {
-        return this.proximityPlacementGroupType == null ? Output.empty() : this.proximityPlacementGroupType;
+        return this.proximityPlacementGroupType == null ? Codegen.empty() : this.proximityPlacementGroupType;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ProximityPlacementGroupArgs(
@@ -100,12 +101,12 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
     }
 
     private ProximityPlacementGroupArgs() {
-        this.colocationStatus = Output.empty();
-        this.location = Output.empty();
-        this.proximityPlacementGroupName = Output.empty();
-        this.proximityPlacementGroupType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.colocationStatus = Codegen.empty();
+        this.location = Codegen.empty();
+        this.proximityPlacementGroupName = Codegen.empty();
+        this.proximityPlacementGroupType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder colocationStatus(@Nullable InstanceViewStatusArgs colocationStatus) {
-            this.colocationStatus = Output.ofNullable(colocationStatus);
+            this.colocationStatus = Codegen.ofNullable(colocationStatus);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -151,7 +152,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder proximityPlacementGroupName(@Nullable Output<String> proximityPlacementGroupName) {
@@ -159,7 +160,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder proximityPlacementGroupName(@Nullable String proximityPlacementGroupName) {
-            this.proximityPlacementGroupName = Output.ofNullable(proximityPlacementGroupName);
+            this.proximityPlacementGroupName = Codegen.ofNullable(proximityPlacementGroupName);
             return this;
         }
         public Builder proximityPlacementGroupType(@Nullable Output<Either<String,ProximityPlacementGroupType>> proximityPlacementGroupType) {
@@ -167,7 +168,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder proximityPlacementGroupType(@Nullable Either<String,ProximityPlacementGroupType> proximityPlacementGroupType) {
-            this.proximityPlacementGroupType = Output.ofNullable(proximityPlacementGroupType);
+            this.proximityPlacementGroupType = Codegen.ofNullable(proximityPlacementGroupType);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -183,7 +184,7 @@ public final class ProximityPlacementGroupArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ProximityPlacementGroupArgs build() {
             return new ProximityPlacementGroupArgs(colocationStatus, location, proximityPlacementGroupName, proximityPlacementGroupType, resourceGroupName, tags);

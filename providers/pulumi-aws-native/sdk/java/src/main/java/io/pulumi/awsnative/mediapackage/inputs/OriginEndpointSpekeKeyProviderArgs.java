@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -88,11 +89,11 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
     }
 
     private OriginEndpointSpekeKeyProviderArgs() {
-        this.certificateArn = Output.empty();
-        this.resourceId = Output.empty();
-        this.roleArn = Output.empty();
-        this.systemIds = Output.empty();
-        this.url = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.systemIds = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class OriginEndpointSpekeKeyProviderArgs extends io.pulumi.resource
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {

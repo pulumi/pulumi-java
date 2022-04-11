@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamDeserializerArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
       private final @Nullable Output<DeliveryStreamDeserializerArgs> deserializer;
 
     public Output<DeliveryStreamDeserializerArgs> getDeserializer() {
-        return this.deserializer == null ? Output.empty() : this.deserializer;
+        return this.deserializer == null ? Codegen.empty() : this.deserializer;
     }
 
     public DeliveryStreamInputFormatConfigurationArgs(@Nullable Output<DeliveryStreamDeserializerArgs> deserializer) {
@@ -26,7 +27,7 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
     }
 
     private DeliveryStreamInputFormatConfigurationArgs() {
-        this.deserializer = Output.empty();
+        this.deserializer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DeliveryStreamInputFormatConfigurationArgs extends io.pulumi.
             return this;
         }
         public Builder deserializer(@Nullable DeliveryStreamDeserializerArgs deserializer) {
-            this.deserializer = Output.ofNullable(deserializer);
+            this.deserializer = Codegen.ofNullable(deserializer);
             return this;
         }        public DeliveryStreamInputFormatConfigurationArgs build() {
             return new DeliveryStreamInputFormatConfigurationArgs(deserializer);

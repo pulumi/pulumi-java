@@ -7,6 +7,7 @@ import io.pulumi.azurenative.labservices.enums.LabUserAccessMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +38,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> labName;
 
     public Output<String> getLabName() {
-        return this.labName == null ? Output.empty() : this.labName;
+        return this.labName == null ? Codegen.empty() : this.labName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxUsersInLab;
 
     public Output<Integer> getMaxUsersInLab() {
-        return this.maxUsersInLab == null ? Output.empty() : this.maxUsersInLab;
+        return this.maxUsersInLab == null ? Codegen.empty() : this.maxUsersInLab;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uniqueIdentifier;
 
     public Output<String> getUniqueIdentifier() {
-        return this.uniqueIdentifier == null ? Output.empty() : this.uniqueIdentifier;
+        return this.uniqueIdentifier == null ? Codegen.empty() : this.uniqueIdentifier;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> usageQuota;
 
     public Output<String> getUsageQuota() {
-        return this.usageQuota == null ? Output.empty() : this.usageQuota;
+        return this.usageQuota == null ? Codegen.empty() : this.usageQuota;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,LabUserAccessMode>> userAccessMode;
 
     public Output<Either<String,LabUserAccessMode>> getUserAccessMode() {
-        return this.userAccessMode == null ? Output.empty() : this.userAccessMode;
+        return this.userAccessMode == null ? Codegen.empty() : this.userAccessMode;
     }
 
     public LabArgs(
@@ -152,16 +153,16 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabArgs() {
-        this.labAccountName = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.maxUsersInLab = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.uniqueIdentifier = Output.empty();
-        this.usageQuota = Output.empty();
-        this.userAccessMode = Output.empty();
+        this.labAccountName = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maxUsersInLab = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uniqueIdentifier = Codegen.empty();
+        this.usageQuota = Codegen.empty();
+        this.userAccessMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labName(@Nullable String labName) {
-            this.labName = Output.ofNullable(labName);
+            this.labName = Codegen.ofNullable(labName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -223,7 +224,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maxUsersInLab(@Nullable Output<Integer> maxUsersInLab) {
@@ -231,7 +232,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxUsersInLab(@Nullable Integer maxUsersInLab) {
-            this.maxUsersInLab = Output.ofNullable(maxUsersInLab);
+            this.maxUsersInLab = Codegen.ofNullable(maxUsersInLab);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -239,7 +240,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -255,7 +256,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uniqueIdentifier(@Nullable Output<String> uniqueIdentifier) {
@@ -263,7 +264,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uniqueIdentifier(@Nullable String uniqueIdentifier) {
-            this.uniqueIdentifier = Output.ofNullable(uniqueIdentifier);
+            this.uniqueIdentifier = Codegen.ofNullable(uniqueIdentifier);
             return this;
         }
         public Builder usageQuota(@Nullable Output<String> usageQuota) {
@@ -271,7 +272,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usageQuota(@Nullable String usageQuota) {
-            this.usageQuota = Output.ofNullable(usageQuota);
+            this.usageQuota = Codegen.ofNullable(usageQuota);
             return this;
         }
         public Builder userAccessMode(@Nullable Output<Either<String,LabUserAccessMode>> userAccessMode) {
@@ -279,7 +280,7 @@ public final class LabArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAccessMode(@Nullable Either<String,LabUserAccessMode> userAccessMode) {
-            this.userAccessMode = Output.ofNullable(userAccessMode);
+            this.userAccessMode = Codegen.ofNullable(userAccessMode);
             return this;
         }        public LabArgs build() {
             return new LabArgs(labAccountName, labName, location, maxUsersInLab, provisioningState, resourceGroupName, tags, uniqueIdentifier, usageQuota, userAccessMode);

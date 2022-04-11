@@ -5,6 +5,7 @@ package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public SourceRepresentationInstanceArgs(
@@ -101,12 +102,12 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
     }
 
     private SourceRepresentationInstanceArgs() {
-        this.databaseVersion = Output.empty();
-        this.host = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.databaseVersion = Codegen.empty();
+        this.host = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -168,7 +169,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -176,7 +177,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -184,7 +185,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public SourceRepresentationInstanceArgs build() {
             return new SourceRepresentationInstanceArgs(databaseVersion, host, name, port, project, region);

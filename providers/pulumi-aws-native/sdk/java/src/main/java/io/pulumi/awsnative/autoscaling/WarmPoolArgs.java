@@ -6,6 +6,7 @@ package io.pulumi.awsnative.autoscaling;
 import io.pulumi.awsnative.autoscaling.inputs.WarmPoolInstanceReusePolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,28 +28,28 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WarmPoolInstanceReusePolicyArgs> instanceReusePolicy;
 
     public Output<WarmPoolInstanceReusePolicyArgs> getInstanceReusePolicy() {
-        return this.instanceReusePolicy == null ? Output.empty() : this.instanceReusePolicy;
+        return this.instanceReusePolicy == null ? Codegen.empty() : this.instanceReusePolicy;
     }
 
     @Import(name="maxGroupPreparedCapacity")
       private final @Nullable Output<Integer> maxGroupPreparedCapacity;
 
     public Output<Integer> getMaxGroupPreparedCapacity() {
-        return this.maxGroupPreparedCapacity == null ? Output.empty() : this.maxGroupPreparedCapacity;
+        return this.maxGroupPreparedCapacity == null ? Codegen.empty() : this.maxGroupPreparedCapacity;
     }
 
     @Import(name="minSize")
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     @Import(name="poolState")
       private final @Nullable Output<String> poolState;
 
     public Output<String> getPoolState() {
-        return this.poolState == null ? Output.empty() : this.poolState;
+        return this.poolState == null ? Codegen.empty() : this.poolState;
     }
 
     public WarmPoolArgs(
@@ -65,11 +66,11 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WarmPoolArgs() {
-        this.autoScalingGroupName = Output.empty();
-        this.instanceReusePolicy = Output.empty();
-        this.maxGroupPreparedCapacity = Output.empty();
-        this.minSize = Output.empty();
-        this.poolState = Output.empty();
+        this.autoScalingGroupName = Codegen.empty();
+        this.instanceReusePolicy = Codegen.empty();
+        this.maxGroupPreparedCapacity = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.poolState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceReusePolicy(@Nullable WarmPoolInstanceReusePolicyArgs instanceReusePolicy) {
-            this.instanceReusePolicy = Output.ofNullable(instanceReusePolicy);
+            this.instanceReusePolicy = Codegen.ofNullable(instanceReusePolicy);
             return this;
         }
         public Builder maxGroupPreparedCapacity(@Nullable Output<Integer> maxGroupPreparedCapacity) {
@@ -121,7 +122,7 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxGroupPreparedCapacity(@Nullable Integer maxGroupPreparedCapacity) {
-            this.maxGroupPreparedCapacity = Output.ofNullable(maxGroupPreparedCapacity);
+            this.maxGroupPreparedCapacity = Codegen.ofNullable(maxGroupPreparedCapacity);
             return this;
         }
         public Builder minSize(@Nullable Output<Integer> minSize) {
@@ -129,7 +130,7 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }
         public Builder poolState(@Nullable Output<String> poolState) {
@@ -137,7 +138,7 @@ public final class WarmPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder poolState(@Nullable String poolState) {
-            this.poolState = Output.ofNullable(poolState);
+            this.poolState = Codegen.ofNullable(poolState);
             return this;
         }        public WarmPoolArgs build() {
             return new WarmPoolArgs(autoScalingGroupName, instanceReusePolicy, maxGroupPreparedCapacity, minSize, poolState);

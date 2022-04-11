@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowWriteOperationType;
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +22,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
       private final @Nullable Output<FlowErrorHandlingConfigArgs> errorHandlingConfig;
 
     public Output<FlowErrorHandlingConfigArgs> getErrorHandlingConfig() {
-        return this.errorHandlingConfig == null ? Output.empty() : this.errorHandlingConfig;
+        return this.errorHandlingConfig == null ? Codegen.empty() : this.errorHandlingConfig;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> idFieldNames;
 
     public Output<List<String>> getIdFieldNames() {
-        return this.idFieldNames == null ? Output.empty() : this.idFieldNames;
+        return this.idFieldNames == null ? Codegen.empty() : this.idFieldNames;
     }
 
     @Import(name="object", required=true)
@@ -46,7 +47,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
       private final @Nullable Output<FlowWriteOperationType> writeOperationType;
 
     public Output<FlowWriteOperationType> getWriteOperationType() {
-        return this.writeOperationType == null ? Output.empty() : this.writeOperationType;
+        return this.writeOperationType == null ? Codegen.empty() : this.writeOperationType;
     }
 
     public FlowZendeskDestinationPropertiesArgs(
@@ -61,10 +62,10 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
     }
 
     private FlowZendeskDestinationPropertiesArgs() {
-        this.errorHandlingConfig = Output.empty();
-        this.idFieldNames = Output.empty();
-        this.object = Output.empty();
-        this.writeOperationType = Output.empty();
+        this.errorHandlingConfig = Codegen.empty();
+        this.idFieldNames = Codegen.empty();
+        this.object = Codegen.empty();
+        this.writeOperationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder errorHandlingConfig(@Nullable FlowErrorHandlingConfigArgs errorHandlingConfig) {
-            this.errorHandlingConfig = Output.ofNullable(errorHandlingConfig);
+            this.errorHandlingConfig = Codegen.ofNullable(errorHandlingConfig);
             return this;
         }
         public Builder idFieldNames(@Nullable Output<List<String>> idFieldNames) {
@@ -106,7 +107,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder idFieldNames(@Nullable List<String> idFieldNames) {
-            this.idFieldNames = Output.ofNullable(idFieldNames);
+            this.idFieldNames = Codegen.ofNullable(idFieldNames);
             return this;
         }
         public Builder idFieldNames(String... idFieldNames) {
@@ -125,7 +126,7 @@ public final class FlowZendeskDestinationPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder writeOperationType(@Nullable FlowWriteOperationType writeOperationType) {
-            this.writeOperationType = Output.ofNullable(writeOperationType);
+            this.writeOperationType = Codegen.ofNullable(writeOperationType);
             return this;
         }        public FlowZendeskDestinationPropertiesArgs build() {
             return new FlowZendeskDestinationPropertiesArgs(errorHandlingConfig, idFieldNames, object, writeOperationType);

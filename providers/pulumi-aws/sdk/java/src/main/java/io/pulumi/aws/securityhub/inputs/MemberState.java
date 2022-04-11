@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> invite;
 
     public Output<Boolean> getInvite() {
-        return this.invite == null ? Output.empty() : this.invite;
+        return this.invite == null ? Codegen.empty() : this.invite;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> masterId;
 
     public Output<String> getMasterId() {
-        return this.masterId == null ? Output.empty() : this.masterId;
+        return this.masterId == null ? Codegen.empty() : this.masterId;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> memberStatus;
 
     public Output<String> getMemberStatus() {
-        return this.memberStatus == null ? Output.empty() : this.memberStatus;
+        return this.memberStatus == null ? Codegen.empty() : this.memberStatus;
     }
 
     public MemberState(
@@ -84,11 +85,11 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MemberState() {
-        this.accountId = Output.empty();
-        this.email = Output.empty();
-        this.invite = Output.empty();
-        this.masterId = Output.empty();
-        this.memberStatus = Output.empty();
+        this.accountId = Codegen.empty();
+        this.email = Codegen.empty();
+        this.invite = Codegen.empty();
+        this.masterId = Codegen.empty();
+        this.memberStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -132,7 +133,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder invite(@Nullable Output<Boolean> invite) {
@@ -140,7 +141,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invite(@Nullable Boolean invite) {
-            this.invite = Output.ofNullable(invite);
+            this.invite = Codegen.ofNullable(invite);
             return this;
         }
         public Builder masterId(@Nullable Output<String> masterId) {
@@ -148,7 +149,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterId(@Nullable String masterId) {
-            this.masterId = Output.ofNullable(masterId);
+            this.masterId = Codegen.ofNullable(masterId);
             return this;
         }
         public Builder memberStatus(@Nullable Output<String> memberStatus) {
@@ -156,7 +157,7 @@ public final class MemberState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memberStatus(@Nullable String memberStatus) {
-            this.memberStatus = Output.ofNullable(memberStatus);
+            this.memberStatus = Codegen.ofNullable(memberStatus);
             return this;
         }        public MemberState build() {
             return new MemberState(accountId, email, invite, masterId, memberStatus);

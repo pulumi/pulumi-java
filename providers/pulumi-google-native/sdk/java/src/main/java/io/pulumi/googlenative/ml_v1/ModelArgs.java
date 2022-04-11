@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> onlinePredictionConsoleLogging;
 
     public Output<Boolean> getOnlinePredictionConsoleLogging() {
-        return this.onlinePredictionConsoleLogging == null ? Output.empty() : this.onlinePredictionConsoleLogging;
+        return this.onlinePredictionConsoleLogging == null ? Codegen.empty() : this.onlinePredictionConsoleLogging;
     }
 
     /**
@@ -80,14 +81,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> onlinePredictionLogging;
 
     public Output<Boolean> getOnlinePredictionLogging() {
-        return this.onlinePredictionLogging == null ? Output.empty() : this.onlinePredictionLogging;
+        return this.onlinePredictionLogging == null ? Codegen.empty() : this.onlinePredictionLogging;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     public ModelArgs(
@@ -121,14 +122,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.onlinePredictionConsoleLogging = Output.empty();
-        this.onlinePredictionLogging = Output.empty();
-        this.project = Output.empty();
-        this.regions = Output.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.onlinePredictionConsoleLogging = Codegen.empty();
+        this.onlinePredictionLogging = Codegen.empty();
+        this.project = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -178,7 +179,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -186,7 +187,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -194,7 +195,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder onlinePredictionConsoleLogging(@Nullable Output<Boolean> onlinePredictionConsoleLogging) {
@@ -202,7 +203,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onlinePredictionConsoleLogging(@Nullable Boolean onlinePredictionConsoleLogging) {
-            this.onlinePredictionConsoleLogging = Output.ofNullable(onlinePredictionConsoleLogging);
+            this.onlinePredictionConsoleLogging = Codegen.ofNullable(onlinePredictionConsoleLogging);
             return this;
         }
         public Builder onlinePredictionLogging(@Nullable Output<Boolean> onlinePredictionLogging) {
@@ -210,7 +211,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onlinePredictionLogging(@Nullable Boolean onlinePredictionLogging) {
-            this.onlinePredictionLogging = Output.ofNullable(onlinePredictionLogging);
+            this.onlinePredictionLogging = Codegen.ofNullable(onlinePredictionLogging);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -218,7 +219,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder regions(@Nullable Output<List<String>> regions) {
@@ -226,7 +227,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {

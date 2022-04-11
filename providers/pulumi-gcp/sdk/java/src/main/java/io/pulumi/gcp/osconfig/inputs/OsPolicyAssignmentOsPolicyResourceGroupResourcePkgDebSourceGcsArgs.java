@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
       private final @Nullable Output<Integer> generation;
 
     public Output<Integer> getGeneration() {
-        return this.generation == null ? Output.empty() : this.generation;
+        return this.generation == null ? Codegen.empty() : this.generation;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGcsArgs() {
-        this.bucket = Output.empty();
-        this.generation = Output.empty();
-        this.object = Output.empty();
+        this.bucket = Codegen.empty();
+        this.generation = Codegen.empty();
+        this.object = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebSourceGc
             return this;
         }
         public Builder generation(@Nullable Integer generation) {
-            this.generation = Output.ofNullable(generation);
+            this.generation = Codegen.ofNullable(generation);
             return this;
         }
         public Builder object(Output<String> object) {

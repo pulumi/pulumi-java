@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> health;
 
     public Output<String> getHealth() {
-        return this.health == null ? Output.empty() : this.health;
+        return this.health == null ? Codegen.empty() : this.health;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> predict;
 
     public Output<String> getPredict() {
-        return this.predict == null ? Output.empty() : this.predict;
+        return this.predict == null ? Codegen.empty() : this.predict;
     }
 
     public GoogleCloudMlV1__RouteMapArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
     }
 
     private GoogleCloudMlV1__RouteMapArgs() {
-        this.health = Output.empty();
-        this.predict = Output.empty();
+        this.health = Codegen.empty();
+        this.predict = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder health(@Nullable String health) {
-            this.health = Output.ofNullable(health);
+            this.health = Codegen.ofNullable(health);
             return this;
         }
         public Builder predict(@Nullable Output<String> predict) {
@@ -87,7 +88,7 @@ public final class GoogleCloudMlV1__RouteMapArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder predict(@Nullable String predict) {
-            this.predict = Output.ofNullable(predict);
+            this.predict = Codegen.ofNullable(predict);
             return this;
         }        public GoogleCloudMlV1__RouteMapArgs build() {
             return new GoogleCloudMlV1__RouteMapArgs(health, predict);

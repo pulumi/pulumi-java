@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
     }
 
     private DataSourcePrestoParametersArgs() {
-        this.catalog = Output.empty();
-        this.host = Output.empty();
-        this.port = Output.empty();
+        this.catalog = Codegen.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

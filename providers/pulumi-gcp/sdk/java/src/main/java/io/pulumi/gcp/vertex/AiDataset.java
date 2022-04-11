@@ -6,6 +6,7 @@ package io.pulumi.gcp.vertex;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vertex.AiDatasetArgs;
 import io.pulumi.gcp.vertex.inputs.AiDatasetState;
@@ -189,7 +190,7 @@ public class AiDataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AiDataset(String name, AiDatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:vertex/aiDataset:AiDataset", name, args == null ? AiDatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AiDataset(String name, Output<String> id, @Nullable AiDatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

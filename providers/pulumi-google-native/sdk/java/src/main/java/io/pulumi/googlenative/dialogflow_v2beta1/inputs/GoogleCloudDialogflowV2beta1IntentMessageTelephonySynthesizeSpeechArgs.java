@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
       private final @Nullable Output<String> ssml;
 
     public Output<String> getSsml() {
-        return this.ssml == null ? Output.empty() : this.ssml;
+        return this.ssml == null ? Codegen.empty() : this.ssml;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
       private final @Nullable Output<String> text;
 
     public Output<String> getText() {
-        return this.text == null ? Output.empty() : this.text;
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs() {
-        this.ssml = Output.empty();
-        this.text = Output.empty();
+        this.ssml = Codegen.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             return this;
         }
         public Builder ssml(@Nullable String ssml) {
-            this.ssml = Output.ofNullable(ssml);
+            this.ssml = Codegen.ofNullable(ssml);
             return this;
         }
         public Builder text(@Nullable Output<String> text) {
@@ -87,7 +88,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeS
             return this;
         }
         public Builder text(@Nullable String text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechArgs(ssml, text);

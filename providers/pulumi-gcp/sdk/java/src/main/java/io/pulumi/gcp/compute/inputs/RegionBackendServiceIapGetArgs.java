@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> oauth2ClientSecretSha256;
 
     public Output<String> getOauth2ClientSecretSha256() {
-        return this.oauth2ClientSecretSha256 == null ? Output.empty() : this.oauth2ClientSecretSha256;
+        return this.oauth2ClientSecretSha256 == null ? Codegen.empty() : this.oauth2ClientSecretSha256;
     }
 
     public RegionBackendServiceIapGetArgs(
@@ -60,9 +61,9 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
     }
 
     private RegionBackendServiceIapGetArgs() {
-        this.oauth2ClientId = Output.empty();
-        this.oauth2ClientSecret = Output.empty();
-        this.oauth2ClientSecretSha256 = Output.empty();
+        this.oauth2ClientId = Codegen.empty();
+        this.oauth2ClientSecret = Codegen.empty();
+        this.oauth2ClientSecretSha256 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class RegionBackendServiceIapGetArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder oauth2ClientSecretSha256(@Nullable String oauth2ClientSecretSha256) {
-            this.oauth2ClientSecretSha256 = Output.ofNullable(oauth2ClientSecretSha256);
+            this.oauth2ClientSecretSha256 = Codegen.ofNullable(oauth2ClientSecretSha256);
             return this;
         }        public RegionBackendServiceIapGetArgs build() {
             return new RegionBackendServiceIapGetArgs(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);

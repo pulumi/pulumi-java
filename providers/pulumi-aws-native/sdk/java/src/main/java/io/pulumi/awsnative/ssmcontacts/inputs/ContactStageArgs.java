@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactTargetsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ContactTargetsArgs>> targets;
 
     public Output<List<ContactTargetsArgs>> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     public ContactStageArgs(
@@ -50,8 +51,8 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactStageArgs() {
-        this.durationInMinutes = Output.empty();
-        this.targets = Output.empty();
+        this.durationInMinutes = Codegen.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class ContactStageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targets(@Nullable List<ContactTargetsArgs> targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder targets(ContactTargetsArgs... targets) {

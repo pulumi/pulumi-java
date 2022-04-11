@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigCaOptionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigX509ConfigKeyUsageArgs;
@@ -28,7 +29,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> additionalExtensions;
 
     public Output<List<AuthorityConfigX509ConfigAdditionalExtensionArgs>> getAdditionalExtensions() {
-        return this.additionalExtensions == null ? Output.empty() : this.additionalExtensions;
+        return this.additionalExtensions == null ? Codegen.empty() : this.additionalExtensions;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> aiaOcspServers;
 
     public Output<List<String>> getAiaOcspServers() {
-        return this.aiaOcspServers == null ? Output.empty() : this.aiaOcspServers;
+        return this.aiaOcspServers == null ? Codegen.empty() : this.aiaOcspServers;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<AuthorityConfigX509ConfigPolicyIdArgs>> policyIds;
 
     public Output<List<AuthorityConfigX509ConfigPolicyIdArgs>> getPolicyIds() {
-        return this.policyIds == null ? Output.empty() : this.policyIds;
+        return this.policyIds == null ? Codegen.empty() : this.policyIds;
     }
 
     public AuthorityConfigX509ConfigArgs(
@@ -93,11 +94,11 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
     }
 
     private AuthorityConfigX509ConfigArgs() {
-        this.additionalExtensions = Output.empty();
-        this.aiaOcspServers = Output.empty();
-        this.caOptions = Output.empty();
-        this.keyUsage = Output.empty();
-        this.policyIds = Output.empty();
+        this.additionalExtensions = Codegen.empty();
+        this.aiaOcspServers = Codegen.empty();
+        this.caOptions = Codegen.empty();
+        this.keyUsage = Codegen.empty();
+        this.policyIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder additionalExtensions(@Nullable List<AuthorityConfigX509ConfigAdditionalExtensionArgs> additionalExtensions) {
-            this.additionalExtensions = Output.ofNullable(additionalExtensions);
+            this.additionalExtensions = Codegen.ofNullable(additionalExtensions);
             return this;
         }
         public Builder additionalExtensions(AuthorityConfigX509ConfigAdditionalExtensionArgs... additionalExtensions) {
@@ -144,7 +145,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder aiaOcspServers(@Nullable List<String> aiaOcspServers) {
-            this.aiaOcspServers = Output.ofNullable(aiaOcspServers);
+            this.aiaOcspServers = Codegen.ofNullable(aiaOcspServers);
             return this;
         }
         public Builder aiaOcspServers(String... aiaOcspServers) {
@@ -171,7 +172,7 @@ public final class AuthorityConfigX509ConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder policyIds(@Nullable List<AuthorityConfigX509ConfigPolicyIdArgs> policyIds) {
-            this.policyIds = Output.ofNullable(policyIds);
+            this.policyIds = Codegen.ofNullable(policyIds);
             return this;
         }
         public Builder policyIds(AuthorityConfigX509ConfigPolicyIdArgs... policyIds) {

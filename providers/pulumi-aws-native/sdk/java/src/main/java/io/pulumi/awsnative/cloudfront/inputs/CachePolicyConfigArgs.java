@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="defaultTTL", required=true)
@@ -74,12 +75,12 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CachePolicyConfigArgs() {
-        this.comment = Output.empty();
-        this.defaultTTL = Output.empty();
-        this.maxTTL = Output.empty();
-        this.minTTL = Output.empty();
-        this.name = Output.empty();
-        this.parametersInCacheKeyAndForwardedToOrigin = Output.empty();
+        this.comment = Codegen.empty();
+        this.defaultTTL = Codegen.empty();
+        this.maxTTL = Codegen.empty();
+        this.minTTL = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parametersInCacheKeyAndForwardedToOrigin = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class CachePolicyConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder defaultTTL(Output<Double> defaultTTL) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.guardduty.outputs.OrganizationConfigurationDatasources;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -97,7 +98,7 @@ public class OrganizationConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationConfiguration(String name, OrganizationConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:guardduty/organizationConfiguration:OrganizationConfiguration", name, args == null ? OrganizationConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:guardduty/organizationConfiguration:OrganizationConfiguration", name, args == null ? OrganizationConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationConfiguration(String name, Output<String> id, @Nullable OrganizationConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

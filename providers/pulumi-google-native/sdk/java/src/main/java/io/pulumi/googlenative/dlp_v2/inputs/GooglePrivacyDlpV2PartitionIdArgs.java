@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
       private final @Nullable Output<String> namespaceId;
 
     public Output<String> getNamespaceId() {
-        return this.namespaceId == null ? Output.empty() : this.namespaceId;
+        return this.namespaceId == null ? Codegen.empty() : this.namespaceId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public GooglePrivacyDlpV2PartitionIdArgs(
@@ -48,8 +49,8 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
     }
 
     private GooglePrivacyDlpV2PartitionIdArgs() {
-        this.namespaceId = Output.empty();
-        this.project = Output.empty();
+        this.namespaceId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
             return this;
         }
         public Builder namespaceId(@Nullable String namespaceId) {
-            this.namespaceId = Output.ofNullable(namespaceId);
+            this.namespaceId = Codegen.ofNullable(namespaceId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -87,7 +88,7 @@ public final class GooglePrivacyDlpV2PartitionIdArgs extends io.pulumi.resources
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public GooglePrivacyDlpV2PartitionIdArgs build() {
             return new GooglePrivacyDlpV2PartitionIdArgs(namespaceId, project);

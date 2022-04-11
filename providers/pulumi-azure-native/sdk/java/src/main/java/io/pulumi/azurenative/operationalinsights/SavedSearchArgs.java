@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.operationalinsights.inputs.TagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> functionAlias;
 
     public Output<String> getFunctionAlias() {
-        return this.functionAlias == null ? Output.empty() : this.functionAlias;
+        return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> functionParameters;
 
     public Output<String> getFunctionParameters() {
-        return this.functionParameters == null ? Output.empty() : this.functionParameters;
+        return this.functionParameters == null ? Codegen.empty() : this.functionParameters;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> savedSearchId;
 
     public Output<String> getSavedSearchId() {
-        return this.savedSearchId == null ? Output.empty() : this.savedSearchId;
+        return this.savedSearchId == null ? Codegen.empty() : this.savedSearchId;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TagArgs>> tags;
 
     public Output<List<TagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> version;
 
     public Output<Double> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -151,16 +152,16 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SavedSearchArgs() {
-        this.category = Output.empty();
-        this.displayName = Output.empty();
-        this.functionAlias = Output.empty();
-        this.functionParameters = Output.empty();
-        this.query = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.savedSearchId = Output.empty();
-        this.tags = Output.empty();
-        this.version = Output.empty();
-        this.workspaceName = Output.empty();
+        this.category = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.functionAlias = Codegen.empty();
+        this.functionParameters = Codegen.empty();
+        this.query = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.savedSearchId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Output.ofNullable(functionAlias);
+            this.functionAlias = Codegen.ofNullable(functionAlias);
             return this;
         }
         public Builder functionParameters(@Nullable Output<String> functionParameters) {
@@ -230,7 +231,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder functionParameters(@Nullable String functionParameters) {
-            this.functionParameters = Output.ofNullable(functionParameters);
+            this.functionParameters = Codegen.ofNullable(functionParameters);
             return this;
         }
         public Builder query(Output<String> query) {
@@ -254,7 +255,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder savedSearchId(@Nullable String savedSearchId) {
-            this.savedSearchId = Output.ofNullable(savedSearchId);
+            this.savedSearchId = Codegen.ofNullable(savedSearchId);
             return this;
         }
         public Builder tags(@Nullable Output<List<TagArgs>> tags) {
@@ -262,7 +263,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TagArgs... tags) {
@@ -273,7 +274,7 @@ public final class SavedSearchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Double version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.datafusion_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datafusion_v1beta1.InstanceNamespaceIamPolicyArgs;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class InstanceNamespaceIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceNamespaceIamPolicy(String name, InstanceNamespaceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:datafusion/v1beta1:InstanceNamespaceIamPolicy", name, args == null ? InstanceNamespaceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:datafusion/v1beta1:InstanceNamespaceIamPolicy", name, args == null ? InstanceNamespaceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceNamespaceIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

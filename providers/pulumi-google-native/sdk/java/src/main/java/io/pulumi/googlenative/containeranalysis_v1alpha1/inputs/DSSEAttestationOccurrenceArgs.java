@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.EnvelopeArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementArgs;
 import java.util.Objects;
@@ -27,14 +28,14 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<EnvelopeArgs> envelope;
 
     public Output<EnvelopeArgs> getEnvelope() {
-        return this.envelope == null ? Output.empty() : this.envelope;
+        return this.envelope == null ? Codegen.empty() : this.envelope;
     }
 
     @Import(name="statement")
       private final @Nullable Output<InTotoStatementArgs> statement;
 
     public Output<InTotoStatementArgs> getStatement() {
-        return this.statement == null ? Output.empty() : this.statement;
+        return this.statement == null ? Codegen.empty() : this.statement;
     }
 
     public DSSEAttestationOccurrenceArgs(
@@ -45,8 +46,8 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
     }
 
     private DSSEAttestationOccurrenceArgs() {
-        this.envelope = Output.empty();
-        this.statement = Output.empty();
+        this.envelope = Codegen.empty();
+        this.statement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder envelope(@Nullable EnvelopeArgs envelope) {
-            this.envelope = Output.ofNullable(envelope);
+            this.envelope = Codegen.ofNullable(envelope);
             return this;
         }
         public Builder statement(@Nullable Output<InTotoStatementArgs> statement) {
@@ -84,7 +85,7 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder statement(@Nullable InTotoStatementArgs statement) {
-            this.statement = Output.ofNullable(statement);
+            this.statement = Codegen.ofNullable(statement);
             return this;
         }        public DSSEAttestationOccurrenceArgs build() {
             return new DSSEAttestationOccurrenceArgs(envelope, statement);

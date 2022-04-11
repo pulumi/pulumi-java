@@ -5,6 +5,7 @@ package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> durationInSeconds;
 
     public Output<Integer> getDurationInSeconds() {
-        return this.durationInSeconds == null ? Output.empty() : this.durationInSeconds;
+        return this.durationInSeconds == null ? Codegen.empty() : this.durationInSeconds;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CanaryScheduleGetArgs() {
-        this.durationInSeconds = Output.empty();
-        this.expression = Output.empty();
+        this.durationInSeconds = Codegen.empty();
+        this.expression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class CanaryScheduleGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder durationInSeconds(@Nullable Integer durationInSeconds) {
-            this.durationInSeconds = Output.ofNullable(durationInSeconds);
+            this.durationInSeconds = Codegen.ofNullable(durationInSeconds);
             return this;
         }
         public Builder expression(Output<String> expression) {

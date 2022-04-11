@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> bucketName;
 
     public Output<Object> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> fileName;
 
     public Output<Object> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> folderPath;
 
     public Output<Object> getFolderPath() {
-        return this.folderPath == null ? Output.empty() : this.folderPath;
+        return this.folderPath == null ? Codegen.empty() : this.folderPath;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> version;
 
     public Output<Object> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public AmazonS3LocationArgs(
@@ -89,11 +90,11 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AmazonS3LocationArgs() {
-        this.bucketName = Output.empty();
-        this.fileName = Output.empty();
-        this.folderPath = Output.empty();
-        this.type = Output.empty();
-        this.version = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.fileName = Codegen.empty();
+        this.folderPath = Codegen.empty();
+        this.type = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bucketName(@Nullable Object bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder fileName(@Nullable Output<Object> fileName) {
@@ -137,7 +138,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fileName(@Nullable Object fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder folderPath(@Nullable Output<Object> folderPath) {
@@ -145,7 +146,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder folderPath(@Nullable Object folderPath) {
-            this.folderPath = Output.ofNullable(folderPath);
+            this.folderPath = Codegen.ofNullable(folderPath);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -161,7 +162,7 @@ public final class AmazonS3LocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder version(@Nullable Object version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public AmazonS3LocationArgs build() {
             return new AmazonS3LocationArgs(bucketName, fileName, folderPath, type, version);

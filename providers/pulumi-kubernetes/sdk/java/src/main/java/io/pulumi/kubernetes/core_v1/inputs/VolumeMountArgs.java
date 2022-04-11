@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mountPropagation;
 
     public Output<String> getMountPropagation() {
-        return this.mountPropagation == null ? Output.empty() : this.mountPropagation;
+        return this.mountPropagation == null ? Codegen.empty() : this.mountPropagation;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subPath;
 
     public Output<String> getSubPath() {
-        return this.subPath == null ? Output.empty() : this.subPath;
+        return this.subPath == null ? Codegen.empty() : this.subPath;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subPathExpr;
 
     public Output<String> getSubPathExpr() {
-        return this.subPathExpr == null ? Output.empty() : this.subPathExpr;
+        return this.subPathExpr == null ? Codegen.empty() : this.subPathExpr;
     }
 
     public VolumeMountArgs(
@@ -101,12 +102,12 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VolumeMountArgs() {
-        this.mountPath = Output.empty();
-        this.mountPropagation = Output.empty();
-        this.name = Output.empty();
-        this.readOnly = Output.empty();
-        this.subPath = Output.empty();
-        this.subPathExpr = Output.empty();
+        this.mountPath = Codegen.empty();
+        this.mountPropagation = Codegen.empty();
+        this.name = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.subPath = Codegen.empty();
+        this.subPathExpr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountPropagation(@Nullable String mountPropagation) {
-            this.mountPropagation = Output.ofNullable(mountPropagation);
+            this.mountPropagation = Codegen.ofNullable(mountPropagation);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -168,7 +169,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder subPath(@Nullable Output<String> subPath) {
@@ -176,7 +177,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subPath(@Nullable String subPath) {
-            this.subPath = Output.ofNullable(subPath);
+            this.subPath = Codegen.ofNullable(subPath);
             return this;
         }
         public Builder subPathExpr(@Nullable Output<String> subPathExpr) {
@@ -184,7 +185,7 @@ public final class VolumeMountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subPathExpr(@Nullable String subPathExpr) {
-            this.subPathExpr = Output.ofNullable(subPathExpr);
+            this.subPathExpr = Codegen.ofNullable(subPathExpr);
             return this;
         }        public VolumeMountArgs build() {
             return new VolumeMountArgs(mountPath, mountPropagation, name, readOnly, subPath, subPathExpr);

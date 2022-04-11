@@ -6,6 +6,7 @@ package io.pulumi.awsnative.fms.inputs;
 import io.pulumi.awsnative.fms.enums.PolicySecurityServicePolicyDataPropertiesType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class SecurityServicePolicyDataPropertiesArgs extends io.pulumi.res
       private final @Nullable Output<String> managedServiceData;
 
     public Output<String> getManagedServiceData() {
-        return this.managedServiceData == null ? Output.empty() : this.managedServiceData;
+        return this.managedServiceData == null ? Codegen.empty() : this.managedServiceData;
     }
 
     @Import(name="type", required=true)
@@ -37,8 +38,8 @@ public final class SecurityServicePolicyDataPropertiesArgs extends io.pulumi.res
     }
 
     private SecurityServicePolicyDataPropertiesArgs() {
-        this.managedServiceData = Output.empty();
-        this.type = Output.empty();
+        this.managedServiceData = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class SecurityServicePolicyDataPropertiesArgs extends io.pulumi.res
             return this;
         }
         public Builder managedServiceData(@Nullable String managedServiceData) {
-            this.managedServiceData = Output.ofNullable(managedServiceData);
+            this.managedServiceData = Codegen.ofNullable(managedServiceData);
             return this;
         }
         public Builder type(Output<PolicySecurityServicePolicyDataPropertiesType> type) {

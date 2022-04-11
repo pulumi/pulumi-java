@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.DateAfterCreationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<DateAfterCreationArgs> delete;
 
     public Output<DateAfterCreationArgs> getDelete() {
-        return this.delete == null ? Output.empty() : this.delete;
+        return this.delete == null ? Codegen.empty() : this.delete;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<DateAfterCreationArgs> tierToArchive;
 
     public Output<DateAfterCreationArgs> getTierToArchive() {
-        return this.tierToArchive == null ? Output.empty() : this.tierToArchive;
+        return this.tierToArchive == null ? Codegen.empty() : this.tierToArchive;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<DateAfterCreationArgs> tierToCool;
 
     public Output<DateAfterCreationArgs> getTierToCool() {
-        return this.tierToCool == null ? Output.empty() : this.tierToCool;
+        return this.tierToCool == null ? Codegen.empty() : this.tierToCool;
     }
 
     public ManagementPolicyVersionArgs(
@@ -61,9 +62,9 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
     }
 
     private ManagementPolicyVersionArgs() {
-        this.delete = Output.empty();
-        this.tierToArchive = Output.empty();
-        this.tierToCool = Output.empty();
+        this.delete = Codegen.empty();
+        this.tierToArchive = Codegen.empty();
+        this.tierToCool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder delete(@Nullable DateAfterCreationArgs delete) {
-            this.delete = Output.ofNullable(delete);
+            this.delete = Codegen.ofNullable(delete);
             return this;
         }
         public Builder tierToArchive(@Nullable Output<DateAfterCreationArgs> tierToArchive) {
@@ -103,7 +104,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tierToArchive(@Nullable DateAfterCreationArgs tierToArchive) {
-            this.tierToArchive = Output.ofNullable(tierToArchive);
+            this.tierToArchive = Codegen.ofNullable(tierToArchive);
             return this;
         }
         public Builder tierToCool(@Nullable Output<DateAfterCreationArgs> tierToCool) {
@@ -111,7 +112,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tierToCool(@Nullable DateAfterCreationArgs tierToCool) {
-            this.tierToCool = Output.ofNullable(tierToCool);
+            this.tierToCool = Codegen.ofNullable(tierToCool);
             return this;
         }        public ManagementPolicyVersionArgs build() {
             return new ManagementPolicyVersionArgs(delete, tierToArchive, tierToCool);

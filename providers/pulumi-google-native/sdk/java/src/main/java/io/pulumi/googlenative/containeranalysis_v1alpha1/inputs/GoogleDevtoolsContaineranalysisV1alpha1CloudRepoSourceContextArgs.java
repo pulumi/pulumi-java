@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> aliasContext;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs> getAliasContext() {
-        return this.aliasContext == null ? Output.empty() : this.aliasContext;
+        return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> getRepoId() {
-        return this.repoId == null ? Output.empty() : this.repoId;
+        return this.repoId == null ? Codegen.empty() : this.repoId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs(
@@ -63,9 +64,9 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs() {
-        this.aliasContext = Output.empty();
-        this.repoId = Output.empty();
-        this.revisionId = Output.empty();
+        this.aliasContext = Codegen.empty();
+        this.repoId = Codegen.empty();
+        this.revisionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             return this;
         }
         public Builder aliasContext(@Nullable GoogleDevtoolsContaineranalysisV1alpha1AliasContextArgs aliasContext) {
-            this.aliasContext = Output.ofNullable(aliasContext);
+            this.aliasContext = Codegen.ofNullable(aliasContext);
             return this;
         }
         public Builder repoId(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs> repoId) {
@@ -105,7 +106,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             return this;
         }
         public Builder repoId(@Nullable GoogleDevtoolsContaineranalysisV1alpha1RepoIdArgs repoId) {
-            this.repoId = Output.ofNullable(repoId);
+            this.repoId = Codegen.ofNullable(repoId);
             return this;
         }
         public Builder revisionId(@Nullable Output<String> revisionId) {
@@ -113,7 +114,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContext
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }        public GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SSLCertificateArgs;
 import io.pulumi.gcp.compute.inputs.SSLCertificateState;
@@ -221,7 +222,7 @@ public class SSLCertificate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SSLCertificate(String name, SSLCertificateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/sSLCertificate:SSLCertificate", name, args == null ? SSLCertificateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/sSLCertificate:SSLCertificate", name, args == null ? SSLCertificateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SSLCertificate(String name, Output<String> id, @Nullable SSLCertificateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

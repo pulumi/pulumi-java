@@ -5,6 +5,7 @@ package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.spanner.inputs.DatabaseEncryptionConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ddls;
 
     public Output<List<String>> getDdls() {
-        return this.ddls == null ? Output.empty() : this.ddls;
+        return this.ddls == null ? Codegen.empty() : this.ddls;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deletionProtection;
 
     public Output<Boolean> getDeletionProtection() {
-        return this.deletionProtection == null ? Output.empty() : this.deletionProtection;
+        return this.deletionProtection == null ? Codegen.empty() : this.deletionProtection;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig;
 
     public Output<DatabaseEncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatabaseArgs(
@@ -106,12 +107,12 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.ddls = Output.empty();
-        this.deletionProtection = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.instance = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.ddls = Codegen.empty();
+        this.deletionProtection = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ddls(@Nullable List<String> ddls) {
-            this.ddls = Output.ofNullable(ddls);
+            this.ddls = Codegen.ofNullable(ddls);
             return this;
         }
         public Builder ddls(String... ddls) {
@@ -160,7 +161,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deletionProtection(@Nullable Boolean deletionProtection) {
-            this.deletionProtection = Output.ofNullable(deletionProtection);
+            this.deletionProtection = Codegen.ofNullable(deletionProtection);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<DatabaseEncryptionConfigArgs> encryptionConfig) {
@@ -168,7 +169,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable DatabaseEncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder instance(Output<String> instance) {
@@ -184,7 +185,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -192,7 +193,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatabaseArgs build() {
             return new DatabaseArgs(ddls, deletionProtection, encryptionConfig, instance, name, project);

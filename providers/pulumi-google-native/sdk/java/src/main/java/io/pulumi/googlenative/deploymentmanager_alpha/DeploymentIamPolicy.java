@@ -6,6 +6,7 @@ package io.pulumi.googlenative.deploymentmanager_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_alpha.DeploymentIamPolicyArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class DeploymentIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentIamPolicy(String name, DeploymentIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:deploymentmanager/alpha:DeploymentIamPolicy", name, args == null ? DeploymentIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:deploymentmanager/alpha:DeploymentIamPolicy", name, args == null ? DeploymentIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeploymentIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequest
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
       private final @Nullable Output<Either<String,Header>> header;
 
     public Output<Either<String,Header>> getHeader() {
-        return this.header == null ? Output.empty() : this.header;
+        return this.header == null ? Codegen.empty() : this.header;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
       private final @Nullable Output<Boolean> includePath;
 
     public Output<Boolean> getIncludePath() {
-        return this.includePath == null ? Output.empty() : this.includePath;
+        return this.includePath == null ? Codegen.empty() : this.includePath;
     }
 
     /**
@@ -50,21 +51,21 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
       private final @Nullable Output<String> partitionFormat;
 
     public Output<String> getPartitionFormat() {
-        return this.partitionFormat == null ? Output.empty() : this.partitionFormat;
+        return this.partitionFormat == null ? Codegen.empty() : this.partitionFormat;
     }
 
     @Import(name="path")
       private final @Nullable Output<DatasetCreateRequestPathArgs> path;
 
     public Output<DatasetCreateRequestPathArgs> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="query")
       private final @Nullable Output<DatasetCreateRequestQueryArgs> query;
 
     public Output<DatasetCreateRequestQueryArgs> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {
-        return this.separator == null ? Output.empty() : this.separator;
+        return this.separator == null ? Codegen.empty() : this.separator;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
       private final @Nullable Output<Either<String,SourceType>> sourceType;
 
     public Output<Either<String,SourceType>> getSourceType() {
-        return this.sourceType == null ? Output.empty() : this.sourceType;
+        return this.sourceType == null ? Codegen.empty() : this.sourceType;
     }
 
     public DatasetCreateRequestParametersArgs(
@@ -98,7 +99,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
         @Nullable Output<String> separator,
         @Nullable Output<Either<String,SourceType>> sourceType) {
         this.header = header;
-        this.includePath = includePath == null ? Output.ofNullable(false) : includePath;
+        this.includePath = includePath == null ? Codegen.ofNullable(false) : includePath;
         this.partitionFormat = partitionFormat;
         this.path = path;
         this.query = query;
@@ -107,13 +108,13 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
     }
 
     private DatasetCreateRequestParametersArgs() {
-        this.header = Output.empty();
-        this.includePath = Output.empty();
-        this.partitionFormat = Output.empty();
-        this.path = Output.empty();
-        this.query = Output.empty();
-        this.separator = Output.empty();
-        this.sourceType = Output.empty();
+        this.header = Codegen.empty();
+        this.includePath = Codegen.empty();
+        this.partitionFormat = Codegen.empty();
+        this.path = Codegen.empty();
+        this.query = Codegen.empty();
+        this.separator = Codegen.empty();
+        this.sourceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder header(@Nullable Either<String,Header> header) {
-            this.header = Output.ofNullable(header);
+            this.header = Codegen.ofNullable(header);
             return this;
         }
         public Builder includePath(@Nullable Output<Boolean> includePath) {
@@ -161,7 +162,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder includePath(@Nullable Boolean includePath) {
-            this.includePath = Output.ofNullable(includePath);
+            this.includePath = Codegen.ofNullable(includePath);
             return this;
         }
         public Builder partitionFormat(@Nullable Output<String> partitionFormat) {
@@ -169,7 +170,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder partitionFormat(@Nullable String partitionFormat) {
-            this.partitionFormat = Output.ofNullable(partitionFormat);
+            this.partitionFormat = Codegen.ofNullable(partitionFormat);
             return this;
         }
         public Builder path(@Nullable Output<DatasetCreateRequestPathArgs> path) {
@@ -177,7 +178,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder path(@Nullable DatasetCreateRequestPathArgs path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder query(@Nullable Output<DatasetCreateRequestQueryArgs> query) {
@@ -185,7 +186,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder query(@Nullable DatasetCreateRequestQueryArgs query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }
         public Builder separator(@Nullable Output<String> separator) {
@@ -193,7 +194,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder separator(@Nullable String separator) {
-            this.separator = Output.ofNullable(separator);
+            this.separator = Codegen.ofNullable(separator);
             return this;
         }
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
@@ -201,7 +202,7 @@ public final class DatasetCreateRequestParametersArgs extends io.pulumi.resource
             return this;
         }
         public Builder sourceType(@Nullable Either<String,SourceType> sourceType) {
-            this.sourceType = Output.ofNullable(sourceType);
+            this.sourceType = Codegen.ofNullable(sourceType);
             return this;
         }        public DatasetCreateRequestParametersArgs build() {
             return new DatasetCreateRequestParametersArgs(header, includePath, partitionFormat, path, query, separator, sourceType);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.glue;
 import io.pulumi.awsnative.glue.inputs.SchemaVersionSchemaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,8 +41,8 @@ public final class SchemaVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaVersionArgs() {
-        this.schema = Output.empty();
-        this.schemaDefinition = Output.empty();
+        this.schema = Codegen.empty();
+        this.schemaDefinition = Codegen.empty();
     }
 
     public static Builder builder() {

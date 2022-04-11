@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -477,7 +478,7 @@ public class AccessReviewScheduleDefinitionById extends io.pulumi.resources.Cust
      * @param options A bag of options that control this resource's behavior.
      */
     public AccessReviewScheduleDefinitionById(String name, @Nullable AccessReviewScheduleDefinitionByIdArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:AccessReviewScheduleDefinitionById", name, args == null ? AccessReviewScheduleDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:AccessReviewScheduleDefinitionById", name, args == null ? AccessReviewScheduleDefinitionByIdArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccessReviewScheduleDefinitionById(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

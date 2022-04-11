@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> billingAccountId;
 
     public Output<String> getBillingAccountId() {
-        return this.billingAccountId == null ? Output.empty() : this.billingAccountId;
+        return this.billingAccountId == null ? Codegen.empty() : this.billingAccountId;
     }
 
     @Import(name="etag")
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public AccountIamPolicyState(
@@ -45,9 +46,9 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private AccountIamPolicyState() {
-        this.billingAccountId = Output.empty();
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
+        this.billingAccountId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder billingAccountId(@Nullable String billingAccountId) {
-            this.billingAccountId = Output.ofNullable(billingAccountId);
+            this.billingAccountId = Codegen.ofNullable(billingAccountId);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -87,7 +88,7 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -95,7 +96,7 @@ public final class AccountIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public AccountIamPolicyState build() {
             return new AccountIamPolicyState(billingAccountId, etag, policyData);

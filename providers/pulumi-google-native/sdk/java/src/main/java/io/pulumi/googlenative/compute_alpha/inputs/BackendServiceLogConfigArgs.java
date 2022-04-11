@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Double> sampleRate;
 
     public Output<Double> getSampleRate() {
-        return this.sampleRate == null ? Output.empty() : this.sampleRate;
+        return this.sampleRate == null ? Codegen.empty() : this.sampleRate;
     }
 
     public BackendServiceLogConfigArgs(
@@ -49,8 +50,8 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
     }
 
     private BackendServiceLogConfigArgs() {
-        this.enable = Output.empty();
-        this.sampleRate = Output.empty();
+        this.enable = Codegen.empty();
+        this.sampleRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder sampleRate(@Nullable Output<Double> sampleRate) {
@@ -88,7 +89,7 @@ public final class BackendServiceLogConfigArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sampleRate(@Nullable Double sampleRate) {
-            this.sampleRate = Output.ofNullable(sampleRate);
+            this.sampleRate = Codegen.ofNullable(sampleRate);
             return this;
         }        public BackendServiceLogConfigArgs build() {
             return new BackendServiceLogConfigArgs(enable, sampleRate);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.NatRuleConditionArgs;
 import io.pulumi.azurenative.network.inputs.NetworkRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,7 +33,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<FirewallPolicyNatRuleActionArgs> action;
 
     public Output<FirewallPolicyNatRuleActionArgs> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Object> ruleCondition;
 
     public Output<Object> getRuleCondition() {
-        return this.ruleCondition == null ? Output.empty() : this.ruleCondition;
+        return this.ruleCondition == null ? Codegen.empty() : this.ruleCondition;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> translatedAddress;
 
     public Output<String> getTranslatedAddress() {
-        return this.translatedAddress == null ? Output.empty() : this.translatedAddress;
+        return this.translatedAddress == null ? Codegen.empty() : this.translatedAddress;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> translatedPort;
 
     public Output<String> getTranslatedPort() {
-        return this.translatedPort == null ? Output.empty() : this.translatedPort;
+        return this.translatedPort == null ? Codegen.empty() : this.translatedPort;
     }
 
     public FirewallPolicyNatRuleArgs(
@@ -120,13 +121,13 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
     }
 
     private FirewallPolicyNatRuleArgs() {
-        this.action = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.ruleCondition = Output.empty();
-        this.ruleType = Output.empty();
-        this.translatedAddress = Output.empty();
-        this.translatedPort = Output.empty();
+        this.action = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.ruleCondition = Codegen.empty();
+        this.ruleType = Codegen.empty();
+        this.translatedAddress = Codegen.empty();
+        this.translatedPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder action(@Nullable FirewallPolicyNatRuleActionArgs action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -174,7 +175,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -182,7 +183,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder ruleCondition(@Nullable Output<Object> ruleCondition) {
@@ -190,7 +191,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ruleCondition(@Nullable Object ruleCondition) {
-            this.ruleCondition = Output.ofNullable(ruleCondition);
+            this.ruleCondition = Codegen.ofNullable(ruleCondition);
             return this;
         }
         public Builder ruleType(Output<String> ruleType) {
@@ -206,7 +207,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder translatedAddress(@Nullable String translatedAddress) {
-            this.translatedAddress = Output.ofNullable(translatedAddress);
+            this.translatedAddress = Codegen.ofNullable(translatedAddress);
             return this;
         }
         public Builder translatedPort(@Nullable Output<String> translatedPort) {
@@ -214,7 +215,7 @@ public final class FirewallPolicyNatRuleArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder translatedPort(@Nullable String translatedPort) {
-            this.translatedPort = Output.ofNullable(translatedPort);
+            this.translatedPort = Codegen.ofNullable(translatedPort);
             return this;
         }        public FirewallPolicyNatRuleArgs build() {
             return new FirewallPolicyNatRuleArgs(action, name, priority, ruleCondition, ruleType, translatedAddress, translatedPort);

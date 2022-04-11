@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.AgreementContentArgs;
 import io.pulumi.azurenative.logic.inputs.BusinessIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> agreementName;
 
     public Output<String> getAgreementName() {
-        return this.agreementName == null ? Output.empty() : this.agreementName;
+        return this.agreementName == null ? Codegen.empty() : this.agreementName;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountAgreementArgs(
@@ -179,18 +180,18 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
     }
 
     private IntegrationAccountAgreementArgs() {
-        this.agreementName = Output.empty();
-        this.agreementType = Output.empty();
-        this.content = Output.empty();
-        this.guestIdentity = Output.empty();
-        this.guestPartner = Output.empty();
-        this.hostIdentity = Output.empty();
-        this.hostPartner = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.agreementName = Codegen.empty();
+        this.agreementType = Codegen.empty();
+        this.content = Codegen.empty();
+        this.guestIdentity = Codegen.empty();
+        this.guestPartner = Codegen.empty();
+        this.hostIdentity = Codegen.empty();
+        this.hostPartner = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder agreementName(@Nullable String agreementName) {
-            this.agreementName = Output.ofNullable(agreementName);
+            this.agreementName = Codegen.ofNullable(agreementName);
             return this;
         }
         public Builder agreementType(Output<AgreementType> agreementType) {
@@ -304,7 +305,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -312,7 +313,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -328,7 +329,7 @@ public final class IntegrationAccountAgreementArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountAgreementArgs build() {
             return new IntegrationAccountAgreementArgs(agreementName, agreementType, content, guestIdentity, guestPartner, hostIdentity, hostPartner, integrationAccountName, location, metadata, resourceGroupName, tags);

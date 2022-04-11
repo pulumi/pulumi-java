@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> encryptionUserAssignedIdentity;
 
     public Output<String> getEncryptionUserAssignedIdentity() {
-        return this.encryptionUserAssignedIdentity == null ? Output.empty() : this.encryptionUserAssignedIdentity;
+        return this.encryptionUserAssignedIdentity == null ? Codegen.empty() : this.encryptionUserAssignedIdentity;
     }
 
     public EncryptionIdentityArgs(@Nullable Output<String> encryptionUserAssignedIdentity) {
@@ -34,7 +35,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EncryptionIdentityArgs() {
-        this.encryptionUserAssignedIdentity = Output.empty();
+        this.encryptionUserAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EncryptionIdentityArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder encryptionUserAssignedIdentity(@Nullable String encryptionUserAssignedIdentity) {
-            this.encryptionUserAssignedIdentity = Output.ofNullable(encryptionUserAssignedIdentity);
+            this.encryptionUserAssignedIdentity = Codegen.ofNullable(encryptionUserAssignedIdentity);
             return this;
         }        public EncryptionIdentityArgs build() {
             return new EncryptionIdentityArgs(encryptionUserAssignedIdentity);

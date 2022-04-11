@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.DestinationPortBehavior;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<Either<String,DestinationPortBehavior>> destinationPortBehavior;
 
     public Output<Either<String,DestinationPortBehavior>> getDestinationPortBehavior() {
-        return this.destinationPortBehavior == null ? Output.empty() : this.destinationPortBehavior;
+        return this.destinationPortBehavior == null ? Codegen.empty() : this.destinationPortBehavior;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<Boolean> disableTraceRoute;
 
     public Output<Boolean> getDisableTraceRoute() {
-        return this.disableTraceRoute == null ? Output.empty() : this.disableTraceRoute;
+        return this.disableTraceRoute == null ? Codegen.empty() : this.disableTraceRoute;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ConnectionMonitorTcpConfigurationArgs(
@@ -65,9 +66,9 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
     }
 
     private ConnectionMonitorTcpConfigurationArgs() {
-        this.destinationPortBehavior = Output.empty();
-        this.disableTraceRoute = Output.empty();
-        this.port = Output.empty();
+        this.destinationPortBehavior = Codegen.empty();
+        this.disableTraceRoute = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder destinationPortBehavior(@Nullable Either<String,DestinationPortBehavior> destinationPortBehavior) {
-            this.destinationPortBehavior = Output.ofNullable(destinationPortBehavior);
+            this.destinationPortBehavior = Codegen.ofNullable(destinationPortBehavior);
             return this;
         }
         public Builder disableTraceRoute(@Nullable Output<Boolean> disableTraceRoute) {
@@ -107,7 +108,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder disableTraceRoute(@Nullable Boolean disableTraceRoute) {
-            this.disableTraceRoute = Output.ofNullable(disableTraceRoute);
+            this.disableTraceRoute = Codegen.ofNullable(disableTraceRoute);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -115,7 +116,7 @@ public final class ConnectionMonitorTcpConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ConnectionMonitorTcpConfigurationArgs build() {
             return new ConnectionMonitorTcpConfigurationArgs(destinationPortBehavior, disableTraceRoute, port);

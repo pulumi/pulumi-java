@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vpcaccess_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vpcaccess_v1.ConnectorArgs;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
@@ -197,7 +198,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vpcaccess/v1:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vpcaccess/v1:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connector(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

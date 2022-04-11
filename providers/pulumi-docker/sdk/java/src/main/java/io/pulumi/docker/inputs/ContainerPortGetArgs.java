@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> external;
 
     public Output<Integer> getExternal() {
-        return this.external == null ? Output.empty() : this.external;
+        return this.external == null ? Codegen.empty() : this.external;
     }
 
     @Import(name="internal", required=true)
@@ -33,14 +34,14 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     @Import(name="protocol")
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public ContainerPortGetArgs(
@@ -55,10 +56,10 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ContainerPortGetArgs() {
-        this.external = Output.empty();
-        this.internal = Output.empty();
-        this.ip = Output.empty();
-        this.protocol = Output.empty();
+        this.external = Codegen.empty();
+        this.internal = Codegen.empty();
+        this.ip = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder external(@Nullable Integer external) {
-            this.external = Output.ofNullable(external);
+            this.external = Codegen.ofNullable(external);
             return this;
         }
         public Builder internal(Output<Integer> internal) {
@@ -108,7 +109,7 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -116,7 +117,7 @@ public final class ContainerPortGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public ContainerPortGetArgs build() {
             return new ContainerPortGetArgs(external, internal, ip, protocol);

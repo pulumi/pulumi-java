@@ -14,6 +14,7 @@ import io.pulumi.aws.route53.outputs.RecordWeightedRoutingPolicy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -277,7 +278,7 @@ public class Record extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Record(String name, RecordArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:route53/record:Record", name, args == null ? RecordArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:route53/record:Record", name, args == null ? RecordArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Record(String name, Output<String> id, @Nullable RecordState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

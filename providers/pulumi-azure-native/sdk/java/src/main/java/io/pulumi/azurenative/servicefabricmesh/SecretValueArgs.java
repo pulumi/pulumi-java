@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretValueResourceName;
 
     public Output<String> getSecretValueResourceName() {
-        return this.secretValueResourceName == null ? Output.empty() : this.secretValueResourceName;
+        return this.secretValueResourceName == null ? Codegen.empty() : this.secretValueResourceName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SecretValueArgs(
@@ -97,12 +98,12 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretValueArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secretResourceName = Output.empty();
-        this.secretValueResourceName = Output.empty();
-        this.tags = Output.empty();
-        this.value = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secretResourceName = Codegen.empty();
+        this.secretValueResourceName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -164,7 +165,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretValueResourceName(@Nullable String secretValueResourceName) {
-            this.secretValueResourceName = Output.ofNullable(secretValueResourceName);
+            this.secretValueResourceName = Codegen.ofNullable(secretValueResourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -172,7 +173,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -180,7 +181,7 @@ public final class SecretValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SecretValueArgs build() {
             return new SecretValueArgs(location, resourceGroupName, secretResourceName, secretValueResourceName, tags, value);

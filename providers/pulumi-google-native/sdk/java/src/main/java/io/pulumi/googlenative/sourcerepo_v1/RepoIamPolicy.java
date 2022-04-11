@@ -6,6 +6,7 @@ package io.pulumi.googlenative.sourcerepo_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sourcerepo_v1.RepoIamPolicyArgs;
 import io.pulumi.googlenative.sourcerepo_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class RepoIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RepoIamPolicy(String name, RepoIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:sourcerepo/v1:RepoIamPolicy", name, args == null ? RepoIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:sourcerepo/v1:RepoIamPolicy", name, args == null ? RepoIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RepoIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

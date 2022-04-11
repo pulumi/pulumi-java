@@ -7,6 +7,7 @@ import io.pulumi.azurenative.cognitiveservices.enums.DeploymentScaleType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,DeploymentScaleType>> scaleType;
 
     public Output<Either<String,DeploymentScaleType>> getScaleType() {
-        return this.scaleType == null ? Output.empty() : this.scaleType;
+        return this.scaleType == null ? Codegen.empty() : this.scaleType;
     }
 
     public DeploymentScaleSettingsArgs(
@@ -51,8 +52,8 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private DeploymentScaleSettingsArgs() {
-        this.capacity = Output.empty();
-        this.scaleType = Output.empty();
+        this.capacity = Codegen.empty();
+        this.scaleType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder scaleType(@Nullable Output<Either<String,DeploymentScaleType>> scaleType) {
@@ -90,7 +91,7 @@ public final class DeploymentScaleSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder scaleType(@Nullable Either<String,DeploymentScaleType> scaleType) {
-            this.scaleType = Output.ofNullable(scaleType);
+            this.scaleType = Codegen.ofNullable(scaleType);
             return this;
         }        public DeploymentScaleSettingsArgs build() {
             return new DeploymentScaleSettingsArgs(capacity, scaleType);

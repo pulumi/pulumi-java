@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
       private final @Nullable Output<String> payloadVersion;
 
     public Output<String> getPayloadVersion() {
-        return this.payloadVersion == null ? Output.empty() : this.payloadVersion;
+        return this.payloadVersion == null ? Codegen.empty() : this.payloadVersion;
     }
 
     @Import(name="targetArn")
       private final @Nullable Output<String> targetArn;
 
     public Output<String> getTargetArn() {
-        return this.targetArn == null ? Output.empty() : this.targetArn;
+        return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 
     public ProvisioningTemplateProvisioningHookArgs(
@@ -36,8 +37,8 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
     }
 
     private ProvisioningTemplateProvisioningHookArgs() {
-        this.payloadVersion = Output.empty();
-        this.targetArn = Output.empty();
+        this.payloadVersion = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
             return this;
         }
         public Builder payloadVersion(@Nullable String payloadVersion) {
-            this.payloadVersion = Output.ofNullable(payloadVersion);
+            this.payloadVersion = Codegen.ofNullable(payloadVersion);
             return this;
         }
         public Builder targetArn(@Nullable Output<String> targetArn) {
@@ -75,7 +76,7 @@ public final class ProvisioningTemplateProvisioningHookArgs extends io.pulumi.re
             return this;
         }
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Output.ofNullable(targetArn);
+            this.targetArn = Codegen.ofNullable(targetArn);
             return this;
         }        public ProvisioningTemplateProvisioningHookArgs build() {
             return new ProvisioningTemplateProvisioningHookArgs(payloadVersion, targetArn);

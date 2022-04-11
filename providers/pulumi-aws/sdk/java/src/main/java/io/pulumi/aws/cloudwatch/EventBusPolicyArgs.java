@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EventBusPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventBusName;
 
     public Output<String> getEventBusName() {
-        return this.eventBusName == null ? Output.empty() : this.eventBusName;
+        return this.eventBusName == null ? Codegen.empty() : this.eventBusName;
     }
 
     @Import(name="policy", required=true)
@@ -40,8 +41,8 @@ public final class EventBusPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventBusPolicyArgs() {
-        this.eventBusName = Output.empty();
-        this.policy = Output.empty();
+        this.eventBusName = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -71,7 +72,7 @@ public final class EventBusPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventBusName(@Nullable String eventBusName) {
-            this.eventBusName = Output.ofNullable(eventBusName);
+            this.eventBusName = Codegen.ofNullable(eventBusName);
             return this;
         }
         public Builder policy(Output<String> policy) {

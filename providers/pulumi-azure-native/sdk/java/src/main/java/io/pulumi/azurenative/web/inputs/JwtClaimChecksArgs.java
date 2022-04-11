@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedClientApplications;
 
     public Output<List<String>> getAllowedClientApplications() {
-        return this.allowedClientApplications == null ? Output.empty() : this.allowedClientApplications;
+        return this.allowedClientApplications == null ? Codegen.empty() : this.allowedClientApplications;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedGroups;
 
     public Output<List<String>> getAllowedGroups() {
-        return this.allowedGroups == null ? Output.empty() : this.allowedGroups;
+        return this.allowedGroups == null ? Codegen.empty() : this.allowedGroups;
     }
 
     public JwtClaimChecksArgs(
@@ -49,8 +50,8 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JwtClaimChecksArgs() {
-        this.allowedClientApplications = Output.empty();
-        this.allowedGroups = Output.empty();
+        this.allowedClientApplications = Codegen.empty();
+        this.allowedGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedClientApplications(@Nullable List<String> allowedClientApplications) {
-            this.allowedClientApplications = Output.ofNullable(allowedClientApplications);
+            this.allowedClientApplications = Codegen.ofNullable(allowedClientApplications);
             return this;
         }
         public Builder allowedClientApplications(String... allowedClientApplications) {
@@ -91,7 +92,7 @@ public final class JwtClaimChecksArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedGroups(@Nullable List<String> allowedGroups) {
-            this.allowedGroups = Output.ofNullable(allowedGroups);
+            this.allowedGroups = Codegen.ofNullable(allowedGroups);
             return this;
         }
         public Builder allowedGroups(String... allowedGroups) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> isValueSecret;
 
     public Output<Boolean> getIsValueSecret() {
-        return this.isValueSecret == null ? Output.empty() : this.isValueSecret;
+        return this.isValueSecret == null ? Codegen.empty() : this.isValueSecret;
     }
 
     @Import(name="key", required=true)
@@ -46,9 +47,9 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
     }
 
     private ConnectionParameterArgs() {
-        this.isValueSecret = Output.empty();
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.isValueSecret = Codegen.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectionParameterArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder isValueSecret(@Nullable Boolean isValueSecret) {
-            this.isValueSecret = Output.ofNullable(isValueSecret);
+            this.isValueSecret = Codegen.ofNullable(isValueSecret);
             return this;
         }
         public Builder key(Output<String> key) {

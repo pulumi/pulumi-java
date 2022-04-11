@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -47,8 +48,8 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
     }
 
     private ServiceTemplateSpecVolumeArgs() {
-        this.name = Output.empty();
-        this.secret = Output.empty();
+        this.name = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {

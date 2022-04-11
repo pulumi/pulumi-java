@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,14 +42,14 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
       private final @Nullable Output<String> vpcConfigurationId;
 
     public Output<String> getVpcConfigurationId() {
-        return this.vpcConfigurationId == null ? Output.empty() : this.vpcConfigurationId;
+        return this.vpcConfigurationId == null ? Codegen.empty() : this.vpcConfigurationId;
     }
 
     @Import(name="vpcId")
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ApplicationApplicationConfigurationVpcConfigurationGetArgs(
@@ -63,10 +64,10 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
     }
 
     private ApplicationApplicationConfigurationVpcConfigurationGetArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcConfigurationId = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcConfigurationId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
             return this;
         }
         public Builder vpcConfigurationId(@Nullable String vpcConfigurationId) {
-            this.vpcConfigurationId = Output.ofNullable(vpcConfigurationId);
+            this.vpcConfigurationId = Codegen.ofNullable(vpcConfigurationId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -130,7 +131,7 @@ public final class ApplicationApplicationConfigurationVpcConfigurationGetArgs ex
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ApplicationApplicationConfigurationVpcConfigurationGetArgs build() {
             return new ApplicationApplicationConfigurationVpcConfigurationGetArgs(securityGroupIds, subnetIds, vpcConfigurationId, vpcId);

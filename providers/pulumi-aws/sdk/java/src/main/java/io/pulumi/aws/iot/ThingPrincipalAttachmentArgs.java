@@ -5,6 +5,7 @@ package io.pulumi.aws.iot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ThingPrincipalAttachmentArgs extends io.pulumi.resources.Reso
     }
 
     private ThingPrincipalAttachmentArgs() {
-        this.principal = Output.empty();
-        this.thing = Output.empty();
+        this.principal = Codegen.empty();
+        this.thing = Codegen.empty();
     }
 
     public static Builder builder() {

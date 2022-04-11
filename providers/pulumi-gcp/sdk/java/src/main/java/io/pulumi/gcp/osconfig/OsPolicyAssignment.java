@@ -6,6 +6,7 @@ package io.pulumi.gcp.osconfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentState;
@@ -284,7 +285,7 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OsPolicyAssignment(String name, OsPolicyAssignmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, args == null ? OsPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, args == null ? OsPolicyAssignmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OsPolicyAssignment(String name, Output<String> id, @Nullable OsPolicyAssignmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

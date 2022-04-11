@@ -5,6 +5,7 @@ package io.pulumi.azurenative.marketplace;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> allSubscriptions;
 
     public Output<Boolean> getAllSubscriptions() {
-        return this.allSubscriptions == null ? Output.empty() : this.allSubscriptions;
+        return this.allSubscriptions == null ? Codegen.empty() : this.allSubscriptions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> claim;
 
     public Output<String> getClaim() {
-        return this.claim == null ? Output.empty() : this.claim;
+        return this.claim == null ? Codegen.empty() : this.claim;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> collectionId;
 
     public Output<String> getCollectionId() {
-        return this.collectionId == null ? Output.empty() : this.collectionId;
+        return this.collectionId == null ? Codegen.empty() : this.collectionId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> collectionName;
 
     public Output<String> getCollectionName() {
-        return this.collectionName == null ? Output.empty() : this.collectionName;
+        return this.collectionName == null ? Codegen.empty() : this.collectionName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> subscriptionsList;
 
     public Output<List<String>> getSubscriptionsList() {
-        return this.subscriptionsList == null ? Output.empty() : this.subscriptionsList;
+        return this.subscriptionsList == null ? Codegen.empty() : this.subscriptionsList;
     }
 
     public PrivateStoreCollectionArgs(
@@ -111,13 +112,13 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
     }
 
     private PrivateStoreCollectionArgs() {
-        this.allSubscriptions = Output.empty();
-        this.claim = Output.empty();
-        this.collectionId = Output.empty();
-        this.collectionName = Output.empty();
-        this.enabled = Output.empty();
-        this.privateStoreId = Output.empty();
-        this.subscriptionsList = Output.empty();
+        this.allSubscriptions = Codegen.empty();
+        this.claim = Codegen.empty();
+        this.collectionId = Codegen.empty();
+        this.collectionName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.privateStoreId = Codegen.empty();
+        this.subscriptionsList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder allSubscriptions(@Nullable Boolean allSubscriptions) {
-            this.allSubscriptions = Output.ofNullable(allSubscriptions);
+            this.allSubscriptions = Codegen.ofNullable(allSubscriptions);
             return this;
         }
         public Builder claim(@Nullable Output<String> claim) {
@@ -165,7 +166,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder claim(@Nullable String claim) {
-            this.claim = Output.ofNullable(claim);
+            this.claim = Codegen.ofNullable(claim);
             return this;
         }
         public Builder collectionId(@Nullable Output<String> collectionId) {
@@ -173,7 +174,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder collectionId(@Nullable String collectionId) {
-            this.collectionId = Output.ofNullable(collectionId);
+            this.collectionId = Codegen.ofNullable(collectionId);
             return this;
         }
         public Builder collectionName(@Nullable Output<String> collectionName) {
@@ -181,7 +182,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder collectionName(@Nullable String collectionName) {
-            this.collectionName = Output.ofNullable(collectionName);
+            this.collectionName = Codegen.ofNullable(collectionName);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -189,7 +190,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder privateStoreId(Output<String> privateStoreId) {
@@ -205,7 +206,7 @@ public final class PrivateStoreCollectionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subscriptionsList(@Nullable List<String> subscriptionsList) {
-            this.subscriptionsList = Output.ofNullable(subscriptionsList);
+            this.subscriptionsList = Codegen.ofNullable(subscriptionsList);
             return this;
         }
         public Builder subscriptionsList(String... subscriptionsList) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.BackupScheduleArgs;
 import io.pulumi.azurenative.dataprotection.inputs.TaggingCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,9 +65,9 @@ public final class ScheduleBasedTriggerContextArgs extends io.pulumi.resources.R
     }
 
     private ScheduleBasedTriggerContextArgs() {
-        this.objectType = Output.empty();
-        this.schedule = Output.empty();
-        this.taggingCriteria = Output.empty();
+        this.objectType = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.taggingCriteria = Codegen.empty();
     }
 
     public static Builder builder() {

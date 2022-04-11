@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.AvroOptionsArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.BigtableOptionsArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.CsvOptionsArgs;
@@ -32,7 +33,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> autodetect;
 
     public Output<Boolean> getAutodetect() {
-        return this.autodetect == null ? Output.empty() : this.autodetect;
+        return this.autodetect == null ? Codegen.empty() : this.autodetect;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<AvroOptionsArgs> avroOptions;
 
     public Output<AvroOptionsArgs> getAvroOptions() {
-        return this.avroOptions == null ? Output.empty() : this.avroOptions;
+        return this.avroOptions == null ? Codegen.empty() : this.avroOptions;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<BigtableOptionsArgs> bigtableOptions;
 
     public Output<BigtableOptionsArgs> getBigtableOptions() {
-        return this.bigtableOptions == null ? Output.empty() : this.bigtableOptions;
+        return this.bigtableOptions == null ? Codegen.empty() : this.bigtableOptions;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> compression;
 
     public Output<String> getCompression() {
-        return this.compression == null ? Output.empty() : this.compression;
+        return this.compression == null ? Codegen.empty() : this.compression;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
-        return this.connectionId == null ? Output.empty() : this.connectionId;
+        return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<CsvOptionsArgs> csvOptions;
 
     public Output<CsvOptionsArgs> getCsvOptions() {
-        return this.csvOptions == null ? Output.empty() : this.csvOptions;
+        return this.csvOptions == null ? Codegen.empty() : this.csvOptions;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> decimalTargetTypes;
 
     public Output<List<String>> getDecimalTargetTypes() {
-        return this.decimalTargetTypes == null ? Output.empty() : this.decimalTargetTypes;
+        return this.decimalTargetTypes == null ? Codegen.empty() : this.decimalTargetTypes;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<GoogleSheetsOptionsArgs> googleSheetsOptions;
 
     public Output<GoogleSheetsOptionsArgs> getGoogleSheetsOptions() {
-        return this.googleSheetsOptions == null ? Output.empty() : this.googleSheetsOptions;
+        return this.googleSheetsOptions == null ? Codegen.empty() : this.googleSheetsOptions;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions;
 
     public Output<HivePartitioningOptionsArgs> getHivePartitioningOptions() {
-        return this.hivePartitioningOptions == null ? Output.empty() : this.hivePartitioningOptions;
+        return this.hivePartitioningOptions == null ? Codegen.empty() : this.hivePartitioningOptions;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> ignoreUnknownValues;
 
     public Output<Boolean> getIgnoreUnknownValues() {
-        return this.ignoreUnknownValues == null ? Output.empty() : this.ignoreUnknownValues;
+        return this.ignoreUnknownValues == null ? Codegen.empty() : this.ignoreUnknownValues;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> maxBadRecords;
 
     public Output<Integer> getMaxBadRecords() {
-        return this.maxBadRecords == null ? Output.empty() : this.maxBadRecords;
+        return this.maxBadRecords == null ? Codegen.empty() : this.maxBadRecords;
     }
 
     /**
@@ -153,7 +154,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ParquetOptionsArgs> parquetOptions;
 
     public Output<ParquetOptionsArgs> getParquetOptions() {
-        return this.parquetOptions == null ? Output.empty() : this.parquetOptions;
+        return this.parquetOptions == null ? Codegen.empty() : this.parquetOptions;
     }
 
     /**
@@ -164,7 +165,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<TableSchemaArgs> schema;
 
     public Output<TableSchemaArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> sourceFormat;
 
     public Output<String> getSourceFormat() {
-        return this.sourceFormat == null ? Output.empty() : this.sourceFormat;
+        return this.sourceFormat == null ? Codegen.empty() : this.sourceFormat;
     }
 
     /**
@@ -186,7 +187,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> sourceUris;
 
     public Output<List<String>> getSourceUris() {
-        return this.sourceUris == null ? Output.empty() : this.sourceUris;
+        return this.sourceUris == null ? Codegen.empty() : this.sourceUris;
     }
 
     public ExternalDataConfigurationArgs(
@@ -223,21 +224,21 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private ExternalDataConfigurationArgs() {
-        this.autodetect = Output.empty();
-        this.avroOptions = Output.empty();
-        this.bigtableOptions = Output.empty();
-        this.compression = Output.empty();
-        this.connectionId = Output.empty();
-        this.csvOptions = Output.empty();
-        this.decimalTargetTypes = Output.empty();
-        this.googleSheetsOptions = Output.empty();
-        this.hivePartitioningOptions = Output.empty();
-        this.ignoreUnknownValues = Output.empty();
-        this.maxBadRecords = Output.empty();
-        this.parquetOptions = Output.empty();
-        this.schema = Output.empty();
-        this.sourceFormat = Output.empty();
-        this.sourceUris = Output.empty();
+        this.autodetect = Codegen.empty();
+        this.avroOptions = Codegen.empty();
+        this.bigtableOptions = Codegen.empty();
+        this.compression = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.csvOptions = Codegen.empty();
+        this.decimalTargetTypes = Codegen.empty();
+        this.googleSheetsOptions = Codegen.empty();
+        this.hivePartitioningOptions = Codegen.empty();
+        this.ignoreUnknownValues = Codegen.empty();
+        this.maxBadRecords = Codegen.empty();
+        this.parquetOptions = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.sourceFormat = Codegen.empty();
+        this.sourceUris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -293,7 +294,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder autodetect(@Nullable Boolean autodetect) {
-            this.autodetect = Output.ofNullable(autodetect);
+            this.autodetect = Codegen.ofNullable(autodetect);
             return this;
         }
         public Builder avroOptions(@Nullable Output<AvroOptionsArgs> avroOptions) {
@@ -301,7 +302,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder avroOptions(@Nullable AvroOptionsArgs avroOptions) {
-            this.avroOptions = Output.ofNullable(avroOptions);
+            this.avroOptions = Codegen.ofNullable(avroOptions);
             return this;
         }
         public Builder bigtableOptions(@Nullable Output<BigtableOptionsArgs> bigtableOptions) {
@@ -309,7 +310,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder bigtableOptions(@Nullable BigtableOptionsArgs bigtableOptions) {
-            this.bigtableOptions = Output.ofNullable(bigtableOptions);
+            this.bigtableOptions = Codegen.ofNullable(bigtableOptions);
             return this;
         }
         public Builder compression(@Nullable Output<String> compression) {
@@ -317,7 +318,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder compression(@Nullable String compression) {
-            this.compression = Output.ofNullable(compression);
+            this.compression = Codegen.ofNullable(compression);
             return this;
         }
         public Builder connectionId(@Nullable Output<String> connectionId) {
@@ -325,7 +326,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Output.ofNullable(connectionId);
+            this.connectionId = Codegen.ofNullable(connectionId);
             return this;
         }
         public Builder csvOptions(@Nullable Output<CsvOptionsArgs> csvOptions) {
@@ -333,7 +334,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder csvOptions(@Nullable CsvOptionsArgs csvOptions) {
-            this.csvOptions = Output.ofNullable(csvOptions);
+            this.csvOptions = Codegen.ofNullable(csvOptions);
             return this;
         }
         public Builder decimalTargetTypes(@Nullable Output<List<String>> decimalTargetTypes) {
@@ -341,7 +342,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder decimalTargetTypes(@Nullable List<String> decimalTargetTypes) {
-            this.decimalTargetTypes = Output.ofNullable(decimalTargetTypes);
+            this.decimalTargetTypes = Codegen.ofNullable(decimalTargetTypes);
             return this;
         }
         public Builder decimalTargetTypes(String... decimalTargetTypes) {
@@ -352,7 +353,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder googleSheetsOptions(@Nullable GoogleSheetsOptionsArgs googleSheetsOptions) {
-            this.googleSheetsOptions = Output.ofNullable(googleSheetsOptions);
+            this.googleSheetsOptions = Codegen.ofNullable(googleSheetsOptions);
             return this;
         }
         public Builder hivePartitioningOptions(@Nullable Output<HivePartitioningOptionsArgs> hivePartitioningOptions) {
@@ -360,7 +361,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hivePartitioningOptions(@Nullable HivePartitioningOptionsArgs hivePartitioningOptions) {
-            this.hivePartitioningOptions = Output.ofNullable(hivePartitioningOptions);
+            this.hivePartitioningOptions = Codegen.ofNullable(hivePartitioningOptions);
             return this;
         }
         public Builder ignoreUnknownValues(@Nullable Output<Boolean> ignoreUnknownValues) {
@@ -368,7 +369,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ignoreUnknownValues(@Nullable Boolean ignoreUnknownValues) {
-            this.ignoreUnknownValues = Output.ofNullable(ignoreUnknownValues);
+            this.ignoreUnknownValues = Codegen.ofNullable(ignoreUnknownValues);
             return this;
         }
         public Builder maxBadRecords(@Nullable Output<Integer> maxBadRecords) {
@@ -376,7 +377,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder maxBadRecords(@Nullable Integer maxBadRecords) {
-            this.maxBadRecords = Output.ofNullable(maxBadRecords);
+            this.maxBadRecords = Codegen.ofNullable(maxBadRecords);
             return this;
         }
         public Builder parquetOptions(@Nullable Output<ParquetOptionsArgs> parquetOptions) {
@@ -384,7 +385,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder parquetOptions(@Nullable ParquetOptionsArgs parquetOptions) {
-            this.parquetOptions = Output.ofNullable(parquetOptions);
+            this.parquetOptions = Codegen.ofNullable(parquetOptions);
             return this;
         }
         public Builder schema(@Nullable Output<TableSchemaArgs> schema) {
@@ -392,7 +393,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder schema(@Nullable TableSchemaArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder sourceFormat(@Nullable Output<String> sourceFormat) {
@@ -400,7 +401,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sourceFormat(@Nullable String sourceFormat) {
-            this.sourceFormat = Output.ofNullable(sourceFormat);
+            this.sourceFormat = Codegen.ofNullable(sourceFormat);
             return this;
         }
         public Builder sourceUris(@Nullable Output<List<String>> sourceUris) {
@@ -408,7 +409,7 @@ public final class ExternalDataConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sourceUris(@Nullable List<String> sourceUris) {
-            this.sourceUris = Output.ofNullable(sourceUris);
+            this.sourceUris = Codegen.ofNullable(sourceUris);
             return this;
         }
         public Builder sourceUris(String... sourceUris) {

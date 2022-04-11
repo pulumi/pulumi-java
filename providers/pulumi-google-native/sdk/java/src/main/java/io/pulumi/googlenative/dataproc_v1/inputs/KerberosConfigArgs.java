@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> crossRealmTrustAdminServer;
 
     public Output<String> getCrossRealmTrustAdminServer() {
-        return this.crossRealmTrustAdminServer == null ? Output.empty() : this.crossRealmTrustAdminServer;
+        return this.crossRealmTrustAdminServer == null ? Codegen.empty() : this.crossRealmTrustAdminServer;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> crossRealmTrustKdc;
 
     public Output<String> getCrossRealmTrustKdc() {
-        return this.crossRealmTrustKdc == null ? Output.empty() : this.crossRealmTrustKdc;
+        return this.crossRealmTrustKdc == null ? Codegen.empty() : this.crossRealmTrustKdc;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> crossRealmTrustRealm;
 
     public Output<String> getCrossRealmTrustRealm() {
-        return this.crossRealmTrustRealm == null ? Output.empty() : this.crossRealmTrustRealm;
+        return this.crossRealmTrustRealm == null ? Codegen.empty() : this.crossRealmTrustRealm;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> crossRealmTrustSharedPasswordUri;
 
     public Output<String> getCrossRealmTrustSharedPasswordUri() {
-        return this.crossRealmTrustSharedPasswordUri == null ? Output.empty() : this.crossRealmTrustSharedPasswordUri;
+        return this.crossRealmTrustSharedPasswordUri == null ? Codegen.empty() : this.crossRealmTrustSharedPasswordUri;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableKerberos;
 
     public Output<Boolean> getEnableKerberos() {
-        return this.enableKerberos == null ? Output.empty() : this.enableKerberos;
+        return this.enableKerberos == null ? Codegen.empty() : this.enableKerberos;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kdcDbKeyUri;
 
     public Output<String> getKdcDbKeyUri() {
-        return this.kdcDbKeyUri == null ? Output.empty() : this.kdcDbKeyUri;
+        return this.kdcDbKeyUri == null ? Codegen.empty() : this.kdcDbKeyUri;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyPasswordUri;
 
     public Output<String> getKeyPasswordUri() {
-        return this.keyPasswordUri == null ? Output.empty() : this.keyPasswordUri;
+        return this.keyPasswordUri == null ? Codegen.empty() : this.keyPasswordUri;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keystorePasswordUri;
 
     public Output<String> getKeystorePasswordUri() {
-        return this.keystorePasswordUri == null ? Output.empty() : this.keystorePasswordUri;
+        return this.keystorePasswordUri == null ? Codegen.empty() : this.keystorePasswordUri;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keystoreUri;
 
     public Output<String> getKeystoreUri() {
-        return this.keystoreUri == null ? Output.empty() : this.keystoreUri;
+        return this.keystoreUri == null ? Codegen.empty() : this.keystoreUri;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyUri;
 
     public Output<String> getKmsKeyUri() {
-        return this.kmsKeyUri == null ? Output.empty() : this.kmsKeyUri;
+        return this.kmsKeyUri == null ? Codegen.empty() : this.kmsKeyUri;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> realm;
 
     public Output<String> getRealm() {
-        return this.realm == null ? Output.empty() : this.realm;
+        return this.realm == null ? Codegen.empty() : this.realm;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rootPrincipalPasswordUri;
 
     public Output<String> getRootPrincipalPasswordUri() {
-        return this.rootPrincipalPasswordUri == null ? Output.empty() : this.rootPrincipalPasswordUri;
+        return this.rootPrincipalPasswordUri == null ? Codegen.empty() : this.rootPrincipalPasswordUri;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> tgtLifetimeHours;
 
     public Output<Integer> getTgtLifetimeHours() {
-        return this.tgtLifetimeHours == null ? Output.empty() : this.tgtLifetimeHours;
+        return this.tgtLifetimeHours == null ? Codegen.empty() : this.tgtLifetimeHours;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> truststorePasswordUri;
 
     public Output<String> getTruststorePasswordUri() {
-        return this.truststorePasswordUri == null ? Output.empty() : this.truststorePasswordUri;
+        return this.truststorePasswordUri == null ? Codegen.empty() : this.truststorePasswordUri;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> truststoreUri;
 
     public Output<String> getTruststoreUri() {
-        return this.truststoreUri == null ? Output.empty() : this.truststoreUri;
+        return this.truststoreUri == null ? Codegen.empty() : this.truststoreUri;
     }
 
     public KerberosConfigArgs(
@@ -219,21 +220,21 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KerberosConfigArgs() {
-        this.crossRealmTrustAdminServer = Output.empty();
-        this.crossRealmTrustKdc = Output.empty();
-        this.crossRealmTrustRealm = Output.empty();
-        this.crossRealmTrustSharedPasswordUri = Output.empty();
-        this.enableKerberos = Output.empty();
-        this.kdcDbKeyUri = Output.empty();
-        this.keyPasswordUri = Output.empty();
-        this.keystorePasswordUri = Output.empty();
-        this.keystoreUri = Output.empty();
-        this.kmsKeyUri = Output.empty();
-        this.realm = Output.empty();
-        this.rootPrincipalPasswordUri = Output.empty();
-        this.tgtLifetimeHours = Output.empty();
-        this.truststorePasswordUri = Output.empty();
-        this.truststoreUri = Output.empty();
+        this.crossRealmTrustAdminServer = Codegen.empty();
+        this.crossRealmTrustKdc = Codegen.empty();
+        this.crossRealmTrustRealm = Codegen.empty();
+        this.crossRealmTrustSharedPasswordUri = Codegen.empty();
+        this.enableKerberos = Codegen.empty();
+        this.kdcDbKeyUri = Codegen.empty();
+        this.keyPasswordUri = Codegen.empty();
+        this.keystorePasswordUri = Codegen.empty();
+        this.keystoreUri = Codegen.empty();
+        this.kmsKeyUri = Codegen.empty();
+        this.realm = Codegen.empty();
+        this.rootPrincipalPasswordUri = Codegen.empty();
+        this.tgtLifetimeHours = Codegen.empty();
+        this.truststorePasswordUri = Codegen.empty();
+        this.truststoreUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -289,7 +290,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crossRealmTrustAdminServer(@Nullable String crossRealmTrustAdminServer) {
-            this.crossRealmTrustAdminServer = Output.ofNullable(crossRealmTrustAdminServer);
+            this.crossRealmTrustAdminServer = Codegen.ofNullable(crossRealmTrustAdminServer);
             return this;
         }
         public Builder crossRealmTrustKdc(@Nullable Output<String> crossRealmTrustKdc) {
@@ -297,7 +298,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crossRealmTrustKdc(@Nullable String crossRealmTrustKdc) {
-            this.crossRealmTrustKdc = Output.ofNullable(crossRealmTrustKdc);
+            this.crossRealmTrustKdc = Codegen.ofNullable(crossRealmTrustKdc);
             return this;
         }
         public Builder crossRealmTrustRealm(@Nullable Output<String> crossRealmTrustRealm) {
@@ -305,7 +306,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crossRealmTrustRealm(@Nullable String crossRealmTrustRealm) {
-            this.crossRealmTrustRealm = Output.ofNullable(crossRealmTrustRealm);
+            this.crossRealmTrustRealm = Codegen.ofNullable(crossRealmTrustRealm);
             return this;
         }
         public Builder crossRealmTrustSharedPasswordUri(@Nullable Output<String> crossRealmTrustSharedPasswordUri) {
@@ -313,7 +314,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crossRealmTrustSharedPasswordUri(@Nullable String crossRealmTrustSharedPasswordUri) {
-            this.crossRealmTrustSharedPasswordUri = Output.ofNullable(crossRealmTrustSharedPasswordUri);
+            this.crossRealmTrustSharedPasswordUri = Codegen.ofNullable(crossRealmTrustSharedPasswordUri);
             return this;
         }
         public Builder enableKerberos(@Nullable Output<Boolean> enableKerberos) {
@@ -321,7 +322,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableKerberos(@Nullable Boolean enableKerberos) {
-            this.enableKerberos = Output.ofNullable(enableKerberos);
+            this.enableKerberos = Codegen.ofNullable(enableKerberos);
             return this;
         }
         public Builder kdcDbKeyUri(@Nullable Output<String> kdcDbKeyUri) {
@@ -329,7 +330,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kdcDbKeyUri(@Nullable String kdcDbKeyUri) {
-            this.kdcDbKeyUri = Output.ofNullable(kdcDbKeyUri);
+            this.kdcDbKeyUri = Codegen.ofNullable(kdcDbKeyUri);
             return this;
         }
         public Builder keyPasswordUri(@Nullable Output<String> keyPasswordUri) {
@@ -337,7 +338,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyPasswordUri(@Nullable String keyPasswordUri) {
-            this.keyPasswordUri = Output.ofNullable(keyPasswordUri);
+            this.keyPasswordUri = Codegen.ofNullable(keyPasswordUri);
             return this;
         }
         public Builder keystorePasswordUri(@Nullable Output<String> keystorePasswordUri) {
@@ -345,7 +346,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keystorePasswordUri(@Nullable String keystorePasswordUri) {
-            this.keystorePasswordUri = Output.ofNullable(keystorePasswordUri);
+            this.keystorePasswordUri = Codegen.ofNullable(keystorePasswordUri);
             return this;
         }
         public Builder keystoreUri(@Nullable Output<String> keystoreUri) {
@@ -353,7 +354,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keystoreUri(@Nullable String keystoreUri) {
-            this.keystoreUri = Output.ofNullable(keystoreUri);
+            this.keystoreUri = Codegen.ofNullable(keystoreUri);
             return this;
         }
         public Builder kmsKeyUri(@Nullable Output<String> kmsKeyUri) {
@@ -361,7 +362,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyUri(@Nullable String kmsKeyUri) {
-            this.kmsKeyUri = Output.ofNullable(kmsKeyUri);
+            this.kmsKeyUri = Codegen.ofNullable(kmsKeyUri);
             return this;
         }
         public Builder realm(@Nullable Output<String> realm) {
@@ -369,7 +370,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder realm(@Nullable String realm) {
-            this.realm = Output.ofNullable(realm);
+            this.realm = Codegen.ofNullable(realm);
             return this;
         }
         public Builder rootPrincipalPasswordUri(@Nullable Output<String> rootPrincipalPasswordUri) {
@@ -377,7 +378,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootPrincipalPasswordUri(@Nullable String rootPrincipalPasswordUri) {
-            this.rootPrincipalPasswordUri = Output.ofNullable(rootPrincipalPasswordUri);
+            this.rootPrincipalPasswordUri = Codegen.ofNullable(rootPrincipalPasswordUri);
             return this;
         }
         public Builder tgtLifetimeHours(@Nullable Output<Integer> tgtLifetimeHours) {
@@ -385,7 +386,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tgtLifetimeHours(@Nullable Integer tgtLifetimeHours) {
-            this.tgtLifetimeHours = Output.ofNullable(tgtLifetimeHours);
+            this.tgtLifetimeHours = Codegen.ofNullable(tgtLifetimeHours);
             return this;
         }
         public Builder truststorePasswordUri(@Nullable Output<String> truststorePasswordUri) {
@@ -393,7 +394,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder truststorePasswordUri(@Nullable String truststorePasswordUri) {
-            this.truststorePasswordUri = Output.ofNullable(truststorePasswordUri);
+            this.truststorePasswordUri = Codegen.ofNullable(truststorePasswordUri);
             return this;
         }
         public Builder truststoreUri(@Nullable Output<String> truststoreUri) {
@@ -401,7 +402,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder truststoreUri(@Nullable String truststoreUri) {
-            this.truststoreUri = Output.ofNullable(truststoreUri);
+            this.truststoreUri = Codegen.ofNullable(truststoreUri);
             return this;
         }        public KerberosConfigArgs build() {
             return new KerberosConfigArgs(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);

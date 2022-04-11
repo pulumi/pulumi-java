@@ -5,6 +5,7 @@ package io.pulumi.aws.rds;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -46,7 +47,7 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetRole;
 
     public Output<String> getTargetRole() {
-        return this.targetRole == null ? Output.empty() : this.targetRole;
+        return this.targetRole == null ? Codegen.empty() : this.targetRole;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProxyEndpointArgs() {
-        this.dbProxyEndpointName = Output.empty();
-        this.dbProxyName = Output.empty();
-        this.tags = Output.empty();
-        this.targetRole = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
-        this.vpcSubnetIds = Output.empty();
+        this.dbProxyEndpointName = Codegen.empty();
+        this.dbProxyName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetRole = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
+        this.vpcSubnetIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetRole(@Nullable Output<String> targetRole) {
@@ -165,7 +166,7 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetRole(@Nullable String targetRole) {
-            this.targetRole = Output.ofNullable(targetRole);
+            this.targetRole = Codegen.ofNullable(targetRole);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -173,7 +174,7 @@ public final class ProxyEndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {

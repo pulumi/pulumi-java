@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.AttachedDiskInitializeParamsOnUpdateAction;
 import io.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
@@ -30,7 +31,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
-        return this.diskName == null ? Output.empty() : this.diskName;
+        return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> diskSizeGb;
 
     public Output<String> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> licenses;
 
     public Output<List<String>> getLicenses() {
-        return this.licenses == null ? Output.empty() : this.licenses;
+        return this.licenses == null ? Codegen.empty() : this.licenses;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<AttachedDiskInitializeParamsOnUpdateAction> onUpdateAction;
 
     public Output<AttachedDiskInitializeParamsOnUpdateAction> getOnUpdateAction() {
-        return this.onUpdateAction == null ? Output.empty() : this.onUpdateAction;
+        return this.onUpdateAction == null ? Codegen.empty() : this.onUpdateAction;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> provisionedIops;
 
     public Output<String> getProvisionedIops() {
-        return this.provisionedIops == null ? Output.empty() : this.provisionedIops;
+        return this.provisionedIops == null ? Codegen.empty() : this.provisionedIops;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> resourcePolicies;
 
     public Output<List<String>> getResourcePolicies() {
-        return this.resourcePolicies == null ? Output.empty() : this.resourcePolicies;
+        return this.resourcePolicies == null ? Codegen.empty() : this.resourcePolicies;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> sourceImage;
 
     public Output<String> getSourceImage() {
-        return this.sourceImage == null ? Output.empty() : this.sourceImage;
+        return this.sourceImage == null ? Codegen.empty() : this.sourceImage;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSourceImageEncryptionKey() {
-        return this.sourceImageEncryptionKey == null ? Output.empty() : this.sourceImageEncryptionKey;
+        return this.sourceImageEncryptionKey == null ? Codegen.empty() : this.sourceImageEncryptionKey;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<String> sourceSnapshot;
 
     public Output<String> getSourceSnapshot() {
-        return this.sourceSnapshot == null ? Output.empty() : this.sourceSnapshot;
+        return this.sourceSnapshot == null ? Codegen.empty() : this.sourceSnapshot;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
       private final @Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey;
 
     public Output<CustomerEncryptionKeyArgs> getSourceSnapshotEncryptionKey() {
-        return this.sourceSnapshotEncryptionKey == null ? Output.empty() : this.sourceSnapshotEncryptionKey;
+        return this.sourceSnapshotEncryptionKey == null ? Codegen.empty() : this.sourceSnapshotEncryptionKey;
     }
 
     public AttachedDiskInitializeParamsArgs(
@@ -195,19 +196,19 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
     }
 
     private AttachedDiskInitializeParamsArgs() {
-        this.description = Output.empty();
-        this.diskName = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
-        this.labels = Output.empty();
-        this.licenses = Output.empty();
-        this.onUpdateAction = Output.empty();
-        this.provisionedIops = Output.empty();
-        this.resourcePolicies = Output.empty();
-        this.sourceImage = Output.empty();
-        this.sourceImageEncryptionKey = Output.empty();
-        this.sourceSnapshot = Output.empty();
-        this.sourceSnapshotEncryptionKey = Output.empty();
+        this.description = Codegen.empty();
+        this.diskName = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.licenses = Codegen.empty();
+        this.onUpdateAction = Codegen.empty();
+        this.provisionedIops = Codegen.empty();
+        this.resourcePolicies = Codegen.empty();
+        this.sourceImage = Codegen.empty();
+        this.sourceImageEncryptionKey = Codegen.empty();
+        this.sourceSnapshot = Codegen.empty();
+        this.sourceSnapshotEncryptionKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -259,7 +260,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskName(@Nullable Output<String> diskName) {
@@ -267,7 +268,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Output.ofNullable(diskName);
+            this.diskName = Codegen.ofNullable(diskName);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<String> diskSizeGb) {
@@ -275,7 +276,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder diskSizeGb(@Nullable String diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder diskType(@Nullable Output<String> diskType) {
@@ -283,7 +284,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -291,7 +292,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder licenses(@Nullable Output<List<String>> licenses) {
@@ -299,7 +300,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder licenses(@Nullable List<String> licenses) {
-            this.licenses = Output.ofNullable(licenses);
+            this.licenses = Codegen.ofNullable(licenses);
             return this;
         }
         public Builder licenses(String... licenses) {
@@ -310,7 +311,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder onUpdateAction(@Nullable AttachedDiskInitializeParamsOnUpdateAction onUpdateAction) {
-            this.onUpdateAction = Output.ofNullable(onUpdateAction);
+            this.onUpdateAction = Codegen.ofNullable(onUpdateAction);
             return this;
         }
         public Builder provisionedIops(@Nullable Output<String> provisionedIops) {
@@ -318,7 +319,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder provisionedIops(@Nullable String provisionedIops) {
-            this.provisionedIops = Output.ofNullable(provisionedIops);
+            this.provisionedIops = Codegen.ofNullable(provisionedIops);
             return this;
         }
         public Builder resourcePolicies(@Nullable Output<List<String>> resourcePolicies) {
@@ -326,7 +327,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourcePolicies(@Nullable List<String> resourcePolicies) {
-            this.resourcePolicies = Output.ofNullable(resourcePolicies);
+            this.resourcePolicies = Codegen.ofNullable(resourcePolicies);
             return this;
         }
         public Builder resourcePolicies(String... resourcePolicies) {
@@ -337,7 +338,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sourceImage(@Nullable String sourceImage) {
-            this.sourceImage = Output.ofNullable(sourceImage);
+            this.sourceImage = Codegen.ofNullable(sourceImage);
             return this;
         }
         public Builder sourceImageEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceImageEncryptionKey) {
@@ -345,7 +346,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sourceImageEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceImageEncryptionKey) {
-            this.sourceImageEncryptionKey = Output.ofNullable(sourceImageEncryptionKey);
+            this.sourceImageEncryptionKey = Codegen.ofNullable(sourceImageEncryptionKey);
             return this;
         }
         public Builder sourceSnapshot(@Nullable Output<String> sourceSnapshot) {
@@ -353,7 +354,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sourceSnapshot(@Nullable String sourceSnapshot) {
-            this.sourceSnapshot = Output.ofNullable(sourceSnapshot);
+            this.sourceSnapshot = Codegen.ofNullable(sourceSnapshot);
             return this;
         }
         public Builder sourceSnapshotEncryptionKey(@Nullable Output<CustomerEncryptionKeyArgs> sourceSnapshotEncryptionKey) {
@@ -361,7 +362,7 @@ public final class AttachedDiskInitializeParamsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sourceSnapshotEncryptionKey(@Nullable CustomerEncryptionKeyArgs sourceSnapshotEncryptionKey) {
-            this.sourceSnapshotEncryptionKey = Output.ofNullable(sourceSnapshotEncryptionKey);
+            this.sourceSnapshotEncryptionKey = Codegen.ofNullable(sourceSnapshotEncryptionKey);
             return this;
         }        public AttachedDiskInitializeParamsArgs build() {
             return new AttachedDiskInitializeParamsArgs(description, diskName, diskSizeGb, diskType, labels, licenses, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);

@@ -7,6 +7,7 @@ import io.pulumi.aws.acmpca.inputs.CertificateAuthorityCertificateAuthorityConfi
 import io.pulumi.aws.acmpca.inputs.CertificateAuthorityRevocationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> permanentDeletionTimeInDays;
 
     public Output<Integer> getPermanentDeletionTimeInDays() {
-        return this.permanentDeletionTimeInDays == null ? Output.empty() : this.permanentDeletionTimeInDays;
+        return this.permanentDeletionTimeInDays == null ? Codegen.empty() : this.permanentDeletionTimeInDays;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration;
 
     public Output<CertificateAuthorityRevocationConfigurationArgs> getRevocationConfiguration() {
-        return this.revocationConfiguration == null ? Output.empty() : this.revocationConfiguration;
+        return this.revocationConfiguration == null ? Codegen.empty() : this.revocationConfiguration;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public CertificateAuthorityArgs(
@@ -101,12 +102,12 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
     }
 
     private CertificateAuthorityArgs() {
-        this.certificateAuthorityConfiguration = Output.empty();
-        this.enabled = Output.empty();
-        this.permanentDeletionTimeInDays = Output.empty();
-        this.revocationConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.certificateAuthorityConfiguration = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.permanentDeletionTimeInDays = Codegen.empty();
+        this.revocationConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder permanentDeletionTimeInDays(@Nullable Output<Integer> permanentDeletionTimeInDays) {
@@ -160,7 +161,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder permanentDeletionTimeInDays(@Nullable Integer permanentDeletionTimeInDays) {
-            this.permanentDeletionTimeInDays = Output.ofNullable(permanentDeletionTimeInDays);
+            this.permanentDeletionTimeInDays = Codegen.ofNullable(permanentDeletionTimeInDays);
             return this;
         }
         public Builder revocationConfiguration(@Nullable Output<CertificateAuthorityRevocationConfigurationArgs> revocationConfiguration) {
@@ -168,7 +169,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder revocationConfiguration(@Nullable CertificateAuthorityRevocationConfigurationArgs revocationConfiguration) {
-            this.revocationConfiguration = Output.ofNullable(revocationConfiguration);
+            this.revocationConfiguration = Codegen.ofNullable(revocationConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -176,7 +177,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -184,7 +185,7 @@ public final class CertificateAuthorityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public CertificateAuthorityArgs build() {
             return new CertificateAuthorityArgs(certificateAuthorityConfiguration, enabled, permanentDeletionTimeInDays, revocationConfiguration, tags, type);

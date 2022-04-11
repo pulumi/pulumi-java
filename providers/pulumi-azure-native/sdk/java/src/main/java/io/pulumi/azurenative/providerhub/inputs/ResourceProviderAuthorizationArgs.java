@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     @Import(name="managedByRoleDefinitionId")
       private final @Nullable Output<String> managedByRoleDefinitionId;
 
     public Output<String> getManagedByRoleDefinitionId() {
-        return this.managedByRoleDefinitionId == null ? Output.empty() : this.managedByRoleDefinitionId;
+        return this.managedByRoleDefinitionId == null ? Codegen.empty() : this.managedByRoleDefinitionId;
     }
 
     @Import(name="roleDefinitionId")
       private final @Nullable Output<String> roleDefinitionId;
 
     public Output<String> getRoleDefinitionId() {
-        return this.roleDefinitionId == null ? Output.empty() : this.roleDefinitionId;
+        return this.roleDefinitionId == null ? Codegen.empty() : this.roleDefinitionId;
     }
 
     public ResourceProviderAuthorizationArgs(
@@ -45,9 +46,9 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
     }
 
     private ResourceProviderAuthorizationArgs() {
-        this.applicationId = Output.empty();
-        this.managedByRoleDefinitionId = Output.empty();
-        this.roleDefinitionId = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.managedByRoleDefinitionId = Codegen.empty();
+        this.roleDefinitionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder managedByRoleDefinitionId(@Nullable Output<String> managedByRoleDefinitionId) {
@@ -87,7 +88,7 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
             return this;
         }
         public Builder managedByRoleDefinitionId(@Nullable String managedByRoleDefinitionId) {
-            this.managedByRoleDefinitionId = Output.ofNullable(managedByRoleDefinitionId);
+            this.managedByRoleDefinitionId = Codegen.ofNullable(managedByRoleDefinitionId);
             return this;
         }
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
@@ -95,7 +96,7 @@ public final class ResourceProviderAuthorizationArgs extends io.pulumi.resources
             return this;
         }
         public Builder roleDefinitionId(@Nullable String roleDefinitionId) {
-            this.roleDefinitionId = Output.ofNullable(roleDefinitionId);
+            this.roleDefinitionId = Codegen.ofNullable(roleDefinitionId);
             return this;
         }        public ResourceProviderAuthorizationArgs build() {
             return new ResourceProviderAuthorizationArgs(applicationId, managedByRoleDefinitionId, roleDefinitionId);

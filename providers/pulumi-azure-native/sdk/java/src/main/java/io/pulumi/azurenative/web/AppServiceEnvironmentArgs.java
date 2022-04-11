@@ -9,6 +9,7 @@ import io.pulumi.azurenative.web.inputs.VirtualNetworkProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<NameValuePairArgs>> clusterSettings;
 
     public Output<List<NameValuePairArgs>> getClusterSettings() {
-        return this.clusterSettings == null ? Output.empty() : this.clusterSettings;
+        return this.clusterSettings == null ? Codegen.empty() : this.clusterSettings;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> dnsSuffix;
 
     public Output<String> getDnsSuffix() {
-        return this.dnsSuffix == null ? Output.empty() : this.dnsSuffix;
+        return this.dnsSuffix == null ? Codegen.empty() : this.dnsSuffix;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> frontEndScaleFactor;
 
     public Output<Integer> getFrontEndScaleFactor() {
-        return this.frontEndScaleFactor == null ? Output.empty() : this.frontEndScaleFactor;
+        return this.frontEndScaleFactor == null ? Codegen.empty() : this.frontEndScaleFactor;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
 
     public Output<Either<String,LoadBalancingMode>> getInternalLoadBalancingMode() {
-        return this.internalLoadBalancingMode == null ? Output.empty() : this.internalLoadBalancingMode;
+        return this.internalLoadBalancingMode == null ? Codegen.empty() : this.internalLoadBalancingMode;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> ipsslAddressCount;
 
     public Output<Integer> getIpsslAddressCount() {
-        return this.ipsslAddressCount == null ? Output.empty() : this.ipsslAddressCount;
+        return this.ipsslAddressCount == null ? Codegen.empty() : this.ipsslAddressCount;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> multiSize;
 
     public Output<String> getMultiSize() {
-        return this.multiSize == null ? Output.empty() : this.multiSize;
+        return this.multiSize == null ? Codegen.empty() : this.multiSize;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> userWhitelistedIpRanges;
 
     public Output<List<String>> getUserWhitelistedIpRanges() {
-        return this.userWhitelistedIpRanges == null ? Output.empty() : this.userWhitelistedIpRanges;
+        return this.userWhitelistedIpRanges == null ? Codegen.empty() : this.userWhitelistedIpRanges;
     }
 
     /**
@@ -194,19 +195,19 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
     }
 
     private AppServiceEnvironmentArgs() {
-        this.clusterSettings = Output.empty();
-        this.dnsSuffix = Output.empty();
-        this.frontEndScaleFactor = Output.empty();
-        this.internalLoadBalancingMode = Output.empty();
-        this.ipsslAddressCount = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.multiSize = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.userWhitelistedIpRanges = Output.empty();
-        this.virtualNetwork = Output.empty();
+        this.clusterSettings = Codegen.empty();
+        this.dnsSuffix = Codegen.empty();
+        this.frontEndScaleFactor = Codegen.empty();
+        this.internalLoadBalancingMode = Codegen.empty();
+        this.ipsslAddressCount = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.multiSize = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userWhitelistedIpRanges = Codegen.empty();
+        this.virtualNetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -258,7 +259,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clusterSettings(@Nullable List<NameValuePairArgs> clusterSettings) {
-            this.clusterSettings = Output.ofNullable(clusterSettings);
+            this.clusterSettings = Codegen.ofNullable(clusterSettings);
             return this;
         }
         public Builder clusterSettings(NameValuePairArgs... clusterSettings) {
@@ -269,7 +270,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dnsSuffix(@Nullable String dnsSuffix) {
-            this.dnsSuffix = Output.ofNullable(dnsSuffix);
+            this.dnsSuffix = Codegen.ofNullable(dnsSuffix);
             return this;
         }
         public Builder frontEndScaleFactor(@Nullable Output<Integer> frontEndScaleFactor) {
@@ -277,7 +278,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder frontEndScaleFactor(@Nullable Integer frontEndScaleFactor) {
-            this.frontEndScaleFactor = Output.ofNullable(frontEndScaleFactor);
+            this.frontEndScaleFactor = Codegen.ofNullable(frontEndScaleFactor);
             return this;
         }
         public Builder internalLoadBalancingMode(@Nullable Output<Either<String,LoadBalancingMode>> internalLoadBalancingMode) {
@@ -285,7 +286,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder internalLoadBalancingMode(@Nullable Either<String,LoadBalancingMode> internalLoadBalancingMode) {
-            this.internalLoadBalancingMode = Output.ofNullable(internalLoadBalancingMode);
+            this.internalLoadBalancingMode = Codegen.ofNullable(internalLoadBalancingMode);
             return this;
         }
         public Builder ipsslAddressCount(@Nullable Output<Integer> ipsslAddressCount) {
@@ -293,7 +294,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipsslAddressCount(@Nullable Integer ipsslAddressCount) {
-            this.ipsslAddressCount = Output.ofNullable(ipsslAddressCount);
+            this.ipsslAddressCount = Codegen.ofNullable(ipsslAddressCount);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -301,7 +302,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -309,7 +310,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder multiSize(@Nullable Output<String> multiSize) {
@@ -317,7 +318,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder multiSize(@Nullable String multiSize) {
-            this.multiSize = Output.ofNullable(multiSize);
+            this.multiSize = Codegen.ofNullable(multiSize);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -325,7 +326,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -341,7 +342,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder userWhitelistedIpRanges(@Nullable Output<List<String>> userWhitelistedIpRanges) {
@@ -349,7 +350,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder userWhitelistedIpRanges(@Nullable List<String> userWhitelistedIpRanges) {
-            this.userWhitelistedIpRanges = Output.ofNullable(userWhitelistedIpRanges);
+            this.userWhitelistedIpRanges = Codegen.ofNullable(userWhitelistedIpRanges);
             return this;
         }
         public Builder userWhitelistedIpRanges(String... userWhitelistedIpRanges) {

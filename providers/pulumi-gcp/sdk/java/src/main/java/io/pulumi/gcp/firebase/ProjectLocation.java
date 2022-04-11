@@ -6,6 +6,7 @@ package io.pulumi.gcp.firebase;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firebase.ProjectLocationArgs;
 import io.pulumi.gcp.firebase.inputs.ProjectLocationState;
@@ -102,7 +103,7 @@ public class ProjectLocation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ProjectLocation(String name, ProjectLocationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:firebase/projectLocation:ProjectLocation", name, args == null ? ProjectLocationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:firebase/projectLocation:ProjectLocation", name, args == null ? ProjectLocationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ProjectLocation(String name, Output<String> id, @Nullable ProjectLocationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

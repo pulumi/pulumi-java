@@ -5,6 +5,7 @@ package io.pulumi.azurenative.analysisservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> firewallRuleName;
 
     public Output<String> getFirewallRuleName() {
-        return this.firewallRuleName == null ? Output.empty() : this.firewallRuleName;
+        return this.firewallRuleName == null ? Codegen.empty() : this.firewallRuleName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> rangeEnd;
 
     public Output<String> getRangeEnd() {
-        return this.rangeEnd == null ? Output.empty() : this.rangeEnd;
+        return this.rangeEnd == null ? Codegen.empty() : this.rangeEnd;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> rangeStart;
 
     public Output<String> getRangeStart() {
-        return this.rangeStart == null ? Output.empty() : this.rangeStart;
+        return this.rangeStart == null ? Codegen.empty() : this.rangeStart;
     }
 
     public IPv4FirewallRuleArgs(
@@ -61,9 +62,9 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IPv4FirewallRuleArgs() {
-        this.firewallRuleName = Output.empty();
-        this.rangeEnd = Output.empty();
-        this.rangeStart = Output.empty();
+        this.firewallRuleName = Codegen.empty();
+        this.rangeEnd = Codegen.empty();
+        this.rangeStart = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder firewallRuleName(@Nullable String firewallRuleName) {
-            this.firewallRuleName = Output.ofNullable(firewallRuleName);
+            this.firewallRuleName = Codegen.ofNullable(firewallRuleName);
             return this;
         }
         public Builder rangeEnd(@Nullable Output<String> rangeEnd) {
@@ -103,7 +104,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rangeEnd(@Nullable String rangeEnd) {
-            this.rangeEnd = Output.ofNullable(rangeEnd);
+            this.rangeEnd = Codegen.ofNullable(rangeEnd);
             return this;
         }
         public Builder rangeStart(@Nullable Output<String> rangeStart) {
@@ -111,7 +112,7 @@ public final class IPv4FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder rangeStart(@Nullable String rangeStart) {
-            this.rangeStart = Output.ofNullable(rangeStart);
+            this.rangeStart = Codegen.ofNullable(rangeStart);
             return this;
         }        public IPv4FirewallRuleArgs build() {
             return new IPv4FirewallRuleArgs(firewallRuleName, rangeEnd, rangeStart);

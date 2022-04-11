@@ -10,6 +10,7 @@ import io.pulumi.azurenative.storage.inputs.LastAccessTimeTrackingPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.RestorePolicyPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> automaticSnapshotPolicyEnabled;
 
     public Output<Boolean> getAutomaticSnapshotPolicyEnabled() {
-        return this.automaticSnapshotPolicyEnabled == null ? Output.empty() : this.automaticSnapshotPolicyEnabled;
+        return this.automaticSnapshotPolicyEnabled == null ? Codegen.empty() : this.automaticSnapshotPolicyEnabled;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> blobServicesName;
 
     public Output<String> getBlobServicesName() {
-        return this.blobServicesName == null ? Output.empty() : this.blobServicesName;
+        return this.blobServicesName == null ? Codegen.empty() : this.blobServicesName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ChangeFeedArgs> changeFeed;
 
     public Output<ChangeFeedArgs> getChangeFeed() {
-        return this.changeFeed == null ? Output.empty() : this.changeFeed;
+        return this.changeFeed == null ? Codegen.empty() : this.changeFeed;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
 
     public Output<DeleteRetentionPolicyArgs> getContainerDeleteRetentionPolicy() {
-        return this.containerDeleteRetentionPolicy == null ? Output.empty() : this.containerDeleteRetentionPolicy;
+        return this.containerDeleteRetentionPolicy == null ? Codegen.empty() : this.containerDeleteRetentionPolicy;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<CorsRulesArgs> cors;
 
     public Output<CorsRulesArgs> getCors() {
-        return this.cors == null ? Output.empty() : this.cors;
+        return this.cors == null ? Codegen.empty() : this.cors;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> defaultServiceVersion;
 
     public Output<String> getDefaultServiceVersion() {
-        return this.defaultServiceVersion == null ? Output.empty() : this.defaultServiceVersion;
+        return this.defaultServiceVersion == null ? Codegen.empty() : this.defaultServiceVersion;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
 
     public Output<DeleteRetentionPolicyArgs> getDeleteRetentionPolicy() {
-        return this.deleteRetentionPolicy == null ? Output.empty() : this.deleteRetentionPolicy;
+        return this.deleteRetentionPolicy == null ? Codegen.empty() : this.deleteRetentionPolicy;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> isVersioningEnabled;
 
     public Output<Boolean> getIsVersioningEnabled() {
-        return this.isVersioningEnabled == null ? Output.empty() : this.isVersioningEnabled;
+        return this.isVersioningEnabled == null ? Codegen.empty() : this.isVersioningEnabled;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
 
     public Output<LastAccessTimeTrackingPolicyArgs> getLastAccessTimeTrackingPolicy() {
-        return this.lastAccessTimeTrackingPolicy == null ? Output.empty() : this.lastAccessTimeTrackingPolicy;
+        return this.lastAccessTimeTrackingPolicy == null ? Codegen.empty() : this.lastAccessTimeTrackingPolicy;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy;
 
     public Output<RestorePolicyPropertiesArgs> getRestorePolicy() {
-        return this.restorePolicy == null ? Output.empty() : this.restorePolicy;
+        return this.restorePolicy == null ? Codegen.empty() : this.restorePolicy;
     }
 
     public BlobServicePropertiesArgs(
@@ -180,18 +181,18 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private BlobServicePropertiesArgs() {
-        this.accountName = Output.empty();
-        this.automaticSnapshotPolicyEnabled = Output.empty();
-        this.blobServicesName = Output.empty();
-        this.changeFeed = Output.empty();
-        this.containerDeleteRetentionPolicy = Output.empty();
-        this.cors = Output.empty();
-        this.defaultServiceVersion = Output.empty();
-        this.deleteRetentionPolicy = Output.empty();
-        this.isVersioningEnabled = Output.empty();
-        this.lastAccessTimeTrackingPolicy = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restorePolicy = Output.empty();
+        this.accountName = Codegen.empty();
+        this.automaticSnapshotPolicyEnabled = Codegen.empty();
+        this.blobServicesName = Codegen.empty();
+        this.changeFeed = Codegen.empty();
+        this.containerDeleteRetentionPolicy = Codegen.empty();
+        this.cors = Codegen.empty();
+        this.defaultServiceVersion = Codegen.empty();
+        this.deleteRetentionPolicy = Codegen.empty();
+        this.isVersioningEnabled = Codegen.empty();
+        this.lastAccessTimeTrackingPolicy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restorePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -249,7 +250,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder automaticSnapshotPolicyEnabled(@Nullable Boolean automaticSnapshotPolicyEnabled) {
-            this.automaticSnapshotPolicyEnabled = Output.ofNullable(automaticSnapshotPolicyEnabled);
+            this.automaticSnapshotPolicyEnabled = Codegen.ofNullable(automaticSnapshotPolicyEnabled);
             return this;
         }
         public Builder blobServicesName(@Nullable Output<String> blobServicesName) {
@@ -257,7 +258,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder blobServicesName(@Nullable String blobServicesName) {
-            this.blobServicesName = Output.ofNullable(blobServicesName);
+            this.blobServicesName = Codegen.ofNullable(blobServicesName);
             return this;
         }
         public Builder changeFeed(@Nullable Output<ChangeFeedArgs> changeFeed) {
@@ -265,7 +266,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder changeFeed(@Nullable ChangeFeedArgs changeFeed) {
-            this.changeFeed = Output.ofNullable(changeFeed);
+            this.changeFeed = Codegen.ofNullable(changeFeed);
             return this;
         }
         public Builder containerDeleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy) {
@@ -273,7 +274,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder containerDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
-            this.containerDeleteRetentionPolicy = Output.ofNullable(containerDeleteRetentionPolicy);
+            this.containerDeleteRetentionPolicy = Codegen.ofNullable(containerDeleteRetentionPolicy);
             return this;
         }
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
@@ -281,7 +282,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Output.ofNullable(cors);
+            this.cors = Codegen.ofNullable(cors);
             return this;
         }
         public Builder defaultServiceVersion(@Nullable Output<String> defaultServiceVersion) {
@@ -289,7 +290,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder defaultServiceVersion(@Nullable String defaultServiceVersion) {
-            this.defaultServiceVersion = Output.ofNullable(defaultServiceVersion);
+            this.defaultServiceVersion = Codegen.ofNullable(defaultServiceVersion);
             return this;
         }
         public Builder deleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy) {
@@ -297,7 +298,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder deleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs deleteRetentionPolicy) {
-            this.deleteRetentionPolicy = Output.ofNullable(deleteRetentionPolicy);
+            this.deleteRetentionPolicy = Codegen.ofNullable(deleteRetentionPolicy);
             return this;
         }
         public Builder isVersioningEnabled(@Nullable Output<Boolean> isVersioningEnabled) {
@@ -305,7 +306,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder isVersioningEnabled(@Nullable Boolean isVersioningEnabled) {
-            this.isVersioningEnabled = Output.ofNullable(isVersioningEnabled);
+            this.isVersioningEnabled = Codegen.ofNullable(isVersioningEnabled);
             return this;
         }
         public Builder lastAccessTimeTrackingPolicy(@Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy) {
@@ -313,7 +314,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder lastAccessTimeTrackingPolicy(@Nullable LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
-            this.lastAccessTimeTrackingPolicy = Output.ofNullable(lastAccessTimeTrackingPolicy);
+            this.lastAccessTimeTrackingPolicy = Codegen.ofNullable(lastAccessTimeTrackingPolicy);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -329,7 +330,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder restorePolicy(@Nullable RestorePolicyPropertiesArgs restorePolicy) {
-            this.restorePolicy = Output.ofNullable(restorePolicy);
+            this.restorePolicy = Codegen.ofNullable(restorePolicy);
             return this;
         }        public BlobServicePropertiesArgs build() {
             return new BlobServicePropertiesArgs(accountName, automaticSnapshotPolicyEnabled, blobServicesName, changeFeed, containerDeleteRetentionPolicy, cors, defaultServiceVersion, deleteRetentionPolicy, isVersioningEnabled, lastAccessTimeTrackingPolicy, resourceGroupName, restorePolicy);

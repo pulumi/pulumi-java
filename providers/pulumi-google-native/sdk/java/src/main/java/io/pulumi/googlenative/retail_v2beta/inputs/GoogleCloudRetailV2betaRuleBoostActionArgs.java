@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends io.pulumi.
       private final @Nullable Output<Double> boost;
 
     public Output<Double> getBoost() {
-        return this.boost == null ? Output.empty() : this.boost;
+        return this.boost == null ? Codegen.empty() : this.boost;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends io.pulumi.
       private final @Nullable Output<String> productsFilter;
 
     public Output<String> getProductsFilter() {
-        return this.productsFilter == null ? Output.empty() : this.productsFilter;
+        return this.productsFilter == null ? Codegen.empty() : this.productsFilter;
     }
 
     public GoogleCloudRetailV2betaRuleBoostActionArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends io.pulumi.
     }
 
     private GoogleCloudRetailV2betaRuleBoostActionArgs() {
-        this.boost = Output.empty();
-        this.productsFilter = Output.empty();
+        this.boost = Codegen.empty();
+        this.productsFilter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends io.pulumi.
             return this;
         }
         public Builder boost(@Nullable Double boost) {
-            this.boost = Output.ofNullable(boost);
+            this.boost = Codegen.ofNullable(boost);
             return this;
         }
         public Builder productsFilter(@Nullable Output<String> productsFilter) {
@@ -88,7 +89,7 @@ public final class GoogleCloudRetailV2betaRuleBoostActionArgs extends io.pulumi.
             return this;
         }
         public Builder productsFilter(@Nullable String productsFilter) {
-            this.productsFilter = Output.ofNullable(productsFilter);
+            this.productsFilter = Codegen.ofNullable(productsFilter);
             return this;
         }        public GoogleCloudRetailV2betaRuleBoostActionArgs build() {
             return new GoogleCloudRetailV2betaRuleBoostActionArgs(boost, productsFilter);

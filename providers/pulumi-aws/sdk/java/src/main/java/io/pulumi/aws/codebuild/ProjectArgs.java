@@ -16,6 +16,7 @@ import io.pulumi.aws.codebuild.inputs.ProjectSourceArgs;
 import io.pulumi.aws.codebuild.inputs.ProjectVpcConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -48,7 +49,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> badgeEnabled;
 
     public Output<Boolean> getBadgeEnabled() {
-        return this.badgeEnabled == null ? Output.empty() : this.badgeEnabled;
+        return this.badgeEnabled == null ? Codegen.empty() : this.badgeEnabled;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig;
 
     public Output<ProjectBuildBatchConfigArgs> getBuildBatchConfig() {
-        return this.buildBatchConfig == null ? Output.empty() : this.buildBatchConfig;
+        return this.buildBatchConfig == null ? Codegen.empty() : this.buildBatchConfig;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> buildTimeout;
 
     public Output<Integer> getBuildTimeout() {
-        return this.buildTimeout == null ? Output.empty() : this.buildTimeout;
+        return this.buildTimeout == null ? Codegen.empty() : this.buildTimeout;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectCacheArgs> cache;
 
     public Output<ProjectCacheArgs> getCache() {
-        return this.cache == null ? Output.empty() : this.cache;
+        return this.cache == null ? Codegen.empty() : this.cache;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> concurrentBuildLimit;
 
     public Output<Integer> getConcurrentBuildLimit() {
-        return this.concurrentBuildLimit == null ? Output.empty() : this.concurrentBuildLimit;
+        return this.concurrentBuildLimit == null ? Codegen.empty() : this.concurrentBuildLimit;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> encryptionKey;
 
     public Output<String> getEncryptionKey() {
-        return this.encryptionKey == null ? Output.empty() : this.encryptionKey;
+        return this.encryptionKey == null ? Codegen.empty() : this.encryptionKey;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ProjectFileSystemLocationArgs>> fileSystemLocations;
 
     public Output<List<ProjectFileSystemLocationArgs>> getFileSystemLocations() {
-        return this.fileSystemLocations == null ? Output.empty() : this.fileSystemLocations;
+        return this.fileSystemLocations == null ? Codegen.empty() : this.fileSystemLocations;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectLogsConfigArgs> logsConfig;
 
     public Output<ProjectLogsConfigArgs> getLogsConfig() {
-        return this.logsConfig == null ? Output.empty() : this.logsConfig;
+        return this.logsConfig == null ? Codegen.empty() : this.logsConfig;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectVisibility;
 
     public Output<String> getProjectVisibility() {
-        return this.projectVisibility == null ? Output.empty() : this.projectVisibility;
+        return this.projectVisibility == null ? Codegen.empty() : this.projectVisibility;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> queuedTimeout;
 
     public Output<Integer> getQueuedTimeout() {
-        return this.queuedTimeout == null ? Output.empty() : this.queuedTimeout;
+        return this.queuedTimeout == null ? Codegen.empty() : this.queuedTimeout;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceAccessRole;
 
     public Output<String> getResourceAccessRole() {
-        return this.resourceAccessRole == null ? Output.empty() : this.resourceAccessRole;
+        return this.resourceAccessRole == null ? Codegen.empty() : this.resourceAccessRole;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts;
 
     public Output<List<ProjectSecondaryArtifactArgs>> getSecondaryArtifacts() {
-        return this.secondaryArtifacts == null ? Output.empty() : this.secondaryArtifacts;
+        return this.secondaryArtifacts == null ? Codegen.empty() : this.secondaryArtifacts;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ProjectSecondarySourceVersionArgs>> secondarySourceVersions;
 
     public Output<List<ProjectSecondarySourceVersionArgs>> getSecondarySourceVersions() {
-        return this.secondarySourceVersions == null ? Output.empty() : this.secondarySourceVersions;
+        return this.secondarySourceVersions == null ? Codegen.empty() : this.secondarySourceVersions;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ProjectSecondarySourceArgs>> secondarySources;
 
     public Output<List<ProjectSecondarySourceArgs>> getSecondarySources() {
-        return this.secondarySources == null ? Output.empty() : this.secondarySources;
+        return this.secondarySources == null ? Codegen.empty() : this.secondarySources;
     }
 
     /**
@@ -257,7 +258,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceVersion;
 
     public Output<String> getSourceVersion() {
-        return this.sourceVersion == null ? Output.empty() : this.sourceVersion;
+        return this.sourceVersion == null ? Codegen.empty() : this.sourceVersion;
     }
 
     /**
@@ -268,7 +269,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -279,7 +280,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectVpcConfigArgs> vpcConfig;
 
     public Output<ProjectVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
+        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
     public ProjectArgs(
@@ -332,29 +333,29 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.artifacts = Output.empty();
-        this.badgeEnabled = Output.empty();
-        this.buildBatchConfig = Output.empty();
-        this.buildTimeout = Output.empty();
-        this.cache = Output.empty();
-        this.concurrentBuildLimit = Output.empty();
-        this.description = Output.empty();
-        this.encryptionKey = Output.empty();
-        this.environment = Output.empty();
-        this.fileSystemLocations = Output.empty();
-        this.logsConfig = Output.empty();
-        this.name = Output.empty();
-        this.projectVisibility = Output.empty();
-        this.queuedTimeout = Output.empty();
-        this.resourceAccessRole = Output.empty();
-        this.secondaryArtifacts = Output.empty();
-        this.secondarySourceVersions = Output.empty();
-        this.secondarySources = Output.empty();
-        this.serviceRole = Output.empty();
-        this.source = Output.empty();
-        this.sourceVersion = Output.empty();
-        this.tags = Output.empty();
-        this.vpcConfig = Output.empty();
+        this.artifacts = Codegen.empty();
+        this.badgeEnabled = Codegen.empty();
+        this.buildBatchConfig = Codegen.empty();
+        this.buildTimeout = Codegen.empty();
+        this.cache = Codegen.empty();
+        this.concurrentBuildLimit = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptionKey = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.fileSystemLocations = Codegen.empty();
+        this.logsConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.projectVisibility = Codegen.empty();
+        this.queuedTimeout = Codegen.empty();
+        this.resourceAccessRole = Codegen.empty();
+        this.secondaryArtifacts = Codegen.empty();
+        this.secondarySourceVersions = Codegen.empty();
+        this.secondarySources = Codegen.empty();
+        this.serviceRole = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourceVersion = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -434,7 +435,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder badgeEnabled(@Nullable Boolean badgeEnabled) {
-            this.badgeEnabled = Output.ofNullable(badgeEnabled);
+            this.badgeEnabled = Codegen.ofNullable(badgeEnabled);
             return this;
         }
         public Builder buildBatchConfig(@Nullable Output<ProjectBuildBatchConfigArgs> buildBatchConfig) {
@@ -442,7 +443,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildBatchConfig(@Nullable ProjectBuildBatchConfigArgs buildBatchConfig) {
-            this.buildBatchConfig = Output.ofNullable(buildBatchConfig);
+            this.buildBatchConfig = Codegen.ofNullable(buildBatchConfig);
             return this;
         }
         public Builder buildTimeout(@Nullable Output<Integer> buildTimeout) {
@@ -450,7 +451,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildTimeout(@Nullable Integer buildTimeout) {
-            this.buildTimeout = Output.ofNullable(buildTimeout);
+            this.buildTimeout = Codegen.ofNullable(buildTimeout);
             return this;
         }
         public Builder cache(@Nullable Output<ProjectCacheArgs> cache) {
@@ -458,7 +459,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cache(@Nullable ProjectCacheArgs cache) {
-            this.cache = Output.ofNullable(cache);
+            this.cache = Codegen.ofNullable(cache);
             return this;
         }
         public Builder concurrentBuildLimit(@Nullable Output<Integer> concurrentBuildLimit) {
@@ -466,7 +467,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder concurrentBuildLimit(@Nullable Integer concurrentBuildLimit) {
-            this.concurrentBuildLimit = Output.ofNullable(concurrentBuildLimit);
+            this.concurrentBuildLimit = Codegen.ofNullable(concurrentBuildLimit);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -474,7 +475,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptionKey(@Nullable Output<String> encryptionKey) {
@@ -482,7 +483,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionKey(@Nullable String encryptionKey) {
-            this.encryptionKey = Output.ofNullable(encryptionKey);
+            this.encryptionKey = Codegen.ofNullable(encryptionKey);
             return this;
         }
         public Builder environment(Output<ProjectEnvironmentArgs> environment) {
@@ -498,7 +499,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileSystemLocations(@Nullable List<ProjectFileSystemLocationArgs> fileSystemLocations) {
-            this.fileSystemLocations = Output.ofNullable(fileSystemLocations);
+            this.fileSystemLocations = Codegen.ofNullable(fileSystemLocations);
             return this;
         }
         public Builder fileSystemLocations(ProjectFileSystemLocationArgs... fileSystemLocations) {
@@ -509,7 +510,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logsConfig(@Nullable ProjectLogsConfigArgs logsConfig) {
-            this.logsConfig = Output.ofNullable(logsConfig);
+            this.logsConfig = Codegen.ofNullable(logsConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -517,7 +518,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder projectVisibility(@Nullable Output<String> projectVisibility) {
@@ -525,7 +526,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectVisibility(@Nullable String projectVisibility) {
-            this.projectVisibility = Output.ofNullable(projectVisibility);
+            this.projectVisibility = Codegen.ofNullable(projectVisibility);
             return this;
         }
         public Builder queuedTimeout(@Nullable Output<Integer> queuedTimeout) {
@@ -533,7 +534,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queuedTimeout(@Nullable Integer queuedTimeout) {
-            this.queuedTimeout = Output.ofNullable(queuedTimeout);
+            this.queuedTimeout = Codegen.ofNullable(queuedTimeout);
             return this;
         }
         public Builder resourceAccessRole(@Nullable Output<String> resourceAccessRole) {
@@ -541,7 +542,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceAccessRole(@Nullable String resourceAccessRole) {
-            this.resourceAccessRole = Output.ofNullable(resourceAccessRole);
+            this.resourceAccessRole = Codegen.ofNullable(resourceAccessRole);
             return this;
         }
         public Builder secondaryArtifacts(@Nullable Output<List<ProjectSecondaryArtifactArgs>> secondaryArtifacts) {
@@ -549,7 +550,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryArtifacts(@Nullable List<ProjectSecondaryArtifactArgs> secondaryArtifacts) {
-            this.secondaryArtifacts = Output.ofNullable(secondaryArtifacts);
+            this.secondaryArtifacts = Codegen.ofNullable(secondaryArtifacts);
             return this;
         }
         public Builder secondaryArtifacts(ProjectSecondaryArtifactArgs... secondaryArtifacts) {
@@ -560,7 +561,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondarySourceVersions(@Nullable List<ProjectSecondarySourceVersionArgs> secondarySourceVersions) {
-            this.secondarySourceVersions = Output.ofNullable(secondarySourceVersions);
+            this.secondarySourceVersions = Codegen.ofNullable(secondarySourceVersions);
             return this;
         }
         public Builder secondarySourceVersions(ProjectSecondarySourceVersionArgs... secondarySourceVersions) {
@@ -571,7 +572,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondarySources(@Nullable List<ProjectSecondarySourceArgs> secondarySources) {
-            this.secondarySources = Output.ofNullable(secondarySources);
+            this.secondarySources = Codegen.ofNullable(secondarySources);
             return this;
         }
         public Builder secondarySources(ProjectSecondarySourceArgs... secondarySources) {
@@ -598,7 +599,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceVersion(@Nullable String sourceVersion) {
-            this.sourceVersion = Output.ofNullable(sourceVersion);
+            this.sourceVersion = Codegen.ofNullable(sourceVersion);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -606,7 +607,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcConfig(@Nullable Output<ProjectVpcConfigArgs> vpcConfig) {
@@ -614,7 +615,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfig(@Nullable ProjectVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Output.ofNullable(vpcConfig);
+            this.vpcConfig = Codegen.ofNullable(vpcConfig);
             return this;
         }        public ProjectArgs build() {
             return new ProjectArgs(artifacts, badgeEnabled, buildBatchConfig, buildTimeout, cache, concurrentBuildLimit, description, encryptionKey, environment, fileSystemLocations, logsConfig, name, projectVisibility, queuedTimeout, resourceAccessRole, secondaryArtifacts, secondarySourceVersions, secondarySources, serviceRole, source, sourceVersion, tags, vpcConfig);

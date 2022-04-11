@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     public ContainerInfoArgs(@Nullable Output<String> image) {
@@ -34,7 +35,7 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerInfoArgs() {
-        this.image = Output.empty();
+        this.image = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ContainerInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }        public ContainerInfoArgs build() {
             return new ContainerInfoArgs(image);

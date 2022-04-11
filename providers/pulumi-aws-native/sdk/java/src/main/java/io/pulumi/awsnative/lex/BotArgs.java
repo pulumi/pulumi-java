@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lex.inputs.BotTagArgs;
 import io.pulumi.awsnative.lex.inputs.DataPrivacyPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,14 +30,14 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> autoBuildBotLocales;
 
     public Output<Boolean> getAutoBuildBotLocales() {
-        return this.autoBuildBotLocales == null ? Output.empty() : this.autoBuildBotLocales;
+        return this.autoBuildBotLocales == null ? Codegen.empty() : this.autoBuildBotLocales;
     }
 
     @Import(name="botFileS3Location")
       private final @Nullable Output<BotS3LocationArgs> botFileS3Location;
 
     public Output<BotS3LocationArgs> getBotFileS3Location() {
-        return this.botFileS3Location == null ? Output.empty() : this.botFileS3Location;
+        return this.botFileS3Location == null ? Codegen.empty() : this.botFileS3Location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BotLocaleArgs>> botLocales;
 
     public Output<List<BotLocaleArgs>> getBotLocales() {
-        return this.botLocales == null ? Output.empty() : this.botLocales;
+        return this.botLocales == null ? Codegen.empty() : this.botLocales;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BotTagArgs>> botTags;
 
     public Output<List<BotTagArgs>> getBotTags() {
-        return this.botTags == null ? Output.empty() : this.botTags;
+        return this.botTags == null ? Codegen.empty() : this.botTags;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="roleArn", required=true)
@@ -112,7 +113,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BotTagArgs>> testBotAliasTags;
 
     public Output<List<BotTagArgs>> getTestBotAliasTags() {
-        return this.testBotAliasTags == null ? Output.empty() : this.testBotAliasTags;
+        return this.testBotAliasTags == null ? Codegen.empty() : this.testBotAliasTags;
     }
 
     public BotArgs(
@@ -139,16 +140,16 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotArgs() {
-        this.autoBuildBotLocales = Output.empty();
-        this.botFileS3Location = Output.empty();
-        this.botLocales = Output.empty();
-        this.botTags = Output.empty();
-        this.dataPrivacy = Output.empty();
-        this.description = Output.empty();
-        this.idleSessionTTLInSeconds = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.testBotAliasTags = Output.empty();
+        this.autoBuildBotLocales = Codegen.empty();
+        this.botFileS3Location = Codegen.empty();
+        this.botLocales = Codegen.empty();
+        this.botTags = Codegen.empty();
+        this.dataPrivacy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.idleSessionTTLInSeconds = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.testBotAliasTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoBuildBotLocales(@Nullable Boolean autoBuildBotLocales) {
-            this.autoBuildBotLocales = Output.ofNullable(autoBuildBotLocales);
+            this.autoBuildBotLocales = Codegen.ofNullable(autoBuildBotLocales);
             return this;
         }
         public Builder botFileS3Location(@Nullable Output<BotS3LocationArgs> botFileS3Location) {
@@ -202,7 +203,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder botFileS3Location(@Nullable BotS3LocationArgs botFileS3Location) {
-            this.botFileS3Location = Output.ofNullable(botFileS3Location);
+            this.botFileS3Location = Codegen.ofNullable(botFileS3Location);
             return this;
         }
         public Builder botLocales(@Nullable Output<List<BotLocaleArgs>> botLocales) {
@@ -210,7 +211,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder botLocales(@Nullable List<BotLocaleArgs> botLocales) {
-            this.botLocales = Output.ofNullable(botLocales);
+            this.botLocales = Codegen.ofNullable(botLocales);
             return this;
         }
         public Builder botLocales(BotLocaleArgs... botLocales) {
@@ -221,7 +222,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder botTags(@Nullable List<BotTagArgs> botTags) {
-            this.botTags = Output.ofNullable(botTags);
+            this.botTags = Codegen.ofNullable(botTags);
             return this;
         }
         public Builder botTags(BotTagArgs... botTags) {
@@ -240,7 +241,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder idleSessionTTLInSeconds(Output<Integer> idleSessionTTLInSeconds) {
@@ -256,7 +257,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -272,7 +273,7 @@ public final class BotArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testBotAliasTags(@Nullable List<BotTagArgs> testBotAliasTags) {
-            this.testBotAliasTags = Output.ofNullable(testBotAliasTags);
+            this.testBotAliasTags = Codegen.ofNullable(testBotAliasTags);
             return this;
         }
         public Builder testBotAliasTags(BotTagArgs... testBotAliasTags) {

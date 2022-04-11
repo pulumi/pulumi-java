@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> excludeVerboseContent;
 
     public Output<Boolean> getExcludeVerboseContent() {
-        return this.excludeVerboseContent == null ? Output.empty() : this.excludeVerboseContent;
+        return this.excludeVerboseContent == null ? Codegen.empty() : this.excludeVerboseContent;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private GraphQLApiLogConfigGetArgs() {
-        this.cloudwatchLogsRoleArn = Output.empty();
-        this.excludeVerboseContent = Output.empty();
-        this.fieldLogLevel = Output.empty();
+        this.cloudwatchLogsRoleArn = Codegen.empty();
+        this.excludeVerboseContent = Codegen.empty();
+        this.fieldLogLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class GraphQLApiLogConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder excludeVerboseContent(@Nullable Boolean excludeVerboseContent) {
-            this.excludeVerboseContent = Output.ofNullable(excludeVerboseContent);
+            this.excludeVerboseContent = Codegen.ofNullable(excludeVerboseContent);
             return this;
         }
         public Builder fieldLogLevel(Output<String> fieldLogLevel) {

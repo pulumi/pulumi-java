@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WorkflowTemplateJobSparkJobLoggingConfigGetArgs extends io.pu
       private final @Nullable Output<Map<String,String>> driverLogLevels;
 
     public Output<Map<String,String>> getDriverLogLevels() {
-        return this.driverLogLevels == null ? Output.empty() : this.driverLogLevels;
+        return this.driverLogLevels == null ? Codegen.empty() : this.driverLogLevels;
     }
 
     public WorkflowTemplateJobSparkJobLoggingConfigGetArgs(@Nullable Output<Map<String,String>> driverLogLevels) {
@@ -31,7 +32,7 @@ public final class WorkflowTemplateJobSparkJobLoggingConfigGetArgs extends io.pu
     }
 
     private WorkflowTemplateJobSparkJobLoggingConfigGetArgs() {
-        this.driverLogLevels = Output.empty();
+        this.driverLogLevels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class WorkflowTemplateJobSparkJobLoggingConfigGetArgs extends io.pu
             return this;
         }
         public Builder driverLogLevels(@Nullable Map<String,String> driverLogLevels) {
-            this.driverLogLevels = Output.ofNullable(driverLogLevels);
+            this.driverLogLevels = Codegen.ofNullable(driverLogLevels);
             return this;
         }        public WorkflowTemplateJobSparkJobLoggingConfigGetArgs build() {
             return new WorkflowTemplateJobSparkJobLoggingConfigGetArgs(driverLogLevels);

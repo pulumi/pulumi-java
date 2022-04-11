@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> hostGroupName;
 
     public Output<String> getHostGroupName() {
-        return this.hostGroupName == null ? Output.empty() : this.hostGroupName;
+        return this.hostGroupName == null ? Codegen.empty() : this.hostGroupName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> supportAutomaticPlacement;
 
     public Output<Boolean> getSupportAutomaticPlacement() {
-        return this.supportAutomaticPlacement == null ? Output.empty() : this.supportAutomaticPlacement;
+        return this.supportAutomaticPlacement == null ? Codegen.empty() : this.supportAutomaticPlacement;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public DedicatedHostGroupArgs(
@@ -113,13 +114,13 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DedicatedHostGroupArgs() {
-        this.hostGroupName = Output.empty();
-        this.location = Output.empty();
-        this.platformFaultDomainCount = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.supportAutomaticPlacement = Output.empty();
-        this.tags = Output.empty();
-        this.zones = Output.empty();
+        this.hostGroupName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.platformFaultDomainCount = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.supportAutomaticPlacement = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder hostGroupName(@Nullable String hostGroupName) {
-            this.hostGroupName = Output.ofNullable(hostGroupName);
+            this.hostGroupName = Codegen.ofNullable(hostGroupName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -167,7 +168,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder platformFaultDomainCount(Output<Integer> platformFaultDomainCount) {
@@ -191,7 +192,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder supportAutomaticPlacement(@Nullable Boolean supportAutomaticPlacement) {
-            this.supportAutomaticPlacement = Output.ofNullable(supportAutomaticPlacement);
+            this.supportAutomaticPlacement = Codegen.ofNullable(supportAutomaticPlacement);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -199,7 +200,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -207,7 +208,7 @@ public final class DedicatedHostGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

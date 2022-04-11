@@ -7,6 +7,7 @@ import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationNfsExpor
 import io.pulumi.aws.fsx.inputs.OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
       private final @Nullable Output<Boolean> copyTagsToSnapshots;
 
     public Output<Boolean> getCopyTagsToSnapshots() {
-        return this.copyTagsToSnapshots == null ? Output.empty() : this.copyTagsToSnapshots;
+        return this.copyTagsToSnapshots == null ? Codegen.empty() : this.copyTagsToSnapshots;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
       private final @Nullable Output<String> dataCompressionType;
 
     public Output<String> getDataCompressionType() {
-        return this.dataCompressionType == null ? Output.empty() : this.dataCompressionType;
+        return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
       private final @Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs> nfsExports;
 
     public Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs> getNfsExports() {
-        return this.nfsExports == null ? Output.empty() : this.nfsExports;
+        return this.nfsExports == null ? Codegen.empty() : this.nfsExports;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
       private final @Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs>> userAndGroupQuotas;
 
     public Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs>> getUserAndGroupQuotas() {
-        return this.userAndGroupQuotas == null ? Output.empty() : this.userAndGroupQuotas;
+        return this.userAndGroupQuotas == null ? Codegen.empty() : this.userAndGroupQuotas;
     }
 
     public OpenZfsFileSystemRootVolumeConfigurationGetArgs(
@@ -87,11 +88,11 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
     }
 
     private OpenZfsFileSystemRootVolumeConfigurationGetArgs() {
-        this.copyTagsToSnapshots = Output.empty();
-        this.dataCompressionType = Output.empty();
-        this.nfsExports = Output.empty();
-        this.readOnly = Output.empty();
-        this.userAndGroupQuotas = Output.empty();
+        this.copyTagsToSnapshots = Codegen.empty();
+        this.dataCompressionType = Codegen.empty();
+        this.nfsExports = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.userAndGroupQuotas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder copyTagsToSnapshots(@Nullable Boolean copyTagsToSnapshots) {
-            this.copyTagsToSnapshots = Output.ofNullable(copyTagsToSnapshots);
+            this.copyTagsToSnapshots = Codegen.ofNullable(copyTagsToSnapshots);
             return this;
         }
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
@@ -135,7 +136,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
-            this.dataCompressionType = Output.ofNullable(dataCompressionType);
+            this.dataCompressionType = Codegen.ofNullable(dataCompressionType);
             return this;
         }
         public Builder nfsExports(@Nullable Output<OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs> nfsExports) {
@@ -143,7 +144,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder nfsExports(@Nullable OpenZfsFileSystemRootVolumeConfigurationNfsExportsGetArgs nfsExports) {
-            this.nfsExports = Output.ofNullable(nfsExports);
+            this.nfsExports = Codegen.ofNullable(nfsExports);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -151,7 +152,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder userAndGroupQuotas(@Nullable Output<List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs>> userAndGroupQuotas) {
@@ -159,7 +160,7 @@ public final class OpenZfsFileSystemRootVolumeConfigurationGetArgs extends io.pu
             return this;
         }
         public Builder userAndGroupQuotas(@Nullable List<OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs> userAndGroupQuotas) {
-            this.userAndGroupQuotas = Output.ofNullable(userAndGroupQuotas);
+            this.userAndGroupQuotas = Codegen.ofNullable(userAndGroupQuotas);
             return this;
         }
         public Builder userAndGroupQuotas(OpenZfsFileSystemRootVolumeConfigurationUserAndGroupQuotaGetArgs... userAndGroupQuotas) {

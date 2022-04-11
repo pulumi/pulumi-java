@@ -6,6 +6,7 @@ package io.pulumi.aws.cfg.inputs;
 import io.pulumi.aws.cfg.inputs.RecorderRecordingGroupGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup;
 
     public Output<RecorderRecordingGroupGetArgs> getRecordingGroup() {
-        return this.recordingGroup == null ? Output.empty() : this.recordingGroup;
+        return this.recordingGroup == null ? Codegen.empty() : this.recordingGroup;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     public RecorderState(
@@ -58,9 +59,9 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecorderState() {
-        this.name = Output.empty();
-        this.recordingGroup = Output.empty();
-        this.roleArn = Output.empty();
+        this.name = Codegen.empty();
+        this.recordingGroup = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recordingGroup(@Nullable Output<RecorderRecordingGroupGetArgs> recordingGroup) {
@@ -100,7 +101,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recordingGroup(@Nullable RecorderRecordingGroupGetArgs recordingGroup) {
-            this.recordingGroup = Output.ofNullable(recordingGroup);
+            this.recordingGroup = Codegen.ofNullable(recordingGroup);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -108,7 +109,7 @@ public final class RecorderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }        public RecorderState build() {
             return new RecorderState(name, recordingGroup, roleArn);

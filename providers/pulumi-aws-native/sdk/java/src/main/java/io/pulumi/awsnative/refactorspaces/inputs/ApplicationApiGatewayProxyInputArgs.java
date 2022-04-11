@@ -6,6 +6,7 @@ package io.pulumi.awsnative.refactorspaces.inputs;
 import io.pulumi.awsnative.refactorspaces.enums.ApplicationApiGatewayEndpointType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
       private final @Nullable Output<ApplicationApiGatewayEndpointType> endpointType;
 
     public Output<ApplicationApiGatewayEndpointType> getEndpointType() {
-        return this.endpointType == null ? Output.empty() : this.endpointType;
+        return this.endpointType == null ? Codegen.empty() : this.endpointType;
     }
 
     @Import(name="stageName")
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     public ApplicationApiGatewayProxyInputArgs(
@@ -37,8 +38,8 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     }
 
     private ApplicationApiGatewayProxyInputArgs() {
-        this.endpointType = Output.empty();
-        this.stageName = Output.empty();
+        this.endpointType = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
             return this;
         }
         public Builder endpointType(@Nullable ApplicationApiGatewayEndpointType endpointType) {
-            this.endpointType = Output.ofNullable(endpointType);
+            this.endpointType = Codegen.ofNullable(endpointType);
             return this;
         }
         public Builder stageName(@Nullable Output<String> stageName) {
@@ -76,7 +77,7 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }        public ApplicationApiGatewayProxyInputArgs build() {
             return new ApplicationApiGatewayProxyInputArgs(endpointType, stageName);

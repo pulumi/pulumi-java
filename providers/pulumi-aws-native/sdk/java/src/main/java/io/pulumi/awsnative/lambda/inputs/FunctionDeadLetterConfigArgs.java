@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> targetArn;
 
     public Output<String> getTargetArn() {
-        return this.targetArn == null ? Output.empty() : this.targetArn;
+        return this.targetArn == null ? Codegen.empty() : this.targetArn;
     }
 
     public FunctionDeadLetterConfigArgs(@Nullable Output<String> targetArn) {
@@ -34,7 +35,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
     }
 
     private FunctionDeadLetterConfigArgs() {
-        this.targetArn = Output.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targetArn(@Nullable String targetArn) {
-            this.targetArn = Output.ofNullable(targetArn);
+            this.targetArn = Codegen.ofNullable(targetArn);
             return this;
         }        public FunctionDeadLetterConfigArgs build() {
             return new FunctionDeadLetterConfigArgs(targetArn);

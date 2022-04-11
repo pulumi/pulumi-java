@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devops.inputs.CodeRepositoryArgs;
 import io.pulumi.azurenative.devops.inputs.PipelineTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<CodeRepositoryArgs> sourceRepository;
 
     public Output<CodeRepositoryArgs> getSourceRepository() {
-        return this.sourceRepository == null ? Output.empty() : this.sourceRepository;
+        return this.sourceRepository == null ? Codegen.empty() : this.sourceRepository;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private BootstrapConfigurationArgs() {
-        this.sourceRepository = Output.empty();
-        this.template = Output.empty();
+        this.sourceRepository = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BootstrapConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sourceRepository(@Nullable CodeRepositoryArgs sourceRepository) {
-            this.sourceRepository = Output.ofNullable(sourceRepository);
+            this.sourceRepository = Codegen.ofNullable(sourceRepository);
             return this;
         }
         public Builder template(Output<PipelineTemplateArgs> template) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> except;
 
     public Output<List<String>> getExcept() {
-        return this.except == null ? Output.empty() : this.except;
+        return this.except == null ? Codegen.empty() : this.except;
     }
 
     public IPBlockArgs(
@@ -49,8 +50,8 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPBlockArgs() {
-        this.cidr = Output.empty();
-        this.except = Output.empty();
+        this.cidr = Codegen.empty();
+        this.except = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class IPBlockArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder except(@Nullable List<String> except) {
-            this.except = Output.ofNullable(except);
+            this.except = Codegen.ofNullable(except);
             return this;
         }
         public Builder except(String... except) {

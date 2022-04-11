@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class StageAccessLogSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private StageAccessLogSettingsArgs() {
-        this.destinationArn = Output.empty();
-        this.format = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.format = Codegen.empty();
     }
 
     public static Builder builder() {

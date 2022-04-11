@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterItemA
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
       private final @Nullable Output<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
     public Output<List<ConnectionMonitorEndpointFilterItemArgs>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
       private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
     public Output<Either<String,ConnectionMonitorEndpointFilterType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ConnectionMonitorEndpointFilterArgs(
@@ -52,8 +53,8 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
     }
 
     private ConnectionMonitorEndpointFilterArgs() {
-        this.items = Output.empty();
-        this.type = Output.empty();
+        this.items = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
             return this;
         }
         public Builder items(@Nullable List<ConnectionMonitorEndpointFilterItemArgs> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(ConnectionMonitorEndpointFilterItemArgs... items) {
@@ -94,7 +95,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
             return this;
         }
         public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ConnectionMonitorEndpointFilterArgs build() {
             return new ConnectionMonitorEndpointFilterArgs(items, type);

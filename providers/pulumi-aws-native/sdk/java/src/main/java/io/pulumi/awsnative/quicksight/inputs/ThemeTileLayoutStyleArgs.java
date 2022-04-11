@@ -7,6 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.ThemeGutterStyleArgs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeMarginStyleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,14 +24,14 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ThemeGutterStyleArgs> gutter;
 
     public Output<ThemeGutterStyleArgs> getGutter() {
-        return this.gutter == null ? Output.empty() : this.gutter;
+        return this.gutter == null ? Codegen.empty() : this.gutter;
     }
 
     @Import(name="margin")
       private final @Nullable Output<ThemeMarginStyleArgs> margin;
 
     public Output<ThemeMarginStyleArgs> getMargin() {
-        return this.margin == null ? Output.empty() : this.margin;
+        return this.margin == null ? Codegen.empty() : this.margin;
     }
 
     public ThemeTileLayoutStyleArgs(
@@ -41,8 +42,8 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
     }
 
     private ThemeTileLayoutStyleArgs() {
-        this.gutter = Output.empty();
-        this.margin = Output.empty();
+        this.gutter = Codegen.empty();
+        this.margin = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder gutter(@Nullable ThemeGutterStyleArgs gutter) {
-            this.gutter = Output.ofNullable(gutter);
+            this.gutter = Codegen.ofNullable(gutter);
             return this;
         }
         public Builder margin(@Nullable Output<ThemeMarginStyleArgs> margin) {
@@ -80,7 +81,7 @@ public final class ThemeTileLayoutStyleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder margin(@Nullable ThemeMarginStyleArgs margin) {
-            this.margin = Output.ofNullable(margin);
+            this.margin = Codegen.ofNullable(margin);
             return this;
         }        public ThemeTileLayoutStyleArgs build() {
             return new ThemeTileLayoutStyleArgs(gutter, margin);

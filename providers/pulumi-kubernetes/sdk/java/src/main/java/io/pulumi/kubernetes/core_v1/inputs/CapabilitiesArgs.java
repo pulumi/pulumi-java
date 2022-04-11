@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> add;
 
     public Output<List<String>> getAdd() {
-        return this.add == null ? Output.empty() : this.add;
+        return this.add == null ? Codegen.empty() : this.add;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> drop;
 
     public Output<List<String>> getDrop() {
-        return this.drop == null ? Output.empty() : this.drop;
+        return this.drop == null ? Codegen.empty() : this.drop;
     }
 
     public CapabilitiesArgs(
@@ -49,8 +50,8 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CapabilitiesArgs() {
-        this.add = Output.empty();
-        this.drop = Output.empty();
+        this.add = Codegen.empty();
+        this.drop = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder add(@Nullable List<String> add) {
-            this.add = Output.ofNullable(add);
+            this.add = Codegen.ofNullable(add);
             return this;
         }
         public Builder add(String... add) {
@@ -91,7 +92,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder drop(@Nullable List<String> drop) {
-            this.drop = Output.ofNullable(drop);
+            this.drop = Codegen.ofNullable(drop);
             return this;
         }
         public Builder drop(String... drop) {

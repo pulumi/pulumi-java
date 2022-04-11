@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.MetastoreServiceArgs;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceState;
@@ -277,7 +278,7 @@ public class MetastoreService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public MetastoreService(String name, MetastoreServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/metastoreService:MetastoreService", name, args == null ? MetastoreServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private MetastoreService(String name, Output<String> id, @Nullable MetastoreServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

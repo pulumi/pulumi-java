@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.ContainerServiceSshConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class ContainerServiceLinuxProfileArgs extends io.pulumi.resources.
     }
 
     private ContainerServiceLinuxProfileArgs() {
-        this.adminUsername = Output.empty();
-        this.ssh = Output.empty();
+        this.adminUsername = Codegen.empty();
+        this.ssh = Codegen.empty();
     }
 
     public static Builder builder() {

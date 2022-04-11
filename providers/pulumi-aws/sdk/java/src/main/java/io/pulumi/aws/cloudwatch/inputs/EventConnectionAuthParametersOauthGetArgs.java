@@ -7,6 +7,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthClientP
 import io.pulumi.aws.cloudwatch.inputs.EventConnectionAuthParametersOauthOauthHttpParametersGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class EventConnectionAuthParametersOauthGetArgs extends io.pulumi.r
       private final @Nullable Output<EventConnectionAuthParametersOauthClientParametersGetArgs> clientParameters;
 
     public Output<EventConnectionAuthParametersOauthClientParametersGetArgs> getClientParameters() {
-        return this.clientParameters == null ? Output.empty() : this.clientParameters;
+        return this.clientParameters == null ? Codegen.empty() : this.clientParameters;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class EventConnectionAuthParametersOauthGetArgs extends io.pulumi.r
     }
 
     private EventConnectionAuthParametersOauthGetArgs() {
-        this.authorizationEndpoint = Output.empty();
-        this.clientParameters = Output.empty();
-        this.httpMethod = Output.empty();
-        this.oauthHttpParameters = Output.empty();
+        this.authorizationEndpoint = Codegen.empty();
+        this.clientParameters = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.oauthHttpParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class EventConnectionAuthParametersOauthGetArgs extends io.pulumi.r
             return this;
         }
         public Builder clientParameters(@Nullable EventConnectionAuthParametersOauthClientParametersGetArgs clientParameters) {
-            this.clientParameters = Output.ofNullable(clientParameters);
+            this.clientParameters = Codegen.ofNullable(clientParameters);
             return this;
         }
         public Builder httpMethod(Output<String> httpMethod) {

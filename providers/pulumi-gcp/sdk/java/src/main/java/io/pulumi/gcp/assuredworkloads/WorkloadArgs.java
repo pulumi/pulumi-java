@@ -5,6 +5,7 @@ package io.pulumi.gcp.assuredworkloads;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadKmsSettingsArgs;
 import io.pulumi.gcp.assuredworkloads.inputs.WorkloadResourceSettingArgs;
 import java.lang.String;
@@ -59,7 +60,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkloadKmsSettingsArgs> kmsSettings;
 
     public Output<WorkloadKmsSettingsArgs> getKmsSettings() {
-        return this.kmsSettings == null ? Output.empty() : this.kmsSettings;
+        return this.kmsSettings == null ? Codegen.empty() : this.kmsSettings;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisionedResourcesParent;
 
     public Output<String> getProvisionedResourcesParent() {
-        return this.provisionedResourcesParent == null ? Output.empty() : this.provisionedResourcesParent;
+        return this.provisionedResourcesParent == null ? Codegen.empty() : this.provisionedResourcesParent;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings;
 
     public Output<List<WorkloadResourceSettingArgs>> getResourceSettings() {
-        return this.resourceSettings == null ? Output.empty() : this.resourceSettings;
+        return this.resourceSettings == null ? Codegen.empty() : this.resourceSettings;
     }
 
     public WorkloadArgs(
@@ -139,15 +140,15 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkloadArgs() {
-        this.billingAccount = Output.empty();
-        this.complianceRegime = Output.empty();
-        this.displayName = Output.empty();
-        this.kmsSettings = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.organization = Output.empty();
-        this.provisionedResourcesParent = Output.empty();
-        this.resourceSettings = Output.empty();
+        this.billingAccount = Codegen.empty();
+        this.complianceRegime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.kmsSettings = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.organization = Codegen.empty();
+        this.provisionedResourcesParent = Codegen.empty();
+        this.resourceSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsSettings(@Nullable WorkloadKmsSettingsArgs kmsSettings) {
-            this.kmsSettings = Output.ofNullable(kmsSettings);
+            this.kmsSettings = Codegen.ofNullable(kmsSettings);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -223,7 +224,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -247,7 +248,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisionedResourcesParent(@Nullable String provisionedResourcesParent) {
-            this.provisionedResourcesParent = Output.ofNullable(provisionedResourcesParent);
+            this.provisionedResourcesParent = Codegen.ofNullable(provisionedResourcesParent);
             return this;
         }
         public Builder resourceSettings(@Nullable Output<List<WorkloadResourceSettingArgs>> resourceSettings) {
@@ -255,7 +256,7 @@ public final class WorkloadArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSettings(@Nullable List<WorkloadResourceSettingArgs> resourceSettings) {
-            this.resourceSettings = Output.ofNullable(resourceSettings);
+            this.resourceSettings = Codegen.ofNullable(resourceSettings);
             return this;
         }
         public Builder resourceSettings(WorkloadResourceSettingArgs... resourceSettings) {

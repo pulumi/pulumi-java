@@ -7,6 +7,7 @@ import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUName;
 import io.pulumi.azurenative.azureactivedirectory.enums.B2CResourceSKUTier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<B2CResourceSKUName> name;
 
     public Output<B2CResourceSKUName> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<B2CResourceSKUTier> tier;
 
     public Output<B2CResourceSKUTier> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public B2CResourceSKUArgs(
@@ -49,8 +50,8 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private B2CResourceSKUArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable B2CResourceSKUName name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(@Nullable Output<B2CResourceSKUTier> tier) {
@@ -88,7 +89,7 @@ public final class B2CResourceSKUArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable B2CResourceSKUTier tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public B2CResourceSKUArgs build() {
             return new B2CResourceSKUArgs(name, tier);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="format")
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     public KeyRingImportJobAttestationArgs(
@@ -36,8 +37,8 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
     }
 
     private KeyRingImportJobAttestationArgs() {
-        this.content = Output.empty();
-        this.format = Output.empty();
+        this.content = Codegen.empty();
+        this.format = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -75,7 +76,7 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }        public KeyRingImportJobAttestationArgs build() {
             return new KeyRingImportJobAttestationArgs(content, format);

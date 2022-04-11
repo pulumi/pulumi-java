@@ -5,6 +5,7 @@ package io.pulumi.aws.docdb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ClusterSnapshotArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterSnapshotArgs() {
-        this.dbClusterIdentifier = Output.empty();
-        this.dbClusterSnapshotIdentifier = Output.empty();
+        this.dbClusterIdentifier = Codegen.empty();
+        this.dbClusterSnapshotIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {

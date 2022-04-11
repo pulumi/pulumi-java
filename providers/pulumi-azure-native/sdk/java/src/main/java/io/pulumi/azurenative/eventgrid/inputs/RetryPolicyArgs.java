@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> eventTimeToLiveInMinutes;
 
     public Output<Integer> getEventTimeToLiveInMinutes() {
-        return this.eventTimeToLiveInMinutes == null ? Output.empty() : this.eventTimeToLiveInMinutes;
+        return this.eventTimeToLiveInMinutes == null ? Codegen.empty() : this.eventTimeToLiveInMinutes;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxDeliveryAttempts;
 
     public Output<Integer> getMaxDeliveryAttempts() {
-        return this.maxDeliveryAttempts == null ? Output.empty() : this.maxDeliveryAttempts;
+        return this.maxDeliveryAttempts == null ? Codegen.empty() : this.maxDeliveryAttempts;
     }
 
     public RetryPolicyArgs(
@@ -48,8 +49,8 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RetryPolicyArgs() {
-        this.eventTimeToLiveInMinutes = Output.empty();
-        this.maxDeliveryAttempts = Output.empty();
+        this.eventTimeToLiveInMinutes = Codegen.empty();
+        this.maxDeliveryAttempts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventTimeToLiveInMinutes(@Nullable Integer eventTimeToLiveInMinutes) {
-            this.eventTimeToLiveInMinutes = Output.ofNullable(eventTimeToLiveInMinutes);
+            this.eventTimeToLiveInMinutes = Codegen.ofNullable(eventTimeToLiveInMinutes);
             return this;
         }
         public Builder maxDeliveryAttempts(@Nullable Output<Integer> maxDeliveryAttempts) {
@@ -87,7 +88,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxDeliveryAttempts(@Nullable Integer maxDeliveryAttempts) {
-            this.maxDeliveryAttempts = Output.ofNullable(maxDeliveryAttempts);
+            this.maxDeliveryAttempts = Codegen.ofNullable(maxDeliveryAttempts);
             return this;
         }        public RetryPolicyArgs build() {
             return new RetryPolicyArgs(eventTimeToLiveInMinutes, maxDeliveryAttempts);

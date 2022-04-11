@@ -5,6 +5,7 @@ package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class WorkloadKmsSettingsGetArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadKmsSettingsGetArgs() {
-        this.nextRotationTime = Output.empty();
-        this.rotationPeriod = Output.empty();
+        this.nextRotationTime = Codegen.empty();
+        this.rotationPeriod = Codegen.empty();
     }
 
     public static Builder builder() {

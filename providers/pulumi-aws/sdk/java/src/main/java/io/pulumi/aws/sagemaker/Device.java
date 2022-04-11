@@ -10,6 +10,7 @@ import io.pulumi.aws.sagemaker.outputs.DeviceDevice;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -100,7 +101,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/device:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/device:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Device(String name, Output<String> id, @Nullable DeviceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

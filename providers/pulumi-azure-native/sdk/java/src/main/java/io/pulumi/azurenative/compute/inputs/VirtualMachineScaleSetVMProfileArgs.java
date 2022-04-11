@@ -16,6 +16,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetStorageProfile
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<BillingProfileArgs> billingProfile;
 
     public Output<BillingProfileArgs> getBillingProfile() {
-        return this.billingProfile == null ? Output.empty() : this.billingProfile;
+        return this.billingProfile == null ? Codegen.empty() : this.billingProfile;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile;
 
     public Output<DiagnosticsProfileArgs> getDiagnosticsProfile() {
-        return this.diagnosticsProfile == null ? Output.empty() : this.diagnosticsProfile;
+        return this.diagnosticsProfile == null ? Codegen.empty() : this.diagnosticsProfile;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
     public Output<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
-        return this.evictionPolicy == null ? Output.empty() : this.evictionPolicy;
+        return this.evictionPolicy == null ? Codegen.empty() : this.evictionPolicy;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
 
     public Output<VirtualMachineScaleSetExtensionProfileArgs> getExtensionProfile() {
-        return this.extensionProfile == null ? Output.empty() : this.extensionProfile;
+        return this.extensionProfile == null ? Codegen.empty() : this.extensionProfile;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<String> licenseType;
 
     public Output<String> getLicenseType() {
-        return this.licenseType == null ? Output.empty() : this.licenseType;
+        return this.licenseType == null ? Codegen.empty() : this.licenseType;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
 
     public Output<VirtualMachineScaleSetNetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile;
 
     public Output<VirtualMachineScaleSetOSProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Output.empty() : this.osProfile;
+        return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority;
 
     public Output<Either<String,VirtualMachinePriorityTypes>> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
     public Output<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
-        return this.scheduledEventsProfile == null ? Output.empty() : this.scheduledEventsProfile;
+        return this.scheduledEventsProfile == null ? Codegen.empty() : this.scheduledEventsProfile;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<SecurityProfileArgs> securityProfile;
 
     public Output<SecurityProfileArgs> getSecurityProfile() {
-        return this.securityProfile == null ? Output.empty() : this.securityProfile;
+        return this.securityProfile == null ? Codegen.empty() : this.securityProfile;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
 
     public Output<VirtualMachineScaleSetStorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Output.empty() : this.storageProfile;
+        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     public VirtualMachineScaleSetVMProfileArgs(
@@ -189,18 +190,18 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
     }
 
     private VirtualMachineScaleSetVMProfileArgs() {
-        this.billingProfile = Output.empty();
-        this.diagnosticsProfile = Output.empty();
-        this.evictionPolicy = Output.empty();
-        this.extensionProfile = Output.empty();
-        this.licenseType = Output.empty();
-        this.networkProfile = Output.empty();
-        this.osProfile = Output.empty();
-        this.priority = Output.empty();
-        this.scheduledEventsProfile = Output.empty();
-        this.securityProfile = Output.empty();
-        this.storageProfile = Output.empty();
-        this.userData = Output.empty();
+        this.billingProfile = Codegen.empty();
+        this.diagnosticsProfile = Codegen.empty();
+        this.evictionPolicy = Codegen.empty();
+        this.extensionProfile = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.networkProfile = Codegen.empty();
+        this.osProfile = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.scheduledEventsProfile = Codegen.empty();
+        this.securityProfile = Codegen.empty();
+        this.storageProfile = Codegen.empty();
+        this.userData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder billingProfile(@Nullable BillingProfileArgs billingProfile) {
-            this.billingProfile = Output.ofNullable(billingProfile);
+            this.billingProfile = Codegen.ofNullable(billingProfile);
             return this;
         }
         public Builder diagnosticsProfile(@Nullable Output<DiagnosticsProfileArgs> diagnosticsProfile) {
@@ -258,7 +259,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileArgs diagnosticsProfile) {
-            this.diagnosticsProfile = Output.ofNullable(diagnosticsProfile);
+            this.diagnosticsProfile = Codegen.ofNullable(diagnosticsProfile);
             return this;
         }
         public Builder evictionPolicy(@Nullable Output<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy) {
@@ -266,7 +267,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder evictionPolicy(@Nullable Either<String,VirtualMachineEvictionPolicyTypes> evictionPolicy) {
-            this.evictionPolicy = Output.ofNullable(evictionPolicy);
+            this.evictionPolicy = Codegen.ofNullable(evictionPolicy);
             return this;
         }
         public Builder extensionProfile(@Nullable Output<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile) {
@@ -274,7 +275,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder extensionProfile(@Nullable VirtualMachineScaleSetExtensionProfileArgs extensionProfile) {
-            this.extensionProfile = Output.ofNullable(extensionProfile);
+            this.extensionProfile = Codegen.ofNullable(extensionProfile);
             return this;
         }
         public Builder licenseType(@Nullable Output<String> licenseType) {
@@ -282,7 +283,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder licenseType(@Nullable String licenseType) {
-            this.licenseType = Output.ofNullable(licenseType);
+            this.licenseType = Codegen.ofNullable(licenseType);
             return this;
         }
         public Builder networkProfile(@Nullable Output<VirtualMachineScaleSetNetworkProfileArgs> networkProfile) {
@@ -290,7 +291,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder networkProfile(@Nullable VirtualMachineScaleSetNetworkProfileArgs networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }
         public Builder osProfile(@Nullable Output<VirtualMachineScaleSetOSProfileArgs> osProfile) {
@@ -298,7 +299,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder osProfile(@Nullable VirtualMachineScaleSetOSProfileArgs osProfile) {
-            this.osProfile = Output.ofNullable(osProfile);
+            this.osProfile = Codegen.ofNullable(osProfile);
             return this;
         }
         public Builder priority(@Nullable Output<Either<String,VirtualMachinePriorityTypes>> priority) {
@@ -306,7 +307,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder priority(@Nullable Either<String,VirtualMachinePriorityTypes> priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder scheduledEventsProfile(@Nullable Output<ScheduledEventsProfileArgs> scheduledEventsProfile) {
@@ -314,7 +315,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder scheduledEventsProfile(@Nullable ScheduledEventsProfileArgs scheduledEventsProfile) {
-            this.scheduledEventsProfile = Output.ofNullable(scheduledEventsProfile);
+            this.scheduledEventsProfile = Codegen.ofNullable(scheduledEventsProfile);
             return this;
         }
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
@@ -322,7 +323,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder securityProfile(@Nullable SecurityProfileArgs securityProfile) {
-            this.securityProfile = Output.ofNullable(securityProfile);
+            this.securityProfile = Codegen.ofNullable(securityProfile);
             return this;
         }
         public Builder storageProfile(@Nullable Output<VirtualMachineScaleSetStorageProfileArgs> storageProfile) {
@@ -330,7 +331,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder storageProfile(@Nullable VirtualMachineScaleSetStorageProfileArgs storageProfile) {
-            this.storageProfile = Output.ofNullable(storageProfile);
+            this.storageProfile = Codegen.ofNullable(storageProfile);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -338,7 +339,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }        public VirtualMachineScaleSetVMProfileArgs build() {
             return new VirtualMachineScaleSetVMProfileArgs(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);

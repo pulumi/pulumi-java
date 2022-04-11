@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
       private final @Nullable Output<String> linkedStorageAccount;
 
     public Output<String> getLinkedStorageAccount() {
-        return this.linkedStorageAccount == null ? Output.empty() : this.linkedStorageAccount;
+        return this.linkedStorageAccount == null ? Codegen.empty() : this.linkedStorageAccount;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     public ComponentLinkedStorageAccountArgs(
@@ -70,10 +71,10 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
     }
 
     private ComponentLinkedStorageAccountArgs() {
-        this.linkedStorageAccount = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.storageType = Output.empty();
+        this.linkedStorageAccount = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.storageType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
             return this;
         }
         public Builder linkedStorageAccount(@Nullable String linkedStorageAccount) {
-            this.linkedStorageAccount = Output.ofNullable(linkedStorageAccount);
+            this.linkedStorageAccount = Codegen.ofNullable(linkedStorageAccount);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -131,7 +132,7 @@ public final class ComponentLinkedStorageAccountArgs extends io.pulumi.resources
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }        public ComponentLinkedStorageAccountArgs build() {
             return new ComponentLinkedStorageAccountArgs(linkedStorageAccount, resourceGroupName, resourceName, storageType);

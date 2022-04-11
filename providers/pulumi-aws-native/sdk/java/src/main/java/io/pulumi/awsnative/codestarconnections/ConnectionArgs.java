@@ -6,6 +6,7 @@ package io.pulumi.awsnative.codestarconnections;
 import io.pulumi.awsnative.codestarconnections.inputs.ConnectionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectionName;
 
     public Output<String> getConnectionName() {
-        return this.connectionName == null ? Output.empty() : this.connectionName;
+        return this.connectionName == null ? Codegen.empty() : this.connectionName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostArn;
 
     public Output<String> getHostArn() {
-        return this.hostArn == null ? Output.empty() : this.hostArn;
+        return this.hostArn == null ? Codegen.empty() : this.hostArn;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> providerType;
 
     public Output<String> getProviderType() {
-        return this.providerType == null ? Output.empty() : this.providerType;
+        return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ConnectionTagArgs>> tags;
 
     public Output<List<ConnectionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConnectionArgs(
@@ -72,10 +73,10 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.connectionName = Output.empty();
-        this.hostArn = Output.empty();
-        this.providerType = Output.empty();
-        this.tags = Output.empty();
+        this.connectionName = Codegen.empty();
+        this.hostArn = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionName(@Nullable String connectionName) {
-            this.connectionName = Output.ofNullable(connectionName);
+            this.connectionName = Codegen.ofNullable(connectionName);
             return this;
         }
         public Builder hostArn(@Nullable Output<String> hostArn) {
@@ -117,7 +118,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostArn(@Nullable String hostArn) {
-            this.hostArn = Output.ofNullable(hostArn);
+            this.hostArn = Codegen.ofNullable(hostArn);
             return this;
         }
         public Builder providerType(@Nullable Output<String> providerType) {
@@ -125,7 +126,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Output.ofNullable(providerType);
+            this.providerType = Codegen.ofNullable(providerType);
             return this;
         }
         public Builder tags(@Nullable Output<List<ConnectionTagArgs>> tags) {
@@ -133,7 +134,7 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ConnectionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ConnectionTagArgs... tags) {

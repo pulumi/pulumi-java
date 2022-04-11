@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.inputs.PublicDelegatedPrefixPublicDelegatedSubPrefixArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> ipCidrRange;
 
     public Output<String> getIpCidrRange() {
-        return this.ipCidrRange == null ? Output.empty() : this.ipCidrRange;
+        return this.ipCidrRange == null ? Codegen.empty() : this.ipCidrRange;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> isLiveMigration;
 
     public Output<Boolean> getIsLiveMigration() {
-        return this.isLiveMigration == null ? Output.empty() : this.isLiveMigration;
+        return this.isLiveMigration == null ? Codegen.empty() : this.isLiveMigration;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> parentPrefix;
 
     public Output<String> getParentPrefix() {
-        return this.parentPrefix == null ? Output.empty() : this.parentPrefix;
+        return this.parentPrefix == null ? Codegen.empty() : this.parentPrefix;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -87,14 +88,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs;
 
     public Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> getPublicDelegatedSubPrefixs() {
-        return this.publicDelegatedSubPrefixs == null ? Output.empty() : this.publicDelegatedSubPrefixs;
+        return this.publicDelegatedSubPrefixs == null ? Codegen.empty() : this.publicDelegatedSubPrefixs;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public GlobalPublicDelegatedPrefixArgs(
@@ -117,14 +118,14 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
     }
 
     private GlobalPublicDelegatedPrefixArgs() {
-        this.description = Output.empty();
-        this.ipCidrRange = Output.empty();
-        this.isLiveMigration = Output.empty();
-        this.name = Output.empty();
-        this.parentPrefix = Output.empty();
-        this.project = Output.empty();
-        this.publicDelegatedSubPrefixs = Output.empty();
-        this.requestId = Output.empty();
+        this.description = Codegen.empty();
+        this.ipCidrRange = Codegen.empty();
+        this.isLiveMigration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentPrefix = Codegen.empty();
+        this.project = Codegen.empty();
+        this.publicDelegatedSubPrefixs = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipCidrRange(@Nullable Output<String> ipCidrRange) {
@@ -174,7 +175,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ipCidrRange(@Nullable String ipCidrRange) {
-            this.ipCidrRange = Output.ofNullable(ipCidrRange);
+            this.ipCidrRange = Codegen.ofNullable(ipCidrRange);
             return this;
         }
         public Builder isLiveMigration(@Nullable Output<Boolean> isLiveMigration) {
@@ -182,7 +183,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder isLiveMigration(@Nullable Boolean isLiveMigration) {
-            this.isLiveMigration = Output.ofNullable(isLiveMigration);
+            this.isLiveMigration = Codegen.ofNullable(isLiveMigration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -190,7 +191,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentPrefix(@Nullable Output<String> parentPrefix) {
@@ -198,7 +199,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder parentPrefix(@Nullable String parentPrefix) {
-            this.parentPrefix = Output.ofNullable(parentPrefix);
+            this.parentPrefix = Codegen.ofNullable(parentPrefix);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -206,7 +207,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder publicDelegatedSubPrefixs(@Nullable Output<List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs>> publicDelegatedSubPrefixs) {
@@ -214,7 +215,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder publicDelegatedSubPrefixs(@Nullable List<PublicDelegatedPrefixPublicDelegatedSubPrefixArgs> publicDelegatedSubPrefixs) {
-            this.publicDelegatedSubPrefixs = Output.ofNullable(publicDelegatedSubPrefixs);
+            this.publicDelegatedSubPrefixs = Codegen.ofNullable(publicDelegatedSubPrefixs);
             return this;
         }
         public Builder publicDelegatedSubPrefixs(PublicDelegatedPrefixPublicDelegatedSubPrefixArgs... publicDelegatedSubPrefixs) {
@@ -225,7 +226,7 @@ public final class GlobalPublicDelegatedPrefixArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public GlobalPublicDelegatedPrefixArgs build() {
             return new GlobalPublicDelegatedPrefixArgs(description, ipCidrRange, isLiveMigration, name, parentPrefix, project, publicDelegatedSubPrefixs, requestId);

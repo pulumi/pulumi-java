@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2clientvpn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientVpnEndpointId;
 
     public Output<String> getClientVpnEndpointId() {
-        return this.clientVpnEndpointId == null ? Output.empty() : this.clientVpnEndpointId;
+        return this.clientVpnEndpointId == null ? Codegen.empty() : this.clientVpnEndpointId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destinationCidrBlock;
 
     public Output<String> getDestinationCidrBlock() {
-        return this.destinationCidrBlock == null ? Output.empty() : this.destinationCidrBlock;
+        return this.destinationCidrBlock == null ? Codegen.empty() : this.destinationCidrBlock;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> origin;
 
     public Output<String> getOrigin() {
-        return this.origin == null ? Output.empty() : this.origin;
+        return this.origin == null ? Codegen.empty() : this.origin;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> targetVpcSubnetId;
 
     public Output<String> getTargetVpcSubnetId() {
-        return this.targetVpcSubnetId == null ? Output.empty() : this.targetVpcSubnetId;
+        return this.targetVpcSubnetId == null ? Codegen.empty() : this.targetVpcSubnetId;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RouteState(
@@ -96,12 +97,12 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteState() {
-        this.clientVpnEndpointId = Output.empty();
-        this.description = Output.empty();
-        this.destinationCidrBlock = Output.empty();
-        this.origin = Output.empty();
-        this.targetVpcSubnetId = Output.empty();
-        this.type = Output.empty();
+        this.clientVpnEndpointId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destinationCidrBlock = Codegen.empty();
+        this.origin = Codegen.empty();
+        this.targetVpcSubnetId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientVpnEndpointId(@Nullable String clientVpnEndpointId) {
-            this.clientVpnEndpointId = Output.ofNullable(clientVpnEndpointId);
+            this.clientVpnEndpointId = Codegen.ofNullable(clientVpnEndpointId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -147,7 +148,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationCidrBlock(@Nullable Output<String> destinationCidrBlock) {
@@ -155,7 +156,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destinationCidrBlock(@Nullable String destinationCidrBlock) {
-            this.destinationCidrBlock = Output.ofNullable(destinationCidrBlock);
+            this.destinationCidrBlock = Codegen.ofNullable(destinationCidrBlock);
             return this;
         }
         public Builder origin(@Nullable Output<String> origin) {
@@ -163,7 +164,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder origin(@Nullable String origin) {
-            this.origin = Output.ofNullable(origin);
+            this.origin = Codegen.ofNullable(origin);
             return this;
         }
         public Builder targetVpcSubnetId(@Nullable Output<String> targetVpcSubnetId) {
@@ -171,7 +172,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetVpcSubnetId(@Nullable String targetVpcSubnetId) {
-            this.targetVpcSubnetId = Output.ofNullable(targetVpcSubnetId);
+            this.targetVpcSubnetId = Codegen.ofNullable(targetVpcSubnetId);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -179,7 +180,7 @@ public final class RouteState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RouteState build() {
             return new RouteState(clientVpnEndpointId, description, destinationCidrBlock, origin, targetVpcSubnetId, type);

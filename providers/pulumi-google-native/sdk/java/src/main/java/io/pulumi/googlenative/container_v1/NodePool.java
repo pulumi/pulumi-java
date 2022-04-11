@@ -6,6 +6,7 @@ package io.pulumi.googlenative.container_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.container_v1.NodePoolArgs;
 import io.pulumi.googlenative.container_v1.outputs.MaxPodsConstraintResponse;
@@ -259,7 +260,7 @@ public class NodePool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodePool(String name, NodePoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:container/v1:NodePool", name, args == null ? NodePoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:container/v1:NodePool", name, args == null ? NodePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodePool(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

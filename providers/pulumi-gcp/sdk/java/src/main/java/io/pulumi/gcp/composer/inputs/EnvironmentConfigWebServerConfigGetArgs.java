@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class EnvironmentConfigWebServerConfigGetArgs extends io.pulumi.res
     }
 
     private EnvironmentConfigWebServerConfigGetArgs() {
-        this.machineType = Output.empty();
+        this.machineType = Codegen.empty();
     }
 
     public static Builder builder() {

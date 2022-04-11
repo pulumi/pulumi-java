@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> dhcpRanges;
 
     public Output<List<String>> getDhcpRanges() {
-        return this.dhcpRanges == null ? Output.empty() : this.dhcpRanges;
+        return this.dhcpRanges == null ? Codegen.empty() : this.dhcpRanges;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> gatewayAddress;
 
     public Output<String> getGatewayAddress() {
-        return this.gatewayAddress == null ? Output.empty() : this.gatewayAddress;
+        return this.gatewayAddress == null ? Codegen.empty() : this.gatewayAddress;
     }
 
     public WorkloadNetworkSegmentSubnetArgs(
@@ -49,8 +50,8 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
     }
 
     private WorkloadNetworkSegmentSubnetArgs() {
-        this.dhcpRanges = Output.empty();
-        this.gatewayAddress = Output.empty();
+        this.dhcpRanges = Codegen.empty();
+        this.gatewayAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder dhcpRanges(@Nullable List<String> dhcpRanges) {
-            this.dhcpRanges = Output.ofNullable(dhcpRanges);
+            this.dhcpRanges = Codegen.ofNullable(dhcpRanges);
             return this;
         }
         public Builder dhcpRanges(String... dhcpRanges) {
@@ -91,7 +92,7 @@ public final class WorkloadNetworkSegmentSubnetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder gatewayAddress(@Nullable String gatewayAddress) {
-            this.gatewayAddress = Output.ofNullable(gatewayAddress);
+            this.gatewayAddress = Codegen.ofNullable(gatewayAddress);
             return this;
         }        public WorkloadNetworkSegmentSubnetArgs build() {
             return new WorkloadNetworkSegmentSubnetArgs(dhcpRanges, gatewayAddress);

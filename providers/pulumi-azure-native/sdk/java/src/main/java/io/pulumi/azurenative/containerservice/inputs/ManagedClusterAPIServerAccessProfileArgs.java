@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> authorizedIPRanges;
 
     public Output<List<String>> getAuthorizedIPRanges() {
-        return this.authorizedIPRanges == null ? Output.empty() : this.authorizedIPRanges;
+        return this.authorizedIPRanges == null ? Codegen.empty() : this.authorizedIPRanges;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> enablePrivateCluster;
 
     public Output<Boolean> getEnablePrivateCluster() {
-        return this.enablePrivateCluster == null ? Output.empty() : this.enablePrivateCluster;
+        return this.enablePrivateCluster == null ? Codegen.empty() : this.enablePrivateCluster;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
       private final @Nullable Output<String> privateDNSZone;
 
     public Output<String> getPrivateDNSZone() {
-        return this.privateDNSZone == null ? Output.empty() : this.privateDNSZone;
+        return this.privateDNSZone == null ? Codegen.empty() : this.privateDNSZone;
     }
 
     public ManagedClusterAPIServerAccessProfileArgs(
@@ -63,9 +64,9 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
     }
 
     private ManagedClusterAPIServerAccessProfileArgs() {
-        this.authorizedIPRanges = Output.empty();
-        this.enablePrivateCluster = Output.empty();
-        this.privateDNSZone = Output.empty();
+        this.authorizedIPRanges = Codegen.empty();
+        this.enablePrivateCluster = Codegen.empty();
+        this.privateDNSZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder authorizedIPRanges(@Nullable List<String> authorizedIPRanges) {
-            this.authorizedIPRanges = Output.ofNullable(authorizedIPRanges);
+            this.authorizedIPRanges = Codegen.ofNullable(authorizedIPRanges);
             return this;
         }
         public Builder authorizedIPRanges(String... authorizedIPRanges) {
@@ -108,7 +109,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder enablePrivateCluster(@Nullable Boolean enablePrivateCluster) {
-            this.enablePrivateCluster = Output.ofNullable(enablePrivateCluster);
+            this.enablePrivateCluster = Codegen.ofNullable(enablePrivateCluster);
             return this;
         }
         public Builder privateDNSZone(@Nullable Output<String> privateDNSZone) {
@@ -116,7 +117,7 @@ public final class ManagedClusterAPIServerAccessProfileArgs extends io.pulumi.re
             return this;
         }
         public Builder privateDNSZone(@Nullable String privateDNSZone) {
-            this.privateDNSZone = Output.ofNullable(privateDNSZone);
+            this.privateDNSZone = Codegen.ofNullable(privateDNSZone);
             return this;
         }        public ManagedClusterAPIServerAccessProfileArgs build() {
             return new ManagedClusterAPIServerAccessProfileArgs(authorizedIPRanges, enablePrivateCluster, privateDNSZone);

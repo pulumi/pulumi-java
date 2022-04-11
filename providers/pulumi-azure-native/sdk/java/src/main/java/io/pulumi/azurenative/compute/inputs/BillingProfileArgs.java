@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> maxPrice;
 
     public Output<Double> getMaxPrice() {
-        return this.maxPrice == null ? Output.empty() : this.maxPrice;
+        return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 
     public BillingProfileArgs(@Nullable Output<Double> maxPrice) {
@@ -34,7 +35,7 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BillingProfileArgs() {
-        this.maxPrice = Output.empty();
+        this.maxPrice = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class BillingProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxPrice(@Nullable Double maxPrice) {
-            this.maxPrice = Output.ofNullable(maxPrice);
+            this.maxPrice = Codegen.ofNullable(maxPrice);
             return this;
         }        public BillingProfileArgs build() {
             return new BillingProfileArgs(maxPrice);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> gid;
 
     public Output<Integer> getGid() {
-        return this.gid == null ? Output.empty() : this.gid;
+        return this.gid == null ? Codegen.empty() : this.gid;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> sshPrivateKey;
 
     public Output<String> getSshPrivateKey() {
-        return this.sshPrivateKey == null ? Output.empty() : this.sshPrivateKey;
+        return this.sshPrivateKey == null ? Codegen.empty() : this.sshPrivateKey;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> uid;
 
     public Output<Integer> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     public LinuxUserConfigurationArgs(
@@ -58,9 +59,9 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private LinuxUserConfigurationArgs() {
-        this.gid = Output.empty();
-        this.sshPrivateKey = Output.empty();
-        this.uid = Output.empty();
+        this.gid = Codegen.empty();
+        this.sshPrivateKey = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder gid(@Nullable Integer gid) {
-            this.gid = Output.ofNullable(gid);
+            this.gid = Codegen.ofNullable(gid);
             return this;
         }
         public Builder sshPrivateKey(@Nullable Output<String> sshPrivateKey) {
@@ -100,7 +101,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sshPrivateKey(@Nullable String sshPrivateKey) {
-            this.sshPrivateKey = Output.ofNullable(sshPrivateKey);
+            this.sshPrivateKey = Codegen.ofNullable(sshPrivateKey);
             return this;
         }
         public Builder uid(@Nullable Output<Integer> uid) {
@@ -108,7 +109,7 @@ public final class LinuxUserConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder uid(@Nullable Integer uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }        public LinuxUserConfigurationArgs build() {
             return new LinuxUserConfigurationArgs(gid, sshPrivateKey, uid);

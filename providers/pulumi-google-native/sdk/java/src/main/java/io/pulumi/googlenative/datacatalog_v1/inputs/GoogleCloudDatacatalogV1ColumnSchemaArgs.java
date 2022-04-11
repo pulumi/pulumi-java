@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
       private final @Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns;
 
     public Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> getSubcolumns() {
-        return this.subcolumns == null ? Output.empty() : this.subcolumns;
+        return this.subcolumns == null ? Codegen.empty() : this.subcolumns;
     }
 
     /**
@@ -88,11 +89,11 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
     }
 
     private GoogleCloudDatacatalogV1ColumnSchemaArgs() {
-        this.column = Output.empty();
-        this.description = Output.empty();
-        this.mode = Output.empty();
-        this.subcolumns = Output.empty();
-        this.type = Output.empty();
+        this.column = Codegen.empty();
+        this.description = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.subcolumns = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -144,7 +145,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder subcolumns(@Nullable Output<List<GoogleCloudDatacatalogV1ColumnSchemaArgs>> subcolumns) {
@@ -152,7 +153,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaArgs extends io.pulumi.re
             return this;
         }
         public Builder subcolumns(@Nullable List<GoogleCloudDatacatalogV1ColumnSchemaArgs> subcolumns) {
-            this.subcolumns = Output.ofNullable(subcolumns);
+            this.subcolumns = Codegen.ofNullable(subcolumns);
             return this;
         }
         public Builder subcolumns(GoogleCloudDatacatalogV1ColumnSchemaArgs... subcolumns) {

@@ -12,6 +12,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetPublicIPAddres
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
     public Output<Either<String,DeleteOptions>> getDeleteOption() {
-        return this.deleteOption == null ? Output.empty() : this.deleteOption;
+        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings;
 
     public Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> getDnsSettings() {
-        return this.dnsSettings == null ? Output.empty() : this.dnsSettings;
+        return this.dnsSettings == null ? Codegen.empty() : this.dnsSettings;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
+        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<List<VirtualMachineScaleSetIpTagArgs>> ipTags;
 
     public Output<List<VirtualMachineScaleSetIpTagArgs>> getIpTags() {
-        return this.ipTags == null ? Output.empty() : this.ipTags;
+        return this.ipTags == null ? Codegen.empty() : this.ipTags;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<Either<String,IPVersion>> publicIPAddressVersion;
 
     public Output<Either<String,IPVersion>> getPublicIPAddressVersion() {
-        return this.publicIPAddressVersion == null ? Output.empty() : this.publicIPAddressVersion;
+        return this.publicIPAddressVersion == null ? Codegen.empty() : this.publicIPAddressVersion;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<SubResourceArgs> publicIPPrefix;
 
     public Output<SubResourceArgs> getPublicIPPrefix() {
-        return this.publicIPPrefix == null ? Output.empty() : this.publicIPPrefix;
+        return this.publicIPPrefix == null ? Codegen.empty() : this.publicIPPrefix;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
       private final @Nullable Output<PublicIPAddressSkuArgs> sku;
 
     public Output<PublicIPAddressSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     public VirtualMachineScaleSetPublicIPAddressConfigurationArgs(
@@ -135,14 +136,14 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
     }
 
     private VirtualMachineScaleSetPublicIPAddressConfigurationArgs() {
-        this.deleteOption = Output.empty();
-        this.dnsSettings = Output.empty();
-        this.idleTimeoutInMinutes = Output.empty();
-        this.ipTags = Output.empty();
-        this.name = Output.empty();
-        this.publicIPAddressVersion = Output.empty();
-        this.publicIPPrefix = Output.empty();
-        this.sku = Output.empty();
+        this.deleteOption = Codegen.empty();
+        this.dnsSettings = Codegen.empty();
+        this.idleTimeoutInMinutes = Codegen.empty();
+        this.ipTags = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publicIPAddressVersion = Codegen.empty();
+        this.publicIPPrefix = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
-            this.deleteOption = Output.ofNullable(deleteOption);
+            this.deleteOption = Codegen.ofNullable(deleteOption);
             return this;
         }
         public Builder dnsSettings(@Nullable Output<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings) {
@@ -192,7 +193,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder dnsSettings(@Nullable VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs dnsSettings) {
-            this.dnsSettings = Output.ofNullable(dnsSettings);
+            this.dnsSettings = Codegen.ofNullable(dnsSettings);
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
@@ -200,7 +201,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
             return this;
         }
         public Builder ipTags(@Nullable Output<List<VirtualMachineScaleSetIpTagArgs>> ipTags) {
@@ -208,7 +209,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder ipTags(@Nullable List<VirtualMachineScaleSetIpTagArgs> ipTags) {
-            this.ipTags = Output.ofNullable(ipTags);
+            this.ipTags = Codegen.ofNullable(ipTags);
             return this;
         }
         public Builder ipTags(VirtualMachineScaleSetIpTagArgs... ipTags) {
@@ -227,7 +228,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder publicIPAddressVersion(@Nullable Either<String,IPVersion> publicIPAddressVersion) {
-            this.publicIPAddressVersion = Output.ofNullable(publicIPAddressVersion);
+            this.publicIPAddressVersion = Codegen.ofNullable(publicIPAddressVersion);
             return this;
         }
         public Builder publicIPPrefix(@Nullable Output<SubResourceArgs> publicIPPrefix) {
@@ -235,7 +236,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder publicIPPrefix(@Nullable SubResourceArgs publicIPPrefix) {
-            this.publicIPPrefix = Output.ofNullable(publicIPPrefix);
+            this.publicIPPrefix = Codegen.ofNullable(publicIPPrefix);
             return this;
         }
         public Builder sku(@Nullable Output<PublicIPAddressSkuArgs> sku) {
@@ -243,7 +244,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             return this;
         }
         public Builder sku(@Nullable PublicIPAddressSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }        public VirtualMachineScaleSetPublicIPAddressConfigurationArgs build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationArgs(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPPrefix, sku);

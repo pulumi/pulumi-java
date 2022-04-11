@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterArgs;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 
     public Output<List<ServicePerimetersServicePerimeterArgs>> getServicePerimeters() {
-        return this.servicePerimeters == null ? Output.empty() : this.servicePerimeters;
+        return this.servicePerimeters == null ? Codegen.empty() : this.servicePerimeters;
     }
 
     public ServicePerimetersArgs(
@@ -48,8 +49,8 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServicePerimetersArgs() {
-        this.parent = Output.empty();
-        this.servicePerimeters = Output.empty();
+        this.parent = Codegen.empty();
+        this.servicePerimeters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder servicePerimeters(@Nullable List<ServicePerimetersServicePerimeterArgs> servicePerimeters) {
-            this.servicePerimeters = Output.ofNullable(servicePerimeters);
+            this.servicePerimeters = Codegen.ofNullable(servicePerimeters);
             return this;
         }
         public Builder servicePerimeters(ServicePerimetersServicePerimeterArgs... servicePerimeters) {

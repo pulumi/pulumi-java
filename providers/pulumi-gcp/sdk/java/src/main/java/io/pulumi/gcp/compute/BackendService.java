@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendServiceArgs;
 import io.pulumi.gcp.compute.inputs.BackendServiceState;
@@ -595,7 +596,7 @@ public class BackendService extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendService(String name, @Nullable BackendServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/backendService:BackendService", name, args == null ? BackendServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/backendService:BackendService", name, args == null ? BackendServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendService(String name, Output<String> id, @Nullable BackendServiceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

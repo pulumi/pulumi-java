@@ -11,6 +11,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.IoTHubStreamInputDataSourceA
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Object> datasource;
 
     public Output<Object> getDatasource() {
-        return this.datasource == null ? Output.empty() : this.datasource;
+        return this.datasource == null ? Codegen.empty() : this.datasource;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Object> serialization;
 
     public Output<Object> getSerialization() {
-        return this.serialization == null ? Output.empty() : this.serialization;
+        return this.serialization == null ? Codegen.empty() : this.serialization;
     }
 
     /**
@@ -69,9 +70,9 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private StreamInputPropertiesArgs() {
-        this.datasource = Output.empty();
-        this.serialization = Output.empty();
-        this.type = Output.empty();
+        this.datasource = Codegen.empty();
+        this.serialization = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder datasource(@Nullable Object datasource) {
-            this.datasource = Output.ofNullable(datasource);
+            this.datasource = Codegen.ofNullable(datasource);
             return this;
         }
         public Builder serialization(@Nullable Output<Object> serialization) {
@@ -111,7 +112,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder serialization(@Nullable Object serialization) {
-            this.serialization = Output.ofNullable(serialization);
+            this.serialization = Codegen.ofNullable(serialization);
             return this;
         }
         public Builder type(Output<String> type) {

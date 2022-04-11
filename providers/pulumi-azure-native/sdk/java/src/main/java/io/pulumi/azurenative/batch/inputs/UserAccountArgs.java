@@ -8,6 +8,7 @@ import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ElevationLevel> elevationLevel;
 
     public Output<ElevationLevel> getElevationLevel() {
-        return this.elevationLevel == null ? Output.empty() : this.elevationLevel;
+        return this.elevationLevel == null ? Codegen.empty() : this.elevationLevel;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration;
 
     public Output<LinuxUserConfigurationArgs> getLinuxUserConfiguration() {
-        return this.linuxUserConfiguration == null ? Output.empty() : this.linuxUserConfiguration;
+        return this.linuxUserConfiguration == null ? Codegen.empty() : this.linuxUserConfiguration;
     }
 
     @Import(name="name", required=true)
@@ -61,7 +62,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WindowsUserConfigurationArgs> windowsUserConfiguration;
 
     public Output<WindowsUserConfigurationArgs> getWindowsUserConfiguration() {
-        return this.windowsUserConfiguration == null ? Output.empty() : this.windowsUserConfiguration;
+        return this.windowsUserConfiguration == null ? Codegen.empty() : this.windowsUserConfiguration;
     }
 
     public UserAccountArgs(
@@ -78,11 +79,11 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserAccountArgs() {
-        this.elevationLevel = Output.empty();
-        this.linuxUserConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.windowsUserConfiguration = Output.empty();
+        this.elevationLevel = Codegen.empty();
+        this.linuxUserConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.windowsUserConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elevationLevel(@Nullable ElevationLevel elevationLevel) {
-            this.elevationLevel = Output.ofNullable(elevationLevel);
+            this.elevationLevel = Codegen.ofNullable(elevationLevel);
             return this;
         }
         public Builder linuxUserConfiguration(@Nullable Output<LinuxUserConfigurationArgs> linuxUserConfiguration) {
@@ -126,7 +127,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxUserConfiguration(@Nullable LinuxUserConfigurationArgs linuxUserConfiguration) {
-            this.linuxUserConfiguration = Output.ofNullable(linuxUserConfiguration);
+            this.linuxUserConfiguration = Codegen.ofNullable(linuxUserConfiguration);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -150,7 +151,7 @@ public final class UserAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsUserConfiguration(@Nullable WindowsUserConfigurationArgs windowsUserConfiguration) {
-            this.windowsUserConfiguration = Output.ofNullable(windowsUserConfiguration);
+            this.windowsUserConfiguration = Codegen.ofNullable(windowsUserConfiguration);
             return this;
         }        public UserAccountArgs build() {
             return new UserAccountArgs(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);

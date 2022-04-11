@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigSpConfigSpCertificateArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> callbackUri;
 
     public Output<String> getCallbackUri() {
-        return this.callbackUri == null ? Output.empty() : this.callbackUri;
+        return this.callbackUri == null ? Codegen.empty() : this.callbackUri;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<InboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
 
     public Output<List<InboundSamlConfigSpConfigSpCertificateArgs>> getSpCertificates() {
-        return this.spCertificates == null ? Output.empty() : this.spCertificates;
+        return this.spCertificates == null ? Codegen.empty() : this.spCertificates;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> spEntityId;
 
     public Output<String> getSpEntityId() {
-        return this.spEntityId == null ? Output.empty() : this.spEntityId;
+        return this.spEntityId == null ? Codegen.empty() : this.spEntityId;
     }
 
     public InboundSamlConfigSpConfigArgs(
@@ -61,9 +62,9 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
     }
 
     private InboundSamlConfigSpConfigArgs() {
-        this.callbackUri = Output.empty();
-        this.spCertificates = Output.empty();
-        this.spEntityId = Output.empty();
+        this.callbackUri = Codegen.empty();
+        this.spCertificates = Codegen.empty();
+        this.spEntityId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder callbackUri(@Nullable String callbackUri) {
-            this.callbackUri = Output.ofNullable(callbackUri);
+            this.callbackUri = Codegen.ofNullable(callbackUri);
             return this;
         }
         public Builder spCertificates(@Nullable Output<List<InboundSamlConfigSpConfigSpCertificateArgs>> spCertificates) {
@@ -103,7 +104,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder spCertificates(@Nullable List<InboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
-            this.spCertificates = Output.ofNullable(spCertificates);
+            this.spCertificates = Codegen.ofNullable(spCertificates);
             return this;
         }
         public Builder spCertificates(InboundSamlConfigSpConfigSpCertificateArgs... spCertificates) {
@@ -114,7 +115,7 @@ public final class InboundSamlConfigSpConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder spEntityId(@Nullable String spEntityId) {
-            this.spEntityId = Output.ofNullable(spEntityId);
+            this.spEntityId = Codegen.ofNullable(spEntityId);
             return this;
         }        public InboundSamlConfigSpConfigArgs build() {
             return new InboundSamlConfigSpConfigArgs(callbackUri, spCertificates, spEntityId);

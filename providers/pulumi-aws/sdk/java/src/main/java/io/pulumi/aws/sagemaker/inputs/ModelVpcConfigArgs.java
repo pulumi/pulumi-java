@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class ModelVpcConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelVpcConfigArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnets = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnets = Codegen.empty();
     }
 
     public static Builder builder() {

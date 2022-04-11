@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.AccessConfigNetworkTier;
 import io.pulumi.googlenative.compute_beta.enums.AccessConfigType;
 import java.lang.Boolean;
@@ -30,7 +31,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> externalIpv6;
 
     public Output<String> getExternalIpv6() {
-        return this.externalIpv6 == null ? Output.empty() : this.externalIpv6;
+        return this.externalIpv6 == null ? Codegen.empty() : this.externalIpv6;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> externalIpv6PrefixLength;
 
     public Output<Integer> getExternalIpv6PrefixLength() {
-        return this.externalIpv6PrefixLength == null ? Output.empty() : this.externalIpv6PrefixLength;
+        return this.externalIpv6PrefixLength == null ? Codegen.empty() : this.externalIpv6PrefixLength;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> natIP;
 
     public Output<String> getNatIP() {
-        return this.natIP == null ? Output.empty() : this.natIP;
+        return this.natIP == null ? Codegen.empty() : this.natIP;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessConfigNetworkTier> networkTier;
 
     public Output<AccessConfigNetworkTier> getNetworkTier() {
-        return this.networkTier == null ? Output.empty() : this.networkTier;
+        return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicPtrDomainName;
 
     public Output<String> getPublicPtrDomainName() {
-        return this.publicPtrDomainName == null ? Output.empty() : this.publicPtrDomainName;
+        return this.publicPtrDomainName == null ? Codegen.empty() : this.publicPtrDomainName;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> setPublicPtr;
 
     public Output<Boolean> getSetPublicPtr() {
-        return this.setPublicPtr == null ? Output.empty() : this.setPublicPtr;
+        return this.setPublicPtr == null ? Codegen.empty() : this.setPublicPtr;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessConfigType> type;
 
     public Output<AccessConfigType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AccessConfigArgs(
@@ -130,14 +131,14 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessConfigArgs() {
-        this.externalIpv6 = Output.empty();
-        this.externalIpv6PrefixLength = Output.empty();
-        this.name = Output.empty();
-        this.natIP = Output.empty();
-        this.networkTier = Output.empty();
-        this.publicPtrDomainName = Output.empty();
-        this.setPublicPtr = Output.empty();
-        this.type = Output.empty();
+        this.externalIpv6 = Codegen.empty();
+        this.externalIpv6PrefixLength = Codegen.empty();
+        this.name = Codegen.empty();
+        this.natIP = Codegen.empty();
+        this.networkTier = Codegen.empty();
+        this.publicPtrDomainName = Codegen.empty();
+        this.setPublicPtr = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalIpv6(@Nullable String externalIpv6) {
-            this.externalIpv6 = Output.ofNullable(externalIpv6);
+            this.externalIpv6 = Codegen.ofNullable(externalIpv6);
             return this;
         }
         public Builder externalIpv6PrefixLength(@Nullable Output<Integer> externalIpv6PrefixLength) {
@@ -187,7 +188,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder externalIpv6PrefixLength(@Nullable Integer externalIpv6PrefixLength) {
-            this.externalIpv6PrefixLength = Output.ofNullable(externalIpv6PrefixLength);
+            this.externalIpv6PrefixLength = Codegen.ofNullable(externalIpv6PrefixLength);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -195,7 +196,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder natIP(@Nullable Output<String> natIP) {
@@ -203,7 +204,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder natIP(@Nullable String natIP) {
-            this.natIP = Output.ofNullable(natIP);
+            this.natIP = Codegen.ofNullable(natIP);
             return this;
         }
         public Builder networkTier(@Nullable Output<AccessConfigNetworkTier> networkTier) {
@@ -211,7 +212,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkTier(@Nullable AccessConfigNetworkTier networkTier) {
-            this.networkTier = Output.ofNullable(networkTier);
+            this.networkTier = Codegen.ofNullable(networkTier);
             return this;
         }
         public Builder publicPtrDomainName(@Nullable Output<String> publicPtrDomainName) {
@@ -219,7 +220,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicPtrDomainName(@Nullable String publicPtrDomainName) {
-            this.publicPtrDomainName = Output.ofNullable(publicPtrDomainName);
+            this.publicPtrDomainName = Codegen.ofNullable(publicPtrDomainName);
             return this;
         }
         public Builder setPublicPtr(@Nullable Output<Boolean> setPublicPtr) {
@@ -227,7 +228,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder setPublicPtr(@Nullable Boolean setPublicPtr) {
-            this.setPublicPtr = Output.ofNullable(setPublicPtr);
+            this.setPublicPtr = Codegen.ofNullable(setPublicPtr);
             return this;
         }
         public Builder type(@Nullable Output<AccessConfigType> type) {
@@ -235,7 +236,7 @@ public final class AccessConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable AccessConfigType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AccessConfigArgs build() {
             return new AccessConfigArgs(externalIpv6, externalIpv6PrefixLength, name, natIP, networkTier, publicPtrDomainName, setPublicPtr, type);

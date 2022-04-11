@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryValidationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<InquiryValidationArgs> inquiryValidation;
 
     public Output<InquiryValidationArgs> getInquiryValidation() {
-        return this.inquiryValidation == null ? Output.empty() : this.inquiryValidation;
+        return this.inquiryValidation == null ? Codegen.empty() : this.inquiryValidation;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Double> itemCount;
 
     public Output<Double> getItemCount() {
-        return this.itemCount == null ? Output.empty() : this.itemCount;
+        return this.itemCount == null ? Codegen.empty() : this.itemCount;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public WorkloadInquiryDetailsArgs(
@@ -63,9 +64,9 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
     }
 
     private WorkloadInquiryDetailsArgs() {
-        this.inquiryValidation = Output.empty();
-        this.itemCount = Output.empty();
-        this.type = Output.empty();
+        this.inquiryValidation = Codegen.empty();
+        this.itemCount = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder inquiryValidation(@Nullable InquiryValidationArgs inquiryValidation) {
-            this.inquiryValidation = Output.ofNullable(inquiryValidation);
+            this.inquiryValidation = Codegen.ofNullable(inquiryValidation);
             return this;
         }
         public Builder itemCount(@Nullable Output<Double> itemCount) {
@@ -105,7 +106,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder itemCount(@Nullable Double itemCount) {
-            this.itemCount = Output.ofNullable(itemCount);
+            this.itemCount = Codegen.ofNullable(itemCount);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -113,7 +114,7 @@ public final class WorkloadInquiryDetailsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public WorkloadInquiryDetailsArgs build() {
             return new WorkloadInquiryDetailsArgs(inquiryValidation, itemCount, type);

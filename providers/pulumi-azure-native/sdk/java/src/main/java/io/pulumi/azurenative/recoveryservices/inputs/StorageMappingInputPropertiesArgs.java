@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
       private final @Nullable Output<String> targetStorageClassificationId;
 
     public Output<String> getTargetStorageClassificationId() {
-        return this.targetStorageClassificationId == null ? Output.empty() : this.targetStorageClassificationId;
+        return this.targetStorageClassificationId == null ? Codegen.empty() : this.targetStorageClassificationId;
     }
 
     public StorageMappingInputPropertiesArgs(@Nullable Output<String> targetStorageClassificationId) {
@@ -34,7 +35,7 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
     }
 
     private StorageMappingInputPropertiesArgs() {
-        this.targetStorageClassificationId = Output.empty();
+        this.targetStorageClassificationId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
             return this;
         }
         public Builder targetStorageClassificationId(@Nullable String targetStorageClassificationId) {
-            this.targetStorageClassificationId = Output.ofNullable(targetStorageClassificationId);
+            this.targetStorageClassificationId = Codegen.ofNullable(targetStorageClassificationId);
             return this;
         }        public StorageMappingInputPropertiesArgs build() {
             return new StorageMappingInputPropertiesArgs(targetStorageClassificationId);

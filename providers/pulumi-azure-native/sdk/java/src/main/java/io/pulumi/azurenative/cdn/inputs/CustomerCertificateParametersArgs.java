@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
       private final @Nullable Output<String> certificateAuthority;
 
     public Output<String> getCertificateAuthority() {
-        return this.certificateAuthority == null ? Output.empty() : this.certificateAuthority;
+        return this.certificateAuthority == null ? Codegen.empty() : this.certificateAuthority;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
       private final @Nullable Output<String> secretVersion;
 
     public Output<String> getSecretVersion() {
-        return this.secretVersion == null ? Output.empty() : this.secretVersion;
+        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> subjectAlternativeNames;
 
     public Output<List<String>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
+        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
       private final @Nullable Output<Boolean> useLatestVersion;
 
     public Output<Boolean> getUseLatestVersion() {
-        return this.useLatestVersion == null ? Output.empty() : this.useLatestVersion;
+        return this.useLatestVersion == null ? Codegen.empty() : this.useLatestVersion;
     }
 
     public CustomerCertificateParametersArgs(
@@ -104,12 +105,12 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
     }
 
     private CustomerCertificateParametersArgs() {
-        this.certificateAuthority = Output.empty();
-        this.secretSource = Output.empty();
-        this.secretVersion = Output.empty();
-        this.subjectAlternativeNames = Output.empty();
-        this.type = Output.empty();
-        this.useLatestVersion = Output.empty();
+        this.certificateAuthority = Codegen.empty();
+        this.secretSource = Codegen.empty();
+        this.secretVersion = Codegen.empty();
+        this.subjectAlternativeNames = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useLatestVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder certificateAuthority(@Nullable String certificateAuthority) {
-            this.certificateAuthority = Output.ofNullable(certificateAuthority);
+            this.certificateAuthority = Codegen.ofNullable(certificateAuthority);
             return this;
         }
         public Builder secretSource(Output<ResourceReferenceArgs> secretSource) {
@@ -163,7 +164,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Output.ofNullable(secretVersion);
+            this.secretVersion = Codegen.ofNullable(secretVersion);
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable Output<List<String>> subjectAlternativeNames) {
@@ -171,7 +172,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable List<String> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
             return this;
         }
         public Builder subjectAlternativeNames(String... subjectAlternativeNames) {
@@ -190,7 +191,7 @@ public final class CustomerCertificateParametersArgs extends io.pulumi.resources
             return this;
         }
         public Builder useLatestVersion(@Nullable Boolean useLatestVersion) {
-            this.useLatestVersion = Output.ofNullable(useLatestVersion);
+            this.useLatestVersion = Codegen.ofNullable(useLatestVersion);
             return this;
         }        public CustomerCertificateParametersArgs build() {
             return new CustomerCertificateParametersArgs(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);

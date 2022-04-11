@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.IngressBackendArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> pathType;
 
     public Output<String> getPathType() {
-        return this.pathType == null ? Output.empty() : this.pathType;
+        return this.pathType == null ? Codegen.empty() : this.pathType;
     }
 
     public HTTPIngressPathArgs(
@@ -72,9 +73,9 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private HTTPIngressPathArgs() {
-        this.backend = Output.empty();
-        this.path = Output.empty();
-        this.pathType = Output.empty();
+        this.backend = Codegen.empty();
+        this.path = Codegen.empty();
+        this.pathType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder pathType(@Nullable Output<String> pathType) {
@@ -122,7 +123,7 @@ public final class HTTPIngressPathArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder pathType(@Nullable String pathType) {
-            this.pathType = Output.ofNullable(pathType);
+            this.pathType = Codegen.ofNullable(pathType);
             return this;
         }        public HTTPIngressPathArgs build() {
             return new HTTPIngressPathArgs(backend, path, pathType);

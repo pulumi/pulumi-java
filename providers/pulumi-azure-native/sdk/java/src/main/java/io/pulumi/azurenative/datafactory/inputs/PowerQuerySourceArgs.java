@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<DatasetReferenceArgs> dataset;
 
     public Output<DatasetReferenceArgs> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<DataFlowReferenceArgs> flowlet;
 
     public Output<DataFlowReferenceArgs> getFlowlet() {
-        return this.flowlet == null ? Output.empty() : this.flowlet;
+        return this.flowlet == null ? Codegen.empty() : this.flowlet;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
     public Output<LinkedServiceReferenceArgs> getLinkedService() {
-        return this.linkedService == null ? Output.empty() : this.linkedService;
+        return this.linkedService == null ? Codegen.empty() : this.linkedService;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getSchemaLinkedService() {
-        return this.schemaLinkedService == null ? Output.empty() : this.schemaLinkedService;
+        return this.schemaLinkedService == null ? Codegen.empty() : this.schemaLinkedService;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     public PowerQuerySourceArgs(
@@ -116,13 +117,13 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PowerQuerySourceArgs() {
-        this.dataset = Output.empty();
-        this.description = Output.empty();
-        this.flowlet = Output.empty();
-        this.linkedService = Output.empty();
-        this.name = Output.empty();
-        this.schemaLinkedService = Output.empty();
-        this.script = Output.empty();
+        this.dataset = Codegen.empty();
+        this.description = Codegen.empty();
+        this.flowlet = Codegen.empty();
+        this.linkedService = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schemaLinkedService = Codegen.empty();
+        this.script = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataset(@Nullable DatasetReferenceArgs dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -170,7 +171,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder flowlet(@Nullable Output<DataFlowReferenceArgs> flowlet) {
@@ -178,7 +179,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder flowlet(@Nullable DataFlowReferenceArgs flowlet) {
-            this.flowlet = Output.ofNullable(flowlet);
+            this.flowlet = Codegen.ofNullable(flowlet);
             return this;
         }
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
@@ -186,7 +187,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder linkedService(@Nullable LinkedServiceReferenceArgs linkedService) {
-            this.linkedService = Output.ofNullable(linkedService);
+            this.linkedService = Codegen.ofNullable(linkedService);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -202,7 +203,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder schemaLinkedService(@Nullable LinkedServiceReferenceArgs schemaLinkedService) {
-            this.schemaLinkedService = Output.ofNullable(schemaLinkedService);
+            this.schemaLinkedService = Codegen.ofNullable(schemaLinkedService);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -210,7 +211,7 @@ public final class PowerQuerySourceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }        public PowerQuerySourceArgs build() {
             return new PowerQuerySourceArgs(dataset, description, flowlet, linkedService, name, schemaLinkedService, script);

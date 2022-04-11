@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -49,7 +50,7 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> secretVersion;
 
     public Output<String> getSecretVersion() {
-        return this.secretVersion == null ? Output.empty() : this.secretVersion;
+        return this.secretVersion == null ? Codegen.empty() : this.secretVersion;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
     }
 
     private UrlSigningKeyParametersArgs() {
-        this.keyId = Output.empty();
-        this.secretSource = Output.empty();
-        this.secretVersion = Output.empty();
-        this.type = Output.empty();
+        this.keyId = Codegen.empty();
+        this.secretSource = Codegen.empty();
+        this.secretVersion = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class UrlSigningKeyParametersArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder secretVersion(@Nullable String secretVersion) {
-            this.secretVersion = Output.ofNullable(secretVersion);
+            this.secretVersion = Codegen.ofNullable(secretVersion);
             return this;
         }
         public Builder type(Output<String> type) {

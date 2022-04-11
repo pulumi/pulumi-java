@@ -14,6 +14,7 @@ import io.pulumi.aws.glue.inputs.CrawlerS3TargetArgs;
 import io.pulumi.aws.glue.inputs.CrawlerSchemaChangePolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CrawlerCatalogTargetArgs>> catalogTargets;
 
     public Output<List<CrawlerCatalogTargetArgs>> getCatalogTargets() {
-        return this.catalogTargets == null ? Output.empty() : this.catalogTargets;
+        return this.catalogTargets == null ? Codegen.empty() : this.catalogTargets;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> classifiers;
 
     public Output<List<String>> getClassifiers() {
-        return this.classifiers == null ? Output.empty() : this.classifiers;
+        return this.classifiers == null ? Codegen.empty() : this.classifiers;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> configuration;
 
     public Output<String> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CrawlerDeltaTargetArgs>> deltaTargets;
 
     public Output<List<CrawlerDeltaTargetArgs>> getDeltaTargets() {
-        return this.deltaTargets == null ? Output.empty() : this.deltaTargets;
+        return this.deltaTargets == null ? Codegen.empty() : this.deltaTargets;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets;
 
     public Output<List<CrawlerDynamodbTargetArgs>> getDynamodbTargets() {
-        return this.dynamodbTargets == null ? Output.empty() : this.dynamodbTargets;
+        return this.dynamodbTargets == null ? Codegen.empty() : this.dynamodbTargets;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CrawlerJdbcTargetArgs>> jdbcTargets;
 
     public Output<List<CrawlerJdbcTargetArgs>> getJdbcTargets() {
-        return this.jdbcTargets == null ? Output.empty() : this.jdbcTargets;
+        return this.jdbcTargets == null ? Codegen.empty() : this.jdbcTargets;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CrawlerLineageConfigurationArgs> lineageConfiguration;
 
     public Output<CrawlerLineageConfigurationArgs> getLineageConfiguration() {
-        return this.lineageConfiguration == null ? Output.empty() : this.lineageConfiguration;
+        return this.lineageConfiguration == null ? Codegen.empty() : this.lineageConfiguration;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets;
 
     public Output<List<CrawlerMongodbTargetArgs>> getMongodbTargets() {
-        return this.mongodbTargets == null ? Output.empty() : this.mongodbTargets;
+        return this.mongodbTargets == null ? Codegen.empty() : this.mongodbTargets;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy;
 
     public Output<CrawlerRecrawlPolicyArgs> getRecrawlPolicy() {
-        return this.recrawlPolicy == null ? Output.empty() : this.recrawlPolicy;
+        return this.recrawlPolicy == null ? Codegen.empty() : this.recrawlPolicy;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CrawlerS3TargetArgs>> s3Targets;
 
     public Output<List<CrawlerS3TargetArgs>> getS3Targets() {
-        return this.s3Targets == null ? Output.empty() : this.s3Targets;
+        return this.s3Targets == null ? Codegen.empty() : this.s3Targets;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy;
 
     public Output<CrawlerSchemaChangePolicyArgs> getSchemaChangePolicy() {
-        return this.schemaChangePolicy == null ? Output.empty() : this.schemaChangePolicy;
+        return this.schemaChangePolicy == null ? Codegen.empty() : this.schemaChangePolicy;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> securityConfiguration;
 
     public Output<String> getSecurityConfiguration() {
-        return this.securityConfiguration == null ? Output.empty() : this.securityConfiguration;
+        return this.securityConfiguration == null ? Codegen.empty() : this.securityConfiguration;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tablePrefix;
 
     public Output<String> getTablePrefix() {
-        return this.tablePrefix == null ? Output.empty() : this.tablePrefix;
+        return this.tablePrefix == null ? Codegen.empty() : this.tablePrefix;
     }
 
     /**
@@ -223,7 +224,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CrawlerArgs(
@@ -268,25 +269,25 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CrawlerArgs() {
-        this.catalogTargets = Output.empty();
-        this.classifiers = Output.empty();
-        this.configuration = Output.empty();
-        this.databaseName = Output.empty();
-        this.deltaTargets = Output.empty();
-        this.description = Output.empty();
-        this.dynamodbTargets = Output.empty();
-        this.jdbcTargets = Output.empty();
-        this.lineageConfiguration = Output.empty();
-        this.mongodbTargets = Output.empty();
-        this.name = Output.empty();
-        this.recrawlPolicy = Output.empty();
-        this.role = Output.empty();
-        this.s3Targets = Output.empty();
-        this.schedule = Output.empty();
-        this.schemaChangePolicy = Output.empty();
-        this.securityConfiguration = Output.empty();
-        this.tablePrefix = Output.empty();
-        this.tags = Output.empty();
+        this.catalogTargets = Codegen.empty();
+        this.classifiers = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.deltaTargets = Codegen.empty();
+        this.description = Codegen.empty();
+        this.dynamodbTargets = Codegen.empty();
+        this.jdbcTargets = Codegen.empty();
+        this.lineageConfiguration = Codegen.empty();
+        this.mongodbTargets = Codegen.empty();
+        this.name = Codegen.empty();
+        this.recrawlPolicy = Codegen.empty();
+        this.role = Codegen.empty();
+        this.s3Targets = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.schemaChangePolicy = Codegen.empty();
+        this.securityConfiguration = Codegen.empty();
+        this.tablePrefix = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -350,7 +351,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogTargets(@Nullable List<CrawlerCatalogTargetArgs> catalogTargets) {
-            this.catalogTargets = Output.ofNullable(catalogTargets);
+            this.catalogTargets = Codegen.ofNullable(catalogTargets);
             return this;
         }
         public Builder catalogTargets(CrawlerCatalogTargetArgs... catalogTargets) {
@@ -361,7 +362,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder classifiers(@Nullable List<String> classifiers) {
-            this.classifiers = Output.ofNullable(classifiers);
+            this.classifiers = Codegen.ofNullable(classifiers);
             return this;
         }
         public Builder classifiers(String... classifiers) {
@@ -372,7 +373,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable String configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder databaseName(Output<String> databaseName) {
@@ -388,7 +389,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deltaTargets(@Nullable List<CrawlerDeltaTargetArgs> deltaTargets) {
-            this.deltaTargets = Output.ofNullable(deltaTargets);
+            this.deltaTargets = Codegen.ofNullable(deltaTargets);
             return this;
         }
         public Builder deltaTargets(CrawlerDeltaTargetArgs... deltaTargets) {
@@ -399,7 +400,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dynamodbTargets(@Nullable Output<List<CrawlerDynamodbTargetArgs>> dynamodbTargets) {
@@ -407,7 +408,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dynamodbTargets(@Nullable List<CrawlerDynamodbTargetArgs> dynamodbTargets) {
-            this.dynamodbTargets = Output.ofNullable(dynamodbTargets);
+            this.dynamodbTargets = Codegen.ofNullable(dynamodbTargets);
             return this;
         }
         public Builder dynamodbTargets(CrawlerDynamodbTargetArgs... dynamodbTargets) {
@@ -418,7 +419,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jdbcTargets(@Nullable List<CrawlerJdbcTargetArgs> jdbcTargets) {
-            this.jdbcTargets = Output.ofNullable(jdbcTargets);
+            this.jdbcTargets = Codegen.ofNullable(jdbcTargets);
             return this;
         }
         public Builder jdbcTargets(CrawlerJdbcTargetArgs... jdbcTargets) {
@@ -429,7 +430,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lineageConfiguration(@Nullable CrawlerLineageConfigurationArgs lineageConfiguration) {
-            this.lineageConfiguration = Output.ofNullable(lineageConfiguration);
+            this.lineageConfiguration = Codegen.ofNullable(lineageConfiguration);
             return this;
         }
         public Builder mongodbTargets(@Nullable Output<List<CrawlerMongodbTargetArgs>> mongodbTargets) {
@@ -437,7 +438,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mongodbTargets(@Nullable List<CrawlerMongodbTargetArgs> mongodbTargets) {
-            this.mongodbTargets = Output.ofNullable(mongodbTargets);
+            this.mongodbTargets = Codegen.ofNullable(mongodbTargets);
             return this;
         }
         public Builder mongodbTargets(CrawlerMongodbTargetArgs... mongodbTargets) {
@@ -448,7 +449,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder recrawlPolicy(@Nullable Output<CrawlerRecrawlPolicyArgs> recrawlPolicy) {
@@ -456,7 +457,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recrawlPolicy(@Nullable CrawlerRecrawlPolicyArgs recrawlPolicy) {
-            this.recrawlPolicy = Output.ofNullable(recrawlPolicy);
+            this.recrawlPolicy = Codegen.ofNullable(recrawlPolicy);
             return this;
         }
         public Builder role(Output<String> role) {
@@ -472,7 +473,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3Targets(@Nullable List<CrawlerS3TargetArgs> s3Targets) {
-            this.s3Targets = Output.ofNullable(s3Targets);
+            this.s3Targets = Codegen.ofNullable(s3Targets);
             return this;
         }
         public Builder s3Targets(CrawlerS3TargetArgs... s3Targets) {
@@ -483,7 +484,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder schemaChangePolicy(@Nullable Output<CrawlerSchemaChangePolicyArgs> schemaChangePolicy) {
@@ -491,7 +492,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaChangePolicy(@Nullable CrawlerSchemaChangePolicyArgs schemaChangePolicy) {
-            this.schemaChangePolicy = Output.ofNullable(schemaChangePolicy);
+            this.schemaChangePolicy = Codegen.ofNullable(schemaChangePolicy);
             return this;
         }
         public Builder securityConfiguration(@Nullable Output<String> securityConfiguration) {
@@ -499,7 +500,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityConfiguration(@Nullable String securityConfiguration) {
-            this.securityConfiguration = Output.ofNullable(securityConfiguration);
+            this.securityConfiguration = Codegen.ofNullable(securityConfiguration);
             return this;
         }
         public Builder tablePrefix(@Nullable Output<String> tablePrefix) {
@@ -507,7 +508,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tablePrefix(@Nullable String tablePrefix) {
-            this.tablePrefix = Output.ofNullable(tablePrefix);
+            this.tablePrefix = Codegen.ofNullable(tablePrefix);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -515,7 +516,7 @@ public final class CrawlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CrawlerArgs build() {
             return new CrawlerArgs(catalogTargets, classifiers, configuration, databaseName, deltaTargets, description, dynamodbTargets, jdbcTargets, lineageConfiguration, mongodbTargets, name, recrawlPolicy, role, s3Targets, schedule, schemaChangePolicy, securityConfiguration, tablePrefix, tags);

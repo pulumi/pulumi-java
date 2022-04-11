@@ -9,6 +9,7 @@ import io.pulumi.awsnative.panorama.inputs.ApplicationInstanceManifestPayloadArg
 import io.pulumi.awsnative.panorama.inputs.ApplicationInstanceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> applicationInstanceIdToReplace;
 
     public Output<String> getApplicationInstanceIdToReplace() {
-        return this.applicationInstanceIdToReplace == null ? Output.empty() : this.applicationInstanceIdToReplace;
+        return this.applicationInstanceIdToReplace == null ? Codegen.empty() : this.applicationInstanceIdToReplace;
     }
 
     @Import(name="defaultRuntimeContextDevice", required=true)
@@ -37,21 +38,21 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="deviceId")
       private final @Nullable Output<String> deviceId;
 
     public Output<String> getDeviceId() {
-        return this.deviceId == null ? Output.empty() : this.deviceId;
+        return this.deviceId == null ? Codegen.empty() : this.deviceId;
     }
 
     @Import(name="manifestOverridesPayload")
       private final @Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload;
 
     public Output<ApplicationInstanceManifestOverridesPayloadArgs> getManifestOverridesPayload() {
-        return this.manifestOverridesPayload == null ? Output.empty() : this.manifestOverridesPayload;
+        return this.manifestOverridesPayload == null ? Codegen.empty() : this.manifestOverridesPayload;
     }
 
     @Import(name="manifestPayload", required=true)
@@ -65,28 +66,28 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="runtimeRoleArn")
       private final @Nullable Output<String> runtimeRoleArn;
 
     public Output<String> getRuntimeRoleArn() {
-        return this.runtimeRoleArn == null ? Output.empty() : this.runtimeRoleArn;
+        return this.runtimeRoleArn == null ? Codegen.empty() : this.runtimeRoleArn;
     }
 
     @Import(name="statusFilter")
       private final @Nullable Output<ApplicationInstanceStatusFilter> statusFilter;
 
     public Output<ApplicationInstanceStatusFilter> getStatusFilter() {
-        return this.statusFilter == null ? Output.empty() : this.statusFilter;
+        return this.statusFilter == null ? Codegen.empty() : this.statusFilter;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ApplicationInstanceTagArgs>> tags;
 
     public Output<List<ApplicationInstanceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ApplicationInstanceArgs(
@@ -113,16 +114,16 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ApplicationInstanceArgs() {
-        this.applicationInstanceIdToReplace = Output.empty();
-        this.defaultRuntimeContextDevice = Output.empty();
-        this.description = Output.empty();
-        this.deviceId = Output.empty();
-        this.manifestOverridesPayload = Output.empty();
-        this.manifestPayload = Output.empty();
-        this.name = Output.empty();
-        this.runtimeRoleArn = Output.empty();
-        this.statusFilter = Output.empty();
-        this.tags = Output.empty();
+        this.applicationInstanceIdToReplace = Codegen.empty();
+        this.defaultRuntimeContextDevice = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceId = Codegen.empty();
+        this.manifestOverridesPayload = Codegen.empty();
+        this.manifestPayload = Codegen.empty();
+        this.name = Codegen.empty();
+        this.runtimeRoleArn = Codegen.empty();
+        this.statusFilter = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder applicationInstanceIdToReplace(@Nullable String applicationInstanceIdToReplace) {
-            this.applicationInstanceIdToReplace = Output.ofNullable(applicationInstanceIdToReplace);
+            this.applicationInstanceIdToReplace = Codegen.ofNullable(applicationInstanceIdToReplace);
             return this;
         }
         public Builder defaultRuntimeContextDevice(Output<String> defaultRuntimeContextDevice) {
@@ -184,7 +185,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceId(@Nullable Output<String> deviceId) {
@@ -192,7 +193,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder deviceId(@Nullable String deviceId) {
-            this.deviceId = Output.ofNullable(deviceId);
+            this.deviceId = Codegen.ofNullable(deviceId);
             return this;
         }
         public Builder manifestOverridesPayload(@Nullable Output<ApplicationInstanceManifestOverridesPayloadArgs> manifestOverridesPayload) {
@@ -200,7 +201,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder manifestOverridesPayload(@Nullable ApplicationInstanceManifestOverridesPayloadArgs manifestOverridesPayload) {
-            this.manifestOverridesPayload = Output.ofNullable(manifestOverridesPayload);
+            this.manifestOverridesPayload = Codegen.ofNullable(manifestOverridesPayload);
             return this;
         }
         public Builder manifestPayload(Output<ApplicationInstanceManifestPayloadArgs> manifestPayload) {
@@ -216,7 +217,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder runtimeRoleArn(@Nullable Output<String> runtimeRoleArn) {
@@ -224,7 +225,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder runtimeRoleArn(@Nullable String runtimeRoleArn) {
-            this.runtimeRoleArn = Output.ofNullable(runtimeRoleArn);
+            this.runtimeRoleArn = Codegen.ofNullable(runtimeRoleArn);
             return this;
         }
         public Builder statusFilter(@Nullable Output<ApplicationInstanceStatusFilter> statusFilter) {
@@ -232,7 +233,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder statusFilter(@Nullable ApplicationInstanceStatusFilter statusFilter) {
-            this.statusFilter = Output.ofNullable(statusFilter);
+            this.statusFilter = Codegen.ofNullable(statusFilter);
             return this;
         }
         public Builder tags(@Nullable Output<List<ApplicationInstanceTagArgs>> tags) {
@@ -240,7 +241,7 @@ public final class ApplicationInstanceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable List<ApplicationInstanceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ApplicationInstanceTagArgs... tags) {

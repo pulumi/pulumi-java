@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.DiskIamPolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.AuditConfigResponse;
@@ -117,7 +118,7 @@ public class DiskIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DiskIamPolicy(String name, DiskIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:DiskIamPolicy", name, args == null ? DiskIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:DiskIamPolicy", name, args == null ? DiskIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DiskIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

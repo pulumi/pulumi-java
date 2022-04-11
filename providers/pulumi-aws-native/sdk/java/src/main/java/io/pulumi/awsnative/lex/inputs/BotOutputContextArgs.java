@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,9 +50,9 @@ public final class BotOutputContextArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BotOutputContextArgs() {
-        this.name = Output.empty();
-        this.timeToLiveInSeconds = Output.empty();
-        this.turnsToLive = Output.empty();
+        this.name = Codegen.empty();
+        this.timeToLiveInSeconds = Codegen.empty();
+        this.turnsToLive = Codegen.empty();
     }
 
     public static Builder builder() {

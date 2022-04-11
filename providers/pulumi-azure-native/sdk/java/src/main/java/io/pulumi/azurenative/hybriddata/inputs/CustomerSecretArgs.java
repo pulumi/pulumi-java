@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hybriddata.inputs;
 import io.pulumi.azurenative.hybriddata.enums.SupportedAlgorithm;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class CustomerSecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomerSecretArgs() {
-        this.algorithm = Output.empty();
-        this.keyIdentifier = Output.empty();
-        this.keyValue = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.keyIdentifier = Codegen.empty();
+        this.keyValue = Codegen.empty();
     }
 
     public static Builder builder() {

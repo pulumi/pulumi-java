@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.enums.LabelDescriptorValueType;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LabelDescriptorValueType> valueType;
 
     public Output<LabelDescriptorValueType> getValueType() {
-        return this.valueType == null ? Output.empty() : this.valueType;
+        return this.valueType == null ? Codegen.empty() : this.valueType;
     }
 
     public LabelDescriptorArgs(
@@ -62,9 +63,9 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LabelDescriptorArgs() {
-        this.description = Output.empty();
-        this.key = Output.empty();
-        this.valueType = Output.empty();
+        this.description = Codegen.empty();
+        this.key = Codegen.empty();
+        this.valueType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -104,7 +105,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder valueType(@Nullable Output<LabelDescriptorValueType> valueType) {
@@ -112,7 +113,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder valueType(@Nullable LabelDescriptorValueType valueType) {
-            this.valueType = Output.ofNullable(valueType);
+            this.valueType = Codegen.ofNullable(valueType);
             return this;
         }        public LabelDescriptorArgs build() {
             return new LabelDescriptorArgs(description, key, valueType);

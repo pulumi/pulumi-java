@@ -8,6 +8,7 @@ import io.pulumi.aws.cloudtrail.inputs.TrailEventSelectorGetArgs;
 import io.pulumi.aws.cloudtrail.inputs.TrailInsightSelectorGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TrailAdvancedEventSelectorGetArgs>> advancedEventSelectors;
 
     public Output<List<TrailAdvancedEventSelectorGetArgs>> getAdvancedEventSelectors() {
-        return this.advancedEventSelectors == null ? Output.empty() : this.advancedEventSelectors;
+        return this.advancedEventSelectors == null ? Codegen.empty() : this.advancedEventSelectors;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudWatchLogsGroupArn;
 
     public Output<String> getCloudWatchLogsGroupArn() {
-        return this.cloudWatchLogsGroupArn == null ? Output.empty() : this.cloudWatchLogsGroupArn;
+        return this.cloudWatchLogsGroupArn == null ? Codegen.empty() : this.cloudWatchLogsGroupArn;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudWatchLogsRoleArn;
 
     public Output<String> getCloudWatchLogsRoleArn() {
-        return this.cloudWatchLogsRoleArn == null ? Output.empty() : this.cloudWatchLogsRoleArn;
+        return this.cloudWatchLogsRoleArn == null ? Codegen.empty() : this.cloudWatchLogsRoleArn;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableLogFileValidation;
 
     public Output<Boolean> getEnableLogFileValidation() {
-        return this.enableLogFileValidation == null ? Output.empty() : this.enableLogFileValidation;
+        return this.enableLogFileValidation == null ? Codegen.empty() : this.enableLogFileValidation;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableLogging;
 
     public Output<Boolean> getEnableLogging() {
-        return this.enableLogging == null ? Output.empty() : this.enableLogging;
+        return this.enableLogging == null ? Codegen.empty() : this.enableLogging;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors;
 
     public Output<List<TrailEventSelectorGetArgs>> getEventSelectors() {
-        return this.eventSelectors == null ? Output.empty() : this.eventSelectors;
+        return this.eventSelectors == null ? Codegen.empty() : this.eventSelectors;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> homeRegion;
 
     public Output<String> getHomeRegion() {
-        return this.homeRegion == null ? Output.empty() : this.homeRegion;
+        return this.homeRegion == null ? Codegen.empty() : this.homeRegion;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> includeGlobalServiceEvents;
 
     public Output<Boolean> getIncludeGlobalServiceEvents() {
-        return this.includeGlobalServiceEvents == null ? Output.empty() : this.includeGlobalServiceEvents;
+        return this.includeGlobalServiceEvents == null ? Codegen.empty() : this.includeGlobalServiceEvents;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors;
 
     public Output<List<TrailInsightSelectorGetArgs>> getInsightSelectors() {
-        return this.insightSelectors == null ? Output.empty() : this.insightSelectors;
+        return this.insightSelectors == null ? Codegen.empty() : this.insightSelectors;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isMultiRegionTrail;
 
     public Output<Boolean> getIsMultiRegionTrail() {
-        return this.isMultiRegionTrail == null ? Output.empty() : this.isMultiRegionTrail;
+        return this.isMultiRegionTrail == null ? Codegen.empty() : this.isMultiRegionTrail;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isOrganizationTrail;
 
     public Output<Boolean> getIsOrganizationTrail() {
-        return this.isOrganizationTrail == null ? Output.empty() : this.isOrganizationTrail;
+        return this.isOrganizationTrail == null ? Codegen.empty() : this.isOrganizationTrail;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3BucketName;
 
     public Output<String> getS3BucketName() {
-        return this.s3BucketName == null ? Output.empty() : this.s3BucketName;
+        return this.s3BucketName == null ? Codegen.empty() : this.s3BucketName;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3KeyPrefix;
 
     public Output<String> getS3KeyPrefix() {
-        return this.s3KeyPrefix == null ? Output.empty() : this.s3KeyPrefix;
+        return this.s3KeyPrefix == null ? Codegen.empty() : this.s3KeyPrefix;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> snsTopicName;
 
     public Output<String> getSnsTopicName() {
-        return this.snsTopicName == null ? Output.empty() : this.snsTopicName;
+        return this.snsTopicName == null ? Codegen.empty() : this.snsTopicName;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public TrailState(
@@ -271,25 +272,25 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrailState() {
-        this.advancedEventSelectors = Output.empty();
-        this.arn = Output.empty();
-        this.cloudWatchLogsGroupArn = Output.empty();
-        this.cloudWatchLogsRoleArn = Output.empty();
-        this.enableLogFileValidation = Output.empty();
-        this.enableLogging = Output.empty();
-        this.eventSelectors = Output.empty();
-        this.homeRegion = Output.empty();
-        this.includeGlobalServiceEvents = Output.empty();
-        this.insightSelectors = Output.empty();
-        this.isMultiRegionTrail = Output.empty();
-        this.isOrganizationTrail = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.name = Output.empty();
-        this.s3BucketName = Output.empty();
-        this.s3KeyPrefix = Output.empty();
-        this.snsTopicName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.advancedEventSelectors = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.cloudWatchLogsGroupArn = Codegen.empty();
+        this.cloudWatchLogsRoleArn = Codegen.empty();
+        this.enableLogFileValidation = Codegen.empty();
+        this.enableLogging = Codegen.empty();
+        this.eventSelectors = Codegen.empty();
+        this.homeRegion = Codegen.empty();
+        this.includeGlobalServiceEvents = Codegen.empty();
+        this.insightSelectors = Codegen.empty();
+        this.isMultiRegionTrail = Codegen.empty();
+        this.isOrganizationTrail = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.s3BucketName = Codegen.empty();
+        this.s3KeyPrefix = Codegen.empty();
+        this.snsTopicName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -353,7 +354,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advancedEventSelectors(@Nullable List<TrailAdvancedEventSelectorGetArgs> advancedEventSelectors) {
-            this.advancedEventSelectors = Output.ofNullable(advancedEventSelectors);
+            this.advancedEventSelectors = Codegen.ofNullable(advancedEventSelectors);
             return this;
         }
         public Builder advancedEventSelectors(TrailAdvancedEventSelectorGetArgs... advancedEventSelectors) {
@@ -364,7 +365,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cloudWatchLogsGroupArn(@Nullable Output<String> cloudWatchLogsGroupArn) {
@@ -372,7 +373,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudWatchLogsGroupArn(@Nullable String cloudWatchLogsGroupArn) {
-            this.cloudWatchLogsGroupArn = Output.ofNullable(cloudWatchLogsGroupArn);
+            this.cloudWatchLogsGroupArn = Codegen.ofNullable(cloudWatchLogsGroupArn);
             return this;
         }
         public Builder cloudWatchLogsRoleArn(@Nullable Output<String> cloudWatchLogsRoleArn) {
@@ -380,7 +381,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudWatchLogsRoleArn(@Nullable String cloudWatchLogsRoleArn) {
-            this.cloudWatchLogsRoleArn = Output.ofNullable(cloudWatchLogsRoleArn);
+            this.cloudWatchLogsRoleArn = Codegen.ofNullable(cloudWatchLogsRoleArn);
             return this;
         }
         public Builder enableLogFileValidation(@Nullable Output<Boolean> enableLogFileValidation) {
@@ -388,7 +389,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableLogFileValidation(@Nullable Boolean enableLogFileValidation) {
-            this.enableLogFileValidation = Output.ofNullable(enableLogFileValidation);
+            this.enableLogFileValidation = Codegen.ofNullable(enableLogFileValidation);
             return this;
         }
         public Builder enableLogging(@Nullable Output<Boolean> enableLogging) {
@@ -396,7 +397,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableLogging(@Nullable Boolean enableLogging) {
-            this.enableLogging = Output.ofNullable(enableLogging);
+            this.enableLogging = Codegen.ofNullable(enableLogging);
             return this;
         }
         public Builder eventSelectors(@Nullable Output<List<TrailEventSelectorGetArgs>> eventSelectors) {
@@ -404,7 +405,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventSelectors(@Nullable List<TrailEventSelectorGetArgs> eventSelectors) {
-            this.eventSelectors = Output.ofNullable(eventSelectors);
+            this.eventSelectors = Codegen.ofNullable(eventSelectors);
             return this;
         }
         public Builder eventSelectors(TrailEventSelectorGetArgs... eventSelectors) {
@@ -415,7 +416,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeRegion(@Nullable String homeRegion) {
-            this.homeRegion = Output.ofNullable(homeRegion);
+            this.homeRegion = Codegen.ofNullable(homeRegion);
             return this;
         }
         public Builder includeGlobalServiceEvents(@Nullable Output<Boolean> includeGlobalServiceEvents) {
@@ -423,7 +424,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includeGlobalServiceEvents(@Nullable Boolean includeGlobalServiceEvents) {
-            this.includeGlobalServiceEvents = Output.ofNullable(includeGlobalServiceEvents);
+            this.includeGlobalServiceEvents = Codegen.ofNullable(includeGlobalServiceEvents);
             return this;
         }
         public Builder insightSelectors(@Nullable Output<List<TrailInsightSelectorGetArgs>> insightSelectors) {
@@ -431,7 +432,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insightSelectors(@Nullable List<TrailInsightSelectorGetArgs> insightSelectors) {
-            this.insightSelectors = Output.ofNullable(insightSelectors);
+            this.insightSelectors = Codegen.ofNullable(insightSelectors);
             return this;
         }
         public Builder insightSelectors(TrailInsightSelectorGetArgs... insightSelectors) {
@@ -442,7 +443,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isMultiRegionTrail(@Nullable Boolean isMultiRegionTrail) {
-            this.isMultiRegionTrail = Output.ofNullable(isMultiRegionTrail);
+            this.isMultiRegionTrail = Codegen.ofNullable(isMultiRegionTrail);
             return this;
         }
         public Builder isOrganizationTrail(@Nullable Output<Boolean> isOrganizationTrail) {
@@ -450,7 +451,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isOrganizationTrail(@Nullable Boolean isOrganizationTrail) {
-            this.isOrganizationTrail = Output.ofNullable(isOrganizationTrail);
+            this.isOrganizationTrail = Codegen.ofNullable(isOrganizationTrail);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -458,7 +459,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -466,7 +467,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder s3BucketName(@Nullable Output<String> s3BucketName) {
@@ -474,7 +475,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3BucketName(@Nullable String s3BucketName) {
-            this.s3BucketName = Output.ofNullable(s3BucketName);
+            this.s3BucketName = Codegen.ofNullable(s3BucketName);
             return this;
         }
         public Builder s3KeyPrefix(@Nullable Output<String> s3KeyPrefix) {
@@ -482,7 +483,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3KeyPrefix(@Nullable String s3KeyPrefix) {
-            this.s3KeyPrefix = Output.ofNullable(s3KeyPrefix);
+            this.s3KeyPrefix = Codegen.ofNullable(s3KeyPrefix);
             return this;
         }
         public Builder snsTopicName(@Nullable Output<String> snsTopicName) {
@@ -490,7 +491,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snsTopicName(@Nullable String snsTopicName) {
-            this.snsTopicName = Output.ofNullable(snsTopicName);
+            this.snsTopicName = Codegen.ofNullable(snsTopicName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -498,7 +499,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -506,7 +507,7 @@ public final class TrailState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public TrailState build() {
             return new TrailState(advancedEventSelectors, arn, cloudWatchLogsGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, enableLogging, eventSelectors, homeRegion, includeGlobalServiceEvents, insightSelectors, isMultiRegionTrail, isOrganizationTrail, kmsKeyId, name, s3BucketName, s3KeyPrefix, snsTopicName, tags, tagsAll);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.ReportColumnType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class ReportGroupingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportGroupingArgs() {
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

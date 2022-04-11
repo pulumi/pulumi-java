@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLTextTransformationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -40,8 +41,8 @@ public final class WebACLTextTransformationArgs extends io.pulumi.resources.Reso
     }
 
     private WebACLTextTransformationArgs() {
-        this.priority = Output.empty();
-        this.type = Output.empty();
+        this.priority = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

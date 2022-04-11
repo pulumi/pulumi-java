@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public DataSourceElasticsearchConfigGetArgs(
@@ -44,8 +45,8 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
     }
 
     private DataSourceElasticsearchConfigGetArgs() {
-        this.endpoint = Output.empty();
-        this.region = Output.empty();
+        this.endpoint = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class DataSourceElasticsearchConfigGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public DataSourceElasticsearchConfigGetArgs build() {
             return new DataSourceElasticsearchConfigGetArgs(endpoint, region);

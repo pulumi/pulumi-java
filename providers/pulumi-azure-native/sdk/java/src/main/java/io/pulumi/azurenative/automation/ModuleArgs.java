@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> moduleName;
 
     public Output<String> getModuleName() {
-        return this.moduleName == null ? Output.empty() : this.moduleName;
+        return this.moduleName == null ? Codegen.empty() : this.moduleName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ModuleArgs(
@@ -111,13 +112,13 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModuleArgs() {
-        this.automationAccountName = Output.empty();
-        this.contentLink = Output.empty();
-        this.location = Output.empty();
-        this.moduleName = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.contentLink = Codegen.empty();
+        this.location = Codegen.empty();
+        this.moduleName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder moduleName(@Nullable Output<String> moduleName) {
@@ -181,7 +182,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder moduleName(@Nullable String moduleName) {
-            this.moduleName = Output.ofNullable(moduleName);
+            this.moduleName = Codegen.ofNullable(moduleName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -189,7 +190,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -205,7 +206,7 @@ public final class ModuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ModuleArgs build() {
             return new ModuleArgs(automationAccountName, contentLink, location, moduleName, name, resourceGroupName, tags);

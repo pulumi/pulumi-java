@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> onDemandTargetCapacity;
 
     public Output<Integer> getOnDemandTargetCapacity() {
-        return this.onDemandTargetCapacity == null ? Output.empty() : this.onDemandTargetCapacity;
+        return this.onDemandTargetCapacity == null ? Codegen.empty() : this.onDemandTargetCapacity;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> spotTargetCapacity;
 
     public Output<Integer> getSpotTargetCapacity() {
-        return this.spotTargetCapacity == null ? Output.empty() : this.spotTargetCapacity;
+        return this.spotTargetCapacity == null ? Codegen.empty() : this.spotTargetCapacity;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
     }
 
     private FleetTargetCapacitySpecificationArgs() {
-        this.defaultTargetCapacityType = Output.empty();
-        this.onDemandTargetCapacity = Output.empty();
-        this.spotTargetCapacity = Output.empty();
-        this.totalTargetCapacity = Output.empty();
+        this.defaultTargetCapacityType = Codegen.empty();
+        this.onDemandTargetCapacity = Codegen.empty();
+        this.spotTargetCapacity = Codegen.empty();
+        this.totalTargetCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
             return this;
         }
         public Builder onDemandTargetCapacity(@Nullable Integer onDemandTargetCapacity) {
-            this.onDemandTargetCapacity = Output.ofNullable(onDemandTargetCapacity);
+            this.onDemandTargetCapacity = Codegen.ofNullable(onDemandTargetCapacity);
             return this;
         }
         public Builder spotTargetCapacity(@Nullable Output<Integer> spotTargetCapacity) {
@@ -124,7 +125,7 @@ public final class FleetTargetCapacitySpecificationArgs extends io.pulumi.resour
             return this;
         }
         public Builder spotTargetCapacity(@Nullable Integer spotTargetCapacity) {
-            this.spotTargetCapacity = Output.ofNullable(spotTargetCapacity);
+            this.spotTargetCapacity = Codegen.ofNullable(spotTargetCapacity);
             return this;
         }
         public Builder totalTargetCapacity(Output<Integer> totalTargetCapacity) {

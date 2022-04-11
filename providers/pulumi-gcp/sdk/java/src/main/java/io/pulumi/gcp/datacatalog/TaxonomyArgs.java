@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> activatedPolicyTypes;
 
     public Output<List<String>> getActivatedPolicyTypes() {
-        return this.activatedPolicyTypes == null ? Output.empty() : this.activatedPolicyTypes;
+        return this.activatedPolicyTypes == null ? Codegen.empty() : this.activatedPolicyTypes;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public TaxonomyArgs(
@@ -92,11 +93,11 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaxonomyArgs() {
-        this.activatedPolicyTypes = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.activatedPolicyTypes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activatedPolicyTypes(@Nullable List<String> activatedPolicyTypes) {
-            this.activatedPolicyTypes = Output.ofNullable(activatedPolicyTypes);
+            this.activatedPolicyTypes = Codegen.ofNullable(activatedPolicyTypes);
             return this;
         }
         public Builder activatedPolicyTypes(String... activatedPolicyTypes) {
@@ -143,7 +144,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -159,7 +160,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -167,7 +168,7 @@ public final class TaxonomyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public TaxonomyArgs build() {
             return new TaxonomyArgs(activatedPolicyTypes, description, displayName, project, region);

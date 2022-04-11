@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<String> mapping;
 
     public Output<String> getMapping() {
-        return this.mapping == null ? Output.empty() : this.mapping;
+        return this.mapping == null ? Codegen.empty() : this.mapping;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordColumnArgs() {
-        this.mapping = Output.empty();
-        this.name = Output.empty();
-        this.sqlType = Output.empty();
+        this.mapping = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sqlType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder mapping(@Nullable String mapping) {
-            this.mapping = Output.ofNullable(mapping);
+            this.mapping = Codegen.ofNullable(mapping);
             return this;
         }
         public Builder name(Output<String> name) {

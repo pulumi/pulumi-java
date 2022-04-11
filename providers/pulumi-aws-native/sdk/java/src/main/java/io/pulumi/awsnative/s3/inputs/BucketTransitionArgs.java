@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.enums.BucketTransitionStorageClass;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -31,14 +32,14 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> transitionDate;
 
     public Output<String> getTransitionDate() {
-        return this.transitionDate == null ? Output.empty() : this.transitionDate;
+        return this.transitionDate == null ? Codegen.empty() : this.transitionDate;
     }
 
     @Import(name="transitionInDays")
       private final @Nullable Output<Integer> transitionInDays;
 
     public Output<Integer> getTransitionInDays() {
-        return this.transitionInDays == null ? Output.empty() : this.transitionInDays;
+        return this.transitionInDays == null ? Codegen.empty() : this.transitionInDays;
     }
 
     public BucketTransitionArgs(
@@ -51,9 +52,9 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private BucketTransitionArgs() {
-        this.storageClass = Output.empty();
-        this.transitionDate = Output.empty();
-        this.transitionInDays = Output.empty();
+        this.storageClass = Codegen.empty();
+        this.transitionDate = Codegen.empty();
+        this.transitionInDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder transitionDate(@Nullable String transitionDate) {
-            this.transitionDate = Output.ofNullable(transitionDate);
+            this.transitionDate = Codegen.ofNullable(transitionDate);
             return this;
         }
         public Builder transitionInDays(@Nullable Output<Integer> transitionInDays) {
@@ -101,7 +102,7 @@ public final class BucketTransitionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder transitionInDays(@Nullable Integer transitionInDays) {
-            this.transitionInDays = Output.ofNullable(transitionInDays);
+            this.transitionInDays = Codegen.ofNullable(transitionInDays);
             return this;
         }        public BucketTransitionArgs build() {
             return new BucketTransitionArgs(storageClass, transitionDate, transitionInDays);

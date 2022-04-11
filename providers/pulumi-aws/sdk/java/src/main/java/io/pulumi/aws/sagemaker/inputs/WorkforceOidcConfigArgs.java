@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -121,14 +122,14 @@ public final class WorkforceOidcConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private WorkforceOidcConfigArgs() {
-        this.authorizationEndpoint = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.issuer = Output.empty();
-        this.jwksUri = Output.empty();
-        this.logoutEndpoint = Output.empty();
-        this.tokenEndpoint = Output.empty();
-        this.userInfoEndpoint = Output.empty();
+        this.authorizationEndpoint = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.issuer = Codegen.empty();
+        this.jwksUri = Codegen.empty();
+        this.logoutEndpoint = Codegen.empty();
+        this.tokenEndpoint = Codegen.empty();
+        this.userInfoEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {

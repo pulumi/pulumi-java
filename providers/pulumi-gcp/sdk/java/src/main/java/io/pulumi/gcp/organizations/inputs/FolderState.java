@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> folderId;
 
     public Output<String> getFolderId() {
-        return this.folderId == null ? Output.empty() : this.folderId;
+        return this.folderId == null ? Codegen.empty() : this.folderId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lifecycleState;
 
     public Output<String> getLifecycleState() {
-        return this.lifecycleState == null ? Output.empty() : this.lifecycleState;
+        return this.lifecycleState == null ? Codegen.empty() : this.lifecycleState;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     public FolderState(
@@ -99,12 +100,12 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderState() {
-        this.createTime = Output.empty();
-        this.displayName = Output.empty();
-        this.folderId = Output.empty();
-        this.lifecycleState = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
+        this.createTime = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.folderId = Codegen.empty();
+        this.lifecycleState = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -150,7 +151,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder folderId(@Nullable Output<String> folderId) {
@@ -158,7 +159,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folderId(@Nullable String folderId) {
-            this.folderId = Output.ofNullable(folderId);
+            this.folderId = Codegen.ofNullable(folderId);
             return this;
         }
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
@@ -166,7 +167,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycleState(@Nullable String lifecycleState) {
-            this.lifecycleState = Output.ofNullable(lifecycleState);
+            this.lifecycleState = Codegen.ofNullable(lifecycleState);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -174,7 +175,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -182,7 +183,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }        public FolderState build() {
             return new FolderState(createTime, displayName, folderId, lifecycleState, name, parent);

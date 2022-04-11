@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentId;
 
     public Output<String> getParentId() {
-        return this.parentId == null ? Output.empty() : this.parentId;
+        return this.parentId == null ? Codegen.empty() : this.parentId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pathPart;
 
     public Output<String> getPathPart() {
-        return this.pathPart == null ? Output.empty() : this.pathPart;
+        return this.pathPart == null ? Codegen.empty() : this.pathPart;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     public ResourceState(
@@ -70,10 +71,10 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceState() {
-        this.parentId = Output.empty();
-        this.path = Output.empty();
-        this.pathPart = Output.empty();
-        this.restApi = Output.empty();
+        this.parentId = Codegen.empty();
+        this.path = Codegen.empty();
+        this.pathPart = Codegen.empty();
+        this.restApi = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentId(@Nullable String parentId) {
-            this.parentId = Output.ofNullable(parentId);
+            this.parentId = Codegen.ofNullable(parentId);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -115,7 +116,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder pathPart(@Nullable Output<String> pathPart) {
@@ -123,7 +124,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pathPart(@Nullable String pathPart) {
-            this.pathPart = Output.ofNullable(pathPart);
+            this.pathPart = Codegen.ofNullable(pathPart);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {

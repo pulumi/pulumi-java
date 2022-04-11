@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 import io.pulumi.azurenative.deploymentmanager.enums.RestAuthLocation;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,10 +76,10 @@ public final class ApiKeyAuthenticationArgs extends io.pulumi.resources.Resource
     }
 
     private ApiKeyAuthenticationArgs() {
-        this.in = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.in = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

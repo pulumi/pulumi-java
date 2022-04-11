@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecEgressPolicyEgressToOperationArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToArgs extends io.pulum
       private final @Nullable Output<List<ServicePerimeterSpecEgressPolicyEgressToOperationArgs>> operations;
 
     public Output<List<ServicePerimeterSpecEgressPolicyEgressToOperationArgs>> getOperations() {
-        return this.operations == null ? Output.empty() : this.operations;
+        return this.operations == null ? Codegen.empty() : this.operations;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToArgs extends io.pulum
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     public ServicePerimeterSpecEgressPolicyEgressToArgs(
@@ -52,8 +53,8 @@ public final class ServicePerimeterSpecEgressPolicyEgressToArgs extends io.pulum
     }
 
     private ServicePerimeterSpecEgressPolicyEgressToArgs() {
-        this.operations = Output.empty();
-        this.resources = Output.empty();
+        this.operations = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToArgs extends io.pulum
             return this;
         }
         public Builder operations(@Nullable List<ServicePerimeterSpecEgressPolicyEgressToOperationArgs> operations) {
-            this.operations = Output.ofNullable(operations);
+            this.operations = Codegen.ofNullable(operations);
             return this;
         }
         public Builder operations(ServicePerimeterSpecEgressPolicyEgressToOperationArgs... operations) {
@@ -94,7 +95,7 @@ public final class ServicePerimeterSpecEgressPolicyEgressToArgs extends io.pulum
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {

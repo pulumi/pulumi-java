@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
       private final @Nullable Output<Double> errorCachingMinTTL;
 
     public Output<Double> getErrorCachingMinTTL() {
-        return this.errorCachingMinTTL == null ? Output.empty() : this.errorCachingMinTTL;
+        return this.errorCachingMinTTL == null ? Codegen.empty() : this.errorCachingMinTTL;
     }
 
     @Import(name="errorCode", required=true)
@@ -34,14 +35,14 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> responseCode;
 
     public Output<Integer> getResponseCode() {
-        return this.responseCode == null ? Output.empty() : this.responseCode;
+        return this.responseCode == null ? Codegen.empty() : this.responseCode;
     }
 
     @Import(name="responsePagePath")
       private final @Nullable Output<String> responsePagePath;
 
     public Output<String> getResponsePagePath() {
-        return this.responsePagePath == null ? Output.empty() : this.responsePagePath;
+        return this.responsePagePath == null ? Codegen.empty() : this.responsePagePath;
     }
 
     public DistributionCustomErrorResponseArgs(
@@ -56,10 +57,10 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
     }
 
     private DistributionCustomErrorResponseArgs() {
-        this.errorCachingMinTTL = Output.empty();
-        this.errorCode = Output.empty();
-        this.responseCode = Output.empty();
-        this.responsePagePath = Output.empty();
+        this.errorCachingMinTTL = Codegen.empty();
+        this.errorCode = Codegen.empty();
+        this.responseCode = Codegen.empty();
+        this.responsePagePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
             return this;
         }
         public Builder errorCachingMinTTL(@Nullable Double errorCachingMinTTL) {
-            this.errorCachingMinTTL = Output.ofNullable(errorCachingMinTTL);
+            this.errorCachingMinTTL = Codegen.ofNullable(errorCachingMinTTL);
             return this;
         }
         public Builder errorCode(Output<Integer> errorCode) {
@@ -109,7 +110,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
             return this;
         }
         public Builder responseCode(@Nullable Integer responseCode) {
-            this.responseCode = Output.ofNullable(responseCode);
+            this.responseCode = Codegen.ofNullable(responseCode);
             return this;
         }
         public Builder responsePagePath(@Nullable Output<String> responsePagePath) {
@@ -117,7 +118,7 @@ public final class DistributionCustomErrorResponseArgs extends io.pulumi.resourc
             return this;
         }
         public Builder responsePagePath(@Nullable String responsePagePath) {
-            this.responsePagePath = Output.ofNullable(responsePagePath);
+            this.responsePagePath = Codegen.ofNullable(responsePagePath);
             return this;
         }        public DistributionCustomErrorResponseArgs build() {
             return new DistributionCustomErrorResponseArgs(errorCachingMinTTL, errorCode, responseCode, responsePagePath);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.enums.SqlWorkloadType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
       private final @Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType;
 
     public Output<Either<String,SqlWorkloadType>> getSqlWorkloadType() {
-        return this.sqlWorkloadType == null ? Output.empty() : this.sqlWorkloadType;
+        return this.sqlWorkloadType == null ? Codegen.empty() : this.sqlWorkloadType;
     }
 
     public SqlWorkloadTypeUpdateSettingsArgs(@Nullable Output<Either<String,SqlWorkloadType>> sqlWorkloadType) {
@@ -36,7 +37,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
     }
 
     private SqlWorkloadTypeUpdateSettingsArgs() {
-        this.sqlWorkloadType = Output.empty();
+        this.sqlWorkloadType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class SqlWorkloadTypeUpdateSettingsArgs extends io.pulumi.resources
             return this;
         }
         public Builder sqlWorkloadType(@Nullable Either<String,SqlWorkloadType> sqlWorkloadType) {
-            this.sqlWorkloadType = Output.ofNullable(sqlWorkloadType);
+            this.sqlWorkloadType = Codegen.ofNullable(sqlWorkloadType);
             return this;
         }        public SqlWorkloadTypeUpdateSettingsArgs build() {
             return new SqlWorkloadTypeUpdateSettingsArgs(sqlWorkloadType);

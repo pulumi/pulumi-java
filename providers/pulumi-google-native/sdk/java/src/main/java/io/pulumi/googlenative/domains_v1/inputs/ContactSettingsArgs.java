@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1.enums.ContactSettingsPrivacy;
 import io.pulumi.googlenative.domains_v1.inputs.ContactArgs;
 import java.util.Objects;
@@ -74,10 +75,10 @@ public final class ContactSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContactSettingsArgs() {
-        this.adminContact = Output.empty();
-        this.privacy = Output.empty();
-        this.registrantContact = Output.empty();
-        this.technicalContact = Output.empty();
+        this.adminContact = Codegen.empty();
+        this.privacy = Codegen.empty();
+        this.registrantContact = Codegen.empty();
+        this.technicalContact = Codegen.empty();
     }
 
     public static Builder builder() {

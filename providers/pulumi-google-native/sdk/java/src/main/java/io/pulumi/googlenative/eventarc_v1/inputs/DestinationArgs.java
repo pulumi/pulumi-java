@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.eventarc_v1.inputs.CloudRunArgs;
 import io.pulumi.googlenative.eventarc_v1.inputs.GKEArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
-        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
+        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CloudRunArgs> cloudRun;
 
     public Output<CloudRunArgs> getCloudRun() {
-        return this.cloudRun == null ? Output.empty() : this.cloudRun;
+        return this.cloudRun == null ? Codegen.empty() : this.cloudRun;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GKEArgs> gke;
 
     public Output<GKEArgs> getGke() {
-        return this.gke == null ? Output.empty() : this.gke;
+        return this.gke == null ? Codegen.empty() : this.gke;
     }
 
     public DestinationArgs(
@@ -63,9 +64,9 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DestinationArgs() {
-        this.cloudFunction = Output.empty();
-        this.cloudRun = Output.empty();
-        this.gke = Output.empty();
+        this.cloudFunction = Codegen.empty();
+        this.cloudRun = Codegen.empty();
+        this.gke = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Output.ofNullable(cloudFunction);
+            this.cloudFunction = Codegen.ofNullable(cloudFunction);
             return this;
         }
         public Builder cloudRun(@Nullable Output<CloudRunArgs> cloudRun) {
@@ -105,7 +106,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudRun(@Nullable CloudRunArgs cloudRun) {
-            this.cloudRun = Output.ofNullable(cloudRun);
+            this.cloudRun = Codegen.ofNullable(cloudRun);
             return this;
         }
         public Builder gke(@Nullable Output<GKEArgs> gke) {
@@ -113,7 +114,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gke(@Nullable GKEArgs gke) {
-            this.gke = Output.ofNullable(gke);
+            this.gke = Codegen.ofNullable(gke);
             return this;
         }        public DestinationArgs build() {
             return new DestinationArgs(cloudFunction, cloudRun, gke);

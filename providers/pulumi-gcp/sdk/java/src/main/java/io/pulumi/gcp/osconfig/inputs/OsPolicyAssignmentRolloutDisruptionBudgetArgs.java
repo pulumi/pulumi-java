@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
       private final @Nullable Output<Integer> fixed;
 
     public Output<Integer> getFixed() {
-        return this.fixed == null ? Output.empty() : this.fixed;
+        return this.fixed == null ? Codegen.empty() : this.fixed;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
       private final @Nullable Output<Integer> percent;
 
     public Output<Integer> getPercent() {
-        return this.percent == null ? Output.empty() : this.percent;
+        return this.percent == null ? Codegen.empty() : this.percent;
     }
 
     public OsPolicyAssignmentRolloutDisruptionBudgetArgs(
@@ -44,8 +45,8 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
     }
 
     private OsPolicyAssignmentRolloutDisruptionBudgetArgs() {
-        this.fixed = Output.empty();
-        this.percent = Output.empty();
+        this.fixed = Codegen.empty();
+        this.percent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
             return this;
         }
         public Builder fixed(@Nullable Integer fixed) {
-            this.fixed = Output.ofNullable(fixed);
+            this.fixed = Codegen.ofNullable(fixed);
             return this;
         }
         public Builder percent(@Nullable Output<Integer> percent) {
@@ -83,7 +84,7 @@ public final class OsPolicyAssignmentRolloutDisruptionBudgetArgs extends io.pulu
             return this;
         }
         public Builder percent(@Nullable Integer percent) {
-            this.percent = Output.ofNullable(percent);
+            this.percent = Codegen.ofNullable(percent);
             return this;
         }        public OsPolicyAssignmentRolloutDisruptionBudgetArgs build() {
             return new OsPolicyAssignmentRolloutDisruptionBudgetArgs(fixed, percent);

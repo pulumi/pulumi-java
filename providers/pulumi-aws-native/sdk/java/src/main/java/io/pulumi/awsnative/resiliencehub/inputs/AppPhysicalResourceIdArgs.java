@@ -5,6 +5,7 @@ package io.pulumi.awsnative.resiliencehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
+        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     @Import(name="awsRegion")
       private final @Nullable Output<String> awsRegion;
 
     public Output<String> getAwsRegion() {
-        return this.awsRegion == null ? Output.empty() : this.awsRegion;
+        return this.awsRegion == null ? Codegen.empty() : this.awsRegion;
     }
 
     @Import(name="identifier", required=true)
@@ -54,10 +55,10 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
     }
 
     private AppPhysicalResourceIdArgs() {
-        this.awsAccountId = Output.empty();
-        this.awsRegion = Output.empty();
-        this.identifier = Output.empty();
-        this.type = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.awsRegion = Codegen.empty();
+        this.identifier = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Output.ofNullable(awsAccountId);
+            this.awsAccountId = Codegen.ofNullable(awsAccountId);
             return this;
         }
         public Builder awsRegion(@Nullable Output<String> awsRegion) {
@@ -99,7 +100,7 @@ public final class AppPhysicalResourceIdArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder awsRegion(@Nullable String awsRegion) {
-            this.awsRegion = Output.ofNullable(awsRegion);
+            this.awsRegion = Codegen.ofNullable(awsRegion);
             return this;
         }
         public Builder identifier(Output<String> identifier) {

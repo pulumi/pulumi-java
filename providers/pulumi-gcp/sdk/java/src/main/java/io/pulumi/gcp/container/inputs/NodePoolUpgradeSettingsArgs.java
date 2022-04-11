@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class NodePoolUpgradeSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private NodePoolUpgradeSettingsArgs() {
-        this.maxSurge = Output.empty();
-        this.maxUnavailable = Output.empty();
+        this.maxSurge = Codegen.empty();
+        this.maxUnavailable = Codegen.empty();
     }
 
     public static Builder builder() {

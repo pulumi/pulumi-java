@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> autoImportPolicy;
 
     public Output<String> getAutoImportPolicy() {
-        return this.autoImportPolicy == null ? Output.empty() : this.autoImportPolicy;
+        return this.autoImportPolicy == null ? Codegen.empty() : this.autoImportPolicy;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> automaticBackupRetentionDays;
 
     public Output<Integer> getAutomaticBackupRetentionDays() {
-        return this.automaticBackupRetentionDays == null ? Output.empty() : this.automaticBackupRetentionDays;
+        return this.automaticBackupRetentionDays == null ? Codegen.empty() : this.automaticBackupRetentionDays;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> backupId;
 
     public Output<String> getBackupId() {
-        return this.backupId == null ? Output.empty() : this.backupId;
+        return this.backupId == null ? Codegen.empty() : this.backupId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> copyTagsToBackups;
 
     public Output<Boolean> getCopyTagsToBackups() {
-        return this.copyTagsToBackups == null ? Output.empty() : this.copyTagsToBackups;
+        return this.copyTagsToBackups == null ? Codegen.empty() : this.copyTagsToBackups;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dailyAutomaticBackupStartTime;
 
     public Output<String> getDailyAutomaticBackupStartTime() {
-        return this.dailyAutomaticBackupStartTime == null ? Output.empty() : this.dailyAutomaticBackupStartTime;
+        return this.dailyAutomaticBackupStartTime == null ? Codegen.empty() : this.dailyAutomaticBackupStartTime;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dataCompressionType;
 
     public Output<String> getDataCompressionType() {
-        return this.dataCompressionType == null ? Output.empty() : this.dataCompressionType;
+        return this.dataCompressionType == null ? Codegen.empty() : this.dataCompressionType;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> deploymentType;
 
     public Output<String> getDeploymentType() {
-        return this.deploymentType == null ? Output.empty() : this.deploymentType;
+        return this.deploymentType == null ? Codegen.empty() : this.deploymentType;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> driveCacheType;
 
     public Output<String> getDriveCacheType() {
-        return this.driveCacheType == null ? Output.empty() : this.driveCacheType;
+        return this.driveCacheType == null ? Codegen.empty() : this.driveCacheType;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> exportPath;
 
     public Output<String> getExportPath() {
-        return this.exportPath == null ? Output.empty() : this.exportPath;
+        return this.exportPath == null ? Codegen.empty() : this.exportPath;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> fileSystemTypeVersion;
 
     public Output<String> getFileSystemTypeVersion() {
-        return this.fileSystemTypeVersion == null ? Output.empty() : this.fileSystemTypeVersion;
+        return this.fileSystemTypeVersion == null ? Codegen.empty() : this.fileSystemTypeVersion;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> importPath;
 
     public Output<String> getImportPath() {
-        return this.importPath == null ? Output.empty() : this.importPath;
+        return this.importPath == null ? Codegen.empty() : this.importPath;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> importedFileChunkSize;
 
     public Output<Integer> getImportedFileChunkSize() {
-        return this.importedFileChunkSize == null ? Output.empty() : this.importedFileChunkSize;
+        return this.importedFileChunkSize == null ? Codegen.empty() : this.importedFileChunkSize;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> mountName;
 
     public Output<String> getMountName() {
-        return this.mountName == null ? Output.empty() : this.mountName;
+        return this.mountName == null ? Codegen.empty() : this.mountName;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> networkInterfaceIds;
 
     public Output<List<String>> getNetworkInterfaceIds() {
-        return this.networkInterfaceIds == null ? Output.empty() : this.networkInterfaceIds;
+        return this.networkInterfaceIds == null ? Codegen.empty() : this.networkInterfaceIds;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> perUnitStorageThroughput;
 
     public Output<Integer> getPerUnitStorageThroughput() {
-        return this.perUnitStorageThroughput == null ? Output.empty() : this.perUnitStorageThroughput;
+        return this.perUnitStorageThroughput == null ? Codegen.empty() : this.perUnitStorageThroughput;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> storageCapacity;
 
     public Output<Integer> getStorageCapacity() {
-        return this.storageCapacity == null ? Output.empty() : this.storageCapacity;
+        return this.storageCapacity == null ? Codegen.empty() : this.storageCapacity;
     }
 
     /**
@@ -257,7 +258,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> storageType;
 
     public Output<String> getStorageType() {
-        return this.storageType == null ? Output.empty() : this.storageType;
+        return this.storageType == null ? Codegen.empty() : this.storageType;
     }
 
     /**
@@ -268,7 +269,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> subnetIds;
 
     public Output<String> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -279,7 +280,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -290,7 +291,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -301,7 +302,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -312,7 +313,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> weeklyMaintenanceStartTime;
 
     public Output<String> getWeeklyMaintenanceStartTime() {
-        return this.weeklyMaintenanceStartTime == null ? Output.empty() : this.weeklyMaintenanceStartTime;
+        return this.weeklyMaintenanceStartTime == null ? Codegen.empty() : this.weeklyMaintenanceStartTime;
     }
 
     public LustreFileSystemState(
@@ -373,33 +374,33 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
     }
 
     private LustreFileSystemState() {
-        this.arn = Output.empty();
-        this.autoImportPolicy = Output.empty();
-        this.automaticBackupRetentionDays = Output.empty();
-        this.backupId = Output.empty();
-        this.copyTagsToBackups = Output.empty();
-        this.dailyAutomaticBackupStartTime = Output.empty();
-        this.dataCompressionType = Output.empty();
-        this.deploymentType = Output.empty();
-        this.dnsName = Output.empty();
-        this.driveCacheType = Output.empty();
-        this.exportPath = Output.empty();
-        this.fileSystemTypeVersion = Output.empty();
-        this.importPath = Output.empty();
-        this.importedFileChunkSize = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.mountName = Output.empty();
-        this.networkInterfaceIds = Output.empty();
-        this.ownerId = Output.empty();
-        this.perUnitStorageThroughput = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.storageCapacity = Output.empty();
-        this.storageType = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
-        this.weeklyMaintenanceStartTime = Output.empty();
+        this.arn = Codegen.empty();
+        this.autoImportPolicy = Codegen.empty();
+        this.automaticBackupRetentionDays = Codegen.empty();
+        this.backupId = Codegen.empty();
+        this.copyTagsToBackups = Codegen.empty();
+        this.dailyAutomaticBackupStartTime = Codegen.empty();
+        this.dataCompressionType = Codegen.empty();
+        this.deploymentType = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.driveCacheType = Codegen.empty();
+        this.exportPath = Codegen.empty();
+        this.fileSystemTypeVersion = Codegen.empty();
+        this.importPath = Codegen.empty();
+        this.importedFileChunkSize = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.mountName = Codegen.empty();
+        this.networkInterfaceIds = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.perUnitStorageThroughput = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.storageCapacity = Codegen.empty();
+        this.storageType = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.weeklyMaintenanceStartTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -479,7 +480,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder autoImportPolicy(@Nullable Output<String> autoImportPolicy) {
@@ -487,7 +488,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder autoImportPolicy(@Nullable String autoImportPolicy) {
-            this.autoImportPolicy = Output.ofNullable(autoImportPolicy);
+            this.autoImportPolicy = Codegen.ofNullable(autoImportPolicy);
             return this;
         }
         public Builder automaticBackupRetentionDays(@Nullable Output<Integer> automaticBackupRetentionDays) {
@@ -495,7 +496,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder automaticBackupRetentionDays(@Nullable Integer automaticBackupRetentionDays) {
-            this.automaticBackupRetentionDays = Output.ofNullable(automaticBackupRetentionDays);
+            this.automaticBackupRetentionDays = Codegen.ofNullable(automaticBackupRetentionDays);
             return this;
         }
         public Builder backupId(@Nullable Output<String> backupId) {
@@ -503,7 +504,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder backupId(@Nullable String backupId) {
-            this.backupId = Output.ofNullable(backupId);
+            this.backupId = Codegen.ofNullable(backupId);
             return this;
         }
         public Builder copyTagsToBackups(@Nullable Output<Boolean> copyTagsToBackups) {
@@ -511,7 +512,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder copyTagsToBackups(@Nullable Boolean copyTagsToBackups) {
-            this.copyTagsToBackups = Output.ofNullable(copyTagsToBackups);
+            this.copyTagsToBackups = Codegen.ofNullable(copyTagsToBackups);
             return this;
         }
         public Builder dailyAutomaticBackupStartTime(@Nullable Output<String> dailyAutomaticBackupStartTime) {
@@ -519,7 +520,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dailyAutomaticBackupStartTime(@Nullable String dailyAutomaticBackupStartTime) {
-            this.dailyAutomaticBackupStartTime = Output.ofNullable(dailyAutomaticBackupStartTime);
+            this.dailyAutomaticBackupStartTime = Codegen.ofNullable(dailyAutomaticBackupStartTime);
             return this;
         }
         public Builder dataCompressionType(@Nullable Output<String> dataCompressionType) {
@@ -527,7 +528,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dataCompressionType(@Nullable String dataCompressionType) {
-            this.dataCompressionType = Output.ofNullable(dataCompressionType);
+            this.dataCompressionType = Codegen.ofNullable(dataCompressionType);
             return this;
         }
         public Builder deploymentType(@Nullable Output<String> deploymentType) {
@@ -535,7 +536,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deploymentType(@Nullable String deploymentType) {
-            this.deploymentType = Output.ofNullable(deploymentType);
+            this.deploymentType = Codegen.ofNullable(deploymentType);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -543,7 +544,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder driveCacheType(@Nullable Output<String> driveCacheType) {
@@ -551,7 +552,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder driveCacheType(@Nullable String driveCacheType) {
-            this.driveCacheType = Output.ofNullable(driveCacheType);
+            this.driveCacheType = Codegen.ofNullable(driveCacheType);
             return this;
         }
         public Builder exportPath(@Nullable Output<String> exportPath) {
@@ -559,7 +560,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder exportPath(@Nullable String exportPath) {
-            this.exportPath = Output.ofNullable(exportPath);
+            this.exportPath = Codegen.ofNullable(exportPath);
             return this;
         }
         public Builder fileSystemTypeVersion(@Nullable Output<String> fileSystemTypeVersion) {
@@ -567,7 +568,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fileSystemTypeVersion(@Nullable String fileSystemTypeVersion) {
-            this.fileSystemTypeVersion = Output.ofNullable(fileSystemTypeVersion);
+            this.fileSystemTypeVersion = Codegen.ofNullable(fileSystemTypeVersion);
             return this;
         }
         public Builder importPath(@Nullable Output<String> importPath) {
@@ -575,7 +576,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder importPath(@Nullable String importPath) {
-            this.importPath = Output.ofNullable(importPath);
+            this.importPath = Codegen.ofNullable(importPath);
             return this;
         }
         public Builder importedFileChunkSize(@Nullable Output<Integer> importedFileChunkSize) {
@@ -583,7 +584,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder importedFileChunkSize(@Nullable Integer importedFileChunkSize) {
-            this.importedFileChunkSize = Output.ofNullable(importedFileChunkSize);
+            this.importedFileChunkSize = Codegen.ofNullable(importedFileChunkSize);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -591,7 +592,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder mountName(@Nullable Output<String> mountName) {
@@ -599,7 +600,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mountName(@Nullable String mountName) {
-            this.mountName = Output.ofNullable(mountName);
+            this.mountName = Codegen.ofNullable(mountName);
             return this;
         }
         public Builder networkInterfaceIds(@Nullable Output<List<String>> networkInterfaceIds) {
@@ -607,7 +608,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder networkInterfaceIds(@Nullable List<String> networkInterfaceIds) {
-            this.networkInterfaceIds = Output.ofNullable(networkInterfaceIds);
+            this.networkInterfaceIds = Codegen.ofNullable(networkInterfaceIds);
             return this;
         }
         public Builder networkInterfaceIds(String... networkInterfaceIds) {
@@ -618,7 +619,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder perUnitStorageThroughput(@Nullable Output<Integer> perUnitStorageThroughput) {
@@ -626,7 +627,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder perUnitStorageThroughput(@Nullable Integer perUnitStorageThroughput) {
-            this.perUnitStorageThroughput = Output.ofNullable(perUnitStorageThroughput);
+            this.perUnitStorageThroughput = Codegen.ofNullable(perUnitStorageThroughput);
             return this;
         }
         public Builder securityGroupIds(@Nullable Output<List<String>> securityGroupIds) {
@@ -634,7 +635,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -645,7 +646,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder storageCapacity(@Nullable Integer storageCapacity) {
-            this.storageCapacity = Output.ofNullable(storageCapacity);
+            this.storageCapacity = Codegen.ofNullable(storageCapacity);
             return this;
         }
         public Builder storageType(@Nullable Output<String> storageType) {
@@ -653,7 +654,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder storageType(@Nullable String storageType) {
-            this.storageType = Output.ofNullable(storageType);
+            this.storageType = Codegen.ofNullable(storageType);
             return this;
         }
         public Builder subnetIds(@Nullable Output<String> subnetIds) {
@@ -661,7 +662,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder subnetIds(@Nullable String subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -669,7 +670,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -677,7 +678,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -685,7 +686,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder weeklyMaintenanceStartTime(@Nullable Output<String> weeklyMaintenanceStartTime) {
@@ -693,7 +694,7 @@ public final class LustreFileSystemState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder weeklyMaintenanceStartTime(@Nullable String weeklyMaintenanceStartTime) {
-            this.weeklyMaintenanceStartTime = Output.ofNullable(weeklyMaintenanceStartTime);
+            this.weeklyMaintenanceStartTime = Codegen.ofNullable(weeklyMaintenanceStartTime);
             return this;
         }        public LustreFileSystemState build() {
             return new LustreFileSystemState(arn, autoImportPolicy, automaticBackupRetentionDays, backupId, copyTagsToBackups, dailyAutomaticBackupStartTime, dataCompressionType, deploymentType, dnsName, driveCacheType, exportPath, fileSystemTypeVersion, importPath, importedFileChunkSize, kmsKeyId, mountName, networkInterfaceIds, ownerId, perUnitStorageThroughput, securityGroupIds, storageCapacity, storageType, subnetIds, tags, tagsAll, vpcId, weeklyMaintenanceStartTime);

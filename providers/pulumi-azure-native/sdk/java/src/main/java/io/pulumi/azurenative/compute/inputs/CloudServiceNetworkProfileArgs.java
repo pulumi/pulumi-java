@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
     public Output<List<LoadBalancerConfigurationArgs>> getLoadBalancerConfigurations() {
-        return this.loadBalancerConfigurations == null ? Output.empty() : this.loadBalancerConfigurations;
+        return this.loadBalancerConfigurations == null ? Codegen.empty() : this.loadBalancerConfigurations;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SubResourceArgs> swappableCloudService;
 
     public Output<SubResourceArgs> getSwappableCloudService() {
-        return this.swappableCloudService == null ? Output.empty() : this.swappableCloudService;
+        return this.swappableCloudService == null ? Codegen.empty() : this.swappableCloudService;
     }
 
     public CloudServiceNetworkProfileArgs(
@@ -50,8 +51,8 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
     }
 
     private CloudServiceNetworkProfileArgs() {
-        this.loadBalancerConfigurations = Output.empty();
-        this.swappableCloudService = Output.empty();
+        this.loadBalancerConfigurations = Codegen.empty();
+        this.swappableCloudService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder loadBalancerConfigurations(@Nullable List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
-            this.loadBalancerConfigurations = Output.ofNullable(loadBalancerConfigurations);
+            this.loadBalancerConfigurations = Codegen.ofNullable(loadBalancerConfigurations);
             return this;
         }
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
@@ -92,7 +93,7 @@ public final class CloudServiceNetworkProfileArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder swappableCloudService(@Nullable SubResourceArgs swappableCloudService) {
-            this.swappableCloudService = Output.ofNullable(swappableCloudService);
+            this.swappableCloudService = Codegen.ofNullable(swappableCloudService);
             return this;
         }        public CloudServiceNetworkProfileArgs build() {
             return new CloudServiceNetworkProfileArgs(loadBalancerConfigurations, swappableCloudService);

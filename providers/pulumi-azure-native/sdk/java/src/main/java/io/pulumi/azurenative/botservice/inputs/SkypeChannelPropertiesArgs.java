@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> callingWebHook;
 
     public Output<String> getCallingWebHook() {
-        return this.callingWebHook == null ? Output.empty() : this.callingWebHook;
+        return this.callingWebHook == null ? Codegen.empty() : this.callingWebHook;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enableCalling;
 
     public Output<Boolean> getEnableCalling() {
-        return this.enableCalling == null ? Output.empty() : this.enableCalling;
+        return this.enableCalling == null ? Codegen.empty() : this.enableCalling;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enableGroups;
 
     public Output<Boolean> getEnableGroups() {
-        return this.enableGroups == null ? Output.empty() : this.enableGroups;
+        return this.enableGroups == null ? Codegen.empty() : this.enableGroups;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enableMediaCards;
 
     public Output<Boolean> getEnableMediaCards() {
-        return this.enableMediaCards == null ? Output.empty() : this.enableMediaCards;
+        return this.enableMediaCards == null ? Codegen.empty() : this.enableMediaCards;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enableMessaging;
 
     public Output<Boolean> getEnableMessaging() {
-        return this.enableMessaging == null ? Output.empty() : this.enableMessaging;
+        return this.enableMessaging == null ? Codegen.empty() : this.enableMessaging;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enableScreenSharing;
 
     public Output<Boolean> getEnableScreenSharing() {
-        return this.enableScreenSharing == null ? Output.empty() : this.enableScreenSharing;
+        return this.enableScreenSharing == null ? Codegen.empty() : this.enableScreenSharing;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enableVideo;
 
     public Output<Boolean> getEnableVideo() {
-        return this.enableVideo == null ? Output.empty() : this.enableVideo;
+        return this.enableVideo == null ? Codegen.empty() : this.enableVideo;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> groupsMode;
 
     public Output<String> getGroupsMode() {
-        return this.groupsMode == null ? Output.empty() : this.groupsMode;
+        return this.groupsMode == null ? Codegen.empty() : this.groupsMode;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> incomingCallRoute;
 
     public Output<String> getIncomingCallRoute() {
-        return this.incomingCallRoute == null ? Output.empty() : this.incomingCallRoute;
+        return this.incomingCallRoute == null ? Codegen.empty() : this.incomingCallRoute;
     }
 
     /**
@@ -153,16 +154,16 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private SkypeChannelPropertiesArgs() {
-        this.callingWebHook = Output.empty();
-        this.enableCalling = Output.empty();
-        this.enableGroups = Output.empty();
-        this.enableMediaCards = Output.empty();
-        this.enableMessaging = Output.empty();
-        this.enableScreenSharing = Output.empty();
-        this.enableVideo = Output.empty();
-        this.groupsMode = Output.empty();
-        this.incomingCallRoute = Output.empty();
-        this.isEnabled = Output.empty();
+        this.callingWebHook = Codegen.empty();
+        this.enableCalling = Codegen.empty();
+        this.enableGroups = Codegen.empty();
+        this.enableMediaCards = Codegen.empty();
+        this.enableMessaging = Codegen.empty();
+        this.enableScreenSharing = Codegen.empty();
+        this.enableVideo = Codegen.empty();
+        this.groupsMode = Codegen.empty();
+        this.incomingCallRoute = Codegen.empty();
+        this.isEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -208,7 +209,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = Output.ofNullable(callingWebHook);
+            this.callingWebHook = Codegen.ofNullable(callingWebHook);
             return this;
         }
         public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
@@ -216,7 +217,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = Output.ofNullable(enableCalling);
+            this.enableCalling = Codegen.ofNullable(enableCalling);
             return this;
         }
         public Builder enableGroups(@Nullable Output<Boolean> enableGroups) {
@@ -224,7 +225,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enableGroups(@Nullable Boolean enableGroups) {
-            this.enableGroups = Output.ofNullable(enableGroups);
+            this.enableGroups = Codegen.ofNullable(enableGroups);
             return this;
         }
         public Builder enableMediaCards(@Nullable Output<Boolean> enableMediaCards) {
@@ -232,7 +233,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enableMediaCards(@Nullable Boolean enableMediaCards) {
-            this.enableMediaCards = Output.ofNullable(enableMediaCards);
+            this.enableMediaCards = Codegen.ofNullable(enableMediaCards);
             return this;
         }
         public Builder enableMessaging(@Nullable Output<Boolean> enableMessaging) {
@@ -240,7 +241,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enableMessaging(@Nullable Boolean enableMessaging) {
-            this.enableMessaging = Output.ofNullable(enableMessaging);
+            this.enableMessaging = Codegen.ofNullable(enableMessaging);
             return this;
         }
         public Builder enableScreenSharing(@Nullable Output<Boolean> enableScreenSharing) {
@@ -248,7 +249,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enableScreenSharing(@Nullable Boolean enableScreenSharing) {
-            this.enableScreenSharing = Output.ofNullable(enableScreenSharing);
+            this.enableScreenSharing = Codegen.ofNullable(enableScreenSharing);
             return this;
         }
         public Builder enableVideo(@Nullable Output<Boolean> enableVideo) {
@@ -256,7 +257,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enableVideo(@Nullable Boolean enableVideo) {
-            this.enableVideo = Output.ofNullable(enableVideo);
+            this.enableVideo = Codegen.ofNullable(enableVideo);
             return this;
         }
         public Builder groupsMode(@Nullable Output<String> groupsMode) {
@@ -264,7 +265,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder groupsMode(@Nullable String groupsMode) {
-            this.groupsMode = Output.ofNullable(groupsMode);
+            this.groupsMode = Codegen.ofNullable(groupsMode);
             return this;
         }
         public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
@@ -272,7 +273,7 @@ public final class SkypeChannelPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = Output.ofNullable(incomingCallRoute);
+            this.incomingCallRoute = Codegen.ofNullable(incomingCallRoute);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {

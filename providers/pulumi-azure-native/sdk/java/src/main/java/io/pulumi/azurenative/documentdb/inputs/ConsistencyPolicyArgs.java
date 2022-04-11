@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.enums.DefaultConsistencyLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> maxIntervalInSeconds;
 
     public Output<Integer> getMaxIntervalInSeconds() {
-        return this.maxIntervalInSeconds == null ? Output.empty() : this.maxIntervalInSeconds;
+        return this.maxIntervalInSeconds == null ? Codegen.empty() : this.maxIntervalInSeconds;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Double> maxStalenessPrefix;
 
     public Output<Double> getMaxStalenessPrefix() {
-        return this.maxStalenessPrefix == null ? Output.empty() : this.maxStalenessPrefix;
+        return this.maxStalenessPrefix == null ? Codegen.empty() : this.maxStalenessPrefix;
     }
 
     public ConsistencyPolicyArgs(
@@ -63,9 +64,9 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConsistencyPolicyArgs() {
-        this.defaultConsistencyLevel = Output.empty();
-        this.maxIntervalInSeconds = Output.empty();
-        this.maxStalenessPrefix = Output.empty();
+        this.defaultConsistencyLevel = Codegen.empty();
+        this.maxIntervalInSeconds = Codegen.empty();
+        this.maxStalenessPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxIntervalInSeconds(@Nullable Integer maxIntervalInSeconds) {
-            this.maxIntervalInSeconds = Output.ofNullable(maxIntervalInSeconds);
+            this.maxIntervalInSeconds = Codegen.ofNullable(maxIntervalInSeconds);
             return this;
         }
         public Builder maxStalenessPrefix(@Nullable Output<Double> maxStalenessPrefix) {
@@ -113,7 +114,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder maxStalenessPrefix(@Nullable Double maxStalenessPrefix) {
-            this.maxStalenessPrefix = Output.ofNullable(maxStalenessPrefix);
+            this.maxStalenessPrefix = Codegen.ofNullable(maxStalenessPrefix);
             return this;
         }        public ConsistencyPolicyArgs build() {
             return new ConsistencyPolicyArgs(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);

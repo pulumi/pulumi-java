@@ -5,6 +5,7 @@ package io.pulumi.googlenative.oslogin_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expirationTimeUsec;
 
     public Output<String> getExpirationTimeUsec() {
-        return this.expirationTimeUsec == null ? Output.empty() : this.expirationTimeUsec;
+        return this.expirationTimeUsec == null ? Codegen.empty() : this.expirationTimeUsec;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     @Import(name="userId", required=true)
@@ -53,9 +54,9 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshPublicKeyArgs() {
-        this.expirationTimeUsec = Output.empty();
-        this.key = Output.empty();
-        this.userId = Output.empty();
+        this.expirationTimeUsec = Codegen.empty();
+        this.key = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationTimeUsec(@Nullable String expirationTimeUsec) {
-            this.expirationTimeUsec = Output.ofNullable(expirationTimeUsec);
+            this.expirationTimeUsec = Codegen.ofNullable(expirationTimeUsec);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -95,7 +96,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder userId(Output<String> userId) {

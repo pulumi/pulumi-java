@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> sinkRefs;
 
     public Output<List<String>> getSinkRefs() {
-        return this.sinkRefs == null ? Output.empty() : this.sinkRefs;
+        return this.sinkRefs == null ? Codegen.empty() : this.sinkRefs;
     }
 
     public DiagnosticsRefArgs(
@@ -50,8 +51,8 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DiagnosticsRefArgs() {
-        this.enabled = Output.empty();
-        this.sinkRefs = Output.empty();
+        this.enabled = Codegen.empty();
+        this.sinkRefs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder sinkRefs(@Nullable Output<List<String>> sinkRefs) {
@@ -89,7 +90,7 @@ public final class DiagnosticsRefArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sinkRefs(@Nullable List<String> sinkRefs) {
-            this.sinkRefs = Output.ofNullable(sinkRefs);
+            this.sinkRefs = Codegen.ofNullable(sinkRefs);
             return this;
         }
         public Builder sinkRefs(String... sinkRefs) {

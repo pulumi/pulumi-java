@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> exclusivePackages;
 
     public Output<List<String>> getExclusivePackages() {
-        return this.exclusivePackages == null ? Output.empty() : this.exclusivePackages;
+        return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> minimal;
 
     public Output<Boolean> getMinimal() {
-        return this.minimal == null ? Output.empty() : this.minimal;
+        return this.minimal == null ? Codegen.empty() : this.minimal;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> security;
 
     public Output<Boolean> getSecurity() {
-        return this.security == null ? Output.empty() : this.security;
+        return this.security == null ? Codegen.empty() : this.security;
     }
 
     public YumSettingsArgs(
@@ -76,10 +77,10 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private YumSettingsArgs() {
-        this.excludes = Output.empty();
-        this.exclusivePackages = Output.empty();
-        this.minimal = Output.empty();
-        this.security = Output.empty();
+        this.excludes = Codegen.empty();
+        this.exclusivePackages = Codegen.empty();
+        this.minimal = Codegen.empty();
+        this.security = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(String... excludes) {
@@ -124,7 +125,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Output.ofNullable(exclusivePackages);
+            this.exclusivePackages = Codegen.ofNullable(exclusivePackages);
             return this;
         }
         public Builder exclusivePackages(String... exclusivePackages) {
@@ -135,7 +136,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minimal(@Nullable Boolean minimal) {
-            this.minimal = Output.ofNullable(minimal);
+            this.minimal = Codegen.ofNullable(minimal);
             return this;
         }
         public Builder security(@Nullable Output<Boolean> security) {
@@ -143,7 +144,7 @@ public final class YumSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder security(@Nullable Boolean security) {
-            this.security = Output.ofNullable(security);
+            this.security = Codegen.ofNullable(security);
             return this;
         }        public YumSettingsArgs build() {
             return new YumSettingsArgs(excludes, exclusivePackages, minimal, security);

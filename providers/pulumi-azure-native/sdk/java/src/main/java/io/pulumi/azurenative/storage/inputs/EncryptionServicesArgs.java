@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.EncryptionServiceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<EncryptionServiceArgs> blob;
 
     public Output<EncryptionServiceArgs> getBlob() {
-        return this.blob == null ? Output.empty() : this.blob;
+        return this.blob == null ? Codegen.empty() : this.blob;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<EncryptionServiceArgs> file;
 
     public Output<EncryptionServiceArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<EncryptionServiceArgs> queue;
 
     public Output<EncryptionServiceArgs> getQueue() {
-        return this.queue == null ? Output.empty() : this.queue;
+        return this.queue == null ? Codegen.empty() : this.queue;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<EncryptionServiceArgs> table;
 
     public Output<EncryptionServiceArgs> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     public EncryptionServicesArgs(
@@ -74,10 +75,10 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private EncryptionServicesArgs() {
-        this.blob = Output.empty();
-        this.file = Output.empty();
-        this.queue = Output.empty();
-        this.table = Output.empty();
+        this.blob = Codegen.empty();
+        this.file = Codegen.empty();
+        this.queue = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder blob(@Nullable EncryptionServiceArgs blob) {
-            this.blob = Output.ofNullable(blob);
+            this.blob = Codegen.ofNullable(blob);
             return this;
         }
         public Builder file(@Nullable Output<EncryptionServiceArgs> file) {
@@ -119,7 +120,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder file(@Nullable EncryptionServiceArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder queue(@Nullable Output<EncryptionServiceArgs> queue) {
@@ -127,7 +128,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queue(@Nullable EncryptionServiceArgs queue) {
-            this.queue = Output.ofNullable(queue);
+            this.queue = Codegen.ofNullable(queue);
             return this;
         }
         public Builder table(@Nullable Output<EncryptionServiceArgs> table) {
@@ -135,7 +136,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder table(@Nullable EncryptionServiceArgs table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }        public EncryptionServicesArgs build() {
             return new EncryptionServicesArgs(blob, file, queue, table);

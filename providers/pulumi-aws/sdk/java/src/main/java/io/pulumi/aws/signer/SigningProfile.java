@@ -11,6 +11,7 @@ import io.pulumi.aws.signer.outputs.SigningProfileSignatureValidityPeriod;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -223,7 +224,7 @@ public class SigningProfile extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SigningProfile(String name, SigningProfileArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:signer/signingProfile:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:signer/signingProfile:SigningProfile", name, args == null ? SigningProfileArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SigningProfile(String name, Output<String> id, @Nullable SigningProfileState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

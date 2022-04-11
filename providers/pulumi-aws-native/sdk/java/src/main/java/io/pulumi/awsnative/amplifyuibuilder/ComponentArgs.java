@@ -12,6 +12,7 @@ import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentTagsArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,70 +27,70 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ComponentBindingPropertiesArgs> bindingProperties;
 
     public Output<ComponentBindingPropertiesArgs> getBindingProperties() {
-        return this.bindingProperties == null ? Output.empty() : this.bindingProperties;
+        return this.bindingProperties == null ? Codegen.empty() : this.bindingProperties;
     }
 
     @Import(name="children")
       private final @Nullable Output<List<ComponentChildArgs>> children;
 
     public Output<List<ComponentChildArgs>> getChildren() {
-        return this.children == null ? Output.empty() : this.children;
+        return this.children == null ? Codegen.empty() : this.children;
     }
 
     @Import(name="collectionProperties")
       private final @Nullable Output<ComponentCollectionPropertiesArgs> collectionProperties;
 
     public Output<ComponentCollectionPropertiesArgs> getCollectionProperties() {
-        return this.collectionProperties == null ? Output.empty() : this.collectionProperties;
+        return this.collectionProperties == null ? Codegen.empty() : this.collectionProperties;
     }
 
     @Import(name="componentType")
       private final @Nullable Output<String> componentType;
 
     public Output<String> getComponentType() {
-        return this.componentType == null ? Output.empty() : this.componentType;
+        return this.componentType == null ? Codegen.empty() : this.componentType;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<ComponentOverridesArgs> overrides;
 
     public Output<ComponentOverridesArgs> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     @Import(name="properties")
       private final @Nullable Output<ComponentPropertiesArgs> properties;
 
     public Output<ComponentPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     @Import(name="sourceId")
       private final @Nullable Output<String> sourceId;
 
     public Output<String> getSourceId() {
-        return this.sourceId == null ? Output.empty() : this.sourceId;
+        return this.sourceId == null ? Codegen.empty() : this.sourceId;
     }
 
     @Import(name="tags")
       private final @Nullable Output<ComponentTagsArgs> tags;
 
     public Output<ComponentTagsArgs> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="variants")
       private final @Nullable Output<List<ComponentVariantArgs>> variants;
 
     public Output<List<ComponentVariantArgs>> getVariants() {
-        return this.variants == null ? Output.empty() : this.variants;
+        return this.variants == null ? Codegen.empty() : this.variants;
     }
 
     public ComponentArgs(
@@ -116,16 +117,16 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComponentArgs() {
-        this.bindingProperties = Output.empty();
-        this.children = Output.empty();
-        this.collectionProperties = Output.empty();
-        this.componentType = Output.empty();
-        this.name = Output.empty();
-        this.overrides = Output.empty();
-        this.properties = Output.empty();
-        this.sourceId = Output.empty();
-        this.tags = Output.empty();
-        this.variants = Output.empty();
+        this.bindingProperties = Codegen.empty();
+        this.children = Codegen.empty();
+        this.collectionProperties = Codegen.empty();
+        this.componentType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.overrides = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.sourceId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.variants = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bindingProperties(@Nullable ComponentBindingPropertiesArgs bindingProperties) {
-            this.bindingProperties = Output.ofNullable(bindingProperties);
+            this.bindingProperties = Codegen.ofNullable(bindingProperties);
             return this;
         }
         public Builder children(@Nullable Output<List<ComponentChildArgs>> children) {
@@ -179,7 +180,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder children(@Nullable List<ComponentChildArgs> children) {
-            this.children = Output.ofNullable(children);
+            this.children = Codegen.ofNullable(children);
             return this;
         }
         public Builder children(ComponentChildArgs... children) {
@@ -190,7 +191,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder collectionProperties(@Nullable ComponentCollectionPropertiesArgs collectionProperties) {
-            this.collectionProperties = Output.ofNullable(collectionProperties);
+            this.collectionProperties = Codegen.ofNullable(collectionProperties);
             return this;
         }
         public Builder componentType(@Nullable Output<String> componentType) {
@@ -198,7 +199,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder componentType(@Nullable String componentType) {
-            this.componentType = Output.ofNullable(componentType);
+            this.componentType = Codegen.ofNullable(componentType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -206,7 +207,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder overrides(@Nullable Output<ComponentOverridesArgs> overrides) {
@@ -214,7 +215,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrides(@Nullable ComponentOverridesArgs overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder properties(@Nullable Output<ComponentPropertiesArgs> properties) {
@@ -222,7 +223,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ComponentPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder sourceId(@Nullable Output<String> sourceId) {
@@ -230,7 +231,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceId(@Nullable String sourceId) {
-            this.sourceId = Output.ofNullable(sourceId);
+            this.sourceId = Codegen.ofNullable(sourceId);
             return this;
         }
         public Builder tags(@Nullable Output<ComponentTagsArgs> tags) {
@@ -238,7 +239,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable ComponentTagsArgs tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder variants(@Nullable Output<List<ComponentVariantArgs>> variants) {
@@ -246,7 +247,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variants(@Nullable List<ComponentVariantArgs> variants) {
-            this.variants = Output.ofNullable(variants);
+            this.variants = Codegen.ofNullable(variants);
             return this;
         }
         public Builder variants(ComponentVariantArgs... variants) {

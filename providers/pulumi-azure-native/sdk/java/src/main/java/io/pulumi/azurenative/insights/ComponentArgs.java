@@ -10,6 +10,7 @@ import io.pulumi.azurenative.insights.enums.RequestSource;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -42,7 +43,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableIpMasking;
 
     public Output<Boolean> getDisableIpMasking() {
-        return this.disableIpMasking == null ? Output.empty() : this.disableIpMasking;
+        return this.disableIpMasking == null ? Codegen.empty() : this.disableIpMasking;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,FlowType>> flowType;
 
     public Output<Either<String,FlowType>> getFlowType() {
-        return this.flowType == null ? Output.empty() : this.flowType;
+        return this.flowType == null ? Codegen.empty() : this.flowType;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hockeyAppId;
 
     public Output<String> getHockeyAppId() {
-        return this.hockeyAppId == null ? Output.empty() : this.hockeyAppId;
+        return this.hockeyAppId == null ? Codegen.empty() : this.hockeyAppId;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> immediatePurgeDataOn30Days;
 
     public Output<Boolean> getImmediatePurgeDataOn30Days() {
-        return this.immediatePurgeDataOn30Days == null ? Output.empty() : this.immediatePurgeDataOn30Days;
+        return this.immediatePurgeDataOn30Days == null ? Codegen.empty() : this.immediatePurgeDataOn30Days;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,IngestionMode>> ingestionMode;
 
     public Output<Either<String,IngestionMode>> getIngestionMode() {
-        return this.ingestionMode == null ? Output.empty() : this.ingestionMode;
+        return this.ingestionMode == null ? Codegen.empty() : this.ingestionMode;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,RequestSource>> requestSource;
 
     public Output<Either<String,RequestSource>> getRequestSource() {
-        return this.requestSource == null ? Output.empty() : this.requestSource;
+        return this.requestSource == null ? Codegen.empty() : this.requestSource;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
+        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> samplingPercentage;
 
     public Output<Double> getSamplingPercentage() {
-        return this.samplingPercentage == null ? Output.empty() : this.samplingPercentage;
+        return this.samplingPercentage == null ? Codegen.empty() : this.samplingPercentage;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ComponentArgs(
@@ -203,26 +204,26 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
         this.requestSource = requestSource == null ? Output.ofLeft("rest") : requestSource;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = resourceName;
-        this.retentionInDays = retentionInDays == null ? Output.ofNullable(90) : retentionInDays;
+        this.retentionInDays = retentionInDays == null ? Codegen.ofNullable(90) : retentionInDays;
         this.samplingPercentage = samplingPercentage;
         this.tags = tags;
     }
 
     private ComponentArgs() {
-        this.applicationType = Output.empty();
-        this.disableIpMasking = Output.empty();
-        this.flowType = Output.empty();
-        this.hockeyAppId = Output.empty();
-        this.immediatePurgeDataOn30Days = Output.empty();
-        this.ingestionMode = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.requestSource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.retentionInDays = Output.empty();
-        this.samplingPercentage = Output.empty();
-        this.tags = Output.empty();
+        this.applicationType = Codegen.empty();
+        this.disableIpMasking = Codegen.empty();
+        this.flowType = Codegen.empty();
+        this.hockeyAppId = Codegen.empty();
+        this.immediatePurgeDataOn30Days = Codegen.empty();
+        this.ingestionMode = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.requestSource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.retentionInDays = Codegen.empty();
+        this.samplingPercentage = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -284,7 +285,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableIpMasking(@Nullable Boolean disableIpMasking) {
-            this.disableIpMasking = Output.ofNullable(disableIpMasking);
+            this.disableIpMasking = Codegen.ofNullable(disableIpMasking);
             return this;
         }
         public Builder flowType(@Nullable Output<Either<String,FlowType>> flowType) {
@@ -292,7 +293,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flowType(@Nullable Either<String,FlowType> flowType) {
-            this.flowType = Output.ofNullable(flowType);
+            this.flowType = Codegen.ofNullable(flowType);
             return this;
         }
         public Builder hockeyAppId(@Nullable Output<String> hockeyAppId) {
@@ -300,7 +301,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hockeyAppId(@Nullable String hockeyAppId) {
-            this.hockeyAppId = Output.ofNullable(hockeyAppId);
+            this.hockeyAppId = Codegen.ofNullable(hockeyAppId);
             return this;
         }
         public Builder immediatePurgeDataOn30Days(@Nullable Output<Boolean> immediatePurgeDataOn30Days) {
@@ -308,7 +309,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder immediatePurgeDataOn30Days(@Nullable Boolean immediatePurgeDataOn30Days) {
-            this.immediatePurgeDataOn30Days = Output.ofNullable(immediatePurgeDataOn30Days);
+            this.immediatePurgeDataOn30Days = Codegen.ofNullable(immediatePurgeDataOn30Days);
             return this;
         }
         public Builder ingestionMode(@Nullable Output<Either<String,IngestionMode>> ingestionMode) {
@@ -316,7 +317,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingestionMode(@Nullable Either<String,IngestionMode> ingestionMode) {
-            this.ingestionMode = Output.ofNullable(ingestionMode);
+            this.ingestionMode = Codegen.ofNullable(ingestionMode);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -332,7 +333,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder requestSource(@Nullable Output<Either<String,RequestSource>> requestSource) {
@@ -340,7 +341,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestSource(@Nullable Either<String,RequestSource> requestSource) {
-            this.requestSource = Output.ofNullable(requestSource);
+            this.requestSource = Codegen.ofNullable(requestSource);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -356,7 +357,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
@@ -364,7 +365,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Output.ofNullable(retentionInDays);
+            this.retentionInDays = Codegen.ofNullable(retentionInDays);
             return this;
         }
         public Builder samplingPercentage(@Nullable Output<Double> samplingPercentage) {
@@ -372,7 +373,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder samplingPercentage(@Nullable Double samplingPercentage) {
-            this.samplingPercentage = Output.ofNullable(samplingPercentage);
+            this.samplingPercentage = Codegen.ofNullable(samplingPercentage);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -380,7 +381,7 @@ public final class ComponentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ComponentArgs build() {
             return new ComponentArgs(applicationType, disableIpMasking, flowType, hockeyAppId, immediatePurgeDataOn30Days, ingestionMode, kind, location, requestSource, resourceGroupName, resourceName, retentionInDays, samplingPercentage, tags);

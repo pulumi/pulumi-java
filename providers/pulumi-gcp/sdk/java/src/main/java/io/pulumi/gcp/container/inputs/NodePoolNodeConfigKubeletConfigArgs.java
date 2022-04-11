@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
     public Output<Boolean> getCpuCfsQuota() {
-        return this.cpuCfsQuota == null ? Output.empty() : this.cpuCfsQuota;
+        return this.cpuCfsQuota == null ? Codegen.empty() : this.cpuCfsQuota;
     }
 
     @Import(name="cpuCfsQuotaPeriod")
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
     public Output<String> getCpuCfsQuotaPeriod() {
-        return this.cpuCfsQuotaPeriod == null ? Output.empty() : this.cpuCfsQuotaPeriod;
+        return this.cpuCfsQuotaPeriod == null ? Codegen.empty() : this.cpuCfsQuotaPeriod;
     }
 
     @Import(name="cpuManagerPolicy", required=true)
@@ -46,9 +47,9 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
     }
 
     private NodePoolNodeConfigKubeletConfigArgs() {
-        this.cpuCfsQuota = Output.empty();
-        this.cpuCfsQuotaPeriod = Output.empty();
-        this.cpuManagerPolicy = Output.empty();
+        this.cpuCfsQuota = Codegen.empty();
+        this.cpuCfsQuotaPeriod = Codegen.empty();
+        this.cpuManagerPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
-            this.cpuCfsQuota = Output.ofNullable(cpuCfsQuota);
+            this.cpuCfsQuota = Codegen.ofNullable(cpuCfsQuota);
             return this;
         }
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
@@ -88,7 +89,7 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = Output.ofNullable(cpuCfsQuotaPeriod);
+            this.cpuCfsQuotaPeriod = Codegen.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
         public Builder cpuManagerPolicy(Output<String> cpuManagerPolicy) {

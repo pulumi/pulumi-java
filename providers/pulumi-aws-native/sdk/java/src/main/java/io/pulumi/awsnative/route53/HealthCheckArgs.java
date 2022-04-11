@@ -7,6 +7,7 @@ import io.pulumi.awsnative.route53.inputs.HealthCheckConfigPropertiesArgs;
 import io.pulumi.awsnative.route53.inputs.HealthCheckTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HealthCheckTagArgs>> healthCheckTags;
 
     public Output<List<HealthCheckTagArgs>> getHealthCheckTags() {
-        return this.healthCheckTags == null ? Output.empty() : this.healthCheckTags;
+        return this.healthCheckTags == null ? Codegen.empty() : this.healthCheckTags;
     }
 
     public HealthCheckArgs(
@@ -46,8 +47,8 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HealthCheckArgs() {
-        this.healthCheckConfig = Output.empty();
-        this.healthCheckTags = Output.empty();
+        this.healthCheckConfig = Codegen.empty();
+        this.healthCheckTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder healthCheckTags(@Nullable List<HealthCheckTagArgs> healthCheckTags) {
-            this.healthCheckTags = Output.ofNullable(healthCheckTags);
+            this.healthCheckTags = Codegen.ofNullable(healthCheckTags);
             return this;
         }
         public Builder healthCheckTags(HealthCheckTagArgs... healthCheckTags) {

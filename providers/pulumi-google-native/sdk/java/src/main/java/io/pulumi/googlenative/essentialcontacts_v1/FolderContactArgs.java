@@ -5,6 +5,7 @@ package io.pulumi.googlenative.essentialcontacts_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.FolderContactNotificationCategorySubscriptionsItem;
 import io.pulumi.googlenative.essentialcontacts_v1.enums.FolderContactValidationState;
 import java.lang.String;
@@ -43,7 +44,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> languageTag;
 
     public Output<String> getLanguageTag() {
-        return this.languageTag == null ? Output.empty() : this.languageTag;
+        return this.languageTag == null ? Codegen.empty() : this.languageTag;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions;
 
     public Output<List<FolderContactNotificationCategorySubscriptionsItem>> getNotificationCategorySubscriptions() {
-        return this.notificationCategorySubscriptions == null ? Output.empty() : this.notificationCategorySubscriptions;
+        return this.notificationCategorySubscriptions == null ? Codegen.empty() : this.notificationCategorySubscriptions;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> validateTime;
 
     public Output<String> getValidateTime() {
-        return this.validateTime == null ? Output.empty() : this.validateTime;
+        return this.validateTime == null ? Codegen.empty() : this.validateTime;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FolderContactValidationState> validationState;
 
     public Output<FolderContactValidationState> getValidationState() {
-        return this.validationState == null ? Output.empty() : this.validationState;
+        return this.validationState == null ? Codegen.empty() : this.validationState;
     }
 
     public FolderContactArgs(
@@ -108,13 +109,13 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderContactArgs() {
-        this.email = Output.empty();
-        this.folderId = Output.empty();
-        this.languageTag = Output.empty();
-        this.name = Output.empty();
-        this.notificationCategorySubscriptions = Output.empty();
-        this.validateTime = Output.empty();
-        this.validationState = Output.empty();
+        this.email = Codegen.empty();
+        this.folderId = Codegen.empty();
+        this.languageTag = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationCategorySubscriptions = Codegen.empty();
+        this.validateTime = Codegen.empty();
+        this.validationState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageTag(@Nullable String languageTag) {
-            this.languageTag = Output.ofNullable(languageTag);
+            this.languageTag = Codegen.ofNullable(languageTag);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -178,7 +179,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationCategorySubscriptions(@Nullable Output<List<FolderContactNotificationCategorySubscriptionsItem>> notificationCategorySubscriptions) {
@@ -186,7 +187,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationCategorySubscriptions(@Nullable List<FolderContactNotificationCategorySubscriptionsItem> notificationCategorySubscriptions) {
-            this.notificationCategorySubscriptions = Output.ofNullable(notificationCategorySubscriptions);
+            this.notificationCategorySubscriptions = Codegen.ofNullable(notificationCategorySubscriptions);
             return this;
         }
         public Builder notificationCategorySubscriptions(FolderContactNotificationCategorySubscriptionsItem... notificationCategorySubscriptions) {
@@ -197,7 +198,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateTime(@Nullable String validateTime) {
-            this.validateTime = Output.ofNullable(validateTime);
+            this.validateTime = Codegen.ofNullable(validateTime);
             return this;
         }
         public Builder validationState(@Nullable Output<FolderContactValidationState> validationState) {
@@ -205,7 +206,7 @@ public final class FolderContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationState(@Nullable FolderContactValidationState validationState) {
-            this.validationState = Output.ofNullable(validationState);
+            this.validationState = Codegen.ofNullable(validationState);
             return this;
         }        public FolderContactArgs build() {
             return new FolderContactArgs(email, folderId, languageTag, name, notificationCategorySubscriptions, validateTime, validationState);

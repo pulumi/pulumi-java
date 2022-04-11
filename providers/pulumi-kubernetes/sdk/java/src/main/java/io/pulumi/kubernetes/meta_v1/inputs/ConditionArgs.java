@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> observedGeneration;
 
     public Output<Integer> getObservedGeneration() {
-        return this.observedGeneration == null ? Output.empty() : this.observedGeneration;
+        return this.observedGeneration == null ? Codegen.empty() : this.observedGeneration;
     }
 
     /**
@@ -101,12 +102,12 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConditionArgs() {
-        this.lastTransitionTime = Output.empty();
-        this.message = Output.empty();
-        this.observedGeneration = Output.empty();
-        this.reason = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.lastTransitionTime = Codegen.empty();
+        this.message = Codegen.empty();
+        this.observedGeneration = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder observedGeneration(@Nullable Integer observedGeneration) {
-            this.observedGeneration = Output.ofNullable(observedGeneration);
+            this.observedGeneration = Codegen.ofNullable(observedGeneration);
             return this;
         }
         public Builder reason(Output<String> reason) {

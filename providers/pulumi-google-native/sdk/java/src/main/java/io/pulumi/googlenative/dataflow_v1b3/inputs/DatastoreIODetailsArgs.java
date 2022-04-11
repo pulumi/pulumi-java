@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DatastoreIODetailsArgs(
@@ -48,8 +49,8 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatastoreIODetailsArgs() {
-        this.namespace = Output.empty();
-        this.project = Output.empty();
+        this.namespace = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -87,7 +88,7 @@ public final class DatastoreIODetailsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DatastoreIODetailsArgs build() {
             return new DatastoreIODetailsArgs(namespace, project);

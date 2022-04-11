@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     @Import(name="encodedKey", required=true)
@@ -54,10 +55,10 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PublicKeyConfigArgs() {
-        this.callerReference = Output.empty();
-        this.comment = Output.empty();
-        this.encodedKey = Output.empty();
-        this.name = Output.empty();
+        this.callerReference = Codegen.empty();
+        this.comment = Codegen.empty();
+        this.encodedKey = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class PublicKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder encodedKey(Output<String> encodedKey) {

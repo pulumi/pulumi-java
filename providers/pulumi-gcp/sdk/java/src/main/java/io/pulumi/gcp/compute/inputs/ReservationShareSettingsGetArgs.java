@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ReservationShareSettingsProjectMapGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<ReservationShareSettingsProjectMapGetArgs>> projectMaps;
 
     public Output<List<ReservationShareSettingsProjectMapGetArgs>> getProjectMaps() {
-        return this.projectMaps == null ? Output.empty() : this.projectMaps;
+        return this.projectMaps == null ? Codegen.empty() : this.projectMaps;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> shareType;
 
     public Output<String> getShareType() {
-        return this.shareType == null ? Output.empty() : this.shareType;
+        return this.shareType == null ? Codegen.empty() : this.shareType;
     }
 
     public ReservationShareSettingsGetArgs(
@@ -48,8 +49,8 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
     }
 
     private ReservationShareSettingsGetArgs() {
-        this.projectMaps = Output.empty();
-        this.shareType = Output.empty();
+        this.projectMaps = Codegen.empty();
+        this.shareType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder projectMaps(@Nullable List<ReservationShareSettingsProjectMapGetArgs> projectMaps) {
-            this.projectMaps = Output.ofNullable(projectMaps);
+            this.projectMaps = Codegen.ofNullable(projectMaps);
             return this;
         }
         public Builder projectMaps(ReservationShareSettingsProjectMapGetArgs... projectMaps) {
@@ -90,7 +91,7 @@ public final class ReservationShareSettingsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder shareType(@Nullable String shareType) {
-            this.shareType = Output.ofNullable(shareType);
+            this.shareType = Codegen.ofNullable(shareType);
             return this;
         }        public ReservationShareSettingsGetArgs build() {
             return new ReservationShareSettingsGetArgs(projectMaps, shareType);

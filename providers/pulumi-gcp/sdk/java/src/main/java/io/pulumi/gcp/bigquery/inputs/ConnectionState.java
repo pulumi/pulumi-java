@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ConnectionCloudSqlGetArgs> cloudSql;
 
     public Output<ConnectionCloudSqlGetArgs> getCloudSql() {
-        return this.cloudSql == null ? Output.empty() : this.cloudSql;
+        return this.cloudSql == null ? Codegen.empty() : this.cloudSql;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectionId;
 
     public Output<String> getConnectionId() {
-        return this.connectionId == null ? Output.empty() : this.connectionId;
+        return this.connectionId == null ? Codegen.empty() : this.connectionId;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasCredential;
 
     public Output<Boolean> getHasCredential() {
-        return this.hasCredential == null ? Output.empty() : this.hasCredential;
+        return this.hasCredential == null ? Codegen.empty() : this.hasCredential;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ConnectionState(
@@ -130,14 +131,14 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.cloudSql = Output.empty();
-        this.connectionId = Output.empty();
-        this.description = Output.empty();
-        this.friendlyName = Output.empty();
-        this.hasCredential = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.cloudSql = Codegen.empty();
+        this.connectionId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.hasCredential = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloudSql(@Nullable ConnectionCloudSqlGetArgs cloudSql) {
-            this.cloudSql = Output.ofNullable(cloudSql);
+            this.cloudSql = Codegen.ofNullable(cloudSql);
             return this;
         }
         public Builder connectionId(@Nullable Output<String> connectionId) {
@@ -187,7 +188,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionId(@Nullable String connectionId) {
-            this.connectionId = Output.ofNullable(connectionId);
+            this.connectionId = Codegen.ofNullable(connectionId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -195,7 +196,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -203,7 +204,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder hasCredential(@Nullable Output<Boolean> hasCredential) {
@@ -211,7 +212,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasCredential(@Nullable Boolean hasCredential) {
-            this.hasCredential = Output.ofNullable(hasCredential);
+            this.hasCredential = Codegen.ofNullable(hasCredential);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -219,7 +220,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -227,7 +228,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -235,7 +236,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ConnectionState build() {
             return new ConnectionState(cloudSql, connectionId, description, friendlyName, hasCredential, location, name, project);

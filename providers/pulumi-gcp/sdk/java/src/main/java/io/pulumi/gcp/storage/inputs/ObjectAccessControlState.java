@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.ObjectAccessControlProjectTeamGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> entity;
 
     public Output<String> getEntity() {
-        return this.entity == null ? Output.empty() : this.entity;
+        return this.entity == null ? Codegen.empty() : this.entity;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> entityId;
 
     public Output<String> getEntityId() {
-        return this.entityId == null ? Output.empty() : this.entityId;
+        return this.entityId == null ? Codegen.empty() : this.entityId;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> generation;
 
     public Output<Integer> getGeneration() {
-        return this.generation == null ? Output.empty() : this.generation;
+        return this.generation == null ? Codegen.empty() : this.generation;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> object;
 
     public Output<String> getObject() {
-        return this.object == null ? Output.empty() : this.object;
+        return this.object == null ? Codegen.empty() : this.object;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams;
 
     public Output<List<ObjectAccessControlProjectTeamGetArgs>> getProjectTeams() {
-        return this.projectTeams == null ? Output.empty() : this.projectTeams;
+        return this.projectTeams == null ? Codegen.empty() : this.projectTeams;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public ObjectAccessControlState(
@@ -147,15 +148,15 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
     }
 
     private ObjectAccessControlState() {
-        this.bucket = Output.empty();
-        this.domain = Output.empty();
-        this.email = Output.empty();
-        this.entity = Output.empty();
-        this.entityId = Output.empty();
-        this.generation = Output.empty();
-        this.object = Output.empty();
-        this.projectTeams = Output.empty();
-        this.role = Output.empty();
+        this.bucket = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.email = Codegen.empty();
+        this.entity = Codegen.empty();
+        this.entityId = Codegen.empty();
+        this.generation = Codegen.empty();
+        this.object = Codegen.empty();
+        this.projectTeams = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -207,7 +208,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder email(@Nullable Output<String> email) {
@@ -215,7 +216,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder entity(@Nullable Output<String> entity) {
@@ -223,7 +224,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder entity(@Nullable String entity) {
-            this.entity = Output.ofNullable(entity);
+            this.entity = Codegen.ofNullable(entity);
             return this;
         }
         public Builder entityId(@Nullable Output<String> entityId) {
@@ -231,7 +232,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder entityId(@Nullable String entityId) {
-            this.entityId = Output.ofNullable(entityId);
+            this.entityId = Codegen.ofNullable(entityId);
             return this;
         }
         public Builder generation(@Nullable Output<Integer> generation) {
@@ -239,7 +240,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder generation(@Nullable Integer generation) {
-            this.generation = Output.ofNullable(generation);
+            this.generation = Codegen.ofNullable(generation);
             return this;
         }
         public Builder object(@Nullable Output<String> object) {
@@ -247,7 +248,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder object(@Nullable String object) {
-            this.object = Output.ofNullable(object);
+            this.object = Codegen.ofNullable(object);
             return this;
         }
         public Builder projectTeams(@Nullable Output<List<ObjectAccessControlProjectTeamGetArgs>> projectTeams) {
@@ -255,7 +256,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder projectTeams(@Nullable List<ObjectAccessControlProjectTeamGetArgs> projectTeams) {
-            this.projectTeams = Output.ofNullable(projectTeams);
+            this.projectTeams = Codegen.ofNullable(projectTeams);
             return this;
         }
         public Builder projectTeams(ObjectAccessControlProjectTeamGetArgs... projectTeams) {
@@ -266,7 +267,7 @@ public final class ObjectAccessControlState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public ObjectAccessControlState build() {
             return new ObjectAccessControlState(bucket, domain, email, entity, entityId, generation, object, projectTeams, role);

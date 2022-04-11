@@ -5,6 +5,7 @@ package io.pulumi.aws.chime.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class VoiceConnectorGroupConnectorGetArgs extends io.pulumi.resourc
     }
 
     private VoiceConnectorGroupConnectorGetArgs() {
-        this.priority = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.priority = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {

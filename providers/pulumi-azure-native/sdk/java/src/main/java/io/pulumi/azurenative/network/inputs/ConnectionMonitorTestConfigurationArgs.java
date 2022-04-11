@@ -12,6 +12,7 @@ import io.pulumi.azurenative.network.inputs.ConnectionMonitorTcpConfigurationArg
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<ConnectionMonitorHttpConfigurationArgs> httpConfiguration;
 
     public Output<ConnectionMonitorHttpConfigurationArgs> getHttpConfiguration() {
-        return this.httpConfiguration == null ? Output.empty() : this.httpConfiguration;
+        return this.httpConfiguration == null ? Codegen.empty() : this.httpConfiguration;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration;
 
     public Output<ConnectionMonitorIcmpConfigurationArgs> getIcmpConfiguration() {
-        return this.icmpConfiguration == null ? Output.empty() : this.icmpConfiguration;
+        return this.icmpConfiguration == null ? Codegen.empty() : this.icmpConfiguration;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<Either<String,PreferredIPVersion>> preferredIPVersion;
 
     public Output<Either<String,PreferredIPVersion>> getPreferredIPVersion() {
-        return this.preferredIPVersion == null ? Output.empty() : this.preferredIPVersion;
+        return this.preferredIPVersion == null ? Codegen.empty() : this.preferredIPVersion;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<ConnectionMonitorSuccessThresholdArgs> successThreshold;
 
     public Output<ConnectionMonitorSuccessThresholdArgs> getSuccessThreshold() {
-        return this.successThreshold == null ? Output.empty() : this.successThreshold;
+        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration;
 
     public Output<ConnectionMonitorTcpConfigurationArgs> getTcpConfiguration() {
-        return this.tcpConfiguration == null ? Output.empty() : this.tcpConfiguration;
+        return this.tcpConfiguration == null ? Codegen.empty() : this.tcpConfiguration;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> testFrequencySec;
 
     public Output<Integer> getTestFrequencySec() {
-        return this.testFrequencySec == null ? Output.empty() : this.testFrequencySec;
+        return this.testFrequencySec == null ? Codegen.empty() : this.testFrequencySec;
     }
 
     public ConnectionMonitorTestConfigurationArgs(
@@ -134,14 +135,14 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
     }
 
     private ConnectionMonitorTestConfigurationArgs() {
-        this.httpConfiguration = Output.empty();
-        this.icmpConfiguration = Output.empty();
-        this.name = Output.empty();
-        this.preferredIPVersion = Output.empty();
-        this.protocol = Output.empty();
-        this.successThreshold = Output.empty();
-        this.tcpConfiguration = Output.empty();
-        this.testFrequencySec = Output.empty();
+        this.httpConfiguration = Codegen.empty();
+        this.icmpConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preferredIPVersion = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.successThreshold = Codegen.empty();
+        this.tcpConfiguration = Codegen.empty();
+        this.testFrequencySec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder httpConfiguration(@Nullable ConnectionMonitorHttpConfigurationArgs httpConfiguration) {
-            this.httpConfiguration = Output.ofNullable(httpConfiguration);
+            this.httpConfiguration = Codegen.ofNullable(httpConfiguration);
             return this;
         }
         public Builder icmpConfiguration(@Nullable Output<ConnectionMonitorIcmpConfigurationArgs> icmpConfiguration) {
@@ -191,7 +192,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder icmpConfiguration(@Nullable ConnectionMonitorIcmpConfigurationArgs icmpConfiguration) {
-            this.icmpConfiguration = Output.ofNullable(icmpConfiguration);
+            this.icmpConfiguration = Codegen.ofNullable(icmpConfiguration);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -207,7 +208,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder preferredIPVersion(@Nullable Either<String,PreferredIPVersion> preferredIPVersion) {
-            this.preferredIPVersion = Output.ofNullable(preferredIPVersion);
+            this.preferredIPVersion = Codegen.ofNullable(preferredIPVersion);
             return this;
         }
         public Builder protocol(Output<Either<String,ConnectionMonitorTestConfigurationProtocol>> protocol) {
@@ -223,7 +224,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder successThreshold(@Nullable ConnectionMonitorSuccessThresholdArgs successThreshold) {
-            this.successThreshold = Output.ofNullable(successThreshold);
+            this.successThreshold = Codegen.ofNullable(successThreshold);
             return this;
         }
         public Builder tcpConfiguration(@Nullable Output<ConnectionMonitorTcpConfigurationArgs> tcpConfiguration) {
@@ -231,7 +232,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder tcpConfiguration(@Nullable ConnectionMonitorTcpConfigurationArgs tcpConfiguration) {
-            this.tcpConfiguration = Output.ofNullable(tcpConfiguration);
+            this.tcpConfiguration = Codegen.ofNullable(tcpConfiguration);
             return this;
         }
         public Builder testFrequencySec(@Nullable Output<Integer> testFrequencySec) {
@@ -239,7 +240,7 @@ public final class ConnectionMonitorTestConfigurationArgs extends io.pulumi.reso
             return this;
         }
         public Builder testFrequencySec(@Nullable Integer testFrequencySec) {
-            this.testFrequencySec = Output.ofNullable(testFrequencySec);
+            this.testFrequencySec = Codegen.ofNullable(testFrequencySec);
             return this;
         }        public ConnectionMonitorTestConfigurationArgs build() {
             return new ConnectionMonitorTestConfigurationArgs(httpConfiguration, icmpConfiguration, name, preferredIPVersion, protocol, successThreshold, tcpConfiguration, testFrequencySec);

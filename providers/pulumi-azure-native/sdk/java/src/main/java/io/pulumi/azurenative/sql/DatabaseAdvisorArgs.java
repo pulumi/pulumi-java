@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.AutoExecuteStatus;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> advisorName;
 
     public Output<String> getAdvisorName() {
-        return this.advisorName == null ? Output.empty() : this.advisorName;
+        return this.advisorName == null ? Codegen.empty() : this.advisorName;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DatabaseAdvisorArgs() {
-        this.advisorName = Output.empty();
-        this.autoExecuteStatus = Output.empty();
-        this.databaseName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
+        this.advisorName = Codegen.empty();
+        this.autoExecuteStatus = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DatabaseAdvisorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder advisorName(@Nullable String advisorName) {
-            this.advisorName = Output.ofNullable(advisorName);
+            this.advisorName = Codegen.ofNullable(advisorName);
             return this;
         }
         public Builder autoExecuteStatus(Output<AutoExecuteStatus> autoExecuteStatus) {

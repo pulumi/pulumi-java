@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2clientvpn.inputs.AuthorizationRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -127,7 +128,7 @@ public class AuthorizationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AuthorizationRule(String name, AuthorizationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2clientvpn/authorizationRule:AuthorizationRule", name, args == null ? AuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2clientvpn/authorizationRule:AuthorizationRule", name, args == null ? AuthorizationRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AuthorizationRule(String name, Output<String> id, @Nullable AuthorizationRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

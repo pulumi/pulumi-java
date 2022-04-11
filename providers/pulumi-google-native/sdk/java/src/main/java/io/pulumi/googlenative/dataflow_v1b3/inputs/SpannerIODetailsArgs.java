@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> databaseId;
 
     public Output<String> getDatabaseId() {
-        return this.databaseId == null ? Output.empty() : this.databaseId;
+        return this.databaseId == null ? Codegen.empty() : this.databaseId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public SpannerIODetailsArgs(
@@ -61,9 +62,9 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SpannerIODetailsArgs() {
-        this.databaseId = Output.empty();
-        this.instanceId = Output.empty();
-        this.project = Output.empty();
+        this.databaseId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder databaseId(@Nullable String databaseId) {
-            this.databaseId = Output.ofNullable(databaseId);
+            this.databaseId = Codegen.ofNullable(databaseId);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -103,7 +104,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -111,7 +112,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public SpannerIODetailsArgs build() {
             return new SpannerIODetailsArgs(databaseId, instanceId, project);

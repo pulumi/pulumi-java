@@ -5,6 +5,7 @@ package io.pulumi.aws.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
       private final @Nullable Output<List<String>> userGroups;
 
     public Output<List<String>> getUserGroups() {
-        return this.userGroups == null ? Output.empty() : this.userGroups;
+        return this.userGroups == null ? Codegen.empty() : this.userGroups;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
       private final @Nullable Output<List<String>> userIds;
 
     public Output<List<String>> getUserIds() {
-        return this.userIds == null ? Output.empty() : this.userIds;
+        return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 
     public DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs(
@@ -45,8 +46,8 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationLaunchPermissionArgs() {
-        this.userGroups = Output.empty();
-        this.userIds = Output.empty();
+        this.userGroups = Codegen.empty();
+        this.userIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = Output.ofNullable(userGroups);
+            this.userGroups = Codegen.ofNullable(userGroups);
             return this;
         }
         public Builder userGroups(String... userGroups) {
@@ -87,7 +88,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Output.ofNullable(userIds);
+            this.userIds = Codegen.ofNullable(userIds);
             return this;
         }
         public Builder userIds(String... userIds) {

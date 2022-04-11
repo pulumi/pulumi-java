@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationTrustFil
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTlsValidationTrustSdsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> file;
 
     public Output<VirtualNodeSpecListenerTlsValidationTrustFileArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
       private final @Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds;
 
     public Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> getSds() {
-        return this.sds == null ? Output.empty() : this.sds;
+        return this.sds == null ? Codegen.empty() : this.sds;
     }
 
     public VirtualNodeSpecListenerTlsValidationTrustArgs(
@@ -45,8 +46,8 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
     }
 
     private VirtualNodeSpecListenerTlsValidationTrustArgs() {
-        this.file = Output.empty();
-        this.sds = Output.empty();
+        this.file = Codegen.empty();
+        this.sds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
             return this;
         }
         public Builder file(@Nullable VirtualNodeSpecListenerTlsValidationTrustFileArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder sds(@Nullable Output<VirtualNodeSpecListenerTlsValidationTrustSdsArgs> sds) {
@@ -84,7 +85,7 @@ public final class VirtualNodeSpecListenerTlsValidationTrustArgs extends io.pulu
             return this;
         }
         public Builder sds(@Nullable VirtualNodeSpecListenerTlsValidationTrustSdsArgs sds) {
-            this.sds = Output.ofNullable(sds);
+            this.sds = Codegen.ofNullable(sds);
             return this;
         }        public VirtualNodeSpecListenerTlsValidationTrustArgs build() {
             return new VirtualNodeSpecListenerTlsValidationTrustArgs(file, sds);

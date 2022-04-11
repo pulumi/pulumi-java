@@ -6,6 +6,7 @@ package io.pulumi.aws.emr.inputs;
 import io.pulumi.aws.emr.inputs.ClusterCoreInstanceGroupEbsConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> autoscalingPolicy;
 
     public Output<String> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
+        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> bidPrice;
 
     public Output<String> getBidPrice() {
-        return this.bidPrice == null ? Output.empty() : this.bidPrice;
+        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs;
 
     public Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
+        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ClusterCoreInstanceGroupGetArgs(
@@ -112,13 +113,13 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
     }
 
     private ClusterCoreInstanceGroupGetArgs() {
-        this.autoscalingPolicy = Output.empty();
-        this.bidPrice = Output.empty();
-        this.ebsConfigs = Output.empty();
-        this.id = Output.empty();
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.name = Output.empty();
+        this.autoscalingPolicy = Codegen.empty();
+        this.bidPrice = Codegen.empty();
+        this.ebsConfigs = Codegen.empty();
+        this.id = Codegen.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder autoscalingPolicy(@Nullable String autoscalingPolicy) {
-            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
             return this;
         }
         public Builder bidPrice(@Nullable Output<String> bidPrice) {
@@ -166,7 +167,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Output.ofNullable(bidPrice);
+            this.bidPrice = Codegen.ofNullable(bidPrice);
             return this;
         }
         public Builder ebsConfigs(@Nullable Output<List<ClusterCoreInstanceGroupEbsConfigGetArgs>> ebsConfigs) {
@@ -174,7 +175,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ebsConfigs(@Nullable List<ClusterCoreInstanceGroupEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Output.ofNullable(ebsConfigs);
+            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
             return this;
         }
         public Builder ebsConfigs(ClusterCoreInstanceGroupEbsConfigGetArgs... ebsConfigs) {
@@ -185,7 +186,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
@@ -193,7 +194,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceType(Output<String> instanceType) {
@@ -209,7 +210,7 @@ public final class ClusterCoreInstanceGroupGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ClusterCoreInstanceGroupGetArgs build() {
             return new ClusterCoreInstanceGroupGetArgs(autoscalingPolicy, bidPrice, ebsConfigs, id, instanceCount, instanceType, name);

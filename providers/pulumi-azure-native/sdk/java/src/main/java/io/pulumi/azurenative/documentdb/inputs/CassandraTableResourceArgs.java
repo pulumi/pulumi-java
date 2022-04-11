@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.CassandraSchemaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> analyticalStorageTtl;
 
     public Output<Integer> getAnalyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Output.empty() : this.analyticalStorageTtl;
+        return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> defaultTtl;
 
     public Output<Integer> getDefaultTtl() {
-        return this.defaultTtl == null ? Output.empty() : this.defaultTtl;
+        return this.defaultTtl == null ? Codegen.empty() : this.defaultTtl;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<CassandraSchemaArgs> schema;
 
     public Output<CassandraSchemaArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     public CassandraTableResourceArgs(
@@ -76,10 +77,10 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
     }
 
     private CassandraTableResourceArgs() {
-        this.analyticalStorageTtl = Output.empty();
-        this.defaultTtl = Output.empty();
-        this.id = Output.empty();
-        this.schema = Output.empty();
+        this.analyticalStorageTtl = Codegen.empty();
+        this.defaultTtl = Codegen.empty();
+        this.id = Codegen.empty();
+        this.schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = Output.ofNullable(analyticalStorageTtl);
+            this.analyticalStorageTtl = Codegen.ofNullable(analyticalStorageTtl);
             return this;
         }
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
@@ -121,7 +122,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder defaultTtl(@Nullable Integer defaultTtl) {
-            this.defaultTtl = Output.ofNullable(defaultTtl);
+            this.defaultTtl = Codegen.ofNullable(defaultTtl);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -137,7 +138,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder schema(@Nullable CassandraSchemaArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }        public CassandraTableResourceArgs build() {
             return new CassandraTableResourceArgs(analyticalStorageTtl, defaultTtl, id, schema);

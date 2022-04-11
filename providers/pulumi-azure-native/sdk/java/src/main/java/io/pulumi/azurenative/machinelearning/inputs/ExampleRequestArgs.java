@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> globalParameters;
 
     public Output<Map<String,Object>> getGlobalParameters() {
-        return this.globalParameters == null ? Output.empty() : this.globalParameters;
+        return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,List<List<Object>>>> inputs;
 
     public Output<Map<String,List<List<Object>>>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     public ExampleRequestArgs(
@@ -51,8 +52,8 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExampleRequestArgs() {
-        this.globalParameters = Output.empty();
-        this.inputs = Output.empty();
+        this.globalParameters = Codegen.empty();
+        this.inputs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder globalParameters(@Nullable Map<String,Object> globalParameters) {
-            this.globalParameters = Output.ofNullable(globalParameters);
+            this.globalParameters = Codegen.ofNullable(globalParameters);
             return this;
         }
         public Builder inputs(@Nullable Output<Map<String,List<List<Object>>>> inputs) {
@@ -90,7 +91,7 @@ public final class ExampleRequestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputs(@Nullable Map<String,List<List<Object>>> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }        public ExampleRequestArgs build() {
             return new ExampleRequestArgs(globalParameters, inputs);

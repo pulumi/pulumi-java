@@ -7,6 +7,7 @@ import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Location>> location;
 
     public Output<Either<String,Location>> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> registrationName;
 
     public Output<String> getRegistrationName() {
-        return this.registrationName == null ? Output.empty() : this.registrationName;
+        return this.registrationName == null ? Codegen.empty() : this.registrationName;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegistrationArgs() {
-        this.location = Output.empty();
-        this.registrationName = Output.empty();
-        this.registrationToken = Output.empty();
-        this.resourceGroup = Output.empty();
+        this.location = Codegen.empty();
+        this.registrationName = Codegen.empty();
+        this.registrationToken = Codegen.empty();
+        this.resourceGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable Either<String,Location> location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder registrationName(@Nullable Output<String> registrationName) {
@@ -117,7 +118,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationName(@Nullable String registrationName) {
-            this.registrationName = Output.ofNullable(registrationName);
+            this.registrationName = Codegen.ofNullable(registrationName);
             return this;
         }
         public Builder registrationToken(Output<String> registrationToken) {

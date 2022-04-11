@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.enums.WindowsVMGuestPatchMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WindowsPatchAssessmentMode>> assessmentMode;
 
     public Output<Either<String,WindowsPatchAssessmentMode>> getAssessmentMode() {
-        return this.assessmentMode == null ? Output.empty() : this.assessmentMode;
+        return this.assessmentMode == null ? Codegen.empty() : this.assessmentMode;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableHotpatching;
 
     public Output<Boolean> getEnableHotpatching() {
-        return this.enableHotpatching == null ? Output.empty() : this.enableHotpatching;
+        return this.enableHotpatching == null ? Codegen.empty() : this.enableHotpatching;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode;
 
     public Output<Either<String,WindowsVMGuestPatchMode>> getPatchMode() {
-        return this.patchMode == null ? Output.empty() : this.patchMode;
+        return this.patchMode == null ? Codegen.empty() : this.patchMode;
     }
 
     public PatchSettingsArgs(
@@ -65,9 +66,9 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PatchSettingsArgs() {
-        this.assessmentMode = Output.empty();
-        this.enableHotpatching = Output.empty();
-        this.patchMode = Output.empty();
+        this.assessmentMode = Codegen.empty();
+        this.enableHotpatching = Codegen.empty();
+        this.patchMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assessmentMode(@Nullable Either<String,WindowsPatchAssessmentMode> assessmentMode) {
-            this.assessmentMode = Output.ofNullable(assessmentMode);
+            this.assessmentMode = Codegen.ofNullable(assessmentMode);
             return this;
         }
         public Builder enableHotpatching(@Nullable Output<Boolean> enableHotpatching) {
@@ -107,7 +108,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableHotpatching(@Nullable Boolean enableHotpatching) {
-            this.enableHotpatching = Output.ofNullable(enableHotpatching);
+            this.enableHotpatching = Codegen.ofNullable(enableHotpatching);
             return this;
         }
         public Builder patchMode(@Nullable Output<Either<String,WindowsVMGuestPatchMode>> patchMode) {
@@ -115,7 +116,7 @@ public final class PatchSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder patchMode(@Nullable Either<String,WindowsVMGuestPatchMode> patchMode) {
-            this.patchMode = Output.ofNullable(patchMode);
+            this.patchMode = Codegen.ofNullable(patchMode);
             return this;
         }        public PatchSettingsArgs build() {
             return new PatchSettingsArgs(assessmentMode, enableHotpatching, patchMode);

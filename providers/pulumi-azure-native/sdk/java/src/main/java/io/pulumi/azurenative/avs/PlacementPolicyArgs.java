@@ -8,6 +8,7 @@ import io.pulumi.azurenative.avs.inputs.VmVmPlacementPolicyPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> placementPolicyName;
 
     public Output<String> getPlacementPolicyName() {
-        return this.placementPolicyName == null ? Output.empty() : this.placementPolicyName;
+        return this.placementPolicyName == null ? Codegen.empty() : this.placementPolicyName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> properties;
 
     public Output<Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PlacementPolicyArgs() {
-        this.clusterName = Output.empty();
-        this.placementPolicyName = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.placementPolicyName = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder placementPolicyName(@Nullable String placementPolicyName) {
-            this.placementPolicyName = Output.ofNullable(placementPolicyName);
+            this.placementPolicyName = Codegen.ofNullable(placementPolicyName);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {
@@ -150,7 +151,7 @@ public final class PlacementPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder properties(@Nullable Either<VmHostPlacementPolicyPropertiesArgs,VmVmPlacementPolicyPropertiesArgs> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.efs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class FileSystemBackupPolicyArgs extends io.pulumi.resources.Resour
     }
 
     private FileSystemBackupPolicyArgs() {
-        this.status = Output.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

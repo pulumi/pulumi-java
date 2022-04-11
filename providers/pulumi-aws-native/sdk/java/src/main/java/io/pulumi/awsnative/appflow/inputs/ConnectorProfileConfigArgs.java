@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appflow.inputs.ConnectorProfileCredentialsArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfilePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ConnectorProfilePropertiesArgs> connectorProfileProperties;
 
     public Output<ConnectorProfilePropertiesArgs> getConnectorProfileProperties() {
-        return this.connectorProfileProperties == null ? Output.empty() : this.connectorProfileProperties;
+        return this.connectorProfileProperties == null ? Codegen.empty() : this.connectorProfileProperties;
     }
 
     public ConnectorProfileConfigArgs(
@@ -41,8 +42,8 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
     }
 
     private ConnectorProfileConfigArgs() {
-        this.connectorProfileCredentials = Output.empty();
-        this.connectorProfileProperties = Output.empty();
+        this.connectorProfileCredentials = Codegen.empty();
+        this.connectorProfileProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectorProfileConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder connectorProfileProperties(@Nullable ConnectorProfilePropertiesArgs connectorProfileProperties) {
-            this.connectorProfileProperties = Output.ofNullable(connectorProfileProperties);
+            this.connectorProfileProperties = Codegen.ofNullable(connectorProfileProperties);
             return this;
         }        public ConnectorProfileConfigArgs build() {
             return new ConnectorProfileConfigArgs(connectorProfileCredentials, connectorProfileProperties);

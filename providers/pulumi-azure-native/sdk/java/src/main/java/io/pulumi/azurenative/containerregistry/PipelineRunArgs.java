@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerregistry;
 import io.pulumi.azurenative.containerregistry.inputs.PipelineRunRequestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> forceUpdateTag;
 
     public Output<String> getForceUpdateTag() {
-        return this.forceUpdateTag == null ? Output.empty() : this.forceUpdateTag;
+        return this.forceUpdateTag == null ? Codegen.empty() : this.forceUpdateTag;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pipelineRunName;
 
     public Output<String> getPipelineRunName() {
-        return this.pipelineRunName == null ? Output.empty() : this.pipelineRunName;
+        return this.pipelineRunName == null ? Codegen.empty() : this.pipelineRunName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PipelineRunRequestArgs> request;
 
     public Output<PipelineRunRequestArgs> getRequest() {
-        return this.request == null ? Output.empty() : this.request;
+        return this.request == null ? Codegen.empty() : this.request;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineRunArgs() {
-        this.forceUpdateTag = Output.empty();
-        this.pipelineRunName = Output.empty();
-        this.registryName = Output.empty();
-        this.request = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.forceUpdateTag = Codegen.empty();
+        this.pipelineRunName = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.request = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceUpdateTag(@Nullable String forceUpdateTag) {
-            this.forceUpdateTag = Output.ofNullable(forceUpdateTag);
+            this.forceUpdateTag = Codegen.ofNullable(forceUpdateTag);
             return this;
         }
         public Builder pipelineRunName(@Nullable Output<String> pipelineRunName) {
@@ -132,7 +133,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineRunName(@Nullable String pipelineRunName) {
-            this.pipelineRunName = Output.ofNullable(pipelineRunName);
+            this.pipelineRunName = Codegen.ofNullable(pipelineRunName);
             return this;
         }
         public Builder registryName(Output<String> registryName) {
@@ -148,7 +149,7 @@ public final class PipelineRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder request(@Nullable PipelineRunRequestArgs request) {
-            this.request = Output.ofNullable(request);
+            this.request = Codegen.ofNullable(request);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

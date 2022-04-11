@@ -9,6 +9,7 @@ import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreSseConfigurationArgs;
 import io.pulumi.awsnative.healthlake.inputs.FHIRDatastoreTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     @Import(name="datastoreTypeVersion", required=true)
@@ -37,21 +38,21 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FHIRDatastorePreloadDataConfigArgs> preloadDataConfig;
 
     public Output<FHIRDatastorePreloadDataConfigArgs> getPreloadDataConfig() {
-        return this.preloadDataConfig == null ? Output.empty() : this.preloadDataConfig;
+        return this.preloadDataConfig == null ? Codegen.empty() : this.preloadDataConfig;
     }
 
     @Import(name="sseConfiguration")
       private final @Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration;
 
     public Output<FHIRDatastoreSseConfigurationArgs> getSseConfiguration() {
-        return this.sseConfiguration == null ? Output.empty() : this.sseConfiguration;
+        return this.sseConfiguration == null ? Codegen.empty() : this.sseConfiguration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<FHIRDatastoreTagArgs>> tags;
 
     public Output<List<FHIRDatastoreTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FHIRDatastoreArgs(
@@ -68,11 +69,11 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FHIRDatastoreArgs() {
-        this.datastoreName = Output.empty();
-        this.datastoreTypeVersion = Output.empty();
-        this.preloadDataConfig = Output.empty();
-        this.sseConfiguration = Output.empty();
-        this.tags = Output.empty();
+        this.datastoreName = Codegen.empty();
+        this.datastoreTypeVersion = Codegen.empty();
+        this.preloadDataConfig = Codegen.empty();
+        this.sseConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder datastoreTypeVersion(Output<FHIRDatastoreDatastoreTypeVersion> datastoreTypeVersion) {
@@ -124,7 +125,7 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preloadDataConfig(@Nullable FHIRDatastorePreloadDataConfigArgs preloadDataConfig) {
-            this.preloadDataConfig = Output.ofNullable(preloadDataConfig);
+            this.preloadDataConfig = Codegen.ofNullable(preloadDataConfig);
             return this;
         }
         public Builder sseConfiguration(@Nullable Output<FHIRDatastoreSseConfigurationArgs> sseConfiguration) {
@@ -132,7 +133,7 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sseConfiguration(@Nullable FHIRDatastoreSseConfigurationArgs sseConfiguration) {
-            this.sseConfiguration = Output.ofNullable(sseConfiguration);
+            this.sseConfiguration = Codegen.ofNullable(sseConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<List<FHIRDatastoreTagArgs>> tags) {
@@ -140,7 +141,7 @@ public final class FHIRDatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<FHIRDatastoreTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FHIRDatastoreTagArgs... tags) {

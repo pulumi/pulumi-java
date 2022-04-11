@@ -10,6 +10,7 @@ import io.pulumi.aws.athena.outputs.WorkgroupConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -166,7 +167,7 @@ public class Workgroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workgroup(String name, @Nullable WorkgroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:athena/workgroup:Workgroup", name, args == null ? WorkgroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:athena/workgroup:Workgroup", name, args == null ? WorkgroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workgroup(String name, Output<String> id, @Nullable WorkgroupState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

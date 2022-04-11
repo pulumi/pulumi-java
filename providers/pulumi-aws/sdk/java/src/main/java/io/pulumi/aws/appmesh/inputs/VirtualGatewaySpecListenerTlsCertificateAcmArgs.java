@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class VirtualGatewaySpecListenerTlsCertificateAcmArgs extends io.pu
     }
 
     private VirtualGatewaySpecListenerTlsCertificateAcmArgs() {
-        this.certificateArn = Output.empty();
+        this.certificateArn = Codegen.empty();
     }
 
     public static Builder builder() {

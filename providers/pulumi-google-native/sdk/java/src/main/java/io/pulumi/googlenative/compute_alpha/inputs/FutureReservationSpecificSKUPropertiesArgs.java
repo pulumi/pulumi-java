@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
       private final @Nullable Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> instanceProperties;
 
     public Output<AllocationSpecificSKUAllocationReservedInstancePropertiesArgs> getInstanceProperties() {
-        return this.instanceProperties == null ? Output.empty() : this.instanceProperties;
+        return this.instanceProperties == null ? Codegen.empty() : this.instanceProperties;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
       private final @Nullable Output<String> totalCount;
 
     public Output<String> getTotalCount() {
-        return this.totalCount == null ? Output.empty() : this.totalCount;
+        return this.totalCount == null ? Codegen.empty() : this.totalCount;
     }
 
     public FutureReservationSpecificSKUPropertiesArgs(
@@ -45,8 +46,8 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
     }
 
     private FutureReservationSpecificSKUPropertiesArgs() {
-        this.instanceProperties = Output.empty();
-        this.totalCount = Output.empty();
+        this.instanceProperties = Codegen.empty();
+        this.totalCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder instanceProperties(@Nullable AllocationSpecificSKUAllocationReservedInstancePropertiesArgs instanceProperties) {
-            this.instanceProperties = Output.ofNullable(instanceProperties);
+            this.instanceProperties = Codegen.ofNullable(instanceProperties);
             return this;
         }
         public Builder totalCount(@Nullable Output<String> totalCount) {
@@ -84,7 +85,7 @@ public final class FutureReservationSpecificSKUPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder totalCount(@Nullable String totalCount) {
-            this.totalCount = Output.ofNullable(totalCount);
+            this.totalCount = Codegen.ofNullable(totalCount);
             return this;
         }        public FutureReservationSpecificSKUPropertiesArgs build() {
             return new FutureReservationSpecificSKUPropertiesArgs(instanceProperties, totalCount);

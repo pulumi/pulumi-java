@@ -5,6 +5,7 @@ package io.pulumi.gcp.servicenetworking;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,9 +62,9 @@ public final class ConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionArgs() {
-        this.network = Output.empty();
-        this.reservedPeeringRanges = Output.empty();
-        this.service = Output.empty();
+        this.network = Codegen.empty();
+        this.reservedPeeringRanges = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

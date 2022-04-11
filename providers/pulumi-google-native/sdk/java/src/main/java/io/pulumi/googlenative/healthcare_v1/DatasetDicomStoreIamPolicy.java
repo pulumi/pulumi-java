@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.DatasetDicomStoreIamPolicyArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class DatasetDicomStoreIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public DatasetDicomStoreIamPolicy(String name, DatasetDicomStoreIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1:DatasetDicomStoreIamPolicy", name, args == null ? DatasetDicomStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1:DatasetDicomStoreIamPolicy", name, args == null ? DatasetDicomStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatasetDicomStoreIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

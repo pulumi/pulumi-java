@@ -7,6 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RulesetRuleArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RulesetTagArgs>> tags;
 
     public Output<List<RulesetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -82,11 +83,11 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RulesetArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.rules = Output.empty();
-        this.tags = Output.empty();
-        this.targetArn = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -130,7 +131,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rules(Output<List<RulesetRuleArgs>> rules) {
@@ -149,7 +150,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<RulesetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(RulesetTagArgs... tags) {

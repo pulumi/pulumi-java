@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunExecutionState;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanRunResultState;
 import io.pulumi.googlenative.websecurityscanner_v1beta.inputs.ScanRunErrorTraceArgs;
@@ -33,7 +34,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScanRunErrorTraceArgs> errorTrace;
 
     public Output<ScanRunErrorTraceArgs> getErrorTrace() {
-        return this.errorTrace == null ? Output.empty() : this.errorTrace;
+        return this.errorTrace == null ? Codegen.empty() : this.errorTrace;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScanRunExecutionState> executionState;
 
     public Output<ScanRunExecutionState> getExecutionState() {
-        return this.executionState == null ? Output.empty() : this.executionState;
+        return this.executionState == null ? Codegen.empty() : this.executionState;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasVulnerabilities;
 
     public Output<Boolean> getHasVulnerabilities() {
-        return this.hasVulnerabilities == null ? Output.empty() : this.hasVulnerabilities;
+        return this.hasVulnerabilities == null ? Codegen.empty() : this.hasVulnerabilities;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> progressPercent;
 
     public Output<Integer> getProgressPercent() {
-        return this.progressPercent == null ? Output.empty() : this.progressPercent;
+        return this.progressPercent == null ? Codegen.empty() : this.progressPercent;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScanRunResultState> resultState;
 
     public Output<ScanRunResultState> getResultState() {
-        return this.resultState == null ? Output.empty() : this.resultState;
+        return this.resultState == null ? Codegen.empty() : this.resultState;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> urlsCrawledCount;
 
     public Output<String> getUrlsCrawledCount() {
-        return this.urlsCrawledCount == null ? Output.empty() : this.urlsCrawledCount;
+        return this.urlsCrawledCount == null ? Codegen.empty() : this.urlsCrawledCount;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> urlsTestedCount;
 
     public Output<String> getUrlsTestedCount() {
-        return this.urlsTestedCount == null ? Output.empty() : this.urlsTestedCount;
+        return this.urlsTestedCount == null ? Codegen.empty() : this.urlsTestedCount;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces;
 
     public Output<List<ScanRunWarningTraceArgs>> getWarningTraces() {
-        return this.warningTraces == null ? Output.empty() : this.warningTraces;
+        return this.warningTraces == null ? Codegen.empty() : this.warningTraces;
     }
 
     public ScanRunArgs(
@@ -172,17 +173,17 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScanRunArgs() {
-        this.endTime = Output.empty();
-        this.errorTrace = Output.empty();
-        this.executionState = Output.empty();
-        this.hasVulnerabilities = Output.empty();
-        this.name = Output.empty();
-        this.progressPercent = Output.empty();
-        this.resultState = Output.empty();
-        this.startTime = Output.empty();
-        this.urlsCrawledCount = Output.empty();
-        this.urlsTestedCount = Output.empty();
-        this.warningTraces = Output.empty();
+        this.endTime = Codegen.empty();
+        this.errorTrace = Codegen.empty();
+        this.executionState = Codegen.empty();
+        this.hasVulnerabilities = Codegen.empty();
+        this.name = Codegen.empty();
+        this.progressPercent = Codegen.empty();
+        this.resultState = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.urlsCrawledCount = Codegen.empty();
+        this.urlsTestedCount = Codegen.empty();
+        this.warningTraces = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -230,7 +231,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder errorTrace(@Nullable Output<ScanRunErrorTraceArgs> errorTrace) {
@@ -238,7 +239,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorTrace(@Nullable ScanRunErrorTraceArgs errorTrace) {
-            this.errorTrace = Output.ofNullable(errorTrace);
+            this.errorTrace = Codegen.ofNullable(errorTrace);
             return this;
         }
         public Builder executionState(@Nullable Output<ScanRunExecutionState> executionState) {
@@ -246,7 +247,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionState(@Nullable ScanRunExecutionState executionState) {
-            this.executionState = Output.ofNullable(executionState);
+            this.executionState = Codegen.ofNullable(executionState);
             return this;
         }
         public Builder hasVulnerabilities(@Nullable Output<Boolean> hasVulnerabilities) {
@@ -254,7 +255,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasVulnerabilities(@Nullable Boolean hasVulnerabilities) {
-            this.hasVulnerabilities = Output.ofNullable(hasVulnerabilities);
+            this.hasVulnerabilities = Codegen.ofNullable(hasVulnerabilities);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -262,7 +263,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder progressPercent(@Nullable Output<Integer> progressPercent) {
@@ -270,7 +271,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder progressPercent(@Nullable Integer progressPercent) {
-            this.progressPercent = Output.ofNullable(progressPercent);
+            this.progressPercent = Codegen.ofNullable(progressPercent);
             return this;
         }
         public Builder resultState(@Nullable Output<ScanRunResultState> resultState) {
@@ -278,7 +279,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resultState(@Nullable ScanRunResultState resultState) {
-            this.resultState = Output.ofNullable(resultState);
+            this.resultState = Codegen.ofNullable(resultState);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -286,7 +287,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder urlsCrawledCount(@Nullable Output<String> urlsCrawledCount) {
@@ -294,7 +295,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder urlsCrawledCount(@Nullable String urlsCrawledCount) {
-            this.urlsCrawledCount = Output.ofNullable(urlsCrawledCount);
+            this.urlsCrawledCount = Codegen.ofNullable(urlsCrawledCount);
             return this;
         }
         public Builder urlsTestedCount(@Nullable Output<String> urlsTestedCount) {
@@ -302,7 +303,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder urlsTestedCount(@Nullable String urlsTestedCount) {
-            this.urlsTestedCount = Output.ofNullable(urlsTestedCount);
+            this.urlsTestedCount = Codegen.ofNullable(urlsTestedCount);
             return this;
         }
         public Builder warningTraces(@Nullable Output<List<ScanRunWarningTraceArgs>> warningTraces) {
@@ -310,7 +311,7 @@ public final class ScanRunArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder warningTraces(@Nullable List<ScanRunWarningTraceArgs> warningTraces) {
-            this.warningTraces = Output.ofNullable(warningTraces);
+            this.warningTraces = Codegen.ofNullable(warningTraces);
             return this;
         }
         public Builder warningTraces(ScanRunWarningTraceArgs... warningTraces) {

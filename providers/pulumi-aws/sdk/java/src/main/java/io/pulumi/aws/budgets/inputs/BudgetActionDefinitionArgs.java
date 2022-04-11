@@ -8,6 +8,7 @@ import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionScpActionDefinitionArg
 import io.pulumi.aws.budgets.inputs.BudgetActionDefinitionSsmActionDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<BudgetActionDefinitionIamActionDefinitionArgs> iamActionDefinition;
 
     public Output<BudgetActionDefinitionIamActionDefinitionArgs> getIamActionDefinition() {
-        return this.iamActionDefinition == null ? Output.empty() : this.iamActionDefinition;
+        return this.iamActionDefinition == null ? Codegen.empty() : this.iamActionDefinition;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition;
 
     public Output<BudgetActionDefinitionScpActionDefinitionArgs> getScpActionDefinition() {
-        return this.scpActionDefinition == null ? Output.empty() : this.scpActionDefinition;
+        return this.scpActionDefinition == null ? Codegen.empty() : this.scpActionDefinition;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition;
 
     public Output<BudgetActionDefinitionSsmActionDefinitionArgs> getSsmActionDefinition() {
-        return this.ssmActionDefinition == null ? Output.empty() : this.ssmActionDefinition;
+        return this.ssmActionDefinition == null ? Codegen.empty() : this.ssmActionDefinition;
     }
 
     public BudgetActionDefinitionArgs(
@@ -59,9 +60,9 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     private BudgetActionDefinitionArgs() {
-        this.iamActionDefinition = Output.empty();
-        this.scpActionDefinition = Output.empty();
-        this.ssmActionDefinition = Output.empty();
+        this.iamActionDefinition = Codegen.empty();
+        this.scpActionDefinition = Codegen.empty();
+        this.ssmActionDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder iamActionDefinition(@Nullable BudgetActionDefinitionIamActionDefinitionArgs iamActionDefinition) {
-            this.iamActionDefinition = Output.ofNullable(iamActionDefinition);
+            this.iamActionDefinition = Codegen.ofNullable(iamActionDefinition);
             return this;
         }
         public Builder scpActionDefinition(@Nullable Output<BudgetActionDefinitionScpActionDefinitionArgs> scpActionDefinition) {
@@ -101,7 +102,7 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder scpActionDefinition(@Nullable BudgetActionDefinitionScpActionDefinitionArgs scpActionDefinition) {
-            this.scpActionDefinition = Output.ofNullable(scpActionDefinition);
+            this.scpActionDefinition = Codegen.ofNullable(scpActionDefinition);
             return this;
         }
         public Builder ssmActionDefinition(@Nullable Output<BudgetActionDefinitionSsmActionDefinitionArgs> ssmActionDefinition) {
@@ -109,7 +110,7 @@ public final class BudgetActionDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ssmActionDefinition(@Nullable BudgetActionDefinitionSsmActionDefinitionArgs ssmActionDefinition) {
-            this.ssmActionDefinition = Output.ofNullable(ssmActionDefinition);
+            this.ssmActionDefinition = Codegen.ofNullable(ssmActionDefinition);
             return this;
         }        public BudgetActionDefinitionArgs build() {
             return new BudgetActionDefinitionArgs(iamActionDefinition, scpActionDefinition, ssmActionDefinition);

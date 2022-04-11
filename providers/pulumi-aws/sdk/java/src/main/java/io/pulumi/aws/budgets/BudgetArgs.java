@@ -7,6 +7,7 @@ import io.pulumi.aws.budgets.inputs.BudgetCostTypesArgs;
 import io.pulumi.aws.budgets.inputs.BudgetNotificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> costFilters;
 
     public Output<Map<String,String>> getCostFilters() {
-        return this.costFilters == null ? Output.empty() : this.costFilters;
+        return this.costFilters == null ? Codegen.empty() : this.costFilters;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetCostTypesArgs> costTypes;
 
     public Output<BudgetCostTypesArgs> getCostTypes() {
-        return this.costTypes == null ? Output.empty() : this.costTypes;
+        return this.costTypes == null ? Codegen.empty() : this.costTypes;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BudgetNotificationArgs>> notifications;
 
     public Output<List<BudgetNotificationArgs>> getNotifications() {
-        return this.notifications == null ? Output.empty() : this.notifications;
+        return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timePeriodEnd;
 
     public Output<String> getTimePeriodEnd() {
-        return this.timePeriodEnd == null ? Output.empty() : this.timePeriodEnd;
+        return this.timePeriodEnd == null ? Codegen.empty() : this.timePeriodEnd;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timePeriodStart;
 
     public Output<String> getTimePeriodStart() {
-        return this.timePeriodStart == null ? Output.empty() : this.timePeriodStart;
+        return this.timePeriodStart == null ? Codegen.empty() : this.timePeriodStart;
     }
 
     /**
@@ -178,18 +179,18 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetArgs() {
-        this.accountId = Output.empty();
-        this.budgetType = Output.empty();
-        this.costFilters = Output.empty();
-        this.costTypes = Output.empty();
-        this.limitAmount = Output.empty();
-        this.limitUnit = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.notifications = Output.empty();
-        this.timePeriodEnd = Output.empty();
-        this.timePeriodStart = Output.empty();
-        this.timeUnit = Output.empty();
+        this.accountId = Codegen.empty();
+        this.budgetType = Codegen.empty();
+        this.costFilters = Codegen.empty();
+        this.costTypes = Codegen.empty();
+        this.limitAmount = Codegen.empty();
+        this.limitUnit = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.notifications = Codegen.empty();
+        this.timePeriodEnd = Codegen.empty();
+        this.timePeriodStart = Codegen.empty();
+        this.timeUnit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder budgetType(Output<String> budgetType) {
@@ -255,7 +256,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder costFilters(@Nullable Map<String,String> costFilters) {
-            this.costFilters = Output.ofNullable(costFilters);
+            this.costFilters = Codegen.ofNullable(costFilters);
             return this;
         }
         public Builder costTypes(@Nullable Output<BudgetCostTypesArgs> costTypes) {
@@ -263,7 +264,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder costTypes(@Nullable BudgetCostTypesArgs costTypes) {
-            this.costTypes = Output.ofNullable(costTypes);
+            this.costTypes = Codegen.ofNullable(costTypes);
             return this;
         }
         public Builder limitAmount(Output<String> limitAmount) {
@@ -287,7 +288,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -295,7 +296,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder notifications(@Nullable Output<List<BudgetNotificationArgs>> notifications) {
@@ -303,7 +304,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notifications(@Nullable List<BudgetNotificationArgs> notifications) {
-            this.notifications = Output.ofNullable(notifications);
+            this.notifications = Codegen.ofNullable(notifications);
             return this;
         }
         public Builder notifications(BudgetNotificationArgs... notifications) {
@@ -314,7 +315,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timePeriodEnd(@Nullable String timePeriodEnd) {
-            this.timePeriodEnd = Output.ofNullable(timePeriodEnd);
+            this.timePeriodEnd = Codegen.ofNullable(timePeriodEnd);
             return this;
         }
         public Builder timePeriodStart(@Nullable Output<String> timePeriodStart) {
@@ -322,7 +323,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timePeriodStart(@Nullable String timePeriodStart) {
-            this.timePeriodStart = Output.ofNullable(timePeriodStart);
+            this.timePeriodStart = Codegen.ofNullable(timePeriodStart);
             return this;
         }
         public Builder timeUnit(Output<String> timeUnit) {

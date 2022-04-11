@@ -5,6 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
       private final @Nullable Output<List<String>> organizationArns;
 
     public Output<List<String>> getOrganizationArns() {
-        return this.organizationArns == null ? Output.empty() : this.organizationArns;
+        return this.organizationArns == null ? Codegen.empty() : this.organizationArns;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
       private final @Nullable Output<List<String>> organizationalUnitArns;
 
     public Output<List<String>> getOrganizationalUnitArns() {
-        return this.organizationalUnitArns == null ? Output.empty() : this.organizationalUnitArns;
+        return this.organizationalUnitArns == null ? Codegen.empty() : this.organizationalUnitArns;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
       private final @Nullable Output<List<String>> userGroups;
 
     public Output<List<String>> getUserGroups() {
-        return this.userGroups == null ? Output.empty() : this.userGroups;
+        return this.userGroups == null ? Codegen.empty() : this.userGroups;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
       private final @Nullable Output<List<String>> userIds;
 
     public Output<List<String>> getUserIds() {
-        return this.userIds == null ? Output.empty() : this.userIds;
+        return this.userIds == null ? Codegen.empty() : this.userIds;
     }
 
     public DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs(
@@ -75,10 +76,10 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
     }
 
     private DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesLaunchPermissionConfigurationPropertiesArgs() {
-        this.organizationArns = Output.empty();
-        this.organizationalUnitArns = Output.empty();
-        this.userGroups = Output.empty();
-        this.userIds = Output.empty();
+        this.organizationArns = Codegen.empty();
+        this.organizationalUnitArns = Codegen.empty();
+        this.userGroups = Codegen.empty();
+        this.userIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder organizationArns(@Nullable List<String> organizationArns) {
-            this.organizationArns = Output.ofNullable(organizationArns);
+            this.organizationArns = Codegen.ofNullable(organizationArns);
             return this;
         }
         public Builder organizationArns(String... organizationArns) {
@@ -123,7 +124,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder organizationalUnitArns(@Nullable List<String> organizationalUnitArns) {
-            this.organizationalUnitArns = Output.ofNullable(organizationalUnitArns);
+            this.organizationalUnitArns = Codegen.ofNullable(organizationalUnitArns);
             return this;
         }
         public Builder organizationalUnitArns(String... organizationalUnitArns) {
@@ -134,7 +135,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder userGroups(@Nullable List<String> userGroups) {
-            this.userGroups = Output.ofNullable(userGroups);
+            this.userGroups = Codegen.ofNullable(userGroups);
             return this;
         }
         public Builder userGroups(String... userGroups) {
@@ -145,7 +146,7 @@ public final class DistributionConfigurationDistributionAmiDistributionConfigura
             return this;
         }
         public Builder userIds(@Nullable List<String> userIds) {
-            this.userIds = Output.ofNullable(userIds);
+            this.userIds = Codegen.ofNullable(userIds);
             return this;
         }
         public Builder userIds(String... userIds) {

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.vmmigration_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.CloneJobArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDetailsResponse;
@@ -128,7 +129,7 @@ public class CloneJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CloneJob(String name, CloneJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:vmmigration/v1:CloneJob", name, args == null ? CloneJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:vmmigration/v1:CloneJob", name, args == null ? CloneJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CloneJob(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> visibility;
 
     public Output<String> getVisibility() {
-        return this.visibility == null ? Output.empty() : this.visibility;
+        return this.visibility == null ? Codegen.empty() : this.visibility;
     }
 
     public IngressProfileArgs(
@@ -61,9 +62,9 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressProfileArgs() {
-        this.ip = Output.empty();
-        this.name = Output.empty();
-        this.visibility = Output.empty();
+        this.ip = Codegen.empty();
+        this.name = Codegen.empty();
+        this.visibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -103,7 +104,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder visibility(@Nullable Output<String> visibility) {
@@ -111,7 +112,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder visibility(@Nullable String visibility) {
-            this.visibility = Output.ofNullable(visibility);
+            this.visibility = Codegen.ofNullable(visibility);
             return this;
         }        public IngressProfileArgs build() {
             return new IngressProfileArgs(ip, name, visibility);

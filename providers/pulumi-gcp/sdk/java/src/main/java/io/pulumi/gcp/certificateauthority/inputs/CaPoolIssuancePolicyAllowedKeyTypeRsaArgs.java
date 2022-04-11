@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
       private final @Nullable Output<String> maxModulusSize;
 
     public Output<String> getMaxModulusSize() {
-        return this.maxModulusSize == null ? Output.empty() : this.maxModulusSize;
+        return this.maxModulusSize == null ? Codegen.empty() : this.maxModulusSize;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
       private final @Nullable Output<String> minModulusSize;
 
     public Output<String> getMinModulusSize() {
-        return this.minModulusSize == null ? Output.empty() : this.minModulusSize;
+        return this.minModulusSize == null ? Codegen.empty() : this.minModulusSize;
     }
 
     public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(
@@ -46,8 +47,8 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
     }
 
     private CaPoolIssuancePolicyAllowedKeyTypeRsaArgs() {
-        this.maxModulusSize = Output.empty();
-        this.minModulusSize = Output.empty();
+        this.maxModulusSize = Codegen.empty();
+        this.minModulusSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
             return this;
         }
         public Builder maxModulusSize(@Nullable String maxModulusSize) {
-            this.maxModulusSize = Output.ofNullable(maxModulusSize);
+            this.maxModulusSize = Codegen.ofNullable(maxModulusSize);
             return this;
         }
         public Builder minModulusSize(@Nullable Output<String> minModulusSize) {
@@ -85,7 +86,7 @@ public final class CaPoolIssuancePolicyAllowedKeyTypeRsaArgs extends io.pulumi.r
             return this;
         }
         public Builder minModulusSize(@Nullable String minModulusSize) {
-            this.minModulusSize = Output.ofNullable(minModulusSize);
+            this.minModulusSize = Codegen.ofNullable(minModulusSize);
             return this;
         }        public CaPoolIssuancePolicyAllowedKeyTypeRsaArgs build() {
             return new CaPoolIssuancePolicyAllowedKeyTypeRsaArgs(maxModulusSize, minModulusSize);

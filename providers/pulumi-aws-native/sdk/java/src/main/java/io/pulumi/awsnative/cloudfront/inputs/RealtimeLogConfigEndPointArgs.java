@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.RealtimeLogConfigKinesisStreamConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -36,8 +37,8 @@ public final class RealtimeLogConfigEndPointArgs extends io.pulumi.resources.Res
     }
 
     private RealtimeLogConfigEndPointArgs() {
-        this.kinesisStreamConfig = Output.empty();
-        this.streamType = Output.empty();
+        this.kinesisStreamConfig = Codegen.empty();
+        this.streamType = Codegen.empty();
     }
 
     public static Builder builder() {

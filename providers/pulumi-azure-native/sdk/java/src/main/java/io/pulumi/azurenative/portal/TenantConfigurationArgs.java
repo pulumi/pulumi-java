@@ -5,6 +5,7 @@ package io.pulumi.azurenative.portal;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> configurationName;
 
     public Output<String> getConfigurationName() {
-        return this.configurationName == null ? Output.empty() : this.configurationName;
+        return this.configurationName == null ? Codegen.empty() : this.configurationName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> enforcePrivateMarkdownStorage;
 
     public Output<Boolean> getEnforcePrivateMarkdownStorage() {
-        return this.enforcePrivateMarkdownStorage == null ? Output.empty() : this.enforcePrivateMarkdownStorage;
+        return this.enforcePrivateMarkdownStorage == null ? Codegen.empty() : this.enforcePrivateMarkdownStorage;
     }
 
     public TenantConfigurationArgs(
@@ -45,8 +46,8 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private TenantConfigurationArgs() {
-        this.configurationName = Output.empty();
-        this.enforcePrivateMarkdownStorage = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.enforcePrivateMarkdownStorage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder configurationName(@Nullable String configurationName) {
-            this.configurationName = Output.ofNullable(configurationName);
+            this.configurationName = Codegen.ofNullable(configurationName);
             return this;
         }
         public Builder enforcePrivateMarkdownStorage(@Nullable Output<Boolean> enforcePrivateMarkdownStorage) {
@@ -84,7 +85,7 @@ public final class TenantConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enforcePrivateMarkdownStorage(@Nullable Boolean enforcePrivateMarkdownStorage) {
-            this.enforcePrivateMarkdownStorage = Output.ofNullable(enforcePrivateMarkdownStorage);
+            this.enforcePrivateMarkdownStorage = Codegen.ofNullable(enforcePrivateMarkdownStorage);
             return this;
         }        public TenantConfigurationArgs build() {
             return new TenantConfigurationArgs(configurationName, enforcePrivateMarkdownStorage);

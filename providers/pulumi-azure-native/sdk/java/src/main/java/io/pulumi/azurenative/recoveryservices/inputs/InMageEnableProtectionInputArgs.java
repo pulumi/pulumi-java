@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageDiskExclusionInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput;
 
     public Output<InMageDiskExclusionInputArgs> getDiskExclusionInput() {
-        return this.diskExclusionInput == null ? Output.empty() : this.diskExclusionInput;
+        return this.diskExclusionInput == null ? Codegen.empty() : this.diskExclusionInput;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> disksToInclude;
 
     public Output<List<String>> getDisksToInclude() {
-        return this.disksToInclude == null ? Output.empty() : this.disksToInclude;
+        return this.disksToInclude == null ? Codegen.empty() : this.disksToInclude;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> runAsAccountId;
 
     public Output<String> getRunAsAccountId() {
-        return this.runAsAccountId == null ? Output.empty() : this.runAsAccountId;
+        return this.runAsAccountId == null ? Codegen.empty() : this.runAsAccountId;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> vmFriendlyName;
 
     public Output<String> getVmFriendlyName() {
-        return this.vmFriendlyName == null ? Output.empty() : this.vmFriendlyName;
+        return this.vmFriendlyName == null ? Codegen.empty() : this.vmFriendlyName;
     }
 
     public InMageEnableProtectionInputArgs(
@@ -168,17 +169,17 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
     }
 
     private InMageEnableProtectionInputArgs() {
-        this.datastoreName = Output.empty();
-        this.diskExclusionInput = Output.empty();
-        this.disksToInclude = Output.empty();
-        this.instanceType = Output.empty();
-        this.masterTargetId = Output.empty();
-        this.multiVmGroupId = Output.empty();
-        this.multiVmGroupName = Output.empty();
-        this.processServerId = Output.empty();
-        this.retentionDrive = Output.empty();
-        this.runAsAccountId = Output.empty();
-        this.vmFriendlyName = Output.empty();
+        this.datastoreName = Codegen.empty();
+        this.diskExclusionInput = Codegen.empty();
+        this.disksToInclude = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.masterTargetId = Codegen.empty();
+        this.multiVmGroupId = Codegen.empty();
+        this.multiVmGroupName = Codegen.empty();
+        this.processServerId = Codegen.empty();
+        this.retentionDrive = Codegen.empty();
+        this.runAsAccountId = Codegen.empty();
+        this.vmFriendlyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder diskExclusionInput(@Nullable Output<InMageDiskExclusionInputArgs> diskExclusionInput) {
@@ -234,7 +235,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder diskExclusionInput(@Nullable InMageDiskExclusionInputArgs diskExclusionInput) {
-            this.diskExclusionInput = Output.ofNullable(diskExclusionInput);
+            this.diskExclusionInput = Codegen.ofNullable(diskExclusionInput);
             return this;
         }
         public Builder disksToInclude(@Nullable Output<List<String>> disksToInclude) {
@@ -242,7 +243,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder disksToInclude(@Nullable List<String> disksToInclude) {
-            this.disksToInclude = Output.ofNullable(disksToInclude);
+            this.disksToInclude = Codegen.ofNullable(disksToInclude);
             return this;
         }
         public Builder disksToInclude(String... disksToInclude) {
@@ -253,7 +254,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder masterTargetId(Output<String> masterTargetId) {
@@ -301,7 +302,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
-            this.runAsAccountId = Output.ofNullable(runAsAccountId);
+            this.runAsAccountId = Codegen.ofNullable(runAsAccountId);
             return this;
         }
         public Builder vmFriendlyName(@Nullable Output<String> vmFriendlyName) {
@@ -309,7 +310,7 @@ public final class InMageEnableProtectionInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder vmFriendlyName(@Nullable String vmFriendlyName) {
-            this.vmFriendlyName = Output.ofNullable(vmFriendlyName);
+            this.vmFriendlyName = Codegen.ofNullable(vmFriendlyName);
             return this;
         }        public InMageEnableProtectionInputArgs build() {
             return new InMageEnableProtectionInputArgs(datastoreName, diskExclusionInput, disksToInclude, instanceType, masterTargetId, multiVmGroupId, multiVmGroupName, processServerId, retentionDrive, runAsAccountId, vmFriendlyName);

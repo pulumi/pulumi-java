@@ -5,6 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class ApplicationCustomComponentArgs extends io.pulumi.resources.Re
     }
 
     private ApplicationCustomComponentArgs() {
-        this.componentName = Output.empty();
-        this.resourceList = Output.empty();
+        this.componentName = Codegen.empty();
+        this.resourceList = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.apimanagement.inputs.UserIdentityPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Output<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public ApiManagementServiceIdentityArgs(
@@ -55,8 +56,8 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
     }
 
     private ApiManagementServiceIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class ApiManagementServiceIdentityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public ApiManagementServiceIdentityArgs build() {
             return new ApiManagementServiceIdentityArgs(type, userAssignedIdentities);

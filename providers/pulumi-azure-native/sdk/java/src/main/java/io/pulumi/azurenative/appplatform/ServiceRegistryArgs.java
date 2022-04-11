@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> serviceRegistryName;
 
     public Output<String> getServiceRegistryName() {
-        return this.serviceRegistryName == null ? Output.empty() : this.serviceRegistryName;
+        return this.serviceRegistryName == null ? Codegen.empty() : this.serviceRegistryName;
     }
 
     public ServiceRegistryArgs(
@@ -57,9 +58,9 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceRegistryArgs() {
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceRegistryName = Output.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceRegistryName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class ServiceRegistryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceRegistryName(@Nullable String serviceRegistryName) {
-            this.serviceRegistryName = Output.ofNullable(serviceRegistryName);
+            this.serviceRegistryName = Codegen.ofNullable(serviceRegistryName);
             return this;
         }        public ServiceRegistryArgs build() {
             return new ServiceRegistryArgs(resourceGroupName, serviceName, serviceRegistryName);

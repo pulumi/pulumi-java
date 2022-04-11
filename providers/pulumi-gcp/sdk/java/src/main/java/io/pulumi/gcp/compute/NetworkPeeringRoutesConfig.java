@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NetworkPeeringRoutesConfigArgs;
 import io.pulumi.gcp.compute.inputs.NetworkPeeringRoutesConfigState;
@@ -141,7 +142,7 @@ public class NetworkPeeringRoutesConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkPeeringRoutesConfig(String name, NetworkPeeringRoutesConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig", name, args == null ? NetworkPeeringRoutesConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/networkPeeringRoutesConfig:NetworkPeeringRoutesConfig", name, args == null ? NetworkPeeringRoutesConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkPeeringRoutesConfig(String name, Output<String> id, @Nullable NetworkPeeringRoutesConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

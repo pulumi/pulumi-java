@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsublite_v1.enums.DeliveryConfigDeliveryRequirement;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
     public Output<DeliveryConfigDeliveryRequirement> getDeliveryRequirement() {
-        return this.deliveryRequirement == null ? Output.empty() : this.deliveryRequirement;
+        return this.deliveryRequirement == null ? Codegen.empty() : this.deliveryRequirement;
     }
 
     public DeliveryConfigArgs(@Nullable Output<DeliveryConfigDeliveryRequirement> deliveryRequirement) {
@@ -34,7 +35,7 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeliveryConfigArgs() {
-        this.deliveryRequirement = Output.empty();
+        this.deliveryRequirement = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryRequirement(@Nullable DeliveryConfigDeliveryRequirement deliveryRequirement) {
-            this.deliveryRequirement = Output.ofNullable(deliveryRequirement);
+            this.deliveryRequirement = Codegen.ofNullable(deliveryRequirement);
             return this;
         }        public DeliveryConfigArgs build() {
             return new DeliveryConfigArgs(deliveryRequirement);

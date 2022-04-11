@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> enableIncrementalDatasetRefresh;
 
     public Output<Boolean> getEnableIncrementalDatasetRefresh() {
-        return this.enableIncrementalDatasetRefresh == null ? Output.empty() : this.enableIncrementalDatasetRefresh;
+        return this.enableIncrementalDatasetRefresh == null ? Codegen.empty() : this.enableIncrementalDatasetRefresh;
     }
 
     public LabelingDatasetConfigurationArgs(
@@ -62,9 +63,9 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
     }
 
     private LabelingDatasetConfigurationArgs() {
-        this.assetName = Output.empty();
-        this.datasetVersion = Output.empty();
-        this.enableIncrementalDatasetRefresh = Output.empty();
+        this.assetName = Codegen.empty();
+        this.datasetVersion = Codegen.empty();
+        this.enableIncrementalDatasetRefresh = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class LabelingDatasetConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder enableIncrementalDatasetRefresh(@Nullable Boolean enableIncrementalDatasetRefresh) {
-            this.enableIncrementalDatasetRefresh = Output.ofNullable(enableIncrementalDatasetRefresh);
+            this.enableIncrementalDatasetRefresh = Codegen.ofNullable(enableIncrementalDatasetRefresh);
             return this;
         }        public LabelingDatasetConfigurationArgs build() {
             return new LabelingDatasetConfigurationArgs(assetName, datasetVersion, enableIncrementalDatasetRefresh);

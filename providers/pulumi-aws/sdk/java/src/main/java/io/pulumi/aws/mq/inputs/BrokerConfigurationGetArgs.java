@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BrokerConfigurationGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BrokerConfigurationGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> revision;
 
     public Output<Integer> getRevision() {
-        return this.revision == null ? Output.empty() : this.revision;
+        return this.revision == null ? Codegen.empty() : this.revision;
     }
 
     public BrokerConfigurationGetArgs(
@@ -45,8 +46,8 @@ public final class BrokerConfigurationGetArgs extends io.pulumi.resources.Resour
     }
 
     private BrokerConfigurationGetArgs() {
-        this.id = Output.empty();
-        this.revision = Output.empty();
+        this.id = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BrokerConfigurationGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder revision(@Nullable Output<Integer> revision) {
@@ -84,7 +85,7 @@ public final class BrokerConfigurationGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder revision(@Nullable Integer revision) {
-            this.revision = Output.ofNullable(revision);
+            this.revision = Codegen.ofNullable(revision);
             return this;
         }        public BrokerConfigurationGetArgs build() {
             return new BrokerConfigurationGetArgs(id, revision);

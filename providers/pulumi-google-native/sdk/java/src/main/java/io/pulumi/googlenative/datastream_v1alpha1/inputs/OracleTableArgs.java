@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.OracleColumnArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OracleColumnArgs>> oracleColumns;
 
     public Output<List<OracleColumnArgs>> getOracleColumns() {
-        return this.oracleColumns == null ? Output.empty() : this.oracleColumns;
+        return this.oracleColumns == null ? Codegen.empty() : this.oracleColumns;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     public OracleTableArgs(
@@ -50,8 +51,8 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OracleTableArgs() {
-        this.oracleColumns = Output.empty();
-        this.tableName = Output.empty();
+        this.oracleColumns = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oracleColumns(@Nullable List<OracleColumnArgs> oracleColumns) {
-            this.oracleColumns = Output.ofNullable(oracleColumns);
+            this.oracleColumns = Codegen.ofNullable(oracleColumns);
             return this;
         }
         public Builder oracleColumns(OracleColumnArgs... oracleColumns) {
@@ -92,7 +93,7 @@ public final class OracleTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }        public OracleTableArgs build() {
             return new OracleTableArgs(oracleColumns, tableName);

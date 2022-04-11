@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.enums.MethodSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
 import java.lang.Boolean;
@@ -30,7 +31,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requestStreaming;
 
     public Output<Boolean> getRequestStreaming() {
-        return this.requestStreaming == null ? Output.empty() : this.requestStreaming;
+        return this.requestStreaming == null ? Codegen.empty() : this.requestStreaming;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestTypeUrl;
 
     public Output<String> getRequestTypeUrl() {
-        return this.requestTypeUrl == null ? Output.empty() : this.requestTypeUrl;
+        return this.requestTypeUrl == null ? Codegen.empty() : this.requestTypeUrl;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> responseStreaming;
 
     public Output<Boolean> getResponseStreaming() {
-        return this.responseStreaming == null ? Output.empty() : this.responseStreaming;
+        return this.responseStreaming == null ? Codegen.empty() : this.responseStreaming;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> responseTypeUrl;
 
     public Output<String> getResponseTypeUrl() {
-        return this.responseTypeUrl == null ? Output.empty() : this.responseTypeUrl;
+        return this.responseTypeUrl == null ? Codegen.empty() : this.responseTypeUrl;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MethodSyntax> syntax;
 
     public Output<MethodSyntax> getSyntax() {
-        return this.syntax == null ? Output.empty() : this.syntax;
+        return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
     public MethodArgs(
@@ -117,13 +118,13 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MethodArgs() {
-        this.name = Output.empty();
-        this.options = Output.empty();
-        this.requestStreaming = Output.empty();
-        this.requestTypeUrl = Output.empty();
-        this.responseStreaming = Output.empty();
-        this.responseTypeUrl = Output.empty();
-        this.syntax = Output.empty();
+        this.name = Codegen.empty();
+        this.options = Codegen.empty();
+        this.requestStreaming = Codegen.empty();
+        this.requestTypeUrl = Codegen.empty();
+        this.responseStreaming = Codegen.empty();
+        this.responseTypeUrl = Codegen.empty();
+        this.syntax = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
@@ -171,7 +172,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(OptionArgs... options) {
@@ -182,7 +183,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestStreaming(@Nullable Boolean requestStreaming) {
-            this.requestStreaming = Output.ofNullable(requestStreaming);
+            this.requestStreaming = Codegen.ofNullable(requestStreaming);
             return this;
         }
         public Builder requestTypeUrl(@Nullable Output<String> requestTypeUrl) {
@@ -190,7 +191,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestTypeUrl(@Nullable String requestTypeUrl) {
-            this.requestTypeUrl = Output.ofNullable(requestTypeUrl);
+            this.requestTypeUrl = Codegen.ofNullable(requestTypeUrl);
             return this;
         }
         public Builder responseStreaming(@Nullable Output<Boolean> responseStreaming) {
@@ -198,7 +199,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseStreaming(@Nullable Boolean responseStreaming) {
-            this.responseStreaming = Output.ofNullable(responseStreaming);
+            this.responseStreaming = Codegen.ofNullable(responseStreaming);
             return this;
         }
         public Builder responseTypeUrl(@Nullable Output<String> responseTypeUrl) {
@@ -206,7 +207,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseTypeUrl(@Nullable String responseTypeUrl) {
-            this.responseTypeUrl = Output.ofNullable(responseTypeUrl);
+            this.responseTypeUrl = Codegen.ofNullable(responseTypeUrl);
             return this;
         }
         public Builder syntax(@Nullable Output<MethodSyntax> syntax) {
@@ -214,7 +215,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syntax(@Nullable MethodSyntax syntax) {
-            this.syntax = Output.ofNullable(syntax);
+            this.syntax = Codegen.ofNullable(syntax);
             return this;
         }        public MethodArgs build() {
             return new MethodArgs(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);

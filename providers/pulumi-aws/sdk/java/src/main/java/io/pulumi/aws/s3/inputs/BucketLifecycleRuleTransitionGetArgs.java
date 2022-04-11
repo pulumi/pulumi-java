@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> date;
 
     public Output<String> getDate() {
-        return this.date == null ? Output.empty() : this.date;
+        return this.date == null ? Codegen.empty() : this.date;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> days;
 
     public Output<Integer> getDays() {
-        return this.days == null ? Output.empty() : this.days;
+        return this.days == null ? Codegen.empty() : this.days;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
     }
 
     private BucketLifecycleRuleTransitionGetArgs() {
-        this.date = Output.empty();
-        this.days = Output.empty();
-        this.storageClass = Output.empty();
+        this.date = Codegen.empty();
+        this.days = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder date(@Nullable String date) {
-            this.date = Output.ofNullable(date);
+            this.date = Codegen.ofNullable(date);
             return this;
         }
         public Builder days(@Nullable Output<Integer> days) {
@@ -100,7 +101,7 @@ public final class BucketLifecycleRuleTransitionGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder days(@Nullable Integer days) {
-            this.days = Output.ofNullable(days);
+            this.days = Codegen.ofNullable(days);
             return this;
         }
         public Builder storageClass(Output<String> storageClass) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> additionalLatencyMilliseconds;
 
     public Output<Integer> getAdditionalLatencyMilliseconds() {
-        return this.additionalLatencyMilliseconds == null ? Output.empty() : this.additionalLatencyMilliseconds;
+        return this.additionalLatencyMilliseconds == null ? Codegen.empty() : this.additionalLatencyMilliseconds;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> sampleSize;
 
     public Output<Integer> getSampleSize() {
-        return this.sampleSize == null ? Output.empty() : this.sampleSize;
+        return this.sampleSize == null ? Codegen.empty() : this.sampleSize;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> successfulSamplesRequired;
 
     public Output<Integer> getSuccessfulSamplesRequired() {
-        return this.successfulSamplesRequired == null ? Output.empty() : this.successfulSamplesRequired;
+        return this.successfulSamplesRequired == null ? Codegen.empty() : this.successfulSamplesRequired;
     }
 
     public LoadBalancingSettingsModelArgs(
@@ -88,11 +89,11 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
     }
 
     private LoadBalancingSettingsModelArgs() {
-        this.additionalLatencyMilliseconds = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.sampleSize = Output.empty();
-        this.successfulSamplesRequired = Output.empty();
+        this.additionalLatencyMilliseconds = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sampleSize = Codegen.empty();
+        this.successfulSamplesRequired = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder additionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
-            this.additionalLatencyMilliseconds = Output.ofNullable(additionalLatencyMilliseconds);
+            this.additionalLatencyMilliseconds = Codegen.ofNullable(additionalLatencyMilliseconds);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -136,7 +137,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -144,7 +145,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sampleSize(@Nullable Output<Integer> sampleSize) {
@@ -152,7 +153,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder sampleSize(@Nullable Integer sampleSize) {
-            this.sampleSize = Output.ofNullable(sampleSize);
+            this.sampleSize = Codegen.ofNullable(sampleSize);
             return this;
         }
         public Builder successfulSamplesRequired(@Nullable Output<Integer> successfulSamplesRequired) {
@@ -160,7 +161,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
-            this.successfulSamplesRequired = Output.ofNullable(successfulSamplesRequired);
+            this.successfulSamplesRequired = Codegen.ofNullable(successfulSamplesRequired);
             return this;
         }        public LoadBalancingSettingsModelArgs build() {
             return new LoadBalancingSettingsModelArgs(additionalLatencyMilliseconds, id, name, sampleSize, successfulSamplesRequired);

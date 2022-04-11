@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiKey;
 
     public Output<String> getApiKey() {
-        return this.apiKey == null ? Output.empty() : this.apiKey;
+        return this.apiKey == null ? Codegen.empty() : this.apiKey;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretKey;
 
     public Output<String> getSecretKey() {
-        return this.secretKey == null ? Output.empty() : this.secretKey;
+        return this.secretKey == null ? Codegen.empty() : this.secretKey;
     }
 
     public BaiduChannelState(
@@ -71,10 +72,10 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BaiduChannelState() {
-        this.apiKey = Output.empty();
-        this.applicationId = Output.empty();
-        this.enabled = Output.empty();
-        this.secretKey = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.secretKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiKey(@Nullable String apiKey) {
-            this.apiKey = Output.ofNullable(apiKey);
+            this.apiKey = Codegen.ofNullable(apiKey);
             return this;
         }
         public Builder applicationId(@Nullable Output<String> applicationId) {
@@ -116,7 +117,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -124,7 +125,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder secretKey(@Nullable Output<String> secretKey) {
@@ -132,7 +133,7 @@ public final class BaiduChannelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretKey(@Nullable String secretKey) {
-            this.secretKey = Output.ofNullable(secretKey);
+            this.secretKey = Codegen.ofNullable(secretKey);
             return this;
         }        public BaiduChannelState build() {
             return new BaiduChannelState(apiKey, applicationId, enabled, secretKey);

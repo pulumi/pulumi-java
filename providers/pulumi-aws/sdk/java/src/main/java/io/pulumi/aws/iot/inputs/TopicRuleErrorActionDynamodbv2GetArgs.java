@@ -6,6 +6,7 @@ package io.pulumi.aws.iot.inputs;
 import io.pulumi.aws.iot.inputs.TopicRuleErrorActionDynamodbv2PutItemGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends io.pulumi.resou
       private final @Nullable Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> putItem;
 
     public Output<TopicRuleErrorActionDynamodbv2PutItemGetArgs> getPutItem() {
-        return this.putItem == null ? Output.empty() : this.putItem;
+        return this.putItem == null ? Codegen.empty() : this.putItem;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends io.pulumi.resou
     }
 
     private TopicRuleErrorActionDynamodbv2GetArgs() {
-        this.putItem = Output.empty();
-        this.roleArn = Output.empty();
+        this.putItem = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TopicRuleErrorActionDynamodbv2GetArgs extends io.pulumi.resou
             return this;
         }
         public Builder putItem(@Nullable TopicRuleErrorActionDynamodbv2PutItemGetArgs putItem) {
-            this.putItem = Output.ofNullable(putItem);
+            this.putItem = Codegen.ofNullable(putItem);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

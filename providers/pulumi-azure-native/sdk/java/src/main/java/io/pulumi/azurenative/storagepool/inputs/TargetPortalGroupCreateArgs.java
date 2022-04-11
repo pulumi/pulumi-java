@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storagepool.inputs.AttributesArgs;
 import io.pulumi.azurenative.storagepool.inputs.IscsiLunArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -63,9 +64,9 @@ public final class TargetPortalGroupCreateArgs extends io.pulumi.resources.Resou
     }
 
     private TargetPortalGroupCreateArgs() {
-        this.acls = Output.empty();
-        this.attributes = Output.empty();
-        this.luns = Output.empty();
+        this.acls = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.luns = Codegen.empty();
     }
 
     public static Builder builder() {

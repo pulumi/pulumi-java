@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelInstanceIAMPolicyArgs;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMPolicyState;
@@ -149,7 +150,7 @@ public class TunnelInstanceIAMPolicy extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public TunnelInstanceIAMPolicy(String name, TunnelInstanceIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/tunnelInstanceIAMPolicy:TunnelInstanceIAMPolicy", name, args == null ? TunnelInstanceIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/tunnelInstanceIAMPolicy:TunnelInstanceIAMPolicy", name, args == null ? TunnelInstanceIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TunnelInstanceIAMPolicy(String name, Output<String> id, @Nullable TunnelInstanceIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

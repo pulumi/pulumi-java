@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public GoogleCloudRunOpV2SecretKeySelectorArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
     }
 
     private GoogleCloudRunOpV2SecretKeySelectorArgs() {
-        this.secret = Output.empty();
-        this.version = Output.empty();
+        this.secret = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class GoogleCloudRunOpV2SecretKeySelectorArgs extends io.pulumi.res
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public GoogleCloudRunOpV2SecretKeySelectorArgs build() {
             return new GoogleCloudRunOpV2SecretKeySelectorArgs(secret, version);

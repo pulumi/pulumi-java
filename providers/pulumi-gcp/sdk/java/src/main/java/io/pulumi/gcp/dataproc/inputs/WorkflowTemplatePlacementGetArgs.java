@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementClusterSelectorGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterGetArgs;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
       private final @Nullable Output<WorkflowTemplatePlacementClusterSelectorGetArgs> clusterSelector;
 
     public Output<WorkflowTemplatePlacementClusterSelectorGetArgs> getClusterSelector() {
-        return this.clusterSelector == null ? Output.empty() : this.clusterSelector;
+        return this.clusterSelector == null ? Codegen.empty() : this.clusterSelector;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster;
 
     public Output<WorkflowTemplatePlacementManagedClusterGetArgs> getManagedCluster() {
-        return this.managedCluster == null ? Output.empty() : this.managedCluster;
+        return this.managedCluster == null ? Codegen.empty() : this.managedCluster;
     }
 
     public WorkflowTemplatePlacementGetArgs(
@@ -45,8 +46,8 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
     }
 
     private WorkflowTemplatePlacementGetArgs() {
-        this.clusterSelector = Output.empty();
-        this.managedCluster = Output.empty();
+        this.clusterSelector = Codegen.empty();
+        this.managedCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder clusterSelector(@Nullable WorkflowTemplatePlacementClusterSelectorGetArgs clusterSelector) {
-            this.clusterSelector = Output.ofNullable(clusterSelector);
+            this.clusterSelector = Codegen.ofNullable(clusterSelector);
             return this;
         }
         public Builder managedCluster(@Nullable Output<WorkflowTemplatePlacementManagedClusterGetArgs> managedCluster) {
@@ -84,7 +85,7 @@ public final class WorkflowTemplatePlacementGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder managedCluster(@Nullable WorkflowTemplatePlacementManagedClusterGetArgs managedCluster) {
-            this.managedCluster = Output.ofNullable(managedCluster);
+            this.managedCluster = Codegen.ofNullable(managedCluster);
             return this;
         }        public WorkflowTemplatePlacementGetArgs build() {
             return new WorkflowTemplatePlacementGetArgs(clusterSelector, managedCluster);

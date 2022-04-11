@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
       private final @Nullable Output<Integer> maxDegreeOfParallelismPerJob;
 
     public Output<Integer> getMaxDegreeOfParallelismPerJob() {
-        return this.maxDegreeOfParallelismPerJob == null ? Output.empty() : this.maxDegreeOfParallelismPerJob;
+        return this.maxDegreeOfParallelismPerJob == null ? Codegen.empty() : this.maxDegreeOfParallelismPerJob;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
       private final @Nullable Output<Integer> minPriorityPerJob;
 
     public Output<Integer> getMinPriorityPerJob() {
-        return this.minPriorityPerJob == null ? Output.empty() : this.minPriorityPerJob;
+        return this.minPriorityPerJob == null ? Codegen.empty() : this.minPriorityPerJob;
     }
 
     /**
@@ -90,11 +91,11 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
     }
 
     private CreateComputePolicyWithAccountParametersArgs() {
-        this.maxDegreeOfParallelismPerJob = Output.empty();
-        this.minPriorityPerJob = Output.empty();
-        this.name = Output.empty();
-        this.objectId = Output.empty();
-        this.objectType = Output.empty();
+        this.maxDegreeOfParallelismPerJob = Codegen.empty();
+        this.minPriorityPerJob = Codegen.empty();
+        this.name = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
             return this;
         }
         public Builder maxDegreeOfParallelismPerJob(@Nullable Integer maxDegreeOfParallelismPerJob) {
-            this.maxDegreeOfParallelismPerJob = Output.ofNullable(maxDegreeOfParallelismPerJob);
+            this.maxDegreeOfParallelismPerJob = Codegen.ofNullable(maxDegreeOfParallelismPerJob);
             return this;
         }
         public Builder minPriorityPerJob(@Nullable Output<Integer> minPriorityPerJob) {
@@ -138,7 +139,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
             return this;
         }
         public Builder minPriorityPerJob(@Nullable Integer minPriorityPerJob) {
-            this.minPriorityPerJob = Output.ofNullable(minPriorityPerJob);
+            this.minPriorityPerJob = Codegen.ofNullable(minPriorityPerJob);
             return this;
         }
         public Builder name(Output<String> name) {

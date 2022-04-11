@@ -8,6 +8,7 @@ import io.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AdvancedScheduleArgs> advancedSchedule;
 
     public Output<AdvancedScheduleArgs> getAdvancedSchedule() {
-        return this.advancedSchedule == null ? Output.empty() : this.advancedSchedule;
+        return this.advancedSchedule == null ? Codegen.empty() : this.advancedSchedule;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expiryTime;
 
     public Output<String> getExpiryTime() {
-        return this.expiryTime == null ? Output.empty() : this.expiryTime;
+        return this.expiryTime == null ? Codegen.empty() : this.expiryTime;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> interval;
 
     public Output<Object> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scheduleName;
 
     public Output<String> getScheduleName() {
-        return this.scheduleName == null ? Output.empty() : this.scheduleName;
+        return this.scheduleName == null ? Codegen.empty() : this.scheduleName;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public ScheduleArgs(
@@ -165,17 +166,17 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.advancedSchedule = Output.empty();
-        this.automationAccountName = Output.empty();
-        this.description = Output.empty();
-        this.expiryTime = Output.empty();
-        this.frequency = Output.empty();
-        this.interval = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scheduleName = Output.empty();
-        this.startTime = Output.empty();
-        this.timeZone = Output.empty();
+        this.advancedSchedule = Codegen.empty();
+        this.automationAccountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expiryTime = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.interval = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scheduleName = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advancedSchedule(@Nullable AdvancedScheduleArgs advancedSchedule) {
-            this.advancedSchedule = Output.ofNullable(advancedSchedule);
+            this.advancedSchedule = Codegen.ofNullable(advancedSchedule);
             return this;
         }
         public Builder automationAccountName(Output<String> automationAccountName) {
@@ -239,7 +240,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
@@ -247,7 +248,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiryTime(@Nullable String expiryTime) {
-            this.expiryTime = Output.ofNullable(expiryTime);
+            this.expiryTime = Codegen.ofNullable(expiryTime);
             return this;
         }
         public Builder frequency(Output<Either<String,ScheduleFrequency>> frequency) {
@@ -263,7 +264,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interval(@Nullable Object interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -287,7 +288,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scheduleName(@Nullable String scheduleName) {
-            this.scheduleName = Output.ofNullable(scheduleName);
+            this.scheduleName = Codegen.ofNullable(scheduleName);
             return this;
         }
         public Builder startTime(Output<String> startTime) {
@@ -303,7 +304,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public ScheduleArgs build() {
             return new ScheduleArgs(advancedSchedule, automationAccountName, description, expiryTime, frequency, interval, name, resourceGroupName, scheduleName, startTime, timeZone);

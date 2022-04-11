@@ -7,6 +7,7 @@ import io.pulumi.azurenative.avs.inputs.DiskPoolVolumeArgs;
 import io.pulumi.azurenative.avs.inputs.NetAppVolumeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datastoreName;
 
     public Output<String> getDatastoreName() {
-        return this.datastoreName == null ? Output.empty() : this.datastoreName;
+        return this.datastoreName == null ? Codegen.empty() : this.datastoreName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiskPoolVolumeArgs> diskPoolVolume;
 
     public Output<DiskPoolVolumeArgs> getDiskPoolVolume() {
-        return this.diskPoolVolume == null ? Output.empty() : this.diskPoolVolume;
+        return this.diskPoolVolume == null ? Codegen.empty() : this.diskPoolVolume;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetAppVolumeArgs> netAppVolume;
 
     public Output<NetAppVolumeArgs> getNetAppVolume() {
-        return this.netAppVolume == null ? Output.empty() : this.netAppVolume;
+        return this.netAppVolume == null ? Codegen.empty() : this.netAppVolume;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatastoreArgs() {
-        this.clusterName = Output.empty();
-        this.datastoreName = Output.empty();
-        this.diskPoolVolume = Output.empty();
-        this.netAppVolume = Output.empty();
-        this.privateCloudName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.datastoreName = Codegen.empty();
+        this.diskPoolVolume = Codegen.empty();
+        this.netAppVolume = Codegen.empty();
+        this.privateCloudName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreName(@Nullable String datastoreName) {
-            this.datastoreName = Output.ofNullable(datastoreName);
+            this.datastoreName = Codegen.ofNullable(datastoreName);
             return this;
         }
         public Builder diskPoolVolume(@Nullable Output<DiskPoolVolumeArgs> diskPoolVolume) {
@@ -157,7 +158,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskPoolVolume(@Nullable DiskPoolVolumeArgs diskPoolVolume) {
-            this.diskPoolVolume = Output.ofNullable(diskPoolVolume);
+            this.diskPoolVolume = Codegen.ofNullable(diskPoolVolume);
             return this;
         }
         public Builder netAppVolume(@Nullable Output<NetAppVolumeArgs> netAppVolume) {
@@ -165,7 +166,7 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder netAppVolume(@Nullable NetAppVolumeArgs netAppVolume) {
-            this.netAppVolume = Output.ofNullable(netAppVolume);
+            this.netAppVolume = Codegen.ofNullable(netAppVolume);
             return this;
         }
         public Builder privateCloudName(Output<String> privateCloudName) {

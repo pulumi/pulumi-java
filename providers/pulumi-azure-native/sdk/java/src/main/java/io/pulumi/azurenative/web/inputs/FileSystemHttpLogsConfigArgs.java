@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> retentionInDays;
 
     public Output<Integer> getRetentionInDays() {
-        return this.retentionInDays == null ? Output.empty() : this.retentionInDays;
+        return this.retentionInDays == null ? Codegen.empty() : this.retentionInDays;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> retentionInMb;
 
     public Output<Integer> getRetentionInMb() {
-        return this.retentionInMb == null ? Output.empty() : this.retentionInMb;
+        return this.retentionInMb == null ? Codegen.empty() : this.retentionInMb;
     }
 
     public FileSystemHttpLogsConfigArgs(
@@ -66,9 +67,9 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
     }
 
     private FileSystemHttpLogsConfigArgs() {
-        this.enabled = Output.empty();
-        this.retentionInDays = Output.empty();
-        this.retentionInMb = Output.empty();
+        this.enabled = Codegen.empty();
+        this.retentionInDays = Codegen.empty();
+        this.retentionInMb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
@@ -108,7 +109,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder retentionInDays(@Nullable Integer retentionInDays) {
-            this.retentionInDays = Output.ofNullable(retentionInDays);
+            this.retentionInDays = Codegen.ofNullable(retentionInDays);
             return this;
         }
         public Builder retentionInMb(@Nullable Output<Integer> retentionInMb) {
@@ -116,7 +117,7 @@ public final class FileSystemHttpLogsConfigArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder retentionInMb(@Nullable Integer retentionInMb) {
-            this.retentionInMb = Output.ofNullable(retentionInMb);
+            this.retentionInMb = Codegen.ofNullable(retentionInMb);
             return this;
         }        public FileSystemHttpLogsConfigArgs build() {
             return new FileSystemHttpLogsConfigArgs(enabled, retentionInDays, retentionInMb);

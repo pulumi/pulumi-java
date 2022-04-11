@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
       private final @Nullable Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> environment;
 
     public Output<GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
       private final @Nullable Output<Map<String,String>> transformNameMapping;
 
     public Output<Map<String,String>> getTransformNameMapping() {
-        return this.transformNameMapping == null ? Output.empty() : this.transformNameMapping;
+        return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
       private final @Nullable Output<Boolean> update;
 
     public Output<Boolean> getUpdate() {
-        return this.update == null ? Output.empty() : this.update;
+        return this.update == null ? Codegen.empty() : this.update;
     }
 
     public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(
@@ -90,11 +91,11 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
     }
 
     private GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs() {
-        this.environment = Output.empty();
-        this.jobName = Output.empty();
-        this.parameters = Output.empty();
-        this.transformNameMapping = Output.empty();
-        this.update = Output.empty();
+        this.environment = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.transformNameMapping = Codegen.empty();
+        this.update = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             return this;
         }
         public Builder environment(@Nullable GoogleCloudDatapipelinesV1RuntimeEnvironmentArgs environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder jobName(Output<String> jobName) {
@@ -146,7 +147,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder transformNameMapping(@Nullable Output<Map<String,String>> transformNameMapping) {
@@ -154,7 +155,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             return this;
         }
         public Builder transformNameMapping(@Nullable Map<String,String> transformNameMapping) {
-            this.transformNameMapping = Output.ofNullable(transformNameMapping);
+            this.transformNameMapping = Codegen.ofNullable(transformNameMapping);
             return this;
         }
         public Builder update(@Nullable Output<Boolean> update) {
@@ -162,7 +163,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs extend
             return this;
         }
         public Builder update(@Nullable Boolean update) {
-            this.update = Output.ofNullable(update);
+            this.update = Codegen.ofNullable(update);
             return this;
         }        public GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersArgs(environment, jobName, parameters, transformNameMapping, update);

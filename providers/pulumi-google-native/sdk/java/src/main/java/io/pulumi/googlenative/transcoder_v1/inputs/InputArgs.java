@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.transcoder_v1.inputs.PreprocessingConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PreprocessingConfigArgs> preprocessingConfig;
 
     public Output<PreprocessingConfigArgs> getPreprocessingConfig() {
-        return this.preprocessingConfig == null ? Output.empty() : this.preprocessingConfig;
+        return this.preprocessingConfig == null ? Codegen.empty() : this.preprocessingConfig;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public InputArgs(
@@ -62,9 +63,9 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InputArgs() {
-        this.key = Output.empty();
-        this.preprocessingConfig = Output.empty();
-        this.uri = Output.empty();
+        this.key = Codegen.empty();
+        this.preprocessingConfig = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder preprocessingConfig(@Nullable Output<PreprocessingConfigArgs> preprocessingConfig) {
@@ -104,7 +105,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preprocessingConfig(@Nullable PreprocessingConfigArgs preprocessingConfig) {
-            this.preprocessingConfig = Output.ofNullable(preprocessingConfig);
+            this.preprocessingConfig = Codegen.ofNullable(preprocessingConfig);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -112,7 +113,7 @@ public final class InputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public InputArgs build() {
             return new InputArgs(key, preprocessingConfig, uri);

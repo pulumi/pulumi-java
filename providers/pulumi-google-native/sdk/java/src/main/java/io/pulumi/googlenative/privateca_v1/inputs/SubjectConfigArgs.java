@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectAltNamesArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectArgs;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubjectAltNamesArgs> subjectAltName;
 
     public Output<SubjectAltNamesArgs> getSubjectAltName() {
-        return this.subjectAltName == null ? Output.empty() : this.subjectAltName;
+        return this.subjectAltName == null ? Codegen.empty() : this.subjectAltName;
     }
 
     public SubjectConfigArgs(
@@ -49,8 +50,8 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubjectConfigArgs() {
-        this.subject = Output.empty();
-        this.subjectAltName = Output.empty();
+        this.subject = Codegen.empty();
+        this.subjectAltName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SubjectConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subjectAltName(@Nullable SubjectAltNamesArgs subjectAltName) {
-            this.subjectAltName = Output.ofNullable(subjectAltName);
+            this.subjectAltName = Codegen.ofNullable(subjectAltName);
             return this;
         }        public SubjectConfigArgs build() {
             return new SubjectConfigArgs(subject, subjectAltName);

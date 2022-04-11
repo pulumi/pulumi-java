@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.meta_v1.inputs;
 import com.google.gson.JsonElement;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> fieldsType;
 
     public Output<String> getFieldsType() {
-        return this.fieldsType == null ? Output.empty() : this.fieldsType;
+        return this.fieldsType == null ? Codegen.empty() : this.fieldsType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<JsonElement> fieldsV1;
 
     public Output<JsonElement> getFieldsV1() {
-        return this.fieldsV1 == null ? Output.empty() : this.fieldsV1;
+        return this.fieldsV1 == null ? Codegen.empty() : this.fieldsV1;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> manager;
 
     public Output<String> getManager() {
-        return this.manager == null ? Output.empty() : this.manager;
+        return this.manager == null ? Codegen.empty() : this.manager;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> operation;
 
     public Output<String> getOperation() {
-        return this.operation == null ? Output.empty() : this.operation;
+        return this.operation == null ? Codegen.empty() : this.operation;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> subresource;
 
     public Output<String> getSubresource() {
-        return this.subresource == null ? Output.empty() : this.subresource;
+        return this.subresource == null ? Codegen.empty() : this.subresource;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     public ManagedFieldsEntryArgs(
@@ -114,13 +115,13 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ManagedFieldsEntryArgs() {
-        this.apiVersion = Output.empty();
-        this.fieldsType = Output.empty();
-        this.fieldsV1 = Output.empty();
-        this.manager = Output.empty();
-        this.operation = Output.empty();
-        this.subresource = Output.empty();
-        this.time = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.fieldsType = Codegen.empty();
+        this.fieldsV1 = Codegen.empty();
+        this.manager = Codegen.empty();
+        this.operation = Codegen.empty();
+        this.subresource = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder fieldsType(@Nullable Output<String> fieldsType) {
@@ -168,7 +169,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fieldsType(@Nullable String fieldsType) {
-            this.fieldsType = Output.ofNullable(fieldsType);
+            this.fieldsType = Codegen.ofNullable(fieldsType);
             return this;
         }
         public Builder fieldsV1(@Nullable Output<JsonElement> fieldsV1) {
@@ -176,7 +177,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder fieldsV1(@Nullable JsonElement fieldsV1) {
-            this.fieldsV1 = Output.ofNullable(fieldsV1);
+            this.fieldsV1 = Codegen.ofNullable(fieldsV1);
             return this;
         }
         public Builder manager(@Nullable Output<String> manager) {
@@ -184,7 +185,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder manager(@Nullable String manager) {
-            this.manager = Output.ofNullable(manager);
+            this.manager = Codegen.ofNullable(manager);
             return this;
         }
         public Builder operation(@Nullable Output<String> operation) {
@@ -192,7 +193,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder operation(@Nullable String operation) {
-            this.operation = Output.ofNullable(operation);
+            this.operation = Codegen.ofNullable(operation);
             return this;
         }
         public Builder subresource(@Nullable Output<String> subresource) {
@@ -200,7 +201,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subresource(@Nullable String subresource) {
-            this.subresource = Output.ofNullable(subresource);
+            this.subresource = Codegen.ofNullable(subresource);
             return this;
         }
         public Builder time(@Nullable Output<String> time) {
@@ -208,7 +209,7 @@ public final class ManagedFieldsEntryArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }        public ManagedFieldsEntryArgs build() {
             return new ManagedFieldsEntryArgs(apiVersion, fieldsType, fieldsV1, manager, operation, subresource, time);

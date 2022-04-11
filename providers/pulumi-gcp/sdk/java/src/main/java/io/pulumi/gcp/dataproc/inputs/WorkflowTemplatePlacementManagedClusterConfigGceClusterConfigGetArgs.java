@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs;
 import java.lang.Boolean;
@@ -27,7 +28,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<Boolean> internalIpOnly;
 
     public Output<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
+        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs> nodeGroupAffinity;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs> getNodeGroupAffinity() {
-        return this.nodeGroupAffinity == null ? Output.empty() : this.nodeGroupAffinity;
+        return this.nodeGroupAffinity == null ? Codegen.empty() : this.nodeGroupAffinity;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<String> privateIpv6GoogleAccess;
 
     public Output<String> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
+        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs> reservationAffinity;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
+        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
     public Output<List<String>> getServiceAccountScopes() {
-        return this.serviceAccountScopes == null ? Output.empty() : this.serviceAccountScopes;
+        return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs(
@@ -166,17 +167,17 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs() {
-        this.internalIpOnly = Output.empty();
-        this.metadata = Output.empty();
-        this.network = Output.empty();
-        this.nodeGroupAffinity = Output.empty();
-        this.privateIpv6GoogleAccess = Output.empty();
-        this.reservationAffinity = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceAccountScopes = Output.empty();
-        this.subnetwork = Output.empty();
-        this.tags = Output.empty();
-        this.zone = Output.empty();
+        this.internalIpOnly = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nodeGroupAffinity = Codegen.empty();
+        this.privateIpv6GoogleAccess = Codegen.empty();
+        this.reservationAffinity = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceAccountScopes = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Output.ofNullable(internalIpOnly);
+            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -232,7 +233,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -240,7 +241,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder nodeGroupAffinity(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs> nodeGroupAffinity) {
@@ -248,7 +249,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder nodeGroupAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinityGetArgs nodeGroupAffinity) {
-            this.nodeGroupAffinity = Output.ofNullable(nodeGroupAffinity);
+            this.nodeGroupAffinity = Codegen.ofNullable(nodeGroupAffinity);
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable Output<String> privateIpv6GoogleAccess) {
@@ -256,7 +257,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable String privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
         public Builder reservationAffinity(@Nullable Output<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs> reservationAffinity) {
@@ -264,7 +265,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder reservationAffinity(@Nullable WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinityGetArgs reservationAffinity) {
-            this.reservationAffinity = Output.ofNullable(reservationAffinity);
+            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -272,7 +273,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
@@ -280,7 +281,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
+            this.serviceAccountScopes = Codegen.ofNullable(serviceAccountScopes);
             return this;
         }
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
@@ -291,7 +292,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -299,7 +300,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -310,7 +311,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs(internalIpOnly, metadata, network, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, subnetwork, tags, zone);

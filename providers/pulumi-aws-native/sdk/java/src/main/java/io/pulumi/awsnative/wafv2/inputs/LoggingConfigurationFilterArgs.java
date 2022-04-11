@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -59,9 +60,9 @@ public final class LoggingConfigurationFilterArgs extends io.pulumi.resources.Re
     }
 
     private LoggingConfigurationFilterArgs() {
-        this.behavior = Output.empty();
-        this.conditions = Output.empty();
-        this.requirement = Output.empty();
+        this.behavior = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.requirement = Codegen.empty();
     }
 
     public static Builder builder() {

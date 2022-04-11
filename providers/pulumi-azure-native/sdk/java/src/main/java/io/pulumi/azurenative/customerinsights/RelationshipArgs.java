@@ -8,6 +8,7 @@ import io.pulumi.azurenative.customerinsights.inputs.PropertyDefinitionArgs;
 import io.pulumi.azurenative.customerinsights.inputs.RelationshipTypeMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CardinalityTypes> cardinality;
 
     public Output<CardinalityTypes> getCardinality() {
-        return this.cardinality == null ? Output.empty() : this.cardinality;
+        return this.cardinality == null ? Codegen.empty() : this.cardinality;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expiryDateTimeUtc;
 
     public Output<String> getExpiryDateTimeUtc() {
-        return this.expiryDateTimeUtc == null ? Output.empty() : this.expiryDateTimeUtc;
+        return this.expiryDateTimeUtc == null ? Codegen.empty() : this.expiryDateTimeUtc;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PropertyDefinitionArgs>> fields;
 
     public Output<List<PropertyDefinitionArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RelationshipTypeMappingArgs>> lookupMappings;
 
     public Output<List<RelationshipTypeMappingArgs>> getLookupMappings() {
-        return this.lookupMappings == null ? Output.empty() : this.lookupMappings;
+        return this.lookupMappings == null ? Codegen.empty() : this.lookupMappings;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> relationshipName;
 
     public Output<String> getRelationshipName() {
-        return this.relationshipName == null ? Output.empty() : this.relationshipName;
+        return this.relationshipName == null ? Codegen.empty() : this.relationshipName;
     }
 
     /**
@@ -166,17 +167,17 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RelationshipArgs() {
-        this.cardinality = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.expiryDateTimeUtc = Output.empty();
-        this.fields = Output.empty();
-        this.hubName = Output.empty();
-        this.lookupMappings = Output.empty();
-        this.profileType = Output.empty();
-        this.relatedProfileType = Output.empty();
-        this.relationshipName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.cardinality = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.expiryDateTimeUtc = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.hubName = Codegen.empty();
+        this.lookupMappings = Codegen.empty();
+        this.profileType = Codegen.empty();
+        this.relatedProfileType = Codegen.empty();
+        this.relationshipName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cardinality(@Nullable CardinalityTypes cardinality) {
-            this.cardinality = Output.ofNullable(cardinality);
+            this.cardinality = Codegen.ofNullable(cardinality);
             return this;
         }
         public Builder description(@Nullable Output<Map<String,String>> description) {
@@ -232,7 +233,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -240,7 +241,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder expiryDateTimeUtc(@Nullable Output<String> expiryDateTimeUtc) {
@@ -248,7 +249,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiryDateTimeUtc(@Nullable String expiryDateTimeUtc) {
-            this.expiryDateTimeUtc = Output.ofNullable(expiryDateTimeUtc);
+            this.expiryDateTimeUtc = Codegen.ofNullable(expiryDateTimeUtc);
             return this;
         }
         public Builder fields(@Nullable Output<List<PropertyDefinitionArgs>> fields) {
@@ -256,7 +257,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<PropertyDefinitionArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(PropertyDefinitionArgs... fields) {
@@ -275,7 +276,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lookupMappings(@Nullable List<RelationshipTypeMappingArgs> lookupMappings) {
-            this.lookupMappings = Output.ofNullable(lookupMappings);
+            this.lookupMappings = Codegen.ofNullable(lookupMappings);
             return this;
         }
         public Builder lookupMappings(RelationshipTypeMappingArgs... lookupMappings) {
@@ -302,7 +303,7 @@ public final class RelationshipArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relationshipName(@Nullable String relationshipName) {
-            this.relationshipName = Output.ofNullable(relationshipName);
+            this.relationshipName = Codegen.ofNullable(relationshipName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datacatalog_v1.enums.EntryType;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1BigQueryTableSpecArgs;
@@ -33,7 +34,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs> bigqueryDateShardedSpec;
 
     public Output<GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs> getBigqueryDateShardedSpec() {
-        return this.bigqueryDateShardedSpec == null ? Output.empty() : this.bigqueryDateShardedSpec;
+        return this.bigqueryDateShardedSpec == null ? Codegen.empty() : this.bigqueryDateShardedSpec;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1BigQueryTableSpecArgs> bigqueryTableSpec;
 
     public Output<GoogleCloudDatacatalogV1BigQueryTableSpecArgs> getBigqueryTableSpec() {
-        return this.bigqueryTableSpec == null ? Output.empty() : this.bigqueryTableSpec;
+        return this.bigqueryTableSpec == null ? Codegen.empty() : this.bigqueryTableSpec;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1BusinessContextArgs> businessContext;
 
     public Output<GoogleCloudDatacatalogV1BusinessContextArgs> getBusinessContext() {
-        return this.businessContext == null ? Output.empty() : this.businessContext;
+        return this.businessContext == null ? Codegen.empty() : this.businessContext;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs> dataSourceConnectionSpec;
 
     public Output<GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs> getDataSourceConnectionSpec() {
-        return this.dataSourceConnectionSpec == null ? Output.empty() : this.dataSourceConnectionSpec;
+        return this.dataSourceConnectionSpec == null ? Codegen.empty() : this.dataSourceConnectionSpec;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecArgs> databaseTableSpec;
 
     public Output<GoogleCloudDatacatalogV1DatabaseTableSpecArgs> getDatabaseTableSpec() {
-        return this.databaseTableSpec == null ? Output.empty() : this.databaseTableSpec;
+        return this.databaseTableSpec == null ? Codegen.empty() : this.databaseTableSpec;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="entryGroupId", required=true)
@@ -124,7 +125,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fullyQualifiedName;
 
     public Output<String> getFullyQualifiedName() {
-        return this.fullyQualifiedName == null ? Output.empty() : this.fullyQualifiedName;
+        return this.fullyQualifiedName == null ? Codegen.empty() : this.fullyQualifiedName;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1GcsFilesetSpecArgs> gcsFilesetSpec;
 
     public Output<GoogleCloudDatacatalogV1GcsFilesetSpecArgs> getGcsFilesetSpec() {
-        return this.gcsFilesetSpec == null ? Output.empty() : this.gcsFilesetSpec;
+        return this.gcsFilesetSpec == null ? Codegen.empty() : this.gcsFilesetSpec;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -157,21 +158,21 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkedResource;
 
     public Output<String> getLinkedResource() {
-        return this.linkedResource == null ? Output.empty() : this.linkedResource;
+        return this.linkedResource == null ? Codegen.empty() : this.linkedResource;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgs> routineSpec;
 
     public Output<GoogleCloudDatacatalogV1RoutineSpecArgs> getRoutineSpec() {
-        return this.routineSpec == null ? Output.empty() : this.routineSpec;
+        return this.routineSpec == null ? Codegen.empty() : this.routineSpec;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1SchemaArgs> schema;
 
     public Output<GoogleCloudDatacatalogV1SchemaArgs> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDatacatalogV1SystemTimestampsArgs> sourceSystemTimestamps;
 
     public Output<GoogleCloudDatacatalogV1SystemTimestampsArgs> getSourceSystemTimestamps() {
-        return this.sourceSystemTimestamps == null ? Output.empty() : this.sourceSystemTimestamps;
+        return this.sourceSystemTimestamps == null ? Codegen.empty() : this.sourceSystemTimestamps;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EntryType> type;
 
     public Output<EntryType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userSpecifiedSystem;
 
     public Output<String> getUserSpecifiedSystem() {
-        return this.userSpecifiedSystem == null ? Output.empty() : this.userSpecifiedSystem;
+        return this.userSpecifiedSystem == null ? Codegen.empty() : this.userSpecifiedSystem;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userSpecifiedType;
 
     public Output<String> getUserSpecifiedType() {
-        return this.userSpecifiedType == null ? Output.empty() : this.userSpecifiedType;
+        return this.userSpecifiedType == null ? Codegen.empty() : this.userSpecifiedType;
     }
 
     public EntryArgs(
@@ -286,27 +287,27 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EntryArgs() {
-        this.bigqueryDateShardedSpec = Output.empty();
-        this.bigqueryTableSpec = Output.empty();
-        this.businessContext = Output.empty();
-        this.dataSourceConnectionSpec = Output.empty();
-        this.databaseTableSpec = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.entryGroupId = Output.empty();
-        this.entryId = Output.empty();
-        this.fullyQualifiedName = Output.empty();
-        this.gcsFilesetSpec = Output.empty();
-        this.labels = Output.empty();
-        this.linkedResource = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.routineSpec = Output.empty();
-        this.schema = Output.empty();
-        this.sourceSystemTimestamps = Output.empty();
-        this.type = Output.empty();
-        this.userSpecifiedSystem = Output.empty();
-        this.userSpecifiedType = Output.empty();
+        this.bigqueryDateShardedSpec = Codegen.empty();
+        this.bigqueryTableSpec = Codegen.empty();
+        this.businessContext = Codegen.empty();
+        this.dataSourceConnectionSpec = Codegen.empty();
+        this.databaseTableSpec = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entryGroupId = Codegen.empty();
+        this.entryId = Codegen.empty();
+        this.fullyQualifiedName = Codegen.empty();
+        this.gcsFilesetSpec = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.linkedResource = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.routineSpec = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.sourceSystemTimestamps = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userSpecifiedSystem = Codegen.empty();
+        this.userSpecifiedType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -374,7 +375,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bigqueryDateShardedSpec(@Nullable GoogleCloudDatacatalogV1BigQueryDateShardedSpecArgs bigqueryDateShardedSpec) {
-            this.bigqueryDateShardedSpec = Output.ofNullable(bigqueryDateShardedSpec);
+            this.bigqueryDateShardedSpec = Codegen.ofNullable(bigqueryDateShardedSpec);
             return this;
         }
         public Builder bigqueryTableSpec(@Nullable Output<GoogleCloudDatacatalogV1BigQueryTableSpecArgs> bigqueryTableSpec) {
@@ -382,7 +383,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bigqueryTableSpec(@Nullable GoogleCloudDatacatalogV1BigQueryTableSpecArgs bigqueryTableSpec) {
-            this.bigqueryTableSpec = Output.ofNullable(bigqueryTableSpec);
+            this.bigqueryTableSpec = Codegen.ofNullable(bigqueryTableSpec);
             return this;
         }
         public Builder businessContext(@Nullable Output<GoogleCloudDatacatalogV1BusinessContextArgs> businessContext) {
@@ -390,7 +391,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder businessContext(@Nullable GoogleCloudDatacatalogV1BusinessContextArgs businessContext) {
-            this.businessContext = Output.ofNullable(businessContext);
+            this.businessContext = Codegen.ofNullable(businessContext);
             return this;
         }
         public Builder dataSourceConnectionSpec(@Nullable Output<GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs> dataSourceConnectionSpec) {
@@ -398,7 +399,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSourceConnectionSpec(@Nullable GoogleCloudDatacatalogV1DataSourceConnectionSpecArgs dataSourceConnectionSpec) {
-            this.dataSourceConnectionSpec = Output.ofNullable(dataSourceConnectionSpec);
+            this.dataSourceConnectionSpec = Codegen.ofNullable(dataSourceConnectionSpec);
             return this;
         }
         public Builder databaseTableSpec(@Nullable Output<GoogleCloudDatacatalogV1DatabaseTableSpecArgs> databaseTableSpec) {
@@ -406,7 +407,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseTableSpec(@Nullable GoogleCloudDatacatalogV1DatabaseTableSpecArgs databaseTableSpec) {
-            this.databaseTableSpec = Output.ofNullable(databaseTableSpec);
+            this.databaseTableSpec = Codegen.ofNullable(databaseTableSpec);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -414,7 +415,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -422,7 +423,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder entryGroupId(Output<String> entryGroupId) {
@@ -446,7 +447,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fullyQualifiedName(@Nullable String fullyQualifiedName) {
-            this.fullyQualifiedName = Output.ofNullable(fullyQualifiedName);
+            this.fullyQualifiedName = Codegen.ofNullable(fullyQualifiedName);
             return this;
         }
         public Builder gcsFilesetSpec(@Nullable Output<GoogleCloudDatacatalogV1GcsFilesetSpecArgs> gcsFilesetSpec) {
@@ -454,7 +455,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcsFilesetSpec(@Nullable GoogleCloudDatacatalogV1GcsFilesetSpecArgs gcsFilesetSpec) {
-            this.gcsFilesetSpec = Output.ofNullable(gcsFilesetSpec);
+            this.gcsFilesetSpec = Codegen.ofNullable(gcsFilesetSpec);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -462,7 +463,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder linkedResource(@Nullable Output<String> linkedResource) {
@@ -470,7 +471,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedResource(@Nullable String linkedResource) {
-            this.linkedResource = Output.ofNullable(linkedResource);
+            this.linkedResource = Codegen.ofNullable(linkedResource);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -478,7 +479,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -486,7 +487,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder routineSpec(@Nullable Output<GoogleCloudDatacatalogV1RoutineSpecArgs> routineSpec) {
@@ -494,7 +495,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routineSpec(@Nullable GoogleCloudDatacatalogV1RoutineSpecArgs routineSpec) {
-            this.routineSpec = Output.ofNullable(routineSpec);
+            this.routineSpec = Codegen.ofNullable(routineSpec);
             return this;
         }
         public Builder schema(@Nullable Output<GoogleCloudDatacatalogV1SchemaArgs> schema) {
@@ -502,7 +503,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable GoogleCloudDatacatalogV1SchemaArgs schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder sourceSystemTimestamps(@Nullable Output<GoogleCloudDatacatalogV1SystemTimestampsArgs> sourceSystemTimestamps) {
@@ -510,7 +511,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceSystemTimestamps(@Nullable GoogleCloudDatacatalogV1SystemTimestampsArgs sourceSystemTimestamps) {
-            this.sourceSystemTimestamps = Output.ofNullable(sourceSystemTimestamps);
+            this.sourceSystemTimestamps = Codegen.ofNullable(sourceSystemTimestamps);
             return this;
         }
         public Builder type(@Nullable Output<EntryType> type) {
@@ -518,7 +519,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable EntryType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder userSpecifiedSystem(@Nullable Output<String> userSpecifiedSystem) {
@@ -526,7 +527,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSpecifiedSystem(@Nullable String userSpecifiedSystem) {
-            this.userSpecifiedSystem = Output.ofNullable(userSpecifiedSystem);
+            this.userSpecifiedSystem = Codegen.ofNullable(userSpecifiedSystem);
             return this;
         }
         public Builder userSpecifiedType(@Nullable Output<String> userSpecifiedType) {
@@ -534,7 +535,7 @@ public final class EntryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userSpecifiedType(@Nullable String userSpecifiedType) {
-            this.userSpecifiedType = Output.ofNullable(userSpecifiedType);
+            this.userSpecifiedType = Codegen.ofNullable(userSpecifiedType);
             return this;
         }        public EntryArgs build() {
             return new EntryArgs(bigqueryDateShardedSpec, bigqueryTableSpec, businessContext, dataSourceConnectionSpec, databaseTableSpec, description, displayName, entryGroupId, entryId, fullyQualifiedName, gcsFilesetSpec, labels, linkedResource, location, project, routineSpec, schema, sourceSystemTimestamps, type, userSpecifiedSystem, userSpecifiedType);

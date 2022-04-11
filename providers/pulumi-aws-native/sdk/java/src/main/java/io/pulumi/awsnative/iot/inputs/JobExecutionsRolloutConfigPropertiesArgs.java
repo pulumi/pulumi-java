@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.JobTemplateExponentialRolloutRateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
     public Output<JobTemplateExponentialRolloutRateArgs> getExponentialRolloutRate() {
-        return this.exponentialRolloutRate == null ? Output.empty() : this.exponentialRolloutRate;
+        return this.exponentialRolloutRate == null ? Codegen.empty() : this.exponentialRolloutRate;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<Integer> maximumPerMinute;
 
     public Output<Integer> getMaximumPerMinute() {
-        return this.maximumPerMinute == null ? Output.empty() : this.maximumPerMinute;
+        return this.maximumPerMinute == null ? Codegen.empty() : this.maximumPerMinute;
     }
 
     public JobExecutionsRolloutConfigPropertiesArgs(
@@ -49,8 +50,8 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
     }
 
     private JobExecutionsRolloutConfigPropertiesArgs() {
-        this.exponentialRolloutRate = Output.empty();
-        this.maximumPerMinute = Output.empty();
+        this.exponentialRolloutRate = Codegen.empty();
+        this.maximumPerMinute = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder exponentialRolloutRate(@Nullable JobTemplateExponentialRolloutRateArgs exponentialRolloutRate) {
-            this.exponentialRolloutRate = Output.ofNullable(exponentialRolloutRate);
+            this.exponentialRolloutRate = Codegen.ofNullable(exponentialRolloutRate);
             return this;
         }
         public Builder maximumPerMinute(@Nullable Output<Integer> maximumPerMinute) {
@@ -88,7 +89,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder maximumPerMinute(@Nullable Integer maximumPerMinute) {
-            this.maximumPerMinute = Output.ofNullable(maximumPerMinute);
+            this.maximumPerMinute = Codegen.ofNullable(maximumPerMinute);
             return this;
         }        public JobExecutionsRolloutConfigPropertiesArgs build() {
             return new JobExecutionsRolloutConfigPropertiesArgs(exponentialRolloutRate, maximumPerMinute);

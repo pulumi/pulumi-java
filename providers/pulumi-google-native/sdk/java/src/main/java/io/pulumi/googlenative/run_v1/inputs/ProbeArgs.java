@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v1.inputs.ExecActionArgs;
 import io.pulumi.googlenative.run_v1.inputs.HTTPGetActionArgs;
 import io.pulumi.googlenative.run_v1.inputs.TCPSocketActionArgs;
@@ -29,7 +30,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExecActionArgs> exec;
 
     public Output<ExecActionArgs> getExec() {
-        return this.exec == null ? Output.empty() : this.exec;
+        return this.exec == null ? Codegen.empty() : this.exec;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HTTPGetActionArgs> httpGet;
 
     public Output<HTTPGetActionArgs> getHttpGet() {
-        return this.httpGet == null ? Output.empty() : this.httpGet;
+        return this.httpGet == null ? Codegen.empty() : this.httpGet;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> initialDelaySeconds;
 
     public Output<Integer> getInitialDelaySeconds() {
-        return this.initialDelaySeconds == null ? Output.empty() : this.initialDelaySeconds;
+        return this.initialDelaySeconds == null ? Codegen.empty() : this.initialDelaySeconds;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> periodSeconds;
 
     public Output<Integer> getPeriodSeconds() {
-        return this.periodSeconds == null ? Output.empty() : this.periodSeconds;
+        return this.periodSeconds == null ? Codegen.empty() : this.periodSeconds;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> successThreshold;
 
     public Output<Integer> getSuccessThreshold() {
-        return this.successThreshold == null ? Output.empty() : this.successThreshold;
+        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TCPSocketActionArgs> tcpSocket;
 
     public Output<TCPSocketActionArgs> getTcpSocket() {
-        return this.tcpSocket == null ? Output.empty() : this.tcpSocket;
+        return this.tcpSocket == null ? Codegen.empty() : this.tcpSocket;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     public ProbeArgs(
@@ -129,14 +130,14 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProbeArgs() {
-        this.exec = Output.empty();
-        this.failureThreshold = Output.empty();
-        this.httpGet = Output.empty();
-        this.initialDelaySeconds = Output.empty();
-        this.periodSeconds = Output.empty();
-        this.successThreshold = Output.empty();
-        this.tcpSocket = Output.empty();
-        this.timeoutSeconds = Output.empty();
+        this.exec = Codegen.empty();
+        this.failureThreshold = Codegen.empty();
+        this.httpGet = Codegen.empty();
+        this.initialDelaySeconds = Codegen.empty();
+        this.periodSeconds = Codegen.empty();
+        this.successThreshold = Codegen.empty();
+        this.tcpSocket = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exec(@Nullable ExecActionArgs exec) {
-            this.exec = Output.ofNullable(exec);
+            this.exec = Codegen.ofNullable(exec);
             return this;
         }
         public Builder failureThreshold(@Nullable Output<Integer> failureThreshold) {
@@ -186,7 +187,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }
         public Builder httpGet(@Nullable Output<HTTPGetActionArgs> httpGet) {
@@ -194,7 +195,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpGet(@Nullable HTTPGetActionArgs httpGet) {
-            this.httpGet = Output.ofNullable(httpGet);
+            this.httpGet = Codegen.ofNullable(httpGet);
             return this;
         }
         public Builder initialDelaySeconds(@Nullable Output<Integer> initialDelaySeconds) {
@@ -202,7 +203,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initialDelaySeconds(@Nullable Integer initialDelaySeconds) {
-            this.initialDelaySeconds = Output.ofNullable(initialDelaySeconds);
+            this.initialDelaySeconds = Codegen.ofNullable(initialDelaySeconds);
             return this;
         }
         public Builder periodSeconds(@Nullable Output<Integer> periodSeconds) {
@@ -210,7 +211,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder periodSeconds(@Nullable Integer periodSeconds) {
-            this.periodSeconds = Output.ofNullable(periodSeconds);
+            this.periodSeconds = Codegen.ofNullable(periodSeconds);
             return this;
         }
         public Builder successThreshold(@Nullable Output<Integer> successThreshold) {
@@ -218,7 +219,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder successThreshold(@Nullable Integer successThreshold) {
-            this.successThreshold = Output.ofNullable(successThreshold);
+            this.successThreshold = Codegen.ofNullable(successThreshold);
             return this;
         }
         public Builder tcpSocket(@Nullable Output<TCPSocketActionArgs> tcpSocket) {
@@ -226,7 +227,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tcpSocket(@Nullable TCPSocketActionArgs tcpSocket) {
-            this.tcpSocket = Output.ofNullable(tcpSocket);
+            this.tcpSocket = Codegen.ofNullable(tcpSocket);
             return this;
         }
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
@@ -234,7 +235,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }        public ProbeArgs build() {
             return new ProbeArgs(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, timeoutSeconds);

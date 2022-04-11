@@ -5,6 +5,7 @@ package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> archiveNameFormat;
 
     public Output<String> getArchiveNameFormat() {
-        return this.archiveNameFormat == null ? Output.empty() : this.archiveNameFormat;
+        return this.archiveNameFormat == null ? Codegen.empty() : this.archiveNameFormat;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> blobContainer;
 
     public Output<String> getBlobContainer() {
-        return this.blobContainer == null ? Output.empty() : this.blobContainer;
+        return this.blobContainer == null ? Codegen.empty() : this.blobContainer;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageAccountResourceId;
 
     public Output<String> getStorageAccountResourceId() {
-        return this.storageAccountResourceId == null ? Output.empty() : this.storageAccountResourceId;
+        return this.storageAccountResourceId == null ? Codegen.empty() : this.storageAccountResourceId;
     }
 
     public DestinationArgs(
@@ -74,10 +75,10 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DestinationArgs() {
-        this.archiveNameFormat = Output.empty();
-        this.blobContainer = Output.empty();
-        this.name = Output.empty();
-        this.storageAccountResourceId = Output.empty();
+        this.archiveNameFormat = Codegen.empty();
+        this.blobContainer = Codegen.empty();
+        this.name = Codegen.empty();
+        this.storageAccountResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder archiveNameFormat(@Nullable String archiveNameFormat) {
-            this.archiveNameFormat = Output.ofNullable(archiveNameFormat);
+            this.archiveNameFormat = Codegen.ofNullable(archiveNameFormat);
             return this;
         }
         public Builder blobContainer(@Nullable Output<String> blobContainer) {
@@ -119,7 +120,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobContainer(@Nullable String blobContainer) {
-            this.blobContainer = Output.ofNullable(blobContainer);
+            this.blobContainer = Codegen.ofNullable(blobContainer);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -127,7 +128,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder storageAccountResourceId(@Nullable Output<String> storageAccountResourceId) {
@@ -135,7 +136,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
-            this.storageAccountResourceId = Output.ofNullable(storageAccountResourceId);
+            this.storageAccountResourceId = Codegen.ofNullable(storageAccountResourceId);
             return this;
         }        public DestinationArgs build() {
             return new DestinationArgs(archiveNameFormat, blobContainer, name, storageAccountResourceId);

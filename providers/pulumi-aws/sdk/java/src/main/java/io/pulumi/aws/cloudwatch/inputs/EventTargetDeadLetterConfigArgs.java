@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EventTargetDeadLetterConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     public EventTargetDeadLetterConfigArgs(@Nullable Output<String> arn) {
@@ -30,7 +31,7 @@ public final class EventTargetDeadLetterConfigArgs extends io.pulumi.resources.R
     }
 
     private EventTargetDeadLetterConfigArgs() {
-        this.arn = Output.empty();
+        this.arn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class EventTargetDeadLetterConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }        public EventTargetDeadLetterConfigArgs build() {
             return new EventTargetDeadLetterConfigArgs(arn);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.AutomaticOSUpgradePolicyArgs;
 import io.pulumi.azurenative.compute.inputs.RollingUpgradePolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutomaticOSUpgradePolicyArgs> automaticOSUpgradePolicy;
 
     public Output<AutomaticOSUpgradePolicyArgs> getAutomaticOSUpgradePolicy() {
-        return this.automaticOSUpgradePolicy == null ? Output.empty() : this.automaticOSUpgradePolicy;
+        return this.automaticOSUpgradePolicy == null ? Codegen.empty() : this.automaticOSUpgradePolicy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UpgradeMode> mode;
 
     public Output<UpgradeMode> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy;
 
     public Output<RollingUpgradePolicyArgs> getRollingUpgradePolicy() {
-        return this.rollingUpgradePolicy == null ? Output.empty() : this.rollingUpgradePolicy;
+        return this.rollingUpgradePolicy == null ? Codegen.empty() : this.rollingUpgradePolicy;
     }
 
     public UpgradePolicyArgs(
@@ -63,9 +64,9 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UpgradePolicyArgs() {
-        this.automaticOSUpgradePolicy = Output.empty();
-        this.mode = Output.empty();
-        this.rollingUpgradePolicy = Output.empty();
+        this.automaticOSUpgradePolicy = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.rollingUpgradePolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder automaticOSUpgradePolicy(@Nullable AutomaticOSUpgradePolicyArgs automaticOSUpgradePolicy) {
-            this.automaticOSUpgradePolicy = Output.ofNullable(automaticOSUpgradePolicy);
+            this.automaticOSUpgradePolicy = Codegen.ofNullable(automaticOSUpgradePolicy);
             return this;
         }
         public Builder mode(@Nullable Output<UpgradeMode> mode) {
@@ -105,7 +106,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable UpgradeMode mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder rollingUpgradePolicy(@Nullable Output<RollingUpgradePolicyArgs> rollingUpgradePolicy) {
@@ -113,7 +114,7 @@ public final class UpgradePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rollingUpgradePolicy(@Nullable RollingUpgradePolicyArgs rollingUpgradePolicy) {
-            this.rollingUpgradePolicy = Output.ofNullable(rollingUpgradePolicy);
+            this.rollingUpgradePolicy = Codegen.ofNullable(rollingUpgradePolicy);
             return this;
         }        public UpgradePolicyArgs build() {
             return new UpgradePolicyArgs(automaticOSUpgradePolicy, mode, rollingUpgradePolicy);

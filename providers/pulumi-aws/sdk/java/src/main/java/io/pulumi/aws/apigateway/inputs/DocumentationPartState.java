@@ -6,6 +6,7 @@ package io.pulumi.aws.apigateway.inputs;
 import io.pulumi.aws.apigateway.inputs.DocumentationPartLocationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DocumentationPartLocationGetArgs> location;
 
     public Output<DocumentationPartLocationGetArgs> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> properties;
 
     public Output<String> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> restApiId;
 
     public Output<String> getRestApiId() {
-        return this.restApiId == null ? Output.empty() : this.restApiId;
+        return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 
     public DocumentationPartState(
@@ -58,9 +59,9 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
     }
 
     private DocumentationPartState() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.restApiId = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.restApiId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable DocumentationPartLocationGetArgs location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<String> properties) {
@@ -100,7 +101,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder properties(@Nullable String properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder restApiId(@Nullable Output<String> restApiId) {
@@ -108,7 +109,7 @@ public final class DocumentationPartState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Output.ofNullable(restApiId);
+            this.restApiId = Codegen.ofNullable(restApiId);
             return this;
         }        public DocumentationPartState build() {
             return new DocumentationPartState(location, properties, restApiId);

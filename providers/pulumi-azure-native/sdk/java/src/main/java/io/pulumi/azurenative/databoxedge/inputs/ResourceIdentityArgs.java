@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.MsiIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,MsiIdentityType>> type;
 
     public Output<Either<String,MsiIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ResourceIdentityArgs(@Nullable Output<Either<String,MsiIdentityType>> type) {
@@ -36,7 +37,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ResourceIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable Either<String,MsiIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ResourceIdentityArgs build() {
             return new ResourceIdentityArgs(type);

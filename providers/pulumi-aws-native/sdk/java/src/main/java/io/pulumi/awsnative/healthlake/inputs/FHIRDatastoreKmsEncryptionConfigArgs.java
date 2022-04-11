@@ -6,6 +6,7 @@ package io.pulumi.awsnative.healthlake.inputs;
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastoreKmsEncryptionConfigCmkType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     public FHIRDatastoreKmsEncryptionConfigArgs(
@@ -49,8 +50,8 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
     }
 
     private FHIRDatastoreKmsEncryptionConfigArgs() {
-        this.cmkType = Output.empty();
-        this.kmsKeyId = Output.empty();
+        this.cmkType = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class FHIRDatastoreKmsEncryptionConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }        public FHIRDatastoreKmsEncryptionConfigArgs build() {
             return new FHIRDatastoreKmsEncryptionConfigArgs(cmkType, kmsKeyId);

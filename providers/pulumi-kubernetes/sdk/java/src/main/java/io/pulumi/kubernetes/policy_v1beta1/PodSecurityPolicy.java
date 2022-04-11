@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.policy_v1beta1.PodSecurityPolicyArgs;
@@ -100,7 +101,7 @@ public class PodSecurityPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PodSecurityPolicy(String name, @Nullable PodSecurityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:policy/v1beta1:PodSecurityPolicy", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:policy/v1beta1:PodSecurityPolicy", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PodSecurityPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

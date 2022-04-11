@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1alpha.inputs.OSPolicyResourceExecResourceExecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
       private final @Nullable Output<OSPolicyResourceExecResourceExecArgs> enforce;
 
     public Output<OSPolicyResourceExecResourceExecArgs> getEnforce() {
-        return this.enforce == null ? Output.empty() : this.enforce;
+        return this.enforce == null ? Codegen.empty() : this.enforce;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
     }
 
     private OSPolicyResourceExecResourceArgs() {
-        this.enforce = Output.empty();
-        this.validate = Output.empty();
+        this.enforce = Codegen.empty();
+        this.validate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class OSPolicyResourceExecResourceArgs extends io.pulumi.resources.
             return this;
         }
         public Builder enforce(@Nullable OSPolicyResourceExecResourceExecArgs enforce) {
-            this.enforce = Output.ofNullable(enforce);
+            this.enforce = Codegen.ofNullable(enforce);
             return this;
         }
         public Builder validate(Output<OSPolicyResourceExecResourceExecArgs> validate) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,9 +59,9 @@ public final class DatasetAccessViewArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetAccessViewArgs() {
-        this.datasetId = Output.empty();
-        this.projectId = Output.empty();
-        this.tableId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.projectId = Codegen.empty();
+        this.tableId = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -10,6 +10,7 @@ import io.pulumi.aws.ecr.outputs.RegistryScanningConfigurationRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -95,7 +96,7 @@ public class RegistryScanningConfiguration extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public RegistryScanningConfiguration(String name, RegistryScanningConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, args == null ? RegistryScanningConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/registryScanningConfiguration:RegistryScanningConfiguration", name, args == null ? RegistryScanningConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegistryScanningConfiguration(String name, Output<String> id, @Nullable RegistryScanningConfigurationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

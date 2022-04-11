@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> arguments;
 
     public Output<Object> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,Object>> defines;
 
     public Output<Map<String,Object>> getDefines() {
-        return this.defines == null ? Output.empty() : this.defines;
+        return this.defines == null ? Codegen.empty() : this.defines;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
     public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
-        return this.getDebugInfo == null ? Output.empty() : this.getDebugInfo;
+        return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<LinkedServiceReferenceArgs> scriptLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getScriptLinkedService() {
-        return this.scriptLinkedService == null ? Output.empty() : this.scriptLinkedService;
+        return this.scriptLinkedService == null ? Codegen.empty() : this.scriptLinkedService;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> scriptPath;
 
     public Output<Object> getScriptPath() {
-        return this.scriptPath == null ? Output.empty() : this.scriptPath;
+        return this.scriptPath == null ? Codegen.empty() : this.scriptPath;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
     public Output<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
-        return this.storageLinkedServices == null ? Output.empty() : this.storageLinkedServices;
+        return this.storageLinkedServices == null ? Codegen.empty() : this.storageLinkedServices;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public HDInsightPigActivityArgs(
@@ -201,19 +202,19 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
     }
 
     private HDInsightPigActivityArgs() {
-        this.arguments = Output.empty();
-        this.defines = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.getDebugInfo = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.scriptLinkedService = Output.empty();
-        this.scriptPath = Output.empty();
-        this.storageLinkedServices = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.arguments = Codegen.empty();
+        this.defines = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.getDebugInfo = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.scriptLinkedService = Codegen.empty();
+        this.scriptPath = Codegen.empty();
+        this.storageLinkedServices = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -265,7 +266,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder arguments(@Nullable Object arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder defines(@Nullable Output<Map<String,Object>> defines) {
@@ -273,7 +274,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder defines(@Nullable Map<String,Object> defines) {
-            this.defines = Output.ofNullable(defines);
+            this.defines = Codegen.ofNullable(defines);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -281,7 +282,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -292,7 +293,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder getDebugInfo(@Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo) {
@@ -300,7 +301,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Output.ofNullable(getDebugInfo);
+            this.getDebugInfo = Codegen.ofNullable(getDebugInfo);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -308,7 +309,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -324,7 +325,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder scriptLinkedService(@Nullable Output<LinkedServiceReferenceArgs> scriptLinkedService) {
@@ -332,7 +333,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scriptLinkedService(@Nullable LinkedServiceReferenceArgs scriptLinkedService) {
-            this.scriptLinkedService = Output.ofNullable(scriptLinkedService);
+            this.scriptLinkedService = Codegen.ofNullable(scriptLinkedService);
             return this;
         }
         public Builder scriptPath(@Nullable Output<Object> scriptPath) {
@@ -340,7 +341,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scriptPath(@Nullable Object scriptPath) {
-            this.scriptPath = Output.ofNullable(scriptPath);
+            this.scriptPath = Codegen.ofNullable(scriptPath);
             return this;
         }
         public Builder storageLinkedServices(@Nullable Output<List<LinkedServiceReferenceArgs>> storageLinkedServices) {
@@ -348,7 +349,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder storageLinkedServices(@Nullable List<LinkedServiceReferenceArgs> storageLinkedServices) {
-            this.storageLinkedServices = Output.ofNullable(storageLinkedServices);
+            this.storageLinkedServices = Codegen.ofNullable(storageLinkedServices);
             return this;
         }
         public Builder storageLinkedServices(LinkedServiceReferenceArgs... storageLinkedServices) {
@@ -367,7 +368,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressClassParametersReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> controller;
 
     public Output<String> getController() {
-        return this.controller == null ? Output.empty() : this.controller;
+        return this.controller == null ? Codegen.empty() : this.controller;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<IngressClassParametersReferenceArgs> parameters;
 
     public Output<IngressClassParametersReferenceArgs> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public IngressClassSpecArgs(
@@ -49,8 +50,8 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private IngressClassSpecArgs() {
-        this.controller = Output.empty();
-        this.parameters = Output.empty();
+        this.controller = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder controller(@Nullable String controller) {
-            this.controller = Output.ofNullable(controller);
+            this.controller = Codegen.ofNullable(controller);
             return this;
         }
         public Builder parameters(@Nullable Output<IngressClassParametersReferenceArgs> parameters) {
@@ -88,7 +89,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameters(@Nullable IngressClassParametersReferenceArgs parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public IngressClassSpecArgs build() {
             return new IngressClassSpecArgs(controller, parameters);

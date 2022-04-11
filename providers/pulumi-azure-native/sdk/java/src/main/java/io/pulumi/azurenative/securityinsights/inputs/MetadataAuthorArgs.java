@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> link;
 
     public Output<String> getLink() {
-        return this.link == null ? Output.empty() : this.link;
+        return this.link == null ? Codegen.empty() : this.link;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public MetadataAuthorArgs(
@@ -61,9 +62,9 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetadataAuthorArgs() {
-        this.email = Output.empty();
-        this.link = Output.empty();
-        this.name = Output.empty();
+        this.email = Codegen.empty();
+        this.link = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder link(@Nullable Output<String> link) {
@@ -103,7 +104,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder link(@Nullable String link) {
-            this.link = Output.ofNullable(link);
+            this.link = Codegen.ofNullable(link);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -111,7 +112,7 @@ public final class MetadataAuthorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public MetadataAuthorArgs build() {
             return new MetadataAuthorArgs(email, link, name);

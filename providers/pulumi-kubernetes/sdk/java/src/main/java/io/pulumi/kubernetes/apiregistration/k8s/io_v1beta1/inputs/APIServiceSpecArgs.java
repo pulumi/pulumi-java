@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> caBundle;
 
     public Output<String> getCaBundle() {
-        return this.caBundle == null ? Output.empty() : this.caBundle;
+        return this.caBundle == null ? Codegen.empty() : this.caBundle;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> insecureSkipTLSVerify;
 
     public Output<Boolean> getInsecureSkipTLSVerify() {
-        return this.insecureSkipTLSVerify == null ? Output.empty() : this.insecureSkipTLSVerify;
+        return this.insecureSkipTLSVerify == null ? Codegen.empty() : this.insecureSkipTLSVerify;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -116,13 +117,13 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private APIServiceSpecArgs() {
-        this.caBundle = Output.empty();
-        this.group = Output.empty();
-        this.groupPriorityMinimum = Output.empty();
-        this.insecureSkipTLSVerify = Output.empty();
-        this.service = Output.empty();
-        this.version = Output.empty();
-        this.versionPriority = Output.empty();
+        this.caBundle = Codegen.empty();
+        this.group = Codegen.empty();
+        this.groupPriorityMinimum = Codegen.empty();
+        this.insecureSkipTLSVerify = Codegen.empty();
+        this.service = Codegen.empty();
+        this.version = Codegen.empty();
+        this.versionPriority = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caBundle(@Nullable String caBundle) {
-            this.caBundle = Output.ofNullable(caBundle);
+            this.caBundle = Codegen.ofNullable(caBundle);
             return this;
         }
         public Builder group(@Nullable Output<String> group) {
@@ -170,7 +171,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder groupPriorityMinimum(Output<Integer> groupPriorityMinimum) {
@@ -186,7 +187,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder insecureSkipTLSVerify(@Nullable Boolean insecureSkipTLSVerify) {
-            this.insecureSkipTLSVerify = Output.ofNullable(insecureSkipTLSVerify);
+            this.insecureSkipTLSVerify = Codegen.ofNullable(insecureSkipTLSVerify);
             return this;
         }
         public Builder service(Output<ServiceReferenceArgs> service) {
@@ -202,7 +203,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder versionPriority(Output<Integer> versionPriority) {

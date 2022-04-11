@@ -5,6 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> appUserModelID;
 
     public Output<String> getAppUserModelID() {
-        return this.appUserModelID == null ? Output.empty() : this.appUserModelID;
+        return this.appUserModelID == null ? Codegen.empty() : this.appUserModelID;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> iconImageName;
 
     public Output<String> getIconImageName() {
-        return this.iconImageName == null ? Output.empty() : this.iconImageName;
+        return this.iconImageName == null ? Codegen.empty() : this.iconImageName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> rawIcon;
 
     public Output<String> getRawIcon() {
-        return this.rawIcon == null ? Output.empty() : this.rawIcon;
+        return this.rawIcon == null ? Codegen.empty() : this.rawIcon;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> rawPng;
 
     public Output<String> getRawPng() {
-        return this.rawPng == null ? Output.empty() : this.rawPng;
+        return this.rawPng == null ? Codegen.empty() : this.rawPng;
     }
 
     public MsixPackageApplicationsArgs(
@@ -113,13 +114,13 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
     }
 
     private MsixPackageApplicationsArgs() {
-        this.appId = Output.empty();
-        this.appUserModelID = Output.empty();
-        this.description = Output.empty();
-        this.friendlyName = Output.empty();
-        this.iconImageName = Output.empty();
-        this.rawIcon = Output.empty();
-        this.rawPng = Output.empty();
+        this.appId = Codegen.empty();
+        this.appUserModelID = Codegen.empty();
+        this.description = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.iconImageName = Codegen.empty();
+        this.rawIcon = Codegen.empty();
+        this.rawPng = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder appUserModelID(@Nullable Output<String> appUserModelID) {
@@ -167,7 +168,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder appUserModelID(@Nullable String appUserModelID) {
-            this.appUserModelID = Output.ofNullable(appUserModelID);
+            this.appUserModelID = Codegen.ofNullable(appUserModelID);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -175,7 +176,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -183,7 +184,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder iconImageName(@Nullable Output<String> iconImageName) {
@@ -191,7 +192,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder iconImageName(@Nullable String iconImageName) {
-            this.iconImageName = Output.ofNullable(iconImageName);
+            this.iconImageName = Codegen.ofNullable(iconImageName);
             return this;
         }
         public Builder rawIcon(@Nullable Output<String> rawIcon) {
@@ -199,7 +200,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rawIcon(@Nullable String rawIcon) {
-            this.rawIcon = Output.ofNullable(rawIcon);
+            this.rawIcon = Codegen.ofNullable(rawIcon);
             return this;
         }
         public Builder rawPng(@Nullable Output<String> rawPng) {
@@ -207,7 +208,7 @@ public final class MsixPackageApplicationsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder rawPng(@Nullable String rawPng) {
-            this.rawPng = Output.ofNullable(rawPng);
+            this.rawPng = Codegen.ofNullable(rawPng);
             return this;
         }        public MsixPackageApplicationsArgs build() {
             return new MsixPackageApplicationsArgs(appId, appUserModelID, description, friendlyName, iconImageName, rawIcon, rawPng);

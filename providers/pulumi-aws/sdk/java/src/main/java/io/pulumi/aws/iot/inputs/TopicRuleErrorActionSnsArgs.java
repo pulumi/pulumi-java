@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> messageFormat;
 
     public Output<String> getMessageFormat() {
-        return this.messageFormat == null ? Output.empty() : this.messageFormat;
+        return this.messageFormat == null ? Codegen.empty() : this.messageFormat;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
     }
 
     private TopicRuleErrorActionSnsArgs() {
-        this.messageFormat = Output.empty();
-        this.roleArn = Output.empty();
-        this.targetArn = Output.empty();
+        this.messageFormat = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.targetArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TopicRuleErrorActionSnsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder messageFormat(@Nullable String messageFormat) {
-            this.messageFormat = Output.ofNullable(messageFormat);
+            this.messageFormat = Codegen.ofNullable(messageFormat);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

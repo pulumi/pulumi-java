@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> volumesPerInstance;
 
     public Output<Integer> getVolumesPerInstance() {
-        return this.volumesPerInstance == null ? Output.empty() : this.volumesPerInstance;
+        return this.volumesPerInstance == null ? Codegen.empty() : this.volumesPerInstance;
     }
 
     public ClusterCoreInstanceGroupEbsConfigArgs(
@@ -71,10 +72,10 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends io.pulumi.resou
     }
 
     private ClusterCoreInstanceGroupEbsConfigArgs() {
-        this.iops = Output.empty();
-        this.size = Output.empty();
-        this.type = Output.empty();
-        this.volumesPerInstance = Output.empty();
+        this.iops = Codegen.empty();
+        this.size = Codegen.empty();
+        this.type = Codegen.empty();
+        this.volumesPerInstance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder size(Output<Integer> size) {
@@ -132,7 +133,7 @@ public final class ClusterCoreInstanceGroupEbsConfigArgs extends io.pulumi.resou
             return this;
         }
         public Builder volumesPerInstance(@Nullable Integer volumesPerInstance) {
-            this.volumesPerInstance = Output.ofNullable(volumesPerInstance);
+            this.volumesPerInstance = Codegen.ofNullable(volumesPerInstance);
             return this;
         }        public ClusterCoreInstanceGroupEbsConfigArgs build() {
             return new ClusterCoreInstanceGroupEbsConfigArgs(iops, size, type, volumesPerInstance);

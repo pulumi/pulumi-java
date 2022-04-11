@@ -5,6 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class HoursOfOperationTimeSliceArgs extends io.pulumi.resources.Res
     }
 
     private HoursOfOperationTimeSliceArgs() {
-        this.hours = Output.empty();
-        this.minutes = Output.empty();
+        this.hours = Codegen.empty();
+        this.minutes = Codegen.empty();
     }
 
     public static Builder builder() {

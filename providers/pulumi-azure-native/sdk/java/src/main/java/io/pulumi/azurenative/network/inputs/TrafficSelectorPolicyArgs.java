@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class TrafficSelectorPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private TrafficSelectorPolicyArgs() {
-        this.localAddressRanges = Output.empty();
-        this.remoteAddressRanges = Output.empty();
+        this.localAddressRanges = Codegen.empty();
+        this.remoteAddressRanges = Codegen.empty();
     }
 
     public static Builder builder() {

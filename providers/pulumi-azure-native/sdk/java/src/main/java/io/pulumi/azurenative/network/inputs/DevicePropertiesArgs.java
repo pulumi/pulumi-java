@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> deviceModel;
 
     public Output<String> getDeviceModel() {
-        return this.deviceModel == null ? Output.empty() : this.deviceModel;
+        return this.deviceModel == null ? Codegen.empty() : this.deviceModel;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> deviceVendor;
 
     public Output<String> getDeviceVendor() {
-        return this.deviceVendor == null ? Output.empty() : this.deviceVendor;
+        return this.deviceVendor == null ? Codegen.empty() : this.deviceVendor;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> linkSpeedInMbps;
 
     public Output<Integer> getLinkSpeedInMbps() {
-        return this.linkSpeedInMbps == null ? Output.empty() : this.linkSpeedInMbps;
+        return this.linkSpeedInMbps == null ? Codegen.empty() : this.linkSpeedInMbps;
     }
 
     public DevicePropertiesArgs(
@@ -62,9 +63,9 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DevicePropertiesArgs() {
-        this.deviceModel = Output.empty();
-        this.deviceVendor = Output.empty();
-        this.linkSpeedInMbps = Output.empty();
+        this.deviceModel = Codegen.empty();
+        this.deviceVendor = Codegen.empty();
+        this.linkSpeedInMbps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deviceModel(@Nullable String deviceModel) {
-            this.deviceModel = Output.ofNullable(deviceModel);
+            this.deviceModel = Codegen.ofNullable(deviceModel);
             return this;
         }
         public Builder deviceVendor(@Nullable Output<String> deviceVendor) {
@@ -104,7 +105,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deviceVendor(@Nullable String deviceVendor) {
-            this.deviceVendor = Output.ofNullable(deviceVendor);
+            this.deviceVendor = Codegen.ofNullable(deviceVendor);
             return this;
         }
         public Builder linkSpeedInMbps(@Nullable Output<Integer> linkSpeedInMbps) {
@@ -112,7 +113,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder linkSpeedInMbps(@Nullable Integer linkSpeedInMbps) {
-            this.linkSpeedInMbps = Output.ofNullable(linkSpeedInMbps);
+            this.linkSpeedInMbps = Codegen.ofNullable(linkSpeedInMbps);
             return this;
         }        public DevicePropertiesArgs build() {
             return new DevicePropertiesArgs(deviceModel, deviceVendor, linkSpeedInMbps);

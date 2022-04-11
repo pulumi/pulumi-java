@@ -10,6 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.DatasetCreateRequest
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> datasetName;
 
     public Output<String> getDatasetName() {
-        return this.datasetName == null ? Output.empty() : this.datasetName;
+        return this.datasetName == null ? Codegen.empty() : this.datasetName;
     }
 
     /**
@@ -75,14 +76,14 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> skipValidation;
 
     public Output<Boolean> getSkipValidation() {
-        return this.skipValidation == null ? Output.empty() : this.skipValidation;
+        return this.skipValidation == null ? Codegen.empty() : this.skipValidation;
     }
 
     @Import(name="timeSeries")
       private final @Nullable Output<DatasetCreateRequestTimeSeriesArgs> timeSeries;
 
     public Output<DatasetCreateRequestTimeSeriesArgs> getTimeSeries() {
-        return this.timeSeries == null ? Output.empty() : this.timeSeries;
+        return this.timeSeries == null ? Codegen.empty() : this.timeSeries;
     }
 
     /**
@@ -110,20 +111,20 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
         this.parameters = Objects.requireNonNull(parameters, "expected parameter 'parameters' to be non-null");
         this.registration = Objects.requireNonNull(registration, "expected parameter 'registration' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.skipValidation = skipValidation == null ? Output.ofNullable(false) : skipValidation;
+        this.skipValidation = skipValidation == null ? Codegen.ofNullable(false) : skipValidation;
         this.timeSeries = timeSeries;
         this.workspaceName = Objects.requireNonNull(workspaceName, "expected parameter 'workspaceName' to be non-null");
     }
 
     private MachineLearningDatasetArgs() {
-        this.datasetName = Output.empty();
-        this.datasetType = Output.empty();
-        this.parameters = Output.empty();
-        this.registration = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.skipValidation = Output.empty();
-        this.timeSeries = Output.empty();
-        this.workspaceName = Output.empty();
+        this.datasetName = Codegen.empty();
+        this.datasetType = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.registration = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.skipValidation = Codegen.empty();
+        this.timeSeries = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder datasetName(@Nullable String datasetName) {
-            this.datasetName = Output.ofNullable(datasetName);
+            this.datasetName = Codegen.ofNullable(datasetName);
             return this;
         }
         public Builder datasetType(Output<Either<String,DatasetType>> datasetType) {
@@ -205,7 +206,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder skipValidation(@Nullable Boolean skipValidation) {
-            this.skipValidation = Output.ofNullable(skipValidation);
+            this.skipValidation = Codegen.ofNullable(skipValidation);
             return this;
         }
         public Builder timeSeries(@Nullable Output<DatasetCreateRequestTimeSeriesArgs> timeSeries) {
@@ -213,7 +214,7 @@ public final class MachineLearningDatasetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder timeSeries(@Nullable DatasetCreateRequestTimeSeriesArgs timeSeries) {
-            this.timeSeries = Output.ofNullable(timeSeries);
+            this.timeSeries = Codegen.ofNullable(timeSeries);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

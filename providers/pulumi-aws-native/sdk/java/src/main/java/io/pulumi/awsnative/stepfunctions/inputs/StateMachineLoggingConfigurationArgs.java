@@ -7,6 +7,7 @@ import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationL
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineLogDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,21 +22,21 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<List<StateMachineLogDestinationArgs>> destinations;
 
     public Output<List<StateMachineLogDestinationArgs>> getDestinations() {
-        return this.destinations == null ? Output.empty() : this.destinations;
+        return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     @Import(name="includeExecutionData")
       private final @Nullable Output<Boolean> includeExecutionData;
 
     public Output<Boolean> getIncludeExecutionData() {
-        return this.includeExecutionData == null ? Output.empty() : this.includeExecutionData;
+        return this.includeExecutionData == null ? Codegen.empty() : this.includeExecutionData;
     }
 
     @Import(name="level")
       private final @Nullable Output<StateMachineLoggingConfigurationLevel> level;
 
     public Output<StateMachineLoggingConfigurationLevel> getLevel() {
-        return this.level == null ? Output.empty() : this.level;
+        return this.level == null ? Codegen.empty() : this.level;
     }
 
     public StateMachineLoggingConfigurationArgs(
@@ -48,9 +49,9 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
     }
 
     private StateMachineLoggingConfigurationArgs() {
-        this.destinations = Output.empty();
-        this.includeExecutionData = Output.empty();
-        this.level = Output.empty();
+        this.destinations = Codegen.empty();
+        this.includeExecutionData = Codegen.empty();
+        this.level = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder destinations(@Nullable List<StateMachineLogDestinationArgs> destinations) {
-            this.destinations = Output.ofNullable(destinations);
+            this.destinations = Codegen.ofNullable(destinations);
             return this;
         }
         public Builder destinations(StateMachineLogDestinationArgs... destinations) {
@@ -93,7 +94,7 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder includeExecutionData(@Nullable Boolean includeExecutionData) {
-            this.includeExecutionData = Output.ofNullable(includeExecutionData);
+            this.includeExecutionData = Codegen.ofNullable(includeExecutionData);
             return this;
         }
         public Builder level(@Nullable Output<StateMachineLoggingConfigurationLevel> level) {
@@ -101,7 +102,7 @@ public final class StateMachineLoggingConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder level(@Nullable StateMachineLoggingConfigurationLevel level) {
-            this.level = Output.ofNullable(level);
+            this.level = Codegen.ofNullable(level);
             return this;
         }        public StateMachineLoggingConfigurationArgs build() {
             return new StateMachineLoggingConfigurationArgs(destinations, includeExecutionData, level);

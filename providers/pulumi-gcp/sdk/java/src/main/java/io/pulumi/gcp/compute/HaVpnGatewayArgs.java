@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.HaVpnGatewayVpnInterfaceArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces;
 
     public Output<List<HaVpnGatewayVpnInterfaceArgs>> getVpnInterfaces() {
-        return this.vpnInterfaces == null ? Output.empty() : this.vpnInterfaces;
+        return this.vpnInterfaces == null ? Codegen.empty() : this.vpnInterfaces;
     }
 
     public HaVpnGatewayArgs(
@@ -106,12 +107,12 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HaVpnGatewayArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.vpnInterfaces = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.vpnInterfaces = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -157,7 +158,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(Output<String> network) {
@@ -173,7 +174,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -181,7 +182,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder vpnInterfaces(@Nullable Output<List<HaVpnGatewayVpnInterfaceArgs>> vpnInterfaces) {
@@ -189,7 +190,7 @@ public final class HaVpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnInterfaces(@Nullable List<HaVpnGatewayVpnInterfaceArgs> vpnInterfaces) {
-            this.vpnInterfaces = Output.ofNullable(vpnInterfaces);
+            this.vpnInterfaces = Codegen.ofNullable(vpnInterfaces);
             return this;
         }
         public Builder vpnInterfaces(HaVpnGatewayVpnInterfaceArgs... vpnInterfaces) {

@@ -8,6 +8,7 @@ import io.pulumi.aws.amplify.inputs.AppCustomRuleGetArgs;
 import io.pulumi.aws.amplify.inputs.AppProductionBranchGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig;
 
     public Output<AppAutoBranchCreationConfigGetArgs> getAutoBranchCreationConfig() {
-        return this.autoBranchCreationConfig == null ? Output.empty() : this.autoBranchCreationConfig;
+        return this.autoBranchCreationConfig == null ? Codegen.empty() : this.autoBranchCreationConfig;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> autoBranchCreationPatterns;
 
     public Output<List<String>> getAutoBranchCreationPatterns() {
-        return this.autoBranchCreationPatterns == null ? Output.empty() : this.autoBranchCreationPatterns;
+        return this.autoBranchCreationPatterns == null ? Codegen.empty() : this.autoBranchCreationPatterns;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> basicAuthCredentials;
 
     public Output<String> getBasicAuthCredentials() {
-        return this.basicAuthCredentials == null ? Output.empty() : this.basicAuthCredentials;
+        return this.basicAuthCredentials == null ? Codegen.empty() : this.basicAuthCredentials;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> buildSpec;
 
     public Output<String> getBuildSpec() {
-        return this.buildSpec == null ? Output.empty() : this.buildSpec;
+        return this.buildSpec == null ? Codegen.empty() : this.buildSpec;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AppCustomRuleGetArgs>> customRules;
 
     public Output<List<AppCustomRuleGetArgs>> getCustomRules() {
-        return this.customRules == null ? Output.empty() : this.customRules;
+        return this.customRules == null ? Codegen.empty() : this.customRules;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultDomain;
 
     public Output<String> getDefaultDomain() {
-        return this.defaultDomain == null ? Output.empty() : this.defaultDomain;
+        return this.defaultDomain == null ? Codegen.empty() : this.defaultDomain;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableAutoBranchCreation;
 
     public Output<Boolean> getEnableAutoBranchCreation() {
-        return this.enableAutoBranchCreation == null ? Output.empty() : this.enableAutoBranchCreation;
+        return this.enableAutoBranchCreation == null ? Codegen.empty() : this.enableAutoBranchCreation;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableBasicAuth;
 
     public Output<Boolean> getEnableBasicAuth() {
-        return this.enableBasicAuth == null ? Output.empty() : this.enableBasicAuth;
+        return this.enableBasicAuth == null ? Codegen.empty() : this.enableBasicAuth;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableBranchAutoBuild;
 
     public Output<Boolean> getEnableBranchAutoBuild() {
-        return this.enableBranchAutoBuild == null ? Output.empty() : this.enableBranchAutoBuild;
+        return this.enableBranchAutoBuild == null ? Codegen.empty() : this.enableBranchAutoBuild;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableBranchAutoDeletion;
 
     public Output<Boolean> getEnableBranchAutoDeletion() {
-        return this.enableBranchAutoDeletion == null ? Output.empty() : this.enableBranchAutoDeletion;
+        return this.enableBranchAutoDeletion == null ? Codegen.empty() : this.enableBranchAutoDeletion;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamServiceRoleArn;
 
     public Output<String> getIamServiceRoleArn() {
-        return this.iamServiceRoleArn == null ? Output.empty() : this.iamServiceRoleArn;
+        return this.iamServiceRoleArn == null ? Codegen.empty() : this.iamServiceRoleArn;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> oauthToken;
 
     public Output<String> getOauthToken() {
-        return this.oauthToken == null ? Output.empty() : this.oauthToken;
+        return this.oauthToken == null ? Codegen.empty() : this.oauthToken;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AppProductionBranchGetArgs>> productionBranches;
 
     public Output<List<AppProductionBranchGetArgs>> getProductionBranches() {
-        return this.productionBranches == null ? Output.empty() : this.productionBranches;
+        return this.productionBranches == null ? Codegen.empty() : this.productionBranches;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repository;
 
     public Output<String> getRepository() {
-        return this.repository == null ? Output.empty() : this.repository;
+        return this.repository == null ? Codegen.empty() : this.repository;
     }
 
     /**
@@ -248,7 +249,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -259,7 +260,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public AppState(
@@ -310,28 +311,28 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppState() {
-        this.accessToken = Output.empty();
-        this.arn = Output.empty();
-        this.autoBranchCreationConfig = Output.empty();
-        this.autoBranchCreationPatterns = Output.empty();
-        this.basicAuthCredentials = Output.empty();
-        this.buildSpec = Output.empty();
-        this.customRules = Output.empty();
-        this.defaultDomain = Output.empty();
-        this.description = Output.empty();
-        this.enableAutoBranchCreation = Output.empty();
-        this.enableBasicAuth = Output.empty();
-        this.enableBranchAutoBuild = Output.empty();
-        this.enableBranchAutoDeletion = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.iamServiceRoleArn = Output.empty();
-        this.name = Output.empty();
-        this.oauthToken = Output.empty();
-        this.platform = Output.empty();
-        this.productionBranches = Output.empty();
-        this.repository = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.autoBranchCreationConfig = Codegen.empty();
+        this.autoBranchCreationPatterns = Codegen.empty();
+        this.basicAuthCredentials = Codegen.empty();
+        this.buildSpec = Codegen.empty();
+        this.customRules = Codegen.empty();
+        this.defaultDomain = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enableAutoBranchCreation = Codegen.empty();
+        this.enableBasicAuth = Codegen.empty();
+        this.enableBranchAutoBuild = Codegen.empty();
+        this.enableBranchAutoDeletion = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.iamServiceRoleArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.oauthToken = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.productionBranches = Codegen.empty();
+        this.repository = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -401,7 +402,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -409,7 +410,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder autoBranchCreationConfig(@Nullable Output<AppAutoBranchCreationConfigGetArgs> autoBranchCreationConfig) {
@@ -417,7 +418,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoBranchCreationConfig(@Nullable AppAutoBranchCreationConfigGetArgs autoBranchCreationConfig) {
-            this.autoBranchCreationConfig = Output.ofNullable(autoBranchCreationConfig);
+            this.autoBranchCreationConfig = Codegen.ofNullable(autoBranchCreationConfig);
             return this;
         }
         public Builder autoBranchCreationPatterns(@Nullable Output<List<String>> autoBranchCreationPatterns) {
@@ -425,7 +426,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoBranchCreationPatterns(@Nullable List<String> autoBranchCreationPatterns) {
-            this.autoBranchCreationPatterns = Output.ofNullable(autoBranchCreationPatterns);
+            this.autoBranchCreationPatterns = Codegen.ofNullable(autoBranchCreationPatterns);
             return this;
         }
         public Builder autoBranchCreationPatterns(String... autoBranchCreationPatterns) {
@@ -436,7 +437,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder basicAuthCredentials(@Nullable String basicAuthCredentials) {
-            this.basicAuthCredentials = Output.ofNullable(basicAuthCredentials);
+            this.basicAuthCredentials = Codegen.ofNullable(basicAuthCredentials);
             return this;
         }
         public Builder buildSpec(@Nullable Output<String> buildSpec) {
@@ -444,7 +445,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildSpec(@Nullable String buildSpec) {
-            this.buildSpec = Output.ofNullable(buildSpec);
+            this.buildSpec = Codegen.ofNullable(buildSpec);
             return this;
         }
         public Builder customRules(@Nullable Output<List<AppCustomRuleGetArgs>> customRules) {
@@ -452,7 +453,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customRules(@Nullable List<AppCustomRuleGetArgs> customRules) {
-            this.customRules = Output.ofNullable(customRules);
+            this.customRules = Codegen.ofNullable(customRules);
             return this;
         }
         public Builder customRules(AppCustomRuleGetArgs... customRules) {
@@ -463,7 +464,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultDomain(@Nullable String defaultDomain) {
-            this.defaultDomain = Output.ofNullable(defaultDomain);
+            this.defaultDomain = Codegen.ofNullable(defaultDomain);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -471,7 +472,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enableAutoBranchCreation(@Nullable Output<Boolean> enableAutoBranchCreation) {
@@ -479,7 +480,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableAutoBranchCreation(@Nullable Boolean enableAutoBranchCreation) {
-            this.enableAutoBranchCreation = Output.ofNullable(enableAutoBranchCreation);
+            this.enableAutoBranchCreation = Codegen.ofNullable(enableAutoBranchCreation);
             return this;
         }
         public Builder enableBasicAuth(@Nullable Output<Boolean> enableBasicAuth) {
@@ -487,7 +488,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableBasicAuth(@Nullable Boolean enableBasicAuth) {
-            this.enableBasicAuth = Output.ofNullable(enableBasicAuth);
+            this.enableBasicAuth = Codegen.ofNullable(enableBasicAuth);
             return this;
         }
         public Builder enableBranchAutoBuild(@Nullable Output<Boolean> enableBranchAutoBuild) {
@@ -495,7 +496,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableBranchAutoBuild(@Nullable Boolean enableBranchAutoBuild) {
-            this.enableBranchAutoBuild = Output.ofNullable(enableBranchAutoBuild);
+            this.enableBranchAutoBuild = Codegen.ofNullable(enableBranchAutoBuild);
             return this;
         }
         public Builder enableBranchAutoDeletion(@Nullable Output<Boolean> enableBranchAutoDeletion) {
@@ -503,7 +504,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableBranchAutoDeletion(@Nullable Boolean enableBranchAutoDeletion) {
-            this.enableBranchAutoDeletion = Output.ofNullable(enableBranchAutoDeletion);
+            this.enableBranchAutoDeletion = Codegen.ofNullable(enableBranchAutoDeletion);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
@@ -511,7 +512,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder iamServiceRoleArn(@Nullable Output<String> iamServiceRoleArn) {
@@ -519,7 +520,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamServiceRoleArn(@Nullable String iamServiceRoleArn) {
-            this.iamServiceRoleArn = Output.ofNullable(iamServiceRoleArn);
+            this.iamServiceRoleArn = Codegen.ofNullable(iamServiceRoleArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -527,7 +528,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder oauthToken(@Nullable Output<String> oauthToken) {
@@ -535,7 +536,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder oauthToken(@Nullable String oauthToken) {
-            this.oauthToken = Output.ofNullable(oauthToken);
+            this.oauthToken = Codegen.ofNullable(oauthToken);
             return this;
         }
         public Builder platform(@Nullable Output<String> platform) {
@@ -543,7 +544,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable String platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder productionBranches(@Nullable Output<List<AppProductionBranchGetArgs>> productionBranches) {
@@ -551,7 +552,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder productionBranches(@Nullable List<AppProductionBranchGetArgs> productionBranches) {
-            this.productionBranches = Output.ofNullable(productionBranches);
+            this.productionBranches = Codegen.ofNullable(productionBranches);
             return this;
         }
         public Builder productionBranches(AppProductionBranchGetArgs... productionBranches) {
@@ -562,7 +563,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repository(@Nullable String repository) {
-            this.repository = Output.ofNullable(repository);
+            this.repository = Codegen.ofNullable(repository);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -570,7 +571,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -578,7 +579,7 @@ public final class AppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public AppState build() {
             return new AppState(accessToken, arn, autoBranchCreationConfig, autoBranchCreationPatterns, basicAuthCredentials, buildSpec, customRules, defaultDomain, description, enableAutoBranchCreation, enableBasicAuth, enableBranchAutoBuild, enableBranchAutoDeletion, environmentVariables, iamServiceRoleArn, name, oauthToken, platform, productionBranches, repository, tags, tagsAll);

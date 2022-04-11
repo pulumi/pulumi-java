@@ -7,6 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupFailoverCrit
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupMembersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,9 +47,9 @@ public final class DistributionOriginGroupArgs extends io.pulumi.resources.Resou
     }
 
     private DistributionOriginGroupArgs() {
-        this.failoverCriteria = Output.empty();
-        this.id = Output.empty();
-        this.members = Output.empty();
+        this.failoverCriteria = Codegen.empty();
+        this.id = Codegen.empty();
+        this.members = Codegen.empty();
     }
 
     public static Builder builder() {

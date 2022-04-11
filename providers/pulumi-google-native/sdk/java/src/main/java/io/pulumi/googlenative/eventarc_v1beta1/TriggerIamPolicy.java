@@ -6,6 +6,7 @@ package io.pulumi.googlenative.eventarc_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.eventarc_v1beta1.TriggerIamPolicyArgs;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class TriggerIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TriggerIamPolicy(String name, TriggerIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:eventarc/v1beta1:TriggerIamPolicy", name, args == null ? TriggerIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:eventarc/v1beta1:TriggerIamPolicy", name, args == null ? TriggerIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TriggerIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

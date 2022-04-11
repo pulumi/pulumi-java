@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1.enums.ReleaseChannelChannel;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ReleaseChannelChannel> channel;
 
     public Output<ReleaseChannelChannel> getChannel() {
-        return this.channel == null ? Output.empty() : this.channel;
+        return this.channel == null ? Codegen.empty() : this.channel;
     }
 
     public ReleaseChannelArgs(@Nullable Output<ReleaseChannelChannel> channel) {
@@ -34,7 +35,7 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReleaseChannelArgs() {
-        this.channel = Output.empty();
+        this.channel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ReleaseChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder channel(@Nullable ReleaseChannelChannel channel) {
-            this.channel = Output.ofNullable(channel);
+            this.channel = Codegen.ofNullable(channel);
             return this;
         }        public ReleaseChannelArgs build() {
             return new ReleaseChannelArgs(channel);

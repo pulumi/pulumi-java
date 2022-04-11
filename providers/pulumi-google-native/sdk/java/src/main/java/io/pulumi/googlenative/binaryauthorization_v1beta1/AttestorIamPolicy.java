@@ -6,6 +6,7 @@ package io.pulumi.googlenative.binaryauthorization_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.AttestorIamPolicyArgs;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class AttestorIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttestorIamPolicy(String name, AttestorIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:binaryauthorization/v1beta1:AttestorIamPolicy", name, args == null ? AttestorIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:binaryauthorization/v1beta1:AttestorIamPolicy", name, args == null ? AttestorIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttestorIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

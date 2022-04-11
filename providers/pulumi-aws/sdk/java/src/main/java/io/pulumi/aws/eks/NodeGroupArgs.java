@@ -10,6 +10,7 @@ import io.pulumi.aws.eks.inputs.NodeGroupTaintArgs;
 import io.pulumi.aws.eks.inputs.NodeGroupUpdateConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> amiType;
 
     public Output<String> getAmiType() {
-        return this.amiType == null ? Output.empty() : this.amiType;
+        return this.amiType == null ? Codegen.empty() : this.amiType;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> capacityType;
 
     public Output<String> getCapacityType() {
-        return this.capacityType == null ? Output.empty() : this.capacityType;
+        return this.capacityType == null ? Codegen.empty() : this.capacityType;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> diskSize;
 
     public Output<Integer> getDiskSize() {
-        return this.diskSize == null ? Output.empty() : this.diskSize;
+        return this.diskSize == null ? Codegen.empty() : this.diskSize;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceUpdateVersion;
 
     public Output<Boolean> getForceUpdateVersion() {
-        return this.forceUpdateVersion == null ? Output.empty() : this.forceUpdateVersion;
+        return this.forceUpdateVersion == null ? Codegen.empty() : this.forceUpdateVersion;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> instanceTypes;
 
     public Output<List<String>> getInstanceTypes() {
-        return this.instanceTypes == null ? Output.empty() : this.instanceTypes;
+        return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate;
 
     public Output<NodeGroupLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
+        return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nodeGroupName;
 
     public Output<String> getNodeGroupName() {
-        return this.nodeGroupName == null ? Output.empty() : this.nodeGroupName;
+        return this.nodeGroupName == null ? Codegen.empty() : this.nodeGroupName;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nodeGroupNamePrefix;
 
     public Output<String> getNodeGroupNamePrefix() {
-        return this.nodeGroupNamePrefix == null ? Output.empty() : this.nodeGroupNamePrefix;
+        return this.nodeGroupNamePrefix == null ? Codegen.empty() : this.nodeGroupNamePrefix;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> releaseVersion;
 
     public Output<String> getReleaseVersion() {
-        return this.releaseVersion == null ? Output.empty() : this.releaseVersion;
+        return this.releaseVersion == null ? Codegen.empty() : this.releaseVersion;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess;
 
     public Output<NodeGroupRemoteAccessArgs> getRemoteAccess() {
-        return this.remoteAccess == null ? Output.empty() : this.remoteAccess;
+        return this.remoteAccess == null ? Codegen.empty() : this.remoteAccess;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -207,14 +208,14 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NodeGroupTaintArgs>> taints;
 
     public Output<List<NodeGroupTaintArgs>> getTaints() {
-        return this.taints == null ? Output.empty() : this.taints;
+        return this.taints == null ? Codegen.empty() : this.taints;
     }
 
     @Import(name="updateConfig")
       private final @Nullable Output<NodeGroupUpdateConfigArgs> updateConfig;
 
     public Output<NodeGroupUpdateConfigArgs> getUpdateConfig() {
-        return this.updateConfig == null ? Output.empty() : this.updateConfig;
+        return this.updateConfig == null ? Codegen.empty() : this.updateConfig;
     }
 
     /**
@@ -225,7 +226,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public NodeGroupArgs(
@@ -270,25 +271,25 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeGroupArgs() {
-        this.amiType = Output.empty();
-        this.capacityType = Output.empty();
-        this.clusterName = Output.empty();
-        this.diskSize = Output.empty();
-        this.forceUpdateVersion = Output.empty();
-        this.instanceTypes = Output.empty();
-        this.labels = Output.empty();
-        this.launchTemplate = Output.empty();
-        this.nodeGroupName = Output.empty();
-        this.nodeGroupNamePrefix = Output.empty();
-        this.nodeRoleArn = Output.empty();
-        this.releaseVersion = Output.empty();
-        this.remoteAccess = Output.empty();
-        this.scalingConfig = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.taints = Output.empty();
-        this.updateConfig = Output.empty();
-        this.version = Output.empty();
+        this.amiType = Codegen.empty();
+        this.capacityType = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.diskSize = Codegen.empty();
+        this.forceUpdateVersion = Codegen.empty();
+        this.instanceTypes = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.launchTemplate = Codegen.empty();
+        this.nodeGroupName = Codegen.empty();
+        this.nodeGroupNamePrefix = Codegen.empty();
+        this.nodeRoleArn = Codegen.empty();
+        this.releaseVersion = Codegen.empty();
+        this.remoteAccess = Codegen.empty();
+        this.scalingConfig = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.taints = Codegen.empty();
+        this.updateConfig = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -352,7 +353,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amiType(@Nullable String amiType) {
-            this.amiType = Output.ofNullable(amiType);
+            this.amiType = Codegen.ofNullable(amiType);
             return this;
         }
         public Builder capacityType(@Nullable Output<String> capacityType) {
@@ -360,7 +361,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityType(@Nullable String capacityType) {
-            this.capacityType = Output.ofNullable(capacityType);
+            this.capacityType = Codegen.ofNullable(capacityType);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -376,7 +377,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSize(@Nullable Integer diskSize) {
-            this.diskSize = Output.ofNullable(diskSize);
+            this.diskSize = Codegen.ofNullable(diskSize);
             return this;
         }
         public Builder forceUpdateVersion(@Nullable Output<Boolean> forceUpdateVersion) {
@@ -384,7 +385,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceUpdateVersion(@Nullable Boolean forceUpdateVersion) {
-            this.forceUpdateVersion = Output.ofNullable(forceUpdateVersion);
+            this.forceUpdateVersion = Codegen.ofNullable(forceUpdateVersion);
             return this;
         }
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
@@ -392,7 +393,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Output.ofNullable(instanceTypes);
+            this.instanceTypes = Codegen.ofNullable(instanceTypes);
             return this;
         }
         public Builder instanceTypes(String... instanceTypes) {
@@ -403,7 +404,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder launchTemplate(@Nullable Output<NodeGroupLaunchTemplateArgs> launchTemplate) {
@@ -411,7 +412,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchTemplate(@Nullable NodeGroupLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Output.ofNullable(launchTemplate);
+            this.launchTemplate = Codegen.ofNullable(launchTemplate);
             return this;
         }
         public Builder nodeGroupName(@Nullable Output<String> nodeGroupName) {
@@ -419,7 +420,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeGroupName(@Nullable String nodeGroupName) {
-            this.nodeGroupName = Output.ofNullable(nodeGroupName);
+            this.nodeGroupName = Codegen.ofNullable(nodeGroupName);
             return this;
         }
         public Builder nodeGroupNamePrefix(@Nullable Output<String> nodeGroupNamePrefix) {
@@ -427,7 +428,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeGroupNamePrefix(@Nullable String nodeGroupNamePrefix) {
-            this.nodeGroupNamePrefix = Output.ofNullable(nodeGroupNamePrefix);
+            this.nodeGroupNamePrefix = Codegen.ofNullable(nodeGroupNamePrefix);
             return this;
         }
         public Builder nodeRoleArn(Output<String> nodeRoleArn) {
@@ -443,7 +444,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder releaseVersion(@Nullable String releaseVersion) {
-            this.releaseVersion = Output.ofNullable(releaseVersion);
+            this.releaseVersion = Codegen.ofNullable(releaseVersion);
             return this;
         }
         public Builder remoteAccess(@Nullable Output<NodeGroupRemoteAccessArgs> remoteAccess) {
@@ -451,7 +452,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteAccess(@Nullable NodeGroupRemoteAccessArgs remoteAccess) {
-            this.remoteAccess = Output.ofNullable(remoteAccess);
+            this.remoteAccess = Codegen.ofNullable(remoteAccess);
             return this;
         }
         public Builder scalingConfig(Output<NodeGroupScalingConfigArgs> scalingConfig) {
@@ -478,7 +479,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder taints(@Nullable Output<List<NodeGroupTaintArgs>> taints) {
@@ -486,7 +487,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taints(@Nullable List<NodeGroupTaintArgs> taints) {
-            this.taints = Output.ofNullable(taints);
+            this.taints = Codegen.ofNullable(taints);
             return this;
         }
         public Builder taints(NodeGroupTaintArgs... taints) {
@@ -497,7 +498,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateConfig(@Nullable NodeGroupUpdateConfigArgs updateConfig) {
-            this.updateConfig = Output.ofNullable(updateConfig);
+            this.updateConfig = Codegen.ofNullable(updateConfig);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -505,7 +506,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public NodeGroupArgs build() {
             return new NodeGroupArgs(amiType, capacityType, clusterName, diskSize, forceUpdateVersion, instanceTypes, labels, launchTemplate, nodeGroupName, nodeGroupNamePrefix, nodeRoleArn, releaseVersion, remoteAccess, scalingConfig, subnetIds, tags, taints, updateConfig, version);

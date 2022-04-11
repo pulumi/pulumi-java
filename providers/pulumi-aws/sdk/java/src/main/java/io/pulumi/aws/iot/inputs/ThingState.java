@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultClientId;
 
     public Output<String> getDefaultClientId() {
-        return this.defaultClientId == null ? Output.empty() : this.defaultClientId;
+        return this.defaultClientId == null ? Codegen.empty() : this.defaultClientId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> thingTypeName;
 
     public Output<String> getThingTypeName() {
-        return this.thingTypeName == null ? Output.empty() : this.thingTypeName;
+        return this.thingTypeName == null ? Codegen.empty() : this.thingTypeName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ThingState(
@@ -98,12 +99,12 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingState() {
-        this.arn = Output.empty();
-        this.attributes = Output.empty();
-        this.defaultClientId = Output.empty();
-        this.name = Output.empty();
-        this.thingTypeName = Output.empty();
-        this.version = Output.empty();
+        this.arn = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.defaultClientId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.thingTypeName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder attributes(@Nullable Output<Map<String,String>> attributes) {
@@ -149,7 +150,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder defaultClientId(@Nullable Output<String> defaultClientId) {
@@ -157,7 +158,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultClientId(@Nullable String defaultClientId) {
-            this.defaultClientId = Output.ofNullable(defaultClientId);
+            this.defaultClientId = Codegen.ofNullable(defaultClientId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -165,7 +166,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder thingTypeName(@Nullable Output<String> thingTypeName) {
@@ -173,7 +174,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thingTypeName(@Nullable String thingTypeName) {
-            this.thingTypeName = Output.ofNullable(thingTypeName);
+            this.thingTypeName = Codegen.ofNullable(thingTypeName);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -181,7 +182,7 @@ public final class ThingState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ThingState build() {
             return new ThingState(arn, attributes, defaultClientId, name, thingTypeName, version);

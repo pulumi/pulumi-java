@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> instancePorts;
 
     public Output<List<String>> getInstancePorts() {
-        return this.instancePorts == null ? Output.empty() : this.instancePorts;
+        return this.instancePorts == null ? Codegen.empty() : this.instancePorts;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> loadBalancer;
 
     public Output<String> getLoadBalancer() {
-        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
+        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 
     public ProxyProtocolPolicyState(
@@ -47,8 +48,8 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
     }
 
     private ProxyProtocolPolicyState() {
-        this.instancePorts = Output.empty();
-        this.loadBalancer = Output.empty();
+        this.instancePorts = Codegen.empty();
+        this.loadBalancer = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instancePorts(@Nullable List<String> instancePorts) {
-            this.instancePorts = Output.ofNullable(instancePorts);
+            this.instancePorts = Codegen.ofNullable(instancePorts);
             return this;
         }
         public Builder instancePorts(String... instancePorts) {
@@ -89,7 +90,7 @@ public final class ProxyProtocolPolicyState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Output.ofNullable(loadBalancer);
+            this.loadBalancer = Codegen.ofNullable(loadBalancer);
             return this;
         }        public ProxyProtocolPolicyState build() {
             return new ProxyProtocolPolicyState(instancePorts, loadBalancer);

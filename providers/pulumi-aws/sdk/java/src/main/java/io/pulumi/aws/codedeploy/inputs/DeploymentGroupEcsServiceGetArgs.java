@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class DeploymentGroupEcsServiceGetArgs extends io.pulumi.resources.
     }
 
     private DeploymentGroupEcsServiceGetArgs() {
-        this.clusterName = Output.empty();
-        this.serviceName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {

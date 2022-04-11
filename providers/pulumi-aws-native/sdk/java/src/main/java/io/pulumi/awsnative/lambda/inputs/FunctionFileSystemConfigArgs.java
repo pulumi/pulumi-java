@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class FunctionFileSystemConfigArgs extends io.pulumi.resources.Reso
     }
 
     private FunctionFileSystemConfigArgs() {
-        this.arn = Output.empty();
-        this.localMountPath = Output.empty();
+        this.arn = Codegen.empty();
+        this.localMountPath = Codegen.empty();
     }
 
     public static Builder builder() {

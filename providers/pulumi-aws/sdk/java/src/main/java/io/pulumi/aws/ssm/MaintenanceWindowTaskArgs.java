@@ -7,6 +7,7 @@ import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTargetArgs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> serviceRoleArn;
 
     public Output<String> getServiceRoleArn() {
-        return this.serviceRoleArn == null ? Output.empty() : this.serviceRoleArn;
+        return this.serviceRoleArn == null ? Codegen.empty() : this.serviceRoleArn;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets;
 
     public Output<List<MaintenanceWindowTaskTargetArgs>> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<MaintenanceWindowTaskTaskInvocationParametersArgs> taskInvocationParameters;
 
     public Output<MaintenanceWindowTaskTaskInvocationParametersArgs> getTaskInvocationParameters() {
-        return this.taskInvocationParameters == null ? Output.empty() : this.taskInvocationParameters;
+        return this.taskInvocationParameters == null ? Codegen.empty() : this.taskInvocationParameters;
     }
 
     /**
@@ -165,17 +166,17 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
     }
 
     private MaintenanceWindowTaskArgs() {
-        this.description = Output.empty();
-        this.maxConcurrency = Output.empty();
-        this.maxErrors = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.serviceRoleArn = Output.empty();
-        this.targets = Output.empty();
-        this.taskArn = Output.empty();
-        this.taskInvocationParameters = Output.empty();
-        this.taskType = Output.empty();
-        this.windowId = Output.empty();
+        this.description = Codegen.empty();
+        this.maxConcurrency = Codegen.empty();
+        this.maxErrors = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.serviceRoleArn = Codegen.empty();
+        this.targets = Codegen.empty();
+        this.taskArn = Codegen.empty();
+        this.taskInvocationParameters = Codegen.empty();
+        this.taskType = Codegen.empty();
+        this.windowId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder maxConcurrency(Output<String> maxConcurrency) {
@@ -247,7 +248,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -255,7 +256,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder serviceRoleArn(@Nullable Output<String> serviceRoleArn) {
@@ -263,7 +264,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder serviceRoleArn(@Nullable String serviceRoleArn) {
-            this.serviceRoleArn = Output.ofNullable(serviceRoleArn);
+            this.serviceRoleArn = Codegen.ofNullable(serviceRoleArn);
             return this;
         }
         public Builder targets(@Nullable Output<List<MaintenanceWindowTaskTargetArgs>> targets) {
@@ -271,7 +272,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder targets(@Nullable List<MaintenanceWindowTaskTargetArgs> targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder targets(MaintenanceWindowTaskTargetArgs... targets) {
@@ -290,7 +291,7 @@ public final class MaintenanceWindowTaskArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder taskInvocationParameters(@Nullable MaintenanceWindowTaskTaskInvocationParametersArgs taskInvocationParameters) {
-            this.taskInvocationParameters = Output.ofNullable(taskInvocationParameters);
+            this.taskInvocationParameters = Codegen.ofNullable(taskInvocationParameters);
             return this;
         }
         public Builder taskType(Output<String> taskType) {

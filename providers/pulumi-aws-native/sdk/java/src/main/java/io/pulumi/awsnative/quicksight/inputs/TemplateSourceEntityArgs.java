@@ -7,6 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.TemplateSourceAnalysisArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateSourceTemplateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,14 +24,14 @@ public final class TemplateSourceEntityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TemplateSourceAnalysisArgs> sourceAnalysis;
 
     public Output<TemplateSourceAnalysisArgs> getSourceAnalysis() {
-        return this.sourceAnalysis == null ? Output.empty() : this.sourceAnalysis;
+        return this.sourceAnalysis == null ? Codegen.empty() : this.sourceAnalysis;
     }
 
     @Import(name="sourceTemplate")
       private final @Nullable Output<TemplateSourceTemplateArgs> sourceTemplate;
 
     public Output<TemplateSourceTemplateArgs> getSourceTemplate() {
-        return this.sourceTemplate == null ? Output.empty() : this.sourceTemplate;
+        return this.sourceTemplate == null ? Codegen.empty() : this.sourceTemplate;
     }
 
     public TemplateSourceEntityArgs(
@@ -41,8 +42,8 @@ public final class TemplateSourceEntityArgs extends io.pulumi.resources.Resource
     }
 
     private TemplateSourceEntityArgs() {
-        this.sourceAnalysis = Output.empty();
-        this.sourceTemplate = Output.empty();
+        this.sourceAnalysis = Codegen.empty();
+        this.sourceTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class TemplateSourceEntityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sourceAnalysis(@Nullable TemplateSourceAnalysisArgs sourceAnalysis) {
-            this.sourceAnalysis = Output.ofNullable(sourceAnalysis);
+            this.sourceAnalysis = Codegen.ofNullable(sourceAnalysis);
             return this;
         }
         public Builder sourceTemplate(@Nullable Output<TemplateSourceTemplateArgs> sourceTemplate) {
@@ -80,7 +81,7 @@ public final class TemplateSourceEntityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sourceTemplate(@Nullable TemplateSourceTemplateArgs sourceTemplate) {
-            this.sourceTemplate = Output.ofNullable(sourceTemplate);
+            this.sourceTemplate = Codegen.ofNullable(sourceTemplate);
             return this;
         }        public TemplateSourceEntityArgs build() {
             return new TemplateSourceEntityArgs(sourceAnalysis, sourceTemplate);

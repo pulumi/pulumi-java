@@ -9,6 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.InferenceContainerPr
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +35,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<String> condaFile;
 
     public Output<String> getCondaFile() {
-        return this.condaFile == null ? Output.empty() : this.condaFile;
+        return this.condaFile == null ? Codegen.empty() : this.condaFile;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker;
 
     public Output<Either<DockerBuildArgs,DockerImageArgs>> getDocker() {
-        return this.docker == null ? Output.empty() : this.docker;
+        return this.docker == null ? Codegen.empty() : this.docker;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties;
 
     public Output<InferenceContainerPropertiesArgs> getInferenceContainerProperties() {
-        return this.inferenceContainerProperties == null ? Output.empty() : this.inferenceContainerProperties;
+        return this.inferenceContainerProperties == null ? Codegen.empty() : this.inferenceContainerProperties;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> isAnonymous;
 
     public Output<Boolean> getIsAnonymous() {
-        return this.isAnonymous == null ? Output.empty() : this.isAnonymous;
+        return this.isAnonymous == null ? Codegen.empty() : this.isAnonymous;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EnvironmentSpecificationVersionArgs(
@@ -121,13 +122,13 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
     }
 
     private EnvironmentSpecificationVersionArgs() {
-        this.condaFile = Output.empty();
-        this.description = Output.empty();
-        this.docker = Output.empty();
-        this.inferenceContainerProperties = Output.empty();
-        this.isAnonymous = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
+        this.condaFile = Codegen.empty();
+        this.description = Codegen.empty();
+        this.docker = Codegen.empty();
+        this.inferenceContainerProperties = Codegen.empty();
+        this.isAnonymous = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder condaFile(@Nullable String condaFile) {
-            this.condaFile = Output.ofNullable(condaFile);
+            this.condaFile = Codegen.ofNullable(condaFile);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -175,7 +176,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder docker(@Nullable Output<Either<DockerBuildArgs,DockerImageArgs>> docker) {
@@ -183,7 +184,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder docker(@Nullable Either<DockerBuildArgs,DockerImageArgs> docker) {
-            this.docker = Output.ofNullable(docker);
+            this.docker = Codegen.ofNullable(docker);
             return this;
         }
         public Builder inferenceContainerProperties(@Nullable Output<InferenceContainerPropertiesArgs> inferenceContainerProperties) {
@@ -191,7 +192,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder inferenceContainerProperties(@Nullable InferenceContainerPropertiesArgs inferenceContainerProperties) {
-            this.inferenceContainerProperties = Output.ofNullable(inferenceContainerProperties);
+            this.inferenceContainerProperties = Codegen.ofNullable(inferenceContainerProperties);
             return this;
         }
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
@@ -199,7 +200,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = Output.ofNullable(isAnonymous);
+            this.isAnonymous = Codegen.ofNullable(isAnonymous);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -207,7 +208,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -215,7 +216,7 @@ public final class EnvironmentSpecificationVersionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public EnvironmentSpecificationVersionArgs build() {
             return new EnvironmentSpecificationVersionArgs(condaFile, description, docker, inferenceContainerProperties, isAnonymous, properties, tags);

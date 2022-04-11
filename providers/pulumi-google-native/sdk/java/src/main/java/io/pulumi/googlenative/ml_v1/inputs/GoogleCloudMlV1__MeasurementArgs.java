@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Measurement_MetricArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
       private final @Nullable Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> metrics;
 
     public Output<List<GoogleCloudMlV1_Measurement_MetricArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
       private final @Nullable Output<String> stepCount;
 
     public Output<String> getStepCount() {
-        return this.stepCount == null ? Output.empty() : this.stepCount;
+        return this.stepCount == null ? Codegen.empty() : this.stepCount;
     }
 
     public GoogleCloudMlV1__MeasurementArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
     }
 
     private GoogleCloudMlV1__MeasurementArgs() {
-        this.metrics = Output.empty();
-        this.stepCount = Output.empty();
+        this.metrics = Codegen.empty();
+        this.stepCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
             return this;
         }
         public Builder metrics(@Nullable List<GoogleCloudMlV1_Measurement_MetricArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(GoogleCloudMlV1_Measurement_MetricArgs... metrics) {
@@ -92,7 +93,7 @@ public final class GoogleCloudMlV1__MeasurementArgs extends io.pulumi.resources.
             return this;
         }
         public Builder stepCount(@Nullable String stepCount) {
-            this.stepCount = Output.ofNullable(stepCount);
+            this.stepCount = Codegen.ofNullable(stepCount);
             return this;
         }        public GoogleCloudMlV1__MeasurementArgs build() {
             return new GoogleCloudMlV1__MeasurementArgs(metrics, stepCount);

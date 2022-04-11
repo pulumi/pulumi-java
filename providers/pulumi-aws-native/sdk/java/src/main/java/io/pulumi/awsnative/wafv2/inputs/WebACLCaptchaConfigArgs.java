@@ -6,6 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLImmunityTimePropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty;
 
     public Output<WebACLImmunityTimePropertyArgs> getImmunityTimeProperty() {
-        return this.immunityTimeProperty == null ? Output.empty() : this.immunityTimeProperty;
+        return this.immunityTimeProperty == null ? Codegen.empty() : this.immunityTimeProperty;
     }
 
     public WebACLCaptchaConfigArgs(@Nullable Output<WebACLImmunityTimePropertyArgs> immunityTimeProperty) {
@@ -26,7 +27,7 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
     }
 
     private WebACLCaptchaConfigArgs() {
-        this.immunityTimeProperty = Output.empty();
+        this.immunityTimeProperty = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class WebACLCaptchaConfigArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder immunityTimeProperty(@Nullable WebACLImmunityTimePropertyArgs immunityTimeProperty) {
-            this.immunityTimeProperty = Output.ofNullable(immunityTimeProperty);
+            this.immunityTimeProperty = Codegen.ofNullable(immunityTimeProperty);
             return this;
         }        public WebACLCaptchaConfigArgs build() {
             return new WebACLCaptchaConfigArgs(immunityTimeProperty);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.SecurityPolicyType;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyAdaptiveProtectionConfigArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyAdvancedOptionsConfigArgs;
@@ -24,14 +25,14 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
     public Output<SecurityPolicyAdaptiveProtectionConfigArgs> getAdaptiveProtectionConfig() {
-        return this.adaptiveProtectionConfig == null ? Output.empty() : this.adaptiveProtectionConfig;
+        return this.adaptiveProtectionConfig == null ? Codegen.empty() : this.adaptiveProtectionConfig;
     }
 
     @Import(name="advancedOptionsConfig")
       private final @Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig;
 
     public Output<SecurityPolicyAdvancedOptionsConfigArgs> getAdvancedOptionsConfig() {
-        return this.advancedOptionsConfig == null ? Output.empty() : this.advancedOptionsConfig;
+        return this.advancedOptionsConfig == null ? Codegen.empty() : this.advancedOptionsConfig;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,28 +54,28 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="recaptchaOptionsConfig")
       private final @Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig;
 
     public Output<SecurityPolicyRecaptchaOptionsConfigArgs> getRecaptchaOptionsConfig() {
-        return this.recaptchaOptionsConfig == null ? Output.empty() : this.recaptchaOptionsConfig;
+        return this.recaptchaOptionsConfig == null ? Codegen.empty() : this.recaptchaOptionsConfig;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
     public Output<List<SecurityPolicyRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecurityPolicyType> type;
 
     public Output<SecurityPolicyType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SecurityPolicyArgs(
@@ -121,15 +122,15 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecurityPolicyArgs() {
-        this.adaptiveProtectionConfig = Output.empty();
-        this.advancedOptionsConfig = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.recaptchaOptionsConfig = Output.empty();
-        this.requestId = Output.empty();
-        this.rules = Output.empty();
-        this.type = Output.empty();
+        this.adaptiveProtectionConfig = Codegen.empty();
+        this.advancedOptionsConfig = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.recaptchaOptionsConfig = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adaptiveProtectionConfig(@Nullable SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
-            this.adaptiveProtectionConfig = Output.ofNullable(adaptiveProtectionConfig);
+            this.adaptiveProtectionConfig = Codegen.ofNullable(adaptiveProtectionConfig);
             return this;
         }
         public Builder advancedOptionsConfig(@Nullable Output<SecurityPolicyAdvancedOptionsConfigArgs> advancedOptionsConfig) {
@@ -181,7 +182,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder advancedOptionsConfig(@Nullable SecurityPolicyAdvancedOptionsConfigArgs advancedOptionsConfig) {
-            this.advancedOptionsConfig = Output.ofNullable(advancedOptionsConfig);
+            this.advancedOptionsConfig = Codegen.ofNullable(advancedOptionsConfig);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -189,7 +190,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -197,7 +198,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -205,7 +206,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder recaptchaOptionsConfig(@Nullable Output<SecurityPolicyRecaptchaOptionsConfigArgs> recaptchaOptionsConfig) {
@@ -213,7 +214,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recaptchaOptionsConfig(@Nullable SecurityPolicyRecaptchaOptionsConfigArgs recaptchaOptionsConfig) {
-            this.recaptchaOptionsConfig = Output.ofNullable(recaptchaOptionsConfig);
+            this.recaptchaOptionsConfig = Codegen.ofNullable(recaptchaOptionsConfig);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -221,7 +222,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
@@ -229,7 +230,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<SecurityPolicyRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(SecurityPolicyRuleArgs... rules) {
@@ -240,7 +241,7 @@ public final class SecurityPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable SecurityPolicyType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SecurityPolicyArgs build() {
             return new SecurityPolicyArgs(adaptiveProtectionConfig, advancedOptionsConfig, description, name, project, recaptchaOptionsConfig, requestId, rules, type);

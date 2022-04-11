@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.DeleteOptions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Either<String,DeleteOptions>> deleteOption;
 
     public Output<Either<String,DeleteOptions>> getDeleteOption() {
-        return this.deleteOption == null ? Output.empty() : this.deleteOption;
+        return this.deleteOption == null ? Codegen.empty() : this.deleteOption;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> primary;
 
     public Output<Boolean> getPrimary() {
-        return this.primary == null ? Output.empty() : this.primary;
+        return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     public NetworkInterfaceReferenceArgs(
@@ -64,9 +65,9 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
     }
 
     private NetworkInterfaceReferenceArgs() {
-        this.deleteOption = Output.empty();
-        this.id = Output.empty();
-        this.primary = Output.empty();
+        this.deleteOption = Codegen.empty();
+        this.id = Codegen.empty();
+        this.primary = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder deleteOption(@Nullable Either<String,DeleteOptions> deleteOption) {
-            this.deleteOption = Output.ofNullable(deleteOption);
+            this.deleteOption = Codegen.ofNullable(deleteOption);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -106,7 +107,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder primary(@Nullable Output<Boolean> primary) {
@@ -114,7 +115,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Output.ofNullable(primary);
+            this.primary = Codegen.ofNullable(primary);
             return this;
         }        public NetworkInterfaceReferenceArgs build() {
             return new NetworkInterfaceReferenceArgs(deleteOption, id, primary);

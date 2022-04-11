@@ -5,6 +5,7 @@ package io.pulumi.aws.ecr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class RepositoryImageScanningConfigurationArgs extends io.pulumi.re
     }
 
     private RepositoryImageScanningConfigurationArgs() {
-        this.scanOnPush = Output.empty();
+        this.scanOnPush = Codegen.empty();
     }
 
     public static Builder builder() {

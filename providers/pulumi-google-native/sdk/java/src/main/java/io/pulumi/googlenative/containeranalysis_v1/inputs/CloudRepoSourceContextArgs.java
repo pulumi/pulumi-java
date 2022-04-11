@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AliasContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.RepoIdArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<AliasContextArgs> aliasContext;
 
     public Output<AliasContextArgs> getAliasContext() {
-        return this.aliasContext == null ? Output.empty() : this.aliasContext;
+        return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<RepoIdArgs> repoId;
 
     public Output<RepoIdArgs> getRepoId() {
-        return this.repoId == null ? Output.empty() : this.repoId;
+        return this.repoId == null ? Codegen.empty() : this.repoId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     public CloudRepoSourceContextArgs(
@@ -63,9 +64,9 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
     }
 
     private CloudRepoSourceContextArgs() {
-        this.aliasContext = Output.empty();
-        this.repoId = Output.empty();
-        this.revisionId = Output.empty();
+        this.aliasContext = Codegen.empty();
+        this.repoId = Codegen.empty();
+        this.revisionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder aliasContext(@Nullable AliasContextArgs aliasContext) {
-            this.aliasContext = Output.ofNullable(aliasContext);
+            this.aliasContext = Codegen.ofNullable(aliasContext);
             return this;
         }
         public Builder repoId(@Nullable Output<RepoIdArgs> repoId) {
@@ -105,7 +106,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder repoId(@Nullable RepoIdArgs repoId) {
-            this.repoId = Output.ofNullable(repoId);
+            this.repoId = Codegen.ofNullable(repoId);
             return this;
         }
         public Builder revisionId(@Nullable Output<String> revisionId) {
@@ -113,7 +114,7 @@ public final class CloudRepoSourceContextArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }        public CloudRepoSourceContextArgs build() {
             return new CloudRepoSourceContextArgs(aliasContext, repoId, revisionId);

@@ -9,6 +9,7 @@ import io.pulumi.azurenative.storage.enums.ShareAccessTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ShareAccessTier>> accessTier;
 
     public Output<Either<String,ShareAccessTier>> getAccessTier() {
-        return this.accessTier == null ? Output.empty() : this.accessTier;
+        return this.accessTier == null ? Codegen.empty() : this.accessTier;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,EnabledProtocols>> enabledProtocols;
 
     public Output<Either<String,EnabledProtocols>> getEnabledProtocols() {
-        return this.enabledProtocols == null ? Output.empty() : this.enabledProtocols;
+        return this.enabledProtocols == null ? Codegen.empty() : this.enabledProtocols;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expand;
 
     public Output<String> getExpand() {
-        return this.expand == null ? Output.empty() : this.expand;
+        return this.expand == null ? Codegen.empty() : this.expand;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,RootSquashType>> rootSquash;
 
     public Output<Either<String,RootSquashType>> getRootSquash() {
-        return this.rootSquash == null ? Output.empty() : this.rootSquash;
+        return this.rootSquash == null ? Codegen.empty() : this.rootSquash;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> shareName;
 
     public Output<String> getShareName() {
-        return this.shareName == null ? Output.empty() : this.shareName;
+        return this.shareName == null ? Codegen.empty() : this.shareName;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> shareQuota;
 
     public Output<Integer> getShareQuota() {
-        return this.shareQuota == null ? Output.empty() : this.shareQuota;
+        return this.shareQuota == null ? Codegen.empty() : this.shareQuota;
     }
 
     public FileShareArgs(
@@ -141,15 +142,15 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileShareArgs() {
-        this.accessTier = Output.empty();
-        this.accountName = Output.empty();
-        this.enabledProtocols = Output.empty();
-        this.expand = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rootSquash = Output.empty();
-        this.shareName = Output.empty();
-        this.shareQuota = Output.empty();
+        this.accessTier = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.enabledProtocols = Codegen.empty();
+        this.expand = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rootSquash = Codegen.empty();
+        this.shareName = Codegen.empty();
+        this.shareQuota = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessTier(@Nullable Either<String,ShareAccessTier> accessTier) {
-            this.accessTier = Output.ofNullable(accessTier);
+            this.accessTier = Codegen.ofNullable(accessTier);
             return this;
         }
         public Builder accountName(Output<String> accountName) {
@@ -209,7 +210,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabledProtocols(@Nullable Either<String,EnabledProtocols> enabledProtocols) {
-            this.enabledProtocols = Output.ofNullable(enabledProtocols);
+            this.enabledProtocols = Codegen.ofNullable(enabledProtocols);
             return this;
         }
         public Builder expand(@Nullable Output<String> expand) {
@@ -217,7 +218,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expand(@Nullable String expand) {
-            this.expand = Output.ofNullable(expand);
+            this.expand = Codegen.ofNullable(expand);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -225,7 +226,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -241,7 +242,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootSquash(@Nullable Either<String,RootSquashType> rootSquash) {
-            this.rootSquash = Output.ofNullable(rootSquash);
+            this.rootSquash = Codegen.ofNullable(rootSquash);
             return this;
         }
         public Builder shareName(@Nullable Output<String> shareName) {
@@ -249,7 +250,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareName(@Nullable String shareName) {
-            this.shareName = Output.ofNullable(shareName);
+            this.shareName = Codegen.ofNullable(shareName);
             return this;
         }
         public Builder shareQuota(@Nullable Output<Integer> shareQuota) {
@@ -257,7 +258,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareQuota(@Nullable Integer shareQuota) {
-            this.shareQuota = Output.ofNullable(shareQuota);
+            this.shareQuota = Codegen.ofNullable(shareQuota);
             return this;
         }        public FileShareArgs build() {
             return new FileShareArgs(accessTier, accountName, enabledProtocols, expand, metadata, resourceGroupName, rootSquash, shareName, shareQuota);

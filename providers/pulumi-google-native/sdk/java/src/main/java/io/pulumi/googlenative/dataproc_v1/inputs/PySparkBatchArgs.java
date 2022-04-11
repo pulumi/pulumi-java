@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> archiveUris;
 
     public Output<List<String>> getArchiveUris() {
-        return this.archiveUris == null ? Output.empty() : this.archiveUris;
+        return this.archiveUris == null ? Codegen.empty() : this.archiveUris;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> fileUris;
 
     public Output<List<String>> getFileUris() {
-        return this.fileUris == null ? Output.empty() : this.fileUris;
+        return this.fileUris == null ? Codegen.empty() : this.fileUris;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> pythonFileUris;
 
     public Output<List<String>> getPythonFileUris() {
-        return this.pythonFileUris == null ? Output.empty() : this.pythonFileUris;
+        return this.pythonFileUris == null ? Codegen.empty() : this.pythonFileUris;
     }
 
     public PySparkBatchArgs(
@@ -101,12 +102,12 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PySparkBatchArgs() {
-        this.archiveUris = Output.empty();
-        this.args = Output.empty();
-        this.fileUris = Output.empty();
-        this.jarFileUris = Output.empty();
-        this.mainPythonFileUri = Output.empty();
-        this.pythonFileUris = Output.empty();
+        this.archiveUris = Codegen.empty();
+        this.args = Codegen.empty();
+        this.fileUris = Codegen.empty();
+        this.jarFileUris = Codegen.empty();
+        this.mainPythonFileUri = Codegen.empty();
+        this.pythonFileUris = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder archiveUris(@Nullable List<String> archiveUris) {
-            this.archiveUris = Output.ofNullable(archiveUris);
+            this.archiveUris = Codegen.ofNullable(archiveUris);
             return this;
         }
         public Builder archiveUris(String... archiveUris) {
@@ -155,7 +156,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -166,7 +167,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileUris(@Nullable List<String> fileUris) {
-            this.fileUris = Output.ofNullable(fileUris);
+            this.fileUris = Codegen.ofNullable(fileUris);
             return this;
         }
         public Builder fileUris(String... fileUris) {
@@ -177,7 +178,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -196,7 +197,7 @@ public final class PySparkBatchArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pythonFileUris(@Nullable List<String> pythonFileUris) {
-            this.pythonFileUris = Output.ofNullable(pythonFileUris);
+            this.pythonFileUris = Codegen.ofNullable(pythonFileUris);
             return this;
         }
         public Builder pythonFileUris(String... pythonFileUris) {

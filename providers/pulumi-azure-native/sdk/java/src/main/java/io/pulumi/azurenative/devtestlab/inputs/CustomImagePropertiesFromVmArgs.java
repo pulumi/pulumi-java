@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.inputs.LinuxOsInfoArgs;
 import io.pulumi.azurenative.devtestlab.inputs.WindowsOsInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
       private final @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
 
     public Output<LinuxOsInfoArgs> getLinuxOsInfo() {
-        return this.linuxOsInfo == null ? Output.empty() : this.linuxOsInfo;
+        return this.linuxOsInfo == null ? Codegen.empty() : this.linuxOsInfo;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> sourceVmId;
 
     public Output<String> getSourceVmId() {
-        return this.sourceVmId == null ? Output.empty() : this.sourceVmId;
+        return this.sourceVmId == null ? Codegen.empty() : this.sourceVmId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
       private final @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
 
     public Output<WindowsOsInfoArgs> getWindowsOsInfo() {
-        return this.windowsOsInfo == null ? Output.empty() : this.windowsOsInfo;
+        return this.windowsOsInfo == null ? Codegen.empty() : this.windowsOsInfo;
     }
 
     public CustomImagePropertiesFromVmArgs(
@@ -63,9 +64,9 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
     }
 
     private CustomImagePropertiesFromVmArgs() {
-        this.linuxOsInfo = Output.empty();
-        this.sourceVmId = Output.empty();
-        this.windowsOsInfo = Output.empty();
+        this.linuxOsInfo = Codegen.empty();
+        this.sourceVmId = Codegen.empty();
+        this.windowsOsInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder linuxOsInfo(@Nullable LinuxOsInfoArgs linuxOsInfo) {
-            this.linuxOsInfo = Output.ofNullable(linuxOsInfo);
+            this.linuxOsInfo = Codegen.ofNullable(linuxOsInfo);
             return this;
         }
         public Builder sourceVmId(@Nullable Output<String> sourceVmId) {
@@ -105,7 +106,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sourceVmId(@Nullable String sourceVmId) {
-            this.sourceVmId = Output.ofNullable(sourceVmId);
+            this.sourceVmId = Codegen.ofNullable(sourceVmId);
             return this;
         }
         public Builder windowsOsInfo(@Nullable Output<WindowsOsInfoArgs> windowsOsInfo) {
@@ -113,7 +114,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder windowsOsInfo(@Nullable WindowsOsInfoArgs windowsOsInfo) {
-            this.windowsOsInfo = Output.ofNullable(windowsOsInfo);
+            this.windowsOsInfo = Codegen.ofNullable(windowsOsInfo);
             return this;
         }        public CustomImagePropertiesFromVmArgs build() {
             return new CustomImagePropertiesFromVmArgs(linuxOsInfo, sourceVmId, windowsOsInfo);

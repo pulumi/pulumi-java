@@ -12,6 +12,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -43,7 +44,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<InstantRPAdditionalDetailsArgs> instantRPDetails;
 
     public Output<InstantRPAdditionalDetailsArgs> getInstantRPDetails() {
-        return this.instantRPDetails == null ? Output.empty() : this.instantRPDetails;
+        return this.instantRPDetails == null ? Codegen.empty() : this.instantRPDetails;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> instantRpRetentionRangeInDays;
 
     public Output<Integer> getInstantRpRetentionRangeInDays() {
-        return this.instantRpRetentionRangeInDays == null ? Output.empty() : this.instantRpRetentionRangeInDays;
+        return this.instantRpRetentionRangeInDays == null ? Codegen.empty() : this.instantRpRetentionRangeInDays;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> protectedItemsCount;
 
     public Output<Integer> getProtectedItemsCount() {
-        return this.protectedItemsCount == null ? Output.empty() : this.protectedItemsCount;
+        return this.protectedItemsCount == null ? Codegen.empty() : this.protectedItemsCount;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Object> schedulePolicy;
 
     public Output<Object> getSchedulePolicy() {
-        return this.schedulePolicy == null ? Output.empty() : this.schedulePolicy;
+        return this.schedulePolicy == null ? Codegen.empty() : this.schedulePolicy;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public AzureIaaSVMProtectionPolicyArgs(
@@ -119,13 +120,13 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
     }
 
     private AzureIaaSVMProtectionPolicyArgs() {
-        this.backupManagementType = Output.empty();
-        this.instantRPDetails = Output.empty();
-        this.instantRpRetentionRangeInDays = Output.empty();
-        this.protectedItemsCount = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.schedulePolicy = Output.empty();
-        this.timeZone = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.instantRPDetails = Codegen.empty();
+        this.instantRpRetentionRangeInDays = Codegen.empty();
+        this.protectedItemsCount = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.schedulePolicy = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instantRPDetails(@Nullable InstantRPAdditionalDetailsArgs instantRPDetails) {
-            this.instantRPDetails = Output.ofNullable(instantRPDetails);
+            this.instantRPDetails = Codegen.ofNullable(instantRPDetails);
             return this;
         }
         public Builder instantRpRetentionRangeInDays(@Nullable Output<Integer> instantRpRetentionRangeInDays) {
@@ -181,7 +182,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
-            this.instantRpRetentionRangeInDays = Output.ofNullable(instantRpRetentionRangeInDays);
+            this.instantRpRetentionRangeInDays = Codegen.ofNullable(instantRpRetentionRangeInDays);
             return this;
         }
         public Builder protectedItemsCount(@Nullable Output<Integer> protectedItemsCount) {
@@ -189,7 +190,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
-            this.protectedItemsCount = Output.ofNullable(protectedItemsCount);
+            this.protectedItemsCount = Codegen.ofNullable(protectedItemsCount);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy) {
@@ -197,7 +198,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs> retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder schedulePolicy(@Nullable Output<Object> schedulePolicy) {
@@ -205,7 +206,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
-            this.schedulePolicy = Output.ofNullable(schedulePolicy);
+            this.schedulePolicy = Codegen.ofNullable(schedulePolicy);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -213,7 +214,7 @@ public final class AzureIaaSVMProtectionPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public AzureIaaSVMProtectionPolicyArgs build() {
             return new AzureIaaSVMProtectionPolicyArgs(backupManagementType, instantRPDetails, instantRpRetentionRangeInDays, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone);

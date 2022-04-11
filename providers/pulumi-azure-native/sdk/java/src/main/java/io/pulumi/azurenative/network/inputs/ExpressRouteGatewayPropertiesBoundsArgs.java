@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
       private final @Nullable Output<Integer> max;
 
     public Output<Integer> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
       private final @Nullable Output<Integer> min;
 
     public Output<Integer> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     public ExpressRouteGatewayPropertiesBoundsArgs(
@@ -48,8 +49,8 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
     }
 
     private ExpressRouteGatewayPropertiesBoundsArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
             return this;
         }
         public Builder max(@Nullable Integer max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder min(@Nullable Output<Integer> min) {
@@ -87,7 +88,7 @@ public final class ExpressRouteGatewayPropertiesBoundsArgs extends io.pulumi.res
             return this;
         }
         public Builder min(@Nullable Integer min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }        public ExpressRouteGatewayPropertiesBoundsArgs build() {
             return new ExpressRouteGatewayPropertiesBoundsArgs(max, min);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<BucketIamConfigurationBucketPolicyOnlyArgs> bucketPolicyOnly;
 
     public Output<BucketIamConfigurationBucketPolicyOnlyArgs> getBucketPolicyOnly() {
-        return this.bucketPolicyOnly == null ? Output.empty() : this.bucketPolicyOnly;
+        return this.bucketPolicyOnly == null ? Codegen.empty() : this.bucketPolicyOnly;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> publicAccessPrevention;
 
     public Output<String> getPublicAccessPrevention() {
-        return this.publicAccessPrevention == null ? Output.empty() : this.publicAccessPrevention;
+        return this.publicAccessPrevention == null ? Codegen.empty() : this.publicAccessPrevention;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess;
 
     public Output<BucketIamConfigurationUniformBucketLevelAccessArgs> getUniformBucketLevelAccess() {
-        return this.uniformBucketLevelAccess == null ? Output.empty() : this.uniformBucketLevelAccess;
+        return this.uniformBucketLevelAccess == null ? Codegen.empty() : this.uniformBucketLevelAccess;
     }
 
     public BucketIamConfigurationArgs(
@@ -63,9 +64,9 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
     }
 
     private BucketIamConfigurationArgs() {
-        this.bucketPolicyOnly = Output.empty();
-        this.publicAccessPrevention = Output.empty();
-        this.uniformBucketLevelAccess = Output.empty();
+        this.bucketPolicyOnly = Codegen.empty();
+        this.publicAccessPrevention = Codegen.empty();
+        this.uniformBucketLevelAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder bucketPolicyOnly(@Nullable BucketIamConfigurationBucketPolicyOnlyArgs bucketPolicyOnly) {
-            this.bucketPolicyOnly = Output.ofNullable(bucketPolicyOnly);
+            this.bucketPolicyOnly = Codegen.ofNullable(bucketPolicyOnly);
             return this;
         }
         public Builder publicAccessPrevention(@Nullable Output<String> publicAccessPrevention) {
@@ -105,7 +106,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder publicAccessPrevention(@Nullable String publicAccessPrevention) {
-            this.publicAccessPrevention = Output.ofNullable(publicAccessPrevention);
+            this.publicAccessPrevention = Codegen.ofNullable(publicAccessPrevention);
             return this;
         }
         public Builder uniformBucketLevelAccess(@Nullable Output<BucketIamConfigurationUniformBucketLevelAccessArgs> uniformBucketLevelAccess) {
@@ -113,7 +114,7 @@ public final class BucketIamConfigurationArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder uniformBucketLevelAccess(@Nullable BucketIamConfigurationUniformBucketLevelAccessArgs uniformBucketLevelAccess) {
-            this.uniformBucketLevelAccess = Output.ofNullable(uniformBucketLevelAccess);
+            this.uniformBucketLevelAccess = Codegen.ofNullable(uniformBucketLevelAccess);
             return this;
         }        public BucketIamConfigurationArgs build() {
             return new BucketIamConfigurationArgs(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);

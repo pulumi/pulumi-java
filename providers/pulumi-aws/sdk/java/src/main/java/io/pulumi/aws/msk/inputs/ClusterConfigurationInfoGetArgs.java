@@ -5,6 +5,7 @@ package io.pulumi.aws.msk.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class ClusterConfigurationInfoGetArgs extends io.pulumi.resources.R
     }
 
     private ClusterConfigurationInfoGetArgs() {
-        this.arn = Output.empty();
-        this.revision = Output.empty();
+        this.arn = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class GCPolicyMaxVersionGetArgs extends io.pulumi.resources.Resourc
     }
 
     private GCPolicyMaxVersionGetArgs() {
-        this.number = Output.empty();
+        this.number = Codegen.empty();
     }
 
     public static Builder builder() {

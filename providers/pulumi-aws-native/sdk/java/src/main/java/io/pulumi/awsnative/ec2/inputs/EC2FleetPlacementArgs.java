@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,56 +20,56 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> affinity;
 
     public Output<String> getAffinity() {
-        return this.affinity == null ? Output.empty() : this.affinity;
+        return this.affinity == null ? Codegen.empty() : this.affinity;
     }
 
     @Import(name="availabilityZone")
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="hostId")
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
-        return this.hostId == null ? Output.empty() : this.hostId;
+        return this.hostId == null ? Codegen.empty() : this.hostId;
     }
 
     @Import(name="hostResourceGroupArn")
       private final @Nullable Output<String> hostResourceGroupArn;
 
     public Output<String> getHostResourceGroupArn() {
-        return this.hostResourceGroupArn == null ? Output.empty() : this.hostResourceGroupArn;
+        return this.hostResourceGroupArn == null ? Codegen.empty() : this.hostResourceGroupArn;
     }
 
     @Import(name="partitionNumber")
       private final @Nullable Output<Integer> partitionNumber;
 
     public Output<Integer> getPartitionNumber() {
-        return this.partitionNumber == null ? Output.empty() : this.partitionNumber;
+        return this.partitionNumber == null ? Codegen.empty() : this.partitionNumber;
     }
 
     @Import(name="spreadDomain")
       private final @Nullable Output<String> spreadDomain;
 
     public Output<String> getSpreadDomain() {
-        return this.spreadDomain == null ? Output.empty() : this.spreadDomain;
+        return this.spreadDomain == null ? Codegen.empty() : this.spreadDomain;
     }
 
     @Import(name="tenancy")
       private final @Nullable Output<String> tenancy;
 
     public Output<String> getTenancy() {
-        return this.tenancy == null ? Output.empty() : this.tenancy;
+        return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
     public EC2FleetPlacementArgs(
@@ -91,14 +92,14 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EC2FleetPlacementArgs() {
-        this.affinity = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.groupName = Output.empty();
-        this.hostId = Output.empty();
-        this.hostResourceGroupArn = Output.empty();
-        this.partitionNumber = Output.empty();
-        this.spreadDomain = Output.empty();
-        this.tenancy = Output.empty();
+        this.affinity = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.hostId = Codegen.empty();
+        this.hostResourceGroupArn = Codegen.empty();
+        this.partitionNumber = Codegen.empty();
+        this.spreadDomain = Codegen.empty();
+        this.tenancy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder affinity(@Nullable String affinity) {
-            this.affinity = Output.ofNullable(affinity);
+            this.affinity = Codegen.ofNullable(affinity);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -148,7 +149,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -156,7 +157,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder hostId(@Nullable Output<String> hostId) {
@@ -164,7 +165,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = Output.ofNullable(hostId);
+            this.hostId = Codegen.ofNullable(hostId);
             return this;
         }
         public Builder hostResourceGroupArn(@Nullable Output<String> hostResourceGroupArn) {
@@ -172,7 +173,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hostResourceGroupArn(@Nullable String hostResourceGroupArn) {
-            this.hostResourceGroupArn = Output.ofNullable(hostResourceGroupArn);
+            this.hostResourceGroupArn = Codegen.ofNullable(hostResourceGroupArn);
             return this;
         }
         public Builder partitionNumber(@Nullable Output<Integer> partitionNumber) {
@@ -180,7 +181,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder partitionNumber(@Nullable Integer partitionNumber) {
-            this.partitionNumber = Output.ofNullable(partitionNumber);
+            this.partitionNumber = Codegen.ofNullable(partitionNumber);
             return this;
         }
         public Builder spreadDomain(@Nullable Output<String> spreadDomain) {
@@ -188,7 +189,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder spreadDomain(@Nullable String spreadDomain) {
-            this.spreadDomain = Output.ofNullable(spreadDomain);
+            this.spreadDomain = Codegen.ofNullable(spreadDomain);
             return this;
         }
         public Builder tenancy(@Nullable Output<String> tenancy) {
@@ -196,7 +197,7 @@ public final class EC2FleetPlacementArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tenancy(@Nullable String tenancy) {
-            this.tenancy = Output.ofNullable(tenancy);
+            this.tenancy = Codegen.ofNullable(tenancy);
             return this;
         }        public EC2FleetPlacementArgs build() {
             return new EC2FleetPlacementArgs(affinity, availabilityZone, groupName, hostId, hostResourceGroupArn, partitionNumber, spreadDomain, tenancy);

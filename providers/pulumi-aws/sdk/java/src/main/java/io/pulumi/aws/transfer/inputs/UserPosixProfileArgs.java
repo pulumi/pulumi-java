@@ -5,6 +5,7 @@ package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class UserPosixProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<Integer>> secondaryGids;
 
     public Output<List<Integer>> getSecondaryGids() {
-        return this.secondaryGids == null ? Output.empty() : this.secondaryGids;
+        return this.secondaryGids == null ? Codegen.empty() : this.secondaryGids;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class UserPosixProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private UserPosixProfileArgs() {
-        this.gid = Output.empty();
-        this.secondaryGids = Output.empty();
-        this.uid = Output.empty();
+        this.gid = Codegen.empty();
+        this.secondaryGids = Codegen.empty();
+        this.uid = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class UserPosixProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder secondaryGids(@Nullable List<Integer> secondaryGids) {
-            this.secondaryGids = Output.ofNullable(secondaryGids);
+            this.secondaryGids = Codegen.ofNullable(secondaryGids);
             return this;
         }
         public Builder secondaryGids(Integer... secondaryGids) {

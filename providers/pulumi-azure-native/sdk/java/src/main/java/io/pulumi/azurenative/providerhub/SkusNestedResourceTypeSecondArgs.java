@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
       private final @Nullable Output<SkuResourcePropertiesArgs> properties;
 
     public Output<SkuResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
       private final @Nullable Output<String> sku;
 
     public Output<String> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     public SkusNestedResourceTypeSecondArgs(
@@ -93,12 +94,12 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
     }
 
     private SkusNestedResourceTypeSecondArgs() {
-        this.nestedResourceTypeFirst = Output.empty();
-        this.nestedResourceTypeSecond = Output.empty();
-        this.properties = Output.empty();
-        this.providerNamespace = Output.empty();
-        this.resourceType = Output.empty();
-        this.sku = Output.empty();
+        this.nestedResourceTypeFirst = Codegen.empty();
+        this.nestedResourceTypeSecond = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
             return this;
         }
         public Builder properties(@Nullable SkuResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerNamespace(Output<String> providerNamespace) {
@@ -176,7 +177,7 @@ public final class SkusNestedResourceTypeSecondArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sku(@Nullable String sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }        public SkusNestedResourceTypeSecondArgs build() {
             return new SkusNestedResourceTypeSecondArgs(nestedResourceTypeFirst, nestedResourceTypeSecond, properties, providerNamespace, resourceType, sku);

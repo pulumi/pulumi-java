@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateData;
 
     public Output<String> getCertificateData() {
-        return this.certificateData == null ? Output.empty() : this.certificateData;
+        return this.certificateData == null ? Codegen.empty() : this.certificateData;
     }
 
     public SshPublicKeyArgs(@Nullable Output<String> certificateData) {
@@ -34,7 +35,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SshPublicKeyArgs() {
-        this.certificateData = Output.empty();
+        this.certificateData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateData(@Nullable String certificateData) {
-            this.certificateData = Output.ofNullable(certificateData);
+            this.certificateData = Codegen.ofNullable(certificateData);
             return this;
         }        public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(certificateData);

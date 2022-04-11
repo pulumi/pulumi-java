@@ -5,6 +5,7 @@ package io.pulumi.aws.directoryservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> connectIps;
 
     public Output<List<String>> getConnectIps() {
-        return this.connectIps == null ? Output.empty() : this.connectIps;
+        return this.connectIps == null ? Codegen.empty() : this.connectIps;
     }
 
     /**
@@ -93,12 +94,12 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private DirectoryConnectSettingsArgs() {
-        this.availabilityZones = Output.empty();
-        this.connectIps = Output.empty();
-        this.customerDnsIps = Output.empty();
-        this.customerUsername = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.availabilityZones = Codegen.empty();
+        this.connectIps = Codegen.empty();
+        this.customerDnsIps = Codegen.empty();
+        this.customerUsername = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {
@@ -147,7 +148,7 @@ public final class DirectoryConnectSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder connectIps(@Nullable List<String> connectIps) {
-            this.connectIps = Output.ofNullable(connectIps);
+            this.connectIps = Codegen.ofNullable(connectIps);
             return this;
         }
         public Builder connectIps(String... connectIps) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class StackSetParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private StackSetParameterArgs() {
-        this.parameterKey = Output.empty();
-        this.parameterValue = Output.empty();
+        this.parameterKey = Codegen.empty();
+        this.parameterValue = Codegen.empty();
     }
 
     public static Builder builder() {

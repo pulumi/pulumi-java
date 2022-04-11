@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> typeUrl;
 
     public Output<String> getTypeUrl() {
-        return this.typeUrl == null ? Output.empty() : this.typeUrl;
+        return this.typeUrl == null ? Codegen.empty() : this.typeUrl;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public AnyArgs(
@@ -48,8 +49,8 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnyArgs() {
-        this.typeUrl = Output.empty();
-        this.value = Output.empty();
+        this.typeUrl = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeUrl(@Nullable String typeUrl) {
-            this.typeUrl = Output.ofNullable(typeUrl);
+            this.typeUrl = Codegen.ofNullable(typeUrl);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -87,7 +88,7 @@ public final class AnyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public AnyArgs build() {
             return new AnyArgs(typeUrl, value);

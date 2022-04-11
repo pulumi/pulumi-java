@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.IdentityArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.LinkedServicePropsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkName;
 
     public Output<String> getLinkName() {
-        return this.linkName == null ? Output.empty() : this.linkName;
+        return this.linkName == null ? Codegen.empty() : this.linkName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LinkedServicePropsArgs> properties;
 
     public Output<LinkedServicePropsArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -111,13 +112,13 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LinkedServiceArgs() {
-        this.identity = Output.empty();
-        this.linkName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.identity = Codegen.empty();
+        this.linkName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder linkName(@Nullable Output<String> linkName) {
@@ -165,7 +166,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkName(@Nullable String linkName) {
-            this.linkName = Output.ofNullable(linkName);
+            this.linkName = Codegen.ofNullable(linkName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -173,7 +174,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -181,7 +182,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<LinkedServicePropsArgs> properties) {
@@ -189,7 +190,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable LinkedServicePropsArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

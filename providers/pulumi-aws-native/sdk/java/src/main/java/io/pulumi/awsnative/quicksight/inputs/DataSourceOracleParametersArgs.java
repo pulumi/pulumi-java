@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -45,9 +46,9 @@ public final class DataSourceOracleParametersArgs extends io.pulumi.resources.Re
     }
 
     private DataSourceOracleParametersArgs() {
-        this.database = Output.empty();
-        this.host = Output.empty();
-        this.port = Output.empty();
+        this.database = Codegen.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {

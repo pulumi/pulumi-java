@@ -5,6 +5,7 @@ package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.diagflow.inputs.CxPageEntryFulfillmentMessageTextGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
       private final @Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text;
 
     public Output<CxPageEntryFulfillmentMessageTextGetArgs> getText() {
-        return this.text == null ? Output.empty() : this.text;
+        return this.text == null ? Codegen.empty() : this.text;
     }
 
     public CxPageEntryFulfillmentMessageGetArgs(@Nullable Output<CxPageEntryFulfillmentMessageTextGetArgs> text) {
@@ -30,7 +31,7 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
     }
 
     private CxPageEntryFulfillmentMessageGetArgs() {
-        this.text = Output.empty();
+        this.text = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CxPageEntryFulfillmentMessageGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder text(@Nullable CxPageEntryFulfillmentMessageTextGetArgs text) {
-            this.text = Output.ofNullable(text);
+            this.text = Codegen.ofNullable(text);
             return this;
         }        public CxPageEntryFulfillmentMessageGetArgs build() {
             return new CxPageEntryFulfillmentMessageGetArgs(text);

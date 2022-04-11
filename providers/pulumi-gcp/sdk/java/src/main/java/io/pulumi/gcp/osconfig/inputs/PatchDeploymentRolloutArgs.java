@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentRolloutDisruptionBudgetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -50,8 +51,8 @@ public final class PatchDeploymentRolloutArgs extends io.pulumi.resources.Resour
     }
 
     private PatchDeploymentRolloutArgs() {
-        this.disruptionBudget = Output.empty();
-        this.mode = Output.empty();
+        this.disruptionBudget = Codegen.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
