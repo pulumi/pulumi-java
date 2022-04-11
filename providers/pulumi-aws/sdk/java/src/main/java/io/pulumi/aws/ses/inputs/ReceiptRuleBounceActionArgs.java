@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +68,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> statusCode;
 
     public Output<String> getStatusCode() {
-        return this.statusCode == null ? Output.empty() : this.statusCode;
+        return this.statusCode == null ? Codegen.empty() : this.statusCode;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> topicArn;
 
     public Output<String> getTopicArn() {
-        return this.topicArn == null ? Output.empty() : this.topicArn;
+        return this.topicArn == null ? Codegen.empty() : this.topicArn;
     }
 
     public ReceiptRuleBounceActionArgs(
@@ -97,12 +98,12 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
     }
 
     private ReceiptRuleBounceActionArgs() {
-        this.message = Output.empty();
-        this.position = Output.empty();
-        this.sender = Output.empty();
-        this.smtpReplyCode = Output.empty();
-        this.statusCode = Output.empty();
-        this.topicArn = Output.empty();
+        this.message = Codegen.empty();
+        this.position = Codegen.empty();
+        this.sender = Codegen.empty();
+        this.smtpReplyCode = Codegen.empty();
+        this.statusCode = Codegen.empty();
+        this.topicArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder statusCode(@Nullable String statusCode) {
-            this.statusCode = Output.ofNullable(statusCode);
+            this.statusCode = Codegen.ofNullable(statusCode);
             return this;
         }
         public Builder topicArn(@Nullable Output<String> topicArn) {
@@ -180,7 +181,7 @@ public final class ReceiptRuleBounceActionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder topicArn(@Nullable String topicArn) {
-            this.topicArn = Output.ofNullable(topicArn);
+            this.topicArn = Codegen.ofNullable(topicArn);
             return this;
         }        public ReceiptRuleBounceActionArgs build() {
             return new ReceiptRuleBounceActionArgs(message, position, sender, smtpReplyCode, statusCode, topicArn);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dashboardJson;
 
     public Output<String> getDashboardJson() {
-        return this.dashboardJson == null ? Output.empty() : this.dashboardJson;
+        return this.dashboardJson == null ? Codegen.empty() : this.dashboardJson;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public DashboardState(
@@ -46,8 +47,8 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardState() {
-        this.dashboardJson = Output.empty();
-        this.project = Output.empty();
+        this.dashboardJson = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardJson(@Nullable String dashboardJson) {
-            this.dashboardJson = Output.ofNullable(dashboardJson);
+            this.dashboardJson = Codegen.ofNullable(dashboardJson);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -85,7 +86,7 @@ public final class DashboardState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public DashboardState build() {
             return new DashboardState(dashboardJson, project);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.AzureStaticWebAppsRegistrationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<AzureStaticWebAppsRegistrationArgs> registration;
 
     public Output<AzureStaticWebAppsRegistrationArgs> getRegistration() {
-        return this.registration == null ? Output.empty() : this.registration;
+        return this.registration == null ? Codegen.empty() : this.registration;
     }
 
     public AzureStaticWebAppsArgs(
@@ -49,8 +50,8 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AzureStaticWebAppsArgs() {
-        this.enabled = Output.empty();
-        this.registration = Output.empty();
+        this.enabled = Codegen.empty();
+        this.registration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder registration(@Nullable Output<AzureStaticWebAppsRegistrationArgs> registration) {
@@ -88,7 +89,7 @@ public final class AzureStaticWebAppsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder registration(@Nullable AzureStaticWebAppsRegistrationArgs registration) {
-            this.registration = Output.ofNullable(registration);
+            this.registration = Codegen.ofNullable(registration);
             return this;
         }        public AzureStaticWebAppsArgs build() {
             return new AzureStaticWebAppsArgs(enabled, registration);

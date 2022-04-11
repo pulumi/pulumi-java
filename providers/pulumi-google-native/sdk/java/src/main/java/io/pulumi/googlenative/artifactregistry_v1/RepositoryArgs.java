@@ -5,6 +5,7 @@ package io.pulumi.googlenative.artifactregistry_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.artifactregistry_v1.enums.RepositoryFormat;
 import io.pulumi.googlenative.artifactregistry_v1.inputs.MavenRepositoryConfigArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RepositoryFormat> format;
 
     public Output<RepositoryFormat> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MavenRepositoryConfigArgs> mavenConfig;
 
     public Output<MavenRepositoryConfigArgs> getMavenConfig() {
-        return this.mavenConfig == null ? Output.empty() : this.mavenConfig;
+        return this.mavenConfig == null ? Codegen.empty() : this.mavenConfig;
     }
 
     /**
@@ -98,21 +99,21 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="repositoryId")
       private final @Nullable Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
-        return this.repositoryId == null ? Output.empty() : this.repositoryId;
+        return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public RepositoryArgs(
@@ -152,17 +153,17 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryArgs() {
-        this.createTime = Output.empty();
-        this.description = Output.empty();
-        this.format = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.mavenConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.repositoryId = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.format = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mavenConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.repositoryId = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -218,7 +219,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder format(@Nullable Output<RepositoryFormat> format) {
@@ -226,7 +227,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable RepositoryFormat format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -234,7 +235,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -242,7 +243,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -250,7 +251,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mavenConfig(@Nullable Output<MavenRepositoryConfigArgs> mavenConfig) {
@@ -258,7 +259,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mavenConfig(@Nullable MavenRepositoryConfigArgs mavenConfig) {
-            this.mavenConfig = Output.ofNullable(mavenConfig);
+            this.mavenConfig = Codegen.ofNullable(mavenConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -266,7 +267,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -274,7 +275,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
@@ -282,7 +283,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Output.ofNullable(repositoryId);
+            this.repositoryId = Codegen.ofNullable(repositoryId);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -290,7 +291,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public RepositoryArgs build() {
             return new RepositoryArgs(createTime, description, format, kmsKeyName, labels, location, mavenConfig, name, project, repositoryId, updateTime);

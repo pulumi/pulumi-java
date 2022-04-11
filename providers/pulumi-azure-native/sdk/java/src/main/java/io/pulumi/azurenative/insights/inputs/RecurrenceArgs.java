@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.RecurrenceFrequency;
 import io.pulumi.azurenative.insights.inputs.RecurrentScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -48,8 +49,8 @@ public final class RecurrenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecurrenceArgs() {
-        this.frequency = Output.empty();
-        this.schedule = Output.empty();
+        this.frequency = Codegen.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {

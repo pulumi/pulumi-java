@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHiveJsonSerDeArg
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOpenXJsonSerDeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
       private final @Nullable Output<DeliveryStreamHiveJsonSerDeArgs> hiveJsonSerDe;
 
     public Output<DeliveryStreamHiveJsonSerDeArgs> getHiveJsonSerDe() {
-        return this.hiveJsonSerDe == null ? Output.empty() : this.hiveJsonSerDe;
+        return this.hiveJsonSerDe == null ? Codegen.empty() : this.hiveJsonSerDe;
     }
 
     @Import(name="openXJsonSerDe")
       private final @Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe;
 
     public Output<DeliveryStreamOpenXJsonSerDeArgs> getOpenXJsonSerDe() {
-        return this.openXJsonSerDe == null ? Output.empty() : this.openXJsonSerDe;
+        return this.openXJsonSerDe == null ? Codegen.empty() : this.openXJsonSerDe;
     }
 
     public DeliveryStreamDeserializerArgs(
@@ -37,8 +38,8 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
     }
 
     private DeliveryStreamDeserializerArgs() {
-        this.hiveJsonSerDe = Output.empty();
-        this.openXJsonSerDe = Output.empty();
+        this.hiveJsonSerDe = Codegen.empty();
+        this.openXJsonSerDe = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder hiveJsonSerDe(@Nullable DeliveryStreamHiveJsonSerDeArgs hiveJsonSerDe) {
-            this.hiveJsonSerDe = Output.ofNullable(hiveJsonSerDe);
+            this.hiveJsonSerDe = Codegen.ofNullable(hiveJsonSerDe);
             return this;
         }
         public Builder openXJsonSerDe(@Nullable Output<DeliveryStreamOpenXJsonSerDeArgs> openXJsonSerDe) {
@@ -76,7 +77,7 @@ public final class DeliveryStreamDeserializerArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder openXJsonSerDe(@Nullable DeliveryStreamOpenXJsonSerDeArgs openXJsonSerDe) {
-            this.openXJsonSerDe = Output.ofNullable(openXJsonSerDe);
+            this.openXJsonSerDe = Codegen.ofNullable(openXJsonSerDe);
             return this;
         }        public DeliveryStreamDeserializerArgs build() {
             return new DeliveryStreamDeserializerArgs(hiveJsonSerDe, openXJsonSerDe);

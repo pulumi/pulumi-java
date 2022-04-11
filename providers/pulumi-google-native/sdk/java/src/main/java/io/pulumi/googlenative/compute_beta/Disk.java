@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.DiskArgs;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
@@ -591,7 +592,7 @@ public class Disk extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Disk(String name, @Nullable DiskArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:Disk", name, args == null ? DiskArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Disk(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

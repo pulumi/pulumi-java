@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
       private final @Nullable Output<String> cloudwatchEncryptionMode;
 
     public Output<String> getCloudwatchEncryptionMode() {
-        return this.cloudwatchEncryptionMode == null ? Output.empty() : this.cloudwatchEncryptionMode;
+        return this.cloudwatchEncryptionMode == null ? Codegen.empty() : this.cloudwatchEncryptionMode;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     public SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs(
@@ -44,8 +45,8 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
     }
 
     private SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs() {
-        this.cloudwatchEncryptionMode = Output.empty();
-        this.kmsKeyArn = Output.empty();
+        this.cloudwatchEncryptionMode = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
             return this;
         }
         public Builder cloudwatchEncryptionMode(@Nullable String cloudwatchEncryptionMode) {
-            this.cloudwatchEncryptionMode = Output.ofNullable(cloudwatchEncryptionMode);
+            this.cloudwatchEncryptionMode = Codegen.ofNullable(cloudwatchEncryptionMode);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -83,7 +84,7 @@ public final class SecurityConfigurationEncryptionConfigurationCloudwatchEncrypt
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }        public SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs build() {
             return new SecurityConfigurationEncryptionConfigurationCloudwatchEncryptionArgs(cloudwatchEncryptionMode, kmsKeyArn);

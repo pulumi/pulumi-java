@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.enums.SpotFleetTagSpecificationResourceType;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +21,14 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<SpotFleetTagSpecificationResourceType> resourceType;
 
     public Output<SpotFleetTagSpecificationResourceType> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<SpotFleetTagArgs>> tags;
 
     public Output<List<SpotFleetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SpotFleetTagSpecificationArgs(
@@ -38,8 +39,8 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
     }
 
     private SpotFleetTagSpecificationArgs() {
-        this.resourceType = Output.empty();
-        this.tags = Output.empty();
+        this.resourceType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder resourceType(@Nullable SpotFleetTagSpecificationResourceType resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder tags(@Nullable Output<List<SpotFleetTagArgs>> tags) {
@@ -77,7 +78,7 @@ public final class SpotFleetTagSpecificationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tags(@Nullable List<SpotFleetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(SpotFleetTagArgs... tags) {

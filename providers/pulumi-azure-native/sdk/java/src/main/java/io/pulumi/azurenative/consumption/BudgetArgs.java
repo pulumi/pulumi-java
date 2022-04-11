@@ -11,6 +11,7 @@ import io.pulumi.azurenative.consumption.inputs.NotificationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> budgetName;
 
     public Output<String> getBudgetName() {
-        return this.budgetName == null ? Output.empty() : this.budgetName;
+        return this.budgetName == null ? Codegen.empty() : this.budgetName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetFilterArgs> filter;
 
     public Output<BudgetFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,NotificationArgs>> notifications;
 
     public Output<Map<String,NotificationArgs>> getNotifications() {
-        return this.notifications == null ? Output.empty() : this.notifications;
+        return this.notifications == null ? Codegen.empty() : this.notifications;
     }
 
     /**
@@ -143,15 +144,15 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetArgs() {
-        this.amount = Output.empty();
-        this.budgetName = Output.empty();
-        this.category = Output.empty();
-        this.eTag = Output.empty();
-        this.filter = Output.empty();
-        this.notifications = Output.empty();
-        this.scope = Output.empty();
-        this.timeGrain = Output.empty();
-        this.timePeriod = Output.empty();
+        this.amount = Codegen.empty();
+        this.budgetName = Codegen.empty();
+        this.category = Codegen.empty();
+        this.eTag = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.notifications = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.timeGrain = Codegen.empty();
+        this.timePeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -203,7 +204,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder budgetName(@Nullable String budgetName) {
-            this.budgetName = Output.ofNullable(budgetName);
+            this.budgetName = Codegen.ofNullable(budgetName);
             return this;
         }
         public Builder category(Output<Either<String,CategoryType>> category) {
@@ -219,7 +220,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder filter(@Nullable Output<BudgetFilterArgs> filter) {
@@ -227,7 +228,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable BudgetFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder notifications(@Nullable Output<Map<String,NotificationArgs>> notifications) {
@@ -235,7 +236,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notifications(@Nullable Map<String,NotificationArgs> notifications) {
-            this.notifications = Output.ofNullable(notifications);
+            this.notifications = Codegen.ofNullable(notifications);
             return this;
         }
         public Builder scope(Output<String> scope) {

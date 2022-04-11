@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -53,14 +54,14 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Map<String,String>>> extensions;
 
     public Output<List<Map<String,String>>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
@@ -74,7 +75,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> validate;
 
     public Output<String> getValidate() {
-        return this.validate == null ? Output.empty() : this.validate;
+        return this.validate == null ? Codegen.empty() : this.validate;
     }
 
     public ApiArgs(
@@ -95,13 +96,13 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiArgs() {
-        this.action = Output.empty();
-        this.contentType = Output.empty();
-        this.data = Output.empty();
-        this.extensions = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.validate = Output.empty();
+        this.action = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.data = Codegen.empty();
+        this.extensions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.validate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder contentType(@Nullable Output<String> contentType) {
@@ -149,7 +150,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder data(@Nullable Output<String> data) {
@@ -157,7 +158,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder extensions(@Nullable Output<List<Map<String,String>>> extensions) {
@@ -165,7 +166,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extensions(@Nullable List<Map<String,String>> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -173,7 +174,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -189,7 +190,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validate(@Nullable String validate) {
-            this.validate = Output.ofNullable(validate);
+            this.validate = Codegen.ofNullable(validate);
             return this;
         }        public ApiArgs build() {
             return new ApiArgs(action, contentType, data, extensions, name, organizationId, validate);

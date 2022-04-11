@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayMulticastDomainTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
       private final @Nullable Output<OptionsPropertiesArgs> options;
 
     public Output<OptionsPropertiesArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
       private final @Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
     public Output<List<TransitGatewayMulticastDomainTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
     }
 
     private TransitGatewayMulticastDomainArgs() {
-        this.options = Output.empty();
-        this.tags = Output.empty();
-        this.transitGatewayId = Output.empty();
+        this.options = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transitGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
             return this;
         }
         public Builder options(@Nullable OptionsPropertiesArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder tags(@Nullable Output<List<TransitGatewayMulticastDomainTagArgs>> tags) {
@@ -102,7 +103,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
             return this;
         }
         public Builder tags(@Nullable List<TransitGatewayMulticastDomainTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TransitGatewayMulticastDomainTagArgs... tags) {

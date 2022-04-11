@@ -6,6 +6,7 @@ package io.pulumi.awsnative.gamelift.inputs;
 import io.pulumi.awsnative.gamelift.enums.FleetIpPermissionProtocol;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,10 +76,10 @@ public final class FleetIpPermissionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private FleetIpPermissionArgs() {
-        this.fromPort = Output.empty();
-        this.ipRange = Output.empty();
-        this.protocol = Output.empty();
-        this.toPort = Output.empty();
+        this.fromPort = Codegen.empty();
+        this.ipRange = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {

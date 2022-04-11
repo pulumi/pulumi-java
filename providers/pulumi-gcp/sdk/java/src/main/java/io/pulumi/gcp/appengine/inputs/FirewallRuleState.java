@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceRange;
 
     public Output<String> getSourceRange() {
-        return this.sourceRange == null ? Output.empty() : this.sourceRange;
+        return this.sourceRange == null ? Codegen.empty() : this.sourceRange;
     }
 
     public FirewallRuleState(
@@ -90,11 +91,11 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallRuleState() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.priority = Output.empty();
-        this.project = Output.empty();
-        this.sourceRange = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.project = Codegen.empty();
+        this.sourceRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -138,7 +139,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -146,7 +147,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -154,7 +155,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder sourceRange(@Nullable Output<String> sourceRange) {
@@ -162,7 +163,7 @@ public final class FirewallRuleState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRange(@Nullable String sourceRange) {
-            this.sourceRange = Output.ofNullable(sourceRange);
+            this.sourceRange = Codegen.ofNullable(sourceRange);
             return this;
         }        public FirewallRuleState build() {
             return new FirewallRuleState(action, description, priority, project, sourceRange);

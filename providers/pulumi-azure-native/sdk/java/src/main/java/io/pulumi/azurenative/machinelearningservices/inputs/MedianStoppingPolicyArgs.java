@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> delayEvaluation;
 
     public Output<Integer> getDelayEvaluation() {
-        return this.delayEvaluation == null ? Output.empty() : this.delayEvaluation;
+        return this.delayEvaluation == null ? Codegen.empty() : this.delayEvaluation;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> evaluationInterval;
 
     public Output<Integer> getEvaluationInterval() {
-        return this.evaluationInterval == null ? Output.empty() : this.evaluationInterval;
+        return this.evaluationInterval == null ? Codegen.empty() : this.evaluationInterval;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private MedianStoppingPolicyArgs() {
-        this.delayEvaluation = Output.empty();
-        this.evaluationInterval = Output.empty();
-        this.policyType = Output.empty();
+        this.delayEvaluation = Codegen.empty();
+        this.evaluationInterval = Codegen.empty();
+        this.policyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
-            this.delayEvaluation = Output.ofNullable(delayEvaluation);
+            this.delayEvaluation = Codegen.ofNullable(delayEvaluation);
             return this;
         }
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
@@ -104,7 +105,7 @@ public final class MedianStoppingPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
-            this.evaluationInterval = Output.ofNullable(evaluationInterval);
+            this.evaluationInterval = Codegen.ofNullable(evaluationInterval);
             return this;
         }
         public Builder policyType(Output<String> policyType) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeSystemsManagerAgentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
       private final @Nullable Output<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
     public Output<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
-        return this.systemsManagerAgent == null ? Output.empty() : this.systemsManagerAgent;
+        return this.systemsManagerAgent == null ? Codegen.empty() : this.systemsManagerAgent;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
       private final @Nullable Output<String> userDataOverride;
 
     public Output<String> getUserDataOverride() {
-        return this.userDataOverride == null ? Output.empty() : this.userDataOverride;
+        return this.userDataOverride == null ? Codegen.empty() : this.userDataOverride;
     }
 
     public ImageRecipeAdditionalInstanceConfigurationArgs(
@@ -49,8 +50,8 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
     }
 
     private ImageRecipeAdditionalInstanceConfigurationArgs() {
-        this.systemsManagerAgent = Output.empty();
-        this.userDataOverride = Output.empty();
+        this.systemsManagerAgent = Codegen.empty();
+        this.userDataOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
             return this;
         }
         public Builder systemsManagerAgent(@Nullable ImageRecipeSystemsManagerAgentArgs systemsManagerAgent) {
-            this.systemsManagerAgent = Output.ofNullable(systemsManagerAgent);
+            this.systemsManagerAgent = Codegen.ofNullable(systemsManagerAgent);
             return this;
         }
         public Builder userDataOverride(@Nullable Output<String> userDataOverride) {
@@ -88,7 +89,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
             return this;
         }
         public Builder userDataOverride(@Nullable String userDataOverride) {
-            this.userDataOverride = Output.ofNullable(userDataOverride);
+            this.userDataOverride = Codegen.ofNullable(userDataOverride);
             return this;
         }        public ImageRecipeAdditionalInstanceConfigurationArgs build() {
             return new ImageRecipeAdditionalInstanceConfigurationArgs(systemsManagerAgent, userDataOverride);

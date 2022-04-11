@@ -6,6 +6,7 @@ package io.pulumi.azurenative.deviceupdate;
 import io.pulumi.azurenative.deviceupdate.inputs.RemotePrivateEndpointArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
       private final @Nullable Output<String> privateEndpointConnectionProxyId;
 
     public Output<String> getPrivateEndpointConnectionProxyId() {
-        return this.privateEndpointConnectionProxyId == null ? Output.empty() : this.privateEndpointConnectionProxyId;
+        return this.privateEndpointConnectionProxyId == null ? Codegen.empty() : this.privateEndpointConnectionProxyId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
       private final @Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint;
 
     public Output<RemotePrivateEndpointArgs> getRemotePrivateEndpoint() {
-        return this.remotePrivateEndpoint == null ? Output.empty() : this.remotePrivateEndpoint;
+        return this.remotePrivateEndpoint == null ? Codegen.empty() : this.remotePrivateEndpoint;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public PrivateEndpointConnectionProxyArgs(
@@ -84,11 +85,11 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
     }
 
     private PrivateEndpointConnectionProxyArgs() {
-        this.accountName = Output.empty();
-        this.privateEndpointConnectionProxyId = Output.empty();
-        this.remotePrivateEndpoint = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.status = Output.empty();
+        this.accountName = Codegen.empty();
+        this.privateEndpointConnectionProxyId = Codegen.empty();
+        this.remotePrivateEndpoint = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
             return this;
         }
         public Builder privateEndpointConnectionProxyId(@Nullable String privateEndpointConnectionProxyId) {
-            this.privateEndpointConnectionProxyId = Output.ofNullable(privateEndpointConnectionProxyId);
+            this.privateEndpointConnectionProxyId = Codegen.ofNullable(privateEndpointConnectionProxyId);
             return this;
         }
         public Builder remotePrivateEndpoint(@Nullable Output<RemotePrivateEndpointArgs> remotePrivateEndpoint) {
@@ -140,7 +141,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
             return this;
         }
         public Builder remotePrivateEndpoint(@Nullable RemotePrivateEndpointArgs remotePrivateEndpoint) {
-            this.remotePrivateEndpoint = Output.ofNullable(remotePrivateEndpoint);
+            this.remotePrivateEndpoint = Codegen.ofNullable(remotePrivateEndpoint);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class PrivateEndpointConnectionProxyArgs extends io.pulumi.resource
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public PrivateEndpointConnectionProxyArgs build() {
             return new PrivateEndpointConnectionProxyArgs(accountName, privateEndpointConnectionProxyId, remotePrivateEndpoint, resourceGroupName, status);

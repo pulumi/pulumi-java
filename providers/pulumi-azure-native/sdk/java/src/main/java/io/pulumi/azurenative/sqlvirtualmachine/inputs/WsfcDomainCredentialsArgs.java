@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> clusterBootstrapAccountPassword;
 
     public Output<String> getClusterBootstrapAccountPassword() {
-        return this.clusterBootstrapAccountPassword == null ? Output.empty() : this.clusterBootstrapAccountPassword;
+        return this.clusterBootstrapAccountPassword == null ? Codegen.empty() : this.clusterBootstrapAccountPassword;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> clusterOperatorAccountPassword;
 
     public Output<String> getClusterOperatorAccountPassword() {
-        return this.clusterOperatorAccountPassword == null ? Output.empty() : this.clusterOperatorAccountPassword;
+        return this.clusterOperatorAccountPassword == null ? Codegen.empty() : this.clusterOperatorAccountPassword;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> sqlServiceAccountPassword;
 
     public Output<String> getSqlServiceAccountPassword() {
-        return this.sqlServiceAccountPassword == null ? Output.empty() : this.sqlServiceAccountPassword;
+        return this.sqlServiceAccountPassword == null ? Codegen.empty() : this.sqlServiceAccountPassword;
     }
 
     public WsfcDomainCredentialsArgs(
@@ -61,9 +62,9 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
     }
 
     private WsfcDomainCredentialsArgs() {
-        this.clusterBootstrapAccountPassword = Output.empty();
-        this.clusterOperatorAccountPassword = Output.empty();
-        this.sqlServiceAccountPassword = Output.empty();
+        this.clusterBootstrapAccountPassword = Codegen.empty();
+        this.clusterOperatorAccountPassword = Codegen.empty();
+        this.sqlServiceAccountPassword = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clusterBootstrapAccountPassword(@Nullable String clusterBootstrapAccountPassword) {
-            this.clusterBootstrapAccountPassword = Output.ofNullable(clusterBootstrapAccountPassword);
+            this.clusterBootstrapAccountPassword = Codegen.ofNullable(clusterBootstrapAccountPassword);
             return this;
         }
         public Builder clusterOperatorAccountPassword(@Nullable Output<String> clusterOperatorAccountPassword) {
@@ -103,7 +104,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder clusterOperatorAccountPassword(@Nullable String clusterOperatorAccountPassword) {
-            this.clusterOperatorAccountPassword = Output.ofNullable(clusterOperatorAccountPassword);
+            this.clusterOperatorAccountPassword = Codegen.ofNullable(clusterOperatorAccountPassword);
             return this;
         }
         public Builder sqlServiceAccountPassword(@Nullable Output<String> sqlServiceAccountPassword) {
@@ -111,7 +112,7 @@ public final class WsfcDomainCredentialsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder sqlServiceAccountPassword(@Nullable String sqlServiceAccountPassword) {
-            this.sqlServiceAccountPassword = Output.ofNullable(sqlServiceAccountPassword);
+            this.sqlServiceAccountPassword = Codegen.ofNullable(sqlServiceAccountPassword);
             return this;
         }        public WsfcDomainCredentialsArgs build() {
             return new WsfcDomainCredentialsArgs(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);

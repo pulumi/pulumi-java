@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.FaqS3PathArgs;
 import io.pulumi.awsnative.kendra.inputs.FaqTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FaqFileFormat> fileFormat;
 
     public Output<FaqFileFormat> getFileFormat() {
-        return this.fileFormat == null ? Output.empty() : this.fileFormat;
+        return this.fileFormat == null ? Codegen.empty() : this.fileFormat;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FaqTagArgs>> tags;
 
     public Output<List<FaqTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FaqArgs(
@@ -113,13 +114,13 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FaqArgs() {
-        this.description = Output.empty();
-        this.fileFormat = Output.empty();
-        this.indexId = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.s3Path = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.fileFormat = Codegen.empty();
+        this.indexId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.s3Path = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fileFormat(@Nullable Output<FaqFileFormat> fileFormat) {
@@ -167,7 +168,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileFormat(@Nullable FaqFileFormat fileFormat) {
-            this.fileFormat = Output.ofNullable(fileFormat);
+            this.fileFormat = Codegen.ofNullable(fileFormat);
             return this;
         }
         public Builder indexId(Output<String> indexId) {
@@ -183,7 +184,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -207,7 +208,7 @@ public final class FaqArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<FaqTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FaqTagArgs... tags) {

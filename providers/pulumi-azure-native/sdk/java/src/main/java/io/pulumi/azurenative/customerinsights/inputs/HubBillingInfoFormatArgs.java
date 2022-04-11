@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> maxUnits;
 
     public Output<Integer> getMaxUnits() {
-        return this.maxUnits == null ? Output.empty() : this.maxUnits;
+        return this.maxUnits == null ? Codegen.empty() : this.maxUnits;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> minUnits;
 
     public Output<Integer> getMinUnits() {
-        return this.minUnits == null ? Output.empty() : this.minUnits;
+        return this.minUnits == null ? Codegen.empty() : this.minUnits;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> skuName;
 
     public Output<String> getSkuName() {
-        return this.skuName == null ? Output.empty() : this.skuName;
+        return this.skuName == null ? Codegen.empty() : this.skuName;
     }
 
     public HubBillingInfoFormatArgs(
@@ -62,9 +63,9 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
     }
 
     private HubBillingInfoFormatArgs() {
-        this.maxUnits = Output.empty();
-        this.minUnits = Output.empty();
-        this.skuName = Output.empty();
+        this.maxUnits = Codegen.empty();
+        this.minUnits = Codegen.empty();
+        this.skuName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder maxUnits(@Nullable Integer maxUnits) {
-            this.maxUnits = Output.ofNullable(maxUnits);
+            this.maxUnits = Codegen.ofNullable(maxUnits);
             return this;
         }
         public Builder minUnits(@Nullable Output<Integer> minUnits) {
@@ -104,7 +105,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder minUnits(@Nullable Integer minUnits) {
-            this.minUnits = Output.ofNullable(minUnits);
+            this.minUnits = Codegen.ofNullable(minUnits);
             return this;
         }
         public Builder skuName(@Nullable Output<String> skuName) {
@@ -112,7 +113,7 @@ public final class HubBillingInfoFormatArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder skuName(@Nullable String skuName) {
-            this.skuName = Output.ofNullable(skuName);
+            this.skuName = Codegen.ofNullable(skuName);
             return this;
         }        public HubBillingInfoFormatArgs build() {
             return new HubBillingInfoFormatArgs(maxUnits, minUnits, skuName);

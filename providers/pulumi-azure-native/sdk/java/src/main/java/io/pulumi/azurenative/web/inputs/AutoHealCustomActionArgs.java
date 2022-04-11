@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> exe;
 
     public Output<String> getExe() {
-        return this.exe == null ? Output.empty() : this.exe;
+        return this.exe == null ? Codegen.empty() : this.exe;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public AutoHealCustomActionArgs(
@@ -49,8 +50,8 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
     }
 
     private AutoHealCustomActionArgs() {
-        this.exe = Output.empty();
-        this.parameters = Output.empty();
+        this.exe = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder exe(@Nullable String exe) {
-            this.exe = Output.ofNullable(exe);
+            this.exe = Codegen.ofNullable(exe);
             return this;
         }
         public Builder parameters(@Nullable Output<String> parameters) {
@@ -88,7 +89,7 @@ public final class AutoHealCustomActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }        public AutoHealCustomActionArgs build() {
             return new AutoHealCustomActionArgs(exe, parameters);

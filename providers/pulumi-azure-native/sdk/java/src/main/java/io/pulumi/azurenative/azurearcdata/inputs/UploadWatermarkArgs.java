@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> logs;
 
     public Output<String> getLogs() {
-        return this.logs == null ? Output.empty() : this.logs;
+        return this.logs == null ? Codegen.empty() : this.logs;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> metrics;
 
     public Output<String> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> usages;
 
     public Output<String> getUsages() {
-        return this.usages == null ? Output.empty() : this.usages;
+        return this.usages == null ? Codegen.empty() : this.usages;
     }
 
     public UploadWatermarkArgs(
@@ -61,9 +62,9 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private UploadWatermarkArgs() {
-        this.logs = Output.empty();
-        this.metrics = Output.empty();
-        this.usages = Output.empty();
+        this.logs = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.usages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder logs(@Nullable String logs) {
-            this.logs = Output.ofNullable(logs);
+            this.logs = Codegen.ofNullable(logs);
             return this;
         }
         public Builder metrics(@Nullable Output<String> metrics) {
@@ -103,7 +104,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metrics(@Nullable String metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder usages(@Nullable Output<String> usages) {
@@ -111,7 +112,7 @@ public final class UploadWatermarkArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder usages(@Nullable String usages) {
-            this.usages = Output.ofNullable(usages);
+            this.usages = Codegen.ofNullable(usages);
             return this;
         }        public UploadWatermarkArgs build() {
             return new UploadWatermarkArgs(logs, metrics, usages);

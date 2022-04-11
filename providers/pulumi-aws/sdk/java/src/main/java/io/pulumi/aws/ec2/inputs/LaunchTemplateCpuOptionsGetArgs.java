@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> coreCount;
 
     public Output<Integer> getCoreCount() {
-        return this.coreCount == null ? Output.empty() : this.coreCount;
+        return this.coreCount == null ? Codegen.empty() : this.coreCount;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> threadsPerCore;
 
     public Output<Integer> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
+        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 
     public LaunchTemplateCpuOptionsGetArgs(
@@ -45,8 +46,8 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
     }
 
     private LaunchTemplateCpuOptionsGetArgs() {
-        this.coreCount = Output.empty();
-        this.threadsPerCore = Output.empty();
+        this.coreCount = Codegen.empty();
+        this.threadsPerCore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder coreCount(@Nullable Integer coreCount) {
-            this.coreCount = Output.ofNullable(coreCount);
+            this.coreCount = Codegen.ofNullable(coreCount);
             return this;
         }
         public Builder threadsPerCore(@Nullable Output<Integer> threadsPerCore) {
@@ -84,7 +85,7 @@ public final class LaunchTemplateCpuOptionsGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder threadsPerCore(@Nullable Integer threadsPerCore) {
-            this.threadsPerCore = Output.ofNullable(threadsPerCore);
+            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
             return this;
         }        public LaunchTemplateCpuOptionsGetArgs build() {
             return new LaunchTemplateCpuOptionsGetArgs(coreCount, threadsPerCore);

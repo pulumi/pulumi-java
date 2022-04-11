@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.AttributeDefinitionArgs;
 import java.lang.String;
@@ -125,7 +126,7 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AttributeDefinition(String name, AttributeDefinitionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:AttributeDefinition", name, args == null ? AttributeDefinitionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:AttributeDefinition", name, args == null ? AttributeDefinitionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AttributeDefinition(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

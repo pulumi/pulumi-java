@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> adminPassword;
 
     public Output<String> getAdminPassword() {
-        return this.adminPassword == null ? Output.empty() : this.adminPassword;
+        return this.adminPassword == null ? Codegen.empty() : this.adminPassword;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> adminUsername;
 
     public Output<String> getAdminUsername() {
-        return this.adminUsername == null ? Output.empty() : this.adminUsername;
+        return this.adminUsername == null ? Codegen.empty() : this.adminUsername;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowExtensionOperations;
 
     public Output<Boolean> getAllowExtensionOperations() {
-        return this.allowExtensionOperations == null ? Output.empty() : this.allowExtensionOperations;
+        return this.allowExtensionOperations == null ? Codegen.empty() : this.allowExtensionOperations;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
-        return this.computerName == null ? Output.empty() : this.computerName;
+        return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LinuxConfigurationArgs> linuxConfiguration;
 
     public Output<LinuxConfigurationArgs> getLinuxConfiguration() {
-        return this.linuxConfiguration == null ? Output.empty() : this.linuxConfiguration;
+        return this.linuxConfiguration == null ? Codegen.empty() : this.linuxConfiguration;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requireGuestProvisionSignal;
 
     public Output<Boolean> getRequireGuestProvisionSignal() {
-        return this.requireGuestProvisionSignal == null ? Output.empty() : this.requireGuestProvisionSignal;
+        return this.requireGuestProvisionSignal == null ? Codegen.empty() : this.requireGuestProvisionSignal;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VaultSecretGroupArgs>> secrets;
 
     public Output<List<VaultSecretGroupArgs>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WindowsConfigurationArgs> windowsConfiguration;
 
     public Output<WindowsConfigurationArgs> getWindowsConfiguration() {
-        return this.windowsConfiguration == null ? Output.empty() : this.windowsConfiguration;
+        return this.windowsConfiguration == null ? Codegen.empty() : this.windowsConfiguration;
     }
 
     public OSProfileArgs(
@@ -144,15 +145,15 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OSProfileArgs() {
-        this.adminPassword = Output.empty();
-        this.adminUsername = Output.empty();
-        this.allowExtensionOperations = Output.empty();
-        this.computerName = Output.empty();
-        this.customData = Output.empty();
-        this.linuxConfiguration = Output.empty();
-        this.requireGuestProvisionSignal = Output.empty();
-        this.secrets = Output.empty();
-        this.windowsConfiguration = Output.empty();
+        this.adminPassword = Codegen.empty();
+        this.adminUsername = Codegen.empty();
+        this.allowExtensionOperations = Codegen.empty();
+        this.computerName = Codegen.empty();
+        this.customData = Codegen.empty();
+        this.linuxConfiguration = Codegen.empty();
+        this.requireGuestProvisionSignal = Codegen.empty();
+        this.secrets = Codegen.empty();
+        this.windowsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminPassword(@Nullable String adminPassword) {
-            this.adminPassword = Output.ofNullable(adminPassword);
+            this.adminPassword = Codegen.ofNullable(adminPassword);
             return this;
         }
         public Builder adminUsername(@Nullable Output<String> adminUsername) {
@@ -204,7 +205,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adminUsername(@Nullable String adminUsername) {
-            this.adminUsername = Output.ofNullable(adminUsername);
+            this.adminUsername = Codegen.ofNullable(adminUsername);
             return this;
         }
         public Builder allowExtensionOperations(@Nullable Output<Boolean> allowExtensionOperations) {
@@ -212,7 +213,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowExtensionOperations(@Nullable Boolean allowExtensionOperations) {
-            this.allowExtensionOperations = Output.ofNullable(allowExtensionOperations);
+            this.allowExtensionOperations = Codegen.ofNullable(allowExtensionOperations);
             return this;
         }
         public Builder computerName(@Nullable Output<String> computerName) {
@@ -220,7 +221,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Output.ofNullable(computerName);
+            this.computerName = Codegen.ofNullable(computerName);
             return this;
         }
         public Builder customData(@Nullable Output<String> customData) {
@@ -228,7 +229,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customData(@Nullable String customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }
         public Builder linuxConfiguration(@Nullable Output<LinuxConfigurationArgs> linuxConfiguration) {
@@ -236,7 +237,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linuxConfiguration(@Nullable LinuxConfigurationArgs linuxConfiguration) {
-            this.linuxConfiguration = Output.ofNullable(linuxConfiguration);
+            this.linuxConfiguration = Codegen.ofNullable(linuxConfiguration);
             return this;
         }
         public Builder requireGuestProvisionSignal(@Nullable Output<Boolean> requireGuestProvisionSignal) {
@@ -244,7 +245,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireGuestProvisionSignal(@Nullable Boolean requireGuestProvisionSignal) {
-            this.requireGuestProvisionSignal = Output.ofNullable(requireGuestProvisionSignal);
+            this.requireGuestProvisionSignal = Codegen.ofNullable(requireGuestProvisionSignal);
             return this;
         }
         public Builder secrets(@Nullable Output<List<VaultSecretGroupArgs>> secrets) {
@@ -252,7 +253,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secrets(@Nullable List<VaultSecretGroupArgs> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(VaultSecretGroupArgs... secrets) {
@@ -263,7 +264,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder windowsConfiguration(@Nullable WindowsConfigurationArgs windowsConfiguration) {
-            this.windowsConfiguration = Output.ofNullable(windowsConfiguration);
+            this.windowsConfiguration = Codegen.ofNullable(windowsConfiguration);
             return this;
         }        public OSProfileArgs build() {
             return new OSProfileArgs(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);

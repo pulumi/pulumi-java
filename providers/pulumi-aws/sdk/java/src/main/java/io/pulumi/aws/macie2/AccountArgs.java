@@ -5,6 +5,7 @@ package io.pulumi.aws.macie2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> findingPublishingFrequency;
 
     public Output<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
+        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public AccountArgs(
@@ -44,8 +45,8 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.findingPublishingFrequency = Output.empty();
-        this.status = Output.empty();
+        this.findingPublishingFrequency = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -83,7 +84,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(findingPublishingFrequency, status);

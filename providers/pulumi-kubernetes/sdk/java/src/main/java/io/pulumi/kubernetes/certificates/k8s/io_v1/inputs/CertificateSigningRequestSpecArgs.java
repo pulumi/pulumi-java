@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.certificates.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
       private final @Nullable Output<Integer> expirationSeconds;
 
     public Output<Integer> getExpirationSeconds() {
-        return this.expirationSeconds == null ? Output.empty() : this.expirationSeconds;
+        return this.expirationSeconds == null ? Codegen.empty() : this.expirationSeconds;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,List<String>>> extra;
 
     public Output<Map<String,List<String>>> getExtra() {
-        return this.extra == null ? Output.empty() : this.extra;
+        return this.extra == null ? Codegen.empty() : this.extra;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> groups;
 
     public Output<List<String>> getGroups() {
-        return this.groups == null ? Output.empty() : this.groups;
+        return this.groups == null ? Codegen.empty() : this.groups;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
       private final @Nullable Output<String> uid;
 
     public Output<String> getUid() {
-        return this.uid == null ? Output.empty() : this.uid;
+        return this.uid == null ? Codegen.empty() : this.uid;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> usages;
 
     public Output<List<String>> getUsages() {
-        return this.usages == null ? Output.empty() : this.usages;
+        return this.usages == null ? Codegen.empty() : this.usages;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public CertificateSigningRequestSpecArgs(
@@ -175,14 +176,14 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
     }
 
     private CertificateSigningRequestSpecArgs() {
-        this.expirationSeconds = Output.empty();
-        this.extra = Output.empty();
-        this.groups = Output.empty();
-        this.request = Output.empty();
-        this.signerName = Output.empty();
-        this.uid = Output.empty();
-        this.usages = Output.empty();
-        this.username = Output.empty();
+        this.expirationSeconds = Codegen.empty();
+        this.extra = Codegen.empty();
+        this.groups = Codegen.empty();
+        this.request = Codegen.empty();
+        this.signerName = Codegen.empty();
+        this.uid = Codegen.empty();
+        this.usages = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             return this;
         }
         public Builder expirationSeconds(@Nullable Integer expirationSeconds) {
-            this.expirationSeconds = Output.ofNullable(expirationSeconds);
+            this.expirationSeconds = Codegen.ofNullable(expirationSeconds);
             return this;
         }
         public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
@@ -232,7 +233,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             return this;
         }
         public Builder extra(@Nullable Map<String,List<String>> extra) {
-            this.extra = Output.ofNullable(extra);
+            this.extra = Codegen.ofNullable(extra);
             return this;
         }
         public Builder groups(@Nullable Output<List<String>> groups) {
@@ -240,7 +241,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             return this;
         }
         public Builder groups(@Nullable List<String> groups) {
-            this.groups = Output.ofNullable(groups);
+            this.groups = Codegen.ofNullable(groups);
             return this;
         }
         public Builder groups(String... groups) {
@@ -267,7 +268,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             return this;
         }
         public Builder uid(@Nullable String uid) {
-            this.uid = Output.ofNullable(uid);
+            this.uid = Codegen.ofNullable(uid);
             return this;
         }
         public Builder usages(@Nullable Output<List<String>> usages) {
@@ -275,7 +276,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             return this;
         }
         public Builder usages(@Nullable List<String> usages) {
-            this.usages = Output.ofNullable(usages);
+            this.usages = Codegen.ofNullable(usages);
             return this;
         }
         public Builder usages(String... usages) {
@@ -286,7 +287,7 @@ public final class CertificateSigningRequestSpecArgs extends io.pulumi.resources
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public CertificateSigningRequestSpecArgs build() {
             return new CertificateSigningRequestSpecArgs(expirationSeconds, extra, groups, request, signerName, uid, usages, username);

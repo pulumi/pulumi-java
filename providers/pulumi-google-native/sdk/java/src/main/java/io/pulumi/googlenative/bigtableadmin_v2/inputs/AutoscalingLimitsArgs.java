@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class AutoscalingLimitsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoscalingLimitsArgs() {
-        this.maxServeNodes = Output.empty();
-        this.minServeNodes = Output.empty();
+        this.maxServeNodes = Codegen.empty();
+        this.minServeNodes = Codegen.empty();
     }
 
     public static Builder builder() {

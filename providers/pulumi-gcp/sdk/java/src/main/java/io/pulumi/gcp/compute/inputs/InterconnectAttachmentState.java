@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.InterconnectAttachmentPrivateInterconnectInfoGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +28,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> adminEnabled;
 
     public Output<Boolean> getAdminEnabled() {
-        return this.adminEnabled == null ? Output.empty() : this.adminEnabled;
+        return this.adminEnabled == null ? Codegen.empty() : this.adminEnabled;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> bandwidth;
 
     public Output<String> getBandwidth() {
-        return this.bandwidth == null ? Output.empty() : this.bandwidth;
+        return this.bandwidth == null ? Codegen.empty() : this.bandwidth;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> candidateSubnets;
 
     public Output<List<String>> getCandidateSubnets() {
-        return this.candidateSubnets == null ? Output.empty() : this.candidateSubnets;
+        return this.candidateSubnets == null ? Codegen.empty() : this.candidateSubnets;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> cloudRouterIpAddress;
 
     public Output<String> getCloudRouterIpAddress() {
-        return this.cloudRouterIpAddress == null ? Output.empty() : this.cloudRouterIpAddress;
+        return this.cloudRouterIpAddress == null ? Codegen.empty() : this.cloudRouterIpAddress;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customerRouterIpAddress;
 
     public Output<String> getCustomerRouterIpAddress() {
-        return this.customerRouterIpAddress == null ? Output.empty() : this.customerRouterIpAddress;
+        return this.customerRouterIpAddress == null ? Codegen.empty() : this.customerRouterIpAddress;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> edgeAvailabilityDomain;
 
     public Output<String> getEdgeAvailabilityDomain() {
-        return this.edgeAvailabilityDomain == null ? Output.empty() : this.edgeAvailabilityDomain;
+        return this.edgeAvailabilityDomain == null ? Codegen.empty() : this.edgeAvailabilityDomain;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> encryption;
 
     public Output<String> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> googleReferenceId;
 
     public Output<String> getGoogleReferenceId() {
-        return this.googleReferenceId == null ? Output.empty() : this.googleReferenceId;
+        return this.googleReferenceId == null ? Codegen.empty() : this.googleReferenceId;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> interconnect;
 
     public Output<String> getInterconnect() {
-        return this.interconnect == null ? Output.empty() : this.interconnect;
+        return this.interconnect == null ? Codegen.empty() : this.interconnect;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> ipsecInternalAddresses;
 
     public Output<List<String>> getIpsecInternalAddresses() {
-        return this.ipsecInternalAddresses == null ? Output.empty() : this.ipsecInternalAddresses;
+        return this.ipsecInternalAddresses == null ? Codegen.empty() : this.ipsecInternalAddresses;
     }
 
     /**
@@ -206,7 +207,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> mtu;
 
     public Output<String> getMtu() {
-        return this.mtu == null ? Output.empty() : this.mtu;
+        return this.mtu == null ? Codegen.empty() : this.mtu;
     }
 
     /**
@@ -222,7 +223,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -234,7 +235,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> pairingKey;
 
     public Output<String> getPairingKey() {
-        return this.pairingKey == null ? Output.empty() : this.pairingKey;
+        return this.pairingKey == null ? Codegen.empty() : this.pairingKey;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> partnerAsn;
 
     public Output<String> getPartnerAsn() {
-        return this.partnerAsn == null ? Output.empty() : this.partnerAsn;
+        return this.partnerAsn == null ? Codegen.empty() : this.partnerAsn;
     }
 
     /**
@@ -258,7 +259,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos;
 
     public Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> getPrivateInterconnectInfos() {
-        return this.privateInterconnectInfos == null ? Output.empty() : this.privateInterconnectInfos;
+        return this.privateInterconnectInfos == null ? Codegen.empty() : this.privateInterconnectInfos;
     }
 
     /**
@@ -270,7 +271,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -281,7 +282,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -295,7 +296,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> router;
 
     public Output<String> getRouter() {
-        return this.router == null ? Output.empty() : this.router;
+        return this.router == null ? Codegen.empty() : this.router;
     }
 
     /**
@@ -306,7 +307,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -317,7 +318,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -330,7 +331,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -342,7 +343,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> vlanTag8021q;
 
     public Output<Integer> getVlanTag8021q() {
-        return this.vlanTag8021q == null ? Output.empty() : this.vlanTag8021q;
+        return this.vlanTag8021q == null ? Codegen.empty() : this.vlanTag8021q;
     }
 
     public InterconnectAttachmentState(
@@ -397,30 +398,30 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
     }
 
     private InterconnectAttachmentState() {
-        this.adminEnabled = Output.empty();
-        this.bandwidth = Output.empty();
-        this.candidateSubnets = Output.empty();
-        this.cloudRouterIpAddress = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.customerRouterIpAddress = Output.empty();
-        this.description = Output.empty();
-        this.edgeAvailabilityDomain = Output.empty();
-        this.encryption = Output.empty();
-        this.googleReferenceId = Output.empty();
-        this.interconnect = Output.empty();
-        this.ipsecInternalAddresses = Output.empty();
-        this.mtu = Output.empty();
-        this.name = Output.empty();
-        this.pairingKey = Output.empty();
-        this.partnerAsn = Output.empty();
-        this.privateInterconnectInfos = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.router = Output.empty();
-        this.selfLink = Output.empty();
-        this.state = Output.empty();
-        this.type = Output.empty();
-        this.vlanTag8021q = Output.empty();
+        this.adminEnabled = Codegen.empty();
+        this.bandwidth = Codegen.empty();
+        this.candidateSubnets = Codegen.empty();
+        this.cloudRouterIpAddress = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.customerRouterIpAddress = Codegen.empty();
+        this.description = Codegen.empty();
+        this.edgeAvailabilityDomain = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.googleReferenceId = Codegen.empty();
+        this.interconnect = Codegen.empty();
+        this.ipsecInternalAddresses = Codegen.empty();
+        this.mtu = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pairingKey = Codegen.empty();
+        this.partnerAsn = Codegen.empty();
+        this.privateInterconnectInfos = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.router = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.state = Codegen.empty();
+        this.type = Codegen.empty();
+        this.vlanTag8021q = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -494,7 +495,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder adminEnabled(@Nullable Boolean adminEnabled) {
-            this.adminEnabled = Output.ofNullable(adminEnabled);
+            this.adminEnabled = Codegen.ofNullable(adminEnabled);
             return this;
         }
         public Builder bandwidth(@Nullable Output<String> bandwidth) {
@@ -502,7 +503,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder bandwidth(@Nullable String bandwidth) {
-            this.bandwidth = Output.ofNullable(bandwidth);
+            this.bandwidth = Codegen.ofNullable(bandwidth);
             return this;
         }
         public Builder candidateSubnets(@Nullable Output<List<String>> candidateSubnets) {
@@ -510,7 +511,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder candidateSubnets(@Nullable List<String> candidateSubnets) {
-            this.candidateSubnets = Output.ofNullable(candidateSubnets);
+            this.candidateSubnets = Codegen.ofNullable(candidateSubnets);
             return this;
         }
         public Builder candidateSubnets(String... candidateSubnets) {
@@ -521,7 +522,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder cloudRouterIpAddress(@Nullable String cloudRouterIpAddress) {
-            this.cloudRouterIpAddress = Output.ofNullable(cloudRouterIpAddress);
+            this.cloudRouterIpAddress = Codegen.ofNullable(cloudRouterIpAddress);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -529,7 +530,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder customerRouterIpAddress(@Nullable Output<String> customerRouterIpAddress) {
@@ -537,7 +538,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customerRouterIpAddress(@Nullable String customerRouterIpAddress) {
-            this.customerRouterIpAddress = Output.ofNullable(customerRouterIpAddress);
+            this.customerRouterIpAddress = Codegen.ofNullable(customerRouterIpAddress);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -545,7 +546,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder edgeAvailabilityDomain(@Nullable Output<String> edgeAvailabilityDomain) {
@@ -553,7 +554,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder edgeAvailabilityDomain(@Nullable String edgeAvailabilityDomain) {
-            this.edgeAvailabilityDomain = Output.ofNullable(edgeAvailabilityDomain);
+            this.edgeAvailabilityDomain = Codegen.ofNullable(edgeAvailabilityDomain);
             return this;
         }
         public Builder encryption(@Nullable Output<String> encryption) {
@@ -561,7 +562,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder encryption(@Nullable String encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder googleReferenceId(@Nullable Output<String> googleReferenceId) {
@@ -569,7 +570,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder googleReferenceId(@Nullable String googleReferenceId) {
-            this.googleReferenceId = Output.ofNullable(googleReferenceId);
+            this.googleReferenceId = Codegen.ofNullable(googleReferenceId);
             return this;
         }
         public Builder interconnect(@Nullable Output<String> interconnect) {
@@ -577,7 +578,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder interconnect(@Nullable String interconnect) {
-            this.interconnect = Output.ofNullable(interconnect);
+            this.interconnect = Codegen.ofNullable(interconnect);
             return this;
         }
         public Builder ipsecInternalAddresses(@Nullable Output<List<String>> ipsecInternalAddresses) {
@@ -585,7 +586,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ipsecInternalAddresses(@Nullable List<String> ipsecInternalAddresses) {
-            this.ipsecInternalAddresses = Output.ofNullable(ipsecInternalAddresses);
+            this.ipsecInternalAddresses = Codegen.ofNullable(ipsecInternalAddresses);
             return this;
         }
         public Builder ipsecInternalAddresses(String... ipsecInternalAddresses) {
@@ -596,7 +597,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mtu(@Nullable String mtu) {
-            this.mtu = Output.ofNullable(mtu);
+            this.mtu = Codegen.ofNullable(mtu);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -604,7 +605,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder pairingKey(@Nullable Output<String> pairingKey) {
@@ -612,7 +613,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder pairingKey(@Nullable String pairingKey) {
-            this.pairingKey = Output.ofNullable(pairingKey);
+            this.pairingKey = Codegen.ofNullable(pairingKey);
             return this;
         }
         public Builder partnerAsn(@Nullable Output<String> partnerAsn) {
@@ -620,7 +621,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder partnerAsn(@Nullable String partnerAsn) {
-            this.partnerAsn = Output.ofNullable(partnerAsn);
+            this.partnerAsn = Codegen.ofNullable(partnerAsn);
             return this;
         }
         public Builder privateInterconnectInfos(@Nullable Output<List<InterconnectAttachmentPrivateInterconnectInfoGetArgs>> privateInterconnectInfos) {
@@ -628,7 +629,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder privateInterconnectInfos(@Nullable List<InterconnectAttachmentPrivateInterconnectInfoGetArgs> privateInterconnectInfos) {
-            this.privateInterconnectInfos = Output.ofNullable(privateInterconnectInfos);
+            this.privateInterconnectInfos = Codegen.ofNullable(privateInterconnectInfos);
             return this;
         }
         public Builder privateInterconnectInfos(InterconnectAttachmentPrivateInterconnectInfoGetArgs... privateInterconnectInfos) {
@@ -639,7 +640,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -647,7 +648,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder router(@Nullable Output<String> router) {
@@ -655,7 +656,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder router(@Nullable String router) {
-            this.router = Output.ofNullable(router);
+            this.router = Codegen.ofNullable(router);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -663,7 +664,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -671,7 +672,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -679,7 +680,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder vlanTag8021q(@Nullable Output<Integer> vlanTag8021q) {
@@ -687,7 +688,7 @@ public final class InterconnectAttachmentState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder vlanTag8021q(@Nullable Integer vlanTag8021q) {
-            this.vlanTag8021q = Output.ofNullable(vlanTag8021q);
+            this.vlanTag8021q = Codegen.ofNullable(vlanTag8021q);
             return this;
         }        public InterconnectAttachmentState build() {
             return new InterconnectAttachmentState(adminEnabled, bandwidth, candidateSubnets, cloudRouterIpAddress, creationTimestamp, customerRouterIpAddress, description, edgeAvailabilityDomain, encryption, googleReferenceId, interconnect, ipsecInternalAddresses, mtu, name, pairingKey, partnerAsn, privateInterconnectInfos, project, region, router, selfLink, state, type, vlanTag8021q);

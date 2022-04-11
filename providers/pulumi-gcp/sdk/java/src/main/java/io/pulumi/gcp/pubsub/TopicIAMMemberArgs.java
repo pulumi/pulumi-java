@@ -5,6 +5,7 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.pubsub.inputs.TopicIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TopicIAMMemberConditionArgs> condition;
 
     public Output<TopicIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
@@ -38,7 +39,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -79,11 +80,11 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicIAMMemberArgs() {
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.topic = Output.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable TopicIAMMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {
@@ -135,7 +136,7 @@ public final class TopicIAMMemberArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(Output<String> role) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> networkType;
 
     public Output<String> getNetworkType() {
-        return this.networkType == null ? Output.empty() : this.networkType;
+        return this.networkType == null ? Codegen.empty() : this.networkType;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     public ConnectivityTestSourceArgs(
@@ -108,12 +109,12 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
     }
 
     private ConnectivityTestSourceArgs() {
-        this.instance = Output.empty();
-        this.ipAddress = Output.empty();
-        this.network = Output.empty();
-        this.networkType = Output.empty();
-        this.port = Output.empty();
-        this.projectId = Output.empty();
+        this.instance = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.network = Codegen.empty();
+        this.networkType = Codegen.empty();
+        this.port = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -159,7 +160,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -167,7 +168,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder networkType(@Nullable Output<String> networkType) {
@@ -175,7 +176,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder networkType(@Nullable String networkType) {
-            this.networkType = Output.ofNullable(networkType);
+            this.networkType = Codegen.ofNullable(networkType);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -183,7 +184,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -191,7 +192,7 @@ public final class ConnectivityTestSourceArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }        public ConnectivityTestSourceArgs build() {
             return new ConnectivityTestSourceArgs(instance, ipAddress, network, networkType, port, projectId);

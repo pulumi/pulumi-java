@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.ReservationSpecificReservationInstancePropertiesGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> inUseCount;
 
     public Output<Integer> getInUseCount() {
-        return this.inUseCount == null ? Output.empty() : this.inUseCount;
+        return this.inUseCount == null ? Codegen.empty() : this.inUseCount;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
     }
 
     private ReservationSpecificReservationGetArgs() {
-        this.count = Output.empty();
-        this.inUseCount = Output.empty();
-        this.instanceProperties = Output.empty();
+        this.count = Codegen.empty();
+        this.inUseCount = Codegen.empty();
+        this.instanceProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class ReservationSpecificReservationGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder inUseCount(@Nullable Integer inUseCount) {
-            this.inUseCount = Output.ofNullable(inUseCount);
+            this.inUseCount = Codegen.ofNullable(inUseCount);
             return this;
         }
         public Builder instanceProperties(Output<ReservationSpecificReservationInstancePropertiesGetArgs> instanceProperties) {

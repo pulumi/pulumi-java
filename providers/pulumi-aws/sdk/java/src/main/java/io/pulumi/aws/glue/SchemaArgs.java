@@ -5,6 +5,7 @@ package io.pulumi.aws.glue;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> registryArn;
 
     public Output<String> getRegistryArn() {
-        return this.registryArn == null ? Output.empty() : this.registryArn;
+        return this.registryArn == null ? Codegen.empty() : this.registryArn;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SchemaArgs(
@@ -110,13 +111,13 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.compatibility = Output.empty();
-        this.dataFormat = Output.empty();
-        this.description = Output.empty();
-        this.registryArn = Output.empty();
-        this.schemaDefinition = Output.empty();
-        this.schemaName = Output.empty();
-        this.tags = Output.empty();
+        this.compatibility = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.description = Codegen.empty();
+        this.registryArn = Codegen.empty();
+        this.schemaDefinition = Codegen.empty();
+        this.schemaName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder registryArn(@Nullable Output<String> registryArn) {
@@ -180,7 +181,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registryArn(@Nullable String registryArn) {
-            this.registryArn = Output.ofNullable(registryArn);
+            this.registryArn = Codegen.ofNullable(registryArn);
             return this;
         }
         public Builder schemaDefinition(Output<String> schemaDefinition) {
@@ -204,7 +205,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SchemaArgs build() {
             return new SchemaArgs(compatibility, dataFormat, description, registryArn, schemaDefinition, schemaName, tags);

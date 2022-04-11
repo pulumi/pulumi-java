@@ -6,6 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTargetTargetGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> ownerInformation;
 
     public Output<String> getOwnerInformation() {
-        return this.ownerInformation == null ? Output.empty() : this.ownerInformation;
+        return this.ownerInformation == null ? Codegen.empty() : this.ownerInformation;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
       private final @Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets;
 
     public Output<List<MaintenanceWindowTargetTargetGetArgs>> getTargets() {
-        return this.targets == null ? Output.empty() : this.targets;
+        return this.targets == null ? Codegen.empty() : this.targets;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> windowId;
 
     public Output<String> getWindowId() {
-        return this.windowId == null ? Output.empty() : this.windowId;
+        return this.windowId == null ? Codegen.empty() : this.windowId;
     }
 
     public MaintenanceWindowTargetState(
@@ -99,12 +100,12 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
     }
 
     private MaintenanceWindowTargetState() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.ownerInformation = Output.empty();
-        this.resourceType = Output.empty();
-        this.targets = Output.empty();
-        this.windowId = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerInformation = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.targets = Codegen.empty();
+        this.windowId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -150,7 +151,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerInformation(@Nullable Output<String> ownerInformation) {
@@ -158,7 +159,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder ownerInformation(@Nullable String ownerInformation) {
-            this.ownerInformation = Output.ofNullable(ownerInformation);
+            this.ownerInformation = Codegen.ofNullable(ownerInformation);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -166,7 +167,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder targets(@Nullable Output<List<MaintenanceWindowTargetTargetGetArgs>> targets) {
@@ -174,7 +175,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder targets(@Nullable List<MaintenanceWindowTargetTargetGetArgs> targets) {
-            this.targets = Output.ofNullable(targets);
+            this.targets = Codegen.ofNullable(targets);
             return this;
         }
         public Builder targets(MaintenanceWindowTargetTargetGetArgs... targets) {
@@ -185,7 +186,7 @@ public final class MaintenanceWindowTargetState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder windowId(@Nullable String windowId) {
-            this.windowId = Output.ofNullable(windowId);
+            this.windowId = Codegen.ofNullable(windowId);
             return this;
         }        public MaintenanceWindowTargetState build() {
             return new MaintenanceWindowTargetState(description, name, ownerInformation, resourceType, targets, windowId);

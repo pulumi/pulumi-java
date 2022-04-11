@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ec2.inputs.TransitGatewayConnectOptionsArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayConnectTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<TransitGatewayConnectTagArgs>> tags;
 
     public Output<List<TransitGatewayConnectTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
     }
 
     private TransitGatewayConnectArgs() {
-        this.options = Output.empty();
-        this.tags = Output.empty();
-        this.transportTransitGatewayAttachmentId = Output.empty();
+        this.options = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.transportTransitGatewayAttachmentId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class TransitGatewayConnectArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable List<TransitGatewayConnectTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TransitGatewayConnectTagArgs... tags) {

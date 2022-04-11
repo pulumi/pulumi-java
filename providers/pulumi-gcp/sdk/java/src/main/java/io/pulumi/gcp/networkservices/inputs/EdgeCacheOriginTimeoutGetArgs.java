@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> connectTimeout;
 
     public Output<String> getConnectTimeout() {
-        return this.connectTimeout == null ? Output.empty() : this.connectTimeout;
+        return this.connectTimeout == null ? Codegen.empty() : this.connectTimeout;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> maxAttemptsTimeout;
 
     public Output<String> getMaxAttemptsTimeout() {
-        return this.maxAttemptsTimeout == null ? Output.empty() : this.maxAttemptsTimeout;
+        return this.maxAttemptsTimeout == null ? Codegen.empty() : this.maxAttemptsTimeout;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> responseTimeout;
 
     public Output<String> getResponseTimeout() {
-        return this.responseTimeout == null ? Output.empty() : this.responseTimeout;
+        return this.responseTimeout == null ? Codegen.empty() : this.responseTimeout;
     }
 
     public EdgeCacheOriginTimeoutGetArgs(
@@ -60,9 +61,9 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
     }
 
     private EdgeCacheOriginTimeoutGetArgs() {
-        this.connectTimeout = Output.empty();
-        this.maxAttemptsTimeout = Output.empty();
-        this.responseTimeout = Output.empty();
+        this.connectTimeout = Codegen.empty();
+        this.maxAttemptsTimeout = Codegen.empty();
+        this.responseTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder connectTimeout(@Nullable String connectTimeout) {
-            this.connectTimeout = Output.ofNullable(connectTimeout);
+            this.connectTimeout = Codegen.ofNullable(connectTimeout);
             return this;
         }
         public Builder maxAttemptsTimeout(@Nullable Output<String> maxAttemptsTimeout) {
@@ -102,7 +103,7 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder maxAttemptsTimeout(@Nullable String maxAttemptsTimeout) {
-            this.maxAttemptsTimeout = Output.ofNullable(maxAttemptsTimeout);
+            this.maxAttemptsTimeout = Codegen.ofNullable(maxAttemptsTimeout);
             return this;
         }
         public Builder responseTimeout(@Nullable Output<String> responseTimeout) {
@@ -110,7 +111,7 @@ public final class EdgeCacheOriginTimeoutGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder responseTimeout(@Nullable String responseTimeout) {
-            this.responseTimeout = Output.ofNullable(responseTimeout);
+            this.responseTimeout = Codegen.ofNullable(responseTimeout);
             return this;
         }        public EdgeCacheOriginTimeoutGetArgs build() {
             return new EdgeCacheOriginTimeoutGetArgs(connectTimeout, maxAttemptsTimeout, responseTimeout);

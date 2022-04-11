@@ -5,6 +5,7 @@ package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
-        return this.datastoreId == null ? Output.empty() : this.datastoreId;
+        return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
-        return this.hostId == null ? Output.empty() : this.hostId;
+        return this.hostId == null ? Codegen.empty() : this.hostId;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourcePoolId;
 
     public Output<String> getResourcePoolId() {
-        return this.resourcePoolId == null ? Output.empty() : this.resourcePoolId;
+        return this.resourcePoolId == null ? Codegen.empty() : this.resourcePoolId;
     }
 
     public PlacementProfileArgs(
@@ -74,10 +75,10 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private PlacementProfileArgs() {
-        this.clusterId = Output.empty();
-        this.datastoreId = Output.empty();
-        this.hostId = Output.empty();
-        this.resourcePoolId = Output.empty();
+        this.clusterId = Codegen.empty();
+        this.datastoreId = Codegen.empty();
+        this.hostId = Codegen.empty();
+        this.resourcePoolId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
@@ -119,7 +120,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Output.ofNullable(datastoreId);
+            this.datastoreId = Codegen.ofNullable(datastoreId);
             return this;
         }
         public Builder hostId(@Nullable Output<String> hostId) {
@@ -127,7 +128,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = Output.ofNullable(hostId);
+            this.hostId = Codegen.ofNullable(hostId);
             return this;
         }
         public Builder resourcePoolId(@Nullable Output<String> resourcePoolId) {
@@ -135,7 +136,7 @@ public final class PlacementProfileArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourcePoolId(@Nullable String resourcePoolId) {
-            this.resourcePoolId = Output.ofNullable(resourcePoolId);
+            this.resourcePoolId = Codegen.ofNullable(resourcePoolId);
             return this;
         }        public PlacementProfileArgs build() {
             return new PlacementProfileArgs(clusterId, datastoreId, hostId, resourcePoolId);

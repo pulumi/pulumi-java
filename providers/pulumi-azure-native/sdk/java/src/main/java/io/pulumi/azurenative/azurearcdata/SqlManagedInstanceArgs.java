@@ -8,6 +8,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstancePropertiesArg
 import io.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstanceSkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<SqlManagedInstanceSkuArgs> sku;
 
     public Output<SqlManagedInstanceSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> sqlManagedInstanceName;
 
     public Output<String> getSqlManagedInstanceName() {
-        return this.sqlManagedInstanceName == null ? Output.empty() : this.sqlManagedInstanceName;
+        return this.sqlManagedInstanceName == null ? Codegen.empty() : this.sqlManagedInstanceName;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public SqlManagedInstanceArgs(
@@ -113,13 +114,13 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SqlManagedInstanceArgs() {
-        this.extendedLocation = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.sqlManagedInstanceName = Output.empty();
-        this.tags = Output.empty();
+        this.extendedLocation = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.sqlManagedInstanceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -167,7 +168,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<SqlManagedInstancePropertiesArgs> properties) {
@@ -191,7 +192,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sku(@Nullable SqlManagedInstanceSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder sqlManagedInstanceName(@Nullable Output<String> sqlManagedInstanceName) {
@@ -199,7 +200,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder sqlManagedInstanceName(@Nullable String sqlManagedInstanceName) {
-            this.sqlManagedInstanceName = Output.ofNullable(sqlManagedInstanceName);
+            this.sqlManagedInstanceName = Codegen.ofNullable(sqlManagedInstanceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -207,7 +208,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public SqlManagedInstanceArgs build() {
             return new SqlManagedInstanceArgs(extendedLocation, location, properties, resourceGroupName, sku, sqlManagedInstanceName, tags);

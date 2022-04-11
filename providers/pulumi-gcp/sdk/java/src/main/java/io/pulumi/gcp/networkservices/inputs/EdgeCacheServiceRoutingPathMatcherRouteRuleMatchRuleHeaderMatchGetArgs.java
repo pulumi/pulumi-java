@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
-        return this.exactMatch == null ? Output.empty() : this.exactMatch;
+        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
       private final @Nullable Output<Boolean> invertMatch;
 
     public Output<Boolean> getInvertMatch() {
-        return this.invertMatch == null ? Output.empty() : this.invertMatch;
+        return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Output.empty() : this.presentMatch;
+        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
       private final @Nullable Output<String> suffixMatch;
 
     public Output<String> getSuffixMatch() {
-        return this.suffixMatch == null ? Output.empty() : this.suffixMatch;
+        return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
     }
 
     public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(
@@ -99,12 +100,12 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
     }
 
     private EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs() {
-        this.exactMatch = Output.empty();
-        this.headerName = Output.empty();
-        this.invertMatch = Output.empty();
-        this.prefixMatch = Output.empty();
-        this.presentMatch = Output.empty();
-        this.suffixMatch = Output.empty();
+        this.exactMatch = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.invertMatch = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
+        this.presentMatch = Codegen.empty();
+        this.suffixMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             return this;
         }
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Output.ofNullable(exactMatch);
+            this.exactMatch = Codegen.ofNullable(exactMatch);
             return this;
         }
         public Builder headerName(Output<String> headerName) {
@@ -158,7 +159,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             return this;
         }
         public Builder invertMatch(@Nullable Boolean invertMatch) {
-            this.invertMatch = Output.ofNullable(invertMatch);
+            this.invertMatch = Codegen.ofNullable(invertMatch);
             return this;
         }
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
@@ -166,7 +167,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             return this;
         }
         public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
@@ -174,7 +175,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             return this;
         }
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Output.ofNullable(presentMatch);
+            this.presentMatch = Codegen.ofNullable(presentMatch);
             return this;
         }
         public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
@@ -182,7 +183,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMat
             return this;
         }
         public Builder suffixMatch(@Nullable String suffixMatch) {
-            this.suffixMatch = Output.ofNullable(suffixMatch);
+            this.suffixMatch = Codegen.ofNullable(suffixMatch);
             return this;
         }        public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, suffixMatch);

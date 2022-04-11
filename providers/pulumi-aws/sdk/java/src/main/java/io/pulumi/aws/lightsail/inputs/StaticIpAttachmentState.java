@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> staticIpName;
 
     public Output<String> getStaticIpName() {
-        return this.staticIpName == null ? Output.empty() : this.staticIpName;
+        return this.staticIpName == null ? Codegen.empty() : this.staticIpName;
     }
 
     public StaticIpAttachmentState(
@@ -57,9 +58,9 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
     }
 
     private StaticIpAttachmentState() {
-        this.instanceName = Output.empty();
-        this.ipAddress = Output.empty();
-        this.staticIpName = Output.empty();
+        this.instanceName = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.staticIpName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -99,7 +100,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder staticIpName(@Nullable Output<String> staticIpName) {
@@ -107,7 +108,7 @@ public final class StaticIpAttachmentState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder staticIpName(@Nullable String staticIpName) {
-            this.staticIpName = Output.ofNullable(staticIpName);
+            this.staticIpName = Codegen.ofNullable(staticIpName);
             return this;
         }        public StaticIpAttachmentState build() {
             return new StaticIpAttachmentState(instanceName, ipAddress, staticIpName);

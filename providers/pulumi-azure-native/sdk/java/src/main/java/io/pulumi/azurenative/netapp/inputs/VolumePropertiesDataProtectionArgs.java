@@ -8,6 +8,7 @@ import io.pulumi.azurenative.netapp.inputs.VolumeBackupPropertiesArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumeSnapshotPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
       private final @Nullable Output<VolumeBackupPropertiesArgs> backup;
 
     public Output<VolumeBackupPropertiesArgs> getBackup() {
-        return this.backup == null ? Output.empty() : this.backup;
+        return this.backup == null ? Codegen.empty() : this.backup;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
       private final @Nullable Output<ReplicationObjectArgs> replication;
 
     public Output<ReplicationObjectArgs> getReplication() {
-        return this.replication == null ? Output.empty() : this.replication;
+        return this.replication == null ? Codegen.empty() : this.replication;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
       private final @Nullable Output<VolumeSnapshotPropertiesArgs> snapshot;
 
     public Output<VolumeSnapshotPropertiesArgs> getSnapshot() {
-        return this.snapshot == null ? Output.empty() : this.snapshot;
+        return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
     public VolumePropertiesDataProtectionArgs(
@@ -63,9 +64,9 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
     }
 
     private VolumePropertiesDataProtectionArgs() {
-        this.backup = Output.empty();
-        this.replication = Output.empty();
-        this.snapshot = Output.empty();
+        this.backup = Codegen.empty();
+        this.replication = Codegen.empty();
+        this.snapshot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
             return this;
         }
         public Builder backup(@Nullable VolumeBackupPropertiesArgs backup) {
-            this.backup = Output.ofNullable(backup);
+            this.backup = Codegen.ofNullable(backup);
             return this;
         }
         public Builder replication(@Nullable Output<ReplicationObjectArgs> replication) {
@@ -105,7 +106,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
             return this;
         }
         public Builder replication(@Nullable ReplicationObjectArgs replication) {
-            this.replication = Output.ofNullable(replication);
+            this.replication = Codegen.ofNullable(replication);
             return this;
         }
         public Builder snapshot(@Nullable Output<VolumeSnapshotPropertiesArgs> snapshot) {
@@ -113,7 +114,7 @@ public final class VolumePropertiesDataProtectionArgs extends io.pulumi.resource
             return this;
         }
         public Builder snapshot(@Nullable VolumeSnapshotPropertiesArgs snapshot) {
-            this.snapshot = Output.ofNullable(snapshot);
+            this.snapshot = Codegen.ofNullable(snapshot);
             return this;
         }        public VolumePropertiesDataProtectionArgs build() {
             return new VolumePropertiesDataProtectionArgs(backup, replication, snapshot);

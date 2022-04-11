@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupOnlineStoreSecurityConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> enableOnlineStore;
 
     public Output<Boolean> getEnableOnlineStore() {
-        return this.enableOnlineStore == null ? Output.empty() : this.enableOnlineStore;
+        return this.enableOnlineStore == null ? Codegen.empty() : this.enableOnlineStore;
     }
 
     @Import(name="securityConfig")
       private final @Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig;
 
     public Output<FeatureGroupOnlineStoreSecurityConfigArgs> getSecurityConfig() {
-        return this.securityConfig == null ? Output.empty() : this.securityConfig;
+        return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 
     public OnlineStoreConfigPropertiesArgs(
@@ -37,8 +38,8 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
     }
 
     private OnlineStoreConfigPropertiesArgs() {
-        this.enableOnlineStore = Output.empty();
-        this.securityConfig = Output.empty();
+        this.enableOnlineStore = Codegen.empty();
+        this.securityConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder enableOnlineStore(@Nullable Boolean enableOnlineStore) {
-            this.enableOnlineStore = Output.ofNullable(enableOnlineStore);
+            this.enableOnlineStore = Codegen.ofNullable(enableOnlineStore);
             return this;
         }
         public Builder securityConfig(@Nullable Output<FeatureGroupOnlineStoreSecurityConfigArgs> securityConfig) {
@@ -76,7 +77,7 @@ public final class OnlineStoreConfigPropertiesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder securityConfig(@Nullable FeatureGroupOnlineStoreSecurityConfigArgs securityConfig) {
-            this.securityConfig = Output.ofNullable(securityConfig);
+            this.securityConfig = Codegen.ofNullable(securityConfig);
             return this;
         }        public OnlineStoreConfigPropertiesArgs build() {
             return new OnlineStoreConfigPropertiesArgs(enableOnlineStore, securityConfig);

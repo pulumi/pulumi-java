@@ -5,6 +5,7 @@ package io.pulumi.aws.cloud9.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> permissions;
 
     public Output<String> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> userArn;
 
     public Output<String> getUserArn() {
-        return this.userArn == null ? Output.empty() : this.userArn;
+        return this.userArn == null ? Codegen.empty() : this.userArn;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> userId;
 
     public Output<String> getUserId() {
-        return this.userId == null ? Output.empty() : this.userId;
+        return this.userId == null ? Codegen.empty() : this.userId;
     }
 
     public EnvironmentMembershipState(
@@ -70,10 +71,10 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
     }
 
     private EnvironmentMembershipState() {
-        this.environmentId = Output.empty();
-        this.permissions = Output.empty();
-        this.userArn = Output.empty();
-        this.userId = Output.empty();
+        this.environmentId = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.userArn = Codegen.empty();
+        this.userId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder permissions(@Nullable Output<String> permissions) {
@@ -115,7 +116,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder permissions(@Nullable String permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder userArn(@Nullable Output<String> userArn) {
@@ -123,7 +124,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder userArn(@Nullable String userArn) {
-            this.userArn = Output.ofNullable(userArn);
+            this.userArn = Codegen.ofNullable(userArn);
             return this;
         }
         public Builder userId(@Nullable Output<String> userId) {
@@ -131,7 +132,7 @@ public final class EnvironmentMembershipState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder userId(@Nullable String userId) {
-            this.userId = Output.ofNullable(userId);
+            this.userId = Codegen.ofNullable(userId);
             return this;
         }        public EnvironmentMembershipState build() {
             return new EnvironmentMembershipState(environmentId, permissions, userArn, userId);

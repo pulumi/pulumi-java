@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -35,7 +36,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
     }
 
     private OpenIdConnectProviderArgs() {
-        this.clientIdLists = Output.empty();
-        this.tags = Output.empty();
-        this.thumbprintLists = Output.empty();
-        this.url = Output.empty();
+        this.clientIdLists = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.thumbprintLists = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class OpenIdConnectProviderArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder thumbprintLists(Output<List<String>> thumbprintLists) {

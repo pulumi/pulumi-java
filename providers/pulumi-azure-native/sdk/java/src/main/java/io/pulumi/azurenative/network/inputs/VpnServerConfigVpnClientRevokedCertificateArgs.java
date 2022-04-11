@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends io.pul
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends io.pul
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public VpnServerConfigVpnClientRevokedCertificateArgs(
@@ -48,8 +49,8 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends io.pul
     }
 
     private VpnServerConfigVpnClientRevokedCertificateArgs() {
-        this.name = Output.empty();
-        this.thumbprint = Output.empty();
+        this.name = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends io.pul
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -87,7 +88,7 @@ public final class VpnServerConfigVpnClientRevokedCertificateArgs extends io.pul
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public VpnServerConfigVpnClientRevokedCertificateArgs build() {
             return new VpnServerConfigVpnClientRevokedCertificateArgs(name, thumbprint);

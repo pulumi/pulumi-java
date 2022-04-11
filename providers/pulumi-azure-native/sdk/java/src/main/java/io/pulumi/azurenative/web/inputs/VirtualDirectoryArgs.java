@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> physicalPath;
 
     public Output<String> getPhysicalPath() {
-        return this.physicalPath == null ? Output.empty() : this.physicalPath;
+        return this.physicalPath == null ? Codegen.empty() : this.physicalPath;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> virtualPath;
 
     public Output<String> getVirtualPath() {
-        return this.virtualPath == null ? Output.empty() : this.virtualPath;
+        return this.virtualPath == null ? Codegen.empty() : this.virtualPath;
     }
 
     public VirtualDirectoryArgs(
@@ -48,8 +49,8 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VirtualDirectoryArgs() {
-        this.physicalPath = Output.empty();
-        this.virtualPath = Output.empty();
+        this.physicalPath = Codegen.empty();
+        this.virtualPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder physicalPath(@Nullable String physicalPath) {
-            this.physicalPath = Output.ofNullable(physicalPath);
+            this.physicalPath = Codegen.ofNullable(physicalPath);
             return this;
         }
         public Builder virtualPath(@Nullable Output<String> virtualPath) {
@@ -87,7 +88,7 @@ public final class VirtualDirectoryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder virtualPath(@Nullable String virtualPath) {
-            this.virtualPath = Output.ofNullable(virtualPath);
+            this.virtualPath = Codegen.ofNullable(virtualPath);
             return this;
         }        public VirtualDirectoryArgs build() {
             return new VirtualDirectoryArgs(physicalPath, virtualPath);

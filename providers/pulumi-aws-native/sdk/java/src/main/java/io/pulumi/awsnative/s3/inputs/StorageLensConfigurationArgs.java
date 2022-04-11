@@ -9,6 +9,7 @@ import io.pulumi.awsnative.s3.inputs.StorageLensBucketsAndRegionsArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensDataExportArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,21 +35,21 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<StorageLensAwsOrgArgs> awsOrg;
 
     public Output<StorageLensAwsOrgArgs> getAwsOrg() {
-        return this.awsOrg == null ? Output.empty() : this.awsOrg;
+        return this.awsOrg == null ? Codegen.empty() : this.awsOrg;
     }
 
     @Import(name="dataExport")
       private final @Nullable Output<StorageLensDataExportArgs> dataExport;
 
     public Output<StorageLensDataExportArgs> getDataExport() {
-        return this.dataExport == null ? Output.empty() : this.dataExport;
+        return this.dataExport == null ? Codegen.empty() : this.dataExport;
     }
 
     @Import(name="exclude")
       private final @Nullable Output<StorageLensBucketsAndRegionsArgs> exclude;
 
     public Output<StorageLensBucketsAndRegionsArgs> getExclude() {
-        return this.exclude == null ? Output.empty() : this.exclude;
+        return this.exclude == null ? Codegen.empty() : this.exclude;
     }
 
     @Import(name="id", required=true)
@@ -62,7 +63,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<StorageLensBucketsAndRegionsArgs> include;
 
     public Output<StorageLensBucketsAndRegionsArgs> getInclude() {
-        return this.include == null ? Output.empty() : this.include;
+        return this.include == null ? Codegen.empty() : this.include;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageLensArn;
 
     public Output<String> getStorageLensArn() {
-        return this.storageLensArn == null ? Output.empty() : this.storageLensArn;
+        return this.storageLensArn == null ? Codegen.empty() : this.storageLensArn;
     }
 
     public StorageLensConfigurationArgs(
@@ -107,14 +108,14 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private StorageLensConfigurationArgs() {
-        this.accountLevel = Output.empty();
-        this.awsOrg = Output.empty();
-        this.dataExport = Output.empty();
-        this.exclude = Output.empty();
-        this.id = Output.empty();
-        this.include = Output.empty();
-        this.isEnabled = Output.empty();
-        this.storageLensArn = Output.empty();
+        this.accountLevel = Codegen.empty();
+        this.awsOrg = Codegen.empty();
+        this.dataExport = Codegen.empty();
+        this.exclude = Codegen.empty();
+        this.id = Codegen.empty();
+        this.include = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.storageLensArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder awsOrg(@Nullable StorageLensAwsOrgArgs awsOrg) {
-            this.awsOrg = Output.ofNullable(awsOrg);
+            this.awsOrg = Codegen.ofNullable(awsOrg);
             return this;
         }
         public Builder dataExport(@Nullable Output<StorageLensDataExportArgs> dataExport) {
@@ -172,7 +173,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dataExport(@Nullable StorageLensDataExportArgs dataExport) {
-            this.dataExport = Output.ofNullable(dataExport);
+            this.dataExport = Codegen.ofNullable(dataExport);
             return this;
         }
         public Builder exclude(@Nullable Output<StorageLensBucketsAndRegionsArgs> exclude) {
@@ -180,7 +181,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder exclude(@Nullable StorageLensBucketsAndRegionsArgs exclude) {
-            this.exclude = Output.ofNullable(exclude);
+            this.exclude = Codegen.ofNullable(exclude);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -196,7 +197,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder include(@Nullable StorageLensBucketsAndRegionsArgs include) {
-            this.include = Output.ofNullable(include);
+            this.include = Codegen.ofNullable(include);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {
@@ -212,7 +213,7 @@ public final class StorageLensConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageLensArn(@Nullable String storageLensArn) {
-            this.storageLensArn = Output.ofNullable(storageLensArn);
+            this.storageLensArn = Codegen.ofNullable(storageLensArn);
             return this;
         }        public StorageLensConfigurationArgs build() {
             return new StorageLensConfigurationArgs(accountLevel, awsOrg, dataExport, exclude, id, include, isEnabled, storageLensArn);

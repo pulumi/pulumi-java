@@ -5,6 +5,7 @@ package io.pulumi.awsnative.chatbot;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> guardrailPolicies;
 
     public Output<List<String>> getGuardrailPolicies() {
-        return this.guardrailPolicies == null ? Output.empty() : this.guardrailPolicies;
+        return this.guardrailPolicies == null ? Codegen.empty() : this.guardrailPolicies;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
-        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
+        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> snsTopicArns;
 
     public Output<List<String>> getSnsTopicArns() {
-        return this.snsTopicArns == null ? Output.empty() : this.snsTopicArns;
+        return this.snsTopicArns == null ? Codegen.empty() : this.snsTopicArns;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> userRoleRequired;
 
     public Output<Boolean> getUserRoleRequired() {
-        return this.userRoleRequired == null ? Output.empty() : this.userRoleRequired;
+        return this.userRoleRequired == null ? Codegen.empty() : this.userRoleRequired;
     }
 
     public SlackChannelConfigurationArgs(
@@ -124,14 +125,14 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
     }
 
     private SlackChannelConfigurationArgs() {
-        this.configurationName = Output.empty();
-        this.guardrailPolicies = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.loggingLevel = Output.empty();
-        this.slackChannelId = Output.empty();
-        this.slackWorkspaceId = Output.empty();
-        this.snsTopicArns = Output.empty();
-        this.userRoleRequired = Output.empty();
+        this.configurationName = Codegen.empty();
+        this.guardrailPolicies = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.loggingLevel = Codegen.empty();
+        this.slackChannelId = Codegen.empty();
+        this.slackWorkspaceId = Codegen.empty();
+        this.snsTopicArns = Codegen.empty();
+        this.userRoleRequired = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder guardrailPolicies(@Nullable List<String> guardrailPolicies) {
-            this.guardrailPolicies = Output.ofNullable(guardrailPolicies);
+            this.guardrailPolicies = Codegen.ofNullable(guardrailPolicies);
             return this;
         }
         public Builder guardrailPolicies(String... guardrailPolicies) {
@@ -200,7 +201,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Output.ofNullable(loggingLevel);
+            this.loggingLevel = Codegen.ofNullable(loggingLevel);
             return this;
         }
         public Builder slackChannelId(Output<String> slackChannelId) {
@@ -224,7 +225,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder snsTopicArns(@Nullable List<String> snsTopicArns) {
-            this.snsTopicArns = Output.ofNullable(snsTopicArns);
+            this.snsTopicArns = Codegen.ofNullable(snsTopicArns);
             return this;
         }
         public Builder snsTopicArns(String... snsTopicArns) {
@@ -235,7 +236,7 @@ public final class SlackChannelConfigurationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder userRoleRequired(@Nullable Boolean userRoleRequired) {
-            this.userRoleRequired = Output.ofNullable(userRoleRequired);
+            this.userRoleRequired = Codegen.ofNullable(userRoleRequired);
             return this;
         }        public SlackChannelConfigurationArgs build() {
             return new SlackChannelConfigurationArgs(configurationName, guardrailPolicies, iamRoleArn, loggingLevel, slackChannelId, slackWorkspaceId, snsTopicArns, userRoleRequired);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
-        return this.attachmentId == null ? Output.empty() : this.attachmentId;
+        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
       private final @Nullable Output<Integer> deviceIndex;
 
     public Output<Integer> getDeviceIndex() {
-        return this.deviceIndex == null ? Output.empty() : this.deviceIndex;
+        return this.deviceIndex == null ? Codegen.empty() : this.deviceIndex;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
       private final @Nullable Output<String> networkInterfaceId;
 
     public Output<String> getNetworkInterfaceId() {
-        return this.networkInterfaceId == null ? Output.empty() : this.networkInterfaceId;
+        return this.networkInterfaceId == null ? Codegen.empty() : this.networkInterfaceId;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public NetworkInterfaceAttachmentState(
@@ -84,11 +85,11 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
     }
 
     private NetworkInterfaceAttachmentState() {
-        this.attachmentId = Output.empty();
-        this.deviceIndex = Output.empty();
-        this.instanceId = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.status = Output.empty();
+        this.attachmentId = Codegen.empty();
+        this.deviceIndex = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
             return this;
         }
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Output.ofNullable(attachmentId);
+            this.attachmentId = Codegen.ofNullable(attachmentId);
             return this;
         }
         public Builder deviceIndex(@Nullable Output<Integer> deviceIndex) {
@@ -132,7 +133,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
             return this;
         }
         public Builder deviceIndex(@Nullable Integer deviceIndex) {
-            this.deviceIndex = Output.ofNullable(deviceIndex);
+            this.deviceIndex = Codegen.ofNullable(deviceIndex);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -140,7 +141,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder networkInterfaceId(@Nullable Output<String> networkInterfaceId) {
@@ -148,7 +149,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
             return this;
         }
         public Builder networkInterfaceId(@Nullable String networkInterfaceId) {
-            this.networkInterfaceId = Output.ofNullable(networkInterfaceId);
+            this.networkInterfaceId = Codegen.ofNullable(networkInterfaceId);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -156,7 +157,7 @@ public final class NetworkInterfaceAttachmentState extends io.pulumi.resources.R
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public NetworkInterfaceAttachmentState build() {
             return new NetworkInterfaceAttachmentState(attachmentId, deviceIndex, instanceId, networkInterfaceId, status);

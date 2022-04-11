@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.HubPublicIPAddressesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> privateIPAddress;
 
     public Output<String> getPrivateIPAddress() {
-        return this.privateIPAddress == null ? Output.empty() : this.privateIPAddress;
+        return this.privateIPAddress == null ? Codegen.empty() : this.privateIPAddress;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HubPublicIPAddressesArgs> publicIPs;
 
     public Output<HubPublicIPAddressesArgs> getPublicIPs() {
-        return this.publicIPs == null ? Output.empty() : this.publicIPs;
+        return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
     }
 
     public HubIPAddressesArgs(
@@ -49,8 +50,8 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubIPAddressesArgs() {
-        this.privateIPAddress = Output.empty();
-        this.publicIPs = Output.empty();
+        this.privateIPAddress = Codegen.empty();
+        this.publicIPs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
-            this.privateIPAddress = Output.ofNullable(privateIPAddress);
+            this.privateIPAddress = Codegen.ofNullable(privateIPAddress);
             return this;
         }
         public Builder publicIPs(@Nullable Output<HubPublicIPAddressesArgs> publicIPs) {
@@ -88,7 +89,7 @@ public final class HubIPAddressesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicIPs(@Nullable HubPublicIPAddressesArgs publicIPs) {
-            this.publicIPs = Output.ofNullable(publicIPs);
+            this.publicIPs = Codegen.ofNullable(publicIPs);
             return this;
         }        public HubIPAddressesArgs build() {
             return new HubIPAddressesArgs(privateIPAddress, publicIPs);

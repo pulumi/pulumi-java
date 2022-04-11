@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> srcIpRanges;
 
     public Output<List<String>> getSrcIpRanges() {
-        return this.srcIpRanges == null ? Output.empty() : this.srcIpRanges;
+        return this.srcIpRanges == null ? Codegen.empty() : this.srcIpRanges;
     }
 
     public SecurityPolicyRuleMatcherConfigArgs(@Nullable Output<List<String>> srcIpRanges) {
@@ -31,7 +32,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
     }
 
     private SecurityPolicyRuleMatcherConfigArgs() {
-        this.srcIpRanges = Output.empty();
+        this.srcIpRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder srcIpRanges(@Nullable List<String> srcIpRanges) {
-            this.srcIpRanges = Output.ofNullable(srcIpRanges);
+            this.srcIpRanges = Codegen.ofNullable(srcIpRanges);
             return this;
         }
         public Builder srcIpRanges(String... srcIpRanges) {

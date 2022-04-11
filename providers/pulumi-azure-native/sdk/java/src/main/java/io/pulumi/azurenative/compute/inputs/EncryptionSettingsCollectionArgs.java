@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.EncryptionSettingsElementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +41,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
       private final @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
     public Output<List<EncryptionSettingsElementArgs>> getEncryptionSettings() {
-        return this.encryptionSettings == null ? Output.empty() : this.encryptionSettings;
+        return this.encryptionSettings == null ? Codegen.empty() : this.encryptionSettings;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
       private final @Nullable Output<String> encryptionSettingsVersion;
 
     public Output<String> getEncryptionSettingsVersion() {
-        return this.encryptionSettingsVersion == null ? Output.empty() : this.encryptionSettingsVersion;
+        return this.encryptionSettingsVersion == null ? Codegen.empty() : this.encryptionSettingsVersion;
     }
 
     public EncryptionSettingsCollectionArgs(
@@ -64,9 +65,9 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
     }
 
     private EncryptionSettingsCollectionArgs() {
-        this.enabled = Output.empty();
-        this.encryptionSettings = Output.empty();
-        this.encryptionSettingsVersion = Output.empty();
+        this.enabled = Codegen.empty();
+        this.encryptionSettings = Codegen.empty();
+        this.encryptionSettingsVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder encryptionSettings(@Nullable List<EncryptionSettingsElementArgs> encryptionSettings) {
-            this.encryptionSettings = Output.ofNullable(encryptionSettings);
+            this.encryptionSettings = Codegen.ofNullable(encryptionSettings);
             return this;
         }
         public Builder encryptionSettings(EncryptionSettingsElementArgs... encryptionSettings) {
@@ -117,7 +118,7 @@ public final class EncryptionSettingsCollectionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder encryptionSettingsVersion(@Nullable String encryptionSettingsVersion) {
-            this.encryptionSettingsVersion = Output.ofNullable(encryptionSettingsVersion);
+            this.encryptionSettingsVersion = Codegen.ofNullable(encryptionSettingsVersion);
             return this;
         }        public EncryptionSettingsCollectionArgs build() {
             return new EncryptionSettingsCollectionArgs(enabled, encryptionSettings, encryptionSettingsVersion);

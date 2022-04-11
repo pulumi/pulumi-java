@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
       private final @Nullable Output<String> s3Prefix;
 
     public Output<String> getS3Prefix() {
-        return this.s3Prefix == null ? Output.empty() : this.s3Prefix;
+        return this.s3Prefix == null ? Codegen.empty() : this.s3Prefix;
     }
 
     public DataSourceDocumentsMetadataConfigurationArgs(@Nullable Output<String> s3Prefix) {
@@ -26,7 +27,7 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
     }
 
     private DataSourceDocumentsMetadataConfigurationArgs() {
-        this.s3Prefix = Output.empty();
+        this.s3Prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
             return this;
         }
         public Builder s3Prefix(@Nullable String s3Prefix) {
-            this.s3Prefix = Output.ofNullable(s3Prefix);
+            this.s3Prefix = Codegen.ofNullable(s3Prefix);
             return this;
         }        public DataSourceDocumentsMetadataConfigurationArgs build() {
             return new DataSourceDocumentsMetadataConfigurationArgs(s3Prefix);

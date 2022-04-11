@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sqladmin_v1.inputs.MySqlReplicaConfigurationArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> failoverTarget;
 
     public Output<Boolean> getFailoverTarget() {
-        return this.failoverTarget == null ? Output.empty() : this.failoverTarget;
+        return this.failoverTarget == null ? Codegen.empty() : this.failoverTarget;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration;
 
     public Output<MySqlReplicaConfigurationArgs> getMysqlReplicaConfiguration() {
-        return this.mysqlReplicaConfiguration == null ? Output.empty() : this.mysqlReplicaConfiguration;
+        return this.mysqlReplicaConfiguration == null ? Codegen.empty() : this.mysqlReplicaConfiguration;
     }
 
     public ReplicaConfigurationArgs(
@@ -63,9 +64,9 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private ReplicaConfigurationArgs() {
-        this.failoverTarget = Output.empty();
-        this.kind = Output.empty();
-        this.mysqlReplicaConfiguration = Output.empty();
+        this.failoverTarget = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.mysqlReplicaConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder failoverTarget(@Nullable Boolean failoverTarget) {
-            this.failoverTarget = Output.ofNullable(failoverTarget);
+            this.failoverTarget = Codegen.ofNullable(failoverTarget);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -105,7 +106,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder mysqlReplicaConfiguration(@Nullable Output<MySqlReplicaConfigurationArgs> mysqlReplicaConfiguration) {
@@ -113,7 +114,7 @@ public final class ReplicaConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder mysqlReplicaConfiguration(@Nullable MySqlReplicaConfigurationArgs mysqlReplicaConfiguration) {
-            this.mysqlReplicaConfiguration = Output.ofNullable(mysqlReplicaConfiguration);
+            this.mysqlReplicaConfiguration = Codegen.ofNullable(mysqlReplicaConfiguration);
             return this;
         }        public ReplicaConfigurationArgs build() {
             return new ReplicaConfigurationArgs(failoverTarget, kind, mysqlReplicaConfiguration);

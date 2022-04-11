@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
-        return this.field == null ? Output.empty() : this.field;
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
     public Output<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     public GooglePrivacyDlpV2BigQueryFieldArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2BigQueryFieldArgs() {
-        this.field = Output.empty();
-        this.table = Output.empty();
+        this.field = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
             return this;
         }
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder table(@Nullable Output<GooglePrivacyDlpV2BigQueryTableArgs> table) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2BigQueryFieldArgs extends io.pulumi.resourc
             return this;
         }
         public Builder table(@Nullable GooglePrivacyDlpV2BigQueryTableArgs table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }        public GooglePrivacyDlpV2BigQueryFieldArgs build() {
             return new GooglePrivacyDlpV2BigQueryFieldArgs(field, table);

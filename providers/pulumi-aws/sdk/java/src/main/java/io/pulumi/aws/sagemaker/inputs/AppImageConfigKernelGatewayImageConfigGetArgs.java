@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigFile
 import io.pulumi.aws.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class AppImageConfigKernelGatewayImageConfigGetArgs extends io.pulu
       private final @Nullable Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> fileSystemConfig;
 
     public Output<AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs> getFileSystemConfig() {
-        return this.fileSystemConfig == null ? Output.empty() : this.fileSystemConfig;
+        return this.fileSystemConfig == null ? Codegen.empty() : this.fileSystemConfig;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class AppImageConfigKernelGatewayImageConfigGetArgs extends io.pulu
     }
 
     private AppImageConfigKernelGatewayImageConfigGetArgs() {
-        this.fileSystemConfig = Output.empty();
-        this.kernelSpec = Output.empty();
+        this.fileSystemConfig = Codegen.empty();
+        this.kernelSpec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AppImageConfigKernelGatewayImageConfigGetArgs extends io.pulu
             return this;
         }
         public Builder fileSystemConfig(@Nullable AppImageConfigKernelGatewayImageConfigFileSystemConfigGetArgs fileSystemConfig) {
-            this.fileSystemConfig = Output.ofNullable(fileSystemConfig);
+            this.fileSystemConfig = Codegen.ofNullable(fileSystemConfig);
             return this;
         }
         public Builder kernelSpec(Output<AppImageConfigKernelGatewayImageConfigKernelSpecGetArgs> kernelSpec) {

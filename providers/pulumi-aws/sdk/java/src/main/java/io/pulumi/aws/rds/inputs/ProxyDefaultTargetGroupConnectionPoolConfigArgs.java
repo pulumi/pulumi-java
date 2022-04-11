@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
       private final @Nullable Output<Integer> connectionBorrowTimeout;
 
     public Output<Integer> getConnectionBorrowTimeout() {
-        return this.connectionBorrowTimeout == null ? Output.empty() : this.connectionBorrowTimeout;
+        return this.connectionBorrowTimeout == null ? Codegen.empty() : this.connectionBorrowTimeout;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
       private final @Nullable Output<String> initQuery;
 
     public Output<String> getInitQuery() {
-        return this.initQuery == null ? Output.empty() : this.initQuery;
+        return this.initQuery == null ? Codegen.empty() : this.initQuery;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
       private final @Nullable Output<Integer> maxConnectionsPercent;
 
     public Output<Integer> getMaxConnectionsPercent() {
-        return this.maxConnectionsPercent == null ? Output.empty() : this.maxConnectionsPercent;
+        return this.maxConnectionsPercent == null ? Codegen.empty() : this.maxConnectionsPercent;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
       private final @Nullable Output<Integer> maxIdleConnectionsPercent;
 
     public Output<Integer> getMaxIdleConnectionsPercent() {
-        return this.maxIdleConnectionsPercent == null ? Output.empty() : this.maxIdleConnectionsPercent;
+        return this.maxIdleConnectionsPercent == null ? Codegen.empty() : this.maxIdleConnectionsPercent;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
       private final @Nullable Output<List<String>> sessionPinningFilters;
 
     public Output<List<String>> getSessionPinningFilters() {
-        return this.sessionPinningFilters == null ? Output.empty() : this.sessionPinningFilters;
+        return this.sessionPinningFilters == null ? Codegen.empty() : this.sessionPinningFilters;
     }
 
     public ProxyDefaultTargetGroupConnectionPoolConfigArgs(
@@ -85,11 +86,11 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
     }
 
     private ProxyDefaultTargetGroupConnectionPoolConfigArgs() {
-        this.connectionBorrowTimeout = Output.empty();
-        this.initQuery = Output.empty();
-        this.maxConnectionsPercent = Output.empty();
-        this.maxIdleConnectionsPercent = Output.empty();
-        this.sessionPinningFilters = Output.empty();
+        this.connectionBorrowTimeout = Codegen.empty();
+        this.initQuery = Codegen.empty();
+        this.maxConnectionsPercent = Codegen.empty();
+        this.maxIdleConnectionsPercent = Codegen.empty();
+        this.sessionPinningFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
             return this;
         }
         public Builder connectionBorrowTimeout(@Nullable Integer connectionBorrowTimeout) {
-            this.connectionBorrowTimeout = Output.ofNullable(connectionBorrowTimeout);
+            this.connectionBorrowTimeout = Codegen.ofNullable(connectionBorrowTimeout);
             return this;
         }
         public Builder initQuery(@Nullable Output<String> initQuery) {
@@ -133,7 +134,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
             return this;
         }
         public Builder initQuery(@Nullable String initQuery) {
-            this.initQuery = Output.ofNullable(initQuery);
+            this.initQuery = Codegen.ofNullable(initQuery);
             return this;
         }
         public Builder maxConnectionsPercent(@Nullable Output<Integer> maxConnectionsPercent) {
@@ -141,7 +142,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
             return this;
         }
         public Builder maxConnectionsPercent(@Nullable Integer maxConnectionsPercent) {
-            this.maxConnectionsPercent = Output.ofNullable(maxConnectionsPercent);
+            this.maxConnectionsPercent = Codegen.ofNullable(maxConnectionsPercent);
             return this;
         }
         public Builder maxIdleConnectionsPercent(@Nullable Output<Integer> maxIdleConnectionsPercent) {
@@ -149,7 +150,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
             return this;
         }
         public Builder maxIdleConnectionsPercent(@Nullable Integer maxIdleConnectionsPercent) {
-            this.maxIdleConnectionsPercent = Output.ofNullable(maxIdleConnectionsPercent);
+            this.maxIdleConnectionsPercent = Codegen.ofNullable(maxIdleConnectionsPercent);
             return this;
         }
         public Builder sessionPinningFilters(@Nullable Output<List<String>> sessionPinningFilters) {
@@ -157,7 +158,7 @@ public final class ProxyDefaultTargetGroupConnectionPoolConfigArgs extends io.pu
             return this;
         }
         public Builder sessionPinningFilters(@Nullable List<String> sessionPinningFilters) {
-            this.sessionPinningFilters = Output.ofNullable(sessionPinningFilters);
+            this.sessionPinningFilters = Codegen.ofNullable(sessionPinningFilters);
             return this;
         }
         public Builder sessionPinningFilters(String... sessionPinningFilters) {

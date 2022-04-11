@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public UserAssignedPropertiesArgs(@Nullable Output<String> resourceId) {
@@ -34,7 +35,7 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private UserAssignedPropertiesArgs() {
-        this.resourceId = Output.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public UserAssignedPropertiesArgs build() {
             return new UserAssignedPropertiesArgs(resourceId);

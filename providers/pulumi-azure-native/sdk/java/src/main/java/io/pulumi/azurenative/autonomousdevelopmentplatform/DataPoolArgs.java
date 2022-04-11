@@ -6,6 +6,7 @@ package io.pulumi.azurenative.autonomousdevelopmentplatform;
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataPoolName;
 
     public Output<String> getDataPoolName() {
-        return this.dataPoolName == null ? Output.empty() : this.dataPoolName;
+        return this.dataPoolName == null ? Codegen.empty() : this.dataPoolName;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataPoolArgs() {
-        this.accountName = Output.empty();
-        this.dataPoolName = Output.empty();
-        this.locations = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataPoolName = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataPoolName(@Nullable String dataPoolName) {
-            this.dataPoolName = Output.ofNullable(dataPoolName);
+            this.dataPoolName = Codegen.ofNullable(dataPoolName);
             return this;
         }
         public Builder locations(Output<List<DataPoolLocationArgs>> locations) {

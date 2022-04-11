@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
       private final @Nullable Output<TunnelInstanceIAMMemberConditionGetArgs> condition;
 
     public Output<TunnelInstanceIAMMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -46,14 +47,14 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -78,14 +79,14 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public TunnelInstanceIAMMemberState(
@@ -106,13 +107,13 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
     }
 
     private TunnelInstanceIAMMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.instance = Output.empty();
-        this.member = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.zone = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.member = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder condition(@Nullable TunnelInstanceIAMMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -160,7 +161,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -168,7 +169,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -176,7 +177,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -184,7 +185,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -192,7 +193,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -200,7 +201,7 @@ public final class TunnelInstanceIAMMemberState extends io.pulumi.resources.Reso
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public TunnelInstanceIAMMemberState build() {
             return new TunnelInstanceIAMMemberState(condition, etag, instance, member, project, role, zone);

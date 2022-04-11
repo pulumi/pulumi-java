@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devtestlab.inputs.FormulaPropertiesFromVmArgs;
 import io.pulumi.azurenative.devtestlab.inputs.LabVirtualMachineCreationParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent;
 
     public Output<LabVirtualMachineCreationParameterArgs> getFormulaContent() {
-        return this.formulaContent == null ? Output.empty() : this.formulaContent;
+        return this.formulaContent == null ? Codegen.empty() : this.formulaContent;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> osType;
 
     public Output<String> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FormulaPropertiesFromVmArgs> vm;
 
     public Output<FormulaPropertiesFromVmArgs> getVm() {
-        return this.vm == null ? Output.empty() : this.vm;
+        return this.vm == null ? Codegen.empty() : this.vm;
     }
 
     public FormulaArgs(
@@ -138,15 +139,15 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FormulaArgs() {
-        this.description = Output.empty();
-        this.formulaContent = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.osType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vm = Output.empty();
+        this.description = Codegen.empty();
+        this.formulaContent = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder formulaContent(@Nullable Output<LabVirtualMachineCreationParameterArgs> formulaContent) {
@@ -198,7 +199,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder formulaContent(@Nullable LabVirtualMachineCreationParameterArgs formulaContent) {
-            this.formulaContent = Output.ofNullable(formulaContent);
+            this.formulaContent = Codegen.ofNullable(formulaContent);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -214,7 +215,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -222,7 +223,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder osType(@Nullable Output<String> osType) {
@@ -230,7 +231,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder osType(@Nullable String osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -246,7 +247,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vm(@Nullable Output<FormulaPropertiesFromVmArgs> vm) {
@@ -254,7 +255,7 @@ public final class FormulaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vm(@Nullable FormulaPropertiesFromVmArgs vm) {
-            this.vm = Output.ofNullable(vm);
+            this.vm = Codegen.ofNullable(vm);
             return this;
         }        public FormulaArgs build() {
             return new FormulaArgs(description, formulaContent, labName, location, name, osType, resourceGroupName, tags, vm);

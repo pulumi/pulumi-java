@@ -8,6 +8,7 @@ import io.pulumi.azurenative.testbase.enums.ContentType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> alwaysRun;
 
     public Output<Boolean> getAlwaysRun() {
-        return this.alwaysRun == null ? Output.empty() : this.alwaysRun;
+        return this.alwaysRun == null ? Codegen.empty() : this.alwaysRun;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> applyUpdateBefore;
 
     public Output<Boolean> getApplyUpdateBefore() {
-        return this.applyUpdateBefore == null ? Output.empty() : this.applyUpdateBefore;
+        return this.applyUpdateBefore == null ? Codegen.empty() : this.applyUpdateBefore;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxRunTime;
 
     public Output<Integer> getMaxRunTime() {
-        return this.maxRunTime == null ? Output.empty() : this.maxRunTime;
+        return this.maxRunTime == null ? Codegen.empty() : this.maxRunTime;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> restartAfter;
 
     public Output<Boolean> getRestartAfter() {
-        return this.restartAfter == null ? Output.empty() : this.restartAfter;
+        return this.restartAfter == null ? Codegen.empty() : this.restartAfter;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> runAsInteractive;
 
     public Output<Boolean> getRunAsInteractive() {
-        return this.runAsInteractive == null ? Output.empty() : this.runAsInteractive;
+        return this.runAsInteractive == null ? Codegen.empty() : this.runAsInteractive;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> runElevated;
 
     public Output<Boolean> getRunElevated() {
-        return this.runElevated == null ? Output.empty() : this.runElevated;
+        return this.runElevated == null ? Codegen.empty() : this.runElevated;
     }
 
     public CommandArgs(
@@ -157,16 +158,16 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommandArgs() {
-        this.action = Output.empty();
-        this.alwaysRun = Output.empty();
-        this.applyUpdateBefore = Output.empty();
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.maxRunTime = Output.empty();
-        this.name = Output.empty();
-        this.restartAfter = Output.empty();
-        this.runAsInteractive = Output.empty();
-        this.runElevated = Output.empty();
+        this.action = Codegen.empty();
+        this.alwaysRun = Codegen.empty();
+        this.applyUpdateBefore = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.maxRunTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.restartAfter = Codegen.empty();
+        this.runAsInteractive = Codegen.empty();
+        this.runElevated = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alwaysRun(@Nullable Boolean alwaysRun) {
-            this.alwaysRun = Output.ofNullable(alwaysRun);
+            this.alwaysRun = Codegen.ofNullable(alwaysRun);
             return this;
         }
         public Builder applyUpdateBefore(@Nullable Output<Boolean> applyUpdateBefore) {
@@ -228,7 +229,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applyUpdateBefore(@Nullable Boolean applyUpdateBefore) {
-            this.applyUpdateBefore = Output.ofNullable(applyUpdateBefore);
+            this.applyUpdateBefore = Codegen.ofNullable(applyUpdateBefore);
             return this;
         }
         public Builder content(Output<String> content) {
@@ -252,7 +253,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxRunTime(@Nullable Integer maxRunTime) {
-            this.maxRunTime = Output.ofNullable(maxRunTime);
+            this.maxRunTime = Codegen.ofNullable(maxRunTime);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -268,7 +269,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder restartAfter(@Nullable Boolean restartAfter) {
-            this.restartAfter = Output.ofNullable(restartAfter);
+            this.restartAfter = Codegen.ofNullable(restartAfter);
             return this;
         }
         public Builder runAsInteractive(@Nullable Output<Boolean> runAsInteractive) {
@@ -276,7 +277,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runAsInteractive(@Nullable Boolean runAsInteractive) {
-            this.runAsInteractive = Output.ofNullable(runAsInteractive);
+            this.runAsInteractive = Codegen.ofNullable(runAsInteractive);
             return this;
         }
         public Builder runElevated(@Nullable Output<Boolean> runElevated) {
@@ -284,7 +285,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runElevated(@Nullable Boolean runElevated) {
-            this.runElevated = Output.ofNullable(runElevated);
+            this.runElevated = Codegen.ofNullable(runElevated);
             return this;
         }        public CommandArgs build() {
             return new CommandArgs(action, alwaysRun, applyUpdateBefore, content, contentType, maxRunTime, name, restartAfter, runAsInteractive, runElevated);

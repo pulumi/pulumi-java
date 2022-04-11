@@ -5,6 +5,7 @@ package io.pulumi.aws.autoscaling.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> checkpointDelay;
 
     public Output<String> getCheckpointDelay() {
-        return this.checkpointDelay == null ? Output.empty() : this.checkpointDelay;
+        return this.checkpointDelay == null ? Codegen.empty() : this.checkpointDelay;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
       private final @Nullable Output<List<Integer>> checkpointPercentages;
 
     public Output<List<Integer>> getCheckpointPercentages() {
-        return this.checkpointPercentages == null ? Output.empty() : this.checkpointPercentages;
+        return this.checkpointPercentages == null ? Codegen.empty() : this.checkpointPercentages;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> instanceWarmup;
 
     public Output<String> getInstanceWarmup() {
-        return this.instanceWarmup == null ? Output.empty() : this.instanceWarmup;
+        return this.instanceWarmup == null ? Codegen.empty() : this.instanceWarmup;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> minHealthyPercentage;
 
     public Output<Integer> getMinHealthyPercentage() {
-        return this.minHealthyPercentage == null ? Output.empty() : this.minHealthyPercentage;
+        return this.minHealthyPercentage == null ? Codegen.empty() : this.minHealthyPercentage;
     }
 
     public GroupInstanceRefreshPreferencesGetArgs(
@@ -72,10 +73,10 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
     }
 
     private GroupInstanceRefreshPreferencesGetArgs() {
-        this.checkpointDelay = Output.empty();
-        this.checkpointPercentages = Output.empty();
-        this.instanceWarmup = Output.empty();
-        this.minHealthyPercentage = Output.empty();
+        this.checkpointDelay = Codegen.empty();
+        this.checkpointPercentages = Codegen.empty();
+        this.instanceWarmup = Codegen.empty();
+        this.minHealthyPercentage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder checkpointDelay(@Nullable String checkpointDelay) {
-            this.checkpointDelay = Output.ofNullable(checkpointDelay);
+            this.checkpointDelay = Codegen.ofNullable(checkpointDelay);
             return this;
         }
         public Builder checkpointPercentages(@Nullable Output<List<Integer>> checkpointPercentages) {
@@ -117,7 +118,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder checkpointPercentages(@Nullable List<Integer> checkpointPercentages) {
-            this.checkpointPercentages = Output.ofNullable(checkpointPercentages);
+            this.checkpointPercentages = Codegen.ofNullable(checkpointPercentages);
             return this;
         }
         public Builder checkpointPercentages(Integer... checkpointPercentages) {
@@ -128,7 +129,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder instanceWarmup(@Nullable String instanceWarmup) {
-            this.instanceWarmup = Output.ofNullable(instanceWarmup);
+            this.instanceWarmup = Codegen.ofNullable(instanceWarmup);
             return this;
         }
         public Builder minHealthyPercentage(@Nullable Output<Integer> minHealthyPercentage) {
@@ -136,7 +137,7 @@ public final class GroupInstanceRefreshPreferencesGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder minHealthyPercentage(@Nullable Integer minHealthyPercentage) {
-            this.minHealthyPercentage = Output.ofNullable(minHealthyPercentage);
+            this.minHealthyPercentage = Codegen.ofNullable(minHealthyPercentage);
             return this;
         }        public GroupInstanceRefreshPreferencesGetArgs build() {
             return new GroupInstanceRefreshPreferencesGetArgs(checkpointDelay, checkpointPercentages, instanceWarmup, minHealthyPercentage);

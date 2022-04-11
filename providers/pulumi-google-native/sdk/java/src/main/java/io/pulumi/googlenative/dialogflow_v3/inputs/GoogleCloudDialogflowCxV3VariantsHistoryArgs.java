@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
       private final @Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants;
 
     public Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> getVersionVariants() {
-        return this.versionVariants == null ? Output.empty() : this.versionVariants;
+        return this.versionVariants == null ? Codegen.empty() : this.versionVariants;
     }
 
     public GoogleCloudDialogflowCxV3VariantsHistoryArgs(
@@ -49,8 +50,8 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowCxV3VariantsHistoryArgs() {
-        this.updateTime = Output.empty();
-        this.versionVariants = Output.empty();
+        this.updateTime = Codegen.empty();
+        this.versionVariants = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder versionVariants(@Nullable Output<GoogleCloudDialogflowCxV3VersionVariantsArgs> versionVariants) {
@@ -88,7 +89,7 @@ public final class GoogleCloudDialogflowCxV3VariantsHistoryArgs extends io.pulum
             return this;
         }
         public Builder versionVariants(@Nullable GoogleCloudDialogflowCxV3VersionVariantsArgs versionVariants) {
-            this.versionVariants = Output.ofNullable(versionVariants);
+            this.versionVariants = Codegen.ofNullable(versionVariants);
             return this;
         }        public GoogleCloudDialogflowCxV3VariantsHistoryArgs build() {
             return new GoogleCloudDialogflowCxV3VariantsHistoryArgs(updateTime, versionVariants);

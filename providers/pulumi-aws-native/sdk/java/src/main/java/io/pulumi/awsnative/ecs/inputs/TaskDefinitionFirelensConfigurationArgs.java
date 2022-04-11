@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
       private final @Nullable Output<Object> options;
 
     public Output<Object> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     @Import(name="type")
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public TaskDefinitionFirelensConfigurationArgs(
@@ -37,8 +38,8 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
     }
 
     private TaskDefinitionFirelensConfigurationArgs() {
-        this.options = Output.empty();
-        this.type = Output.empty();
+        this.options = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder options(@Nullable Object options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -76,7 +77,7 @@ public final class TaskDefinitionFirelensConfigurationArgs extends io.pulumi.res
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public TaskDefinitionFirelensConfigurationArgs build() {
             return new TaskDefinitionFirelensConfigurationArgs(options, type);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.loadtestservice;
 import io.pulumi.azurenative.loadtestservice.inputs.SystemAssignedServiceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SystemAssignedServiceIdentityArgs> identity;
 
     public Output<SystemAssignedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> loadTestName;
 
     public Output<String> getLoadTestName() {
-        return this.loadTestName == null ? Output.empty() : this.loadTestName;
+        return this.loadTestName == null ? Codegen.empty() : this.loadTestName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LoadTestArgs(
@@ -98,12 +99,12 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoadTestArgs() {
-        this.description = Output.empty();
-        this.identity = Output.empty();
-        this.loadTestName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.loadTestName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder identity(@Nullable Output<SystemAssignedServiceIdentityArgs> identity) {
@@ -149,7 +150,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable SystemAssignedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder loadTestName(@Nullable Output<String> loadTestName) {
@@ -157,7 +158,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadTestName(@Nullable String loadTestName) {
-            this.loadTestName = Output.ofNullable(loadTestName);
+            this.loadTestName = Codegen.ofNullable(loadTestName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -165,7 +166,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -181,7 +182,7 @@ public final class LoadTestArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LoadTestArgs build() {
             return new LoadTestArgs(description, identity, loadTestName, location, resourceGroupName, tags);

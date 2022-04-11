@@ -47,6 +47,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -68,7 +69,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> activities;
 
     public Output<List<Object>> getActivities() {
-        return this.activities == null ? Output.empty() : this.activities;
+        return this.activities == null ? Codegen.empty() : this.activities;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> concurrency;
 
     public Output<Integer> getConcurrency() {
-        return this.concurrency == null ? Output.empty() : this.concurrency;
+        return this.concurrency == null ? Codegen.empty() : this.concurrency;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PipelineFolderArgs> folder;
 
     public Output<PipelineFolderArgs> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pipelineName;
 
     public Output<String> getPipelineName() {
-        return this.pipelineName == null ? Output.empty() : this.pipelineName;
+        return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PipelinePolicyArgs> policy;
 
     public Output<PipelinePolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> runDimensions;
 
     public Output<Map<String,Object>> getRunDimensions() {
-        return this.runDimensions == null ? Output.empty() : this.runDimensions;
+        return this.runDimensions == null ? Codegen.empty() : this.runDimensions;
     }
 
     /**
@@ -189,7 +190,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,VariableSpecificationArgs>> variables;
 
     public Output<Map<String,VariableSpecificationArgs>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     public PipelineArgs(
@@ -220,18 +221,18 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.activities = Output.empty();
-        this.annotations = Output.empty();
-        this.concurrency = Output.empty();
-        this.description = Output.empty();
-        this.factoryName = Output.empty();
-        this.folder = Output.empty();
-        this.parameters = Output.empty();
-        this.pipelineName = Output.empty();
-        this.policy = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runDimensions = Output.empty();
-        this.variables = Output.empty();
+        this.activities = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.concurrency = Codegen.empty();
+        this.description = Codegen.empty();
+        this.factoryName = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.pipelineName = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runDimensions = Codegen.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -281,7 +282,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder activities(@Nullable List<Object> activities) {
-            this.activities = Output.ofNullable(activities);
+            this.activities = Codegen.ofNullable(activities);
             return this;
         }
         public Builder activities(Object... activities) {
@@ -292,7 +293,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -303,7 +304,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder concurrency(@Nullable Integer concurrency) {
-            this.concurrency = Output.ofNullable(concurrency);
+            this.concurrency = Codegen.ofNullable(concurrency);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -311,7 +312,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder factoryName(Output<String> factoryName) {
@@ -327,7 +328,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable PipelineFolderArgs folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -335,7 +336,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
@@ -343,7 +344,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Output.ofNullable(pipelineName);
+            this.pipelineName = Codegen.ofNullable(pipelineName);
             return this;
         }
         public Builder policy(@Nullable Output<PipelinePolicyArgs> policy) {
@@ -351,7 +352,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable PipelinePolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -367,7 +368,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runDimensions(@Nullable Map<String,Object> runDimensions) {
-            this.runDimensions = Output.ofNullable(runDimensions);
+            this.runDimensions = Codegen.ofNullable(runDimensions);
             return this;
         }
         public Builder variables(@Nullable Output<Map<String,VariableSpecificationArgs>> variables) {
@@ -375,7 +376,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variables(@Nullable Map<String,VariableSpecificationArgs> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }        public PipelineArgs build() {
             return new PipelineArgs(activities, annotations, concurrency, description, factoryName, folder, parameters, pipelineName, policy, resourceGroupName, runDimensions, variables);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
       private final @Nullable Output<String> customTag;
 
     public Output<String> getCustomTag() {
-        return this.customTag == null ? Output.empty() : this.customTag;
+        return this.customTag == null ? Codegen.empty() : this.customTag;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
-        return this.field == null ? Output.empty() : this.field;
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     public GooglePrivacyDlpV2QuasiIdentifierFieldArgs(
@@ -49,8 +50,8 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
     }
 
     private GooglePrivacyDlpV2QuasiIdentifierFieldArgs() {
-        this.customTag = Output.empty();
-        this.field = Output.empty();
+        this.customTag = Codegen.empty();
+        this.field = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
             return this;
         }
         public Builder customTag(@Nullable String customTag) {
-            this.customTag = Output.ofNullable(customTag);
+            this.customTag = Codegen.ofNullable(customTag);
             return this;
         }
         public Builder field(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
@@ -88,7 +89,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
             return this;
         }
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }        public GooglePrivacyDlpV2QuasiIdentifierFieldArgs build() {
             return new GooglePrivacyDlpV2QuasiIdentifierFieldArgs(customTag, field);

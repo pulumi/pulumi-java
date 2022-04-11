@@ -7,6 +7,7 @@ import io.pulumi.azurenative.kusto.enums.Kind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseArgs() {
-        this.clusterName = Output.empty();
-        this.databaseName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder kind(Output<Either<String,Kind>> kind) {
@@ -149,7 +150,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

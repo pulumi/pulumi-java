@@ -5,6 +5,7 @@ package io.pulumi.aws.waf.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -60,9 +61,9 @@ public final class RulePredicateGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RulePredicateGetArgs() {
-        this.dataId = Output.empty();
-        this.negated = Output.empty();
-        this.type = Output.empty();
+        this.dataId = Codegen.empty();
+        this.negated = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

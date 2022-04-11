@@ -356,7 +356,7 @@ func (mod *modContext) typeStringRecHelper(
 // In general, `outerOptional` <=> `!optionalAsNull`.
 func emptyTypeInitializer(ctx *classFileContext, t schema.Type, optionalAsNull bool) string {
 	if isInputType(t) {
-		return fmt.Sprintf("%s.empty()", ctx.ref(names.Output))
+		return fmt.Sprintf("%s.empty()", ctx.ref(names.Codegen))
 	}
 	if _, ok := t.(*schema.OptionalType); ok && !optionalAsNull {
 		return fmt.Sprintf("%s.empty()", ctx.ref(names.Optional))
@@ -416,7 +416,7 @@ func typeInitializer(ctx *classFileContext, t schema.Type, nested string, nested
 				fmt.Sprintf("%s.ofLeft", ctx.ref(names.Output)),
 				fmt.Sprintf("%s.ofRight", ctx.ref(names.Output)))
 		default:
-			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Output), nested)
+			return fmt.Sprintf("%s.ofNullable(%s)", ctx.ref(names.Codegen), nested)
 		}
 
 	case *schema.ArrayType:
@@ -636,7 +636,7 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -671,13 +671,13 @@ func (pt *plainType) genJumboInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+					return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 				}
 				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
 						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
 				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
@@ -842,7 +842,7 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 		setterName := names.Ident(prop.Name).AsProperty().Setter()
 		assignment := func(propertyName names.Ident) string {
 			if prop.Secret {
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 			if prop.IsRequired() {
 				return fmt.Sprintf("this.%s = %s.requireNonNull(%s)", propertyName, ctx.ref(names.Objects), propertyName)
@@ -877,13 +877,13 @@ func (pt *plainType) genNormalInputType(ctx *classFileContext) error {
 
 			assignmentUnwrapped := func(propertyName names.Ident) string {
 				if prop.Secret {
-					return fmt.Sprintf("this.%s = %s.ofNullable(%s).asSecret()", propertyName, ctx.ref(names.Output), propertyName)
+					return fmt.Sprintf("this.%s = %s.secret(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 				}
 				if prop.IsRequired() {
 					return fmt.Sprintf("this.%s = %s.of(%s.requireNonNull(%s))",
 						propertyName, ctx.ref(names.Output), ctx.ref(names.Objects), propertyName)
 				}
-				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Output), propertyName)
+				return fmt.Sprintf("this.%s = %s.ofNullable(%s)", propertyName, ctx.ref(names.Codegen), propertyName)
 			}
 
 			if !propertyTypeUnwrapped.Equal(propertyType) {
@@ -1645,7 +1645,7 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	fprintf(w, "    public %s(String name, %s args, @%s %s options) {\n",
 		className, argsType, ctx.ref(names.Nullable), optionsType)
 	fprintf(w, "        super(\"%s\", name, %s, makeResourceOptions(options, %s.empty())%s);\n",
-		tok, argsOverride, ctx.imports.Ref(names.Output), isComponent)
+		tok, argsOverride, ctx.imports.Ref(names.Codegen), isComponent)
 	fprintf(w, "    }\n")
 
 	// Write a private constructor for the use of `get`.

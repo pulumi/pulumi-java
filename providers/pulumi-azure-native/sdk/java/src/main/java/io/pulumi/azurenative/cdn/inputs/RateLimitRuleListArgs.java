@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.RateLimitRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<RateLimitRuleArgs>> rules;
 
     public Output<List<RateLimitRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public RateLimitRuleListArgs(@Nullable Output<List<RateLimitRuleArgs>> rules) {
@@ -35,7 +36,7 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RateLimitRuleListArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class RateLimitRuleListArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rules(@Nullable List<RateLimitRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(RateLimitRuleArgs... rules) {

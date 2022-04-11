@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiskEncryptionSetIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,DiskEncryptionSetIdentityType>> type;
 
     public Output<Either<String,DiskEncryptionSetIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public EncryptionSetIdentityArgs(@Nullable Output<Either<String,DiskEncryptionSetIdentityType>> type) {
@@ -36,7 +37,7 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
     }
 
     private EncryptionSetIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class EncryptionSetIdentityArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder type(@Nullable Either<String,DiskEncryptionSetIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public EncryptionSetIdentityArgs build() {
             return new EncryptionSetIdentityArgs(type);

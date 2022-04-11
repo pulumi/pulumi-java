@@ -5,6 +5,7 @@ package io.pulumi.aws.signer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class SigningJobDestinationS3Args extends io.pulumi.resources.Resou
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public SigningJobDestinationS3Args(
@@ -44,8 +45,8 @@ public final class SigningJobDestinationS3Args extends io.pulumi.resources.Resou
     }
 
     private SigningJobDestinationS3Args() {
-        this.bucket = Output.empty();
-        this.prefix = Output.empty();
+        this.bucket = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class SigningJobDestinationS3Args extends io.pulumi.resources.Resou
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public SigningJobDestinationS3Args build() {
             return new SigningJobDestinationS3Args(bucket, prefix);

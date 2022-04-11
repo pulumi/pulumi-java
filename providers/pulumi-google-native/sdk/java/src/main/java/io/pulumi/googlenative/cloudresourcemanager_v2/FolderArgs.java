@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FolderArgs() {
-        this.displayName = Output.empty();
-        this.parent = Output.empty();
+        this.displayName = Codegen.empty();
+        this.parent = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class FolderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder parent(Output<String> parent) {

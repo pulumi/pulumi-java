@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.RolePolicyAttachmentState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -83,7 +84,7 @@ public class RolePolicyAttachment extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RolePolicyAttachment(String name, RolePolicyAttachmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/rolePolicyAttachment:RolePolicyAttachment", name, args == null ? RolePolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/rolePolicyAttachment:RolePolicyAttachment", name, args == null ? RolePolicyAttachmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RolePolicyAttachment(String name, Output<String> id, @Nullable RolePolicyAttachmentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

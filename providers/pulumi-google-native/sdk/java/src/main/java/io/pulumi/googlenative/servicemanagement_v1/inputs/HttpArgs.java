@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.HttpRuleArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> fullyDecodeReservedExpansion;
 
     public Output<Boolean> getFullyDecodeReservedExpansion() {
-        return this.fullyDecodeReservedExpansion == null ? Output.empty() : this.fullyDecodeReservedExpansion;
+        return this.fullyDecodeReservedExpansion == null ? Codegen.empty() : this.fullyDecodeReservedExpansion;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HttpRuleArgs>> rules;
 
     public Output<List<HttpRuleArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public HttpArgs(
@@ -50,8 +51,8 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpArgs() {
-        this.fullyDecodeReservedExpansion = Output.empty();
-        this.rules = Output.empty();
+        this.fullyDecodeReservedExpansion = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fullyDecodeReservedExpansion(@Nullable Boolean fullyDecodeReservedExpansion) {
-            this.fullyDecodeReservedExpansion = Output.ofNullable(fullyDecodeReservedExpansion);
+            this.fullyDecodeReservedExpansion = Codegen.ofNullable(fullyDecodeReservedExpansion);
             return this;
         }
         public Builder rules(@Nullable Output<List<HttpRuleArgs>> rules) {
@@ -89,7 +90,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<HttpRuleArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(HttpRuleArgs... rules) {

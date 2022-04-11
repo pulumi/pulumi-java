@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.OrganizationsAccessState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import javax.annotation.Nullable;
 
@@ -59,7 +60,7 @@ public class OrganizationsAccess extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationsAccess(String name, OrganizationsAccessArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/organizationsAccess:OrganizationsAccess", name, args == null ? OrganizationsAccessArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/organizationsAccess:OrganizationsAccess", name, args == null ? OrganizationsAccessArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationsAccess(String name, Output<String> id, @Nullable OrganizationsAccessState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.costmanagement;
 import io.pulumi.azurenative.costmanagement.inputs.SettingsPropertiesCacheArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SettingsPropertiesCacheArgs>> cache;
 
     public Output<List<SettingsPropertiesCacheArgs>> getCache() {
-        return this.cache == null ? Output.empty() : this.cache;
+        return this.cache == null ? Codegen.empty() : this.cache;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> settingName;
 
     public Output<String> getSettingName() {
-        return this.settingName == null ? Output.empty() : this.settingName;
+        return this.settingName == null ? Codegen.empty() : this.settingName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startOn;
 
     public Output<String> getStartOn() {
-        return this.startOn == null ? Output.empty() : this.startOn;
+        return this.startOn == null ? Codegen.empty() : this.startOn;
     }
 
     public SettingArgs(
@@ -72,10 +73,10 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SettingArgs() {
-        this.cache = Output.empty();
-        this.scope = Output.empty();
-        this.settingName = Output.empty();
-        this.startOn = Output.empty();
+        this.cache = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.settingName = Codegen.empty();
+        this.startOn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cache(@Nullable List<SettingsPropertiesCacheArgs> cache) {
-            this.cache = Output.ofNullable(cache);
+            this.cache = Codegen.ofNullable(cache);
             return this;
         }
         public Builder cache(SettingsPropertiesCacheArgs... cache) {
@@ -128,7 +129,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder settingName(@Nullable String settingName) {
-            this.settingName = Output.ofNullable(settingName);
+            this.settingName = Codegen.ofNullable(settingName);
             return this;
         }
         public Builder startOn(@Nullable Output<String> startOn) {
@@ -136,7 +137,7 @@ public final class SettingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startOn(@Nullable String startOn) {
-            this.startOn = Output.ofNullable(startOn);
+            this.startOn = Codegen.ofNullable(startOn);
             return this;
         }        public SettingArgs build() {
             return new SettingArgs(cache, scope, settingName, startOn);

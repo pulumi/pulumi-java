@@ -6,6 +6,7 @@ package io.pulumi.azurenative.synapse.inputs;
 import io.pulumi.azurenative.synapse.inputs.EntityReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<EntityReferenceArgs> connectVia;
 
     public Output<EntityReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
       private final @Nullable Output<EntityReferenceArgs> stagingLinkedService;
 
     public Output<EntityReferenceArgs> getStagingLinkedService() {
-        return this.stagingLinkedService == null ? Output.empty() : this.stagingLinkedService;
+        return this.stagingLinkedService == null ? Codegen.empty() : this.stagingLinkedService;
     }
 
     public IntegrationRuntimeDataProxyPropertiesArgs(
@@ -62,9 +63,9 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
     }
 
     private IntegrationRuntimeDataProxyPropertiesArgs() {
-        this.connectVia = Output.empty();
-        this.path = Output.empty();
-        this.stagingLinkedService = Output.empty();
+        this.connectVia = Codegen.empty();
+        this.path = Codegen.empty();
+        this.stagingLinkedService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder connectVia(@Nullable EntityReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -104,7 +105,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder stagingLinkedService(@Nullable Output<EntityReferenceArgs> stagingLinkedService) {
@@ -112,7 +113,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
             return this;
         }
         public Builder stagingLinkedService(@Nullable EntityReferenceArgs stagingLinkedService) {
-            this.stagingLinkedService = Output.ofNullable(stagingLinkedService);
+            this.stagingLinkedService = Codegen.ofNullable(stagingLinkedService);
             return this;
         }        public IntegrationRuntimeDataProxyPropertiesArgs build() {
             return new IntegrationRuntimeDataProxyPropertiesArgs(connectVia, path, stagingLinkedService);

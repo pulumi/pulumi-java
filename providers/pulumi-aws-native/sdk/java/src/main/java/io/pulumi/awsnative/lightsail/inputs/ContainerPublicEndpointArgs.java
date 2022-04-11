@@ -6,6 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerHealthCheckConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> containerPort;
 
     public Output<Integer> getContainerPort() {
-        return this.containerPort == null ? Output.empty() : this.containerPort;
+        return this.containerPort == null ? Codegen.empty() : this.containerPort;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig;
 
     public Output<ContainerHealthCheckConfigArgs> getHealthCheckConfig() {
-        return this.healthCheckConfig == null ? Output.empty() : this.healthCheckConfig;
+        return this.healthCheckConfig == null ? Codegen.empty() : this.healthCheckConfig;
     }
 
     public ContainerPublicEndpointArgs(
@@ -63,9 +64,9 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
     }
 
     private ContainerPublicEndpointArgs() {
-        this.containerName = Output.empty();
-        this.containerPort = Output.empty();
-        this.healthCheckConfig = Output.empty();
+        this.containerName = Codegen.empty();
+        this.containerPort = Codegen.empty();
+        this.healthCheckConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder containerPort(@Nullable Output<Integer> containerPort) {
@@ -105,7 +106,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder containerPort(@Nullable Integer containerPort) {
-            this.containerPort = Output.ofNullable(containerPort);
+            this.containerPort = Codegen.ofNullable(containerPort);
             return this;
         }
         public Builder healthCheckConfig(@Nullable Output<ContainerHealthCheckConfigArgs> healthCheckConfig) {
@@ -113,7 +114,7 @@ public final class ContainerPublicEndpointArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder healthCheckConfig(@Nullable ContainerHealthCheckConfigArgs healthCheckConfig) {
-            this.healthCheckConfig = Output.ofNullable(healthCheckConfig);
+            this.healthCheckConfig = Codegen.ofNullable(healthCheckConfig);
             return this;
         }        public ContainerPublicEndpointArgs build() {
             return new ContainerPublicEndpointArgs(containerName, containerPort, healthCheckConfig);

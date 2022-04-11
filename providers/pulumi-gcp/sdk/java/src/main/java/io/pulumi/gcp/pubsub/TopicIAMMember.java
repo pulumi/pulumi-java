@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.TopicIAMMemberArgs;
 import io.pulumi.gcp.pubsub.inputs.TopicIAMMemberState;
@@ -154,7 +155,7 @@ public class TopicIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TopicIAMMember(String name, TopicIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/topicIAMMember:TopicIAMMember", name, args == null ? TopicIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/topicIAMMember:TopicIAMMember", name, args == null ? TopicIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TopicIAMMember(String name, Output<String> id, @Nullable TopicIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

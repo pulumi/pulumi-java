@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ApiOAuthSettingsParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters;
 
     public Output<Map<String,ApiOAuthSettingsParameterArgs>> getCustomParameters() {
-        return this.customParameters == null ? Output.empty() : this.customParameters;
+        return this.customParameters == null ? Codegen.empty() : this.customParameters;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> identityProvider;
 
     public Output<String> getIdentityProvider() {
-        return this.identityProvider == null ? Output.empty() : this.identityProvider;
+        return this.identityProvider == null ? Codegen.empty() : this.identityProvider;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> redirectUrl;
 
     public Output<String> getRedirectUrl() {
-        return this.redirectUrl == null ? Output.empty() : this.redirectUrl;
+        return this.redirectUrl == null ? Codegen.empty() : this.redirectUrl;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     public ApiOAuthSettingsArgs(
@@ -117,13 +118,13 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ApiOAuthSettingsArgs() {
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
-        this.customParameters = Output.empty();
-        this.identityProvider = Output.empty();
-        this.properties = Output.empty();
-        this.redirectUrl = Output.empty();
-        this.scopes = Output.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
+        this.customParameters = Codegen.empty();
+        this.identityProvider = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.redirectUrl = Codegen.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -171,7 +172,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }
         public Builder customParameters(@Nullable Output<Map<String,ApiOAuthSettingsParameterArgs>> customParameters) {
@@ -179,7 +180,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder customParameters(@Nullable Map<String,ApiOAuthSettingsParameterArgs> customParameters) {
-            this.customParameters = Output.ofNullable(customParameters);
+            this.customParameters = Codegen.ofNullable(customParameters);
             return this;
         }
         public Builder identityProvider(@Nullable Output<String> identityProvider) {
@@ -187,7 +188,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identityProvider(@Nullable String identityProvider) {
-            this.identityProvider = Output.ofNullable(identityProvider);
+            this.identityProvider = Codegen.ofNullable(identityProvider);
             return this;
         }
         public Builder properties(@Nullable Output<Object> properties) {
@@ -195,7 +196,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable Object properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
@@ -203,7 +204,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder redirectUrl(@Nullable String redirectUrl) {
-            this.redirectUrl = Output.ofNullable(redirectUrl);
+            this.redirectUrl = Codegen.ofNullable(redirectUrl);
             return this;
         }
         public Builder scopes(@Nullable Output<List<String>> scopes) {
@@ -211,7 +212,7 @@ public final class ApiOAuthSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.athena.inputs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupEncryptionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,28 +25,28 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
       private final @Nullable Output<WorkGroupEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<WorkGroupEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="outputLocation")
       private final @Nullable Output<String> outputLocation;
 
     public Output<String> getOutputLocation() {
-        return this.outputLocation == null ? Output.empty() : this.outputLocation;
+        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
     @Import(name="removeEncryptionConfiguration")
       private final @Nullable Output<Boolean> removeEncryptionConfiguration;
 
     public Output<Boolean> getRemoveEncryptionConfiguration() {
-        return this.removeEncryptionConfiguration == null ? Output.empty() : this.removeEncryptionConfiguration;
+        return this.removeEncryptionConfiguration == null ? Codegen.empty() : this.removeEncryptionConfiguration;
     }
 
     @Import(name="removeOutputLocation")
       private final @Nullable Output<Boolean> removeOutputLocation;
 
     public Output<Boolean> getRemoveOutputLocation() {
-        return this.removeOutputLocation == null ? Output.empty() : this.removeOutputLocation;
+        return this.removeOutputLocation == null ? Codegen.empty() : this.removeOutputLocation;
     }
 
     public WorkGroupResultConfigurationUpdatesArgs(
@@ -60,10 +61,10 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
     }
 
     private WorkGroupResultConfigurationUpdatesArgs() {
-        this.encryptionConfiguration = Output.empty();
-        this.outputLocation = Output.empty();
-        this.removeEncryptionConfiguration = Output.empty();
-        this.removeOutputLocation = Output.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.outputLocation = Codegen.empty();
+        this.removeEncryptionConfiguration = Codegen.empty();
+        this.removeOutputLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
             return this;
         }
         public Builder encryptionConfiguration(@Nullable WorkGroupEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
@@ -105,7 +106,7 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
             return this;
         }
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Output.ofNullable(outputLocation);
+            this.outputLocation = Codegen.ofNullable(outputLocation);
             return this;
         }
         public Builder removeEncryptionConfiguration(@Nullable Output<Boolean> removeEncryptionConfiguration) {
@@ -113,7 +114,7 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
             return this;
         }
         public Builder removeEncryptionConfiguration(@Nullable Boolean removeEncryptionConfiguration) {
-            this.removeEncryptionConfiguration = Output.ofNullable(removeEncryptionConfiguration);
+            this.removeEncryptionConfiguration = Codegen.ofNullable(removeEncryptionConfiguration);
             return this;
         }
         public Builder removeOutputLocation(@Nullable Output<Boolean> removeOutputLocation) {
@@ -121,7 +122,7 @@ public final class WorkGroupResultConfigurationUpdatesArgs extends io.pulumi.res
             return this;
         }
         public Builder removeOutputLocation(@Nullable Boolean removeOutputLocation) {
-            this.removeOutputLocation = Output.ofNullable(removeOutputLocation);
+            this.removeOutputLocation = Codegen.ofNullable(removeOutputLocation);
             return this;
         }        public WorkGroupResultConfigurationUpdatesArgs build() {
             return new WorkGroupResultConfigurationUpdatesArgs(encryptionConfiguration, outputLocation, removeEncryptionConfiguration, removeOutputLocation);

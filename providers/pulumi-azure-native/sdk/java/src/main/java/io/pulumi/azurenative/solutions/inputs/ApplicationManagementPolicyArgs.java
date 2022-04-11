@@ -7,6 +7,7 @@ import io.pulumi.azurenative.solutions.enums.ApplicationManagementMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Either<String,ApplicationManagementMode>> mode;
 
     public Output<Either<String,ApplicationManagementMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     public ApplicationManagementPolicyArgs(@Nullable Output<Either<String,ApplicationManagementMode>> mode) {
@@ -36,7 +37,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
     }
 
     private ApplicationManagementPolicyArgs() {
-        this.mode = Output.empty();
+        this.mode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder mode(@Nullable Either<String,ApplicationManagementMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }        public ApplicationManagementPolicyArgs build() {
             return new ApplicationManagementPolicyArgs(mode);

@@ -10,6 +10,7 @@ import io.pulumi.awsnative.route53recoverycontrol.outputs.ControlPanelTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -143,7 +144,7 @@ public class ControlPanel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ControlPanel(String name, @Nullable ControlPanelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53recoverycontrol:ControlPanel", name, args == null ? ControlPanelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53recoverycontrol:ControlPanel", name, args == null ? ControlPanelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ControlPanel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class JobExtractSourceModelGetArgs extends io.pulumi.resources.Reso
     }
 
     private JobExtractSourceModelGetArgs() {
-        this.datasetId = Output.empty();
-        this.modelId = Output.empty();
-        this.projectId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.modelId = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {

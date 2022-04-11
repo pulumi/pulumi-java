@@ -6,6 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.PatchBaselineApprovalRulePatchFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> approveAfterDays;
 
     public Output<Integer> getApproveAfterDays() {
-        return this.approveAfterDays == null ? Output.empty() : this.approveAfterDays;
+        return this.approveAfterDays == null ? Codegen.empty() : this.approveAfterDays;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> approveUntilDate;
 
     public Output<String> getApproveUntilDate() {
-        return this.approveUntilDate == null ? Output.empty() : this.approveUntilDate;
+        return this.approveUntilDate == null ? Codegen.empty() : this.approveUntilDate;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> complianceLevel;
 
     public Output<String> getComplianceLevel() {
-        return this.complianceLevel == null ? Output.empty() : this.complianceLevel;
+        return this.complianceLevel == null ? Codegen.empty() : this.complianceLevel;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> enableNonSecurity;
 
     public Output<Boolean> getEnableNonSecurity() {
-        return this.enableNonSecurity == null ? Output.empty() : this.enableNonSecurity;
+        return this.enableNonSecurity == null ? Codegen.empty() : this.enableNonSecurity;
     }
 
     /**
@@ -87,11 +88,11 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
     }
 
     private PatchBaselineApprovalRuleArgs() {
-        this.approveAfterDays = Output.empty();
-        this.approveUntilDate = Output.empty();
-        this.complianceLevel = Output.empty();
-        this.enableNonSecurity = Output.empty();
-        this.patchFilters = Output.empty();
+        this.approveAfterDays = Codegen.empty();
+        this.approveUntilDate = Codegen.empty();
+        this.complianceLevel = Codegen.empty();
+        this.enableNonSecurity = Codegen.empty();
+        this.patchFilters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder approveAfterDays(@Nullable Integer approveAfterDays) {
-            this.approveAfterDays = Output.ofNullable(approveAfterDays);
+            this.approveAfterDays = Codegen.ofNullable(approveAfterDays);
             return this;
         }
         public Builder approveUntilDate(@Nullable Output<String> approveUntilDate) {
@@ -135,7 +136,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder approveUntilDate(@Nullable String approveUntilDate) {
-            this.approveUntilDate = Output.ofNullable(approveUntilDate);
+            this.approveUntilDate = Codegen.ofNullable(approveUntilDate);
             return this;
         }
         public Builder complianceLevel(@Nullable Output<String> complianceLevel) {
@@ -143,7 +144,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder complianceLevel(@Nullable String complianceLevel) {
-            this.complianceLevel = Output.ofNullable(complianceLevel);
+            this.complianceLevel = Codegen.ofNullable(complianceLevel);
             return this;
         }
         public Builder enableNonSecurity(@Nullable Output<Boolean> enableNonSecurity) {
@@ -151,7 +152,7 @@ public final class PatchBaselineApprovalRuleArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enableNonSecurity(@Nullable Boolean enableNonSecurity) {
-            this.enableNonSecurity = Output.ofNullable(enableNonSecurity);
+            this.enableNonSecurity = Codegen.ofNullable(enableNonSecurity);
             return this;
         }
         public Builder patchFilters(Output<List<PatchBaselineApprovalRulePatchFilterArgs>> patchFilters) {

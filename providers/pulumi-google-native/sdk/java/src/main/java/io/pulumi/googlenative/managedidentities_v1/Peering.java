@@ -6,6 +6,7 @@ package io.pulumi.googlenative.managedidentities_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1.PeeringArgs;
 import java.lang.String;
@@ -154,7 +155,7 @@ public class Peering extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Peering(String name, PeeringArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:managedidentities/v1:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:managedidentities/v1:Peering", name, args == null ? PeeringArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Peering(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

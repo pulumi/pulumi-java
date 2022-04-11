@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
       private final @Nullable Output<Integer> blockDurationMinutes;
 
     public Output<Integer> getBlockDurationMinutes() {
-        return this.blockDurationMinutes == null ? Output.empty() : this.blockDurationMinutes;
+        return this.blockDurationMinutes == null ? Codegen.empty() : this.blockDurationMinutes;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
     public Output<String> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
+        return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
       private final @Nullable Output<String> maxPrice;
 
     public Output<String> getMaxPrice() {
-        return this.maxPrice == null ? Output.empty() : this.maxPrice;
+        return this.maxPrice == null ? Codegen.empty() : this.maxPrice;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
       private final @Nullable Output<String> spotInstanceType;
 
     public Output<String> getSpotInstanceType() {
-        return this.spotInstanceType == null ? Output.empty() : this.spotInstanceType;
+        return this.spotInstanceType == null ? Codegen.empty() : this.spotInstanceType;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {
-        return this.validUntil == null ? Output.empty() : this.validUntil;
+        return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 
     public LaunchTemplateInstanceMarketOptionsSpotOptionsArgs(
@@ -85,11 +86,11 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
     }
 
     private LaunchTemplateInstanceMarketOptionsSpotOptionsArgs() {
-        this.blockDurationMinutes = Output.empty();
-        this.instanceInterruptionBehavior = Output.empty();
-        this.maxPrice = Output.empty();
-        this.spotInstanceType = Output.empty();
-        this.validUntil = Output.empty();
+        this.blockDurationMinutes = Codegen.empty();
+        this.instanceInterruptionBehavior = Codegen.empty();
+        this.maxPrice = Codegen.empty();
+        this.spotInstanceType = Codegen.empty();
+        this.validUntil = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
             return this;
         }
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
+            this.blockDurationMinutes = Codegen.ofNullable(blockDurationMinutes);
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
@@ -133,7 +134,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Codegen.ofNullable(instanceInterruptionBehavior);
             return this;
         }
         public Builder maxPrice(@Nullable Output<String> maxPrice) {
@@ -141,7 +142,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
             return this;
         }
         public Builder maxPrice(@Nullable String maxPrice) {
-            this.maxPrice = Output.ofNullable(maxPrice);
+            this.maxPrice = Codegen.ofNullable(maxPrice);
             return this;
         }
         public Builder spotInstanceType(@Nullable Output<String> spotInstanceType) {
@@ -149,7 +150,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
             return this;
         }
         public Builder spotInstanceType(@Nullable String spotInstanceType) {
-            this.spotInstanceType = Output.ofNullable(spotInstanceType);
+            this.spotInstanceType = Codegen.ofNullable(spotInstanceType);
             return this;
         }
         public Builder validUntil(@Nullable Output<String> validUntil) {
@@ -157,7 +158,7 @@ public final class LaunchTemplateInstanceMarketOptionsSpotOptionsArgs extends io
             return this;
         }
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Output.ofNullable(validUntil);
+            this.validUntil = Codegen.ofNullable(validUntil);
             return this;
         }        public LaunchTemplateInstanceMarketOptionsSpotOptionsArgs build() {
             return new LaunchTemplateInstanceMarketOptionsSpotOptionsArgs(blockDurationMinutes, instanceInterruptionBehavior, maxPrice, spotInstanceType, validUntil);

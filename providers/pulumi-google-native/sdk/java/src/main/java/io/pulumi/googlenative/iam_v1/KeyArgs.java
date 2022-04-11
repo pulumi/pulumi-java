@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.iam_v1.enums.KeyKeyAlgorithm;
 import io.pulumi.googlenative.iam_v1.enums.KeyPrivateKeyType;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyKeyAlgorithm> keyAlgorithm;
 
     public Output<KeyKeyAlgorithm> getKeyAlgorithm() {
-        return this.keyAlgorithm == null ? Output.empty() : this.keyAlgorithm;
+        return this.keyAlgorithm == null ? Codegen.empty() : this.keyAlgorithm;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyPrivateKeyType> privateKeyType;
 
     public Output<KeyPrivateKeyType> getPrivateKeyType() {
-        return this.privateKeyType == null ? Output.empty() : this.privateKeyType;
+        return this.privateKeyType == null ? Codegen.empty() : this.privateKeyType;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceAccountId", required=true)
@@ -64,10 +65,10 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.keyAlgorithm = Output.empty();
-        this.privateKeyType = Output.empty();
-        this.project = Output.empty();
-        this.serviceAccountId = Output.empty();
+        this.keyAlgorithm = Codegen.empty();
+        this.privateKeyType = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceAccountId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyAlgorithm(@Nullable KeyKeyAlgorithm keyAlgorithm) {
-            this.keyAlgorithm = Output.ofNullable(keyAlgorithm);
+            this.keyAlgorithm = Codegen.ofNullable(keyAlgorithm);
             return this;
         }
         public Builder privateKeyType(@Nullable Output<KeyPrivateKeyType> privateKeyType) {
@@ -109,7 +110,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder privateKeyType(@Nullable KeyPrivateKeyType privateKeyType) {
-            this.privateKeyType = Output.ofNullable(privateKeyType);
+            this.privateKeyType = Codegen.ofNullable(privateKeyType);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -117,7 +118,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceAccountId(Output<String> serviceAccountId) {

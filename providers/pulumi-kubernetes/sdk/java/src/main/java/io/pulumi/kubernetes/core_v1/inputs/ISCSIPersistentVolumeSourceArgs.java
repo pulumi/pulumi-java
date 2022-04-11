@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> chapAuthDiscovery;
 
     public Output<Boolean> getChapAuthDiscovery() {
-        return this.chapAuthDiscovery == null ? Output.empty() : this.chapAuthDiscovery;
+        return this.chapAuthDiscovery == null ? Codegen.empty() : this.chapAuthDiscovery;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> chapAuthSession;
 
     public Output<Boolean> getChapAuthSession() {
-        return this.chapAuthSession == null ? Output.empty() : this.chapAuthSession;
+        return this.chapAuthSession == null ? Codegen.empty() : this.chapAuthSession;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> initiatorName;
 
     public Output<String> getInitiatorName() {
-        return this.initiatorName == null ? Output.empty() : this.initiatorName;
+        return this.initiatorName == null ? Codegen.empty() : this.initiatorName;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> iscsiInterface;
 
     public Output<String> getIscsiInterface() {
-        return this.iscsiInterface == null ? Output.empty() : this.iscsiInterface;
+        return this.iscsiInterface == null ? Codegen.empty() : this.iscsiInterface;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> portals;
 
     public Output<List<String>> getPortals() {
-        return this.portals == null ? Output.empty() : this.portals;
+        return this.portals == null ? Codegen.empty() : this.portals;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
     public Output<SecretReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Output.empty() : this.secretRef;
+        return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
     /**
@@ -169,17 +170,17 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
     }
 
     private ISCSIPersistentVolumeSourceArgs() {
-        this.chapAuthDiscovery = Output.empty();
-        this.chapAuthSession = Output.empty();
-        this.fsType = Output.empty();
-        this.initiatorName = Output.empty();
-        this.iqn = Output.empty();
-        this.iscsiInterface = Output.empty();
-        this.lun = Output.empty();
-        this.portals = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretRef = Output.empty();
-        this.targetPortal = Output.empty();
+        this.chapAuthDiscovery = Codegen.empty();
+        this.chapAuthSession = Codegen.empty();
+        this.fsType = Codegen.empty();
+        this.initiatorName = Codegen.empty();
+        this.iqn = Codegen.empty();
+        this.iscsiInterface = Codegen.empty();
+        this.lun = Codegen.empty();
+        this.portals = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretRef = Codegen.empty();
+        this.targetPortal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -227,7 +228,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder chapAuthDiscovery(@Nullable Boolean chapAuthDiscovery) {
-            this.chapAuthDiscovery = Output.ofNullable(chapAuthDiscovery);
+            this.chapAuthDiscovery = Codegen.ofNullable(chapAuthDiscovery);
             return this;
         }
         public Builder chapAuthSession(@Nullable Output<Boolean> chapAuthSession) {
@@ -235,7 +236,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder chapAuthSession(@Nullable Boolean chapAuthSession) {
-            this.chapAuthSession = Output.ofNullable(chapAuthSession);
+            this.chapAuthSession = Codegen.ofNullable(chapAuthSession);
             return this;
         }
         public Builder fsType(@Nullable Output<String> fsType) {
@@ -243,7 +244,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder initiatorName(@Nullable Output<String> initiatorName) {
@@ -251,7 +252,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder initiatorName(@Nullable String initiatorName) {
-            this.initiatorName = Output.ofNullable(initiatorName);
+            this.initiatorName = Codegen.ofNullable(initiatorName);
             return this;
         }
         public Builder iqn(Output<String> iqn) {
@@ -267,7 +268,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder iscsiInterface(@Nullable String iscsiInterface) {
-            this.iscsiInterface = Output.ofNullable(iscsiInterface);
+            this.iscsiInterface = Codegen.ofNullable(iscsiInterface);
             return this;
         }
         public Builder lun(Output<Integer> lun) {
@@ -283,7 +284,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder portals(@Nullable List<String> portals) {
-            this.portals = Output.ofNullable(portals);
+            this.portals = Codegen.ofNullable(portals);
             return this;
         }
         public Builder portals(String... portals) {
@@ -294,7 +295,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
@@ -302,7 +303,7 @@ public final class ISCSIPersistentVolumeSourceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
-            this.secretRef = Output.ofNullable(secretRef);
+            this.secretRef = Codegen.ofNullable(secretRef);
             return this;
         }
         public Builder targetPortal(Output<String> targetPortal) {

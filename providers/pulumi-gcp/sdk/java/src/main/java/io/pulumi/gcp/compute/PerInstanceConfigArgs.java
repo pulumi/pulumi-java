@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.PerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> minimalAction;
 
     public Output<String> getMinimalAction() {
-        return this.minimalAction == null ? Output.empty() : this.minimalAction;
+        return this.minimalAction == null ? Codegen.empty() : this.minimalAction;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> mostDisruptiveAllowedAction;
 
     public Output<String> getMostDisruptiveAllowedAction() {
-        return this.mostDisruptiveAllowedAction == null ? Output.empty() : this.mostDisruptiveAllowedAction;
+        return this.mostDisruptiveAllowedAction == null ? Codegen.empty() : this.mostDisruptiveAllowedAction;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState;
 
     public Output<PerInstanceConfigPreservedStateArgs> getPreservedState() {
-        return this.preservedState == null ? Output.empty() : this.preservedState;
+        return this.preservedState == null ? Codegen.empty() : this.preservedState;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> removeInstanceStateOnDestroy;
 
     public Output<Boolean> getRemoveInstanceStateOnDestroy() {
-        return this.removeInstanceStateOnDestroy == null ? Output.empty() : this.removeInstanceStateOnDestroy;
+        return this.removeInstanceStateOnDestroy == null ? Codegen.empty() : this.removeInstanceStateOnDestroy;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public PerInstanceConfigArgs(
@@ -138,14 +139,14 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PerInstanceConfigArgs() {
-        this.instanceGroupManager = Output.empty();
-        this.minimalAction = Output.empty();
-        this.mostDisruptiveAllowedAction = Output.empty();
-        this.name = Output.empty();
-        this.preservedState = Output.empty();
-        this.project = Output.empty();
-        this.removeInstanceStateOnDestroy = Output.empty();
-        this.zone = Output.empty();
+        this.instanceGroupManager = Codegen.empty();
+        this.minimalAction = Codegen.empty();
+        this.mostDisruptiveAllowedAction = Codegen.empty();
+        this.name = Codegen.empty();
+        this.preservedState = Codegen.empty();
+        this.project = Codegen.empty();
+        this.removeInstanceStateOnDestroy = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minimalAction(@Nullable String minimalAction) {
-            this.minimalAction = Output.ofNullable(minimalAction);
+            this.minimalAction = Codegen.ofNullable(minimalAction);
             return this;
         }
         public Builder mostDisruptiveAllowedAction(@Nullable Output<String> mostDisruptiveAllowedAction) {
@@ -203,7 +204,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mostDisruptiveAllowedAction(@Nullable String mostDisruptiveAllowedAction) {
-            this.mostDisruptiveAllowedAction = Output.ofNullable(mostDisruptiveAllowedAction);
+            this.mostDisruptiveAllowedAction = Codegen.ofNullable(mostDisruptiveAllowedAction);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -211,7 +212,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder preservedState(@Nullable Output<PerInstanceConfigPreservedStateArgs> preservedState) {
@@ -219,7 +220,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder preservedState(@Nullable PerInstanceConfigPreservedStateArgs preservedState) {
-            this.preservedState = Output.ofNullable(preservedState);
+            this.preservedState = Codegen.ofNullable(preservedState);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -227,7 +228,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder removeInstanceStateOnDestroy(@Nullable Output<Boolean> removeInstanceStateOnDestroy) {
@@ -235,7 +236,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder removeInstanceStateOnDestroy(@Nullable Boolean removeInstanceStateOnDestroy) {
-            this.removeInstanceStateOnDestroy = Output.ofNullable(removeInstanceStateOnDestroy);
+            this.removeInstanceStateOnDestroy = Codegen.ofNullable(removeInstanceStateOnDestroy);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -243,7 +244,7 @@ public final class PerInstanceConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public PerInstanceConfigArgs build() {
             return new PerInstanceConfigArgs(instanceGroupManager, minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, removeInstanceStateOnDestroy, zone);

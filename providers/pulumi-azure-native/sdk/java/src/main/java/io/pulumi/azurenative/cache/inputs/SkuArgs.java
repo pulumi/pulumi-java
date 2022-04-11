@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cache.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -64,9 +65,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.capacity = Output.empty();
-        this.family = Output.empty();
-        this.name = Output.empty();
+        this.capacity = Codegen.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

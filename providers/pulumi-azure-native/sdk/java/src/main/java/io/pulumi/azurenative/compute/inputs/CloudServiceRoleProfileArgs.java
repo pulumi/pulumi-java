@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfilePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles;
 
     public Output<List<CloudServiceRoleProfilePropertiesArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     public CloudServiceRoleProfileArgs(@Nullable Output<List<CloudServiceRoleProfilePropertiesArgs>> roles) {
@@ -35,7 +36,7 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
     }
 
     private CloudServiceRoleProfileArgs() {
-        this.roles = Output.empty();
+        this.roles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CloudServiceRoleProfileArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder roles(@Nullable List<CloudServiceRoleProfilePropertiesArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(CloudServiceRoleProfilePropertiesArgs... roles) {

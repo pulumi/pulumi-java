@@ -5,6 +5,7 @@ package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class IamAuditConfigAuditLogConfigGetArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
+        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class IamAuditConfigAuditLogConfigGetArgs extends io.pulumi.resourc
     }
 
     private IamAuditConfigAuditLogConfigGetArgs() {
-        this.exemptedMembers = Output.empty();
-        this.logType = Output.empty();
+        this.exemptedMembers = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class IamAuditConfigAuditLogConfigGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Output.ofNullable(exemptedMembers);
+            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
             return this;
         }
         public Builder exemptedMembers(String... exemptedMembers) {

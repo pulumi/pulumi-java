@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs> file;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
       private final @Nullable Output<String> outputFilePath;
 
     public Output<String> getOutputFilePath() {
-        return this.outputFilePath == null ? Output.empty() : this.outputFilePath;
+        return this.outputFilePath == null ? Codegen.empty() : this.outputFilePath;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs(
@@ -85,11 +86,11 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs() {
-        this.args = Output.empty();
-        this.file = Output.empty();
-        this.interpreter = Output.empty();
-        this.outputFilePath = Output.empty();
-        this.script = Output.empty();
+        this.args = Codegen.empty();
+        this.file = Codegen.empty();
+        this.interpreter = Codegen.empty();
+        this.outputFilePath = Codegen.empty();
+        this.script = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {
@@ -136,7 +137,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
             return this;
         }
         public Builder file(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder interpreter(Output<String> interpreter) {
@@ -152,7 +153,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
             return this;
         }
         public Builder outputFilePath(@Nullable String outputFilePath) {
-            this.outputFilePath = Output.ofNullable(outputFilePath);
+            this.outputFilePath = Codegen.ofNullable(outputFilePath);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -160,7 +161,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGet
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceGetArgs(args, file, interpreter, outputFilePath, script);

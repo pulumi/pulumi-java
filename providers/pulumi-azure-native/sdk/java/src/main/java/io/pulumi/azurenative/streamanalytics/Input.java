@@ -12,6 +12,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -98,7 +99,7 @@ public class Input extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Input(String name, InputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:streamanalytics:Input", name, args == null ? InputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:streamanalytics:Input", name, args == null ? InputArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Input(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.wafv2.inputs.IpSetState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -171,7 +172,7 @@ public class IpSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IpSet(String name, IpSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:wafv2/ipSet:IpSet", name, args == null ? IpSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:wafv2/ipSet:IpSet", name, args == null ? IpSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IpSet(String name, Output<String> id, @Nullable IpSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

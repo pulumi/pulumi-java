@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -62,9 +63,9 @@ public final class BlobInventoryPolicyRuleArgs extends io.pulumi.resources.Resou
     }
 
     private BlobInventoryPolicyRuleArgs() {
-        this.definition = Output.empty();
-        this.enabled = Output.empty();
-        this.name = Output.empty();
+        this.definition = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.BackupPlanLifecycleResourceTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
       private final @Nullable Output<BackupPlanLifecycleResourceTypeArgs> lifecycle;
 
     public Output<BackupPlanLifecycleResourceTypeArgs> getLifecycle() {
-        return this.lifecycle == null ? Output.empty() : this.lifecycle;
+        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
     public BackupPlanCopyActionResourceTypeArgs(
@@ -37,8 +38,8 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
     }
 
     private BackupPlanCopyActionResourceTypeArgs() {
-        this.destinationBackupVaultArn = Output.empty();
-        this.lifecycle = Output.empty();
+        this.destinationBackupVaultArn = Codegen.empty();
+        this.lifecycle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BackupPlanCopyActionResourceTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder lifecycle(@Nullable BackupPlanLifecycleResourceTypeArgs lifecycle) {
-            this.lifecycle = Output.ofNullable(lifecycle);
+            this.lifecycle = Codegen.ofNullable(lifecycle);
             return this;
         }        public BackupPlanCopyActionResourceTypeArgs build() {
             return new BackupPlanCopyActionResourceTypeArgs(destinationBackupVaultArn, lifecycle);

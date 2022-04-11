@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
 
     public Output<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> getConcurrencyControlGroup() {
-        return this.concurrencyControlGroup == null ? Output.empty() : this.concurrencyControlGroup;
+        return this.concurrencyControlGroup == null ? Codegen.empty() : this.concurrencyControlGroup;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
       private final @Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 
     public Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     public ResourcePolicyVmMaintenancePolicyArgs(
@@ -41,8 +42,8 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     }
 
     private ResourcePolicyVmMaintenancePolicyArgs() {
-        this.concurrencyControlGroup = Output.empty();
-        this.maintenanceWindow = Output.empty();
+        this.concurrencyControlGroup = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder concurrencyControlGroup(@Nullable ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs concurrencyControlGroup) {
-            this.concurrencyControlGroup = Output.ofNullable(concurrencyControlGroup);
+            this.concurrencyControlGroup = Codegen.ofNullable(concurrencyControlGroup);
             return this;
         }
         public Builder maintenanceWindow(@Nullable Output<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow) {
@@ -80,7 +81,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder maintenanceWindow(@Nullable ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }        public ResourcePolicyVmMaintenancePolicyArgs build() {
             return new ResourcePolicyVmMaintenancePolicyArgs(concurrencyControlGroup, maintenanceWindow);

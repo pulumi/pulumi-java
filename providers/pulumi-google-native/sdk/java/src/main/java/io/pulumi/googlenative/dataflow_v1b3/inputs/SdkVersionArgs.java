@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.enums.SdkVersionSdkSupportStatus;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SdkVersionSdkSupportStatus> sdkSupportStatus;
 
     public Output<SdkVersionSdkSupportStatus> getSdkSupportStatus() {
-        return this.sdkSupportStatus == null ? Output.empty() : this.sdkSupportStatus;
+        return this.sdkSupportStatus == null ? Codegen.empty() : this.sdkSupportStatus;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionDisplayName;
 
     public Output<String> getVersionDisplayName() {
-        return this.versionDisplayName == null ? Output.empty() : this.versionDisplayName;
+        return this.versionDisplayName == null ? Codegen.empty() : this.versionDisplayName;
     }
 
     public SdkVersionArgs(
@@ -62,9 +63,9 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SdkVersionArgs() {
-        this.sdkSupportStatus = Output.empty();
-        this.version = Output.empty();
-        this.versionDisplayName = Output.empty();
+        this.sdkSupportStatus = Codegen.empty();
+        this.version = Codegen.empty();
+        this.versionDisplayName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sdkSupportStatus(@Nullable SdkVersionSdkSupportStatus sdkSupportStatus) {
-            this.sdkSupportStatus = Output.ofNullable(sdkSupportStatus);
+            this.sdkSupportStatus = Codegen.ofNullable(sdkSupportStatus);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -104,7 +105,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder versionDisplayName(@Nullable Output<String> versionDisplayName) {
@@ -112,7 +113,7 @@ public final class SdkVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionDisplayName(@Nullable String versionDisplayName) {
-            this.versionDisplayName = Output.ofNullable(versionDisplayName);
+            this.versionDisplayName = Codegen.ofNullable(versionDisplayName);
             return this;
         }        public SdkVersionArgs build() {
             return new SdkVersionArgs(sdkSupportStatus, version, versionDisplayName);

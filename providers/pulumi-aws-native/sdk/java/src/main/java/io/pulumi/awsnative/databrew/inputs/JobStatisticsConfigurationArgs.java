@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.JobStatisticOverrideArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> includedStatistics;
 
     public Output<List<String>> getIncludedStatistics() {
-        return this.includedStatistics == null ? Output.empty() : this.includedStatistics;
+        return this.includedStatistics == null ? Codegen.empty() : this.includedStatistics;
     }
 
     @Import(name="overrides")
       private final @Nullable Output<List<JobStatisticOverrideArgs>> overrides;
 
     public Output<List<JobStatisticOverrideArgs>> getOverrides() {
-        return this.overrides == null ? Output.empty() : this.overrides;
+        return this.overrides == null ? Codegen.empty() : this.overrides;
     }
 
     public JobStatisticsConfigurationArgs(
@@ -38,8 +39,8 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
     }
 
     private JobStatisticsConfigurationArgs() {
-        this.includedStatistics = Output.empty();
-        this.overrides = Output.empty();
+        this.includedStatistics = Codegen.empty();
+        this.overrides = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder includedStatistics(@Nullable List<String> includedStatistics) {
-            this.includedStatistics = Output.ofNullable(includedStatistics);
+            this.includedStatistics = Codegen.ofNullable(includedStatistics);
             return this;
         }
         public Builder includedStatistics(String... includedStatistics) {
@@ -80,7 +81,7 @@ public final class JobStatisticsConfigurationArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder overrides(@Nullable List<JobStatisticOverrideArgs> overrides) {
-            this.overrides = Output.ofNullable(overrides);
+            this.overrides = Codegen.ofNullable(overrides);
             return this;
         }
         public Builder overrides(JobStatisticOverrideArgs... overrides) {

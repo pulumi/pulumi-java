@@ -6,6 +6,7 @@ package io.pulumi.aws.iot;
 import io.pulumi.aws.iot.inputs.ThingTypePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deprecated;
 
     public Output<Boolean> getDeprecated() {
-        return this.deprecated == null ? Output.empty() : this.deprecated;
+        return this.deprecated == null ? Codegen.empty() : this.deprecated;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ThingTypePropertiesArgs> properties;
 
     public Output<ThingTypePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ThingTypeArgs(
@@ -73,10 +74,10 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThingTypeArgs() {
-        this.deprecated = Output.empty();
-        this.name = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
+        this.deprecated = Codegen.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deprecated(@Nullable Boolean deprecated) {
-            this.deprecated = Output.ofNullable(deprecated);
+            this.deprecated = Codegen.ofNullable(deprecated);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -118,7 +119,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<ThingTypePropertiesArgs> properties) {
@@ -126,7 +127,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ThingTypePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -134,7 +135,7 @@ public final class ThingTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ThingTypeArgs build() {
             return new ThingTypeArgs(deprecated, name, properties, tags);

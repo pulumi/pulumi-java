@@ -8,6 +8,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,21 +26,21 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DatasetFilesLimitArgs> filesLimit;
 
     public Output<DatasetFilesLimitArgs> getFilesLimit() {
-        return this.filesLimit == null ? Output.empty() : this.filesLimit;
+        return this.filesLimit == null ? Codegen.empty() : this.filesLimit;
     }
 
     @Import(name="lastModifiedDateCondition")
       private final @Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition;
 
     public Output<DatasetFilterExpressionArgs> getLastModifiedDateCondition() {
-        return this.lastModifiedDateCondition == null ? Output.empty() : this.lastModifiedDateCondition;
+        return this.lastModifiedDateCondition == null ? Codegen.empty() : this.lastModifiedDateCondition;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<List<DatasetPathParameterArgs>> parameters;
 
     public Output<List<DatasetPathParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public DatasetPathOptionsArgs(
@@ -52,9 +53,9 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatasetPathOptionsArgs() {
-        this.filesLimit = Output.empty();
-        this.lastModifiedDateCondition = Output.empty();
-        this.parameters = Output.empty();
+        this.filesLimit = Codegen.empty();
+        this.lastModifiedDateCondition = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filesLimit(@Nullable DatasetFilesLimitArgs filesLimit) {
-            this.filesLimit = Output.ofNullable(filesLimit);
+            this.filesLimit = Codegen.ofNullable(filesLimit);
             return this;
         }
         public Builder lastModifiedDateCondition(@Nullable Output<DatasetFilterExpressionArgs> lastModifiedDateCondition) {
@@ -94,7 +95,7 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lastModifiedDateCondition(@Nullable DatasetFilterExpressionArgs lastModifiedDateCondition) {
-            this.lastModifiedDateCondition = Output.ofNullable(lastModifiedDateCondition);
+            this.lastModifiedDateCondition = Codegen.ofNullable(lastModifiedDateCondition);
             return this;
         }
         public Builder parameters(@Nullable Output<List<DatasetPathParameterArgs>> parameters) {
@@ -102,7 +103,7 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parameters(@Nullable List<DatasetPathParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(DatasetPathParameterArgs... parameters) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.enums.EnumSyntax;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.EnumValueArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionArgs;
@@ -31,7 +32,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EnumValueArgs>> enumvalue;
 
     public Output<List<EnumValueArgs>> getEnumvalue() {
-        return this.enumvalue == null ? Output.empty() : this.enumvalue;
+        return this.enumvalue == null ? Codegen.empty() : this.enumvalue;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OptionArgs>> options;
 
     public Output<List<OptionArgs>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceContextArgs> sourceContext;
 
     public Output<SourceContextArgs> getSourceContext() {
-        return this.sourceContext == null ? Output.empty() : this.sourceContext;
+        return this.sourceContext == null ? Codegen.empty() : this.sourceContext;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnumSyntax> syntax;
 
     public Output<EnumSyntax> getSyntax() {
-        return this.syntax == null ? Output.empty() : this.syntax;
+        return this.syntax == null ? Codegen.empty() : this.syntax;
     }
 
     public EnumArgs(
@@ -92,11 +93,11 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnumArgs() {
-        this.enumvalue = Output.empty();
-        this.name = Output.empty();
-        this.options = Output.empty();
-        this.sourceContext = Output.empty();
-        this.syntax = Output.empty();
+        this.enumvalue = Codegen.empty();
+        this.name = Codegen.empty();
+        this.options = Codegen.empty();
+        this.sourceContext = Codegen.empty();
+        this.syntax = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enumvalue(@Nullable List<EnumValueArgs> enumvalue) {
-            this.enumvalue = Output.ofNullable(enumvalue);
+            this.enumvalue = Codegen.ofNullable(enumvalue);
             return this;
         }
         public Builder enumvalue(EnumValueArgs... enumvalue) {
@@ -143,7 +144,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder options(@Nullable Output<List<OptionArgs>> options) {
@@ -151,7 +152,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<OptionArgs> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(OptionArgs... options) {
@@ -162,7 +163,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceContext(@Nullable SourceContextArgs sourceContext) {
-            this.sourceContext = Output.ofNullable(sourceContext);
+            this.sourceContext = Codegen.ofNullable(sourceContext);
             return this;
         }
         public Builder syntax(@Nullable Output<EnumSyntax> syntax) {
@@ -170,7 +171,7 @@ public final class EnumArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syntax(@Nullable EnumSyntax syntax) {
-            this.syntax = Output.ofNullable(syntax);
+            this.syntax = Codegen.ofNullable(syntax);
             return this;
         }        public EnumArgs build() {
             return new EnumArgs(enumvalue, name, options, sourceContext, syntax);

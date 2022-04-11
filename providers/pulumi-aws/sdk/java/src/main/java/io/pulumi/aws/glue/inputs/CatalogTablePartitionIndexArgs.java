@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> indexStatus;
 
     public Output<String> getIndexStatus() {
-        return this.indexStatus == null ? Output.empty() : this.indexStatus;
+        return this.indexStatus == null ? Codegen.empty() : this.indexStatus;
     }
 
     /**
@@ -54,9 +55,9 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
     }
 
     private CatalogTablePartitionIndexArgs() {
-        this.indexName = Output.empty();
-        this.indexStatus = Output.empty();
-        this.keys = Output.empty();
+        this.indexName = Codegen.empty();
+        this.indexStatus = Codegen.empty();
+        this.keys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class CatalogTablePartitionIndexArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder indexStatus(@Nullable String indexStatus) {
-            this.indexStatus = Output.ofNullable(indexStatus);
+            this.indexStatus = Codegen.ofNullable(indexStatus);
             return this;
         }
         public Builder keys(Output<List<String>> keys) {

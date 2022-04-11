@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> forceUpdate;
 
     public Output<Boolean> getForceUpdate() {
-        return this.forceUpdate == null ? Output.empty() : this.forceUpdate;
+        return this.forceUpdate == null ? Codegen.empty() : this.forceUpdate;
     }
 
     public LogDestinationPolicyArgs(
@@ -58,9 +59,9 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
     }
 
     private LogDestinationPolicyArgs() {
-        this.accessPolicy = Output.empty();
-        this.destinationName = Output.empty();
-        this.forceUpdate = Output.empty();
+        this.accessPolicy = Codegen.empty();
+        this.destinationName = Codegen.empty();
+        this.forceUpdate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class LogDestinationPolicyArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder forceUpdate(@Nullable Boolean forceUpdate) {
-            this.forceUpdate = Output.ofNullable(forceUpdate);
+            this.forceUpdate = Codegen.ofNullable(forceUpdate);
             return this;
         }        public LogDestinationPolicyArgs build() {
             return new LogDestinationPolicyArgs(accessPolicy, destinationName, forceUpdate);

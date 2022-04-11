@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration;
 import io.pulumi.azurenative.datamigration.inputs.ProjectFilePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fileName;
 
     public Output<String> getFileName() {
-        return this.fileName == null ? Output.empty() : this.fileName;
+        return this.fileName == null ? Codegen.empty() : this.fileName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ProjectFilePropertiesArgs> properties;
 
     public Output<ProjectFilePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FileArgs() {
-        this.fileName = Output.empty();
-        this.groupName = Output.empty();
-        this.projectName = Output.empty();
-        this.properties = Output.empty();
-        this.serviceName = Output.empty();
+        this.fileName = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileName(@Nullable String fileName) {
-            this.fileName = Output.ofNullable(fileName);
+            this.fileName = Codegen.ofNullable(fileName);
             return this;
         }
         public Builder groupName(Output<String> groupName) {
@@ -148,7 +149,7 @@ public final class FileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ProjectFilePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

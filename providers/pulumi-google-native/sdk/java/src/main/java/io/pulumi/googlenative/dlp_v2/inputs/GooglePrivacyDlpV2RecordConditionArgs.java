@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ExpressionsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
       private final @Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions;
 
     public Output<GooglePrivacyDlpV2ExpressionsArgs> getExpressions() {
-        return this.expressions == null ? Output.empty() : this.expressions;
+        return this.expressions == null ? Codegen.empty() : this.expressions;
     }
 
     public GooglePrivacyDlpV2RecordConditionArgs(@Nullable Output<GooglePrivacyDlpV2ExpressionsArgs> expressions) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
     }
 
     private GooglePrivacyDlpV2RecordConditionArgs() {
-        this.expressions = Output.empty();
+        this.expressions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2RecordConditionArgs extends io.pulumi.resou
             return this;
         }
         public Builder expressions(@Nullable GooglePrivacyDlpV2ExpressionsArgs expressions) {
-            this.expressions = Output.ofNullable(expressions);
+            this.expressions = Codegen.ofNullable(expressions);
             return this;
         }        public GooglePrivacyDlpV2RecordConditionArgs build() {
             return new GooglePrivacyDlpV2RecordConditionArgs(expressions);

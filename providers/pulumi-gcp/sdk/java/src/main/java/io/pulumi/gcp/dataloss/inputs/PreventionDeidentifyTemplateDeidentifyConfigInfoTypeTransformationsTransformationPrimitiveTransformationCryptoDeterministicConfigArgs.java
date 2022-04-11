@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs;
@@ -33,7 +34,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs> context;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs> cryptoKey;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs> getCryptoKey() {
-        return this.cryptoKey == null ? Output.empty() : this.cryptoKey;
+        return this.cryptoKey == null ? Codegen.empty() : this.cryptoKey;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
       private final @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs> surrogateInfoType;
 
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs> getSurrogateInfoType() {
-        return this.surrogateInfoType == null ? Output.empty() : this.surrogateInfoType;
+        return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs(
@@ -73,9 +74,9 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs() {
-        this.context = Output.empty();
-        this.cryptoKey = Output.empty();
-        this.surrogateInfoType = Output.empty();
+        this.context = Codegen.empty();
+        this.cryptoKey = Codegen.empty();
+        this.surrogateInfoType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder context(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigContextArgs context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder cryptoKey(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs> cryptoKey) {
@@ -115,7 +116,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder cryptoKey(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigCryptoKeyArgs cryptoKey) {
-            this.cryptoKey = Output.ofNullable(cryptoKey);
+            this.cryptoKey = Codegen.ofNullable(cryptoKey);
             return this;
         }
         public Builder surrogateInfoType(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs> surrogateInfoType) {
@@ -123,7 +124,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder surrogateInfoType(@Nullable PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigSurrogateInfoTypeArgs surrogateInfoType) {
-            this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
+            this.surrogateInfoType = Codegen.ofNullable(surrogateInfoType);
             return this;
         }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoDeterministicConfigArgs(context, cryptoKey, surrogateInfoType);

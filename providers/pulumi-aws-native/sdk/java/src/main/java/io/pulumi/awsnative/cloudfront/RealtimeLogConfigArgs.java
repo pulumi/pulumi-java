@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.RealtimeLogConfigEndPointArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="samplingRate", required=true)
@@ -57,10 +58,10 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RealtimeLogConfigArgs() {
-        this.endPoints = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.samplingRate = Output.empty();
+        this.endPoints = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.samplingRate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder samplingRate(Output<Double> samplingRate) {

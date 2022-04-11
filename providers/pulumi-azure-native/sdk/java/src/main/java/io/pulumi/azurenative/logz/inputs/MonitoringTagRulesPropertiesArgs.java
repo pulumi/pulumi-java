@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logz.inputs;
 import io.pulumi.azurenative.logz.inputs.LogRulesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
       private final @Nullable Output<LogRulesArgs> logRules;
 
     public Output<LogRulesArgs> getLogRules() {
-        return this.logRules == null ? Output.empty() : this.logRules;
+        return this.logRules == null ? Codegen.empty() : this.logRules;
     }
 
     public MonitoringTagRulesPropertiesArgs(@Nullable Output<LogRulesArgs> logRules) {
@@ -34,7 +35,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
     }
 
     private MonitoringTagRulesPropertiesArgs() {
-        this.logRules = Output.empty();
+        this.logRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder logRules(@Nullable LogRulesArgs logRules) {
-            this.logRules = Output.ofNullable(logRules);
+            this.logRules = Codegen.ofNullable(logRules);
             return this;
         }        public MonitoringTagRulesPropertiesArgs build() {
             return new MonitoringTagRulesPropertiesArgs(logRules);

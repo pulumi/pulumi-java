@@ -6,6 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.HoursOfOperationConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<HoursOfOperationConfigGetArgs>> configs;
 
     public Output<List<HoursOfOperationConfigGetArgs>> getConfigs() {
-        return this.configs == null ? Output.empty() : this.configs;
+        return this.configs == null ? Codegen.empty() : this.configs;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> hoursOfOperationArn;
 
     public Output<String> getHoursOfOperationArn() {
-        return this.hoursOfOperationArn == null ? Output.empty() : this.hoursOfOperationArn;
+        return this.hoursOfOperationArn == null ? Codegen.empty() : this.hoursOfOperationArn;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> hoursOfOperationId;
 
     public Output<String> getHoursOfOperationId() {
-        return this.hoursOfOperationId == null ? Output.empty() : this.hoursOfOperationId;
+        return this.hoursOfOperationId == null ? Codegen.empty() : this.hoursOfOperationId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public HoursOfOperationState(
@@ -138,15 +139,15 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
     }
 
     private HoursOfOperationState() {
-        this.configs = Output.empty();
-        this.description = Output.empty();
-        this.hoursOfOperationArn = Output.empty();
-        this.hoursOfOperationId = Output.empty();
-        this.instanceId = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.timeZone = Output.empty();
+        this.configs = Codegen.empty();
+        this.description = Codegen.empty();
+        this.hoursOfOperationArn = Codegen.empty();
+        this.hoursOfOperationId = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder configs(@Nullable List<HoursOfOperationConfigGetArgs> configs) {
-            this.configs = Output.ofNullable(configs);
+            this.configs = Codegen.ofNullable(configs);
             return this;
         }
         public Builder configs(HoursOfOperationConfigGetArgs... configs) {
@@ -201,7 +202,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder hoursOfOperationArn(@Nullable Output<String> hoursOfOperationArn) {
@@ -209,7 +210,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hoursOfOperationArn(@Nullable String hoursOfOperationArn) {
-            this.hoursOfOperationArn = Output.ofNullable(hoursOfOperationArn);
+            this.hoursOfOperationArn = Codegen.ofNullable(hoursOfOperationArn);
             return this;
         }
         public Builder hoursOfOperationId(@Nullable Output<String> hoursOfOperationId) {
@@ -217,7 +218,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder hoursOfOperationId(@Nullable String hoursOfOperationId) {
-            this.hoursOfOperationId = Output.ofNullable(hoursOfOperationId);
+            this.hoursOfOperationId = Codegen.ofNullable(hoursOfOperationId);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -225,7 +226,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -233,7 +234,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -241,7 +242,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -249,7 +250,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder timeZone(@Nullable Output<String> timeZone) {
@@ -257,7 +258,7 @@ public final class HoursOfOperationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public HoursOfOperationState build() {
             return new HoursOfOperationState(configs, description, hoursOfOperationArn, hoursOfOperationId, instanceId, name, tags, tagsAll, timeZone);

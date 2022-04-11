@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
       private final @Nullable Output<String> lastTransitionTime;
 
     public Output<String> getLastTransitionTime() {
-        return this.lastTransitionTime == null ? Output.empty() : this.lastTransitionTime;
+        return this.lastTransitionTime == null ? Codegen.empty() : this.lastTransitionTime;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
       private final @Nullable Output<String> lastUpdateTime;
 
     public Output<String> getLastUpdateTime() {
-        return this.lastUpdateTime == null ? Output.empty() : this.lastUpdateTime;
+        return this.lastUpdateTime == null ? Codegen.empty() : this.lastUpdateTime;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
       private final @Nullable Output<String> reason;
 
     public Output<String> getReason() {
-        return this.reason == null ? Output.empty() : this.reason;
+        return this.reason == null ? Codegen.empty() : this.reason;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
     }
 
     private CertificateSigningRequestConditionArgs() {
-        this.lastTransitionTime = Output.empty();
-        this.lastUpdateTime = Output.empty();
-        this.message = Output.empty();
-        this.reason = Output.empty();
-        this.status = Output.empty();
-        this.type = Output.empty();
+        this.lastTransitionTime = Codegen.empty();
+        this.lastUpdateTime = Codegen.empty();
+        this.message = Codegen.empty();
+        this.reason = Codegen.empty();
+        this.status = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
             return this;
         }
         public Builder lastTransitionTime(@Nullable String lastTransitionTime) {
-            this.lastTransitionTime = Output.ofNullable(lastTransitionTime);
+            this.lastTransitionTime = Codegen.ofNullable(lastTransitionTime);
             return this;
         }
         public Builder lastUpdateTime(@Nullable Output<String> lastUpdateTime) {
@@ -147,7 +148,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
             return this;
         }
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
-            this.lastUpdateTime = Output.ofNullable(lastUpdateTime);
+            this.lastUpdateTime = Codegen.ofNullable(lastUpdateTime);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -155,7 +156,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder reason(@Nullable Output<String> reason) {
@@ -163,7 +164,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
             return this;
         }
         public Builder reason(@Nullable String reason) {
-            this.reason = Output.ofNullable(reason);
+            this.reason = Codegen.ofNullable(reason);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -171,7 +172,7 @@ public final class CertificateSigningRequestConditionArgs extends io.pulumi.reso
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder type(Output<String> type) {

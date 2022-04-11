@@ -9,6 +9,7 @@ import io.pulumi.azurenative.devices.inputs.RoutingServiceBusTopicEndpointProper
 import io.pulumi.azurenative.devices.inputs.RoutingStorageContainerPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<RoutingEventHubPropertiesArgs>> eventHubs;
 
     public Output<List<RoutingEventHubPropertiesArgs>> getEventHubs() {
-        return this.eventHubs == null ? Output.empty() : this.eventHubs;
+        return this.eventHubs == null ? Codegen.empty() : this.eventHubs;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> serviceBusQueues;
 
     public Output<List<RoutingServiceBusQueueEndpointPropertiesArgs>> getServiceBusQueues() {
-        return this.serviceBusQueues == null ? Output.empty() : this.serviceBusQueues;
+        return this.serviceBusQueues == null ? Codegen.empty() : this.serviceBusQueues;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> serviceBusTopics;
 
     public Output<List<RoutingServiceBusTopicEndpointPropertiesArgs>> getServiceBusTopics() {
-        return this.serviceBusTopics == null ? Output.empty() : this.serviceBusTopics;
+        return this.serviceBusTopics == null ? Codegen.empty() : this.serviceBusTopics;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<RoutingStorageContainerPropertiesArgs>> storageContainers;
 
     public Output<List<RoutingStorageContainerPropertiesArgs>> getStorageContainers() {
-        return this.storageContainers == null ? Output.empty() : this.storageContainers;
+        return this.storageContainers == null ? Codegen.empty() : this.storageContainers;
     }
 
     public RoutingEndpointsArgs(
@@ -78,10 +79,10 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RoutingEndpointsArgs() {
-        this.eventHubs = Output.empty();
-        this.serviceBusQueues = Output.empty();
-        this.serviceBusTopics = Output.empty();
-        this.storageContainers = Output.empty();
+        this.eventHubs = Codegen.empty();
+        this.serviceBusQueues = Codegen.empty();
+        this.serviceBusTopics = Codegen.empty();
+        this.storageContainers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder eventHubs(@Nullable List<RoutingEventHubPropertiesArgs> eventHubs) {
-            this.eventHubs = Output.ofNullable(eventHubs);
+            this.eventHubs = Codegen.ofNullable(eventHubs);
             return this;
         }
         public Builder eventHubs(RoutingEventHubPropertiesArgs... eventHubs) {
@@ -126,7 +127,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceBusQueues(@Nullable List<RoutingServiceBusQueueEndpointPropertiesArgs> serviceBusQueues) {
-            this.serviceBusQueues = Output.ofNullable(serviceBusQueues);
+            this.serviceBusQueues = Codegen.ofNullable(serviceBusQueues);
             return this;
         }
         public Builder serviceBusQueues(RoutingServiceBusQueueEndpointPropertiesArgs... serviceBusQueues) {
@@ -137,7 +138,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceBusTopics(@Nullable List<RoutingServiceBusTopicEndpointPropertiesArgs> serviceBusTopics) {
-            this.serviceBusTopics = Output.ofNullable(serviceBusTopics);
+            this.serviceBusTopics = Codegen.ofNullable(serviceBusTopics);
             return this;
         }
         public Builder serviceBusTopics(RoutingServiceBusTopicEndpointPropertiesArgs... serviceBusTopics) {
@@ -148,7 +149,7 @@ public final class RoutingEndpointsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder storageContainers(@Nullable List<RoutingStorageContainerPropertiesArgs> storageContainers) {
-            this.storageContainers = Output.ofNullable(storageContainers);
+            this.storageContainers = Codegen.ofNullable(storageContainers);
             return this;
         }
         public Builder storageContainers(RoutingStorageContainerPropertiesArgs... storageContainers) {

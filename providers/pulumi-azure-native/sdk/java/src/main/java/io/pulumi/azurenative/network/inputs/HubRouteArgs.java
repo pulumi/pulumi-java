@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -87,11 +88,11 @@ public final class HubRouteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubRouteArgs() {
-        this.destinationType = Output.empty();
-        this.destinations = Output.empty();
-        this.name = Output.empty();
-        this.nextHop = Output.empty();
-        this.nextHopType = Output.empty();
+        this.destinationType = Codegen.empty();
+        this.destinations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nextHop = Codegen.empty();
+        this.nextHopType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
       private final @Nullable Output<String> connectionPersistenceOnUnhealthyBackends;
 
     public Output<String> getConnectionPersistenceOnUnhealthyBackends() {
-        return this.connectionPersistenceOnUnhealthyBackends == null ? Output.empty() : this.connectionPersistenceOnUnhealthyBackends;
+        return this.connectionPersistenceOnUnhealthyBackends == null ? Codegen.empty() : this.connectionPersistenceOnUnhealthyBackends;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
       private final @Nullable Output<Integer> idleTimeoutSec;
 
     public Output<Integer> getIdleTimeoutSec() {
-        return this.idleTimeoutSec == null ? Output.empty() : this.idleTimeoutSec;
+        return this.idleTimeoutSec == null ? Codegen.empty() : this.idleTimeoutSec;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
       private final @Nullable Output<String> trackingMode;
 
     public Output<String> getTrackingMode() {
-        return this.trackingMode == null ? Output.empty() : this.trackingMode;
+        return this.trackingMode == null ? Codegen.empty() : this.trackingMode;
     }
 
     public RegionBackendServiceConnectionTrackingPolicyGetArgs(
@@ -81,9 +82,9 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
     }
 
     private RegionBackendServiceConnectionTrackingPolicyGetArgs() {
-        this.connectionPersistenceOnUnhealthyBackends = Output.empty();
-        this.idleTimeoutSec = Output.empty();
-        this.trackingMode = Output.empty();
+        this.connectionPersistenceOnUnhealthyBackends = Codegen.empty();
+        this.idleTimeoutSec = Codegen.empty();
+        this.trackingMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
             return this;
         }
         public Builder connectionPersistenceOnUnhealthyBackends(@Nullable String connectionPersistenceOnUnhealthyBackends) {
-            this.connectionPersistenceOnUnhealthyBackends = Output.ofNullable(connectionPersistenceOnUnhealthyBackends);
+            this.connectionPersistenceOnUnhealthyBackends = Codegen.ofNullable(connectionPersistenceOnUnhealthyBackends);
             return this;
         }
         public Builder idleTimeoutSec(@Nullable Output<Integer> idleTimeoutSec) {
@@ -123,7 +124,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
             return this;
         }
         public Builder idleTimeoutSec(@Nullable Integer idleTimeoutSec) {
-            this.idleTimeoutSec = Output.ofNullable(idleTimeoutSec);
+            this.idleTimeoutSec = Codegen.ofNullable(idleTimeoutSec);
             return this;
         }
         public Builder trackingMode(@Nullable Output<String> trackingMode) {
@@ -131,7 +132,7 @@ public final class RegionBackendServiceConnectionTrackingPolicyGetArgs extends i
             return this;
         }
         public Builder trackingMode(@Nullable String trackingMode) {
-            this.trackingMode = Output.ofNullable(trackingMode);
+            this.trackingMode = Codegen.ofNullable(trackingMode);
             return this;
         }        public RegionBackendServiceConnectionTrackingPolicyGetArgs build() {
             return new RegionBackendServiceConnectionTrackingPolicyGetArgs(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);

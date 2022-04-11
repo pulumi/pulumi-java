@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class WebAclLoggingConfigurationLoggingFilterFilterConditionActionC
     }
 
     private WebAclLoggingConfigurationLoggingFilterFilterConditionActionConditionArgs() {
-        this.action = Output.empty();
+        this.action = Codegen.empty();
     }
 
     public static Builder builder() {

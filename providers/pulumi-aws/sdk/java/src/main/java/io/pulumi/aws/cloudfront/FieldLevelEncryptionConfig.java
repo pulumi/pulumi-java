@@ -11,6 +11,7 @@ import io.pulumi.aws.cloudfront.outputs.FieldLevelEncryptionConfigQueryArgProfil
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -123,7 +124,7 @@ public class FieldLevelEncryptionConfig extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public FieldLevelEncryptionConfig(String name, FieldLevelEncryptionConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, args == null ? FieldLevelEncryptionConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/fieldLevelEncryptionConfig:FieldLevelEncryptionConfig", name, args == null ? FieldLevelEncryptionConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FieldLevelEncryptionConfig(String name, Output<String> id, @Nullable FieldLevelEncryptionConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

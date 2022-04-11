@@ -5,6 +5,7 @@ package io.pulumi.aws.iam;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
-        return this.certificateChain == null ? Output.empty() : this.certificateChain;
+        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServerCertificateArgs(
@@ -118,13 +119,13 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ServerCertificateArgs() {
-        this.certificateBody = Output.empty();
-        this.certificateChain = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.path = Output.empty();
-        this.privateKey = Output.empty();
-        this.tags = Output.empty();
+        this.certificateBody = Codegen.empty();
+        this.certificateChain = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.path = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Output.ofNullable(certificateChain);
+            this.certificateChain = Codegen.ofNullable(certificateChain);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -180,7 +181,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -188,7 +189,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -196,7 +197,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder privateKey(Output<String> privateKey) {
@@ -212,7 +213,7 @@ public final class ServerCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServerCertificateArgs build() {
             return new ServerCertificateArgs(certificateBody, certificateChain, name, namePrefix, path, privateKey, tags);

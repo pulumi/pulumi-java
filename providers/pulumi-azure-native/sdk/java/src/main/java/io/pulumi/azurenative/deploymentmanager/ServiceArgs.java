@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -110,13 +111,13 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceTopologyName = Output.empty();
-        this.tags = Output.empty();
-        this.targetLocation = Output.empty();
-        this.targetSubscriptionId = Output.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceTopologyName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetLocation = Codegen.empty();
+        this.targetSubscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -172,7 +173,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder serviceTopologyName(Output<String> serviceTopologyName) {
@@ -188,7 +189,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetLocation(Output<String> targetLocation) {

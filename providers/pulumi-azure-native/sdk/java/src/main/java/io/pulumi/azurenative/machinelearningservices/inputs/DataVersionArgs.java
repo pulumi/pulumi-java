@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.DatasetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DatasetType>> datasetType;
 
     public Output<Either<String,DatasetType>> getDatasetType() {
-        return this.datasetType == null ? Output.empty() : this.datasetType;
+        return this.datasetType == null ? Codegen.empty() : this.datasetType;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
-        return this.datastoreId == null ? Output.empty() : this.datastoreId;
+        return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isAnonymous;
 
     public Output<Boolean> getIsAnonymous() {
-        return this.isAnonymous == null ? Output.empty() : this.isAnonymous;
+        return this.isAnonymous == null ? Codegen.empty() : this.isAnonymous;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DataVersionArgs(
@@ -117,13 +118,13 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataVersionArgs() {
-        this.datasetType = Output.empty();
-        this.datastoreId = Output.empty();
-        this.description = Output.empty();
-        this.isAnonymous = Output.empty();
-        this.path = Output.empty();
-        this.properties = Output.empty();
-        this.tags = Output.empty();
+        this.datasetType = Codegen.empty();
+        this.datastoreId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isAnonymous = Codegen.empty();
+        this.path = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasetType(@Nullable Either<String,DatasetType> datasetType) {
-            this.datasetType = Output.ofNullable(datasetType);
+            this.datasetType = Codegen.ofNullable(datasetType);
             return this;
         }
         public Builder datastoreId(@Nullable Output<String> datastoreId) {
@@ -171,7 +172,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Output.ofNullable(datastoreId);
+            this.datastoreId = Codegen.ofNullable(datastoreId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -179,7 +180,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isAnonymous(@Nullable Output<Boolean> isAnonymous) {
@@ -187,7 +188,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isAnonymous(@Nullable Boolean isAnonymous) {
-            this.isAnonymous = Output.ofNullable(isAnonymous);
+            this.isAnonymous = Codegen.ofNullable(isAnonymous);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -203,7 +204,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -211,7 +212,7 @@ public final class DataVersionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DataVersionArgs build() {
             return new DataVersionArgs(datasetType, datastoreId, description, isAnonymous, path, properties, tags);

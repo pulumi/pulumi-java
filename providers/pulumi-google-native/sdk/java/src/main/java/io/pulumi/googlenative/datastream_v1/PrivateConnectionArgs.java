@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1.inputs.VpcPeeringConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -35,14 +36,14 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="privateConnectionId", required=true)
@@ -56,14 +57,14 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig;
 
     public Output<VpcPeeringConfigArgs> getVpcPeeringConfig() {
-        return this.vpcPeeringConfig == null ? Output.empty() : this.vpcPeeringConfig;
+        return this.vpcPeeringConfig == null ? Codegen.empty() : this.vpcPeeringConfig;
     }
 
     public PrivateConnectionArgs(
@@ -95,13 +96,13 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PrivateConnectionArgs() {
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.privateConnectionId = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.vpcPeeringConfig = Output.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.privateConnectionId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.vpcPeeringConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -157,7 +158,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder privateConnectionId(Output<String> privateConnectionId) {
@@ -173,7 +174,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -181,7 +182,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder vpcPeeringConfig(@Nullable Output<VpcPeeringConfigArgs> vpcPeeringConfig) {
@@ -189,7 +190,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vpcPeeringConfig(@Nullable VpcPeeringConfigArgs vpcPeeringConfig) {
-            this.vpcPeeringConfig = Output.ofNullable(vpcPeeringConfig);
+            this.vpcPeeringConfig = Codegen.ofNullable(vpcPeeringConfig);
             return this;
         }        public PrivateConnectionArgs build() {
             return new PrivateConnectionArgs(displayName, labels, location, privateConnectionId, project, requestId, vpcPeeringConfig);

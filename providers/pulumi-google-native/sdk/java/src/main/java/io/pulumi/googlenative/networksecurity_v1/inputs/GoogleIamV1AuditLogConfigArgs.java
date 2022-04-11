@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1.enums.GoogleIamV1AuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> exemptedMembers;
 
     public Output<List<String>> getExemptedMembers() {
-        return this.exemptedMembers == null ? Output.empty() : this.exemptedMembers;
+        return this.exemptedMembers == null ? Codegen.empty() : this.exemptedMembers;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<GoogleIamV1AuditLogConfigLogType> logType;
 
     public Output<GoogleIamV1AuditLogConfigLogType> getLogType() {
-        return this.logType == null ? Output.empty() : this.logType;
+        return this.logType == null ? Codegen.empty() : this.logType;
     }
 
     public GoogleIamV1AuditLogConfigArgs(
@@ -50,8 +51,8 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
     }
 
     private GoogleIamV1AuditLogConfigArgs() {
-        this.exemptedMembers = Output.empty();
-        this.logType = Output.empty();
+        this.exemptedMembers = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder exemptedMembers(@Nullable List<String> exemptedMembers) {
-            this.exemptedMembers = Output.ofNullable(exemptedMembers);
+            this.exemptedMembers = Codegen.ofNullable(exemptedMembers);
             return this;
         }
         public Builder exemptedMembers(String... exemptedMembers) {
@@ -92,7 +93,7 @@ public final class GoogleIamV1AuditLogConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder logType(@Nullable GoogleIamV1AuditLogConfigLogType logType) {
-            this.logType = Output.ofNullable(logType);
+            this.logType = Codegen.ofNullable(logType);
             return this;
         }        public GoogleIamV1AuditLogConfigArgs build() {
             return new GoogleIamV1AuditLogConfigArgs(exemptedMembers, logType);

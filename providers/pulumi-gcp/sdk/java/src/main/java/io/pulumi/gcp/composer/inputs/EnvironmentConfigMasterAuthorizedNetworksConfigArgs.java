@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
       private final @Nullable Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
     public Output<List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
-        return this.cidrBlocks == null ? Output.empty() : this.cidrBlocks;
+        return this.cidrBlocks == null ? Codegen.empty() : this.cidrBlocks;
     }
 
     @Import(name="enabled", required=true)
@@ -38,8 +39,8 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
     }
 
     private EnvironmentConfigMasterAuthorizedNetworksConfigArgs() {
-        this.cidrBlocks = Output.empty();
-        this.enabled = Output.empty();
+        this.cidrBlocks = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class EnvironmentConfigMasterAuthorizedNetworksConfigArgs extends i
             return this;
         }
         public Builder cidrBlocks(@Nullable List<EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs> cidrBlocks) {
-            this.cidrBlocks = Output.ofNullable(cidrBlocks);
+            this.cidrBlocks = Codegen.ofNullable(cidrBlocks);
             return this;
         }
         public Builder cidrBlocks(EnvironmentConfigMasterAuthorizedNetworksConfigCidrBlockArgs... cidrBlocks) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigAdditionalExtensionObjectIdGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -60,9 +61,9 @@ public final class CertificateConfigX509ConfigAdditionalExtensionGetArgs extends
     }
 
     private CertificateConfigX509ConfigAdditionalExtensionGetArgs() {
-        this.critical = Output.empty();
-        this.objectId = Output.empty();
-        this.value = Output.empty();
+        this.critical = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

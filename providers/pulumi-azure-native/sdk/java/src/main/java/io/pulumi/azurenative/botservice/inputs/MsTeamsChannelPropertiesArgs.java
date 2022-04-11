@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> acceptedTerms;
 
     public Output<Boolean> getAcceptedTerms() {
-        return this.acceptedTerms == null ? Output.empty() : this.acceptedTerms;
+        return this.acceptedTerms == null ? Codegen.empty() : this.acceptedTerms;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> callingWebHook;
 
     public Output<String> getCallingWebHook() {
-        return this.callingWebHook == null ? Output.empty() : this.callingWebHook;
+        return this.callingWebHook == null ? Codegen.empty() : this.callingWebHook;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> deploymentEnvironment;
 
     public Output<String> getDeploymentEnvironment() {
-        return this.deploymentEnvironment == null ? Output.empty() : this.deploymentEnvironment;
+        return this.deploymentEnvironment == null ? Codegen.empty() : this.deploymentEnvironment;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> enableCalling;
 
     public Output<Boolean> getEnableCalling() {
-        return this.enableCalling == null ? Output.empty() : this.enableCalling;
+        return this.enableCalling == null ? Codegen.empty() : this.enableCalling;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> incomingCallRoute;
 
     public Output<String> getIncomingCallRoute() {
-        return this.incomingCallRoute == null ? Output.empty() : this.incomingCallRoute;
+        return this.incomingCallRoute == null ? Codegen.empty() : this.incomingCallRoute;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
         @Nullable Output<Boolean> enableCalling,
         @Nullable Output<String> incomingCallRoute,
         Output<Boolean> isEnabled) {
-        this.acceptedTerms = acceptedTerms == null ? Output.ofNullable(true) : acceptedTerms;
+        this.acceptedTerms = acceptedTerms == null ? Codegen.ofNullable(true) : acceptedTerms;
         this.callingWebHook = callingWebHook;
         this.deploymentEnvironment = deploymentEnvironment;
         this.enableCalling = enableCalling;
@@ -101,12 +102,12 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
     }
 
     private MsTeamsChannelPropertiesArgs() {
-        this.acceptedTerms = Output.empty();
-        this.callingWebHook = Output.empty();
-        this.deploymentEnvironment = Output.empty();
-        this.enableCalling = Output.empty();
-        this.incomingCallRoute = Output.empty();
-        this.isEnabled = Output.empty();
+        this.acceptedTerms = Codegen.empty();
+        this.callingWebHook = Codegen.empty();
+        this.deploymentEnvironment = Codegen.empty();
+        this.enableCalling = Codegen.empty();
+        this.incomingCallRoute = Codegen.empty();
+        this.isEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder acceptedTerms(@Nullable Boolean acceptedTerms) {
-            this.acceptedTerms = Output.ofNullable(acceptedTerms);
+            this.acceptedTerms = Codegen.ofNullable(acceptedTerms);
             return this;
         }
         public Builder callingWebHook(@Nullable Output<String> callingWebHook) {
@@ -152,7 +153,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder callingWebHook(@Nullable String callingWebHook) {
-            this.callingWebHook = Output.ofNullable(callingWebHook);
+            this.callingWebHook = Codegen.ofNullable(callingWebHook);
             return this;
         }
         public Builder deploymentEnvironment(@Nullable Output<String> deploymentEnvironment) {
@@ -160,7 +161,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder deploymentEnvironment(@Nullable String deploymentEnvironment) {
-            this.deploymentEnvironment = Output.ofNullable(deploymentEnvironment);
+            this.deploymentEnvironment = Codegen.ofNullable(deploymentEnvironment);
             return this;
         }
         public Builder enableCalling(@Nullable Output<Boolean> enableCalling) {
@@ -168,7 +169,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enableCalling(@Nullable Boolean enableCalling) {
-            this.enableCalling = Output.ofNullable(enableCalling);
+            this.enableCalling = Codegen.ofNullable(enableCalling);
             return this;
         }
         public Builder incomingCallRoute(@Nullable Output<String> incomingCallRoute) {
@@ -176,7 +177,7 @@ public final class MsTeamsChannelPropertiesArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder incomingCallRoute(@Nullable String incomingCallRoute) {
-            this.incomingCallRoute = Output.ofNullable(incomingCallRoute);
+            this.incomingCallRoute = Codegen.ofNullable(incomingCallRoute);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {

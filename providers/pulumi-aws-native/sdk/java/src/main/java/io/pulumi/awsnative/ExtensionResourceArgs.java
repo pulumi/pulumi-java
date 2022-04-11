@@ -5,6 +5,7 @@ package io.pulumi.awsnative;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -45,8 +46,8 @@ public final class ExtensionResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ExtensionResourceArgs() {
-        this.properties = Output.empty();
-        this.type = Output.empty();
+        this.properties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

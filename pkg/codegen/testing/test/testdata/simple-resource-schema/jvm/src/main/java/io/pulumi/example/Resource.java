@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.ResourceArgs;
 import io.pulumi.example.Utilities;
 import java.lang.String;
@@ -19,6 +20,12 @@ public class Resource extends io.pulumi.resources.CustomResource {
 
     public Output</* @Nullable */ String> getBar() {
         return this.bar;
+    }
+    @Export(name="baz", type=String.class, parameters={})
+    private Output</* @Nullable */ String> baz;
+
+    public Output</* @Nullable */ String> getBaz() {
+        return this.baz;
     }
 
     /**
@@ -43,7 +50,7 @@ public class Resource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Resource(String name, @Nullable ResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("example::Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("example::Resource", name, args == null ? ResourceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Resource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {
@@ -54,7 +61,8 @@ public class Resource extends io.pulumi.resources.CustomResource {
         var defaultOptions = io.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
             .additionalSecretOutputs(List.of(
-                "bar"
+                "bar",
+                "baz"
             ))
             .build();
         return io.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);

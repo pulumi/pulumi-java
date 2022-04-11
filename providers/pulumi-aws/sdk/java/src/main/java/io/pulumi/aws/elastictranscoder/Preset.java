@@ -14,6 +14,7 @@ import io.pulumi.aws.elastictranscoder.outputs.PresetVideoWatermark;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -204,7 +205,7 @@ public class Preset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Preset(String name, PresetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:elastictranscoder/preset:Preset", name, args == null ? PresetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:elastictranscoder/preset:Preset", name, args == null ? PresetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Preset(String name, Output<String> id, @Nullable PresetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3TransitionRouteArgs;
 import java.lang.String;
 import java.util.List;
@@ -45,14 +46,14 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -63,14 +64,14 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
     public Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> getTransitionRoutes() {
-        return this.transitionRoutes == null ? Output.empty() : this.transitionRoutes;
+        return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
     }
 
     public TransitionRouteGroupArgs(
@@ -104,14 +105,14 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
     }
 
     private TransitionRouteGroupArgs() {
-        this.agentId = Output.empty();
-        this.displayName = Output.empty();
-        this.flowId = Output.empty();
-        this.languageCode = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.transitionRoutes = Output.empty();
+        this.agentId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.flowId = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.transitionRoutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -185,7 +186,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -193,7 +194,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -201,7 +202,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder transitionRoutes(@Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes) {
@@ -209,7 +210,7 @@ public final class TransitionRouteGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder transitionRoutes(@Nullable List<GoogleCloudDialogflowCxV3TransitionRouteArgs> transitionRoutes) {
-            this.transitionRoutes = Output.ofNullable(transitionRoutes);
+            this.transitionRoutes = Codegen.ofNullable(transitionRoutes);
             return this;
         }
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteArgs... transitionRoutes) {

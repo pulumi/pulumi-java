@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.TopicArgs;
 import io.pulumi.gcp.pubsub.inputs.TopicState;
@@ -199,7 +200,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Topic(String name, @Nullable TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/topic:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/topic:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Topic(String name, Output<String> id, @Nullable TopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

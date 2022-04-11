@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
       private final @Nullable Output<Object> all;
 
     public Output<Object> getAll() {
-        return this.all == null ? Output.empty() : this.all;
+        return this.all == null ? Codegen.empty() : this.all;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
       private final @Nullable Output<List<String>> includedPaths;
 
     public Output<List<String>> getIncludedPaths() {
-        return this.includedPaths == null ? Output.empty() : this.includedPaths;
+        return this.includedPaths == null ? Codegen.empty() : this.includedPaths;
     }
 
     public LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs(
@@ -50,8 +51,8 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
     }
 
     private LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs() {
-        this.all = Output.empty();
-        this.includedPaths = Output.empty();
+        this.all = Codegen.empty();
+        this.includedPaths = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             return this;
         }
         public Builder all(@Nullable Object all) {
-            this.all = Output.ofNullable(all);
+            this.all = Codegen.ofNullable(all);
             return this;
         }
         public Builder includedPaths(@Nullable Output<List<String>> includedPaths) {
@@ -89,7 +90,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatter
             return this;
         }
         public Builder includedPaths(@Nullable List<String> includedPaths) {
-            this.includedPaths = Output.ofNullable(includedPaths);
+            this.includedPaths = Codegen.ofNullable(includedPaths);
             return this;
         }
         public Builder includedPaths(String... includedPaths) {

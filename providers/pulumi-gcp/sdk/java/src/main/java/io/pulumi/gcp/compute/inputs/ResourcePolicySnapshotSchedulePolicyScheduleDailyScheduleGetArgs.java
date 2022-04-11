@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
     }
 
     private ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs() {
-        this.daysInCycle = Output.empty();
-        this.startTime = Output.empty();
+        this.daysInCycle = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

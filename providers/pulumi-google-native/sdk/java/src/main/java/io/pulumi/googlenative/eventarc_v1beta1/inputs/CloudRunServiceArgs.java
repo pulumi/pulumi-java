@@ -5,6 +5,7 @@ package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CloudRunServiceArgs() {
-        this.path = Output.empty();
-        this.region = Output.empty();
-        this.service = Output.empty();
+        this.path = Codegen.empty();
+        this.region = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class CloudRunServiceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder region(Output<String> region) {

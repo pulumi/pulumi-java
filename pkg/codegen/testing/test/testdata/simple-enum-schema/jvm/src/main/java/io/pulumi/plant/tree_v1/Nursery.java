@@ -5,6 +5,7 @@ package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.tree_v1.NurseryArgs;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class Nursery extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Nursery(String name, NurseryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("plant:tree/v1:Nursery", name, args == null ? NurseryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("plant:tree/v1:Nursery", name, args == null ? NurseryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Nursery(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

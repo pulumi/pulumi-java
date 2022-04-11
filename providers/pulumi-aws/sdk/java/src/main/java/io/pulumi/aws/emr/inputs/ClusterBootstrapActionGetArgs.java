@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ClusterBootstrapActionGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> args;
 
     public Output<List<String>> getArgs() {
-        return this.args == null ? Output.empty() : this.args;
+        return this.args == null ? Codegen.empty() : this.args;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class ClusterBootstrapActionGetArgs extends io.pulumi.resources.Res
     }
 
     private ClusterBootstrapActionGetArgs() {
-        this.args = Output.empty();
-        this.name = Output.empty();
-        this.path = Output.empty();
+        this.args = Codegen.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ClusterBootstrapActionGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder args(@Nullable List<String> args) {
-            this.args = Output.ofNullable(args);
+            this.args = Codegen.ofNullable(args);
             return this;
         }
         public Builder args(String... args) {

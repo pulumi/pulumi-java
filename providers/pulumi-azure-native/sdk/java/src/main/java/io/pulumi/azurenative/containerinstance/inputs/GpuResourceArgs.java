@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.GpuSku;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -50,8 +51,8 @@ public final class GpuResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GpuResourceArgs() {
-        this.count = Output.empty();
-        this.sku = Output.empty();
+        this.count = Codegen.empty();
+        this.sku = Codegen.empty();
     }
 
     public static Builder builder() {

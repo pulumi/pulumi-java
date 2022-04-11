@@ -8,6 +8,7 @@ import io.pulumi.azurenative.databricks.inputs.WorkspaceCustomParametersArgs;
 import io.pulumi.azurenative.databricks.inputs.WorkspaceProviderAuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkspaceProviderAuthorizationArgs>> authorizations;
 
     public Output<List<WorkspaceProviderAuthorizationArgs>> getAuthorizations() {
-        return this.authorizations == null ? Output.empty() : this.authorizations;
+        return this.authorizations == null ? Codegen.empty() : this.authorizations;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkspaceCustomParametersArgs> parameters;
 
     public Output<WorkspaceCustomParametersArgs> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uiDefinitionUri;
 
     public Output<String> getUiDefinitionUri() {
-        return this.uiDefinitionUri == null ? Output.empty() : this.uiDefinitionUri;
+        return this.uiDefinitionUri == null ? Codegen.empty() : this.uiDefinitionUri;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workspaceName;
 
     public Output<String> getWorkspaceName() {
-        return this.workspaceName == null ? Output.empty() : this.workspaceName;
+        return this.workspaceName == null ? Codegen.empty() : this.workspaceName;
     }
 
     public WorkspaceArgs(
@@ -140,15 +141,15 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceArgs() {
-        this.authorizations = Output.empty();
-        this.location = Output.empty();
-        this.managedResourceGroupId = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.uiDefinitionUri = Output.empty();
-        this.workspaceName = Output.empty();
+        this.authorizations = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedResourceGroupId = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.uiDefinitionUri = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizations(@Nullable List<WorkspaceProviderAuthorizationArgs> authorizations) {
-            this.authorizations = Output.ofNullable(authorizations);
+            this.authorizations = Codegen.ofNullable(authorizations);
             return this;
         }
         public Builder authorizations(WorkspaceProviderAuthorizationArgs... authorizations) {
@@ -203,7 +204,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedResourceGroupId(Output<String> managedResourceGroupId) {
@@ -219,7 +220,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable WorkspaceCustomParametersArgs parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -235,7 +236,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -243,7 +244,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder uiDefinitionUri(@Nullable Output<String> uiDefinitionUri) {
@@ -251,7 +252,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uiDefinitionUri(@Nullable String uiDefinitionUri) {
-            this.uiDefinitionUri = Output.ofNullable(uiDefinitionUri);
+            this.uiDefinitionUri = Codegen.ofNullable(uiDefinitionUri);
             return this;
         }
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
@@ -259,7 +260,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceName(@Nullable String workspaceName) {
-            this.workspaceName = Output.ofNullable(workspaceName);
+            this.workspaceName = Codegen.ofNullable(workspaceName);
             return this;
         }        public WorkspaceArgs build() {
             return new WorkspaceArgs(authorizations, location, managedResourceGroupId, parameters, resourceGroupName, sku, tags, uiDefinitionUri, workspaceName);

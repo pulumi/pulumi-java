@@ -8,6 +8,7 @@ import io.pulumi.azurenative.databoxedge.enums.StorageAccountStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageAccountCredentialId;
 
     public Output<String> getStorageAccountCredentialId() {
-        return this.storageAccountCredentialId == null ? Output.empty() : this.storageAccountCredentialId;
+        return this.storageAccountCredentialId == null ? Codegen.empty() : this.storageAccountCredentialId;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageAccountName;
 
     public Output<String> getStorageAccountName() {
-        return this.storageAccountName == null ? Output.empty() : this.storageAccountName;
+        return this.storageAccountName == null ? Codegen.empty() : this.storageAccountName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus;
 
     public Output<Either<String,StorageAccountStatus>> getStorageAccountStatus() {
-        return this.storageAccountStatus == null ? Output.empty() : this.storageAccountStatus;
+        return this.storageAccountStatus == null ? Codegen.empty() : this.storageAccountStatus;
     }
 
     public StorageAccountArgs(
@@ -112,13 +113,13 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.dataPolicy = Output.empty();
-        this.description = Output.empty();
-        this.deviceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.storageAccountCredentialId = Output.empty();
-        this.storageAccountName = Output.empty();
-        this.storageAccountStatus = Output.empty();
+        this.dataPolicy = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.storageAccountCredentialId = Codegen.empty();
+        this.storageAccountName = Codegen.empty();
+        this.storageAccountStatus = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -190,7 +191,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountCredentialId(@Nullable String storageAccountCredentialId) {
-            this.storageAccountCredentialId = Output.ofNullable(storageAccountCredentialId);
+            this.storageAccountCredentialId = Codegen.ofNullable(storageAccountCredentialId);
             return this;
         }
         public Builder storageAccountName(@Nullable Output<String> storageAccountName) {
@@ -198,7 +199,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountName(@Nullable String storageAccountName) {
-            this.storageAccountName = Output.ofNullable(storageAccountName);
+            this.storageAccountName = Codegen.ofNullable(storageAccountName);
             return this;
         }
         public Builder storageAccountStatus(@Nullable Output<Either<String,StorageAccountStatus>> storageAccountStatus) {
@@ -206,7 +207,7 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountStatus(@Nullable Either<String,StorageAccountStatus> storageAccountStatus) {
-            this.storageAccountStatus = Output.ofNullable(storageAccountStatus);
+            this.storageAccountStatus = Codegen.ofNullable(storageAccountStatus);
             return this;
         }        public StorageAccountArgs build() {
             return new StorageAccountArgs(dataPolicy, description, deviceName, resourceGroupName, storageAccountCredentialId, storageAccountName, storageAccountStatus);

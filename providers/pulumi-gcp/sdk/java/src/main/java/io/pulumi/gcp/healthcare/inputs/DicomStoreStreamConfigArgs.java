@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreStreamConfigBigqueryDestinationArgs;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class DicomStoreStreamConfigArgs extends io.pulumi.resources.Resour
     }
 
     private DicomStoreStreamConfigArgs() {
-        this.bigqueryDestination = Output.empty();
+        this.bigqueryDestination = Codegen.empty();
     }
 
     public static Builder builder() {

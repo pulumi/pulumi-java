@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.AutoscalerAutoscalingPolicyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoscalerAutoscalingPolicyGetArgs> autoscalingPolicy;
 
     public Output<AutoscalerAutoscalingPolicyGetArgs> getAutoscalingPolicy() {
-        return this.autoscalingPolicy == null ? Output.empty() : this.autoscalingPolicy;
+        return this.autoscalingPolicy == null ? Codegen.empty() : this.autoscalingPolicy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public AutoscalerState(
@@ -131,14 +132,14 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutoscalerState() {
-        this.autoscalingPolicy = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.selfLink = Output.empty();
-        this.target = Output.empty();
-        this.zone = Output.empty();
+        this.autoscalingPolicy = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.target = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingPolicy(@Nullable AutoscalerAutoscalingPolicyGetArgs autoscalingPolicy) {
-            this.autoscalingPolicy = Output.ofNullable(autoscalingPolicy);
+            this.autoscalingPolicy = Codegen.ofNullable(autoscalingPolicy);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -188,7 +189,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -196,7 +197,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -212,7 +213,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -220,7 +221,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -228,7 +229,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -236,7 +237,7 @@ public final class AutoscalerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public AutoscalerState build() {
             return new AutoscalerState(autoscalingPolicy, creationTimestamp, description, name, project, selfLink, target, zone);

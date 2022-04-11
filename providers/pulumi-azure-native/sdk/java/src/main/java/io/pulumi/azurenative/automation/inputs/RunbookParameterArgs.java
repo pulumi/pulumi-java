@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> isMandatory;
 
     public Output<Boolean> getIsMandatory() {
-        return this.isMandatory == null ? Output.empty() : this.isMandatory;
+        return this.isMandatory == null ? Codegen.empty() : this.isMandatory;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> position;
 
     public Output<Integer> getPosition() {
-        return this.position == null ? Output.empty() : this.position;
+        return this.position == null ? Codegen.empty() : this.position;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public RunbookParameterArgs(
@@ -76,10 +77,10 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RunbookParameterArgs() {
-        this.defaultValue = Output.empty();
-        this.isMandatory = Output.empty();
-        this.position = Output.empty();
-        this.type = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.isMandatory = Codegen.empty();
+        this.position = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder isMandatory(@Nullable Output<Boolean> isMandatory) {
@@ -121,7 +122,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder isMandatory(@Nullable Boolean isMandatory) {
-            this.isMandatory = Output.ofNullable(isMandatory);
+            this.isMandatory = Codegen.ofNullable(isMandatory);
             return this;
         }
         public Builder position(@Nullable Output<Integer> position) {
@@ -129,7 +130,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder position(@Nullable Integer position) {
-            this.position = Output.ofNullable(position);
+            this.position = Codegen.ofNullable(position);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -137,7 +138,7 @@ public final class RunbookParameterArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public RunbookParameterArgs build() {
             return new RunbookParameterArgs(defaultValue, isMandatory, position, type);

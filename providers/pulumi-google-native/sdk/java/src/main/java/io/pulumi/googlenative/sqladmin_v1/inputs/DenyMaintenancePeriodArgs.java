@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> startDate;
 
     public Output<String> getStartDate() {
-        return this.startDate == null ? Output.empty() : this.startDate;
+        return this.startDate == null ? Codegen.empty() : this.startDate;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> time;
 
     public Output<String> getTime() {
-        return this.time == null ? Output.empty() : this.time;
+        return this.time == null ? Codegen.empty() : this.time;
     }
 
     public DenyMaintenancePeriodArgs(
@@ -61,9 +62,9 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
     }
 
     private DenyMaintenancePeriodArgs() {
-        this.endDate = Output.empty();
-        this.startDate = Output.empty();
-        this.time = Output.empty();
+        this.endDate = Codegen.empty();
+        this.startDate = Codegen.empty();
+        this.time = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder startDate(@Nullable Output<String> startDate) {
@@ -103,7 +104,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder startDate(@Nullable String startDate) {
-            this.startDate = Output.ofNullable(startDate);
+            this.startDate = Codegen.ofNullable(startDate);
             return this;
         }
         public Builder time(@Nullable Output<String> time) {
@@ -111,7 +112,7 @@ public final class DenyMaintenancePeriodArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder time(@Nullable String time) {
-            this.time = Output.ofNullable(time);
+            this.time = Codegen.ofNullable(time);
             return this;
         }        public DenyMaintenancePeriodArgs build() {
             return new DenyMaintenancePeriodArgs(endDate, startDate, time);

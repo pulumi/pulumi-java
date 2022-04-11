@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.inputs.StatefulPolicyPreservedStateArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StatefulPolicyPreservedStateArgs> preservedState;
 
     public Output<StatefulPolicyPreservedStateArgs> getPreservedState() {
-        return this.preservedState == null ? Output.empty() : this.preservedState;
+        return this.preservedState == null ? Codegen.empty() : this.preservedState;
     }
 
     public StatefulPolicyArgs(@Nullable Output<StatefulPolicyPreservedStateArgs> preservedState) {
@@ -26,7 +27,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StatefulPolicyArgs() {
-        this.preservedState = Output.empty();
+        this.preservedState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class StatefulPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder preservedState(@Nullable StatefulPolicyPreservedStateArgs preservedState) {
-            this.preservedState = Output.ofNullable(preservedState);
+            this.preservedState = Codegen.ofNullable(preservedState);
             return this;
         }        public StatefulPolicyArgs build() {
             return new StatefulPolicyArgs(preservedState);

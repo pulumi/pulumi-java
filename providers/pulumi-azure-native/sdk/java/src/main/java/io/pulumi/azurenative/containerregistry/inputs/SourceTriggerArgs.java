@@ -9,6 +9,7 @@ import io.pulumi.azurenative.containerregistry.inputs.SourcePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,7 +65,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,TriggerStatus>> status;
 
     public Output<Either<String,TriggerStatus>> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public SourceTriggerArgs(
@@ -79,10 +80,10 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceTriggerArgs() {
-        this.name = Output.empty();
-        this.sourceRepository = Output.empty();
-        this.sourceTriggerEvents = Output.empty();
-        this.status = Output.empty();
+        this.name = Codegen.empty();
+        this.sourceRepository = Codegen.empty();
+        this.sourceTriggerEvents = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class SourceTriggerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable Either<String,TriggerStatus> status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public SourceTriggerArgs build() {
             return new SourceTriggerArgs(name, sourceRepository, sourceTriggerEvents, status);

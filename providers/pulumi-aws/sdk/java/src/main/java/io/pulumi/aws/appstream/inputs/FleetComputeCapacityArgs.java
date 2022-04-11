@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> available;
 
     public Output<Integer> getAvailable() {
-        return this.available == null ? Output.empty() : this.available;
+        return this.available == null ? Codegen.empty() : this.available;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> inUse;
 
     public Output<Integer> getInUse() {
-        return this.inUse == null ? Output.empty() : this.inUse;
+        return this.inUse == null ? Codegen.empty() : this.inUse;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> running;
 
     public Output<Integer> getRunning() {
-        return this.running == null ? Output.empty() : this.running;
+        return this.running == null ? Codegen.empty() : this.running;
     }
 
     public FleetComputeCapacityArgs(
@@ -70,10 +71,10 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
     }
 
     private FleetComputeCapacityArgs() {
-        this.available = Output.empty();
-        this.desiredInstances = Output.empty();
-        this.inUse = Output.empty();
-        this.running = Output.empty();
+        this.available = Codegen.empty();
+        this.desiredInstances = Codegen.empty();
+        this.inUse = Codegen.empty();
+        this.running = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder available(@Nullable Integer available) {
-            this.available = Output.ofNullable(available);
+            this.available = Codegen.ofNullable(available);
             return this;
         }
         public Builder desiredInstances(Output<Integer> desiredInstances) {
@@ -123,7 +124,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder inUse(@Nullable Integer inUse) {
-            this.inUse = Output.ofNullable(inUse);
+            this.inUse = Codegen.ofNullable(inUse);
             return this;
         }
         public Builder running(@Nullable Output<Integer> running) {
@@ -131,7 +132,7 @@ public final class FleetComputeCapacityArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder running(@Nullable Integer running) {
-            this.running = Output.ofNullable(running);
+            this.running = Codegen.ofNullable(running);
             return this;
         }        public FleetComputeCapacityArgs build() {
             return new FleetComputeCapacityArgs(available, desiredInstances, inUse, running);

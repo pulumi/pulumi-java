@@ -11,6 +11,7 @@ import io.pulumi.azurenative.insights.inputs.ThresholdRuleConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -32,7 +33,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> action;
 
     public Output<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions;
 
     public Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -142,7 +143,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AlertRuleArgs(
@@ -171,17 +172,17 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AlertRuleArgs() {
-        this.action = Output.empty();
-        this.actions = Output.empty();
-        this.condition = Output.empty();
-        this.description = Output.empty();
-        this.isEnabled = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.provisioningState = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.ruleName = Output.empty();
-        this.tags = Output.empty();
+        this.action = Codegen.empty();
+        this.actions = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.provisioningState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -229,7 +230,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable Either<RuleEmailActionArgs,RuleWebhookActionArgs> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder actions(@Nullable Output<List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>>> actions) {
@@ -237,7 +238,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable List<Either<RuleEmailActionArgs,RuleWebhookActionArgs>> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(Either<RuleEmailActionArgs,RuleWebhookActionArgs>... actions) {
@@ -256,7 +257,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {
@@ -272,7 +273,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -288,7 +289,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -304,7 +305,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -312,7 +313,7 @@ public final class AlertRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AlertRuleArgs build() {
             return new AlertRuleArgs(action, actions, condition, description, isEnabled, location, name, provisioningState, resourceGroupName, ruleName, tags);

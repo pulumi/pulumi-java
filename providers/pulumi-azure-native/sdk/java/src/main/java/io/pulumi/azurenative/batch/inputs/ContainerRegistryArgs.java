@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> registryServer;
 
     public Output<String> getRegistryServer() {
-        return this.registryServer == null ? Output.empty() : this.registryServer;
+        return this.registryServer == null ? Codegen.empty() : this.registryServer;
     }
 
     @Import(name="userName", required=true)
@@ -49,9 +50,9 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ContainerRegistryArgs() {
-        this.password = Output.empty();
-        this.registryServer = Output.empty();
-        this.userName = Output.empty();
+        this.password = Codegen.empty();
+        this.registryServer = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ContainerRegistryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder registryServer(@Nullable String registryServer) {
-            this.registryServer = Output.ofNullable(registryServer);
+            this.registryServer = Codegen.ofNullable(registryServer);
             return this;
         }
         public Builder userName(Output<String> userName) {

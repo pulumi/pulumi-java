@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs 
     }
 
     private ManagedInstancePrivateLinkServiceConnectionStatePropertyArgs() {
-        this.description = Output.empty();
-        this.status = Output.empty();
+        this.description = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

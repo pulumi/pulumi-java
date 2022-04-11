@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
       private final @Nullable Output<String> format;
 
     public Output<String> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -101,12 +102,12 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
     }
 
     private CustomResourceColumnDefinitionArgs() {
-        this.JSONPath = Output.empty();
-        this.description = Output.empty();
-        this.format = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.type = Output.empty();
+        this.JSONPath = Codegen.empty();
+        this.description = Codegen.empty();
+        this.format = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder format(@Nullable Output<String> format) {
@@ -160,7 +161,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder format(@Nullable String format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -176,7 +177,7 @@ public final class CustomResourceColumnDefinitionArgs extends io.pulumi.resource
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder type(Output<String> type) {

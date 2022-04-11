@@ -8,6 +8,7 @@ import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationJob
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationS3EncryptionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -50,9 +51,9 @@ public final class SecurityConfigurationEncryptionConfigurationGetArgs extends i
     }
 
     private SecurityConfigurationEncryptionConfigurationGetArgs() {
-        this.cloudwatchEncryption = Output.empty();
-        this.jobBookmarksEncryption = Output.empty();
-        this.s3Encryption = Output.empty();
+        this.cloudwatchEncryption = Codegen.empty();
+        this.jobBookmarksEncryption = Codegen.empty();
+        this.s3Encryption = Codegen.empty();
     }
 
     public static Builder builder() {

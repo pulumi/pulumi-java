@@ -6,6 +6,7 @@ package io.pulumi.aws.s3control.inputs;
 import io.pulumi.aws.s3control.inputs.ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationAwsLambdaGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ObjectLambdaAccessPointConfigurationTransformationConfigurati
     }
 
     private ObjectLambdaAccessPointConfigurationTransformationConfigurationContentTransformationGetArgs() {
-        this.awsLambda = Output.empty();
+        this.awsLambda = Codegen.empty();
     }
 
     public static Builder builder() {

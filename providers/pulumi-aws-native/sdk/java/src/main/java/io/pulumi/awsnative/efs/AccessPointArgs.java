@@ -8,6 +8,7 @@ import io.pulumi.awsnative.efs.inputs.AccessPointRootDirectoryArgs;
 import io.pulumi.awsnative.efs.inputs.AccessPointTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AccessPointTagArgs>> accessPointTags;
 
     public Output<List<AccessPointTagArgs>> getAccessPointTags() {
-        return this.accessPointTags == null ? Output.empty() : this.accessPointTags;
+        return this.accessPointTags == null ? Codegen.empty() : this.accessPointTags;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientToken;
 
     public Output<String> getClientToken() {
-        return this.clientToken == null ? Output.empty() : this.clientToken;
+        return this.clientToken == null ? Codegen.empty() : this.clientToken;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessPointPosixUserArgs> posixUser;
 
     public Output<AccessPointPosixUserArgs> getPosixUser() {
-        return this.posixUser == null ? Output.empty() : this.posixUser;
+        return this.posixUser == null ? Codegen.empty() : this.posixUser;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AccessPointRootDirectoryArgs> rootDirectory;
 
     public Output<AccessPointRootDirectoryArgs> getRootDirectory() {
-        return this.rootDirectory == null ? Output.empty() : this.rootDirectory;
+        return this.rootDirectory == null ? Codegen.empty() : this.rootDirectory;
     }
 
     public AccessPointArgs(
@@ -83,11 +84,11 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccessPointArgs() {
-        this.accessPointTags = Output.empty();
-        this.clientToken = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.posixUser = Output.empty();
-        this.rootDirectory = Output.empty();
+        this.accessPointTags = Codegen.empty();
+        this.clientToken = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.posixUser = Codegen.empty();
+        this.rootDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessPointTags(@Nullable List<AccessPointTagArgs> accessPointTags) {
-            this.accessPointTags = Output.ofNullable(accessPointTags);
+            this.accessPointTags = Codegen.ofNullable(accessPointTags);
             return this;
         }
         public Builder accessPointTags(AccessPointTagArgs... accessPointTags) {
@@ -134,7 +135,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientToken(@Nullable String clientToken) {
-            this.clientToken = Output.ofNullable(clientToken);
+            this.clientToken = Codegen.ofNullable(clientToken);
             return this;
         }
         public Builder fileSystemId(Output<String> fileSystemId) {
@@ -150,7 +151,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder posixUser(@Nullable AccessPointPosixUserArgs posixUser) {
-            this.posixUser = Output.ofNullable(posixUser);
+            this.posixUser = Codegen.ofNullable(posixUser);
             return this;
         }
         public Builder rootDirectory(@Nullable Output<AccessPointRootDirectoryArgs> rootDirectory) {
@@ -158,7 +159,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootDirectory(@Nullable AccessPointRootDirectoryArgs rootDirectory) {
-            this.rootDirectory = Output.ofNullable(rootDirectory);
+            this.rootDirectory = Codegen.ofNullable(rootDirectory);
             return this;
         }        public AccessPointArgs build() {
             return new AccessPointArgs(accessPointTags, clientToken, fileSystemId, posixUser, rootDirectory);

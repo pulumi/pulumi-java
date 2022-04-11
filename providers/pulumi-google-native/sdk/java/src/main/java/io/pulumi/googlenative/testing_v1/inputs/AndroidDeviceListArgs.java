@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceArgs;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class AndroidDeviceListArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AndroidDeviceListArgs() {
-        this.androidDevices = Output.empty();
+        this.androidDevices = Codegen.empty();
     }
 
     public static Builder builder() {

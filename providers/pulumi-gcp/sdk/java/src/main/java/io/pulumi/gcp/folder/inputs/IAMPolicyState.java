@@ -5,6 +5,7 @@ package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="folder")
       private final @Nullable Output<String> folder;
 
     public Output<String> getFolder() {
-        return this.folder == null ? Output.empty() : this.folder;
+        return this.folder == null ? Codegen.empty() : this.folder;
     }
 
     @Import(name="policyData")
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     public IAMPolicyState(
@@ -45,9 +46,9 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMPolicyState() {
-        this.etag = Output.empty();
-        this.folder = Output.empty();
-        this.policyData = Output.empty();
+        this.etag = Codegen.empty();
+        this.folder = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder folder(@Nullable Output<String> folder) {
@@ -87,7 +88,7 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folder(@Nullable String folder) {
-            this.folder = Output.ofNullable(folder);
+            this.folder = Codegen.ofNullable(folder);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -95,7 +96,7 @@ public final class IAMPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }        public IAMPolicyState build() {
             return new IAMPolicyState(etag, folder, policyData);

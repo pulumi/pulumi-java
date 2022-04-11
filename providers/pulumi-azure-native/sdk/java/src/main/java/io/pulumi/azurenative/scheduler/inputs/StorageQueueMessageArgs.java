@@ -5,6 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> queueName;
 
     public Output<String> getQueueName() {
-        return this.queueName == null ? Output.empty() : this.queueName;
+        return this.queueName == null ? Codegen.empty() : this.queueName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> sasToken;
 
     public Output<String> getSasToken() {
-        return this.sasToken == null ? Output.empty() : this.sasToken;
+        return this.sasToken == null ? Codegen.empty() : this.sasToken;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> storageAccount;
 
     public Output<String> getStorageAccount() {
-        return this.storageAccount == null ? Output.empty() : this.storageAccount;
+        return this.storageAccount == null ? Codegen.empty() : this.storageAccount;
     }
 
     public StorageQueueMessageArgs(
@@ -70,10 +71,10 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
     }
 
     private StorageQueueMessageArgs() {
-        this.message = Output.empty();
-        this.queueName = Output.empty();
-        this.sasToken = Output.empty();
-        this.storageAccount = Output.empty();
+        this.message = Codegen.empty();
+        this.queueName = Codegen.empty();
+        this.sasToken = Codegen.empty();
+        this.storageAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder queueName(@Nullable Output<String> queueName) {
@@ -115,7 +116,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder queueName(@Nullable String queueName) {
-            this.queueName = Output.ofNullable(queueName);
+            this.queueName = Codegen.ofNullable(queueName);
             return this;
         }
         public Builder sasToken(@Nullable Output<String> sasToken) {
@@ -123,7 +124,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sasToken(@Nullable String sasToken) {
-            this.sasToken = Output.ofNullable(sasToken);
+            this.sasToken = Codegen.ofNullable(sasToken);
             return this;
         }
         public Builder storageAccount(@Nullable Output<String> storageAccount) {
@@ -131,7 +132,7 @@ public final class StorageQueueMessageArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder storageAccount(@Nullable String storageAccount) {
-            this.storageAccount = Output.ofNullable(storageAccount);
+            this.storageAccount = Codegen.ofNullable(storageAccount);
             return this;
         }        public StorageQueueMessageArgs build() {
             return new StorageQueueMessageArgs(message, queueName, sasToken, storageAccount);

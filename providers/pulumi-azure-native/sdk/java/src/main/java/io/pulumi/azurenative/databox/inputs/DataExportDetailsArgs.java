@@ -10,6 +10,7 @@ import io.pulumi.azurenative.databox.inputs.TransferConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -42,7 +43,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,LogCollectionLevel>> logCollectionLevel;
 
     public Output<Either<String,LogCollectionLevel>> getLogCollectionLevel() {
-        return this.logCollectionLevel == null ? Output.empty() : this.logCollectionLevel;
+        return this.logCollectionLevel == null ? Codegen.empty() : this.logCollectionLevel;
     }
 
     /**
@@ -66,9 +67,9 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataExportDetailsArgs() {
-        this.accountDetails = Output.empty();
-        this.logCollectionLevel = Output.empty();
-        this.transferConfiguration = Output.empty();
+        this.accountDetails = Codegen.empty();
+        this.logCollectionLevel = Codegen.empty();
+        this.transferConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder logCollectionLevel(@Nullable Either<String,LogCollectionLevel> logCollectionLevel) {
-            this.logCollectionLevel = Output.ofNullable(logCollectionLevel);
+            this.logCollectionLevel = Codegen.ofNullable(logCollectionLevel);
             return this;
         }
         public Builder transferConfiguration(Output<TransferConfigurationArgs> transferConfiguration) {

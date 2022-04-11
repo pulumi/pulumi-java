@@ -13,6 +13,7 @@ import io.pulumi.azurenative.media.inputs.JobOutputAssetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -44,7 +45,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> correlationData;
 
     public Output<Map<String,String>> getCorrelationData() {
-        return this.correlationData == null ? Output.empty() : this.correlationData;
+        return this.correlationData == null ? Codegen.empty() : this.correlationData;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobName;
 
     public Output<String> getJobName() {
-        return this.jobName == null ? Output.empty() : this.jobName;
+        return this.jobName == null ? Codegen.empty() : this.jobName;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,Priority>> priority;
 
     public Output<Either<String,Priority>> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -146,15 +147,15 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobArgs() {
-        this.accountName = Output.empty();
-        this.correlationData = Output.empty();
-        this.description = Output.empty();
-        this.input = Output.empty();
-        this.jobName = Output.empty();
-        this.outputs = Output.empty();
-        this.priority = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.transformName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.correlationData = Codegen.empty();
+        this.description = Codegen.empty();
+        this.input = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.transformName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -206,7 +207,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder correlationData(@Nullable Map<String,String> correlationData) {
-            this.correlationData = Output.ofNullable(correlationData);
+            this.correlationData = Codegen.ofNullable(correlationData);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -214,7 +215,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder input(Output<Object> input) {
@@ -230,7 +231,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobName(@Nullable String jobName) {
-            this.jobName = Output.ofNullable(jobName);
+            this.jobName = Codegen.ofNullable(jobName);
             return this;
         }
         public Builder outputs(Output<List<JobOutputAssetArgs>> outputs) {
@@ -249,7 +250,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Either<String,Priority> priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

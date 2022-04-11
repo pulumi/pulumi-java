@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.enums.ApplicationGatewayTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> capacity;
 
     public Output<Integer> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,ApplicationGatewaySkuName>> name;
 
     public Output<Either<String,ApplicationGatewaySkuName>> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,ApplicationGatewayTier>> tier;
 
     public Output<Either<String,ApplicationGatewayTier>> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     public ApplicationGatewaySkuArgs(
@@ -65,9 +66,9 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
     }
 
     private ApplicationGatewaySkuArgs() {
-        this.capacity = Output.empty();
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.capacity = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder capacity(@Nullable Integer capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder name(@Nullable Output<Either<String,ApplicationGatewaySkuName>> name) {
@@ -107,7 +108,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable Either<String,ApplicationGatewaySkuName> name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tier(@Nullable Output<Either<String,ApplicationGatewayTier>> tier) {
@@ -115,7 +116,7 @@ public final class ApplicationGatewaySkuArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tier(@Nullable Either<String,ApplicationGatewayTier> tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }        public ApplicationGatewaySkuArgs build() {
             return new ApplicationGatewaySkuArgs(capacity, name, tier);

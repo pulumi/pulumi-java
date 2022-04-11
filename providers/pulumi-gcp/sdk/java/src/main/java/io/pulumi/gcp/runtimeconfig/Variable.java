@@ -6,6 +6,7 @@ package io.pulumi.gcp.runtimeconfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.runtimeconfig.VariableArgs;
 import io.pulumi.gcp.runtimeconfig.inputs.VariableState;
@@ -145,7 +146,7 @@ public class Variable extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Variable(String name, VariableArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:runtimeconfig/variable:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:runtimeconfig/variable:Variable", name, args == null ? VariableArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Variable(String name, Output<String> id, @Nullable VariableState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

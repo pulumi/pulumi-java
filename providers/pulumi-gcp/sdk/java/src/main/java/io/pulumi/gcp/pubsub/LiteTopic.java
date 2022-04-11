@@ -6,6 +6,7 @@ package io.pulumi.gcp.pubsub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.LiteTopicArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteTopicState;
@@ -178,7 +179,7 @@ public class LiteTopic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiteTopic(String name, @Nullable LiteTopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:pubsub/liteTopic:LiteTopic", name, args == null ? LiteTopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:pubsub/liteTopic:LiteTopic", name, args == null ? LiteTopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LiteTopic(String name, Output<String> id, @Nullable LiteTopicState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expression;
 
     public Output<String> getExpression() {
-        return this.expression == null ? Output.empty() : this.expression;
+        return this.expression == null ? Codegen.empty() : this.expression;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public ExprArgs(
@@ -74,10 +75,10 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExprArgs() {
-        this.description = Output.empty();
-        this.expression = Output.empty();
-        this.location = Output.empty();
-        this.title = Output.empty();
+        this.description = Codegen.empty();
+        this.expression = Codegen.empty();
+        this.location = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expression(@Nullable Output<String> expression) {
@@ -119,7 +120,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expression(@Nullable String expression) {
-            this.expression = Output.ofNullable(expression);
+            this.expression = Codegen.ofNullable(expression);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -127,7 +128,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -135,7 +136,7 @@ public final class ExprArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public ExprArgs build() {
             return new ExprArgs(description, expression, location, title);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.enums.RecurrenceType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -51,7 +52,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<DayOfWeek>> weeklyDaysList;
 
     public Output<List<DayOfWeek>> getWeeklyDaysList() {
-        return this.weeklyDaysList == null ? Output.empty() : this.weeklyDaysList;
+        return this.weeklyDaysList == null ? Codegen.empty() : this.weeklyDaysList;
     }
 
     public ScheduleRecurrenceArgs(
@@ -64,9 +65,9 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ScheduleRecurrenceArgs() {
-        this.recurrenceType = Output.empty();
-        this.recurrenceValue = Output.empty();
-        this.weeklyDaysList = Output.empty();
+        this.recurrenceType = Codegen.empty();
+        this.recurrenceValue = Codegen.empty();
+        this.weeklyDaysList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ScheduleRecurrenceArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder weeklyDaysList(@Nullable List<DayOfWeek> weeklyDaysList) {
-            this.weeklyDaysList = Output.ofNullable(weeklyDaysList);
+            this.weeklyDaysList = Codegen.ofNullable(weeklyDaysList);
             return this;
         }
         public Builder weeklyDaysList(DayOfWeek... weeklyDaysList) {

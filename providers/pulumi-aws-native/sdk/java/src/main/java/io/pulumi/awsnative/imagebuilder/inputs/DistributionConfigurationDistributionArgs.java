@@ -8,6 +8,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistribu
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationLaunchTemplateConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
       private final @Nullable Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> amiDistributionConfiguration;
 
     public Output<DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs> getAmiDistributionConfiguration() {
-        return this.amiDistributionConfiguration == null ? Output.empty() : this.amiDistributionConfiguration;
+        return this.amiDistributionConfiguration == null ? Codegen.empty() : this.amiDistributionConfiguration;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
       private final @Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration;
 
     public Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> getContainerDistributionConfiguration() {
-        return this.containerDistributionConfiguration == null ? Output.empty() : this.containerDistributionConfiguration;
+        return this.containerDistributionConfiguration == null ? Codegen.empty() : this.containerDistributionConfiguration;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
       private final @Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations;
 
     public Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> getLaunchTemplateConfigurations() {
-        return this.launchTemplateConfigurations == null ? Output.empty() : this.launchTemplateConfigurations;
+        return this.launchTemplateConfigurations == null ? Codegen.empty() : this.launchTemplateConfigurations;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
       private final @Nullable Output<List<String>> licenseConfigurationArns;
 
     public Output<List<String>> getLicenseConfigurationArns() {
-        return this.licenseConfigurationArns == null ? Output.empty() : this.licenseConfigurationArns;
+        return this.licenseConfigurationArns == null ? Codegen.empty() : this.licenseConfigurationArns;
     }
 
     /**
@@ -91,11 +92,11 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
     }
 
     private DistributionConfigurationDistributionArgs() {
-        this.amiDistributionConfiguration = Output.empty();
-        this.containerDistributionConfiguration = Output.empty();
-        this.launchTemplateConfigurations = Output.empty();
-        this.licenseConfigurationArns = Output.empty();
-        this.region = Output.empty();
+        this.amiDistributionConfiguration = Codegen.empty();
+        this.containerDistributionConfiguration = Codegen.empty();
+        this.launchTemplateConfigurations = Codegen.empty();
+        this.licenseConfigurationArns = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder amiDistributionConfiguration(@Nullable DistributionConfigurationDistributionAmiDistributionConfigurationPropertiesArgs amiDistributionConfiguration) {
-            this.amiDistributionConfiguration = Output.ofNullable(amiDistributionConfiguration);
+            this.amiDistributionConfiguration = Codegen.ofNullable(amiDistributionConfiguration);
             return this;
         }
         public Builder containerDistributionConfiguration(@Nullable Output<DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs> containerDistributionConfiguration) {
@@ -139,7 +140,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder containerDistributionConfiguration(@Nullable DistributionConfigurationDistributionContainerDistributionConfigurationPropertiesArgs containerDistributionConfiguration) {
-            this.containerDistributionConfiguration = Output.ofNullable(containerDistributionConfiguration);
+            this.containerDistributionConfiguration = Codegen.ofNullable(containerDistributionConfiguration);
             return this;
         }
         public Builder launchTemplateConfigurations(@Nullable Output<List<DistributionConfigurationLaunchTemplateConfigurationArgs>> launchTemplateConfigurations) {
@@ -147,7 +148,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder launchTemplateConfigurations(@Nullable List<DistributionConfigurationLaunchTemplateConfigurationArgs> launchTemplateConfigurations) {
-            this.launchTemplateConfigurations = Output.ofNullable(launchTemplateConfigurations);
+            this.launchTemplateConfigurations = Codegen.ofNullable(launchTemplateConfigurations);
             return this;
         }
         public Builder launchTemplateConfigurations(DistributionConfigurationLaunchTemplateConfigurationArgs... launchTemplateConfigurations) {
@@ -158,7 +159,7 @@ public final class DistributionConfigurationDistributionArgs extends io.pulumi.r
             return this;
         }
         public Builder licenseConfigurationArns(@Nullable List<String> licenseConfigurationArns) {
-            this.licenseConfigurationArns = Output.ofNullable(licenseConfigurationArns);
+            this.licenseConfigurationArns = Codegen.ofNullable(licenseConfigurationArns);
             return this;
         }
         public Builder licenseConfigurationArns(String... licenseConfigurationArns) {

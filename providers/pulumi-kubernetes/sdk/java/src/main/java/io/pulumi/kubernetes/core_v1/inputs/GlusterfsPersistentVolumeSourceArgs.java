@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<String> endpointsNamespace;
 
     public Output<String> getEndpointsNamespace() {
-        return this.endpointsNamespace == null ? Output.empty() : this.endpointsNamespace;
+        return this.endpointsNamespace == null ? Codegen.empty() : this.endpointsNamespace;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     public GlusterfsPersistentVolumeSourceArgs(
@@ -75,10 +76,10 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
     }
 
     private GlusterfsPersistentVolumeSourceArgs() {
-        this.endpoints = Output.empty();
-        this.endpointsNamespace = Output.empty();
-        this.path = Output.empty();
-        this.readOnly = Output.empty();
+        this.endpoints = Codegen.empty();
+        this.endpointsNamespace = Codegen.empty();
+        this.path = Codegen.empty();
+        this.readOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder endpointsNamespace(@Nullable String endpointsNamespace) {
-            this.endpointsNamespace = Output.ofNullable(endpointsNamespace);
+            this.endpointsNamespace = Codegen.ofNullable(endpointsNamespace);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -136,7 +137,7 @@ public final class GlusterfsPersistentVolumeSourceArgs extends io.pulumi.resourc
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }        public GlusterfsPersistentVolumeSourceArgs build() {
             return new GlusterfsPersistentVolumeSourceArgs(endpoints, endpointsNamespace, path, readOnly);

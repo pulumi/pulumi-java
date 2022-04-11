@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> childPolicyTags;
 
     public Output<List<String>> getChildPolicyTags() {
-        return this.childPolicyTags == null ? Output.empty() : this.childPolicyTags;
+        return this.childPolicyTags == null ? Codegen.empty() : this.childPolicyTags;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentPolicyTag;
 
     public Output<String> getParentPolicyTag() {
-        return this.parentPolicyTag == null ? Output.empty() : this.parentPolicyTag;
+        return this.parentPolicyTag == null ? Codegen.empty() : this.parentPolicyTag;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> taxonomy;
 
     public Output<String> getTaxonomy() {
-        return this.taxonomy == null ? Output.empty() : this.taxonomy;
+        return this.taxonomy == null ? Codegen.empty() : this.taxonomy;
     }
 
     public PolicyTagState(
@@ -105,12 +106,12 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyTagState() {
-        this.childPolicyTags = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.parentPolicyTag = Output.empty();
-        this.taxonomy = Output.empty();
+        this.childPolicyTags = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentPolicyTag = Codegen.empty();
+        this.taxonomy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder childPolicyTags(@Nullable List<String> childPolicyTags) {
-            this.childPolicyTags = Output.ofNullable(childPolicyTags);
+            this.childPolicyTags = Codegen.ofNullable(childPolicyTags);
             return this;
         }
         public Builder childPolicyTags(String... childPolicyTags) {
@@ -159,7 +160,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -167,7 +168,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -175,7 +176,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentPolicyTag(@Nullable Output<String> parentPolicyTag) {
@@ -183,7 +184,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
-            this.parentPolicyTag = Output.ofNullable(parentPolicyTag);
+            this.parentPolicyTag = Codegen.ofNullable(parentPolicyTag);
             return this;
         }
         public Builder taxonomy(@Nullable Output<String> taxonomy) {
@@ -191,7 +192,7 @@ public final class PolicyTagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taxonomy(@Nullable String taxonomy) {
-            this.taxonomy = Output.ofNullable(taxonomy);
+            this.taxonomy = Codegen.ofNullable(taxonomy);
             return this;
         }        public PolicyTagState build() {
             return new PolicyTagState(childPolicyTags, description, displayName, name, parentPolicyTag, taxonomy);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.storage.inputs.DeleteRetentionPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.ProtocolSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<CorsRulesArgs> cors;
 
     public Output<CorsRulesArgs> getCors() {
-        return this.cors == null ? Output.empty() : this.cors;
+        return this.cors == null ? Codegen.empty() : this.cors;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> fileServicesName;
 
     public Output<String> getFileServicesName() {
-        return this.fileServicesName == null ? Output.empty() : this.fileServicesName;
+        return this.fileServicesName == null ? Codegen.empty() : this.fileServicesName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ProtocolSettingsArgs> protocolSettings;
 
     public Output<ProtocolSettingsArgs> getProtocolSettings() {
-        return this.protocolSettings == null ? Output.empty() : this.protocolSettings;
+        return this.protocolSettings == null ? Codegen.empty() : this.protocolSettings;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
 
     public Output<DeleteRetentionPolicyArgs> getShareDeleteRetentionPolicy() {
-        return this.shareDeleteRetentionPolicy == null ? Output.empty() : this.shareDeleteRetentionPolicy;
+        return this.shareDeleteRetentionPolicy == null ? Codegen.empty() : this.shareDeleteRetentionPolicy;
     }
 
     public FileServicePropertiesArgs(
@@ -99,12 +100,12 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private FileServicePropertiesArgs() {
-        this.accountName = Output.empty();
-        this.cors = Output.empty();
-        this.fileServicesName = Output.empty();
-        this.protocolSettings = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareDeleteRetentionPolicy = Output.empty();
+        this.accountName = Codegen.empty();
+        this.cors = Codegen.empty();
+        this.fileServicesName = Codegen.empty();
+        this.protocolSettings = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareDeleteRetentionPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Output.ofNullable(cors);
+            this.cors = Codegen.ofNullable(cors);
             return this;
         }
         public Builder fileServicesName(@Nullable Output<String> fileServicesName) {
@@ -158,7 +159,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder fileServicesName(@Nullable String fileServicesName) {
-            this.fileServicesName = Output.ofNullable(fileServicesName);
+            this.fileServicesName = Codegen.ofNullable(fileServicesName);
             return this;
         }
         public Builder protocolSettings(@Nullable Output<ProtocolSettingsArgs> protocolSettings) {
@@ -166,7 +167,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder protocolSettings(@Nullable ProtocolSettingsArgs protocolSettings) {
-            this.protocolSettings = Output.ofNullable(protocolSettings);
+            this.protocolSettings = Codegen.ofNullable(protocolSettings);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -182,7 +183,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder shareDeleteRetentionPolicy(@Nullable DeleteRetentionPolicyArgs shareDeleteRetentionPolicy) {
-            this.shareDeleteRetentionPolicy = Output.ofNullable(shareDeleteRetentionPolicy);
+            this.shareDeleteRetentionPolicy = Codegen.ofNullable(shareDeleteRetentionPolicy);
             return this;
         }        public FileServicePropertiesArgs build() {
             return new FileServicePropertiesArgs(accountName, cors, fileServicesName, protocolSettings, resourceGroupName, shareDeleteRetentionPolicy);

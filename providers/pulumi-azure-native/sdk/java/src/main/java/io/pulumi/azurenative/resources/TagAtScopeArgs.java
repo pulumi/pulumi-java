@@ -6,6 +6,7 @@ package io.pulumi.azurenative.resources;
 import io.pulumi.azurenative.resources.inputs.TagsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class TagAtScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagAtScopeArgs() {
-        this.properties = Output.empty();
-        this.scope = Output.empty();
+        this.properties = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {

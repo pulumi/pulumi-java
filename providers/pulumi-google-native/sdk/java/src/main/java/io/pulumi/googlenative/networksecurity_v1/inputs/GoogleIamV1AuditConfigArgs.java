@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleIamV1AuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<GoogleIamV1AuditLogConfigArgs>> auditLogConfigs;
 
     public Output<List<GoogleIamV1AuditLogConfigArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
+        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public GoogleIamV1AuditConfigArgs(
@@ -50,8 +51,8 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
     }
 
     private GoogleIamV1AuditConfigArgs() {
-        this.auditLogConfigs = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder auditLogConfigs(@Nullable List<GoogleIamV1AuditLogConfigArgs> auditLogConfigs) {
-            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
             return this;
         }
         public Builder auditLogConfigs(GoogleIamV1AuditLogConfigArgs... auditLogConfigs) {
@@ -92,7 +93,7 @@ public final class GoogleIamV1AuditConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public GoogleIamV1AuditConfigArgs build() {
             return new GoogleIamV1AuditConfigArgs(auditLogConfigs, service);

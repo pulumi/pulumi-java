@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3Configuratio
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeGetArgs> orcSerDe;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeGetArgs> getOrcSerDe() {
-        return this.orcSerDe == null ? Output.empty() : this.orcSerDe;
+        return this.orcSerDe == null ? Codegen.empty() : this.orcSerDe;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs> parquetSerDe;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs> getParquetSerDe() {
-        return this.parquetSerDe == null ? Output.empty() : this.parquetSerDe;
+        return this.parquetSerDe == null ? Codegen.empty() : this.parquetSerDe;
     }
 
     public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs(
@@ -45,8 +46,8 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs() {
-        this.orcSerDe = Output.empty();
-        this.parquetSerDe = Output.empty();
+        this.orcSerDe = Codegen.empty();
+        this.parquetSerDe = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder orcSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerOrcSerDeGetArgs orcSerDe) {
-            this.orcSerDe = Output.ofNullable(orcSerDe);
+            this.orcSerDe = Codegen.ofNullable(orcSerDe);
             return this;
         }
         public Builder parquetSerDe(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs> parquetSerDe) {
@@ -84,7 +85,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConver
             return this;
         }
         public Builder parquetSerDe(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerParquetSerDeGetArgs parquetSerDe) {
-            this.parquetSerDe = Output.ofNullable(parquetSerDe);
+            this.parquetSerDe = Codegen.ofNullable(parquetSerDe);
             return this;
         }        public FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs build() {
             return new FirehoseDeliveryStreamExtendedS3ConfigurationDataFormatConversionConfigurationOutputFormatConfigurationSerializerGetArgs(orcSerDe, parquetSerDe);

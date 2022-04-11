@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
     }
 
     private IntegrationRuntimeReferenceArgs() {
-        this.parameters = Output.empty();
-        this.referenceName = Output.empty();
-        this.type = Output.empty();
+        this.parameters = Codegen.empty();
+        this.referenceName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class IntegrationRuntimeReferenceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder referenceName(Output<String> referenceName) {

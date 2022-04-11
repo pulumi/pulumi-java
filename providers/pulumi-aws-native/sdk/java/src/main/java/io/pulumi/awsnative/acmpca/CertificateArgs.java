@@ -7,6 +7,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateApiPassthroughArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateValidityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CertificateApiPassthroughArgs> apiPassthrough;
 
     public Output<CertificateApiPassthroughArgs> getApiPassthrough() {
-        return this.apiPassthrough == null ? Output.empty() : this.apiPassthrough;
+        return this.apiPassthrough == null ? Codegen.empty() : this.apiPassthrough;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateArn;
 
     public Output<String> getTemplateArn() {
-        return this.templateArn == null ? Output.empty() : this.templateArn;
+        return this.templateArn == null ? Codegen.empty() : this.templateArn;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CertificateValidityArgs> validityNotBefore;
 
     public Output<CertificateValidityArgs> getValidityNotBefore() {
-        return this.validityNotBefore == null ? Output.empty() : this.validityNotBefore;
+        return this.validityNotBefore == null ? Codegen.empty() : this.validityNotBefore;
     }
 
     public CertificateArgs(
@@ -111,13 +112,13 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CertificateArgs() {
-        this.apiPassthrough = Output.empty();
-        this.certificateAuthorityArn = Output.empty();
-        this.certificateSigningRequest = Output.empty();
-        this.signingAlgorithm = Output.empty();
-        this.templateArn = Output.empty();
-        this.validity = Output.empty();
-        this.validityNotBefore = Output.empty();
+        this.apiPassthrough = Codegen.empty();
+        this.certificateAuthorityArn = Codegen.empty();
+        this.certificateSigningRequest = Codegen.empty();
+        this.signingAlgorithm = Codegen.empty();
+        this.templateArn = Codegen.empty();
+        this.validity = Codegen.empty();
+        this.validityNotBefore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiPassthrough(@Nullable CertificateApiPassthroughArgs apiPassthrough) {
-            this.apiPassthrough = Output.ofNullable(apiPassthrough);
+            this.apiPassthrough = Codegen.ofNullable(apiPassthrough);
             return this;
         }
         public Builder certificateAuthorityArn(Output<String> certificateAuthorityArn) {
@@ -189,7 +190,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateArn(@Nullable String templateArn) {
-            this.templateArn = Output.ofNullable(templateArn);
+            this.templateArn = Codegen.ofNullable(templateArn);
             return this;
         }
         public Builder validity(Output<CertificateValidityArgs> validity) {
@@ -205,7 +206,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validityNotBefore(@Nullable CertificateValidityArgs validityNotBefore) {
-            this.validityNotBefore = Output.ofNullable(validityNotBefore);
+            this.validityNotBefore = Codegen.ofNullable(validityNotBefore);
             return this;
         }        public CertificateArgs build() {
             return new CertificateArgs(apiPassthrough, certificateAuthorityArn, certificateSigningRequest, signingAlgorithm, templateArn, validity, validityNotBefore);

@@ -12,6 +12,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDown
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
+        return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs> body;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs> method;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs> queryString;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
-        return this.singleHeader == null ? Output.empty() : this.singleHeader;
+        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
+        return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs> uriPath;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs> getUriPath() {
-        return this.uriPath == null ? Output.empty() : this.uriPath;
+        return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 
     public WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs(
@@ -115,13 +116,13 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs() {
-        this.allQueryArguments = Output.empty();
-        this.body = Output.empty();
-        this.method = Output.empty();
-        this.queryString = Output.empty();
-        this.singleHeader = Output.empty();
-        this.singleQueryArgument = Output.empty();
-        this.uriPath = Output.empty();
+        this.allQueryArguments = Codegen.empty();
+        this.body = Codegen.empty();
+        this.method = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.singleHeader = Codegen.empty();
+        this.singleQueryArgument = Codegen.empty();
+        this.uriPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder allQueryArguments(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchAllQueryArgumentsGetArgs allQueryArguments) {
-            this.allQueryArguments = Output.ofNullable(allQueryArguments);
+            this.allQueryArguments = Codegen.ofNullable(allQueryArguments);
             return this;
         }
         public Builder body(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs> body) {
@@ -169,7 +170,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder body(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchBodyGetArgs body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder method(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs> method) {
@@ -177,7 +178,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder method(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchMethodGetArgs method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder queryString(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs> queryString) {
@@ -185,7 +186,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder queryString(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchQueryStringGetArgs queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder singleHeader(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
@@ -193,7 +194,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder singleHeader(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleHeaderGetArgs singleHeader) {
-            this.singleHeader = Output.ofNullable(singleHeader);
+            this.singleHeader = Codegen.ofNullable(singleHeader);
             return this;
         }
         public Builder singleQueryArgument(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
@@ -201,7 +202,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder singleQueryArgument(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchSingleQueryArgumentGetArgs singleQueryArgument) {
-            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Codegen.ofNullable(singleQueryArgument);
             return this;
         }
         public Builder uriPath(@Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs> uriPath) {
@@ -209,7 +210,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementNotSta
             return this;
         }
         public Builder uriPath(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchUriPathGetArgs uriPath) {
-            this.uriPath = Output.ofNullable(uriPath);
+            this.uriPath = Codegen.ofNullable(uriPath);
             return this;
         }        public WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementNotStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);

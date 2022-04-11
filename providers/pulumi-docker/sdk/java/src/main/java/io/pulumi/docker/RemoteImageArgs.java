@@ -5,6 +5,7 @@ package io.pulumi.docker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.RemoteImageBuildArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RemoteImageBuildArgs> build;
 
     public Output<RemoteImageBuildArgs> getBuild() {
-        return this.build == null ? Output.empty() : this.build;
+        return this.build == null ? Codegen.empty() : this.build;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> forceRemove;
 
     public Output<Boolean> getForceRemove() {
-        return this.forceRemove == null ? Output.empty() : this.forceRemove;
+        return this.forceRemove == null ? Codegen.empty() : this.forceRemove;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> keepLocally;
 
     public Output<Boolean> getKeepLocally() {
-        return this.keepLocally == null ? Output.empty() : this.keepLocally;
+        return this.keepLocally == null ? Codegen.empty() : this.keepLocally;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
 
     @Deprecated /* Use field pull_triggers instead */
     public Output<String> getPullTrigger() {
-        return this.pullTrigger == null ? Output.empty() : this.pullTrigger;
+        return this.pullTrigger == null ? Codegen.empty() : this.pullTrigger;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> pullTriggers;
 
     public Output<List<String>> getPullTriggers() {
-        return this.pullTriggers == null ? Output.empty() : this.pullTriggers;
+        return this.pullTriggers == null ? Codegen.empty() : this.pullTriggers;
     }
 
     public RemoteImageArgs(
@@ -107,12 +108,12 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RemoteImageArgs() {
-        this.build = Output.empty();
-        this.forceRemove = Output.empty();
-        this.keepLocally = Output.empty();
-        this.name = Output.empty();
-        this.pullTrigger = Output.empty();
-        this.pullTriggers = Output.empty();
+        this.build = Codegen.empty();
+        this.forceRemove = Codegen.empty();
+        this.keepLocally = Codegen.empty();
+        this.name = Codegen.empty();
+        this.pullTrigger = Codegen.empty();
+        this.pullTriggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder build(@Nullable RemoteImageBuildArgs build) {
-            this.build = Output.ofNullable(build);
+            this.build = Codegen.ofNullable(build);
             return this;
         }
         public Builder forceRemove(@Nullable Output<Boolean> forceRemove) {
@@ -158,7 +159,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forceRemove(@Nullable Boolean forceRemove) {
-            this.forceRemove = Output.ofNullable(forceRemove);
+            this.forceRemove = Codegen.ofNullable(forceRemove);
             return this;
         }
         public Builder keepLocally(@Nullable Output<Boolean> keepLocally) {
@@ -166,7 +167,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepLocally(@Nullable Boolean keepLocally) {
-            this.keepLocally = Output.ofNullable(keepLocally);
+            this.keepLocally = Codegen.ofNullable(keepLocally);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -182,7 +183,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullTrigger(@Nullable String pullTrigger) {
-            this.pullTrigger = Output.ofNullable(pullTrigger);
+            this.pullTrigger = Codegen.ofNullable(pullTrigger);
             return this;
         }
         public Builder pullTriggers(@Nullable Output<List<String>> pullTriggers) {
@@ -190,7 +191,7 @@ public final class RemoteImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pullTriggers(@Nullable List<String> pullTriggers) {
-            this.pullTriggers = Output.ofNullable(pullTriggers);
+            this.pullTriggers = Codegen.ofNullable(pullTriggers);
             return this;
         }
         public Builder pullTriggers(String... pullTriggers) {

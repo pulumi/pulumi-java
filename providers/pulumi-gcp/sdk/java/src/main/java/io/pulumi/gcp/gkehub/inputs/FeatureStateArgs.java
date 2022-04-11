@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateStateArgs;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FeatureStateStateArgs>> states;
 
     public Output<List<FeatureStateStateArgs>> getStates() {
-        return this.states == null ? Output.empty() : this.states;
+        return this.states == null ? Codegen.empty() : this.states;
     }
 
     public FeatureStateArgs(@Nullable Output<List<FeatureStateStateArgs>> states) {
@@ -27,7 +28,7 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FeatureStateArgs() {
-        this.states = Output.empty();
+        this.states = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class FeatureStateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder states(@Nullable List<FeatureStateStateArgs> states) {
-            this.states = Output.ofNullable(states);
+            this.states = Codegen.ofNullable(states);
             return this;
         }
         public Builder states(FeatureStateStateArgs... states) {

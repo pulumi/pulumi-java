@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupInstanceName;
 
     public Output<String> getBackupInstanceName() {
-        return this.backupInstanceName == null ? Output.empty() : this.backupInstanceName;
+        return this.backupInstanceName == null ? Codegen.empty() : this.backupInstanceName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties;
 
     public Output<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupInstanceArgs() {
-        this.backupInstanceName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.vaultName = Output.empty();
+        this.backupInstanceName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupInstanceName(@Nullable String backupInstanceName) {
-            this.backupInstanceName = Output.ofNullable(backupInstanceName);
+            this.backupInstanceName = Codegen.ofNullable(backupInstanceName);
             return this;
         }
         public Builder properties(@Nullable Output<io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs> properties) {
@@ -115,7 +116,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable io.pulumi.azurenative.dataprotection.inputs.BackupInstanceArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

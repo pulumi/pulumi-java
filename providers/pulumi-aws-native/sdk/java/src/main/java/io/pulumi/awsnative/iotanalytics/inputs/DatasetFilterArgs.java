@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetDeltaTimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class DatasetFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatasetDeltaTimeArgs> deltaTime;
 
     public Output<DatasetDeltaTimeArgs> getDeltaTime() {
-        return this.deltaTime == null ? Output.empty() : this.deltaTime;
+        return this.deltaTime == null ? Codegen.empty() : this.deltaTime;
     }
 
     public DatasetFilterArgs(@Nullable Output<DatasetDeltaTimeArgs> deltaTime) {
@@ -26,7 +27,7 @@ public final class DatasetFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasetFilterArgs() {
-        this.deltaTime = Output.empty();
+        this.deltaTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DatasetFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deltaTime(@Nullable DatasetDeltaTimeArgs deltaTime) {
-            this.deltaTime = Output.ofNullable(deltaTime);
+            this.deltaTime = Codegen.ofNullable(deltaTime);
             return this;
         }        public DatasetFilterArgs build() {
             return new DatasetFilterArgs(deltaTime);

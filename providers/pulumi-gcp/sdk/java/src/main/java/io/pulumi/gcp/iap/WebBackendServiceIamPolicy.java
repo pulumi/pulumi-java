@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebBackendServiceIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.WebBackendServiceIamPolicyState;
@@ -143,7 +144,7 @@ public class WebBackendServiceIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebBackendServiceIamPolicy(String name, WebBackendServiceIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webBackendServiceIamPolicy:WebBackendServiceIamPolicy", name, args == null ? WebBackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webBackendServiceIamPolicy:WebBackendServiceIamPolicy", name, args == null ? WebBackendServiceIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebBackendServiceIamPolicy(String name, Output<String> id, @Nullable WebBackendServiceIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

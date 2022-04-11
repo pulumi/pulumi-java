@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class RouteRequestParameterGetArgs extends io.pulumi.resources.Reso
     }
 
     private RouteRequestParameterGetArgs() {
-        this.requestParameterKey = Output.empty();
-        this.required = Output.empty();
+        this.requestParameterKey = Codegen.empty();
+        this.required = Codegen.empty();
     }
 
     public static Builder builder() {

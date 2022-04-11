@@ -5,6 +5,7 @@ package io.pulumi.aws.emr;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     public SecurityConfigurationArgs(
@@ -58,9 +59,9 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private SecurityConfigurationArgs() {
-        this.configuration = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
+        this.configuration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -108,7 +109,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }        public SecurityConfigurationArgs build() {
             return new SecurityConfigurationArgs(configuration, name, namePrefix);

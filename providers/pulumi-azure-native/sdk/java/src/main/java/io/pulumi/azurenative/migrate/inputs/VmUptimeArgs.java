@@ -5,6 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> daysPerMonth;
 
     public Output<Double> getDaysPerMonth() {
-        return this.daysPerMonth == null ? Output.empty() : this.daysPerMonth;
+        return this.daysPerMonth == null ? Codegen.empty() : this.daysPerMonth;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> hoursPerDay;
 
     public Output<Double> getHoursPerDay() {
-        return this.hoursPerDay == null ? Output.empty() : this.hoursPerDay;
+        return this.hoursPerDay == null ? Codegen.empty() : this.hoursPerDay;
     }
 
     public VmUptimeArgs(
@@ -44,8 +45,8 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VmUptimeArgs() {
-        this.daysPerMonth = Output.empty();
-        this.hoursPerDay = Output.empty();
+        this.daysPerMonth = Codegen.empty();
+        this.hoursPerDay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder daysPerMonth(@Nullable Double daysPerMonth) {
-            this.daysPerMonth = Output.ofNullable(daysPerMonth);
+            this.daysPerMonth = Codegen.ofNullable(daysPerMonth);
             return this;
         }
         public Builder hoursPerDay(@Nullable Output<Double> hoursPerDay) {
@@ -83,7 +84,7 @@ public final class VmUptimeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hoursPerDay(@Nullable Double hoursPerDay) {
-            this.hoursPerDay = Output.ofNullable(hoursPerDay);
+            this.hoursPerDay = Codegen.ofNullable(hoursPerDay);
             return this;
         }        public VmUptimeArgs build() {
             return new VmUptimeArgs(daysPerMonth, hoursPerDay);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VpcPeeringConfigArgs() {
-        this.subnet = Output.empty();
-        this.vpc = Output.empty();
+        this.subnet = Codegen.empty();
+        this.vpc = Codegen.empty();
     }
 
     public static Builder builder() {

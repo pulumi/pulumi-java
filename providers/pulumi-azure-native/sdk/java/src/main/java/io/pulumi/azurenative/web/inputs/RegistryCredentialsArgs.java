@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> passwordSecretRef;
 
     public Output<String> getPasswordSecretRef() {
-        return this.passwordSecretRef == null ? Output.empty() : this.passwordSecretRef;
+        return this.passwordSecretRef == null ? Codegen.empty() : this.passwordSecretRef;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> server;
 
     public Output<String> getServer() {
-        return this.server == null ? Output.empty() : this.server;
+        return this.server == null ? Codegen.empty() : this.server;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public RegistryCredentialsArgs(
@@ -61,9 +62,9 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
     }
 
     private RegistryCredentialsArgs() {
-        this.passwordSecretRef = Output.empty();
-        this.server = Output.empty();
-        this.username = Output.empty();
+        this.passwordSecretRef = Codegen.empty();
+        this.server = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder passwordSecretRef(@Nullable String passwordSecretRef) {
-            this.passwordSecretRef = Output.ofNullable(passwordSecretRef);
+            this.passwordSecretRef = Codegen.ofNullable(passwordSecretRef);
             return this;
         }
         public Builder server(@Nullable Output<String> server) {
@@ -103,7 +104,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder server(@Nullable String server) {
-            this.server = Output.ofNullable(server);
+            this.server = Codegen.ofNullable(server);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -111,7 +112,7 @@ public final class RegistryCredentialsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public RegistryCredentialsArgs build() {
             return new RegistryCredentialsArgs(passwordSecretRef, server, username);

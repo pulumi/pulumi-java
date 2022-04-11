@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.DatasetArgs;
 import java.lang.String;
@@ -68,7 +69,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dataset(String name, @Nullable DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dataset(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

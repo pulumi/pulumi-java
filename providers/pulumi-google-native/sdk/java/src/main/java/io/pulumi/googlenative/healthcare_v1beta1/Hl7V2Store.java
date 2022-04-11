@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.Hl7V2StoreArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7V2NotificationConfigResponse;
@@ -130,7 +131,7 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hl7V2Store(String name, Hl7V2StoreArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:Hl7V2Store", name, args == null ? Hl7V2StoreArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:Hl7V2Store", name, args == null ? Hl7V2StoreArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hl7V2Store(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

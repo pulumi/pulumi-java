@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> latestRevision;
 
     public Output<Boolean> getLatestRevision() {
-        return this.latestRevision == null ? Output.empty() : this.latestRevision;
+        return this.latestRevision == null ? Codegen.empty() : this.latestRevision;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> revisionName;
 
     public Output<String> getRevisionName() {
-        return this.revisionName == null ? Output.empty() : this.revisionName;
+        return this.revisionName == null ? Codegen.empty() : this.revisionName;
     }
 
     public ServiceTrafficArgs(
@@ -62,9 +63,9 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceTrafficArgs() {
-        this.latestRevision = Output.empty();
-        this.percent = Output.empty();
-        this.revisionName = Output.empty();
+        this.latestRevision = Codegen.empty();
+        this.percent = Codegen.empty();
+        this.revisionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestRevision(@Nullable Boolean latestRevision) {
-            this.latestRevision = Output.ofNullable(latestRevision);
+            this.latestRevision = Codegen.ofNullable(latestRevision);
             return this;
         }
         public Builder percent(Output<Integer> percent) {
@@ -112,7 +113,7 @@ public final class ServiceTrafficArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder revisionName(@Nullable String revisionName) {
-            this.revisionName = Output.ofNullable(revisionName);
+            this.revisionName = Codegen.ofNullable(revisionName);
             return this;
         }        public ServiceTrafficArgs build() {
             return new ServiceTrafficArgs(latestRevision, percent, revisionName);

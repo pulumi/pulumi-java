@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class CassandraKeyspaceResourceArgs extends io.pulumi.resources.Res
     }
 
     private CassandraKeyspaceResourceArgs() {
-        this.id = Output.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {

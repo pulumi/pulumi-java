@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> errorManifestFile;
 
     public Output<String> getErrorManifestFile() {
-        return this.errorManifestFile == null ? Output.empty() : this.errorManifestFile;
+        return this.errorManifestFile == null ? Codegen.empty() : this.errorManifestFile;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> inProgressRefreshJobId;
 
     public Output<String> getInProgressRefreshJobId() {
-        return this.inProgressRefreshJobId == null ? Output.empty() : this.inProgressRefreshJobId;
+        return this.inProgressRefreshJobId == null ? Codegen.empty() : this.inProgressRefreshJobId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastCompletedRefreshJobTimeInUTC;
 
     public Output<String> getLastCompletedRefreshJobTimeInUTC() {
-        return this.lastCompletedRefreshJobTimeInUTC == null ? Output.empty() : this.lastCompletedRefreshJobTimeInUTC;
+        return this.lastCompletedRefreshJobTimeInUTC == null ? Codegen.empty() : this.lastCompletedRefreshJobTimeInUTC;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastJob;
 
     public Output<String> getLastJob() {
-        return this.lastJob == null ? Output.empty() : this.lastJob;
+        return this.lastJob == null ? Codegen.empty() : this.lastJob;
     }
 
     public RefreshDetailsArgs(
@@ -74,10 +75,10 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RefreshDetailsArgs() {
-        this.errorManifestFile = Output.empty();
-        this.inProgressRefreshJobId = Output.empty();
-        this.lastCompletedRefreshJobTimeInUTC = Output.empty();
-        this.lastJob = Output.empty();
+        this.errorManifestFile = Codegen.empty();
+        this.inProgressRefreshJobId = Codegen.empty();
+        this.lastCompletedRefreshJobTimeInUTC = Codegen.empty();
+        this.lastJob = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder errorManifestFile(@Nullable String errorManifestFile) {
-            this.errorManifestFile = Output.ofNullable(errorManifestFile);
+            this.errorManifestFile = Codegen.ofNullable(errorManifestFile);
             return this;
         }
         public Builder inProgressRefreshJobId(@Nullable Output<String> inProgressRefreshJobId) {
@@ -119,7 +120,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inProgressRefreshJobId(@Nullable String inProgressRefreshJobId) {
-            this.inProgressRefreshJobId = Output.ofNullable(inProgressRefreshJobId);
+            this.inProgressRefreshJobId = Codegen.ofNullable(inProgressRefreshJobId);
             return this;
         }
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable Output<String> lastCompletedRefreshJobTimeInUTC) {
@@ -127,7 +128,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastCompletedRefreshJobTimeInUTC(@Nullable String lastCompletedRefreshJobTimeInUTC) {
-            this.lastCompletedRefreshJobTimeInUTC = Output.ofNullable(lastCompletedRefreshJobTimeInUTC);
+            this.lastCompletedRefreshJobTimeInUTC = Codegen.ofNullable(lastCompletedRefreshJobTimeInUTC);
             return this;
         }
         public Builder lastJob(@Nullable Output<String> lastJob) {
@@ -135,7 +136,7 @@ public final class RefreshDetailsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastJob(@Nullable String lastJob) {
-            this.lastJob = Output.ofNullable(lastJob);
+            this.lastJob = Codegen.ofNullable(lastJob);
             return this;
         }        public RefreshDetailsArgs build() {
             return new RefreshDetailsArgs(errorManifestFile, inProgressRefreshJobId, lastCompletedRefreshJobTimeInUTC, lastJob);

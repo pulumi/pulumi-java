@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudhsmv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     public HsmArgs(
@@ -70,10 +71,10 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HsmArgs() {
-        this.availabilityZone = Output.empty();
-        this.clusterId = Output.empty();
-        this.ipAddress = Output.empty();
-        this.subnetId = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.clusterId = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder clusterId(Output<String> clusterId) {
@@ -123,7 +124,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -131,7 +132,7 @@ public final class HsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }        public HsmArgs build() {
             return new HsmArgs(availabilityZone, clusterId, ipAddress, subnetId);

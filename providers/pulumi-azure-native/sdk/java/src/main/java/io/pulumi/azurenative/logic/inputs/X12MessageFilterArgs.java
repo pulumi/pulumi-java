@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.enums.MessageFilterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,7 +36,7 @@ public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private X12MessageFilterArgs() {
-        this.messageFilterType = Output.empty();
+        this.messageFilterType = Codegen.empty();
     }
 
     public static Builder builder() {

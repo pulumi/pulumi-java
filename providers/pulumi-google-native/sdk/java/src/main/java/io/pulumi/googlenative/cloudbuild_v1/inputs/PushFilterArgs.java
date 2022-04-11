@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> branch;
 
     public Output<String> getBranch() {
-        return this.branch == null ? Output.empty() : this.branch;
+        return this.branch == null ? Codegen.empty() : this.branch;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> invertRegex;
 
     public Output<Boolean> getInvertRegex() {
-        return this.invertRegex == null ? Output.empty() : this.invertRegex;
+        return this.invertRegex == null ? Codegen.empty() : this.invertRegex;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public PushFilterArgs(
@@ -62,9 +63,9 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PushFilterArgs() {
-        this.branch = Output.empty();
-        this.invertRegex = Output.empty();
-        this.tag = Output.empty();
+        this.branch = Codegen.empty();
+        this.invertRegex = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder branch(@Nullable String branch) {
-            this.branch = Output.ofNullable(branch);
+            this.branch = Codegen.ofNullable(branch);
             return this;
         }
         public Builder invertRegex(@Nullable Output<Boolean> invertRegex) {
@@ -104,7 +105,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invertRegex(@Nullable Boolean invertRegex) {
-            this.invertRegex = Output.ofNullable(invertRegex);
+            this.invertRegex = Codegen.ofNullable(invertRegex);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -112,7 +113,7 @@ public final class PushFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public PushFilterArgs build() {
             return new PushFilterArgs(branch, invertRegex, tag);

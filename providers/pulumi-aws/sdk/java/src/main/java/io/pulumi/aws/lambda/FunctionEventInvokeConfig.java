@@ -10,6 +10,7 @@ import io.pulumi.aws.lambda.outputs.FunctionEventInvokeConfigDestinationConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -141,7 +142,7 @@ public class FunctionEventInvokeConfig extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public FunctionEventInvokeConfig(String name, FunctionEventInvokeConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig", name, args == null ? FunctionEventInvokeConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lambda/functionEventInvokeConfig:FunctionEventInvokeConfig", name, args == null ? FunctionEventInvokeConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FunctionEventInvokeConfig(String name, Output<String> id, @Nullable FunctionEventInvokeConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

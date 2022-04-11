@@ -9,6 +9,7 @@ import io.pulumi.azurenative.automation.inputs.SoftwareUpdateConfigurationTasksA
 import io.pulumi.azurenative.automation.inputs.UpdateConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
       private final @Nullable Output<ErrorResponseArgs> error;
 
     public Output<ErrorResponseArgs> getError() {
-        return this.error == null ? Output.empty() : this.error;
+        return this.error == null ? Codegen.empty() : this.error;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
       private final @Nullable Output<String> softwareUpdateConfigurationName;
 
     public Output<String> getSoftwareUpdateConfigurationName() {
-        return this.softwareUpdateConfigurationName == null ? Output.empty() : this.softwareUpdateConfigurationName;
+        return this.softwareUpdateConfigurationName == null ? Codegen.empty() : this.softwareUpdateConfigurationName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
       private final @Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks;
 
     public Output<SoftwareUpdateConfigurationTasksArgs> getTasks() {
-        return this.tasks == null ? Output.empty() : this.tasks;
+        return this.tasks == null ? Codegen.empty() : this.tasks;
     }
 
     /**
@@ -113,13 +114,13 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
     }
 
     private SoftwareUpdateConfigurationByNameArgs() {
-        this.automationAccountName = Output.empty();
-        this.error = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scheduleInfo = Output.empty();
-        this.softwareUpdateConfigurationName = Output.empty();
-        this.tasks = Output.empty();
-        this.updateConfiguration = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.error = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scheduleInfo = Codegen.empty();
+        this.softwareUpdateConfigurationName = Codegen.empty();
+        this.tasks = Codegen.empty();
+        this.updateConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
             return this;
         }
         public Builder error(@Nullable ErrorResponseArgs error) {
-            this.error = Output.ofNullable(error);
+            this.error = Codegen.ofNullable(error);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -191,7 +192,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
             return this;
         }
         public Builder softwareUpdateConfigurationName(@Nullable String softwareUpdateConfigurationName) {
-            this.softwareUpdateConfigurationName = Output.ofNullable(softwareUpdateConfigurationName);
+            this.softwareUpdateConfigurationName = Codegen.ofNullable(softwareUpdateConfigurationName);
             return this;
         }
         public Builder tasks(@Nullable Output<SoftwareUpdateConfigurationTasksArgs> tasks) {
@@ -199,7 +200,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
             return this;
         }
         public Builder tasks(@Nullable SoftwareUpdateConfigurationTasksArgs tasks) {
-            this.tasks = Output.ofNullable(tasks);
+            this.tasks = Codegen.ofNullable(tasks);
             return this;
         }
         public Builder updateConfiguration(Output<UpdateConfigurationArgs> updateConfiguration) {

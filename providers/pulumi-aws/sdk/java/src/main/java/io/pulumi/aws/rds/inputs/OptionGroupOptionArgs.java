@@ -6,6 +6,7 @@ package io.pulumi.aws.rds.inputs;
 import io.pulumi.aws.rds.inputs.OptionGroupOptionOptionSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> dbSecurityGroupMemberships;
 
     public Output<List<String>> getDbSecurityGroupMemberships() {
-        return this.dbSecurityGroupMemberships == null ? Output.empty() : this.dbSecurityGroupMemberships;
+        return this.dbSecurityGroupMemberships == null ? Codegen.empty() : this.dbSecurityGroupMemberships;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<OptionGroupOptionOptionSettingArgs>> optionSettings;
 
     public Output<List<OptionGroupOptionOptionSettingArgs>> getOptionSettings() {
-        return this.optionSettings == null ? Output.empty() : this.optionSettings;
+        return this.optionSettings == null ? Codegen.empty() : this.optionSettings;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> vpcSecurityGroupMemberships;
 
     public Output<List<String>> getVpcSecurityGroupMemberships() {
-        return this.vpcSecurityGroupMemberships == null ? Output.empty() : this.vpcSecurityGroupMemberships;
+        return this.vpcSecurityGroupMemberships == null ? Codegen.empty() : this.vpcSecurityGroupMemberships;
     }
 
     public OptionGroupOptionArgs(
@@ -99,12 +100,12 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private OptionGroupOptionArgs() {
-        this.dbSecurityGroupMemberships = Output.empty();
-        this.optionName = Output.empty();
-        this.optionSettings = Output.empty();
-        this.port = Output.empty();
-        this.version = Output.empty();
-        this.vpcSecurityGroupMemberships = Output.empty();
+        this.dbSecurityGroupMemberships = Codegen.empty();
+        this.optionName = Codegen.empty();
+        this.optionSettings = Codegen.empty();
+        this.port = Codegen.empty();
+        this.version = Codegen.empty();
+        this.vpcSecurityGroupMemberships = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dbSecurityGroupMemberships(@Nullable List<String> dbSecurityGroupMemberships) {
-            this.dbSecurityGroupMemberships = Output.ofNullable(dbSecurityGroupMemberships);
+            this.dbSecurityGroupMemberships = Codegen.ofNullable(dbSecurityGroupMemberships);
             return this;
         }
         public Builder dbSecurityGroupMemberships(String... dbSecurityGroupMemberships) {
@@ -161,7 +162,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder optionSettings(@Nullable List<OptionGroupOptionOptionSettingArgs> optionSettings) {
-            this.optionSettings = Output.ofNullable(optionSettings);
+            this.optionSettings = Codegen.ofNullable(optionSettings);
             return this;
         }
         public Builder optionSettings(OptionGroupOptionOptionSettingArgs... optionSettings) {
@@ -172,7 +173,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -180,7 +181,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder vpcSecurityGroupMemberships(@Nullable Output<List<String>> vpcSecurityGroupMemberships) {
@@ -188,7 +189,7 @@ public final class OptionGroupOptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder vpcSecurityGroupMemberships(@Nullable List<String> vpcSecurityGroupMemberships) {
-            this.vpcSecurityGroupMemberships = Output.ofNullable(vpcSecurityGroupMemberships);
+            this.vpcSecurityGroupMemberships = Codegen.ofNullable(vpcSecurityGroupMemberships);
             return this;
         }
         public Builder vpcSecurityGroupMemberships(String... vpcSecurityGroupMemberships) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStat
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementR
       private final @Nullable Output<WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Output<WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
+        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
     /**
@@ -60,9 +61,9 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementR
     }
 
     private WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementGetArgs() {
-        this.arn = Output.empty();
-        this.fieldToMatch = Output.empty();
-        this.textTransformations = Output.empty();
+        this.arn = Codegen.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class WebAclRuleStatementOrStatementStatementAndStatementStatementR
             return this;
         }
         public Builder fieldToMatch(@Nullable WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Output.ofNullable(fieldToMatch);
+            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
             return this;
         }
         public Builder textTransformations(Output<List<WebAclRuleStatementOrStatementStatementAndStatementStatementRegexPatternSetReferenceStatementTextTransformationGetArgs>> textTransformations) {

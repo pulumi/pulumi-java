@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,21 +20,21 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="logGroupName")
       private final @Nullable Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     @Import(name="logStreamName")
       private final @Nullable Output<String> logStreamName;
 
     public Output<String> getLogStreamName() {
-        return this.logStreamName == null ? Output.empty() : this.logStreamName;
+        return this.logStreamName == null ? Codegen.empty() : this.logStreamName;
     }
 
     public DeliveryStreamCloudWatchLoggingOptionsArgs(
@@ -46,9 +47,9 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
     }
 
     private DeliveryStreamCloudWatchLoggingOptionsArgs() {
-        this.enabled = Output.empty();
-        this.logGroupName = Output.empty();
-        this.logStreamName = Output.empty();
+        this.enabled = Codegen.empty();
+        this.logGroupName = Codegen.empty();
+        this.logStreamName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
@@ -88,7 +89,7 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }
         public Builder logStreamName(@Nullable Output<String> logStreamName) {
@@ -96,7 +97,7 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
             return this;
         }
         public Builder logStreamName(@Nullable String logStreamName) {
-            this.logStreamName = Output.ofNullable(logStreamName);
+            this.logStreamName = Codegen.ofNullable(logStreamName);
             return this;
         }        public DeliveryStreamCloudWatchLoggingOptionsArgs build() {
             return new DeliveryStreamCloudWatchLoggingOptionsArgs(enabled, logGroupName, logStreamName);

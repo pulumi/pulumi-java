@@ -6,6 +6,7 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.notificationhubs.inputs.SharedAccessAuthorizationRulePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> authorizationRuleName;
 
     public Output<String> getAuthorizationRuleName() {
-        return this.authorizationRuleName == null ? Output.empty() : this.authorizationRuleName;
+        return this.authorizationRuleName == null ? Codegen.empty() : this.authorizationRuleName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
     }
 
     private NamespaceAuthorizationRuleArgs() {
-        this.authorizationRuleName = Output.empty();
-        this.namespaceName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.authorizationRuleName = Codegen.empty();
+        this.namespaceName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class NamespaceAuthorizationRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder authorizationRuleName(@Nullable String authorizationRuleName) {
-            this.authorizationRuleName = Output.ofNullable(authorizationRuleName);
+            this.authorizationRuleName = Codegen.ofNullable(authorizationRuleName);
             return this;
         }
         public Builder namespaceName(Output<String> namespaceName) {

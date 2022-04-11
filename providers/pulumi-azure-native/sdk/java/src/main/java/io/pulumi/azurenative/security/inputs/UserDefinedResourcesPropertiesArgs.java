@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class UserDefinedResourcesPropertiesArgs extends io.pulumi.resource
     }
 
     private UserDefinedResourcesPropertiesArgs() {
-        this.query = Output.empty();
-        this.querySubscriptions = Output.empty();
+        this.query = Codegen.empty();
+        this.querySubscriptions = Codegen.empty();
     }
 
     public static Builder builder() {

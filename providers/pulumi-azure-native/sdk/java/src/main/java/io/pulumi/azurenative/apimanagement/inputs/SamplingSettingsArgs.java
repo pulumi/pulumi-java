@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.SamplingType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Double> percentage;
 
     public Output<Double> getPercentage() {
-        return this.percentage == null ? Output.empty() : this.percentage;
+        return this.percentage == null ? Codegen.empty() : this.percentage;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,SamplingType>> samplingType;
 
     public Output<Either<String,SamplingType>> getSamplingType() {
-        return this.samplingType == null ? Output.empty() : this.samplingType;
+        return this.samplingType == null ? Codegen.empty() : this.samplingType;
     }
 
     public SamplingSettingsArgs(
@@ -51,8 +52,8 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SamplingSettingsArgs() {
-        this.percentage = Output.empty();
-        this.samplingType = Output.empty();
+        this.percentage = Codegen.empty();
+        this.samplingType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder percentage(@Nullable Double percentage) {
-            this.percentage = Output.ofNullable(percentage);
+            this.percentage = Codegen.ofNullable(percentage);
             return this;
         }
         public Builder samplingType(@Nullable Output<Either<String,SamplingType>> samplingType) {
@@ -90,7 +91,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder samplingType(@Nullable Either<String,SamplingType> samplingType) {
-            this.samplingType = Output.ofNullable(samplingType);
+            this.samplingType = Codegen.ofNullable(samplingType);
             return this;
         }        public SamplingSettingsArgs build() {
             return new SamplingSettingsArgs(percentage, samplingType);

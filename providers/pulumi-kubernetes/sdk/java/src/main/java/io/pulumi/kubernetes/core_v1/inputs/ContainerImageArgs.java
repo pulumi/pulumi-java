@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> sizeBytes;
 
     public Output<Integer> getSizeBytes() {
-        return this.sizeBytes == null ? Output.empty() : this.sizeBytes;
+        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 
     public ContainerImageArgs(
@@ -50,8 +51,8 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerImageArgs() {
-        this.names = Output.empty();
-        this.sizeBytes = Output.empty();
+        this.names = Codegen.empty();
+        this.sizeBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Output.ofNullable(sizeBytes);
+            this.sizeBytes = Codegen.ofNullable(sizeBytes);
             return this;
         }        public ContainerImageArgs build() {
             return new ContainerImageArgs(names, sizeBytes);

@@ -14,6 +14,7 @@ import io.pulumi.azurenative.web.inputs.LegacyMicrosoftAccountArgs;
 import io.pulumi.azurenative.web.inputs.TwitterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AppleArgs> apple;
 
     public Output<AppleArgs> getApple() {
-        return this.apple == null ? Output.empty() : this.apple;
+        return this.apple == null ? Codegen.empty() : this.apple;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory;
 
     public Output<AzureActiveDirectoryArgs> getAzureActiveDirectory() {
-        return this.azureActiveDirectory == null ? Output.empty() : this.azureActiveDirectory;
+        return this.azureActiveDirectory == null ? Codegen.empty() : this.azureActiveDirectory;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps;
 
     public Output<AzureStaticWebAppsArgs> getAzureStaticWebApps() {
-        return this.azureStaticWebApps == null ? Output.empty() : this.azureStaticWebApps;
+        return this.azureStaticWebApps == null ? Codegen.empty() : this.azureStaticWebApps;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders;
 
     public Output<Map<String,CustomOpenIdConnectProviderArgs>> getCustomOpenIdConnectProviders() {
-        return this.customOpenIdConnectProviders == null ? Output.empty() : this.customOpenIdConnectProviders;
+        return this.customOpenIdConnectProviders == null ? Codegen.empty() : this.customOpenIdConnectProviders;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FacebookArgs> facebook;
 
     public Output<FacebookArgs> getFacebook() {
-        return this.facebook == null ? Output.empty() : this.facebook;
+        return this.facebook == null ? Codegen.empty() : this.facebook;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<GitHubArgs> gitHub;
 
     public Output<GitHubArgs> getGitHub() {
-        return this.gitHub == null ? Output.empty() : this.gitHub;
+        return this.gitHub == null ? Codegen.empty() : this.gitHub;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<GoogleArgs> google;
 
     public Output<GoogleArgs> getGoogle() {
-        return this.google == null ? Output.empty() : this.google;
+        return this.google == null ? Codegen.empty() : this.google;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount;
 
     public Output<LegacyMicrosoftAccountArgs> getLegacyMicrosoftAccount() {
-        return this.legacyMicrosoftAccount == null ? Output.empty() : this.legacyMicrosoftAccount;
+        return this.legacyMicrosoftAccount == null ? Codegen.empty() : this.legacyMicrosoftAccount;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<TwitterArgs> twitter;
 
     public Output<TwitterArgs> getTwitter() {
-        return this.twitter == null ? Output.empty() : this.twitter;
+        return this.twitter == null ? Codegen.empty() : this.twitter;
     }
 
     public IdentityProvidersArgs(
@@ -150,15 +151,15 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
     }
 
     private IdentityProvidersArgs() {
-        this.apple = Output.empty();
-        this.azureActiveDirectory = Output.empty();
-        this.azureStaticWebApps = Output.empty();
-        this.customOpenIdConnectProviders = Output.empty();
-        this.facebook = Output.empty();
-        this.gitHub = Output.empty();
-        this.google = Output.empty();
-        this.legacyMicrosoftAccount = Output.empty();
-        this.twitter = Output.empty();
+        this.apple = Codegen.empty();
+        this.azureActiveDirectory = Codegen.empty();
+        this.azureStaticWebApps = Codegen.empty();
+        this.customOpenIdConnectProviders = Codegen.empty();
+        this.facebook = Codegen.empty();
+        this.gitHub = Codegen.empty();
+        this.google = Codegen.empty();
+        this.legacyMicrosoftAccount = Codegen.empty();
+        this.twitter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -202,7 +203,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder apple(@Nullable AppleArgs apple) {
-            this.apple = Output.ofNullable(apple);
+            this.apple = Codegen.ofNullable(apple);
             return this;
         }
         public Builder azureActiveDirectory(@Nullable Output<AzureActiveDirectoryArgs> azureActiveDirectory) {
@@ -210,7 +211,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder azureActiveDirectory(@Nullable AzureActiveDirectoryArgs azureActiveDirectory) {
-            this.azureActiveDirectory = Output.ofNullable(azureActiveDirectory);
+            this.azureActiveDirectory = Codegen.ofNullable(azureActiveDirectory);
             return this;
         }
         public Builder azureStaticWebApps(@Nullable Output<AzureStaticWebAppsArgs> azureStaticWebApps) {
@@ -218,7 +219,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder azureStaticWebApps(@Nullable AzureStaticWebAppsArgs azureStaticWebApps) {
-            this.azureStaticWebApps = Output.ofNullable(azureStaticWebApps);
+            this.azureStaticWebApps = Codegen.ofNullable(azureStaticWebApps);
             return this;
         }
         public Builder customOpenIdConnectProviders(@Nullable Output<Map<String,CustomOpenIdConnectProviderArgs>> customOpenIdConnectProviders) {
@@ -226,7 +227,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder customOpenIdConnectProviders(@Nullable Map<String,CustomOpenIdConnectProviderArgs> customOpenIdConnectProviders) {
-            this.customOpenIdConnectProviders = Output.ofNullable(customOpenIdConnectProviders);
+            this.customOpenIdConnectProviders = Codegen.ofNullable(customOpenIdConnectProviders);
             return this;
         }
         public Builder facebook(@Nullable Output<FacebookArgs> facebook) {
@@ -234,7 +235,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder facebook(@Nullable FacebookArgs facebook) {
-            this.facebook = Output.ofNullable(facebook);
+            this.facebook = Codegen.ofNullable(facebook);
             return this;
         }
         public Builder gitHub(@Nullable Output<GitHubArgs> gitHub) {
@@ -242,7 +243,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder gitHub(@Nullable GitHubArgs gitHub) {
-            this.gitHub = Output.ofNullable(gitHub);
+            this.gitHub = Codegen.ofNullable(gitHub);
             return this;
         }
         public Builder google(@Nullable Output<GoogleArgs> google) {
@@ -250,7 +251,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder google(@Nullable GoogleArgs google) {
-            this.google = Output.ofNullable(google);
+            this.google = Codegen.ofNullable(google);
             return this;
         }
         public Builder legacyMicrosoftAccount(@Nullable Output<LegacyMicrosoftAccountArgs> legacyMicrosoftAccount) {
@@ -258,7 +259,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder legacyMicrosoftAccount(@Nullable LegacyMicrosoftAccountArgs legacyMicrosoftAccount) {
-            this.legacyMicrosoftAccount = Output.ofNullable(legacyMicrosoftAccount);
+            this.legacyMicrosoftAccount = Codegen.ofNullable(legacyMicrosoftAccount);
             return this;
         }
         public Builder twitter(@Nullable Output<TwitterArgs> twitter) {
@@ -266,7 +267,7 @@ public final class IdentityProvidersArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder twitter(@Nullable TwitterArgs twitter) {
-            this.twitter = Output.ofNullable(twitter);
+            this.twitter = Codegen.ofNullable(twitter);
             return this;
         }        public IdentityProvidersArgs build() {
             return new IdentityProvidersArgs(apple, azureActiveDirectory, azureStaticWebApps, customOpenIdConnectProviders, facebook, gitHub, google, legacyMicrosoftAccount, twitter);

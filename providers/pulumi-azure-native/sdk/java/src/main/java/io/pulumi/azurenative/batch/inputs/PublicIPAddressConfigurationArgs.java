@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.IPAddressProvisioningType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> ipAddressIds;
 
     public Output<List<String>> getIpAddressIds() {
-        return this.ipAddressIds == null ? Output.empty() : this.ipAddressIds;
+        return this.ipAddressIds == null ? Codegen.empty() : this.ipAddressIds;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<IPAddressProvisioningType> provision;
 
     public Output<IPAddressProvisioningType> getProvision() {
-        return this.provision == null ? Output.empty() : this.provision;
+        return this.provision == null ? Codegen.empty() : this.provision;
     }
 
     public PublicIPAddressConfigurationArgs(
@@ -50,8 +51,8 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
     }
 
     private PublicIPAddressConfigurationArgs() {
-        this.ipAddressIds = Output.empty();
-        this.provision = Output.empty();
+        this.ipAddressIds = Codegen.empty();
+        this.provision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
-            this.ipAddressIds = Output.ofNullable(ipAddressIds);
+            this.ipAddressIds = Codegen.ofNullable(ipAddressIds);
             return this;
         }
         public Builder ipAddressIds(String... ipAddressIds) {
@@ -92,7 +93,7 @@ public final class PublicIPAddressConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder provision(@Nullable IPAddressProvisioningType provision) {
-            this.provision = Output.ofNullable(provision);
+            this.provision = Codegen.ofNullable(provision);
             return this;
         }        public PublicIPAddressConfigurationArgs build() {
             return new PublicIPAddressConfigurationArgs(ipAddressIds, provision);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> images;
 
     public Output<List<String>> getImages() {
-        return this.images == null ? Output.empty() : this.images;
+        return this.images == null ? Codegen.empty() : this.images;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TriggerBuildArtifactsObjectsArgs> objects;
 
     public Output<TriggerBuildArtifactsObjectsArgs> getObjects() {
-        return this.objects == null ? Output.empty() : this.objects;
+        return this.objects == null ? Codegen.empty() : this.objects;
     }
 
     public TriggerBuildArtifactsArgs(
@@ -54,8 +55,8 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
     }
 
     private TriggerBuildArtifactsArgs() {
-        this.images = Output.empty();
-        this.objects = Output.empty();
+        this.images = Codegen.empty();
+        this.objects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder images(@Nullable List<String> images) {
-            this.images = Output.ofNullable(images);
+            this.images = Codegen.ofNullable(images);
             return this;
         }
         public Builder images(String... images) {
@@ -96,7 +97,7 @@ public final class TriggerBuildArtifactsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder objects(@Nullable TriggerBuildArtifactsObjectsArgs objects) {
-            this.objects = Output.ofNullable(objects);
+            this.objects = Codegen.ofNullable(objects);
             return this;
         }        public TriggerBuildArtifactsArgs build() {
             return new TriggerBuildArtifactsArgs(images, objects);

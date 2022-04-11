@@ -5,6 +5,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,10 +74,10 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlanArgs() {
-        this.name = Output.empty();
-        this.product = Output.empty();
-        this.publisher = Output.empty();
-        this.version = Output.empty();
+        this.name = Codegen.empty();
+        this.product = Codegen.empty();
+        this.publisher = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {

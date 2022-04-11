@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 import io.pulumi.aws.elasticloadbalancing.inputs.SslNegotiationPolicyAttributeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<SslNegotiationPolicyAttributeGetArgs>> attributes;
 
     public Output<List<SslNegotiationPolicyAttributeGetArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> lbPort;
 
     public Output<Integer> getLbPort() {
-        return this.lbPort == null ? Output.empty() : this.lbPort;
+        return this.lbPort == null ? Codegen.empty() : this.lbPort;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> loadBalancer;
 
     public Output<String> getLoadBalancer() {
-        return this.loadBalancer == null ? Output.empty() : this.loadBalancer;
+        return this.loadBalancer == null ? Codegen.empty() : this.loadBalancer;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SslNegotiationPolicyState(
@@ -76,10 +77,10 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
     }
 
     private SslNegotiationPolicyState() {
-        this.attributes = Output.empty();
-        this.lbPort = Output.empty();
-        this.loadBalancer = Output.empty();
-        this.name = Output.empty();
+        this.attributes = Codegen.empty();
+        this.lbPort = Codegen.empty();
+        this.loadBalancer = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder attributes(@Nullable List<SslNegotiationPolicyAttributeGetArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(SslNegotiationPolicyAttributeGetArgs... attributes) {
@@ -124,7 +125,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder lbPort(@Nullable Integer lbPort) {
-            this.lbPort = Output.ofNullable(lbPort);
+            this.lbPort = Codegen.ofNullable(lbPort);
             return this;
         }
         public Builder loadBalancer(@Nullable Output<String> loadBalancer) {
@@ -132,7 +133,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder loadBalancer(@Nullable String loadBalancer) {
-            this.loadBalancer = Output.ofNullable(loadBalancer);
+            this.loadBalancer = Codegen.ofNullable(loadBalancer);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class SslNegotiationPolicyState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SslNegotiationPolicyState build() {
             return new SslNegotiationPolicyState(attributes, lbPort, loadBalancer, name);

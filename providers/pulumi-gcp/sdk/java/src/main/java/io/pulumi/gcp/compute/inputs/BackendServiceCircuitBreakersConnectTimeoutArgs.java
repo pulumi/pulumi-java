@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class BackendServiceCircuitBreakersConnectTimeoutArgs extends io.pu
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
-        return this.nanos == null ? Output.empty() : this.nanos;
+        return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
     /**
@@ -47,8 +48,8 @@ public final class BackendServiceCircuitBreakersConnectTimeoutArgs extends io.pu
     }
 
     private BackendServiceCircuitBreakersConnectTimeoutArgs() {
-        this.nanos = Output.empty();
-        this.seconds = Output.empty();
+        this.nanos = Codegen.empty();
+        this.seconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class BackendServiceCircuitBreakersConnectTimeoutArgs extends io.pu
             return this;
         }
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Output.ofNullable(nanos);
+            this.nanos = Codegen.ofNullable(nanos);
             return this;
         }
         public Builder seconds(Output<Integer> seconds) {

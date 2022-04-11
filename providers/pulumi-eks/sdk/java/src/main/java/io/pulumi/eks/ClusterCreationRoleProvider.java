@@ -8,6 +8,7 @@ import io.pulumi.aws.iam.Role;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.ClusterCreationRoleProviderArgs;
 import io.pulumi.eks.Utilities;
 import javax.annotation.Nullable;
@@ -53,7 +54,7 @@ public class ClusterCreationRoleProvider extends io.pulumi.resources.ComponentRe
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterCreationRoleProvider(String name, @Nullable ClusterCreationRoleProviderArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("eks:index:ClusterCreationRoleProvider", name, args == null ? ClusterCreationRoleProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("eks:index:ClusterCreationRoleProvider", name, args == null ? ClusterCreationRoleProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

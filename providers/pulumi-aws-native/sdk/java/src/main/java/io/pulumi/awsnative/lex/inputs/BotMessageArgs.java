@@ -9,6 +9,7 @@ import io.pulumi.awsnative.lex.inputs.BotPlainTextMessageArgs;
 import io.pulumi.awsnative.lex.inputs.BotSSMLMessageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,28 +26,28 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BotCustomPayloadArgs> customPayload;
 
     public Output<BotCustomPayloadArgs> getCustomPayload() {
-        return this.customPayload == null ? Output.empty() : this.customPayload;
+        return this.customPayload == null ? Codegen.empty() : this.customPayload;
     }
 
     @Import(name="imageResponseCard")
       private final @Nullable Output<BotImageResponseCardArgs> imageResponseCard;
 
     public Output<BotImageResponseCardArgs> getImageResponseCard() {
-        return this.imageResponseCard == null ? Output.empty() : this.imageResponseCard;
+        return this.imageResponseCard == null ? Codegen.empty() : this.imageResponseCard;
     }
 
     @Import(name="plainTextMessage")
       private final @Nullable Output<BotPlainTextMessageArgs> plainTextMessage;
 
     public Output<BotPlainTextMessageArgs> getPlainTextMessage() {
-        return this.plainTextMessage == null ? Output.empty() : this.plainTextMessage;
+        return this.plainTextMessage == null ? Codegen.empty() : this.plainTextMessage;
     }
 
     @Import(name="sSMLMessage")
       private final @Nullable Output<BotSSMLMessageArgs> sSMLMessage;
 
     public Output<BotSSMLMessageArgs> getSSMLMessage() {
-        return this.sSMLMessage == null ? Output.empty() : this.sSMLMessage;
+        return this.sSMLMessage == null ? Codegen.empty() : this.sSMLMessage;
     }
 
     public BotMessageArgs(
@@ -61,10 +62,10 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotMessageArgs() {
-        this.customPayload = Output.empty();
-        this.imageResponseCard = Output.empty();
-        this.plainTextMessage = Output.empty();
-        this.sSMLMessage = Output.empty();
+        this.customPayload = Codegen.empty();
+        this.imageResponseCard = Codegen.empty();
+        this.plainTextMessage = Codegen.empty();
+        this.sSMLMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customPayload(@Nullable BotCustomPayloadArgs customPayload) {
-            this.customPayload = Output.ofNullable(customPayload);
+            this.customPayload = Codegen.ofNullable(customPayload);
             return this;
         }
         public Builder imageResponseCard(@Nullable Output<BotImageResponseCardArgs> imageResponseCard) {
@@ -106,7 +107,7 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageResponseCard(@Nullable BotImageResponseCardArgs imageResponseCard) {
-            this.imageResponseCard = Output.ofNullable(imageResponseCard);
+            this.imageResponseCard = Codegen.ofNullable(imageResponseCard);
             return this;
         }
         public Builder plainTextMessage(@Nullable Output<BotPlainTextMessageArgs> plainTextMessage) {
@@ -114,7 +115,7 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder plainTextMessage(@Nullable BotPlainTextMessageArgs plainTextMessage) {
-            this.plainTextMessage = Output.ofNullable(plainTextMessage);
+            this.plainTextMessage = Codegen.ofNullable(plainTextMessage);
             return this;
         }
         public Builder sSMLMessage(@Nullable Output<BotSSMLMessageArgs> sSMLMessage) {
@@ -122,7 +123,7 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sSMLMessage(@Nullable BotSSMLMessageArgs sSMLMessage) {
-            this.sSMLMessage = Output.ofNullable(sSMLMessage);
+            this.sSMLMessage = Codegen.ofNullable(sSMLMessage);
             return this;
         }        public BotMessageArgs build() {
             return new BotMessageArgs(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);

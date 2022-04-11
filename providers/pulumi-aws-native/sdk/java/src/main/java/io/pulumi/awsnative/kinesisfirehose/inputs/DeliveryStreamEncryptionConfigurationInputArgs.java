@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationInputKeyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
       private final @Nullable Output<String> keyARN;
 
     public Output<String> getKeyARN() {
-        return this.keyARN == null ? Output.empty() : this.keyARN;
+        return this.keyARN == null ? Codegen.empty() : this.keyARN;
     }
 
     @Import(name="keyType", required=true)
@@ -37,8 +38,8 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
     }
 
     private DeliveryStreamEncryptionConfigurationInputArgs() {
-        this.keyARN = Output.empty();
-        this.keyType = Output.empty();
+        this.keyARN = Codegen.empty();
+        this.keyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
             return this;
         }
         public Builder keyARN(@Nullable String keyARN) {
-            this.keyARN = Output.ofNullable(keyARN);
+            this.keyARN = Codegen.ofNullable(keyARN);
             return this;
         }
         public Builder keyType(Output<DeliveryStreamEncryptionConfigurationInputKeyType> keyType) {

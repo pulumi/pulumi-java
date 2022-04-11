@@ -6,6 +6,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.DatasetConsentStoreIamPolicyArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class DatasetConsentStoreIamPolicy extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public DatasetConsentStoreIamPolicy(String name, DatasetConsentStoreIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:healthcare/v1beta1:DatasetConsentStoreIamPolicy", name, args == null ? DatasetConsentStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:healthcare/v1beta1:DatasetConsentStoreIamPolicy", name, args == null ? DatasetConsentStoreIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatasetConsentStoreIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

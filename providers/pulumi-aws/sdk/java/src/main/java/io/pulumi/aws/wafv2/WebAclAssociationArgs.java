@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class WebAclAssociationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private WebAclAssociationArgs() {
-        this.resourceArn = Output.empty();
-        this.webAclArn = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.webAclArn = Codegen.empty();
     }
 
     public static Builder builder() {

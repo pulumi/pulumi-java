@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> words;
 
     public Output<List<String>> getWords() {
-        return this.words == null ? Output.empty() : this.words;
+        return this.words == null ? Codegen.empty() : this.words;
     }
 
     public GooglePrivacyDlpV2WordListArgs(@Nullable Output<List<String>> words) {
@@ -35,7 +36,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
     }
 
     private GooglePrivacyDlpV2WordListArgs() {
-        this.words = Output.empty();
+        this.words = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GooglePrivacyDlpV2WordListArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder words(@Nullable List<String> words) {
-            this.words = Output.ofNullable(words);
+            this.words = Codegen.ofNullable(words);
             return this;
         }
         public Builder words(String... words) {

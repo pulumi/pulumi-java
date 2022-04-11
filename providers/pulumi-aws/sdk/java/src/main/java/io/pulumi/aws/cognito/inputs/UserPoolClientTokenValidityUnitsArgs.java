@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
       private final @Nullable Output<String> accessToken;
 
     public Output<String> getAccessToken() {
-        return this.accessToken == null ? Output.empty() : this.accessToken;
+        return this.accessToken == null ? Codegen.empty() : this.accessToken;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
       private final @Nullable Output<String> idToken;
 
     public Output<String> getIdToken() {
-        return this.idToken == null ? Output.empty() : this.idToken;
+        return this.idToken == null ? Codegen.empty() : this.idToken;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
       private final @Nullable Output<String> refreshToken;
 
     public Output<String> getRefreshToken() {
-        return this.refreshToken == null ? Output.empty() : this.refreshToken;
+        return this.refreshToken == null ? Codegen.empty() : this.refreshToken;
     }
 
     public UserPoolClientTokenValidityUnitsArgs(
@@ -57,9 +58,9 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
     }
 
     private UserPoolClientTokenValidityUnitsArgs() {
-        this.accessToken = Output.empty();
-        this.idToken = Output.empty();
-        this.refreshToken = Output.empty();
+        this.accessToken = Codegen.empty();
+        this.idToken = Codegen.empty();
+        this.refreshToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
             return this;
         }
         public Builder accessToken(@Nullable String accessToken) {
-            this.accessToken = Output.ofNullable(accessToken);
+            this.accessToken = Codegen.ofNullable(accessToken);
             return this;
         }
         public Builder idToken(@Nullable Output<String> idToken) {
@@ -99,7 +100,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
             return this;
         }
         public Builder idToken(@Nullable String idToken) {
-            this.idToken = Output.ofNullable(idToken);
+            this.idToken = Codegen.ofNullable(idToken);
             return this;
         }
         public Builder refreshToken(@Nullable Output<String> refreshToken) {
@@ -107,7 +108,7 @@ public final class UserPoolClientTokenValidityUnitsArgs extends io.pulumi.resour
             return this;
         }
         public Builder refreshToken(@Nullable String refreshToken) {
-            this.refreshToken = Output.ofNullable(refreshToken);
+            this.refreshToken = Codegen.ofNullable(refreshToken);
             return this;
         }        public UserPoolClientTokenValidityUnitsArgs build() {
             return new UserPoolClientTokenValidityUnitsArgs(accessToken, idToken, refreshToken);

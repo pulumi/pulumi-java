@@ -5,6 +5,7 @@ package io.pulumi.aws.appconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
     }
 
     private ConfigurationProfileValidatorGetArgs() {
-        this.content = Output.empty();
-        this.type = Output.empty();
+        this.content = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ConfigurationProfileValidatorGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder type(Output<String> type) {

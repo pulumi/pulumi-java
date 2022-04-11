@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedUnsafeSysctls;
 
     public Output<List<String>> getAllowedUnsafeSysctls() {
-        return this.allowedUnsafeSysctls == null ? Output.empty() : this.allowedUnsafeSysctls;
+        return this.allowedUnsafeSysctls == null ? Codegen.empty() : this.allowedUnsafeSysctls;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> containerLogMaxFiles;
 
     public Output<Integer> getContainerLogMaxFiles() {
-        return this.containerLogMaxFiles == null ? Output.empty() : this.containerLogMaxFiles;
+        return this.containerLogMaxFiles == null ? Codegen.empty() : this.containerLogMaxFiles;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> containerLogMaxSizeMB;
 
     public Output<Integer> getContainerLogMaxSizeMB() {
-        return this.containerLogMaxSizeMB == null ? Output.empty() : this.containerLogMaxSizeMB;
+        return this.containerLogMaxSizeMB == null ? Codegen.empty() : this.containerLogMaxSizeMB;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> cpuCfsQuota;
 
     public Output<Boolean> getCpuCfsQuota() {
-        return this.cpuCfsQuota == null ? Output.empty() : this.cpuCfsQuota;
+        return this.cpuCfsQuota == null ? Codegen.empty() : this.cpuCfsQuota;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cpuCfsQuotaPeriod;
 
     public Output<String> getCpuCfsQuotaPeriod() {
-        return this.cpuCfsQuotaPeriod == null ? Output.empty() : this.cpuCfsQuotaPeriod;
+        return this.cpuCfsQuotaPeriod == null ? Codegen.empty() : this.cpuCfsQuotaPeriod;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cpuManagerPolicy;
 
     public Output<String> getCpuManagerPolicy() {
-        return this.cpuManagerPolicy == null ? Output.empty() : this.cpuManagerPolicy;
+        return this.cpuManagerPolicy == null ? Codegen.empty() : this.cpuManagerPolicy;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> failSwapOn;
 
     public Output<Boolean> getFailSwapOn() {
-        return this.failSwapOn == null ? Output.empty() : this.failSwapOn;
+        return this.failSwapOn == null ? Codegen.empty() : this.failSwapOn;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> imageGcHighThreshold;
 
     public Output<Integer> getImageGcHighThreshold() {
-        return this.imageGcHighThreshold == null ? Output.empty() : this.imageGcHighThreshold;
+        return this.imageGcHighThreshold == null ? Codegen.empty() : this.imageGcHighThreshold;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> imageGcLowThreshold;
 
     public Output<Integer> getImageGcLowThreshold() {
-        return this.imageGcLowThreshold == null ? Output.empty() : this.imageGcLowThreshold;
+        return this.imageGcLowThreshold == null ? Codegen.empty() : this.imageGcLowThreshold;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> podMaxPids;
 
     public Output<Integer> getPodMaxPids() {
-        return this.podMaxPids == null ? Output.empty() : this.podMaxPids;
+        return this.podMaxPids == null ? Codegen.empty() : this.podMaxPids;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> topologyManagerPolicy;
 
     public Output<String> getTopologyManagerPolicy() {
-        return this.topologyManagerPolicy == null ? Output.empty() : this.topologyManagerPolicy;
+        return this.topologyManagerPolicy == null ? Codegen.empty() : this.topologyManagerPolicy;
     }
 
     public KubeletConfigArgs(
@@ -168,17 +169,17 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KubeletConfigArgs() {
-        this.allowedUnsafeSysctls = Output.empty();
-        this.containerLogMaxFiles = Output.empty();
-        this.containerLogMaxSizeMB = Output.empty();
-        this.cpuCfsQuota = Output.empty();
-        this.cpuCfsQuotaPeriod = Output.empty();
-        this.cpuManagerPolicy = Output.empty();
-        this.failSwapOn = Output.empty();
-        this.imageGcHighThreshold = Output.empty();
-        this.imageGcLowThreshold = Output.empty();
-        this.podMaxPids = Output.empty();
-        this.topologyManagerPolicy = Output.empty();
+        this.allowedUnsafeSysctls = Codegen.empty();
+        this.containerLogMaxFiles = Codegen.empty();
+        this.containerLogMaxSizeMB = Codegen.empty();
+        this.cpuCfsQuota = Codegen.empty();
+        this.cpuCfsQuotaPeriod = Codegen.empty();
+        this.cpuManagerPolicy = Codegen.empty();
+        this.failSwapOn = Codegen.empty();
+        this.imageGcHighThreshold = Codegen.empty();
+        this.imageGcLowThreshold = Codegen.empty();
+        this.podMaxPids = Codegen.empty();
+        this.topologyManagerPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedUnsafeSysctls(@Nullable List<String> allowedUnsafeSysctls) {
-            this.allowedUnsafeSysctls = Output.ofNullable(allowedUnsafeSysctls);
+            this.allowedUnsafeSysctls = Codegen.ofNullable(allowedUnsafeSysctls);
             return this;
         }
         public Builder allowedUnsafeSysctls(String... allowedUnsafeSysctls) {
@@ -237,7 +238,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerLogMaxFiles(@Nullable Integer containerLogMaxFiles) {
-            this.containerLogMaxFiles = Output.ofNullable(containerLogMaxFiles);
+            this.containerLogMaxFiles = Codegen.ofNullable(containerLogMaxFiles);
             return this;
         }
         public Builder containerLogMaxSizeMB(@Nullable Output<Integer> containerLogMaxSizeMB) {
@@ -245,7 +246,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerLogMaxSizeMB(@Nullable Integer containerLogMaxSizeMB) {
-            this.containerLogMaxSizeMB = Output.ofNullable(containerLogMaxSizeMB);
+            this.containerLogMaxSizeMB = Codegen.ofNullable(containerLogMaxSizeMB);
             return this;
         }
         public Builder cpuCfsQuota(@Nullable Output<Boolean> cpuCfsQuota) {
@@ -253,7 +254,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuCfsQuota(@Nullable Boolean cpuCfsQuota) {
-            this.cpuCfsQuota = Output.ofNullable(cpuCfsQuota);
+            this.cpuCfsQuota = Codegen.ofNullable(cpuCfsQuota);
             return this;
         }
         public Builder cpuCfsQuotaPeriod(@Nullable Output<String> cpuCfsQuotaPeriod) {
@@ -261,7 +262,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuCfsQuotaPeriod(@Nullable String cpuCfsQuotaPeriod) {
-            this.cpuCfsQuotaPeriod = Output.ofNullable(cpuCfsQuotaPeriod);
+            this.cpuCfsQuotaPeriod = Codegen.ofNullable(cpuCfsQuotaPeriod);
             return this;
         }
         public Builder cpuManagerPolicy(@Nullable Output<String> cpuManagerPolicy) {
@@ -269,7 +270,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuManagerPolicy(@Nullable String cpuManagerPolicy) {
-            this.cpuManagerPolicy = Output.ofNullable(cpuManagerPolicy);
+            this.cpuManagerPolicy = Codegen.ofNullable(cpuManagerPolicy);
             return this;
         }
         public Builder failSwapOn(@Nullable Output<Boolean> failSwapOn) {
@@ -277,7 +278,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failSwapOn(@Nullable Boolean failSwapOn) {
-            this.failSwapOn = Output.ofNullable(failSwapOn);
+            this.failSwapOn = Codegen.ofNullable(failSwapOn);
             return this;
         }
         public Builder imageGcHighThreshold(@Nullable Output<Integer> imageGcHighThreshold) {
@@ -285,7 +286,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageGcHighThreshold(@Nullable Integer imageGcHighThreshold) {
-            this.imageGcHighThreshold = Output.ofNullable(imageGcHighThreshold);
+            this.imageGcHighThreshold = Codegen.ofNullable(imageGcHighThreshold);
             return this;
         }
         public Builder imageGcLowThreshold(@Nullable Output<Integer> imageGcLowThreshold) {
@@ -293,7 +294,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageGcLowThreshold(@Nullable Integer imageGcLowThreshold) {
-            this.imageGcLowThreshold = Output.ofNullable(imageGcLowThreshold);
+            this.imageGcLowThreshold = Codegen.ofNullable(imageGcLowThreshold);
             return this;
         }
         public Builder podMaxPids(@Nullable Output<Integer> podMaxPids) {
@@ -301,7 +302,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podMaxPids(@Nullable Integer podMaxPids) {
-            this.podMaxPids = Output.ofNullable(podMaxPids);
+            this.podMaxPids = Codegen.ofNullable(podMaxPids);
             return this;
         }
         public Builder topologyManagerPolicy(@Nullable Output<String> topologyManagerPolicy) {
@@ -309,7 +310,7 @@ public final class KubeletConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topologyManagerPolicy(@Nullable String topologyManagerPolicy) {
-            this.topologyManagerPolicy = Output.ofNullable(topologyManagerPolicy);
+            this.topologyManagerPolicy = Codegen.ofNullable(topologyManagerPolicy);
             return this;
         }        public KubeletConfigArgs build() {
             return new KubeletConfigArgs(allowedUnsafeSysctls, containerLogMaxFiles, containerLogMaxSizeMB, cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy, failSwapOn, imageGcHighThreshold, imageGcLowThreshold, podMaxPids, topologyManagerPolicy);

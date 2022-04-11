@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
+        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamArn;
 
     public Output<String> getIamArn() {
-        return this.iamArn == null ? Output.empty() : this.iamArn;
+        return this.iamArn == null ? Codegen.empty() : this.iamArn;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sessionName;
 
     public Output<String> getSessionName() {
-        return this.sessionName == null ? Output.empty() : this.sessionName;
+        return this.sessionName == null ? Codegen.empty() : this.sessionName;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     /**
@@ -122,14 +123,14 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.awsAccountId = Output.empty();
-        this.email = Output.empty();
-        this.iamArn = Output.empty();
-        this.identityType = Output.empty();
-        this.namespace = Output.empty();
-        this.sessionName = Output.empty();
-        this.userName = Output.empty();
-        this.userRole = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.email = Codegen.empty();
+        this.iamArn = Codegen.empty();
+        this.identityType = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.sessionName = Codegen.empty();
+        this.userName = Codegen.empty();
+        this.userRole = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Output.ofNullable(awsAccountId);
+            this.awsAccountId = Codegen.ofNullable(awsAccountId);
             return this;
         }
         public Builder email(Output<String> email) {
@@ -187,7 +188,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamArn(@Nullable String iamArn) {
-            this.iamArn = Output.ofNullable(iamArn);
+            this.iamArn = Codegen.ofNullable(iamArn);
             return this;
         }
         public Builder identityType(Output<String> identityType) {
@@ -203,7 +204,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder sessionName(@Nullable Output<String> sessionName) {
@@ -211,7 +212,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionName(@Nullable String sessionName) {
-            this.sessionName = Output.ofNullable(sessionName);
+            this.sessionName = Codegen.ofNullable(sessionName);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -219,7 +220,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }
         public Builder userRole(Output<String> userRole) {

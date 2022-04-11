@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public DailyMaintenanceWindowArgs(@Nullable Output<String> startTime) {
@@ -34,7 +35,7 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
     }
 
     private DailyMaintenanceWindowArgs() {
-        this.startTime = Output.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DailyMaintenanceWindowArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public DailyMaintenanceWindowArgs build() {
             return new DailyMaintenanceWindowArgs(startTime);

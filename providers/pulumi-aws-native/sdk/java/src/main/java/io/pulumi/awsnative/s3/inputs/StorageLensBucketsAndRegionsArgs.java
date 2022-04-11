@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> buckets;
 
     public Output<List<String>> getBuckets() {
-        return this.buckets == null ? Output.empty() : this.buckets;
+        return this.buckets == null ? Codegen.empty() : this.buckets;
     }
 
     @Import(name="regions")
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     public StorageLensBucketsAndRegionsArgs(
@@ -41,8 +42,8 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
     }
 
     private StorageLensBucketsAndRegionsArgs() {
-        this.buckets = Output.empty();
-        this.regions = Output.empty();
+        this.buckets = Codegen.empty();
+        this.regions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder buckets(@Nullable List<String> buckets) {
-            this.buckets = Output.ofNullable(buckets);
+            this.buckets = Codegen.ofNullable(buckets);
             return this;
         }
         public Builder buckets(String... buckets) {
@@ -83,7 +84,7 @@ public final class StorageLensBucketsAndRegionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {

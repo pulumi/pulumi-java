@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
       private final @Nullable Output<Boolean> cpuIdle;
 
     public Output<Boolean> getCpuIdle() {
-        return this.cpuIdle == null ? Output.empty() : this.cpuIdle;
+        return this.cpuIdle == null ? Codegen.empty() : this.cpuIdle;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
       private final @Nullable Output<Map<String,String>> limits;
 
     public Output<Map<String,String>> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     public GoogleCloudRunOpV2ResourceRequirementsArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
     }
 
     private GoogleCloudRunOpV2ResourceRequirementsArgs() {
-        this.cpuIdle = Output.empty();
-        this.limits = Output.empty();
+        this.cpuIdle = Codegen.empty();
+        this.limits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
             return this;
         }
         public Builder cpuIdle(@Nullable Boolean cpuIdle) {
-            this.cpuIdle = Output.ofNullable(cpuIdle);
+            this.cpuIdle = Codegen.ofNullable(cpuIdle);
             return this;
         }
         public Builder limits(@Nullable Output<Map<String,String>> limits) {
@@ -89,7 +90,7 @@ public final class GoogleCloudRunOpV2ResourceRequirementsArgs extends io.pulumi.
             return this;
         }
         public Builder limits(@Nullable Map<String,String> limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }        public GoogleCloudRunOpV2ResourceRequirementsArgs build() {
             return new GoogleCloudRunOpV2ResourceRequirementsArgs(cpuIdle, limits);

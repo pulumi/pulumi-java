@@ -6,6 +6,7 @@ package io.pulumi.awsnative.rekognition;
 import io.pulumi.awsnative.rekognition.inputs.CollectionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CollectionTagArgs>> tags;
 
     public Output<List<CollectionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CollectionArgs(
@@ -42,8 +43,8 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CollectionArgs() {
-        this.collectionId = Output.empty();
-        this.tags = Output.empty();
+        this.collectionId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<CollectionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(CollectionTagArgs... tags) {

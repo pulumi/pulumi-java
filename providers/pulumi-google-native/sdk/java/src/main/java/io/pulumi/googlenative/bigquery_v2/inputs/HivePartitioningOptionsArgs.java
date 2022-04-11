@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
+        return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> sourceUriPrefix;
 
     public Output<String> getSourceUriPrefix() {
-        return this.sourceUriPrefix == null ? Output.empty() : this.sourceUriPrefix;
+        return this.sourceUriPrefix == null ? Codegen.empty() : this.sourceUriPrefix;
     }
 
     public HivePartitioningOptionsArgs(
@@ -58,9 +59,9 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private HivePartitioningOptionsArgs() {
-        this.mode = Output.empty();
-        this.requirePartitionFilter = Output.empty();
-        this.sourceUriPrefix = Output.empty();
+        this.mode = Codegen.empty();
+        this.requirePartitionFilter = Codegen.empty();
+        this.sourceUriPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
@@ -100,7 +101,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Codegen.ofNullable(requirePartitionFilter);
             return this;
         }
         public Builder sourceUriPrefix(@Nullable Output<String> sourceUriPrefix) {
@@ -108,7 +109,7 @@ public final class HivePartitioningOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sourceUriPrefix(@Nullable String sourceUriPrefix) {
-            this.sourceUriPrefix = Output.ofNullable(sourceUriPrefix);
+            this.sourceUriPrefix = Codegen.ofNullable(sourceUriPrefix);
             return this;
         }        public HivePartitioningOptionsArgs build() {
             return new HivePartitioningOptionsArgs(mode, requirePartitionFilter, sourceUriPrefix);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.ClusterAutoscalingConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig;
 
     public Output<ClusterAutoscalingConfigArgs> getClusterAutoscalingConfig() {
-        return this.clusterAutoscalingConfig == null ? Output.empty() : this.clusterAutoscalingConfig;
+        return this.clusterAutoscalingConfig == null ? Codegen.empty() : this.clusterAutoscalingConfig;
     }
 
     public ClusterConfigArgs(@Nullable Output<ClusterAutoscalingConfigArgs> clusterAutoscalingConfig) {
@@ -34,7 +35,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterConfigArgs() {
-        this.clusterAutoscalingConfig = Output.empty();
+        this.clusterAutoscalingConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterAutoscalingConfig(@Nullable ClusterAutoscalingConfigArgs clusterAutoscalingConfig) {
-            this.clusterAutoscalingConfig = Output.ofNullable(clusterAutoscalingConfig);
+            this.clusterAutoscalingConfig = Codegen.ofNullable(clusterAutoscalingConfig);
             return this;
         }        public ClusterConfigArgs build() {
             return new ClusterConfigArgs(clusterAutoscalingConfig);

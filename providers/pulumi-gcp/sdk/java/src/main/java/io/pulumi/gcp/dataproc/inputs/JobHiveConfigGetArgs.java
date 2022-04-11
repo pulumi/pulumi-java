@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> continueOnFailure;
 
     public Output<Boolean> getContinueOnFailure() {
-        return this.continueOnFailure == null ? Output.empty() : this.continueOnFailure;
+        return this.continueOnFailure == null ? Codegen.empty() : this.continueOnFailure;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> jarFileUris;
 
     public Output<List<String>> getJarFileUris() {
-        return this.jarFileUris == null ? Output.empty() : this.jarFileUris;
+        return this.jarFileUris == null ? Codegen.empty() : this.jarFileUris;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> queryFileUri;
 
     public Output<String> getQueryFileUri() {
-        return this.queryFileUri == null ? Output.empty() : this.queryFileUri;
+        return this.queryFileUri == null ? Codegen.empty() : this.queryFileUri;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> queryLists;
 
     public Output<List<String>> getQueryLists() {
-        return this.queryLists == null ? Output.empty() : this.queryLists;
+        return this.queryLists == null ? Codegen.empty() : this.queryLists;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> scriptVariables;
 
     public Output<Map<String,String>> getScriptVariables() {
-        return this.scriptVariables == null ? Output.empty() : this.scriptVariables;
+        return this.scriptVariables == null ? Codegen.empty() : this.scriptVariables;
     }
 
     public JobHiveConfigGetArgs(
@@ -101,12 +102,12 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobHiveConfigGetArgs() {
-        this.continueOnFailure = Output.empty();
-        this.jarFileUris = Output.empty();
-        this.properties = Output.empty();
-        this.queryFileUri = Output.empty();
-        this.queryLists = Output.empty();
-        this.scriptVariables = Output.empty();
+        this.continueOnFailure = Codegen.empty();
+        this.jarFileUris = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.queryFileUri = Codegen.empty();
+        this.queryLists = Codegen.empty();
+        this.scriptVariables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder continueOnFailure(@Nullable Boolean continueOnFailure) {
-            this.continueOnFailure = Output.ofNullable(continueOnFailure);
+            this.continueOnFailure = Codegen.ofNullable(continueOnFailure);
             return this;
         }
         public Builder jarFileUris(@Nullable Output<List<String>> jarFileUris) {
@@ -152,7 +153,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder jarFileUris(@Nullable List<String> jarFileUris) {
-            this.jarFileUris = Output.ofNullable(jarFileUris);
+            this.jarFileUris = Codegen.ofNullable(jarFileUris);
             return this;
         }
         public Builder jarFileUris(String... jarFileUris) {
@@ -163,7 +164,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder queryFileUri(@Nullable Output<String> queryFileUri) {
@@ -171,7 +172,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder queryFileUri(@Nullable String queryFileUri) {
-            this.queryFileUri = Output.ofNullable(queryFileUri);
+            this.queryFileUri = Codegen.ofNullable(queryFileUri);
             return this;
         }
         public Builder queryLists(@Nullable Output<List<String>> queryLists) {
@@ -179,7 +180,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder queryLists(@Nullable List<String> queryLists) {
-            this.queryLists = Output.ofNullable(queryLists);
+            this.queryLists = Codegen.ofNullable(queryLists);
             return this;
         }
         public Builder queryLists(String... queryLists) {
@@ -190,7 +191,7 @@ public final class JobHiveConfigGetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder scriptVariables(@Nullable Map<String,String> scriptVariables) {
-            this.scriptVariables = Output.ofNullable(scriptVariables);
+            this.scriptVariables = Codegen.ofNullable(scriptVariables);
             return this;
         }        public JobHiveConfigGetArgs build() {
             return new JobHiveConfigGetArgs(continueOnFailure, jarFileUris, properties, queryFileUri, queryLists, scriptVariables);

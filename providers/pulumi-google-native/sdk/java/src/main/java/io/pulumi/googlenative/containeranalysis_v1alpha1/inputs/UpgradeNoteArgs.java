@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UpgradeDistributionArgs>> distributions;
 
     public Output<List<UpgradeDistributionArgs>> getDistributions() {
-        return this.distributions == null ? Output.empty() : this.distributions;
+        return this.distributions == null ? Codegen.empty() : this.distributions;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> package_;
 
     public Output<String> getPackage_() {
-        return this.package_ == null ? Output.empty() : this.package_;
+        return this.package_ == null ? Codegen.empty() : this.package_;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VersionArgs> version;
 
     public Output<VersionArgs> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public UpgradeNoteArgs(
@@ -64,9 +65,9 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UpgradeNoteArgs() {
-        this.distributions = Output.empty();
-        this.package_ = Output.empty();
-        this.version = Output.empty();
+        this.distributions = Codegen.empty();
+        this.package_ = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distributions(@Nullable List<UpgradeDistributionArgs> distributions) {
-            this.distributions = Output.ofNullable(distributions);
+            this.distributions = Codegen.ofNullable(distributions);
             return this;
         }
         public Builder distributions(UpgradeDistributionArgs... distributions) {
@@ -109,7 +110,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder package_(@Nullable String package_) {
-            this.package_ = Output.ofNullable(package_);
+            this.package_ = Codegen.ofNullable(package_);
             return this;
         }
         public Builder version(@Nullable Output<VersionArgs> version) {
@@ -117,7 +118,7 @@ public final class UpgradeNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable VersionArgs version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public UpgradeNoteArgs build() {
             return new UpgradeNoteArgs(distributions, package_, version);

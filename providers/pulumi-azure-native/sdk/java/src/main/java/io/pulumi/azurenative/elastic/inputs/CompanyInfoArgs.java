@@ -5,6 +5,7 @@ package io.pulumi.azurenative.elastic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> business;
 
     public Output<String> getBusiness() {
-        return this.business == null ? Output.empty() : this.business;
+        return this.business == null ? Codegen.empty() : this.business;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> country;
 
     public Output<String> getCountry() {
-        return this.country == null ? Output.empty() : this.country;
+        return this.country == null ? Codegen.empty() : this.country;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> employeesNumber;
 
     public Output<String> getEmployeesNumber() {
-        return this.employeesNumber == null ? Output.empty() : this.employeesNumber;
+        return this.employeesNumber == null ? Codegen.empty() : this.employeesNumber;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public CompanyInfoArgs(
@@ -87,11 +88,11 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CompanyInfoArgs() {
-        this.business = Output.empty();
-        this.country = Output.empty();
-        this.domain = Output.empty();
-        this.employeesNumber = Output.empty();
-        this.state = Output.empty();
+        this.business = Codegen.empty();
+        this.country = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.employeesNumber = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder business(@Nullable String business) {
-            this.business = Output.ofNullable(business);
+            this.business = Codegen.ofNullable(business);
             return this;
         }
         public Builder country(@Nullable Output<String> country) {
@@ -135,7 +136,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder country(@Nullable String country) {
-            this.country = Output.ofNullable(country);
+            this.country = Codegen.ofNullable(country);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -143,7 +144,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder employeesNumber(@Nullable Output<String> employeesNumber) {
@@ -151,7 +152,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder employeesNumber(@Nullable String employeesNumber) {
-            this.employeesNumber = Output.ofNullable(employeesNumber);
+            this.employeesNumber = Codegen.ofNullable(employeesNumber);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -159,7 +160,7 @@ public final class CompanyInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public CompanyInfoArgs build() {
             return new CompanyInfoArgs(business, country, domain, employeesNumber, state);

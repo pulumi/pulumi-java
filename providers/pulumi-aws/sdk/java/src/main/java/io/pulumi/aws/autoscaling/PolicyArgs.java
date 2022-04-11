@@ -8,6 +8,7 @@ import io.pulumi.aws.autoscaling.inputs.PolicyStepAdjustmentArgs;
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> adjustmentType;
 
     public Output<String> getAdjustmentType() {
-        return this.adjustmentType == null ? Output.empty() : this.adjustmentType;
+        return this.adjustmentType == null ? Codegen.empty() : this.adjustmentType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> cooldown;
 
     public Output<Integer> getCooldown() {
-        return this.cooldown == null ? Output.empty() : this.cooldown;
+        return this.cooldown == null ? Codegen.empty() : this.cooldown;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> estimatedInstanceWarmup;
 
     public Output<Integer> getEstimatedInstanceWarmup() {
-        return this.estimatedInstanceWarmup == null ? Output.empty() : this.estimatedInstanceWarmup;
+        return this.estimatedInstanceWarmup == null ? Codegen.empty() : this.estimatedInstanceWarmup;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metricAggregationType;
 
     public Output<String> getMetricAggregationType() {
-        return this.metricAggregationType == null ? Output.empty() : this.metricAggregationType;
+        return this.metricAggregationType == null ? Codegen.empty() : this.metricAggregationType;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minAdjustmentMagnitude;
 
     public Output<Integer> getMinAdjustmentMagnitude() {
-        return this.minAdjustmentMagnitude == null ? Output.empty() : this.minAdjustmentMagnitude;
+        return this.minAdjustmentMagnitude == null ? Codegen.empty() : this.minAdjustmentMagnitude;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> policyType;
 
     public Output<String> getPolicyType() {
-        return this.policyType == null ? Output.empty() : this.policyType;
+        return this.policyType == null ? Codegen.empty() : this.policyType;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration;
 
     public Output<PolicyPredictiveScalingConfigurationArgs> getPredictiveScalingConfiguration() {
-        return this.predictiveScalingConfiguration == null ? Output.empty() : this.predictiveScalingConfiguration;
+        return this.predictiveScalingConfiguration == null ? Codegen.empty() : this.predictiveScalingConfiguration;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> scalingAdjustment;
 
     public Output<Integer> getScalingAdjustment() {
-        return this.scalingAdjustment == null ? Output.empty() : this.scalingAdjustment;
+        return this.scalingAdjustment == null ? Codegen.empty() : this.scalingAdjustment;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PolicyStepAdjustmentArgs>> stepAdjustments;
 
     public Output<List<PolicyStepAdjustmentArgs>> getStepAdjustments() {
-        return this.stepAdjustments == null ? Output.empty() : this.stepAdjustments;
+        return this.stepAdjustments == null ? Codegen.empty() : this.stepAdjustments;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PolicyTargetTrackingConfigurationArgs> targetTrackingConfiguration;
 
     public Output<PolicyTargetTrackingConfigurationArgs> getTargetTrackingConfiguration() {
-        return this.targetTrackingConfiguration == null ? Output.empty() : this.targetTrackingConfiguration;
+        return this.targetTrackingConfiguration == null ? Codegen.empty() : this.targetTrackingConfiguration;
     }
 
     public PolicyArgs(
@@ -182,18 +183,18 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.adjustmentType = Output.empty();
-        this.autoscalingGroupName = Output.empty();
-        this.cooldown = Output.empty();
-        this.estimatedInstanceWarmup = Output.empty();
-        this.metricAggregationType = Output.empty();
-        this.minAdjustmentMagnitude = Output.empty();
-        this.name = Output.empty();
-        this.policyType = Output.empty();
-        this.predictiveScalingConfiguration = Output.empty();
-        this.scalingAdjustment = Output.empty();
-        this.stepAdjustments = Output.empty();
-        this.targetTrackingConfiguration = Output.empty();
+        this.adjustmentType = Codegen.empty();
+        this.autoscalingGroupName = Codegen.empty();
+        this.cooldown = Codegen.empty();
+        this.estimatedInstanceWarmup = Codegen.empty();
+        this.metricAggregationType = Codegen.empty();
+        this.minAdjustmentMagnitude = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policyType = Codegen.empty();
+        this.predictiveScalingConfiguration = Codegen.empty();
+        this.scalingAdjustment = Codegen.empty();
+        this.stepAdjustments = Codegen.empty();
+        this.targetTrackingConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -243,7 +244,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder adjustmentType(@Nullable String adjustmentType) {
-            this.adjustmentType = Output.ofNullable(adjustmentType);
+            this.adjustmentType = Codegen.ofNullable(adjustmentType);
             return this;
         }
         public Builder autoscalingGroupName(Output<String> autoscalingGroupName) {
@@ -259,7 +260,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cooldown(@Nullable Integer cooldown) {
-            this.cooldown = Output.ofNullable(cooldown);
+            this.cooldown = Codegen.ofNullable(cooldown);
             return this;
         }
         public Builder estimatedInstanceWarmup(@Nullable Output<Integer> estimatedInstanceWarmup) {
@@ -267,7 +268,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder estimatedInstanceWarmup(@Nullable Integer estimatedInstanceWarmup) {
-            this.estimatedInstanceWarmup = Output.ofNullable(estimatedInstanceWarmup);
+            this.estimatedInstanceWarmup = Codegen.ofNullable(estimatedInstanceWarmup);
             return this;
         }
         public Builder metricAggregationType(@Nullable Output<String> metricAggregationType) {
@@ -275,7 +276,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricAggregationType(@Nullable String metricAggregationType) {
-            this.metricAggregationType = Output.ofNullable(metricAggregationType);
+            this.metricAggregationType = Codegen.ofNullable(metricAggregationType);
             return this;
         }
         public Builder minAdjustmentMagnitude(@Nullable Output<Integer> minAdjustmentMagnitude) {
@@ -283,7 +284,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minAdjustmentMagnitude(@Nullable Integer minAdjustmentMagnitude) {
-            this.minAdjustmentMagnitude = Output.ofNullable(minAdjustmentMagnitude);
+            this.minAdjustmentMagnitude = Codegen.ofNullable(minAdjustmentMagnitude);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -291,7 +292,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policyType(@Nullable Output<String> policyType) {
@@ -299,7 +300,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyType(@Nullable String policyType) {
-            this.policyType = Output.ofNullable(policyType);
+            this.policyType = Codegen.ofNullable(policyType);
             return this;
         }
         public Builder predictiveScalingConfiguration(@Nullable Output<PolicyPredictiveScalingConfigurationArgs> predictiveScalingConfiguration) {
@@ -307,7 +308,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predictiveScalingConfiguration(@Nullable PolicyPredictiveScalingConfigurationArgs predictiveScalingConfiguration) {
-            this.predictiveScalingConfiguration = Output.ofNullable(predictiveScalingConfiguration);
+            this.predictiveScalingConfiguration = Codegen.ofNullable(predictiveScalingConfiguration);
             return this;
         }
         public Builder scalingAdjustment(@Nullable Output<Integer> scalingAdjustment) {
@@ -315,7 +316,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scalingAdjustment(@Nullable Integer scalingAdjustment) {
-            this.scalingAdjustment = Output.ofNullable(scalingAdjustment);
+            this.scalingAdjustment = Codegen.ofNullable(scalingAdjustment);
             return this;
         }
         public Builder stepAdjustments(@Nullable Output<List<PolicyStepAdjustmentArgs>> stepAdjustments) {
@@ -323,7 +324,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stepAdjustments(@Nullable List<PolicyStepAdjustmentArgs> stepAdjustments) {
-            this.stepAdjustments = Output.ofNullable(stepAdjustments);
+            this.stepAdjustments = Codegen.ofNullable(stepAdjustments);
             return this;
         }
         public Builder stepAdjustments(PolicyStepAdjustmentArgs... stepAdjustments) {
@@ -334,7 +335,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetTrackingConfiguration(@Nullable PolicyTargetTrackingConfigurationArgs targetTrackingConfiguration) {
-            this.targetTrackingConfiguration = Output.ofNullable(targetTrackingConfiguration);
+            this.targetTrackingConfiguration = Codegen.ofNullable(targetTrackingConfiguration);
             return this;
         }        public PolicyArgs build() {
             return new PolicyArgs(adjustmentType, autoscalingGroupName, cooldown, estimatedInstanceWarmup, metricAggregationType, minAdjustmentMagnitude, name, policyType, predictiveScalingConfiguration, scalingAdjustment, stepAdjustments, targetTrackingConfiguration);

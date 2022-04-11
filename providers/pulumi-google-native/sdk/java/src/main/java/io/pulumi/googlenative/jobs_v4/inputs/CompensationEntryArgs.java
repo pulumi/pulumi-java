@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.jobs_v4.enums.CompensationEntryType;
 import io.pulumi.googlenative.jobs_v4.enums.CompensationEntryUnit;
 import io.pulumi.googlenative.jobs_v4.inputs.CompensationRangeArgs;
@@ -31,7 +32,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<MoneyArgs> amount;
 
     public Output<MoneyArgs> getAmount() {
-        return this.amount == null ? Output.empty() : this.amount;
+        return this.amount == null ? Codegen.empty() : this.amount;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Double> expectedUnitsPerYear;
 
     public Output<Double> getExpectedUnitsPerYear() {
-        return this.expectedUnitsPerYear == null ? Output.empty() : this.expectedUnitsPerYear;
+        return this.expectedUnitsPerYear == null ? Codegen.empty() : this.expectedUnitsPerYear;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CompensationRangeArgs> range;
 
     public Output<CompensationRangeArgs> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CompensationEntryType> type;
 
     public Output<CompensationEntryType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CompensationEntryUnit> unit;
 
     public Output<CompensationEntryUnit> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public CompensationEntryArgs(
@@ -105,12 +106,12 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CompensationEntryArgs() {
-        this.amount = Output.empty();
-        this.description = Output.empty();
-        this.expectedUnitsPerYear = Output.empty();
-        this.range = Output.empty();
-        this.type = Output.empty();
-        this.unit = Output.empty();
+        this.amount = Codegen.empty();
+        this.description = Codegen.empty();
+        this.expectedUnitsPerYear = Codegen.empty();
+        this.range = Codegen.empty();
+        this.type = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder amount(@Nullable MoneyArgs amount) {
-            this.amount = Output.ofNullable(amount);
+            this.amount = Codegen.ofNullable(amount);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -156,7 +157,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expectedUnitsPerYear(@Nullable Output<Double> expectedUnitsPerYear) {
@@ -164,7 +165,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder expectedUnitsPerYear(@Nullable Double expectedUnitsPerYear) {
-            this.expectedUnitsPerYear = Output.ofNullable(expectedUnitsPerYear);
+            this.expectedUnitsPerYear = Codegen.ofNullable(expectedUnitsPerYear);
             return this;
         }
         public Builder range(@Nullable Output<CompensationRangeArgs> range) {
@@ -172,7 +173,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder range(@Nullable CompensationRangeArgs range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }
         public Builder type(@Nullable Output<CompensationEntryType> type) {
@@ -180,7 +181,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder type(@Nullable CompensationEntryType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder unit(@Nullable Output<CompensationEntryUnit> unit) {
@@ -188,7 +189,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder unit(@Nullable CompensationEntryUnit unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public CompensationEntryArgs build() {
             return new CompensationEntryArgs(amount, description, expectedUnitsPerYear, range, type, unit);

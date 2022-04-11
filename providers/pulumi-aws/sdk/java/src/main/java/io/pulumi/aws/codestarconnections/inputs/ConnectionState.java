@@ -5,6 +5,7 @@ package io.pulumi.aws.codestarconnections.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectionStatus;
 
     public Output<String> getConnectionStatus() {
-        return this.connectionStatus == null ? Output.empty() : this.connectionStatus;
+        return this.connectionStatus == null ? Codegen.empty() : this.connectionStatus;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hostArn;
 
     public Output<String> getHostArn() {
-        return this.hostArn == null ? Output.empty() : this.hostArn;
+        return this.hostArn == null ? Codegen.empty() : this.hostArn;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> providerType;
 
     public Output<String> getProviderType() {
-        return this.providerType == null ? Output.empty() : this.providerType;
+        return this.providerType == null ? Codegen.empty() : this.providerType;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ConnectionState(
@@ -110,13 +111,13 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionState() {
-        this.arn = Output.empty();
-        this.connectionStatus = Output.empty();
-        this.hostArn = Output.empty();
-        this.name = Output.empty();
-        this.providerType = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.connectionStatus = Codegen.empty();
+        this.hostArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.providerType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder connectionStatus(@Nullable Output<String> connectionStatus) {
@@ -164,7 +165,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionStatus(@Nullable String connectionStatus) {
-            this.connectionStatus = Output.ofNullable(connectionStatus);
+            this.connectionStatus = Codegen.ofNullable(connectionStatus);
             return this;
         }
         public Builder hostArn(@Nullable Output<String> hostArn) {
@@ -172,7 +173,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostArn(@Nullable String hostArn) {
-            this.hostArn = Output.ofNullable(hostArn);
+            this.hostArn = Codegen.ofNullable(hostArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -180,7 +181,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder providerType(@Nullable Output<String> providerType) {
@@ -188,7 +189,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder providerType(@Nullable String providerType) {
-            this.providerType = Output.ofNullable(providerType);
+            this.providerType = Codegen.ofNullable(providerType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -196,7 +197,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -204,7 +205,7 @@ public final class ConnectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ConnectionState build() {
             return new ConnectionState(arn, connectionStatus, hostArn, name, providerType, tags, tagsAll);

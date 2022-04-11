@@ -10,6 +10,7 @@ import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> allowForwardedTraffic;
 
     public Output<Boolean> getAllowForwardedTraffic() {
-        return this.allowForwardedTraffic == null ? Output.empty() : this.allowForwardedTraffic;
+        return this.allowForwardedTraffic == null ? Codegen.empty() : this.allowForwardedTraffic;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> allowGatewayTransit;
 
     public Output<Boolean> getAllowGatewayTransit() {
-        return this.allowGatewayTransit == null ? Output.empty() : this.allowGatewayTransit;
+        return this.allowGatewayTransit == null ? Codegen.empty() : this.allowGatewayTransit;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
     public Output<Boolean> getAllowVirtualNetworkAccess() {
-        return this.allowVirtualNetworkAccess == null ? Output.empty() : this.allowVirtualNetworkAccess;
+        return this.allowVirtualNetworkAccess == null ? Codegen.empty() : this.allowVirtualNetworkAccess;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> doNotVerifyRemoteGateways;
 
     public Output<Boolean> getDoNotVerifyRemoteGateways() {
-        return this.doNotVerifyRemoteGateways == null ? Output.empty() : this.doNotVerifyRemoteGateways;
+        return this.doNotVerifyRemoteGateways == null ? Codegen.empty() : this.doNotVerifyRemoteGateways;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState;
 
     public Output<Either<String,VirtualNetworkPeeringState>> getPeeringState() {
-        return this.peeringState == null ? Output.empty() : this.peeringState;
+        return this.peeringState == null ? Codegen.empty() : this.peeringState;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
     public Output<AddressSpaceArgs> getRemoteAddressSpace() {
-        return this.remoteAddressSpace == null ? Output.empty() : this.remoteAddressSpace;
+        return this.remoteAddressSpace == null ? Codegen.empty() : this.remoteAddressSpace;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
 
     public Output<VirtualNetworkBgpCommunitiesArgs> getRemoteBgpCommunities() {
-        return this.remoteBgpCommunities == null ? Output.empty() : this.remoteBgpCommunities;
+        return this.remoteBgpCommunities == null ? Codegen.empty() : this.remoteBgpCommunities;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
     public Output<SubResourceArgs> getRemoteVirtualNetwork() {
-        return this.remoteVirtualNetwork == null ? Output.empty() : this.remoteVirtualNetwork;
+        return this.remoteVirtualNetwork == null ? Codegen.empty() : this.remoteVirtualNetwork;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> useRemoteGateways;
 
     public Output<Boolean> getUseRemoteGateways() {
-        return this.useRemoteGateways == null ? Output.empty() : this.useRemoteGateways;
+        return this.useRemoteGateways == null ? Codegen.empty() : this.useRemoteGateways;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> virtualNetworkPeeringName;
 
     public Output<String> getVirtualNetworkPeeringName() {
-        return this.virtualNetworkPeeringName == null ? Output.empty() : this.virtualNetworkPeeringName;
+        return this.virtualNetworkPeeringName == null ? Codegen.empty() : this.virtualNetworkPeeringName;
     }
 
     public VirtualNetworkPeeringArgs(
@@ -219,21 +220,21 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
     }
 
     private VirtualNetworkPeeringArgs() {
-        this.allowForwardedTraffic = Output.empty();
-        this.allowGatewayTransit = Output.empty();
-        this.allowVirtualNetworkAccess = Output.empty();
-        this.doNotVerifyRemoteGateways = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.peeringState = Output.empty();
-        this.remoteAddressSpace = Output.empty();
-        this.remoteBgpCommunities = Output.empty();
-        this.remoteVirtualNetwork = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.type = Output.empty();
-        this.useRemoteGateways = Output.empty();
-        this.virtualNetworkName = Output.empty();
-        this.virtualNetworkPeeringName = Output.empty();
+        this.allowForwardedTraffic = Codegen.empty();
+        this.allowGatewayTransit = Codegen.empty();
+        this.allowVirtualNetworkAccess = Codegen.empty();
+        this.doNotVerifyRemoteGateways = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.peeringState = Codegen.empty();
+        this.remoteAddressSpace = Codegen.empty();
+        this.remoteBgpCommunities = Codegen.empty();
+        this.remoteVirtualNetwork = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.type = Codegen.empty();
+        this.useRemoteGateways = Codegen.empty();
+        this.virtualNetworkName = Codegen.empty();
+        this.virtualNetworkPeeringName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -289,7 +290,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowForwardedTraffic(@Nullable Boolean allowForwardedTraffic) {
-            this.allowForwardedTraffic = Output.ofNullable(allowForwardedTraffic);
+            this.allowForwardedTraffic = Codegen.ofNullable(allowForwardedTraffic);
             return this;
         }
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
@@ -297,7 +298,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowGatewayTransit(@Nullable Boolean allowGatewayTransit) {
-            this.allowGatewayTransit = Output.ofNullable(allowGatewayTransit);
+            this.allowGatewayTransit = Codegen.ofNullable(allowGatewayTransit);
             return this;
         }
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
@@ -305,7 +306,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowVirtualNetworkAccess(@Nullable Boolean allowVirtualNetworkAccess) {
-            this.allowVirtualNetworkAccess = Output.ofNullable(allowVirtualNetworkAccess);
+            this.allowVirtualNetworkAccess = Codegen.ofNullable(allowVirtualNetworkAccess);
             return this;
         }
         public Builder doNotVerifyRemoteGateways(@Nullable Output<Boolean> doNotVerifyRemoteGateways) {
@@ -313,7 +314,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder doNotVerifyRemoteGateways(@Nullable Boolean doNotVerifyRemoteGateways) {
-            this.doNotVerifyRemoteGateways = Output.ofNullable(doNotVerifyRemoteGateways);
+            this.doNotVerifyRemoteGateways = Codegen.ofNullable(doNotVerifyRemoteGateways);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -321,7 +322,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -329,7 +330,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder peeringState(@Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState) {
@@ -337,7 +338,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder peeringState(@Nullable Either<String,VirtualNetworkPeeringState> peeringState) {
-            this.peeringState = Output.ofNullable(peeringState);
+            this.peeringState = Codegen.ofNullable(peeringState);
             return this;
         }
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
@@ -345,7 +346,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder remoteAddressSpace(@Nullable AddressSpaceArgs remoteAddressSpace) {
-            this.remoteAddressSpace = Output.ofNullable(remoteAddressSpace);
+            this.remoteAddressSpace = Codegen.ofNullable(remoteAddressSpace);
             return this;
         }
         public Builder remoteBgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities) {
@@ -353,7 +354,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder remoteBgpCommunities(@Nullable VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
-            this.remoteBgpCommunities = Output.ofNullable(remoteBgpCommunities);
+            this.remoteBgpCommunities = Codegen.ofNullable(remoteBgpCommunities);
             return this;
         }
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
@@ -361,7 +362,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder remoteVirtualNetwork(@Nullable SubResourceArgs remoteVirtualNetwork) {
-            this.remoteVirtualNetwork = Output.ofNullable(remoteVirtualNetwork);
+            this.remoteVirtualNetwork = Codegen.ofNullable(remoteVirtualNetwork);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -377,7 +378,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder useRemoteGateways(@Nullable Output<Boolean> useRemoteGateways) {
@@ -385,7 +386,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder useRemoteGateways(@Nullable Boolean useRemoteGateways) {
-            this.useRemoteGateways = Output.ofNullable(useRemoteGateways);
+            this.useRemoteGateways = Codegen.ofNullable(useRemoteGateways);
             return this;
         }
         public Builder virtualNetworkName(Output<String> virtualNetworkName) {
@@ -401,7 +402,7 @@ public final class VirtualNetworkPeeringArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder virtualNetworkPeeringName(@Nullable String virtualNetworkPeeringName) {
-            this.virtualNetworkPeeringName = Output.ofNullable(virtualNetworkPeeringName);
+            this.virtualNetworkPeeringName = Codegen.ofNullable(virtualNetworkPeeringName);
             return this;
         }        public VirtualNetworkPeeringArgs build() {
             return new VirtualNetworkPeeringArgs(allowForwardedTraffic, allowGatewayTransit, allowVirtualNetworkAccess, doNotVerifyRemoteGateways, id, name, peeringState, remoteAddressSpace, remoteBgpCommunities, remoteVirtualNetwork, resourceGroupName, type, useRemoteGateways, virtualNetworkName, virtualNetworkPeeringName);

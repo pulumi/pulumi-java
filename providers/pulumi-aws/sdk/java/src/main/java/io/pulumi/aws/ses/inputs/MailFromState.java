@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> behaviorOnMxFailure;
 
     public Output<String> getBehaviorOnMxFailure() {
-        return this.behaviorOnMxFailure == null ? Output.empty() : this.behaviorOnMxFailure;
+        return this.behaviorOnMxFailure == null ? Codegen.empty() : this.behaviorOnMxFailure;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mailFromDomain;
 
     public Output<String> getMailFromDomain() {
-        return this.mailFromDomain == null ? Output.empty() : this.mailFromDomain;
+        return this.mailFromDomain == null ? Codegen.empty() : this.mailFromDomain;
     }
 
     public MailFromState(
@@ -57,9 +58,9 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
     }
 
     private MailFromState() {
-        this.behaviorOnMxFailure = Output.empty();
-        this.domain = Output.empty();
-        this.mailFromDomain = Output.empty();
+        this.behaviorOnMxFailure = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.mailFromDomain = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder behaviorOnMxFailure(@Nullable String behaviorOnMxFailure) {
-            this.behaviorOnMxFailure = Output.ofNullable(behaviorOnMxFailure);
+            this.behaviorOnMxFailure = Codegen.ofNullable(behaviorOnMxFailure);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -99,7 +100,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder mailFromDomain(@Nullable Output<String> mailFromDomain) {
@@ -107,7 +108,7 @@ public final class MailFromState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mailFromDomain(@Nullable String mailFromDomain) {
-            this.mailFromDomain = Output.ofNullable(mailFromDomain);
+            this.mailFromDomain = Codegen.ofNullable(mailFromDomain);
             return this;
         }        public MailFromState build() {
             return new MailFromState(behaviorOnMxFailure, domain, mailFromDomain);

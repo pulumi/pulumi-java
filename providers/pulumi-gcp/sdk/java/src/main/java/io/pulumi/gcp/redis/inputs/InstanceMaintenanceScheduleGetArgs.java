@@ -5,6 +5,7 @@ package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> scheduleDeadlineTime;
 
     public Output<String> getScheduleDeadlineTime() {
-        return this.scheduleDeadlineTime == null ? Output.empty() : this.scheduleDeadlineTime;
+        return this.scheduleDeadlineTime == null ? Codegen.empty() : this.scheduleDeadlineTime;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public InstanceMaintenanceScheduleGetArgs(
@@ -67,9 +68,9 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
     }
 
     private InstanceMaintenanceScheduleGetArgs() {
-        this.endTime = Output.empty();
-        this.scheduleDeadlineTime = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.scheduleDeadlineTime = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder scheduleDeadlineTime(@Nullable Output<String> scheduleDeadlineTime) {
@@ -109,7 +110,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder scheduleDeadlineTime(@Nullable String scheduleDeadlineTime) {
-            this.scheduleDeadlineTime = Output.ofNullable(scheduleDeadlineTime);
+            this.scheduleDeadlineTime = Codegen.ofNullable(scheduleDeadlineTime);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -117,7 +118,7 @@ public final class InstanceMaintenanceScheduleGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public InstanceMaintenanceScheduleGetArgs build() {
             return new InstanceMaintenanceScheduleGetArgs(endTime, scheduleDeadlineTime, startTime);

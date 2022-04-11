@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> assetTag;
 
     public Output<String> getAssetTag() {
-        return this.assetTag == null ? Output.empty() : this.assetTag;
+        return this.assetTag == null ? Codegen.empty() : this.assetTag;
     }
 
     @Import(name="customer")
       private final @Nullable Output<String> customer;
 
     public Output<String> getCustomer() {
-        return this.customer == null ? Output.empty() : this.customer;
+        return this.customer == null ? Codegen.empty() : this.customer;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lastSyncTime;
 
     public Output<String> getLastSyncTime() {
-        return this.lastSyncTime == null ? Output.empty() : this.lastSyncTime;
+        return this.lastSyncTime == null ? Codegen.empty() : this.lastSyncTime;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serialNumber;
 
     public Output<String> getSerialNumber() {
-        return this.serialNumber == null ? Output.empty() : this.serialNumber;
+        return this.serialNumber == null ? Codegen.empty() : this.serialNumber;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> wifiMacAddresses;
 
     public Output<List<String>> getWifiMacAddresses() {
-        return this.wifiMacAddresses == null ? Output.empty() : this.wifiMacAddresses;
+        return this.wifiMacAddresses == null ? Codegen.empty() : this.wifiMacAddresses;
     }
 
     public DeviceArgs(
@@ -80,11 +81,11 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.assetTag = Output.empty();
-        this.customer = Output.empty();
-        this.lastSyncTime = Output.empty();
-        this.serialNumber = Output.empty();
-        this.wifiMacAddresses = Output.empty();
+        this.assetTag = Codegen.empty();
+        this.customer = Codegen.empty();
+        this.lastSyncTime = Codegen.empty();
+        this.serialNumber = Codegen.empty();
+        this.wifiMacAddresses = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assetTag(@Nullable String assetTag) {
-            this.assetTag = Output.ofNullable(assetTag);
+            this.assetTag = Codegen.ofNullable(assetTag);
             return this;
         }
         public Builder customer(@Nullable Output<String> customer) {
@@ -128,7 +129,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customer(@Nullable String customer) {
-            this.customer = Output.ofNullable(customer);
+            this.customer = Codegen.ofNullable(customer);
             return this;
         }
         public Builder lastSyncTime(@Nullable Output<String> lastSyncTime) {
@@ -136,7 +137,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lastSyncTime(@Nullable String lastSyncTime) {
-            this.lastSyncTime = Output.ofNullable(lastSyncTime);
+            this.lastSyncTime = Codegen.ofNullable(lastSyncTime);
             return this;
         }
         public Builder serialNumber(@Nullable Output<String> serialNumber) {
@@ -144,7 +145,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serialNumber(@Nullable String serialNumber) {
-            this.serialNumber = Output.ofNullable(serialNumber);
+            this.serialNumber = Codegen.ofNullable(serialNumber);
             return this;
         }
         public Builder wifiMacAddresses(@Nullable Output<List<String>> wifiMacAddresses) {
@@ -152,7 +153,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder wifiMacAddresses(@Nullable List<String> wifiMacAddresses) {
-            this.wifiMacAddresses = Output.ofNullable(wifiMacAddresses);
+            this.wifiMacAddresses = Codegen.ofNullable(wifiMacAddresses);
             return this;
         }
         public Builder wifiMacAddresses(String... wifiMacAddresses) {

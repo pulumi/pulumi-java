@@ -11,6 +11,7 @@ import io.pulumi.awsnative.lightsail.inputs.InstanceStateArgs;
 import io.pulumi.awsnative.lightsail.inputs.InstanceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceAddOnArgs>> addOns;
 
     public Output<List<InstanceAddOnArgs>> getAddOns() {
-        return this.addOns == null ? Output.empty() : this.addOns;
+        return this.addOns == null ? Codegen.empty() : this.addOns;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceHardwareArgs> hardware;
 
     public Output<InstanceHardwareArgs> getHardware() {
-        return this.hardware == null ? Output.empty() : this.hardware;
+        return this.hardware == null ? Codegen.empty() : this.hardware;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -91,28 +92,28 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyPairName;
 
     public Output<String> getKeyPairName() {
-        return this.keyPairName == null ? Output.empty() : this.keyPairName;
+        return this.keyPairName == null ? Codegen.empty() : this.keyPairName;
     }
 
     @Import(name="location")
       private final @Nullable Output<InstanceLocationArgs> location;
 
     public Output<InstanceLocationArgs> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="networking")
       private final @Nullable Output<InstanceNetworkingArgs> networking;
 
     public Output<InstanceNetworkingArgs> getNetworking() {
-        return this.networking == null ? Output.empty() : this.networking;
+        return this.networking == null ? Codegen.empty() : this.networking;
     }
 
     @Import(name="state")
       private final @Nullable Output<InstanceStateArgs> state;
 
     public Output<InstanceStateArgs> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceTagArgs>> tags;
 
     public Output<List<InstanceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     public InstanceArgs(
@@ -165,18 +166,18 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.addOns = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.blueprintId = Output.empty();
-        this.bundleId = Output.empty();
-        this.hardware = Output.empty();
-        this.instanceName = Output.empty();
-        this.keyPairName = Output.empty();
-        this.location = Output.empty();
-        this.networking = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.userData = Output.empty();
+        this.addOns = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.blueprintId = Codegen.empty();
+        this.bundleId = Codegen.empty();
+        this.hardware = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.keyPairName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networking = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userData = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -226,7 +227,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addOns(@Nullable List<InstanceAddOnArgs> addOns) {
-            this.addOns = Output.ofNullable(addOns);
+            this.addOns = Codegen.ofNullable(addOns);
             return this;
         }
         public Builder addOns(InstanceAddOnArgs... addOns) {
@@ -237,7 +238,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder blueprintId(Output<String> blueprintId) {
@@ -261,7 +262,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hardware(@Nullable InstanceHardwareArgs hardware) {
-            this.hardware = Output.ofNullable(hardware);
+            this.hardware = Codegen.ofNullable(hardware);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -269,7 +270,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder keyPairName(@Nullable Output<String> keyPairName) {
@@ -277,7 +278,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyPairName(@Nullable String keyPairName) {
-            this.keyPairName = Output.ofNullable(keyPairName);
+            this.keyPairName = Codegen.ofNullable(keyPairName);
             return this;
         }
         public Builder location(@Nullable Output<InstanceLocationArgs> location) {
@@ -285,7 +286,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable InstanceLocationArgs location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networking(@Nullable Output<InstanceNetworkingArgs> networking) {
@@ -293,7 +294,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networking(@Nullable InstanceNetworkingArgs networking) {
-            this.networking = Output.ofNullable(networking);
+            this.networking = Codegen.ofNullable(networking);
             return this;
         }
         public Builder state(@Nullable Output<InstanceStateArgs> state) {
@@ -301,7 +302,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable InstanceStateArgs state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<List<InstanceTagArgs>> tags) {
@@ -309,7 +310,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<InstanceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(InstanceTagArgs... tags) {
@@ -320,7 +321,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(addOns, availabilityZone, blueprintId, bundleId, hardware, instanceName, keyPairName, location, networking, state, tags, userData);

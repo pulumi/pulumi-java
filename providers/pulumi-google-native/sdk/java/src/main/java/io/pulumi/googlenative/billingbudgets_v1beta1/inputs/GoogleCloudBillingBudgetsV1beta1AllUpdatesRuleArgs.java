@@ -5,6 +5,7 @@ package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
       private final @Nullable Output<Boolean> disableDefaultIamRecipients;
 
     public Output<Boolean> getDisableDefaultIamRecipients() {
-        return this.disableDefaultIamRecipients == null ? Output.empty() : this.disableDefaultIamRecipients;
+        return this.disableDefaultIamRecipients == null ? Codegen.empty() : this.disableDefaultIamRecipients;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
       private final @Nullable Output<List<String>> monitoringNotificationChannels;
 
     public Output<List<String>> getMonitoringNotificationChannels() {
-        return this.monitoringNotificationChannels == null ? Output.empty() : this.monitoringNotificationChannels;
+        return this.monitoringNotificationChannels == null ? Codegen.empty() : this.monitoringNotificationChannels;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
       private final @Nullable Output<String> pubsubTopic;
 
     public Output<String> getPubsubTopic() {
-        return this.pubsubTopic == null ? Output.empty() : this.pubsubTopic;
+        return this.pubsubTopic == null ? Codegen.empty() : this.pubsubTopic;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
       private final @Nullable Output<String> schemaVersion;
 
     public Output<String> getSchemaVersion() {
-        return this.schemaVersion == null ? Output.empty() : this.schemaVersion;
+        return this.schemaVersion == null ? Codegen.empty() : this.schemaVersion;
     }
 
     public GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs(
@@ -76,10 +77,10 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
     }
 
     private GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs() {
-        this.disableDefaultIamRecipients = Output.empty();
-        this.monitoringNotificationChannels = Output.empty();
-        this.pubsubTopic = Output.empty();
-        this.schemaVersion = Output.empty();
+        this.disableDefaultIamRecipients = Codegen.empty();
+        this.monitoringNotificationChannels = Codegen.empty();
+        this.pubsubTopic = Codegen.empty();
+        this.schemaVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
             return this;
         }
         public Builder disableDefaultIamRecipients(@Nullable Boolean disableDefaultIamRecipients) {
-            this.disableDefaultIamRecipients = Output.ofNullable(disableDefaultIamRecipients);
+            this.disableDefaultIamRecipients = Codegen.ofNullable(disableDefaultIamRecipients);
             return this;
         }
         public Builder monitoringNotificationChannels(@Nullable Output<List<String>> monitoringNotificationChannels) {
@@ -121,7 +122,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
             return this;
         }
         public Builder monitoringNotificationChannels(@Nullable List<String> monitoringNotificationChannels) {
-            this.monitoringNotificationChannels = Output.ofNullable(monitoringNotificationChannels);
+            this.monitoringNotificationChannels = Codegen.ofNullable(monitoringNotificationChannels);
             return this;
         }
         public Builder monitoringNotificationChannels(String... monitoringNotificationChannels) {
@@ -132,7 +133,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
             return this;
         }
         public Builder pubsubTopic(@Nullable String pubsubTopic) {
-            this.pubsubTopic = Output.ofNullable(pubsubTopic);
+            this.pubsubTopic = Codegen.ofNullable(pubsubTopic);
             return this;
         }
         public Builder schemaVersion(@Nullable Output<String> schemaVersion) {
@@ -140,7 +141,7 @@ public final class GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs extends io
             return this;
         }
         public Builder schemaVersion(@Nullable String schemaVersion) {
-            this.schemaVersion = Output.ofNullable(schemaVersion);
+            this.schemaVersion = Codegen.ofNullable(schemaVersion);
             return this;
         }        public GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs build() {
             return new GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleArgs(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);

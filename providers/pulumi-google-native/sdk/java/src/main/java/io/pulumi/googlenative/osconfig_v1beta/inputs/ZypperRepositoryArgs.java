@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> gpgKeys;
 
     public Output<List<String>> getGpgKeys() {
-        return this.gpgKeys == null ? Output.empty() : this.gpgKeys;
+        return this.gpgKeys == null ? Codegen.empty() : this.gpgKeys;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ZypperRepositoryArgs() {
-        this.baseUrl = Output.empty();
-        this.displayName = Output.empty();
-        this.gpgKeys = Output.empty();
-        this.id = Output.empty();
+        this.baseUrl = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.gpgKeys = Codegen.empty();
+        this.id = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder gpgKeys(@Nullable Output<List<String>> gpgKeys) {
@@ -128,7 +129,7 @@ public final class ZypperRepositoryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder gpgKeys(@Nullable List<String> gpgKeys) {
-            this.gpgKeys = Output.ofNullable(gpgKeys);
+            this.gpgKeys = Codegen.ofNullable(gpgKeys);
             return this;
         }
         public Builder gpgKeys(String... gpgKeys) {

@@ -19,6 +19,7 @@ import io.pulumi.aws.cloudfront.outputs.DistributionViewerCertificate;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -567,7 +568,7 @@ public class Distribution extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Distribution(String name, DistributionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudfront/distribution:Distribution", name, args == null ? DistributionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudfront/distribution:Distribution", name, args == null ? DistributionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Distribution(String name, Output<String> id, @Nullable DistributionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

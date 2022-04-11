@@ -9,6 +9,7 @@ import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurati
 import io.pulumi.aws.kinesisanalyticsv2.inputs.ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs> kinesisFirehoseOutput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs> getKinesisFirehoseOutput() {
-        return this.kinesisFirehoseOutput == null ? Output.empty() : this.kinesisFirehoseOutput;
+        return this.kinesisFirehoseOutput == null ? Codegen.empty() : this.kinesisFirehoseOutput;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputArgs> kinesisStreamsOutput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputArgs> getKinesisStreamsOutput() {
-        return this.kinesisStreamsOutput == null ? Output.empty() : this.kinesisStreamsOutput;
+        return this.kinesisStreamsOutput == null ? Codegen.empty() : this.kinesisStreamsOutput;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs> lambdaOutput;
 
     public Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs> getLambdaOutput() {
-        return this.lambdaOutput == null ? Output.empty() : this.lambdaOutput;
+        return this.lambdaOutput == null ? Codegen.empty() : this.lambdaOutput;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
       private final @Nullable Output<String> outputId;
 
     public Output<String> getOutputId() {
-        return this.outputId == null ? Output.empty() : this.outputId;
+        return this.outputId == null ? Codegen.empty() : this.outputId;
     }
 
     public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs(
@@ -96,12 +97,12 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs() {
-        this.destinationSchema = Output.empty();
-        this.kinesisFirehoseOutput = Output.empty();
-        this.kinesisStreamsOutput = Output.empty();
-        this.lambdaOutput = Output.empty();
-        this.name = Output.empty();
-        this.outputId = Output.empty();
+        this.destinationSchema = Codegen.empty();
+        this.kinesisFirehoseOutput = Codegen.empty();
+        this.kinesisStreamsOutput = Codegen.empty();
+        this.lambdaOutput = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder kinesisFirehoseOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisFirehoseOutputArgs kinesisFirehoseOutput) {
-            this.kinesisFirehoseOutput = Output.ofNullable(kinesisFirehoseOutput);
+            this.kinesisFirehoseOutput = Codegen.ofNullable(kinesisFirehoseOutput);
             return this;
         }
         public Builder kinesisStreamsOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputArgs> kinesisStreamsOutput) {
@@ -155,7 +156,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder kinesisStreamsOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputKinesisStreamsOutputArgs kinesisStreamsOutput) {
-            this.kinesisStreamsOutput = Output.ofNullable(kinesisStreamsOutput);
+            this.kinesisStreamsOutput = Codegen.ofNullable(kinesisStreamsOutput);
             return this;
         }
         public Builder lambdaOutput(@Nullable Output<ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs> lambdaOutput) {
@@ -163,7 +164,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder lambdaOutput(@Nullable ApplicationApplicationConfigurationSqlApplicationConfigurationOutputLambdaOutputArgs lambdaOutput) {
-            this.lambdaOutput = Output.ofNullable(lambdaOutput);
+            this.lambdaOutput = Codegen.ofNullable(lambdaOutput);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -179,7 +180,7 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
             return this;
         }
         public Builder outputId(@Nullable String outputId) {
-            this.outputId = Output.ofNullable(outputId);
+            this.outputId = Codegen.ofNullable(outputId);
             return this;
         }        public ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs build() {
             return new ApplicationApplicationConfigurationSqlApplicationConfigurationOutputArgs(destinationSchema, kinesisFirehoseOutput, kinesisStreamsOutput, lambdaOutput, name, outputId);

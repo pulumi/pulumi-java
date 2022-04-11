@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.AliasContextArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<AliasContextArgs> aliasContext;
 
     public Output<AliasContextArgs> getAliasContext() {
-        return this.aliasContext == null ? Output.empty() : this.aliasContext;
+        return this.aliasContext == null ? Codegen.empty() : this.aliasContext;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> gerritProject;
 
     public Output<String> getGerritProject() {
-        return this.gerritProject == null ? Output.empty() : this.gerritProject;
+        return this.gerritProject == null ? Codegen.empty() : this.gerritProject;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> hostUri;
 
     public Output<String> getHostUri() {
-        return this.hostUri == null ? Output.empty() : this.hostUri;
+        return this.hostUri == null ? Codegen.empty() : this.hostUri;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> revisionId;
 
     public Output<String> getRevisionId() {
-        return this.revisionId == null ? Output.empty() : this.revisionId;
+        return this.revisionId == null ? Codegen.empty() : this.revisionId;
     }
 
     public GerritSourceContextArgs(
@@ -75,10 +76,10 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
     }
 
     private GerritSourceContextArgs() {
-        this.aliasContext = Output.empty();
-        this.gerritProject = Output.empty();
-        this.hostUri = Output.empty();
-        this.revisionId = Output.empty();
+        this.aliasContext = Codegen.empty();
+        this.gerritProject = Codegen.empty();
+        this.hostUri = Codegen.empty();
+        this.revisionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder aliasContext(@Nullable AliasContextArgs aliasContext) {
-            this.aliasContext = Output.ofNullable(aliasContext);
+            this.aliasContext = Codegen.ofNullable(aliasContext);
             return this;
         }
         public Builder gerritProject(@Nullable Output<String> gerritProject) {
@@ -120,7 +121,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder gerritProject(@Nullable String gerritProject) {
-            this.gerritProject = Output.ofNullable(gerritProject);
+            this.gerritProject = Codegen.ofNullable(gerritProject);
             return this;
         }
         public Builder hostUri(@Nullable Output<String> hostUri) {
@@ -128,7 +129,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hostUri(@Nullable String hostUri) {
-            this.hostUri = Output.ofNullable(hostUri);
+            this.hostUri = Codegen.ofNullable(hostUri);
             return this;
         }
         public Builder revisionId(@Nullable Output<String> revisionId) {
@@ -136,7 +137,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder revisionId(@Nullable String revisionId) {
-            this.revisionId = Output.ofNullable(revisionId);
+            this.revisionId = Codegen.ofNullable(revisionId);
             return this;
         }        public GerritSourceContextArgs build() {
             return new GerritSourceContextArgs(aliasContext, gerritProject, hostUri, revisionId);

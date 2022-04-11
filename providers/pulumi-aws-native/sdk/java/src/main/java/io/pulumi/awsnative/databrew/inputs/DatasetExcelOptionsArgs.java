@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,21 +22,21 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> headerRow;
 
     public Output<Boolean> getHeaderRow() {
-        return this.headerRow == null ? Output.empty() : this.headerRow;
+        return this.headerRow == null ? Codegen.empty() : this.headerRow;
     }
 
     @Import(name="sheetIndexes")
       private final @Nullable Output<List<Integer>> sheetIndexes;
 
     public Output<List<Integer>> getSheetIndexes() {
-        return this.sheetIndexes == null ? Output.empty() : this.sheetIndexes;
+        return this.sheetIndexes == null ? Codegen.empty() : this.sheetIndexes;
     }
 
     @Import(name="sheetNames")
       private final @Nullable Output<List<String>> sheetNames;
 
     public Output<List<String>> getSheetNames() {
-        return this.sheetNames == null ? Output.empty() : this.sheetNames;
+        return this.sheetNames == null ? Codegen.empty() : this.sheetNames;
     }
 
     public DatasetExcelOptionsArgs(
@@ -48,9 +49,9 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
     }
 
     private DatasetExcelOptionsArgs() {
-        this.headerRow = Output.empty();
-        this.sheetIndexes = Output.empty();
-        this.sheetNames = Output.empty();
+        this.headerRow = Codegen.empty();
+        this.sheetIndexes = Codegen.empty();
+        this.sheetNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = Output.ofNullable(headerRow);
+            this.headerRow = Codegen.ofNullable(headerRow);
             return this;
         }
         public Builder sheetIndexes(@Nullable Output<List<Integer>> sheetIndexes) {
@@ -90,7 +91,7 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sheetIndexes(@Nullable List<Integer> sheetIndexes) {
-            this.sheetIndexes = Output.ofNullable(sheetIndexes);
+            this.sheetIndexes = Codegen.ofNullable(sheetIndexes);
             return this;
         }
         public Builder sheetIndexes(Integer... sheetIndexes) {
@@ -101,7 +102,7 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sheetNames(@Nullable List<String> sheetNames) {
-            this.sheetNames = Output.ofNullable(sheetNames);
+            this.sheetNames = Codegen.ofNullable(sheetNames);
             return this;
         }
         public Builder sheetNames(String... sheetNames) {

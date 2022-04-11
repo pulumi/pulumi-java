@@ -7,6 +7,7 @@ import io.pulumi.azurenative.webpubsub.enums.FeatureFlags;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -43,7 +44,7 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -67,9 +68,9 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WebPubSubFeatureArgs() {
-        this.flag = Output.empty();
-        this.properties = Output.empty();
-        this.value = Output.empty();
+        this.flag = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class WebPubSubFeatureArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder value(Output<String> value) {

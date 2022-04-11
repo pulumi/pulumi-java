@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigquery.inputs.RoutineArgumentArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RoutineArgumentArgs>> arguments;
 
     public Output<List<RoutineArgumentArgs>> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> determinismLevel;
 
     public Output<String> getDeterminismLevel() {
-        return this.determinismLevel == null ? Output.empty() : this.determinismLevel;
+        return this.determinismLevel == null ? Codegen.empty() : this.determinismLevel;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> importedLibraries;
 
     public Output<List<String>> getImportedLibraries() {
-        return this.importedLibraries == null ? Output.empty() : this.importedLibraries;
+        return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> language;
 
     public Output<String> getLanguage() {
-        return this.language == null ? Output.empty() : this.language;
+        return this.language == null ? Codegen.empty() : this.language;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> returnTableType;
 
     public Output<String> getReturnTableType() {
-        return this.returnTableType == null ? Output.empty() : this.returnTableType;
+        return this.returnTableType == null ? Codegen.empty() : this.returnTableType;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> returnType;
 
     public Output<String> getReturnType() {
-        return this.returnType == null ? Output.empty() : this.returnType;
+        return this.returnType == null ? Codegen.empty() : this.returnType;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> routineType;
 
     public Output<String> getRoutineType() {
-        return this.routineType == null ? Output.empty() : this.routineType;
+        return this.routineType == null ? Codegen.empty() : this.routineType;
     }
 
     public RoutineArgs(
@@ -194,18 +195,18 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoutineArgs() {
-        this.arguments = Output.empty();
-        this.datasetId = Output.empty();
-        this.definitionBody = Output.empty();
-        this.description = Output.empty();
-        this.determinismLevel = Output.empty();
-        this.importedLibraries = Output.empty();
-        this.language = Output.empty();
-        this.project = Output.empty();
-        this.returnTableType = Output.empty();
-        this.returnType = Output.empty();
-        this.routineId = Output.empty();
-        this.routineType = Output.empty();
+        this.arguments = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.definitionBody = Codegen.empty();
+        this.description = Codegen.empty();
+        this.determinismLevel = Codegen.empty();
+        this.importedLibraries = Codegen.empty();
+        this.language = Codegen.empty();
+        this.project = Codegen.empty();
+        this.returnTableType = Codegen.empty();
+        this.returnType = Codegen.empty();
+        this.routineId = Codegen.empty();
+        this.routineType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -255,7 +256,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arguments(@Nullable List<RoutineArgumentArgs> arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder arguments(RoutineArgumentArgs... arguments) {
@@ -282,7 +283,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder determinismLevel(@Nullable Output<String> determinismLevel) {
@@ -290,7 +291,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder determinismLevel(@Nullable String determinismLevel) {
-            this.determinismLevel = Output.ofNullable(determinismLevel);
+            this.determinismLevel = Codegen.ofNullable(determinismLevel);
             return this;
         }
         public Builder importedLibraries(@Nullable Output<List<String>> importedLibraries) {
@@ -298,7 +299,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Output.ofNullable(importedLibraries);
+            this.importedLibraries = Codegen.ofNullable(importedLibraries);
             return this;
         }
         public Builder importedLibraries(String... importedLibraries) {
@@ -309,7 +310,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder language(@Nullable String language) {
-            this.language = Output.ofNullable(language);
+            this.language = Codegen.ofNullable(language);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -317,7 +318,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder returnTableType(@Nullable Output<String> returnTableType) {
@@ -325,7 +326,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder returnTableType(@Nullable String returnTableType) {
-            this.returnTableType = Output.ofNullable(returnTableType);
+            this.returnTableType = Codegen.ofNullable(returnTableType);
             return this;
         }
         public Builder returnType(@Nullable Output<String> returnType) {
@@ -333,7 +334,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder returnType(@Nullable String returnType) {
-            this.returnType = Output.ofNullable(returnType);
+            this.returnType = Codegen.ofNullable(returnType);
             return this;
         }
         public Builder routineId(Output<String> routineId) {
@@ -349,7 +350,7 @@ public final class RoutineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routineType(@Nullable String routineType) {
-            this.routineType = Output.ofNullable(routineType);
+            this.routineType = Codegen.ofNullable(routineType);
             return this;
         }        public RoutineArgs build() {
             return new RoutineArgs(arguments, datasetId, definitionBody, description, determinismLevel, importedLibraries, language, project, returnTableType, returnType, routineId, routineType);

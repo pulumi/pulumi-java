@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebasedatabase_v1beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceState;
 import io.pulumi.googlenative.firebasedatabase_v1beta.enums.InstanceType;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseId;
 
     public Output<String> getDatabaseId() {
-        return this.databaseId == null ? Output.empty() : this.databaseId;
+        return this.databaseId == null ? Codegen.empty() : this.databaseId;
     }
 
     /**
@@ -31,14 +32,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseUrl;
 
     public Output<String> getDatabaseUrl() {
-        return this.databaseUrl == null ? Output.empty() : this.databaseUrl;
+        return this.databaseUrl == null ? Codegen.empty() : this.databaseUrl;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceState> state;
 
     public Output<InstanceState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -82,14 +83,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceType> type;
 
     public Output<InstanceType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public InstanceArgs(
@@ -112,14 +113,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.databaseId = Output.empty();
-        this.databaseUrl = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
-        this.type = Output.empty();
-        this.validateOnly = Output.empty();
+        this.databaseId = Codegen.empty();
+        this.databaseUrl = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
+        this.type = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseId(@Nullable String databaseId) {
-            this.databaseId = Output.ofNullable(databaseId);
+            this.databaseId = Codegen.ofNullable(databaseId);
             return this;
         }
         public Builder databaseUrl(@Nullable Output<String> databaseUrl) {
@@ -169,7 +170,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseUrl(@Nullable String databaseUrl) {
-            this.databaseUrl = Output.ofNullable(databaseUrl);
+            this.databaseUrl = Codegen.ofNullable(databaseUrl);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -177,7 +178,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -193,7 +194,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<InstanceState> state) {
@@ -201,7 +202,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable InstanceState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder type(@Nullable Output<InstanceType> type) {
@@ -209,7 +210,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable InstanceType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -217,7 +218,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(databaseId, databaseUrl, location, name, project, state, type, validateOnly);

@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryAwsCloudMapAr
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecServiceDiscoveryDnsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> awsCloudMap;
 
     public Output<VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs> getAwsCloudMap() {
-        return this.awsCloudMap == null ? Output.empty() : this.awsCloudMap;
+        return this.awsCloudMap == null ? Codegen.empty() : this.awsCloudMap;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
       private final @Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns;
 
     public Output<VirtualNodeSpecServiceDiscoveryDnsArgs> getDns() {
-        return this.dns == null ? Output.empty() : this.dns;
+        return this.dns == null ? Codegen.empty() : this.dns;
     }
 
     public VirtualNodeSpecServiceDiscoveryArgs(
@@ -45,8 +46,8 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
     }
 
     private VirtualNodeSpecServiceDiscoveryArgs() {
-        this.awsCloudMap = Output.empty();
-        this.dns = Output.empty();
+        this.awsCloudMap = Codegen.empty();
+        this.dns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
             return this;
         }
         public Builder awsCloudMap(@Nullable VirtualNodeSpecServiceDiscoveryAwsCloudMapArgs awsCloudMap) {
-            this.awsCloudMap = Output.ofNullable(awsCloudMap);
+            this.awsCloudMap = Codegen.ofNullable(awsCloudMap);
             return this;
         }
         public Builder dns(@Nullable Output<VirtualNodeSpecServiceDiscoveryDnsArgs> dns) {
@@ -84,7 +85,7 @@ public final class VirtualNodeSpecServiceDiscoveryArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dns(@Nullable VirtualNodeSpecServiceDiscoveryDnsArgs dns) {
-            this.dns = Output.ofNullable(dns);
+            this.dns = Codegen.ofNullable(dns);
             return this;
         }        public VirtualNodeSpecServiceDiscoveryArgs build() {
             return new VirtualNodeSpecServiceDiscoveryArgs(awsCloudMap, dns);

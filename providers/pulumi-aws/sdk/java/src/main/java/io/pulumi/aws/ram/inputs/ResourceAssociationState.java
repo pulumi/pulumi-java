@@ -5,6 +5,7 @@ package io.pulumi.aws.ram.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> resourceArn;
 
     public Output<String> getResourceArn() {
-        return this.resourceArn == null ? Output.empty() : this.resourceArn;
+        return this.resourceArn == null ? Codegen.empty() : this.resourceArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> resourceShareArn;
 
     public Output<String> getResourceShareArn() {
-        return this.resourceShareArn == null ? Output.empty() : this.resourceShareArn;
+        return this.resourceShareArn == null ? Codegen.empty() : this.resourceShareArn;
     }
 
     public ResourceAssociationState(
@@ -44,8 +45,8 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
     }
 
     private ResourceAssociationState() {
-        this.resourceArn = Output.empty();
-        this.resourceShareArn = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.resourceShareArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder resourceArn(@Nullable String resourceArn) {
-            this.resourceArn = Output.ofNullable(resourceArn);
+            this.resourceArn = Codegen.ofNullable(resourceArn);
             return this;
         }
         public Builder resourceShareArn(@Nullable Output<String> resourceShareArn) {
@@ -83,7 +84,7 @@ public final class ResourceAssociationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder resourceShareArn(@Nullable String resourceShareArn) {
-            this.resourceShareArn = Output.ofNullable(resourceShareArn);
+            this.resourceShareArn = Codegen.ofNullable(resourceShareArn);
             return this;
         }        public ResourceAssociationState build() {
             return new ResourceAssociationState(resourceArn, resourceShareArn);

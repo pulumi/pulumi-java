@@ -5,6 +5,7 @@ package io.pulumi.aws.datasync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -111,13 +112,13 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LocationFsxWindowsArgs() {
-        this.domain = Output.empty();
-        this.fsxFilesystemArn = Output.empty();
-        this.password = Output.empty();
-        this.securityGroupArns = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.user = Output.empty();
+        this.domain = Codegen.empty();
+        this.fsxFilesystemArn = Codegen.empty();
+        this.password = Codegen.empty();
+        this.securityGroupArns = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder fsxFilesystemArn(Output<String> fsxFilesystemArn) {
@@ -192,7 +193,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -200,7 +201,7 @@ public final class LocationFsxWindowsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder user(Output<String> user) {

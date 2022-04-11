@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> apiGroups;
 
     public Output<List<String>> getApiGroups() {
-        return this.apiGroups == null ? Output.empty() : this.apiGroups;
+        return this.apiGroups == null ? Codegen.empty() : this.apiGroups;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> apiVersions;
 
     public Output<List<String>> getApiVersions() {
-        return this.apiVersions == null ? Output.empty() : this.apiVersions;
+        return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> operations;
 
     public Output<List<String>> getOperations() {
-        return this.operations == null ? Output.empty() : this.operations;
+        return this.operations == null ? Codegen.empty() : this.operations;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public RuleWithOperationsArgs(
@@ -94,11 +95,11 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RuleWithOperationsArgs() {
-        this.apiGroups = Output.empty();
-        this.apiVersions = Output.empty();
-        this.operations = Output.empty();
-        this.resources = Output.empty();
-        this.scope = Output.empty();
+        this.apiGroups = Codegen.empty();
+        this.apiVersions = Codegen.empty();
+        this.operations = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder apiGroups(@Nullable List<String> apiGroups) {
-            this.apiGroups = Output.ofNullable(apiGroups);
+            this.apiGroups = Codegen.ofNullable(apiGroups);
             return this;
         }
         public Builder apiGroups(String... apiGroups) {
@@ -145,7 +146,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Output.ofNullable(apiVersions);
+            this.apiVersions = Codegen.ofNullable(apiVersions);
             return this;
         }
         public Builder apiVersions(String... apiVersions) {
@@ -156,7 +157,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder operations(@Nullable List<String> operations) {
-            this.operations = Output.ofNullable(operations);
+            this.operations = Codegen.ofNullable(operations);
             return this;
         }
         public Builder operations(String... operations) {
@@ -167,7 +168,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {
@@ -178,7 +179,7 @@ public final class RuleWithOperationsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public RuleWithOperationsArgs build() {
             return new RuleWithOperationsArgs(apiGroups, apiVersions, operations, resources, scope);

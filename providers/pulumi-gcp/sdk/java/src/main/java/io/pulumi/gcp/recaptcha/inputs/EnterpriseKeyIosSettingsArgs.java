@@ -5,6 +5,7 @@ package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> allowAllBundleIds;
 
     public Output<Boolean> getAllowAllBundleIds() {
-        return this.allowAllBundleIds == null ? Output.empty() : this.allowAllBundleIds;
+        return this.allowAllBundleIds == null ? Codegen.empty() : this.allowAllBundleIds;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> allowedBundleIds;
 
     public Output<List<String>> getAllowedBundleIds() {
-        return this.allowedBundleIds == null ? Output.empty() : this.allowedBundleIds;
+        return this.allowedBundleIds == null ? Codegen.empty() : this.allowedBundleIds;
     }
 
     public EnterpriseKeyIosSettingsArgs(
@@ -46,8 +47,8 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private EnterpriseKeyIosSettingsArgs() {
-        this.allowAllBundleIds = Output.empty();
-        this.allowedBundleIds = Output.empty();
+        this.allowAllBundleIds = Codegen.empty();
+        this.allowedBundleIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowAllBundleIds(@Nullable Boolean allowAllBundleIds) {
-            this.allowAllBundleIds = Output.ofNullable(allowAllBundleIds);
+            this.allowAllBundleIds = Codegen.ofNullable(allowAllBundleIds);
             return this;
         }
         public Builder allowedBundleIds(@Nullable Output<List<String>> allowedBundleIds) {
@@ -85,7 +86,7 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedBundleIds(@Nullable List<String> allowedBundleIds) {
-            this.allowedBundleIds = Output.ofNullable(allowedBundleIds);
+            this.allowedBundleIds = Codegen.ofNullable(allowedBundleIds);
             return this;
         }
         public Builder allowedBundleIds(String... allowedBundleIds) {

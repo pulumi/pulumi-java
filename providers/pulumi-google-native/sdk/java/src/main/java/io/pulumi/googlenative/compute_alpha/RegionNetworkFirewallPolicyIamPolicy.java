@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionNetworkFirewallPolicyIamPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.AuditConfigResponse;
@@ -117,7 +118,7 @@ public class RegionNetworkFirewallPolicyIamPolicy extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionNetworkFirewallPolicyIamPolicy(String name, RegionNetworkFirewallPolicyIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionNetworkFirewallPolicyIamPolicy", name, args == null ? RegionNetworkFirewallPolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionNetworkFirewallPolicyIamPolicy", name, args == null ? RegionNetworkFirewallPolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionNetworkFirewallPolicyIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

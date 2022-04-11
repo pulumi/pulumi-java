@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     @Import(name="name")
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ServiceEndpointArgs(
@@ -36,8 +37,8 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ServiceEndpointArgs() {
-        this.address = Output.empty();
-        this.name = Output.empty();
+        this.address = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -75,7 +76,7 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ServiceEndpointArgs build() {
             return new ServiceEndpointArgs(address, name);

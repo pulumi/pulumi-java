@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.enums.PubsubConfigState;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PubsubConfigState> state;
 
     public Output<PubsubConfigState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public PubsubConfigArgs(
@@ -62,9 +63,9 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PubsubConfigArgs() {
-        this.serviceAccountEmail = Output.empty();
-        this.state = Output.empty();
-        this.topic = Output.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.state = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder state(@Nullable Output<PubsubConfigState> state) {
@@ -104,7 +105,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable PubsubConfigState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -112,7 +113,7 @@ public final class PubsubConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public PubsubConfigArgs build() {
             return new PubsubConfigArgs(serviceAccountEmail, state, topic);

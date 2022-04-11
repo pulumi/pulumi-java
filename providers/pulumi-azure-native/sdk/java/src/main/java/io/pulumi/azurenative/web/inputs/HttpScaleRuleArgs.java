@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
     public Output<List<ScaleRuleAuthArgs>> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     public HttpScaleRuleArgs(
@@ -51,8 +52,8 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpScaleRuleArgs() {
-        this.auth = Output.empty();
-        this.metadata = Output.empty();
+        this.auth = Codegen.empty();
+        this.metadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auth(@Nullable List<ScaleRuleAuthArgs> auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder auth(ScaleRuleAuthArgs... auth) {
@@ -93,7 +94,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }        public HttpScaleRuleArgs build() {
             return new HttpScaleRuleArgs(auth, metadata);

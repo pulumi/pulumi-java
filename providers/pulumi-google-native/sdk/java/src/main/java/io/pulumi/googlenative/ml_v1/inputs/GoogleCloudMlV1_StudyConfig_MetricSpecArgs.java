@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1_StudyConfig_MetricSpecGoal;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class GoogleCloudMlV1_StudyConfig_MetricSpecArgs extends io.pulumi.
     }
 
     private GoogleCloudMlV1_StudyConfig_MetricSpecArgs() {
-        this.goal = Output.empty();
-        this.metric = Output.empty();
+        this.goal = Codegen.empty();
+        this.metric = Codegen.empty();
     }
 
     public static Builder builder() {

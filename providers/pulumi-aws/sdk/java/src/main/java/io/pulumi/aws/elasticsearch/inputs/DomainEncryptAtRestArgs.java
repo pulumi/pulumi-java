@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class DomainEncryptAtRestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     public DomainEncryptAtRestArgs(
@@ -45,8 +46,8 @@ public final class DomainEncryptAtRestArgs extends io.pulumi.resources.ResourceA
     }
 
     private DomainEncryptAtRestArgs() {
-        this.enabled = Output.empty();
-        this.kmsKeyId = Output.empty();
+        this.enabled = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DomainEncryptAtRestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }        public DomainEncryptAtRestArgs build() {
             return new DomainEncryptAtRestArgs(enabled, kmsKeyId);

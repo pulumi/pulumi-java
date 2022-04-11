@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> handSize;
 
     public Output<Integer> getHandSize() {
-        return this.handSize == null ? Output.empty() : this.handSize;
+        return this.handSize == null ? Codegen.empty() : this.handSize;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> queueLengthLimit;
 
     public Output<Integer> getQueueLengthLimit() {
-        return this.queueLengthLimit == null ? Output.empty() : this.queueLengthLimit;
+        return this.queueLengthLimit == null ? Codegen.empty() : this.queueLengthLimit;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> queues;
 
     public Output<Integer> getQueues() {
-        return this.queues == null ? Output.empty() : this.queues;
+        return this.queues == null ? Codegen.empty() : this.queues;
     }
 
     public QueuingConfigurationArgs(
@@ -61,9 +62,9 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private QueuingConfigurationArgs() {
-        this.handSize = Output.empty();
-        this.queueLengthLimit = Output.empty();
-        this.queues = Output.empty();
+        this.handSize = Codegen.empty();
+        this.queueLengthLimit = Codegen.empty();
+        this.queues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder handSize(@Nullable Integer handSize) {
-            this.handSize = Output.ofNullable(handSize);
+            this.handSize = Codegen.ofNullable(handSize);
             return this;
         }
         public Builder queueLengthLimit(@Nullable Output<Integer> queueLengthLimit) {
@@ -103,7 +104,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder queueLengthLimit(@Nullable Integer queueLengthLimit) {
-            this.queueLengthLimit = Output.ofNullable(queueLengthLimit);
+            this.queueLengthLimit = Codegen.ofNullable(queueLengthLimit);
             return this;
         }
         public Builder queues(@Nullable Output<Integer> queues) {
@@ -111,7 +112,7 @@ public final class QueuingConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder queues(@Nullable Integer queues) {
-            this.queues = Output.ofNullable(queues);
+            this.queues = Codegen.ofNullable(queues);
             return this;
         }        public QueuingConfigurationArgs build() {
             return new QueuingConfigurationArgs(handSize, queueLengthLimit, queues);

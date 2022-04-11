@@ -6,6 +6,7 @@ package io.pulumi.aws.appmesh.inputs;
 import io.pulumi.aws.appmesh.inputs.VirtualNodeSpecListenerTimeoutTcpIdleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class VirtualNodeSpecListenerTimeoutTcpArgs extends io.pulumi.resou
       private final @Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle;
 
     public Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> getIdle() {
-        return this.idle == null ? Output.empty() : this.idle;
+        return this.idle == null ? Codegen.empty() : this.idle;
     }
 
     public VirtualNodeSpecListenerTimeoutTcpArgs(@Nullable Output<VirtualNodeSpecListenerTimeoutTcpIdleArgs> idle) {
@@ -30,7 +31,7 @@ public final class VirtualNodeSpecListenerTimeoutTcpArgs extends io.pulumi.resou
     }
 
     private VirtualNodeSpecListenerTimeoutTcpArgs() {
-        this.idle = Output.empty();
+        this.idle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class VirtualNodeSpecListenerTimeoutTcpArgs extends io.pulumi.resou
             return this;
         }
         public Builder idle(@Nullable VirtualNodeSpecListenerTimeoutTcpIdleArgs idle) {
-            this.idle = Output.ofNullable(idle);
+            this.idle = Codegen.ofNullable(idle);
             return this;
         }        public VirtualNodeSpecListenerTimeoutTcpArgs build() {
             return new VirtualNodeSpecListenerTimeoutTcpArgs(idle);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudchannel_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudchannel_v1.CustomerArgs;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
@@ -212,7 +213,7 @@ public class Customer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Customer(String name, CustomerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudchannel/v1:Customer", name, args == null ? CustomerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudchannel/v1:Customer", name, args == null ? CustomerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Customer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

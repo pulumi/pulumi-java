@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.AutoHealActionsArgs;
 import io.pulumi.azurenative.web.inputs.AutoHealTriggersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoHealActionsArgs> actions;
 
     public Output<AutoHealActionsArgs> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoHealTriggersArgs> triggers;
 
     public Output<AutoHealTriggersArgs> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public AutoHealRulesArgs(
@@ -49,8 +50,8 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutoHealRulesArgs() {
-        this.actions = Output.empty();
-        this.triggers = Output.empty();
+        this.actions = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable AutoHealActionsArgs actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder triggers(@Nullable Output<AutoHealTriggersArgs> triggers) {
@@ -88,7 +89,7 @@ public final class AutoHealRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable AutoHealTriggersArgs triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }        public AutoHealRulesArgs build() {
             return new AutoHealRulesArgs(actions, triggers);

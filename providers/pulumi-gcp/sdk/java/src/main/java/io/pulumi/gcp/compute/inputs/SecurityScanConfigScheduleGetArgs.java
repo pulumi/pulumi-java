@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> scheduleTime;
 
     public Output<String> getScheduleTime() {
-        return this.scheduleTime == null ? Output.empty() : this.scheduleTime;
+        return this.scheduleTime == null ? Codegen.empty() : this.scheduleTime;
     }
 
     public SecurityScanConfigScheduleGetArgs(
@@ -47,8 +48,8 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
     }
 
     private SecurityScanConfigScheduleGetArgs() {
-        this.intervalDurationDays = Output.empty();
-        this.scheduleTime = Output.empty();
+        this.intervalDurationDays = Codegen.empty();
+        this.scheduleTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class SecurityScanConfigScheduleGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder scheduleTime(@Nullable String scheduleTime) {
-            this.scheduleTime = Output.ofNullable(scheduleTime);
+            this.scheduleTime = Codegen.ofNullable(scheduleTime);
             return this;
         }        public SecurityScanConfigScheduleGetArgs build() {
             return new SecurityScanConfigScheduleGetArgs(intervalDurationDays, scheduleTime);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.Hl7StoreIamMemberArgs;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamMemberState;
@@ -146,7 +147,7 @@ public class Hl7StoreIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Hl7StoreIamMember(String name, Hl7StoreIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, args == null ? Hl7StoreIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/hl7StoreIamMember:Hl7StoreIamMember", name, args == null ? Hl7StoreIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Hl7StoreIamMember(String name, Output<String> id, @Nullable Hl7StoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

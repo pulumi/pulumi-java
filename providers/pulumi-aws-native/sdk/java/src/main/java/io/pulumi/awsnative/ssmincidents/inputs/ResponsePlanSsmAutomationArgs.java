@@ -7,6 +7,7 @@ import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAcc
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanSsmParameterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -40,7 +41,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
-        return this.documentVersion == null ? Output.empty() : this.documentVersion;
+        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters;
 
     public Output<List<ResponsePlanSsmParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ResponsePlanSsmAutomationTargetAccount> targetAccount;
 
     public Output<ResponsePlanSsmAutomationTargetAccount> getTargetAccount() {
-        return this.targetAccount == null ? Output.empty() : this.targetAccount;
+        return this.targetAccount == null ? Codegen.empty() : this.targetAccount;
     }
 
     public ResponsePlanSsmAutomationArgs(
@@ -90,11 +91,11 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
     }
 
     private ResponsePlanSsmAutomationArgs() {
-        this.documentName = Output.empty();
-        this.documentVersion = Output.empty();
-        this.parameters = Output.empty();
-        this.roleArn = Output.empty();
-        this.targetAccount = Output.empty();
+        this.documentName = Codegen.empty();
+        this.documentVersion = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.targetAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -138,7 +139,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Output.ofNullable(documentVersion);
+            this.documentVersion = Codegen.ofNullable(documentVersion);
             return this;
         }
         public Builder parameters(@Nullable Output<List<ResponsePlanSsmParameterArgs>> parameters) {
@@ -146,7 +147,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder parameters(@Nullable List<ResponsePlanSsmParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(ResponsePlanSsmParameterArgs... parameters) {
@@ -165,7 +166,7 @@ public final class ResponsePlanSsmAutomationArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder targetAccount(@Nullable ResponsePlanSsmAutomationTargetAccount targetAccount) {
-            this.targetAccount = Output.ofNullable(targetAccount);
+            this.targetAccount = Codegen.ofNullable(targetAccount);
             return this;
         }        public ResponsePlanSsmAutomationArgs build() {
             return new ResponsePlanSsmAutomationArgs(documentName, documentVersion, parameters, roleArn, targetAccount);

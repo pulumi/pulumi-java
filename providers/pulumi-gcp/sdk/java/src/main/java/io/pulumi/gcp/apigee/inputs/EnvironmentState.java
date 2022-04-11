@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigee.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> orgId;
 
     public Output<String> getOrgId() {
-        return this.orgId == null ? Output.empty() : this.orgId;
+        return this.orgId == null ? Codegen.empty() : this.orgId;
     }
 
     public EnvironmentState(
@@ -71,10 +72,10 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentState() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.orgId = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.orgId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -116,7 +117,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -124,7 +125,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder orgId(@Nullable Output<String> orgId) {
@@ -132,7 +133,7 @@ public final class EnvironmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder orgId(@Nullable String orgId) {
-            this.orgId = Output.ofNullable(orgId);
+            this.orgId = Codegen.ofNullable(orgId);
             return this;
         }        public EnvironmentState build() {
             return new EnvironmentState(description, displayName, name, orgId);

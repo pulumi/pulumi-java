@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.KeyRingCryptoKeyIamPolicyArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class KeyRingCryptoKeyIamPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRingCryptoKeyIamPolicy(String name, KeyRingCryptoKeyIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudkms/v1:KeyRingCryptoKeyIamPolicy", name, args == null ? KeyRingCryptoKeyIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudkms/v1:KeyRingCryptoKeyIamPolicy", name, args == null ? KeyRingCryptoKeyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRingCryptoKeyIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

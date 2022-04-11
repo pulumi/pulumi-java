@@ -10,6 +10,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationServiceNowSourcePr
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationZendeskSourcePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,35 +23,35 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
       private final @Nullable Output<IntegrationMarketoSourcePropertiesArgs> marketo;
 
     public Output<IntegrationMarketoSourcePropertiesArgs> getMarketo() {
-        return this.marketo == null ? Output.empty() : this.marketo;
+        return this.marketo == null ? Codegen.empty() : this.marketo;
     }
 
     @Import(name="s3")
       private final @Nullable Output<IntegrationS3SourcePropertiesArgs> s3;
 
     public Output<IntegrationS3SourcePropertiesArgs> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     @Import(name="salesforce")
       private final @Nullable Output<IntegrationSalesforceSourcePropertiesArgs> salesforce;
 
     public Output<IntegrationSalesforceSourcePropertiesArgs> getSalesforce() {
-        return this.salesforce == null ? Output.empty() : this.salesforce;
+        return this.salesforce == null ? Codegen.empty() : this.salesforce;
     }
 
     @Import(name="serviceNow")
       private final @Nullable Output<IntegrationServiceNowSourcePropertiesArgs> serviceNow;
 
     public Output<IntegrationServiceNowSourcePropertiesArgs> getServiceNow() {
-        return this.serviceNow == null ? Output.empty() : this.serviceNow;
+        return this.serviceNow == null ? Codegen.empty() : this.serviceNow;
     }
 
     @Import(name="zendesk")
       private final @Nullable Output<IntegrationZendeskSourcePropertiesArgs> zendesk;
 
     public Output<IntegrationZendeskSourcePropertiesArgs> getZendesk() {
-        return this.zendesk == null ? Output.empty() : this.zendesk;
+        return this.zendesk == null ? Codegen.empty() : this.zendesk;
     }
 
     public IntegrationSourceConnectorPropertiesArgs(
@@ -67,11 +68,11 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
     }
 
     private IntegrationSourceConnectorPropertiesArgs() {
-        this.marketo = Output.empty();
-        this.s3 = Output.empty();
-        this.salesforce = Output.empty();
-        this.serviceNow = Output.empty();
-        this.zendesk = Output.empty();
+        this.marketo = Codegen.empty();
+        this.s3 = Codegen.empty();
+        this.salesforce = Codegen.empty();
+        this.serviceNow = Codegen.empty();
+        this.zendesk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder marketo(@Nullable IntegrationMarketoSourcePropertiesArgs marketo) {
-            this.marketo = Output.ofNullable(marketo);
+            this.marketo = Codegen.ofNullable(marketo);
             return this;
         }
         public Builder s3(@Nullable Output<IntegrationS3SourcePropertiesArgs> s3) {
@@ -115,7 +116,7 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder s3(@Nullable IntegrationS3SourcePropertiesArgs s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }
         public Builder salesforce(@Nullable Output<IntegrationSalesforceSourcePropertiesArgs> salesforce) {
@@ -123,7 +124,7 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder salesforce(@Nullable IntegrationSalesforceSourcePropertiesArgs salesforce) {
-            this.salesforce = Output.ofNullable(salesforce);
+            this.salesforce = Codegen.ofNullable(salesforce);
             return this;
         }
         public Builder serviceNow(@Nullable Output<IntegrationServiceNowSourcePropertiesArgs> serviceNow) {
@@ -131,7 +132,7 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder serviceNow(@Nullable IntegrationServiceNowSourcePropertiesArgs serviceNow) {
-            this.serviceNow = Output.ofNullable(serviceNow);
+            this.serviceNow = Codegen.ofNullable(serviceNow);
             return this;
         }
         public Builder zendesk(@Nullable Output<IntegrationZendeskSourcePropertiesArgs> zendesk) {
@@ -139,7 +140,7 @@ public final class IntegrationSourceConnectorPropertiesArgs extends io.pulumi.re
             return this;
         }
         public Builder zendesk(@Nullable IntegrationZendeskSourcePropertiesArgs zendesk) {
-            this.zendesk = Output.ofNullable(zendesk);
+            this.zendesk = Codegen.ofNullable(zendesk);
             return this;
         }        public IntegrationSourceConnectorPropertiesArgs build() {
             return new IntegrationSourceConnectorPropertiesArgs(marketo, s3, salesforce, serviceNow, zendesk);

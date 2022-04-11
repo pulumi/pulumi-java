@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networksecurity_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1.AuthorizationPolicyIamPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleIamV1AuditConfigResponse;
@@ -102,7 +103,7 @@ public class AuthorizationPolicyIamPolicy extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public AuthorizationPolicyIamPolicy(String name, AuthorizationPolicyIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networksecurity/v1:AuthorizationPolicyIamPolicy", name, args == null ? AuthorizationPolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networksecurity/v1:AuthorizationPolicyIamPolicy", name, args == null ? AuthorizationPolicyIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AuthorizationPolicyIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

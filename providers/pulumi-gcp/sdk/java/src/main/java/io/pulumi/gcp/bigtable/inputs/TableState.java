@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigtable.inputs.TableColumnFamilyGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TableColumnFamilyGetArgs>> columnFamilies;
 
     public Output<List<TableColumnFamilyGetArgs>> getColumnFamilies() {
-        return this.columnFamilies == null ? Output.empty() : this.columnFamilies;
+        return this.columnFamilies == null ? Codegen.empty() : this.columnFamilies;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> splitKeys;
 
     public Output<List<String>> getSplitKeys() {
-        return this.splitKeys == null ? Output.empty() : this.splitKeys;
+        return this.splitKeys == null ? Codegen.empty() : this.splitKeys;
     }
 
     public TableState(
@@ -88,11 +89,11 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TableState() {
-        this.columnFamilies = Output.empty();
-        this.instanceName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.splitKeys = Output.empty();
+        this.columnFamilies = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.splitKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columnFamilies(@Nullable List<TableColumnFamilyGetArgs> columnFamilies) {
-            this.columnFamilies = Output.ofNullable(columnFamilies);
+            this.columnFamilies = Codegen.ofNullable(columnFamilies);
             return this;
         }
         public Builder columnFamilies(TableColumnFamilyGetArgs... columnFamilies) {
@@ -139,7 +140,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -147,7 +148,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -155,7 +156,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder splitKeys(@Nullable Output<List<String>> splitKeys) {
@@ -163,7 +164,7 @@ public final class TableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder splitKeys(@Nullable List<String> splitKeys) {
-            this.splitKeys = Output.ofNullable(splitKeys);
+            this.splitKeys = Codegen.ofNullable(splitKeys);
             return this;
         }
         public Builder splitKeys(String... splitKeys) {

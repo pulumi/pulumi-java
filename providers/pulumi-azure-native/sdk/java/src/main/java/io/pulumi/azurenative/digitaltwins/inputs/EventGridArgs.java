@@ -7,6 +7,7 @@ import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -39,7 +40,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accessKey2;
 
     public Output<String> getAccessKey2() {
-        return this.accessKey2 == null ? Output.empty() : this.accessKey2;
+        return this.accessKey2 == null ? Codegen.empty() : this.accessKey2;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,AuthenticationType>> authenticationType;
 
     public Output<Either<String,AuthenticationType>> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deadLetterSecret;
 
     public Output<String> getDeadLetterSecret() {
-        return this.deadLetterSecret == null ? Output.empty() : this.deadLetterSecret;
+        return this.deadLetterSecret == null ? Codegen.empty() : this.deadLetterSecret;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deadLetterUri;
 
     public Output<String> getDeadLetterUri() {
-        return this.deadLetterUri == null ? Output.empty() : this.deadLetterUri;
+        return this.deadLetterUri == null ? Codegen.empty() : this.deadLetterUri;
     }
 
     /**
@@ -116,13 +117,13 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EventGridArgs() {
-        this.accessKey1 = Output.empty();
-        this.accessKey2 = Output.empty();
-        this.authenticationType = Output.empty();
-        this.deadLetterSecret = Output.empty();
-        this.deadLetterUri = Output.empty();
-        this.endpointType = Output.empty();
-        this.topicEndpoint = Output.empty();
+        this.accessKey1 = Codegen.empty();
+        this.accessKey2 = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.deadLetterSecret = Codegen.empty();
+        this.deadLetterUri = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.topicEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessKey2(@Nullable String accessKey2) {
-            this.accessKey2 = Output.ofNullable(accessKey2);
+            this.accessKey2 = Codegen.ofNullable(accessKey2);
             return this;
         }
         public Builder authenticationType(@Nullable Output<Either<String,AuthenticationType>> authenticationType) {
@@ -178,7 +179,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationType(@Nullable Either<String,AuthenticationType> authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder deadLetterSecret(@Nullable Output<String> deadLetterSecret) {
@@ -186,7 +187,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
-            this.deadLetterSecret = Output.ofNullable(deadLetterSecret);
+            this.deadLetterSecret = Codegen.ofNullable(deadLetterSecret);
             return this;
         }
         public Builder deadLetterUri(@Nullable Output<String> deadLetterUri) {
@@ -194,7 +195,7 @@ public final class EventGridArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
-            this.deadLetterUri = Output.ofNullable(deadLetterUri);
+            this.deadLetterUri = Codegen.ofNullable(deadLetterUri);
             return this;
         }
         public Builder endpointType(Output<String> endpointType) {

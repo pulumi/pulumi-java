@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 import io.pulumi.awsnative.cassandra.enums.TableEncryptionType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> kmsKeyIdentifier;
 
     public Output<String> getKmsKeyIdentifier() {
-        return this.kmsKeyIdentifier == null ? Output.empty() : this.kmsKeyIdentifier;
+        return this.kmsKeyIdentifier == null ? Codegen.empty() : this.kmsKeyIdentifier;
     }
 
     public TableEncryptionSpecificationArgs(
@@ -41,8 +42,8 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
     }
 
     private TableEncryptionSpecificationArgs() {
-        this.encryptionType = Output.empty();
-        this.kmsKeyIdentifier = Output.empty();
+        this.encryptionType = Codegen.empty();
+        this.kmsKeyIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class TableEncryptionSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder kmsKeyIdentifier(@Nullable String kmsKeyIdentifier) {
-            this.kmsKeyIdentifier = Output.ofNullable(kmsKeyIdentifier);
+            this.kmsKeyIdentifier = Codegen.ofNullable(kmsKeyIdentifier);
             return this;
         }        public TableEncryptionSpecificationArgs build() {
             return new TableEncryptionSpecificationArgs(encryptionType, kmsKeyIdentifier);

@@ -14,6 +14,7 @@ import io.pulumi.aws.ec2.inputs.SpotInstanceRequestNetworkInterfaceArgs;
 import io.pulumi.aws.ec2.inputs.SpotInstanceRequestRootBlockDeviceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +36,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> ami;
 
     public Output<String> getAmi() {
-        return this.ami == null ? Output.empty() : this.ami;
+        return this.ami == null ? Codegen.empty() : this.ami;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> associatePublicIpAddress;
 
     public Output<Boolean> getAssociatePublicIpAddress() {
-        return this.associatePublicIpAddress == null ? Output.empty() : this.associatePublicIpAddress;
+        return this.associatePublicIpAddress == null ? Codegen.empty() : this.associatePublicIpAddress;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> blockDurationMinutes;
 
     public Output<Integer> getBlockDurationMinutes() {
-        return this.blockDurationMinutes == null ? Output.empty() : this.blockDurationMinutes;
+        return this.blockDurationMinutes == null ? Codegen.empty() : this.blockDurationMinutes;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SpotInstanceRequestCapacityReservationSpecificationArgs> capacityReservationSpecification;
 
     public Output<SpotInstanceRequestCapacityReservationSpecificationArgs> getCapacityReservationSpecification() {
-        return this.capacityReservationSpecification == null ? Output.empty() : this.capacityReservationSpecification;
+        return this.capacityReservationSpecification == null ? Codegen.empty() : this.capacityReservationSpecification;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> cpuCoreCount;
 
     public Output<Integer> getCpuCoreCount() {
-        return this.cpuCoreCount == null ? Output.empty() : this.cpuCoreCount;
+        return this.cpuCoreCount == null ? Codegen.empty() : this.cpuCoreCount;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> cpuThreadsPerCore;
 
     public Output<Integer> getCpuThreadsPerCore() {
-        return this.cpuThreadsPerCore == null ? Output.empty() : this.cpuThreadsPerCore;
+        return this.cpuThreadsPerCore == null ? Codegen.empty() : this.cpuThreadsPerCore;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SpotInstanceRequestCreditSpecificationArgs> creditSpecification;
 
     public Output<SpotInstanceRequestCreditSpecificationArgs> getCreditSpecification() {
-        return this.creditSpecification == null ? Output.empty() : this.creditSpecification;
+        return this.creditSpecification == null ? Codegen.empty() : this.creditSpecification;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> disableApiTermination;
 
     public Output<Boolean> getDisableApiTermination() {
-        return this.disableApiTermination == null ? Output.empty() : this.disableApiTermination;
+        return this.disableApiTermination == null ? Codegen.empty() : this.disableApiTermination;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<SpotInstanceRequestEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Output<List<SpotInstanceRequestEbsBlockDeviceArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
+        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SpotInstanceRequestEnclaveOptionsArgs> enclaveOptions;
 
     public Output<SpotInstanceRequestEnclaveOptionsArgs> getEnclaveOptions() {
-        return this.enclaveOptions == null ? Output.empty() : this.enclaveOptions;
+        return this.enclaveOptions == null ? Codegen.empty() : this.enclaveOptions;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Output<List<SpotInstanceRequestEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
+        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> getPasswordData;
 
     public Output<Boolean> getGetPasswordData() {
-        return this.getPasswordData == null ? Output.empty() : this.getPasswordData;
+        return this.getPasswordData == null ? Codegen.empty() : this.getPasswordData;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> hibernation;
 
     public Output<Boolean> getHibernation() {
-        return this.hibernation == null ? Output.empty() : this.hibernation;
+        return this.hibernation == null ? Codegen.empty() : this.hibernation;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> hostId;
 
     public Output<String> getHostId() {
-        return this.hostId == null ? Output.empty() : this.hostId;
+        return this.hostId == null ? Codegen.empty() : this.hostId;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> iamInstanceProfile;
 
     public Output<String> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
+        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
     public Output<String> getInstanceInitiatedShutdownBehavior() {
-        return this.instanceInitiatedShutdownBehavior == null ? Output.empty() : this.instanceInitiatedShutdownBehavior;
+        return this.instanceInitiatedShutdownBehavior == null ? Codegen.empty() : this.instanceInitiatedShutdownBehavior;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> instanceInterruptionBehavior;
 
     public Output<String> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
+        return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
     /**
@@ -251,7 +252,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
 
     @Deprecated /* Use the parameter ""instance_interruption_behavior"" instead. */
     public Output<String> getInstanceInterruptionBehaviour() {
-        return this.instanceInterruptionBehaviour == null ? Output.empty() : this.instanceInterruptionBehaviour;
+        return this.instanceInterruptionBehaviour == null ? Codegen.empty() : this.instanceInterruptionBehaviour;
     }
 
     /**
@@ -262,7 +263,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -273,7 +274,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> ipv6AddressCount;
 
     public Output<Integer> getIpv6AddressCount() {
-        return this.ipv6AddressCount == null ? Output.empty() : this.ipv6AddressCount;
+        return this.ipv6AddressCount == null ? Codegen.empty() : this.ipv6AddressCount;
     }
 
     /**
@@ -284,7 +285,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> ipv6Addresses;
 
     public Output<List<String>> getIpv6Addresses() {
-        return this.ipv6Addresses == null ? Output.empty() : this.ipv6Addresses;
+        return this.ipv6Addresses == null ? Codegen.empty() : this.ipv6Addresses;
     }
 
     /**
@@ -295,7 +296,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -307,7 +308,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> launchGroup;
 
     public Output<String> getLaunchGroup() {
-        return this.launchGroup == null ? Output.empty() : this.launchGroup;
+        return this.launchGroup == null ? Codegen.empty() : this.launchGroup;
     }
 
     /**
@@ -319,7 +320,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SpotInstanceRequestLaunchTemplateArgs> launchTemplate;
 
     public Output<SpotInstanceRequestLaunchTemplateArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
+        return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
     /**
@@ -330,7 +331,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SpotInstanceRequestMetadataOptionsArgs> metadataOptions;
 
     public Output<SpotInstanceRequestMetadataOptionsArgs> getMetadataOptions() {
-        return this.metadataOptions == null ? Output.empty() : this.metadataOptions;
+        return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
     /**
@@ -341,7 +342,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> monitoring;
 
     public Output<Boolean> getMonitoring() {
-        return this.monitoring == null ? Output.empty() : this.monitoring;
+        return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     /**
@@ -352,7 +353,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<SpotInstanceRequestNetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<SpotInstanceRequestNetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     /**
@@ -363,7 +364,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> placementGroup;
 
     public Output<String> getPlacementGroup() {
-        return this.placementGroup == null ? Output.empty() : this.placementGroup;
+        return this.placementGroup == null ? Codegen.empty() : this.placementGroup;
     }
 
     /**
@@ -374,7 +375,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> placementPartitionNumber;
 
     public Output<Integer> getPlacementPartitionNumber() {
-        return this.placementPartitionNumber == null ? Output.empty() : this.placementPartitionNumber;
+        return this.placementPartitionNumber == null ? Codegen.empty() : this.placementPartitionNumber;
     }
 
     /**
@@ -385,7 +386,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> privateIp;
 
     public Output<String> getPrivateIp() {
-        return this.privateIp == null ? Output.empty() : this.privateIp;
+        return this.privateIp == null ? Codegen.empty() : this.privateIp;
     }
 
     /**
@@ -396,7 +397,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SpotInstanceRequestRootBlockDeviceArgs> rootBlockDevice;
 
     public Output<SpotInstanceRequestRootBlockDeviceArgs> getRootBlockDevice() {
-        return this.rootBlockDevice == null ? Output.empty() : this.rootBlockDevice;
+        return this.rootBlockDevice == null ? Codegen.empty() : this.rootBlockDevice;
     }
 
     /**
@@ -407,7 +408,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> secondaryPrivateIps;
 
     public Output<List<String>> getSecondaryPrivateIps() {
-        return this.secondaryPrivateIps == null ? Output.empty() : this.secondaryPrivateIps;
+        return this.secondaryPrivateIps == null ? Codegen.empty() : this.secondaryPrivateIps;
     }
 
     /**
@@ -418,7 +419,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -429,7 +430,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> sourceDestCheck;
 
     public Output<Boolean> getSourceDestCheck() {
-        return this.sourceDestCheck == null ? Output.empty() : this.sourceDestCheck;
+        return this.sourceDestCheck == null ? Codegen.empty() : this.sourceDestCheck;
     }
 
     /**
@@ -440,7 +441,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
-        return this.spotPrice == null ? Output.empty() : this.spotPrice;
+        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     /**
@@ -452,7 +453,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> spotType;
 
     public Output<String> getSpotType() {
-        return this.spotType == null ? Output.empty() : this.spotType;
+        return this.spotType == null ? Codegen.empty() : this.spotType;
     }
 
     /**
@@ -463,7 +464,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -474,7 +475,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -485,7 +486,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> tenancy;
 
     public Output<String> getTenancy() {
-        return this.tenancy == null ? Output.empty() : this.tenancy;
+        return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
     /**
@@ -496,7 +497,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     /**
@@ -507,7 +508,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> userDataBase64;
 
     public Output<String> getUserDataBase64() {
-        return this.userDataBase64 == null ? Output.empty() : this.userDataBase64;
+        return this.userDataBase64 == null ? Codegen.empty() : this.userDataBase64;
     }
 
     /**
@@ -518,7 +519,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> validFrom;
 
     public Output<String> getValidFrom() {
-        return this.validFrom == null ? Output.empty() : this.validFrom;
+        return this.validFrom == null ? Codegen.empty() : this.validFrom;
     }
 
     /**
@@ -529,7 +530,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> validUntil;
 
     public Output<String> getValidUntil() {
-        return this.validUntil == null ? Output.empty() : this.validUntil;
+        return this.validUntil == null ? Codegen.empty() : this.validUntil;
     }
 
     /**
@@ -540,7 +541,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> volumeTags;
 
     public Output<Map<String,String>> getVolumeTags() {
-        return this.volumeTags == null ? Output.empty() : this.volumeTags;
+        return this.volumeTags == null ? Codegen.empty() : this.volumeTags;
     }
 
     /**
@@ -551,7 +552,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -564,7 +565,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> waitForFulfillment;
 
     public Output<Boolean> getWaitForFulfillment() {
-        return this.waitForFulfillment == null ? Output.empty() : this.waitForFulfillment;
+        return this.waitForFulfillment == null ? Codegen.empty() : this.waitForFulfillment;
     }
 
     public SpotInstanceRequestArgs(
@@ -667,54 +668,54 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
     }
 
     private SpotInstanceRequestArgs() {
-        this.ami = Output.empty();
-        this.associatePublicIpAddress = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.blockDurationMinutes = Output.empty();
-        this.capacityReservationSpecification = Output.empty();
-        this.cpuCoreCount = Output.empty();
-        this.cpuThreadsPerCore = Output.empty();
-        this.creditSpecification = Output.empty();
-        this.disableApiTermination = Output.empty();
-        this.ebsBlockDevices = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.enclaveOptions = Output.empty();
-        this.ephemeralBlockDevices = Output.empty();
-        this.getPasswordData = Output.empty();
-        this.hibernation = Output.empty();
-        this.hostId = Output.empty();
-        this.iamInstanceProfile = Output.empty();
-        this.instanceInitiatedShutdownBehavior = Output.empty();
-        this.instanceInterruptionBehavior = Output.empty();
-        this.instanceInterruptionBehaviour = Output.empty();
-        this.instanceType = Output.empty();
-        this.ipv6AddressCount = Output.empty();
-        this.ipv6Addresses = Output.empty();
-        this.keyName = Output.empty();
-        this.launchGroup = Output.empty();
-        this.launchTemplate = Output.empty();
-        this.metadataOptions = Output.empty();
-        this.monitoring = Output.empty();
-        this.networkInterfaces = Output.empty();
-        this.placementGroup = Output.empty();
-        this.placementPartitionNumber = Output.empty();
-        this.privateIp = Output.empty();
-        this.rootBlockDevice = Output.empty();
-        this.secondaryPrivateIps = Output.empty();
-        this.securityGroups = Output.empty();
-        this.sourceDestCheck = Output.empty();
-        this.spotPrice = Output.empty();
-        this.spotType = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.tenancy = Output.empty();
-        this.userData = Output.empty();
-        this.userDataBase64 = Output.empty();
-        this.validFrom = Output.empty();
-        this.validUntil = Output.empty();
-        this.volumeTags = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
-        this.waitForFulfillment = Output.empty();
+        this.ami = Codegen.empty();
+        this.associatePublicIpAddress = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.blockDurationMinutes = Codegen.empty();
+        this.capacityReservationSpecification = Codegen.empty();
+        this.cpuCoreCount = Codegen.empty();
+        this.cpuThreadsPerCore = Codegen.empty();
+        this.creditSpecification = Codegen.empty();
+        this.disableApiTermination = Codegen.empty();
+        this.ebsBlockDevices = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.enclaveOptions = Codegen.empty();
+        this.ephemeralBlockDevices = Codegen.empty();
+        this.getPasswordData = Codegen.empty();
+        this.hibernation = Codegen.empty();
+        this.hostId = Codegen.empty();
+        this.iamInstanceProfile = Codegen.empty();
+        this.instanceInitiatedShutdownBehavior = Codegen.empty();
+        this.instanceInterruptionBehavior = Codegen.empty();
+        this.instanceInterruptionBehaviour = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.ipv6AddressCount = Codegen.empty();
+        this.ipv6Addresses = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.launchGroup = Codegen.empty();
+        this.launchTemplate = Codegen.empty();
+        this.metadataOptions = Codegen.empty();
+        this.monitoring = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.placementGroup = Codegen.empty();
+        this.placementPartitionNumber = Codegen.empty();
+        this.privateIp = Codegen.empty();
+        this.rootBlockDevice = Codegen.empty();
+        this.secondaryPrivateIps = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.sourceDestCheck = Codegen.empty();
+        this.spotPrice = Codegen.empty();
+        this.spotType = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tenancy = Codegen.empty();
+        this.userData = Codegen.empty();
+        this.userDataBase64 = Codegen.empty();
+        this.validFrom = Codegen.empty();
+        this.validUntil = Codegen.empty();
+        this.volumeTags = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
+        this.waitForFulfillment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -836,7 +837,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ami(@Nullable String ami) {
-            this.ami = Output.ofNullable(ami);
+            this.ami = Codegen.ofNullable(ami);
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable Output<Boolean> associatePublicIpAddress) {
@@ -844,7 +845,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder associatePublicIpAddress(@Nullable Boolean associatePublicIpAddress) {
-            this.associatePublicIpAddress = Output.ofNullable(associatePublicIpAddress);
+            this.associatePublicIpAddress = Codegen.ofNullable(associatePublicIpAddress);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -852,7 +853,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder blockDurationMinutes(@Nullable Output<Integer> blockDurationMinutes) {
@@ -860,7 +861,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder blockDurationMinutes(@Nullable Integer blockDurationMinutes) {
-            this.blockDurationMinutes = Output.ofNullable(blockDurationMinutes);
+            this.blockDurationMinutes = Codegen.ofNullable(blockDurationMinutes);
             return this;
         }
         public Builder capacityReservationSpecification(@Nullable Output<SpotInstanceRequestCapacityReservationSpecificationArgs> capacityReservationSpecification) {
@@ -868,7 +869,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder capacityReservationSpecification(@Nullable SpotInstanceRequestCapacityReservationSpecificationArgs capacityReservationSpecification) {
-            this.capacityReservationSpecification = Output.ofNullable(capacityReservationSpecification);
+            this.capacityReservationSpecification = Codegen.ofNullable(capacityReservationSpecification);
             return this;
         }
         public Builder cpuCoreCount(@Nullable Output<Integer> cpuCoreCount) {
@@ -876,7 +877,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder cpuCoreCount(@Nullable Integer cpuCoreCount) {
-            this.cpuCoreCount = Output.ofNullable(cpuCoreCount);
+            this.cpuCoreCount = Codegen.ofNullable(cpuCoreCount);
             return this;
         }
         public Builder cpuThreadsPerCore(@Nullable Output<Integer> cpuThreadsPerCore) {
@@ -884,7 +885,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder cpuThreadsPerCore(@Nullable Integer cpuThreadsPerCore) {
-            this.cpuThreadsPerCore = Output.ofNullable(cpuThreadsPerCore);
+            this.cpuThreadsPerCore = Codegen.ofNullable(cpuThreadsPerCore);
             return this;
         }
         public Builder creditSpecification(@Nullable Output<SpotInstanceRequestCreditSpecificationArgs> creditSpecification) {
@@ -892,7 +893,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder creditSpecification(@Nullable SpotInstanceRequestCreditSpecificationArgs creditSpecification) {
-            this.creditSpecification = Output.ofNullable(creditSpecification);
+            this.creditSpecification = Codegen.ofNullable(creditSpecification);
             return this;
         }
         public Builder disableApiTermination(@Nullable Output<Boolean> disableApiTermination) {
@@ -900,7 +901,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder disableApiTermination(@Nullable Boolean disableApiTermination) {
-            this.disableApiTermination = Output.ofNullable(disableApiTermination);
+            this.disableApiTermination = Codegen.ofNullable(disableApiTermination);
             return this;
         }
         public Builder ebsBlockDevices(@Nullable Output<List<SpotInstanceRequestEbsBlockDeviceArgs>> ebsBlockDevices) {
@@ -908,7 +909,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ebsBlockDevices(@Nullable List<SpotInstanceRequestEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
             return this;
         }
         public Builder ebsBlockDevices(SpotInstanceRequestEbsBlockDeviceArgs... ebsBlockDevices) {
@@ -919,7 +920,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder enclaveOptions(@Nullable Output<SpotInstanceRequestEnclaveOptionsArgs> enclaveOptions) {
@@ -927,7 +928,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enclaveOptions(@Nullable SpotInstanceRequestEnclaveOptionsArgs enclaveOptions) {
-            this.enclaveOptions = Output.ofNullable(enclaveOptions);
+            this.enclaveOptions = Codegen.ofNullable(enclaveOptions);
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable Output<List<SpotInstanceRequestEphemeralBlockDeviceArgs>> ephemeralBlockDevices) {
@@ -935,7 +936,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable List<SpotInstanceRequestEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
             return this;
         }
         public Builder ephemeralBlockDevices(SpotInstanceRequestEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
@@ -946,7 +947,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder getPasswordData(@Nullable Boolean getPasswordData) {
-            this.getPasswordData = Output.ofNullable(getPasswordData);
+            this.getPasswordData = Codegen.ofNullable(getPasswordData);
             return this;
         }
         public Builder hibernation(@Nullable Output<Boolean> hibernation) {
@@ -954,7 +955,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hibernation(@Nullable Boolean hibernation) {
-            this.hibernation = Output.ofNullable(hibernation);
+            this.hibernation = Codegen.ofNullable(hibernation);
             return this;
         }
         public Builder hostId(@Nullable Output<String> hostId) {
@@ -962,7 +963,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hostId(@Nullable String hostId) {
-            this.hostId = Output.ofNullable(hostId);
+            this.hostId = Codegen.ofNullable(hostId);
             return this;
         }
         public Builder iamInstanceProfile(@Nullable Output<String> iamInstanceProfile) {
@@ -970,7 +971,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder iamInstanceProfile(@Nullable String iamInstanceProfile) {
-            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
             return this;
         }
         public Builder instanceInitiatedShutdownBehavior(@Nullable Output<String> instanceInitiatedShutdownBehavior) {
@@ -978,7 +979,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
-            this.instanceInitiatedShutdownBehavior = Output.ofNullable(instanceInitiatedShutdownBehavior);
+            this.instanceInitiatedShutdownBehavior = Codegen.ofNullable(instanceInitiatedShutdownBehavior);
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable Output<String> instanceInterruptionBehavior) {
@@ -986,7 +987,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable String instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Codegen.ofNullable(instanceInterruptionBehavior);
             return this;
         }
         public Builder instanceInterruptionBehaviour(@Nullable Output<String> instanceInterruptionBehaviour) {
@@ -994,7 +995,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceInterruptionBehaviour(@Nullable String instanceInterruptionBehaviour) {
-            this.instanceInterruptionBehaviour = Output.ofNullable(instanceInterruptionBehaviour);
+            this.instanceInterruptionBehaviour = Codegen.ofNullable(instanceInterruptionBehaviour);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -1002,7 +1003,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder ipv6AddressCount(@Nullable Output<Integer> ipv6AddressCount) {
@@ -1010,7 +1011,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ipv6AddressCount(@Nullable Integer ipv6AddressCount) {
-            this.ipv6AddressCount = Output.ofNullable(ipv6AddressCount);
+            this.ipv6AddressCount = Codegen.ofNullable(ipv6AddressCount);
             return this;
         }
         public Builder ipv6Addresses(@Nullable Output<List<String>> ipv6Addresses) {
@@ -1018,7 +1019,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ipv6Addresses(@Nullable List<String> ipv6Addresses) {
-            this.ipv6Addresses = Output.ofNullable(ipv6Addresses);
+            this.ipv6Addresses = Codegen.ofNullable(ipv6Addresses);
             return this;
         }
         public Builder ipv6Addresses(String... ipv6Addresses) {
@@ -1029,7 +1030,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder launchGroup(@Nullable Output<String> launchGroup) {
@@ -1037,7 +1038,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder launchGroup(@Nullable String launchGroup) {
-            this.launchGroup = Output.ofNullable(launchGroup);
+            this.launchGroup = Codegen.ofNullable(launchGroup);
             return this;
         }
         public Builder launchTemplate(@Nullable Output<SpotInstanceRequestLaunchTemplateArgs> launchTemplate) {
@@ -1045,7 +1046,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder launchTemplate(@Nullable SpotInstanceRequestLaunchTemplateArgs launchTemplate) {
-            this.launchTemplate = Output.ofNullable(launchTemplate);
+            this.launchTemplate = Codegen.ofNullable(launchTemplate);
             return this;
         }
         public Builder metadataOptions(@Nullable Output<SpotInstanceRequestMetadataOptionsArgs> metadataOptions) {
@@ -1053,7 +1054,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder metadataOptions(@Nullable SpotInstanceRequestMetadataOptionsArgs metadataOptions) {
-            this.metadataOptions = Output.ofNullable(metadataOptions);
+            this.metadataOptions = Codegen.ofNullable(metadataOptions);
             return this;
         }
         public Builder monitoring(@Nullable Output<Boolean> monitoring) {
@@ -1061,7 +1062,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder monitoring(@Nullable Boolean monitoring) {
-            this.monitoring = Output.ofNullable(monitoring);
+            this.monitoring = Codegen.ofNullable(monitoring);
             return this;
         }
         public Builder networkInterfaces(@Nullable Output<List<SpotInstanceRequestNetworkInterfaceArgs>> networkInterfaces) {
@@ -1069,7 +1070,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder networkInterfaces(@Nullable List<SpotInstanceRequestNetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(SpotInstanceRequestNetworkInterfaceArgs... networkInterfaces) {
@@ -1080,7 +1081,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder placementGroup(@Nullable String placementGroup) {
-            this.placementGroup = Output.ofNullable(placementGroup);
+            this.placementGroup = Codegen.ofNullable(placementGroup);
             return this;
         }
         public Builder placementPartitionNumber(@Nullable Output<Integer> placementPartitionNumber) {
@@ -1088,7 +1089,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder placementPartitionNumber(@Nullable Integer placementPartitionNumber) {
-            this.placementPartitionNumber = Output.ofNullable(placementPartitionNumber);
+            this.placementPartitionNumber = Codegen.ofNullable(placementPartitionNumber);
             return this;
         }
         public Builder privateIp(@Nullable Output<String> privateIp) {
@@ -1096,7 +1097,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateIp(@Nullable String privateIp) {
-            this.privateIp = Output.ofNullable(privateIp);
+            this.privateIp = Codegen.ofNullable(privateIp);
             return this;
         }
         public Builder rootBlockDevice(@Nullable Output<SpotInstanceRequestRootBlockDeviceArgs> rootBlockDevice) {
@@ -1104,7 +1105,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder rootBlockDevice(@Nullable SpotInstanceRequestRootBlockDeviceArgs rootBlockDevice) {
-            this.rootBlockDevice = Output.ofNullable(rootBlockDevice);
+            this.rootBlockDevice = Codegen.ofNullable(rootBlockDevice);
             return this;
         }
         public Builder secondaryPrivateIps(@Nullable Output<List<String>> secondaryPrivateIps) {
@@ -1112,7 +1113,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder secondaryPrivateIps(@Nullable List<String> secondaryPrivateIps) {
-            this.secondaryPrivateIps = Output.ofNullable(secondaryPrivateIps);
+            this.secondaryPrivateIps = Codegen.ofNullable(secondaryPrivateIps);
             return this;
         }
         public Builder secondaryPrivateIps(String... secondaryPrivateIps) {
@@ -1123,7 +1124,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -1134,7 +1135,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder sourceDestCheck(@Nullable Boolean sourceDestCheck) {
-            this.sourceDestCheck = Output.ofNullable(sourceDestCheck);
+            this.sourceDestCheck = Codegen.ofNullable(sourceDestCheck);
             return this;
         }
         public Builder spotPrice(@Nullable Output<String> spotPrice) {
@@ -1142,7 +1143,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Output.ofNullable(spotPrice);
+            this.spotPrice = Codegen.ofNullable(spotPrice);
             return this;
         }
         public Builder spotType(@Nullable Output<String> spotType) {
@@ -1150,7 +1151,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder spotType(@Nullable String spotType) {
-            this.spotType = Output.ofNullable(spotType);
+            this.spotType = Codegen.ofNullable(spotType);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -1158,7 +1159,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -1166,7 +1167,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tenancy(@Nullable Output<String> tenancy) {
@@ -1174,7 +1175,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tenancy(@Nullable String tenancy) {
-            this.tenancy = Output.ofNullable(tenancy);
+            this.tenancy = Codegen.ofNullable(tenancy);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -1182,7 +1183,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }
         public Builder userDataBase64(@Nullable Output<String> userDataBase64) {
@@ -1190,7 +1191,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder userDataBase64(@Nullable String userDataBase64) {
-            this.userDataBase64 = Output.ofNullable(userDataBase64);
+            this.userDataBase64 = Codegen.ofNullable(userDataBase64);
             return this;
         }
         public Builder validFrom(@Nullable Output<String> validFrom) {
@@ -1198,7 +1199,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder validFrom(@Nullable String validFrom) {
-            this.validFrom = Output.ofNullable(validFrom);
+            this.validFrom = Codegen.ofNullable(validFrom);
             return this;
         }
         public Builder validUntil(@Nullable Output<String> validUntil) {
@@ -1206,7 +1207,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder validUntil(@Nullable String validUntil) {
-            this.validUntil = Output.ofNullable(validUntil);
+            this.validUntil = Codegen.ofNullable(validUntil);
             return this;
         }
         public Builder volumeTags(@Nullable Output<Map<String,String>> volumeTags) {
@@ -1214,7 +1215,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder volumeTags(@Nullable Map<String,String> volumeTags) {
-            this.volumeTags = Output.ofNullable(volumeTags);
+            this.volumeTags = Codegen.ofNullable(volumeTags);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -1222,7 +1223,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {
@@ -1233,7 +1234,7 @@ public final class SpotInstanceRequestArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder waitForFulfillment(@Nullable Boolean waitForFulfillment) {
-            this.waitForFulfillment = Output.ofNullable(waitForFulfillment);
+            this.waitForFulfillment = Codegen.ofNullable(waitForFulfillment);
             return this;
         }        public SpotInstanceRequestArgs build() {
             return new SpotInstanceRequestArgs(ami, associatePublicIpAddress, availabilityZone, blockDurationMinutes, capacityReservationSpecification, cpuCoreCount, cpuThreadsPerCore, creditSpecification, disableApiTermination, ebsBlockDevices, ebsOptimized, enclaveOptions, ephemeralBlockDevices, getPasswordData, hibernation, hostId, iamInstanceProfile, instanceInitiatedShutdownBehavior, instanceInterruptionBehavior, instanceInterruptionBehaviour, instanceType, ipv6AddressCount, ipv6Addresses, keyName, launchGroup, launchTemplate, metadataOptions, monitoring, networkInterfaces, placementGroup, placementPartitionNumber, privateIp, rootBlockDevice, secondaryPrivateIps, securityGroups, sourceDestCheck, spotPrice, spotType, subnetId, tags, tenancy, userData, userDataBase64, validFrom, validUntil, volumeTags, vpcSecurityGroupIds, waitForFulfillment);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
       private final @Nullable Output<Integer> concurrencyLimit;
 
     public Output<Integer> getConcurrencyLimit() {
-        return this.concurrencyLimit == null ? Output.empty() : this.concurrencyLimit;
+        return this.concurrencyLimit == null ? Codegen.empty() : this.concurrencyLimit;
     }
 
     public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(@Nullable Output<Integer> concurrencyLimit) {
@@ -30,7 +31,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
     }
 
     private ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs() {
-        this.concurrencyLimit = Output.empty();
+        this.concurrencyLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs exten
             return this;
         }
         public Builder concurrencyLimit(@Nullable Integer concurrencyLimit) {
-            this.concurrencyLimit = Output.ofNullable(concurrencyLimit);
+            this.concurrencyLimit = Codegen.ofNullable(concurrencyLimit);
             return this;
         }        public ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs build() {
             return new ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs(concurrencyLimit);

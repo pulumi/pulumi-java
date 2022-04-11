@@ -11,6 +11,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ThrottlingInformationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -41,7 +42,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> alertRuleName;
 
     public Output<String> getAlertRuleName() {
-        return this.alertRuleName == null ? Output.empty() : this.alertRuleName;
+        return this.alertRuleName == null ? Codegen.empty() : this.alertRuleName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ThrottlingInformationArgs> throttling;
 
     public Output<ThrottlingInformationArgs> getThrottling() {
-        return this.throttling == null ? Output.empty() : this.throttling;
+        return this.throttling == null ? Codegen.empty() : this.throttling;
     }
 
     public SmartDetectorAlertRuleArgs(
@@ -172,7 +173,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
         this.description = description;
         this.detector = Objects.requireNonNull(detector, "expected parameter 'detector' to be non-null");
         this.frequency = Objects.requireNonNull(frequency, "expected parameter 'frequency' to be non-null");
-        this.location = location == null ? Output.ofNullable("global") : location;
+        this.location = location == null ? Codegen.ofNullable("global") : location;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.scope = Objects.requireNonNull(scope, "expected parameter 'scope' to be non-null");
         this.severity = Objects.requireNonNull(severity, "expected parameter 'severity' to be non-null");
@@ -182,18 +183,18 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
     }
 
     private SmartDetectorAlertRuleArgs() {
-        this.actionGroups = Output.empty();
-        this.alertRuleName = Output.empty();
-        this.description = Output.empty();
-        this.detector = Output.empty();
-        this.frequency = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.severity = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.throttling = Output.empty();
+        this.actionGroups = Codegen.empty();
+        this.alertRuleName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.detector = Codegen.empty();
+        this.frequency = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.severity = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.throttling = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -251,7 +252,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder alertRuleName(@Nullable String alertRuleName) {
-            this.alertRuleName = Output.ofNullable(alertRuleName);
+            this.alertRuleName = Codegen.ofNullable(alertRuleName);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -259,7 +260,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder detector(Output<DetectorArgs> detector) {
@@ -283,7 +284,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -326,7 +327,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder throttling(@Nullable Output<ThrottlingInformationArgs> throttling) {
@@ -334,7 +335,7 @@ public final class SmartDetectorAlertRuleArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder throttling(@Nullable ThrottlingInformationArgs throttling) {
-            this.throttling = Output.ofNullable(throttling);
+            this.throttling = Codegen.ofNullable(throttling);
             return this;
         }        public SmartDetectorAlertRuleArgs build() {
             return new SmartDetectorAlertRuleArgs(actionGroups, alertRuleName, description, detector, frequency, location, resourceGroupName, scope, severity, state, tags, throttling);

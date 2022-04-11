@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -73,10 +74,10 @@ public final class KeyRingImportJobArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KeyRingImportJobArgs() {
-        this.importJobId = Output.empty();
-        this.importMethod = Output.empty();
-        this.keyRing = Output.empty();
-        this.protectionLevel = Output.empty();
+        this.importJobId = Codegen.empty();
+        this.importMethod = Codegen.empty();
+        this.keyRing = Codegen.empty();
+        this.protectionLevel = Codegen.empty();
     }
 
     public static Builder builder() {

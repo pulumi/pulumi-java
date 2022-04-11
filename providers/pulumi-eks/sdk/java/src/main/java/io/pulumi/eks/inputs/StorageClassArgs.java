@@ -5,6 +5,7 @@ package io.pulumi.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -30,7 +31,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowVolumeExpansion;
 
     public Output<Boolean> getAllowVolumeExpansion() {
-        return this.allowVolumeExpansion == null ? Output.empty() : this.allowVolumeExpansion;
+        return this.allowVolumeExpansion == null ? Codegen.empty() : this.allowVolumeExpansion;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> default_;
 
     public Output<Boolean> getDefault_() {
-        return this.default_ == null ? Output.empty() : this.default_;
+        return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> iopsPerGb;
 
     public Output<Integer> getIopsPerGb() {
-        return this.iopsPerGb == null ? Output.empty() : this.iopsPerGb;
+        return this.iopsPerGb == null ? Codegen.empty() : this.iopsPerGb;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> mountOptions;
 
     public Output<List<String>> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reclaimPolicy;
 
     public Output<String> getReclaimPolicy() {
-        return this.reclaimPolicy == null ? Output.empty() : this.reclaimPolicy;
+        return this.reclaimPolicy == null ? Codegen.empty() : this.reclaimPolicy;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeBindingMode;
 
     public Output<String> getVolumeBindingMode() {
-        return this.volumeBindingMode == null ? Output.empty() : this.volumeBindingMode;
+        return this.volumeBindingMode == null ? Codegen.empty() : this.volumeBindingMode;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public StorageClassArgs(
@@ -173,17 +174,17 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageClassArgs() {
-        this.allowVolumeExpansion = Output.empty();
-        this.default_ = Output.empty();
-        this.encrypted = Output.empty();
-        this.iopsPerGb = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.metadata = Output.empty();
-        this.mountOptions = Output.empty();
-        this.reclaimPolicy = Output.empty();
-        this.type = Output.empty();
-        this.volumeBindingMode = Output.empty();
-        this.zones = Output.empty();
+        this.allowVolumeExpansion = Codegen.empty();
+        this.default_ = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iopsPerGb = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.mountOptions = Codegen.empty();
+        this.reclaimPolicy = Codegen.empty();
+        this.type = Codegen.empty();
+        this.volumeBindingMode = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -231,7 +232,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowVolumeExpansion(@Nullable Boolean allowVolumeExpansion) {
-            this.allowVolumeExpansion = Output.ofNullable(allowVolumeExpansion);
+            this.allowVolumeExpansion = Codegen.ofNullable(allowVolumeExpansion);
             return this;
         }
         public Builder default_(@Nullable Output<Boolean> default_) {
@@ -239,7 +240,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder default_(@Nullable Boolean default_) {
-            this.default_ = Output.ofNullable(default_);
+            this.default_ = Codegen.ofNullable(default_);
             return this;
         }
         public Builder encrypted(@Nullable Output<Boolean> encrypted) {
@@ -247,7 +248,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iopsPerGb(@Nullable Output<Integer> iopsPerGb) {
@@ -255,7 +256,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iopsPerGb(@Nullable Integer iopsPerGb) {
-            this.iopsPerGb = Output.ofNullable(iopsPerGb);
+            this.iopsPerGb = Codegen.ofNullable(iopsPerGb);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -263,7 +264,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -271,7 +272,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder mountOptions(@Nullable Output<List<String>> mountOptions) {
@@ -279,7 +280,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountOptions(@Nullable List<String> mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder mountOptions(String... mountOptions) {
@@ -290,7 +291,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reclaimPolicy(@Nullable String reclaimPolicy) {
-            this.reclaimPolicy = Output.ofNullable(reclaimPolicy);
+            this.reclaimPolicy = Codegen.ofNullable(reclaimPolicy);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -306,7 +307,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeBindingMode(@Nullable String volumeBindingMode) {
-            this.volumeBindingMode = Output.ofNullable(volumeBindingMode);
+            this.volumeBindingMode = Codegen.ofNullable(volumeBindingMode);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -314,7 +315,7 @@ public final class StorageClassArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> failureThreshold;
 
     public Output<Integer> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> resourcePath;
 
     public Output<String> getResourcePath() {
-        return this.resourcePath == null ? Output.empty() : this.resourcePath;
+        return this.resourcePath == null ? Codegen.empty() : this.resourcePath;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ServiceHealthCheckConfigGetArgs(
@@ -58,9 +59,9 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
     }
 
     private ServiceHealthCheckConfigGetArgs() {
-        this.failureThreshold = Output.empty();
-        this.resourcePath = Output.empty();
-        this.type = Output.empty();
+        this.failureThreshold = Codegen.empty();
+        this.resourcePath = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder failureThreshold(@Nullable Integer failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }
         public Builder resourcePath(@Nullable Output<String> resourcePath) {
@@ -100,7 +101,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder resourcePath(@Nullable String resourcePath) {
-            this.resourcePath = Output.ofNullable(resourcePath);
+            this.resourcePath = Codegen.ofNullable(resourcePath);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -108,7 +109,7 @@ public final class ServiceHealthCheckConfigGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ServiceHealthCheckConfigGetArgs build() {
             return new ServiceHealthCheckConfigGetArgs(failureThreshold, resourcePath, type);

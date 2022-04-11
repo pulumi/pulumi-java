@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.NodeTemplateNodeTypeFlexibilityGetArgs;
 import io.pulumi.gcp.compute.inputs.NodeTemplateServerBindingGetArgs;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cpuOvercommitType;
 
     public Output<String> getCpuOvercommitType() {
-        return this.cpuOvercommitType == null ? Output.empty() : this.cpuOvercommitType;
+        return this.cpuOvercommitType == null ? Codegen.empty() : this.cpuOvercommitType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> creationTimestamp;
 
     public Output<String> getCreationTimestamp() {
-        return this.creationTimestamp == null ? Output.empty() : this.creationTimestamp;
+        return this.creationTimestamp == null ? Codegen.empty() : this.creationTimestamp;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> nodeAffinityLabels;
 
     public Output<Map<String,String>> getNodeAffinityLabels() {
-        return this.nodeAffinityLabels == null ? Output.empty() : this.nodeAffinityLabels;
+        return this.nodeAffinityLabels == null ? Codegen.empty() : this.nodeAffinityLabels;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nodeType;
 
     public Output<String> getNodeType() {
-        return this.nodeType == null ? Output.empty() : this.nodeType;
+        return this.nodeType == null ? Codegen.empty() : this.nodeType;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility;
 
     public Output<NodeTemplateNodeTypeFlexibilityGetArgs> getNodeTypeFlexibility() {
-        return this.nodeTypeFlexibility == null ? Output.empty() : this.nodeTypeFlexibility;
+        return this.nodeTypeFlexibility == null ? Codegen.empty() : this.nodeTypeFlexibility;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selfLink;
 
     public Output<String> getSelfLink() {
-        return this.selfLink == null ? Output.empty() : this.selfLink;
+        return this.selfLink == null ? Codegen.empty() : this.selfLink;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding;
 
     public Output<NodeTemplateServerBindingGetArgs> getServerBinding() {
-        return this.serverBinding == null ? Output.empty() : this.serverBinding;
+        return this.serverBinding == null ? Codegen.empty() : this.serverBinding;
     }
 
     public NodeTemplateState(
@@ -176,17 +177,17 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeTemplateState() {
-        this.cpuOvercommitType = Output.empty();
-        this.creationTimestamp = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.nodeAffinityLabels = Output.empty();
-        this.nodeType = Output.empty();
-        this.nodeTypeFlexibility = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.selfLink = Output.empty();
-        this.serverBinding = Output.empty();
+        this.cpuOvercommitType = Codegen.empty();
+        this.creationTimestamp = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodeAffinityLabels = Codegen.empty();
+        this.nodeType = Codegen.empty();
+        this.nodeTypeFlexibility = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.selfLink = Codegen.empty();
+        this.serverBinding = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -234,7 +235,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpuOvercommitType(@Nullable String cpuOvercommitType) {
-            this.cpuOvercommitType = Output.ofNullable(cpuOvercommitType);
+            this.cpuOvercommitType = Codegen.ofNullable(cpuOvercommitType);
             return this;
         }
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
@@ -242,7 +243,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTimestamp(@Nullable String creationTimestamp) {
-            this.creationTimestamp = Output.ofNullable(creationTimestamp);
+            this.creationTimestamp = Codegen.ofNullable(creationTimestamp);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -250,7 +251,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -258,7 +259,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodeAffinityLabels(@Nullable Output<Map<String,String>> nodeAffinityLabels) {
@@ -266,7 +267,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeAffinityLabels(@Nullable Map<String,String> nodeAffinityLabels) {
-            this.nodeAffinityLabels = Output.ofNullable(nodeAffinityLabels);
+            this.nodeAffinityLabels = Codegen.ofNullable(nodeAffinityLabels);
             return this;
         }
         public Builder nodeType(@Nullable Output<String> nodeType) {
@@ -274,7 +275,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeType(@Nullable String nodeType) {
-            this.nodeType = Output.ofNullable(nodeType);
+            this.nodeType = Codegen.ofNullable(nodeType);
             return this;
         }
         public Builder nodeTypeFlexibility(@Nullable Output<NodeTemplateNodeTypeFlexibilityGetArgs> nodeTypeFlexibility) {
@@ -282,7 +283,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeTypeFlexibility(@Nullable NodeTemplateNodeTypeFlexibilityGetArgs nodeTypeFlexibility) {
-            this.nodeTypeFlexibility = Output.ofNullable(nodeTypeFlexibility);
+            this.nodeTypeFlexibility = Codegen.ofNullable(nodeTypeFlexibility);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -290,7 +291,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -298,7 +299,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder selfLink(@Nullable Output<String> selfLink) {
@@ -306,7 +307,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selfLink(@Nullable String selfLink) {
-            this.selfLink = Output.ofNullable(selfLink);
+            this.selfLink = Codegen.ofNullable(selfLink);
             return this;
         }
         public Builder serverBinding(@Nullable Output<NodeTemplateServerBindingGetArgs> serverBinding) {
@@ -314,7 +315,7 @@ public final class NodeTemplateState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverBinding(@Nullable NodeTemplateServerBindingGetArgs serverBinding) {
-            this.serverBinding = Output.ofNullable(serverBinding);
+            this.serverBinding = Codegen.ofNullable(serverBinding);
             return this;
         }        public NodeTemplateState build() {
             return new NodeTemplateState(cpuOvercommitType, creationTimestamp, description, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, project, region, selfLink, serverBinding);

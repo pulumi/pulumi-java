@@ -6,6 +6,7 @@ package io.pulumi.awsnative.stepfunctions;
 import io.pulumi.awsnative.stepfunctions.inputs.ActivityTagsEntryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ActivityTagsEntryArgs>> tags;
 
     public Output<List<ActivityTagsEntryArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ActivityArgs(
@@ -38,8 +39,8 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActivityArgs() {
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<ActivityTagsEntryArgs>> tags) {
@@ -77,7 +78,7 @@ public final class ActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ActivityTagsEntryArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ActivityTagsEntryArgs... tags) {

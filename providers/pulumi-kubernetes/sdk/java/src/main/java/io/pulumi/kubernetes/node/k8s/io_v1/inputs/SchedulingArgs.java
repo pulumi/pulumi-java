@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.node.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.TolerationArgs;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> nodeSelector;
 
     public Output<Map<String,String>> getNodeSelector() {
-        return this.nodeSelector == null ? Output.empty() : this.nodeSelector;
+        return this.nodeSelector == null ? Codegen.empty() : this.nodeSelector;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TolerationArgs>> tolerations;
 
     public Output<List<TolerationArgs>> getTolerations() {
-        return this.tolerations == null ? Output.empty() : this.tolerations;
+        return this.tolerations == null ? Codegen.empty() : this.tolerations;
     }
 
     public SchedulingArgs(
@@ -51,8 +52,8 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchedulingArgs() {
-        this.nodeSelector = Output.empty();
-        this.tolerations = Output.empty();
+        this.nodeSelector = Codegen.empty();
+        this.tolerations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodeSelector(@Nullable Map<String,String> nodeSelector) {
-            this.nodeSelector = Output.ofNullable(nodeSelector);
+            this.nodeSelector = Codegen.ofNullable(nodeSelector);
             return this;
         }
         public Builder tolerations(@Nullable Output<List<TolerationArgs>> tolerations) {
@@ -90,7 +91,7 @@ public final class SchedulingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tolerations(@Nullable List<TolerationArgs> tolerations) {
-            this.tolerations = Output.ofNullable(tolerations);
+            this.tolerations = Codegen.ofNullable(tolerations);
             return this;
         }
         public Builder tolerations(TolerationArgs... tolerations) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.ExprArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -49,7 +50,7 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
       private final @Nullable Output<ExprArgs> celExpression;
 
     public Output<ExprArgs> getCelExpression() {
-        return this.celExpression == null ? Output.empty() : this.celExpression;
+        return this.celExpression == null ? Codegen.empty() : this.celExpression;
     }
 
     public CertificateIdentityConstraintsArgs(
@@ -62,9 +63,9 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
     }
 
     private CertificateIdentityConstraintsArgs() {
-        this.allowSubjectAltNamesPassthrough = Output.empty();
-        this.allowSubjectPassthrough = Output.empty();
-        this.celExpression = Output.empty();
+        this.allowSubjectAltNamesPassthrough = Codegen.empty();
+        this.allowSubjectPassthrough = Codegen.empty();
+        this.celExpression = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class CertificateIdentityConstraintsArgs extends io.pulumi.resource
             return this;
         }
         public Builder celExpression(@Nullable ExprArgs celExpression) {
-            this.celExpression = Output.ofNullable(celExpression);
+            this.celExpression = Codegen.ofNullable(celExpression);
             return this;
         }        public CertificateIdentityConstraintsArgs build() {
             return new CertificateIdentityConstraintsArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);

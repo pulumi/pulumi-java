@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databox.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> family;
 
     public Output<String> getFamily() {
-        return this.family == null ? Output.empty() : this.family;
+        return this.family == null ? Codegen.empty() : this.family;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkuArgs() {
-        this.displayName = Output.empty();
-        this.family = Output.empty();
-        this.name = Output.empty();
+        this.displayName = Codegen.empty();
+        this.family = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder family(@Nullable Output<String> family) {
@@ -105,7 +106,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder family(@Nullable String family) {
-            this.family = Output.ofNullable(family);
+            this.family = Codegen.ofNullable(family);
             return this;
         }
         public Builder name(Output<Either<String,SkuName>> name) {

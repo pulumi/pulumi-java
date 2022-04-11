@@ -6,6 +6,7 @@ package io.pulumi.aws.kinesis.inputs;
 import io.pulumi.aws.kinesis.inputs.FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<Integer> bufferInterval;
 
     public Output<Integer> getBufferInterval() {
-        return this.bufferInterval == null ? Output.empty() : this.bufferInterval;
+        return this.bufferInterval == null ? Codegen.empty() : this.bufferInterval;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<Integer> bufferSize;
 
     public Output<Integer> getBufferSize() {
-        return this.bufferSize == null ? Output.empty() : this.bufferSize;
+        return this.bufferSize == null ? Codegen.empty() : this.bufferSize;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions;
 
     public Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs> getCloudwatchLoggingOptions() {
-        return this.cloudwatchLoggingOptions == null ? Output.empty() : this.cloudwatchLoggingOptions;
+        return this.cloudwatchLoggingOptions == null ? Codegen.empty() : this.cloudwatchLoggingOptions;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<String> compressionFormat;
 
     public Output<String> getCompressionFormat() {
-        return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
+        return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<String> errorOutputPrefix;
 
     public Output<String> getErrorOutputPrefix() {
-        return this.errorOutputPrefix == null ? Output.empty() : this.errorOutputPrefix;
+        return this.errorOutputPrefix == null ? Codegen.empty() : this.errorOutputPrefix;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -139,15 +140,15 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
     }
 
     private FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationGetArgs() {
-        this.bucketArn = Output.empty();
-        this.bufferInterval = Output.empty();
-        this.bufferSize = Output.empty();
-        this.cloudwatchLoggingOptions = Output.empty();
-        this.compressionFormat = Output.empty();
-        this.errorOutputPrefix = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.prefix = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucketArn = Codegen.empty();
+        this.bufferInterval = Codegen.empty();
+        this.bufferSize = Codegen.empty();
+        this.cloudwatchLoggingOptions = Codegen.empty();
+        this.compressionFormat = Codegen.empty();
+        this.errorOutputPrefix = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder bufferInterval(@Nullable Integer bufferInterval) {
-            this.bufferInterval = Output.ofNullable(bufferInterval);
+            this.bufferInterval = Codegen.ofNullable(bufferInterval);
             return this;
         }
         public Builder bufferSize(@Nullable Output<Integer> bufferSize) {
@@ -207,7 +208,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder bufferSize(@Nullable Integer bufferSize) {
-            this.bufferSize = Output.ofNullable(bufferSize);
+            this.bufferSize = Codegen.ofNullable(bufferSize);
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable Output<FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs> cloudwatchLoggingOptions) {
@@ -215,7 +216,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder cloudwatchLoggingOptions(@Nullable FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigurationCloudwatchLoggingOptionsGetArgs cloudwatchLoggingOptions) {
-            this.cloudwatchLoggingOptions = Output.ofNullable(cloudwatchLoggingOptions);
+            this.cloudwatchLoggingOptions = Codegen.ofNullable(cloudwatchLoggingOptions);
             return this;
         }
         public Builder compressionFormat(@Nullable Output<String> compressionFormat) {
@@ -223,7 +224,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder compressionFormat(@Nullable String compressionFormat) {
-            this.compressionFormat = Output.ofNullable(compressionFormat);
+            this.compressionFormat = Codegen.ofNullable(compressionFormat);
             return this;
         }
         public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
@@ -231,7 +232,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
-            this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
+            this.errorOutputPrefix = Codegen.ofNullable(errorOutputPrefix);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -239,7 +240,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -247,7 +248,7 @@ public final class FirehoseDeliveryStreamExtendedS3ConfigurationS3BackupConfigur
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

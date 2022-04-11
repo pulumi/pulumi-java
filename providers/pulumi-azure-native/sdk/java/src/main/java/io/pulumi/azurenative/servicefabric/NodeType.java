@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -311,7 +312,7 @@ public class NodeType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeType(String name, NodeTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:servicefabric:NodeType", name, args == null ? NodeTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:servicefabric:NodeType", name, args == null ? NodeTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodeType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

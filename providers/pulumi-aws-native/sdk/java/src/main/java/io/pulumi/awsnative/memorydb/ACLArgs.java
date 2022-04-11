@@ -6,6 +6,7 @@ package io.pulumi.awsnative.memorydb;
 import io.pulumi.awsnative.memorydb.inputs.ACLTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> aCLName;
 
     public Output<String> getACLName() {
-        return this.aCLName == null ? Output.empty() : this.aCLName;
+        return this.aCLName == null ? Codegen.empty() : this.aCLName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ACLTagArgs>> tags;
 
     public Output<List<ACLTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> userNames;
 
     public Output<List<String>> getUserNames() {
-        return this.userNames == null ? Output.empty() : this.userNames;
+        return this.userNames == null ? Codegen.empty() : this.userNames;
     }
 
     public ACLArgs(
@@ -59,9 +60,9 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ACLArgs() {
-        this.aCLName = Output.empty();
-        this.tags = Output.empty();
-        this.userNames = Output.empty();
+        this.aCLName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.userNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aCLName(@Nullable String aCLName) {
-            this.aCLName = Output.ofNullable(aCLName);
+            this.aCLName = Codegen.ofNullable(aCLName);
             return this;
         }
         public Builder tags(@Nullable Output<List<ACLTagArgs>> tags) {
@@ -101,7 +102,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ACLTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ACLTagArgs... tags) {
@@ -112,7 +113,7 @@ public final class ACLArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userNames(@Nullable List<String> userNames) {
-            this.userNames = Output.ofNullable(userNames);
+            this.userNames = Codegen.ofNullable(userNames);
             return this;
         }
         public Builder userNames(String... userNames) {

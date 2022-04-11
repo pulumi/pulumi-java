@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datamigration_v1.enums.DatabaseTypeEngine;
 import io.pulumi.googlenative.datamigration_v1.enums.DatabaseTypeProvider;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatabaseTypeEngine> engine;
 
     public Output<DatabaseTypeEngine> getEngine() {
-        return this.engine == null ? Output.empty() : this.engine;
+        return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DatabaseTypeProvider> provider;
 
     public Output<DatabaseTypeProvider> getProvider() {
-        return this.provider == null ? Output.empty() : this.provider;
+        return this.provider == null ? Codegen.empty() : this.provider;
     }
 
     public DatabaseTypeArgs(
@@ -49,8 +50,8 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatabaseTypeArgs() {
-        this.engine = Output.empty();
-        this.provider = Output.empty();
+        this.engine = Codegen.empty();
+        this.provider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engine(@Nullable DatabaseTypeEngine engine) {
-            this.engine = Output.ofNullable(engine);
+            this.engine = Codegen.ofNullable(engine);
             return this;
         }
         public Builder provider(@Nullable Output<DatabaseTypeProvider> provider) {
@@ -88,7 +89,7 @@ public final class DatabaseTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provider(@Nullable DatabaseTypeProvider provider) {
-            this.provider = Output.ofNullable(provider);
+            this.provider = Codegen.ofNullable(provider);
             return this;
         }        public DatabaseTypeArgs build() {
             return new DatabaseTypeArgs(engine, provider);

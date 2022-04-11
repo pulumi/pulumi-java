@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import io.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
     public Output<KeyVaultMetaInfoArgs> getKeyVaultMetaInfo() {
-        return this.keyVaultMetaInfo == null ? Output.empty() : this.keyVaultMetaInfo;
+        return this.keyVaultMetaInfo == null ? Codegen.empty() : this.keyVaultMetaInfo;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EncryptionConfigArgs() {
-        this.keyVaultMetaInfo = Output.empty();
-        this.type = Output.empty();
+        this.keyVaultMetaInfo = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder keyVaultMetaInfo(@Nullable KeyVaultMetaInfoArgs keyVaultMetaInfo) {
-            this.keyVaultMetaInfo = Output.ofNullable(keyVaultMetaInfo);
+            this.keyVaultMetaInfo = Codegen.ofNullable(keyVaultMetaInfo);
             return this;
         }
         public Builder type(Output<EncryptionConfigType> type) {

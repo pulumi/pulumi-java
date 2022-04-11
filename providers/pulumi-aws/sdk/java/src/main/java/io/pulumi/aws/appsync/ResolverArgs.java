@@ -8,6 +8,7 @@ import io.pulumi.aws.appsync.inputs.ResolverPipelineConfigArgs;
 import io.pulumi.aws.appsync.inputs.ResolverSyncConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResolverCachingConfigArgs> cachingConfig;
 
     public Output<ResolverCachingConfigArgs> getCachingConfig() {
-        return this.cachingConfig == null ? Output.empty() : this.cachingConfig;
+        return this.cachingConfig == null ? Codegen.empty() : this.cachingConfig;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataSource;
 
     public Output<String> getDataSource() {
-        return this.dataSource == null ? Output.empty() : this.dataSource;
+        return this.dataSource == null ? Codegen.empty() : this.dataSource;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxBatchSize;
 
     public Output<Integer> getMaxBatchSize() {
-        return this.maxBatchSize == null ? Output.empty() : this.maxBatchSize;
+        return this.maxBatchSize == null ? Codegen.empty() : this.maxBatchSize;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResolverPipelineConfigArgs> pipelineConfig;
 
     public Output<ResolverPipelineConfigArgs> getPipelineConfig() {
-        return this.pipelineConfig == null ? Output.empty() : this.pipelineConfig;
+        return this.pipelineConfig == null ? Codegen.empty() : this.pipelineConfig;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestTemplate;
 
     public Output<String> getRequestTemplate() {
-        return this.requestTemplate == null ? Output.empty() : this.requestTemplate;
+        return this.requestTemplate == null ? Codegen.empty() : this.requestTemplate;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> responseTemplate;
 
     public Output<String> getResponseTemplate() {
-        return this.responseTemplate == null ? Output.empty() : this.responseTemplate;
+        return this.responseTemplate == null ? Codegen.empty() : this.responseTemplate;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResolverSyncConfigArgs> syncConfig;
 
     public Output<ResolverSyncConfigArgs> getSyncConfig() {
-        return this.syncConfig == null ? Output.empty() : this.syncConfig;
+        return this.syncConfig == null ? Codegen.empty() : this.syncConfig;
     }
 
     /**
@@ -165,17 +166,17 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResolverArgs() {
-        this.apiId = Output.empty();
-        this.cachingConfig = Output.empty();
-        this.dataSource = Output.empty();
-        this.field = Output.empty();
-        this.kind = Output.empty();
-        this.maxBatchSize = Output.empty();
-        this.pipelineConfig = Output.empty();
-        this.requestTemplate = Output.empty();
-        this.responseTemplate = Output.empty();
-        this.syncConfig = Output.empty();
-        this.type = Output.empty();
+        this.apiId = Codegen.empty();
+        this.cachingConfig = Codegen.empty();
+        this.dataSource = Codegen.empty();
+        this.field = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.maxBatchSize = Codegen.empty();
+        this.pipelineConfig = Codegen.empty();
+        this.requestTemplate = Codegen.empty();
+        this.responseTemplate = Codegen.empty();
+        this.syncConfig = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -231,7 +232,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cachingConfig(@Nullable ResolverCachingConfigArgs cachingConfig) {
-            this.cachingConfig = Output.ofNullable(cachingConfig);
+            this.cachingConfig = Codegen.ofNullable(cachingConfig);
             return this;
         }
         public Builder dataSource(@Nullable Output<String> dataSource) {
@@ -239,7 +240,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSource(@Nullable String dataSource) {
-            this.dataSource = Output.ofNullable(dataSource);
+            this.dataSource = Codegen.ofNullable(dataSource);
             return this;
         }
         public Builder field(Output<String> field) {
@@ -255,7 +256,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder maxBatchSize(@Nullable Output<Integer> maxBatchSize) {
@@ -263,7 +264,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxBatchSize(@Nullable Integer maxBatchSize) {
-            this.maxBatchSize = Output.ofNullable(maxBatchSize);
+            this.maxBatchSize = Codegen.ofNullable(maxBatchSize);
             return this;
         }
         public Builder pipelineConfig(@Nullable Output<ResolverPipelineConfigArgs> pipelineConfig) {
@@ -271,7 +272,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineConfig(@Nullable ResolverPipelineConfigArgs pipelineConfig) {
-            this.pipelineConfig = Output.ofNullable(pipelineConfig);
+            this.pipelineConfig = Codegen.ofNullable(pipelineConfig);
             return this;
         }
         public Builder requestTemplate(@Nullable Output<String> requestTemplate) {
@@ -279,7 +280,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestTemplate(@Nullable String requestTemplate) {
-            this.requestTemplate = Output.ofNullable(requestTemplate);
+            this.requestTemplate = Codegen.ofNullable(requestTemplate);
             return this;
         }
         public Builder responseTemplate(@Nullable Output<String> responseTemplate) {
@@ -287,7 +288,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseTemplate(@Nullable String responseTemplate) {
-            this.responseTemplate = Output.ofNullable(responseTemplate);
+            this.responseTemplate = Codegen.ofNullable(responseTemplate);
             return this;
         }
         public Builder syncConfig(@Nullable Output<ResolverSyncConfigArgs> syncConfig) {
@@ -295,7 +296,7 @@ public final class ResolverArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder syncConfig(@Nullable ResolverSyncConfigArgs syncConfig) {
-            this.syncConfig = Output.ofNullable(syncConfig);
+            this.syncConfig = Codegen.ofNullable(syncConfig);
             return this;
         }
         public Builder type(Output<String> type) {

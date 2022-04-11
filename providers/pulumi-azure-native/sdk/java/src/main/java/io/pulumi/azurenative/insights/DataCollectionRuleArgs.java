@@ -10,6 +10,7 @@ import io.pulumi.azurenative.insights.inputs.DataFlowArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> dataCollectionRuleName;
 
     public Output<String> getDataCollectionRuleName() {
-        return this.dataCollectionRuleName == null ? Output.empty() : this.dataCollectionRuleName;
+        return this.dataCollectionRuleName == null ? Codegen.empty() : this.dataCollectionRuleName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<DataFlowArgs>> dataFlows;
 
     public Output<List<DataFlowArgs>> getDataFlows() {
-        return this.dataFlows == null ? Output.empty() : this.dataFlows;
+        return this.dataFlows == null ? Codegen.empty() : this.dataFlows;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DataCollectionRuleDataSourcesArgs> dataSources;
 
     public Output<DataCollectionRuleDataSourcesArgs> getDataSources() {
-        return this.dataSources == null ? Output.empty() : this.dataSources;
+        return this.dataSources == null ? Codegen.empty() : this.dataSources;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DataCollectionRuleDestinationsArgs> destinations;
 
     public Output<DataCollectionRuleDestinationsArgs> getDestinations() {
-        return this.destinations == null ? Output.empty() : this.destinations;
+        return this.destinations == null ? Codegen.empty() : this.destinations;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind;
 
     public Output<Either<String,KnownDataCollectionRuleResourceKind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DataCollectionRuleArgs(
@@ -143,15 +144,15 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DataCollectionRuleArgs() {
-        this.dataCollectionRuleName = Output.empty();
-        this.dataFlows = Output.empty();
-        this.dataSources = Output.empty();
-        this.description = Output.empty();
-        this.destinations = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.dataCollectionRuleName = Codegen.empty();
+        this.dataFlows = Codegen.empty();
+        this.dataSources = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destinations = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataCollectionRuleName(@Nullable String dataCollectionRuleName) {
-            this.dataCollectionRuleName = Output.ofNullable(dataCollectionRuleName);
+            this.dataCollectionRuleName = Codegen.ofNullable(dataCollectionRuleName);
             return this;
         }
         public Builder dataFlows(@Nullable Output<List<DataFlowArgs>> dataFlows) {
@@ -203,7 +204,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataFlows(@Nullable List<DataFlowArgs> dataFlows) {
-            this.dataFlows = Output.ofNullable(dataFlows);
+            this.dataFlows = Codegen.ofNullable(dataFlows);
             return this;
         }
         public Builder dataFlows(DataFlowArgs... dataFlows) {
@@ -214,7 +215,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder dataSources(@Nullable DataCollectionRuleDataSourcesArgs dataSources) {
-            this.dataSources = Output.ofNullable(dataSources);
+            this.dataSources = Codegen.ofNullable(dataSources);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -222,7 +223,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinations(@Nullable Output<DataCollectionRuleDestinationsArgs> destinations) {
@@ -230,7 +231,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder destinations(@Nullable DataCollectionRuleDestinationsArgs destinations) {
-            this.destinations = Output.ofNullable(destinations);
+            this.destinations = Codegen.ofNullable(destinations);
             return this;
         }
         public Builder kind(@Nullable Output<Either<String,KnownDataCollectionRuleResourceKind>> kind) {
@@ -238,7 +239,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kind(@Nullable Either<String,KnownDataCollectionRuleResourceKind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -246,7 +247,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -262,7 +263,7 @@ public final class DataCollectionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DataCollectionRuleArgs build() {
             return new DataCollectionRuleArgs(dataCollectionRuleName, dataFlows, dataSources, description, destinations, kind, location, resourceGroupName, tags);

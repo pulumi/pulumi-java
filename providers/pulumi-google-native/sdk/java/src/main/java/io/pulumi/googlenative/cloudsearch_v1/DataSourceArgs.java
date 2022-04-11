@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.GSuitePrincipalArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableModifications;
 
     public Output<Boolean> getDisableModifications() {
-        return this.disableModifications == null ? Output.empty() : this.disableModifications;
+        return this.disableModifications == null ? Codegen.empty() : this.disableModifications;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableServing;
 
     public Output<Boolean> getDisableServing() {
-        return this.disableServing == null ? Output.empty() : this.disableServing;
+        return this.disableServing == null ? Codegen.empty() : this.disableServing;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> indexingServiceAccounts;
 
     public Output<List<String>> getIndexingServiceAccounts() {
-        return this.indexingServiceAccounts == null ? Output.empty() : this.indexingServiceAccounts;
+        return this.indexingServiceAccounts == null ? Codegen.empty() : this.indexingServiceAccounts;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GSuitePrincipalArgs>> itemsVisibility;
 
     public Output<List<GSuitePrincipalArgs>> getItemsVisibility() {
-        return this.itemsVisibility == null ? Output.empty() : this.itemsVisibility;
+        return this.itemsVisibility == null ? Codegen.empty() : this.itemsVisibility;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> operationIds;
 
     public Output<List<String>> getOperationIds() {
-        return this.operationIds == null ? Output.empty() : this.operationIds;
+        return this.operationIds == null ? Codegen.empty() : this.operationIds;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> returnThumbnailUrls;
 
     public Output<Boolean> getReturnThumbnailUrls() {
-        return this.returnThumbnailUrls == null ? Output.empty() : this.returnThumbnailUrls;
+        return this.returnThumbnailUrls == null ? Codegen.empty() : this.returnThumbnailUrls;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> shortName;
 
     public Output<String> getShortName() {
-        return this.shortName == null ? Output.empty() : this.shortName;
+        return this.shortName == null ? Codegen.empty() : this.shortName;
     }
 
     public DataSourceArgs(
@@ -138,15 +139,15 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.disableModifications = Output.empty();
-        this.disableServing = Output.empty();
-        this.displayName = Output.empty();
-        this.indexingServiceAccounts = Output.empty();
-        this.itemsVisibility = Output.empty();
-        this.name = Output.empty();
-        this.operationIds = Output.empty();
-        this.returnThumbnailUrls = Output.empty();
-        this.shortName = Output.empty();
+        this.disableModifications = Codegen.empty();
+        this.disableServing = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.indexingServiceAccounts = Codegen.empty();
+        this.itemsVisibility = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operationIds = Codegen.empty();
+        this.returnThumbnailUrls = Codegen.empty();
+        this.shortName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableModifications(@Nullable Boolean disableModifications) {
-            this.disableModifications = Output.ofNullable(disableModifications);
+            this.disableModifications = Codegen.ofNullable(disableModifications);
             return this;
         }
         public Builder disableServing(@Nullable Output<Boolean> disableServing) {
@@ -198,7 +199,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableServing(@Nullable Boolean disableServing) {
-            this.disableServing = Output.ofNullable(disableServing);
+            this.disableServing = Codegen.ofNullable(disableServing);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -214,7 +215,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder indexingServiceAccounts(@Nullable List<String> indexingServiceAccounts) {
-            this.indexingServiceAccounts = Output.ofNullable(indexingServiceAccounts);
+            this.indexingServiceAccounts = Codegen.ofNullable(indexingServiceAccounts);
             return this;
         }
         public Builder indexingServiceAccounts(String... indexingServiceAccounts) {
@@ -225,7 +226,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder itemsVisibility(@Nullable List<GSuitePrincipalArgs> itemsVisibility) {
-            this.itemsVisibility = Output.ofNullable(itemsVisibility);
+            this.itemsVisibility = Codegen.ofNullable(itemsVisibility);
             return this;
         }
         public Builder itemsVisibility(GSuitePrincipalArgs... itemsVisibility) {
@@ -236,7 +237,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder operationIds(@Nullable Output<List<String>> operationIds) {
@@ -244,7 +245,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationIds(@Nullable List<String> operationIds) {
-            this.operationIds = Output.ofNullable(operationIds);
+            this.operationIds = Codegen.ofNullable(operationIds);
             return this;
         }
         public Builder operationIds(String... operationIds) {
@@ -255,7 +256,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder returnThumbnailUrls(@Nullable Boolean returnThumbnailUrls) {
-            this.returnThumbnailUrls = Output.ofNullable(returnThumbnailUrls);
+            this.returnThumbnailUrls = Codegen.ofNullable(returnThumbnailUrls);
             return this;
         }
         public Builder shortName(@Nullable Output<String> shortName) {
@@ -263,7 +264,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shortName(@Nullable String shortName) {
-            this.shortName = Output.ofNullable(shortName);
+            this.shortName = Codegen.ofNullable(shortName);
             return this;
         }        public DataSourceArgs build() {
             return new DataSourceArgs(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);

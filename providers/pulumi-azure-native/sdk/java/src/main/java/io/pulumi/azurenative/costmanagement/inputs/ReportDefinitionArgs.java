@@ -10,6 +10,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ReportDatasetArgs> dataset;
 
     public Output<ReportDatasetArgs> getDataset() {
-        return this.dataset == null ? Output.empty() : this.dataset;
+        return this.dataset == null ? Codegen.empty() : this.dataset;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ReportTimePeriodArgs> timePeriod;
 
     public Output<ReportTimePeriodArgs> getTimePeriod() {
-        return this.timePeriod == null ? Output.empty() : this.timePeriod;
+        return this.timePeriod == null ? Codegen.empty() : this.timePeriod;
     }
 
     /**
@@ -79,10 +80,10 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ReportDefinitionArgs() {
-        this.dataset = Output.empty();
-        this.timePeriod = Output.empty();
-        this.timeframe = Output.empty();
-        this.type = Output.empty();
+        this.dataset = Codegen.empty();
+        this.timePeriod = Codegen.empty();
+        this.timeframe = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dataset(@Nullable ReportDatasetArgs dataset) {
-            this.dataset = Output.ofNullable(dataset);
+            this.dataset = Codegen.ofNullable(dataset);
             return this;
         }
         public Builder timePeriod(@Nullable Output<ReportTimePeriodArgs> timePeriod) {
@@ -124,7 +125,7 @@ public final class ReportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder timePeriod(@Nullable ReportTimePeriodArgs timePeriod) {
-            this.timePeriod = Output.ofNullable(timePeriod);
+            this.timePeriod = Codegen.ofNullable(timePeriod);
             return this;
         }
         public Builder timeframe(Output<Either<String,TimeframeType>> timeframe) {

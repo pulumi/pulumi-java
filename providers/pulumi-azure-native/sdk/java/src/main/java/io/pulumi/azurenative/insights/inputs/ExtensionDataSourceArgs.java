@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.KnownExtensionDataSourceStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +43,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> extensionSettings;
 
     public Output<Object> getExtensionSettings() {
-        return this.extensionSettings == null ? Output.empty() : this.extensionSettings;
+        return this.extensionSettings == null ? Codegen.empty() : this.extensionSettings;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> inputDataSources;
 
     public Output<List<String>> getInputDataSources() {
-        return this.inputDataSources == null ? Output.empty() : this.inputDataSources;
+        return this.inputDataSources == null ? Codegen.empty() : this.inputDataSources;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams;
 
     public Output<List<Either<String,KnownExtensionDataSourceStreams>>> getStreams() {
-        return this.streams == null ? Output.empty() : this.streams;
+        return this.streams == null ? Codegen.empty() : this.streams;
     }
 
     public ExtensionDataSourceArgs(
@@ -94,11 +95,11 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
     }
 
     private ExtensionDataSourceArgs() {
-        this.extensionName = Output.empty();
-        this.extensionSettings = Output.empty();
-        this.inputDataSources = Output.empty();
-        this.name = Output.empty();
-        this.streams = Output.empty();
+        this.extensionName = Codegen.empty();
+        this.extensionSettings = Codegen.empty();
+        this.inputDataSources = Codegen.empty();
+        this.name = Codegen.empty();
+        this.streams = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder extensionSettings(@Nullable Object extensionSettings) {
-            this.extensionSettings = Output.ofNullable(extensionSettings);
+            this.extensionSettings = Codegen.ofNullable(extensionSettings);
             return this;
         }
         public Builder inputDataSources(@Nullable Output<List<String>> inputDataSources) {
@@ -150,7 +151,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder inputDataSources(@Nullable List<String> inputDataSources) {
-            this.inputDataSources = Output.ofNullable(inputDataSources);
+            this.inputDataSources = Codegen.ofNullable(inputDataSources);
             return this;
         }
         public Builder inputDataSources(String... inputDataSources) {
@@ -161,7 +162,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder streams(@Nullable Output<List<Either<String,KnownExtensionDataSourceStreams>>> streams) {
@@ -169,7 +170,7 @@ public final class ExtensionDataSourceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder streams(@Nullable List<Either<String,KnownExtensionDataSourceStreams>> streams) {
-            this.streams = Output.ofNullable(streams);
+            this.streams = Codegen.ofNullable(streams);
             return this;
         }
         public Builder streams(Either<String,KnownExtensionDataSourceStreams>... streams) {

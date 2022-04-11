@@ -5,6 +5,7 @@ package io.pulumi.aws.s3control.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> accessPointArn;
 
     public Output<String> getAccessPointArn() {
-        return this.accessPointArn == null ? Output.empty() : this.accessPointArn;
+        return this.accessPointArn == null ? Codegen.empty() : this.accessPointArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> hasPublicAccessPolicy;
 
     public Output<Boolean> getHasPublicAccessPolicy() {
-        return this.hasPublicAccessPolicy == null ? Output.empty() : this.hasPublicAccessPolicy;
+        return this.hasPublicAccessPolicy == null ? Codegen.empty() : this.hasPublicAccessPolicy;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public AccessPointPolicyState(
@@ -58,9 +59,9 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
     }
 
     private AccessPointPolicyState() {
-        this.accessPointArn = Output.empty();
-        this.hasPublicAccessPolicy = Output.empty();
-        this.policy = Output.empty();
+        this.accessPointArn = Codegen.empty();
+        this.hasPublicAccessPolicy = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder accessPointArn(@Nullable String accessPointArn) {
-            this.accessPointArn = Output.ofNullable(accessPointArn);
+            this.accessPointArn = Codegen.ofNullable(accessPointArn);
             return this;
         }
         public Builder hasPublicAccessPolicy(@Nullable Output<Boolean> hasPublicAccessPolicy) {
@@ -100,7 +101,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder hasPublicAccessPolicy(@Nullable Boolean hasPublicAccessPolicy) {
-            this.hasPublicAccessPolicy = Output.ofNullable(hasPublicAccessPolicy);
+            this.hasPublicAccessPolicy = Codegen.ofNullable(hasPublicAccessPolicy);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -108,7 +109,7 @@ public final class AccessPointPolicyState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public AccessPointPolicyState build() {
             return new AccessPointPolicyState(accessPointArn, hasPublicAccessPolicy, policy);

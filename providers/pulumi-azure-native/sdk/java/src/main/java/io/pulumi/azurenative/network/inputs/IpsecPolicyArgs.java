@@ -12,6 +12,7 @@ import io.pulumi.azurenative.network.enums.PfsGroup;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -133,14 +134,14 @@ public final class IpsecPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpsecPolicyArgs() {
-        this.dhGroup = Output.empty();
-        this.ikeEncryption = Output.empty();
-        this.ikeIntegrity = Output.empty();
-        this.ipsecEncryption = Output.empty();
-        this.ipsecIntegrity = Output.empty();
-        this.pfsGroup = Output.empty();
-        this.saDataSizeKilobytes = Output.empty();
-        this.saLifeTimeSeconds = Output.empty();
+        this.dhGroup = Codegen.empty();
+        this.ikeEncryption = Codegen.empty();
+        this.ikeIntegrity = Codegen.empty();
+        this.ipsecEncryption = Codegen.empty();
+        this.ipsecIntegrity = Codegen.empty();
+        this.pfsGroup = Codegen.empty();
+        this.saDataSizeKilobytes = Codegen.empty();
+        this.saLifeTimeSeconds = Codegen.empty();
     }
 
     public static Builder builder() {

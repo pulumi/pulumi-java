@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> registrationLimit;
 
     public Output<Integer> getRegistrationLimit() {
-        return this.registrationLimit == null ? Output.empty() : this.registrationLimit;
+        return this.registrationLimit == null ? Codegen.empty() : this.registrationLimit;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ActivationArgs(
@@ -98,12 +99,12 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ActivationArgs() {
-        this.description = Output.empty();
-        this.expirationDate = Output.empty();
-        this.iamRole = Output.empty();
-        this.name = Output.empty();
-        this.registrationLimit = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.iamRole = Codegen.empty();
+        this.name = Codegen.empty();
+        this.registrationLimit = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder expirationDate(@Nullable Output<String> expirationDate) {
@@ -149,7 +150,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder iamRole(Output<String> iamRole) {
@@ -165,7 +166,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder registrationLimit(@Nullable Output<Integer> registrationLimit) {
@@ -173,7 +174,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationLimit(@Nullable Integer registrationLimit) {
-            this.registrationLimit = Output.ofNullable(registrationLimit);
+            this.registrationLimit = Codegen.ofNullable(registrationLimit);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -181,7 +182,7 @@ public final class ActivationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ActivationArgs build() {
             return new ActivationArgs(description, expirationDate, iamRole, name, registrationLimit, tags);

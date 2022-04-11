@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class ApplicationFeatureSettingsArgs extends io.pulumi.resources.Re
     }
 
     private ApplicationFeatureSettingsArgs() {
-        this.splitHealthChecks = Output.empty();
+        this.splitHealthChecks = Codegen.empty();
     }
 
     public static Builder builder() {

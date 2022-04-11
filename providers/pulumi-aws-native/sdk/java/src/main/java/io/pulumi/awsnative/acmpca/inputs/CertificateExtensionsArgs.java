@@ -9,6 +9,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateKeyUsageArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificatePolicyInformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,28 +27,28 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<CertificatePolicyInformationArgs>> certificatePolicies;
 
     public Output<List<CertificatePolicyInformationArgs>> getCertificatePolicies() {
-        return this.certificatePolicies == null ? Output.empty() : this.certificatePolicies;
+        return this.certificatePolicies == null ? Codegen.empty() : this.certificatePolicies;
     }
 
     @Import(name="extendedKeyUsage")
       private final @Nullable Output<List<CertificateExtendedKeyUsageArgs>> extendedKeyUsage;
 
     public Output<List<CertificateExtendedKeyUsageArgs>> getExtendedKeyUsage() {
-        return this.extendedKeyUsage == null ? Output.empty() : this.extendedKeyUsage;
+        return this.extendedKeyUsage == null ? Codegen.empty() : this.extendedKeyUsage;
     }
 
     @Import(name="keyUsage")
       private final @Nullable Output<CertificateKeyUsageArgs> keyUsage;
 
     public Output<CertificateKeyUsageArgs> getKeyUsage() {
-        return this.keyUsage == null ? Output.empty() : this.keyUsage;
+        return this.keyUsage == null ? Codegen.empty() : this.keyUsage;
     }
 
     @Import(name="subjectAlternativeNames")
       private final @Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames;
 
     public Output<List<CertificateGeneralNameArgs>> getSubjectAlternativeNames() {
-        return this.subjectAlternativeNames == null ? Output.empty() : this.subjectAlternativeNames;
+        return this.subjectAlternativeNames == null ? Codegen.empty() : this.subjectAlternativeNames;
     }
 
     public CertificateExtensionsArgs(
@@ -62,10 +63,10 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
     }
 
     private CertificateExtensionsArgs() {
-        this.certificatePolicies = Output.empty();
-        this.extendedKeyUsage = Output.empty();
-        this.keyUsage = Output.empty();
-        this.subjectAlternativeNames = Output.empty();
+        this.certificatePolicies = Codegen.empty();
+        this.extendedKeyUsage = Codegen.empty();
+        this.keyUsage = Codegen.empty();
+        this.subjectAlternativeNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder certificatePolicies(@Nullable List<CertificatePolicyInformationArgs> certificatePolicies) {
-            this.certificatePolicies = Output.ofNullable(certificatePolicies);
+            this.certificatePolicies = Codegen.ofNullable(certificatePolicies);
             return this;
         }
         public Builder certificatePolicies(CertificatePolicyInformationArgs... certificatePolicies) {
@@ -110,7 +111,7 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder extendedKeyUsage(@Nullable List<CertificateExtendedKeyUsageArgs> extendedKeyUsage) {
-            this.extendedKeyUsage = Output.ofNullable(extendedKeyUsage);
+            this.extendedKeyUsage = Codegen.ofNullable(extendedKeyUsage);
             return this;
         }
         public Builder extendedKeyUsage(CertificateExtendedKeyUsageArgs... extendedKeyUsage) {
@@ -121,7 +122,7 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder keyUsage(@Nullable CertificateKeyUsageArgs keyUsage) {
-            this.keyUsage = Output.ofNullable(keyUsage);
+            this.keyUsage = Codegen.ofNullable(keyUsage);
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable Output<List<CertificateGeneralNameArgs>> subjectAlternativeNames) {
@@ -129,7 +130,7 @@ public final class CertificateExtensionsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subjectAlternativeNames(@Nullable List<CertificateGeneralNameArgs> subjectAlternativeNames) {
-            this.subjectAlternativeNames = Output.ofNullable(subjectAlternativeNames);
+            this.subjectAlternativeNames = Codegen.ofNullable(subjectAlternativeNames);
             return this;
         }
         public Builder subjectAlternativeNames(CertificateGeneralNameArgs... subjectAlternativeNames) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.inputs.ResourceTypeEndpointFeaturesRule
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,49 +23,49 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> apiVersions;
 
     public Output<List<String>> getApiVersions() {
-        return this.apiVersions == null ? Output.empty() : this.apiVersions;
+        return this.apiVersions == null ? Codegen.empty() : this.apiVersions;
     }
 
     @Import(name="enabled")
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="extensions")
       private final @Nullable Output<List<ResourceTypeExtensionArgs>> extensions;
 
     public Output<List<ResourceTypeExtensionArgs>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     @Import(name="featuresRule")
       private final @Nullable Output<ResourceTypeEndpointFeaturesRuleArgs> featuresRule;
 
     public Output<ResourceTypeEndpointFeaturesRuleArgs> getFeaturesRule() {
-        return this.featuresRule == null ? Output.empty() : this.featuresRule;
+        return this.featuresRule == null ? Codegen.empty() : this.featuresRule;
     }
 
     @Import(name="locations")
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     @Import(name="requiredFeatures")
       private final @Nullable Output<List<String>> requiredFeatures;
 
     public Output<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
+        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ResourceTypeEndpointArgs(
@@ -85,13 +86,13 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
     }
 
     private ResourceTypeEndpointArgs() {
-        this.apiVersions = Output.empty();
-        this.enabled = Output.empty();
-        this.extensions = Output.empty();
-        this.featuresRule = Output.empty();
-        this.locations = Output.empty();
-        this.requiredFeatures = Output.empty();
-        this.timeout = Output.empty();
+        this.apiVersions = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.extensions = Codegen.empty();
+        this.featuresRule = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.requiredFeatures = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder apiVersions(@Nullable List<String> apiVersions) {
-            this.apiVersions = Output.ofNullable(apiVersions);
+            this.apiVersions = Codegen.ofNullable(apiVersions);
             return this;
         }
         public Builder apiVersions(String... apiVersions) {
@@ -142,7 +143,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder extensions(@Nullable Output<List<ResourceTypeExtensionArgs>> extensions) {
@@ -150,7 +151,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder extensions(@Nullable List<ResourceTypeExtensionArgs> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder extensions(ResourceTypeExtensionArgs... extensions) {
@@ -161,7 +162,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder featuresRule(@Nullable ResourceTypeEndpointFeaturesRuleArgs featuresRule) {
-            this.featuresRule = Output.ofNullable(featuresRule);
+            this.featuresRule = Codegen.ofNullable(featuresRule);
             return this;
         }
         public Builder locations(@Nullable Output<List<String>> locations) {
@@ -169,7 +170,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -180,7 +181,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Output.ofNullable(requiredFeatures);
+            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
             return this;
         }
         public Builder requiredFeatures(String... requiredFeatures) {
@@ -191,7 +192,7 @@ public final class ResourceTypeEndpointArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ResourceTypeEndpointArgs build() {
             return new ResourceTypeEndpointArgs(apiVersions, enabled, extensions, featuresRule, locations, requiredFeatures, timeout);

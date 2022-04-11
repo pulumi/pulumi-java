@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.ResourceProviderCapabilitiesEffec
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> requiredFeatures;
 
     public Output<List<String>> getRequiredFeatures() {
-        return this.requiredFeatures == null ? Output.empty() : this.requiredFeatures;
+        return this.requiredFeatures == null ? Codegen.empty() : this.requiredFeatures;
     }
 
     public ResourceProviderCapabilitiesArgs(
@@ -48,9 +49,9 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
     }
 
     private ResourceProviderCapabilitiesArgs() {
-        this.effect = Output.empty();
-        this.quotaId = Output.empty();
-        this.requiredFeatures = Output.empty();
+        this.effect = Codegen.empty();
+        this.quotaId = Codegen.empty();
+        this.requiredFeatures = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ResourceProviderCapabilitiesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder requiredFeatures(@Nullable List<String> requiredFeatures) {
-            this.requiredFeatures = Output.ofNullable(requiredFeatures);
+            this.requiredFeatures = Codegen.ofNullable(requiredFeatures);
             return this;
         }
         public Builder requiredFeatures(String... requiredFeatures) {

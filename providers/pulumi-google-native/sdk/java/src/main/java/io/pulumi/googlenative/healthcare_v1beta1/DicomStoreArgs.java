@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomStreamConfigArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.NotificationConfigArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dicomStoreId;
 
     public Output<String> getDicomStoreId() {
-        return this.dicomStoreId == null ? Output.empty() : this.dicomStoreId;
+        return this.dicomStoreId == null ? Codegen.empty() : this.dicomStoreId;
     }
 
     /**
@@ -40,14 +41,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
     public Output<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs;
 
     public Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
+        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 
     public DicomStoreArgs(
@@ -110,14 +111,14 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DicomStoreArgs() {
-        this.datasetId = Output.empty();
-        this.dicomStoreId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.project = Output.empty();
-        this.streamConfigs = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.dicomStoreId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.streamConfigs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dicomStoreId(@Nullable String dicomStoreId) {
-            this.dicomStoreId = Output.ofNullable(dicomStoreId);
+            this.dicomStoreId = Codegen.ofNullable(dicomStoreId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -175,7 +176,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -183,7 +184,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -191,7 +192,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
@@ -199,7 +200,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -207,7 +208,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder streamConfigs(@Nullable Output<List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs>> streamConfigs) {
@@ -215,7 +216,7 @@ public final class DicomStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamConfigs(@Nullable List<GoogleCloudHealthcareV1beta1DicomStreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Output.ofNullable(streamConfigs);
+            this.streamConfigs = Codegen.ofNullable(streamConfigs);
             return this;
         }
         public Builder streamConfigs(GoogleCloudHealthcareV1beta1DicomStreamConfigArgs... streamConfigs) {

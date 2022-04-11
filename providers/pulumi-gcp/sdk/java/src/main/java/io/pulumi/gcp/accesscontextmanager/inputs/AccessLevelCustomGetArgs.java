@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelCustomExprGetArgs;
 import java.util.Objects;
 
@@ -32,7 +33,7 @@ public final class AccessLevelCustomGetArgs extends io.pulumi.resources.Resource
     }
 
     private AccessLevelCustomGetArgs() {
-        this.expr = Output.empty();
+        this.expr = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> default_;
 
     public Output<Map<String,String>> getDefault_() {
-        return this.default_ == null ? Output.empty() : this.default_;
+        return this.default_ == null ? Codegen.empty() : this.default_;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> defaultRequest;
 
     public Output<Map<String,String>> getDefaultRequest() {
-        return this.defaultRequest == null ? Output.empty() : this.defaultRequest;
+        return this.defaultRequest == null ? Codegen.empty() : this.defaultRequest;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> max;
 
     public Output<Map<String,String>> getMax() {
-        return this.max == null ? Output.empty() : this.max;
+        return this.max == null ? Codegen.empty() : this.max;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> maxLimitRequestRatio;
 
     public Output<Map<String,String>> getMaxLimitRequestRatio() {
-        return this.maxLimitRequestRatio == null ? Output.empty() : this.maxLimitRequestRatio;
+        return this.maxLimitRequestRatio == null ? Codegen.empty() : this.maxLimitRequestRatio;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> min;
 
     public Output<Map<String,String>> getMin() {
-        return this.min == null ? Output.empty() : this.min;
+        return this.min == null ? Codegen.empty() : this.min;
     }
 
     /**
@@ -106,12 +107,12 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LimitRangeItemArgs() {
-        this.default_ = Output.empty();
-        this.defaultRequest = Output.empty();
-        this.max = Output.empty();
-        this.maxLimitRequestRatio = Output.empty();
-        this.min = Output.empty();
-        this.type = Output.empty();
+        this.default_ = Codegen.empty();
+        this.defaultRequest = Codegen.empty();
+        this.max = Codegen.empty();
+        this.maxLimitRequestRatio = Codegen.empty();
+        this.min = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -149,7 +150,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder default_(@Nullable Map<String,String> default_) {
-            this.default_ = Output.ofNullable(default_);
+            this.default_ = Codegen.ofNullable(default_);
             return this;
         }
         public Builder defaultRequest(@Nullable Output<Map<String,String>> defaultRequest) {
@@ -157,7 +158,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultRequest(@Nullable Map<String,String> defaultRequest) {
-            this.defaultRequest = Output.ofNullable(defaultRequest);
+            this.defaultRequest = Codegen.ofNullable(defaultRequest);
             return this;
         }
         public Builder max(@Nullable Output<Map<String,String>> max) {
@@ -165,7 +166,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder max(@Nullable Map<String,String> max) {
-            this.max = Output.ofNullable(max);
+            this.max = Codegen.ofNullable(max);
             return this;
         }
         public Builder maxLimitRequestRatio(@Nullable Output<Map<String,String>> maxLimitRequestRatio) {
@@ -173,7 +174,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxLimitRequestRatio(@Nullable Map<String,String> maxLimitRequestRatio) {
-            this.maxLimitRequestRatio = Output.ofNullable(maxLimitRequestRatio);
+            this.maxLimitRequestRatio = Codegen.ofNullable(maxLimitRequestRatio);
             return this;
         }
         public Builder min(@Nullable Output<Map<String,String>> min) {
@@ -181,7 +182,7 @@ public final class LimitRangeItemArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder min(@Nullable Map<String,String> min) {
-            this.min = Output.ofNullable(min);
+            this.min = Codegen.ofNullable(min);
             return this;
         }
         public Builder type(Output<String> type) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> verificationToken;
 
     public Output<String> getVerificationToken() {
-        return this.verificationToken == null ? Output.empty() : this.verificationToken;
+        return this.verificationToken == null ? Codegen.empty() : this.verificationToken;
     }
 
     public DomainIdentityState(
@@ -63,9 +64,9 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
     }
 
     private DomainIdentityState() {
-        this.arn = Output.empty();
-        this.domain = Output.empty();
-        this.verificationToken = Output.empty();
+        this.arn = Codegen.empty();
+        this.domain = Codegen.empty();
+        this.verificationToken = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder domain(@Nullable Output<String> domain) {
@@ -105,7 +106,7 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
@@ -113,7 +114,7 @@ public final class DomainIdentityState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder verificationToken(@Nullable String verificationToken) {
-            this.verificationToken = Output.ofNullable(verificationToken);
+            this.verificationToken = Codegen.ofNullable(verificationToken);
             return this;
         }        public DomainIdentityState build() {
             return new DomainIdentityState(arn, domain, verificationToken);

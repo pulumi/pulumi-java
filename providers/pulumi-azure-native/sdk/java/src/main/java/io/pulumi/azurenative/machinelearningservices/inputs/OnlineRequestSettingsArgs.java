@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> maxConcurrentRequestsPerInstance;
 
     public Output<Integer> getMaxConcurrentRequestsPerInstance() {
-        return this.maxConcurrentRequestsPerInstance == null ? Output.empty() : this.maxConcurrentRequestsPerInstance;
+        return this.maxConcurrentRequestsPerInstance == null ? Codegen.empty() : this.maxConcurrentRequestsPerInstance;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> maxQueueWait;
 
     public Output<String> getMaxQueueWait() {
-        return this.maxQueueWait == null ? Output.empty() : this.maxQueueWait;
+        return this.maxQueueWait == null ? Codegen.empty() : this.maxQueueWait;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> requestTimeout;
 
     public Output<String> getRequestTimeout() {
-        return this.requestTimeout == null ? Output.empty() : this.requestTimeout;
+        return this.requestTimeout == null ? Codegen.empty() : this.requestTimeout;
     }
 
     public OnlineRequestSettingsArgs(
@@ -62,9 +63,9 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private OnlineRequestSettingsArgs() {
-        this.maxConcurrentRequestsPerInstance = Output.empty();
-        this.maxQueueWait = Output.empty();
-        this.requestTimeout = Output.empty();
+        this.maxConcurrentRequestsPerInstance = Codegen.empty();
+        this.maxQueueWait = Codegen.empty();
+        this.requestTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maxConcurrentRequestsPerInstance(@Nullable Integer maxConcurrentRequestsPerInstance) {
-            this.maxConcurrentRequestsPerInstance = Output.ofNullable(maxConcurrentRequestsPerInstance);
+            this.maxConcurrentRequestsPerInstance = Codegen.ofNullable(maxConcurrentRequestsPerInstance);
             return this;
         }
         public Builder maxQueueWait(@Nullable Output<String> maxQueueWait) {
@@ -104,7 +105,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder maxQueueWait(@Nullable String maxQueueWait) {
-            this.maxQueueWait = Output.ofNullable(maxQueueWait);
+            this.maxQueueWait = Codegen.ofNullable(maxQueueWait);
             return this;
         }
         public Builder requestTimeout(@Nullable Output<String> requestTimeout) {
@@ -112,7 +113,7 @@ public final class OnlineRequestSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder requestTimeout(@Nullable String requestTimeout) {
-            this.requestTimeout = Output.ofNullable(requestTimeout);
+            this.requestTimeout = Codegen.ofNullable(requestTimeout);
             return this;
         }        public OnlineRequestSettingsArgs build() {
             return new OnlineRequestSettingsArgs(maxConcurrentRequestsPerInstance, maxQueueWait, requestTimeout);

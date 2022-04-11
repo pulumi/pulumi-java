@@ -6,6 +6,7 @@ package io.pulumi.aws.lightsail.inputs;
 import io.pulumi.aws.lightsail.inputs.InstancePublicPortsPortInfoGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
       private final @Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos;
 
     public Output<List<InstancePublicPortsPortInfoGetArgs>> getPortInfos() {
-        return this.portInfos == null ? Output.empty() : this.portInfos;
+        return this.portInfos == null ? Codegen.empty() : this.portInfos;
     }
 
     public InstancePublicPortsState(
@@ -46,8 +47,8 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
     }
 
     private InstancePublicPortsState() {
-        this.instanceName = Output.empty();
-        this.portInfos = Output.empty();
+        this.instanceName = Codegen.empty();
+        this.portInfos = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder portInfos(@Nullable Output<List<InstancePublicPortsPortInfoGetArgs>> portInfos) {
@@ -85,7 +86,7 @@ public final class InstancePublicPortsState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder portInfos(@Nullable List<InstancePublicPortsPortInfoGetArgs> portInfos) {
-            this.portInfos = Output.ofNullable(portInfos);
+            this.portInfos = Codegen.ofNullable(portInfos);
             return this;
         }
         public Builder portInfos(InstancePublicPortsPortInfoGetArgs... portInfos) {

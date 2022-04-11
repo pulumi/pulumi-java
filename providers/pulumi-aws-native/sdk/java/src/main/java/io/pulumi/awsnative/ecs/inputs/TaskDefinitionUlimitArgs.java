@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,9 +46,9 @@ public final class TaskDefinitionUlimitArgs extends io.pulumi.resources.Resource
     }
 
     private TaskDefinitionUlimitArgs() {
-        this.hardLimit = Output.empty();
-        this.name = Output.empty();
-        this.softLimit = Output.empty();
+        this.hardLimit = Codegen.empty();
+        this.name = Codegen.empty();
+        this.softLimit = Codegen.empty();
     }
 
     public static Builder builder() {

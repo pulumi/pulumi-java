@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
     }
 
     private GoogleCloudApigeeV1OperationArgs() {
-        this.methods = Output.empty();
-        this.resource = Output.empty();
+        this.methods = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(String... methods) {

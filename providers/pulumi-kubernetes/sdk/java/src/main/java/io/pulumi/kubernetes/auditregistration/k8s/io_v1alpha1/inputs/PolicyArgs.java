@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> stages;
 
     public Output<List<String>> getStages() {
-        return this.stages == null ? Output.empty() : this.stages;
+        return this.stages == null ? Codegen.empty() : this.stages;
     }
 
     public PolicyArgs(
@@ -49,8 +50,8 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyArgs() {
-        this.level = Output.empty();
-        this.stages = Output.empty();
+        this.level = Codegen.empty();
+        this.stages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stages(@Nullable List<String> stages) {
-            this.stages = Output.ofNullable(stages);
+            this.stages = Codegen.ofNullable(stages);
             return this;
         }
         public Builder stages(String... stages) {

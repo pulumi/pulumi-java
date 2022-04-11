@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.inputs.ApiManagementServiceSkuPropert
 import io.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> disableGateway;
 
     public Output<Boolean> getDisableGateway() {
-        return this.disableGateway == null ? Output.empty() : this.disableGateway;
+        return this.disableGateway == null ? Codegen.empty() : this.disableGateway;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Output.empty() : this.virtualNetworkConfiguration;
+        return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public AdditionalLocationArgs(
@@ -83,7 +84,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
         Output<ApiManagementServiceSkuPropertiesArgs> sku,
         @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration,
         @Nullable Output<List<String>> zones) {
-        this.disableGateway = disableGateway == null ? Output.ofNullable(false) : disableGateway;
+        this.disableGateway = disableGateway == null ? Codegen.ofNullable(false) : disableGateway;
         this.location = Objects.requireNonNull(location, "expected parameter 'location' to be non-null");
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.virtualNetworkConfiguration = virtualNetworkConfiguration;
@@ -91,11 +92,11 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AdditionalLocationArgs() {
-        this.disableGateway = Output.empty();
-        this.location = Output.empty();
-        this.sku = Output.empty();
-        this.virtualNetworkConfiguration = Output.empty();
-        this.zones = Output.empty();
+        this.disableGateway = Codegen.empty();
+        this.location = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.virtualNetworkConfiguration = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder disableGateway(@Nullable Boolean disableGateway) {
-            this.disableGateway = Output.ofNullable(disableGateway);
+            this.disableGateway = Codegen.ofNullable(disableGateway);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -155,7 +156,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
+            this.virtualNetworkConfiguration = Codegen.ofNullable(virtualNetworkConfiguration);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -163,7 +164,7 @@ public final class AdditionalLocationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

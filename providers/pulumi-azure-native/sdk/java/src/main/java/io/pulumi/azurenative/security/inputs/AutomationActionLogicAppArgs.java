@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -38,7 +39,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> logicAppResourceId;
 
     public Output<String> getLogicAppResourceId() {
-        return this.logicAppResourceId == null ? Output.empty() : this.logicAppResourceId;
+        return this.logicAppResourceId == null ? Codegen.empty() : this.logicAppResourceId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public AutomationActionLogicAppArgs(
@@ -62,9 +63,9 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
     }
 
     private AutomationActionLogicAppArgs() {
-        this.actionType = Output.empty();
-        this.logicAppResourceId = Output.empty();
-        this.uri = Output.empty();
+        this.actionType = Codegen.empty();
+        this.logicAppResourceId = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder logicAppResourceId(@Nullable String logicAppResourceId) {
-            this.logicAppResourceId = Output.ofNullable(logicAppResourceId);
+            this.logicAppResourceId = Codegen.ofNullable(logicAppResourceId);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -112,7 +113,7 @@ public final class AutomationActionLogicAppArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public AutomationActionLogicAppArgs build() {
             return new AutomationActionLogicAppArgs(actionType, logicAppResourceId, uri);

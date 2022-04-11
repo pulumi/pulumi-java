@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     public ProjectArgs(
@@ -71,10 +72,10 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ProjectArgs() {
-        this.displayName = Output.empty();
-        this.labels = Output.empty();
-        this.parent = Output.empty();
-        this.projectId = Output.empty();
+        this.displayName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -116,7 +117,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -124,7 +125,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder projectId(@Nullable Output<String> projectId) {
@@ -132,7 +133,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }        public ProjectArgs build() {
             return new ProjectArgs(displayName, labels, parent, projectId);

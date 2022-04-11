@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isActiveCMK;
 
     public Output<Boolean> getIsActiveCMK() {
-        return this.isActiveCMK == null ? Output.empty() : this.isActiveCMK;
+        return this.isActiveCMK == null ? Codegen.empty() : this.isActiveCMK;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyVaultUrl;
 
     public Output<String> getKeyVaultUrl() {
-        return this.keyVaultUrl == null ? Output.empty() : this.keyVaultUrl;
+        return this.keyVaultUrl == null ? Codegen.empty() : this.keyVaultUrl;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyArgs() {
-        this.isActiveCMK = Output.empty();
-        this.keyName = Output.empty();
-        this.keyVaultUrl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.isActiveCMK = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.keyVaultUrl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isActiveCMK(@Nullable Boolean isActiveCMK) {
-            this.isActiveCMK = Output.ofNullable(isActiveCMK);
+            this.isActiveCMK = Codegen.ofNullable(isActiveCMK);
             return this;
         }
         public Builder keyName(@Nullable Output<String> keyName) {
@@ -132,7 +133,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
@@ -140,7 +141,7 @@ public final class KeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVaultUrl(@Nullable String keyVaultUrl) {
-            this.keyVaultUrl = Output.ofNullable(keyVaultUrl);
+            this.keyVaultUrl = Codegen.ofNullable(keyVaultUrl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

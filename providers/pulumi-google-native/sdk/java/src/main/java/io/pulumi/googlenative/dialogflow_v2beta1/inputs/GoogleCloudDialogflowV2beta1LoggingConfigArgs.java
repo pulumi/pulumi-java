@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
       private final @Nullable Output<Boolean> enableStackdriverLogging;
 
     public Output<Boolean> getEnableStackdriverLogging() {
-        return this.enableStackdriverLogging == null ? Output.empty() : this.enableStackdriverLogging;
+        return this.enableStackdriverLogging == null ? Codegen.empty() : this.enableStackdriverLogging;
     }
 
     public GoogleCloudDialogflowV2beta1LoggingConfigArgs(@Nullable Output<Boolean> enableStackdriverLogging) {
@@ -34,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
     }
 
     private GoogleCloudDialogflowV2beta1LoggingConfigArgs() {
-        this.enableStackdriverLogging = Output.empty();
+        this.enableStackdriverLogging = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1LoggingConfigArgs extends io.pulu
             return this;
         }
         public Builder enableStackdriverLogging(@Nullable Boolean enableStackdriverLogging) {
-            this.enableStackdriverLogging = Output.ofNullable(enableStackdriverLogging);
+            this.enableStackdriverLogging = Codegen.ofNullable(enableStackdriverLogging);
             return this;
         }        public GoogleCloudDialogflowV2beta1LoggingConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1LoggingConfigArgs(enableStackdriverLogging);

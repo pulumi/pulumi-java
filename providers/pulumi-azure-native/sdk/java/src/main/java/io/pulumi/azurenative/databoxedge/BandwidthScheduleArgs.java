@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.DayOfWeek;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -113,13 +114,13 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BandwidthScheduleArgs() {
-        this.days = Output.empty();
-        this.deviceName = Output.empty();
-        this.name = Output.empty();
-        this.rateInMbps = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.start = Output.empty();
-        this.stop = Output.empty();
+        this.days = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rateInMbps = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.start = Codegen.empty();
+        this.stop = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rateInMbps(Output<Integer> rateInMbps) {

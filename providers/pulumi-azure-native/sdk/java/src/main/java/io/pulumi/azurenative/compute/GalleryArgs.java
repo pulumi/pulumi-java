@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.inputs.SharingProfileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> galleryName;
 
     public Output<String> getGalleryName() {
-        return this.galleryName == null ? Output.empty() : this.galleryName;
+        return this.galleryName == null ? Codegen.empty() : this.galleryName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SharingProfileArgs> sharingProfile;
 
     public Output<SharingProfileArgs> getSharingProfile() {
-        return this.sharingProfile == null ? Output.empty() : this.sharingProfile;
+        return this.sharingProfile == null ? Codegen.empty() : this.sharingProfile;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GalleryArgs(
@@ -98,12 +99,12 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GalleryArgs() {
-        this.description = Output.empty();
-        this.galleryName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sharingProfile = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.galleryName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sharingProfile = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder galleryName(@Nullable Output<String> galleryName) {
@@ -149,7 +150,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder galleryName(@Nullable String galleryName) {
-            this.galleryName = Output.ofNullable(galleryName);
+            this.galleryName = Codegen.ofNullable(galleryName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -157,7 +158,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -173,7 +174,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharingProfile(@Nullable SharingProfileArgs sharingProfile) {
-            this.sharingProfile = Output.ofNullable(sharingProfile);
+            this.sharingProfile = Codegen.ofNullable(sharingProfile);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -181,7 +182,7 @@ public final class GalleryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public GalleryArgs build() {
             return new GalleryArgs(description, galleryName, location, resourceGroupName, sharingProfile, tags);

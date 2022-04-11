@@ -6,6 +6,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 import io.pulumi.azurenative.managedservices.inputs.AuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
       private final @Nullable Output<String> registrationDefinitionName;
 
     public Output<String> getRegistrationDefinitionName() {
-        return this.registrationDefinitionName == null ? Output.empty() : this.registrationDefinitionName;
+        return this.registrationDefinitionName == null ? Codegen.empty() : this.registrationDefinitionName;
     }
 
     public RegistrationDefinitionPropertiesArgs(
@@ -76,10 +77,10 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
     }
 
     private RegistrationDefinitionPropertiesArgs() {
-        this.authorizations = Output.empty();
-        this.description = Output.empty();
-        this.managedByTenantId = Output.empty();
-        this.registrationDefinitionName = Output.empty();
+        this.authorizations = Codegen.empty();
+        this.description = Codegen.empty();
+        this.managedByTenantId = Codegen.empty();
+        this.registrationDefinitionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder managedByTenantId(Output<String> managedByTenantId) {
@@ -140,7 +141,7 @@ public final class RegistrationDefinitionPropertiesArgs extends io.pulumi.resour
             return this;
         }
         public Builder registrationDefinitionName(@Nullable String registrationDefinitionName) {
-            this.registrationDefinitionName = Output.ofNullable(registrationDefinitionName);
+            this.registrationDefinitionName = Codegen.ofNullable(registrationDefinitionName);
             return this;
         }        public RegistrationDefinitionPropertiesArgs build() {
             return new RegistrationDefinitionPropertiesArgs(authorizations, description, managedByTenantId, registrationDefinitionName);

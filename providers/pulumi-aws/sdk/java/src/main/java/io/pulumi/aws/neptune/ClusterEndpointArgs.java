@@ -5,6 +5,7 @@ package io.pulumi.aws.neptune;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -53,7 +54,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> excludedMembers;
 
     public Output<List<String>> getExcludedMembers() {
-        return this.excludedMembers == null ? Output.empty() : this.excludedMembers;
+        return this.excludedMembers == null ? Codegen.empty() : this.excludedMembers;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> staticMembers;
 
     public Output<List<String>> getStaticMembers() {
-        return this.staticMembers == null ? Output.empty() : this.staticMembers;
+        return this.staticMembers == null ? Codegen.empty() : this.staticMembers;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterEndpointArgs(
@@ -94,12 +95,12 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterEndpointArgs() {
-        this.clusterEndpointIdentifier = Output.empty();
-        this.clusterIdentifier = Output.empty();
-        this.endpointType = Output.empty();
-        this.excludedMembers = Output.empty();
-        this.staticMembers = Output.empty();
-        this.tags = Output.empty();
+        this.clusterEndpointIdentifier = Codegen.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.excludedMembers = Codegen.empty();
+        this.staticMembers = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder excludedMembers(@Nullable List<String> excludedMembers) {
-            this.excludedMembers = Output.ofNullable(excludedMembers);
+            this.excludedMembers = Codegen.ofNullable(excludedMembers);
             return this;
         }
         public Builder excludedMembers(String... excludedMembers) {
@@ -172,7 +173,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder staticMembers(@Nullable List<String> staticMembers) {
-            this.staticMembers = Output.ofNullable(staticMembers);
+            this.staticMembers = Codegen.ofNullable(staticMembers);
             return this;
         }
         public Builder staticMembers(String... staticMembers) {
@@ -183,7 +184,7 @@ public final class ClusterEndpointArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterEndpointArgs build() {
             return new ClusterEndpointArgs(clusterEndpointIdentifier, clusterIdentifier, endpointType, excludedMembers, staticMembers, tags);

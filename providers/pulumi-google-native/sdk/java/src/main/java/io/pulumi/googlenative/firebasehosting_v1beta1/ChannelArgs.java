@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -31,7 +32,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expireTime;
 
     public Output<String> getExpireTime() {
-        return this.expireTime == null ? Output.empty() : this.expireTime;
+        return this.expireTime == null ? Codegen.empty() : this.expireTime;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -53,14 +54,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> retainedReleaseCount;
 
     public Output<Integer> getRetainedReleaseCount() {
-        return this.retainedReleaseCount == null ? Output.empty() : this.retainedReleaseCount;
+        return this.retainedReleaseCount == null ? Codegen.empty() : this.retainedReleaseCount;
     }
 
     @Import(name="siteId", required=true)
@@ -89,7 +90,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ttl;
 
     public Output<String> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public ChannelArgs(
@@ -112,14 +113,14 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ChannelArgs() {
-        this.channelId = Output.empty();
-        this.expireTime = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.retainedReleaseCount = Output.empty();
-        this.siteId = Output.empty();
-        this.ttl = Output.empty();
+        this.channelId = Codegen.empty();
+        this.expireTime = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.retainedReleaseCount = Codegen.empty();
+        this.siteId = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -169,7 +170,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expireTime(@Nullable String expireTime) {
-            this.expireTime = Output.ofNullable(expireTime);
+            this.expireTime = Codegen.ofNullable(expireTime);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -177,7 +178,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -185,7 +186,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -193,7 +194,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder retainedReleaseCount(@Nullable Output<Integer> retainedReleaseCount) {
@@ -201,7 +202,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retainedReleaseCount(@Nullable Integer retainedReleaseCount) {
-            this.retainedReleaseCount = Output.ofNullable(retainedReleaseCount);
+            this.retainedReleaseCount = Codegen.ofNullable(retainedReleaseCount);
             return this;
         }
         public Builder siteId(Output<String> siteId) {
@@ -217,7 +218,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable String ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public ChannelArgs build() {
             return new ChannelArgs(channelId, expireTime, labels, name, project, retainedReleaseCount, siteId, ttl);

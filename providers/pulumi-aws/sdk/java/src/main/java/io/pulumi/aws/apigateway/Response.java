@@ -9,6 +9,7 @@ import io.pulumi.aws.apigateway.inputs.ResponseState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -122,7 +123,7 @@ public class Response extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Response(String name, ResponseArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigateway/response:Response", name, args == null ? ResponseArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigateway/response:Response", name, args == null ? ResponseArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Response(String name, Output<String> id, @Nullable ResponseState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

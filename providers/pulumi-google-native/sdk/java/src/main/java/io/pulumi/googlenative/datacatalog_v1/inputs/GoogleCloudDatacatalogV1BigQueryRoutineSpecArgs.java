@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
       private final @Nullable Output<List<String>> importedLibraries;
 
     public Output<List<String>> getImportedLibraries() {
-        return this.importedLibraries == null ? Output.empty() : this.importedLibraries;
+        return this.importedLibraries == null ? Codegen.empty() : this.importedLibraries;
     }
 
     public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(@Nullable Output<List<String>> importedLibraries) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
     }
 
     private GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs() {
-        this.importedLibraries = Output.empty();
+        this.importedLibraries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
             return this;
         }
         public Builder importedLibraries(@Nullable List<String> importedLibraries) {
-            this.importedLibraries = Output.ofNullable(importedLibraries);
+            this.importedLibraries = Codegen.ofNullable(importedLibraries);
             return this;
         }
         public Builder importedLibraries(String... importedLibraries) {

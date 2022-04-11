@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclLoggingConfigurationLoggingFilterFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,8 +46,8 @@ public final class WebAclLoggingConfigurationLoggingFilterArgs extends io.pulumi
     }
 
     private WebAclLoggingConfigurationLoggingFilterArgs() {
-        this.defaultBehavior = Output.empty();
-        this.filters = Output.empty();
+        this.defaultBehavior = Codegen.empty();
+        this.filters = Codegen.empty();
     }
 
     public static Builder builder() {

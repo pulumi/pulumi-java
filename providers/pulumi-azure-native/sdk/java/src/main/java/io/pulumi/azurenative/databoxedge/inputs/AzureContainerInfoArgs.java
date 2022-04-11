@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -62,9 +63,9 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AzureContainerInfoArgs() {
-        this.containerName = Output.empty();
-        this.dataFormat = Output.empty();
-        this.storageAccountCredentialId = Output.empty();
+        this.containerName = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.storageAccountCredentialId = Codegen.empty();
     }
 
     public static Builder builder() {

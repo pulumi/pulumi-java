@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> siteExtensionId;
 
     public Output<String> getSiteExtensionId() {
-        return this.siteExtensionId == null ? Output.empty() : this.siteExtensionId;
+        return this.siteExtensionId == null ? Codegen.empty() : this.siteExtensionId;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
     }
 
     private WebAppSiteExtensionSlotArgs() {
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.siteExtensionId = Output.empty();
-        this.slot = Output.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.siteExtensionId = Codegen.empty();
+        this.slot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder siteExtensionId(@Nullable String siteExtensionId) {
-            this.siteExtensionId = Output.ofNullable(siteExtensionId);
+            this.siteExtensionId = Codegen.ofNullable(siteExtensionId);
             return this;
         }
         public Builder slot(Output<String> slot) {

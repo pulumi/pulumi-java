@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class TopicRuleFirehoseActionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> batchMode;
 
     public Output<Boolean> getBatchMode() {
-        return this.batchMode == null ? Output.empty() : this.batchMode;
+        return this.batchMode == null ? Codegen.empty() : this.batchMode;
     }
 
     @Import(name="deliveryStreamName", required=true)
@@ -40,7 +41,7 @@ public final class TopicRuleFirehoseActionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {
-        return this.separator == null ? Output.empty() : this.separator;
+        return this.separator == null ? Codegen.empty() : this.separator;
     }
 
     public TopicRuleFirehoseActionArgs(
@@ -55,10 +56,10 @@ public final class TopicRuleFirehoseActionArgs extends io.pulumi.resources.Resou
     }
 
     private TopicRuleFirehoseActionArgs() {
-        this.batchMode = Output.empty();
-        this.deliveryStreamName = Output.empty();
-        this.roleArn = Output.empty();
-        this.separator = Output.empty();
+        this.batchMode = Codegen.empty();
+        this.deliveryStreamName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.separator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class TopicRuleFirehoseActionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder batchMode(@Nullable Boolean batchMode) {
-            this.batchMode = Output.ofNullable(batchMode);
+            this.batchMode = Codegen.ofNullable(batchMode);
             return this;
         }
         public Builder deliveryStreamName(Output<String> deliveryStreamName) {
@@ -116,7 +117,7 @@ public final class TopicRuleFirehoseActionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder separator(@Nullable String separator) {
-            this.separator = Output.ofNullable(separator);
+            this.separator = Codegen.ofNullable(separator);
             return this;
         }        public TopicRuleFirehoseActionArgs build() {
             return new TopicRuleFirehoseActionArgs(batchMode, deliveryStreamName, roleArn, separator);

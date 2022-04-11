@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.EnclaveCertificateIamRoleAssociationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -112,7 +113,7 @@ public class EnclaveCertificateIamRoleAssociation extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public EnclaveCertificateIamRoleAssociation(String name, EnclaveCertificateIamRoleAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:EnclaveCertificateIamRoleAssociation", name, args == null ? EnclaveCertificateIamRoleAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:EnclaveCertificateIamRoleAssociation", name, args == null ? EnclaveCertificateIamRoleAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EnclaveCertificateIamRoleAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

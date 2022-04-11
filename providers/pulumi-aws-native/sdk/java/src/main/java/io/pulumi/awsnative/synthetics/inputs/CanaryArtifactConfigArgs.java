@@ -6,6 +6,7 @@ package io.pulumi.awsnative.synthetics.inputs;
 import io.pulumi.awsnative.synthetics.inputs.CanaryS3EncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class CanaryArtifactConfigArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<CanaryS3EncryptionArgs> s3Encryption;
 
     public Output<CanaryS3EncryptionArgs> getS3Encryption() {
-        return this.s3Encryption == null ? Output.empty() : this.s3Encryption;
+        return this.s3Encryption == null ? Codegen.empty() : this.s3Encryption;
     }
 
     public CanaryArtifactConfigArgs(@Nullable Output<CanaryS3EncryptionArgs> s3Encryption) {
@@ -30,7 +31,7 @@ public final class CanaryArtifactConfigArgs extends io.pulumi.resources.Resource
     }
 
     private CanaryArtifactConfigArgs() {
-        this.s3Encryption = Output.empty();
+        this.s3Encryption = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class CanaryArtifactConfigArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder s3Encryption(@Nullable CanaryS3EncryptionArgs s3Encryption) {
-            this.s3Encryption = Output.ofNullable(s3Encryption);
+            this.s3Encryption = Codegen.ofNullable(s3Encryption);
             return this;
         }        public CanaryArtifactConfigArgs build() {
             return new CanaryArtifactConfigArgs(s3Encryption);

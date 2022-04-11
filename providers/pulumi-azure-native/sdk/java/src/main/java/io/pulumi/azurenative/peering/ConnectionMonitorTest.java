@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -181,7 +182,7 @@ public class ConnectionMonitorTest extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectionMonitorTest(String name, ConnectionMonitorTestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:peering:ConnectionMonitorTest", name, args == null ? ConnectionMonitorTestArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:peering:ConnectionMonitorTest", name, args == null ? ConnectionMonitorTestArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectionMonitorTest(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

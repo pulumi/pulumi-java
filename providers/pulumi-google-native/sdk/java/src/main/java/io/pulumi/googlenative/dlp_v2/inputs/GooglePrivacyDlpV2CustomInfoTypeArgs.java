@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CustomInfoTypeExclusionType;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CustomInfoTypeLikelihood;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DetectionRuleArgs;
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> detectionRules;
 
     public Output<List<GooglePrivacyDlpV2DetectionRuleArgs>> getDetectionRules() {
-        return this.detectionRules == null ? Output.empty() : this.detectionRules;
+        return this.detectionRules == null ? Codegen.empty() : this.detectionRules;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2DictionaryArgs> dictionary;
 
     public Output<GooglePrivacyDlpV2DictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Output.empty() : this.dictionary;
+        return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType;
 
     public Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> getExclusionType() {
-        return this.exclusionType == null ? Output.empty() : this.exclusionType;
+        return this.exclusionType == null ? Codegen.empty() : this.exclusionType;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType;
 
     public Output<GooglePrivacyDlpV2InfoTypeArgs> getInfoType() {
-        return this.infoType == null ? Output.empty() : this.infoType;
+        return this.infoType == null ? Codegen.empty() : this.infoType;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood;
 
     public Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> getLikelihood() {
-        return this.likelihood == null ? Output.empty() : this.likelihood;
+        return this.likelihood == null ? Codegen.empty() : this.likelihood;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2RegexArgs> regex;
 
     public Output<GooglePrivacyDlpV2RegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2StoredTypeArgs> storedType;
 
     public Output<GooglePrivacyDlpV2StoredTypeArgs> getStoredType() {
-        return this.storedType == null ? Output.empty() : this.storedType;
+        return this.storedType == null ? Codegen.empty() : this.storedType;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
       private final @Nullable Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType;
 
     public Output<GooglePrivacyDlpV2SurrogateTypeArgs> getSurrogateType() {
-        return this.surrogateType == null ? Output.empty() : this.surrogateType;
+        return this.surrogateType == null ? Codegen.empty() : this.surrogateType;
     }
 
     public GooglePrivacyDlpV2CustomInfoTypeArgs(
@@ -134,14 +135,14 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
     }
 
     private GooglePrivacyDlpV2CustomInfoTypeArgs() {
-        this.detectionRules = Output.empty();
-        this.dictionary = Output.empty();
-        this.exclusionType = Output.empty();
-        this.infoType = Output.empty();
-        this.likelihood = Output.empty();
-        this.regex = Output.empty();
-        this.storedType = Output.empty();
-        this.surrogateType = Output.empty();
+        this.detectionRules = Codegen.empty();
+        this.dictionary = Codegen.empty();
+        this.exclusionType = Codegen.empty();
+        this.infoType = Codegen.empty();
+        this.likelihood = Codegen.empty();
+        this.regex = Codegen.empty();
+        this.storedType = Codegen.empty();
+        this.surrogateType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -183,7 +184,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder detectionRules(@Nullable List<GooglePrivacyDlpV2DetectionRuleArgs> detectionRules) {
-            this.detectionRules = Output.ofNullable(detectionRules);
+            this.detectionRules = Codegen.ofNullable(detectionRules);
             return this;
         }
         public Builder detectionRules(GooglePrivacyDlpV2DetectionRuleArgs... detectionRules) {
@@ -194,7 +195,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder dictionary(@Nullable GooglePrivacyDlpV2DictionaryArgs dictionary) {
-            this.dictionary = Output.ofNullable(dictionary);
+            this.dictionary = Codegen.ofNullable(dictionary);
             return this;
         }
         public Builder exclusionType(@Nullable Output<GooglePrivacyDlpV2CustomInfoTypeExclusionType> exclusionType) {
@@ -202,7 +203,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder exclusionType(@Nullable GooglePrivacyDlpV2CustomInfoTypeExclusionType exclusionType) {
-            this.exclusionType = Output.ofNullable(exclusionType);
+            this.exclusionType = Codegen.ofNullable(exclusionType);
             return this;
         }
         public Builder infoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> infoType) {
@@ -210,7 +211,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder infoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs infoType) {
-            this.infoType = Output.ofNullable(infoType);
+            this.infoType = Codegen.ofNullable(infoType);
             return this;
         }
         public Builder likelihood(@Nullable Output<GooglePrivacyDlpV2CustomInfoTypeLikelihood> likelihood) {
@@ -218,7 +219,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder likelihood(@Nullable GooglePrivacyDlpV2CustomInfoTypeLikelihood likelihood) {
-            this.likelihood = Output.ofNullable(likelihood);
+            this.likelihood = Codegen.ofNullable(likelihood);
             return this;
         }
         public Builder regex(@Nullable Output<GooglePrivacyDlpV2RegexArgs> regex) {
@@ -226,7 +227,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder regex(@Nullable GooglePrivacyDlpV2RegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder storedType(@Nullable Output<GooglePrivacyDlpV2StoredTypeArgs> storedType) {
@@ -234,7 +235,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder storedType(@Nullable GooglePrivacyDlpV2StoredTypeArgs storedType) {
-            this.storedType = Output.ofNullable(storedType);
+            this.storedType = Codegen.ofNullable(storedType);
             return this;
         }
         public Builder surrogateType(@Nullable Output<GooglePrivacyDlpV2SurrogateTypeArgs> surrogateType) {
@@ -242,7 +243,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeArgs extends io.pulumi.resour
             return this;
         }
         public Builder surrogateType(@Nullable GooglePrivacyDlpV2SurrogateTypeArgs surrogateType) {
-            this.surrogateType = Output.ofNullable(surrogateType);
+            this.surrogateType = Codegen.ofNullable(surrogateType);
             return this;
         }        public GooglePrivacyDlpV2CustomInfoTypeArgs build() {
             return new GooglePrivacyDlpV2CustomInfoTypeArgs(detectionRules, dictionary, exclusionType, infoType, likelihood, regex, storedType, surrogateType);

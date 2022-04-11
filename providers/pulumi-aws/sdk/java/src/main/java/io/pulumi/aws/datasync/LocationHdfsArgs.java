@@ -7,6 +7,7 @@ import io.pulumi.aws.datasync.inputs.LocationHdfsNameNodeArgs;
 import io.pulumi.aws.datasync.inputs.LocationHdfsQopConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authenticationType;
 
     public Output<String> getAuthenticationType() {
-        return this.authenticationType == null ? Output.empty() : this.authenticationType;
+        return this.authenticationType == null ? Codegen.empty() : this.authenticationType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> blockSize;
 
     public Output<Integer> getBlockSize() {
-        return this.blockSize == null ? Output.empty() : this.blockSize;
+        return this.blockSize == null ? Codegen.empty() : this.blockSize;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kerberosKeytab;
 
     public Output<String> getKerberosKeytab() {
-        return this.kerberosKeytab == null ? Output.empty() : this.kerberosKeytab;
+        return this.kerberosKeytab == null ? Codegen.empty() : this.kerberosKeytab;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kerberosKrb5Conf;
 
     public Output<String> getKerberosKrb5Conf() {
-        return this.kerberosKrb5Conf == null ? Output.empty() : this.kerberosKrb5Conf;
+        return this.kerberosKrb5Conf == null ? Codegen.empty() : this.kerberosKrb5Conf;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kerberosPrincipal;
 
     public Output<String> getKerberosPrincipal() {
-        return this.kerberosPrincipal == null ? Output.empty() : this.kerberosPrincipal;
+        return this.kerberosPrincipal == null ? Codegen.empty() : this.kerberosPrincipal;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyProviderUri;
 
     public Output<String> getKmsKeyProviderUri() {
-        return this.kmsKeyProviderUri == null ? Output.empty() : this.kmsKeyProviderUri;
+        return this.kmsKeyProviderUri == null ? Codegen.empty() : this.kmsKeyProviderUri;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LocationHdfsQopConfigurationArgs> qopConfiguration;
 
     public Output<LocationHdfsQopConfigurationArgs> getQopConfiguration() {
-        return this.qopConfiguration == null ? Output.empty() : this.qopConfiguration;
+        return this.qopConfiguration == null ? Codegen.empty() : this.qopConfiguration;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> replicationFactor;
 
     public Output<Integer> getReplicationFactor() {
-        return this.replicationFactor == null ? Output.empty() : this.replicationFactor;
+        return this.replicationFactor == null ? Codegen.empty() : this.replicationFactor;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> simpleUser;
 
     public Output<String> getSimpleUser() {
-        return this.simpleUser == null ? Output.empty() : this.simpleUser;
+        return this.simpleUser == null ? Codegen.empty() : this.simpleUser;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public LocationHdfsArgs(
@@ -205,20 +206,20 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocationHdfsArgs() {
-        this.agentArns = Output.empty();
-        this.authenticationType = Output.empty();
-        this.blockSize = Output.empty();
-        this.kerberosKeytab = Output.empty();
-        this.kerberosKrb5Conf = Output.empty();
-        this.kerberosPrincipal = Output.empty();
-        this.kmsKeyProviderUri = Output.empty();
-        this.nameNodes = Output.empty();
-        this.qopConfiguration = Output.empty();
-        this.replicationFactor = Output.empty();
-        this.simpleUser = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.agentArns = Codegen.empty();
+        this.authenticationType = Codegen.empty();
+        this.blockSize = Codegen.empty();
+        this.kerberosKeytab = Codegen.empty();
+        this.kerberosKrb5Conf = Codegen.empty();
+        this.kerberosPrincipal = Codegen.empty();
+        this.kmsKeyProviderUri = Codegen.empty();
+        this.nameNodes = Codegen.empty();
+        this.qopConfiguration = Codegen.empty();
+        this.replicationFactor = Codegen.empty();
+        this.simpleUser = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -283,7 +284,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationType(@Nullable String authenticationType) {
-            this.authenticationType = Output.ofNullable(authenticationType);
+            this.authenticationType = Codegen.ofNullable(authenticationType);
             return this;
         }
         public Builder blockSize(@Nullable Output<Integer> blockSize) {
@@ -291,7 +292,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blockSize(@Nullable Integer blockSize) {
-            this.blockSize = Output.ofNullable(blockSize);
+            this.blockSize = Codegen.ofNullable(blockSize);
             return this;
         }
         public Builder kerberosKeytab(@Nullable Output<String> kerberosKeytab) {
@@ -299,7 +300,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosKeytab(@Nullable String kerberosKeytab) {
-            this.kerberosKeytab = Output.ofNullable(kerberosKeytab);
+            this.kerberosKeytab = Codegen.ofNullable(kerberosKeytab);
             return this;
         }
         public Builder kerberosKrb5Conf(@Nullable Output<String> kerberosKrb5Conf) {
@@ -307,7 +308,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosKrb5Conf(@Nullable String kerberosKrb5Conf) {
-            this.kerberosKrb5Conf = Output.ofNullable(kerberosKrb5Conf);
+            this.kerberosKrb5Conf = Codegen.ofNullable(kerberosKrb5Conf);
             return this;
         }
         public Builder kerberosPrincipal(@Nullable Output<String> kerberosPrincipal) {
@@ -315,7 +316,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kerberosPrincipal(@Nullable String kerberosPrincipal) {
-            this.kerberosPrincipal = Output.ofNullable(kerberosPrincipal);
+            this.kerberosPrincipal = Codegen.ofNullable(kerberosPrincipal);
             return this;
         }
         public Builder kmsKeyProviderUri(@Nullable Output<String> kmsKeyProviderUri) {
@@ -323,7 +324,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyProviderUri(@Nullable String kmsKeyProviderUri) {
-            this.kmsKeyProviderUri = Output.ofNullable(kmsKeyProviderUri);
+            this.kmsKeyProviderUri = Codegen.ofNullable(kmsKeyProviderUri);
             return this;
         }
         public Builder nameNodes(Output<List<LocationHdfsNameNodeArgs>> nameNodes) {
@@ -342,7 +343,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder qopConfiguration(@Nullable LocationHdfsQopConfigurationArgs qopConfiguration) {
-            this.qopConfiguration = Output.ofNullable(qopConfiguration);
+            this.qopConfiguration = Codegen.ofNullable(qopConfiguration);
             return this;
         }
         public Builder replicationFactor(@Nullable Output<Integer> replicationFactor) {
@@ -350,7 +351,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicationFactor(@Nullable Integer replicationFactor) {
-            this.replicationFactor = Output.ofNullable(replicationFactor);
+            this.replicationFactor = Codegen.ofNullable(replicationFactor);
             return this;
         }
         public Builder simpleUser(@Nullable Output<String> simpleUser) {
@@ -358,7 +359,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder simpleUser(@Nullable String simpleUser) {
-            this.simpleUser = Output.ofNullable(simpleUser);
+            this.simpleUser = Codegen.ofNullable(simpleUser);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -366,7 +367,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -374,7 +375,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -382,7 +383,7 @@ public final class LocationHdfsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public LocationHdfsArgs build() {
             return new LocationHdfsArgs(agentArns, authenticationType, blockSize, kerberosKeytab, kerberosKrb5Conf, kerberosPrincipal, kmsKeyProviderUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, subdirectory, tags, tagsAll);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ExecutionConfigArgs> executionConfig;
 
     public Output<ExecutionConfigArgs> getExecutionConfig() {
-        return this.executionConfig == null ? Output.empty() : this.executionConfig;
+        return this.executionConfig == null ? Codegen.empty() : this.executionConfig;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<PeripheralsConfigArgs> peripheralsConfig;
 
     public Output<PeripheralsConfigArgs> getPeripheralsConfig() {
-        return this.peripheralsConfig == null ? Output.empty() : this.peripheralsConfig;
+        return this.peripheralsConfig == null ? Codegen.empty() : this.peripheralsConfig;
     }
 
     public EnvironmentConfigArgs(
@@ -49,8 +50,8 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private EnvironmentConfigArgs() {
-        this.executionConfig = Output.empty();
-        this.peripheralsConfig = Output.empty();
+        this.executionConfig = Codegen.empty();
+        this.peripheralsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder executionConfig(@Nullable ExecutionConfigArgs executionConfig) {
-            this.executionConfig = Output.ofNullable(executionConfig);
+            this.executionConfig = Codegen.ofNullable(executionConfig);
             return this;
         }
         public Builder peripheralsConfig(@Nullable Output<PeripheralsConfigArgs> peripheralsConfig) {
@@ -88,7 +89,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder peripheralsConfig(@Nullable PeripheralsConfigArgs peripheralsConfig) {
-            this.peripheralsConfig = Output.ofNullable(peripheralsConfig);
+            this.peripheralsConfig = Codegen.ofNullable(peripheralsConfig);
             return this;
         }        public EnvironmentConfigArgs build() {
             return new EnvironmentConfigArgs(executionConfig, peripheralsConfig);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> connectionString;
 
     public Output<AsymmetricEncryptedSecretArgs> getConnectionString() {
-        return this.connectionString == null ? Output.empty() : this.connectionString;
+        return this.connectionString == null ? Codegen.empty() : this.connectionString;
     }
 
     public SymmetricKeyArgs(@Nullable Output<AsymmetricEncryptedSecretArgs> connectionString) {
@@ -34,7 +35,7 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SymmetricKeyArgs() {
-        this.connectionString = Output.empty();
+        this.connectionString = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SymmetricKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionString(@Nullable AsymmetricEncryptedSecretArgs connectionString) {
-            this.connectionString = Output.ofNullable(connectionString);
+            this.connectionString = Codegen.ofNullable(connectionString);
             return this;
         }        public SymmetricKeyArgs build() {
             return new SymmetricKeyArgs(connectionString);

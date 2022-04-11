@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TopicRuleStepFunctionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> executionNamePrefix;
 
     public Output<String> getExecutionNamePrefix() {
-        return this.executionNamePrefix == null ? Output.empty() : this.executionNamePrefix;
+        return this.executionNamePrefix == null ? Codegen.empty() : this.executionNamePrefix;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class TopicRuleStepFunctionArgs extends io.pulumi.resources.Resourc
     }
 
     private TopicRuleStepFunctionArgs() {
-        this.executionNamePrefix = Output.empty();
-        this.roleArn = Output.empty();
-        this.stateMachineName = Output.empty();
+        this.executionNamePrefix = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stateMachineName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class TopicRuleStepFunctionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder executionNamePrefix(@Nullable String executionNamePrefix) {
-            this.executionNamePrefix = Output.ofNullable(executionNamePrefix);
+            this.executionNamePrefix = Codegen.ofNullable(executionNamePrefix);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> parameters;
 
     public Output<String> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private RuntimeScriptActionArgs() {
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.roles = Output.empty();
-        this.uri = Output.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class RuntimeScriptActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder parameters(@Nullable String parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder roles(Output<List<String>> roles) {

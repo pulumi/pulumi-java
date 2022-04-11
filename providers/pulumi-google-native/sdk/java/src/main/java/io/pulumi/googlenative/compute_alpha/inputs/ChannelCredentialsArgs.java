@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.ChannelCredentialsChannelCredentialType;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<TlsCertificatePathsArgs> certificates;
 
     public Output<TlsCertificatePathsArgs> getCertificates() {
-        return this.certificates == null ? Output.empty() : this.certificates;
+        return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType;
 
     public Output<ChannelCredentialsChannelCredentialType> getChannelCredentialType() {
-        return this.channelCredentialType == null ? Output.empty() : this.channelCredentialType;
+        return this.channelCredentialType == null ? Codegen.empty() : this.channelCredentialType;
     }
 
     public ChannelCredentialsArgs(
@@ -49,8 +50,8 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ChannelCredentialsArgs() {
-        this.certificates = Output.empty();
-        this.channelCredentialType = Output.empty();
+        this.certificates = Codegen.empty();
+        this.channelCredentialType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder certificates(@Nullable TlsCertificatePathsArgs certificates) {
-            this.certificates = Output.ofNullable(certificates);
+            this.certificates = Codegen.ofNullable(certificates);
             return this;
         }
         public Builder channelCredentialType(@Nullable Output<ChannelCredentialsChannelCredentialType> channelCredentialType) {
@@ -88,7 +89,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder channelCredentialType(@Nullable ChannelCredentialsChannelCredentialType channelCredentialType) {
-            this.channelCredentialType = Output.ofNullable(channelCredentialType);
+            this.channelCredentialType = Codegen.ofNullable(channelCredentialType);
             return this;
         }        public ChannelCredentialsArgs build() {
             return new ChannelCredentialsArgs(certificates, channelCredentialType);

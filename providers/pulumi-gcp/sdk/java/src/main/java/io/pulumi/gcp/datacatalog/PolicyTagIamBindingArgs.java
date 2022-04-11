@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<PolicyTagIamBindingConditionArgs> condition;
 
     public Output<PolicyTagIamBindingConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="members", required=true)
@@ -66,10 +67,10 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
     }
 
     private PolicyTagIamBindingArgs() {
-        this.condition = Output.empty();
-        this.members = Output.empty();
-        this.policyTag = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.members = Codegen.empty();
+        this.policyTag = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class PolicyTagIamBindingArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder condition(@Nullable PolicyTagIamBindingConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder members(Output<List<String>> members) {

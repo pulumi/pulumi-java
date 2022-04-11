@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> contentType;
 
     public Output<String> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     public ModelState(
@@ -83,11 +84,11 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelState() {
-        this.contentType = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.restApi = Output.empty();
-        this.schema = Output.empty();
+        this.contentType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable String contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -131,7 +132,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -139,7 +140,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -151,7 +152,7 @@ public final class ModelState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }        public ModelState build() {
             return new ModelState(contentType, description, name, restApi, schema);

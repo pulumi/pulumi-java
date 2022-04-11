@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.BackendAuthorizationHeaderCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
       private final @Nullable Output<BackendAuthorizationHeaderCredentialsArgs> authorization;
 
     public Output<BackendAuthorizationHeaderCredentialsArgs> getAuthorization() {
-        return this.authorization == null ? Output.empty() : this.authorization;
+        return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> certificate;
 
     public Output<List<String>> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> certificateIds;
 
     public Output<List<String>> getCertificateIds() {
-        return this.certificateIds == null ? Output.empty() : this.certificateIds;
+        return this.certificateIds == null ? Codegen.empty() : this.certificateIds;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,List<String>>> header;
 
     public Output<Map<String,List<String>>> getHeader() {
-        return this.header == null ? Output.empty() : this.header;
+        return this.header == null ? Codegen.empty() : this.header;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,List<String>>> query;
 
     public Output<Map<String,List<String>>> getQuery() {
-        return this.query == null ? Output.empty() : this.query;
+        return this.query == null ? Codegen.empty() : this.query;
     }
 
     public BackendCredentialsContractArgs(
@@ -90,11 +91,11 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
     }
 
     private BackendCredentialsContractArgs() {
-        this.authorization = Output.empty();
-        this.certificate = Output.empty();
-        this.certificateIds = Output.empty();
-        this.header = Output.empty();
-        this.query = Output.empty();
+        this.authorization = Codegen.empty();
+        this.certificate = Codegen.empty();
+        this.certificateIds = Codegen.empty();
+        this.header = Codegen.empty();
+        this.query = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder authorization(@Nullable BackendAuthorizationHeaderCredentialsArgs authorization) {
-            this.authorization = Output.ofNullable(authorization);
+            this.authorization = Codegen.ofNullable(authorization);
             return this;
         }
         public Builder certificate(@Nullable Output<List<String>> certificate) {
@@ -138,7 +139,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder certificate(@Nullable List<String> certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder certificate(String... certificate) {
@@ -149,7 +150,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder certificateIds(@Nullable List<String> certificateIds) {
-            this.certificateIds = Output.ofNullable(certificateIds);
+            this.certificateIds = Codegen.ofNullable(certificateIds);
             return this;
         }
         public Builder certificateIds(String... certificateIds) {
@@ -160,7 +161,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder header(@Nullable Map<String,List<String>> header) {
-            this.header = Output.ofNullable(header);
+            this.header = Codegen.ofNullable(header);
             return this;
         }
         public Builder query(@Nullable Output<Map<String,List<String>>> query) {
@@ -168,7 +169,7 @@ public final class BackendCredentialsContractArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder query(@Nullable Map<String,List<String>> query) {
-            this.query = Output.ofNullable(query);
+            this.query = Codegen.ofNullable(query);
             return this;
         }        public BackendCredentialsContractArgs build() {
             return new BackendCredentialsContractArgs(authorization, certificate, certificateIds, header, query);

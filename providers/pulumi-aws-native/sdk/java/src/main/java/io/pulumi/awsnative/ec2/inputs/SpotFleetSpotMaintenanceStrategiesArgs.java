@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotCapacityRebalanceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
       private final @Nullable Output<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance;
 
     public Output<SpotFleetSpotCapacityRebalanceArgs> getCapacityRebalance() {
-        return this.capacityRebalance == null ? Output.empty() : this.capacityRebalance;
+        return this.capacityRebalance == null ? Codegen.empty() : this.capacityRebalance;
     }
 
     public SpotFleetSpotMaintenanceStrategiesArgs(@Nullable Output<SpotFleetSpotCapacityRebalanceArgs> capacityRebalance) {
@@ -26,7 +27,7 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
     }
 
     private SpotFleetSpotMaintenanceStrategiesArgs() {
-        this.capacityRebalance = Output.empty();
+        this.capacityRebalance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class SpotFleetSpotMaintenanceStrategiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder capacityRebalance(@Nullable SpotFleetSpotCapacityRebalanceArgs capacityRebalance) {
-            this.capacityRebalance = Output.ofNullable(capacityRebalance);
+            this.capacityRebalance = Codegen.ofNullable(capacityRebalance);
             return this;
         }        public SpotFleetSpotMaintenanceStrategiesArgs build() {
             return new SpotFleetSpotMaintenanceStrategiesArgs(capacityRebalance);

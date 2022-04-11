@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -67,10 +68,10 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.accountName = Output.empty();
-        this.name = Output.empty();
-        this.privateLinkServiceConnectionState = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder privateLinkServiceConnectionState(Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {

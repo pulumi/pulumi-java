@@ -8,6 +8,7 @@ import io.pulumi.awsnative.backup.inputs.ReportPlanTagArgs;
 import io.pulumi.awsnative.backup.inputs.ReportSettingPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reportPlanDescription;
 
     public Output<String> getReportPlanDescription() {
-        return this.reportPlanDescription == null ? Output.empty() : this.reportPlanDescription;
+        return this.reportPlanDescription == null ? Codegen.empty() : this.reportPlanDescription;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reportPlanName;
 
     public Output<String> getReportPlanName() {
-        return this.reportPlanName == null ? Output.empty() : this.reportPlanName;
+        return this.reportPlanName == null ? Codegen.empty() : this.reportPlanName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReportPlanTagArgs>> reportPlanTags;
 
     public Output<List<ReportPlanTagArgs>> getReportPlanTags() {
-        return this.reportPlanTags == null ? Output.empty() : this.reportPlanTags;
+        return this.reportPlanTags == null ? Codegen.empty() : this.reportPlanTags;
     }
 
     /**
@@ -87,11 +88,11 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReportPlanArgs() {
-        this.reportDeliveryChannel = Output.empty();
-        this.reportPlanDescription = Output.empty();
-        this.reportPlanName = Output.empty();
-        this.reportPlanTags = Output.empty();
-        this.reportSetting = Output.empty();
+        this.reportDeliveryChannel = Codegen.empty();
+        this.reportPlanDescription = Codegen.empty();
+        this.reportPlanName = Codegen.empty();
+        this.reportPlanTags = Codegen.empty();
+        this.reportSetting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -135,7 +136,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportPlanDescription(@Nullable String reportPlanDescription) {
-            this.reportPlanDescription = Output.ofNullable(reportPlanDescription);
+            this.reportPlanDescription = Codegen.ofNullable(reportPlanDescription);
             return this;
         }
         public Builder reportPlanName(@Nullable Output<String> reportPlanName) {
@@ -143,7 +144,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportPlanName(@Nullable String reportPlanName) {
-            this.reportPlanName = Output.ofNullable(reportPlanName);
+            this.reportPlanName = Codegen.ofNullable(reportPlanName);
             return this;
         }
         public Builder reportPlanTags(@Nullable Output<List<ReportPlanTagArgs>> reportPlanTags) {
@@ -151,7 +152,7 @@ public final class ReportPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reportPlanTags(@Nullable List<ReportPlanTagArgs> reportPlanTags) {
-            this.reportPlanTags = Output.ofNullable(reportPlanTags);
+            this.reportPlanTags = Codegen.ofNullable(reportPlanTags);
             return this;
         }
         public Builder reportPlanTags(ReportPlanTagArgs... reportPlanTags) {

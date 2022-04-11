@@ -5,6 +5,7 @@ package io.pulumi.docker;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.docker.inputs.ServiceAuthArgs;
 import io.pulumi.docker.inputs.ServiceConvergeConfigArgs;
 import io.pulumi.docker.inputs.ServiceEndpointSpecArgs;
@@ -31,7 +32,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceAuthArgs> auth;
 
     public Output<ServiceAuthArgs> getAuth() {
-        return this.auth == null ? Output.empty() : this.auth;
+        return this.auth == null ? Codegen.empty() : this.auth;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceConvergeConfigArgs> convergeConfig;
 
     public Output<ServiceConvergeConfigArgs> getConvergeConfig() {
-        return this.convergeConfig == null ? Output.empty() : this.convergeConfig;
+        return this.convergeConfig == null ? Codegen.empty() : this.convergeConfig;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceEndpointSpecArgs> endpointSpec;
 
     public Output<ServiceEndpointSpecArgs> getEndpointSpec() {
-        return this.endpointSpec == null ? Output.empty() : this.endpointSpec;
+        return this.endpointSpec == null ? Codegen.empty() : this.endpointSpec;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ServiceLabelArgs>> labels;
 
     public Output<List<ServiceLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceModeArgs> mode;
 
     public Output<ServiceModeArgs> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceRollbackConfigArgs> rollbackConfig;
 
     public Output<ServiceRollbackConfigArgs> getRollbackConfig() {
-        return this.rollbackConfig == null ? Output.empty() : this.rollbackConfig;
+        return this.rollbackConfig == null ? Codegen.empty() : this.rollbackConfig;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceUpdateConfigArgs> updateConfig;
 
     public Output<ServiceUpdateConfigArgs> getUpdateConfig() {
-        return this.updateConfig == null ? Output.empty() : this.updateConfig;
+        return this.updateConfig == null ? Codegen.empty() : this.updateConfig;
     }
 
     public ServiceArgs(
@@ -144,15 +145,15 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.auth = Output.empty();
-        this.convergeConfig = Output.empty();
-        this.endpointSpec = Output.empty();
-        this.labels = Output.empty();
-        this.mode = Output.empty();
-        this.name = Output.empty();
-        this.rollbackConfig = Output.empty();
-        this.taskSpec = Output.empty();
-        this.updateConfig = Output.empty();
+        this.auth = Codegen.empty();
+        this.convergeConfig = Codegen.empty();
+        this.endpointSpec = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rollbackConfig = Codegen.empty();
+        this.taskSpec = Codegen.empty();
+        this.updateConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder auth(@Nullable ServiceAuthArgs auth) {
-            this.auth = Output.ofNullable(auth);
+            this.auth = Codegen.ofNullable(auth);
             return this;
         }
         public Builder convergeConfig(@Nullable Output<ServiceConvergeConfigArgs> convergeConfig) {
@@ -204,7 +205,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder convergeConfig(@Nullable ServiceConvergeConfigArgs convergeConfig) {
-            this.convergeConfig = Output.ofNullable(convergeConfig);
+            this.convergeConfig = Codegen.ofNullable(convergeConfig);
             return this;
         }
         public Builder endpointSpec(@Nullable Output<ServiceEndpointSpecArgs> endpointSpec) {
@@ -212,7 +213,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointSpec(@Nullable ServiceEndpointSpecArgs endpointSpec) {
-            this.endpointSpec = Output.ofNullable(endpointSpec);
+            this.endpointSpec = Codegen.ofNullable(endpointSpec);
             return this;
         }
         public Builder labels(@Nullable Output<List<ServiceLabelArgs>> labels) {
@@ -220,7 +221,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<ServiceLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(ServiceLabelArgs... labels) {
@@ -231,7 +232,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable ServiceModeArgs mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -239,7 +240,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rollbackConfig(@Nullable Output<ServiceRollbackConfigArgs> rollbackConfig) {
@@ -247,7 +248,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rollbackConfig(@Nullable ServiceRollbackConfigArgs rollbackConfig) {
-            this.rollbackConfig = Output.ofNullable(rollbackConfig);
+            this.rollbackConfig = Codegen.ofNullable(rollbackConfig);
             return this;
         }
         public Builder taskSpec(Output<ServiceTaskSpecArgs> taskSpec) {
@@ -263,7 +264,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateConfig(@Nullable ServiceUpdateConfigArgs updateConfig) {
-            this.updateConfig = Output.ofNullable(updateConfig);
+            this.updateConfig = Codegen.ofNullable(updateConfig);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(auth, convergeConfig, endpointSpec, labels, mode, name, rollbackConfig, taskSpec, updateConfig);

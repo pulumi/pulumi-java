@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class GcsDataArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public GcsDataArgs(
@@ -48,8 +49,8 @@ public final class GcsDataArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GcsDataArgs() {
-        this.bucketName = Output.empty();
-        this.path = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class GcsDataArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public GcsDataArgs build() {
             return new GcsDataArgs(bucketName, path);

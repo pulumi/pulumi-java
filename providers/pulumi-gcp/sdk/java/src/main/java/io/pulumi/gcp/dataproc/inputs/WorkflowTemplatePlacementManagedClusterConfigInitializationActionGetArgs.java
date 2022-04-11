@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
       private final @Nullable Output<String> executableFile;
 
     public Output<String> getExecutableFile() {
-        return this.executableFile == null ? Output.empty() : this.executableFile;
+        return this.executableFile == null ? Codegen.empty() : this.executableFile;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
       private final @Nullable Output<String> executionTimeout;
 
     public Output<String> getExecutionTimeout() {
-        return this.executionTimeout == null ? Output.empty() : this.executionTimeout;
+        return this.executionTimeout == null ? Codegen.empty() : this.executionTimeout;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs(
@@ -44,8 +45,8 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs() {
-        this.executableFile = Output.empty();
-        this.executionTimeout = Output.empty();
+        this.executableFile = Codegen.empty();
+        this.executionTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             return this;
         }
         public Builder executableFile(@Nullable String executableFile) {
-            this.executableFile = Output.ofNullable(executableFile);
+            this.executableFile = Codegen.ofNullable(executableFile);
             return this;
         }
         public Builder executionTimeout(@Nullable Output<String> executionTimeout) {
@@ -83,7 +84,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             return this;
         }
         public Builder executionTimeout(@Nullable String executionTimeout) {
-            this.executionTimeout = Output.ofNullable(executionTimeout);
+            this.executionTimeout = Codegen.ofNullable(executionTimeout);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs(executableFile, executionTimeout);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> dataLocations;
 
     public Output<List<String>> getDataLocations() {
-        return this.dataLocations == null ? Output.empty() : this.dataLocations;
+        return this.dataLocations == null ? Codegen.empty() : this.dataLocations;
     }
 
     public BucketCustomPlacementConfigArgs(@Nullable Output<List<String>> dataLocations) {
@@ -35,7 +36,7 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
     }
 
     private BucketCustomPlacementConfigArgs() {
-        this.dataLocations = Output.empty();
+        this.dataLocations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class BucketCustomPlacementConfigArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder dataLocations(@Nullable List<String> dataLocations) {
-            this.dataLocations = Output.ofNullable(dataLocations);
+            this.dataLocations = Codegen.ofNullable(dataLocations);
             return this;
         }
         public Builder dataLocations(String... dataLocations) {

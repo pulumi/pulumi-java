@@ -9,6 +9,7 @@ import io.pulumi.aws.backup.inputs.VaultPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -93,7 +94,7 @@ public class VaultPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VaultPolicy(String name, VaultPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:backup/vaultPolicy:VaultPolicy", name, args == null ? VaultPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:backup/vaultPolicy:VaultPolicy", name, args == null ? VaultPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VaultPolicy(String name, Output<String> id, @Nullable VaultPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

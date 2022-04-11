@@ -9,6 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.ModelPrimaryContainerArgs;
 import io.pulumi.aws.sagemaker.inputs.ModelVpcConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ModelContainerArgs>> containers;
 
     public Output<List<ModelContainerArgs>> getContainers() {
-        return this.containers == null ? Output.empty() : this.containers;
+        return this.containers == null ? Codegen.empty() : this.containers;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableNetworkIsolation;
 
     public Output<Boolean> getEnableNetworkIsolation() {
-        return this.enableNetworkIsolation == null ? Output.empty() : this.enableNetworkIsolation;
+        return this.enableNetworkIsolation == null ? Codegen.empty() : this.enableNetworkIsolation;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ModelInferenceExecutionConfigArgs> inferenceExecutionConfig;
 
     public Output<ModelInferenceExecutionConfigArgs> getInferenceExecutionConfig() {
-        return this.inferenceExecutionConfig == null ? Output.empty() : this.inferenceExecutionConfig;
+        return this.inferenceExecutionConfig == null ? Codegen.empty() : this.inferenceExecutionConfig;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ModelPrimaryContainerArgs> primaryContainer;
 
     public Output<ModelPrimaryContainerArgs> getPrimaryContainer() {
-        return this.primaryContainer == null ? Output.empty() : this.primaryContainer;
+        return this.primaryContainer == null ? Codegen.empty() : this.primaryContainer;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ModelVpcConfigArgs> vpcConfig;
 
     public Output<ModelVpcConfigArgs> getVpcConfig() {
-        return this.vpcConfig == null ? Output.empty() : this.vpcConfig;
+        return this.vpcConfig == null ? Codegen.empty() : this.vpcConfig;
     }
 
     public ModelArgs(
@@ -129,14 +130,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.containers = Output.empty();
-        this.enableNetworkIsolation = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.inferenceExecutionConfig = Output.empty();
-        this.name = Output.empty();
-        this.primaryContainer = Output.empty();
-        this.tags = Output.empty();
-        this.vpcConfig = Output.empty();
+        this.containers = Codegen.empty();
+        this.enableNetworkIsolation = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.inferenceExecutionConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.primaryContainer = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containers(@Nullable List<ModelContainerArgs> containers) {
-            this.containers = Output.ofNullable(containers);
+            this.containers = Codegen.ofNullable(containers);
             return this;
         }
         public Builder containers(ModelContainerArgs... containers) {
@@ -189,7 +190,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableNetworkIsolation(@Nullable Boolean enableNetworkIsolation) {
-            this.enableNetworkIsolation = Output.ofNullable(enableNetworkIsolation);
+            this.enableNetworkIsolation = Codegen.ofNullable(enableNetworkIsolation);
             return this;
         }
         public Builder executionRoleArn(Output<String> executionRoleArn) {
@@ -205,7 +206,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inferenceExecutionConfig(@Nullable ModelInferenceExecutionConfigArgs inferenceExecutionConfig) {
-            this.inferenceExecutionConfig = Output.ofNullable(inferenceExecutionConfig);
+            this.inferenceExecutionConfig = Codegen.ofNullable(inferenceExecutionConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -213,7 +214,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder primaryContainer(@Nullable Output<ModelPrimaryContainerArgs> primaryContainer) {
@@ -221,7 +222,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primaryContainer(@Nullable ModelPrimaryContainerArgs primaryContainer) {
-            this.primaryContainer = Output.ofNullable(primaryContainer);
+            this.primaryContainer = Codegen.ofNullable(primaryContainer);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -229,7 +230,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcConfig(@Nullable Output<ModelVpcConfigArgs> vpcConfig) {
@@ -237,7 +238,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcConfig(@Nullable ModelVpcConfigArgs vpcConfig) {
-            this.vpcConfig = Output.ofNullable(vpcConfig);
+            this.vpcConfig = Codegen.ofNullable(vpcConfig);
             return this;
         }        public ModelArgs build() {
             return new ModelArgs(containers, enableNetworkIsolation, executionRoleArn, inferenceExecutionConfig, name, primaryContainer, tags, vpcConfig);

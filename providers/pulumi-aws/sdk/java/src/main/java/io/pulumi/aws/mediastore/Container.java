@@ -9,6 +9,7 @@ import io.pulumi.aws.mediastore.inputs.ContainerState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -122,7 +123,7 @@ public class Container extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Container(String name, @Nullable ContainerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:mediastore/container:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:mediastore/container:Container", name, args == null ? ContainerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Container(String name, Output<String> id, @Nullable ContainerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

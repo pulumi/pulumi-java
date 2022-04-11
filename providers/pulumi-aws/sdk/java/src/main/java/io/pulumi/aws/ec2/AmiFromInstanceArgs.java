@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.AmiFromInstanceEbsBlockDeviceArgs;
 import io.pulumi.aws.ec2.inputs.AmiFromInstanceEphemeralBlockDeviceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices;
 
     public Output<List<AmiFromInstanceEbsBlockDeviceArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
+        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiFromInstanceEphemeralBlockDeviceArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
+        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> snapshotWithoutReboot;
 
     public Output<Boolean> getSnapshotWithoutReboot() {
-        return this.snapshotWithoutReboot == null ? Output.empty() : this.snapshotWithoutReboot;
+        return this.snapshotWithoutReboot == null ? Codegen.empty() : this.snapshotWithoutReboot;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AmiFromInstanceArgs(
@@ -119,13 +120,13 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AmiFromInstanceArgs() {
-        this.description = Output.empty();
-        this.ebsBlockDevices = Output.empty();
-        this.ephemeralBlockDevices = Output.empty();
-        this.name = Output.empty();
-        this.snapshotWithoutReboot = Output.empty();
-        this.sourceInstanceId = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.ebsBlockDevices = Codegen.empty();
+        this.ephemeralBlockDevices = Codegen.empty();
+        this.name = Codegen.empty();
+        this.snapshotWithoutReboot = Codegen.empty();
+        this.sourceInstanceId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ebsBlockDevices(@Nullable Output<List<AmiFromInstanceEbsBlockDeviceArgs>> ebsBlockDevices) {
@@ -173,7 +174,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ebsBlockDevices(@Nullable List<AmiFromInstanceEbsBlockDeviceArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
             return this;
         }
         public Builder ebsBlockDevices(AmiFromInstanceEbsBlockDeviceArgs... ebsBlockDevices) {
@@ -184,7 +185,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable List<AmiFromInstanceEphemeralBlockDeviceArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
             return this;
         }
         public Builder ephemeralBlockDevices(AmiFromInstanceEphemeralBlockDeviceArgs... ephemeralBlockDevices) {
@@ -195,7 +196,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder snapshotWithoutReboot(@Nullable Output<Boolean> snapshotWithoutReboot) {
@@ -203,7 +204,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder snapshotWithoutReboot(@Nullable Boolean snapshotWithoutReboot) {
-            this.snapshotWithoutReboot = Output.ofNullable(snapshotWithoutReboot);
+            this.snapshotWithoutReboot = Codegen.ofNullable(snapshotWithoutReboot);
             return this;
         }
         public Builder sourceInstanceId(Output<String> sourceInstanceId) {
@@ -219,7 +220,7 @@ public final class AmiFromInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AmiFromInstanceArgs build() {
             return new AmiFromInstanceArgs(description, ebsBlockDevices, ephemeralBlockDevices, name, snapshotWithoutReboot, sourceInstanceId, tags);

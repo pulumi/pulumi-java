@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
       private final @Nullable Output<String> certificate;
 
     public Output<String> getCertificate() {
-        return this.certificate == null ? Output.empty() : this.certificate;
+        return this.certificate == null ? Codegen.empty() : this.certificate;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     public SslCertificateSelfManagedSslCertificateArgs(
@@ -48,8 +49,8 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
     }
 
     private SslCertificateSelfManagedSslCertificateArgs() {
-        this.certificate = Output.empty();
-        this.privateKey = Output.empty();
+        this.certificate = Codegen.empty();
+        this.privateKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
             return this;
         }
         public Builder certificate(@Nullable String certificate) {
-            this.certificate = Output.ofNullable(certificate);
+            this.certificate = Codegen.ofNullable(certificate);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -87,7 +88,7 @@ public final class SslCertificateSelfManagedSslCertificateArgs extends io.pulumi
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }        public SslCertificateSelfManagedSslCertificateArgs build() {
             return new SslCertificateSelfManagedSslCertificateArgs(certificate, privateKey);

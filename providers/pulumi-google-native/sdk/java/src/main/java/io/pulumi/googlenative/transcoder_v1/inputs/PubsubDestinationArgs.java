@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public PubsubDestinationArgs(@Nullable Output<String> topic) {
@@ -34,7 +35,7 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PubsubDestinationArgs() {
-        this.topic = Output.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class PubsubDestinationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public PubsubDestinationArgs build() {
             return new PubsubDestinationArgs(topic);

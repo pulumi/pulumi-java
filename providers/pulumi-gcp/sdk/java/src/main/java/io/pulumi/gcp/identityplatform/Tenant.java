@@ -6,6 +6,7 @@ package io.pulumi.gcp.identityplatform;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.TenantArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantState;
@@ -157,7 +158,7 @@ public class Tenant extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Tenant(String name, TenantArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:identityplatform/tenant:Tenant", name, args == null ? TenantArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:identityplatform/tenant:Tenant", name, args == null ? TenantArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Tenant(String name, Output<String> id, @Nullable TenantState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

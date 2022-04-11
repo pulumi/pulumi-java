@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
       private final @Nullable Output<String> notificationArn;
 
     public Output<String> getNotificationArn() {
-        return this.notificationArn == null ? Output.empty() : this.notificationArn;
+        return this.notificationArn == null ? Codegen.empty() : this.notificationArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
       private final @Nullable Output<List<String>> notificationEvents;
 
     public Output<List<String>> getNotificationEvents() {
-        return this.notificationEvents == null ? Output.empty() : this.notificationEvents;
+        return this.notificationEvents == null ? Codegen.empty() : this.notificationEvents;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
       private final @Nullable Output<String> notificationType;
 
     public Output<String> getNotificationType() {
-        return this.notificationType == null ? Output.empty() : this.notificationType;
+        return this.notificationType == null ? Codegen.empty() : this.notificationType;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs(
@@ -58,9 +59,9 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs() {
-        this.notificationArn = Output.empty();
-        this.notificationEvents = Output.empty();
-        this.notificationType = Output.empty();
+        this.notificationArn = Codegen.empty();
+        this.notificationEvents = Codegen.empty();
+        this.notificationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder notificationArn(@Nullable String notificationArn) {
-            this.notificationArn = Output.ofNullable(notificationArn);
+            this.notificationArn = Codegen.ofNullable(notificationArn);
             return this;
         }
         public Builder notificationEvents(@Nullable Output<List<String>> notificationEvents) {
@@ -100,7 +101,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder notificationEvents(@Nullable List<String> notificationEvents) {
-            this.notificationEvents = Output.ofNullable(notificationEvents);
+            this.notificationEvents = Codegen.ofNullable(notificationEvents);
             return this;
         }
         public Builder notificationEvents(String... notificationEvents) {
@@ -111,7 +112,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersRunCommandParame
             return this;
         }
         public Builder notificationType(@Nullable String notificationType) {
-            this.notificationType = Output.ofNullable(notificationType);
+            this.notificationType = Codegen.ofNullable(notificationType);
             return this;
         }        public MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs build() {
             return new MaintenanceWindowTaskTaskInvocationParametersRunCommandParametersNotificationConfigGetArgs(notificationArn, notificationEvents, notificationType);

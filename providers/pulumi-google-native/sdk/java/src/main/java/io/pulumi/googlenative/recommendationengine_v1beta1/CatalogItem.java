@@ -6,6 +6,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse;
@@ -143,7 +144,7 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CatalogItem(String name, CatalogItemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:recommendationengine/v1beta1:CatalogItem", name, args == null ? CatalogItemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:recommendationengine/v1beta1:CatalogItem", name, args == null ? CatalogItemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CatalogItem(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

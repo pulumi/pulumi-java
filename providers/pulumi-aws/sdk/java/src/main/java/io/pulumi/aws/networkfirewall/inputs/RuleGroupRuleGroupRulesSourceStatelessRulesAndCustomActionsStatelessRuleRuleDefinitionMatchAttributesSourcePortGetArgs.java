@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
       private final @Nullable Output<Integer> toPort;
 
     public Output<Integer> getToPort() {
-        return this.toPort == null ? Output.empty() : this.toPort;
+        return this.toPort == null ? Codegen.empty() : this.toPort;
     }
 
     public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs(
@@ -44,8 +45,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs() {
-        this.fromPort = Output.empty();
-        this.toPort = Output.empty();
+        this.fromPort = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsSt
             return this;
         }
         public Builder toPort(@Nullable Integer toPort) {
-            this.toPort = Output.ofNullable(toPort);
+            this.toPort = Codegen.ofNullable(toPort);
             return this;
         }        public RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs build() {
             return new RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleRuleDefinitionMatchAttributesSourcePortGetArgs(fromPort, toPort);

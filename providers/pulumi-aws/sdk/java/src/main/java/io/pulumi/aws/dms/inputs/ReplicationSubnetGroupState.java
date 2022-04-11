@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> replicationSubnetGroupArn;
 
     public Output<String> getReplicationSubnetGroupArn() {
-        return this.replicationSubnetGroupArn == null ? Output.empty() : this.replicationSubnetGroupArn;
+        return this.replicationSubnetGroupArn == null ? Codegen.empty() : this.replicationSubnetGroupArn;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> replicationSubnetGroupDescription;
 
     public Output<String> getReplicationSubnetGroupDescription() {
-        return this.replicationSubnetGroupDescription == null ? Output.empty() : this.replicationSubnetGroupDescription;
+        return this.replicationSubnetGroupDescription == null ? Codegen.empty() : this.replicationSubnetGroupDescription;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> replicationSubnetGroupId;
 
     public Output<String> getReplicationSubnetGroupId() {
-        return this.replicationSubnetGroupId == null ? Output.empty() : this.replicationSubnetGroupId;
+        return this.replicationSubnetGroupId == null ? Codegen.empty() : this.replicationSubnetGroupId;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ReplicationSubnetGroupState(
@@ -107,13 +108,13 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
     }
 
     private ReplicationSubnetGroupState() {
-        this.replicationSubnetGroupArn = Output.empty();
-        this.replicationSubnetGroupDescription = Output.empty();
-        this.replicationSubnetGroupId = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.replicationSubnetGroupArn = Codegen.empty();
+        this.replicationSubnetGroupDescription = Codegen.empty();
+        this.replicationSubnetGroupId = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder replicationSubnetGroupArn(@Nullable String replicationSubnetGroupArn) {
-            this.replicationSubnetGroupArn = Output.ofNullable(replicationSubnetGroupArn);
+            this.replicationSubnetGroupArn = Codegen.ofNullable(replicationSubnetGroupArn);
             return this;
         }
         public Builder replicationSubnetGroupDescription(@Nullable Output<String> replicationSubnetGroupDescription) {
@@ -161,7 +162,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder replicationSubnetGroupDescription(@Nullable String replicationSubnetGroupDescription) {
-            this.replicationSubnetGroupDescription = Output.ofNullable(replicationSubnetGroupDescription);
+            this.replicationSubnetGroupDescription = Codegen.ofNullable(replicationSubnetGroupDescription);
             return this;
         }
         public Builder replicationSubnetGroupId(@Nullable Output<String> replicationSubnetGroupId) {
@@ -169,7 +170,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder replicationSubnetGroupId(@Nullable String replicationSubnetGroupId) {
-            this.replicationSubnetGroupId = Output.ofNullable(replicationSubnetGroupId);
+            this.replicationSubnetGroupId = Codegen.ofNullable(replicationSubnetGroupId);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -177,7 +178,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -188,7 +189,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -196,7 +197,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -204,7 +205,7 @@ public final class ReplicationSubnetGroupState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ReplicationSubnetGroupState build() {
             return new ReplicationSubnetGroupState(replicationSubnetGroupArn, replicationSubnetGroupDescription, replicationSubnetGroupId, subnetIds, tags, tagsAll, vpcId);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class AssetHierarchyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssetHierarchyArgs() {
-        this.childAssetId = Output.empty();
-        this.logicalId = Output.empty();
+        this.childAssetId = Codegen.empty();
+        this.logicalId = Codegen.empty();
     }
 
     public static Builder builder() {

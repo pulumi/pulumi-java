@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingResourceMetricArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -90,11 +91,11 @@ public final class AverageLoadScalingTriggerArgs extends io.pulumi.resources.Res
     }
 
     private AverageLoadScalingTriggerArgs() {
-        this.kind = Output.empty();
-        this.lowerLoadThreshold = Output.empty();
-        this.metric = Output.empty();
-        this.scaleIntervalInSeconds = Output.empty();
-        this.upperLoadThreshold = Output.empty();
+        this.kind = Codegen.empty();
+        this.lowerLoadThreshold = Codegen.empty();
+        this.metric = Codegen.empty();
+        this.scaleIntervalInSeconds = Codegen.empty();
+        this.upperLoadThreshold = Codegen.empty();
     }
 
     public static Builder builder() {

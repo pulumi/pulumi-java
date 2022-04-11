@@ -22,6 +22,7 @@ import io.pulumi.azurenative.media.inputs.TransportStreamFormatArgs;
 import io.pulumi.azurenative.media.inputs.VideoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -56,7 +57,7 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<FiltersArgs> filters;
 
     public Output<FiltersArgs> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     /**
@@ -94,10 +95,10 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
     }
 
     private StandardEncoderPresetArgs() {
-        this.codecs = Output.empty();
-        this.filters = Output.empty();
-        this.formats = Output.empty();
-        this.odataType = Output.empty();
+        this.codecs = Codegen.empty();
+        this.filters = Codegen.empty();
+        this.formats = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class StandardEncoderPresetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filters(@Nullable FiltersArgs filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder formats(Output<List<Object>> formats) {

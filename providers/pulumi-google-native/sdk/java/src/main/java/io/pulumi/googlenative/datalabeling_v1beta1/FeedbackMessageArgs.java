@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> body;
 
     public Output<String> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     @Import(name="datasetId", required=true)
@@ -67,7 +68,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -78,28 +79,28 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="operatorFeedbackMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> getOperatorFeedbackMetadata() {
-        return this.operatorFeedbackMetadata == null ? Output.empty() : this.operatorFeedbackMetadata;
+        return this.operatorFeedbackMetadata == null ? Codegen.empty() : this.operatorFeedbackMetadata;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requesterFeedbackMetadata")
       private final @Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata;
 
     public Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> getRequesterFeedbackMetadata() {
-        return this.requesterFeedbackMetadata == null ? Output.empty() : this.requesterFeedbackMetadata;
+        return this.requesterFeedbackMetadata == null ? Codegen.empty() : this.requesterFeedbackMetadata;
     }
 
     public FeedbackMessageArgs(
@@ -126,16 +127,16 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private FeedbackMessageArgs() {
-        this.annotatedDatasetId = Output.empty();
-        this.body = Output.empty();
-        this.createTime = Output.empty();
-        this.datasetId = Output.empty();
-        this.feedbackThreadId = Output.empty();
-        this.image = Output.empty();
-        this.name = Output.empty();
-        this.operatorFeedbackMetadata = Output.empty();
-        this.project = Output.empty();
-        this.requesterFeedbackMetadata = Output.empty();
+        this.annotatedDatasetId = Codegen.empty();
+        this.body = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.feedbackThreadId = Codegen.empty();
+        this.image = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operatorFeedbackMetadata = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requesterFeedbackMetadata = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -189,7 +190,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder body(@Nullable String body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -197,7 +198,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder datasetId(Output<String> datasetId) {
@@ -221,7 +222,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -229,7 +230,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder operatorFeedbackMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs> operatorFeedbackMetadata) {
@@ -237,7 +238,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder operatorFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs operatorFeedbackMetadata) {
-            this.operatorFeedbackMetadata = Output.ofNullable(operatorFeedbackMetadata);
+            this.operatorFeedbackMetadata = Codegen.ofNullable(operatorFeedbackMetadata);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -245,7 +246,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requesterFeedbackMetadata(@Nullable Output<GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs> requesterFeedbackMetadata) {
@@ -253,7 +254,7 @@ public final class FeedbackMessageArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder requesterFeedbackMetadata(@Nullable GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataArgs requesterFeedbackMetadata) {
-            this.requesterFeedbackMetadata = Output.ofNullable(requesterFeedbackMetadata);
+            this.requesterFeedbackMetadata = Codegen.ofNullable(requesterFeedbackMetadata);
             return this;
         }        public FeedbackMessageArgs build() {
             return new FeedbackMessageArgs(annotatedDatasetId, body, createTime, datasetId, feedbackThreadId, image, name, operatorFeedbackMetadata, project, requesterFeedbackMetadata);

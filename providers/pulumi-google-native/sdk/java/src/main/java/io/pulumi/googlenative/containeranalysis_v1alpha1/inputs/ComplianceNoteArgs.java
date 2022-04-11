@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.CisBenchmarkArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ComplianceVersionArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CisBenchmarkArgs> cisBenchmark;
 
     public Output<CisBenchmarkArgs> getCisBenchmark() {
-        return this.cisBenchmark == null ? Output.empty() : this.cisBenchmark;
+        return this.cisBenchmark == null ? Codegen.empty() : this.cisBenchmark;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rationale;
 
     public Output<String> getRationale() {
-        return this.rationale == null ? Output.empty() : this.rationale;
+        return this.rationale == null ? Codegen.empty() : this.rationale;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> remediation;
 
     public Output<String> getRemediation() {
-        return this.remediation == null ? Output.empty() : this.remediation;
+        return this.remediation == null ? Codegen.empty() : this.remediation;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scanInstructions;
 
     public Output<String> getScanInstructions() {
-        return this.scanInstructions == null ? Output.empty() : this.scanInstructions;
+        return this.scanInstructions == null ? Codegen.empty() : this.scanInstructions;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ComplianceVersionArgs>> version;
 
     public Output<List<ComplianceVersionArgs>> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ComplianceNoteArgs(
@@ -116,13 +117,13 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ComplianceNoteArgs() {
-        this.cisBenchmark = Output.empty();
-        this.description = Output.empty();
-        this.rationale = Output.empty();
-        this.remediation = Output.empty();
-        this.scanInstructions = Output.empty();
-        this.title = Output.empty();
-        this.version = Output.empty();
+        this.cisBenchmark = Codegen.empty();
+        this.description = Codegen.empty();
+        this.rationale = Codegen.empty();
+        this.remediation = Codegen.empty();
+        this.scanInstructions = Codegen.empty();
+        this.title = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cisBenchmark(@Nullable CisBenchmarkArgs cisBenchmark) {
-            this.cisBenchmark = Output.ofNullable(cisBenchmark);
+            this.cisBenchmark = Codegen.ofNullable(cisBenchmark);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -170,7 +171,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder rationale(@Nullable Output<String> rationale) {
@@ -178,7 +179,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rationale(@Nullable String rationale) {
-            this.rationale = Output.ofNullable(rationale);
+            this.rationale = Codegen.ofNullable(rationale);
             return this;
         }
         public Builder remediation(@Nullable Output<String> remediation) {
@@ -186,7 +187,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remediation(@Nullable String remediation) {
-            this.remediation = Output.ofNullable(remediation);
+            this.remediation = Codegen.ofNullable(remediation);
             return this;
         }
         public Builder scanInstructions(@Nullable Output<String> scanInstructions) {
@@ -194,7 +195,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scanInstructions(@Nullable String scanInstructions) {
-            this.scanInstructions = Output.ofNullable(scanInstructions);
+            this.scanInstructions = Codegen.ofNullable(scanInstructions);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -202,7 +203,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder version(@Nullable Output<List<ComplianceVersionArgs>> version) {
@@ -210,7 +211,7 @@ public final class ComplianceNoteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable List<ComplianceVersionArgs> version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder version(ComplianceVersionArgs... version) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.billing.inputs.BudgetAllUpdatesRuleGetArgs;
 import io.pulumi.gcp.billing.inputs.BudgetAmountGetArgs;
 import io.pulumi.gcp.billing.inputs.BudgetBudgetFilterGetArgs;
@@ -30,7 +31,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetAllUpdatesRuleGetArgs> allUpdatesRule;
 
     public Output<BudgetAllUpdatesRuleGetArgs> getAllUpdatesRule() {
-        return this.allUpdatesRule == null ? Output.empty() : this.allUpdatesRule;
+        return this.allUpdatesRule == null ? Codegen.empty() : this.allUpdatesRule;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetAmountGetArgs> amount;
 
     public Output<BudgetAmountGetArgs> getAmount() {
-        return this.amount == null ? Output.empty() : this.amount;
+        return this.amount == null ? Codegen.empty() : this.amount;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> billingAccount;
 
     public Output<String> getBillingAccount() {
-        return this.billingAccount == null ? Output.empty() : this.billingAccount;
+        return this.billingAccount == null ? Codegen.empty() : this.billingAccount;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter;
 
     public Output<BudgetBudgetFilterGetArgs> getBudgetFilter() {
-        return this.budgetFilter == null ? Output.empty() : this.budgetFilter;
+        return this.budgetFilter == null ? Codegen.empty() : this.budgetFilter;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules;
 
     public Output<List<BudgetThresholdRuleGetArgs>> getThresholdRules() {
-        return this.thresholdRules == null ? Output.empty() : this.thresholdRules;
+        return this.thresholdRules == null ? Codegen.empty() : this.thresholdRules;
     }
 
     public BudgetState(
@@ -124,13 +125,13 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetState() {
-        this.allUpdatesRule = Output.empty();
-        this.amount = Output.empty();
-        this.billingAccount = Output.empty();
-        this.budgetFilter = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.thresholdRules = Output.empty();
+        this.allUpdatesRule = Codegen.empty();
+        this.amount = Codegen.empty();
+        this.billingAccount = Codegen.empty();
+        this.budgetFilter = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.thresholdRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allUpdatesRule(@Nullable BudgetAllUpdatesRuleGetArgs allUpdatesRule) {
-            this.allUpdatesRule = Output.ofNullable(allUpdatesRule);
+            this.allUpdatesRule = Codegen.ofNullable(allUpdatesRule);
             return this;
         }
         public Builder amount(@Nullable Output<BudgetAmountGetArgs> amount) {
@@ -178,7 +179,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amount(@Nullable BudgetAmountGetArgs amount) {
-            this.amount = Output.ofNullable(amount);
+            this.amount = Codegen.ofNullable(amount);
             return this;
         }
         public Builder billingAccount(@Nullable Output<String> billingAccount) {
@@ -186,7 +187,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder billingAccount(@Nullable String billingAccount) {
-            this.billingAccount = Output.ofNullable(billingAccount);
+            this.billingAccount = Codegen.ofNullable(billingAccount);
             return this;
         }
         public Builder budgetFilter(@Nullable Output<BudgetBudgetFilterGetArgs> budgetFilter) {
@@ -194,7 +195,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder budgetFilter(@Nullable BudgetBudgetFilterGetArgs budgetFilter) {
-            this.budgetFilter = Output.ofNullable(budgetFilter);
+            this.budgetFilter = Codegen.ofNullable(budgetFilter);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -202,7 +203,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -210,7 +211,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder thresholdRules(@Nullable Output<List<BudgetThresholdRuleGetArgs>> thresholdRules) {
@@ -218,7 +219,7 @@ public final class BudgetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thresholdRules(@Nullable List<BudgetThresholdRuleGetArgs> thresholdRules) {
-            this.thresholdRules = Output.ofNullable(thresholdRules);
+            this.thresholdRules = Codegen.ofNullable(thresholdRules);
             return this;
         }
         public Builder thresholdRules(BudgetThresholdRuleGetArgs... thresholdRules) {

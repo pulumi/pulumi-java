@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.inputs.NamespacedGkeDeploymentTargetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget;
 
     public Output<NamespacedGkeDeploymentTargetArgs> getNamespacedGkeDeploymentTarget() {
-        return this.namespacedGkeDeploymentTarget == null ? Output.empty() : this.namespacedGkeDeploymentTarget;
+        return this.namespacedGkeDeploymentTarget == null ? Codegen.empty() : this.namespacedGkeDeploymentTarget;
     }
 
     public GkeClusterConfigArgs(@Nullable Output<NamespacedGkeDeploymentTargetArgs> namespacedGkeDeploymentTarget) {
@@ -34,7 +35,7 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GkeClusterConfigArgs() {
-        this.namespacedGkeDeploymentTarget = Output.empty();
+        this.namespacedGkeDeploymentTarget = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GkeClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder namespacedGkeDeploymentTarget(@Nullable NamespacedGkeDeploymentTargetArgs namespacedGkeDeploymentTarget) {
-            this.namespacedGkeDeploymentTarget = Output.ofNullable(namespacedGkeDeploymentTarget);
+            this.namespacedGkeDeploymentTarget = Codegen.ofNullable(namespacedGkeDeploymentTarget);
             return this;
         }        public GkeClusterConfigArgs build() {
             return new GkeClusterConfigArgs(namespacedGkeDeploymentTarget);

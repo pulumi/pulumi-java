@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateKey;
 
     public Output<String> getCertificateKey() {
-        return this.certificateKey == null ? Output.empty() : this.certificateKey;
+        return this.certificateKey == null ? Codegen.empty() : this.certificateKey;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mpnsCertificate;
 
     public Output<String> getMpnsCertificate() {
-        return this.mpnsCertificate == null ? Output.empty() : this.mpnsCertificate;
+        return this.mpnsCertificate == null ? Codegen.empty() : this.mpnsCertificate;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public MpnsCredentialArgs(
@@ -61,9 +62,9 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MpnsCredentialArgs() {
-        this.certificateKey = Output.empty();
-        this.mpnsCertificate = Output.empty();
-        this.thumbprint = Output.empty();
+        this.certificateKey = Codegen.empty();
+        this.mpnsCertificate = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = Output.ofNullable(certificateKey);
+            this.certificateKey = Codegen.ofNullable(certificateKey);
             return this;
         }
         public Builder mpnsCertificate(@Nullable Output<String> mpnsCertificate) {
@@ -103,7 +104,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mpnsCertificate(@Nullable String mpnsCertificate) {
-            this.mpnsCertificate = Output.ofNullable(mpnsCertificate);
+            this.mpnsCertificate = Codegen.ofNullable(mpnsCertificate);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -111,7 +112,7 @@ public final class MpnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public MpnsCredentialArgs build() {
             return new MpnsCredentialArgs(certificateKey, mpnsCertificate, thumbprint);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate;
 import io.pulumi.azurenative.migrate.inputs.AssessmentPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> assessmentName;
 
     public Output<String> getAssessmentName() {
-        return this.assessmentName == null ? Output.empty() : this.assessmentName;
+        return this.assessmentName == null ? Codegen.empty() : this.assessmentName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eTag;
 
     public Output<String> getETag() {
-        return this.eTag == null ? Output.empty() : this.eTag;
+        return this.eTag == null ? Codegen.empty() : this.eTag;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentArgs() {
-        this.assessmentName = Output.empty();
-        this.eTag = Output.empty();
-        this.groupName = Output.empty();
-        this.projectName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.assessmentName = Codegen.empty();
+        this.eTag = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.projectName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assessmentName(@Nullable String assessmentName) {
-            this.assessmentName = Output.ofNullable(assessmentName);
+            this.assessmentName = Codegen.ofNullable(assessmentName);
             return this;
         }
         public Builder eTag(@Nullable Output<String> eTag) {
@@ -148,7 +149,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eTag(@Nullable String eTag) {
-            this.eTag = Output.ofNullable(eTag);
+            this.eTag = Codegen.ofNullable(eTag);
             return this;
         }
         public Builder groupName(Output<String> groupName) {

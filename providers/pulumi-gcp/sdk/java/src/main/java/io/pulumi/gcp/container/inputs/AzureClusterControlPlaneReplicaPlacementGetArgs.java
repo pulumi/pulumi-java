@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class AzureClusterControlPlaneReplicaPlacementGetArgs extends io.pu
     }
 
     private AzureClusterControlPlaneReplicaPlacementGetArgs() {
-        this.azureAvailabilityZone = Output.empty();
-        this.subnetId = Output.empty();
+        this.azureAvailabilityZone = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

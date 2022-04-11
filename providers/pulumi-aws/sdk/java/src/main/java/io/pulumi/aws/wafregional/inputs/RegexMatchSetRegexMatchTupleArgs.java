@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.RegexMatchSetRegexMatchTupleFieldToMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class RegexMatchSetRegexMatchTupleArgs extends io.pulumi.resources.
     }
 
     private RegexMatchSetRegexMatchTupleArgs() {
-        this.fieldToMatch = Output.empty();
-        this.regexPatternSetId = Output.empty();
-        this.textTransformation = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.regexPatternSetId = Codegen.empty();
+        this.textTransformation = Codegen.empty();
     }
 
     public static Builder builder() {

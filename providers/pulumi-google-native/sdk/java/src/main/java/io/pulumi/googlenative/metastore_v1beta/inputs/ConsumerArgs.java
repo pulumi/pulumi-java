@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public ConsumerArgs(@Nullable Output<String> subnetwork) {
@@ -34,7 +35,7 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConsumerArgs() {
-        this.subnetwork = Output.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ConsumerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public ConsumerArgs build() {
             return new ConsumerArgs(subnetwork);

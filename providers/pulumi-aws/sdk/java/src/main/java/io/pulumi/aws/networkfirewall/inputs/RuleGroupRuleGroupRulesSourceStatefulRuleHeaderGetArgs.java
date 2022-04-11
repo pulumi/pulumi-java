@@ -5,6 +5,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,12 +96,12 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs extend
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleHeaderGetArgs() {
-        this.destination = Output.empty();
-        this.destinationPort = Output.empty();
-        this.direction = Output.empty();
-        this.protocol = Output.empty();
-        this.source = Output.empty();
-        this.sourcePort = Output.empty();
+        this.destination = Codegen.empty();
+        this.destinationPort = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.source = Codegen.empty();
+        this.sourcePort = Codegen.empty();
     }
 
     public static Builder builder() {

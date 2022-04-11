@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageStateExecutionStageState;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> currentStateTime;
 
     public Output<String> getCurrentStateTime() {
-        return this.currentStateTime == null ? Output.empty() : this.currentStateTime;
+        return this.currentStateTime == null ? Codegen.empty() : this.currentStateTime;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> executionStageName;
 
     public Output<String> getExecutionStageName() {
-        return this.executionStageName == null ? Output.empty() : this.executionStageName;
+        return this.executionStageName == null ? Codegen.empty() : this.executionStageName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ExecutionStageStateExecutionStageState> executionStageState;
 
     public Output<ExecutionStageStateExecutionStageState> getExecutionStageState() {
-        return this.executionStageState == null ? Output.empty() : this.executionStageState;
+        return this.executionStageState == null ? Codegen.empty() : this.executionStageState;
     }
 
     public ExecutionStageStateArgs(
@@ -62,9 +63,9 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
     }
 
     private ExecutionStageStateArgs() {
-        this.currentStateTime = Output.empty();
-        this.executionStageName = Output.empty();
-        this.executionStageState = Output.empty();
+        this.currentStateTime = Codegen.empty();
+        this.executionStageName = Codegen.empty();
+        this.executionStageState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder currentStateTime(@Nullable String currentStateTime) {
-            this.currentStateTime = Output.ofNullable(currentStateTime);
+            this.currentStateTime = Codegen.ofNullable(currentStateTime);
             return this;
         }
         public Builder executionStageName(@Nullable Output<String> executionStageName) {
@@ -104,7 +105,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder executionStageName(@Nullable String executionStageName) {
-            this.executionStageName = Output.ofNullable(executionStageName);
+            this.executionStageName = Codegen.ofNullable(executionStageName);
             return this;
         }
         public Builder executionStageState(@Nullable Output<ExecutionStageStateExecutionStageState> executionStageState) {
@@ -112,7 +113,7 @@ public final class ExecutionStageStateArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder executionStageState(@Nullable ExecutionStageStateExecutionStageState executionStageState) {
-            this.executionStageState = Output.ofNullable(executionStageState);
+            this.executionStageState = Codegen.ofNullable(executionStageState);
             return this;
         }        public ExecutionStageStateArgs build() {
             return new ExecutionStageStateArgs(currentStateTime, executionStageName, executionStageState);

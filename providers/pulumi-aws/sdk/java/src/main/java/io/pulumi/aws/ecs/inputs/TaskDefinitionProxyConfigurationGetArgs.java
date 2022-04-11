@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public TaskDefinitionProxyConfigurationGetArgs(
@@ -58,9 +59,9 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
     }
 
     private TaskDefinitionProxyConfigurationGetArgs() {
-        this.containerName = Output.empty();
-        this.properties = Output.empty();
-        this.type = Output.empty();
+        this.containerName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -108,7 +109,7 @@ public final class TaskDefinitionProxyConfigurationGetArgs extends io.pulumi.res
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public TaskDefinitionProxyConfigurationGetArgs build() {
             return new TaskDefinitionProxyConfigurationGetArgs(containerName, properties, type);

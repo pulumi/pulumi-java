@@ -6,6 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.enums.FlowOperatorPropertiesKeys;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -40,8 +41,8 @@ public final class FlowTaskPropertiesObjectArgs extends io.pulumi.resources.Reso
     }
 
     private FlowTaskPropertiesObjectArgs() {
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.acmpca.inputs.CertificateAuthorityOtherNameArgs;
 import io.pulumi.awsnative.acmpca.inputs.CertificateAuthoritySubjectArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,56 +26,56 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
       private final @Nullable Output<CertificateAuthoritySubjectArgs> directoryName;
 
     public Output<CertificateAuthoritySubjectArgs> getDirectoryName() {
-        return this.directoryName == null ? Output.empty() : this.directoryName;
+        return this.directoryName == null ? Codegen.empty() : this.directoryName;
     }
 
     @Import(name="dnsName")
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     @Import(name="ediPartyName")
       private final @Nullable Output<CertificateAuthorityEdiPartyNameArgs> ediPartyName;
 
     public Output<CertificateAuthorityEdiPartyNameArgs> getEdiPartyName() {
-        return this.ediPartyName == null ? Output.empty() : this.ediPartyName;
+        return this.ediPartyName == null ? Codegen.empty() : this.ediPartyName;
     }
 
     @Import(name="ipAddress")
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     @Import(name="otherName")
       private final @Nullable Output<CertificateAuthorityOtherNameArgs> otherName;
 
     public Output<CertificateAuthorityOtherNameArgs> getOtherName() {
-        return this.otherName == null ? Output.empty() : this.otherName;
+        return this.otherName == null ? Codegen.empty() : this.otherName;
     }
 
     @Import(name="registeredId")
       private final @Nullable Output<String> registeredId;
 
     public Output<String> getRegisteredId() {
-        return this.registeredId == null ? Output.empty() : this.registeredId;
+        return this.registeredId == null ? Codegen.empty() : this.registeredId;
     }
 
     @Import(name="rfc822Name")
       private final @Nullable Output<String> rfc822Name;
 
     public Output<String> getRfc822Name() {
-        return this.rfc822Name == null ? Output.empty() : this.rfc822Name;
+        return this.rfc822Name == null ? Codegen.empty() : this.rfc822Name;
     }
 
     @Import(name="uniformResourceIdentifier")
       private final @Nullable Output<String> uniformResourceIdentifier;
 
     public Output<String> getUniformResourceIdentifier() {
-        return this.uniformResourceIdentifier == null ? Output.empty() : this.uniformResourceIdentifier;
+        return this.uniformResourceIdentifier == null ? Codegen.empty() : this.uniformResourceIdentifier;
     }
 
     public CertificateAuthorityGeneralNameArgs(
@@ -97,14 +98,14 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
     }
 
     private CertificateAuthorityGeneralNameArgs() {
-        this.directoryName = Output.empty();
-        this.dnsName = Output.empty();
-        this.ediPartyName = Output.empty();
-        this.ipAddress = Output.empty();
-        this.otherName = Output.empty();
-        this.registeredId = Output.empty();
-        this.rfc822Name = Output.empty();
-        this.uniformResourceIdentifier = Output.empty();
+        this.directoryName = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.ediPartyName = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.otherName = Codegen.empty();
+        this.registeredId = Codegen.empty();
+        this.rfc822Name = Codegen.empty();
+        this.uniformResourceIdentifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder directoryName(@Nullable CertificateAuthoritySubjectArgs directoryName) {
-            this.directoryName = Output.ofNullable(directoryName);
+            this.directoryName = Codegen.ofNullable(directoryName);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -154,7 +155,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder ediPartyName(@Nullable Output<CertificateAuthorityEdiPartyNameArgs> ediPartyName) {
@@ -162,7 +163,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ediPartyName(@Nullable CertificateAuthorityEdiPartyNameArgs ediPartyName) {
-            this.ediPartyName = Output.ofNullable(ediPartyName);
+            this.ediPartyName = Codegen.ofNullable(ediPartyName);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -170,7 +171,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder otherName(@Nullable Output<CertificateAuthorityOtherNameArgs> otherName) {
@@ -178,7 +179,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder otherName(@Nullable CertificateAuthorityOtherNameArgs otherName) {
-            this.otherName = Output.ofNullable(otherName);
+            this.otherName = Codegen.ofNullable(otherName);
             return this;
         }
         public Builder registeredId(@Nullable Output<String> registeredId) {
@@ -186,7 +187,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder registeredId(@Nullable String registeredId) {
-            this.registeredId = Output.ofNullable(registeredId);
+            this.registeredId = Codegen.ofNullable(registeredId);
             return this;
         }
         public Builder rfc822Name(@Nullable Output<String> rfc822Name) {
@@ -194,7 +195,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rfc822Name(@Nullable String rfc822Name) {
-            this.rfc822Name = Output.ofNullable(rfc822Name);
+            this.rfc822Name = Codegen.ofNullable(rfc822Name);
             return this;
         }
         public Builder uniformResourceIdentifier(@Nullable Output<String> uniformResourceIdentifier) {
@@ -202,7 +203,7 @@ public final class CertificateAuthorityGeneralNameArgs extends io.pulumi.resourc
             return this;
         }
         public Builder uniformResourceIdentifier(@Nullable String uniformResourceIdentifier) {
-            this.uniformResourceIdentifier = Output.ofNullable(uniformResourceIdentifier);
+            this.uniformResourceIdentifier = Codegen.ofNullable(uniformResourceIdentifier);
             return this;
         }        public CertificateAuthorityGeneralNameArgs build() {
             return new CertificateAuthorityGeneralNameArgs(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);

@@ -8,6 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotSlotTypeArgs;
 import io.pulumi.awsnative.lex.inputs.BotVoiceSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BotIntentArgs>> intents;
 
     public Output<List<BotIntentArgs>> getIntents() {
-        return this.intents == null ? Output.empty() : this.intents;
+        return this.intents == null ? Codegen.empty() : this.intents;
     }
 
     @Import(name="localeId", required=true)
@@ -63,14 +64,14 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BotSlotTypeArgs>> slotTypes;
 
     public Output<List<BotSlotTypeArgs>> getSlotTypes() {
-        return this.slotTypes == null ? Output.empty() : this.slotTypes;
+        return this.slotTypes == null ? Codegen.empty() : this.slotTypes;
     }
 
     @Import(name="voiceSettings")
       private final @Nullable Output<BotVoiceSettingsArgs> voiceSettings;
 
     public Output<BotVoiceSettingsArgs> getVoiceSettings() {
-        return this.voiceSettings == null ? Output.empty() : this.voiceSettings;
+        return this.voiceSettings == null ? Codegen.empty() : this.voiceSettings;
     }
 
     public BotLocaleArgs(
@@ -89,12 +90,12 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotLocaleArgs() {
-        this.description = Output.empty();
-        this.intents = Output.empty();
-        this.localeId = Output.empty();
-        this.nluConfidenceThreshold = Output.empty();
-        this.slotTypes = Output.empty();
-        this.voiceSettings = Output.empty();
+        this.description = Codegen.empty();
+        this.intents = Codegen.empty();
+        this.localeId = Codegen.empty();
+        this.nluConfidenceThreshold = Codegen.empty();
+        this.slotTypes = Codegen.empty();
+        this.voiceSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder intents(@Nullable Output<List<BotIntentArgs>> intents) {
@@ -140,7 +141,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intents(@Nullable List<BotIntentArgs> intents) {
-            this.intents = Output.ofNullable(intents);
+            this.intents = Codegen.ofNullable(intents);
             return this;
         }
         public Builder intents(BotIntentArgs... intents) {
@@ -167,7 +168,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slotTypes(@Nullable List<BotSlotTypeArgs> slotTypes) {
-            this.slotTypes = Output.ofNullable(slotTypes);
+            this.slotTypes = Codegen.ofNullable(slotTypes);
             return this;
         }
         public Builder slotTypes(BotSlotTypeArgs... slotTypes) {
@@ -178,7 +179,7 @@ public final class BotLocaleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder voiceSettings(@Nullable BotVoiceSettingsArgs voiceSettings) {
-            this.voiceSettings = Output.ofNullable(voiceSettings);
+            this.voiceSettings = Codegen.ofNullable(voiceSettings);
             return this;
         }        public BotLocaleArgs build() {
             return new BotLocaleArgs(description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);

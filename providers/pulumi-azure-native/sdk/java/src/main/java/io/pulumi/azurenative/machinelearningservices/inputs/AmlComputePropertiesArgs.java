@@ -13,6 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineImageA
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enableNodePublicIp;
 
     public Output<Boolean> getEnableNodePublicIp() {
-        return this.enableNodePublicIp == null ? Output.empty() : this.enableNodePublicIp;
+        return this.enableNodePublicIp == null ? Codegen.empty() : this.enableNodePublicIp;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> isolatedNetwork;
 
     public Output<Boolean> getIsolatedNetwork() {
-        return this.isolatedNetwork == null ? Output.empty() : this.isolatedNetwork;
+        return this.isolatedNetwork == null ? Codegen.empty() : this.isolatedNetwork;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,OsType>> osType;
 
     public Output<Either<String,OsType>> getOsType() {
-        return this.osType == null ? Output.empty() : this.osType;
+        return this.osType == null ? Codegen.empty() : this.osType;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess;
 
     public Output<Either<String,RemoteLoginPortPublicAccess>> getRemoteLoginPortPublicAccess() {
-        return this.remoteLoginPortPublicAccess == null ? Output.empty() : this.remoteLoginPortPublicAccess;
+        return this.remoteLoginPortPublicAccess == null ? Codegen.empty() : this.remoteLoginPortPublicAccess;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
     public Output<ScaleSettingsArgs> getScaleSettings() {
-        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
+        return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ResourceIdArgs> subnet;
 
     public Output<ResourceIdArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<UserAccountCredentialsArgs> userAccountCredentials;
 
     public Output<UserAccountCredentialsArgs> getUserAccountCredentials() {
-        return this.userAccountCredentials == null ? Output.empty() : this.userAccountCredentials;
+        return this.userAccountCredentials == null ? Codegen.empty() : this.userAccountCredentials;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<VirtualMachineImageArgs> virtualMachineImage;
 
     public Output<VirtualMachineImageArgs> getVirtualMachineImage() {
-        return this.virtualMachineImage == null ? Output.empty() : this.virtualMachineImage;
+        return this.virtualMachineImage == null ? Codegen.empty() : this.virtualMachineImage;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,VmPriority>> vmPriority;
 
     public Output<Either<String,VmPriority>> getVmPriority() {
-        return this.vmPriority == null ? Output.empty() : this.vmPriority;
+        return this.vmPriority == null ? Codegen.empty() : this.vmPriority;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public AmlComputePropertiesArgs(
@@ -148,7 +149,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
         @Nullable Output<VirtualMachineImageArgs> virtualMachineImage,
         @Nullable Output<Either<String,VmPriority>> vmPriority,
         @Nullable Output<String> vmSize) {
-        this.enableNodePublicIp = enableNodePublicIp == null ? Output.ofNullable(true) : enableNodePublicIp;
+        this.enableNodePublicIp = enableNodePublicIp == null ? Codegen.ofNullable(true) : enableNodePublicIp;
         this.isolatedNetwork = isolatedNetwork;
         this.osType = osType == null ? Output.ofLeft("Linux") : osType;
         this.remoteLoginPortPublicAccess = remoteLoginPortPublicAccess == null ? Output.ofLeft("NotSpecified") : remoteLoginPortPublicAccess;
@@ -161,16 +162,16 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private AmlComputePropertiesArgs() {
-        this.enableNodePublicIp = Output.empty();
-        this.isolatedNetwork = Output.empty();
-        this.osType = Output.empty();
-        this.remoteLoginPortPublicAccess = Output.empty();
-        this.scaleSettings = Output.empty();
-        this.subnet = Output.empty();
-        this.userAccountCredentials = Output.empty();
-        this.virtualMachineImage = Output.empty();
-        this.vmPriority = Output.empty();
-        this.vmSize = Output.empty();
+        this.enableNodePublicIp = Codegen.empty();
+        this.isolatedNetwork = Codegen.empty();
+        this.osType = Codegen.empty();
+        this.remoteLoginPortPublicAccess = Codegen.empty();
+        this.scaleSettings = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.userAccountCredentials = Codegen.empty();
+        this.virtualMachineImage = Codegen.empty();
+        this.vmPriority = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enableNodePublicIp(@Nullable Boolean enableNodePublicIp) {
-            this.enableNodePublicIp = Output.ofNullable(enableNodePublicIp);
+            this.enableNodePublicIp = Codegen.ofNullable(enableNodePublicIp);
             return this;
         }
         public Builder isolatedNetwork(@Nullable Output<Boolean> isolatedNetwork) {
@@ -224,7 +225,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder isolatedNetwork(@Nullable Boolean isolatedNetwork) {
-            this.isolatedNetwork = Output.ofNullable(isolatedNetwork);
+            this.isolatedNetwork = Codegen.ofNullable(isolatedNetwork);
             return this;
         }
         public Builder osType(@Nullable Output<Either<String,OsType>> osType) {
@@ -232,7 +233,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder osType(@Nullable Either<String,OsType> osType) {
-            this.osType = Output.ofNullable(osType);
+            this.osType = Codegen.ofNullable(osType);
             return this;
         }
         public Builder remoteLoginPortPublicAccess(@Nullable Output<Either<String,RemoteLoginPortPublicAccess>> remoteLoginPortPublicAccess) {
@@ -240,7 +241,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder remoteLoginPortPublicAccess(@Nullable Either<String,RemoteLoginPortPublicAccess> remoteLoginPortPublicAccess) {
-            this.remoteLoginPortPublicAccess = Output.ofNullable(remoteLoginPortPublicAccess);
+            this.remoteLoginPortPublicAccess = Codegen.ofNullable(remoteLoginPortPublicAccess);
             return this;
         }
         public Builder scaleSettings(@Nullable Output<ScaleSettingsArgs> scaleSettings) {
@@ -248,7 +249,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Output.ofNullable(scaleSettings);
+            this.scaleSettings = Codegen.ofNullable(scaleSettings);
             return this;
         }
         public Builder subnet(@Nullable Output<ResourceIdArgs> subnet) {
@@ -256,7 +257,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnet(@Nullable ResourceIdArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder userAccountCredentials(@Nullable Output<UserAccountCredentialsArgs> userAccountCredentials) {
@@ -264,7 +265,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder userAccountCredentials(@Nullable UserAccountCredentialsArgs userAccountCredentials) {
-            this.userAccountCredentials = Output.ofNullable(userAccountCredentials);
+            this.userAccountCredentials = Codegen.ofNullable(userAccountCredentials);
             return this;
         }
         public Builder virtualMachineImage(@Nullable Output<VirtualMachineImageArgs> virtualMachineImage) {
@@ -272,7 +273,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder virtualMachineImage(@Nullable VirtualMachineImageArgs virtualMachineImage) {
-            this.virtualMachineImage = Output.ofNullable(virtualMachineImage);
+            this.virtualMachineImage = Codegen.ofNullable(virtualMachineImage);
             return this;
         }
         public Builder vmPriority(@Nullable Output<Either<String,VmPriority>> vmPriority) {
@@ -280,7 +281,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder vmPriority(@Nullable Either<String,VmPriority> vmPriority) {
-            this.vmPriority = Output.ofNullable(vmPriority);
+            this.vmPriority = Codegen.ofNullable(vmPriority);
             return this;
         }
         public Builder vmSize(@Nullable Output<String> vmSize) {
@@ -288,7 +289,7 @@ public final class AmlComputePropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public AmlComputePropertiesArgs build() {
             return new AmlComputePropertiesArgs(enableNodePublicIp, isolatedNetwork, osType, remoteLoginPortPublicAccess, scaleSettings, subnet, userAccountCredentials, virtualMachineImage, vmPriority, vmSize);

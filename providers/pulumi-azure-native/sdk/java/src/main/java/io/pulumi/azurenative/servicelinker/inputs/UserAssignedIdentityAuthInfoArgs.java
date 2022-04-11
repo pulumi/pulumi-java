@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicelinker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class UserAssignedIdentityAuthInfoArgs extends io.pulumi.resources.
     }
 
     private UserAssignedIdentityAuthInfoArgs() {
-        this.authType = Output.empty();
-        this.clientId = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.authType = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {

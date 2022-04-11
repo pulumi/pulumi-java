@@ -6,6 +6,7 @@ package io.pulumi.awsnative.macie.inputs;
 import io.pulumi.awsnative.macie.inputs.FindingsFilterCriterionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class FindingsFilterFindingCriteriaArgs extends io.pulumi.resources
       private final @Nullable Output<FindingsFilterCriterionArgs> criterion;
 
     public Output<FindingsFilterCriterionArgs> getCriterion() {
-        return this.criterion == null ? Output.empty() : this.criterion;
+        return this.criterion == null ? Codegen.empty() : this.criterion;
     }
 
     public FindingsFilterFindingCriteriaArgs(@Nullable Output<FindingsFilterCriterionArgs> criterion) {
@@ -26,7 +27,7 @@ public final class FindingsFilterFindingCriteriaArgs extends io.pulumi.resources
     }
 
     private FindingsFilterFindingCriteriaArgs() {
-        this.criterion = Output.empty();
+        this.criterion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class FindingsFilterFindingCriteriaArgs extends io.pulumi.resources
             return this;
         }
         public Builder criterion(@Nullable FindingsFilterCriterionArgs criterion) {
-            this.criterion = Output.ofNullable(criterion);
+            this.criterion = Codegen.ofNullable(criterion);
             return this;
         }        public FindingsFilterFindingCriteriaArgs build() {
             return new FindingsFilterFindingCriteriaArgs(criterion);

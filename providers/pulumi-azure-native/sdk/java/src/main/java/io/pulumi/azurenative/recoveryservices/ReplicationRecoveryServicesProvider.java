@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -110,7 +111,7 @@ public class ReplicationRecoveryServicesProvider extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public ReplicationRecoveryServicesProvider(String name, ReplicationRecoveryServicesProviderArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:recoveryservices:ReplicationRecoveryServicesProvider", name, args == null ? ReplicationRecoveryServicesProviderArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:recoveryservices:ReplicationRecoveryServicesProvider", name, args == null ? ReplicationRecoveryServicesProviderArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ReplicationRecoveryServicesProvider(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

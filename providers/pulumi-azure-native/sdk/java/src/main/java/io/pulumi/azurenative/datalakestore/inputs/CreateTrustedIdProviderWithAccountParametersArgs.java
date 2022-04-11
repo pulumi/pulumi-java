@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class CreateTrustedIdProviderWithAccountParametersArgs extends io.p
     }
 
     private CreateTrustedIdProviderWithAccountParametersArgs() {
-        this.idProvider = Output.empty();
-        this.name = Output.empty();
+        this.idProvider = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

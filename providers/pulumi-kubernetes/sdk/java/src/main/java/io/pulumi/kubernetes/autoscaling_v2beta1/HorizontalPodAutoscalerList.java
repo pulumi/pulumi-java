@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.autoscaling_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.autoscaling_v2beta1.HorizontalPodAutoscalerListArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.HorizontalPodAutoscaler;
@@ -99,7 +100,7 @@ public class HorizontalPodAutoscalerList extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public HorizontalPodAutoscalerList(String name, HorizontalPodAutoscalerListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:autoscaling/v2beta1:HorizontalPodAutoscalerList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:autoscaling/v2beta1:HorizontalPodAutoscalerList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private HorizontalPodAutoscalerList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

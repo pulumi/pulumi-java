@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class JobHadoopConfigLoggingConfigArgs extends io.pulumi.resources.
     }
 
     private JobHadoopConfigLoggingConfigArgs() {
-        this.driverLogLevels = Output.empty();
+        this.driverLogLevels = Codegen.empty();
     }
 
     public static Builder builder() {

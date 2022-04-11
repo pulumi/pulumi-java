@@ -6,6 +6,7 @@ package io.pulumi.gcp.logging;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderSinkArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkState;
@@ -212,7 +213,7 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FolderSink(String name, FolderSinkArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:logging/folderSink:FolderSink", name, args == null ? FolderSinkArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:logging/folderSink:FolderSink", name, args == null ? FolderSinkArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FolderSink(String name, Output<String> id, @Nullable FolderSinkState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

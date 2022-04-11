@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.EcKeyTypeArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.RsaKeyTypeArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EcKeyTypeArgs> ellipticCurve;
 
     public Output<EcKeyTypeArgs> getEllipticCurve() {
-        return this.ellipticCurve == null ? Output.empty() : this.ellipticCurve;
+        return this.ellipticCurve == null ? Codegen.empty() : this.ellipticCurve;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RsaKeyTypeArgs> rsa;
 
     public Output<RsaKeyTypeArgs> getRsa() {
-        return this.rsa == null ? Output.empty() : this.rsa;
+        return this.rsa == null ? Codegen.empty() : this.rsa;
     }
 
     public AllowedKeyTypeArgs(
@@ -49,8 +50,8 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AllowedKeyTypeArgs() {
-        this.ellipticCurve = Output.empty();
-        this.rsa = Output.empty();
+        this.ellipticCurve = Codegen.empty();
+        this.rsa = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ellipticCurve(@Nullable EcKeyTypeArgs ellipticCurve) {
-            this.ellipticCurve = Output.ofNullable(ellipticCurve);
+            this.ellipticCurve = Codegen.ofNullable(ellipticCurve);
             return this;
         }
         public Builder rsa(@Nullable Output<RsaKeyTypeArgs> rsa) {
@@ -88,7 +89,7 @@ public final class AllowedKeyTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rsa(@Nullable RsaKeyTypeArgs rsa) {
-            this.rsa = Output.ofNullable(rsa);
+            this.rsa = Codegen.ofNullable(rsa);
             return this;
         }        public AllowedKeyTypeArgs build() {
             return new AllowedKeyTypeArgs(ellipticCurve, rsa);

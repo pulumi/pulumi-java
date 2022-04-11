@@ -5,6 +5,7 @@ package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.metastore_v1beta.inputs.SecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecretArgs> keytab;
 
     public Output<SecretArgs> getKeytab() {
-        return this.keytab == null ? Output.empty() : this.keytab;
+        return this.keytab == null ? Codegen.empty() : this.keytab;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> krb5ConfigGcsUri;
 
     public Output<String> getKrb5ConfigGcsUri() {
-        return this.krb5ConfigGcsUri == null ? Output.empty() : this.krb5ConfigGcsUri;
+        return this.krb5ConfigGcsUri == null ? Codegen.empty() : this.krb5ConfigGcsUri;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
-        return this.principal == null ? Output.empty() : this.principal;
+        return this.principal == null ? Codegen.empty() : this.principal;
     }
 
     public KerberosConfigArgs(
@@ -62,9 +63,9 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KerberosConfigArgs() {
-        this.keytab = Output.empty();
-        this.krb5ConfigGcsUri = Output.empty();
-        this.principal = Output.empty();
+        this.keytab = Codegen.empty();
+        this.krb5ConfigGcsUri = Codegen.empty();
+        this.principal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keytab(@Nullable SecretArgs keytab) {
-            this.keytab = Output.ofNullable(keytab);
+            this.keytab = Codegen.ofNullable(keytab);
             return this;
         }
         public Builder krb5ConfigGcsUri(@Nullable Output<String> krb5ConfigGcsUri) {
@@ -104,7 +105,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder krb5ConfigGcsUri(@Nullable String krb5ConfigGcsUri) {
-            this.krb5ConfigGcsUri = Output.ofNullable(krb5ConfigGcsUri);
+            this.krb5ConfigGcsUri = Codegen.ofNullable(krb5ConfigGcsUri);
             return this;
         }
         public Builder principal(@Nullable Output<String> principal) {
@@ -112,7 +113,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principal(@Nullable String principal) {
-            this.principal = Output.ofNullable(principal);
+            this.principal = Codegen.ofNullable(principal);
             return this;
         }        public KerberosConfigArgs build() {
             return new KerberosConfigArgs(keytab, krb5ConfigGcsUri, principal);

@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
       private final @Nullable Output<String> awsAccountNumber;
 
     public Output<String> getAwsAccountNumber() {
-        return this.awsAccountNumber == null ? Output.empty() : this.awsAccountNumber;
+        return this.awsAccountNumber == null ? Codegen.empty() : this.awsAccountNumber;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
       private final @Nullable Output<List<String>> keyPairIds;
 
     public Output<List<String>> getKeyPairIds() {
-        return this.keyPairIds == null ? Output.empty() : this.keyPairIds;
+        return this.keyPairIds == null ? Codegen.empty() : this.keyPairIds;
     }
 
     public DistributionTrustedSignerItemGetArgs(
@@ -45,8 +46,8 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
     }
 
     private DistributionTrustedSignerItemGetArgs() {
-        this.awsAccountNumber = Output.empty();
-        this.keyPairIds = Output.empty();
+        this.awsAccountNumber = Codegen.empty();
+        this.keyPairIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder awsAccountNumber(@Nullable String awsAccountNumber) {
-            this.awsAccountNumber = Output.ofNullable(awsAccountNumber);
+            this.awsAccountNumber = Codegen.ofNullable(awsAccountNumber);
             return this;
         }
         public Builder keyPairIds(@Nullable Output<List<String>> keyPairIds) {
@@ -84,7 +85,7 @@ public final class DistributionTrustedSignerItemGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder keyPairIds(@Nullable List<String> keyPairIds) {
-            this.keyPairIds = Output.ofNullable(keyPairIds);
+            this.keyPairIds = Codegen.ofNullable(keyPairIds);
             return this;
         }
         public Builder keyPairIds(String... keyPairIds) {

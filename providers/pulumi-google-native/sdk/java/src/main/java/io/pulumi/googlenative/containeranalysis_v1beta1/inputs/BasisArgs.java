@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BasisArgs() {
-        this.fingerprint = Output.empty();
-        this.resourceUrl = Output.empty();
+        this.fingerprint = Codegen.empty();
+        this.resourceUrl = Codegen.empty();
     }
 
     public static Builder builder() {

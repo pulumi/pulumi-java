@@ -7,6 +7,7 @@ import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationArgs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceSourceCodeVersionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ServiceCodeConfigurationArgs> codeConfiguration;
 
     public Output<ServiceCodeConfigurationArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
+        return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
     /**
@@ -55,9 +56,9 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceCodeRepositoryArgs() {
-        this.codeConfiguration = Output.empty();
-        this.repositoryUrl = Output.empty();
-        this.sourceCodeVersion = Output.empty();
+        this.codeConfiguration = Codegen.empty();
+        this.repositoryUrl = Codegen.empty();
+        this.sourceCodeVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class ServiceCodeRepositoryArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder codeConfiguration(@Nullable ServiceCodeConfigurationArgs codeConfiguration) {
-            this.codeConfiguration = Output.ofNullable(codeConfiguration);
+            this.codeConfiguration = Codegen.ofNullable(codeConfiguration);
             return this;
         }
         public Builder repositoryUrl(Output<String> repositoryUrl) {

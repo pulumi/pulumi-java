@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentAggregationGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentTriggerGetArgs;
 import java.lang.String;
@@ -38,7 +39,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
       private final @Nullable Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> aggregations;
 
     public Output<List<AlertPolicyConditionConditionAbsentAggregationGetArgs>> getAggregations() {
-        return this.aggregations == null ? Output.empty() : this.aggregations;
+        return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
       private final @Nullable Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger;
 
     public Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public AlertPolicyConditionConditionAbsentGetArgs(
@@ -108,10 +109,10 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
     }
 
     private AlertPolicyConditionConditionAbsentGetArgs() {
-        this.aggregations = Output.empty();
-        this.duration = Output.empty();
-        this.filter = Output.empty();
-        this.trigger = Output.empty();
+        this.aggregations = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
             return this;
         }
         public Builder aggregations(@Nullable List<AlertPolicyConditionConditionAbsentAggregationGetArgs> aggregations) {
-            this.aggregations = Output.ofNullable(aggregations);
+            this.aggregations = Codegen.ofNullable(aggregations);
             return this;
         }
         public Builder aggregations(AlertPolicyConditionConditionAbsentAggregationGetArgs... aggregations) {
@@ -164,7 +165,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionAbsentTriggerGetArgs> trigger) {
@@ -172,7 +173,7 @@ public final class AlertPolicyConditionConditionAbsentGetArgs extends io.pulumi.
             return this;
         }
         public Builder trigger(@Nullable AlertPolicyConditionConditionAbsentTriggerGetArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public AlertPolicyConditionConditionAbsentGetArgs build() {
             return new AlertPolicyConditionConditionAbsentGetArgs(aggregations, duration, filter, trigger);

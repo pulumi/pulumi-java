@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage;
 import io.pulumi.azurenative.storage.inputs.CorsRulesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<CorsRulesArgs> cors;
 
     public Output<CorsRulesArgs> getCors() {
-        return this.cors == null ? Output.empty() : this.cors;
+        return this.cors == null ? Codegen.empty() : this.cors;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> queueServiceName;
 
     public Output<String> getQueueServiceName() {
-        return this.queueServiceName == null ? Output.empty() : this.queueServiceName;
+        return this.queueServiceName == null ? Codegen.empty() : this.queueServiceName;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
     }
 
     private QueueServicePropertiesArgs() {
-        this.accountName = Output.empty();
-        this.cors = Output.empty();
-        this.queueServiceName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.cors = Codegen.empty();
+        this.queueServiceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder cors(@Nullable CorsRulesArgs cors) {
-            this.cors = Output.ofNullable(cors);
+            this.cors = Codegen.ofNullable(cors);
             return this;
         }
         public Builder queueServiceName(@Nullable Output<String> queueServiceName) {
@@ -124,7 +125,7 @@ public final class QueueServicePropertiesArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder queueServiceName(@Nullable String queueServiceName) {
-            this.queueServiceName = Output.ofNullable(queueServiceName);
+            this.queueServiceName = Codegen.ofNullable(queueServiceName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

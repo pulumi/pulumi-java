@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.inputs.ConnectionGatewayDefinitionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> connectionGatewayName;
 
     public Output<String> getConnectionGatewayName() {
-        return this.connectionGatewayName == null ? Output.empty() : this.connectionGatewayName;
+        return this.connectionGatewayName == null ? Codegen.empty() : this.connectionGatewayName;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="properties")
       private final @Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties;
 
     public Output<ConnectionGatewayDefinitionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> subscriptionId;
 
     public Output<String> getSubscriptionId() {
-        return this.subscriptionId == null ? Output.empty() : this.subscriptionId;
+        return this.subscriptionId == null ? Codegen.empty() : this.subscriptionId;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ConnectionGatewayArgs(
@@ -94,12 +95,12 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ConnectionGatewayArgs() {
-        this.connectionGatewayName = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tags = Output.empty();
+        this.connectionGatewayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder connectionGatewayName(@Nullable String connectionGatewayName) {
-            this.connectionGatewayName = Output.ofNullable(connectionGatewayName);
+            this.connectionGatewayName = Codegen.ofNullable(connectionGatewayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -145,7 +146,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<ConnectionGatewayDefinitionPropertiesArgs> properties) {
@@ -153,7 +154,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder properties(@Nullable ConnectionGatewayDefinitionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -169,7 +170,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder subscriptionId(@Nullable String subscriptionId) {
-            this.subscriptionId = Output.ofNullable(subscriptionId);
+            this.subscriptionId = Codegen.ofNullable(subscriptionId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -177,7 +178,7 @@ public final class ConnectionGatewayArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ConnectionGatewayArgs build() {
             return new ConnectionGatewayArgs(connectionGatewayName, location, properties, resourceGroupName, subscriptionId, tags);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> elbName;
 
     public Output<String> getElbName() {
-        return this.elbName == null ? Output.empty() : this.elbName;
+        return this.elbName == null ? Codegen.empty() : this.elbName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
+        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     public ServiceLoadBalancerArgs(
@@ -71,10 +72,10 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceLoadBalancerArgs() {
-        this.containerName = Output.empty();
-        this.containerPort = Output.empty();
-        this.elbName = Output.empty();
-        this.targetGroupArn = Output.empty();
+        this.containerName = Codegen.empty();
+        this.containerPort = Codegen.empty();
+        this.elbName = Codegen.empty();
+        this.targetGroupArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder elbName(@Nullable String elbName) {
-            this.elbName = Output.ofNullable(elbName);
+            this.elbName = Codegen.ofNullable(elbName);
             return this;
         }
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
@@ -132,7 +133,7 @@ public final class ServiceLoadBalancerArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Output.ofNullable(targetGroupArn);
+            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
             return this;
         }        public ServiceLoadBalancerArgs build() {
             return new ServiceLoadBalancerArgs(containerName, containerPort, elbName, targetGroupArn);

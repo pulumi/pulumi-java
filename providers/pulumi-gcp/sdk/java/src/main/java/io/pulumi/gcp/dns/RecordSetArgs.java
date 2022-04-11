@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -48,7 +49,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -103,12 +104,12 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RecordSetArgs() {
-        this.managedZone = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rrdatas = Output.empty();
-        this.ttl = Output.empty();
-        this.type = Output.empty();
+        this.managedZone = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rrdatas = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rrdatas(Output<List<String>> rrdatas) {
@@ -181,7 +182,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder type(Output<String> type) {

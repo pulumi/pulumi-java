@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
       private final @Nullable Output<Double> utilizationTarget;
 
     public Output<Double> getUtilizationTarget() {
-        return this.utilizationTarget == null ? Output.empty() : this.utilizationTarget;
+        return this.utilizationTarget == null ? Codegen.empty() : this.utilizationTarget;
     }
 
     public AutoscalingPolicyLoadBalancingUtilizationArgs(@Nullable Output<Double> utilizationTarget) {
@@ -34,7 +35,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
     }
 
     private AutoscalingPolicyLoadBalancingUtilizationArgs() {
-        this.utilizationTarget = Output.empty();
+        this.utilizationTarget = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AutoscalingPolicyLoadBalancingUtilizationArgs extends io.pulu
             return this;
         }
         public Builder utilizationTarget(@Nullable Double utilizationTarget) {
-            this.utilizationTarget = Output.ofNullable(utilizationTarget);
+            this.utilizationTarget = Codegen.ofNullable(utilizationTarget);
             return this;
         }        public AutoscalingPolicyLoadBalancingUtilizationArgs build() {
             return new AutoscalingPolicyLoadBalancingUtilizationArgs(utilizationTarget);

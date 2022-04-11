@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.ExtensionCategory;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,21 +22,21 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> endpointUri;
 
     public Output<String> getEndpointUri() {
-        return this.endpointUri == null ? Output.empty() : this.endpointUri;
+        return this.endpointUri == null ? Codegen.empty() : this.endpointUri;
     }
 
     @Import(name="extensionCategories")
       private final @Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories;
 
     public Output<List<Either<String,ExtensionCategory>>> getExtensionCategories() {
-        return this.extensionCategories == null ? Output.empty() : this.extensionCategories;
+        return this.extensionCategories == null ? Codegen.empty() : this.extensionCategories;
     }
 
     @Import(name="timeout")
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public ResourceTypeExtensionArgs(
@@ -48,9 +49,9 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
     }
 
     private ResourceTypeExtensionArgs() {
-        this.endpointUri = Output.empty();
-        this.extensionCategories = Output.empty();
-        this.timeout = Output.empty();
+        this.endpointUri = Codegen.empty();
+        this.extensionCategories = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder endpointUri(@Nullable String endpointUri) {
-            this.endpointUri = Output.ofNullable(endpointUri);
+            this.endpointUri = Codegen.ofNullable(endpointUri);
             return this;
         }
         public Builder extensionCategories(@Nullable Output<List<Either<String,ExtensionCategory>>> extensionCategories) {
@@ -90,7 +91,7 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder extensionCategories(@Nullable List<Either<String,ExtensionCategory>> extensionCategories) {
-            this.extensionCategories = Output.ofNullable(extensionCategories);
+            this.extensionCategories = Codegen.ofNullable(extensionCategories);
             return this;
         }
         public Builder extensionCategories(Either<String,ExtensionCategory>... extensionCategories) {
@@ -101,7 +102,7 @@ public final class ResourceTypeExtensionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public ResourceTypeExtensionArgs build() {
             return new ResourceTypeExtensionArgs(endpointUri, extensionCategories, timeout);

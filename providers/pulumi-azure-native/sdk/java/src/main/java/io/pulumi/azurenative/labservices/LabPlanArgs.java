@@ -9,6 +9,7 @@ import io.pulumi.azurenative.labservices.inputs.LabPlanNetworkProfileArgs;
 import io.pulumi.azurenative.labservices.inputs.SupportInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedRegions;
 
     public Output<List<String>> getAllowedRegions() {
-        return this.allowedRegions == null ? Output.empty() : this.allowedRegions;
+        return this.allowedRegions == null ? Codegen.empty() : this.allowedRegions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoShutdownProfileArgs> defaultAutoShutdownProfile;
 
     public Output<AutoShutdownProfileArgs> getDefaultAutoShutdownProfile() {
-        return this.defaultAutoShutdownProfile == null ? Output.empty() : this.defaultAutoShutdownProfile;
+        return this.defaultAutoShutdownProfile == null ? Codegen.empty() : this.defaultAutoShutdownProfile;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ConnectionProfileArgs> defaultConnectionProfile;
 
     public Output<ConnectionProfileArgs> getDefaultConnectionProfile() {
-        return this.defaultConnectionProfile == null ? Output.empty() : this.defaultConnectionProfile;
+        return this.defaultConnectionProfile == null ? Codegen.empty() : this.defaultConnectionProfile;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile;
 
     public Output<LabPlanNetworkProfileArgs> getDefaultNetworkProfile() {
-        return this.defaultNetworkProfile == null ? Output.empty() : this.defaultNetworkProfile;
+        return this.defaultNetworkProfile == null ? Codegen.empty() : this.defaultNetworkProfile;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> labPlanName;
 
     public Output<String> getLabPlanName() {
-        return this.labPlanName == null ? Output.empty() : this.labPlanName;
+        return this.labPlanName == null ? Codegen.empty() : this.labPlanName;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> linkedLmsInstance;
 
     public Output<String> getLinkedLmsInstance() {
-        return this.linkedLmsInstance == null ? Output.empty() : this.linkedLmsInstance;
+        return this.linkedLmsInstance == null ? Codegen.empty() : this.linkedLmsInstance;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sharedGalleryId;
 
     public Output<String> getSharedGalleryId() {
-        return this.sharedGalleryId == null ? Output.empty() : this.sharedGalleryId;
+        return this.sharedGalleryId == null ? Codegen.empty() : this.sharedGalleryId;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SupportInfoArgs> supportInfo;
 
     public Output<SupportInfoArgs> getSupportInfo() {
-        return this.supportInfo == null ? Output.empty() : this.supportInfo;
+        return this.supportInfo == null ? Codegen.empty() : this.supportInfo;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public LabPlanArgs(
@@ -167,17 +168,17 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LabPlanArgs() {
-        this.allowedRegions = Output.empty();
-        this.defaultAutoShutdownProfile = Output.empty();
-        this.defaultConnectionProfile = Output.empty();
-        this.defaultNetworkProfile = Output.empty();
-        this.labPlanName = Output.empty();
-        this.linkedLmsInstance = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sharedGalleryId = Output.empty();
-        this.supportInfo = Output.empty();
-        this.tags = Output.empty();
+        this.allowedRegions = Codegen.empty();
+        this.defaultAutoShutdownProfile = Codegen.empty();
+        this.defaultConnectionProfile = Codegen.empty();
+        this.defaultNetworkProfile = Codegen.empty();
+        this.labPlanName = Codegen.empty();
+        this.linkedLmsInstance = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sharedGalleryId = Codegen.empty();
+        this.supportInfo = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedRegions(@Nullable List<String> allowedRegions) {
-            this.allowedRegions = Output.ofNullable(allowedRegions);
+            this.allowedRegions = Codegen.ofNullable(allowedRegions);
             return this;
         }
         public Builder allowedRegions(String... allowedRegions) {
@@ -236,7 +237,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultAutoShutdownProfile(@Nullable AutoShutdownProfileArgs defaultAutoShutdownProfile) {
-            this.defaultAutoShutdownProfile = Output.ofNullable(defaultAutoShutdownProfile);
+            this.defaultAutoShutdownProfile = Codegen.ofNullable(defaultAutoShutdownProfile);
             return this;
         }
         public Builder defaultConnectionProfile(@Nullable Output<ConnectionProfileArgs> defaultConnectionProfile) {
@@ -244,7 +245,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultConnectionProfile(@Nullable ConnectionProfileArgs defaultConnectionProfile) {
-            this.defaultConnectionProfile = Output.ofNullable(defaultConnectionProfile);
+            this.defaultConnectionProfile = Codegen.ofNullable(defaultConnectionProfile);
             return this;
         }
         public Builder defaultNetworkProfile(@Nullable Output<LabPlanNetworkProfileArgs> defaultNetworkProfile) {
@@ -252,7 +253,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultNetworkProfile(@Nullable LabPlanNetworkProfileArgs defaultNetworkProfile) {
-            this.defaultNetworkProfile = Output.ofNullable(defaultNetworkProfile);
+            this.defaultNetworkProfile = Codegen.ofNullable(defaultNetworkProfile);
             return this;
         }
         public Builder labPlanName(@Nullable Output<String> labPlanName) {
@@ -260,7 +261,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labPlanName(@Nullable String labPlanName) {
-            this.labPlanName = Output.ofNullable(labPlanName);
+            this.labPlanName = Codegen.ofNullable(labPlanName);
             return this;
         }
         public Builder linkedLmsInstance(@Nullable Output<String> linkedLmsInstance) {
@@ -268,7 +269,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder linkedLmsInstance(@Nullable String linkedLmsInstance) {
-            this.linkedLmsInstance = Output.ofNullable(linkedLmsInstance);
+            this.linkedLmsInstance = Codegen.ofNullable(linkedLmsInstance);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -276,7 +277,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -292,7 +293,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharedGalleryId(@Nullable String sharedGalleryId) {
-            this.sharedGalleryId = Output.ofNullable(sharedGalleryId);
+            this.sharedGalleryId = Codegen.ofNullable(sharedGalleryId);
             return this;
         }
         public Builder supportInfo(@Nullable Output<SupportInfoArgs> supportInfo) {
@@ -300,7 +301,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportInfo(@Nullable SupportInfoArgs supportInfo) {
-            this.supportInfo = Output.ofNullable(supportInfo);
+            this.supportInfo = Codegen.ofNullable(supportInfo);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -308,7 +309,7 @@ public final class LabPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public LabPlanArgs build() {
             return new LabPlanArgs(allowedRegions, defaultAutoShutdownProfile, defaultConnectionProfile, defaultNetworkProfile, labPlanName, linkedLmsInstance, location, resourceGroupName, sharedGalleryId, supportInfo, tags);

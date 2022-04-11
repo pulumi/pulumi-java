@@ -9,6 +9,7 @@ import io.pulumi.azurenative.databoxedge.inputs.ContactDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -59,7 +60,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ShipmentType>> shipmentType;
 
     public Output<Either<String,ShipmentType>> getShipmentType() {
-        return this.shipmentType == null ? Output.empty() : this.shipmentType;
+        return this.shipmentType == null ? Codegen.empty() : this.shipmentType;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressArgs> shippingAddress;
 
     public Output<AddressArgs> getShippingAddress() {
-        return this.shippingAddress == null ? Output.empty() : this.shippingAddress;
+        return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
     }
 
     public OrderArgs(
@@ -87,11 +88,11 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OrderArgs() {
-        this.contactInformation = Output.empty();
-        this.deviceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shipmentType = Output.empty();
-        this.shippingAddress = Output.empty();
+        this.contactInformation = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shipmentType = Codegen.empty();
+        this.shippingAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shipmentType(@Nullable Either<String,ShipmentType> shipmentType) {
-            this.shipmentType = Output.ofNullable(shipmentType);
+            this.shipmentType = Codegen.ofNullable(shipmentType);
             return this;
         }
         public Builder shippingAddress(@Nullable Output<AddressArgs> shippingAddress) {
@@ -159,7 +160,7 @@ public final class OrderArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shippingAddress(@Nullable AddressArgs shippingAddress) {
-            this.shippingAddress = Output.ofNullable(shippingAddress);
+            this.shippingAddress = Codegen.ofNullable(shippingAddress);
             return this;
         }        public OrderArgs build() {
             return new OrderArgs(contactInformation, deviceName, resourceGroupName, shipmentType, shippingAddress);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -49,8 +50,8 @@ public final class DetectorModelDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private DetectorModelDefinitionArgs() {
-        this.initialStateName = Output.empty();
-        this.states = Output.empty();
+        this.initialStateName = Codegen.empty();
+        this.states = Codegen.empty();
     }
 
     public static Builder builder() {

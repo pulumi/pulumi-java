@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudcontrol.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> desiredState;
 
     public Output<String> getDesiredState() {
-        return this.desiredState == null ? Output.empty() : this.desiredState;
+        return this.desiredState == null ? Codegen.empty() : this.desiredState;
     }
 
     @Import(name="properties")
       private final @Nullable Output<String> properties;
 
     public Output<String> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> typeVersionId;
 
     public Output<String> getTypeVersionId() {
-        return this.typeVersionId == null ? Output.empty() : this.typeVersionId;
+        return this.typeVersionId == null ? Codegen.empty() : this.typeVersionId;
     }
 
     public ResourceState(
@@ -88,12 +89,12 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceState() {
-        this.desiredState = Output.empty();
-        this.properties = Output.empty();
-        this.roleArn = Output.empty();
-        this.schema = Output.empty();
-        this.typeName = Output.empty();
-        this.typeVersionId = Output.empty();
+        this.desiredState = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.typeName = Codegen.empty();
+        this.typeVersionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredState(@Nullable String desiredState) {
-            this.desiredState = Output.ofNullable(desiredState);
+            this.desiredState = Codegen.ofNullable(desiredState);
             return this;
         }
         public Builder properties(@Nullable Output<String> properties) {
@@ -139,7 +140,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable String properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -147,7 +148,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -155,7 +156,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder typeName(@Nullable Output<String> typeName) {
@@ -163,7 +164,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }
         public Builder typeVersionId(@Nullable Output<String> typeVersionId) {
@@ -171,7 +172,7 @@ public final class ResourceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder typeVersionId(@Nullable String typeVersionId) {
-            this.typeVersionId = Output.ofNullable(typeVersionId);
+            this.typeVersionId = Codegen.ofNullable(typeVersionId);
             return this;
         }        public ResourceState build() {
             return new ResourceState(desiredState, properties, roleArn, schema, typeName, typeVersionId);

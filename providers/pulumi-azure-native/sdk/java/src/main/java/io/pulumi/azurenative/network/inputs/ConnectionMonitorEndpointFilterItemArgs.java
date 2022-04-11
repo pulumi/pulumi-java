@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.ConnectionMonitorEndpointFilterItemTy
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
       private final @Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type;
 
     public Output<Either<String,ConnectionMonitorEndpointFilterItemType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ConnectionMonitorEndpointFilterItemArgs(
@@ -50,8 +51,8 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
     }
 
     private ConnectionMonitorEndpointFilterItemArgs() {
-        this.address = Output.empty();
-        this.type = Output.empty();
+        this.address = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,ConnectionMonitorEndpointFilterItemType>> type) {
@@ -89,7 +90,7 @@ public final class ConnectionMonitorEndpointFilterItemArgs extends io.pulumi.res
             return this;
         }
         public Builder type(@Nullable Either<String,ConnectionMonitorEndpointFilterItemType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ConnectionMonitorEndpointFilterItemArgs build() {
             return new ConnectionMonitorEndpointFilterItemArgs(address, type);

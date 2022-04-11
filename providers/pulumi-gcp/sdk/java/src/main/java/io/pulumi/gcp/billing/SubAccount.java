@@ -6,6 +6,7 @@ package io.pulumi.gcp.billing;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.SubAccountArgs;
 import io.pulumi.gcp.billing.inputs.SubAccountState;
@@ -142,7 +143,7 @@ public class SubAccount extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SubAccount(String name, SubAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:billing/subAccount:SubAccount", name, args == null ? SubAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:billing/subAccount:SubAccount", name, args == null ? SubAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SubAccount(String name, Output<String> id, @Nullable SubAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

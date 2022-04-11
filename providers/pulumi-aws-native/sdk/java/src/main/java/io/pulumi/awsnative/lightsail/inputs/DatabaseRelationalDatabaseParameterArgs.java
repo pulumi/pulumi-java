@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> allowedValues;
 
     public Output<String> getAllowedValues() {
-        return this.allowedValues == null ? Output.empty() : this.allowedValues;
+        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> applyMethod;
 
     public Output<String> getApplyMethod() {
-        return this.applyMethod == null ? Output.empty() : this.applyMethod;
+        return this.applyMethod == null ? Codegen.empty() : this.applyMethod;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> applyType;
 
     public Output<String> getApplyType() {
-        return this.applyType == null ? Output.empty() : this.applyType;
+        return this.applyType == null ? Codegen.empty() : this.applyType;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> dataType;
 
     public Output<String> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> isModifiable;
 
     public Output<Boolean> getIsModifiable() {
-        return this.isModifiable == null ? Output.empty() : this.isModifiable;
+        return this.isModifiable == null ? Codegen.empty() : this.isModifiable;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> parameterName;
 
     public Output<String> getParameterName() {
-        return this.parameterName == null ? Output.empty() : this.parameterName;
+        return this.parameterName == null ? Codegen.empty() : this.parameterName;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
       private final @Nullable Output<String> parameterValue;
 
     public Output<String> getParameterValue() {
-        return this.parameterValue == null ? Output.empty() : this.parameterValue;
+        return this.parameterValue == null ? Codegen.empty() : this.parameterValue;
     }
 
     public DatabaseRelationalDatabaseParameterArgs(
@@ -127,14 +128,14 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
     }
 
     private DatabaseRelationalDatabaseParameterArgs() {
-        this.allowedValues = Output.empty();
-        this.applyMethod = Output.empty();
-        this.applyType = Output.empty();
-        this.dataType = Output.empty();
-        this.description = Output.empty();
-        this.isModifiable = Output.empty();
-        this.parameterName = Output.empty();
-        this.parameterValue = Output.empty();
+        this.allowedValues = Codegen.empty();
+        this.applyMethod = Codegen.empty();
+        this.applyType = Codegen.empty();
+        this.dataType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.isModifiable = Codegen.empty();
+        this.parameterName = Codegen.empty();
+        this.parameterValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder allowedValues(@Nullable String allowedValues) {
-            this.allowedValues = Output.ofNullable(allowedValues);
+            this.allowedValues = Codegen.ofNullable(allowedValues);
             return this;
         }
         public Builder applyMethod(@Nullable Output<String> applyMethod) {
@@ -184,7 +185,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder applyMethod(@Nullable String applyMethod) {
-            this.applyMethod = Output.ofNullable(applyMethod);
+            this.applyMethod = Codegen.ofNullable(applyMethod);
             return this;
         }
         public Builder applyType(@Nullable Output<String> applyType) {
@@ -192,7 +193,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder applyType(@Nullable String applyType) {
-            this.applyType = Output.ofNullable(applyType);
+            this.applyType = Codegen.ofNullable(applyType);
             return this;
         }
         public Builder dataType(@Nullable Output<String> dataType) {
@@ -200,7 +201,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder dataType(@Nullable String dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -208,7 +209,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isModifiable(@Nullable Output<Boolean> isModifiable) {
@@ -216,7 +217,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder isModifiable(@Nullable Boolean isModifiable) {
-            this.isModifiable = Output.ofNullable(isModifiable);
+            this.isModifiable = Codegen.ofNullable(isModifiable);
             return this;
         }
         public Builder parameterName(@Nullable Output<String> parameterName) {
@@ -224,7 +225,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder parameterName(@Nullable String parameterName) {
-            this.parameterName = Output.ofNullable(parameterName);
+            this.parameterName = Codegen.ofNullable(parameterName);
             return this;
         }
         public Builder parameterValue(@Nullable Output<String> parameterValue) {
@@ -232,7 +233,7 @@ public final class DatabaseRelationalDatabaseParameterArgs extends io.pulumi.res
             return this;
         }
         public Builder parameterValue(@Nullable String parameterValue) {
-            this.parameterValue = Output.ofNullable(parameterValue);
+            this.parameterValue = Codegen.ofNullable(parameterValue);
             return this;
         }        public DatabaseRelationalDatabaseParameterArgs build() {
             return new DatabaseRelationalDatabaseParameterArgs(allowedValues, applyMethod, applyType, dataType, description, isModifiable, parameterName, parameterValue);

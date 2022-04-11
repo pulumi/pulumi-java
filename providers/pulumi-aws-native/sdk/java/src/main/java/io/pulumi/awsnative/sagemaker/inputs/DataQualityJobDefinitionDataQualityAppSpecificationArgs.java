@@ -5,6 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
       private final @Nullable Output<List<String>> containerArguments;
 
     public Output<List<String>> getContainerArguments() {
-        return this.containerArguments == null ? Output.empty() : this.containerArguments;
+        return this.containerArguments == null ? Codegen.empty() : this.containerArguments;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
       private final @Nullable Output<List<String>> containerEntrypoint;
 
     public Output<List<String>> getContainerEntrypoint() {
-        return this.containerEntrypoint == null ? Output.empty() : this.containerEntrypoint;
+        return this.containerEntrypoint == null ? Codegen.empty() : this.containerEntrypoint;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
       private final @Nullable Output<Object> environment;
 
     public Output<Object> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
       private final @Nullable Output<String> postAnalyticsProcessorSourceUri;
 
     public Output<String> getPostAnalyticsProcessorSourceUri() {
-        return this.postAnalyticsProcessorSourceUri == null ? Output.empty() : this.postAnalyticsProcessorSourceUri;
+        return this.postAnalyticsProcessorSourceUri == null ? Codegen.empty() : this.postAnalyticsProcessorSourceUri;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
       private final @Nullable Output<String> recordPreprocessorSourceUri;
 
     public Output<String> getRecordPreprocessorSourceUri() {
-        return this.recordPreprocessorSourceUri == null ? Output.empty() : this.recordPreprocessorSourceUri;
+        return this.recordPreprocessorSourceUri == null ? Codegen.empty() : this.recordPreprocessorSourceUri;
     }
 
     public DataQualityJobDefinitionDataQualityAppSpecificationArgs(
@@ -102,12 +103,12 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
     }
 
     private DataQualityJobDefinitionDataQualityAppSpecificationArgs() {
-        this.containerArguments = Output.empty();
-        this.containerEntrypoint = Output.empty();
-        this.environment = Output.empty();
-        this.imageUri = Output.empty();
-        this.postAnalyticsProcessorSourceUri = Output.empty();
-        this.recordPreprocessorSourceUri = Output.empty();
+        this.containerArguments = Codegen.empty();
+        this.containerEntrypoint = Codegen.empty();
+        this.environment = Codegen.empty();
+        this.imageUri = Codegen.empty();
+        this.postAnalyticsProcessorSourceUri = Codegen.empty();
+        this.recordPreprocessorSourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             return this;
         }
         public Builder containerArguments(@Nullable List<String> containerArguments) {
-            this.containerArguments = Output.ofNullable(containerArguments);
+            this.containerArguments = Codegen.ofNullable(containerArguments);
             return this;
         }
         public Builder containerArguments(String... containerArguments) {
@@ -156,7 +157,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             return this;
         }
         public Builder containerEntrypoint(@Nullable List<String> containerEntrypoint) {
-            this.containerEntrypoint = Output.ofNullable(containerEntrypoint);
+            this.containerEntrypoint = Codegen.ofNullable(containerEntrypoint);
             return this;
         }
         public Builder containerEntrypoint(String... containerEntrypoint) {
@@ -167,7 +168,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             return this;
         }
         public Builder environment(@Nullable Object environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder imageUri(Output<String> imageUri) {
@@ -183,7 +184,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             return this;
         }
         public Builder postAnalyticsProcessorSourceUri(@Nullable String postAnalyticsProcessorSourceUri) {
-            this.postAnalyticsProcessorSourceUri = Output.ofNullable(postAnalyticsProcessorSourceUri);
+            this.postAnalyticsProcessorSourceUri = Codegen.ofNullable(postAnalyticsProcessorSourceUri);
             return this;
         }
         public Builder recordPreprocessorSourceUri(@Nullable Output<String> recordPreprocessorSourceUri) {
@@ -191,7 +192,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             return this;
         }
         public Builder recordPreprocessorSourceUri(@Nullable String recordPreprocessorSourceUri) {
-            this.recordPreprocessorSourceUri = Output.ofNullable(recordPreprocessorSourceUri);
+            this.recordPreprocessorSourceUri = Codegen.ofNullable(recordPreprocessorSourceUri);
             return this;
         }        public DataQualityJobDefinitionDataQualityAppSpecificationArgs build() {
             return new DataQualityJobDefinitionDataQualityAppSpecificationArgs(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);

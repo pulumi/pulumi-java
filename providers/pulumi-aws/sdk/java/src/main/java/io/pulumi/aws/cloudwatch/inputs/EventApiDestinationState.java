@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> connectionArn;
 
     public Output<String> getConnectionArn() {
-        return this.connectionArn == null ? Output.empty() : this.connectionArn;
+        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> httpMethod;
 
     public Output<String> getHttpMethod() {
-        return this.httpMethod == null ? Output.empty() : this.httpMethod;
+        return this.httpMethod == null ? Codegen.empty() : this.httpMethod;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> invocationEndpoint;
 
     public Output<String> getInvocationEndpoint() {
-        return this.invocationEndpoint == null ? Output.empty() : this.invocationEndpoint;
+        return this.invocationEndpoint == null ? Codegen.empty() : this.invocationEndpoint;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> invocationRateLimitPerSecond;
 
     public Output<Integer> getInvocationRateLimitPerSecond() {
-        return this.invocationRateLimitPerSecond == null ? Output.empty() : this.invocationRateLimitPerSecond;
+        return this.invocationRateLimitPerSecond == null ? Codegen.empty() : this.invocationRateLimitPerSecond;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public EventApiDestinationState(
@@ -110,13 +111,13 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
     }
 
     private EventApiDestinationState() {
-        this.arn = Output.empty();
-        this.connectionArn = Output.empty();
-        this.description = Output.empty();
-        this.httpMethod = Output.empty();
-        this.invocationEndpoint = Output.empty();
-        this.invocationRateLimitPerSecond = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.connectionArn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.invocationEndpoint = Codegen.empty();
+        this.invocationRateLimitPerSecond = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder connectionArn(@Nullable Output<String> connectionArn) {
@@ -164,7 +165,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Output.ofNullable(connectionArn);
+            this.connectionArn = Codegen.ofNullable(connectionArn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -172,7 +173,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder httpMethod(@Nullable Output<String> httpMethod) {
@@ -180,7 +181,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder httpMethod(@Nullable String httpMethod) {
-            this.httpMethod = Output.ofNullable(httpMethod);
+            this.httpMethod = Codegen.ofNullable(httpMethod);
             return this;
         }
         public Builder invocationEndpoint(@Nullable Output<String> invocationEndpoint) {
@@ -188,7 +189,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder invocationEndpoint(@Nullable String invocationEndpoint) {
-            this.invocationEndpoint = Output.ofNullable(invocationEndpoint);
+            this.invocationEndpoint = Codegen.ofNullable(invocationEndpoint);
             return this;
         }
         public Builder invocationRateLimitPerSecond(@Nullable Output<Integer> invocationRateLimitPerSecond) {
@@ -196,7 +197,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder invocationRateLimitPerSecond(@Nullable Integer invocationRateLimitPerSecond) {
-            this.invocationRateLimitPerSecond = Output.ofNullable(invocationRateLimitPerSecond);
+            this.invocationRateLimitPerSecond = Codegen.ofNullable(invocationRateLimitPerSecond);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -204,7 +205,7 @@ public final class EventApiDestinationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public EventApiDestinationState build() {
             return new EventApiDestinationState(arn, connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond, name);

@@ -5,6 +5,7 @@ package io.pulumi.aws.organizations;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class DelegatedAdministratorArgs extends io.pulumi.resources.Resour
     }
 
     private DelegatedAdministratorArgs() {
-        this.accountId = Output.empty();
-        this.servicePrincipal = Output.empty();
+        this.accountId = Codegen.empty();
+        this.servicePrincipal = Codegen.empty();
     }
 
     public static Builder builder() {

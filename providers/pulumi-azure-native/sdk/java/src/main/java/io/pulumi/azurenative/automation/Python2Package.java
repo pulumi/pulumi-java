@@ -11,6 +11,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -283,7 +284,7 @@ public class Python2Package extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Python2Package(String name, Python2PackageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:automation:Python2Package", name, args == null ? Python2PackageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:automation:Python2Package", name, args == null ? Python2PackageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Python2Package(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

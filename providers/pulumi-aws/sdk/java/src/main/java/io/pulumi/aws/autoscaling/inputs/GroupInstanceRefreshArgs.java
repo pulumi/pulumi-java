@@ -6,6 +6,7 @@ package io.pulumi.aws.autoscaling.inputs;
 import io.pulumi.aws.autoscaling.inputs.GroupInstanceRefreshPreferencesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<GroupInstanceRefreshPreferencesArgs> preferences;
 
     public Output<GroupInstanceRefreshPreferencesArgs> getPreferences() {
-        return this.preferences == null ? Output.empty() : this.preferences;
+        return this.preferences == null ? Codegen.empty() : this.preferences;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> triggers;
 
     public Output<List<String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     public GroupInstanceRefreshArgs(
@@ -59,9 +60,9 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
     }
 
     private GroupInstanceRefreshArgs() {
-        this.preferences = Output.empty();
-        this.strategy = Output.empty();
-        this.triggers = Output.empty();
+        this.preferences = Codegen.empty();
+        this.strategy = Codegen.empty();
+        this.triggers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder preferences(@Nullable GroupInstanceRefreshPreferencesArgs preferences) {
-            this.preferences = Output.ofNullable(preferences);
+            this.preferences = Codegen.ofNullable(preferences);
             return this;
         }
         public Builder strategy(Output<String> strategy) {
@@ -109,7 +110,7 @@ public final class GroupInstanceRefreshArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder triggers(@Nullable List<String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder triggers(String... triggers) {

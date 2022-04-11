@@ -7,6 +7,7 @@ import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigArgs;
 import io.pulumi.aws.emr.inputs.InstanceFleetLaunchSpecificationsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceFleetInstanceTypeConfigArgs>> instanceTypeConfigs;
 
     public Output<List<InstanceFleetInstanceTypeConfigArgs>> getInstanceTypeConfigs() {
-        return this.instanceTypeConfigs == null ? Output.empty() : this.instanceTypeConfigs;
+        return this.instanceTypeConfigs == null ? Codegen.empty() : this.instanceTypeConfigs;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceFleetLaunchSpecificationsArgs> launchSpecifications;
 
     public Output<InstanceFleetLaunchSpecificationsArgs> getLaunchSpecifications() {
-        return this.launchSpecifications == null ? Output.empty() : this.launchSpecifications;
+        return this.launchSpecifications == null ? Codegen.empty() : this.launchSpecifications;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> targetOnDemandCapacity;
 
     public Output<Integer> getTargetOnDemandCapacity() {
-        return this.targetOnDemandCapacity == null ? Output.empty() : this.targetOnDemandCapacity;
+        return this.targetOnDemandCapacity == null ? Codegen.empty() : this.targetOnDemandCapacity;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> targetSpotCapacity;
 
     public Output<Integer> getTargetSpotCapacity() {
-        return this.targetSpotCapacity == null ? Output.empty() : this.targetSpotCapacity;
+        return this.targetSpotCapacity == null ? Codegen.empty() : this.targetSpotCapacity;
     }
 
     public InstanceFleetArgs(
@@ -100,12 +101,12 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceFleetArgs() {
-        this.clusterId = Output.empty();
-        this.instanceTypeConfigs = Output.empty();
-        this.launchSpecifications = Output.empty();
-        this.name = Output.empty();
-        this.targetOnDemandCapacity = Output.empty();
-        this.targetSpotCapacity = Output.empty();
+        this.clusterId = Codegen.empty();
+        this.instanceTypeConfigs = Codegen.empty();
+        this.launchSpecifications = Codegen.empty();
+        this.name = Codegen.empty();
+        this.targetOnDemandCapacity = Codegen.empty();
+        this.targetSpotCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceTypeConfigs(@Nullable List<InstanceFleetInstanceTypeConfigArgs> instanceTypeConfigs) {
-            this.instanceTypeConfigs = Output.ofNullable(instanceTypeConfigs);
+            this.instanceTypeConfigs = Codegen.ofNullable(instanceTypeConfigs);
             return this;
         }
         public Builder instanceTypeConfigs(InstanceFleetInstanceTypeConfigArgs... instanceTypeConfigs) {
@@ -162,7 +163,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchSpecifications(@Nullable InstanceFleetLaunchSpecificationsArgs launchSpecifications) {
-            this.launchSpecifications = Output.ofNullable(launchSpecifications);
+            this.launchSpecifications = Codegen.ofNullable(launchSpecifications);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -170,7 +171,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder targetOnDemandCapacity(@Nullable Output<Integer> targetOnDemandCapacity) {
@@ -178,7 +179,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetOnDemandCapacity(@Nullable Integer targetOnDemandCapacity) {
-            this.targetOnDemandCapacity = Output.ofNullable(targetOnDemandCapacity);
+            this.targetOnDemandCapacity = Codegen.ofNullable(targetOnDemandCapacity);
             return this;
         }
         public Builder targetSpotCapacity(@Nullable Output<Integer> targetSpotCapacity) {
@@ -186,7 +187,7 @@ public final class InstanceFleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetSpotCapacity(@Nullable Integer targetSpotCapacity) {
-            this.targetSpotCapacity = Output.ofNullable(targetSpotCapacity);
+            this.targetSpotCapacity = Codegen.ofNullable(targetSpotCapacity);
             return this;
         }        public InstanceFleetArgs build() {
             return new InstanceFleetArgs(clusterId, instanceTypeConfigs, launchSpecifications, name, targetOnDemandCapacity, targetSpotCapacity);

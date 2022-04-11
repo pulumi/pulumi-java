@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudkms_v1.inputs.ServiceResolverArgs;
 import java.lang.String;
 import java.util.List;
@@ -31,21 +32,21 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ServiceResolverArgs>> serviceResolvers;
 
     public Output<List<ServiceResolverArgs>> getServiceResolvers() {
-        return this.serviceResolvers == null ? Output.empty() : this.serviceResolvers;
+        return this.serviceResolvers == null ? Codegen.empty() : this.serviceResolvers;
     }
 
     public EkmConnectionArgs(
@@ -73,11 +74,11 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EkmConnectionArgs() {
-        this.ekmConnectionId = Output.empty();
-        this.etag = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.serviceResolvers = Output.empty();
+        this.ekmConnectionId = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceResolvers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -129,7 +130,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -137,7 +138,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceResolvers(@Nullable Output<List<ServiceResolverArgs>> serviceResolvers) {
@@ -145,7 +146,7 @@ public final class EkmConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceResolvers(@Nullable List<ServiceResolverArgs> serviceResolvers) {
-            this.serviceResolvers = Output.ofNullable(serviceResolvers);
+            this.serviceResolvers = Codegen.ofNullable(serviceResolvers);
             return this;
         }
         public Builder serviceResolvers(ServiceResolverArgs... serviceResolvers) {

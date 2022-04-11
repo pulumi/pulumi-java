@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class ApplicationUrlDispatchRuleGetArgs extends io.pulumi.resources
       private final @Nullable Output<String> domain;
 
     public Output<String> getDomain() {
-        return this.domain == null ? Output.empty() : this.domain;
+        return this.domain == null ? Codegen.empty() : this.domain;
     }
 
     @Import(name="path")
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     @Import(name="service")
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public ApplicationUrlDispatchRuleGetArgs(
@@ -45,9 +46,9 @@ public final class ApplicationUrlDispatchRuleGetArgs extends io.pulumi.resources
     }
 
     private ApplicationUrlDispatchRuleGetArgs() {
-        this.domain = Output.empty();
-        this.path = Output.empty();
-        this.service = Output.empty();
+        this.domain = Codegen.empty();
+        this.path = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ApplicationUrlDispatchRuleGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder domain(@Nullable String domain) {
-            this.domain = Output.ofNullable(domain);
+            this.domain = Codegen.ofNullable(domain);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -87,7 +88,7 @@ public final class ApplicationUrlDispatchRuleGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -95,7 +96,7 @@ public final class ApplicationUrlDispatchRuleGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public ApplicationUrlDispatchRuleGetArgs build() {
             return new ApplicationUrlDispatchRuleGetArgs(domain, path, service);

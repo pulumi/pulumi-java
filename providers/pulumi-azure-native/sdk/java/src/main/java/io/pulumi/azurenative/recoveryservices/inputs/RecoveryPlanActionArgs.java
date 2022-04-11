@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOper
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -64,9 +65,9 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private RecoveryPlanActionArgs() {
-        this.actionName = Output.empty();
-        this.failoverDirections = Output.empty();
-        this.failoverTypes = Output.empty();
+        this.actionName = Codegen.empty();
+        this.failoverDirections = Codegen.empty();
+        this.failoverTypes = Codegen.empty();
     }
 
     public static Builder builder() {

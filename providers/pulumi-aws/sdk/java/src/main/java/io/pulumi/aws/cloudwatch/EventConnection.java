@@ -10,6 +10,7 @@ import io.pulumi.aws.cloudwatch.outputs.EventConnectionAuthParameters;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -138,7 +139,7 @@ public class EventConnection extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventConnection(String name, EventConnectionArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventConnection:EventConnection", name, args == null ? EventConnectionArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/eventConnection:EventConnection", name, args == null ? EventConnectionArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventConnection(String name, Output<String> id, @Nullable EventConnectionState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

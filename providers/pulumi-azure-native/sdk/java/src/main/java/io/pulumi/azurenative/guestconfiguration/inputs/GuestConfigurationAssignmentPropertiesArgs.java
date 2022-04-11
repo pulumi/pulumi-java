@@ -6,6 +6,7 @@ package io.pulumi.azurenative.guestconfiguration.inputs;
 import io.pulumi.azurenative.guestconfiguration.inputs.GuestConfigurationNavigationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
       private final @Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration;
 
     public Output<GuestConfigurationNavigationArgs> getGuestConfiguration() {
-        return this.guestConfiguration == null ? Output.empty() : this.guestConfiguration;
+        return this.guestConfiguration == null ? Codegen.empty() : this.guestConfiguration;
     }
 
     public GuestConfigurationAssignmentPropertiesArgs(
@@ -49,8 +50,8 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
     }
 
     private GuestConfigurationAssignmentPropertiesArgs() {
-        this.context = Output.empty();
-        this.guestConfiguration = Output.empty();
+        this.context = Codegen.empty();
+        this.guestConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder guestConfiguration(@Nullable Output<GuestConfigurationNavigationArgs> guestConfiguration) {
@@ -88,7 +89,7 @@ public final class GuestConfigurationAssignmentPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder guestConfiguration(@Nullable GuestConfigurationNavigationArgs guestConfiguration) {
-            this.guestConfiguration = Output.ofNullable(guestConfiguration);
+            this.guestConfiguration = Codegen.ofNullable(guestConfiguration);
             return this;
         }        public GuestConfigurationAssignmentPropertiesArgs build() {
             return new GuestConfigurationAssignmentPropertiesArgs(context, guestConfiguration);

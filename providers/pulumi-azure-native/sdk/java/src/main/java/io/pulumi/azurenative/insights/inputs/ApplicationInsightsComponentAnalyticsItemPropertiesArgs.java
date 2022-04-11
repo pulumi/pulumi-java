@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
       private final @Nullable Output<String> functionAlias;
 
     public Output<String> getFunctionAlias() {
-        return this.functionAlias == null ? Output.empty() : this.functionAlias;
+        return this.functionAlias == null ? Codegen.empty() : this.functionAlias;
     }
 
     public ApplicationInsightsComponentAnalyticsItemPropertiesArgs(@Nullable Output<String> functionAlias) {
@@ -34,7 +35,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
     }
 
     private ApplicationInsightsComponentAnalyticsItemPropertiesArgs() {
-        this.functionAlias = Output.empty();
+        this.functionAlias = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApplicationInsightsComponentAnalyticsItemPropertiesArgs exten
             return this;
         }
         public Builder functionAlias(@Nullable String functionAlias) {
-            this.functionAlias = Output.ofNullable(functionAlias);
+            this.functionAlias = Codegen.ofNullable(functionAlias);
             return this;
         }        public ApplicationInsightsComponentAnalyticsItemPropertiesArgs build() {
             return new ApplicationInsightsComponentAnalyticsItemPropertiesArgs(functionAlias);

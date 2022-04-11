@@ -7,6 +7,7 @@ import io.pulumi.azurenative.chaos.inputs.ExperimentPropertiesArgs;
 import io.pulumi.azurenative.chaos.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> experimentName;
 
     public Output<String> getExperimentName() {
-        return this.experimentName == null ? Output.empty() : this.experimentName;
+        return this.experimentName == null ? Codegen.empty() : this.experimentName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ExperimentArgs(
@@ -99,12 +100,12 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExperimentArgs() {
-        this.experimentName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.experimentName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder experimentName(@Nullable String experimentName) {
-            this.experimentName = Output.ofNullable(experimentName);
+            this.experimentName = Codegen.ofNullable(experimentName);
             return this;
         }
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
@@ -150,7 +151,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -158,7 +159,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(Output<ExperimentPropertiesArgs> properties) {
@@ -182,7 +183,7 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ExperimentArgs build() {
             return new ExperimentArgs(experimentName, identity, location, properties, resourceGroupName, tags);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.notebooks_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.RuntimeIamPolicyArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class RuntimeIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuntimeIamPolicy(String name, RuntimeIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:notebooks/v1:RuntimeIamPolicy", name, args == null ? RuntimeIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:notebooks/v1:RuntimeIamPolicy", name, args == null ? RuntimeIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuntimeIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

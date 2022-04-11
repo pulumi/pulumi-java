@@ -5,6 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> monthlyRetention;
 
     public Output<String> getMonthlyRetention() {
-        return this.monthlyRetention == null ? Output.empty() : this.monthlyRetention;
+        return this.monthlyRetention == null ? Codegen.empty() : this.monthlyRetention;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> weekOfYear;
 
     public Output<Integer> getWeekOfYear() {
-        return this.weekOfYear == null ? Output.empty() : this.weekOfYear;
+        return this.weekOfYear == null ? Codegen.empty() : this.weekOfYear;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> weeklyRetention;
 
     public Output<String> getWeeklyRetention() {
-        return this.weeklyRetention == null ? Output.empty() : this.weeklyRetention;
+        return this.weeklyRetention == null ? Codegen.empty() : this.weeklyRetention;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> yearlyRetention;
 
     public Output<String> getYearlyRetention() {
-        return this.yearlyRetention == null ? Output.empty() : this.yearlyRetention;
+        return this.yearlyRetention == null ? Codegen.empty() : this.yearlyRetention;
     }
 
     public LongTermRetentionPolicyArgs(
@@ -123,14 +124,14 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
     }
 
     private LongTermRetentionPolicyArgs() {
-        this.databaseName = Output.empty();
-        this.monthlyRetention = Output.empty();
-        this.policyName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.weekOfYear = Output.empty();
-        this.weeklyRetention = Output.empty();
-        this.yearlyRetention = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.monthlyRetention = Codegen.empty();
+        this.policyName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.weekOfYear = Codegen.empty();
+        this.weeklyRetention = Codegen.empty();
+        this.yearlyRetention = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -180,7 +181,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder monthlyRetention(@Nullable String monthlyRetention) {
-            this.monthlyRetention = Output.ofNullable(monthlyRetention);
+            this.monthlyRetention = Codegen.ofNullable(monthlyRetention);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -188,7 +189,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -212,7 +213,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder weekOfYear(@Nullable Integer weekOfYear) {
-            this.weekOfYear = Output.ofNullable(weekOfYear);
+            this.weekOfYear = Codegen.ofNullable(weekOfYear);
             return this;
         }
         public Builder weeklyRetention(@Nullable Output<String> weeklyRetention) {
@@ -220,7 +221,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder weeklyRetention(@Nullable String weeklyRetention) {
-            this.weeklyRetention = Output.ofNullable(weeklyRetention);
+            this.weeklyRetention = Codegen.ofNullable(weeklyRetention);
             return this;
         }
         public Builder yearlyRetention(@Nullable Output<String> yearlyRetention) {
@@ -228,7 +229,7 @@ public final class LongTermRetentionPolicyArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder yearlyRetention(@Nullable String yearlyRetention) {
-            this.yearlyRetention = Output.ofNullable(yearlyRetention);
+            this.yearlyRetention = Codegen.ofNullable(yearlyRetention);
             return this;
         }        public LongTermRetentionPolicyArgs build() {
             return new LongTermRetentionPolicyArgs(databaseName, monthlyRetention, policyName, resourceGroupName, serverName, weekOfYear, weeklyRetention, yearlyRetention);

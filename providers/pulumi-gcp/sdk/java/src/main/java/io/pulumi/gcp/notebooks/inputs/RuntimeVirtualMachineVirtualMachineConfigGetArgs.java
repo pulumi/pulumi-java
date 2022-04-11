@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskGetArgs;
@@ -31,7 +32,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> acceleratorConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs> getAcceleratorConfig() {
-        return this.acceleratorConfig == null ? Output.empty() : this.acceleratorConfig;
+        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages;
 
     public Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> getContainerImages() {
-        return this.containerImages == null ? Output.empty() : this.containerImages;
+        return this.containerImages == null ? Codegen.empty() : this.containerImages;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> encryptionConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<Map<String,String>> guestAttributes;
 
     public Output<Map<String,String>> getGuestAttributes() {
-        return this.guestAttributes == null ? Output.empty() : this.guestAttributes;
+        return this.guestAttributes == null ? Codegen.empty() : this.guestAttributes;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<Boolean> internalIpOnly;
 
     public Output<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
+        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<String> nicType;
 
     public Output<String> getNicType() {
-        return this.nicType == null ? Output.empty() : this.nicType;
+        return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig;
 
     public Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -200,7 +201,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -225,7 +226,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public RuntimeVirtualMachineVirtualMachineConfigGetArgs(
@@ -262,21 +263,21 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigGetArgs() {
-        this.acceleratorConfig = Output.empty();
-        this.containerImages = Output.empty();
-        this.dataDisk = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.guestAttributes = Output.empty();
-        this.internalIpOnly = Output.empty();
-        this.labels = Output.empty();
-        this.machineType = Output.empty();
-        this.metadata = Output.empty();
-        this.network = Output.empty();
-        this.nicType = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.subnet = Output.empty();
-        this.tags = Output.empty();
-        this.zone = Output.empty();
+        this.acceleratorConfig = Codegen.empty();
+        this.containerImages = Codegen.empty();
+        this.dataDisk = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.guestAttributes = Codegen.empty();
+        this.internalIpOnly = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nicType = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -332,7 +333,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder acceleratorConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs acceleratorConfig) {
-            this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
+            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
             return this;
         }
         public Builder containerImages(@Nullable Output<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs>> containerImages) {
@@ -340,7 +341,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder containerImages(@Nullable List<RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs> containerImages) {
-            this.containerImages = Output.ofNullable(containerImages);
+            this.containerImages = Codegen.ofNullable(containerImages);
             return this;
         }
         public Builder containerImages(RuntimeVirtualMachineVirtualMachineConfigContainerImageGetArgs... containerImages) {
@@ -359,7 +360,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder encryptionConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigGetArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder guestAttributes(@Nullable Output<Map<String,String>> guestAttributes) {
@@ -367,7 +368,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder guestAttributes(@Nullable Map<String,String> guestAttributes) {
-            this.guestAttributes = Output.ofNullable(guestAttributes);
+            this.guestAttributes = Codegen.ofNullable(guestAttributes);
             return this;
         }
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
@@ -375,7 +376,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Output.ofNullable(internalIpOnly);
+            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -383,7 +384,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder machineType(Output<String> machineType) {
@@ -399,7 +400,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -407,7 +408,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder nicType(@Nullable Output<String> nicType) {
@@ -415,7 +416,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder nicType(@Nullable String nicType) {
-            this.nicType = Output.ofNullable(nicType);
+            this.nicType = Codegen.ofNullable(nicType);
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable Output<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs> shieldedInstanceConfig) {
@@ -423,7 +424,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigGetArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder subnet(@Nullable Output<String> subnet) {
@@ -431,7 +432,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -439,7 +440,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -450,7 +451,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigGetArgs extends io.p
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigGetArgs(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);

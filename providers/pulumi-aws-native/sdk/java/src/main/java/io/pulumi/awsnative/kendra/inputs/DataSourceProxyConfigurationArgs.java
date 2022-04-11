@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<String> credentials;
 
     public Output<String> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     @Import(name="host", required=true)
@@ -46,9 +47,9 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
     }
 
     private DataSourceProxyConfigurationArgs() {
-        this.credentials = Output.empty();
-        this.host = Output.empty();
-        this.port = Output.empty();
+        this.credentials = Codegen.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataSourceProxyConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder credentials(@Nullable String credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder host(Output<String> host) {

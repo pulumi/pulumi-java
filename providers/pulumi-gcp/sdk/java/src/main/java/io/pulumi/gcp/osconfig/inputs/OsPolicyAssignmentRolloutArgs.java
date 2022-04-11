@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentRolloutDisruptionBudgetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class OsPolicyAssignmentRolloutArgs extends io.pulumi.resources.Res
     }
 
     private OsPolicyAssignmentRolloutArgs() {
-        this.disruptionBudget = Output.empty();
-        this.minWaitDuration = Output.empty();
+        this.disruptionBudget = Codegen.empty();
+        this.minWaitDuration = Codegen.empty();
     }
 
     public static Builder builder() {

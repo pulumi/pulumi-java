@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtContainerMappingIn
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
       private final @Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput;
 
     public Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> getProviderSpecificInput() {
-        return this.providerSpecificInput == null ? Output.empty() : this.providerSpecificInput;
+        return this.providerSpecificInput == null ? Codegen.empty() : this.providerSpecificInput;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
       private final @Nullable Output<String> targetProtectionContainerId;
 
     public Output<String> getTargetProtectionContainerId() {
-        return this.targetProtectionContainerId == null ? Output.empty() : this.targetProtectionContainerId;
+        return this.targetProtectionContainerId == null ? Codegen.empty() : this.targetProtectionContainerId;
     }
 
     public CreateProtectionContainerMappingInputPropertiesArgs(
@@ -64,9 +65,9 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
     }
 
     private CreateProtectionContainerMappingInputPropertiesArgs() {
-        this.policyId = Output.empty();
-        this.providerSpecificInput = Output.empty();
-        this.targetProtectionContainerId = Output.empty();
+        this.policyId = Codegen.empty();
+        this.providerSpecificInput = Codegen.empty();
+        this.targetProtectionContainerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder providerSpecificInput(@Nullable Output<Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs>> providerSpecificInput) {
@@ -106,7 +107,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
             return this;
         }
         public Builder providerSpecificInput(@Nullable Either<A2AContainerMappingInputArgs,VMwareCbtContainerMappingInputArgs> providerSpecificInput) {
-            this.providerSpecificInput = Output.ofNullable(providerSpecificInput);
+            this.providerSpecificInput = Codegen.ofNullable(providerSpecificInput);
             return this;
         }
         public Builder targetProtectionContainerId(@Nullable Output<String> targetProtectionContainerId) {
@@ -114,7 +115,7 @@ public final class CreateProtectionContainerMappingInputPropertiesArgs extends i
             return this;
         }
         public Builder targetProtectionContainerId(@Nullable String targetProtectionContainerId) {
-            this.targetProtectionContainerId = Output.ofNullable(targetProtectionContainerId);
+            this.targetProtectionContainerId = Codegen.ofNullable(targetProtectionContainerId);
             return this;
         }        public CreateProtectionContainerMappingInputPropertiesArgs build() {
             return new CreateProtectionContainerMappingInputPropertiesArgs(policyId, providerSpecificInput, targetProtectionContainerId);

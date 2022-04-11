@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.FlowSchemaConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<FlowSchemaConditionArgs>> conditions;
 
     public Output<List<FlowSchemaConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     public FlowSchemaStatusArgs(@Nullable Output<List<FlowSchemaConditionArgs>> conditions) {
@@ -35,7 +36,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FlowSchemaStatusArgs() {
-        this.conditions = Output.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class FlowSchemaStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder conditions(@Nullable List<FlowSchemaConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(FlowSchemaConditionArgs... conditions) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.inspector.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResourceGroupState(
@@ -45,8 +46,8 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceGroupState() {
-        this.arn = Output.empty();
-        this.tags = Output.empty();
+        this.arn = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -84,7 +85,7 @@ public final class ResourceGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResourceGroupState build() {
             return new ResourceGroupState(arn, tags);

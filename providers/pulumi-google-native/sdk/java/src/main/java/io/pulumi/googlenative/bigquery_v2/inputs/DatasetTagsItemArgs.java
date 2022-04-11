@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> tagKey;
 
     public Output<String> getTagKey() {
-        return this.tagKey == null ? Output.empty() : this.tagKey;
+        return this.tagKey == null ? Codegen.empty() : this.tagKey;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> tagValue;
 
     public Output<String> getTagValue() {
-        return this.tagValue == null ? Output.empty() : this.tagValue;
+        return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 
     public DatasetTagsItemArgs(
@@ -44,8 +45,8 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DatasetTagsItemArgs() {
-        this.tagKey = Output.empty();
-        this.tagValue = Output.empty();
+        this.tagKey = Codegen.empty();
+        this.tagValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagKey(@Nullable String tagKey) {
-            this.tagKey = Output.ofNullable(tagKey);
+            this.tagKey = Codegen.ofNullable(tagKey);
             return this;
         }
         public Builder tagValue(@Nullable Output<String> tagValue) {
@@ -83,7 +84,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Output.ofNullable(tagValue);
+            this.tagValue = Codegen.ofNullable(tagValue);
             return this;
         }        public DatasetTagsItemArgs build() {
             return new DatasetTagsItemArgs(tagKey, tagValue);

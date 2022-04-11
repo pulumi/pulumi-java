@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ValueValidationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ValueValidationArgs() {
-        this.values = Output.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

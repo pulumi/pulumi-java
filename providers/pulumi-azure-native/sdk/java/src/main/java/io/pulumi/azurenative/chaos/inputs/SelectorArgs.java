@@ -7,6 +7,7 @@ import io.pulumi.azurenative.chaos.enums.SelectorType;
 import io.pulumi.azurenative.chaos.inputs.TargetReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,9 +64,9 @@ public final class SelectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SelectorArgs() {
-        this.id = Output.empty();
-        this.targets = Output.empty();
-        this.type = Output.empty();
+        this.id = Codegen.empty();
+        this.targets = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

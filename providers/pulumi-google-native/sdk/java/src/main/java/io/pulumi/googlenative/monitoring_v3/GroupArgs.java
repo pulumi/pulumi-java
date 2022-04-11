@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isCluster;
 
     public Output<Boolean> getIsCluster() {
-        return this.isCluster == null ? Output.empty() : this.isCluster;
+        return this.isCluster == null ? Codegen.empty() : this.isCluster;
     }
 
     /**
@@ -56,21 +57,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentName;
 
     public Output<String> getParentName() {
-        return this.parentName == null ? Output.empty() : this.parentName;
+        return this.parentName == null ? Codegen.empty() : this.parentName;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public GroupArgs(
@@ -89,12 +90,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.displayName = Output.empty();
-        this.filter = Output.empty();
-        this.isCluster = Output.empty();
-        this.parentName = Output.empty();
-        this.project = Output.empty();
-        this.validateOnly = Output.empty();
+        this.displayName = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.isCluster = Codegen.empty();
+        this.parentName = Codegen.empty();
+        this.project = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder filter(@Nullable Output<String> filter) {
@@ -140,7 +141,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder isCluster(@Nullable Output<Boolean> isCluster) {
@@ -148,7 +149,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCluster(@Nullable Boolean isCluster) {
-            this.isCluster = Output.ofNullable(isCluster);
+            this.isCluster = Codegen.ofNullable(isCluster);
             return this;
         }
         public Builder parentName(@Nullable Output<String> parentName) {
@@ -156,7 +157,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentName(@Nullable String parentName) {
-            this.parentName = Output.ofNullable(parentName);
+            this.parentName = Codegen.ofNullable(parentName);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -164,7 +165,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -172,7 +173,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public GroupArgs build() {
             return new GroupArgs(displayName, filter, isCluster, parentName, project, validateOnly);

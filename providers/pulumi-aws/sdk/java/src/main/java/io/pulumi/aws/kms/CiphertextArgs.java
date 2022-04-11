@@ -5,6 +5,7 @@ package io.pulumi.aws.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> context;
 
     public Output<Map<String,String>> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CiphertextArgs() {
-        this.context = Output.empty();
-        this.keyId = Output.empty();
-        this.plaintext = Output.empty();
+        this.context = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.plaintext = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class CiphertextArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder context(@Nullable Map<String,String> context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder keyId(Output<String> keyId) {

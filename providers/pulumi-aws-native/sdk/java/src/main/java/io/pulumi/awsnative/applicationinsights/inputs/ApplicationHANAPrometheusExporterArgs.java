@@ -5,6 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +75,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
       private final @Nullable Output<String> prometheusPort;
 
     public Output<String> getPrometheusPort() {
-        return this.prometheusPort == null ? Output.empty() : this.prometheusPort;
+        return this.prometheusPort == null ? Codegen.empty() : this.prometheusPort;
     }
 
     public ApplicationHANAPrometheusExporterArgs(
@@ -91,11 +92,11 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
     }
 
     private ApplicationHANAPrometheusExporterArgs() {
-        this.agreeToInstallHANADBClient = Output.empty();
-        this.hANAPort = Output.empty();
-        this.hANASID = Output.empty();
-        this.hANASecretName = Output.empty();
-        this.prometheusPort = Output.empty();
+        this.agreeToInstallHANADBClient = Codegen.empty();
+        this.hANAPort = Codegen.empty();
+        this.hANASID = Codegen.empty();
+        this.hANASecretName = Codegen.empty();
+        this.prometheusPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class ApplicationHANAPrometheusExporterArgs extends io.pulumi.resou
             return this;
         }
         public Builder prometheusPort(@Nullable String prometheusPort) {
-            this.prometheusPort = Output.ofNullable(prometheusPort);
+            this.prometheusPort = Codegen.ofNullable(prometheusPort);
             return this;
         }        public ApplicationHANAPrometheusExporterArgs build() {
             return new ApplicationHANAPrometheusExporterArgs(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);

@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.apps_v1beta2.inputs;
 import com.google.gson.JsonElement;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<JsonElement> data;
 
     public Output<JsonElement> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -90,11 +91,11 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ControllerRevisionArgs() {
-        this.apiVersion = Output.empty();
-        this.data = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.revision = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.data = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.revision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder data(@Nullable Output<JsonElement> data) {
@@ -138,7 +139,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder data(@Nullable JsonElement data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -146,7 +147,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -154,7 +155,7 @@ public final class ControllerRevisionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder revision(Output<Integer> revision) {

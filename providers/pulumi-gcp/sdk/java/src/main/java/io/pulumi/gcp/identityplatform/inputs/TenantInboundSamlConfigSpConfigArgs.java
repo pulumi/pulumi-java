@@ -5,6 +5,7 @@ package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigSpCertificateArgs;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> spCertificates;
 
     public Output<List<TenantInboundSamlConfigSpConfigSpCertificateArgs>> getSpCertificates() {
-        return this.spCertificates == null ? Output.empty() : this.spCertificates;
+        return this.spCertificates == null ? Codegen.empty() : this.spCertificates;
     }
 
     /**
@@ -61,9 +62,9 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
     }
 
     private TenantInboundSamlConfigSpConfigArgs() {
-        this.callbackUri = Output.empty();
-        this.spCertificates = Output.empty();
-        this.spEntityId = Output.empty();
+        this.callbackUri = Codegen.empty();
+        this.spCertificates = Codegen.empty();
+        this.spEntityId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class TenantInboundSamlConfigSpConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder spCertificates(@Nullable List<TenantInboundSamlConfigSpConfigSpCertificateArgs> spCertificates) {
-            this.spCertificates = Output.ofNullable(spCertificates);
+            this.spCertificates = Codegen.ofNullable(spCertificates);
             return this;
         }
         public Builder spCertificates(TenantInboundSamlConfigSpConfigSpCertificateArgs... spCertificates) {

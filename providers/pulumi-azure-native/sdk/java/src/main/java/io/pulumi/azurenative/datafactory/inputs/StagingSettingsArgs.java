@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Object> enableCompression;
 
     public Output<Object> getEnableCompression() {
-        return this.enableCompression == null ? Output.empty() : this.enableCompression;
+        return this.enableCompression == null ? Codegen.empty() : this.enableCompression;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Object> path;
 
     public Output<Object> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public StagingSettingsArgs(
@@ -62,9 +63,9 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private StagingSettingsArgs() {
-        this.enableCompression = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.path = Output.empty();
+        this.enableCompression = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enableCompression(@Nullable Object enableCompression) {
-            this.enableCompression = Output.ofNullable(enableCompression);
+            this.enableCompression = Codegen.ofNullable(enableCompression);
             return this;
         }
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -112,7 +113,7 @@ public final class StagingSettingsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder path(@Nullable Object path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public StagingSettingsArgs build() {
             return new StagingSettingsArgs(enableCompression, linkedServiceName, path);

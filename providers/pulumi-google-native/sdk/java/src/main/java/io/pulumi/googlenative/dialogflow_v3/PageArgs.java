@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
@@ -45,7 +46,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> entryFulfillment;
 
     public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> getEntryFulfillment() {
-        return this.entryFulfillment == null ? Output.empty() : this.entryFulfillment;
+        return this.entryFulfillment == null ? Codegen.empty() : this.entryFulfillment;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
     public Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> getEventHandlers() {
-        return this.eventHandlers == null ? Output.empty() : this.eventHandlers;
+        return this.eventHandlers == null ? Codegen.empty() : this.eventHandlers;
     }
 
     @Import(name="flowId", required=true)
@@ -74,21 +75,21 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudDialogflowCxV3FormArgs> form;
 
     public Output<GoogleCloudDialogflowCxV3FormArgs> getForm() {
-        return this.form == null ? Output.empty() : this.form;
+        return this.form == null ? Codegen.empty() : this.form;
     }
 
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -99,14 +100,14 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> transitionRouteGroups;
 
     public Output<List<String>> getTransitionRouteGroups() {
-        return this.transitionRouteGroups == null ? Output.empty() : this.transitionRouteGroups;
+        return this.transitionRouteGroups == null ? Codegen.empty() : this.transitionRouteGroups;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
     public Output<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> getTransitionRoutes() {
-        return this.transitionRoutes == null ? Output.empty() : this.transitionRoutes;
+        return this.transitionRoutes == null ? Codegen.empty() : this.transitionRoutes;
     }
 
     public PageArgs(
@@ -159,18 +160,18 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PageArgs() {
-        this.agentId = Output.empty();
-        this.displayName = Output.empty();
-        this.entryFulfillment = Output.empty();
-        this.eventHandlers = Output.empty();
-        this.flowId = Output.empty();
-        this.form = Output.empty();
-        this.languageCode = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.transitionRouteGroups = Output.empty();
-        this.transitionRoutes = Output.empty();
+        this.agentId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.entryFulfillment = Codegen.empty();
+        this.eventHandlers = Codegen.empty();
+        this.flowId = Codegen.empty();
+        this.form = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.transitionRouteGroups = Codegen.empty();
+        this.transitionRoutes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -236,7 +237,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder entryFulfillment(@Nullable GoogleCloudDialogflowCxV3FulfillmentArgs entryFulfillment) {
-            this.entryFulfillment = Output.ofNullable(entryFulfillment);
+            this.entryFulfillment = Codegen.ofNullable(entryFulfillment);
             return this;
         }
         public Builder eventHandlers(@Nullable Output<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers) {
@@ -244,7 +245,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventHandlers(@Nullable List<GoogleCloudDialogflowCxV3EventHandlerArgs> eventHandlers) {
-            this.eventHandlers = Output.ofNullable(eventHandlers);
+            this.eventHandlers = Codegen.ofNullable(eventHandlers);
             return this;
         }
         public Builder eventHandlers(GoogleCloudDialogflowCxV3EventHandlerArgs... eventHandlers) {
@@ -263,7 +264,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder form(@Nullable GoogleCloudDialogflowCxV3FormArgs form) {
-            this.form = Output.ofNullable(form);
+            this.form = Codegen.ofNullable(form);
             return this;
         }
         public Builder languageCode(@Nullable Output<String> languageCode) {
@@ -271,7 +272,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -279,7 +280,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -287,7 +288,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -295,7 +296,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder transitionRouteGroups(@Nullable Output<List<String>> transitionRouteGroups) {
@@ -303,7 +304,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitionRouteGroups(@Nullable List<String> transitionRouteGroups) {
-            this.transitionRouteGroups = Output.ofNullable(transitionRouteGroups);
+            this.transitionRouteGroups = Codegen.ofNullable(transitionRouteGroups);
             return this;
         }
         public Builder transitionRouteGroups(String... transitionRouteGroups) {
@@ -314,7 +315,7 @@ public final class PageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitionRoutes(@Nullable List<GoogleCloudDialogflowCxV3TransitionRouteArgs> transitionRoutes) {
-            this.transitionRoutes = Output.ofNullable(transitionRoutes);
+            this.transitionRoutes = Codegen.ofNullable(transitionRoutes);
             return this;
         }
         public Builder transitionRoutes(GoogleCloudDialogflowCxV3TransitionRouteArgs... transitionRoutes) {

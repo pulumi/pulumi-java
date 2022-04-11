@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.ContainerArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPublicEndpointArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<ContainerArgs>> containers;
 
     public Output<List<ContainerArgs>> getContainers() {
-        return this.containers == null ? Output.empty() : this.containers;
+        return this.containers == null ? Codegen.empty() : this.containers;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ContainerPublicEndpointArgs> publicEndpoint;
 
     public Output<ContainerPublicEndpointArgs> getPublicEndpoint() {
-        return this.publicEndpoint == null ? Output.empty() : this.publicEndpoint;
+        return this.publicEndpoint == null ? Codegen.empty() : this.publicEndpoint;
     }
 
     public ContainerServiceDeploymentArgs(
@@ -50,8 +51,8 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
     }
 
     private ContainerServiceDeploymentArgs() {
-        this.containers = Output.empty();
-        this.publicEndpoint = Output.empty();
+        this.containers = Codegen.empty();
+        this.publicEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder containers(@Nullable List<ContainerArgs> containers) {
-            this.containers = Output.ofNullable(containers);
+            this.containers = Codegen.ofNullable(containers);
             return this;
         }
         public Builder containers(ContainerArgs... containers) {
@@ -92,7 +93,7 @@ public final class ContainerServiceDeploymentArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder publicEndpoint(@Nullable ContainerPublicEndpointArgs publicEndpoint) {
-            this.publicEndpoint = Output.ofNullable(publicEndpoint);
+            this.publicEndpoint = Codegen.ofNullable(publicEndpoint);
             return this;
         }        public ContainerServiceDeploymentArgs build() {
             return new ContainerServiceDeploymentArgs(containers, publicEndpoint);

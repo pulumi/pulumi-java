@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.VpcIpamOperatingRegionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VpcIpamArgs(
@@ -60,9 +61,9 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcIpamArgs() {
-        this.description = Output.empty();
-        this.operatingRegions = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.operatingRegions = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder operatingRegions(Output<List<VpcIpamOperatingRegionArgs>> operatingRegions) {
@@ -113,7 +114,7 @@ public final class VpcIpamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public VpcIpamArgs build() {
             return new VpcIpamArgs(description, operatingRegions, tags);

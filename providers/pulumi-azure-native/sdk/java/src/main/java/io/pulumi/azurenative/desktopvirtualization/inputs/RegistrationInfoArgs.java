@@ -7,6 +7,7 @@ import io.pulumi.azurenative.desktopvirtualization.enums.RegistrationTokenOperat
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
     public Output<Either<String,RegistrationTokenOperation>> getRegistrationTokenOperation() {
-        return this.registrationTokenOperation == null ? Output.empty() : this.registrationTokenOperation;
+        return this.registrationTokenOperation == null ? Codegen.empty() : this.registrationTokenOperation;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> token;
 
     public Output<String> getToken() {
-        return this.token == null ? Output.empty() : this.token;
+        return this.token == null ? Codegen.empty() : this.token;
     }
 
     public RegistrationInfoArgs(
@@ -63,9 +64,9 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private RegistrationInfoArgs() {
-        this.expirationTime = Output.empty();
-        this.registrationTokenOperation = Output.empty();
-        this.token = Output.empty();
+        this.expirationTime = Codegen.empty();
+        this.registrationTokenOperation = Codegen.empty();
+        this.token = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder registrationTokenOperation(@Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
@@ -105,7 +106,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder registrationTokenOperation(@Nullable Either<String,RegistrationTokenOperation> registrationTokenOperation) {
-            this.registrationTokenOperation = Output.ofNullable(registrationTokenOperation);
+            this.registrationTokenOperation = Codegen.ofNullable(registrationTokenOperation);
             return this;
         }
         public Builder token(@Nullable Output<String> token) {
@@ -113,7 +114,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder token(@Nullable String token) {
-            this.token = Output.ofNullable(token);
+            this.token = Codegen.ofNullable(token);
             return this;
         }        public RegistrationInfoArgs build() {
             return new RegistrationInfoArgs(expirationTime, registrationTokenOperation, token);

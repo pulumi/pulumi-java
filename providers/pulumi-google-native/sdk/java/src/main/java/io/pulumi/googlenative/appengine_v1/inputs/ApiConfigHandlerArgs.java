@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1.enums.ApiConfigHandlerAuthFailAction;
 import io.pulumi.googlenative.appengine_v1.enums.ApiConfigHandlerLogin;
 import io.pulumi.googlenative.appengine_v1.enums.ApiConfigHandlerSecurityLevel;
@@ -29,7 +30,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ApiConfigHandlerAuthFailAction> authFailAction;
 
     public Output<ApiConfigHandlerAuthFailAction> getAuthFailAction() {
-        return this.authFailAction == null ? Output.empty() : this.authFailAction;
+        return this.authFailAction == null ? Codegen.empty() : this.authFailAction;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ApiConfigHandlerLogin> login;
 
     public Output<ApiConfigHandlerLogin> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel;
 
     public Output<ApiConfigHandlerSecurityLevel> getSecurityLevel() {
-        return this.securityLevel == null ? Output.empty() : this.securityLevel;
+        return this.securityLevel == null ? Codegen.empty() : this.securityLevel;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public ApiConfigHandlerArgs(
@@ -90,11 +91,11 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ApiConfigHandlerArgs() {
-        this.authFailAction = Output.empty();
-        this.login = Output.empty();
-        this.script = Output.empty();
-        this.securityLevel = Output.empty();
-        this.url = Output.empty();
+        this.authFailAction = Codegen.empty();
+        this.login = Codegen.empty();
+        this.script = Codegen.empty();
+        this.securityLevel = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder authFailAction(@Nullable ApiConfigHandlerAuthFailAction authFailAction) {
-            this.authFailAction = Output.ofNullable(authFailAction);
+            this.authFailAction = Codegen.ofNullable(authFailAction);
             return this;
         }
         public Builder login(@Nullable Output<ApiConfigHandlerLogin> login) {
@@ -138,7 +139,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder login(@Nullable ApiConfigHandlerLogin login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -146,7 +147,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }
         public Builder securityLevel(@Nullable Output<ApiConfigHandlerSecurityLevel> securityLevel) {
@@ -154,7 +155,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder securityLevel(@Nullable ApiConfigHandlerSecurityLevel securityLevel) {
-            this.securityLevel = Output.ofNullable(securityLevel);
+            this.securityLevel = Codegen.ofNullable(securityLevel);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -162,7 +163,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public ApiConfigHandlerArgs build() {
             return new ApiConfigHandlerArgs(authFailAction, login, script, securityLevel, url);

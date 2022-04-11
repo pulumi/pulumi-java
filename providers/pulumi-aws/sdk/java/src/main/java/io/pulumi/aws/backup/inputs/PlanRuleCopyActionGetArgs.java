@@ -6,6 +6,7 @@ package io.pulumi.aws.backup.inputs;
 import io.pulumi.aws.backup.inputs.PlanRuleCopyActionLifecycleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class PlanRuleCopyActionGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<PlanRuleCopyActionLifecycleGetArgs> lifecycle;
 
     public Output<PlanRuleCopyActionLifecycleGetArgs> getLifecycle() {
-        return this.lifecycle == null ? Output.empty() : this.lifecycle;
+        return this.lifecycle == null ? Codegen.empty() : this.lifecycle;
     }
 
     public PlanRuleCopyActionGetArgs(
@@ -45,8 +46,8 @@ public final class PlanRuleCopyActionGetArgs extends io.pulumi.resources.Resourc
     }
 
     private PlanRuleCopyActionGetArgs() {
-        this.destinationVaultArn = Output.empty();
-        this.lifecycle = Output.empty();
+        this.destinationVaultArn = Codegen.empty();
+        this.lifecycle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class PlanRuleCopyActionGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder lifecycle(@Nullable PlanRuleCopyActionLifecycleGetArgs lifecycle) {
-            this.lifecycle = Output.ofNullable(lifecycle);
+            this.lifecycle = Codegen.ofNullable(lifecycle);
             return this;
         }        public PlanRuleCopyActionGetArgs build() {
             return new PlanRuleCopyActionGetArgs(destinationVaultArn, lifecycle);

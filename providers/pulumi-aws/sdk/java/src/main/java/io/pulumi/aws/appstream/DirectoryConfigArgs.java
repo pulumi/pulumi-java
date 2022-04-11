@@ -6,6 +6,7 @@ package io.pulumi.aws.appstream;
 import io.pulumi.aws.appstream.inputs.DirectoryConfigServiceAccountCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -58,9 +59,9 @@ public final class DirectoryConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DirectoryConfigArgs() {
-        this.directoryName = Output.empty();
-        this.organizationalUnitDistinguishedNames = Output.empty();
-        this.serviceAccountCredentials = Output.empty();
+        this.directoryName = Codegen.empty();
+        this.organizationalUnitDistinguishedNames = Codegen.empty();
+        this.serviceAccountCredentials = Codegen.empty();
     }
 
     public static Builder builder() {

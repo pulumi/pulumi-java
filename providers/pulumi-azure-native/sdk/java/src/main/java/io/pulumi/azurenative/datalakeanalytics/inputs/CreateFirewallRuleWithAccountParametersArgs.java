@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datalakeanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class CreateFirewallRuleWithAccountParametersArgs extends io.pulumi
     }
 
     private CreateFirewallRuleWithAccountParametersArgs() {
-        this.endIpAddress = Output.empty();
-        this.name = Output.empty();
-        this.startIpAddress = Output.empty();
+        this.endIpAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.startIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {

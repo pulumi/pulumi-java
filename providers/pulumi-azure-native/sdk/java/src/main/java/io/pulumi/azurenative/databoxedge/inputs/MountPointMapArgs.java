@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class MountPointMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MountPointMapArgs() {
-        this.shareId = Output.empty();
+        this.shareId = Codegen.empty();
     }
 
     public static Builder builder() {

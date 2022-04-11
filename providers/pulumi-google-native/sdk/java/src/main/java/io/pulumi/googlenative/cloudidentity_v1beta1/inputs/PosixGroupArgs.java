@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gid;
 
     public Output<String> getGid() {
-        return this.gid == null ? Output.empty() : this.gid;
+        return this.gid == null ? Codegen.empty() : this.gid;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> systemId;
 
     public Output<String> getSystemId() {
-        return this.systemId == null ? Output.empty() : this.systemId;
+        return this.systemId == null ? Codegen.empty() : this.systemId;
     }
 
     public PosixGroupArgs(
@@ -61,9 +62,9 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PosixGroupArgs() {
-        this.gid = Output.empty();
-        this.name = Output.empty();
-        this.systemId = Output.empty();
+        this.gid = Codegen.empty();
+        this.name = Codegen.empty();
+        this.systemId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gid(@Nullable String gid) {
-            this.gid = Output.ofNullable(gid);
+            this.gid = Codegen.ofNullable(gid);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -103,7 +104,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder systemId(@Nullable Output<String> systemId) {
@@ -111,7 +112,7 @@ public final class PosixGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemId(@Nullable String systemId) {
-            this.systemId = Output.ofNullable(systemId);
+            this.systemId = Codegen.ofNullable(systemId);
             return this;
         }        public PosixGroupArgs build() {
             return new PosixGroupArgs(gid, name, systemId);

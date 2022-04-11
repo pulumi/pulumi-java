@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.PublicAdvertisedPrefixArgs;
 import io.pulumi.googlenative.compute_beta.outputs.PublicAdvertisedPrefixPublicDelegatedPrefixResponse;
@@ -196,7 +197,7 @@ public class PublicAdvertisedPrefix extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicAdvertisedPrefix(String name, @Nullable PublicAdvertisedPrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:PublicAdvertisedPrefix", name, args == null ? PublicAdvertisedPrefixArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:PublicAdvertisedPrefix", name, args == null ? PublicAdvertisedPrefixArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicAdvertisedPrefix(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

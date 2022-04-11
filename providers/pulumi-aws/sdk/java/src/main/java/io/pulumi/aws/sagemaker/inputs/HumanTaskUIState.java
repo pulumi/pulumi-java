@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.HumanTaskUIUiTemplateGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> humanTaskUiName;
 
     public Output<String> getHumanTaskUiName() {
-        return this.humanTaskUiName == null ? Output.empty() : this.humanTaskUiName;
+        return this.humanTaskUiName == null ? Codegen.empty() : this.humanTaskUiName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate;
 
     public Output<HumanTaskUIUiTemplateGetArgs> getUiTemplate() {
-        return this.uiTemplate == null ? Output.empty() : this.uiTemplate;
+        return this.uiTemplate == null ? Codegen.empty() : this.uiTemplate;
     }
 
     public HumanTaskUIState(
@@ -85,11 +86,11 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
     }
 
     private HumanTaskUIState() {
-        this.arn = Output.empty();
-        this.humanTaskUiName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uiTemplate = Output.empty();
+        this.arn = Codegen.empty();
+        this.humanTaskUiName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uiTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder humanTaskUiName(@Nullable Output<String> humanTaskUiName) {
@@ -133,7 +134,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder humanTaskUiName(@Nullable String humanTaskUiName) {
-            this.humanTaskUiName = Output.ofNullable(humanTaskUiName);
+            this.humanTaskUiName = Codegen.ofNullable(humanTaskUiName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -141,7 +142,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -149,7 +150,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uiTemplate(@Nullable Output<HumanTaskUIUiTemplateGetArgs> uiTemplate) {
@@ -157,7 +158,7 @@ public final class HumanTaskUIState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uiTemplate(@Nullable HumanTaskUIUiTemplateGetArgs uiTemplate) {
-            this.uiTemplate = Output.ofNullable(uiTemplate);
+            this.uiTemplate = Codegen.ofNullable(uiTemplate);
             return this;
         }        public HumanTaskUIState build() {
             return new HumanTaskUIState(arn, humanTaskUiName, tags, tagsAll, uiTemplate);

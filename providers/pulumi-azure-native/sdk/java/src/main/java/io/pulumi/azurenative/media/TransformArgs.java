@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.TransformOutputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transformName;
 
     public Output<String> getTransformName() {
-        return this.transformName == null ? Output.empty() : this.transformName;
+        return this.transformName == null ? Codegen.empty() : this.transformName;
     }
 
     public TransformArgs(
@@ -85,11 +86,11 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TransformArgs() {
-        this.accountName = Output.empty();
-        this.description = Output.empty();
-        this.outputs = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.transformName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.outputs = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.transformName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder outputs(Output<List<TransformOutputArgs>> outputs) {
@@ -160,7 +161,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transformName(@Nullable String transformName) {
-            this.transformName = Output.ofNullable(transformName);
+            this.transformName = Codegen.ofNullable(transformName);
             return this;
         }        public TransformArgs build() {
             return new TransformArgs(accountName, description, outputs, resourceGroupName, transformName);

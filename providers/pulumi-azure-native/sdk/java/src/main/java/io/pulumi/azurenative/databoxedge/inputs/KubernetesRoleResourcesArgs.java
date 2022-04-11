@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeArgs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -38,7 +39,7 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<KubernetesRoleStorageArgs> storage;
 
     public Output<KubernetesRoleStorageArgs> getStorage() {
-        return this.storage == null ? Output.empty() : this.storage;
+        return this.storage == null ? Codegen.empty() : this.storage;
     }
 
     public KubernetesRoleResourcesArgs(
@@ -49,8 +50,8 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
     }
 
     private KubernetesRoleResourcesArgs() {
-        this.compute = Output.empty();
-        this.storage = Output.empty();
+        this.compute = Codegen.empty();
+        this.storage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class KubernetesRoleResourcesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder storage(@Nullable KubernetesRoleStorageArgs storage) {
-            this.storage = Output.ofNullable(storage);
+            this.storage = Codegen.ofNullable(storage);
             return this;
         }        public KubernetesRoleResourcesArgs build() {
             return new KubernetesRoleResourcesArgs(compute, storage);

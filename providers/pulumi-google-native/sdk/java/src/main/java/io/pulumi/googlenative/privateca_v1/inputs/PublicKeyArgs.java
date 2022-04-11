@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.enums.PublicKeyFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyArgs() {
-        this.format = Output.empty();
-        this.key = Output.empty();
+        this.format = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

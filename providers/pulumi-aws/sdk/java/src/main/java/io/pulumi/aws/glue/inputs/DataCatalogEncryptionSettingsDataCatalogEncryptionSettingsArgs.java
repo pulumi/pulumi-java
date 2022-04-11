@@ -7,6 +7,7 @@ import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncrypt
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsEncryptionAtRestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -44,8 +45,8 @@ public final class DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArg
     }
 
     private DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsArgs() {
-        this.connectionPasswordEncryption = Output.empty();
-        this.encryptionAtRest = Output.empty();
+        this.connectionPasswordEncryption = Codegen.empty();
+        this.encryptionAtRest = Codegen.empty();
     }
 
     public static Builder builder() {

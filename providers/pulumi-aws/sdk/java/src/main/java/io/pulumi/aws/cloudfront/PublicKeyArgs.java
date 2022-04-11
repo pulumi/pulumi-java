@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     public PublicKeyArgs(
@@ -70,10 +71,10 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublicKeyArgs() {
-        this.comment = Output.empty();
-        this.encodedKey = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
+        this.comment = Codegen.empty();
+        this.encodedKey = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder encodedKey(Output<String> encodedKey) {
@@ -123,7 +124,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -131,7 +132,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }        public PublicKeyArgs build() {
             return new PublicKeyArgs(comment, encodedKey, name, namePrefix);

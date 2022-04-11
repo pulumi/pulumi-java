@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metricCosts;
 
     public Output<Map<String,String>> getMetricCosts() {
-        return this.metricCosts == null ? Output.empty() : this.metricCosts;
+        return this.metricCosts == null ? Codegen.empty() : this.metricCosts;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public MetricRuleArgs(
@@ -49,8 +50,8 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricRuleArgs() {
-        this.metricCosts = Output.empty();
-        this.selector = Output.empty();
+        this.metricCosts = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricCosts(@Nullable Map<String,String> metricCosts) {
-            this.metricCosts = Output.ofNullable(metricCosts);
+            this.metricCosts = Codegen.ofNullable(metricCosts);
             return this;
         }
         public Builder selector(@Nullable Output<String> selector) {
@@ -88,7 +89,7 @@ public final class MetricRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public MetricRuleArgs build() {
             return new MetricRuleArgs(metricCosts, selector);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.ContentType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ContentType>> contentType;
 
     public Output<Either<String,ContentType>> getContentType() {
-        return this.contentType == null ? Output.empty() : this.contentType;
+        return this.contentType == null ? Codegen.empty() : this.contentType;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public ContentPathMapArgs(
@@ -50,8 +51,8 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContentPathMapArgs() {
-        this.contentType = Output.empty();
-        this.path = Output.empty();
+        this.contentType = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentType(@Nullable Either<String,ContentType> contentType) {
-            this.contentType = Output.ofNullable(contentType);
+            this.contentType = Codegen.ofNullable(contentType);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -89,7 +90,7 @@ public final class ContentPathMapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public ContentPathMapArgs build() {
             return new ContentPathMapArgs(contentType, path);

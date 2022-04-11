@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagepool.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,10 +75,10 @@ public final class AclArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AclArgs() {
-        this.initiatorIqn = Output.empty();
-        this.mappedLuns = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.initiatorIqn = Codegen.empty();
+        this.mappedLuns = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

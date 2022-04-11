@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 import io.pulumi.azurenative.storsimple.enums.ManagerType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -33,7 +34,7 @@ public final class ManagerIntrinsicSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private ManagerIntrinsicSettingsArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

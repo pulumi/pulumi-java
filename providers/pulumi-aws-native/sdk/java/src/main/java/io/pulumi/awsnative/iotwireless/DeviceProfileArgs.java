@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotwireless.inputs.DeviceProfileLoRaWANDeviceProfileA
 import io.pulumi.awsnative.iotwireless.inputs.DeviceProfileTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeviceProfileLoRaWANDeviceProfileArgs> loRaWAN;
 
     public Output<DeviceProfileLoRaWANDeviceProfileArgs> getLoRaWAN() {
-        return this.loRaWAN == null ? Output.empty() : this.loRaWAN;
+        return this.loRaWAN == null ? Codegen.empty() : this.loRaWAN;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DeviceProfileTagArgs>> tags;
 
     public Output<List<DeviceProfileTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeviceProfileArgs(
@@ -60,9 +61,9 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceProfileArgs() {
-        this.loRaWAN = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.loRaWAN = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loRaWAN(@Nullable DeviceProfileLoRaWANDeviceProfileArgs loRaWAN) {
-            this.loRaWAN = Output.ofNullable(loRaWAN);
+            this.loRaWAN = Codegen.ofNullable(loRaWAN);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -102,7 +103,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<DeviceProfileTagArgs>> tags) {
@@ -110,7 +111,7 @@ public final class DeviceProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DeviceProfileTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DeviceProfileTagArgs... tags) {

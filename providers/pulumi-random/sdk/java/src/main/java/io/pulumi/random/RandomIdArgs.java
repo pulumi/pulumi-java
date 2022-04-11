@@ -5,6 +5,7 @@ package io.pulumi.random;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -36,7 +37,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> keepers;
 
     public Output<Map<String,Object>> getKeepers() {
-        return this.keepers == null ? Output.empty() : this.keepers;
+        return this.keepers == null ? Codegen.empty() : this.keepers;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public RandomIdArgs(
@@ -60,9 +61,9 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RandomIdArgs() {
-        this.byteLength = Output.empty();
-        this.keepers = Output.empty();
-        this.prefix = Output.empty();
+        this.byteLength = Codegen.empty();
+        this.keepers = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keepers(@Nullable Map<String,Object> keepers) {
-            this.keepers = Output.ofNullable(keepers);
+            this.keepers = Codegen.ofNullable(keepers);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -110,7 +111,7 @@ public final class RandomIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public RandomIdArgs build() {
             return new RandomIdArgs(byteLength, keepers, prefix);

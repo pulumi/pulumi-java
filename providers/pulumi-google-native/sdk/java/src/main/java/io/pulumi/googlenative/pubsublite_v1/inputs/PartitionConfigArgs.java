@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsublite_v1.inputs.CapacityArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<CapacityArgs> capacity;
 
     public Output<CapacityArgs> getCapacity() {
-        return this.capacity == null ? Output.empty() : this.capacity;
+        return this.capacity == null ? Codegen.empty() : this.capacity;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> count;
 
     public Output<String> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     public PartitionConfigArgs(
@@ -49,8 +50,8 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PartitionConfigArgs() {
-        this.capacity = Output.empty();
-        this.count = Output.empty();
+        this.capacity = Codegen.empty();
+        this.count = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder capacity(@Nullable CapacityArgs capacity) {
-            this.capacity = Output.ofNullable(capacity);
+            this.capacity = Codegen.ofNullable(capacity);
             return this;
         }
         public Builder count(@Nullable Output<String> count) {
@@ -88,7 +89,7 @@ public final class PartitionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder count(@Nullable String count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }        public PartitionConfigArgs build() {
             return new PartitionConfigArgs(capacity, count);

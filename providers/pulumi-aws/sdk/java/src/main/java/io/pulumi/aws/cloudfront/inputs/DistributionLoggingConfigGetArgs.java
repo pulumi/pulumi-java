@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class DistributionLoggingConfigGetArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> includeCookies;
 
     public Output<Boolean> getIncludeCookies() {
-        return this.includeCookies == null ? Output.empty() : this.includeCookies;
+        return this.includeCookies == null ? Codegen.empty() : this.includeCookies;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DistributionLoggingConfigGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public DistributionLoggingConfigGetArgs(
@@ -61,9 +62,9 @@ public final class DistributionLoggingConfigGetArgs extends io.pulumi.resources.
     }
 
     private DistributionLoggingConfigGetArgs() {
-        this.bucket = Output.empty();
-        this.includeCookies = Output.empty();
-        this.prefix = Output.empty();
+        this.bucket = Codegen.empty();
+        this.includeCookies = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class DistributionLoggingConfigGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder includeCookies(@Nullable Boolean includeCookies) {
-            this.includeCookies = Output.ofNullable(includeCookies);
+            this.includeCookies = Codegen.ofNullable(includeCookies);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -111,7 +112,7 @@ public final class DistributionLoggingConfigGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public DistributionLoggingConfigGetArgs build() {
             return new DistributionLoggingConfigGetArgs(bucket, includeCookies, prefix);

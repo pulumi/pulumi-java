@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
       private final @Nullable Output<String> notBeforeTimeout;
 
     public Output<String> getNotBeforeTimeout() {
-        return this.notBeforeTimeout == null ? Output.empty() : this.notBeforeTimeout;
+        return this.notBeforeTimeout == null ? Codegen.empty() : this.notBeforeTimeout;
     }
 
     public TerminateNotificationProfileArgs(
@@ -45,8 +46,8 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
     }
 
     private TerminateNotificationProfileArgs() {
-        this.enable = Output.empty();
-        this.notBeforeTimeout = Output.empty();
+        this.enable = Codegen.empty();
+        this.notBeforeTimeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder notBeforeTimeout(@Nullable Output<String> notBeforeTimeout) {
@@ -84,7 +85,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
             return this;
         }
         public Builder notBeforeTimeout(@Nullable String notBeforeTimeout) {
-            this.notBeforeTimeout = Output.ofNullable(notBeforeTimeout);
+            this.notBeforeTimeout = Codegen.ofNullable(notBeforeTimeout);
             return this;
         }        public TerminateNotificationProfileArgs build() {
             return new TerminateNotificationProfileArgs(enable, notBeforeTimeout);

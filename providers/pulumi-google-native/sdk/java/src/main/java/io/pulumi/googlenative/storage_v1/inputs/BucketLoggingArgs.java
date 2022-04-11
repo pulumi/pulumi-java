@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logBucket;
 
     public Output<String> getLogBucket() {
-        return this.logBucket == null ? Output.empty() : this.logBucket;
+        return this.logBucket == null ? Codegen.empty() : this.logBucket;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logObjectPrefix;
 
     public Output<String> getLogObjectPrefix() {
-        return this.logObjectPrefix == null ? Output.empty() : this.logObjectPrefix;
+        return this.logObjectPrefix == null ? Codegen.empty() : this.logObjectPrefix;
     }
 
     public BucketLoggingArgs(
@@ -48,8 +49,8 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketLoggingArgs() {
-        this.logBucket = Output.empty();
-        this.logObjectPrefix = Output.empty();
+        this.logBucket = Codegen.empty();
+        this.logObjectPrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logBucket(@Nullable String logBucket) {
-            this.logBucket = Output.ofNullable(logBucket);
+            this.logBucket = Codegen.ofNullable(logBucket);
             return this;
         }
         public Builder logObjectPrefix(@Nullable Output<String> logObjectPrefix) {
@@ -87,7 +88,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logObjectPrefix(@Nullable String logObjectPrefix) {
-            this.logObjectPrefix = Output.ofNullable(logObjectPrefix);
+            this.logObjectPrefix = Codegen.ofNullable(logObjectPrefix);
             return this;
         }        public BucketLoggingArgs build() {
             return new BucketLoggingArgs(logBucket, logObjectPrefix);

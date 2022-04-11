@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> ports;
 
     public Output<List<String>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallDenyArgs() {
-        this.ports = Output.empty();
-        this.protocol = Output.empty();
+        this.ports = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class FirewallDenyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ports(@Nullable List<String> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(String... ports) {

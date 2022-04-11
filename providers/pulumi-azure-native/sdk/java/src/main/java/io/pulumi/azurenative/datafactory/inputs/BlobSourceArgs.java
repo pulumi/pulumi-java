@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> disableMetricsCollection;
 
     public Output<Object> getDisableMetricsCollection() {
-        return this.disableMetricsCollection == null ? Output.empty() : this.disableMetricsCollection;
+        return this.disableMetricsCollection == null ? Codegen.empty() : this.disableMetricsCollection;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> maxConcurrentConnections;
 
     public Output<Object> getMaxConcurrentConnections() {
-        return this.maxConcurrentConnections == null ? Output.empty() : this.maxConcurrentConnections;
+        return this.maxConcurrentConnections == null ? Codegen.empty() : this.maxConcurrentConnections;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> recursive;
 
     public Output<Object> getRecursive() {
-        return this.recursive == null ? Output.empty() : this.recursive;
+        return this.recursive == null ? Codegen.empty() : this.recursive;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> skipHeaderLineCount;
 
     public Output<Object> getSkipHeaderLineCount() {
-        return this.skipHeaderLineCount == null ? Output.empty() : this.skipHeaderLineCount;
+        return this.skipHeaderLineCount == null ? Codegen.empty() : this.skipHeaderLineCount;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sourceRetryCount;
 
     public Output<Object> getSourceRetryCount() {
-        return this.sourceRetryCount == null ? Output.empty() : this.sourceRetryCount;
+        return this.sourceRetryCount == null ? Codegen.empty() : this.sourceRetryCount;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> sourceRetryWait;
 
     public Output<Object> getSourceRetryWait() {
-        return this.sourceRetryWait == null ? Output.empty() : this.sourceRetryWait;
+        return this.sourceRetryWait == null ? Codegen.empty() : this.sourceRetryWait;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> treatEmptyAsNull;
 
     public Output<Object> getTreatEmptyAsNull() {
-        return this.treatEmptyAsNull == null ? Output.empty() : this.treatEmptyAsNull;
+        return this.treatEmptyAsNull == null ? Codegen.empty() : this.treatEmptyAsNull;
     }
 
     /**
@@ -128,14 +129,14 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BlobSourceArgs() {
-        this.disableMetricsCollection = Output.empty();
-        this.maxConcurrentConnections = Output.empty();
-        this.recursive = Output.empty();
-        this.skipHeaderLineCount = Output.empty();
-        this.sourceRetryCount = Output.empty();
-        this.sourceRetryWait = Output.empty();
-        this.treatEmptyAsNull = Output.empty();
-        this.type = Output.empty();
+        this.disableMetricsCollection = Codegen.empty();
+        this.maxConcurrentConnections = Codegen.empty();
+        this.recursive = Codegen.empty();
+        this.skipHeaderLineCount = Codegen.empty();
+        this.sourceRetryCount = Codegen.empty();
+        this.sourceRetryWait = Codegen.empty();
+        this.treatEmptyAsNull = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableMetricsCollection(@Nullable Object disableMetricsCollection) {
-            this.disableMetricsCollection = Output.ofNullable(disableMetricsCollection);
+            this.disableMetricsCollection = Codegen.ofNullable(disableMetricsCollection);
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
@@ -185,7 +186,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxConcurrentConnections(@Nullable Object maxConcurrentConnections) {
-            this.maxConcurrentConnections = Output.ofNullable(maxConcurrentConnections);
+            this.maxConcurrentConnections = Codegen.ofNullable(maxConcurrentConnections);
             return this;
         }
         public Builder recursive(@Nullable Output<Object> recursive) {
@@ -193,7 +194,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder recursive(@Nullable Object recursive) {
-            this.recursive = Output.ofNullable(recursive);
+            this.recursive = Codegen.ofNullable(recursive);
             return this;
         }
         public Builder skipHeaderLineCount(@Nullable Output<Object> skipHeaderLineCount) {
@@ -201,7 +202,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipHeaderLineCount(@Nullable Object skipHeaderLineCount) {
-            this.skipHeaderLineCount = Output.ofNullable(skipHeaderLineCount);
+            this.skipHeaderLineCount = Codegen.ofNullable(skipHeaderLineCount);
             return this;
         }
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
@@ -209,7 +210,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryCount(@Nullable Object sourceRetryCount) {
-            this.sourceRetryCount = Output.ofNullable(sourceRetryCount);
+            this.sourceRetryCount = Codegen.ofNullable(sourceRetryCount);
             return this;
         }
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
@@ -217,7 +218,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRetryWait(@Nullable Object sourceRetryWait) {
-            this.sourceRetryWait = Output.ofNullable(sourceRetryWait);
+            this.sourceRetryWait = Codegen.ofNullable(sourceRetryWait);
             return this;
         }
         public Builder treatEmptyAsNull(@Nullable Output<Object> treatEmptyAsNull) {
@@ -225,7 +226,7 @@ public final class BlobSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder treatEmptyAsNull(@Nullable Object treatEmptyAsNull) {
-            this.treatEmptyAsNull = Output.ofNullable(treatEmptyAsNull);
+            this.treatEmptyAsNull = Codegen.ofNullable(treatEmptyAsNull);
             return this;
         }
         public Builder type(Output<String> type) {

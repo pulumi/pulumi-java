@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyVersionState;
 import io.pulumi.googlenative.cloudkms_v1.inputs.ExternalProtectionLevelOptionsArgs;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ExternalProtectionLevelOptionsArgs> externalProtectionLevelOptions;
 
     public Output<ExternalProtectionLevelOptionsArgs> getExternalProtectionLevelOptions() {
-        return this.externalProtectionLevelOptions == null ? Output.empty() : this.externalProtectionLevelOptions;
+        return this.externalProtectionLevelOptions == null ? Codegen.empty() : this.externalProtectionLevelOptions;
     }
 
     @Import(name="keyRingId", required=true)
@@ -45,14 +46,14 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<CryptoKeyVersionState> state;
 
     public Output<CryptoKeyVersionState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public CryptoKeyVersionArgs(
@@ -82,12 +83,12 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CryptoKeyVersionArgs() {
-        this.cryptoKeyId = Output.empty();
-        this.externalProtectionLevelOptions = Output.empty();
-        this.keyRingId = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
+        this.cryptoKeyId = Codegen.empty();
+        this.externalProtectionLevelOptions = Codegen.empty();
+        this.keyRingId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder externalProtectionLevelOptions(@Nullable ExternalProtectionLevelOptionsArgs externalProtectionLevelOptions) {
-            this.externalProtectionLevelOptions = Output.ofNullable(externalProtectionLevelOptions);
+            this.externalProtectionLevelOptions = Codegen.ofNullable(externalProtectionLevelOptions);
             return this;
         }
         public Builder keyRingId(Output<String> keyRingId) {
@@ -149,7 +150,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -157,7 +158,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<CryptoKeyVersionState> state) {
@@ -165,7 +166,7 @@ public final class CryptoKeyVersionArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder state(@Nullable CryptoKeyVersionState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public CryptoKeyVersionArgs build() {
             return new CryptoKeyVersionArgs(cryptoKeyId, externalProtectionLevelOptions, keyRingId, location, project, state);

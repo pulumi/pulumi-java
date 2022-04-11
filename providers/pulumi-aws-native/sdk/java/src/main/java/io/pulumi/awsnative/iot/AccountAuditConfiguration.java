@@ -10,6 +10,7 @@ import io.pulumi.awsnative.iot.outputs.AccountAuditConfigurationAuditNotificatio
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -82,7 +83,7 @@ public class AccountAuditConfiguration extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountAuditConfiguration(String name, AccountAuditConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:iot:AccountAuditConfiguration", name, args == null ? AccountAuditConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:iot:AccountAuditConfiguration", name, args == null ? AccountAuditConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountAuditConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

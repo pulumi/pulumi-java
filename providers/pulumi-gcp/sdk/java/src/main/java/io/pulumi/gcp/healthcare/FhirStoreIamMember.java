@@ -6,6 +6,7 @@ package io.pulumi.gcp.healthcare;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.FhirStoreIamMemberArgs;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberState;
@@ -146,7 +147,7 @@ public class FhirStoreIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FhirStoreIamMember(String name, FhirStoreIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:healthcare/fhirStoreIamMember:FhirStoreIamMember", name, args == null ? FhirStoreIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:healthcare/fhirStoreIamMember:FhirStoreIamMember", name, args == null ? FhirStoreIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FhirStoreIamMember(String name, Output<String> id, @Nullable FhirStoreIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

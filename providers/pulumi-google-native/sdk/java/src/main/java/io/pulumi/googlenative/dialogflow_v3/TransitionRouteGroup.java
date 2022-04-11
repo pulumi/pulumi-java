@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3.TransitionRouteGroupArgs;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3TransitionRouteResponse;
@@ -84,7 +85,7 @@ public class TransitionRouteGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TransitionRouteGroup(String name, TransitionRouteGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v3:TransitionRouteGroup", name, args == null ? TransitionRouteGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v3:TransitionRouteGroup", name, args == null ? TransitionRouteGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TransitionRouteGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

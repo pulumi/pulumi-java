@@ -6,6 +6,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 import io.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {
-        return this.keyArn == null ? Output.empty() : this.keyArn;
+        return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 
     @Import(name="keyType", required=true)
@@ -45,8 +46,8 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
     }
 
     private StudioEncryptionConfigurationArgs() {
-        this.keyArn = Output.empty();
-        this.keyType = Output.empty();
+        this.keyArn = Codegen.empty();
+        this.keyType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class StudioEncryptionConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Output.ofNullable(keyArn);
+            this.keyArn = Codegen.ofNullable(keyArn);
             return this;
         }
         public Builder keyType(Output<StudioEncryptionConfigurationKeyType> keyType) {

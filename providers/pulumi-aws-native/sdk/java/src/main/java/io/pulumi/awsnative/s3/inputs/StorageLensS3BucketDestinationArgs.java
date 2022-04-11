@@ -8,6 +8,7 @@ import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVe
 import io.pulumi.awsnative.s3.inputs.StorageLensEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
       private final @Nullable Output<StorageLensEncryptionArgs> encryption;
 
     public Output<StorageLensEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     public StorageLensS3BucketDestinationArgs(
@@ -99,12 +100,12 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
     }
 
     private StorageLensS3BucketDestinationArgs() {
-        this.accountId = Output.empty();
-        this.arn = Output.empty();
-        this.encryption = Output.empty();
-        this.format = Output.empty();
-        this.outputSchemaVersion = Output.empty();
-        this.prefix = Output.empty();
+        this.accountId = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.format = Codegen.empty();
+        this.outputSchemaVersion = Codegen.empty();
+        this.prefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
             return this;
         }
         public Builder encryption(@Nullable StorageLensEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder format(Output<StorageLensS3BucketDestinationFormat> format) {
@@ -182,7 +183,7 @@ public final class StorageLensS3BucketDestinationArgs extends io.pulumi.resource
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }        public StorageLensS3BucketDestinationArgs build() {
             return new StorageLensS3BucketDestinationArgs(accountId, arn, encryption, format, outputSchemaVersion, prefix);

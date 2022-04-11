@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.GlobalParameterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -50,8 +51,8 @@ public final class GlobalParameterSpecificationArgs extends io.pulumi.resources.
     }
 
     private GlobalParameterSpecificationArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

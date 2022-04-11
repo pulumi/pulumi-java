@@ -8,6 +8,7 @@ import io.pulumi.azurenative.portal.enums.FontStyle;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,FontSize>> fontSize;
 
     public Output<Either<String,FontSize>> getFontSize() {
-        return this.fontSize == null ? Output.empty() : this.fontSize;
+        return this.fontSize == null ? Codegen.empty() : this.fontSize;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,FontStyle>> fontStyle;
 
     public Output<Either<String,FontStyle>> getFontStyle() {
-        return this.fontStyle == null ? Output.empty() : this.fontStyle;
+        return this.fontStyle == null ? Codegen.empty() : this.fontStyle;
     }
 
     public TerminalSettingsArgs(
@@ -51,8 +52,8 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TerminalSettingsArgs() {
-        this.fontSize = Output.empty();
-        this.fontStyle = Output.empty();
+        this.fontSize = Codegen.empty();
+        this.fontStyle = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fontSize(@Nullable Either<String,FontSize> fontSize) {
-            this.fontSize = Output.ofNullable(fontSize);
+            this.fontSize = Codegen.ofNullable(fontSize);
             return this;
         }
         public Builder fontStyle(@Nullable Output<Either<String,FontStyle>> fontStyle) {
@@ -90,7 +91,7 @@ public final class TerminalSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder fontStyle(@Nullable Either<String,FontStyle> fontStyle) {
-            this.fontStyle = Output.ofNullable(fontStyle);
+            this.fontStyle = Codegen.ofNullable(fontStyle);
             return this;
         }        public TerminalSettingsArgs build() {
             return new TerminalSettingsArgs(fontSize, fontStyle);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> hostedGateway;
 
     public Output<SubResourceArgs> getHostedGateway() {
-        return this.hostedGateway == null ? Output.empty() : this.hostedGateway;
+        return this.hostedGateway == null ? Codegen.empty() : this.hostedGateway;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> hostedSubnet;
 
     public Output<SubResourceArgs> getHostedSubnet() {
-        return this.hostedSubnet == null ? Output.empty() : this.hostedSubnet;
+        return this.hostedSubnet == null ? Codegen.empty() : this.hostedSubnet;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> virtualRouterAsn;
 
     public Output<Double> getVirtualRouterAsn() {
-        return this.virtualRouterAsn == null ? Output.empty() : this.virtualRouterAsn;
+        return this.virtualRouterAsn == null ? Codegen.empty() : this.virtualRouterAsn;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> virtualRouterIps;
 
     public Output<List<String>> getVirtualRouterIps() {
-        return this.virtualRouterIps == null ? Output.empty() : this.virtualRouterIps;
+        return this.virtualRouterIps == null ? Codegen.empty() : this.virtualRouterIps;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> virtualRouterName;
 
     public Output<String> getVirtualRouterName() {
-        return this.virtualRouterName == null ? Output.empty() : this.virtualRouterName;
+        return this.virtualRouterName == null ? Codegen.empty() : this.virtualRouterName;
     }
 
     public VirtualRouterArgs(
@@ -139,15 +140,15 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VirtualRouterArgs() {
-        this.hostedGateway = Output.empty();
-        this.hostedSubnet = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.virtualRouterAsn = Output.empty();
-        this.virtualRouterIps = Output.empty();
-        this.virtualRouterName = Output.empty();
+        this.hostedGateway = Codegen.empty();
+        this.hostedSubnet = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualRouterAsn = Codegen.empty();
+        this.virtualRouterIps = Codegen.empty();
+        this.virtualRouterName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedGateway(@Nullable SubResourceArgs hostedGateway) {
-            this.hostedGateway = Output.ofNullable(hostedGateway);
+            this.hostedGateway = Codegen.ofNullable(hostedGateway);
             return this;
         }
         public Builder hostedSubnet(@Nullable Output<SubResourceArgs> hostedSubnet) {
@@ -199,7 +200,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hostedSubnet(@Nullable SubResourceArgs hostedSubnet) {
-            this.hostedSubnet = Output.ofNullable(hostedSubnet);
+            this.hostedSubnet = Codegen.ofNullable(hostedSubnet);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -207,7 +208,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -215,7 +216,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -231,7 +232,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualRouterAsn(@Nullable Output<Double> virtualRouterAsn) {
@@ -239,7 +240,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualRouterAsn(@Nullable Double virtualRouterAsn) {
-            this.virtualRouterAsn = Output.ofNullable(virtualRouterAsn);
+            this.virtualRouterAsn = Codegen.ofNullable(virtualRouterAsn);
             return this;
         }
         public Builder virtualRouterIps(@Nullable Output<List<String>> virtualRouterIps) {
@@ -247,7 +248,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualRouterIps(@Nullable List<String> virtualRouterIps) {
-            this.virtualRouterIps = Output.ofNullable(virtualRouterIps);
+            this.virtualRouterIps = Codegen.ofNullable(virtualRouterIps);
             return this;
         }
         public Builder virtualRouterIps(String... virtualRouterIps) {
@@ -258,7 +259,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualRouterName(@Nullable String virtualRouterName) {
-            this.virtualRouterName = Output.ofNullable(virtualRouterName);
+            this.virtualRouterName = Codegen.ofNullable(virtualRouterName);
             return this;
         }        public VirtualRouterArgs build() {
             return new VirtualRouterArgs(hostedGateway, hostedSubnet, id, location, resourceGroupName, tags, virtualRouterAsn, virtualRouterIps, virtualRouterName);

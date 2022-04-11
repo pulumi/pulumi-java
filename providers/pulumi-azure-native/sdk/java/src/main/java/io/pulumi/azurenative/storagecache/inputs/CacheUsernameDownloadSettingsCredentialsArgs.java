@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
       private final @Nullable Output<String> bindDn;
 
     public Output<String> getBindDn() {
-        return this.bindDn == null ? Output.empty() : this.bindDn;
+        return this.bindDn == null ? Codegen.empty() : this.bindDn;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
       private final @Nullable Output<String> bindPassword;
 
     public Output<String> getBindPassword() {
-        return this.bindPassword == null ? Output.empty() : this.bindPassword;
+        return this.bindPassword == null ? Codegen.empty() : this.bindPassword;
     }
 
     public CacheUsernameDownloadSettingsCredentialsArgs(
@@ -48,8 +49,8 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
     }
 
     private CacheUsernameDownloadSettingsCredentialsArgs() {
-        this.bindDn = Output.empty();
-        this.bindPassword = Output.empty();
+        this.bindDn = Codegen.empty();
+        this.bindPassword = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
             return this;
         }
         public Builder bindDn(@Nullable String bindDn) {
-            this.bindDn = Output.ofNullable(bindDn);
+            this.bindDn = Codegen.ofNullable(bindDn);
             return this;
         }
         public Builder bindPassword(@Nullable Output<String> bindPassword) {
@@ -87,7 +88,7 @@ public final class CacheUsernameDownloadSettingsCredentialsArgs extends io.pulum
             return this;
         }
         public Builder bindPassword(@Nullable String bindPassword) {
-            this.bindPassword = Output.ofNullable(bindPassword);
+            this.bindPassword = Codegen.ofNullable(bindPassword);
             return this;
         }        public CacheUsernameDownloadSettingsCredentialsArgs build() {
             return new CacheUsernameDownloadSettingsCredentialsArgs(bindDn, bindPassword);

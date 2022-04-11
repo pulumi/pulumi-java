@@ -6,6 +6,7 @@ package io.pulumi.example;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.example.ComponentArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Foo;
@@ -94,7 +95,7 @@ public class Component extends io.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Component(String name, ComponentArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("example::Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("example::Component", name, args == null ? ComponentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> description;
 
     public Output<Map<String,String>> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> displayName;
 
     public Output<Map<String,String>> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StrongIdArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.keyPropertyNames = Output.empty();
-        this.strongIdName = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.keyPropertyNames = Codegen.empty();
+        this.strongIdName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable Map<String,String> description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
@@ -121,7 +122,7 @@ public final class StrongIdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable Map<String,String> displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder keyPropertyNames(Output<List<String>> keyPropertyNames) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayPrivateLinkIpConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
       private final @Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations;
 
     public Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
+        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ApplicationGatewayPrivateLinkConfigurationArgs(
@@ -63,9 +64,9 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
     }
 
     private ApplicationGatewayPrivateLinkConfigurationArgs() {
-        this.id = Output.empty();
-        this.ipConfigurations = Output.empty();
-        this.name = Output.empty();
+        this.id = Codegen.empty();
+        this.ipConfigurations = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipConfigurations(@Nullable Output<List<ApplicationGatewayPrivateLinkIpConfigurationArgs>> ipConfigurations) {
@@ -105,7 +106,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
             return this;
         }
         public Builder ipConfigurations(@Nullable List<ApplicationGatewayPrivateLinkIpConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Output.ofNullable(ipConfigurations);
+            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
             return this;
         }
         public Builder ipConfigurations(ApplicationGatewayPrivateLinkIpConfigurationArgs... ipConfigurations) {
@@ -116,7 +117,7 @@ public final class ApplicationGatewayPrivateLinkConfigurationArgs extends io.pul
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ApplicationGatewayPrivateLinkConfigurationArgs build() {
             return new ApplicationGatewayPrivateLinkConfigurationArgs(id, ipConfigurations, name);

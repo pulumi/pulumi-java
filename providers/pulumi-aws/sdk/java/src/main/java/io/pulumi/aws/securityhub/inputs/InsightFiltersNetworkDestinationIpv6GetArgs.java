@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class InsightFiltersNetworkDestinationIpv6GetArgs extends io.pulumi
     }
 
     private InsightFiltersNetworkDestinationIpv6GetArgs() {
-        this.cidr = Output.empty();
+        this.cidr = Codegen.empty();
     }
 
     public static Builder builder() {

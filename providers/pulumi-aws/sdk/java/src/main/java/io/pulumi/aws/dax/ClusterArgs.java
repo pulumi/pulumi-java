@@ -6,6 +6,7 @@ package io.pulumi.aws.dax;
 import io.pulumi.aws.dax.inputs.ClusterServerSideEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterEndpointEncryptionType;
 
     public Output<String> getClusterEndpointEncryptionType() {
-        return this.clusterEndpointEncryptionType == null ? Output.empty() : this.clusterEndpointEncryptionType;
+        return this.clusterEndpointEncryptionType == null ? Codegen.empty() : this.clusterEndpointEncryptionType;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maintenanceWindow;
 
     public Output<String> getMaintenanceWindow() {
-        return this.maintenanceWindow == null ? Output.empty() : this.maintenanceWindow;
+        return this.maintenanceWindow == null ? Codegen.empty() : this.maintenanceWindow;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notificationTopicArn;
 
     public Output<String> getNotificationTopicArn() {
-        return this.notificationTopicArn == null ? Output.empty() : this.notificationTopicArn;
+        return this.notificationTopicArn == null ? Codegen.empty() : this.notificationTopicArn;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parameterGroupName;
 
     public Output<String> getParameterGroupName() {
-        return this.parameterGroupName == null ? Output.empty() : this.parameterGroupName;
+        return this.parameterGroupName == null ? Codegen.empty() : this.parameterGroupName;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterServerSideEncryptionArgs> serverSideEncryption;
 
     public Output<ClusterServerSideEncryptionArgs> getServerSideEncryption() {
-        return this.serverSideEncryption == null ? Output.empty() : this.serverSideEncryption;
+        return this.serverSideEncryption == null ? Codegen.empty() : this.serverSideEncryption;
     }
 
     /**
@@ -175,7 +176,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetGroupName;
 
     public Output<String> getSubnetGroupName() {
-        return this.subnetGroupName == null ? Output.empty() : this.subnetGroupName;
+        return this.subnetGroupName == null ? Codegen.empty() : this.subnetGroupName;
     }
 
     /**
@@ -186,7 +187,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterArgs(
@@ -221,20 +222,20 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.availabilityZones = Output.empty();
-        this.clusterEndpointEncryptionType = Output.empty();
-        this.clusterName = Output.empty();
-        this.description = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.maintenanceWindow = Output.empty();
-        this.nodeType = Output.empty();
-        this.notificationTopicArn = Output.empty();
-        this.parameterGroupName = Output.empty();
-        this.replicationFactor = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.serverSideEncryption = Output.empty();
-        this.subnetGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.availabilityZones = Codegen.empty();
+        this.clusterEndpointEncryptionType = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.maintenanceWindow = Codegen.empty();
+        this.nodeType = Codegen.empty();
+        this.notificationTopicArn = Codegen.empty();
+        this.parameterGroupName = Codegen.empty();
+        this.replicationFactor = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.serverSideEncryption = Codegen.empty();
+        this.subnetGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -288,7 +289,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {
@@ -299,7 +300,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterEndpointEncryptionType(@Nullable String clusterEndpointEncryptionType) {
-            this.clusterEndpointEncryptionType = Output.ofNullable(clusterEndpointEncryptionType);
+            this.clusterEndpointEncryptionType = Codegen.ofNullable(clusterEndpointEncryptionType);
             return this;
         }
         public Builder clusterName(Output<String> clusterName) {
@@ -315,7 +316,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder iamRoleArn(Output<String> iamRoleArn) {
@@ -331,7 +332,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceWindow(@Nullable String maintenanceWindow) {
-            this.maintenanceWindow = Output.ofNullable(maintenanceWindow);
+            this.maintenanceWindow = Codegen.ofNullable(maintenanceWindow);
             return this;
         }
         public Builder nodeType(Output<String> nodeType) {
@@ -347,7 +348,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationTopicArn(@Nullable String notificationTopicArn) {
-            this.notificationTopicArn = Output.ofNullable(notificationTopicArn);
+            this.notificationTopicArn = Codegen.ofNullable(notificationTopicArn);
             return this;
         }
         public Builder parameterGroupName(@Nullable Output<String> parameterGroupName) {
@@ -355,7 +356,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameterGroupName(@Nullable String parameterGroupName) {
-            this.parameterGroupName = Output.ofNullable(parameterGroupName);
+            this.parameterGroupName = Codegen.ofNullable(parameterGroupName);
             return this;
         }
         public Builder replicationFactor(Output<Integer> replicationFactor) {
@@ -371,7 +372,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -382,7 +383,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverSideEncryption(@Nullable ClusterServerSideEncryptionArgs serverSideEncryption) {
-            this.serverSideEncryption = Output.ofNullable(serverSideEncryption);
+            this.serverSideEncryption = Codegen.ofNullable(serverSideEncryption);
             return this;
         }
         public Builder subnetGroupName(@Nullable Output<String> subnetGroupName) {
@@ -390,7 +391,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetGroupName(@Nullable String subnetGroupName) {
-            this.subnetGroupName = Output.ofNullable(subnetGroupName);
+            this.subnetGroupName = Codegen.ofNullable(subnetGroupName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -398,7 +399,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(availabilityZones, clusterEndpointEncryptionType, clusterName, description, iamRoleArn, maintenanceWindow, nodeType, notificationTopicArn, parameterGroupName, replicationFactor, securityGroupIds, serverSideEncryption, subnetGroupName, tags);

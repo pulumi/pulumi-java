@@ -5,6 +5,7 @@ package io.pulumi.foobar;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.foobar.ModuleResourceArgs;
 import io.pulumi.foobar.Utilities;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ModuleResource(String name, ModuleResourceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("foobar::ModuleResource", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("foobar::ModuleResource", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private ModuleResource(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

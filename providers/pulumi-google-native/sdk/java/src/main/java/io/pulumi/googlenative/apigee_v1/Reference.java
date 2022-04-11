@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigee_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigee_v1.ReferenceArgs;
 import java.lang.String;
@@ -96,7 +97,7 @@ public class Reference extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Reference(String name, ReferenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigee/v1:Reference", name, args == null ? ReferenceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigee/v1:Reference", name, args == null ? ReferenceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Reference(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

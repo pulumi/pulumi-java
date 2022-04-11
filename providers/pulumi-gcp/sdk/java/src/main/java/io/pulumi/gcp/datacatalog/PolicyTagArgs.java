@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentPolicyTag;
 
     public Output<String> getParentPolicyTag() {
-        return this.parentPolicyTag == null ? Output.empty() : this.parentPolicyTag;
+        return this.parentPolicyTag == null ? Codegen.empty() : this.parentPolicyTag;
     }
 
     /**
@@ -77,10 +78,10 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PolicyTagArgs() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.parentPolicyTag = Output.empty();
-        this.taxonomy = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.parentPolicyTag = Codegen.empty();
+        this.taxonomy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -130,7 +131,7 @@ public final class PolicyTagArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentPolicyTag(@Nullable String parentPolicyTag) {
-            this.parentPolicyTag = Output.ofNullable(parentPolicyTag);
+            this.parentPolicyTag = Codegen.ofNullable(parentPolicyTag);
             return this;
         }
         public Builder taxonomy(Output<String> taxonomy) {

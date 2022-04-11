@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.StepState;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.MultiStepArgs;
@@ -33,7 +34,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TimestampArgs> completionTime;
 
     public Output<TimestampArgs> getCompletionTime() {
-        return this.completionTime == null ? Output.empty() : this.completionTime;
+        return this.completionTime == null ? Codegen.empty() : this.completionTime;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TimestampArgs> creationTime;
 
     public Output<TimestampArgs> getCreationTime() {
-        return this.creationTime == null ? Output.empty() : this.creationTime;
+        return this.creationTime == null ? Codegen.empty() : this.creationTime;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DurationArgs> deviceUsageDuration;
 
     public Output<DurationArgs> getDeviceUsageDuration() {
-        return this.deviceUsageDuration == null ? Output.empty() : this.deviceUsageDuration;
+        return this.deviceUsageDuration == null ? Codegen.empty() : this.deviceUsageDuration;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue;
 
     public Output<List<StepDimensionValueEntryArgs>> getDimensionValue() {
-        return this.dimensionValue == null ? Output.empty() : this.dimensionValue;
+        return this.dimensionValue == null ? Codegen.empty() : this.dimensionValue;
     }
 
     @Import(name="executionId", required=true)
@@ -95,7 +96,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> hasImages;
 
     public Output<Boolean> getHasImages() {
-        return this.hasImages == null ? Output.empty() : this.hasImages;
+        return this.hasImages == null ? Codegen.empty() : this.hasImages;
     }
 
     @Import(name="historyId", required=true)
@@ -113,7 +114,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StepLabelsEntryArgs>> labels;
 
     public Output<List<StepLabelsEntryArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MultiStepArgs> multiStep;
 
     public Output<MultiStepArgs> getMultiStep() {
-        return this.multiStep == null ? Output.empty() : this.multiStep;
+        return this.multiStep == null ? Codegen.empty() : this.multiStep;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -146,21 +147,21 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<OutcomeArgs> outcome;
 
     public Output<OutcomeArgs> getOutcome() {
-        return this.outcome == null ? Output.empty() : this.outcome;
+        return this.outcome == null ? Codegen.empty() : this.outcome;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DurationArgs> runDuration;
 
     public Output<DurationArgs> getRunDuration() {
-        return this.runDuration == null ? Output.empty() : this.runDuration;
+        return this.runDuration == null ? Codegen.empty() : this.runDuration;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StepState> state;
 
     public Output<StepState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stepId;
 
     public Output<String> getStepId() {
-        return this.stepId == null ? Output.empty() : this.stepId;
+        return this.stepId == null ? Codegen.empty() : this.stepId;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TestExecutionStepArgs> testExecutionStep;
 
     public Output<TestExecutionStepArgs> getTestExecutionStep() {
-        return this.testExecutionStep == null ? Output.empty() : this.testExecutionStep;
+        return this.testExecutionStep == null ? Codegen.empty() : this.testExecutionStep;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ToolExecutionStepArgs> toolExecutionStep;
 
     public Output<ToolExecutionStepArgs> getToolExecutionStep() {
-        return this.toolExecutionStep == null ? Output.empty() : this.toolExecutionStep;
+        return this.toolExecutionStep == null ? Codegen.empty() : this.toolExecutionStep;
     }
 
     public StepArgs(
@@ -260,25 +261,25 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StepArgs() {
-        this.completionTime = Output.empty();
-        this.creationTime = Output.empty();
-        this.description = Output.empty();
-        this.deviceUsageDuration = Output.empty();
-        this.dimensionValue = Output.empty();
-        this.executionId = Output.empty();
-        this.hasImages = Output.empty();
-        this.historyId = Output.empty();
-        this.labels = Output.empty();
-        this.multiStep = Output.empty();
-        this.name = Output.empty();
-        this.outcome = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.runDuration = Output.empty();
-        this.state = Output.empty();
-        this.stepId = Output.empty();
-        this.testExecutionStep = Output.empty();
-        this.toolExecutionStep = Output.empty();
+        this.completionTime = Codegen.empty();
+        this.creationTime = Codegen.empty();
+        this.description = Codegen.empty();
+        this.deviceUsageDuration = Codegen.empty();
+        this.dimensionValue = Codegen.empty();
+        this.executionId = Codegen.empty();
+        this.hasImages = Codegen.empty();
+        this.historyId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.multiStep = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outcome = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.runDuration = Codegen.empty();
+        this.state = Codegen.empty();
+        this.stepId = Codegen.empty();
+        this.testExecutionStep = Codegen.empty();
+        this.toolExecutionStep = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -342,7 +343,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder completionTime(@Nullable TimestampArgs completionTime) {
-            this.completionTime = Output.ofNullable(completionTime);
+            this.completionTime = Codegen.ofNullable(completionTime);
             return this;
         }
         public Builder creationTime(@Nullable Output<TimestampArgs> creationTime) {
@@ -350,7 +351,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder creationTime(@Nullable TimestampArgs creationTime) {
-            this.creationTime = Output.ofNullable(creationTime);
+            this.creationTime = Codegen.ofNullable(creationTime);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -358,7 +359,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder deviceUsageDuration(@Nullable Output<DurationArgs> deviceUsageDuration) {
@@ -366,7 +367,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceUsageDuration(@Nullable DurationArgs deviceUsageDuration) {
-            this.deviceUsageDuration = Output.ofNullable(deviceUsageDuration);
+            this.deviceUsageDuration = Codegen.ofNullable(deviceUsageDuration);
             return this;
         }
         public Builder dimensionValue(@Nullable Output<List<StepDimensionValueEntryArgs>> dimensionValue) {
@@ -374,7 +375,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensionValue(@Nullable List<StepDimensionValueEntryArgs> dimensionValue) {
-            this.dimensionValue = Output.ofNullable(dimensionValue);
+            this.dimensionValue = Codegen.ofNullable(dimensionValue);
             return this;
         }
         public Builder dimensionValue(StepDimensionValueEntryArgs... dimensionValue) {
@@ -393,7 +394,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hasImages(@Nullable Boolean hasImages) {
-            this.hasImages = Output.ofNullable(hasImages);
+            this.hasImages = Codegen.ofNullable(hasImages);
             return this;
         }
         public Builder historyId(Output<String> historyId) {
@@ -409,7 +410,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<StepLabelsEntryArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(StepLabelsEntryArgs... labels) {
@@ -420,7 +421,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder multiStep(@Nullable MultiStepArgs multiStep) {
-            this.multiStep = Output.ofNullable(multiStep);
+            this.multiStep = Codegen.ofNullable(multiStep);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -428,7 +429,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outcome(@Nullable Output<OutcomeArgs> outcome) {
@@ -436,7 +437,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outcome(@Nullable OutcomeArgs outcome) {
-            this.outcome = Output.ofNullable(outcome);
+            this.outcome = Codegen.ofNullable(outcome);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -444,7 +445,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -452,7 +453,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder runDuration(@Nullable Output<DurationArgs> runDuration) {
@@ -460,7 +461,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runDuration(@Nullable DurationArgs runDuration) {
-            this.runDuration = Output.ofNullable(runDuration);
+            this.runDuration = Codegen.ofNullable(runDuration);
             return this;
         }
         public Builder state(@Nullable Output<StepState> state) {
@@ -468,7 +469,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable StepState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder stepId(@Nullable Output<String> stepId) {
@@ -476,7 +477,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stepId(@Nullable String stepId) {
-            this.stepId = Output.ofNullable(stepId);
+            this.stepId = Codegen.ofNullable(stepId);
             return this;
         }
         public Builder testExecutionStep(@Nullable Output<TestExecutionStepArgs> testExecutionStep) {
@@ -484,7 +485,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testExecutionStep(@Nullable TestExecutionStepArgs testExecutionStep) {
-            this.testExecutionStep = Output.ofNullable(testExecutionStep);
+            this.testExecutionStep = Codegen.ofNullable(testExecutionStep);
             return this;
         }
         public Builder toolExecutionStep(@Nullable Output<ToolExecutionStepArgs> toolExecutionStep) {
@@ -492,7 +493,7 @@ public final class StepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder toolExecutionStep(@Nullable ToolExecutionStepArgs toolExecutionStep) {
-            this.toolExecutionStep = Output.ofNullable(toolExecutionStep);
+            this.toolExecutionStep = Codegen.ofNullable(toolExecutionStep);
             return this;
         }        public StepArgs build() {
             return new StepArgs(completionTime, creationTime, description, deviceUsageDuration, dimensionValue, executionId, hasImages, historyId, labels, multiStep, name, outcome, project, requestId, runDuration, state, stepId, testExecutionStep, toolExecutionStep);

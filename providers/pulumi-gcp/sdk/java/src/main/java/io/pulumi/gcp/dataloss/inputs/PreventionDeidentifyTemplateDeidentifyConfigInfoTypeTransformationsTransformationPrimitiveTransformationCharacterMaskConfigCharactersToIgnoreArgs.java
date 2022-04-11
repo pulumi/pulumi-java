@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
       private final @Nullable Output<String> charactersToSkip;
 
     public Output<String> getCharactersToSkip() {
-        return this.charactersToSkip == null ? Output.empty() : this.charactersToSkip;
+        return this.charactersToSkip == null ? Codegen.empty() : this.charactersToSkip;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
       private final @Nullable Output<String> commonCharactersToIgnore;
 
     public Output<String> getCommonCharactersToIgnore() {
-        return this.commonCharactersToIgnore == null ? Output.empty() : this.commonCharactersToIgnore;
+        return this.commonCharactersToIgnore == null ? Codegen.empty() : this.commonCharactersToIgnore;
     }
 
     public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs(
@@ -45,8 +46,8 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     }
 
     private PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs() {
-        this.charactersToSkip = Output.empty();
-        this.commonCharactersToIgnore = Output.empty();
+        this.charactersToSkip = Codegen.empty();
+        this.commonCharactersToIgnore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder charactersToSkip(@Nullable String charactersToSkip) {
-            this.charactersToSkip = Output.ofNullable(charactersToSkip);
+            this.charactersToSkip = Codegen.ofNullable(charactersToSkip);
             return this;
         }
         public Builder commonCharactersToIgnore(@Nullable Output<String> commonCharactersToIgnore) {
@@ -84,7 +85,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             return this;
         }
         public Builder commonCharactersToIgnore(@Nullable String commonCharactersToIgnore) {
-            this.commonCharactersToIgnore = Output.ofNullable(commonCharactersToIgnore);
+            this.commonCharactersToIgnore = Codegen.ofNullable(commonCharactersToIgnore);
             return this;
         }        public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCharacterMaskConfigCharactersToIgnoreArgs(charactersToSkip, commonCharactersToIgnore);

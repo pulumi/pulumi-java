@@ -5,6 +5,7 @@ package io.pulumi.gcp.tags.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.tags.inputs.TagValueIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<TagValueIamMemberConditionGetArgs> condition;
 
     public Output<TagValueIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,14 +31,14 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> tagValue;
 
     public Output<String> getTagValue() {
-        return this.tagValue == null ? Output.empty() : this.tagValue;
+        return this.tagValue == null ? Codegen.empty() : this.tagValue;
     }
 
     public TagValueIamMemberState(
@@ -78,11 +79,11 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
     }
 
     private TagValueIamMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
-        this.tagValue = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
+        this.tagValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder condition(@Nullable TagValueIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -126,7 +127,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -134,7 +135,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -142,7 +143,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder tagValue(@Nullable Output<String> tagValue) {
@@ -150,7 +151,7 @@ public final class TagValueIamMemberState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagValue(@Nullable String tagValue) {
-            this.tagValue = Output.ofNullable(tagValue);
+            this.tagValue = Codegen.ofNullable(tagValue);
             return this;
         }        public TagValueIamMemberState build() {
             return new TagValueIamMemberState(condition, etag, member, role, tagValue);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policyData;
 
     public Output<String> getPolicyData() {
-        return this.policyData == null ? Output.empty() : this.policyData;
+        return this.policyData == null ? Codegen.empty() : this.policyData;
     }
 
     @Import(name="serviceName")
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public ServiceIamPolicyState(
@@ -54,9 +55,9 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private ServiceIamPolicyState() {
-        this.etag = Output.empty();
-        this.policyData = Output.empty();
-        this.serviceName = Output.empty();
+        this.etag = Codegen.empty();
+        this.policyData = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder policyData(@Nullable Output<String> policyData) {
@@ -96,7 +97,7 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyData(@Nullable String policyData) {
-            this.policyData = Output.ofNullable(policyData);
+            this.policyData = Codegen.ofNullable(policyData);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -104,7 +105,7 @@ public final class ServiceIamPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public ServiceIamPolicyState build() {
             return new ServiceIamPolicyState(etag, policyData, serviceName);

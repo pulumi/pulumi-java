@@ -6,6 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.PartitionIndexPartitionIndexGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex;
 
     public Output<PartitionIndexPartitionIndexGetArgs> getPartitionIndex() {
-        return this.partitionIndex == null ? Output.empty() : this.partitionIndex;
+        return this.partitionIndex == null ? Codegen.empty() : this.partitionIndex;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     public PartitionIndexState(
@@ -71,10 +72,10 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
     }
 
     private PartitionIndexState() {
-        this.catalogId = Output.empty();
-        this.databaseName = Output.empty();
-        this.partitionIndex = Output.empty();
-        this.tableName = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.partitionIndex = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -116,7 +117,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder partitionIndex(@Nullable Output<PartitionIndexPartitionIndexGetArgs> partitionIndex) {
@@ -124,7 +125,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder partitionIndex(@Nullable PartitionIndexPartitionIndexGetArgs partitionIndex) {
-            this.partitionIndex = Output.ofNullable(partitionIndex);
+            this.partitionIndex = Codegen.ofNullable(partitionIndex);
             return this;
         }
         public Builder tableName(@Nullable Output<String> tableName) {
@@ -132,7 +133,7 @@ public final class PartitionIndexState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }        public PartitionIndexState build() {
             return new PartitionIndexState(catalogId, databaseName, partitionIndex, tableName);

@@ -5,6 +5,7 @@ package io.pulumi.aws.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> addressAllocationIds;
 
     public Output<List<String>> getAddressAllocationIds() {
-        return this.addressAllocationIds == null ? Output.empty() : this.addressAllocationIds;
+        return this.addressAllocationIds == null ? Codegen.empty() : this.addressAllocationIds;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> securityGroupIds;
 
     public Output<List<String>> getSecurityGroupIds() {
-        return this.securityGroupIds == null ? Output.empty() : this.securityGroupIds;
+        return this.securityGroupIds == null ? Codegen.empty() : this.securityGroupIds;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public ServerEndpointDetailsGetArgs(
@@ -84,11 +85,11 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
     }
 
     private ServerEndpointDetailsGetArgs() {
-        this.addressAllocationIds = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcEndpointId = Output.empty();
-        this.vpcId = Output.empty();
+        this.addressAllocationIds = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder addressAllocationIds(@Nullable List<String> addressAllocationIds) {
-            this.addressAllocationIds = Output.ofNullable(addressAllocationIds);
+            this.addressAllocationIds = Codegen.ofNullable(addressAllocationIds);
             return this;
         }
         public Builder addressAllocationIds(String... addressAllocationIds) {
@@ -135,7 +136,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder securityGroupIds(@Nullable List<String> securityGroupIds) {
-            this.securityGroupIds = Output.ofNullable(securityGroupIds);
+            this.securityGroupIds = Codegen.ofNullable(securityGroupIds);
             return this;
         }
         public Builder securityGroupIds(String... securityGroupIds) {
@@ -146,7 +147,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -157,7 +158,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -165,7 +166,7 @@ public final class ServerEndpointDetailsGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public ServerEndpointDetailsGetArgs build() {
             return new ServerEndpointDetailsGetArgs(addressAllocationIds, securityGroupIds, subnetIds, vpcEndpointId, vpcId);

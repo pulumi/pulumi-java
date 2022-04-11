@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ConfigFileArgs;
 import io.pulumi.googlenative.deploymentmanager_v2.inputs.ImportFileArgs;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ConfigFileArgs> config;
 
     public Output<ConfigFileArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<ImportFileArgs>> imports;
 
     public Output<List<ImportFileArgs>> getImports() {
-        return this.imports == null ? Output.empty() : this.imports;
+        return this.imports == null ? Codegen.empty() : this.imports;
     }
 
     public TargetConfigurationArgs(
@@ -46,8 +47,8 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
     }
 
     private TargetConfigurationArgs() {
-        this.config = Output.empty();
-        this.imports = Output.empty();
+        this.config = Codegen.empty();
+        this.imports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder config(@Nullable ConfigFileArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder imports(@Nullable Output<List<ImportFileArgs>> imports) {
@@ -85,7 +86,7 @@ public final class TargetConfigurationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder imports(@Nullable List<ImportFileArgs> imports) {
-            this.imports = Output.ofNullable(imports);
+            this.imports = Codegen.ofNullable(imports);
             return this;
         }
         public Builder imports(ImportFileArgs... imports) {

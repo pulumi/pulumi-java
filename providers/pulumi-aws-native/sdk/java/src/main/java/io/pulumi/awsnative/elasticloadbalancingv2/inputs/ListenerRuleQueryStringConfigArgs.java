@@ -6,6 +6,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleQueryStringKeyValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
       private final @Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values;
 
     public Output<List<ListenerRuleQueryStringKeyValueArgs>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ListenerRuleQueryStringConfigArgs(@Nullable Output<List<ListenerRuleQueryStringKeyValueArgs>> values) {
@@ -27,7 +28,7 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
     }
 
     private ListenerRuleQueryStringConfigArgs() {
-        this.values = Output.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class ListenerRuleQueryStringConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder values(@Nullable List<ListenerRuleQueryStringKeyValueArgs> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(ListenerRuleQueryStringKeyValueArgs... values) {

@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDown
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
+        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementGetArgs() {
-        this.fieldToMatch = Output.empty();
-        this.textTransformations = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
             return this;
         }
         public Builder fieldToMatch(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Output.ofNullable(fieldToMatch);
+            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
             return this;
         }
         public Builder textTransformations(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementNotStatementStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {

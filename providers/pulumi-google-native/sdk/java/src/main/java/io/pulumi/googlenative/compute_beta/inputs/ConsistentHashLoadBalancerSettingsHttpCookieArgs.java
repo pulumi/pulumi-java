@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
       private final @Nullable Output<DurationArgs> ttl;
 
     public Output<DurationArgs> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     public ConsistentHashLoadBalancerSettingsHttpCookieArgs(
@@ -62,9 +63,9 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
     }
 
     private ConsistentHashLoadBalancerSettingsHttpCookieArgs() {
-        this.name = Output.empty();
-        this.path = Output.empty();
-        this.ttl = Output.empty();
+        this.name = Codegen.empty();
+        this.path = Codegen.empty();
+        this.ttl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -104,7 +105,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder ttl(@Nullable Output<DurationArgs> ttl) {
@@ -112,7 +113,7 @@ public final class ConsistentHashLoadBalancerSettingsHttpCookieArgs extends io.p
             return this;
         }
         public Builder ttl(@Nullable DurationArgs ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }        public ConsistentHashLoadBalancerSettingsHttpCookieArgs build() {
             return new ConsistentHashLoadBalancerSettingsHttpCookieArgs(name, path, ttl);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.sql;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sql.SourceRepresentationInstanceArgs;
 import io.pulumi.gcp.sql.inputs.SourceRepresentationInstanceState;
@@ -156,7 +157,7 @@ public class SourceRepresentationInstance extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public SourceRepresentationInstance(String name, SourceRepresentationInstanceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance", name, args == null ? SourceRepresentationInstanceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:sql/sourceRepresentationInstance:SourceRepresentationInstance", name, args == null ? SourceRepresentationInstanceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SourceRepresentationInstance(String name, Output<String> id, @Nullable SourceRepresentationInstanceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.pinpoint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> lambdaFunctionName;
 
     public Output<String> getLambdaFunctionName() {
-        return this.lambdaFunctionName == null ? Output.empty() : this.lambdaFunctionName;
+        return this.lambdaFunctionName == null ? Codegen.empty() : this.lambdaFunctionName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> webUrl;
 
     public Output<String> getWebUrl() {
-        return this.webUrl == null ? Output.empty() : this.webUrl;
+        return this.webUrl == null ? Codegen.empty() : this.webUrl;
     }
 
     public AppCampaignHookGetArgs(
@@ -57,9 +58,9 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AppCampaignHookGetArgs() {
-        this.lambdaFunctionName = Output.empty();
-        this.mode = Output.empty();
-        this.webUrl = Output.empty();
+        this.lambdaFunctionName = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.webUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lambdaFunctionName(@Nullable String lambdaFunctionName) {
-            this.lambdaFunctionName = Output.ofNullable(lambdaFunctionName);
+            this.lambdaFunctionName = Codegen.ofNullable(lambdaFunctionName);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -99,7 +100,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder webUrl(@Nullable Output<String> webUrl) {
@@ -107,7 +108,7 @@ public final class AppCampaignHookGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder webUrl(@Nullable String webUrl) {
-            this.webUrl = Output.ofNullable(webUrl);
+            this.webUrl = Codegen.ofNullable(webUrl);
             return this;
         }        public AppCampaignHookGetArgs build() {
             return new AppCampaignHookGetArgs(lambdaFunctionName, mode, webUrl);

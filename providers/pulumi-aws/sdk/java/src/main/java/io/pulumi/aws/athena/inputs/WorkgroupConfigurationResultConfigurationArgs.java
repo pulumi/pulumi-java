@@ -6,6 +6,7 @@ package io.pulumi.aws.athena.inputs;
 import io.pulumi.aws.athena.inputs.WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
       private final @Nullable Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
       private final @Nullable Output<String> outputLocation;
 
     public Output<String> getOutputLocation() {
-        return this.outputLocation == null ? Output.empty() : this.outputLocation;
+        return this.outputLocation == null ? Codegen.empty() : this.outputLocation;
     }
 
     public WorkgroupConfigurationResultConfigurationArgs(
@@ -45,8 +46,8 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
     }
 
     private WorkgroupConfigurationResultConfigurationArgs() {
-        this.encryptionConfiguration = Output.empty();
-        this.outputLocation = Output.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.outputLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
             return this;
         }
         public Builder encryptionConfiguration(@Nullable WorkgroupConfigurationResultConfigurationEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder outputLocation(@Nullable Output<String> outputLocation) {
@@ -84,7 +85,7 @@ public final class WorkgroupConfigurationResultConfigurationArgs extends io.pulu
             return this;
         }
         public Builder outputLocation(@Nullable String outputLocation) {
-            this.outputLocation = Output.ofNullable(outputLocation);
+            this.outputLocation = Codegen.ofNullable(outputLocation);
             return this;
         }        public WorkgroupConfigurationResultConfigurationArgs build() {
             return new WorkgroupConfigurationResultConfigurationArgs(encryptionConfiguration, outputLocation);

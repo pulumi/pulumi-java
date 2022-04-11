@@ -15,6 +15,7 @@ import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -242,7 +243,7 @@ public class Factory extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Factory(String name, FactoryArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:datafactory:Factory", name, args == null ? FactoryArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:datafactory:Factory", name, args == null ? FactoryArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Factory(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

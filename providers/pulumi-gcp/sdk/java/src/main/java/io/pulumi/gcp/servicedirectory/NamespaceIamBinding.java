@@ -6,6 +6,7 @@ package io.pulumi.gcp.servicedirectory;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.NamespaceIamBindingArgs;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingState;
@@ -139,7 +140,7 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NamespaceIamBinding(String name, NamespaceIamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, args == null ? NamespaceIamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, args == null ? NamespaceIamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NamespaceIamBinding(String name, Output<String> id, @Nullable NamespaceIamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

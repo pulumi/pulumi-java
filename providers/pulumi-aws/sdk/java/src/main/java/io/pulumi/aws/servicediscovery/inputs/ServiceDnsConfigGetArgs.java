@@ -6,6 +6,7 @@ package io.pulumi.aws.servicediscovery.inputs;
 import io.pulumi.aws.servicediscovery.inputs.ServiceDnsConfigDnsRecordGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> routingPolicy;
 
     public Output<String> getRoutingPolicy() {
-        return this.routingPolicy == null ? Output.empty() : this.routingPolicy;
+        return this.routingPolicy == null ? Codegen.empty() : this.routingPolicy;
     }
 
     public ServiceDnsConfigGetArgs(
@@ -59,9 +60,9 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ServiceDnsConfigGetArgs() {
-        this.dnsRecords = Output.empty();
-        this.namespaceId = Output.empty();
-        this.routingPolicy = Output.empty();
+        this.dnsRecords = Codegen.empty();
+        this.namespaceId = Codegen.empty();
+        this.routingPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ServiceDnsConfigGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder routingPolicy(@Nullable String routingPolicy) {
-            this.routingPolicy = Output.ofNullable(routingPolicy);
+            this.routingPolicy = Codegen.ofNullable(routingPolicy);
             return this;
         }        public ServiceDnsConfigGetArgs build() {
             return new ServiceDnsConfigGetArgs(dnsRecords, namespaceId, routingPolicy);

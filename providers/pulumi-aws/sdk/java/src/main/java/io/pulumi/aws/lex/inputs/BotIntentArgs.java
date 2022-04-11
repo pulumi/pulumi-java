@@ -5,6 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class BotIntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BotIntentArgs() {
-        this.intentName = Output.empty();
-        this.intentVersion = Output.empty();
+        this.intentName = Codegen.empty();
+        this.intentVersion = Codegen.empty();
     }
 
     public static Builder builder() {

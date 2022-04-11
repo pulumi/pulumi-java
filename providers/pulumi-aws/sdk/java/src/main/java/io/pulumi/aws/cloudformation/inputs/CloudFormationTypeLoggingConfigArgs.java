@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class CloudFormationTypeLoggingConfigArgs extends io.pulumi.resourc
     }
 
     private CloudFormationTypeLoggingConfigArgs() {
-        this.logGroupName = Output.empty();
-        this.logRoleArn = Output.empty();
+        this.logGroupName = Codegen.empty();
+        this.logRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {

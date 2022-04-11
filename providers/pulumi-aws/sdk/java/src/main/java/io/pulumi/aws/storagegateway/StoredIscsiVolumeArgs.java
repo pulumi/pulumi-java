@@ -5,6 +5,7 @@ package io.pulumi.aws.storagegateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -46,7 +47,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> kmsEncrypted;
 
     public Output<Boolean> getKmsEncrypted() {
-        return this.kmsEncrypted == null ? Output.empty() : this.kmsEncrypted;
+        return this.kmsEncrypted == null ? Codegen.empty() : this.kmsEncrypted;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -137,15 +138,15 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
     }
 
     private StoredIscsiVolumeArgs() {
-        this.diskId = Output.empty();
-        this.gatewayArn = Output.empty();
-        this.kmsEncrypted = Output.empty();
-        this.kmsKey = Output.empty();
-        this.networkInterfaceId = Output.empty();
-        this.preserveExistingData = Output.empty();
-        this.snapshotId = Output.empty();
-        this.tags = Output.empty();
-        this.targetName = Output.empty();
+        this.diskId = Codegen.empty();
+        this.gatewayArn = Codegen.empty();
+        this.kmsEncrypted = Codegen.empty();
+        this.kmsKey = Codegen.empty();
+        this.networkInterfaceId = Codegen.empty();
+        this.preserveExistingData = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kmsEncrypted(@Nullable Boolean kmsEncrypted) {
-            this.kmsEncrypted = Output.ofNullable(kmsEncrypted);
+            this.kmsEncrypted = Codegen.ofNullable(kmsEncrypted);
             return this;
         }
         public Builder kmsKey(@Nullable Output<String> kmsKey) {
@@ -213,7 +214,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }
         public Builder networkInterfaceId(Output<String> networkInterfaceId) {
@@ -237,7 +238,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -245,7 +246,7 @@ public final class StoredIscsiVolumeArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetName(Output<String> targetName) {

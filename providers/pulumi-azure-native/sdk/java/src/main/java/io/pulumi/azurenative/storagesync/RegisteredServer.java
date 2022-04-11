@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -390,7 +391,7 @@ public class RegisteredServer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegisteredServer(String name, RegisteredServerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:RegisteredServer", name, args == null ? RegisteredServerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagesync:RegisteredServer", name, args == null ? RegisteredServerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegisteredServer(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> maxInstances;
 
     public Output<Integer> getMaxInstances() {
-        return this.maxInstances == null ? Output.empty() : this.maxInstances;
+        return this.maxInstances == null ? Codegen.empty() : this.maxInstances;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> minInstances;
 
     public Output<Integer> getMinInstances() {
-        return this.minInstances == null ? Output.empty() : this.minInstances;
+        return this.minInstances == null ? Codegen.empty() : this.minInstances;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private ManualScaleSettingsArgs() {
-        this.instanceCount = Output.empty();
-        this.maxInstances = Output.empty();
-        this.minInstances = Output.empty();
-        this.scaleType = Output.empty();
+        this.instanceCount = Codegen.empty();
+        this.maxInstances = Codegen.empty();
+        this.minInstances = Codegen.empty();
+        this.scaleType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder maxInstances(@Nullable Output<Integer> maxInstances) {
@@ -116,7 +117,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder maxInstances(@Nullable Integer maxInstances) {
-            this.maxInstances = Output.ofNullable(maxInstances);
+            this.maxInstances = Codegen.ofNullable(maxInstances);
             return this;
         }
         public Builder minInstances(@Nullable Output<Integer> minInstances) {
@@ -124,7 +125,7 @@ public final class ManualScaleSettingsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder minInstances(@Nullable Integer minInstances) {
-            this.minInstances = Output.ofNullable(minInstances);
+            this.minInstances = Codegen.ofNullable(minInstances);
             return this;
         }
         public Builder scaleType(Output<String> scaleType) {

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> authentication;
 
     public Output<Object> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> functionKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getFunctionKey() {
-        return this.functionKey == null ? Output.empty() : this.functionKey;
+        return this.functionKey == null ? Codegen.empty() : this.functionKey;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Object> resourceId;
 
     public Output<Object> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -175,17 +176,17 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
     }
 
     private AzureFunctionLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.authentication = Output.empty();
-        this.connectVia = Output.empty();
-        this.credential = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.functionAppUrl = Output.empty();
-        this.functionKey = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceId = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.authentication = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.functionAppUrl = Codegen.empty();
+        this.functionKey = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -233,7 +234,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -244,7 +245,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder authentication(@Nullable Object authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -252,7 +253,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -260,7 +261,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -268,7 +269,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -276,7 +277,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder functionAppUrl(Output<Object> functionAppUrl) {
@@ -292,7 +293,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder functionKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> functionKey) {
-            this.functionKey = Output.ofNullable(functionKey);
+            this.functionKey = Codegen.ofNullable(functionKey);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -300,7 +301,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceId(@Nullable Output<Object> resourceId) {
@@ -308,7 +309,7 @@ public final class AzureFunctionLinkedServiceArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder resourceId(@Nullable Object resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder type(Output<String> type) {

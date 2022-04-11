@@ -5,6 +5,7 @@ package io.pulumi.aws.appstream.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class StackApplicationSettingsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="settingsGroup")
       private final @Nullable Output<String> settingsGroup;
 
     public Output<String> getSettingsGroup() {
-        return this.settingsGroup == null ? Output.empty() : this.settingsGroup;
+        return this.settingsGroup == null ? Codegen.empty() : this.settingsGroup;
     }
 
     public StackApplicationSettingsArgs(
@@ -37,8 +38,8 @@ public final class StackApplicationSettingsArgs extends io.pulumi.resources.Reso
     }
 
     private StackApplicationSettingsArgs() {
-        this.enabled = Output.empty();
-        this.settingsGroup = Output.empty();
+        this.enabled = Codegen.empty();
+        this.settingsGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class StackApplicationSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder settingsGroup(@Nullable Output<String> settingsGroup) {
@@ -76,7 +77,7 @@ public final class StackApplicationSettingsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder settingsGroup(@Nullable String settingsGroup) {
-            this.settingsGroup = Output.ofNullable(settingsGroup);
+            this.settingsGroup = Codegen.ofNullable(settingsGroup);
             return this;
         }        public StackApplicationSettingsArgs build() {
             return new StackApplicationSettingsArgs(enabled, settingsGroup);

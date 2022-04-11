@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.notebooks.inputs.InstanceAcceleratorConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceContainerImageArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceReservationAffinityArgs;
@@ -34,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceAcceleratorConfigArgs> acceleratorConfig;
 
     public Output<InstanceAcceleratorConfigArgs> getAcceleratorConfig() {
-        return this.acceleratorConfig == null ? Output.empty() : this.acceleratorConfig;
+        return this.acceleratorConfig == null ? Codegen.empty() : this.acceleratorConfig;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
     public Output<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
+        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bootDiskType;
 
     public Output<String> getBootDiskType() {
-        return this.bootDiskType == null ? Output.empty() : this.bootDiskType;
+        return this.bootDiskType == null ? Codegen.empty() : this.bootDiskType;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceContainerImageArgs> containerImage;
 
     public Output<InstanceContainerImageArgs> getContainerImage() {
-        return this.containerImage == null ? Output.empty() : this.containerImage;
+        return this.containerImage == null ? Codegen.empty() : this.containerImage;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customGpuDriverPath;
 
     public Output<String> getCustomGpuDriverPath() {
-        return this.customGpuDriverPath == null ? Output.empty() : this.customGpuDriverPath;
+        return this.customGpuDriverPath == null ? Codegen.empty() : this.customGpuDriverPath;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> dataDiskSizeGb;
 
     public Output<Integer> getDataDiskSizeGb() {
-        return this.dataDiskSizeGb == null ? Output.empty() : this.dataDiskSizeGb;
+        return this.dataDiskSizeGb == null ? Codegen.empty() : this.dataDiskSizeGb;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataDiskType;
 
     public Output<String> getDataDiskType() {
-        return this.dataDiskType == null ? Output.empty() : this.dataDiskType;
+        return this.dataDiskType == null ? Codegen.empty() : this.dataDiskType;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> diskEncryption;
 
     public Output<String> getDiskEncryption() {
-        return this.diskEncryption == null ? Output.empty() : this.diskEncryption;
+        return this.diskEncryption == null ? Codegen.empty() : this.diskEncryption;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> installGpuDriver;
 
     public Output<Boolean> getInstallGpuDriver() {
-        return this.installGpuDriver == null ? Output.empty() : this.installGpuDriver;
+        return this.installGpuDriver == null ? Codegen.empty() : this.installGpuDriver;
     }
 
     /**
@@ -160,7 +161,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> instanceOwners;
 
     public Output<List<String>> getInstanceOwners() {
-        return this.instanceOwners == null ? Output.empty() : this.instanceOwners;
+        return this.instanceOwners == null ? Codegen.empty() : this.instanceOwners;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -218,7 +219,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -229,7 +230,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -241,7 +242,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -253,7 +254,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> nicType;
 
     public Output<String> getNicType() {
-        return this.nicType == null ? Output.empty() : this.nicType;
+        return this.nicType == null ? Codegen.empty() : this.nicType;
     }
 
     /**
@@ -264,7 +265,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> noProxyAccess;
 
     public Output<Boolean> getNoProxyAccess() {
-        return this.noProxyAccess == null ? Output.empty() : this.noProxyAccess;
+        return this.noProxyAccess == null ? Codegen.empty() : this.noProxyAccess;
     }
 
     /**
@@ -275,7 +276,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> noPublicIp;
 
     public Output<Boolean> getNoPublicIp() {
-        return this.noPublicIp == null ? Output.empty() : this.noPublicIp;
+        return this.noPublicIp == null ? Codegen.empty() : this.noPublicIp;
     }
 
     /**
@@ -286,7 +287,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> noRemoveDataDisk;
 
     public Output<Boolean> getNoRemoveDataDisk() {
-        return this.noRemoveDataDisk == null ? Output.empty() : this.noRemoveDataDisk;
+        return this.noRemoveDataDisk == null ? Codegen.empty() : this.noRemoveDataDisk;
     }
 
     /**
@@ -299,7 +300,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> postStartupScript;
 
     public Output<String> getPostStartupScript() {
-        return this.postStartupScript == null ? Output.empty() : this.postStartupScript;
+        return this.postStartupScript == null ? Codegen.empty() : this.postStartupScript;
     }
 
     /**
@@ -311,7 +312,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -323,7 +324,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceReservationAffinityArgs> reservationAffinity;
 
     public Output<InstanceReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
+        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
     /**
@@ -338,7 +339,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -352,7 +353,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
     public Output<List<String>> getServiceAccountScopes() {
-        return this.serviceAccountScopes == null ? Output.empty() : this.serviceAccountScopes;
+        return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
     }
 
     /**
@@ -365,7 +366,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<InstanceShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -377,7 +378,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnet;
 
     public Output<String> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     /**
@@ -388,7 +389,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -399,7 +400,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -411,7 +412,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceVmImageArgs> vmImage;
 
     public Output<InstanceVmImageArgs> getVmImage() {
-        return this.vmImage == null ? Output.empty() : this.vmImage;
+        return this.vmImage == null ? Codegen.empty() : this.vmImage;
     }
 
     public InstanceArgs(
@@ -482,38 +483,38 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.acceleratorConfig = Output.empty();
-        this.bootDiskSizeGb = Output.empty();
-        this.bootDiskType = Output.empty();
-        this.containerImage = Output.empty();
-        this.createTime = Output.empty();
-        this.customGpuDriverPath = Output.empty();
-        this.dataDiskSizeGb = Output.empty();
-        this.dataDiskType = Output.empty();
-        this.diskEncryption = Output.empty();
-        this.installGpuDriver = Output.empty();
-        this.instanceOwners = Output.empty();
-        this.kmsKey = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.machineType = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.nicType = Output.empty();
-        this.noProxyAccess = Output.empty();
-        this.noPublicIp = Output.empty();
-        this.noRemoveDataDisk = Output.empty();
-        this.postStartupScript = Output.empty();
-        this.project = Output.empty();
-        this.reservationAffinity = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceAccountScopes = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.subnet = Output.empty();
-        this.tags = Output.empty();
-        this.updateTime = Output.empty();
-        this.vmImage = Output.empty();
+        this.acceleratorConfig = Codegen.empty();
+        this.bootDiskSizeGb = Codegen.empty();
+        this.bootDiskType = Codegen.empty();
+        this.containerImage = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.customGpuDriverPath = Codegen.empty();
+        this.dataDiskSizeGb = Codegen.empty();
+        this.dataDiskType = Codegen.empty();
+        this.diskEncryption = Codegen.empty();
+        this.installGpuDriver = Codegen.empty();
+        this.instanceOwners = Codegen.empty();
+        this.kmsKey = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.nicType = Codegen.empty();
+        this.noProxyAccess = Codegen.empty();
+        this.noPublicIp = Codegen.empty();
+        this.noRemoveDataDisk = Codegen.empty();
+        this.postStartupScript = Codegen.empty();
+        this.project = Codegen.empty();
+        this.reservationAffinity = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceAccountScopes = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.subnet = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.vmImage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -603,7 +604,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceleratorConfig(@Nullable InstanceAcceleratorConfigArgs acceleratorConfig) {
-            this.acceleratorConfig = Output.ofNullable(acceleratorConfig);
+            this.acceleratorConfig = Codegen.ofNullable(acceleratorConfig);
             return this;
         }
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
@@ -611,7 +612,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
             return this;
         }
         public Builder bootDiskType(@Nullable Output<String> bootDiskType) {
@@ -619,7 +620,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bootDiskType(@Nullable String bootDiskType) {
-            this.bootDiskType = Output.ofNullable(bootDiskType);
+            this.bootDiskType = Codegen.ofNullable(bootDiskType);
             return this;
         }
         public Builder containerImage(@Nullable Output<InstanceContainerImageArgs> containerImage) {
@@ -627,7 +628,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerImage(@Nullable InstanceContainerImageArgs containerImage) {
-            this.containerImage = Output.ofNullable(containerImage);
+            this.containerImage = Codegen.ofNullable(containerImage);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -635,7 +636,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder customGpuDriverPath(@Nullable Output<String> customGpuDriverPath) {
@@ -643,7 +644,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customGpuDriverPath(@Nullable String customGpuDriverPath) {
-            this.customGpuDriverPath = Output.ofNullable(customGpuDriverPath);
+            this.customGpuDriverPath = Codegen.ofNullable(customGpuDriverPath);
             return this;
         }
         public Builder dataDiskSizeGb(@Nullable Output<Integer> dataDiskSizeGb) {
@@ -651,7 +652,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDiskSizeGb(@Nullable Integer dataDiskSizeGb) {
-            this.dataDiskSizeGb = Output.ofNullable(dataDiskSizeGb);
+            this.dataDiskSizeGb = Codegen.ofNullable(dataDiskSizeGb);
             return this;
         }
         public Builder dataDiskType(@Nullable Output<String> dataDiskType) {
@@ -659,7 +660,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataDiskType(@Nullable String dataDiskType) {
-            this.dataDiskType = Output.ofNullable(dataDiskType);
+            this.dataDiskType = Codegen.ofNullable(dataDiskType);
             return this;
         }
         public Builder diskEncryption(@Nullable Output<String> diskEncryption) {
@@ -667,7 +668,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskEncryption(@Nullable String diskEncryption) {
-            this.diskEncryption = Output.ofNullable(diskEncryption);
+            this.diskEncryption = Codegen.ofNullable(diskEncryption);
             return this;
         }
         public Builder installGpuDriver(@Nullable Output<Boolean> installGpuDriver) {
@@ -675,7 +676,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder installGpuDriver(@Nullable Boolean installGpuDriver) {
-            this.installGpuDriver = Output.ofNullable(installGpuDriver);
+            this.installGpuDriver = Codegen.ofNullable(installGpuDriver);
             return this;
         }
         public Builder instanceOwners(@Nullable Output<List<String>> instanceOwners) {
@@ -683,7 +684,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceOwners(@Nullable List<String> instanceOwners) {
-            this.instanceOwners = Output.ofNullable(instanceOwners);
+            this.instanceOwners = Codegen.ofNullable(instanceOwners);
             return this;
         }
         public Builder instanceOwners(String... instanceOwners) {
@@ -694,7 +695,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -702,7 +703,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(Output<String> location) {
@@ -726,7 +727,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -734,7 +735,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -742,7 +743,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder nicType(@Nullable Output<String> nicType) {
@@ -750,7 +751,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nicType(@Nullable String nicType) {
-            this.nicType = Output.ofNullable(nicType);
+            this.nicType = Codegen.ofNullable(nicType);
             return this;
         }
         public Builder noProxyAccess(@Nullable Output<Boolean> noProxyAccess) {
@@ -758,7 +759,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noProxyAccess(@Nullable Boolean noProxyAccess) {
-            this.noProxyAccess = Output.ofNullable(noProxyAccess);
+            this.noProxyAccess = Codegen.ofNullable(noProxyAccess);
             return this;
         }
         public Builder noPublicIp(@Nullable Output<Boolean> noPublicIp) {
@@ -766,7 +767,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noPublicIp(@Nullable Boolean noPublicIp) {
-            this.noPublicIp = Output.ofNullable(noPublicIp);
+            this.noPublicIp = Codegen.ofNullable(noPublicIp);
             return this;
         }
         public Builder noRemoveDataDisk(@Nullable Output<Boolean> noRemoveDataDisk) {
@@ -774,7 +775,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noRemoveDataDisk(@Nullable Boolean noRemoveDataDisk) {
-            this.noRemoveDataDisk = Output.ofNullable(noRemoveDataDisk);
+            this.noRemoveDataDisk = Codegen.ofNullable(noRemoveDataDisk);
             return this;
         }
         public Builder postStartupScript(@Nullable Output<String> postStartupScript) {
@@ -782,7 +783,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder postStartupScript(@Nullable String postStartupScript) {
-            this.postStartupScript = Output.ofNullable(postStartupScript);
+            this.postStartupScript = Codegen.ofNullable(postStartupScript);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -790,7 +791,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder reservationAffinity(@Nullable Output<InstanceReservationAffinityArgs> reservationAffinity) {
@@ -798,7 +799,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservationAffinity(@Nullable InstanceReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Output.ofNullable(reservationAffinity);
+            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -806,7 +807,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
@@ -814,7 +815,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
+            this.serviceAccountScopes = Codegen.ofNullable(serviceAccountScopes);
             return this;
         }
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
@@ -825,7 +826,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable InstanceShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder subnet(@Nullable Output<String> subnet) {
@@ -833,7 +834,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnet(@Nullable String subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -841,7 +842,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -852,7 +853,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder vmImage(@Nullable Output<InstanceVmImageArgs> vmImage) {
@@ -860,7 +861,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmImage(@Nullable InstanceVmImageArgs vmImage) {
-            this.vmImage = Output.ofNullable(vmImage);
+            this.vmImage = Codegen.ofNullable(vmImage);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(acceleratorConfig, bootDiskSizeGb, bootDiskType, containerImage, createTime, customGpuDriverPath, dataDiskSizeGb, dataDiskType, diskEncryption, installGpuDriver, instanceOwners, kmsKey, labels, location, machineType, metadata, name, network, nicType, noProxyAccess, noPublicIp, noRemoveDataDisk, postStartupScript, project, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnet, tags, updateTime, vmImage);

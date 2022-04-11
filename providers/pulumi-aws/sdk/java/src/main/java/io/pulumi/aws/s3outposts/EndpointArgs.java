@@ -5,6 +5,7 @@ package io.pulumi.aws.s3outposts;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.outpostId = Output.empty();
-        this.securityGroupId = Output.empty();
-        this.subnetId = Output.empty();
+        this.outpostId = Codegen.empty();
+        this.securityGroupId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

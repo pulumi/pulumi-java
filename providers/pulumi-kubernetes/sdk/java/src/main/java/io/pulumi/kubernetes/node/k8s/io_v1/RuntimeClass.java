@@ -7,6 +7,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.node.k8s.io_v1.RuntimeClassArgs;
@@ -133,7 +134,7 @@ public class RuntimeClass extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RuntimeClass(String name, RuntimeClassArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:node.k8s.io/v1:RuntimeClass", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:node.k8s.io/v1:RuntimeClass", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private RuntimeClass(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

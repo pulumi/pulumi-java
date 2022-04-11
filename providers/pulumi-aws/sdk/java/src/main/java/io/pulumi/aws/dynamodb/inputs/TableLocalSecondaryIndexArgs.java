@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> nonKeyAttributes;
 
     public Output<List<String>> getNonKeyAttributes() {
-        return this.nonKeyAttributes == null ? Output.empty() : this.nonKeyAttributes;
+        return this.nonKeyAttributes == null ? Codegen.empty() : this.nonKeyAttributes;
     }
 
     /**
@@ -77,10 +78,10 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
     }
 
     private TableLocalSecondaryIndexArgs() {
-        this.name = Output.empty();
-        this.nonKeyAttributes = Output.empty();
-        this.projectionType = Output.empty();
-        this.rangeKey = Output.empty();
+        this.name = Codegen.empty();
+        this.nonKeyAttributes = Codegen.empty();
+        this.projectionType = Codegen.empty();
+        this.rangeKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class TableLocalSecondaryIndexArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder nonKeyAttributes(@Nullable List<String> nonKeyAttributes) {
-            this.nonKeyAttributes = Output.ofNullable(nonKeyAttributes);
+            this.nonKeyAttributes = Codegen.ofNullable(nonKeyAttributes);
             return this;
         }
         public Builder nonKeyAttributes(String... nonKeyAttributes) {

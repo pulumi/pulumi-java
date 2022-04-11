@@ -8,6 +8,7 @@ import io.pulumi.aws.ses.inputs.EventDestinationKinesisDestinationGetArgs;
 import io.pulumi.aws.ses.inputs.EventDestinationSnsDestinationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations;
 
     public Output<List<EventDestinationCloudwatchDestinationGetArgs>> getCloudwatchDestinations() {
-        return this.cloudwatchDestinations == null ? Output.empty() : this.cloudwatchDestinations;
+        return this.cloudwatchDestinations == null ? Codegen.empty() : this.cloudwatchDestinations;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> configurationSetName;
 
     public Output<String> getConfigurationSetName() {
-        return this.configurationSetName == null ? Output.empty() : this.configurationSetName;
+        return this.configurationSetName == null ? Codegen.empty() : this.configurationSetName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<EventDestinationKinesisDestinationGetArgs> kinesisDestination;
 
     public Output<EventDestinationKinesisDestinationGetArgs> getKinesisDestination() {
-        return this.kinesisDestination == null ? Output.empty() : this.kinesisDestination;
+        return this.kinesisDestination == null ? Codegen.empty() : this.kinesisDestination;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> matchingTypes;
 
     public Output<List<String>> getMatchingTypes() {
-        return this.matchingTypes == null ? Output.empty() : this.matchingTypes;
+        return this.matchingTypes == null ? Codegen.empty() : this.matchingTypes;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<EventDestinationSnsDestinationGetArgs> snsDestination;
 
     public Output<EventDestinationSnsDestinationGetArgs> getSnsDestination() {
-        return this.snsDestination == null ? Output.empty() : this.snsDestination;
+        return this.snsDestination == null ? Codegen.empty() : this.snsDestination;
     }
 
     public EventDestinationState(
@@ -127,14 +128,14 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
     }
 
     private EventDestinationState() {
-        this.arn = Output.empty();
-        this.cloudwatchDestinations = Output.empty();
-        this.configurationSetName = Output.empty();
-        this.enabled = Output.empty();
-        this.kinesisDestination = Output.empty();
-        this.matchingTypes = Output.empty();
-        this.name = Output.empty();
-        this.snsDestination = Output.empty();
+        this.arn = Codegen.empty();
+        this.cloudwatchDestinations = Codegen.empty();
+        this.configurationSetName = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.kinesisDestination = Codegen.empty();
+        this.matchingTypes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.snsDestination = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cloudwatchDestinations(@Nullable Output<List<EventDestinationCloudwatchDestinationGetArgs>> cloudwatchDestinations) {
@@ -184,7 +185,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cloudwatchDestinations(@Nullable List<EventDestinationCloudwatchDestinationGetArgs> cloudwatchDestinations) {
-            this.cloudwatchDestinations = Output.ofNullable(cloudwatchDestinations);
+            this.cloudwatchDestinations = Codegen.ofNullable(cloudwatchDestinations);
             return this;
         }
         public Builder cloudwatchDestinations(EventDestinationCloudwatchDestinationGetArgs... cloudwatchDestinations) {
@@ -195,7 +196,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder configurationSetName(@Nullable String configurationSetName) {
-            this.configurationSetName = Output.ofNullable(configurationSetName);
+            this.configurationSetName = Codegen.ofNullable(configurationSetName);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -203,7 +204,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder kinesisDestination(@Nullable Output<EventDestinationKinesisDestinationGetArgs> kinesisDestination) {
@@ -211,7 +212,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder kinesisDestination(@Nullable EventDestinationKinesisDestinationGetArgs kinesisDestination) {
-            this.kinesisDestination = Output.ofNullable(kinesisDestination);
+            this.kinesisDestination = Codegen.ofNullable(kinesisDestination);
             return this;
         }
         public Builder matchingTypes(@Nullable Output<List<String>> matchingTypes) {
@@ -219,7 +220,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder matchingTypes(@Nullable List<String> matchingTypes) {
-            this.matchingTypes = Output.ofNullable(matchingTypes);
+            this.matchingTypes = Codegen.ofNullable(matchingTypes);
             return this;
         }
         public Builder matchingTypes(String... matchingTypes) {
@@ -230,7 +231,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder snsDestination(@Nullable Output<EventDestinationSnsDestinationGetArgs> snsDestination) {
@@ -238,7 +239,7 @@ public final class EventDestinationState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder snsDestination(@Nullable EventDestinationSnsDestinationGetArgs snsDestination) {
-            this.snsDestination = Output.ofNullable(snsDestination);
+            this.snsDestination = Codegen.ofNullable(snsDestination);
             return this;
         }        public EventDestinationState build() {
             return new EventDestinationState(arn, cloudwatchDestinations, configurationSetName, enabled, kinesisDestination, matchingTypes, name, snsDestination);

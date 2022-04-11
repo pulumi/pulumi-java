@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> maxPercentUnhealthyPartitionsPerService;
 
     public Output<Integer> getMaxPercentUnhealthyPartitionsPerService() {
-        return this.maxPercentUnhealthyPartitionsPerService == null ? Output.empty() : this.maxPercentUnhealthyPartitionsPerService;
+        return this.maxPercentUnhealthyPartitionsPerService == null ? Codegen.empty() : this.maxPercentUnhealthyPartitionsPerService;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> maxPercentUnhealthyReplicasPerPartition;
 
     public Output<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
-        return this.maxPercentUnhealthyReplicasPerPartition == null ? Output.empty() : this.maxPercentUnhealthyReplicasPerPartition;
+        return this.maxPercentUnhealthyReplicasPerPartition == null ? Codegen.empty() : this.maxPercentUnhealthyReplicasPerPartition;
     }
 
     /**
@@ -48,22 +49,22 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> maxPercentUnhealthyServices;
 
     public Output<Integer> getMaxPercentUnhealthyServices() {
-        return this.maxPercentUnhealthyServices == null ? Output.empty() : this.maxPercentUnhealthyServices;
+        return this.maxPercentUnhealthyServices == null ? Codegen.empty() : this.maxPercentUnhealthyServices;
     }
 
     public ArmServiceTypeHealthPolicyArgs(
         @Nullable Output<Integer> maxPercentUnhealthyPartitionsPerService,
         @Nullable Output<Integer> maxPercentUnhealthyReplicasPerPartition,
         @Nullable Output<Integer> maxPercentUnhealthyServices) {
-        this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService == null ? Output.ofNullable(0) : maxPercentUnhealthyPartitionsPerService;
-        this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition == null ? Output.ofNullable(0) : maxPercentUnhealthyReplicasPerPartition;
-        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Output.ofNullable(0) : maxPercentUnhealthyServices;
+        this.maxPercentUnhealthyPartitionsPerService = maxPercentUnhealthyPartitionsPerService == null ? Codegen.ofNullable(0) : maxPercentUnhealthyPartitionsPerService;
+        this.maxPercentUnhealthyReplicasPerPartition = maxPercentUnhealthyReplicasPerPartition == null ? Codegen.ofNullable(0) : maxPercentUnhealthyReplicasPerPartition;
+        this.maxPercentUnhealthyServices = maxPercentUnhealthyServices == null ? Codegen.ofNullable(0) : maxPercentUnhealthyServices;
     }
 
     private ArmServiceTypeHealthPolicyArgs() {
-        this.maxPercentUnhealthyPartitionsPerService = Output.empty();
-        this.maxPercentUnhealthyReplicasPerPartition = Output.empty();
-        this.maxPercentUnhealthyServices = Output.empty();
+        this.maxPercentUnhealthyPartitionsPerService = Codegen.empty();
+        this.maxPercentUnhealthyReplicasPerPartition = Codegen.empty();
+        this.maxPercentUnhealthyServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxPercentUnhealthyPartitionsPerService(@Nullable Integer maxPercentUnhealthyPartitionsPerService) {
-            this.maxPercentUnhealthyPartitionsPerService = Output.ofNullable(maxPercentUnhealthyPartitionsPerService);
+            this.maxPercentUnhealthyPartitionsPerService = Codegen.ofNullable(maxPercentUnhealthyPartitionsPerService);
             return this;
         }
         public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Output<Integer> maxPercentUnhealthyReplicasPerPartition) {
@@ -103,7 +104,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxPercentUnhealthyReplicasPerPartition(@Nullable Integer maxPercentUnhealthyReplicasPerPartition) {
-            this.maxPercentUnhealthyReplicasPerPartition = Output.ofNullable(maxPercentUnhealthyReplicasPerPartition);
+            this.maxPercentUnhealthyReplicasPerPartition = Codegen.ofNullable(maxPercentUnhealthyReplicasPerPartition);
             return this;
         }
         public Builder maxPercentUnhealthyServices(@Nullable Output<Integer> maxPercentUnhealthyServices) {
@@ -111,7 +112,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxPercentUnhealthyServices(@Nullable Integer maxPercentUnhealthyServices) {
-            this.maxPercentUnhealthyServices = Output.ofNullable(maxPercentUnhealthyServices);
+            this.maxPercentUnhealthyServices = Codegen.ofNullable(maxPercentUnhealthyServices);
             return this;
         }        public ArmServiceTypeHealthPolicyArgs build() {
             return new ArmServiceTypeHealthPolicyArgs(maxPercentUnhealthyPartitionsPerService, maxPercentUnhealthyReplicasPerPartition, maxPercentUnhealthyServices);

@@ -10,6 +10,7 @@ import io.pulumi.aws.ses.outputs.ConfgurationSetDeliveryOptions;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -141,7 +142,7 @@ public class ConfgurationSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConfgurationSet(String name, @Nullable ConfgurationSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ses/confgurationSet:ConfgurationSet", name, args == null ? ConfgurationSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ses/confgurationSet:ConfgurationSet", name, args == null ? ConfgurationSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConfgurationSet(String name, Output<String> id, @Nullable ConfgurationSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

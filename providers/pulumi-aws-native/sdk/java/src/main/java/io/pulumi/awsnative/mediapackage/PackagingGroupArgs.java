@@ -8,6 +8,7 @@ import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupLogConfigurationArg
 import io.pulumi.awsnative.mediapackage.inputs.PackagingGroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PackagingGroupAuthorizationArgs> authorization;
 
     public Output<PackagingGroupAuthorizationArgs> getAuthorization() {
-        return this.authorization == null ? Output.empty() : this.authorization;
+        return this.authorization == null ? Codegen.empty() : this.authorization;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs;
 
     public Output<PackagingGroupLogConfigurationArgs> getEgressAccessLogs() {
-        return this.egressAccessLogs == null ? Output.empty() : this.egressAccessLogs;
+        return this.egressAccessLogs == null ? Codegen.empty() : this.egressAccessLogs;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PackagingGroupTagArgs>> tags;
 
     public Output<List<PackagingGroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PackagingGroupArgs(
@@ -60,9 +61,9 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackagingGroupArgs() {
-        this.authorization = Output.empty();
-        this.egressAccessLogs = Output.empty();
-        this.tags = Output.empty();
+        this.authorization = Codegen.empty();
+        this.egressAccessLogs = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorization(@Nullable PackagingGroupAuthorizationArgs authorization) {
-            this.authorization = Output.ofNullable(authorization);
+            this.authorization = Codegen.ofNullable(authorization);
             return this;
         }
         public Builder egressAccessLogs(@Nullable Output<PackagingGroupLogConfigurationArgs> egressAccessLogs) {
@@ -102,7 +103,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egressAccessLogs(@Nullable PackagingGroupLogConfigurationArgs egressAccessLogs) {
-            this.egressAccessLogs = Output.ofNullable(egressAccessLogs);
+            this.egressAccessLogs = Codegen.ofNullable(egressAccessLogs);
             return this;
         }
         public Builder tags(@Nullable Output<List<PackagingGroupTagArgs>> tags) {
@@ -110,7 +111,7 @@ public final class PackagingGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PackagingGroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PackagingGroupTagArgs... tags) {

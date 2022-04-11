@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> imageId;
 
     public Output<String> getImageId() {
-        return this.imageId == null ? Output.empty() : this.imageId;
+        return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 
     public AmiLaunchPermissionState(
@@ -44,8 +45,8 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
     }
 
     private AmiLaunchPermissionState() {
-        this.accountId = Output.empty();
-        this.imageId = Output.empty();
+        this.accountId = Codegen.empty();
+        this.imageId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder imageId(@Nullable Output<String> imageId) {
@@ -83,7 +84,7 @@ public final class AmiLaunchPermissionState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder imageId(@Nullable String imageId) {
-            this.imageId = Output.ofNullable(imageId);
+            this.imageId = Codegen.ofNullable(imageId);
             return this;
         }        public AmiLaunchPermissionState build() {
             return new AmiLaunchPermissionState(accountId, imageId);

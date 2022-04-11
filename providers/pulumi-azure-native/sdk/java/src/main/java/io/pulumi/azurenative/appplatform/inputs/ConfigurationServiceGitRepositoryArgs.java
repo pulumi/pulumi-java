@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<String> hostKey;
 
     public Output<String> getHostKey() {
-        return this.hostKey == null ? Output.empty() : this.hostKey;
+        return this.hostKey == null ? Codegen.empty() : this.hostKey;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<String> hostKeyAlgorithm;
 
     public Output<String> getHostKeyAlgorithm() {
-        return this.hostKeyAlgorithm == null ? Output.empty() : this.hostKeyAlgorithm;
+        return this.hostKeyAlgorithm == null ? Codegen.empty() : this.hostKeyAlgorithm;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<List<String>> searchPaths;
 
     public Output<List<String>> getSearchPaths() {
-        return this.searchPaths == null ? Output.empty() : this.searchPaths;
+        return this.searchPaths == null ? Codegen.empty() : this.searchPaths;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<Boolean> strictHostKeyChecking;
 
     public Output<Boolean> getStrictHostKeyChecking() {
-        return this.strictHostKeyChecking == null ? Output.empty() : this.strictHostKeyChecking;
+        return this.strictHostKeyChecking == null ? Codegen.empty() : this.strictHostKeyChecking;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public ConfigurationServiceGitRepositoryArgs(
@@ -167,17 +168,17 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
     }
 
     private ConfigurationServiceGitRepositoryArgs() {
-        this.hostKey = Output.empty();
-        this.hostKeyAlgorithm = Output.empty();
-        this.label = Output.empty();
-        this.name = Output.empty();
-        this.password = Output.empty();
-        this.patterns = Output.empty();
-        this.privateKey = Output.empty();
-        this.searchPaths = Output.empty();
-        this.strictHostKeyChecking = Output.empty();
-        this.uri = Output.empty();
-        this.username = Output.empty();
+        this.hostKey = Codegen.empty();
+        this.hostKeyAlgorithm = Codegen.empty();
+        this.label = Codegen.empty();
+        this.name = Codegen.empty();
+        this.password = Codegen.empty();
+        this.patterns = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.searchPaths = Codegen.empty();
+        this.strictHostKeyChecking = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder hostKey(@Nullable String hostKey) {
-            this.hostKey = Output.ofNullable(hostKey);
+            this.hostKey = Codegen.ofNullable(hostKey);
             return this;
         }
         public Builder hostKeyAlgorithm(@Nullable Output<String> hostKeyAlgorithm) {
@@ -233,7 +234,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder hostKeyAlgorithm(@Nullable String hostKeyAlgorithm) {
-            this.hostKeyAlgorithm = Output.ofNullable(hostKeyAlgorithm);
+            this.hostKeyAlgorithm = Codegen.ofNullable(hostKeyAlgorithm);
             return this;
         }
         public Builder label(Output<String> label) {
@@ -257,7 +258,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder patterns(Output<List<String>> patterns) {
@@ -276,7 +277,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder searchPaths(@Nullable Output<List<String>> searchPaths) {
@@ -284,7 +285,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder searchPaths(@Nullable List<String> searchPaths) {
-            this.searchPaths = Output.ofNullable(searchPaths);
+            this.searchPaths = Codegen.ofNullable(searchPaths);
             return this;
         }
         public Builder searchPaths(String... searchPaths) {
@@ -295,7 +296,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder strictHostKeyChecking(@Nullable Boolean strictHostKeyChecking) {
-            this.strictHostKeyChecking = Output.ofNullable(strictHostKeyChecking);
+            this.strictHostKeyChecking = Codegen.ofNullable(strictHostKeyChecking);
             return this;
         }
         public Builder uri(Output<String> uri) {
@@ -311,7 +312,7 @@ public final class ConfigurationServiceGitRepositoryArgs extends io.pulumi.resou
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public ConfigurationServiceGitRepositoryArgs build() {
             return new ConfigurationServiceGitRepositoryArgs(hostKey, hostKeyAlgorithm, label, name, password, patterns, privateKey, searchPaths, strictHostKeyChecking, uri, username);

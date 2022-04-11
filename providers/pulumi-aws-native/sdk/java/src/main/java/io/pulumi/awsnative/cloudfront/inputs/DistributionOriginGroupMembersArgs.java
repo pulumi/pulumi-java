@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupMemberArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -37,8 +38,8 @@ public final class DistributionOriginGroupMembersArgs extends io.pulumi.resource
     }
 
     private DistributionOriginGroupMembersArgs() {
-        this.items = Output.empty();
-        this.quantity = Output.empty();
+        this.items = Codegen.empty();
+        this.quantity = Codegen.empty();
     }
 
     public static Builder builder() {

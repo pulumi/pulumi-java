@@ -7,6 +7,7 @@ import io.pulumi.aws.backup.inputs.SelectionConditionGetArgs;
 import io.pulumi.aws.backup.inputs.SelectionSelectionTagGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SelectionConditionGetArgs>> conditions;
 
     public Output<List<SelectionConditionGetArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iamRoleArn;
 
     public Output<String> getIamRoleArn() {
-        return this.iamRoleArn == null ? Output.empty() : this.iamRoleArn;
+        return this.iamRoleArn == null ? Codegen.empty() : this.iamRoleArn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> notResources;
 
     public Output<List<String>> getNotResources() {
-        return this.notResources == null ? Output.empty() : this.notResources;
+        return this.notResources == null ? Codegen.empty() : this.notResources;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> planId;
 
     public Output<String> getPlanId() {
-        return this.planId == null ? Output.empty() : this.planId;
+        return this.planId == null ? Codegen.empty() : this.planId;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SelectionSelectionTagGetArgs>> selectionTags;
 
     public Output<List<SelectionSelectionTagGetArgs>> getSelectionTags() {
-        return this.selectionTags == null ? Output.empty() : this.selectionTags;
+        return this.selectionTags == null ? Codegen.empty() : this.selectionTags;
     }
 
     public SelectionState(
@@ -112,13 +113,13 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
     }
 
     private SelectionState() {
-        this.conditions = Output.empty();
-        this.iamRoleArn = Output.empty();
-        this.name = Output.empty();
-        this.notResources = Output.empty();
-        this.planId = Output.empty();
-        this.resources = Output.empty();
-        this.selectionTags = Output.empty();
+        this.conditions = Codegen.empty();
+        this.iamRoleArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notResources = Codegen.empty();
+        this.planId = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.selectionTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder conditions(@Nullable List<SelectionConditionGetArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(SelectionConditionGetArgs... conditions) {
@@ -169,7 +170,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamRoleArn(@Nullable String iamRoleArn) {
-            this.iamRoleArn = Output.ofNullable(iamRoleArn);
+            this.iamRoleArn = Codegen.ofNullable(iamRoleArn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -177,7 +178,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notResources(@Nullable Output<List<String>> notResources) {
@@ -185,7 +186,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notResources(@Nullable List<String> notResources) {
-            this.notResources = Output.ofNullable(notResources);
+            this.notResources = Codegen.ofNullable(notResources);
             return this;
         }
         public Builder notResources(String... notResources) {
@@ -196,7 +197,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder planId(@Nullable String planId) {
-            this.planId = Output.ofNullable(planId);
+            this.planId = Codegen.ofNullable(planId);
             return this;
         }
         public Builder resources(@Nullable Output<List<String>> resources) {
@@ -204,7 +205,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {
@@ -215,7 +216,7 @@ public final class SelectionState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selectionTags(@Nullable List<SelectionSelectionTagGetArgs> selectionTags) {
-            this.selectionTags = Output.ofNullable(selectionTags);
+            this.selectionTags = Codegen.ofNullable(selectionTags);
             return this;
         }
         public Builder selectionTags(SelectionSelectionTagGetArgs... selectionTags) {

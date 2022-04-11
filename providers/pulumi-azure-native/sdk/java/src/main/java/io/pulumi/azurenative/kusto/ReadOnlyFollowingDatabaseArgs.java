@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> hotCachePeriod;
 
     public Output<String> getHotCachePeriod() {
-        return this.hotCachePeriod == null ? Output.empty() : this.hotCachePeriod;
+        return this.hotCachePeriod == null ? Codegen.empty() : this.hotCachePeriod;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
     }
 
     private ReadOnlyFollowingDatabaseArgs() {
-        this.clusterName = Output.empty();
-        this.databaseName = Output.empty();
-        this.hotCachePeriod = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.clusterName = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.hotCachePeriod = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
@@ -156,7 +157,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder hotCachePeriod(@Nullable String hotCachePeriod) {
-            this.hotCachePeriod = Output.ofNullable(hotCachePeriod);
+            this.hotCachePeriod = Codegen.ofNullable(hotCachePeriod);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -172,7 +173,7 @@ public final class ReadOnlyFollowingDatabaseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

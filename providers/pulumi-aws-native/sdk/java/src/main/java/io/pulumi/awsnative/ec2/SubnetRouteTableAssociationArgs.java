@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class SubnetRouteTableAssociationArgs extends io.pulumi.resources.R
     }
 
     private SubnetRouteTableAssociationArgs() {
-        this.routeTableId = Output.empty();
-        this.subnetId = Output.empty();
+        this.routeTableId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

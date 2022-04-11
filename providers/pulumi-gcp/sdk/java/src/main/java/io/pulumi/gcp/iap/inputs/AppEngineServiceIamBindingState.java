@@ -5,6 +5,7 @@ package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
       private final @Nullable Output<AppEngineServiceIamBindingConditionGetArgs> condition;
 
     public Output<AppEngineServiceIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -47,14 +48,14 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public AppEngineServiceIamBindingState(
@@ -111,13 +112,13 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
     }
 
     private AppEngineServiceIamBindingState() {
-        this.appId = Output.empty();
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.service = Output.empty();
+        this.appId = Codegen.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder condition(@Nullable Output<AppEngineServiceIamBindingConditionGetArgs> condition) {
@@ -165,7 +166,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder condition(@Nullable AppEngineServiceIamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -173,7 +174,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -181,7 +182,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -192,7 +193,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -200,7 +201,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -208,7 +209,7 @@ public final class AppEngineServiceIamBindingState extends io.pulumi.resources.R
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public AppEngineServiceIamBindingState build() {
             return new AppEngineServiceIamBindingState(appId, condition, etag, members, project, role, service);

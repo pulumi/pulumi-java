@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayAr
       private final @Nullable Output<Integer> nanos;
 
     public Output<Integer> getNanos() {
-        return this.nanos == null ? Output.empty() : this.nanos;
+        return this.nanos == null ? Codegen.empty() : this.nanos;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayAr
       private final @Nullable Output<String> seconds;
 
     public Output<String> getSeconds() {
-        return this.seconds == null ? Output.empty() : this.seconds;
+        return this.seconds == null ? Codegen.empty() : this.seconds;
     }
 
     public URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs(
@@ -47,8 +48,8 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayAr
     }
 
     private URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs() {
-        this.nanos = Output.empty();
-        this.seconds = Output.empty();
+        this.nanos = Codegen.empty();
+        this.seconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayAr
             return this;
         }
         public Builder nanos(@Nullable Integer nanos) {
-            this.nanos = Output.ofNullable(nanos);
+            this.nanos = Codegen.ofNullable(nanos);
             return this;
         }
         public Builder seconds(@Nullable Output<String> seconds) {
@@ -86,7 +87,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayAr
             return this;
         }
         public Builder seconds(@Nullable String seconds) {
-            this.seconds = Output.ofNullable(seconds);
+            this.seconds = Codegen.ofNullable(seconds);
             return this;
         }        public URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayArgs(nanos, seconds);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storage.enums.ExpirationAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -49,8 +50,8 @@ public final class SasPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SasPolicyArgs() {
-        this.expirationAction = Output.empty();
-        this.sasExpirationPeriod = Output.empty();
+        this.expirationAction = Codegen.empty();
+        this.sasExpirationPeriod = Codegen.empty();
     }
 
     public static Builder builder() {

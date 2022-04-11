@@ -6,6 +6,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 import io.pulumi.azurenative.servicebus.inputs.SubnetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
       private final @Nullable Output<Boolean> ignoreMissingVnetServiceEndpoint;
 
     public Output<Boolean> getIgnoreMissingVnetServiceEndpoint() {
-        return this.ignoreMissingVnetServiceEndpoint == null ? Output.empty() : this.ignoreMissingVnetServiceEndpoint;
+        return this.ignoreMissingVnetServiceEndpoint == null ? Codegen.empty() : this.ignoreMissingVnetServiceEndpoint;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
       private final @Nullable Output<SubnetArgs> subnet;
 
     public Output<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public NWRuleSetVirtualNetworkRulesArgs(
@@ -49,8 +50,8 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
     }
 
     private NWRuleSetVirtualNetworkRulesArgs() {
-        this.ignoreMissingVnetServiceEndpoint = Output.empty();
-        this.subnet = Output.empty();
+        this.ignoreMissingVnetServiceEndpoint = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
-            this.ignoreMissingVnetServiceEndpoint = Output.ofNullable(ignoreMissingVnetServiceEndpoint);
+            this.ignoreMissingVnetServiceEndpoint = Codegen.ofNullable(ignoreMissingVnetServiceEndpoint);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
@@ -88,7 +89,7 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
             return this;
         }
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public NWRuleSetVirtualNetworkRulesArgs build() {
             return new NWRuleSetVirtualNetworkRulesArgs(ignoreMissingVnetServiceEndpoint, subnet);

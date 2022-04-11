@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IDRangeArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<IDRangeArgs>> ranges;
 
     public Output<List<IDRangeArgs>> getRanges() {
-        return this.ranges == null ? Output.empty() : this.ranges;
+        return this.ranges == null ? Codegen.empty() : this.ranges;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
     }
 
     private RunAsGroupStrategyOptionsArgs() {
-        this.ranges = Output.empty();
-        this.rule = Output.empty();
+        this.ranges = Codegen.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class RunAsGroupStrategyOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ranges(@Nullable List<IDRangeArgs> ranges) {
-            this.ranges = Output.ofNullable(ranges);
+            this.ranges = Codegen.ofNullable(ranges);
             return this;
         }
         public Builder ranges(IDRangeArgs... ranges) {

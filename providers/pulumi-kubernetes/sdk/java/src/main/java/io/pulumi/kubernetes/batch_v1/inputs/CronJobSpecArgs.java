@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.batch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.batch_v1.inputs.JobTemplateSpecArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -34,7 +35,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> concurrencyPolicy;
 
     public Output<String> getConcurrencyPolicy() {
-        return this.concurrencyPolicy == null ? Output.empty() : this.concurrencyPolicy;
+        return this.concurrencyPolicy == null ? Codegen.empty() : this.concurrencyPolicy;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> failedJobsHistoryLimit;
 
     public Output<Integer> getFailedJobsHistoryLimit() {
-        return this.failedJobsHistoryLimit == null ? Output.empty() : this.failedJobsHistoryLimit;
+        return this.failedJobsHistoryLimit == null ? Codegen.empty() : this.failedJobsHistoryLimit;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> startingDeadlineSeconds;
 
     public Output<Integer> getStartingDeadlineSeconds() {
-        return this.startingDeadlineSeconds == null ? Output.empty() : this.startingDeadlineSeconds;
+        return this.startingDeadlineSeconds == null ? Codegen.empty() : this.startingDeadlineSeconds;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> successfulJobsHistoryLimit;
 
     public Output<Integer> getSuccessfulJobsHistoryLimit() {
-        return this.successfulJobsHistoryLimit == null ? Output.empty() : this.successfulJobsHistoryLimit;
+        return this.successfulJobsHistoryLimit == null ? Codegen.empty() : this.successfulJobsHistoryLimit;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> suspend;
 
     public Output<Boolean> getSuspend() {
-        return this.suspend == null ? Output.empty() : this.suspend;
+        return this.suspend == null ? Codegen.empty() : this.suspend;
     }
 
     public CronJobSpecArgs(
@@ -121,13 +122,13 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CronJobSpecArgs() {
-        this.concurrencyPolicy = Output.empty();
-        this.failedJobsHistoryLimit = Output.empty();
-        this.jobTemplate = Output.empty();
-        this.schedule = Output.empty();
-        this.startingDeadlineSeconds = Output.empty();
-        this.successfulJobsHistoryLimit = Output.empty();
-        this.suspend = Output.empty();
+        this.concurrencyPolicy = Codegen.empty();
+        this.failedJobsHistoryLimit = Codegen.empty();
+        this.jobTemplate = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.startingDeadlineSeconds = Codegen.empty();
+        this.successfulJobsHistoryLimit = Codegen.empty();
+        this.suspend = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -167,7 +168,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder concurrencyPolicy(@Nullable String concurrencyPolicy) {
-            this.concurrencyPolicy = Output.ofNullable(concurrencyPolicy);
+            this.concurrencyPolicy = Codegen.ofNullable(concurrencyPolicy);
             return this;
         }
         public Builder failedJobsHistoryLimit(@Nullable Output<Integer> failedJobsHistoryLimit) {
@@ -175,7 +176,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder failedJobsHistoryLimit(@Nullable Integer failedJobsHistoryLimit) {
-            this.failedJobsHistoryLimit = Output.ofNullable(failedJobsHistoryLimit);
+            this.failedJobsHistoryLimit = Codegen.ofNullable(failedJobsHistoryLimit);
             return this;
         }
         public Builder jobTemplate(Output<JobTemplateSpecArgs> jobTemplate) {
@@ -199,7 +200,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startingDeadlineSeconds(@Nullable Integer startingDeadlineSeconds) {
-            this.startingDeadlineSeconds = Output.ofNullable(startingDeadlineSeconds);
+            this.startingDeadlineSeconds = Codegen.ofNullable(startingDeadlineSeconds);
             return this;
         }
         public Builder successfulJobsHistoryLimit(@Nullable Output<Integer> successfulJobsHistoryLimit) {
@@ -207,7 +208,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder successfulJobsHistoryLimit(@Nullable Integer successfulJobsHistoryLimit) {
-            this.successfulJobsHistoryLimit = Output.ofNullable(successfulJobsHistoryLimit);
+            this.successfulJobsHistoryLimit = Codegen.ofNullable(successfulJobsHistoryLimit);
             return this;
         }
         public Builder suspend(@Nullable Output<Boolean> suspend) {
@@ -215,7 +216,7 @@ public final class CronJobSpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder suspend(@Nullable Boolean suspend) {
-            this.suspend = Output.ofNullable(suspend);
+            this.suspend = Codegen.ofNullable(suspend);
             return this;
         }        public CronJobSpecArgs build() {
             return new CronJobSpecArgs(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend);

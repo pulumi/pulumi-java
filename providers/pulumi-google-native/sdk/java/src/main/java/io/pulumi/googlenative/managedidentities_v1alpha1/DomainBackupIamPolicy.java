@@ -6,6 +6,7 @@ package io.pulumi.googlenative.managedidentities_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1alpha1.DomainBackupIamPolicyArgs;
 import io.pulumi.googlenative.managedidentities_v1alpha1.outputs.BindingResponse;
@@ -87,7 +88,7 @@ public class DomainBackupIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DomainBackupIamPolicy(String name, DomainBackupIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:managedidentities/v1alpha1:DomainBackupIamPolicy", name, args == null ? DomainBackupIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:managedidentities/v1alpha1:DomainBackupIamPolicy", name, args == null ? DomainBackupIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DomainBackupIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

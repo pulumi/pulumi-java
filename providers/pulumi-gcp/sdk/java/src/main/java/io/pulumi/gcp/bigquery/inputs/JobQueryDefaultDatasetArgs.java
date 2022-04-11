@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> projectId;
 
     public Output<String> getProjectId() {
-        return this.projectId == null ? Output.empty() : this.projectId;
+        return this.projectId == null ? Codegen.empty() : this.projectId;
     }
 
     public JobQueryDefaultDatasetArgs(
@@ -44,8 +45,8 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
     }
 
     private JobQueryDefaultDatasetArgs() {
-        this.datasetId = Output.empty();
-        this.projectId = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.projectId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class JobQueryDefaultDatasetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder projectId(@Nullable String projectId) {
-            this.projectId = Output.ofNullable(projectId);
+            this.projectId = Codegen.ofNullable(projectId);
             return this;
         }        public JobQueryDefaultDatasetArgs build() {
             return new JobQueryDefaultDatasetArgs(datasetId, projectId);

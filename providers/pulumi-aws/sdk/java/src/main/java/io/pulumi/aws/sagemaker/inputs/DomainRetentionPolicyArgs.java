@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> homeEfsFileSystem;
 
     public Output<String> getHomeEfsFileSystem() {
-        return this.homeEfsFileSystem == null ? Output.empty() : this.homeEfsFileSystem;
+        return this.homeEfsFileSystem == null ? Codegen.empty() : this.homeEfsFileSystem;
     }
 
     public DomainRetentionPolicyArgs(@Nullable Output<String> homeEfsFileSystem) {
@@ -30,7 +31,7 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private DomainRetentionPolicyArgs() {
-        this.homeEfsFileSystem = Output.empty();
+        this.homeEfsFileSystem = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class DomainRetentionPolicyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder homeEfsFileSystem(@Nullable String homeEfsFileSystem) {
-            this.homeEfsFileSystem = Output.ofNullable(homeEfsFileSystem);
+            this.homeEfsFileSystem = Codegen.ofNullable(homeEfsFileSystem);
             return this;
         }        public DomainRetentionPolicyArgs build() {
             return new DomainRetentionPolicyArgs(homeEfsFileSystem);

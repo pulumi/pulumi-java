@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> id;
 
     public Output<Integer> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> interconnectAttachment;
 
     public Output<String> getInterconnectAttachment() {
-        return this.interconnectAttachment == null ? Output.empty() : this.interconnectAttachment;
+        return this.interconnectAttachment == null ? Codegen.empty() : this.interconnectAttachment;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     public HaVpnGatewayVpnInterfaceArgs(
@@ -64,9 +65,9 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
     }
 
     private HaVpnGatewayVpnInterfaceArgs() {
-        this.id = Output.empty();
-        this.interconnectAttachment = Output.empty();
-        this.ipAddress = Output.empty();
+        this.id = Codegen.empty();
+        this.interconnectAttachment = Codegen.empty();
+        this.ipAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder id(@Nullable Integer id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
@@ -106,7 +107,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder interconnectAttachment(@Nullable String interconnectAttachment) {
-            this.interconnectAttachment = Output.ofNullable(interconnectAttachment);
+            this.interconnectAttachment = Codegen.ofNullable(interconnectAttachment);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -114,7 +115,7 @@ public final class HaVpnGatewayVpnInterfaceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }        public HaVpnGatewayVpnInterfaceArgs build() {
             return new HaVpnGatewayVpnInterfaceArgs(id, interconnectAttachment, ipAddress);

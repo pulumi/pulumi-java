@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> subscription;
 
     public Output<String> getSubscription() {
-        return this.subscription == null ? Output.empty() : this.subscription;
+        return this.subscription == null ? Codegen.empty() : this.subscription;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> topic;
 
     public Output<String> getTopic() {
-        return this.topic == null ? Output.empty() : this.topic;
+        return this.topic == null ? Codegen.empty() : this.topic;
     }
 
     public TriggerTransportPubsubArgs(
@@ -45,8 +46,8 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
     }
 
     private TriggerTransportPubsubArgs() {
-        this.subscription = Output.empty();
-        this.topic = Output.empty();
+        this.subscription = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subscription(@Nullable String subscription) {
-            this.subscription = Output.ofNullable(subscription);
+            this.subscription = Codegen.ofNullable(subscription);
             return this;
         }
         public Builder topic(@Nullable Output<String> topic) {
@@ -84,7 +85,7 @@ public final class TriggerTransportPubsubArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder topic(@Nullable String topic) {
-            this.topic = Output.ofNullable(topic);
+            this.topic = Codegen.ofNullable(topic);
             return this;
         }        public TriggerTransportPubsubArgs build() {
             return new TriggerTransportPubsubArgs(subscription, topic);

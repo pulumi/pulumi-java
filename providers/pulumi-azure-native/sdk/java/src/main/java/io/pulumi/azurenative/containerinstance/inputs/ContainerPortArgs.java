@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerinstance.enums.ContainerNetworkProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -40,7 +41,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ContainerNetworkProtocol>> protocol;
 
     public Output<Either<String,ContainerNetworkProtocol>> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     public ContainerPortArgs(
@@ -51,8 +52,8 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerPortArgs() {
-        this.port = Output.empty();
-        this.protocol = Output.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class ContainerPortArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable Either<String,ContainerNetworkProtocol> protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }        public ContainerPortArgs build() {
             return new ContainerPortArgs(port, protocol);

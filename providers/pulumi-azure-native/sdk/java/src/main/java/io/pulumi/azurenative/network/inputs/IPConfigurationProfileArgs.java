@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<SubnetArgs> subnet;
 
     public Output<SubnetArgs> getSubnet() {
-        return this.subnet == null ? Output.empty() : this.subnet;
+        return this.subnet == null ? Codegen.empty() : this.subnet;
     }
 
     public IPConfigurationProfileArgs(
@@ -62,9 +63,9 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
     }
 
     private IPConfigurationProfileArgs() {
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.subnet = Output.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subnet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subnet(@Nullable Output<SubnetArgs> subnet) {
@@ -112,7 +113,7 @@ public final class IPConfigurationProfileArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder subnet(@Nullable SubnetArgs subnet) {
-            this.subnet = Output.ofNullable(subnet);
+            this.subnet = Codegen.ofNullable(subnet);
             return this;
         }        public IPConfigurationProfileArgs build() {
             return new IPConfigurationProfileArgs(id, name, subnet);

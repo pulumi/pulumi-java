@@ -6,6 +6,7 @@ package io.pulumi.aws.route53recoverycontrol.inputs;
 import io.pulumi.aws.route53recoverycontrol.inputs.ClusterClusterEndpointGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints;
 
     public Output<List<ClusterClusterEndpointGetArgs>> getClusterEndpoints() {
-        return this.clusterEndpoints == null ? Output.empty() : this.clusterEndpoints;
+        return this.clusterEndpoints == null ? Codegen.empty() : this.clusterEndpoints;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public ClusterState(
@@ -72,10 +73,10 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.arn = Output.empty();
-        this.clusterEndpoints = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
+        this.arn = Codegen.empty();
+        this.clusterEndpoints = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder clusterEndpoints(@Nullable Output<List<ClusterClusterEndpointGetArgs>> clusterEndpoints) {
@@ -117,7 +118,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterEndpoints(@Nullable List<ClusterClusterEndpointGetArgs> clusterEndpoints) {
-            this.clusterEndpoints = Output.ofNullable(clusterEndpoints);
+            this.clusterEndpoints = Codegen.ofNullable(clusterEndpoints);
             return this;
         }
         public Builder clusterEndpoints(ClusterClusterEndpointGetArgs... clusterEndpoints) {
@@ -128,7 +129,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -136,7 +137,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public ClusterState build() {
             return new ClusterState(arn, clusterEndpoints, name, status);

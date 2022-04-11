@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> hard;
 
     public Output<Map<String,String>> getHard() {
-        return this.hard == null ? Output.empty() : this.hard;
+        return this.hard == null ? Codegen.empty() : this.hard;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> used;
 
     public Output<Map<String,String>> getUsed() {
-        return this.used == null ? Output.empty() : this.used;
+        return this.used == null ? Codegen.empty() : this.used;
     }
 
     public ResourceQuotaStatusArgs(
@@ -49,8 +50,8 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
     }
 
     private ResourceQuotaStatusArgs() {
-        this.hard = Output.empty();
-        this.used = Output.empty();
+        this.hard = Codegen.empty();
+        this.used = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder hard(@Nullable Map<String,String> hard) {
-            this.hard = Output.ofNullable(hard);
+            this.hard = Codegen.ofNullable(hard);
             return this;
         }
         public Builder used(@Nullable Output<Map<String,String>> used) {
@@ -88,7 +89,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder used(@Nullable Map<String,String> used) {
-            this.used = Output.ofNullable(used);
+            this.used = Codegen.ofNullable(used);
             return this;
         }        public ResourceQuotaStatusArgs build() {
             return new ResourceQuotaStatusArgs(hard, used);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.inputs.RoleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<String> customData;
 
     public Output<String> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<String> mechanisms;
 
     public Output<String> getMechanisms() {
-        return this.mechanisms == null ? Output.empty() : this.mechanisms;
+        return this.mechanisms == null ? Codegen.empty() : this.mechanisms;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<String> mongoUserDefinitionId;
 
     public Output<String> getMongoUserDefinitionId() {
-        return this.mongoUserDefinitionId == null ? Output.empty() : this.mongoUserDefinitionId;
+        return this.mongoUserDefinitionId == null ? Codegen.empty() : this.mongoUserDefinitionId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<List<RoleArgs>> roles;
 
     public Output<List<RoleArgs>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public MongoDBResourceMongoUserDefinitionArgs(
@@ -137,15 +138,15 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
     }
 
     private MongoDBResourceMongoUserDefinitionArgs() {
-        this.accountName = Output.empty();
-        this.customData = Output.empty();
-        this.databaseName = Output.empty();
-        this.mechanisms = Output.empty();
-        this.mongoUserDefinitionId = Output.empty();
-        this.password = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.roles = Output.empty();
-        this.userName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.customData = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.mechanisms = Codegen.empty();
+        this.mongoUserDefinitionId = Codegen.empty();
+        this.password = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.roles = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -197,7 +198,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder customData(@Nullable String customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -205,7 +206,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder mechanisms(@Nullable Output<String> mechanisms) {
@@ -213,7 +214,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder mechanisms(@Nullable String mechanisms) {
-            this.mechanisms = Output.ofNullable(mechanisms);
+            this.mechanisms = Codegen.ofNullable(mechanisms);
             return this;
         }
         public Builder mongoUserDefinitionId(@Nullable Output<String> mongoUserDefinitionId) {
@@ -221,7 +222,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder mongoUserDefinitionId(@Nullable String mongoUserDefinitionId) {
-            this.mongoUserDefinitionId = Output.ofNullable(mongoUserDefinitionId);
+            this.mongoUserDefinitionId = Codegen.ofNullable(mongoUserDefinitionId);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -229,7 +230,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -245,7 +246,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder roles(@Nullable List<RoleArgs> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(RoleArgs... roles) {
@@ -256,7 +257,7 @@ public final class MongoDBResourceMongoUserDefinitionArgs extends io.pulumi.reso
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public MongoDBResourceMongoUserDefinitionArgs build() {
             return new MongoDBResourceMongoUserDefinitionArgs(accountName, customData, databaseName, mechanisms, mongoUserDefinitionId, password, resourceGroupName, roles, userName);

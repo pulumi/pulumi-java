@@ -6,6 +6,7 @@ package io.pulumi.azurenative.iotcentral;
 import io.pulumi.azurenative.iotcentral.inputs.AppSkuInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subdomain;
 
     public Output<String> getSubdomain() {
-        return this.subdomain == null ? Output.empty() : this.subdomain;
+        return this.subdomain == null ? Codegen.empty() : this.subdomain;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> template;
 
     public Output<String> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     public AppArgs(
@@ -124,14 +125,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sku = Output.empty();
-        this.subdomain = Output.empty();
-        this.tags = Output.empty();
-        this.template = Output.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.subdomain = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -181,7 +182,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -197,7 +198,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder sku(Output<AppSkuInfoArgs> sku) {
@@ -213,7 +214,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdomain(@Nullable String subdomain) {
-            this.subdomain = Output.ofNullable(subdomain);
+            this.subdomain = Codegen.ofNullable(subdomain);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder template(@Nullable Output<String> template) {
@@ -229,7 +230,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder template(@Nullable String template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }        public AppArgs build() {
             return new AppArgs(displayName, location, resourceGroupName, resourceName, sku, subdomain, tags, template);

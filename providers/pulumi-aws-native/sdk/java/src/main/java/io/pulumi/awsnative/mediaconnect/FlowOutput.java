@@ -11,6 +11,7 @@ import io.pulumi.awsnative.mediaconnect.outputs.FlowOutputVpcInterfaceAttachment
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -255,7 +256,7 @@ public class FlowOutput extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FlowOutput(String name, FlowOutputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediaconnect:FlowOutput", name, args == null ? FlowOutputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediaconnect:FlowOutput", name, args == null ? FlowOutputArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FlowOutput(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

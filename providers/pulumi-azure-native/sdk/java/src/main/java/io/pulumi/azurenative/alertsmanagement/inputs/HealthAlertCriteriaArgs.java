@@ -6,6 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 import io.pulumi.azurenative.alertsmanagement.inputs.VmGuestHealthAlertCriterionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf;
 
     public Output<List<VmGuestHealthAlertCriterionArgs>> getAllOf() {
-        return this.allOf == null ? Output.empty() : this.allOf;
+        return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
     public HealthAlertCriteriaArgs(@Nullable Output<List<VmGuestHealthAlertCriterionArgs>> allOf) {
@@ -35,7 +36,7 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
     }
 
     private HealthAlertCriteriaArgs() {
-        this.allOf = Output.empty();
+        this.allOf = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class HealthAlertCriteriaArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allOf(@Nullable List<VmGuestHealthAlertCriterionArgs> allOf) {
-            this.allOf = Output.ofNullable(allOf);
+            this.allOf = Codegen.ofNullable(allOf);
             return this;
         }
         public Builder allOf(VmGuestHealthAlertCriterionArgs... allOf) {

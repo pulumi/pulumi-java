@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.AddRecoveryServicesProviderInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -45,7 +46,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
       private final @Nullable Output<String> providerName;
 
     public Output<String> getProviderName() {
-        return this.providerName == null ? Output.empty() : this.providerName;
+        return this.providerName == null ? Codegen.empty() : this.providerName;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
     }
 
     private ReplicationRecoveryServicesProviderArgs() {
-        this.fabricName = Output.empty();
-        this.properties = Output.empty();
-        this.providerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.providerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class ReplicationRecoveryServicesProviderArgs extends io.pulumi.res
             return this;
         }
         public Builder providerName(@Nullable String providerName) {
-            this.providerName = Output.ofNullable(providerName);
+            this.providerName = Codegen.ofNullable(providerName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

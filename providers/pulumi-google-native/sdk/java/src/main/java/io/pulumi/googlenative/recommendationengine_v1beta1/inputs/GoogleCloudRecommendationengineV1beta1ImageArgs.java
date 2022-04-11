@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
       private final @Nullable Output<Integer> height;
 
     public Output<Integer> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
       private final @Nullable Output<Integer> width;
 
     public Output<Integer> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public GoogleCloudRecommendationengineV1beta1ImageArgs(
@@ -62,9 +63,9 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
     }
 
     private GoogleCloudRecommendationengineV1beta1ImageArgs() {
-        this.height = Output.empty();
-        this.uri = Output.empty();
-        this.width = Output.empty();
+        this.height = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
             return this;
         }
         public Builder height(@Nullable Integer height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder uri(Output<String> uri) {
@@ -112,7 +113,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
             return this;
         }
         public Builder width(@Nullable Integer width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public GoogleCloudRecommendationengineV1beta1ImageArgs build() {
             return new GoogleCloudRecommendationengineV1beta1ImageArgs(height, uri, width);

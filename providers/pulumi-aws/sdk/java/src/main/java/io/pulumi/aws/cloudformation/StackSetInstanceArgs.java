@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudformation;
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets;
 
     public Output<StackSetInstanceDeploymentTargetsArgs> getDeploymentTargets() {
-        return this.deploymentTargets == null ? Output.empty() : this.deploymentTargets;
+        return this.deploymentTargets == null ? Codegen.empty() : this.deploymentTargets;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> parameterOverrides;
 
     public Output<Map<String,String>> getParameterOverrides() {
-        return this.parameterOverrides == null ? Output.empty() : this.parameterOverrides;
+        return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> retainStack;
 
     public Output<Boolean> getRetainStack() {
-        return this.retainStack == null ? Output.empty() : this.retainStack;
+        return this.retainStack == null ? Codegen.empty() : this.retainStack;
     }
 
     /**
@@ -99,12 +100,12 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private StackSetInstanceArgs() {
-        this.accountId = Output.empty();
-        this.deploymentTargets = Output.empty();
-        this.parameterOverrides = Output.empty();
-        this.region = Output.empty();
-        this.retainStack = Output.empty();
-        this.stackSetName = Output.empty();
+        this.accountId = Codegen.empty();
+        this.deploymentTargets = Codegen.empty();
+        this.parameterOverrides = Codegen.empty();
+        this.region = Codegen.empty();
+        this.retainStack = Codegen.empty();
+        this.stackSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsArgs> deploymentTargets) {
@@ -150,7 +151,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsArgs deploymentTargets) {
-            this.deploymentTargets = Output.ofNullable(deploymentTargets);
+            this.deploymentTargets = Codegen.ofNullable(deploymentTargets);
             return this;
         }
         public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
@@ -158,7 +159,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
-            this.parameterOverrides = Output.ofNullable(parameterOverrides);
+            this.parameterOverrides = Codegen.ofNullable(parameterOverrides);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -166,7 +167,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder retainStack(@Nullable Output<Boolean> retainStack) {
@@ -174,7 +175,7 @@ public final class StackSetInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder retainStack(@Nullable Boolean retainStack) {
-            this.retainStack = Output.ofNullable(retainStack);
+            this.retainStack = Codegen.ofNullable(retainStack);
             return this;
         }
         public Builder stackSetName(Output<String> stackSetName) {

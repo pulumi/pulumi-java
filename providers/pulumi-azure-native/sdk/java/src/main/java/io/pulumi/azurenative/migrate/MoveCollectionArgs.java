@@ -7,6 +7,7 @@ import io.pulumi.azurenative.migrate.inputs.IdentityArgs;
 import io.pulumi.azurenative.migrate.inputs.MoveCollectionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> moveCollectionName;
 
     public Output<String> getMoveCollectionName() {
-        return this.moveCollectionName == null ? Output.empty() : this.moveCollectionName;
+        return this.moveCollectionName == null ? Codegen.empty() : this.moveCollectionName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MoveCollectionPropertiesArgs> properties;
 
     public Output<MoveCollectionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MoveCollectionArgs(
@@ -99,12 +100,12 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MoveCollectionArgs() {
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.moveCollectionName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.moveCollectionName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -150,7 +151,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder moveCollectionName(@Nullable Output<String> moveCollectionName) {
@@ -158,7 +159,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder moveCollectionName(@Nullable String moveCollectionName) {
-            this.moveCollectionName = Output.ofNullable(moveCollectionName);
+            this.moveCollectionName = Codegen.ofNullable(moveCollectionName);
             return this;
         }
         public Builder properties(@Nullable Output<MoveCollectionPropertiesArgs> properties) {
@@ -166,7 +167,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable MoveCollectionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -182,7 +183,7 @@ public final class MoveCollectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MoveCollectionArgs build() {
             return new MoveCollectionArgs(identity, location, moveCollectionName, properties, resourceGroupName, tags);

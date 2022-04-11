@@ -6,6 +6,7 @@ package io.pulumi.azurenative.managednetwork.inputs;
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceIdArgs>> managementGroups;
 
     public Output<List<ResourceIdArgs>> getManagementGroups() {
-        return this.managementGroups == null ? Output.empty() : this.managementGroups;
+        return this.managementGroups == null ? Codegen.empty() : this.managementGroups;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceIdArgs>> subnets;
 
     public Output<List<ResourceIdArgs>> getSubnets() {
-        return this.subnets == null ? Output.empty() : this.subnets;
+        return this.subnets == null ? Codegen.empty() : this.subnets;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceIdArgs>> subscriptions;
 
     public Output<List<ResourceIdArgs>> getSubscriptions() {
-        return this.subscriptions == null ? Output.empty() : this.subscriptions;
+        return this.subscriptions == null ? Codegen.empty() : this.subscriptions;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResourceIdArgs>> virtualNetworks;
 
     public Output<List<ResourceIdArgs>> getVirtualNetworks() {
-        return this.virtualNetworks == null ? Output.empty() : this.virtualNetworks;
+        return this.virtualNetworks == null ? Codegen.empty() : this.virtualNetworks;
     }
 
     public ScopeArgs(
@@ -75,10 +76,10 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeArgs() {
-        this.managementGroups = Output.empty();
-        this.subnets = Output.empty();
-        this.subscriptions = Output.empty();
-        this.virtualNetworks = Output.empty();
+        this.managementGroups = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.subscriptions = Codegen.empty();
+        this.virtualNetworks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managementGroups(@Nullable List<ResourceIdArgs> managementGroups) {
-            this.managementGroups = Output.ofNullable(managementGroups);
+            this.managementGroups = Codegen.ofNullable(managementGroups);
             return this;
         }
         public Builder managementGroups(ResourceIdArgs... managementGroups) {
@@ -123,7 +124,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnets(@Nullable List<ResourceIdArgs> subnets) {
-            this.subnets = Output.ofNullable(subnets);
+            this.subnets = Codegen.ofNullable(subnets);
             return this;
         }
         public Builder subnets(ResourceIdArgs... subnets) {
@@ -134,7 +135,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptions(@Nullable List<ResourceIdArgs> subscriptions) {
-            this.subscriptions = Output.ofNullable(subscriptions);
+            this.subscriptions = Codegen.ofNullable(subscriptions);
             return this;
         }
         public Builder subscriptions(ResourceIdArgs... subscriptions) {
@@ -145,7 +146,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualNetworks(@Nullable List<ResourceIdArgs> virtualNetworks) {
-            this.virtualNetworks = Output.ofNullable(virtualNetworks);
+            this.virtualNetworks = Codegen.ofNullable(virtualNetworks);
             return this;
         }
         public Builder virtualNetworks(ResourceIdArgs... virtualNetworks) {

@@ -14,6 +14,7 @@ import io.pulumi.azurenative.apimanagement.inputs.VirtualNetworkConfigurationArg
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<AdditionalLocationArgs>> additionalLocations;
 
     public Output<List<AdditionalLocationArgs>> getAdditionalLocations() {
-        return this.additionalLocations == null ? Output.empty() : this.additionalLocations;
+        return this.additionalLocations == null ? Codegen.empty() : this.additionalLocations;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ApiVersionConstraintArgs> apiVersionConstraint;
 
     public Output<ApiVersionConstraintArgs> getApiVersionConstraint() {
-        return this.apiVersionConstraint == null ? Output.empty() : this.apiVersionConstraint;
+        return this.apiVersionConstraint == null ? Codegen.empty() : this.apiVersionConstraint;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<CertificateConfigurationArgs>> certificates;
 
     public Output<List<CertificateConfigurationArgs>> getCertificates() {
-        return this.certificates == null ? Output.empty() : this.certificates;
+        return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> customProperties;
 
     public Output<Map<String,String>> getCustomProperties() {
-        return this.customProperties == null ? Output.empty() : this.customProperties;
+        return this.customProperties == null ? Codegen.empty() : this.customProperties;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> disableGateway;
 
     public Output<Boolean> getDisableGateway() {
-        return this.disableGateway == null ? Output.empty() : this.disableGateway;
+        return this.disableGateway == null ? Codegen.empty() : this.disableGateway;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enableClientCertificate;
 
     public Output<Boolean> getEnableClientCertificate() {
-        return this.enableClientCertificate == null ? Output.empty() : this.enableClientCertificate;
+        return this.enableClientCertificate == null ? Codegen.empty() : this.enableClientCertificate;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations;
 
     public Output<List<HostnameConfigurationArgs>> getHostnameConfigurations() {
-        return this.hostnameConfigurations == null ? Output.empty() : this.hostnameConfigurations;
+        return this.hostnameConfigurations == null ? Codegen.empty() : this.hostnameConfigurations;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<ApiManagementServiceIdentityArgs> identity;
 
     public Output<ApiManagementServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> notificationSenderEmail;
 
     public Output<String> getNotificationSenderEmail() {
-        return this.notificationSenderEmail == null ? Output.empty() : this.notificationSenderEmail;
+        return this.notificationSenderEmail == null ? Codegen.empty() : this.notificationSenderEmail;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> restore;
 
     public Output<Boolean> getRestore() {
-        return this.restore == null ? Output.empty() : this.restore;
+        return this.restore == null ? Codegen.empty() : this.restore;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -210,7 +211,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -221,7 +222,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration;
 
     public Output<VirtualNetworkConfigurationArgs> getVirtualNetworkConfiguration() {
-        return this.virtualNetworkConfiguration == null ? Output.empty() : this.virtualNetworkConfiguration;
+        return this.virtualNetworkConfiguration == null ? Codegen.empty() : this.virtualNetworkConfiguration;
     }
 
     /**
@@ -232,7 +233,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType;
 
     public Output<Either<String,VirtualNetworkType>> getVirtualNetworkType() {
-        return this.virtualNetworkType == null ? Output.empty() : this.virtualNetworkType;
+        return this.virtualNetworkType == null ? Codegen.empty() : this.virtualNetworkType;
     }
 
     /**
@@ -243,7 +244,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public ApiManagementServiceArgs(
@@ -271,8 +272,8 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         this.apiVersionConstraint = apiVersionConstraint;
         this.certificates = certificates;
         this.customProperties = customProperties;
-        this.disableGateway = disableGateway == null ? Output.ofNullable(false) : disableGateway;
-        this.enableClientCertificate = enableClientCertificate == null ? Output.ofNullable(false) : enableClientCertificate;
+        this.disableGateway = disableGateway == null ? Codegen.ofNullable(false) : disableGateway;
+        this.enableClientCertificate = enableClientCertificate == null ? Codegen.ofNullable(false) : enableClientCertificate;
         this.hostnameConfigurations = hostnameConfigurations;
         this.identity = identity;
         this.location = location;
@@ -280,7 +281,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
         this.publisherEmail = Objects.requireNonNull(publisherEmail, "expected parameter 'publisherEmail' to be non-null");
         this.publisherName = Objects.requireNonNull(publisherName, "expected parameter 'publisherName' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
-        this.restore = restore == null ? Output.ofNullable(false) : restore;
+        this.restore = restore == null ? Codegen.ofNullable(false) : restore;
         this.serviceName = serviceName;
         this.sku = Objects.requireNonNull(sku, "expected parameter 'sku' to be non-null");
         this.tags = tags;
@@ -290,26 +291,26 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
     }
 
     private ApiManagementServiceArgs() {
-        this.additionalLocations = Output.empty();
-        this.apiVersionConstraint = Output.empty();
-        this.certificates = Output.empty();
-        this.customProperties = Output.empty();
-        this.disableGateway = Output.empty();
-        this.enableClientCertificate = Output.empty();
-        this.hostnameConfigurations = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.notificationSenderEmail = Output.empty();
-        this.publisherEmail = Output.empty();
-        this.publisherName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.restore = Output.empty();
-        this.serviceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.virtualNetworkConfiguration = Output.empty();
-        this.virtualNetworkType = Output.empty();
-        this.zones = Output.empty();
+        this.additionalLocations = Codegen.empty();
+        this.apiVersionConstraint = Codegen.empty();
+        this.certificates = Codegen.empty();
+        this.customProperties = Codegen.empty();
+        this.disableGateway = Codegen.empty();
+        this.enableClientCertificate = Codegen.empty();
+        this.hostnameConfigurations = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.notificationSenderEmail = Codegen.empty();
+        this.publisherEmail = Codegen.empty();
+        this.publisherName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.restore = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.virtualNetworkConfiguration = Codegen.empty();
+        this.virtualNetworkType = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -375,7 +376,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder additionalLocations(@Nullable List<AdditionalLocationArgs> additionalLocations) {
-            this.additionalLocations = Output.ofNullable(additionalLocations);
+            this.additionalLocations = Codegen.ofNullable(additionalLocations);
             return this;
         }
         public Builder additionalLocations(AdditionalLocationArgs... additionalLocations) {
@@ -386,7 +387,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder apiVersionConstraint(@Nullable ApiVersionConstraintArgs apiVersionConstraint) {
-            this.apiVersionConstraint = Output.ofNullable(apiVersionConstraint);
+            this.apiVersionConstraint = Codegen.ofNullable(apiVersionConstraint);
             return this;
         }
         public Builder certificates(@Nullable Output<List<CertificateConfigurationArgs>> certificates) {
@@ -394,7 +395,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder certificates(@Nullable List<CertificateConfigurationArgs> certificates) {
-            this.certificates = Output.ofNullable(certificates);
+            this.certificates = Codegen.ofNullable(certificates);
             return this;
         }
         public Builder certificates(CertificateConfigurationArgs... certificates) {
@@ -405,7 +406,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder customProperties(@Nullable Map<String,String> customProperties) {
-            this.customProperties = Output.ofNullable(customProperties);
+            this.customProperties = Codegen.ofNullable(customProperties);
             return this;
         }
         public Builder disableGateway(@Nullable Output<Boolean> disableGateway) {
@@ -413,7 +414,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder disableGateway(@Nullable Boolean disableGateway) {
-            this.disableGateway = Output.ofNullable(disableGateway);
+            this.disableGateway = Codegen.ofNullable(disableGateway);
             return this;
         }
         public Builder enableClientCertificate(@Nullable Output<Boolean> enableClientCertificate) {
@@ -421,7 +422,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enableClientCertificate(@Nullable Boolean enableClientCertificate) {
-            this.enableClientCertificate = Output.ofNullable(enableClientCertificate);
+            this.enableClientCertificate = Codegen.ofNullable(enableClientCertificate);
             return this;
         }
         public Builder hostnameConfigurations(@Nullable Output<List<HostnameConfigurationArgs>> hostnameConfigurations) {
@@ -429,7 +430,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder hostnameConfigurations(@Nullable List<HostnameConfigurationArgs> hostnameConfigurations) {
-            this.hostnameConfigurations = Output.ofNullable(hostnameConfigurations);
+            this.hostnameConfigurations = Codegen.ofNullable(hostnameConfigurations);
             return this;
         }
         public Builder hostnameConfigurations(HostnameConfigurationArgs... hostnameConfigurations) {
@@ -440,7 +441,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder identity(@Nullable ApiManagementServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -448,7 +449,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder notificationSenderEmail(@Nullable Output<String> notificationSenderEmail) {
@@ -456,7 +457,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder notificationSenderEmail(@Nullable String notificationSenderEmail) {
-            this.notificationSenderEmail = Output.ofNullable(notificationSenderEmail);
+            this.notificationSenderEmail = Codegen.ofNullable(notificationSenderEmail);
             return this;
         }
         public Builder publisherEmail(Output<String> publisherEmail) {
@@ -488,7 +489,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder restore(@Nullable Boolean restore) {
-            this.restore = Output.ofNullable(restore);
+            this.restore = Codegen.ofNullable(restore);
             return this;
         }
         public Builder serviceName(@Nullable Output<String> serviceName) {
@@ -496,7 +497,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder sku(Output<ApiManagementServiceSkuPropertiesArgs> sku) {
@@ -512,7 +513,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder virtualNetworkConfiguration(@Nullable Output<VirtualNetworkConfigurationArgs> virtualNetworkConfiguration) {
@@ -520,7 +521,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder virtualNetworkConfiguration(@Nullable VirtualNetworkConfigurationArgs virtualNetworkConfiguration) {
-            this.virtualNetworkConfiguration = Output.ofNullable(virtualNetworkConfiguration);
+            this.virtualNetworkConfiguration = Codegen.ofNullable(virtualNetworkConfiguration);
             return this;
         }
         public Builder virtualNetworkType(@Nullable Output<Either<String,VirtualNetworkType>> virtualNetworkType) {
@@ -528,7 +529,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder virtualNetworkType(@Nullable Either<String,VirtualNetworkType> virtualNetworkType) {
-            this.virtualNetworkType = Output.ofNullable(virtualNetworkType);
+            this.virtualNetworkType = Codegen.ofNullable(virtualNetworkType);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -536,7 +537,7 @@ public final class ApiManagementServiceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

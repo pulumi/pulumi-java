@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DatasetReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
       private final @Nullable Output<List<DatasetReferenceArgs>> datasets;
 
     public Output<List<DatasetReferenceArgs>> getDatasets() {
-        return this.datasets == null ? Output.empty() : this.datasets;
+        return this.datasets == null ? Codegen.empty() : this.datasets;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
       private final @Nullable Output<List<LinkedServiceReferenceArgs>> linkedServices;
 
     public Output<List<LinkedServiceReferenceArgs>> getLinkedServices() {
-        return this.linkedServices == null ? Output.empty() : this.linkedServices;
+        return this.linkedServices == null ? Codegen.empty() : this.linkedServices;
     }
 
     public CustomActivityReferenceObjectArgs(
@@ -50,8 +51,8 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
     }
 
     private CustomActivityReferenceObjectArgs() {
-        this.datasets = Output.empty();
-        this.linkedServices = Output.empty();
+        this.datasets = Codegen.empty();
+        this.linkedServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
             return this;
         }
         public Builder datasets(@Nullable List<DatasetReferenceArgs> datasets) {
-            this.datasets = Output.ofNullable(datasets);
+            this.datasets = Codegen.ofNullable(datasets);
             return this;
         }
         public Builder datasets(DatasetReferenceArgs... datasets) {
@@ -92,7 +93,7 @@ public final class CustomActivityReferenceObjectArgs extends io.pulumi.resources
             return this;
         }
         public Builder linkedServices(@Nullable List<LinkedServiceReferenceArgs> linkedServices) {
-            this.linkedServices = Output.ofNullable(linkedServices);
+            this.linkedServices = Codegen.ofNullable(linkedServices);
             return this;
         }
         public Builder linkedServices(LinkedServiceReferenceArgs... linkedServices) {

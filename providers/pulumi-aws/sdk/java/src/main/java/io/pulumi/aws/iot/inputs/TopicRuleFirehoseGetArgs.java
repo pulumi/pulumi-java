@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class TopicRuleFirehoseGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> separator;
 
     public Output<String> getSeparator() {
-        return this.separator == null ? Output.empty() : this.separator;
+        return this.separator == null ? Codegen.empty() : this.separator;
     }
 
     public TopicRuleFirehoseGetArgs(
@@ -57,9 +58,9 @@ public final class TopicRuleFirehoseGetArgs extends io.pulumi.resources.Resource
     }
 
     private TopicRuleFirehoseGetArgs() {
-        this.deliveryStreamName = Output.empty();
-        this.roleArn = Output.empty();
-        this.separator = Output.empty();
+        this.deliveryStreamName = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.separator = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class TopicRuleFirehoseGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder separator(@Nullable String separator) {
-            this.separator = Output.ofNullable(separator);
+            this.separator = Codegen.ofNullable(separator);
             return this;
         }        public TopicRuleFirehoseGetArgs build() {
             return new TopicRuleFirehoseGetArgs(deliveryStreamName, roleArn, separator);

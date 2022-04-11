@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResolverQueryLogConfigArgs(
@@ -59,9 +60,9 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
     }
 
     private ResolverQueryLogConfigArgs() {
-        this.destinationArn = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -109,7 +110,7 @@ public final class ResolverQueryLogConfigArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResolverQueryLogConfigArgs build() {
             return new ResolverQueryLogConfigArgs(destinationArn, name, tags);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> height;
 
     public Output<String> getHeight() {
-        return this.height == null ? Output.empty() : this.height;
+        return this.height == null ? Codegen.empty() : this.height;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> width;
 
     public Output<String> getWidth() {
-        return this.width == null ? Output.empty() : this.width;
+        return this.width == null ? Codegen.empty() : this.width;
     }
 
     public PngLayerArgs(
@@ -75,10 +76,10 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PngLayerArgs() {
-        this.height = Output.empty();
-        this.label = Output.empty();
-        this.odataType = Output.empty();
-        this.width = Output.empty();
+        this.height = Codegen.empty();
+        this.label = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.width = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder height(@Nullable String height) {
-            this.height = Output.ofNullable(height);
+            this.height = Codegen.ofNullable(height);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -120,7 +121,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -136,7 +137,7 @@ public final class PngLayerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder width(@Nullable String width) {
-            this.width = Output.ofNullable(width);
+            this.width = Codegen.ofNullable(width);
             return this;
         }        public PngLayerArgs build() {
             return new PngLayerArgs(height, label, odataType, width);

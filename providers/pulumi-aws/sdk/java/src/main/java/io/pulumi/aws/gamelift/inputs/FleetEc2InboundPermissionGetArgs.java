@@ -5,6 +5,7 @@ package io.pulumi.aws.gamelift.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -70,10 +71,10 @@ public final class FleetEc2InboundPermissionGetArgs extends io.pulumi.resources.
     }
 
     private FleetEc2InboundPermissionGetArgs() {
-        this.fromPort = Output.empty();
-        this.ipRange = Output.empty();
-        this.protocol = Output.empty();
-        this.toPort = Output.empty();
+        this.fromPort = Codegen.empty();
+        this.ipRange = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {

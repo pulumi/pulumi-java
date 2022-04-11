@@ -8,6 +8,7 @@ import io.pulumi.azurenative.providerhub.inputs.ProviderHubMetadataThirdPartyPro
 import io.pulumi.azurenative.providerhub.inputs.ResourceProviderAuthorizationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,21 +22,21 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
       private final @Nullable Output<ProviderHubMetadataProviderAuthenticationArgs> providerAuthentication;
 
     public Output<ProviderHubMetadataProviderAuthenticationArgs> getProviderAuthentication() {
-        return this.providerAuthentication == null ? Output.empty() : this.providerAuthentication;
+        return this.providerAuthentication == null ? Codegen.empty() : this.providerAuthentication;
     }
 
     @Import(name="providerAuthorizations")
       private final @Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations;
 
     public Output<List<ResourceProviderAuthorizationArgs>> getProviderAuthorizations() {
-        return this.providerAuthorizations == null ? Output.empty() : this.providerAuthorizations;
+        return this.providerAuthorizations == null ? Codegen.empty() : this.providerAuthorizations;
     }
 
     @Import(name="thirdPartyProviderAuthorization")
       private final @Nullable Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> thirdPartyProviderAuthorization;
 
     public Output<ProviderHubMetadataThirdPartyProviderAuthorizationArgs> getThirdPartyProviderAuthorization() {
-        return this.thirdPartyProviderAuthorization == null ? Output.empty() : this.thirdPartyProviderAuthorization;
+        return this.thirdPartyProviderAuthorization == null ? Codegen.empty() : this.thirdPartyProviderAuthorization;
     }
 
     public ProviderRegistrationPropertiesProviderHubMetadataArgs(
@@ -48,9 +49,9 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
     }
 
     private ProviderRegistrationPropertiesProviderHubMetadataArgs() {
-        this.providerAuthentication = Output.empty();
-        this.providerAuthorizations = Output.empty();
-        this.thirdPartyProviderAuthorization = Output.empty();
+        this.providerAuthentication = Codegen.empty();
+        this.providerAuthorizations = Codegen.empty();
+        this.thirdPartyProviderAuthorization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
             return this;
         }
         public Builder providerAuthentication(@Nullable ProviderHubMetadataProviderAuthenticationArgs providerAuthentication) {
-            this.providerAuthentication = Output.ofNullable(providerAuthentication);
+            this.providerAuthentication = Codegen.ofNullable(providerAuthentication);
             return this;
         }
         public Builder providerAuthorizations(@Nullable Output<List<ResourceProviderAuthorizationArgs>> providerAuthorizations) {
@@ -90,7 +91,7 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
             return this;
         }
         public Builder providerAuthorizations(@Nullable List<ResourceProviderAuthorizationArgs> providerAuthorizations) {
-            this.providerAuthorizations = Output.ofNullable(providerAuthorizations);
+            this.providerAuthorizations = Codegen.ofNullable(providerAuthorizations);
             return this;
         }
         public Builder providerAuthorizations(ResourceProviderAuthorizationArgs... providerAuthorizations) {
@@ -101,7 +102,7 @@ public final class ProviderRegistrationPropertiesProviderHubMetadataArgs extends
             return this;
         }
         public Builder thirdPartyProviderAuthorization(@Nullable ProviderHubMetadataThirdPartyProviderAuthorizationArgs thirdPartyProviderAuthorization) {
-            this.thirdPartyProviderAuthorization = Output.ofNullable(thirdPartyProviderAuthorization);
+            this.thirdPartyProviderAuthorization = Codegen.ofNullable(thirdPartyProviderAuthorization);
             return this;
         }        public ProviderRegistrationPropertiesProviderHubMetadataArgs build() {
             return new ProviderRegistrationPropertiesProviderHubMetadataArgs(providerAuthentication, providerAuthorizations, thirdPartyProviderAuthorization);

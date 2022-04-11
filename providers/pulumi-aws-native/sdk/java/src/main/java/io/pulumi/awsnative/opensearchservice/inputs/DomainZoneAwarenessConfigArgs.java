@@ -5,6 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> availabilityZoneCount;
 
     public Output<Integer> getAvailabilityZoneCount() {
-        return this.availabilityZoneCount == null ? Output.empty() : this.availabilityZoneCount;
+        return this.availabilityZoneCount == null ? Codegen.empty() : this.availabilityZoneCount;
     }
 
     public DomainZoneAwarenessConfigArgs(@Nullable Output<Integer> availabilityZoneCount) {
@@ -26,7 +27,7 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
     }
 
     private DomainZoneAwarenessConfigArgs() {
-        this.availabilityZoneCount = Output.empty();
+        this.availabilityZoneCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DomainZoneAwarenessConfigArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder availabilityZoneCount(@Nullable Integer availabilityZoneCount) {
-            this.availabilityZoneCount = Output.ofNullable(availabilityZoneCount);
+            this.availabilityZoneCount = Codegen.ofNullable(availabilityZoneCount);
             return this;
         }        public DomainZoneAwarenessConfigArgs build() {
             return new DomainZoneAwarenessConfigArgs(availabilityZoneCount);

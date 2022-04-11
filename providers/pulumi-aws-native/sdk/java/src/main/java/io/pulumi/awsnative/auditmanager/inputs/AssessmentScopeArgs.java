@@ -7,6 +7,7 @@ import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSAccountArgs;
 import io.pulumi.awsnative.auditmanager.inputs.AssessmentAWSServiceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<AssessmentAWSAccountArgs>> awsAccounts;
 
     public Output<List<AssessmentAWSAccountArgs>> getAwsAccounts() {
-        return this.awsAccounts == null ? Output.empty() : this.awsAccounts;
+        return this.awsAccounts == null ? Codegen.empty() : this.awsAccounts;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<AssessmentAWSServiceArgs>> awsServices;
 
     public Output<List<AssessmentAWSServiceArgs>> getAwsServices() {
-        return this.awsServices == null ? Output.empty() : this.awsServices;
+        return this.awsServices == null ? Codegen.empty() : this.awsServices;
     }
 
     public AssessmentScopeArgs(
@@ -50,8 +51,8 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AssessmentScopeArgs() {
-        this.awsAccounts = Output.empty();
-        this.awsServices = Output.empty();
+        this.awsAccounts = Codegen.empty();
+        this.awsServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder awsAccounts(@Nullable List<AssessmentAWSAccountArgs> awsAccounts) {
-            this.awsAccounts = Output.ofNullable(awsAccounts);
+            this.awsAccounts = Codegen.ofNullable(awsAccounts);
             return this;
         }
         public Builder awsAccounts(AssessmentAWSAccountArgs... awsAccounts) {
@@ -92,7 +93,7 @@ public final class AssessmentScopeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder awsServices(@Nullable List<AssessmentAWSServiceArgs> awsServices) {
-            this.awsServices = Output.ofNullable(awsServices);
+            this.awsServices = Codegen.ofNullable(awsServices);
             return this;
         }
         public Builder awsServices(AssessmentAWSServiceArgs... awsServices) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.dataproc;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.ClusterIAMBindingArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterIAMBindingState;
@@ -167,7 +168,7 @@ public class ClusterIAMBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ClusterIAMBinding(String name, ClusterIAMBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dataproc/clusterIAMBinding:ClusterIAMBinding", name, args == null ? ClusterIAMBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dataproc/clusterIAMBinding:ClusterIAMBinding", name, args == null ? ClusterIAMBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ClusterIAMBinding(String name, Output<String> id, @Nullable ClusterIAMBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

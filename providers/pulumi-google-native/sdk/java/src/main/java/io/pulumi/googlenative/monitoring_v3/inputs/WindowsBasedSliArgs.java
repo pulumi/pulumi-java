@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricRangeArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.PerformanceThresholdArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> goodBadMetricFilter;
 
     public Output<String> getGoodBadMetricFilter() {
-        return this.goodBadMetricFilter == null ? Output.empty() : this.goodBadMetricFilter;
+        return this.goodBadMetricFilter == null ? Codegen.empty() : this.goodBadMetricFilter;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold;
 
     public Output<PerformanceThresholdArgs> getGoodTotalRatioThreshold() {
-        return this.goodTotalRatioThreshold == null ? Output.empty() : this.goodTotalRatioThreshold;
+        return this.goodTotalRatioThreshold == null ? Codegen.empty() : this.goodTotalRatioThreshold;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<MetricRangeArgs> metricMeanInRange;
 
     public Output<MetricRangeArgs> getMetricMeanInRange() {
-        return this.metricMeanInRange == null ? Output.empty() : this.metricMeanInRange;
+        return this.metricMeanInRange == null ? Codegen.empty() : this.metricMeanInRange;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<MetricRangeArgs> metricSumInRange;
 
     public Output<MetricRangeArgs> getMetricSumInRange() {
-        return this.metricSumInRange == null ? Output.empty() : this.metricSumInRange;
+        return this.metricSumInRange == null ? Codegen.empty() : this.metricSumInRange;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> windowPeriod;
 
     public Output<String> getWindowPeriod() {
-        return this.windowPeriod == null ? Output.empty() : this.windowPeriod;
+        return this.windowPeriod == null ? Codegen.empty() : this.windowPeriod;
     }
 
     public WindowsBasedSliArgs(
@@ -89,11 +90,11 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private WindowsBasedSliArgs() {
-        this.goodBadMetricFilter = Output.empty();
-        this.goodTotalRatioThreshold = Output.empty();
-        this.metricMeanInRange = Output.empty();
-        this.metricSumInRange = Output.empty();
-        this.windowPeriod = Output.empty();
+        this.goodBadMetricFilter = Codegen.empty();
+        this.goodTotalRatioThreshold = Codegen.empty();
+        this.metricMeanInRange = Codegen.empty();
+        this.metricSumInRange = Codegen.empty();
+        this.windowPeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder goodBadMetricFilter(@Nullable String goodBadMetricFilter) {
-            this.goodBadMetricFilter = Output.ofNullable(goodBadMetricFilter);
+            this.goodBadMetricFilter = Codegen.ofNullable(goodBadMetricFilter);
             return this;
         }
         public Builder goodTotalRatioThreshold(@Nullable Output<PerformanceThresholdArgs> goodTotalRatioThreshold) {
@@ -137,7 +138,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder goodTotalRatioThreshold(@Nullable PerformanceThresholdArgs goodTotalRatioThreshold) {
-            this.goodTotalRatioThreshold = Output.ofNullable(goodTotalRatioThreshold);
+            this.goodTotalRatioThreshold = Codegen.ofNullable(goodTotalRatioThreshold);
             return this;
         }
         public Builder metricMeanInRange(@Nullable Output<MetricRangeArgs> metricMeanInRange) {
@@ -145,7 +146,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metricMeanInRange(@Nullable MetricRangeArgs metricMeanInRange) {
-            this.metricMeanInRange = Output.ofNullable(metricMeanInRange);
+            this.metricMeanInRange = Codegen.ofNullable(metricMeanInRange);
             return this;
         }
         public Builder metricSumInRange(@Nullable Output<MetricRangeArgs> metricSumInRange) {
@@ -153,7 +154,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metricSumInRange(@Nullable MetricRangeArgs metricSumInRange) {
-            this.metricSumInRange = Output.ofNullable(metricSumInRange);
+            this.metricSumInRange = Codegen.ofNullable(metricSumInRange);
             return this;
         }
         public Builder windowPeriod(@Nullable Output<String> windowPeriod) {
@@ -161,7 +162,7 @@ public final class WindowsBasedSliArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder windowPeriod(@Nullable String windowPeriod) {
-            this.windowPeriod = Output.ofNullable(windowPeriod);
+            this.windowPeriod = Codegen.ofNullable(windowPeriod);
             return this;
         }        public WindowsBasedSliArgs build() {
             return new WindowsBasedSliArgs(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);

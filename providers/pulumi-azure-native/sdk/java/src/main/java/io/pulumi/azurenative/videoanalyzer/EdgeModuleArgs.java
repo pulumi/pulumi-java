@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> edgeModuleName;
 
     public Output<String> getEdgeModuleName() {
-        return this.edgeModuleName == null ? Output.empty() : this.edgeModuleName;
+        return this.edgeModuleName == null ? Codegen.empty() : this.edgeModuleName;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EdgeModuleArgs() {
-        this.accountName = Output.empty();
-        this.edgeModuleName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.edgeModuleName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class EdgeModuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder edgeModuleName(@Nullable String edgeModuleName) {
-            this.edgeModuleName = Output.ofNullable(edgeModuleName);
+            this.edgeModuleName = Codegen.ofNullable(edgeModuleName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.BlobAuditingPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -82,7 +83,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> auditActionsAndGroups;
 
     public Output<List<String>> getAuditActionsAndGroups() {
-        return this.auditActionsAndGroups == null ? Output.empty() : this.auditActionsAndGroups;
+        return this.auditActionsAndGroups == null ? Codegen.empty() : this.auditActionsAndGroups;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> blobAuditingPolicyName;
 
     public Output<String> getBlobAuditingPolicyName() {
-        return this.blobAuditingPolicyName == null ? Output.empty() : this.blobAuditingPolicyName;
+        return this.blobAuditingPolicyName == null ? Codegen.empty() : this.blobAuditingPolicyName;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> isAzureMonitorTargetEnabled;
 
     public Output<Boolean> getIsAzureMonitorTargetEnabled() {
-        return this.isAzureMonitorTargetEnabled == null ? Output.empty() : this.isAzureMonitorTargetEnabled;
+        return this.isAzureMonitorTargetEnabled == null ? Codegen.empty() : this.isAzureMonitorTargetEnabled;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> isDevopsAuditEnabled;
 
     public Output<Boolean> getIsDevopsAuditEnabled() {
-        return this.isDevopsAuditEnabled == null ? Output.empty() : this.isDevopsAuditEnabled;
+        return this.isDevopsAuditEnabled == null ? Codegen.empty() : this.isDevopsAuditEnabled;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Boolean> isStorageSecondaryKeyInUse;
 
     public Output<Boolean> getIsStorageSecondaryKeyInUse() {
-        return this.isStorageSecondaryKeyInUse == null ? Output.empty() : this.isStorageSecondaryKeyInUse;
+        return this.isStorageSecondaryKeyInUse == null ? Codegen.empty() : this.isStorageSecondaryKeyInUse;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> queueDelayMs;
 
     public Output<Integer> getQueueDelayMs() {
-        return this.queueDelayMs == null ? Output.empty() : this.queueDelayMs;
+        return this.queueDelayMs == null ? Codegen.empty() : this.queueDelayMs;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     /**
@@ -217,7 +218,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageAccountAccessKey;
 
     public Output<String> getStorageAccountAccessKey() {
-        return this.storageAccountAccessKey == null ? Output.empty() : this.storageAccountAccessKey;
+        return this.storageAccountAccessKey == null ? Codegen.empty() : this.storageAccountAccessKey;
     }
 
     /**
@@ -228,7 +229,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageAccountSubscriptionId;
 
     public Output<String> getStorageAccountSubscriptionId() {
-        return this.storageAccountSubscriptionId == null ? Output.empty() : this.storageAccountSubscriptionId;
+        return this.storageAccountSubscriptionId == null ? Codegen.empty() : this.storageAccountSubscriptionId;
     }
 
     /**
@@ -239,7 +240,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageEndpoint;
 
     public Output<String> getStorageEndpoint() {
-        return this.storageEndpoint == null ? Output.empty() : this.storageEndpoint;
+        return this.storageEndpoint == null ? Codegen.empty() : this.storageEndpoint;
     }
 
     public ServerBlobAuditingPolicyArgs(
@@ -272,19 +273,19 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
     }
 
     private ServerBlobAuditingPolicyArgs() {
-        this.auditActionsAndGroups = Output.empty();
-        this.blobAuditingPolicyName = Output.empty();
-        this.isAzureMonitorTargetEnabled = Output.empty();
-        this.isDevopsAuditEnabled = Output.empty();
-        this.isStorageSecondaryKeyInUse = Output.empty();
-        this.queueDelayMs = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retentionDays = Output.empty();
-        this.serverName = Output.empty();
-        this.state = Output.empty();
-        this.storageAccountAccessKey = Output.empty();
-        this.storageAccountSubscriptionId = Output.empty();
-        this.storageEndpoint = Output.empty();
+        this.auditActionsAndGroups = Codegen.empty();
+        this.blobAuditingPolicyName = Codegen.empty();
+        this.isAzureMonitorTargetEnabled = Codegen.empty();
+        this.isDevopsAuditEnabled = Codegen.empty();
+        this.isStorageSecondaryKeyInUse = Codegen.empty();
+        this.queueDelayMs = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retentionDays = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.storageAccountAccessKey = Codegen.empty();
+        this.storageAccountSubscriptionId = Codegen.empty();
+        this.storageEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -336,7 +337,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder auditActionsAndGroups(@Nullable List<String> auditActionsAndGroups) {
-            this.auditActionsAndGroups = Output.ofNullable(auditActionsAndGroups);
+            this.auditActionsAndGroups = Codegen.ofNullable(auditActionsAndGroups);
             return this;
         }
         public Builder auditActionsAndGroups(String... auditActionsAndGroups) {
@@ -347,7 +348,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder blobAuditingPolicyName(@Nullable String blobAuditingPolicyName) {
-            this.blobAuditingPolicyName = Output.ofNullable(blobAuditingPolicyName);
+            this.blobAuditingPolicyName = Codegen.ofNullable(blobAuditingPolicyName);
             return this;
         }
         public Builder isAzureMonitorTargetEnabled(@Nullable Output<Boolean> isAzureMonitorTargetEnabled) {
@@ -355,7 +356,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder isAzureMonitorTargetEnabled(@Nullable Boolean isAzureMonitorTargetEnabled) {
-            this.isAzureMonitorTargetEnabled = Output.ofNullable(isAzureMonitorTargetEnabled);
+            this.isAzureMonitorTargetEnabled = Codegen.ofNullable(isAzureMonitorTargetEnabled);
             return this;
         }
         public Builder isDevopsAuditEnabled(@Nullable Output<Boolean> isDevopsAuditEnabled) {
@@ -363,7 +364,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder isDevopsAuditEnabled(@Nullable Boolean isDevopsAuditEnabled) {
-            this.isDevopsAuditEnabled = Output.ofNullable(isDevopsAuditEnabled);
+            this.isDevopsAuditEnabled = Codegen.ofNullable(isDevopsAuditEnabled);
             return this;
         }
         public Builder isStorageSecondaryKeyInUse(@Nullable Output<Boolean> isStorageSecondaryKeyInUse) {
@@ -371,7 +372,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder isStorageSecondaryKeyInUse(@Nullable Boolean isStorageSecondaryKeyInUse) {
-            this.isStorageSecondaryKeyInUse = Output.ofNullable(isStorageSecondaryKeyInUse);
+            this.isStorageSecondaryKeyInUse = Codegen.ofNullable(isStorageSecondaryKeyInUse);
             return this;
         }
         public Builder queueDelayMs(@Nullable Output<Integer> queueDelayMs) {
@@ -379,7 +380,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder queueDelayMs(@Nullable Integer queueDelayMs) {
-            this.queueDelayMs = Output.ofNullable(queueDelayMs);
+            this.queueDelayMs = Codegen.ofNullable(queueDelayMs);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -395,7 +396,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }
         public Builder serverName(Output<String> serverName) {
@@ -419,7 +420,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
-            this.storageAccountAccessKey = Output.ofNullable(storageAccountAccessKey);
+            this.storageAccountAccessKey = Codegen.ofNullable(storageAccountAccessKey);
             return this;
         }
         public Builder storageAccountSubscriptionId(@Nullable Output<String> storageAccountSubscriptionId) {
@@ -427,7 +428,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageAccountSubscriptionId(@Nullable String storageAccountSubscriptionId) {
-            this.storageAccountSubscriptionId = Output.ofNullable(storageAccountSubscriptionId);
+            this.storageAccountSubscriptionId = Codegen.ofNullable(storageAccountSubscriptionId);
             return this;
         }
         public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
@@ -435,7 +436,7 @@ public final class ServerBlobAuditingPolicyArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
-            this.storageEndpoint = Output.ofNullable(storageEndpoint);
+            this.storageEndpoint = Codegen.ofNullable(storageEndpoint);
             return this;
         }        public ServerBlobAuditingPolicyArgs build() {
             return new ServerBlobAuditingPolicyArgs(auditActionsAndGroups, blobAuditingPolicyName, isAzureMonitorTargetEnabled, isDevopsAuditEnabled, isStorageSecondaryKeyInUse, queueDelayMs, resourceGroupName, retentionDays, serverName, state, storageAccountAccessKey, storageAccountSubscriptionId, storageEndpoint);

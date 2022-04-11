@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.SshConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<SshConfigurationArgs> ssh;
 
     public Output<SshConfigurationArgs> getSsh() {
-        return this.ssh == null ? Output.empty() : this.ssh;
+        return this.ssh == null ? Codegen.empty() : this.ssh;
     }
 
     public LinuxConfigurationArgs(@Nullable Output<SshConfigurationArgs> ssh) {
@@ -34,7 +35,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private LinuxConfigurationArgs() {
-        this.ssh = Output.empty();
+        this.ssh = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LinuxConfigurationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder ssh(@Nullable SshConfigurationArgs ssh) {
-            this.ssh = Output.ofNullable(ssh);
+            this.ssh = Codegen.ofNullable(ssh);
             return this;
         }        public LinuxConfigurationArgs build() {
             return new LinuxConfigurationArgs(ssh);

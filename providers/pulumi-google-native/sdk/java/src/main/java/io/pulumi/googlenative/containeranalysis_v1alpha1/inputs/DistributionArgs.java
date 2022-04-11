@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DistributionArchitecture;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DistributionArchitecture> architecture;
 
     public Output<DistributionArchitecture> getArchitecture() {
-        return this.architecture == null ? Output.empty() : this.architecture;
+        return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cpeUri;
 
     public Output<String> getCpeUri() {
-        return this.cpeUri == null ? Output.empty() : this.cpeUri;
+        return this.cpeUri == null ? Codegen.empty() : this.cpeUri;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VersionArgs> latestVersion;
 
     public Output<VersionArgs> getLatestVersion() {
-        return this.latestVersion == null ? Output.empty() : this.latestVersion;
+        return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> maintainer;
 
     public Output<String> getMaintainer() {
-        return this.maintainer == null ? Output.empty() : this.maintainer;
+        return this.maintainer == null ? Codegen.empty() : this.maintainer;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public DistributionArgs(
@@ -102,12 +103,12 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DistributionArgs() {
-        this.architecture = Output.empty();
-        this.cpeUri = Output.empty();
-        this.description = Output.empty();
-        this.latestVersion = Output.empty();
-        this.maintainer = Output.empty();
-        this.url = Output.empty();
+        this.architecture = Codegen.empty();
+        this.cpeUri = Codegen.empty();
+        this.description = Codegen.empty();
+        this.latestVersion = Codegen.empty();
+        this.maintainer = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -145,7 +146,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder architecture(@Nullable DistributionArchitecture architecture) {
-            this.architecture = Output.ofNullable(architecture);
+            this.architecture = Codegen.ofNullable(architecture);
             return this;
         }
         public Builder cpeUri(@Nullable Output<String> cpeUri) {
@@ -153,7 +154,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpeUri(@Nullable String cpeUri) {
-            this.cpeUri = Output.ofNullable(cpeUri);
+            this.cpeUri = Codegen.ofNullable(cpeUri);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -161,7 +162,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder latestVersion(@Nullable Output<VersionArgs> latestVersion) {
@@ -169,7 +170,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder latestVersion(@Nullable VersionArgs latestVersion) {
-            this.latestVersion = Output.ofNullable(latestVersion);
+            this.latestVersion = Codegen.ofNullable(latestVersion);
             return this;
         }
         public Builder maintainer(@Nullable Output<String> maintainer) {
@@ -177,7 +178,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintainer(@Nullable String maintainer) {
-            this.maintainer = Output.ofNullable(maintainer);
+            this.maintainer = Codegen.ofNullable(maintainer);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -185,7 +186,7 @@ public final class DistributionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public DistributionArgs build() {
             return new DistributionArgs(architecture, cpeUri, description, latestVersion, maintainer, url);

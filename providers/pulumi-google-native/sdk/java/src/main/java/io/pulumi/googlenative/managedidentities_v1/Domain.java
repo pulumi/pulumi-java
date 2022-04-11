@@ -6,6 +6,7 @@ package io.pulumi.googlenative.managedidentities_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.managedidentities_v1.DomainArgs;
 import io.pulumi.googlenative.managedidentities_v1.outputs.TrustResponse;
@@ -227,7 +228,7 @@ public class Domain extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Domain(String name, DomainArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:managedidentities/v1:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:managedidentities/v1:Domain", name, args == null ? DomainArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Domain(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

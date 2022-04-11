@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> extension;
 
     public Output<String> getExtension() {
-        return this.extension == null ? Output.empty() : this.extension;
+        return this.extension == null ? Codegen.empty() : this.extension;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> filePath;
 
     public Output<String> getFilePath() {
-        return this.filePath == null ? Output.empty() : this.filePath;
+        return this.filePath == null ? Codegen.empty() : this.filePath;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> mediaType;
 
     public Output<String> getMediaType() {
-        return this.mediaType == null ? Output.empty() : this.mediaType;
+        return this.mediaType == null ? Codegen.empty() : this.mediaType;
     }
 
     public ProjectFilePropertiesArgs(
@@ -61,9 +62,9 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
     }
 
     private ProjectFilePropertiesArgs() {
-        this.extension = Output.empty();
-        this.filePath = Output.empty();
-        this.mediaType = Output.empty();
+        this.extension = Codegen.empty();
+        this.filePath = Codegen.empty();
+        this.mediaType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder extension(@Nullable String extension) {
-            this.extension = Output.ofNullable(extension);
+            this.extension = Codegen.ofNullable(extension);
             return this;
         }
         public Builder filePath(@Nullable Output<String> filePath) {
@@ -103,7 +104,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder filePath(@Nullable String filePath) {
-            this.filePath = Output.ofNullable(filePath);
+            this.filePath = Codegen.ofNullable(filePath);
             return this;
         }
         public Builder mediaType(@Nullable Output<String> mediaType) {
@@ -111,7 +112,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder mediaType(@Nullable String mediaType) {
-            this.mediaType = Output.ofNullable(mediaType);
+            this.mediaType = Codegen.ofNullable(mediaType);
             return this;
         }        public ProjectFilePropertiesArgs build() {
             return new ProjectFilePropertiesArgs(extension, filePath, mediaType);

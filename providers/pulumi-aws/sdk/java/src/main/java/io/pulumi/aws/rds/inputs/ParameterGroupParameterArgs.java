@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class ParameterGroupParameterArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> applyMethod;
 
     public Output<String> getApplyMethod() {
-        return this.applyMethod == null ? Output.empty() : this.applyMethod;
+        return this.applyMethod == null ? Codegen.empty() : this.applyMethod;
     }
 
     /**
@@ -59,9 +60,9 @@ public final class ParameterGroupParameterArgs extends io.pulumi.resources.Resou
     }
 
     private ParameterGroupParameterArgs() {
-        this.applyMethod = Output.empty();
-        this.name = Output.empty();
-        this.value = Output.empty();
+        this.applyMethod = Codegen.empty();
+        this.name = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ParameterGroupParameterArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder applyMethod(@Nullable String applyMethod) {
-            this.applyMethod = Output.ofNullable(applyMethod);
+            this.applyMethod = Codegen.ofNullable(applyMethod);
             return this;
         }
         public Builder name(Output<String> name) {

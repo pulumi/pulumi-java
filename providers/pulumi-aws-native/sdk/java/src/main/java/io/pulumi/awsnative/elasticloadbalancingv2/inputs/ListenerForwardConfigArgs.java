@@ -7,6 +7,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupStic
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupTupleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +21,14 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
     public Output<ListenerTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
-        return this.targetGroupStickinessConfig == null ? Output.empty() : this.targetGroupStickinessConfig;
+        return this.targetGroupStickinessConfig == null ? Codegen.empty() : this.targetGroupStickinessConfig;
     }
 
     @Import(name="targetGroups")
       private final @Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups;
 
     public Output<List<ListenerTargetGroupTupleArgs>> getTargetGroups() {
-        return this.targetGroups == null ? Output.empty() : this.targetGroups;
+        return this.targetGroups == null ? Codegen.empty() : this.targetGroups;
     }
 
     public ListenerForwardConfigArgs(
@@ -38,8 +39,8 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private ListenerForwardConfigArgs() {
-        this.targetGroupStickinessConfig = Output.empty();
-        this.targetGroups = Output.empty();
+        this.targetGroupStickinessConfig = Codegen.empty();
+        this.targetGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder targetGroupStickinessConfig(@Nullable ListenerTargetGroupStickinessConfigArgs targetGroupStickinessConfig) {
-            this.targetGroupStickinessConfig = Output.ofNullable(targetGroupStickinessConfig);
+            this.targetGroupStickinessConfig = Codegen.ofNullable(targetGroupStickinessConfig);
             return this;
         }
         public Builder targetGroups(@Nullable Output<List<ListenerTargetGroupTupleArgs>> targetGroups) {
@@ -77,7 +78,7 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder targetGroups(@Nullable List<ListenerTargetGroupTupleArgs> targetGroups) {
-            this.targetGroups = Output.ofNullable(targetGroups);
+            this.targetGroups = Codegen.ofNullable(targetGroups);
             return this;
         }
         public Builder targetGroups(ListenerTargetGroupTupleArgs... targetGroups) {

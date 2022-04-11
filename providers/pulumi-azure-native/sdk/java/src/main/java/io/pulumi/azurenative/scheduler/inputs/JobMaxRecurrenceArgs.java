@@ -6,6 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.enums.RecurrenceFrequency;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<RecurrenceFrequency> frequency;
 
     public Output<RecurrenceFrequency> getFrequency() {
-        return this.frequency == null ? Output.empty() : this.frequency;
+        return this.frequency == null ? Codegen.empty() : this.frequency;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> interval;
 
     public Output<Integer> getInterval() {
-        return this.interval == null ? Output.empty() : this.interval;
+        return this.interval == null ? Codegen.empty() : this.interval;
     }
 
     public JobMaxRecurrenceArgs(
@@ -45,8 +46,8 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private JobMaxRecurrenceArgs() {
-        this.frequency = Output.empty();
-        this.interval = Output.empty();
+        this.frequency = Codegen.empty();
+        this.interval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder frequency(@Nullable RecurrenceFrequency frequency) {
-            this.frequency = Output.ofNullable(frequency);
+            this.frequency = Codegen.ofNullable(frequency);
             return this;
         }
         public Builder interval(@Nullable Output<Integer> interval) {
@@ -84,7 +85,7 @@ public final class JobMaxRecurrenceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder interval(@Nullable Integer interval) {
-            this.interval = Output.ofNullable(interval);
+            this.interval = Codegen.ofNullable(interval);
             return this;
         }        public JobMaxRecurrenceArgs build() {
             return new JobMaxRecurrenceArgs(frequency, interval);

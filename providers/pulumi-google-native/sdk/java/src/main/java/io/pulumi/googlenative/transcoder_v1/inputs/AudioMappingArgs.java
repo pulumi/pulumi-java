@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +40,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> gainDb;
 
     public Output<Double> getGainDb() {
-        return this.gainDb == null ? Output.empty() : this.gainDb;
+        return this.gainDb == null ? Codegen.empty() : this.gainDb;
     }
 
     /**
@@ -102,12 +103,12 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AudioMappingArgs() {
-        this.atomKey = Output.empty();
-        this.gainDb = Output.empty();
-        this.inputChannel = Output.empty();
-        this.inputKey = Output.empty();
-        this.inputTrack = Output.empty();
-        this.outputChannel = Output.empty();
+        this.atomKey = Codegen.empty();
+        this.gainDb = Codegen.empty();
+        this.inputChannel = Codegen.empty();
+        this.inputKey = Codegen.empty();
+        this.inputTrack = Codegen.empty();
+        this.outputChannel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class AudioMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gainDb(@Nullable Double gainDb) {
-            this.gainDb = Output.ofNullable(gainDb);
+            this.gainDb = Codegen.ofNullable(gainDb);
             return this;
         }
         public Builder inputChannel(Output<Integer> inputChannel) {

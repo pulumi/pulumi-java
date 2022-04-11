@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupItemType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,BackupItemType>> backupItemType;
 
     public Output<Either<String,BackupItemType>> getBackupItemType() {
-        return this.backupItemType == null ? Output.empty() : this.backupItemType;
+        return this.backupItemType == null ? Codegen.empty() : this.backupItemType;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> backupItems;
 
     public Output<List<String>> getBackupItems() {
-        return this.backupItems == null ? Output.empty() : this.backupItems;
+        return this.backupItems == null ? Codegen.empty() : this.backupItems;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> lastBackupStatus;
 
     public Output<String> getLastBackupStatus() {
-        return this.lastBackupStatus == null ? Output.empty() : this.lastBackupStatus;
+        return this.lastBackupStatus == null ? Codegen.empty() : this.lastBackupStatus;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> lastRefreshedAt;
 
     public Output<String> getLastRefreshedAt() {
-        return this.lastRefreshedAt == null ? Output.empty() : this.lastRefreshedAt;
+        return this.lastRefreshedAt == null ? Codegen.empty() : this.lastRefreshedAt;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     public MabContainerExtendedInfoArgs(
@@ -90,11 +91,11 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
     }
 
     private MabContainerExtendedInfoArgs() {
-        this.backupItemType = Output.empty();
-        this.backupItems = Output.empty();
-        this.lastBackupStatus = Output.empty();
-        this.lastRefreshedAt = Output.empty();
-        this.policyName = Output.empty();
+        this.backupItemType = Codegen.empty();
+        this.backupItems = Codegen.empty();
+        this.lastBackupStatus = Codegen.empty();
+        this.lastRefreshedAt = Codegen.empty();
+        this.policyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder backupItemType(@Nullable Either<String,BackupItemType> backupItemType) {
-            this.backupItemType = Output.ofNullable(backupItemType);
+            this.backupItemType = Codegen.ofNullable(backupItemType);
             return this;
         }
         public Builder backupItems(@Nullable Output<List<String>> backupItems) {
@@ -138,7 +139,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder backupItems(@Nullable List<String> backupItems) {
-            this.backupItems = Output.ofNullable(backupItems);
+            this.backupItems = Codegen.ofNullable(backupItems);
             return this;
         }
         public Builder backupItems(String... backupItems) {
@@ -149,7 +150,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder lastBackupStatus(@Nullable String lastBackupStatus) {
-            this.lastBackupStatus = Output.ofNullable(lastBackupStatus);
+            this.lastBackupStatus = Codegen.ofNullable(lastBackupStatus);
             return this;
         }
         public Builder lastRefreshedAt(@Nullable Output<String> lastRefreshedAt) {
@@ -157,7 +158,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder lastRefreshedAt(@Nullable String lastRefreshedAt) {
-            this.lastRefreshedAt = Output.ofNullable(lastRefreshedAt);
+            this.lastRefreshedAt = Codegen.ofNullable(lastRefreshedAt);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -165,7 +166,7 @@ public final class MabContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }        public MabContainerExtendedInfoArgs build() {
             return new MabContainerExtendedInfoArgs(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);

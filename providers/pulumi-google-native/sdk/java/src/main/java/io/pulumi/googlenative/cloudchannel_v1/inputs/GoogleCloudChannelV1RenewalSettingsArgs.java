@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudchannel_v1.enums.GoogleCloudChannelV1RenewalSettingsPaymentPlan;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1PeriodArgs;
 import java.lang.Boolean;
@@ -28,7 +29,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> enableRenewal;
 
     public Output<Boolean> getEnableRenewal() {
-        return this.enableRenewal == null ? Output.empty() : this.enableRenewal;
+        return this.enableRenewal == null ? Codegen.empty() : this.enableRenewal;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
       private final @Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle;
 
     public Output<GoogleCloudChannelV1PeriodArgs> getPaymentCycle() {
-        return this.paymentCycle == null ? Output.empty() : this.paymentCycle;
+        return this.paymentCycle == null ? Codegen.empty() : this.paymentCycle;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
       private final @Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan;
 
     public Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> getPaymentPlan() {
-        return this.paymentPlan == null ? Output.empty() : this.paymentPlan;
+        return this.paymentPlan == null ? Codegen.empty() : this.paymentPlan;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> resizeUnitCount;
 
     public Output<Boolean> getResizeUnitCount() {
-        return this.resizeUnitCount == null ? Output.empty() : this.resizeUnitCount;
+        return this.resizeUnitCount == null ? Codegen.empty() : this.resizeUnitCount;
     }
 
     public GoogleCloudChannelV1RenewalSettingsArgs(
@@ -76,10 +77,10 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
     }
 
     private GoogleCloudChannelV1RenewalSettingsArgs() {
-        this.enableRenewal = Output.empty();
-        this.paymentCycle = Output.empty();
-        this.paymentPlan = Output.empty();
-        this.resizeUnitCount = Output.empty();
+        this.enableRenewal = Codegen.empty();
+        this.paymentCycle = Codegen.empty();
+        this.paymentPlan = Codegen.empty();
+        this.resizeUnitCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
             return this;
         }
         public Builder enableRenewal(@Nullable Boolean enableRenewal) {
-            this.enableRenewal = Output.ofNullable(enableRenewal);
+            this.enableRenewal = Codegen.ofNullable(enableRenewal);
             return this;
         }
         public Builder paymentCycle(@Nullable Output<GoogleCloudChannelV1PeriodArgs> paymentCycle) {
@@ -121,7 +122,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
             return this;
         }
         public Builder paymentCycle(@Nullable GoogleCloudChannelV1PeriodArgs paymentCycle) {
-            this.paymentCycle = Output.ofNullable(paymentCycle);
+            this.paymentCycle = Codegen.ofNullable(paymentCycle);
             return this;
         }
         public Builder paymentPlan(@Nullable Output<GoogleCloudChannelV1RenewalSettingsPaymentPlan> paymentPlan) {
@@ -129,7 +130,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
             return this;
         }
         public Builder paymentPlan(@Nullable GoogleCloudChannelV1RenewalSettingsPaymentPlan paymentPlan) {
-            this.paymentPlan = Output.ofNullable(paymentPlan);
+            this.paymentPlan = Codegen.ofNullable(paymentPlan);
             return this;
         }
         public Builder resizeUnitCount(@Nullable Output<Boolean> resizeUnitCount) {
@@ -137,7 +138,7 @@ public final class GoogleCloudChannelV1RenewalSettingsArgs extends io.pulumi.res
             return this;
         }
         public Builder resizeUnitCount(@Nullable Boolean resizeUnitCount) {
-            this.resizeUnitCount = Output.ofNullable(resizeUnitCount);
+            this.resizeUnitCount = Codegen.ofNullable(resizeUnitCount);
             return this;
         }        public GoogleCloudChannelV1RenewalSettingsArgs build() {
             return new GoogleCloudChannelV1RenewalSettingsArgs(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);

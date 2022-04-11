@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gcmEndpoint;
 
     public Output<String> getGcmEndpoint() {
-        return this.gcmEndpoint == null ? Output.empty() : this.gcmEndpoint;
+        return this.gcmEndpoint == null ? Codegen.empty() : this.gcmEndpoint;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> googleApiKey;
 
     public Output<String> getGoogleApiKey() {
-        return this.googleApiKey == null ? Output.empty() : this.googleApiKey;
+        return this.googleApiKey == null ? Codegen.empty() : this.googleApiKey;
     }
 
     public GcmCredentialArgs(
@@ -48,8 +49,8 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GcmCredentialArgs() {
-        this.gcmEndpoint = Output.empty();
-        this.googleApiKey = Output.empty();
+        this.gcmEndpoint = Codegen.empty();
+        this.googleApiKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gcmEndpoint(@Nullable String gcmEndpoint) {
-            this.gcmEndpoint = Output.ofNullable(gcmEndpoint);
+            this.gcmEndpoint = Codegen.ofNullable(gcmEndpoint);
             return this;
         }
         public Builder googleApiKey(@Nullable Output<String> googleApiKey) {
@@ -87,7 +88,7 @@ public final class GcmCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder googleApiKey(@Nullable String googleApiKey) {
-            this.googleApiKey = Output.ofNullable(googleApiKey);
+            this.googleApiKey = Codegen.ofNullable(googleApiKey);
             return this;
         }        public GcmCredentialArgs build() {
             return new GcmCredentialArgs(gcmEndpoint, googleApiKey);

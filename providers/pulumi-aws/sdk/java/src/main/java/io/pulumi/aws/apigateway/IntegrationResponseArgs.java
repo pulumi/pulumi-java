@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> contentHandling;
 
     public Output<String> getContentHandling() {
-        return this.contentHandling == null ? Output.empty() : this.contentHandling;
+        return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> responseParameters;
 
     public Output<Map<String,String>> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> responseTemplates;
 
     public Output<Map<String,String>> getResponseTemplates() {
-        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
+        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> selectionPattern;
 
     public Output<String> getSelectionPattern() {
-        return this.selectionPattern == null ? Output.empty() : this.selectionPattern;
+        return this.selectionPattern == null ? Codegen.empty() : this.selectionPattern;
     }
 
     /**
@@ -127,14 +128,14 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
     }
 
     private IntegrationResponseArgs() {
-        this.contentHandling = Output.empty();
-        this.httpMethod = Output.empty();
-        this.resourceId = Output.empty();
-        this.responseParameters = Output.empty();
-        this.responseTemplates = Output.empty();
-        this.restApi = Output.empty();
-        this.selectionPattern = Output.empty();
-        this.statusCode = Output.empty();
+        this.contentHandling = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.responseParameters = Codegen.empty();
+        this.responseTemplates = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.selectionPattern = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -176,7 +177,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder contentHandling(@Nullable String contentHandling) {
-            this.contentHandling = Output.ofNullable(contentHandling);
+            this.contentHandling = Codegen.ofNullable(contentHandling);
             return this;
         }
         public Builder httpMethod(Output<String> httpMethod) {
@@ -200,7 +201,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder responseParameters(@Nullable Map<String,String> responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder responseTemplates(@Nullable Output<Map<String,String>> responseTemplates) {
@@ -208,7 +209,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder responseTemplates(@Nullable Map<String,String> responseTemplates) {
-            this.responseTemplates = Output.ofNullable(responseTemplates);
+            this.responseTemplates = Codegen.ofNullable(responseTemplates);
             return this;
         }
         public Builder restApi(Output<String> restApi) {
@@ -220,7 +221,7 @@ public final class IntegrationResponseArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder selectionPattern(@Nullable String selectionPattern) {
-            this.selectionPattern = Output.ofNullable(selectionPattern);
+            this.selectionPattern = Codegen.ofNullable(selectionPattern);
             return this;
         }
         public Builder statusCode(Output<String> statusCode) {

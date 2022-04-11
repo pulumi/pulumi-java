@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -109,7 +110,7 @@ public class SyncGroup extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SyncGroup(String name, SyncGroupArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storagesync:SyncGroup", name, args == null ? SyncGroupArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storagesync:SyncGroup", name, args == null ? SyncGroupArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SyncGroup(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

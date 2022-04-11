@@ -6,6 +6,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 import io.pulumi.azurenative.blueprint.inputs.SecretValueReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecretValueReferenceArgs> reference;
 
     public Output<SecretValueReferenceArgs> getReference() {
-        return this.reference == null ? Output.empty() : this.reference;
+        return this.reference == null ? Codegen.empty() : this.reference;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> value;
 
     public Output<Object> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ParameterValueArgs(
@@ -49,8 +50,8 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParameterValueArgs() {
-        this.reference = Output.empty();
-        this.value = Output.empty();
+        this.reference = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reference(@Nullable SecretValueReferenceArgs reference) {
-            this.reference = Output.ofNullable(reference);
+            this.reference = Codegen.ofNullable(reference);
             return this;
         }
         public Builder value(@Nullable Output<Object> value) {
@@ -88,7 +89,7 @@ public final class ParameterValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable Object value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ParameterValueArgs build() {
             return new ParameterValueArgs(reference, value);

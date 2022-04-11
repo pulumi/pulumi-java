@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.appengine_v1alpha.inputs.SslSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -30,21 +31,21 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="noManagedCertificate")
       private final @Nullable Output<String> noManagedCertificate;
 
     public Output<String> getNoManagedCertificate() {
-        return this.noManagedCertificate == null ? Output.empty() : this.noManagedCertificate;
+        return this.noManagedCertificate == null ? Codegen.empty() : this.noManagedCertificate;
     }
 
     @Import(name="overrideStrategy")
       private final @Nullable Output<String> overrideStrategy;
 
     public Output<String> getOverrideStrategy() {
-        return this.overrideStrategy == null ? Output.empty() : this.overrideStrategy;
+        return this.overrideStrategy == null ? Codegen.empty() : this.overrideStrategy;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SslSettingsArgs> sslSettings;
 
     public Output<SslSettingsArgs> getSslSettings() {
-        return this.sslSettings == null ? Output.empty() : this.sslSettings;
+        return this.sslSettings == null ? Codegen.empty() : this.sslSettings;
     }
 
     public DomainMappingArgs(
@@ -72,11 +73,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainMappingArgs() {
-        this.appId = Output.empty();
-        this.id = Output.empty();
-        this.noManagedCertificate = Output.empty();
-        this.overrideStrategy = Output.empty();
-        this.sslSettings = Output.empty();
+        this.appId = Codegen.empty();
+        this.id = Codegen.empty();
+        this.noManagedCertificate = Codegen.empty();
+        this.overrideStrategy = Codegen.empty();
+        this.sslSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder noManagedCertificate(@Nullable Output<String> noManagedCertificate) {
@@ -128,7 +129,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder noManagedCertificate(@Nullable String noManagedCertificate) {
-            this.noManagedCertificate = Output.ofNullable(noManagedCertificate);
+            this.noManagedCertificate = Codegen.ofNullable(noManagedCertificate);
             return this;
         }
         public Builder overrideStrategy(@Nullable Output<String> overrideStrategy) {
@@ -136,7 +137,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder overrideStrategy(@Nullable String overrideStrategy) {
-            this.overrideStrategy = Output.ofNullable(overrideStrategy);
+            this.overrideStrategy = Codegen.ofNullable(overrideStrategy);
             return this;
         }
         public Builder sslSettings(@Nullable Output<SslSettingsArgs> sslSettings) {
@@ -144,7 +145,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslSettings(@Nullable SslSettingsArgs sslSettings) {
-            this.sslSettings = Output.ofNullable(sslSettings);
+            this.sslSettings = Codegen.ofNullable(sslSettings);
             return this;
         }        public DomainMappingArgs build() {
             return new DomainMappingArgs(appId, id, noManagedCertificate, overrideStrategy, sslSettings);

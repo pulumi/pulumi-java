@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
       private final @Nullable Output<Boolean> disableConnectionDrainOnFailover;
 
     public Output<Boolean> getDisableConnectionDrainOnFailover() {
-        return this.disableConnectionDrainOnFailover == null ? Output.empty() : this.disableConnectionDrainOnFailover;
+        return this.disableConnectionDrainOnFailover == null ? Codegen.empty() : this.disableConnectionDrainOnFailover;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
       private final @Nullable Output<Boolean> dropTrafficIfUnhealthy;
 
     public Output<Boolean> getDropTrafficIfUnhealthy() {
-        return this.dropTrafficIfUnhealthy == null ? Output.empty() : this.dropTrafficIfUnhealthy;
+        return this.dropTrafficIfUnhealthy == null ? Codegen.empty() : this.dropTrafficIfUnhealthy;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
       private final @Nullable Output<Double> failoverRatio;
 
     public Output<Double> getFailoverRatio() {
-        return this.failoverRatio == null ? Output.empty() : this.failoverRatio;
+        return this.failoverRatio == null ? Codegen.empty() : this.failoverRatio;
     }
 
     public RegionBackendServiceFailoverPolicyArgs(
@@ -75,9 +76,9 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
     }
 
     private RegionBackendServiceFailoverPolicyArgs() {
-        this.disableConnectionDrainOnFailover = Output.empty();
-        this.dropTrafficIfUnhealthy = Output.empty();
-        this.failoverRatio = Output.empty();
+        this.disableConnectionDrainOnFailover = Codegen.empty();
+        this.dropTrafficIfUnhealthy = Codegen.empty();
+        this.failoverRatio = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder disableConnectionDrainOnFailover(@Nullable Boolean disableConnectionDrainOnFailover) {
-            this.disableConnectionDrainOnFailover = Output.ofNullable(disableConnectionDrainOnFailover);
+            this.disableConnectionDrainOnFailover = Codegen.ofNullable(disableConnectionDrainOnFailover);
             return this;
         }
         public Builder dropTrafficIfUnhealthy(@Nullable Output<Boolean> dropTrafficIfUnhealthy) {
@@ -117,7 +118,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder dropTrafficIfUnhealthy(@Nullable Boolean dropTrafficIfUnhealthy) {
-            this.dropTrafficIfUnhealthy = Output.ofNullable(dropTrafficIfUnhealthy);
+            this.dropTrafficIfUnhealthy = Codegen.ofNullable(dropTrafficIfUnhealthy);
             return this;
         }
         public Builder failoverRatio(@Nullable Output<Double> failoverRatio) {
@@ -125,7 +126,7 @@ public final class RegionBackendServiceFailoverPolicyArgs extends io.pulumi.reso
             return this;
         }
         public Builder failoverRatio(@Nullable Double failoverRatio) {
-            this.failoverRatio = Output.ofNullable(failoverRatio);
+            this.failoverRatio = Codegen.ofNullable(failoverRatio);
             return this;
         }        public RegionBackendServiceFailoverPolicyArgs build() {
             return new RegionBackendServiceFailoverPolicyArgs(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);

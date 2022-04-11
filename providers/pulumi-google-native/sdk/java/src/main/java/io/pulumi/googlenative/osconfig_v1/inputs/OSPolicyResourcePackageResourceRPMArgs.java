@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends io.pulumi.reso
       private final @Nullable Output<Boolean> pullDeps;
 
     public Output<Boolean> getPullDeps() {
-        return this.pullDeps == null ? Output.empty() : this.pullDeps;
+        return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends io.pulumi.reso
     }
 
     private OSPolicyResourcePackageResourceRPMArgs() {
-        this.pullDeps = Output.empty();
-        this.source = Output.empty();
+        this.pullDeps = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OSPolicyResourcePackageResourceRPMArgs extends io.pulumi.reso
             return this;
         }
         public Builder pullDeps(@Nullable Boolean pullDeps) {
-            this.pullDeps = Output.ofNullable(pullDeps);
+            this.pullDeps = Codegen.ofNullable(pullDeps);
             return this;
         }
         public Builder source(Output<OSPolicyResourceFileArgs> source) {

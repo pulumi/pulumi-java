@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__ParameterSpecScaleType;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__ParameterSpecType;
 import java.lang.Double;
@@ -30,7 +31,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> categoricalValues;
 
     public Output<List<String>> getCategoricalValues() {
-        return this.categoricalValues == null ? Output.empty() : this.categoricalValues;
+        return this.categoricalValues == null ? Codegen.empty() : this.categoricalValues;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
       private final @Nullable Output<List<Double>> discreteValues;
 
     public Output<List<Double>> getDiscreteValues() {
-        return this.discreteValues == null ? Output.empty() : this.discreteValues;
+        return this.discreteValues == null ? Codegen.empty() : this.discreteValues;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
       private final @Nullable Output<Double> maxValue;
 
     public Output<Double> getMaxValue() {
-        return this.maxValue == null ? Output.empty() : this.maxValue;
+        return this.maxValue == null ? Codegen.empty() : this.maxValue;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
       private final @Nullable Output<Double> minValue;
 
     public Output<Double> getMinValue() {
-        return this.minValue == null ? Output.empty() : this.minValue;
+        return this.minValue == null ? Codegen.empty() : this.minValue;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
       private final @Nullable Output<GoogleCloudMlV1__ParameterSpecScaleType> scaleType;
 
     public Output<GoogleCloudMlV1__ParameterSpecScaleType> getScaleType() {
-        return this.scaleType == null ? Output.empty() : this.scaleType;
+        return this.scaleType == null ? Codegen.empty() : this.scaleType;
     }
 
     /**
@@ -117,13 +118,13 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
     }
 
     private GoogleCloudMlV1__ParameterSpecArgs() {
-        this.categoricalValues = Output.empty();
-        this.discreteValues = Output.empty();
-        this.maxValue = Output.empty();
-        this.minValue = Output.empty();
-        this.parameterName = Output.empty();
-        this.scaleType = Output.empty();
-        this.type = Output.empty();
+        this.categoricalValues = Codegen.empty();
+        this.discreteValues = Codegen.empty();
+        this.maxValue = Codegen.empty();
+        this.minValue = Codegen.empty();
+        this.parameterName = Codegen.empty();
+        this.scaleType = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder categoricalValues(@Nullable List<String> categoricalValues) {
-            this.categoricalValues = Output.ofNullable(categoricalValues);
+            this.categoricalValues = Codegen.ofNullable(categoricalValues);
             return this;
         }
         public Builder categoricalValues(String... categoricalValues) {
@@ -174,7 +175,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder discreteValues(@Nullable List<Double> discreteValues) {
-            this.discreteValues = Output.ofNullable(discreteValues);
+            this.discreteValues = Codegen.ofNullable(discreteValues);
             return this;
         }
         public Builder discreteValues(Double... discreteValues) {
@@ -185,7 +186,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder maxValue(@Nullable Double maxValue) {
-            this.maxValue = Output.ofNullable(maxValue);
+            this.maxValue = Codegen.ofNullable(maxValue);
             return this;
         }
         public Builder minValue(@Nullable Output<Double> minValue) {
@@ -193,7 +194,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder minValue(@Nullable Double minValue) {
-            this.minValue = Output.ofNullable(minValue);
+            this.minValue = Codegen.ofNullable(minValue);
             return this;
         }
         public Builder parameterName(Output<String> parameterName) {
@@ -209,7 +210,7 @@ public final class GoogleCloudMlV1__ParameterSpecArgs extends io.pulumi.resource
             return this;
         }
         public Builder scaleType(@Nullable GoogleCloudMlV1__ParameterSpecScaleType scaleType) {
-            this.scaleType = Output.ofNullable(scaleType);
+            this.scaleType = Codegen.ofNullable(scaleType);
             return this;
         }
         public Builder type(Output<GoogleCloudMlV1__ParameterSpecType> type) {

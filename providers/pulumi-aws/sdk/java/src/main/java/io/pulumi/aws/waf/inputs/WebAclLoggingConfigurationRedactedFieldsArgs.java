@@ -6,6 +6,7 @@ package io.pulumi.aws.waf.inputs;
 import io.pulumi.aws.waf.inputs.WebAclLoggingConfigurationRedactedFieldsFieldToMatchArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class WebAclLoggingConfigurationRedactedFieldsArgs extends io.pulum
     }
 
     private WebAclLoggingConfigurationRedactedFieldsArgs() {
-        this.fieldToMatches = Output.empty();
+        this.fieldToMatches = Codegen.empty();
     }
 
     public static Builder builder() {

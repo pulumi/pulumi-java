@@ -5,6 +5,7 @@ package io.pulumi.aws.amplify.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> condition;
 
     public Output<String> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppCustomRuleArgs() {
-        this.condition = Output.empty();
-        this.source = Output.empty();
-        this.status = Output.empty();
-        this.target = Output.empty();
+        this.condition = Codegen.empty();
+        this.source = Codegen.empty();
+        this.status = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder condition(@Nullable String condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder source(Output<String> source) {
@@ -123,7 +124,7 @@ public final class AppCustomRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder target(Output<String> target) {

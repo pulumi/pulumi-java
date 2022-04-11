@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public ClfsTargetArgs(@Nullable Output<String> target) {
@@ -34,7 +35,7 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClfsTargetArgs() {
-        this.target = Output.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ClfsTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public ClfsTargetArgs build() {
             return new ClfsTargetArgs(target);

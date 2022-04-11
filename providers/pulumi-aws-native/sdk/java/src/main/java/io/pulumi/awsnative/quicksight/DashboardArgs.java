@@ -10,6 +10,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DashboardPublishOptionsArgs> dashboardPublishOptions;
 
     public Output<DashboardPublishOptionsArgs> getDashboardPublishOptions() {
-        return this.dashboardPublishOptions == null ? Output.empty() : this.dashboardPublishOptions;
+        return this.dashboardPublishOptions == null ? Codegen.empty() : this.dashboardPublishOptions;
     }
 
     /**
@@ -49,14 +50,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="parameters")
       private final @Nullable Output<DashboardParametersArgs> parameters;
 
     public Output<DashboardParametersArgs> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DashboardResourcePermissionArgs>> permissions;
 
     public Output<List<DashboardResourcePermissionArgs>> getPermissions() {
-        return this.permissions == null ? Output.empty() : this.permissions;
+        return this.permissions == null ? Codegen.empty() : this.permissions;
     }
 
     @Import(name="sourceEntity", required=true)
@@ -90,7 +91,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DashboardTagArgs>> tags;
 
     public Output<List<DashboardTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> themeArn;
 
     public Output<String> getThemeArn() {
-        return this.themeArn == null ? Output.empty() : this.themeArn;
+        return this.themeArn == null ? Codegen.empty() : this.themeArn;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionDescription;
 
     public Output<String> getVersionDescription() {
-        return this.versionDescription == null ? Output.empty() : this.versionDescription;
+        return this.versionDescription == null ? Codegen.empty() : this.versionDescription;
     }
 
     public DashboardArgs(
@@ -142,16 +143,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.awsAccountId = Output.empty();
-        this.dashboardId = Output.empty();
-        this.dashboardPublishOptions = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.permissions = Output.empty();
-        this.sourceEntity = Output.empty();
-        this.tags = Output.empty();
-        this.themeArn = Output.empty();
-        this.versionDescription = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.dashboardId = Codegen.empty();
+        this.dashboardPublishOptions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.sourceEntity = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.themeArn = Codegen.empty();
+        this.versionDescription = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -213,7 +214,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardPublishOptions(@Nullable DashboardPublishOptionsArgs dashboardPublishOptions) {
-            this.dashboardPublishOptions = Output.ofNullable(dashboardPublishOptions);
+            this.dashboardPublishOptions = Codegen.ofNullable(dashboardPublishOptions);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -221,7 +222,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<DashboardParametersArgs> parameters) {
@@ -229,7 +230,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable DashboardParametersArgs parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder permissions(@Nullable Output<List<DashboardResourcePermissionArgs>> permissions) {
@@ -237,7 +238,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder permissions(@Nullable List<DashboardResourcePermissionArgs> permissions) {
-            this.permissions = Output.ofNullable(permissions);
+            this.permissions = Codegen.ofNullable(permissions);
             return this;
         }
         public Builder permissions(DashboardResourcePermissionArgs... permissions) {
@@ -256,7 +257,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DashboardTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DashboardTagArgs... tags) {
@@ -267,7 +268,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder themeArn(@Nullable String themeArn) {
-            this.themeArn = Output.ofNullable(themeArn);
+            this.themeArn = Codegen.ofNullable(themeArn);
             return this;
         }
         public Builder versionDescription(@Nullable Output<String> versionDescription) {
@@ -275,7 +276,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionDescription(@Nullable String versionDescription) {
-            this.versionDescription = Output.ofNullable(versionDescription);
+            this.versionDescription = Codegen.ofNullable(versionDescription);
             return this;
         }        public DashboardArgs build() {
             return new DashboardArgs(awsAccountId, dashboardId, dashboardPublishOptions, name, parameters, permissions, sourceEntity, tags, themeArn, versionDescription);

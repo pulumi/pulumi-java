@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.RouteTableRouteGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> propagatingVgws;
 
     public Output<List<String>> getPropagatingVgws() {
-        return this.propagatingVgws == null ? Output.empty() : this.propagatingVgws;
+        return this.propagatingVgws == null ? Codegen.empty() : this.propagatingVgws;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RouteTableRouteGetArgs>> routes;
 
     public Output<List<RouteTableRouteGetArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public RouteTableState(
@@ -112,13 +113,13 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteTableState() {
-        this.arn = Output.empty();
-        this.ownerId = Output.empty();
-        this.propagatingVgws = Output.empty();
-        this.routes = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.vpcId = Output.empty();
+        this.arn = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.propagatingVgws = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -166,7 +167,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder propagatingVgws(@Nullable Output<List<String>> propagatingVgws) {
@@ -174,7 +175,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
-            this.propagatingVgws = Output.ofNullable(propagatingVgws);
+            this.propagatingVgws = Codegen.ofNullable(propagatingVgws);
             return this;
         }
         public Builder propagatingVgws(String... propagatingVgws) {
@@ -185,7 +186,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable List<RouteTableRouteGetArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(RouteTableRouteGetArgs... routes) {
@@ -196,7 +197,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -204,7 +205,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -212,7 +213,7 @@ public final class RouteTableState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public RouteTableState build() {
             return new RouteTableState(arn, ownerId, propagatingVgws, routes, tags, tagsAll, vpcId);

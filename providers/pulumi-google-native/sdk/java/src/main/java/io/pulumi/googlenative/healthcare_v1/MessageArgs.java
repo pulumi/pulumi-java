@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1.inputs.PatientIdArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.SchematizedDataArgs;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> data;
 
     public Output<String> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     @Import(name="datasetId", required=true)
@@ -51,14 +52,14 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> messageType;
 
     public Output<String> getMessageType() {
-        return this.messageType == null ? Output.empty() : this.messageType;
+        return this.messageType == null ? Codegen.empty() : this.messageType;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -91,14 +92,14 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PatientIdArgs>> patientIds;
 
     public Output<List<PatientIdArgs>> getPatientIds() {
-        return this.patientIds == null ? Output.empty() : this.patientIds;
+        return this.patientIds == null ? Codegen.empty() : this.patientIds;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchematizedDataArgs> schematizedData;
 
     public Output<SchematizedDataArgs> getSchematizedData() {
-        return this.schematizedData == null ? Output.empty() : this.schematizedData;
+        return this.schematizedData == null ? Codegen.empty() : this.schematizedData;
     }
 
     /**
@@ -120,7 +121,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sendFacility;
 
     public Output<String> getSendFacility() {
-        return this.sendFacility == null ? Output.empty() : this.sendFacility;
+        return this.sendFacility == null ? Codegen.empty() : this.sendFacility;
     }
 
     /**
@@ -131,7 +132,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sendTime;
 
     public Output<String> getSendTime() {
-        return this.sendTime == null ? Output.empty() : this.sendTime;
+        return this.sendTime == null ? Codegen.empty() : this.sendTime;
     }
 
     public MessageArgs(
@@ -162,18 +163,18 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MessageArgs() {
-        this.data = Output.empty();
-        this.datasetId = Output.empty();
-        this.hl7V2StoreId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.messageType = Output.empty();
-        this.name = Output.empty();
-        this.patientIds = Output.empty();
-        this.project = Output.empty();
-        this.schematizedData = Output.empty();
-        this.sendFacility = Output.empty();
-        this.sendTime = Output.empty();
+        this.data = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.hl7V2StoreId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.messageType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.patientIds = Codegen.empty();
+        this.project = Codegen.empty();
+        this.schematizedData = Codegen.empty();
+        this.sendFacility = Codegen.empty();
+        this.sendTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -223,7 +224,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder data(@Nullable String data) {
-            this.data = Output.ofNullable(data);
+            this.data = Codegen.ofNullable(data);
             return this;
         }
         public Builder datasetId(Output<String> datasetId) {
@@ -247,7 +248,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -255,7 +256,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder messageType(@Nullable Output<String> messageType) {
@@ -263,7 +264,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messageType(@Nullable String messageType) {
-            this.messageType = Output.ofNullable(messageType);
+            this.messageType = Codegen.ofNullable(messageType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -271,7 +272,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder patientIds(@Nullable Output<List<PatientIdArgs>> patientIds) {
@@ -279,7 +280,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder patientIds(@Nullable List<PatientIdArgs> patientIds) {
-            this.patientIds = Output.ofNullable(patientIds);
+            this.patientIds = Codegen.ofNullable(patientIds);
             return this;
         }
         public Builder patientIds(PatientIdArgs... patientIds) {
@@ -290,7 +291,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder schematizedData(@Nullable Output<SchematizedDataArgs> schematizedData) {
@@ -298,7 +299,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schematizedData(@Nullable SchematizedDataArgs schematizedData) {
-            this.schematizedData = Output.ofNullable(schematizedData);
+            this.schematizedData = Codegen.ofNullable(schematizedData);
             return this;
         }
         public Builder sendFacility(@Nullable Output<String> sendFacility) {
@@ -306,7 +307,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendFacility(@Nullable String sendFacility) {
-            this.sendFacility = Output.ofNullable(sendFacility);
+            this.sendFacility = Codegen.ofNullable(sendFacility);
             return this;
         }
         public Builder sendTime(@Nullable Output<String> sendTime) {
@@ -314,7 +315,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sendTime(@Nullable String sendTime) {
-            this.sendTime = Output.ofNullable(sendTime);
+            this.sendTime = Codegen.ofNullable(sendTime);
             return this;
         }        public MessageArgs build() {
             return new MessageArgs(data, datasetId, hl7V2StoreId, labels, location, messageType, name, patientIds, project, schematizedData, sendFacility, sendTime);

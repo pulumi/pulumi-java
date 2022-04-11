@@ -5,6 +5,7 @@ package io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.enums.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.inputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> containerImageSources;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getContainerImageSources() {
-        return this.containerImageSources == null ? Output.empty() : this.containerImageSources;
+        return this.containerImageSources == null ? Codegen.empty() : this.containerImageSources;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerAddCapabilities() {
-        return this.dockerAddCapabilities == null ? Output.empty() : this.dockerAddCapabilities;
+        return this.dockerAddCapabilities == null ? Codegen.empty() : this.dockerAddCapabilities;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerChrootPath() {
-        return this.dockerChrootPath == null ? Output.empty() : this.dockerChrootPath;
+        return this.dockerChrootPath == null ? Codegen.empty() : this.dockerChrootPath;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerNetwork() {
-        return this.dockerNetwork == null ? Output.empty() : this.dockerNetwork;
+        return this.dockerNetwork == null ? Codegen.empty() : this.dockerNetwork;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerPrivileged() {
-        return this.dockerPrivileged == null ? Output.empty() : this.dockerPrivileged;
+        return this.dockerPrivileged == null ? Codegen.empty() : this.dockerPrivileged;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerRunAsRoot() {
-        return this.dockerRunAsRoot == null ? Output.empty() : this.dockerRunAsRoot;
+        return this.dockerRunAsRoot == null ? Codegen.empty() : this.dockerRunAsRoot;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerRuntime() {
-        return this.dockerRuntime == null ? Output.empty() : this.dockerRuntime;
+        return this.dockerRuntime == null ? Codegen.empty() : this.dockerRuntime;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> getDockerSiblingContainers() {
-        return this.dockerSiblingContainers == null ? Output.empty() : this.dockerSiblingContainers;
+        return this.dockerSiblingContainers == null ? Codegen.empty() : this.dockerSiblingContainers;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
       private final @Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation;
 
     public Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> getLinuxIsolation() {
-        return this.linuxIsolation == null ? Output.empty() : this.linuxIsolation;
+        return this.linuxIsolation == null ? Codegen.empty() : this.linuxIsolation;
     }
 
     public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs(
@@ -140,15 +141,15 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
     }
 
     private GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs() {
-        this.containerImageSources = Output.empty();
-        this.dockerAddCapabilities = Output.empty();
-        this.dockerChrootPath = Output.empty();
-        this.dockerNetwork = Output.empty();
-        this.dockerPrivileged = Output.empty();
-        this.dockerRunAsRoot = Output.empty();
-        this.dockerRuntime = Output.empty();
-        this.dockerSiblingContainers = Output.empty();
-        this.linuxIsolation = Output.empty();
+        this.containerImageSources = Codegen.empty();
+        this.dockerAddCapabilities = Codegen.empty();
+        this.dockerChrootPath = Codegen.empty();
+        this.dockerNetwork = Codegen.empty();
+        this.dockerPrivileged = Codegen.empty();
+        this.dockerRunAsRoot = Codegen.empty();
+        this.dockerRuntime = Codegen.empty();
+        this.dockerSiblingContainers = Codegen.empty();
+        this.linuxIsolation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder containerImageSources(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs containerImageSources) {
-            this.containerImageSources = Output.ofNullable(containerImageSources);
+            this.containerImageSources = Codegen.ofNullable(containerImageSources);
             return this;
         }
         public Builder dockerAddCapabilities(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerAddCapabilities) {
@@ -200,7 +201,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerAddCapabilities(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerAddCapabilities) {
-            this.dockerAddCapabilities = Output.ofNullable(dockerAddCapabilities);
+            this.dockerAddCapabilities = Codegen.ofNullable(dockerAddCapabilities);
             return this;
         }
         public Builder dockerChrootPath(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerChrootPath) {
@@ -208,7 +209,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerChrootPath(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerChrootPath) {
-            this.dockerChrootPath = Output.ofNullable(dockerChrootPath);
+            this.dockerChrootPath = Codegen.ofNullable(dockerChrootPath);
             return this;
         }
         public Builder dockerNetwork(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerNetwork) {
@@ -216,7 +217,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerNetwork(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerNetwork) {
-            this.dockerNetwork = Output.ofNullable(dockerNetwork);
+            this.dockerNetwork = Codegen.ofNullable(dockerNetwork);
             return this;
         }
         public Builder dockerPrivileged(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerPrivileged) {
@@ -224,7 +225,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerPrivileged(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerPrivileged) {
-            this.dockerPrivileged = Output.ofNullable(dockerPrivileged);
+            this.dockerPrivileged = Codegen.ofNullable(dockerPrivileged);
             return this;
         }
         public Builder dockerRunAsRoot(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRunAsRoot) {
@@ -232,7 +233,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerRunAsRoot(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerRunAsRoot) {
-            this.dockerRunAsRoot = Output.ofNullable(dockerRunAsRoot);
+            this.dockerRunAsRoot = Codegen.ofNullable(dockerRunAsRoot);
             return this;
         }
         public Builder dockerRuntime(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerRuntime) {
@@ -240,7 +241,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerRuntime(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerRuntime) {
-            this.dockerRuntime = Output.ofNullable(dockerRuntime);
+            this.dockerRuntime = Codegen.ofNullable(dockerRuntime);
             return this;
         }
         public Builder dockerSiblingContainers(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs> dockerSiblingContainers) {
@@ -248,7 +249,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder dockerSiblingContainers(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyFeatureArgs dockerSiblingContainers) {
-            this.dockerSiblingContainers = Output.ofNullable(dockerSiblingContainers);
+            this.dockerSiblingContainers = Codegen.ofNullable(dockerSiblingContainers);
             return this;
         }
         public Builder linuxIsolation(@Nullable Output<GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation> linuxIsolation) {
@@ -256,7 +257,7 @@ public final class GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyAr
             return this;
         }
         public Builder linuxIsolation(@Nullable GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyLinuxIsolation linuxIsolation) {
-            this.linuxIsolation = Output.ofNullable(linuxIsolation);
+            this.linuxIsolation = Codegen.ofNullable(linuxIsolation);
             return this;
         }        public GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs build() {
             return new GoogleDevtoolsRemotebuildexecutionAdminV1alphaFeaturePolicyArgs(containerImageSources, dockerAddCapabilities, dockerChrootPath, dockerNetwork, dockerPrivileged, dockerRunAsRoot, dockerRuntime, dockerSiblingContainers, linuxIsolation);

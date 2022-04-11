@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.GenericSignedAttestationArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.PgpSignedAttestationArgs;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GenericSignedAttestationArgs> genericSignedAttestation;
 
     public Output<GenericSignedAttestationArgs> getGenericSignedAttestation() {
-        return this.genericSignedAttestation == null ? Output.empty() : this.genericSignedAttestation;
+        return this.genericSignedAttestation == null ? Codegen.empty() : this.genericSignedAttestation;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation;
 
     public Output<PgpSignedAttestationArgs> getPgpSignedAttestation() {
-        return this.pgpSignedAttestation == null ? Output.empty() : this.pgpSignedAttestation;
+        return this.pgpSignedAttestation == null ? Codegen.empty() : this.pgpSignedAttestation;
     }
 
     public AttestationArgs(
@@ -45,8 +46,8 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttestationArgs() {
-        this.genericSignedAttestation = Output.empty();
-        this.pgpSignedAttestation = Output.empty();
+        this.genericSignedAttestation = Codegen.empty();
+        this.pgpSignedAttestation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder genericSignedAttestation(@Nullable GenericSignedAttestationArgs genericSignedAttestation) {
-            this.genericSignedAttestation = Output.ofNullable(genericSignedAttestation);
+            this.genericSignedAttestation = Codegen.ofNullable(genericSignedAttestation);
             return this;
         }
         public Builder pgpSignedAttestation(@Nullable Output<PgpSignedAttestationArgs> pgpSignedAttestation) {
@@ -84,7 +85,7 @@ public final class AttestationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pgpSignedAttestation(@Nullable PgpSignedAttestationArgs pgpSignedAttestation) {
-            this.pgpSignedAttestation = Output.ofNullable(pgpSignedAttestation);
+            this.pgpSignedAttestation = Codegen.ofNullable(pgpSignedAttestation);
             return this;
         }        public AttestationArgs build() {
             return new AttestationArgs(genericSignedAttestation, pgpSignedAttestation);

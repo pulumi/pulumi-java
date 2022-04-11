@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.NetworkSecurityGroupRuleAccess;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -54,7 +55,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<String>> sourcePortRanges;
 
     public Output<List<String>> getSourcePortRanges() {
-        return this.sourcePortRanges == null ? Output.empty() : this.sourcePortRanges;
+        return this.sourcePortRanges == null ? Codegen.empty() : this.sourcePortRanges;
     }
 
     public NetworkSecurityGroupRuleArgs(
@@ -69,10 +70,10 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
     }
 
     private NetworkSecurityGroupRuleArgs() {
-        this.access = Output.empty();
-        this.priority = Output.empty();
-        this.sourceAddressPrefix = Output.empty();
-        this.sourcePortRanges = Output.empty();
+        this.access = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.sourceAddressPrefix = Codegen.empty();
+        this.sourcePortRanges = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class NetworkSecurityGroupRuleArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder sourcePortRanges(@Nullable List<String> sourcePortRanges) {
-            this.sourcePortRanges = Output.ofNullable(sourcePortRanges);
+            this.sourcePortRanges = Codegen.ofNullable(sourcePortRanges);
             return this;
         }
         public Builder sourcePortRanges(String... sourcePortRanges) {

@@ -115,7 +115,7 @@ public class Deserializer {
     }
 
     private OutputData<Void> deserializeEmpty(@SuppressWarnings("unused") Value unused) {
-        return OutputData.empty();
+        return OutputData.ofNullable(null);
     }
 
     private OutputData<Boolean> deserializeBoolean(Value value) {

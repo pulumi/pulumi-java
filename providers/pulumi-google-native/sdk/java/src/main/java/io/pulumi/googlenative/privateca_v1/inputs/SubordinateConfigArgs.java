@@ -5,6 +5,7 @@ package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.privateca_v1.inputs.SubordinateConfigChainArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class SubordinateConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SubordinateConfigArgs() {
-        this.certificateAuthority = Output.empty();
-        this.pemIssuerChain = Output.empty();
+        this.certificateAuthority = Codegen.empty();
+        this.pemIssuerChain = Codegen.empty();
     }
 
     public static Builder builder() {

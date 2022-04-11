@@ -7,6 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefu
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatefulRuleRuleOptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,9 +60,9 @@ public final class RuleGroupRuleGroupRulesSourceStatefulRuleArgs extends io.pulu
     }
 
     private RuleGroupRuleGroupRulesSourceStatefulRuleArgs() {
-        this.action = Output.empty();
-        this.header = Output.empty();
-        this.ruleOptions = Output.empty();
+        this.action = Codegen.empty();
+        this.header = Codegen.empty();
+        this.ruleOptions = Codegen.empty();
     }
 
     public static Builder builder() {

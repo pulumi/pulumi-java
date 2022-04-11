@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class TransferJobScheduleScheduleStartDateArgs extends io.pulumi.re
     }
 
     private TransferJobScheduleScheduleStartDateArgs() {
-        this.day = Output.empty();
-        this.month = Output.empty();
-        this.year = Output.empty();
+        this.day = Codegen.empty();
+        this.month = Codegen.empty();
+        this.year = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class VPCDHCPOptionsAssociationArgs extends io.pulumi.resources.Res
     }
 
     private VPCDHCPOptionsAssociationArgs() {
-        this.dhcpOptionsId = Output.empty();
-        this.vpcId = Output.empty();
+        this.dhcpOptionsId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {

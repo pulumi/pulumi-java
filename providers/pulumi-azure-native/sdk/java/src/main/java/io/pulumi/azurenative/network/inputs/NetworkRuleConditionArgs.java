@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicyRuleConditionNetworkPro
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> destinationAddresses;
 
     public Output<List<String>> getDestinationAddresses() {
-        return this.destinationAddresses == null ? Output.empty() : this.destinationAddresses;
+        return this.destinationAddresses == null ? Codegen.empty() : this.destinationAddresses;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> destinationIpGroups;
 
     public Output<List<String>> getDestinationIpGroups() {
-        return this.destinationIpGroups == null ? Output.empty() : this.destinationIpGroups;
+        return this.destinationIpGroups == null ? Codegen.empty() : this.destinationIpGroups;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> destinationPorts;
 
     public Output<List<String>> getDestinationPorts() {
-        return this.destinationPorts == null ? Output.empty() : this.destinationPorts;
+        return this.destinationPorts == null ? Codegen.empty() : this.destinationPorts;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> ipProtocols;
 
     public Output<List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>>> getIpProtocols() {
-        return this.ipProtocols == null ? Output.empty() : this.ipProtocols;
+        return this.ipProtocols == null ? Codegen.empty() : this.ipProtocols;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> sourceAddresses;
 
     public Output<List<String>> getSourceAddresses() {
-        return this.sourceAddresses == null ? Output.empty() : this.sourceAddresses;
+        return this.sourceAddresses == null ? Codegen.empty() : this.sourceAddresses;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> sourceIpGroups;
 
     public Output<List<String>> getSourceIpGroups() {
-        return this.sourceIpGroups == null ? Output.empty() : this.sourceIpGroups;
+        return this.sourceIpGroups == null ? Codegen.empty() : this.sourceIpGroups;
     }
 
     public NetworkRuleConditionArgs(
@@ -143,15 +144,15 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkRuleConditionArgs() {
-        this.description = Output.empty();
-        this.destinationAddresses = Output.empty();
-        this.destinationIpGroups = Output.empty();
-        this.destinationPorts = Output.empty();
-        this.ipProtocols = Output.empty();
-        this.name = Output.empty();
-        this.ruleConditionType = Output.empty();
-        this.sourceAddresses = Output.empty();
-        this.sourceIpGroups = Output.empty();
+        this.description = Codegen.empty();
+        this.destinationAddresses = Codegen.empty();
+        this.destinationIpGroups = Codegen.empty();
+        this.destinationPorts = Codegen.empty();
+        this.ipProtocols = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ruleConditionType = Codegen.empty();
+        this.sourceAddresses = Codegen.empty();
+        this.sourceIpGroups = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destinationAddresses(@Nullable Output<List<String>> destinationAddresses) {
@@ -203,7 +204,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder destinationAddresses(@Nullable List<String> destinationAddresses) {
-            this.destinationAddresses = Output.ofNullable(destinationAddresses);
+            this.destinationAddresses = Codegen.ofNullable(destinationAddresses);
             return this;
         }
         public Builder destinationAddresses(String... destinationAddresses) {
@@ -214,7 +215,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder destinationIpGroups(@Nullable List<String> destinationIpGroups) {
-            this.destinationIpGroups = Output.ofNullable(destinationIpGroups);
+            this.destinationIpGroups = Codegen.ofNullable(destinationIpGroups);
             return this;
         }
         public Builder destinationIpGroups(String... destinationIpGroups) {
@@ -225,7 +226,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder destinationPorts(@Nullable List<String> destinationPorts) {
-            this.destinationPorts = Output.ofNullable(destinationPorts);
+            this.destinationPorts = Codegen.ofNullable(destinationPorts);
             return this;
         }
         public Builder destinationPorts(String... destinationPorts) {
@@ -236,7 +237,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ipProtocols(@Nullable List<Either<String,FirewallPolicyRuleConditionNetworkProtocol>> ipProtocols) {
-            this.ipProtocols = Output.ofNullable(ipProtocols);
+            this.ipProtocols = Codegen.ofNullable(ipProtocols);
             return this;
         }
         public Builder ipProtocols(Either<String,FirewallPolicyRuleConditionNetworkProtocol>... ipProtocols) {
@@ -247,7 +248,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ruleConditionType(Output<String> ruleConditionType) {
@@ -263,7 +264,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sourceAddresses(@Nullable List<String> sourceAddresses) {
-            this.sourceAddresses = Output.ofNullable(sourceAddresses);
+            this.sourceAddresses = Codegen.ofNullable(sourceAddresses);
             return this;
         }
         public Builder sourceAddresses(String... sourceAddresses) {
@@ -274,7 +275,7 @@ public final class NetworkRuleConditionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sourceIpGroups(@Nullable List<String> sourceIpGroups) {
-            this.sourceIpGroups = Output.ofNullable(sourceIpGroups);
+            this.sourceIpGroups = Codegen.ofNullable(sourceIpGroups);
             return this;
         }
         public Builder sourceIpGroups(String... sourceIpGroups) {

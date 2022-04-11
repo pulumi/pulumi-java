@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2.inputs;
 import io.pulumi.aws.ec2.inputs.VpcEndpointServicePrivateDnsNameConfigurationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> acceptanceRequired;
 
     public Output<Boolean> getAcceptanceRequired() {
-        return this.acceptanceRequired == null ? Output.empty() : this.acceptanceRequired;
+        return this.acceptanceRequired == null ? Codegen.empty() : this.acceptanceRequired;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> allowedPrincipals;
 
     public Output<List<String>> getAllowedPrincipals() {
-        return this.allowedPrincipals == null ? Output.empty() : this.allowedPrincipals;
+        return this.allowedPrincipals == null ? Codegen.empty() : this.allowedPrincipals;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> availabilityZones;
 
     public Output<List<String>> getAvailabilityZones() {
-        return this.availabilityZones == null ? Output.empty() : this.availabilityZones;
+        return this.availabilityZones == null ? Codegen.empty() : this.availabilityZones;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> baseEndpointDnsNames;
 
     public Output<List<String>> getBaseEndpointDnsNames() {
-        return this.baseEndpointDnsNames == null ? Output.empty() : this.baseEndpointDnsNames;
+        return this.baseEndpointDnsNames == null ? Codegen.empty() : this.baseEndpointDnsNames;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> gatewayLoadBalancerArns;
 
     public Output<List<String>> getGatewayLoadBalancerArns() {
-        return this.gatewayLoadBalancerArns == null ? Output.empty() : this.gatewayLoadBalancerArns;
+        return this.gatewayLoadBalancerArns == null ? Codegen.empty() : this.gatewayLoadBalancerArns;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> managesVpcEndpoints;
 
     public Output<Boolean> getManagesVpcEndpoints() {
-        return this.managesVpcEndpoints == null ? Output.empty() : this.managesVpcEndpoints;
+        return this.managesVpcEndpoints == null ? Codegen.empty() : this.managesVpcEndpoints;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> networkLoadBalancerArns;
 
     public Output<List<String>> getNetworkLoadBalancerArns() {
-        return this.networkLoadBalancerArns == null ? Output.empty() : this.networkLoadBalancerArns;
+        return this.networkLoadBalancerArns == null ? Codegen.empty() : this.networkLoadBalancerArns;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> privateDnsName;
 
     public Output<String> getPrivateDnsName() {
-        return this.privateDnsName == null ? Output.empty() : this.privateDnsName;
+        return this.privateDnsName == null ? Codegen.empty() : this.privateDnsName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations;
 
     public Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> getPrivateDnsNameConfigurations() {
-        return this.privateDnsNameConfigurations == null ? Output.empty() : this.privateDnsNameConfigurations;
+        return this.privateDnsNameConfigurations == null ? Codegen.empty() : this.privateDnsNameConfigurations;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> serviceType;
 
     public Output<String> getServiceType() {
-        return this.serviceType == null ? Output.empty() : this.serviceType;
+        return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public VpcEndpointServiceState(
@@ -217,21 +218,21 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
     }
 
     private VpcEndpointServiceState() {
-        this.acceptanceRequired = Output.empty();
-        this.allowedPrincipals = Output.empty();
-        this.arn = Output.empty();
-        this.availabilityZones = Output.empty();
-        this.baseEndpointDnsNames = Output.empty();
-        this.gatewayLoadBalancerArns = Output.empty();
-        this.managesVpcEndpoints = Output.empty();
-        this.networkLoadBalancerArns = Output.empty();
-        this.privateDnsName = Output.empty();
-        this.privateDnsNameConfigurations = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceType = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.acceptanceRequired = Codegen.empty();
+        this.allowedPrincipals = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.availabilityZones = Codegen.empty();
+        this.baseEndpointDnsNames = Codegen.empty();
+        this.gatewayLoadBalancerArns = Codegen.empty();
+        this.managesVpcEndpoints = Codegen.empty();
+        this.networkLoadBalancerArns = Codegen.empty();
+        this.privateDnsName = Codegen.empty();
+        this.privateDnsNameConfigurations = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceType = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -287,7 +288,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder acceptanceRequired(@Nullable Boolean acceptanceRequired) {
-            this.acceptanceRequired = Output.ofNullable(acceptanceRequired);
+            this.acceptanceRequired = Codegen.ofNullable(acceptanceRequired);
             return this;
         }
         public Builder allowedPrincipals(@Nullable Output<List<String>> allowedPrincipals) {
@@ -295,7 +296,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allowedPrincipals(@Nullable List<String> allowedPrincipals) {
-            this.allowedPrincipals = Output.ofNullable(allowedPrincipals);
+            this.allowedPrincipals = Codegen.ofNullable(allowedPrincipals);
             return this;
         }
         public Builder allowedPrincipals(String... allowedPrincipals) {
@@ -306,7 +307,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder availabilityZones(@Nullable Output<List<String>> availabilityZones) {
@@ -314,7 +315,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
-            this.availabilityZones = Output.ofNullable(availabilityZones);
+            this.availabilityZones = Codegen.ofNullable(availabilityZones);
             return this;
         }
         public Builder availabilityZones(String... availabilityZones) {
@@ -325,7 +326,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder baseEndpointDnsNames(@Nullable List<String> baseEndpointDnsNames) {
-            this.baseEndpointDnsNames = Output.ofNullable(baseEndpointDnsNames);
+            this.baseEndpointDnsNames = Codegen.ofNullable(baseEndpointDnsNames);
             return this;
         }
         public Builder baseEndpointDnsNames(String... baseEndpointDnsNames) {
@@ -336,7 +337,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder gatewayLoadBalancerArns(@Nullable List<String> gatewayLoadBalancerArns) {
-            this.gatewayLoadBalancerArns = Output.ofNullable(gatewayLoadBalancerArns);
+            this.gatewayLoadBalancerArns = Codegen.ofNullable(gatewayLoadBalancerArns);
             return this;
         }
         public Builder gatewayLoadBalancerArns(String... gatewayLoadBalancerArns) {
@@ -347,7 +348,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder managesVpcEndpoints(@Nullable Boolean managesVpcEndpoints) {
-            this.managesVpcEndpoints = Output.ofNullable(managesVpcEndpoints);
+            this.managesVpcEndpoints = Codegen.ofNullable(managesVpcEndpoints);
             return this;
         }
         public Builder networkLoadBalancerArns(@Nullable Output<List<String>> networkLoadBalancerArns) {
@@ -355,7 +356,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder networkLoadBalancerArns(@Nullable List<String> networkLoadBalancerArns) {
-            this.networkLoadBalancerArns = Output.ofNullable(networkLoadBalancerArns);
+            this.networkLoadBalancerArns = Codegen.ofNullable(networkLoadBalancerArns);
             return this;
         }
         public Builder networkLoadBalancerArns(String... networkLoadBalancerArns) {
@@ -366,7 +367,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateDnsName(@Nullable String privateDnsName) {
-            this.privateDnsName = Output.ofNullable(privateDnsName);
+            this.privateDnsName = Codegen.ofNullable(privateDnsName);
             return this;
         }
         public Builder privateDnsNameConfigurations(@Nullable Output<List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs>> privateDnsNameConfigurations) {
@@ -374,7 +375,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder privateDnsNameConfigurations(@Nullable List<VpcEndpointServicePrivateDnsNameConfigurationGetArgs> privateDnsNameConfigurations) {
-            this.privateDnsNameConfigurations = Output.ofNullable(privateDnsNameConfigurations);
+            this.privateDnsNameConfigurations = Codegen.ofNullable(privateDnsNameConfigurations);
             return this;
         }
         public Builder privateDnsNameConfigurations(VpcEndpointServicePrivateDnsNameConfigurationGetArgs... privateDnsNameConfigurations) {
@@ -385,7 +386,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder serviceType(@Nullable Output<String> serviceType) {
@@ -393,7 +394,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder serviceType(@Nullable String serviceType) {
-            this.serviceType = Output.ofNullable(serviceType);
+            this.serviceType = Codegen.ofNullable(serviceType);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -401,7 +402,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -409,7 +410,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -417,7 +418,7 @@ public final class VpcEndpointServiceState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public VpcEndpointServiceState build() {
             return new VpcEndpointServiceState(acceptanceRequired, allowedPrincipals, arn, availabilityZones, baseEndpointDnsNames, gatewayLoadBalancerArns, managesVpcEndpoints, networkLoadBalancerArns, privateDnsName, privateDnsNameConfigurations, serviceName, serviceType, state, tags, tagsAll);

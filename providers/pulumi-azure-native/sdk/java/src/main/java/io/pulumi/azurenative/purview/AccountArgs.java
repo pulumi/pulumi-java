@@ -8,6 +8,7 @@ import io.pulumi.azurenative.purview.inputs.IdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityArgs> identity;
 
     public Output<IdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> managedResourceGroupName;
 
     public Output<String> getManagedResourceGroupName() {
-        return this.managedResourceGroupName == null ? Output.empty() : this.managedResourceGroupName;
+        return this.managedResourceGroupName == null ? Codegen.empty() : this.managedResourceGroupName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AccountArgs(
@@ -113,13 +114,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.managedResourceGroupName = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedResourceGroupName = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
@@ -167,7 +168,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -175,7 +176,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedResourceGroupName(@Nullable Output<String> managedResourceGroupName) {
@@ -183,7 +184,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedResourceGroupName(@Nullable String managedResourceGroupName) {
-            this.managedResourceGroupName = Output.ofNullable(managedResourceGroupName);
+            this.managedResourceGroupName = Codegen.ofNullable(managedResourceGroupName);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -191,7 +192,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -207,7 +208,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(accountName, identity, location, managedResourceGroupName, publicNetworkAccess, resourceGroupName, tags);

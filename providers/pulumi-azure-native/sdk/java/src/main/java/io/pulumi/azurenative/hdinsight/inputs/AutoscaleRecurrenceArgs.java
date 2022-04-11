@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleScheduleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
 
     public Output<List<AutoscaleScheduleArgs>> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> timeZone;
 
     public Output<String> getTimeZone() {
-        return this.timeZone == null ? Output.empty() : this.timeZone;
+        return this.timeZone == null ? Codegen.empty() : this.timeZone;
     }
 
     public AutoscaleRecurrenceArgs(
@@ -50,8 +51,8 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
     }
 
     private AutoscaleRecurrenceArgs() {
-        this.schedule = Output.empty();
-        this.timeZone = Output.empty();
+        this.schedule = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder schedule(@Nullable List<AutoscaleScheduleArgs> schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder schedule(AutoscaleScheduleArgs... schedule) {
@@ -92,7 +93,7 @@ public final class AutoscaleRecurrenceArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder timeZone(@Nullable String timeZone) {
-            this.timeZone = Output.ofNullable(timeZone);
+            this.timeZone = Codegen.ofNullable(timeZone);
             return this;
         }        public AutoscaleRecurrenceArgs build() {
             return new AutoscaleRecurrenceArgs(schedule, timeZone);

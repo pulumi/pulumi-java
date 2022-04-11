@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> items;
 
     public Output<List<String>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     public TagsArgs(@Nullable Output<List<String>> items) {
@@ -35,7 +36,7 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagsArgs() {
-        this.items = Output.empty();
+        this.items = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TagsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder items(@Nullable List<String> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(String... items) {

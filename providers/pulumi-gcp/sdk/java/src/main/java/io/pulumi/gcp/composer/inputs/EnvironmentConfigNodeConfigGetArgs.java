@@ -5,6 +5,7 @@ package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,77 +23,77 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     @Import(name="enableIpMasqAgent")
       private final @Nullable Output<Boolean> enableIpMasqAgent;
 
     public Output<Boolean> getEnableIpMasqAgent() {
-        return this.enableIpMasqAgent == null ? Output.empty() : this.enableIpMasqAgent;
+        return this.enableIpMasqAgent == null ? Codegen.empty() : this.enableIpMasqAgent;
     }
 
     @Import(name="ipAllocationPolicy")
       private final @Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs> ipAllocationPolicy;
 
     public Output<EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs> getIpAllocationPolicy() {
-        return this.ipAllocationPolicy == null ? Output.empty() : this.ipAllocationPolicy;
+        return this.ipAllocationPolicy == null ? Codegen.empty() : this.ipAllocationPolicy;
     }
 
     @Import(name="machineType")
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     @Import(name="maxPodsPerNode")
       private final @Nullable Output<Integer> maxPodsPerNode;
 
     public Output<Integer> getMaxPodsPerNode() {
-        return this.maxPodsPerNode == null ? Output.empty() : this.maxPodsPerNode;
+        return this.maxPodsPerNode == null ? Codegen.empty() : this.maxPodsPerNode;
     }
 
     @Import(name="network")
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     @Import(name="oauthScopes")
       private final @Nullable Output<List<String>> oauthScopes;
 
     public Output<List<String>> getOauthScopes() {
-        return this.oauthScopes == null ? Output.empty() : this.oauthScopes;
+        return this.oauthScopes == null ? Codegen.empty() : this.oauthScopes;
     }
 
     @Import(name="serviceAccount")
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     @Import(name="subnetwork")
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public EnvironmentConfigNodeConfigGetArgs(
@@ -121,17 +122,17 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
     }
 
     private EnvironmentConfigNodeConfigGetArgs() {
-        this.diskSizeGb = Output.empty();
-        this.enableIpMasqAgent = Output.empty();
-        this.ipAllocationPolicy = Output.empty();
-        this.machineType = Output.empty();
-        this.maxPodsPerNode = Output.empty();
-        this.network = Output.empty();
-        this.oauthScopes = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.subnetwork = Output.empty();
-        this.tags = Output.empty();
-        this.zone = Output.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.enableIpMasqAgent = Codegen.empty();
+        this.ipAllocationPolicy = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.maxPodsPerNode = Codegen.empty();
+        this.network = Codegen.empty();
+        this.oauthScopes = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder enableIpMasqAgent(@Nullable Output<Boolean> enableIpMasqAgent) {
@@ -187,7 +188,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder enableIpMasqAgent(@Nullable Boolean enableIpMasqAgent) {
-            this.enableIpMasqAgent = Output.ofNullable(enableIpMasqAgent);
+            this.enableIpMasqAgent = Codegen.ofNullable(enableIpMasqAgent);
             return this;
         }
         public Builder ipAllocationPolicy(@Nullable Output<EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs> ipAllocationPolicy) {
@@ -195,7 +196,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipAllocationPolicy(@Nullable EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs ipAllocationPolicy) {
-            this.ipAllocationPolicy = Output.ofNullable(ipAllocationPolicy);
+            this.ipAllocationPolicy = Codegen.ofNullable(ipAllocationPolicy);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -203,7 +204,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder maxPodsPerNode(@Nullable Output<Integer> maxPodsPerNode) {
@@ -211,7 +212,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder maxPodsPerNode(@Nullable Integer maxPodsPerNode) {
-            this.maxPodsPerNode = Output.ofNullable(maxPodsPerNode);
+            this.maxPodsPerNode = Codegen.ofNullable(maxPodsPerNode);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -219,7 +220,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder oauthScopes(@Nullable Output<List<String>> oauthScopes) {
@@ -227,7 +228,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder oauthScopes(@Nullable List<String> oauthScopes) {
-            this.oauthScopes = Output.ofNullable(oauthScopes);
+            this.oauthScopes = Codegen.ofNullable(oauthScopes);
             return this;
         }
         public Builder oauthScopes(String... oauthScopes) {
@@ -238,7 +239,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -246,7 +247,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -254,7 +255,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -265,7 +266,7 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public EnvironmentConfigNodeConfigGetArgs build() {
             return new EnvironmentConfigNodeConfigGetArgs(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);

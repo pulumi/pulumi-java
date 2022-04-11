@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.AutoscalerArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalerStatusDetailsResponse;
@@ -241,7 +242,7 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Autoscaler(String name, @Nullable AutoscalerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:Autoscaler", name, args == null ? AutoscalerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:Autoscaler", name, args == null ? AutoscalerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Autoscaler(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

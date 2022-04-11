@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -31,7 +32,7 @@ public final class AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs exten
     }
 
     private AutoscalerAutoscalingPolicyLoadBalancingUtilizationArgs() {
-        this.target = Output.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {

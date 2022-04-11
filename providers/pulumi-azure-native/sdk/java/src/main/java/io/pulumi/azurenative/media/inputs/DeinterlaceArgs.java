@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.enums.DeinterlaceParity;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DeinterlaceMode>> mode;
 
     public Output<Either<String,DeinterlaceMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DeinterlaceParity>> parity;
 
     public Output<Either<String,DeinterlaceParity>> getParity() {
-        return this.parity == null ? Output.empty() : this.parity;
+        return this.parity == null ? Codegen.empty() : this.parity;
     }
 
     public DeinterlaceArgs(
@@ -51,8 +52,8 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeinterlaceArgs() {
-        this.mode = Output.empty();
-        this.parity = Output.empty();
+        this.mode = Codegen.empty();
+        this.parity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable Either<String,DeinterlaceMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder parity(@Nullable Output<Either<String,DeinterlaceParity>> parity) {
@@ -90,7 +91,7 @@ public final class DeinterlaceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parity(@Nullable Either<String,DeinterlaceParity> parity) {
-            this.parity = Output.ofNullable(parity);
+            this.parity = Codegen.ofNullable(parity);
             return this;
         }        public DeinterlaceArgs build() {
             return new DeinterlaceArgs(mode, parity);

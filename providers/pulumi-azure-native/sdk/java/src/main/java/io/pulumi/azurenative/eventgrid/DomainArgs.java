@@ -10,6 +10,7 @@ import io.pulumi.azurenative.eventgrid.inputs.JsonInputSchemaMappingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
     public Output<List<InboundIpRuleArgs>> getInboundIpRules() {
-        return this.inboundIpRules == null ? Output.empty() : this.inboundIpRules;
+        return this.inboundIpRules == null ? Codegen.empty() : this.inboundIpRules;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,InputSchema>> inputSchema;
 
     public Output<Either<String,InputSchema>> getInputSchema() {
-        return this.inputSchema == null ? Output.empty() : this.inputSchema;
+        return this.inputSchema == null ? Codegen.empty() : this.inputSchema;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping;
 
     public Output<JsonInputSchemaMappingArgs> getInputSchemaMapping() {
-        return this.inputSchemaMapping == null ? Output.empty() : this.inputSchemaMapping;
+        return this.inputSchemaMapping == null ? Codegen.empty() : this.inputSchemaMapping;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DomainArgs(
@@ -130,14 +131,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.domainName = Output.empty();
-        this.inboundIpRules = Output.empty();
-        this.inputSchema = Output.empty();
-        this.inputSchemaMapping = Output.empty();
-        this.location = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.domainName = Codegen.empty();
+        this.inboundIpRules = Codegen.empty();
+        this.inputSchema = Codegen.empty();
+        this.inputSchemaMapping = Codegen.empty();
+        this.location = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
@@ -187,7 +188,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inboundIpRules(@Nullable List<InboundIpRuleArgs> inboundIpRules) {
-            this.inboundIpRules = Output.ofNullable(inboundIpRules);
+            this.inboundIpRules = Codegen.ofNullable(inboundIpRules);
             return this;
         }
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
@@ -198,7 +199,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputSchema(@Nullable Either<String,InputSchema> inputSchema) {
-            this.inputSchema = Output.ofNullable(inputSchema);
+            this.inputSchema = Codegen.ofNullable(inputSchema);
             return this;
         }
         public Builder inputSchemaMapping(@Nullable Output<JsonInputSchemaMappingArgs> inputSchemaMapping) {
@@ -206,7 +207,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputSchemaMapping(@Nullable JsonInputSchemaMappingArgs inputSchemaMapping) {
-            this.inputSchemaMapping = Output.ofNullable(inputSchemaMapping);
+            this.inputSchemaMapping = Codegen.ofNullable(inputSchemaMapping);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -214,7 +215,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -222,7 +223,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -238,7 +239,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DomainArgs build() {
             return new DomainArgs(domainName, inboundIpRules, inputSchema, inputSchemaMapping, location, publicNetworkAccess, resourceGroupName, tags);

@@ -10,6 +10,7 @@ import io.pulumi.aws.s3control.outputs.ObjectLambdaAccessPointConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -101,7 +102,7 @@ public class ObjectLambdaAccessPoint extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public ObjectLambdaAccessPoint(String name, ObjectLambdaAccessPointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, args == null ? ObjectLambdaAccessPointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3control/objectLambdaAccessPoint:ObjectLambdaAccessPoint", name, args == null ? ObjectLambdaAccessPointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ObjectLambdaAccessPoint(String name, Output<String> id, @Nullable ObjectLambdaAccessPointState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

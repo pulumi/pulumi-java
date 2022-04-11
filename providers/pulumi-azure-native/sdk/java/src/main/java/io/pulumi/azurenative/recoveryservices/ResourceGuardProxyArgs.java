@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> resourceGuardProxyName;
 
     public Output<String> getResourceGuardProxyName() {
-        return this.resourceGuardProxyName == null ? Output.empty() : this.resourceGuardProxyName;
+        return this.resourceGuardProxyName == null ? Codegen.empty() : this.resourceGuardProxyName;
     }
 
     /**
@@ -53,9 +54,9 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ResourceGuardProxyArgs() {
-        this.resourceGroupName = Output.empty();
-        this.resourceGuardProxyName = Output.empty();
-        this.vaultName = Output.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceGuardProxyName = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder resourceGuardProxyName(@Nullable String resourceGuardProxyName) {
-            this.resourceGuardProxyName = Output.ofNullable(resourceGuardProxyName);
+            this.resourceGuardProxyName = Codegen.ofNullable(resourceGuardProxyName);
             return this;
         }
         public Builder vaultName(Output<String> vaultName) {

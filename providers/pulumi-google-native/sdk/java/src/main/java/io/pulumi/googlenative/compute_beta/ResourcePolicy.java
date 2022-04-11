@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.ResourcePolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicyGroupPlacementPolicyResponse;
@@ -182,7 +183,7 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ResourcePolicy(String name, ResourcePolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:ResourcePolicy", name, args == null ? ResourcePolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ResourcePolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

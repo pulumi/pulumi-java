@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gameservices_v1.inputs.GkeClusterReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
       private final @Nullable Output<GkeClusterReferenceArgs> gkeClusterReference;
 
     public Output<GkeClusterReferenceArgs> getGkeClusterReference() {
-        return this.gkeClusterReference == null ? Output.empty() : this.gkeClusterReference;
+        return this.gkeClusterReference == null ? Codegen.empty() : this.gkeClusterReference;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public GameServerClusterConnectionInfoArgs(
@@ -49,8 +50,8 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
     }
 
     private GameServerClusterConnectionInfoArgs() {
-        this.gkeClusterReference = Output.empty();
-        this.namespace = Output.empty();
+        this.gkeClusterReference = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder gkeClusterReference(@Nullable GkeClusterReferenceArgs gkeClusterReference) {
-            this.gkeClusterReference = Output.ofNullable(gkeClusterReference);
+            this.gkeClusterReference = Codegen.ofNullable(gkeClusterReference);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -88,7 +89,7 @@ public final class GameServerClusterConnectionInfoArgs extends io.pulumi.resourc
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public GameServerClusterConnectionInfoArgs build() {
             return new GameServerClusterConnectionInfoArgs(gkeClusterReference, namespace);

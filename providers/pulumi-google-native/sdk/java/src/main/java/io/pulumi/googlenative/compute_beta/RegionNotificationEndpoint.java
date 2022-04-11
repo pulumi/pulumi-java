@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.RegionNotificationEndpointArgs;
 import io.pulumi.googlenative.compute_beta.outputs.NotificationEndpointGrpcSettingsResponse;
@@ -139,7 +140,7 @@ public class RegionNotificationEndpoint extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionNotificationEndpoint(String name, RegionNotificationEndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:RegionNotificationEndpoint", name, args == null ? RegionNotificationEndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:RegionNotificationEndpoint", name, args == null ? RegionNotificationEndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionNotificationEndpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

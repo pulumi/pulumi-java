@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class ProvisionedConcurrencyConfigArgs extends io.pulumi.resources.
     }
 
     private ProvisionedConcurrencyConfigArgs() {
-        this.functionName = Output.empty();
-        this.provisionedConcurrentExecutions = Output.empty();
-        this.qualifier = Output.empty();
+        this.functionName = Codegen.empty();
+        this.provisionedConcurrentExecutions = Codegen.empty();
+        this.qualifier = Codegen.empty();
     }
 
     public static Builder builder() {

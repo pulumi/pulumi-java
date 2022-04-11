@@ -5,6 +5,7 @@ package io.pulumi.azurenative.peering;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peeringServicePrefixKey;
 
     public Output<String> getPeeringServicePrefixKey() {
-        return this.peeringServicePrefixKey == null ? Output.empty() : this.peeringServicePrefixKey;
+        return this.peeringServicePrefixKey == null ? Codegen.empty() : this.peeringServicePrefixKey;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> prefixName;
 
     public Output<String> getPrefixName() {
-        return this.prefixName == null ? Output.empty() : this.prefixName;
+        return this.prefixName == null ? Codegen.empty() : this.prefixName;
     }
 
     /**
@@ -83,11 +84,11 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrefixArgs() {
-        this.peeringServiceName = Output.empty();
-        this.peeringServicePrefixKey = Output.empty();
-        this.prefix = Output.empty();
-        this.prefixName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.peeringServiceName = Codegen.empty();
+        this.peeringServicePrefixKey = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.prefixName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peeringServicePrefixKey(@Nullable String peeringServicePrefixKey) {
-            this.peeringServicePrefixKey = Output.ofNullable(peeringServicePrefixKey);
+            this.peeringServicePrefixKey = Codegen.ofNullable(peeringServicePrefixKey);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -139,7 +140,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder prefixName(@Nullable Output<String> prefixName) {
@@ -147,7 +148,7 @@ public final class PrefixArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefixName(@Nullable String prefixName) {
-            this.prefixName = Output.ofNullable(prefixName);
+            this.prefixName = Codegen.ofNullable(prefixName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

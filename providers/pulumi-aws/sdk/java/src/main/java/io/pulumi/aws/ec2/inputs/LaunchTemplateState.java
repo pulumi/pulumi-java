@@ -21,6 +21,7 @@ import io.pulumi.aws.ec2.inputs.LaunchTemplatePlacementGetArgs;
 import io.pulumi.aws.ec2.inputs.LaunchTemplateTagSpecificationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings;
 
     public Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
+        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateCapacityReservationSpecificationGetArgs> capacityReservationSpecification;
 
     public Output<LaunchTemplateCapacityReservationSpecificationGetArgs> getCapacityReservationSpecification() {
-        return this.capacityReservationSpecification == null ? Output.empty() : this.capacityReservationSpecification;
+        return this.capacityReservationSpecification == null ? Codegen.empty() : this.capacityReservationSpecification;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions;
 
     public Output<LaunchTemplateCpuOptionsGetArgs> getCpuOptions() {
-        return this.cpuOptions == null ? Output.empty() : this.cpuOptions;
+        return this.cpuOptions == null ? Codegen.empty() : this.cpuOptions;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification;
 
     public Output<LaunchTemplateCreditSpecificationGetArgs> getCreditSpecification() {
-        return this.creditSpecification == null ? Output.empty() : this.creditSpecification;
+        return this.creditSpecification == null ? Codegen.empty() : this.creditSpecification;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> defaultVersion;
 
     public Output<Integer> getDefaultVersion() {
-        return this.defaultVersion == null ? Output.empty() : this.defaultVersion;
+        return this.defaultVersion == null ? Codegen.empty() : this.defaultVersion;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> disableApiTermination;
 
     public Output<Boolean> getDisableApiTermination() {
-        return this.disableApiTermination == null ? Output.empty() : this.disableApiTermination;
+        return this.disableApiTermination == null ? Codegen.empty() : this.disableApiTermination;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> ebsOptimized;
 
     public Output<String> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications;
 
     public Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> getElasticGpuSpecifications() {
-        return this.elasticGpuSpecifications == null ? Output.empty() : this.elasticGpuSpecifications;
+        return this.elasticGpuSpecifications == null ? Codegen.empty() : this.elasticGpuSpecifications;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> elasticInferenceAccelerator;
 
     public Output<LaunchTemplateElasticInferenceAcceleratorGetArgs> getElasticInferenceAccelerator() {
-        return this.elasticInferenceAccelerator == null ? Output.empty() : this.elasticInferenceAccelerator;
+        return this.elasticInferenceAccelerator == null ? Codegen.empty() : this.elasticInferenceAccelerator;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions;
 
     public Output<LaunchTemplateEnclaveOptionsGetArgs> getEnclaveOptions() {
-        return this.enclaveOptions == null ? Output.empty() : this.enclaveOptions;
+        return this.enclaveOptions == null ? Codegen.empty() : this.enclaveOptions;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions;
 
     public Output<LaunchTemplateHibernationOptionsGetArgs> getHibernationOptions() {
-        return this.hibernationOptions == null ? Output.empty() : this.hibernationOptions;
+        return this.hibernationOptions == null ? Codegen.empty() : this.hibernationOptions;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile;
 
     public Output<LaunchTemplateIamInstanceProfileGetArgs> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
+        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> imageId;
 
     public Output<String> getImageId() {
-        return this.imageId == null ? Output.empty() : this.imageId;
+        return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> instanceInitiatedShutdownBehavior;
 
     public Output<String> getInstanceInitiatedShutdownBehavior() {
-        return this.instanceInitiatedShutdownBehavior == null ? Output.empty() : this.instanceInitiatedShutdownBehavior;
+        return this.instanceInitiatedShutdownBehavior == null ? Codegen.empty() : this.instanceInitiatedShutdownBehavior;
     }
 
     /**
@@ -225,7 +226,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions;
 
     public Output<LaunchTemplateInstanceMarketOptionsGetArgs> getInstanceMarketOptions() {
-        return this.instanceMarketOptions == null ? Output.empty() : this.instanceMarketOptions;
+        return this.instanceMarketOptions == null ? Codegen.empty() : this.instanceMarketOptions;
     }
 
     /**
@@ -236,7 +237,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -247,7 +248,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
-        return this.kernelId == null ? Output.empty() : this.kernelId;
+        return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
     /**
@@ -258,7 +259,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     /**
@@ -269,7 +270,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> latestVersion;
 
     public Output<Integer> getLatestVersion() {
-        return this.latestVersion == null ? Output.empty() : this.latestVersion;
+        return this.latestVersion == null ? Codegen.empty() : this.latestVersion;
     }
 
     /**
@@ -280,7 +281,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications;
 
     public Output<List<LaunchTemplateLicenseSpecificationGetArgs>> getLicenseSpecifications() {
-        return this.licenseSpecifications == null ? Output.empty() : this.licenseSpecifications;
+        return this.licenseSpecifications == null ? Codegen.empty() : this.licenseSpecifications;
     }
 
     /**
@@ -291,7 +292,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateMetadataOptionsGetArgs> metadataOptions;
 
     public Output<LaunchTemplateMetadataOptionsGetArgs> getMetadataOptions() {
-        return this.metadataOptions == null ? Output.empty() : this.metadataOptions;
+        return this.metadataOptions == null ? Codegen.empty() : this.metadataOptions;
     }
 
     /**
@@ -302,7 +303,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring;
 
     public Output<LaunchTemplateMonitoringGetArgs> getMonitoring() {
-        return this.monitoring == null ? Output.empty() : this.monitoring;
+        return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     /**
@@ -313,7 +314,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -324,7 +325,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -336,7 +337,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces;
 
     public Output<List<LaunchTemplateNetworkInterfaceGetArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     /**
@@ -347,7 +348,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<LaunchTemplatePlacementGetArgs> placement;
 
     public Output<LaunchTemplatePlacementGetArgs> getPlacement() {
-        return this.placement == null ? Output.empty() : this.placement;
+        return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     /**
@@ -358,7 +359,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> ramDiskId;
 
     public Output<String> getRamDiskId() {
-        return this.ramDiskId == null ? Output.empty() : this.ramDiskId;
+        return this.ramDiskId == null ? Codegen.empty() : this.ramDiskId;
     }
 
     /**
@@ -370,7 +371,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> securityGroupNames;
 
     public Output<List<String>> getSecurityGroupNames() {
-        return this.securityGroupNames == null ? Output.empty() : this.securityGroupNames;
+        return this.securityGroupNames == null ? Codegen.empty() : this.securityGroupNames;
     }
 
     /**
@@ -381,7 +382,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<LaunchTemplateTagSpecificationGetArgs>> tagSpecifications;
 
     public Output<List<LaunchTemplateTagSpecificationGetArgs>> getTagSpecifications() {
-        return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
+        return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     /**
@@ -392,7 +393,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -403,7 +404,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -414,7 +415,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> updateDefaultVersion;
 
     public Output<Boolean> getUpdateDefaultVersion() {
-        return this.updateDefaultVersion == null ? Output.empty() : this.updateDefaultVersion;
+        return this.updateDefaultVersion == null ? Codegen.empty() : this.updateDefaultVersion;
     }
 
     /**
@@ -425,7 +426,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     /**
@@ -436,7 +437,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     public LaunchTemplateState(
@@ -515,42 +516,42 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
     }
 
     private LaunchTemplateState() {
-        this.arn = Output.empty();
-        this.blockDeviceMappings = Output.empty();
-        this.capacityReservationSpecification = Output.empty();
-        this.cpuOptions = Output.empty();
-        this.creditSpecification = Output.empty();
-        this.defaultVersion = Output.empty();
-        this.description = Output.empty();
-        this.disableApiTermination = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.elasticGpuSpecifications = Output.empty();
-        this.elasticInferenceAccelerator = Output.empty();
-        this.enclaveOptions = Output.empty();
-        this.hibernationOptions = Output.empty();
-        this.iamInstanceProfile = Output.empty();
-        this.imageId = Output.empty();
-        this.instanceInitiatedShutdownBehavior = Output.empty();
-        this.instanceMarketOptions = Output.empty();
-        this.instanceType = Output.empty();
-        this.kernelId = Output.empty();
-        this.keyName = Output.empty();
-        this.latestVersion = Output.empty();
-        this.licenseSpecifications = Output.empty();
-        this.metadataOptions = Output.empty();
-        this.monitoring = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.networkInterfaces = Output.empty();
-        this.placement = Output.empty();
-        this.ramDiskId = Output.empty();
-        this.securityGroupNames = Output.empty();
-        this.tagSpecifications = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.updateDefaultVersion = Output.empty();
-        this.userData = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
+        this.arn = Codegen.empty();
+        this.blockDeviceMappings = Codegen.empty();
+        this.capacityReservationSpecification = Codegen.empty();
+        this.cpuOptions = Codegen.empty();
+        this.creditSpecification = Codegen.empty();
+        this.defaultVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.disableApiTermination = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.elasticGpuSpecifications = Codegen.empty();
+        this.elasticInferenceAccelerator = Codegen.empty();
+        this.enclaveOptions = Codegen.empty();
+        this.hibernationOptions = Codegen.empty();
+        this.iamInstanceProfile = Codegen.empty();
+        this.imageId = Codegen.empty();
+        this.instanceInitiatedShutdownBehavior = Codegen.empty();
+        this.instanceMarketOptions = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.kernelId = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.latestVersion = Codegen.empty();
+        this.licenseSpecifications = Codegen.empty();
+        this.metadataOptions = Codegen.empty();
+        this.monitoring = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.placement = Codegen.empty();
+        this.ramDiskId = Codegen.empty();
+        this.securityGroupNames = Codegen.empty();
+        this.tagSpecifications = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.updateDefaultVersion = Codegen.empty();
+        this.userData = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -648,7 +649,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder blockDeviceMappings(@Nullable Output<List<LaunchTemplateBlockDeviceMappingGetArgs>> blockDeviceMappings) {
@@ -656,7 +657,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder blockDeviceMappings(@Nullable List<LaunchTemplateBlockDeviceMappingGetArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
             return this;
         }
         public Builder blockDeviceMappings(LaunchTemplateBlockDeviceMappingGetArgs... blockDeviceMappings) {
@@ -667,7 +668,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder capacityReservationSpecification(@Nullable LaunchTemplateCapacityReservationSpecificationGetArgs capacityReservationSpecification) {
-            this.capacityReservationSpecification = Output.ofNullable(capacityReservationSpecification);
+            this.capacityReservationSpecification = Codegen.ofNullable(capacityReservationSpecification);
             return this;
         }
         public Builder cpuOptions(@Nullable Output<LaunchTemplateCpuOptionsGetArgs> cpuOptions) {
@@ -675,7 +676,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder cpuOptions(@Nullable LaunchTemplateCpuOptionsGetArgs cpuOptions) {
-            this.cpuOptions = Output.ofNullable(cpuOptions);
+            this.cpuOptions = Codegen.ofNullable(cpuOptions);
             return this;
         }
         public Builder creditSpecification(@Nullable Output<LaunchTemplateCreditSpecificationGetArgs> creditSpecification) {
@@ -683,7 +684,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder creditSpecification(@Nullable LaunchTemplateCreditSpecificationGetArgs creditSpecification) {
-            this.creditSpecification = Output.ofNullable(creditSpecification);
+            this.creditSpecification = Codegen.ofNullable(creditSpecification);
             return this;
         }
         public Builder defaultVersion(@Nullable Output<Integer> defaultVersion) {
@@ -691,7 +692,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder defaultVersion(@Nullable Integer defaultVersion) {
-            this.defaultVersion = Output.ofNullable(defaultVersion);
+            this.defaultVersion = Codegen.ofNullable(defaultVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -699,7 +700,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder disableApiTermination(@Nullable Output<Boolean> disableApiTermination) {
@@ -707,7 +708,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder disableApiTermination(@Nullable Boolean disableApiTermination) {
-            this.disableApiTermination = Output.ofNullable(disableApiTermination);
+            this.disableApiTermination = Codegen.ofNullable(disableApiTermination);
             return this;
         }
         public Builder ebsOptimized(@Nullable Output<String> ebsOptimized) {
@@ -715,7 +716,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ebsOptimized(@Nullable String ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder elasticGpuSpecifications(@Nullable Output<List<LaunchTemplateElasticGpuSpecificationGetArgs>> elasticGpuSpecifications) {
@@ -723,7 +724,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder elasticGpuSpecifications(@Nullable List<LaunchTemplateElasticGpuSpecificationGetArgs> elasticGpuSpecifications) {
-            this.elasticGpuSpecifications = Output.ofNullable(elasticGpuSpecifications);
+            this.elasticGpuSpecifications = Codegen.ofNullable(elasticGpuSpecifications);
             return this;
         }
         public Builder elasticGpuSpecifications(LaunchTemplateElasticGpuSpecificationGetArgs... elasticGpuSpecifications) {
@@ -734,7 +735,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder elasticInferenceAccelerator(@Nullable LaunchTemplateElasticInferenceAcceleratorGetArgs elasticInferenceAccelerator) {
-            this.elasticInferenceAccelerator = Output.ofNullable(elasticInferenceAccelerator);
+            this.elasticInferenceAccelerator = Codegen.ofNullable(elasticInferenceAccelerator);
             return this;
         }
         public Builder enclaveOptions(@Nullable Output<LaunchTemplateEnclaveOptionsGetArgs> enclaveOptions) {
@@ -742,7 +743,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder enclaveOptions(@Nullable LaunchTemplateEnclaveOptionsGetArgs enclaveOptions) {
-            this.enclaveOptions = Output.ofNullable(enclaveOptions);
+            this.enclaveOptions = Codegen.ofNullable(enclaveOptions);
             return this;
         }
         public Builder hibernationOptions(@Nullable Output<LaunchTemplateHibernationOptionsGetArgs> hibernationOptions) {
@@ -750,7 +751,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder hibernationOptions(@Nullable LaunchTemplateHibernationOptionsGetArgs hibernationOptions) {
-            this.hibernationOptions = Output.ofNullable(hibernationOptions);
+            this.hibernationOptions = Codegen.ofNullable(hibernationOptions);
             return this;
         }
         public Builder iamInstanceProfile(@Nullable Output<LaunchTemplateIamInstanceProfileGetArgs> iamInstanceProfile) {
@@ -758,7 +759,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder iamInstanceProfile(@Nullable LaunchTemplateIamInstanceProfileGetArgs iamInstanceProfile) {
-            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
             return this;
         }
         public Builder imageId(@Nullable Output<String> imageId) {
@@ -766,7 +767,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder imageId(@Nullable String imageId) {
-            this.imageId = Output.ofNullable(imageId);
+            this.imageId = Codegen.ofNullable(imageId);
             return this;
         }
         public Builder instanceInitiatedShutdownBehavior(@Nullable Output<String> instanceInitiatedShutdownBehavior) {
@@ -774,7 +775,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instanceInitiatedShutdownBehavior(@Nullable String instanceInitiatedShutdownBehavior) {
-            this.instanceInitiatedShutdownBehavior = Output.ofNullable(instanceInitiatedShutdownBehavior);
+            this.instanceInitiatedShutdownBehavior = Codegen.ofNullable(instanceInitiatedShutdownBehavior);
             return this;
         }
         public Builder instanceMarketOptions(@Nullable Output<LaunchTemplateInstanceMarketOptionsGetArgs> instanceMarketOptions) {
@@ -782,7 +783,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instanceMarketOptions(@Nullable LaunchTemplateInstanceMarketOptionsGetArgs instanceMarketOptions) {
-            this.instanceMarketOptions = Output.ofNullable(instanceMarketOptions);
+            this.instanceMarketOptions = Codegen.ofNullable(instanceMarketOptions);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -790,7 +791,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder kernelId(@Nullable Output<String> kernelId) {
@@ -798,7 +799,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Output.ofNullable(kernelId);
+            this.kernelId = Codegen.ofNullable(kernelId);
             return this;
         }
         public Builder keyName(@Nullable Output<String> keyName) {
@@ -806,7 +807,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder latestVersion(@Nullable Output<Integer> latestVersion) {
@@ -814,7 +815,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder latestVersion(@Nullable Integer latestVersion) {
-            this.latestVersion = Output.ofNullable(latestVersion);
+            this.latestVersion = Codegen.ofNullable(latestVersion);
             return this;
         }
         public Builder licenseSpecifications(@Nullable Output<List<LaunchTemplateLicenseSpecificationGetArgs>> licenseSpecifications) {
@@ -822,7 +823,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder licenseSpecifications(@Nullable List<LaunchTemplateLicenseSpecificationGetArgs> licenseSpecifications) {
-            this.licenseSpecifications = Output.ofNullable(licenseSpecifications);
+            this.licenseSpecifications = Codegen.ofNullable(licenseSpecifications);
             return this;
         }
         public Builder licenseSpecifications(LaunchTemplateLicenseSpecificationGetArgs... licenseSpecifications) {
@@ -833,7 +834,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder metadataOptions(@Nullable LaunchTemplateMetadataOptionsGetArgs metadataOptions) {
-            this.metadataOptions = Output.ofNullable(metadataOptions);
+            this.metadataOptions = Codegen.ofNullable(metadataOptions);
             return this;
         }
         public Builder monitoring(@Nullable Output<LaunchTemplateMonitoringGetArgs> monitoring) {
@@ -841,7 +842,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder monitoring(@Nullable LaunchTemplateMonitoringGetArgs monitoring) {
-            this.monitoring = Output.ofNullable(monitoring);
+            this.monitoring = Codegen.ofNullable(monitoring);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -849,7 +850,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -857,7 +858,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder networkInterfaces(@Nullable Output<List<LaunchTemplateNetworkInterfaceGetArgs>> networkInterfaces) {
@@ -865,7 +866,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networkInterfaces(@Nullable List<LaunchTemplateNetworkInterfaceGetArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(LaunchTemplateNetworkInterfaceGetArgs... networkInterfaces) {
@@ -876,7 +877,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder placement(@Nullable LaunchTemplatePlacementGetArgs placement) {
-            this.placement = Output.ofNullable(placement);
+            this.placement = Codegen.ofNullable(placement);
             return this;
         }
         public Builder ramDiskId(@Nullable Output<String> ramDiskId) {
@@ -884,7 +885,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ramDiskId(@Nullable String ramDiskId) {
-            this.ramDiskId = Output.ofNullable(ramDiskId);
+            this.ramDiskId = Codegen.ofNullable(ramDiskId);
             return this;
         }
         public Builder securityGroupNames(@Nullable Output<List<String>> securityGroupNames) {
@@ -892,7 +893,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder securityGroupNames(@Nullable List<String> securityGroupNames) {
-            this.securityGroupNames = Output.ofNullable(securityGroupNames);
+            this.securityGroupNames = Codegen.ofNullable(securityGroupNames);
             return this;
         }
         public Builder securityGroupNames(String... securityGroupNames) {
@@ -903,7 +904,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagSpecifications(@Nullable List<LaunchTemplateTagSpecificationGetArgs> tagSpecifications) {
-            this.tagSpecifications = Output.ofNullable(tagSpecifications);
+            this.tagSpecifications = Codegen.ofNullable(tagSpecifications);
             return this;
         }
         public Builder tagSpecifications(LaunchTemplateTagSpecificationGetArgs... tagSpecifications) {
@@ -914,7 +915,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -922,7 +923,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder updateDefaultVersion(@Nullable Output<Boolean> updateDefaultVersion) {
@@ -930,7 +931,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder updateDefaultVersion(@Nullable Boolean updateDefaultVersion) {
-            this.updateDefaultVersion = Output.ofNullable(updateDefaultVersion);
+            this.updateDefaultVersion = Codegen.ofNullable(updateDefaultVersion);
             return this;
         }
         public Builder userData(@Nullable Output<String> userData) {
@@ -938,7 +939,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable Output<List<String>> vpcSecurityGroupIds) {
@@ -946,7 +947,7 @@ public final class LaunchTemplateState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {

@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.NetworkAclRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -219,7 +220,7 @@ public class NetworkAclRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkAclRule(String name, NetworkAclRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ec2/networkAclRule:NetworkAclRule", name, args == null ? NetworkAclRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ec2/networkAclRule:NetworkAclRule", name, args == null ? NetworkAclRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkAclRule(String name, Output<String> id, @Nullable NetworkAclRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

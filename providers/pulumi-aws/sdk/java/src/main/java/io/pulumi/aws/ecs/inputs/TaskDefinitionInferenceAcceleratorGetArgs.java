@@ -5,6 +5,7 @@ package io.pulumi.aws.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class TaskDefinitionInferenceAcceleratorGetArgs extends io.pulumi.r
     }
 
     private TaskDefinitionInferenceAcceleratorGetArgs() {
-        this.deviceName = Output.empty();
-        this.deviceType = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.deviceType = Codegen.empty();
     }
 
     public static Builder builder() {

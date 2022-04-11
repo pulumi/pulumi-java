@@ -6,6 +6,7 @@ package io.pulumi.awsnative.forecast.inputs;
 import io.pulumi.awsnative.forecast.inputs.AttributesItemPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<AttributesItemPropertiesArgs>> attributes;
 
     public Output<List<AttributesItemPropertiesArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     public SchemaPropertiesArgs(@Nullable Output<List<AttributesItemPropertiesArgs>> attributes) {
@@ -27,7 +28,7 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private SchemaPropertiesArgs() {
-        this.attributes = Output.empty();
+        this.attributes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder attributes(@Nullable List<AttributesItemPropertiesArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(AttributesItemPropertiesArgs... attributes) {

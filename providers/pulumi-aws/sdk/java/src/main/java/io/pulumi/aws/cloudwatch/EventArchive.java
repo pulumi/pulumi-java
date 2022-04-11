@@ -9,6 +9,7 @@ import io.pulumi.aws.cloudwatch.inputs.EventArchiveState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -139,7 +140,7 @@ public class EventArchive extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EventArchive(String name, EventArchiveArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cloudwatch/eventArchive:EventArchive", name, args == null ? EventArchiveArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cloudwatch/eventArchive:EventArchive", name, args == null ? EventArchiveArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private EventArchive(String name, Output<String> id, @Nullable EventArchiveState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

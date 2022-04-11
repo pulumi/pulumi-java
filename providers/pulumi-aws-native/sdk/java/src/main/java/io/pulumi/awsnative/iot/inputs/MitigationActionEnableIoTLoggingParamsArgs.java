@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.enums.MitigationActionEnableIoTLoggingParamsLogLevel;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class MitigationActionEnableIoTLoggingParamsArgs extends io.pulumi.
     }
 
     private MitigationActionEnableIoTLoggingParamsArgs() {
-        this.logLevel = Output.empty();
-        this.roleArnForLogging = Output.empty();
+        this.logLevel = Codegen.empty();
+        this.roleArnForLogging = Codegen.empty();
     }
 
     public static Builder builder() {

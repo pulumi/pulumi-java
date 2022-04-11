@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub;
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DefaultRolloutPropertiesArgs> properties;
 
     public Output<DefaultRolloutPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rolloutName;
 
     public Output<String> getRolloutName() {
-        return this.rolloutName == null ? Output.empty() : this.rolloutName;
+        return this.rolloutName == null ? Codegen.empty() : this.rolloutName;
     }
 
     public DefaultRolloutArgs(
@@ -58,9 +59,9 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DefaultRolloutArgs() {
-        this.properties = Output.empty();
-        this.providerNamespace = Output.empty();
-        this.rolloutName = Output.empty();
+        this.properties = Codegen.empty();
+        this.providerNamespace = Codegen.empty();
+        this.rolloutName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable DefaultRolloutPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerNamespace(Output<String> providerNamespace) {
@@ -108,7 +109,7 @@ public final class DefaultRolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rolloutName(@Nullable String rolloutName) {
-            this.rolloutName = Output.ofNullable(rolloutName);
+            this.rolloutName = Codegen.ofNullable(rolloutName);
             return this;
         }        public DefaultRolloutArgs build() {
             return new DefaultRolloutArgs(properties, providerNamespace, rolloutName);

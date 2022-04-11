@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class LinkedTemplateArtifactArgs extends io.pulumi.resources.Resour
     }
 
     private LinkedTemplateArtifactArgs() {
-        this.path = Output.empty();
-        this.template = Output.empty();
+        this.path = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {

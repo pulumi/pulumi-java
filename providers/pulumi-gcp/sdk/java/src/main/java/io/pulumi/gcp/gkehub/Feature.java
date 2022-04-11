@@ -6,6 +6,7 @@ package io.pulumi.gcp.gkehub;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.FeatureArgs;
 import io.pulumi.gcp.gkehub.outputs.FeatureResourceState;
@@ -199,7 +200,7 @@ public class Feature extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Feature(String name, FeatureArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:gkehub/feature:Feature", name, args == null ? FeatureArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:gkehub/feature:Feature", name, args == null ? FeatureArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Feature(String name, Output<String> id, @Nullable io.pulumi.gcp.gkehub.inputs.FeatureState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

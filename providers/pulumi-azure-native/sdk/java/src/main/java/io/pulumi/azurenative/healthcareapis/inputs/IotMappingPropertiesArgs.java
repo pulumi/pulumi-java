@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> content;
 
     public Output<Object> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     public IotMappingPropertiesArgs(@Nullable Output<Object> content) {
@@ -34,7 +35,7 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
     }
 
     private IotMappingPropertiesArgs() {
-        this.content = Output.empty();
+        this.content = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder content(@Nullable Object content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }        public IotMappingPropertiesArgs build() {
             return new IotMappingPropertiesArgs(content);

@@ -5,6 +5,7 @@ package io.pulumi.aws.apprunner;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> enableWwwSubdomain;
 
     public Output<Boolean> getEnableWwwSubdomain() {
-        return this.enableWwwSubdomain == null ? Output.empty() : this.enableWwwSubdomain;
+        return this.enableWwwSubdomain == null ? Codegen.empty() : this.enableWwwSubdomain;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
     }
 
     private CustomDomainAssociationArgs() {
-        this.domainName = Output.empty();
-        this.enableWwwSubdomain = Output.empty();
-        this.serviceArn = Output.empty();
+        this.domainName = Codegen.empty();
+        this.enableWwwSubdomain = Codegen.empty();
+        this.serviceArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class CustomDomainAssociationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder enableWwwSubdomain(@Nullable Boolean enableWwwSubdomain) {
-            this.enableWwwSubdomain = Output.ofNullable(enableWwwSubdomain);
+            this.enableWwwSubdomain = Codegen.ofNullable(enableWwwSubdomain);
             return this;
         }
         public Builder serviceArn(Output<String> serviceArn) {

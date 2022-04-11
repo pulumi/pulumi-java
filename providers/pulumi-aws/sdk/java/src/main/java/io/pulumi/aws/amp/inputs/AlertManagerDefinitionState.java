@@ -5,6 +5,7 @@ package io.pulumi.aws.amp.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> definition;
 
     public Output<String> getDefinition() {
-        return this.definition == null ? Output.empty() : this.definition;
+        return this.definition == null ? Codegen.empty() : this.definition;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> workspaceId;
 
     public Output<String> getWorkspaceId() {
-        return this.workspaceId == null ? Output.empty() : this.workspaceId;
+        return this.workspaceId == null ? Codegen.empty() : this.workspaceId;
     }
 
     public AlertManagerDefinitionState(
@@ -44,8 +45,8 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
     }
 
     private AlertManagerDefinitionState() {
-        this.definition = Output.empty();
-        this.workspaceId = Output.empty();
+        this.definition = Codegen.empty();
+        this.workspaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder definition(@Nullable String definition) {
-            this.definition = Output.ofNullable(definition);
+            this.definition = Codegen.ofNullable(definition);
             return this;
         }
         public Builder workspaceId(@Nullable Output<String> workspaceId) {
@@ -83,7 +84,7 @@ public final class AlertManagerDefinitionState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder workspaceId(@Nullable String workspaceId) {
-            this.workspaceId = Output.ofNullable(workspaceId);
+            this.workspaceId = Codegen.ofNullable(workspaceId);
             return this;
         }        public AlertManagerDefinitionState build() {
             return new AlertManagerDefinitionState(definition, workspaceId);

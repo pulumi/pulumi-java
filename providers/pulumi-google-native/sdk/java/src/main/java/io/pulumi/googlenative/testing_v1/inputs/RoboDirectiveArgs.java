@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.enums.RoboDirectiveActionType;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> inputText;
 
     public Output<String> getInputText() {
-        return this.inputText == null ? Output.empty() : this.inputText;
+        return this.inputText == null ? Codegen.empty() : this.inputText;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoboDirectiveArgs() {
-        this.actionType = Output.empty();
-        this.inputText = Output.empty();
-        this.resourceName = Output.empty();
+        this.actionType = Codegen.empty();
+        this.inputText = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class RoboDirectiveArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputText(@Nullable String inputText) {
-            this.inputText = Output.ofNullable(inputText);
+            this.inputText = Codegen.ofNullable(inputText);
             return this;
         }
         public Builder resourceName(Output<String> resourceName) {

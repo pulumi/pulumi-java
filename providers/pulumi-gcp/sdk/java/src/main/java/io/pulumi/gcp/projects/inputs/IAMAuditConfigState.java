@@ -5,6 +5,7 @@ package io.pulumi.gcp.projects.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.projects.inputs.IAMAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<IAMAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
     public Output<List<IAMAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
-        return this.auditLogConfigs == null ? Output.empty() : this.auditLogConfigs;
+        return this.auditLogConfigs == null ? Codegen.empty() : this.auditLogConfigs;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public IAMAuditConfigState(
@@ -73,10 +74,10 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
     }
 
     private IAMAuditConfigState() {
-        this.auditLogConfigs = Output.empty();
-        this.etag = Output.empty();
-        this.project = Output.empty();
-        this.service = Output.empty();
+        this.auditLogConfigs = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.project = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder auditLogConfigs(@Nullable List<IAMAuditConfigAuditLogConfigGetArgs> auditLogConfigs) {
-            this.auditLogConfigs = Output.ofNullable(auditLogConfigs);
+            this.auditLogConfigs = Codegen.ofNullable(auditLogConfigs);
             return this;
         }
         public Builder auditLogConfigs(IAMAuditConfigAuditLogConfigGetArgs... auditLogConfigs) {
@@ -121,7 +122,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -129,7 +130,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder service(@Nullable Output<String> service) {
@@ -137,7 +138,7 @@ public final class IAMAuditConfigState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public IAMAuditConfigState build() {
             return new IAMAuditConfigState(auditLogConfigs, etag, project, service);

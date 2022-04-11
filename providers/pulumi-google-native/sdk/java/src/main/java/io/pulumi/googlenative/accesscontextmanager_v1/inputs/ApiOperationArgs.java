@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.MethodSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MethodSelectorArgs>> methodSelectors;
 
     public Output<List<MethodSelectorArgs>> getMethodSelectors() {
-        return this.methodSelectors == null ? Output.empty() : this.methodSelectors;
+        return this.methodSelectors == null ? Codegen.empty() : this.methodSelectors;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public ApiOperationArgs(
@@ -50,8 +51,8 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiOperationArgs() {
-        this.methodSelectors = Output.empty();
-        this.serviceName = Output.empty();
+        this.methodSelectors = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methodSelectors(@Nullable List<MethodSelectorArgs> methodSelectors) {
-            this.methodSelectors = Output.ofNullable(methodSelectors);
+            this.methodSelectors = Codegen.ofNullable(methodSelectors);
             return this;
         }
         public Builder methodSelectors(MethodSelectorArgs... methodSelectors) {
@@ -92,7 +93,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public ApiOperationArgs build() {
             return new ApiOperationArgs(methodSelectors, serviceName);

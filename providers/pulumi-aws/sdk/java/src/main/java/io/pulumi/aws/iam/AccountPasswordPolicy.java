@@ -9,6 +9,7 @@ import io.pulumi.aws.iam.inputs.AccountPasswordPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import javax.annotation.Nullable;
@@ -196,7 +197,7 @@ public class AccountPasswordPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AccountPasswordPolicy(String name, @Nullable AccountPasswordPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iam/accountPasswordPolicy:AccountPasswordPolicy", name, args == null ? AccountPasswordPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iam/accountPasswordPolicy:AccountPasswordPolicy", name, args == null ? AccountPasswordPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AccountPasswordPolicy(String name, Output<String> id, @Nullable AccountPasswordPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

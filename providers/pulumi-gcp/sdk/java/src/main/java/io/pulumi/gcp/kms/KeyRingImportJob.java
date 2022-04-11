@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingImportJobArgs;
 import io.pulumi.gcp.kms.inputs.KeyRingImportJobState;
@@ -205,7 +206,7 @@ public class KeyRingImportJob extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRingImportJob(String name, KeyRingImportJobArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/keyRingImportJob:KeyRingImportJob", name, args == null ? KeyRingImportJobArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/keyRingImportJob:KeyRingImportJob", name, args == null ? KeyRingImportJobArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRingImportJob(String name, Output<String> id, @Nullable KeyRingImportJobState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

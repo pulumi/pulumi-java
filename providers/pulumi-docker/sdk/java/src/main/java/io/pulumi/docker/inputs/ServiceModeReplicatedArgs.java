@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ServiceModeReplicatedArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> replicas;
 
     public Output<Integer> getReplicas() {
-        return this.replicas == null ? Output.empty() : this.replicas;
+        return this.replicas == null ? Codegen.empty() : this.replicas;
     }
 
     public ServiceModeReplicatedArgs(@Nullable Output<Integer> replicas) {
@@ -26,7 +27,7 @@ public final class ServiceModeReplicatedArgs extends io.pulumi.resources.Resourc
     }
 
     private ServiceModeReplicatedArgs() {
-        this.replicas = Output.empty();
+        this.replicas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class ServiceModeReplicatedArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder replicas(@Nullable Integer replicas) {
-            this.replicas = Output.ofNullable(replicas);
+            this.replicas = Codegen.ofNullable(replicas);
             return this;
         }        public ServiceModeReplicatedArgs build() {
             return new ServiceModeReplicatedArgs(replicas);

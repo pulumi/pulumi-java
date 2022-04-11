@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCapt
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
       private final @Nullable Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> captureContentTypeHeader;
 
     public Output<EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs> getCaptureContentTypeHeader() {
-        return this.captureContentTypeHeader == null ? Output.empty() : this.captureContentTypeHeader;
+        return this.captureContentTypeHeader == null ? Codegen.empty() : this.captureContentTypeHeader;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
       private final @Nullable Output<Boolean> enableCapture;
 
     public Output<Boolean> getEnableCapture() {
-        return this.enableCapture == null ? Output.empty() : this.enableCapture;
+        return this.enableCapture == null ? Codegen.empty() : this.enableCapture;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     public EndpointConfigurationDataCaptureConfigGetArgs(
@@ -101,12 +102,12 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
     }
 
     private EndpointConfigurationDataCaptureConfigGetArgs() {
-        this.captureContentTypeHeader = Output.empty();
-        this.captureOptions = Output.empty();
-        this.destinationS3Uri = Output.empty();
-        this.enableCapture = Output.empty();
-        this.initialSamplingPercentage = Output.empty();
-        this.kmsKeyId = Output.empty();
+        this.captureContentTypeHeader = Codegen.empty();
+        this.captureOptions = Codegen.empty();
+        this.destinationS3Uri = Codegen.empty();
+        this.enableCapture = Codegen.empty();
+        this.initialSamplingPercentage = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
             return this;
         }
         public Builder captureContentTypeHeader(@Nullable EndpointConfigurationDataCaptureConfigCaptureContentTypeHeaderGetArgs captureContentTypeHeader) {
-            this.captureContentTypeHeader = Output.ofNullable(captureContentTypeHeader);
+            this.captureContentTypeHeader = Codegen.ofNullable(captureContentTypeHeader);
             return this;
         }
         public Builder captureOptions(Output<List<EndpointConfigurationDataCaptureConfigCaptureOptionGetArgs>> captureOptions) {
@@ -171,7 +172,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
             return this;
         }
         public Builder enableCapture(@Nullable Boolean enableCapture) {
-            this.enableCapture = Output.ofNullable(enableCapture);
+            this.enableCapture = Codegen.ofNullable(enableCapture);
             return this;
         }
         public Builder initialSamplingPercentage(Output<Integer> initialSamplingPercentage) {
@@ -187,7 +188,7 @@ public final class EndpointConfigurationDataCaptureConfigGetArgs extends io.pulu
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }        public EndpointConfigurationDataCaptureConfigGetArgs build() {
             return new EndpointConfigurationDataCaptureConfigGetArgs(captureContentTypeHeader, captureOptions, destinationS3Uri, enableCapture, initialSamplingPercentage, kmsKeyId);

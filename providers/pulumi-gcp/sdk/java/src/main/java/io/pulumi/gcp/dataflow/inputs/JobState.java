@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -27,7 +28,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> additionalExperiments;
 
     public Output<List<String>> getAdditionalExperiments() {
-        return this.additionalExperiments == null ? Output.empty() : this.additionalExperiments;
+        return this.additionalExperiments == null ? Codegen.empty() : this.additionalExperiments;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableStreamingEngine;
 
     public Output<Boolean> getEnableStreamingEngine() {
-        return this.enableStreamingEngine == null ? Output.empty() : this.enableStreamingEngine;
+        return this.enableStreamingEngine == null ? Codegen.empty() : this.enableStreamingEngine;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipConfiguration;
 
     public Output<String> getIpConfiguration() {
-        return this.ipConfiguration == null ? Output.empty() : this.ipConfiguration;
+        return this.ipConfiguration == null ? Codegen.empty() : this.ipConfiguration;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> jobId;
 
     public Output<String> getJobId() {
-        return this.jobId == null ? Output.empty() : this.jobId;
+        return this.jobId == null ? Codegen.empty() : this.jobId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> labels;
 
     public Output<Map<String,Object>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxWorkers;
 
     public Output<Integer> getMaxWorkers() {
-        return this.maxWorkers == null ? Output.empty() : this.maxWorkers;
+        return this.maxWorkers == null ? Codegen.empty() : this.maxWorkers;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> onDelete;
 
     public Output<String> getOnDelete() {
-        return this.onDelete == null ? Output.empty() : this.onDelete;
+        return this.onDelete == null ? Codegen.empty() : this.onDelete;
     }
 
     /**
@@ -152,7 +153,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -163,7 +164,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -174,7 +175,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -185,7 +186,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     /**
@@ -196,7 +197,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -207,7 +208,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     /**
@@ -218,7 +219,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tempGcsLocation;
 
     public Output<String> getTempGcsLocation() {
-        return this.tempGcsLocation == null ? Output.empty() : this.tempGcsLocation;
+        return this.tempGcsLocation == null ? Codegen.empty() : this.tempGcsLocation;
     }
 
     /**
@@ -229,7 +230,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateGcsPath;
 
     public Output<String> getTemplateGcsPath() {
-        return this.templateGcsPath == null ? Output.empty() : this.templateGcsPath;
+        return this.templateGcsPath == null ? Codegen.empty() : this.templateGcsPath;
     }
 
     /**
@@ -241,7 +242,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> transformNameMapping;
 
     public Output<Map<String,Object>> getTransformNameMapping() {
-        return this.transformNameMapping == null ? Output.empty() : this.transformNameMapping;
+        return this.transformNameMapping == null ? Codegen.empty() : this.transformNameMapping;
     }
 
     /**
@@ -252,7 +253,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -263,7 +264,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public JobState(
@@ -314,28 +315,28 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobState() {
-        this.additionalExperiments = Output.empty();
-        this.enableStreamingEngine = Output.empty();
-        this.ipConfiguration = Output.empty();
-        this.jobId = Output.empty();
-        this.kmsKeyName = Output.empty();
-        this.labels = Output.empty();
-        this.machineType = Output.empty();
-        this.maxWorkers = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.onDelete = Output.empty();
-        this.parameters = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
-        this.serviceAccountEmail = Output.empty();
-        this.state = Output.empty();
-        this.subnetwork = Output.empty();
-        this.tempGcsLocation = Output.empty();
-        this.templateGcsPath = Output.empty();
-        this.transformNameMapping = Output.empty();
-        this.type = Output.empty();
-        this.zone = Output.empty();
+        this.additionalExperiments = Codegen.empty();
+        this.enableStreamingEngine = Codegen.empty();
+        this.ipConfiguration = Codegen.empty();
+        this.jobId = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.maxWorkers = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.onDelete = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
+        this.state = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.tempGcsLocation = Codegen.empty();
+        this.templateGcsPath = Codegen.empty();
+        this.transformNameMapping = Codegen.empty();
+        this.type = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -405,7 +406,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalExperiments(@Nullable List<String> additionalExperiments) {
-            this.additionalExperiments = Output.ofNullable(additionalExperiments);
+            this.additionalExperiments = Codegen.ofNullable(additionalExperiments);
             return this;
         }
         public Builder additionalExperiments(String... additionalExperiments) {
@@ -416,7 +417,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableStreamingEngine(@Nullable Boolean enableStreamingEngine) {
-            this.enableStreamingEngine = Output.ofNullable(enableStreamingEngine);
+            this.enableStreamingEngine = Codegen.ofNullable(enableStreamingEngine);
             return this;
         }
         public Builder ipConfiguration(@Nullable Output<String> ipConfiguration) {
@@ -424,7 +425,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipConfiguration(@Nullable String ipConfiguration) {
-            this.ipConfiguration = Output.ofNullable(ipConfiguration);
+            this.ipConfiguration = Codegen.ofNullable(ipConfiguration);
             return this;
         }
         public Builder jobId(@Nullable Output<String> jobId) {
@@ -432,7 +433,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobId(@Nullable String jobId) {
-            this.jobId = Output.ofNullable(jobId);
+            this.jobId = Codegen.ofNullable(jobId);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -440,7 +441,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,Object>> labels) {
@@ -448,7 +449,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,Object> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -456,7 +457,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder maxWorkers(@Nullable Output<Integer> maxWorkers) {
@@ -464,7 +465,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxWorkers(@Nullable Integer maxWorkers) {
-            this.maxWorkers = Output.ofNullable(maxWorkers);
+            this.maxWorkers = Codegen.ofNullable(maxWorkers);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -472,7 +473,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -480,7 +481,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder onDelete(@Nullable Output<String> onDelete) {
@@ -488,7 +489,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onDelete(@Nullable String onDelete) {
-            this.onDelete = Output.ofNullable(onDelete);
+            this.onDelete = Codegen.ofNullable(onDelete);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
@@ -496,7 +497,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -504,7 +505,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -512,7 +513,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
@@ -520,7 +521,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -528,7 +529,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -536,7 +537,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder tempGcsLocation(@Nullable Output<String> tempGcsLocation) {
@@ -544,7 +545,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tempGcsLocation(@Nullable String tempGcsLocation) {
-            this.tempGcsLocation = Output.ofNullable(tempGcsLocation);
+            this.tempGcsLocation = Codegen.ofNullable(tempGcsLocation);
             return this;
         }
         public Builder templateGcsPath(@Nullable Output<String> templateGcsPath) {
@@ -552,7 +553,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateGcsPath(@Nullable String templateGcsPath) {
-            this.templateGcsPath = Output.ofNullable(templateGcsPath);
+            this.templateGcsPath = Codegen.ofNullable(templateGcsPath);
             return this;
         }
         public Builder transformNameMapping(@Nullable Output<Map<String,Object>> transformNameMapping) {
@@ -560,7 +561,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transformNameMapping(@Nullable Map<String,Object> transformNameMapping) {
-            this.transformNameMapping = Output.ofNullable(transformNameMapping);
+            this.transformNameMapping = Codegen.ofNullable(transformNameMapping);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -568,7 +569,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -576,7 +577,7 @@ public final class JobState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public JobState build() {
             return new JobState(additionalExperiments, enableStreamingEngine, ipConfiguration, jobId, kmsKeyName, labels, machineType, maxWorkers, name, network, onDelete, parameters, project, region, serviceAccountEmail, state, subnetwork, tempGcsLocation, templateGcsPath, transformNameMapping, type, zone);

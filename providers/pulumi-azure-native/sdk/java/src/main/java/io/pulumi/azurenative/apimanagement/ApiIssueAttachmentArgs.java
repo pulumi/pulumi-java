@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> attachmentId;
 
     public Output<String> getAttachmentId() {
-        return this.attachmentId == null ? Output.empty() : this.attachmentId;
+        return this.attachmentId == null ? Codegen.empty() : this.attachmentId;
     }
 
     /**
@@ -122,14 +123,14 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ApiIssueAttachmentArgs() {
-        this.apiId = Output.empty();
-        this.attachmentId = Output.empty();
-        this.content = Output.empty();
-        this.contentFormat = Output.empty();
-        this.issueId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.title = Output.empty();
+        this.apiId = Codegen.empty();
+        this.attachmentId = Codegen.empty();
+        this.content = Codegen.empty();
+        this.contentFormat = Codegen.empty();
+        this.issueId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ApiIssueAttachmentArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder attachmentId(@Nullable String attachmentId) {
-            this.attachmentId = Output.ofNullable(attachmentId);
+            this.attachmentId = Codegen.ofNullable(attachmentId);
             return this;
         }
         public Builder content(Output<String> content) {

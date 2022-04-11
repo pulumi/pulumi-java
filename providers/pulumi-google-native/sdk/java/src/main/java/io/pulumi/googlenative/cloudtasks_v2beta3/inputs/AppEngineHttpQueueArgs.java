@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudtasks_v2beta3.inputs.AppEngineRoutingArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AppEngineHttpQueueArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride;
 
     public Output<AppEngineRoutingArgs> getAppEngineRoutingOverride() {
-        return this.appEngineRoutingOverride == null ? Output.empty() : this.appEngineRoutingOverride;
+        return this.appEngineRoutingOverride == null ? Codegen.empty() : this.appEngineRoutingOverride;
     }
 
     public AppEngineHttpQueueArgs(@Nullable Output<AppEngineRoutingArgs> appEngineRoutingOverride) {
@@ -34,7 +35,7 @@ public final class AppEngineHttpQueueArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AppEngineHttpQueueArgs() {
-        this.appEngineRoutingOverride = Output.empty();
+        this.appEngineRoutingOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AppEngineHttpQueueArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder appEngineRoutingOverride(@Nullable AppEngineRoutingArgs appEngineRoutingOverride) {
-            this.appEngineRoutingOverride = Output.ofNullable(appEngineRoutingOverride);
+            this.appEngineRoutingOverride = Codegen.ofNullable(appEngineRoutingOverride);
             return this;
         }        public AppEngineHttpQueueArgs build() {
             return new AppEngineHttpQueueArgs(appEngineRoutingOverride);

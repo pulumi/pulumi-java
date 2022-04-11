@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesInstanceGetArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -45,8 +46,8 @@ public final class SpokeLinkedRouterApplianceInstancesGetArgs extends io.pulumi.
     }
 
     private SpokeLinkedRouterApplianceInstancesGetArgs() {
-        this.instances = Output.empty();
-        this.siteToSiteDataTransfer = Output.empty();
+        this.instances = Codegen.empty();
+        this.siteToSiteDataTransfer = Codegen.empty();
     }
 
     public static Builder builder() {

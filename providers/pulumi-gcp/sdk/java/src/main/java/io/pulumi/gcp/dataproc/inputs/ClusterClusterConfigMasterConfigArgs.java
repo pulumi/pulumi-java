@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigMasterConfigAcceleratorArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigMasterConfigDiskConfigArgs;
 import java.lang.Integer;
@@ -26,7 +27,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
       private final @Nullable Output<List<ClusterClusterConfigMasterConfigAcceleratorArgs>> accelerators;
 
     public Output<List<ClusterClusterConfigMasterConfigAcceleratorArgs>> getAccelerators() {
-        return this.accelerators == null ? Output.empty() : this.accelerators;
+        return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
       private final @Nullable Output<ClusterClusterConfigMasterConfigDiskConfigArgs> diskConfig;
 
     public Output<ClusterClusterConfigMasterConfigDiskConfigArgs> getDiskConfig() {
-        return this.diskConfig == null ? Output.empty() : this.diskConfig;
+        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
     /**
@@ -49,14 +50,14 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
-        return this.imageUri == null ? Output.empty() : this.imageUri;
+        return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
     @Import(name="instanceNames")
       private final @Nullable Output<List<String>> instanceNames;
 
     public Output<List<String>> getInstanceNames() {
-        return this.instanceNames == null ? Output.empty() : this.instanceNames;
+        return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
+        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> numInstances;
 
     public Output<Integer> getNumInstances() {
-        return this.numInstances == null ? Output.empty() : this.numInstances;
+        return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 
     public ClusterClusterConfigMasterConfigArgs(
@@ -116,13 +117,13 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
     }
 
     private ClusterClusterConfigMasterConfigArgs() {
-        this.accelerators = Output.empty();
-        this.diskConfig = Output.empty();
-        this.imageUri = Output.empty();
-        this.instanceNames = Output.empty();
-        this.machineType = Output.empty();
-        this.minCpuPlatform = Output.empty();
-        this.numInstances = Output.empty();
+        this.accelerators = Codegen.empty();
+        this.diskConfig = Codegen.empty();
+        this.imageUri = Codegen.empty();
+        this.instanceNames = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.minCpuPlatform = Codegen.empty();
+        this.numInstances = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder accelerators(@Nullable List<ClusterClusterConfigMasterConfigAcceleratorArgs> accelerators) {
-            this.accelerators = Output.ofNullable(accelerators);
+            this.accelerators = Codegen.ofNullable(accelerators);
             return this;
         }
         public Builder accelerators(ClusterClusterConfigMasterConfigAcceleratorArgs... accelerators) {
@@ -173,7 +174,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder diskConfig(@Nullable ClusterClusterConfigMasterConfigDiskConfigArgs diskConfig) {
-            this.diskConfig = Output.ofNullable(diskConfig);
+            this.diskConfig = Codegen.ofNullable(diskConfig);
             return this;
         }
         public Builder imageUri(@Nullable Output<String> imageUri) {
@@ -181,7 +182,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Output.ofNullable(imageUri);
+            this.imageUri = Codegen.ofNullable(imageUri);
             return this;
         }
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
@@ -189,7 +190,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Output.ofNullable(instanceNames);
+            this.instanceNames = Codegen.ofNullable(instanceNames);
             return this;
         }
         public Builder instanceNames(String... instanceNames) {
@@ -200,7 +201,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
@@ -208,7 +209,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
             return this;
         }
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
@@ -216,7 +217,7 @@ public final class ClusterClusterConfigMasterConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Output.ofNullable(numInstances);
+            this.numInstances = Codegen.ofNullable(numInstances);
             return this;
         }        public ClusterClusterConfigMasterConfigArgs build() {
             return new ClusterClusterConfigMasterConfigArgs(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);

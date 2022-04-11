@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.enums.DiskCreateOptionTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Output<Either<String,DiskCreateOptionTypes>> getCreateOption() {
-        return this.createOption == null ? Output.empty() : this.createOption;
+        return this.createOption == null ? Codegen.empty() : this.createOption;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public DataDiskArgs(
@@ -64,9 +65,9 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataDiskArgs() {
-        this.createOption = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.name = Output.empty();
+        this.createOption = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createOption(@Nullable Either<String,DiskCreateOptionTypes> createOption) {
-            this.createOption = Output.ofNullable(createOption);
+            this.createOption = Codegen.ofNullable(createOption);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -106,7 +107,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -114,7 +115,7 @@ public final class DataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public DataDiskArgs build() {
             return new DataDiskArgs(createOption, diskSizeGB, name);

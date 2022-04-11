@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> abort;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs> getAbort() {
-        return this.abort == null ? Output.empty() : this.abort;
+        return this.abort == null ? Codegen.empty() : this.abort;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay;
 
     public Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> getDelay() {
-        return this.delay == null ? Output.empty() : this.delay;
+        return this.delay == null ? Codegen.empty() : this.delay;
     }
 
     public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs(
@@ -49,8 +50,8 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
     }
 
     private RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs() {
-        this.abort = Output.empty();
-        this.delay = Output.empty();
+        this.abort = Codegen.empty();
+        this.delay = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             return this;
         }
         public Builder abort(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortArgs abort) {
-            this.abort = Output.ofNullable(abort);
+            this.abort = Codegen.ofNullable(abort);
             return this;
         }
         public Builder delay(@Nullable Output<RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs> delay) {
@@ -88,7 +89,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPoli
             return this;
         }
         public Builder delay(@Nullable RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyDelayArgs delay) {
-            this.delay = Output.ofNullable(delay);
+            this.delay = Codegen.ofNullable(delay);
             return this;
         }        public RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyArgs(abort, delay);

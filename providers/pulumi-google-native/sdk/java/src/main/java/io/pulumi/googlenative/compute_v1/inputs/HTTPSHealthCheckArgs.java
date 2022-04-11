@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.HTTPSHealthCheckPortSpecification;
 import io.pulumi.googlenative.compute_v1.enums.HTTPSHealthCheckProxyHeader;
 import java.lang.Integer;
@@ -25,7 +26,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> portName;
 
     public Output<String> getPortName() {
-        return this.portName == null ? Output.empty() : this.portName;
+        return this.portName == null ? Codegen.empty() : this.portName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification;
 
     public Output<HTTPSHealthCheckPortSpecification> getPortSpecification() {
-        return this.portSpecification == null ? Output.empty() : this.portSpecification;
+        return this.portSpecification == null ? Codegen.empty() : this.portSpecification;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader;
 
     public Output<HTTPSHealthCheckProxyHeader> getProxyHeader() {
-        return this.proxyHeader == null ? Output.empty() : this.proxyHeader;
+        return this.proxyHeader == null ? Codegen.empty() : this.proxyHeader;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> requestPath;
 
     public Output<String> getRequestPath() {
-        return this.requestPath == null ? Output.empty() : this.requestPath;
+        return this.requestPath == null ? Codegen.empty() : this.requestPath;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> response;
 
     public Output<String> getResponse() {
-        return this.response == null ? Output.empty() : this.response;
+        return this.response == null ? Codegen.empty() : this.response;
     }
 
     public HTTPSHealthCheckArgs(
@@ -112,13 +113,13 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private HTTPSHealthCheckArgs() {
-        this.host = Output.empty();
-        this.port = Output.empty();
-        this.portName = Output.empty();
-        this.portSpecification = Output.empty();
-        this.proxyHeader = Output.empty();
-        this.requestPath = Output.empty();
-        this.response = Output.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
+        this.portName = Codegen.empty();
+        this.portSpecification = Codegen.empty();
+        this.proxyHeader = Codegen.empty();
+        this.requestPath = Codegen.empty();
+        this.response = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -166,7 +167,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder portName(@Nullable Output<String> portName) {
@@ -174,7 +175,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder portName(@Nullable String portName) {
-            this.portName = Output.ofNullable(portName);
+            this.portName = Codegen.ofNullable(portName);
             return this;
         }
         public Builder portSpecification(@Nullable Output<HTTPSHealthCheckPortSpecification> portSpecification) {
@@ -182,7 +183,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder portSpecification(@Nullable HTTPSHealthCheckPortSpecification portSpecification) {
-            this.portSpecification = Output.ofNullable(portSpecification);
+            this.portSpecification = Codegen.ofNullable(portSpecification);
             return this;
         }
         public Builder proxyHeader(@Nullable Output<HTTPSHealthCheckProxyHeader> proxyHeader) {
@@ -190,7 +191,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder proxyHeader(@Nullable HTTPSHealthCheckProxyHeader proxyHeader) {
-            this.proxyHeader = Output.ofNullable(proxyHeader);
+            this.proxyHeader = Codegen.ofNullable(proxyHeader);
             return this;
         }
         public Builder requestPath(@Nullable Output<String> requestPath) {
@@ -198,7 +199,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requestPath(@Nullable String requestPath) {
-            this.requestPath = Output.ofNullable(requestPath);
+            this.requestPath = Codegen.ofNullable(requestPath);
             return this;
         }
         public Builder response(@Nullable Output<String> response) {
@@ -206,7 +207,7 @@ public final class HTTPSHealthCheckArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder response(@Nullable String response) {
-            this.response = Output.ofNullable(response);
+            this.response = Codegen.ofNullable(response);
             return this;
         }        public HTTPSHealthCheckArgs build() {
             return new HTTPSHealthCheckArgs(host, port, portName, portSpecification, proxyHeader, requestPath, response);

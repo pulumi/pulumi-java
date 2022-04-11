@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.CreateProtectionContainerMappingInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
       private final @Nullable Output<String> mappingName;
 
     public Output<String> getMappingName() {
-        return this.mappingName == null ? Output.empty() : this.mappingName;
+        return this.mappingName == null ? Codegen.empty() : this.mappingName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
       private final @Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties;
 
     public Output<CreateProtectionContainerMappingInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -97,12 +98,12 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
     }
 
     private ReplicationProtectionContainerMappingArgs() {
-        this.fabricName = Output.empty();
-        this.mappingName = Output.empty();
-        this.properties = Output.empty();
-        this.protectionContainerName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.mappingName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.protectionContainerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder mappingName(@Nullable String mappingName) {
-            this.mappingName = Output.ofNullable(mappingName);
+            this.mappingName = Codegen.ofNullable(mappingName);
             return this;
         }
         public Builder properties(@Nullable Output<CreateProtectionContainerMappingInputPropertiesArgs> properties) {
@@ -156,7 +157,7 @@ public final class ReplicationProtectionContainerMappingArgs extends io.pulumi.r
             return this;
         }
         public Builder properties(@Nullable CreateProtectionContainerMappingInputPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder protectionContainerName(Output<String> protectionContainerName) {

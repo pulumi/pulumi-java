@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.servicemanagement_v1.enums.RolloutStatus;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DeleteServiceStrategyArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.TrafficPercentStrategyArgs;
@@ -25,7 +26,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
     public Output<DeleteServiceStrategyArgs> getDeleteServiceStrategy() {
-        return this.deleteServiceStrategy == null ? Output.empty() : this.deleteServiceStrategy;
+        return this.deleteServiceStrategy == null ? Codegen.empty() : this.deleteServiceStrategy;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rolloutId;
 
     public Output<String> getRolloutId() {
-        return this.rolloutId == null ? Output.empty() : this.rolloutId;
+        return this.rolloutId == null ? Codegen.empty() : this.rolloutId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RolloutStatus> status;
 
     public Output<RolloutStatus> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
     public Output<TrafficPercentStrategyArgs> getTrafficPercentStrategy() {
-        return this.trafficPercentStrategy == null ? Output.empty() : this.trafficPercentStrategy;
+        return this.trafficPercentStrategy == null ? Codegen.empty() : this.trafficPercentStrategy;
     }
 
     public RolloutArgs(
@@ -99,12 +100,12 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolloutArgs() {
-        this.createTime = Output.empty();
-        this.deleteServiceStrategy = Output.empty();
-        this.rolloutId = Output.empty();
-        this.serviceName = Output.empty();
-        this.status = Output.empty();
-        this.trafficPercentStrategy = Output.empty();
+        this.createTime = Codegen.empty();
+        this.deleteServiceStrategy = Codegen.empty();
+        this.rolloutId = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.status = Codegen.empty();
+        this.trafficPercentStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder deleteServiceStrategy(@Nullable Output<DeleteServiceStrategyArgs> deleteServiceStrategy) {
@@ -150,7 +151,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteServiceStrategy(@Nullable DeleteServiceStrategyArgs deleteServiceStrategy) {
-            this.deleteServiceStrategy = Output.ofNullable(deleteServiceStrategy);
+            this.deleteServiceStrategy = Codegen.ofNullable(deleteServiceStrategy);
             return this;
         }
         public Builder rolloutId(@Nullable Output<String> rolloutId) {
@@ -158,7 +159,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rolloutId(@Nullable String rolloutId) {
-            this.rolloutId = Output.ofNullable(rolloutId);
+            this.rolloutId = Codegen.ofNullable(rolloutId);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -174,7 +175,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable RolloutStatus status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder trafficPercentStrategy(@Nullable Output<TrafficPercentStrategyArgs> trafficPercentStrategy) {
@@ -182,7 +183,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficPercentStrategy(@Nullable TrafficPercentStrategyArgs trafficPercentStrategy) {
-            this.trafficPercentStrategy = Output.ofNullable(trafficPercentStrategy);
+            this.trafficPercentStrategy = Codegen.ofNullable(trafficPercentStrategy);
             return this;
         }        public RolloutArgs build() {
             return new RolloutArgs(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);

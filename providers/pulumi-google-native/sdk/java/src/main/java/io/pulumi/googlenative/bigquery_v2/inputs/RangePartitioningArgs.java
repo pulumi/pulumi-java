@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<RangePartitioningRangeArgs> range;
 
     public Output<RangePartitioningRangeArgs> getRange() {
-        return this.range == null ? Output.empty() : this.range;
+        return this.range == null ? Codegen.empty() : this.range;
     }
 
     public RangePartitioningArgs(
@@ -45,8 +46,8 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RangePartitioningArgs() {
-        this.field = Output.empty();
-        this.range = Output.empty();
+        this.field = Codegen.empty();
+        this.range = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder range(@Nullable Output<RangePartitioningRangeArgs> range) {
@@ -84,7 +85,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder range(@Nullable RangePartitioningRangeArgs range) {
-            this.range = Output.ofNullable(range);
+            this.range = Codegen.ofNullable(range);
             return this;
         }        public RangePartitioningArgs build() {
             return new RangePartitioningArgs(field, range);

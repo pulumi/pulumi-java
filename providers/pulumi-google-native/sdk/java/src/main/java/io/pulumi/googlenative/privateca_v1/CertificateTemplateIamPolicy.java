@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateTemplateIamPolicyArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class CertificateTemplateIamPolicy extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateTemplateIamPolicy(String name, CertificateTemplateIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:CertificateTemplateIamPolicy", name, args == null ? CertificateTemplateIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:CertificateTemplateIamPolicy", name, args == null ? CertificateTemplateIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateTemplateIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.panorama;
 import io.pulumi.awsnative.panorama.inputs.PackageTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PackageTagArgs>> tags;
 
     public Output<List<PackageTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PackageArgs(
@@ -38,8 +39,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageArgs() {
-        this.packageName = Output.empty();
-        this.tags = Output.empty();
+        this.packageName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder tags(@Nullable Output<List<PackageTagArgs>> tags) {
@@ -77,7 +78,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PackageTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PackageTagArgs... tags) {

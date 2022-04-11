@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> restApiId;
 
     public Output<String> getRestApiId() {
-        return this.restApiId == null ? Output.empty() : this.restApiId;
+        return this.restApiId == null ? Codegen.empty() : this.restApiId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public DocumentationVersionState(
@@ -57,9 +58,9 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
     }
 
     private DocumentationVersionState() {
-        this.description = Output.empty();
-        this.restApiId = Output.empty();
-        this.version = Output.empty();
+        this.description = Codegen.empty();
+        this.restApiId = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder restApiId(@Nullable Output<String> restApiId) {
@@ -99,7 +100,7 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder restApiId(@Nullable String restApiId) {
-            this.restApiId = Output.ofNullable(restApiId);
+            this.restApiId = Codegen.ofNullable(restApiId);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -107,7 +108,7 @@ public final class DocumentationVersionState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public DocumentationVersionState build() {
             return new DocumentationVersionState(description, restApiId, version);

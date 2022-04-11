@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.enums.TopicRuleCannedAccessControlList;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<TopicRuleCannedAccessControlList> cannedAcl;
 
     public Output<TopicRuleCannedAccessControlList> getCannedAcl() {
-        return this.cannedAcl == null ? Output.empty() : this.cannedAcl;
+        return this.cannedAcl == null ? Codegen.empty() : this.cannedAcl;
     }
 
     @Import(name="key", required=true)
@@ -55,10 +56,10 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TopicRuleS3ActionArgs() {
-        this.bucketName = Output.empty();
-        this.cannedAcl = Output.empty();
-        this.key = Output.empty();
-        this.roleArn = Output.empty();
+        this.bucketName = Codegen.empty();
+        this.cannedAcl = Codegen.empty();
+        this.key = Codegen.empty();
+        this.roleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class TopicRuleS3ActionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder cannedAcl(@Nullable TopicRuleCannedAccessControlList cannedAcl) {
-            this.cannedAcl = Output.ofNullable(cannedAcl);
+            this.cannedAcl = Codegen.ofNullable(cannedAcl);
             return this;
         }
         public Builder key(Output<String> key) {

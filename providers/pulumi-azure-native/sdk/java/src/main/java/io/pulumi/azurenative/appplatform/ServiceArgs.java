@@ -7,6 +7,7 @@ import io.pulumi.azurenative.appplatform.inputs.ClusterResourcePropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterResourcePropertiesArgs> properties;
 
     public Output<ClusterResourcePropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceArgs(
@@ -99,12 +100,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<ClusterResourcePropertiesArgs> properties) {
@@ -150,7 +151,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable ClusterResourcePropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -166,7 +167,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder sku(@Nullable Output<SkuArgs> sku) {
@@ -174,7 +175,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -182,7 +183,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(location, properties, resourceGroupName, serviceName, sku, tags);

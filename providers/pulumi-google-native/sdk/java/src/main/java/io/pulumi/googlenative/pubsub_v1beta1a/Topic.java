@@ -6,6 +6,7 @@ package io.pulumi.googlenative.pubsub_v1beta1a;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1beta1a.TopicArgs;
 import java.lang.String;
@@ -54,7 +55,7 @@ public class Topic extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Topic(String name, @Nullable TopicArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:pubsub/v1beta1a:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:pubsub/v1beta1a:Topic", name, args == null ? TopicArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Topic(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

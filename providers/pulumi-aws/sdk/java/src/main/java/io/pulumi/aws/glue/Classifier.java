@@ -13,6 +13,7 @@ import io.pulumi.aws.glue.outputs.ClassifierXmlClassifier;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -127,7 +128,7 @@ public class Classifier extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Classifier(String name, @Nullable ClassifierArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:glue/classifier:Classifier", name, args == null ? ClassifierArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:glue/classifier:Classifier", name, args == null ? ClassifierArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Classifier(String name, Output<String> id, @Nullable ClassifierState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -223,7 +224,7 @@ public class LiveOutput extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public LiveOutput(String name, LiveOutputArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:media:LiveOutput", name, args == null ? LiveOutputArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:media:LiveOutput", name, args == null ? LiveOutputArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private LiveOutput(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

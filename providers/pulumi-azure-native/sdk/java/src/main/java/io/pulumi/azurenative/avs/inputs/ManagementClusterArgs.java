@@ -5,6 +5,7 @@ package io.pulumi.azurenative.avs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class ManagementClusterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ManagementClusterArgs() {
-        this.clusterSize = Output.empty();
+        this.clusterSize = Codegen.empty();
     }
 
     public static Builder builder() {

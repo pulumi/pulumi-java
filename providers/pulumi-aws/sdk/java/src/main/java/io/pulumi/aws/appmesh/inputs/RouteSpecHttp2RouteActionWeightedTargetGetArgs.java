@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class RouteSpecHttp2RouteActionWeightedTargetGetArgs extends io.pul
     }
 
     private RouteSpecHttp2RouteActionWeightedTargetGetArgs() {
-        this.virtualNode = Output.empty();
-        this.weight = Output.empty();
+        this.virtualNode = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {

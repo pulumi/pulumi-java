@@ -12,6 +12,7 @@ import io.pulumi.aws.sagemaker.outputs.WorkforceSourceIpConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -138,7 +139,7 @@ public class Workforce extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workforce(String name, WorkforceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sagemaker/workforce:Workforce", name, args == null ? WorkforceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sagemaker/workforce:Workforce", name, args == null ? WorkforceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workforce(String name, Output<String> id, @Nullable WorkforceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

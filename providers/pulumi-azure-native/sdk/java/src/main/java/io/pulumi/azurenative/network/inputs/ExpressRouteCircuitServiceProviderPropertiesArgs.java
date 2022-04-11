@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
       private final @Nullable Output<Integer> bandwidthInMbps;
 
     public Output<Integer> getBandwidthInMbps() {
-        return this.bandwidthInMbps == null ? Output.empty() : this.bandwidthInMbps;
+        return this.bandwidthInMbps == null ? Codegen.empty() : this.bandwidthInMbps;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
       private final @Nullable Output<String> peeringLocation;
 
     public Output<String> getPeeringLocation() {
-        return this.peeringLocation == null ? Output.empty() : this.peeringLocation;
+        return this.peeringLocation == null ? Codegen.empty() : this.peeringLocation;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
       private final @Nullable Output<String> serviceProviderName;
 
     public Output<String> getServiceProviderName() {
-        return this.serviceProviderName == null ? Output.empty() : this.serviceProviderName;
+        return this.serviceProviderName == null ? Codegen.empty() : this.serviceProviderName;
     }
 
     public ExpressRouteCircuitServiceProviderPropertiesArgs(
@@ -62,9 +63,9 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
     }
 
     private ExpressRouteCircuitServiceProviderPropertiesArgs() {
-        this.bandwidthInMbps = Output.empty();
-        this.peeringLocation = Output.empty();
-        this.serviceProviderName = Output.empty();
+        this.bandwidthInMbps = Codegen.empty();
+        this.peeringLocation = Codegen.empty();
+        this.serviceProviderName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
             return this;
         }
         public Builder bandwidthInMbps(@Nullable Integer bandwidthInMbps) {
-            this.bandwidthInMbps = Output.ofNullable(bandwidthInMbps);
+            this.bandwidthInMbps = Codegen.ofNullable(bandwidthInMbps);
             return this;
         }
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
@@ -104,7 +105,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
             return this;
         }
         public Builder peeringLocation(@Nullable String peeringLocation) {
-            this.peeringLocation = Output.ofNullable(peeringLocation);
+            this.peeringLocation = Codegen.ofNullable(peeringLocation);
             return this;
         }
         public Builder serviceProviderName(@Nullable Output<String> serviceProviderName) {
@@ -112,7 +113,7 @@ public final class ExpressRouteCircuitServiceProviderPropertiesArgs extends io.p
             return this;
         }
         public Builder serviceProviderName(@Nullable String serviceProviderName) {
-            this.serviceProviderName = Output.ofNullable(serviceProviderName);
+            this.serviceProviderName = Codegen.ofNullable(serviceProviderName);
             return this;
         }        public ExpressRouteCircuitServiceProviderPropertiesArgs build() {
             return new ExpressRouteCircuitServiceProviderPropertiesArgs(bandwidthInMbps, peeringLocation, serviceProviderName);

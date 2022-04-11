@@ -7,6 +7,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableContributorInsightsSpecifi
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReadProvisionedThroughputSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +21,7 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
       private final @Nullable Output<GlobalTableContributorInsightsSpecificationArgs> contributorInsightsSpecification;
 
     public Output<GlobalTableContributorInsightsSpecificationArgs> getContributorInsightsSpecification() {
-        return this.contributorInsightsSpecification == null ? Output.empty() : this.contributorInsightsSpecification;
+        return this.contributorInsightsSpecification == null ? Codegen.empty() : this.contributorInsightsSpecification;
     }
 
     @Import(name="indexName", required=true)
@@ -34,7 +35,7 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
       private final @Nullable Output<GlobalTableReadProvisionedThroughputSettingsArgs> readProvisionedThroughputSettings;
 
     public Output<GlobalTableReadProvisionedThroughputSettingsArgs> getReadProvisionedThroughputSettings() {
-        return this.readProvisionedThroughputSettings == null ? Output.empty() : this.readProvisionedThroughputSettings;
+        return this.readProvisionedThroughputSettings == null ? Codegen.empty() : this.readProvisionedThroughputSettings;
     }
 
     public GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(
@@ -47,9 +48,9 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
     }
 
     private GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs() {
-        this.contributorInsightsSpecification = Output.empty();
-        this.indexName = Output.empty();
-        this.readProvisionedThroughputSettings = Output.empty();
+        this.contributorInsightsSpecification = Codegen.empty();
+        this.indexName = Codegen.empty();
+        this.readProvisionedThroughputSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
             return this;
         }
         public Builder contributorInsightsSpecification(@Nullable GlobalTableContributorInsightsSpecificationArgs contributorInsightsSpecification) {
-            this.contributorInsightsSpecification = Output.ofNullable(contributorInsightsSpecification);
+            this.contributorInsightsSpecification = Codegen.ofNullable(contributorInsightsSpecification);
             return this;
         }
         public Builder indexName(Output<String> indexName) {
@@ -97,7 +98,7 @@ public final class GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs exten
             return this;
         }
         public Builder readProvisionedThroughputSettings(@Nullable GlobalTableReadProvisionedThroughputSettingsArgs readProvisionedThroughputSettings) {
-            this.readProvisionedThroughputSettings = Output.ofNullable(readProvisionedThroughputSettings);
+            this.readProvisionedThroughputSettings = Codegen.ofNullable(readProvisionedThroughputSettings);
             return this;
         }        public GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs build() {
             return new GlobalTableReplicaGlobalSecondaryIndexSpecificationArgs(contributorInsightsSpecification, indexName, readProvisionedThroughputSettings);

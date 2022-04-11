@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> certificateAlternativeNames;
 
     public Output<List<String>> getCertificateAlternativeNames() {
-        return this.certificateAlternativeNames == null ? Output.empty() : this.certificateAlternativeNames;
+        return this.certificateAlternativeNames == null ? Codegen.empty() : this.certificateAlternativeNames;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> isAttached;
 
     public Output<Boolean> getIsAttached() {
-        return this.isAttached == null ? Output.empty() : this.isAttached;
+        return this.isAttached == null ? Codegen.empty() : this.isAttached;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
     }
 
     private LoadBalancerTlsCertificateArgs() {
-        this.certificateAlternativeNames = Output.empty();
-        this.certificateDomainName = Output.empty();
-        this.certificateName = Output.empty();
-        this.isAttached = Output.empty();
-        this.loadBalancerName = Output.empty();
+        this.certificateAlternativeNames = Codegen.empty();
+        this.certificateDomainName = Codegen.empty();
+        this.certificateName = Codegen.empty();
+        this.isAttached = Codegen.empty();
+        this.loadBalancerName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder certificateAlternativeNames(@Nullable List<String> certificateAlternativeNames) {
-            this.certificateAlternativeNames = Output.ofNullable(certificateAlternativeNames);
+            this.certificateAlternativeNames = Codegen.ofNullable(certificateAlternativeNames);
             return this;
         }
         public Builder certificateAlternativeNames(String... certificateAlternativeNames) {
@@ -152,7 +153,7 @@ public final class LoadBalancerTlsCertificateArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder isAttached(@Nullable Boolean isAttached) {
-            this.isAttached = Output.ofNullable(isAttached);
+            this.isAttached = Codegen.ofNullable(isAttached);
             return this;
         }
         public Builder loadBalancerName(Output<String> loadBalancerName) {

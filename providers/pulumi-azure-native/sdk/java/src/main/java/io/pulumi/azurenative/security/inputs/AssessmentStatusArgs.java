@@ -7,6 +7,7 @@ import io.pulumi.azurenative.security.enums.AssessmentStatusCode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> cause;
 
     public Output<String> getCause() {
-        return this.cause == null ? Output.empty() : this.cause;
+        return this.cause == null ? Codegen.empty() : this.cause;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     public AssessmentStatusArgs(
@@ -63,9 +64,9 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private AssessmentStatusArgs() {
-        this.cause = Output.empty();
-        this.code = Output.empty();
-        this.description = Output.empty();
+        this.cause = Codegen.empty();
+        this.code = Codegen.empty();
+        this.description = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder cause(@Nullable String cause) {
-            this.cause = Output.ofNullable(cause);
+            this.cause = Codegen.ofNullable(cause);
             return this;
         }
         public Builder code(Output<Either<String,AssessmentStatusCode>> code) {
@@ -113,7 +114,7 @@ public final class AssessmentStatusArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }        public AssessmentStatusArgs build() {
             return new AssessmentStatusArgs(cause, code, description);

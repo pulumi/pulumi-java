@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionDeviceUnderTestArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,14 +29,14 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
       private final @Nullable Output<List<SuiteDefinitionDeviceUnderTestArgs>> devices;
 
     public Output<List<SuiteDefinitionDeviceUnderTestArgs>> getDevices() {
-        return this.devices == null ? Output.empty() : this.devices;
+        return this.devices == null ? Codegen.empty() : this.devices;
     }
 
     @Import(name="intendedForQualification")
       private final @Nullable Output<Boolean> intendedForQualification;
 
     public Output<Boolean> getIntendedForQualification() {
-        return this.intendedForQualification == null ? Output.empty() : this.intendedForQualification;
+        return this.intendedForQualification == null ? Codegen.empty() : this.intendedForQualification;
     }
 
     @Import(name="rootGroup", required=true)
@@ -49,7 +50,7 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
       private final @Nullable Output<String> suiteDefinitionName;
 
     public Output<String> getSuiteDefinitionName() {
-        return this.suiteDefinitionName == null ? Output.empty() : this.suiteDefinitionName;
+        return this.suiteDefinitionName == null ? Codegen.empty() : this.suiteDefinitionName;
     }
 
     public SuiteDefinitionConfigurationPropertiesArgs(
@@ -66,11 +67,11 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
     }
 
     private SuiteDefinitionConfigurationPropertiesArgs() {
-        this.devicePermissionRoleArn = Output.empty();
-        this.devices = Output.empty();
-        this.intendedForQualification = Output.empty();
-        this.rootGroup = Output.empty();
-        this.suiteDefinitionName = Output.empty();
+        this.devicePermissionRoleArn = Codegen.empty();
+        this.devices = Codegen.empty();
+        this.intendedForQualification = Codegen.empty();
+        this.rootGroup = Codegen.empty();
+        this.suiteDefinitionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder devices(@Nullable List<SuiteDefinitionDeviceUnderTestArgs> devices) {
-            this.devices = Output.ofNullable(devices);
+            this.devices = Codegen.ofNullable(devices);
             return this;
         }
         public Builder devices(SuiteDefinitionDeviceUnderTestArgs... devices) {
@@ -125,7 +126,7 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder intendedForQualification(@Nullable Boolean intendedForQualification) {
-            this.intendedForQualification = Output.ofNullable(intendedForQualification);
+            this.intendedForQualification = Codegen.ofNullable(intendedForQualification);
             return this;
         }
         public Builder rootGroup(Output<String> rootGroup) {
@@ -141,7 +142,7 @@ public final class SuiteDefinitionConfigurationPropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder suiteDefinitionName(@Nullable String suiteDefinitionName) {
-            this.suiteDefinitionName = Output.ofNullable(suiteDefinitionName);
+            this.suiteDefinitionName = Codegen.ofNullable(suiteDefinitionName);
             return this;
         }        public SuiteDefinitionConfigurationPropertiesArgs build() {
             return new SuiteDefinitionConfigurationPropertiesArgs(devicePermissionRoleArn, devices, intendedForQualification, rootGroup, suiteDefinitionName);

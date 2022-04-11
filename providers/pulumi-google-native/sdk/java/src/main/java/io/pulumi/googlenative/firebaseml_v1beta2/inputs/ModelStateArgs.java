@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebaseml_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> published;
 
     public Output<Boolean> getPublished() {
-        return this.published == null ? Output.empty() : this.published;
+        return this.published == null ? Codegen.empty() : this.published;
     }
 
     public ModelStateArgs(@Nullable Output<Boolean> published) {
@@ -34,7 +35,7 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelStateArgs() {
-        this.published = Output.empty();
+        this.published = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ModelStateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder published(@Nullable Boolean published) {
-            this.published = Output.ofNullable(published);
+            this.published = Codegen.ofNullable(published);
             return this;
         }        public ModelStateArgs build() {
             return new ModelStateArgs(published);

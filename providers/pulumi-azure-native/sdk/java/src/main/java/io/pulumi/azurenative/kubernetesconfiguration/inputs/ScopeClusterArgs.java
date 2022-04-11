@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> releaseNamespace;
 
     public Output<String> getReleaseNamespace() {
-        return this.releaseNamespace == null ? Output.empty() : this.releaseNamespace;
+        return this.releaseNamespace == null ? Codegen.empty() : this.releaseNamespace;
     }
 
     public ScopeClusterArgs(@Nullable Output<String> releaseNamespace) {
@@ -34,7 +35,7 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeClusterArgs() {
-        this.releaseNamespace = Output.empty();
+        this.releaseNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ScopeClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder releaseNamespace(@Nullable String releaseNamespace) {
-            this.releaseNamespace = Output.ofNullable(releaseNamespace);
+            this.releaseNamespace = Codegen.ofNullable(releaseNamespace);
             return this;
         }        public ScopeClusterArgs build() {
             return new ScopeClusterArgs(releaseNamespace);

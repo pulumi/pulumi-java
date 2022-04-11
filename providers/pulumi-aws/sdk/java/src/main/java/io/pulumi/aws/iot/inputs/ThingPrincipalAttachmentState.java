@@ -5,6 +5,7 @@ package io.pulumi.aws.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
       private final @Nullable Output<String> principal;
 
     public Output<String> getPrincipal() {
-        return this.principal == null ? Output.empty() : this.principal;
+        return this.principal == null ? Codegen.empty() : this.principal;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
       private final @Nullable Output<String> thing;
 
     public Output<String> getThing() {
-        return this.thing == null ? Output.empty() : this.thing;
+        return this.thing == null ? Codegen.empty() : this.thing;
     }
 
     public ThingPrincipalAttachmentState(
@@ -44,8 +45,8 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
     }
 
     private ThingPrincipalAttachmentState() {
-        this.principal = Output.empty();
-        this.thing = Output.empty();
+        this.principal = Codegen.empty();
+        this.thing = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
             return this;
         }
         public Builder principal(@Nullable String principal) {
-            this.principal = Output.ofNullable(principal);
+            this.principal = Codegen.ofNullable(principal);
             return this;
         }
         public Builder thing(@Nullable Output<String> thing) {
@@ -83,7 +84,7 @@ public final class ThingPrincipalAttachmentState extends io.pulumi.resources.Res
             return this;
         }
         public Builder thing(@Nullable String thing) {
-            this.thing = Output.ofNullable(thing);
+            this.thing = Codegen.ofNullable(thing);
             return this;
         }        public ThingPrincipalAttachmentState build() {
             return new ThingPrincipalAttachmentState(principal, thing);

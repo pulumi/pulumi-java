@@ -8,6 +8,7 @@ import io.pulumi.azurenative.compute.enums.PassNames;
 import io.pulumi.azurenative.compute.enums.SettingNames;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ComponentNames> componentName;
 
     public Output<ComponentNames> getComponentName() {
-        return this.componentName == null ? Output.empty() : this.componentName;
+        return this.componentName == null ? Codegen.empty() : this.componentName;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> content;
 
     public Output<String> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
       private final @Nullable Output<PassNames> passName;
 
     public Output<PassNames> getPassName() {
-        return this.passName == null ? Output.empty() : this.passName;
+        return this.passName == null ? Codegen.empty() : this.passName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
       private final @Nullable Output<SettingNames> settingName;
 
     public Output<SettingNames> getSettingName() {
-        return this.settingName == null ? Output.empty() : this.settingName;
+        return this.settingName == null ? Codegen.empty() : this.settingName;
     }
 
     public AdditionalUnattendContentArgs(
@@ -77,10 +78,10 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
     }
 
     private AdditionalUnattendContentArgs() {
-        this.componentName = Output.empty();
-        this.content = Output.empty();
-        this.passName = Output.empty();
-        this.settingName = Output.empty();
+        this.componentName = Codegen.empty();
+        this.content = Codegen.empty();
+        this.passName = Codegen.empty();
+        this.settingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder componentName(@Nullable ComponentNames componentName) {
-            this.componentName = Output.ofNullable(componentName);
+            this.componentName = Codegen.ofNullable(componentName);
             return this;
         }
         public Builder content(@Nullable Output<String> content) {
@@ -122,7 +123,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder content(@Nullable String content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder passName(@Nullable Output<PassNames> passName) {
@@ -130,7 +131,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder passName(@Nullable PassNames passName) {
-            this.passName = Output.ofNullable(passName);
+            this.passName = Codegen.ofNullable(passName);
             return this;
         }
         public Builder settingName(@Nullable Output<SettingNames> settingName) {
@@ -138,7 +139,7 @@ public final class AdditionalUnattendContentArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder settingName(@Nullable SettingNames settingName) {
-            this.settingName = Output.ofNullable(settingName);
+            this.settingName = Codegen.ofNullable(settingName);
             return this;
         }        public AdditionalUnattendContentArgs build() {
             return new AdditionalUnattendContentArgs(componentName, content, passName, settingName);

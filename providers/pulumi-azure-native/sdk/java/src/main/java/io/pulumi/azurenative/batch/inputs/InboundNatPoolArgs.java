@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.InboundEndpointProtocol;
 import io.pulumi.azurenative.batch.inputs.NetworkSecurityGroupRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -70,7 +71,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NetworkSecurityGroupRuleArgs>> networkSecurityGroupRules;
 
     public Output<List<NetworkSecurityGroupRuleArgs>> getNetworkSecurityGroupRules() {
-        return this.networkSecurityGroupRules == null ? Output.empty() : this.networkSecurityGroupRules;
+        return this.networkSecurityGroupRules == null ? Codegen.empty() : this.networkSecurityGroupRules;
     }
 
     @Import(name="protocol", required=true)
@@ -96,12 +97,12 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InboundNatPoolArgs() {
-        this.backendPort = Output.empty();
-        this.frontendPortRangeEnd = Output.empty();
-        this.frontendPortRangeStart = Output.empty();
-        this.name = Output.empty();
-        this.networkSecurityGroupRules = Output.empty();
-        this.protocol = Output.empty();
+        this.backendPort = Codegen.empty();
+        this.frontendPortRangeEnd = Codegen.empty();
+        this.frontendPortRangeStart = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkSecurityGroupRules = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -171,7 +172,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkSecurityGroupRules(@Nullable List<NetworkSecurityGroupRuleArgs> networkSecurityGroupRules) {
-            this.networkSecurityGroupRules = Output.ofNullable(networkSecurityGroupRules);
+            this.networkSecurityGroupRules = Codegen.ofNullable(networkSecurityGroupRules);
             return this;
         }
         public Builder networkSecurityGroupRules(NetworkSecurityGroupRuleArgs... networkSecurityGroupRules) {

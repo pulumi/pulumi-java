@@ -5,6 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> allocationWeight;
 
     public Output<Integer> getAllocationWeight() {
-        return this.allocationWeight == null ? Output.empty() : this.allocationWeight;
+        return this.allocationWeight == null ? Codegen.empty() : this.allocationWeight;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> applyAllocationPolicy;
 
     public Output<Boolean> getApplyAllocationPolicy() {
-        return this.applyAllocationPolicy == null ? Output.empty() : this.applyAllocationPolicy;
+        return this.applyAllocationPolicy == null ? Codegen.empty() : this.applyAllocationPolicy;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
     }
 
     private IotHubDefinitionDescriptionArgs() {
-        this.allocationWeight = Output.empty();
-        this.applyAllocationPolicy = Output.empty();
-        this.connectionString = Output.empty();
-        this.location = Output.empty();
+        this.allocationWeight = Codegen.empty();
+        this.applyAllocationPolicy = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder allocationWeight(@Nullable Integer allocationWeight) {
-            this.allocationWeight = Output.ofNullable(allocationWeight);
+            this.allocationWeight = Codegen.ofNullable(allocationWeight);
             return this;
         }
         public Builder applyAllocationPolicy(@Nullable Output<Boolean> applyAllocationPolicy) {
@@ -121,7 +122,7 @@ public final class IotHubDefinitionDescriptionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder applyAllocationPolicy(@Nullable Boolean applyAllocationPolicy) {
-            this.applyAllocationPolicy = Output.ofNullable(applyAllocationPolicy);
+            this.applyAllocationPolicy = Codegen.ofNullable(applyAllocationPolicy);
             return this;
         }
         public Builder connectionString(Output<String> connectionString) {

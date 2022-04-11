@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.DomainDefaultUserSettingsArgs;
 import io.pulumi.aws.sagemaker.inputs.DomainRetentionPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appNetworkAccessType;
 
     public Output<String> getAppNetworkAccessType() {
-        return this.appNetworkAccessType == null ? Output.empty() : this.appNetworkAccessType;
+        return this.appNetworkAccessType == null ? Codegen.empty() : this.appNetworkAccessType;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DomainRetentionPolicyArgs> retentionPolicy;
 
     public Output<DomainRetentionPolicyArgs> getRetentionPolicy() {
-        return this.retentionPolicy == null ? Output.empty() : this.retentionPolicy;
+        return this.retentionPolicy == null ? Codegen.empty() : this.retentionPolicy;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -139,15 +140,15 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainArgs() {
-        this.appNetworkAccessType = Output.empty();
-        this.authMode = Output.empty();
-        this.defaultUserSettings = Output.empty();
-        this.domainName = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.retentionPolicy = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.appNetworkAccessType = Codegen.empty();
+        this.authMode = Codegen.empty();
+        this.defaultUserSettings = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.retentionPolicy = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appNetworkAccessType(@Nullable String appNetworkAccessType) {
-            this.appNetworkAccessType = Output.ofNullable(appNetworkAccessType);
+            this.appNetworkAccessType = Codegen.ofNullable(appNetworkAccessType);
             return this;
         }
         public Builder authMode(Output<String> authMode) {
@@ -223,7 +224,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder retentionPolicy(@Nullable Output<DomainRetentionPolicyArgs> retentionPolicy) {
@@ -231,7 +232,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retentionPolicy(@Nullable DomainRetentionPolicyArgs retentionPolicy) {
-            this.retentionPolicy = Output.ofNullable(retentionPolicy);
+            this.retentionPolicy = Codegen.ofNullable(retentionPolicy);
             return this;
         }
         public Builder subnetIds(Output<List<String>> subnetIds) {
@@ -250,7 +251,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

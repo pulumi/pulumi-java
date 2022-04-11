@@ -11,6 +11,7 @@ import io.pulumi.azurenative.apimanagement.inputs.BackendTlsPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backendId;
 
     public Output<String> getBackendId() {
-        return this.backendId == null ? Output.empty() : this.backendId;
+        return this.backendId == null ? Codegen.empty() : this.backendId;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackendCredentialsContractArgs> credentials;
 
     public Output<BackendCredentialsContractArgs> getCredentials() {
-        return this.credentials == null ? Output.empty() : this.credentials;
+        return this.credentials == null ? Codegen.empty() : this.credentials;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackendPropertiesArgs> properties;
 
     public Output<BackendPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackendProxyContractArgs> proxy;
 
     public Output<BackendProxyContractArgs> getProxy() {
-        return this.proxy == null ? Output.empty() : this.proxy;
+        return this.proxy == null ? Codegen.empty() : this.proxy;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackendTlsPropertiesArgs> tls;
 
     public Output<BackendTlsPropertiesArgs> getTls() {
-        return this.tls == null ? Output.empty() : this.tls;
+        return this.tls == null ? Codegen.empty() : this.tls;
     }
 
     /**
@@ -180,18 +181,18 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackendArgs() {
-        this.backendId = Output.empty();
-        this.credentials = Output.empty();
-        this.description = Output.empty();
-        this.properties = Output.empty();
-        this.protocol = Output.empty();
-        this.proxy = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.serviceName = Output.empty();
-        this.title = Output.empty();
-        this.tls = Output.empty();
-        this.url = Output.empty();
+        this.backendId = Codegen.empty();
+        this.credentials = Codegen.empty();
+        this.description = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.proxy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.title = Codegen.empty();
+        this.tls = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -241,7 +242,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backendId(@Nullable String backendId) {
-            this.backendId = Output.ofNullable(backendId);
+            this.backendId = Codegen.ofNullable(backendId);
             return this;
         }
         public Builder credentials(@Nullable Output<BackendCredentialsContractArgs> credentials) {
@@ -249,7 +250,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder credentials(@Nullable BackendCredentialsContractArgs credentials) {
-            this.credentials = Output.ofNullable(credentials);
+            this.credentials = Codegen.ofNullable(credentials);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -257,7 +258,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder properties(@Nullable Output<BackendPropertiesArgs> properties) {
@@ -265,7 +266,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable BackendPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder protocol(Output<Either<String,BackendProtocol>> protocol) {
@@ -281,7 +282,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder proxy(@Nullable BackendProxyContractArgs proxy) {
-            this.proxy = Output.ofNullable(proxy);
+            this.proxy = Codegen.ofNullable(proxy);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -297,7 +298,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -313,7 +314,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder tls(@Nullable Output<BackendTlsPropertiesArgs> tls) {
@@ -321,7 +322,7 @@ public final class BackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tls(@Nullable BackendTlsPropertiesArgs tls) {
-            this.tls = Output.ofNullable(tls);
+            this.tls = Codegen.ofNullable(tls);
             return this;
         }
         public Builder url(Output<String> url) {

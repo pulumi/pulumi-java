@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.enums.Tenancy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> endDate;
 
     public Output<String> getEndDate() {
-        return this.endDate == null ? Output.empty() : this.endDate;
+        return this.endDate == null ? Codegen.empty() : this.endDate;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> endDateType;
 
     public Output<String> getEndDateType() {
-        return this.endDateType == null ? Output.empty() : this.endDateType;
+        return this.endDateType == null ? Codegen.empty() : this.endDateType;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> ephemeralStorage;
 
     public Output<Boolean> getEphemeralStorage() {
-        return this.ephemeralStorage == null ? Output.empty() : this.ephemeralStorage;
+        return this.ephemeralStorage == null ? Codegen.empty() : this.ephemeralStorage;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> instanceMatchCriteria;
 
     public Output<String> getInstanceMatchCriteria() {
-        return this.instanceMatchCriteria == null ? Output.empty() : this.instanceMatchCriteria;
+        return this.instanceMatchCriteria == null ? Codegen.empty() : this.instanceMatchCriteria;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,InstancePlatform>> instancePlatform;
 
     public Output<Either<String,InstancePlatform>> getInstancePlatform() {
-        return this.instancePlatform == null ? Output.empty() : this.instancePlatform;
+        return this.instancePlatform == null ? Codegen.empty() : this.instancePlatform;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,InstanceType>> instanceType;
 
     public Output<Either<String,InstanceType>> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> outpostArn;
 
     public Output<String> getOutpostArn() {
-        return this.outpostArn == null ? Output.empty() : this.outpostArn;
+        return this.outpostArn == null ? Codegen.empty() : this.outpostArn;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -161,14 +162,14 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,Tenancy>> tenancy;
 
     public Output<Either<String,Tenancy>> getTenancy() {
-        return this.tenancy == null ? Output.empty() : this.tenancy;
+        return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
     public CapacityReservationState(
@@ -216,21 +217,21 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
     }
 
     private CapacityReservationState() {
-        this.arn = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.endDate = Output.empty();
-        this.endDateType = Output.empty();
-        this.ephemeralStorage = Output.empty();
-        this.instanceCount = Output.empty();
-        this.instanceMatchCriteria = Output.empty();
-        this.instancePlatform = Output.empty();
-        this.instanceType = Output.empty();
-        this.outpostArn = Output.empty();
-        this.ownerId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.tenancy = Output.empty();
+        this.arn = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.endDate = Codegen.empty();
+        this.endDateType = Codegen.empty();
+        this.ephemeralStorage = Codegen.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceMatchCriteria = Codegen.empty();
+        this.instancePlatform = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.outpostArn = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.tenancy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -286,7 +287,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -294,7 +295,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder ebsOptimized(@Nullable Output<Boolean> ebsOptimized) {
@@ -302,7 +303,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder endDate(@Nullable Output<String> endDate) {
@@ -310,7 +311,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder endDate(@Nullable String endDate) {
-            this.endDate = Output.ofNullable(endDate);
+            this.endDate = Codegen.ofNullable(endDate);
             return this;
         }
         public Builder endDateType(@Nullable Output<String> endDateType) {
@@ -318,7 +319,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder endDateType(@Nullable String endDateType) {
-            this.endDateType = Output.ofNullable(endDateType);
+            this.endDateType = Codegen.ofNullable(endDateType);
             return this;
         }
         public Builder ephemeralStorage(@Nullable Output<Boolean> ephemeralStorage) {
@@ -326,7 +327,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ephemeralStorage(@Nullable Boolean ephemeralStorage) {
-            this.ephemeralStorage = Output.ofNullable(ephemeralStorage);
+            this.ephemeralStorage = Codegen.ofNullable(ephemeralStorage);
             return this;
         }
         public Builder instanceCount(@Nullable Output<Integer> instanceCount) {
@@ -334,7 +335,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceMatchCriteria(@Nullable Output<String> instanceMatchCriteria) {
@@ -342,7 +343,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceMatchCriteria(@Nullable String instanceMatchCriteria) {
-            this.instanceMatchCriteria = Output.ofNullable(instanceMatchCriteria);
+            this.instanceMatchCriteria = Codegen.ofNullable(instanceMatchCriteria);
             return this;
         }
         public Builder instancePlatform(@Nullable Output<Either<String,InstancePlatform>> instancePlatform) {
@@ -350,7 +351,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instancePlatform(@Nullable Either<String,InstancePlatform> instancePlatform) {
-            this.instancePlatform = Output.ofNullable(instancePlatform);
+            this.instancePlatform = Codegen.ofNullable(instancePlatform);
             return this;
         }
         public Builder instanceType(@Nullable Output<Either<String,InstanceType>> instanceType) {
@@ -358,7 +359,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceType(@Nullable Either<String,InstanceType> instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder outpostArn(@Nullable Output<String> outpostArn) {
@@ -366,7 +367,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder outpostArn(@Nullable String outpostArn) {
-            this.outpostArn = Output.ofNullable(outpostArn);
+            this.outpostArn = Codegen.ofNullable(outpostArn);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -374,7 +375,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -382,7 +383,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -390,7 +391,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder tenancy(@Nullable Output<Either<String,Tenancy>> tenancy) {
@@ -398,7 +399,7 @@ public final class CapacityReservationState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tenancy(@Nullable Either<String,Tenancy> tenancy) {
-            this.tenancy = Output.ofNullable(tenancy);
+            this.tenancy = Codegen.ofNullable(tenancy);
             return this;
         }        public CapacityReservationState build() {
             return new CapacityReservationState(arn, availabilityZone, ebsOptimized, endDate, endDateType, ephemeralStorage, instanceCount, instanceMatchCriteria, instancePlatform, instanceType, outpostArn, ownerId, tags, tagsAll, tenancy);

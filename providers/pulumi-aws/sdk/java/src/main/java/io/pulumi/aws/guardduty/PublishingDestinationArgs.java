@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> destinationType;
 
     public Output<String> getDestinationType() {
-        return this.destinationType == null ? Output.empty() : this.destinationType;
+        return this.destinationType == null ? Codegen.empty() : this.destinationType;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
     }
 
     private PublishingDestinationArgs() {
-        this.destinationArn = Output.empty();
-        this.destinationType = Output.empty();
-        this.detectorId = Output.empty();
-        this.kmsKeyArn = Output.empty();
+        this.destinationArn = Codegen.empty();
+        this.destinationType = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class PublishingDestinationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder destinationType(@Nullable String destinationType) {
-            this.destinationType = Output.ofNullable(destinationType);
+            this.destinationType = Codegen.ofNullable(destinationType);
             return this;
         }
         public Builder detectorId(Output<String> detectorId) {

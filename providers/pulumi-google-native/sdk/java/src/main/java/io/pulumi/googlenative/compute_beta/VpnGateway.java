@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.VpnGatewayArgs;
 import io.pulumi.googlenative.compute_beta.outputs.VpnGatewayVpnGatewayInterfaceResponse;
@@ -197,7 +198,7 @@ public class VpnGateway extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnGateway(String name, VpnGatewayArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:VpnGateway", name, args == null ? VpnGatewayArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpnGateway(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

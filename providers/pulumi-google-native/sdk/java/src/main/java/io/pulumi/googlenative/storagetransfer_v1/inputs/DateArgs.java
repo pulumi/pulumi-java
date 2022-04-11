@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> day;
 
     public Output<Integer> getDay() {
-        return this.day == null ? Output.empty() : this.day;
+        return this.day == null ? Codegen.empty() : this.day;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> month;
 
     public Output<Integer> getMonth() {
-        return this.month == null ? Output.empty() : this.month;
+        return this.month == null ? Codegen.empty() : this.month;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> year;
 
     public Output<Integer> getYear() {
-        return this.year == null ? Output.empty() : this.year;
+        return this.year == null ? Codegen.empty() : this.year;
     }
 
     public DateArgs(
@@ -61,9 +62,9 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DateArgs() {
-        this.day = Output.empty();
-        this.month = Output.empty();
-        this.year = Output.empty();
+        this.day = Codegen.empty();
+        this.month = Codegen.empty();
+        this.year = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder day(@Nullable Integer day) {
-            this.day = Output.ofNullable(day);
+            this.day = Codegen.ofNullable(day);
             return this;
         }
         public Builder month(@Nullable Output<Integer> month) {
@@ -103,7 +104,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder month(@Nullable Integer month) {
-            this.month = Output.ofNullable(month);
+            this.month = Codegen.ofNullable(month);
             return this;
         }
         public Builder year(@Nullable Output<Integer> year) {
@@ -111,7 +112,7 @@ public final class DateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder year(@Nullable Integer year) {
-            this.year = Output.ofNullable(year);
+            this.year = Codegen.ofNullable(year);
             return this;
         }        public DateArgs build() {
             return new DateArgs(day, month, year);

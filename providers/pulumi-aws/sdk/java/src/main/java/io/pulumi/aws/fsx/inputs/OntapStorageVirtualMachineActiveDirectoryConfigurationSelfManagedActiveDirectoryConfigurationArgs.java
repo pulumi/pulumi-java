@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
       private final @Nullable Output<String> fileSystemAdministratorsGroup;
 
     public Output<String> getFileSystemAdministratorsGroup() {
-        return this.fileSystemAdministratorsGroup == null ? Output.empty() : this.fileSystemAdministratorsGroup;
+        return this.fileSystemAdministratorsGroup == null ? Codegen.empty() : this.fileSystemAdministratorsGroup;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
 
     @Deprecated /* use 'organizational_unit_distinguished_name' instead */
     public Output<String> getOrganizationalUnitDistinguidshedName() {
-        return this.organizationalUnitDistinguidshedName == null ? Output.empty() : this.organizationalUnitDistinguidshedName;
+        return this.organizationalUnitDistinguidshedName == null ? Codegen.empty() : this.organizationalUnitDistinguidshedName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
       private final @Nullable Output<String> organizationalUnitDistinguishedName;
 
     public Output<String> getOrganizationalUnitDistinguishedName() {
-        return this.organizationalUnitDistinguishedName == null ? Output.empty() : this.organizationalUnitDistinguishedName;
+        return this.organizationalUnitDistinguishedName == null ? Codegen.empty() : this.organizationalUnitDistinguishedName;
     }
 
     /**
@@ -113,13 +114,13 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
     }
 
     private OntapStorageVirtualMachineActiveDirectoryConfigurationSelfManagedActiveDirectoryConfigurationArgs() {
-        this.dnsIps = Output.empty();
-        this.domainName = Output.empty();
-        this.fileSystemAdministratorsGroup = Output.empty();
-        this.organizationalUnitDistinguidshedName = Output.empty();
-        this.organizationalUnitDistinguishedName = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.dnsIps = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.fileSystemAdministratorsGroup = Codegen.empty();
+        this.organizationalUnitDistinguidshedName = Codegen.empty();
+        this.organizationalUnitDistinguishedName = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
             return this;
         }
         public Builder fileSystemAdministratorsGroup(@Nullable String fileSystemAdministratorsGroup) {
-            this.fileSystemAdministratorsGroup = Output.ofNullable(fileSystemAdministratorsGroup);
+            this.fileSystemAdministratorsGroup = Codegen.ofNullable(fileSystemAdministratorsGroup);
             return this;
         }
         public Builder organizationalUnitDistinguidshedName(@Nullable Output<String> organizationalUnitDistinguidshedName) {
@@ -186,7 +187,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
             return this;
         }
         public Builder organizationalUnitDistinguidshedName(@Nullable String organizationalUnitDistinguidshedName) {
-            this.organizationalUnitDistinguidshedName = Output.ofNullable(organizationalUnitDistinguidshedName);
+            this.organizationalUnitDistinguidshedName = Codegen.ofNullable(organizationalUnitDistinguidshedName);
             return this;
         }
         public Builder organizationalUnitDistinguishedName(@Nullable Output<String> organizationalUnitDistinguishedName) {
@@ -194,7 +195,7 @@ public final class OntapStorageVirtualMachineActiveDirectoryConfigurationSelfMan
             return this;
         }
         public Builder organizationalUnitDistinguishedName(@Nullable String organizationalUnitDistinguishedName) {
-            this.organizationalUnitDistinguishedName = Output.ofNullable(organizationalUnitDistinguishedName);
+            this.organizationalUnitDistinguishedName = Codegen.ofNullable(organizationalUnitDistinguishedName);
             return this;
         }
         public Builder password(Output<String> password) {

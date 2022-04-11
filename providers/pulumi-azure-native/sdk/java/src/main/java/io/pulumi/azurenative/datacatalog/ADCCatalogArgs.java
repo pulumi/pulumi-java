@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datacatalog.inputs.PrincipalsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PrincipalsArgs>> admins;
 
     public Output<List<PrincipalsArgs>> getAdmins() {
-        return this.admins == null ? Output.empty() : this.admins;
+        return this.admins == null ? Codegen.empty() : this.admins;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> catalogName;
 
     public Output<String> getCatalogName() {
-        return this.catalogName == null ? Output.empty() : this.catalogName;
+        return this.catalogName == null ? Codegen.empty() : this.catalogName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableAutomaticUnitAdjustment;
 
     public Output<Boolean> getEnableAutomaticUnitAdjustment() {
-        return this.enableAutomaticUnitAdjustment == null ? Output.empty() : this.enableAutomaticUnitAdjustment;
+        return this.enableAutomaticUnitAdjustment == null ? Codegen.empty() : this.enableAutomaticUnitAdjustment;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,SkuType>> sku;
 
     public Output<Either<String,SkuType>> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> successfullyProvisioned;
 
     public Output<Boolean> getSuccessfullyProvisioned() {
-        return this.successfullyProvisioned == null ? Output.empty() : this.successfullyProvisioned;
+        return this.successfullyProvisioned == null ? Codegen.empty() : this.successfullyProvisioned;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> units;
 
     public Output<Integer> getUnits() {
-        return this.units == null ? Output.empty() : this.units;
+        return this.units == null ? Codegen.empty() : this.units;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<PrincipalsArgs>> users;
 
     public Output<List<PrincipalsArgs>> getUsers() {
-        return this.users == null ? Output.empty() : this.users;
+        return this.users == null ? Codegen.empty() : this.users;
     }
 
     public ADCCatalogArgs(
@@ -155,16 +156,16 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ADCCatalogArgs() {
-        this.admins = Output.empty();
-        this.catalogName = Output.empty();
-        this.enableAutomaticUnitAdjustment = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.successfullyProvisioned = Output.empty();
-        this.tags = Output.empty();
-        this.units = Output.empty();
-        this.users = Output.empty();
+        this.admins = Codegen.empty();
+        this.catalogName = Codegen.empty();
+        this.enableAutomaticUnitAdjustment = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.successfullyProvisioned = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.units = Codegen.empty();
+        this.users = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder admins(@Nullable List<PrincipalsArgs> admins) {
-            this.admins = Output.ofNullable(admins);
+            this.admins = Codegen.ofNullable(admins);
             return this;
         }
         public Builder admins(PrincipalsArgs... admins) {
@@ -221,7 +222,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder catalogName(@Nullable String catalogName) {
-            this.catalogName = Output.ofNullable(catalogName);
+            this.catalogName = Codegen.ofNullable(catalogName);
             return this;
         }
         public Builder enableAutomaticUnitAdjustment(@Nullable Output<Boolean> enableAutomaticUnitAdjustment) {
@@ -229,7 +230,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableAutomaticUnitAdjustment(@Nullable Boolean enableAutomaticUnitAdjustment) {
-            this.enableAutomaticUnitAdjustment = Output.ofNullable(enableAutomaticUnitAdjustment);
+            this.enableAutomaticUnitAdjustment = Codegen.ofNullable(enableAutomaticUnitAdjustment);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -237,7 +238,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -253,7 +254,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable Either<String,SkuType> sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder successfullyProvisioned(@Nullable Output<Boolean> successfullyProvisioned) {
@@ -261,7 +262,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder successfullyProvisioned(@Nullable Boolean successfullyProvisioned) {
-            this.successfullyProvisioned = Output.ofNullable(successfullyProvisioned);
+            this.successfullyProvisioned = Codegen.ofNullable(successfullyProvisioned);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -269,7 +270,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder units(@Nullable Output<Integer> units) {
@@ -277,7 +278,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder units(@Nullable Integer units) {
-            this.units = Output.ofNullable(units);
+            this.units = Codegen.ofNullable(units);
             return this;
         }
         public Builder users(@Nullable Output<List<PrincipalsArgs>> users) {
@@ -285,7 +286,7 @@ public final class ADCCatalogArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder users(@Nullable List<PrincipalsArgs> users) {
-            this.users = Output.ofNullable(users);
+            this.users = Codegen.ofNullable(users);
             return this;
         }
         public Builder users(PrincipalsArgs... users) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
       private final @Nullable Output<String> recurrencePeriodDuration;
 
     public Output<String> getRecurrencePeriodDuration() {
-        return this.recurrencePeriodDuration == null ? Output.empty() : this.recurrencePeriodDuration;
+        return this.recurrencePeriodDuration == null ? Codegen.empty() : this.recurrencePeriodDuration;
     }
 
     public PreventionJobTriggerTriggerScheduleArgs(@Nullable Output<String> recurrencePeriodDuration) {
@@ -33,7 +34,7 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
     }
 
     private PreventionJobTriggerTriggerScheduleArgs() {
-        this.recurrencePeriodDuration = Output.empty();
+        this.recurrencePeriodDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -61,7 +62,7 @@ public final class PreventionJobTriggerTriggerScheduleArgs extends io.pulumi.res
             return this;
         }
         public Builder recurrencePeriodDuration(@Nullable String recurrencePeriodDuration) {
-            this.recurrencePeriodDuration = Output.ofNullable(recurrencePeriodDuration);
+            this.recurrencePeriodDuration = Codegen.ofNullable(recurrencePeriodDuration);
             return this;
         }        public PreventionJobTriggerTriggerScheduleArgs build() {
             return new PreventionJobTriggerTriggerScheduleArgs(recurrencePeriodDuration);

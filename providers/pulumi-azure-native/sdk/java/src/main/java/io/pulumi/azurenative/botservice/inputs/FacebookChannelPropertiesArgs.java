@@ -6,6 +6,7 @@ package io.pulumi.azurenative.botservice.inputs;
 import io.pulumi.azurenative.botservice.inputs.FacebookPageArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -40,7 +41,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> appSecret;
 
     public Output<String> getAppSecret() {
-        return this.appSecret == null ? Output.empty() : this.appSecret;
+        return this.appSecret == null ? Codegen.empty() : this.appSecret;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<FacebookPageArgs>> pages;
 
     public Output<List<FacebookPageArgs>> getPages() {
-        return this.pages == null ? Output.empty() : this.pages;
+        return this.pages == null ? Codegen.empty() : this.pages;
     }
 
     public FacebookChannelPropertiesArgs(
@@ -77,10 +78,10 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
     }
 
     private FacebookChannelPropertiesArgs() {
-        this.appId = Output.empty();
-        this.appSecret = Output.empty();
-        this.isEnabled = Output.empty();
-        this.pages = Output.empty();
+        this.appId = Codegen.empty();
+        this.appSecret = Codegen.empty();
+        this.isEnabled = Codegen.empty();
+        this.pages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -122,7 +123,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder appSecret(@Nullable String appSecret) {
-            this.appSecret = Output.ofNullable(appSecret);
+            this.appSecret = Codegen.ofNullable(appSecret);
             return this;
         }
         public Builder isEnabled(Output<Boolean> isEnabled) {
@@ -138,7 +139,7 @@ public final class FacebookChannelPropertiesArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder pages(@Nullable List<FacebookPageArgs> pages) {
-            this.pages = Output.ofNullable(pages);
+            this.pages = Codegen.ofNullable(pages);
             return this;
         }
         public Builder pages(FacebookPageArgs... pages) {

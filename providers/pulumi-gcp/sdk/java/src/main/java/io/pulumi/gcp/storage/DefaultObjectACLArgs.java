@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> roleEntities;
 
     public Output<List<String>> getRoleEntities() {
-        return this.roleEntities == null ? Output.empty() : this.roleEntities;
+        return this.roleEntities == null ? Codegen.empty() : this.roleEntities;
     }
 
     public DefaultObjectACLArgs(
@@ -47,8 +48,8 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DefaultObjectACLArgs() {
-        this.bucket = Output.empty();
-        this.roleEntities = Output.empty();
+        this.bucket = Codegen.empty();
+        this.roleEntities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -86,7 +87,7 @@ public final class DefaultObjectACLArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder roleEntities(@Nullable List<String> roleEntities) {
-            this.roleEntities = Output.ofNullable(roleEntities);
+            this.roleEntities = Codegen.ofNullable(roleEntities);
             return this;
         }
         public Builder roleEntities(String... roleEntities) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -78,10 +79,10 @@ public final class WebBasicAuthenticationArgs extends io.pulumi.resources.Resour
     }
 
     private WebBasicAuthenticationArgs() {
-        this.authenticationType = Output.empty();
-        this.password = Output.empty();
-        this.url = Output.empty();
-        this.username = Output.empty();
+        this.authenticationType = Codegen.empty();
+        this.password = Codegen.empty();
+        this.url = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

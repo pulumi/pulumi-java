@@ -7,6 +7,7 @@ import io.pulumi.azurenative.powerbidedicated.inputs.AutoScaleVCoreSkuArgs;
 import io.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> capacityLimit;
 
     public Output<Integer> getCapacityLimit() {
-        return this.capacityLimit == null ? Output.empty() : this.capacityLimit;
+        return this.capacityLimit == null ? Codegen.empty() : this.capacityLimit;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> capacityObjectId;
 
     public Output<String> getCapacityObjectId() {
-        return this.capacityObjectId == null ? Output.empty() : this.capacityObjectId;
+        return this.capacityObjectId == null ? Codegen.empty() : this.capacityObjectId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SystemDataArgs> systemData;
 
     public Output<SystemDataArgs> getSystemData() {
-        return this.systemData == null ? Output.empty() : this.systemData;
+        return this.systemData == null ? Codegen.empty() : this.systemData;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vcoreName;
 
     public Output<String> getVcoreName() {
-        return this.vcoreName == null ? Output.empty() : this.vcoreName;
+        return this.vcoreName == null ? Codegen.empty() : this.vcoreName;
     }
 
     public AutoScaleVCoreArgs(
@@ -126,14 +127,14 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AutoScaleVCoreArgs() {
-        this.capacityLimit = Output.empty();
-        this.capacityObjectId = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.systemData = Output.empty();
-        this.tags = Output.empty();
-        this.vcoreName = Output.empty();
+        this.capacityLimit = Codegen.empty();
+        this.capacityObjectId = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.systemData = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vcoreName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityLimit(@Nullable Integer capacityLimit) {
-            this.capacityLimit = Output.ofNullable(capacityLimit);
+            this.capacityLimit = Codegen.ofNullable(capacityLimit);
             return this;
         }
         public Builder capacityObjectId(@Nullable Output<String> capacityObjectId) {
@@ -183,7 +184,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder capacityObjectId(@Nullable String capacityObjectId) {
-            this.capacityObjectId = Output.ofNullable(capacityObjectId);
+            this.capacityObjectId = Codegen.ofNullable(capacityObjectId);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -191,7 +192,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -215,7 +216,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder systemData(@Nullable SystemDataArgs systemData) {
-            this.systemData = Output.ofNullable(systemData);
+            this.systemData = Codegen.ofNullable(systemData);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -223,7 +224,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vcoreName(@Nullable Output<String> vcoreName) {
@@ -231,7 +232,7 @@ public final class AutoScaleVCoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vcoreName(@Nullable String vcoreName) {
-            this.vcoreName = Output.ofNullable(vcoreName);
+            this.vcoreName = Codegen.ofNullable(vcoreName);
             return this;
         }        public AutoScaleVCoreArgs build() {
             return new AutoScaleVCoreArgs(capacityLimit, capacityObjectId, location, resourceGroupName, sku, systemData, tags, vcoreName);

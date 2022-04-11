@@ -5,6 +5,7 @@ package io.pulumi.aws.xray;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> attributes;
 
     public Output<Map<String,String>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -190,19 +191,19 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SamplingRuleArgs() {
-        this.attributes = Output.empty();
-        this.fixedRate = Output.empty();
-        this.host = Output.empty();
-        this.httpMethod = Output.empty();
-        this.priority = Output.empty();
-        this.reservoirSize = Output.empty();
-        this.resourceArn = Output.empty();
-        this.ruleName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceType = Output.empty();
-        this.tags = Output.empty();
-        this.urlPath = Output.empty();
-        this.version = Output.empty();
+        this.attributes = Codegen.empty();
+        this.fixedRate = Codegen.empty();
+        this.host = Codegen.empty();
+        this.httpMethod = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.reservoirSize = Codegen.empty();
+        this.resourceArn = Codegen.empty();
+        this.ruleName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceType = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.urlPath = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -254,7 +255,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable Map<String,String> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder fixedRate(Output<Double> fixedRate) {
@@ -310,7 +311,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -334,7 +335,7 @@ public final class SamplingRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder urlPath(Output<String> urlPath) {

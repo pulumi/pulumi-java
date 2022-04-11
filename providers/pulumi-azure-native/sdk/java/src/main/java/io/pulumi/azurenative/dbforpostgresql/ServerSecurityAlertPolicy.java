@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -181,7 +182,7 @@ public class ServerSecurityAlertPolicy extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public ServerSecurityAlertPolicy(String name, ServerSecurityAlertPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:dbforpostgresql:ServerSecurityAlertPolicy", name, args == null ? ServerSecurityAlertPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:dbforpostgresql:ServerSecurityAlertPolicy", name, args == null ? ServerSecurityAlertPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServerSecurityAlertPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

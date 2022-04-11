@@ -5,6 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class PackagingConfigurationSpekeKeyProviderArgs extends io.pulumi.
     }
 
     private PackagingConfigurationSpekeKeyProviderArgs() {
-        this.roleArn = Output.empty();
-        this.systemIds = Output.empty();
-        this.url = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.systemIds = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

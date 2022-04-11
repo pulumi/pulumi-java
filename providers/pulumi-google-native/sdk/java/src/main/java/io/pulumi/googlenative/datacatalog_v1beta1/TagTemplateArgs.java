@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -52,14 +53,14 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="tagTemplateId", required=true)
@@ -85,12 +86,12 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagTemplateArgs() {
-        this.displayName = Output.empty();
-        this.fields = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.tagTemplateId = Output.empty();
+        this.displayName = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.tagTemplateId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fields(Output<Map<String,String>> fields) {
@@ -144,7 +145,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -152,7 +153,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -160,7 +161,7 @@ public final class TagTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder tagTemplateId(Output<String> tagTemplateId) {

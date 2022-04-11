@@ -8,6 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.Operator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> contentId;
 
     public Output<String> getContentId() {
-        return this.contentId == null ? Output.empty() : this.contentId;
+        return this.contentId == null ? Codegen.empty() : this.contentId;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<MetadataDependenciesArgs>> criteria;
 
     public Output<List<MetadataDependenciesArgs>> getCriteria() {
-        return this.criteria == null ? Output.empty() : this.criteria;
+        return this.criteria == null ? Codegen.empty() : this.criteria;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,Kind>> kind;
 
     public Output<Either<String,Kind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,Operator>> operator;
 
     public Output<Either<String,Operator>> getOperator() {
-        return this.operator == null ? Output.empty() : this.operator;
+        return this.operator == null ? Codegen.empty() : this.operator;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public MetadataDependenciesArgs(
@@ -104,12 +105,12 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
     }
 
     private MetadataDependenciesArgs() {
-        this.contentId = Output.empty();
-        this.criteria = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.operator = Output.empty();
-        this.version = Output.empty();
+        this.contentId = Codegen.empty();
+        this.criteria = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder contentId(@Nullable String contentId) {
-            this.contentId = Output.ofNullable(contentId);
+            this.contentId = Codegen.ofNullable(contentId);
             return this;
         }
         public Builder criteria(@Nullable Output<List<MetadataDependenciesArgs>> criteria) {
@@ -155,7 +156,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder criteria(@Nullable List<MetadataDependenciesArgs> criteria) {
-            this.criteria = Output.ofNullable(criteria);
+            this.criteria = Codegen.ofNullable(criteria);
             return this;
         }
         public Builder criteria(MetadataDependenciesArgs... criteria) {
@@ -166,7 +167,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder kind(@Nullable Either<String,Kind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -174,7 +175,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder operator(@Nullable Output<Either<String,Operator>> operator) {
@@ -182,7 +183,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder operator(@Nullable Either<String,Operator> operator) {
-            this.operator = Output.ofNullable(operator);
+            this.operator = Codegen.ofNullable(operator);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -190,7 +191,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public MetadataDependenciesArgs build() {
             return new MetadataDependenciesArgs(contentId, criteria, kind, name, operator, version);

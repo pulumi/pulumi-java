@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateTemplateArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
@@ -157,7 +158,7 @@ public class CertificateTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateTemplate(String name, CertificateTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:CertificateTemplate", name, args == null ? CertificateTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:CertificateTemplate", name, args == null ? CertificateTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateTemplate(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

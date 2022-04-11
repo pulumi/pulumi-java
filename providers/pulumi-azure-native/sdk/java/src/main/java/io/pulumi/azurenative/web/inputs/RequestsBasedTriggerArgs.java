@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> count;
 
     public Output<Integer> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> timeInterval;
 
     public Output<String> getTimeInterval() {
-        return this.timeInterval == null ? Output.empty() : this.timeInterval;
+        return this.timeInterval == null ? Codegen.empty() : this.timeInterval;
     }
 
     public RequestsBasedTriggerArgs(
@@ -49,8 +50,8 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
     }
 
     private RequestsBasedTriggerArgs() {
-        this.count = Output.empty();
-        this.timeInterval = Output.empty();
+        this.count = Codegen.empty();
+        this.timeInterval = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder count(@Nullable Integer count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
@@ -88,7 +89,7 @@ public final class RequestsBasedTriggerArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder timeInterval(@Nullable String timeInterval) {
-            this.timeInterval = Output.ofNullable(timeInterval);
+            this.timeInterval = Codegen.ofNullable(timeInterval);
             return this;
         }        public RequestsBasedTriggerArgs build() {
             return new RequestsBasedTriggerArgs(count, timeInterval);

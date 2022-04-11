@@ -7,6 +7,7 @@ import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScrip
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,21 +29,21 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
       private final @Nullable Output<String> launchProfileProtocolVersion;
 
     public Output<String> getLaunchProfileProtocolVersion() {
-        return this.launchProfileProtocolVersion == null ? Output.empty() : this.launchProfileProtocolVersion;
+        return this.launchProfileProtocolVersion == null ? Codegen.empty() : this.launchProfileProtocolVersion;
     }
 
     @Import(name="platform")
       private final @Nullable Output<StudioComponentLaunchProfilePlatform> platform;
 
     public Output<StudioComponentLaunchProfilePlatform> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     @Import(name="runContext")
       private final @Nullable Output<StudioComponentInitializationScriptRunContext> runContext;
 
     public Output<StudioComponentInitializationScriptRunContext> getRunContext() {
-        return this.runContext == null ? Output.empty() : this.runContext;
+        return this.runContext == null ? Codegen.empty() : this.runContext;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
       private final @Nullable Output<String> script;
 
     public Output<String> getScript() {
-        return this.script == null ? Output.empty() : this.script;
+        return this.script == null ? Codegen.empty() : this.script;
     }
 
     public StudioComponentInitializationScriptArgs(
@@ -68,10 +69,10 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
     }
 
     private StudioComponentInitializationScriptArgs() {
-        this.launchProfileProtocolVersion = Output.empty();
-        this.platform = Output.empty();
-        this.runContext = Output.empty();
-        this.script = Output.empty();
+        this.launchProfileProtocolVersion = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.runContext = Codegen.empty();
+        this.script = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
             return this;
         }
         public Builder launchProfileProtocolVersion(@Nullable String launchProfileProtocolVersion) {
-            this.launchProfileProtocolVersion = Output.ofNullable(launchProfileProtocolVersion);
+            this.launchProfileProtocolVersion = Codegen.ofNullable(launchProfileProtocolVersion);
             return this;
         }
         public Builder platform(@Nullable Output<StudioComponentLaunchProfilePlatform> platform) {
@@ -113,7 +114,7 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
             return this;
         }
         public Builder platform(@Nullable StudioComponentLaunchProfilePlatform platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder runContext(@Nullable Output<StudioComponentInitializationScriptRunContext> runContext) {
@@ -121,7 +122,7 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
             return this;
         }
         public Builder runContext(@Nullable StudioComponentInitializationScriptRunContext runContext) {
-            this.runContext = Output.ofNullable(runContext);
+            this.runContext = Codegen.ofNullable(runContext);
             return this;
         }
         public Builder script(@Nullable Output<String> script) {
@@ -129,7 +130,7 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
             return this;
         }
         public Builder script(@Nullable String script) {
-            this.script = Output.ofNullable(script);
+            this.script = Codegen.ofNullable(script);
             return this;
         }        public StudioComponentInitializationScriptArgs build() {
             return new StudioComponentInitializationScriptArgs(launchProfileProtocolVersion, platform, runContext, script);

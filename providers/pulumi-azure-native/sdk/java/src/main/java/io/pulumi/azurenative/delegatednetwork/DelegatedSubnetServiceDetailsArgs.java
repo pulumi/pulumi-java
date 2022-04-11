@@ -7,6 +7,7 @@ import io.pulumi.azurenative.delegatednetwork.inputs.ControllerDetailsArgs;
 import io.pulumi.azurenative.delegatednetwork.inputs.SubnetDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
       private final @Nullable Output<ControllerDetailsArgs> controllerDetails;
 
     public Output<ControllerDetailsArgs> getControllerDetails() {
-        return this.controllerDetails == null ? Output.empty() : this.controllerDetails;
+        return this.controllerDetails == null ? Codegen.empty() : this.controllerDetails;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
       private final @Nullable Output<SubnetDetailsArgs> subnetDetails;
 
     public Output<SubnetDetailsArgs> getSubnetDetails() {
-        return this.subnetDetails == null ? Output.empty() : this.subnetDetails;
+        return this.subnetDetails == null ? Codegen.empty() : this.subnetDetails;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DelegatedSubnetServiceDetailsArgs(
@@ -99,12 +100,12 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
     }
 
     private DelegatedSubnetServiceDetailsArgs() {
-        this.controllerDetails = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.subnetDetails = Output.empty();
-        this.tags = Output.empty();
+        this.controllerDetails = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.subnetDetails = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder controllerDetails(@Nullable ControllerDetailsArgs controllerDetails) {
-            this.controllerDetails = Output.ofNullable(controllerDetails);
+            this.controllerDetails = Codegen.ofNullable(controllerDetails);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -150,7 +151,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -166,7 +167,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder subnetDetails(@Nullable Output<SubnetDetailsArgs> subnetDetails) {
@@ -174,7 +175,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder subnetDetails(@Nullable SubnetDetailsArgs subnetDetails) {
-            this.subnetDetails = Output.ofNullable(subnetDetails);
+            this.subnetDetails = Codegen.ofNullable(subnetDetails);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -182,7 +183,7 @@ public final class DelegatedSubnetServiceDetailsArgs extends io.pulumi.resources
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DelegatedSubnetServiceDetailsArgs build() {
             return new DelegatedSubnetServiceDetailsArgs(controllerDetails, location, resourceGroupName, resourceName, subnetDetails, tags);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.servicedirectory_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicedirectory_v1beta1.EndpointArgs;
 import java.lang.Integer;
@@ -140,7 +141,7 @@ public class Endpoint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Endpoint(String name, EndpointArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:servicedirectory/v1beta1:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:servicedirectory/v1beta1:Endpoint", name, args == null ? EndpointArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Endpoint(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

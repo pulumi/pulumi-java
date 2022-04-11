@@ -6,6 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.ClientCredentialMethod;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
       private final @Nullable Output<String> clientSecretSettingName;
 
     public Output<String> getClientSecretSettingName() {
-        return this.clientSecretSettingName == null ? Output.empty() : this.clientSecretSettingName;
+        return this.clientSecretSettingName == null ? Codegen.empty() : this.clientSecretSettingName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
       private final @Nullable Output<ClientCredentialMethod> method;
 
     public Output<ClientCredentialMethod> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     public OpenIdConnectClientCredentialArgs(
@@ -49,8 +50,8 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
     }
 
     private OpenIdConnectClientCredentialArgs() {
-        this.clientSecretSettingName = Output.empty();
-        this.method = Output.empty();
+        this.clientSecretSettingName = Codegen.empty();
+        this.method = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
             return this;
         }
         public Builder clientSecretSettingName(@Nullable String clientSecretSettingName) {
-            this.clientSecretSettingName = Output.ofNullable(clientSecretSettingName);
+            this.clientSecretSettingName = Codegen.ofNullable(clientSecretSettingName);
             return this;
         }
         public Builder method(@Nullable Output<ClientCredentialMethod> method) {
@@ -88,7 +89,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
             return this;
         }
         public Builder method(@Nullable ClientCredentialMethod method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }        public OpenIdConnectClientCredentialArgs build() {
             return new OpenIdConnectClientCredentialArgs(clientSecretSettingName, method);

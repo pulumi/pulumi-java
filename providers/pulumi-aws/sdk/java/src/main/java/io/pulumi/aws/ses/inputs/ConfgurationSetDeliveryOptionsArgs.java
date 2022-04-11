@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ConfgurationSetDeliveryOptionsArgs extends io.pulumi.resource
       private final @Nullable Output<String> tlsPolicy;
 
     public Output<String> getTlsPolicy() {
-        return this.tlsPolicy == null ? Output.empty() : this.tlsPolicy;
+        return this.tlsPolicy == null ? Codegen.empty() : this.tlsPolicy;
     }
 
     public ConfgurationSetDeliveryOptionsArgs(@Nullable Output<String> tlsPolicy) {
@@ -30,7 +31,7 @@ public final class ConfgurationSetDeliveryOptionsArgs extends io.pulumi.resource
     }
 
     private ConfgurationSetDeliveryOptionsArgs() {
-        this.tlsPolicy = Output.empty();
+        this.tlsPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ConfgurationSetDeliveryOptionsArgs extends io.pulumi.resource
             return this;
         }
         public Builder tlsPolicy(@Nullable String tlsPolicy) {
-            this.tlsPolicy = Output.ofNullable(tlsPolicy);
+            this.tlsPolicy = Codegen.ofNullable(tlsPolicy);
             return this;
         }        public ConfgurationSetDeliveryOptionsArgs build() {
             return new ConfgurationSetDeliveryOptionsArgs(tlsPolicy);

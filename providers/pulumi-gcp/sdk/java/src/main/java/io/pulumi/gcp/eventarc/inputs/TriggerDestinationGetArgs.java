@@ -5,6 +5,7 @@ package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.eventarc.inputs.TriggerDestinationCloudRunServiceGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> cloudFunction;
 
     public Output<String> getCloudFunction() {
-        return this.cloudFunction == null ? Output.empty() : this.cloudFunction;
+        return this.cloudFunction == null ? Codegen.empty() : this.cloudFunction;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService;
 
     public Output<TriggerDestinationCloudRunServiceGetArgs> getCloudRunService() {
-        return this.cloudRunService == null ? Output.empty() : this.cloudRunService;
+        return this.cloudRunService == null ? Codegen.empty() : this.cloudRunService;
     }
 
     public TriggerDestinationGetArgs(
@@ -45,8 +46,8 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
     }
 
     private TriggerDestinationGetArgs() {
-        this.cloudFunction = Output.empty();
-        this.cloudRunService = Output.empty();
+        this.cloudFunction = Codegen.empty();
+        this.cloudRunService = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cloudFunction(@Nullable String cloudFunction) {
-            this.cloudFunction = Output.ofNullable(cloudFunction);
+            this.cloudFunction = Codegen.ofNullable(cloudFunction);
             return this;
         }
         public Builder cloudRunService(@Nullable Output<TriggerDestinationCloudRunServiceGetArgs> cloudRunService) {
@@ -84,7 +85,7 @@ public final class TriggerDestinationGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder cloudRunService(@Nullable TriggerDestinationCloudRunServiceGetArgs cloudRunService) {
-            this.cloudRunService = Output.ofNullable(cloudRunService);
+            this.cloudRunService = Codegen.ofNullable(cloudRunService);
             return this;
         }        public TriggerDestinationGetArgs build() {
             return new TriggerDestinationGetArgs(cloudFunction, cloudRunService);

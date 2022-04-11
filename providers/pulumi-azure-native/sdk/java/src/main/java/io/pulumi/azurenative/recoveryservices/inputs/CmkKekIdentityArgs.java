@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useSystemAssignedIdentity;
 
     public Output<Boolean> getUseSystemAssignedIdentity() {
-        return this.useSystemAssignedIdentity == null ? Output.empty() : this.useSystemAssignedIdentity;
+        return this.useSystemAssignedIdentity == null ? Codegen.empty() : this.useSystemAssignedIdentity;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userAssignedIdentity;
 
     public Output<String> getUserAssignedIdentity() {
-        return this.userAssignedIdentity == null ? Output.empty() : this.userAssignedIdentity;
+        return this.userAssignedIdentity == null ? Codegen.empty() : this.userAssignedIdentity;
     }
 
     public CmkKekIdentityArgs(
@@ -49,8 +50,8 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CmkKekIdentityArgs() {
-        this.useSystemAssignedIdentity = Output.empty();
-        this.userAssignedIdentity = Output.empty();
+        this.useSystemAssignedIdentity = Codegen.empty();
+        this.userAssignedIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useSystemAssignedIdentity(@Nullable Boolean useSystemAssignedIdentity) {
-            this.useSystemAssignedIdentity = Output.ofNullable(useSystemAssignedIdentity);
+            this.useSystemAssignedIdentity = Codegen.ofNullable(useSystemAssignedIdentity);
             return this;
         }
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
@@ -88,7 +89,7 @@ public final class CmkKekIdentityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
-            this.userAssignedIdentity = Output.ofNullable(userAssignedIdentity);
+            this.userAssignedIdentity = Codegen.ofNullable(userAssignedIdentity);
             return this;
         }        public CmkKekIdentityArgs build() {
             return new CmkKekIdentityArgs(useSystemAssignedIdentity, userAssignedIdentity);

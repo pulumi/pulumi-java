@@ -14,6 +14,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.KPIResourceHealthDetailsArg
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +38,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
     public Output<Either<String,BackupManagementType>> getBackupManagementType() {
-        return this.backupManagementType == null ? Output.empty() : this.backupManagementType;
+        return this.backupManagementType == null ? Codegen.empty() : this.backupManagementType;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> backupSetName;
 
     public Output<String> getBackupSetName() {
-        return this.backupSetName == null ? Output.empty() : this.backupSetName;
+        return this.backupSetName == null ? Codegen.empty() : this.backupSetName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> containerName;
 
     public Output<String> getContainerName() {
-        return this.containerName == null ? Output.empty() : this.containerName;
+        return this.containerName == null ? Codegen.empty() : this.containerName;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Either<String,CreateMode>> createMode;
 
     public Output<Either<String,CreateMode>> getCreateMode() {
-        return this.createMode == null ? Output.empty() : this.createMode;
+        return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> deferredDeleteTimeInUTC;
 
     public Output<String> getDeferredDeleteTimeInUTC() {
-        return this.deferredDeleteTimeInUTC == null ? Output.empty() : this.deferredDeleteTimeInUTC;
+        return this.deferredDeleteTimeInUTC == null ? Codegen.empty() : this.deferredDeleteTimeInUTC;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> deferredDeleteTimeRemaining;
 
     public Output<String> getDeferredDeleteTimeRemaining() {
-        return this.deferredDeleteTimeRemaining == null ? Output.empty() : this.deferredDeleteTimeRemaining;
+        return this.deferredDeleteTimeRemaining == null ? Codegen.empty() : this.deferredDeleteTimeRemaining;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> getExtendedInfo() {
-        return this.extendedInfo == null ? Output.empty() : this.extendedInfo;
+        return this.extendedInfo == null ? Codegen.empty() : this.extendedInfo;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> friendlyName;
 
     public Output<String> getFriendlyName() {
-        return this.friendlyName == null ? Output.empty() : this.friendlyName;
+        return this.friendlyName == null ? Codegen.empty() : this.friendlyName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Output<Boolean> getIsDeferredDeleteScheduleUpcoming() {
-        return this.isDeferredDeleteScheduleUpcoming == null ? Output.empty() : this.isDeferredDeleteScheduleUpcoming;
+        return this.isDeferredDeleteScheduleUpcoming == null ? Codegen.empty() : this.isDeferredDeleteScheduleUpcoming;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Boolean> isRehydrate;
 
     public Output<Boolean> getIsRehydrate() {
-        return this.isRehydrate == null ? Output.empty() : this.isRehydrate;
+        return this.isRehydrate == null ? Codegen.empty() : this.isRehydrate;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Boolean> isScheduledForDeferredDelete;
 
     public Output<Boolean> getIsScheduledForDeferredDelete() {
-        return this.isScheduledForDeferredDelete == null ? Output.empty() : this.isScheduledForDeferredDelete;
+        return this.isScheduledForDeferredDelete == null ? Codegen.empty() : this.isScheduledForDeferredDelete;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
     public Output<Map<String,KPIResourceHealthDetailsArgs>> getKpisHealths() {
-        return this.kpisHealths == null ? Output.empty() : this.kpisHealths;
+        return this.kpisHealths == null ? Codegen.empty() : this.kpisHealths;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Either<String,LastBackupStatus>> lastBackupStatus;
 
     public Output<Either<String,LastBackupStatus>> getLastBackupStatus() {
-        return this.lastBackupStatus == null ? Output.empty() : this.lastBackupStatus;
+        return this.lastBackupStatus == null ? Codegen.empty() : this.lastBackupStatus;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> lastBackupTime;
 
     public Output<String> getLastBackupTime() {
-        return this.lastBackupTime == null ? Output.empty() : this.lastBackupTime;
+        return this.lastBackupTime == null ? Codegen.empty() : this.lastBackupTime;
     }
 
     /**
@@ -191,7 +192,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> lastRecoveryPoint;
 
     public Output<String> getLastRecoveryPoint() {
-        return this.lastRecoveryPoint == null ? Output.empty() : this.lastRecoveryPoint;
+        return this.lastRecoveryPoint == null ? Codegen.empty() : this.lastRecoveryPoint;
     }
 
     /**
@@ -202,7 +203,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> parentName;
 
     public Output<String> getParentName() {
-        return this.parentName == null ? Output.empty() : this.parentName;
+        return this.parentName == null ? Codegen.empty() : this.parentName;
     }
 
     /**
@@ -213,7 +214,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> parentType;
 
     public Output<String> getParentType() {
-        return this.parentType == null ? Output.empty() : this.parentType;
+        return this.parentType == null ? Codegen.empty() : this.parentType;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> protectedItemDataSourceId;
 
     public Output<String> getProtectedItemDataSourceId() {
-        return this.protectedItemDataSourceId == null ? Output.empty() : this.protectedItemDataSourceId;
+        return this.protectedItemDataSourceId == null ? Codegen.empty() : this.protectedItemDataSourceId;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus;
 
     public Output<Either<String,ProtectedItemHealthStatus>> getProtectedItemHealthStatus() {
-        return this.protectedItemHealthStatus == null ? Output.empty() : this.protectedItemHealthStatus;
+        return this.protectedItemHealthStatus == null ? Codegen.empty() : this.protectedItemHealthStatus;
     }
 
     /**
@@ -269,7 +270,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Either<String,ProtectionState>> protectionState;
 
     public Output<Either<String,ProtectionState>> getProtectionState() {
-        return this.protectionState == null ? Output.empty() : this.protectionState;
+        return this.protectionState == null ? Codegen.empty() : this.protectionState;
     }
 
     /**
@@ -280,7 +281,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> protectionStatus;
 
     public Output<String> getProtectionStatus() {
-        return this.protectionStatus == null ? Output.empty() : this.protectionStatus;
+        return this.protectionStatus == null ? Codegen.empty() : this.protectionStatus;
     }
 
     /**
@@ -291,7 +292,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     /**
@@ -302,7 +303,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<String> sourceResourceId;
 
     public Output<String> getSourceResourceId() {
-        return this.sourceResourceId == null ? Output.empty() : this.sourceResourceId;
+        return this.sourceResourceId == null ? Codegen.empty() : this.sourceResourceId;
     }
 
     /**
@@ -313,7 +314,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
       private final @Nullable Output<Either<String,DataSourceType>> workloadType;
 
     public Output<Either<String,DataSourceType>> getWorkloadType() {
-        return this.workloadType == null ? Output.empty() : this.workloadType;
+        return this.workloadType == null ? Codegen.empty() : this.workloadType;
     }
 
     public AzureVmWorkloadSQLDatabaseProtectedItemArgs(
@@ -372,32 +373,32 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
     }
 
     private AzureVmWorkloadSQLDatabaseProtectedItemArgs() {
-        this.backupManagementType = Output.empty();
-        this.backupSetName = Output.empty();
-        this.containerName = Output.empty();
-        this.createMode = Output.empty();
-        this.deferredDeleteTimeInUTC = Output.empty();
-        this.deferredDeleteTimeRemaining = Output.empty();
-        this.extendedInfo = Output.empty();
-        this.friendlyName = Output.empty();
-        this.isDeferredDeleteScheduleUpcoming = Output.empty();
-        this.isRehydrate = Output.empty();
-        this.isScheduledForDeferredDelete = Output.empty();
-        this.kpisHealths = Output.empty();
-        this.lastBackupStatus = Output.empty();
-        this.lastBackupTime = Output.empty();
-        this.lastRecoveryPoint = Output.empty();
-        this.parentName = Output.empty();
-        this.parentType = Output.empty();
-        this.policyId = Output.empty();
-        this.protectedItemDataSourceId = Output.empty();
-        this.protectedItemHealthStatus = Output.empty();
-        this.protectedItemType = Output.empty();
-        this.protectionState = Output.empty();
-        this.protectionStatus = Output.empty();
-        this.serverName = Output.empty();
-        this.sourceResourceId = Output.empty();
-        this.workloadType = Output.empty();
+        this.backupManagementType = Codegen.empty();
+        this.backupSetName = Codegen.empty();
+        this.containerName = Codegen.empty();
+        this.createMode = Codegen.empty();
+        this.deferredDeleteTimeInUTC = Codegen.empty();
+        this.deferredDeleteTimeRemaining = Codegen.empty();
+        this.extendedInfo = Codegen.empty();
+        this.friendlyName = Codegen.empty();
+        this.isDeferredDeleteScheduleUpcoming = Codegen.empty();
+        this.isRehydrate = Codegen.empty();
+        this.isScheduledForDeferredDelete = Codegen.empty();
+        this.kpisHealths = Codegen.empty();
+        this.lastBackupStatus = Codegen.empty();
+        this.lastBackupTime = Codegen.empty();
+        this.lastRecoveryPoint = Codegen.empty();
+        this.parentName = Codegen.empty();
+        this.parentType = Codegen.empty();
+        this.policyId = Codegen.empty();
+        this.protectedItemDataSourceId = Codegen.empty();
+        this.protectedItemHealthStatus = Codegen.empty();
+        this.protectedItemType = Codegen.empty();
+        this.protectionState = Codegen.empty();
+        this.protectionStatus = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.sourceResourceId = Codegen.empty();
+        this.workloadType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -475,7 +476,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder backupManagementType(@Nullable Either<String,BackupManagementType> backupManagementType) {
-            this.backupManagementType = Output.ofNullable(backupManagementType);
+            this.backupManagementType = Codegen.ofNullable(backupManagementType);
             return this;
         }
         public Builder backupSetName(@Nullable Output<String> backupSetName) {
@@ -483,7 +484,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder backupSetName(@Nullable String backupSetName) {
-            this.backupSetName = Output.ofNullable(backupSetName);
+            this.backupSetName = Codegen.ofNullable(backupSetName);
             return this;
         }
         public Builder containerName(@Nullable Output<String> containerName) {
@@ -491,7 +492,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder containerName(@Nullable String containerName) {
-            this.containerName = Output.ofNullable(containerName);
+            this.containerName = Codegen.ofNullable(containerName);
             return this;
         }
         public Builder createMode(@Nullable Output<Either<String,CreateMode>> createMode) {
@@ -499,7 +500,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder createMode(@Nullable Either<String,CreateMode> createMode) {
-            this.createMode = Output.ofNullable(createMode);
+            this.createMode = Codegen.ofNullable(createMode);
             return this;
         }
         public Builder deferredDeleteTimeInUTC(@Nullable Output<String> deferredDeleteTimeInUTC) {
@@ -507,7 +508,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder deferredDeleteTimeInUTC(@Nullable String deferredDeleteTimeInUTC) {
-            this.deferredDeleteTimeInUTC = Output.ofNullable(deferredDeleteTimeInUTC);
+            this.deferredDeleteTimeInUTC = Codegen.ofNullable(deferredDeleteTimeInUTC);
             return this;
         }
         public Builder deferredDeleteTimeRemaining(@Nullable Output<String> deferredDeleteTimeRemaining) {
@@ -515,7 +516,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder deferredDeleteTimeRemaining(@Nullable String deferredDeleteTimeRemaining) {
-            this.deferredDeleteTimeRemaining = Output.ofNullable(deferredDeleteTimeRemaining);
+            this.deferredDeleteTimeRemaining = Codegen.ofNullable(deferredDeleteTimeRemaining);
             return this;
         }
         public Builder extendedInfo(@Nullable Output<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo) {
@@ -523,7 +524,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder extendedInfo(@Nullable AzureVmWorkloadProtectedItemExtendedInfoArgs extendedInfo) {
-            this.extendedInfo = Output.ofNullable(extendedInfo);
+            this.extendedInfo = Codegen.ofNullable(extendedInfo);
             return this;
         }
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
@@ -531,7 +532,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder friendlyName(@Nullable String friendlyName) {
-            this.friendlyName = Output.ofNullable(friendlyName);
+            this.friendlyName = Codegen.ofNullable(friendlyName);
             return this;
         }
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Output<Boolean> isDeferredDeleteScheduleUpcoming) {
@@ -539,7 +540,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder isDeferredDeleteScheduleUpcoming(@Nullable Boolean isDeferredDeleteScheduleUpcoming) {
-            this.isDeferredDeleteScheduleUpcoming = Output.ofNullable(isDeferredDeleteScheduleUpcoming);
+            this.isDeferredDeleteScheduleUpcoming = Codegen.ofNullable(isDeferredDeleteScheduleUpcoming);
             return this;
         }
         public Builder isRehydrate(@Nullable Output<Boolean> isRehydrate) {
@@ -547,7 +548,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder isRehydrate(@Nullable Boolean isRehydrate) {
-            this.isRehydrate = Output.ofNullable(isRehydrate);
+            this.isRehydrate = Codegen.ofNullable(isRehydrate);
             return this;
         }
         public Builder isScheduledForDeferredDelete(@Nullable Output<Boolean> isScheduledForDeferredDelete) {
@@ -555,7 +556,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder isScheduledForDeferredDelete(@Nullable Boolean isScheduledForDeferredDelete) {
-            this.isScheduledForDeferredDelete = Output.ofNullable(isScheduledForDeferredDelete);
+            this.isScheduledForDeferredDelete = Codegen.ofNullable(isScheduledForDeferredDelete);
             return this;
         }
         public Builder kpisHealths(@Nullable Output<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths) {
@@ -563,7 +564,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder kpisHealths(@Nullable Map<String,KPIResourceHealthDetailsArgs> kpisHealths) {
-            this.kpisHealths = Output.ofNullable(kpisHealths);
+            this.kpisHealths = Codegen.ofNullable(kpisHealths);
             return this;
         }
         public Builder lastBackupStatus(@Nullable Output<Either<String,LastBackupStatus>> lastBackupStatus) {
@@ -571,7 +572,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder lastBackupStatus(@Nullable Either<String,LastBackupStatus> lastBackupStatus) {
-            this.lastBackupStatus = Output.ofNullable(lastBackupStatus);
+            this.lastBackupStatus = Codegen.ofNullable(lastBackupStatus);
             return this;
         }
         public Builder lastBackupTime(@Nullable Output<String> lastBackupTime) {
@@ -579,7 +580,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder lastBackupTime(@Nullable String lastBackupTime) {
-            this.lastBackupTime = Output.ofNullable(lastBackupTime);
+            this.lastBackupTime = Codegen.ofNullable(lastBackupTime);
             return this;
         }
         public Builder lastRecoveryPoint(@Nullable Output<String> lastRecoveryPoint) {
@@ -587,7 +588,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder lastRecoveryPoint(@Nullable String lastRecoveryPoint) {
-            this.lastRecoveryPoint = Output.ofNullable(lastRecoveryPoint);
+            this.lastRecoveryPoint = Codegen.ofNullable(lastRecoveryPoint);
             return this;
         }
         public Builder parentName(@Nullable Output<String> parentName) {
@@ -595,7 +596,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder parentName(@Nullable String parentName) {
-            this.parentName = Output.ofNullable(parentName);
+            this.parentName = Codegen.ofNullable(parentName);
             return this;
         }
         public Builder parentType(@Nullable Output<String> parentType) {
@@ -603,7 +604,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder parentType(@Nullable String parentType) {
-            this.parentType = Output.ofNullable(parentType);
+            this.parentType = Codegen.ofNullable(parentType);
             return this;
         }
         public Builder policyId(@Nullable Output<String> policyId) {
@@ -611,7 +612,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder protectedItemDataSourceId(@Nullable Output<String> protectedItemDataSourceId) {
@@ -619,7 +620,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder protectedItemDataSourceId(@Nullable String protectedItemDataSourceId) {
-            this.protectedItemDataSourceId = Output.ofNullable(protectedItemDataSourceId);
+            this.protectedItemDataSourceId = Codegen.ofNullable(protectedItemDataSourceId);
             return this;
         }
         public Builder protectedItemHealthStatus(@Nullable Output<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus) {
@@ -627,7 +628,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder protectedItemHealthStatus(@Nullable Either<String,ProtectedItemHealthStatus> protectedItemHealthStatus) {
-            this.protectedItemHealthStatus = Output.ofNullable(protectedItemHealthStatus);
+            this.protectedItemHealthStatus = Codegen.ofNullable(protectedItemHealthStatus);
             return this;
         }
         public Builder protectedItemType(Output<String> protectedItemType) {
@@ -643,7 +644,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder protectionState(@Nullable Either<String,ProtectionState> protectionState) {
-            this.protectionState = Output.ofNullable(protectionState);
+            this.protectionState = Codegen.ofNullable(protectionState);
             return this;
         }
         public Builder protectionStatus(@Nullable Output<String> protectionStatus) {
@@ -651,7 +652,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder protectionStatus(@Nullable String protectionStatus) {
-            this.protectionStatus = Output.ofNullable(protectionStatus);
+            this.protectionStatus = Codegen.ofNullable(protectionStatus);
             return this;
         }
         public Builder serverName(@Nullable Output<String> serverName) {
@@ -659,7 +660,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder sourceResourceId(@Nullable Output<String> sourceResourceId) {
@@ -667,7 +668,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
-            this.sourceResourceId = Output.ofNullable(sourceResourceId);
+            this.sourceResourceId = Codegen.ofNullable(sourceResourceId);
             return this;
         }
         public Builder workloadType(@Nullable Output<Either<String,DataSourceType>> workloadType) {
@@ -675,7 +676,7 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemArgs extends io.pulumi
             return this;
         }
         public Builder workloadType(@Nullable Either<String,DataSourceType> workloadType) {
-            this.workloadType = Output.ofNullable(workloadType);
+            this.workloadType = Codegen.ofNullable(workloadType);
             return this;
         }        public AzureVmWorkloadSQLDatabaseProtectedItemArgs build() {
             return new AzureVmWorkloadSQLDatabaseProtectedItemArgs(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, parentName, parentType, policyId, protectedItemDataSourceId, protectedItemHealthStatus, protectedItemType, protectionState, protectionStatus, serverName, sourceResourceId, workloadType);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,9 +61,9 @@ public final class VirtualNetworkConfigurationArgs extends io.pulumi.resources.R
     }
 
     private VirtualNetworkConfigurationArgs() {
-        this.dataManagementPublicIpId = Output.empty();
-        this.enginePublicIpId = Output.empty();
-        this.subnetId = Output.empty();
+        this.dataManagementPublicIpId = Codegen.empty();
+        this.enginePublicIpId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

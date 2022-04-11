@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ImageIamPolicyArgs;
 import io.pulumi.gcp.compute.inputs.ImageIamPolicyState;
@@ -143,7 +144,7 @@ public class ImageIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ImageIamPolicy(String name, ImageIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/imageIamPolicy:ImageIamPolicy", name, args == null ? ImageIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/imageIamPolicy:ImageIamPolicy", name, args == null ? ImageIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ImageIamPolicy(String name, Output<String> id, @Nullable ImageIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

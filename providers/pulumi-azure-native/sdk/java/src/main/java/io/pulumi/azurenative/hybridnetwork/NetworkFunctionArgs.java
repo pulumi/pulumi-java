@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurati
 import io.pulumi.azurenative.hybridnetwork.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SubResourceArgs> device;
 
     public Output<SubResourceArgs> getDevice() {
-        return this.device == null ? Output.empty() : this.device;
+        return this.device == null ? Codegen.empty() : this.device;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Object> managedApplicationParameters;
 
     public Output<Object> getManagedApplicationParameters() {
-        return this.managedApplicationParameters == null ? Output.empty() : this.managedApplicationParameters;
+        return this.managedApplicationParameters == null ? Codegen.empty() : this.managedApplicationParameters;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> networkFunctionName;
 
     public Output<String> getNetworkFunctionName() {
-        return this.networkFunctionName == null ? Output.empty() : this.networkFunctionName;
+        return this.networkFunctionName == null ? Codegen.empty() : this.networkFunctionName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations;
 
     public Output<List<NetworkFunctionUserConfigurationArgs>> getNetworkFunctionUserConfigurations() {
-        return this.networkFunctionUserConfigurations == null ? Output.empty() : this.networkFunctionUserConfigurations;
+        return this.networkFunctionUserConfigurations == null ? Codegen.empty() : this.networkFunctionUserConfigurations;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> skuName;
 
     public Output<String> getSkuName() {
-        return this.skuName == null ? Output.empty() : this.skuName;
+        return this.skuName == null ? Codegen.empty() : this.skuName;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> vendorName;
 
     public Output<String> getVendorName() {
-        return this.vendorName == null ? Output.empty() : this.vendorName;
+        return this.vendorName == null ? Codegen.empty() : this.vendorName;
     }
 
     public NetworkFunctionArgs(
@@ -140,15 +141,15 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NetworkFunctionArgs() {
-        this.device = Output.empty();
-        this.location = Output.empty();
-        this.managedApplicationParameters = Output.empty();
-        this.networkFunctionName = Output.empty();
-        this.networkFunctionUserConfigurations = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.skuName = Output.empty();
-        this.tags = Output.empty();
-        this.vendorName = Output.empty();
+        this.device = Codegen.empty();
+        this.location = Codegen.empty();
+        this.managedApplicationParameters = Codegen.empty();
+        this.networkFunctionName = Codegen.empty();
+        this.networkFunctionUserConfigurations = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.skuName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vendorName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder device(@Nullable SubResourceArgs device) {
-            this.device = Output.ofNullable(device);
+            this.device = Codegen.ofNullable(device);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -200,7 +201,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedApplicationParameters(@Nullable Output<Object> managedApplicationParameters) {
@@ -208,7 +209,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder managedApplicationParameters(@Nullable Object managedApplicationParameters) {
-            this.managedApplicationParameters = Output.ofNullable(managedApplicationParameters);
+            this.managedApplicationParameters = Codegen.ofNullable(managedApplicationParameters);
             return this;
         }
         public Builder networkFunctionName(@Nullable Output<String> networkFunctionName) {
@@ -216,7 +217,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networkFunctionName(@Nullable String networkFunctionName) {
-            this.networkFunctionName = Output.ofNullable(networkFunctionName);
+            this.networkFunctionName = Codegen.ofNullable(networkFunctionName);
             return this;
         }
         public Builder networkFunctionUserConfigurations(@Nullable Output<List<NetworkFunctionUserConfigurationArgs>> networkFunctionUserConfigurations) {
@@ -224,7 +225,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networkFunctionUserConfigurations(@Nullable List<NetworkFunctionUserConfigurationArgs> networkFunctionUserConfigurations) {
-            this.networkFunctionUserConfigurations = Output.ofNullable(networkFunctionUserConfigurations);
+            this.networkFunctionUserConfigurations = Codegen.ofNullable(networkFunctionUserConfigurations);
             return this;
         }
         public Builder networkFunctionUserConfigurations(NetworkFunctionUserConfigurationArgs... networkFunctionUserConfigurations) {
@@ -243,7 +244,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder skuName(@Nullable String skuName) {
-            this.skuName = Output.ofNullable(skuName);
+            this.skuName = Codegen.ofNullable(skuName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -251,7 +252,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vendorName(@Nullable Output<String> vendorName) {
@@ -259,7 +260,7 @@ public final class NetworkFunctionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vendorName(@Nullable String vendorName) {
-            this.vendorName = Output.ofNullable(vendorName);
+            this.vendorName = Codegen.ofNullable(vendorName);
             return this;
         }        public NetworkFunctionArgs build() {
             return new NetworkFunctionArgs(device, location, managedApplicationParameters, networkFunctionName, networkFunctionUserConfigurations, resourceGroupName, skuName, tags, vendorName);

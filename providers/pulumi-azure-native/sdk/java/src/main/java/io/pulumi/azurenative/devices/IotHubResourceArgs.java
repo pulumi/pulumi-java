@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.inputs.IotHubPropertiesArgs;
 import io.pulumi.azurenative.devices.inputs.IotHubSkuInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IotHubPropertiesArgs> properties;
 
     public Output<IotHubPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IotHubResourceArgs(
@@ -99,12 +100,12 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IotHubResourceArgs() {
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<IotHubPropertiesArgs> properties) {
@@ -150,7 +151,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable IotHubPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -166,7 +167,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder sku(Output<IotHubSkuInfoArgs> sku) {
@@ -182,7 +183,7 @@ public final class IotHubResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IotHubResourceArgs build() {
             return new IotHubResourceArgs(location, properties, resourceGroupName, resourceName, sku, tags);

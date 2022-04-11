@@ -6,6 +6,7 @@ package io.pulumi.aws.eks.inputs;
 import io.pulumi.aws.eks.inputs.ClusterEncryptionConfigProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,8 +46,8 @@ public final class ClusterEncryptionConfigArgs extends io.pulumi.resources.Resou
     }
 
     private ClusterEncryptionConfigArgs() {
-        this.provider = Output.empty();
-        this.resources = Output.empty();
+        this.provider = Codegen.empty();
+        this.resources = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationMethodSelectorGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOper
       private final @Nullable Output<List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationMethodSelectorGetArgs>> methodSelectors;
 
     public Output<List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationMethodSelectorGetArgs>> getMethodSelectors() {
-        return this.methodSelectors == null ? Output.empty() : this.methodSelectors;
+        return this.methodSelectors == null ? Codegen.empty() : this.methodSelectors;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOper
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     public ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationGetArgs(
@@ -52,8 +53,8 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOper
     }
 
     private ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationGetArgs() {
-        this.methodSelectors = Output.empty();
-        this.serviceName = Output.empty();
+        this.methodSelectors = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOper
             return this;
         }
         public Builder methodSelectors(@Nullable List<ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationMethodSelectorGetArgs> methodSelectors) {
-            this.methodSelectors = Output.ofNullable(methodSelectors);
+            this.methodSelectors = Codegen.ofNullable(methodSelectors);
             return this;
         }
         public Builder methodSelectors(ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationMethodSelectorGetArgs... methodSelectors) {
@@ -94,7 +95,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOper
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }        public ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationGetArgs build() {
             return new ServicePerimetersServicePerimeterSpecEgressPolicyEgressToOperationGetArgs(methodSelectors, serviceName);

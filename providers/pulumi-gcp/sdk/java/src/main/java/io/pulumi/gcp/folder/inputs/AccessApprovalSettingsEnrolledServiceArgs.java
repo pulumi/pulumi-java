@@ -5,6 +5,7 @@ package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -57,7 +58,7 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
       private final @Nullable Output<String> enrollmentLevel;
 
     public Output<String> getEnrollmentLevel() {
-        return this.enrollmentLevel == null ? Output.empty() : this.enrollmentLevel;
+        return this.enrollmentLevel == null ? Codegen.empty() : this.enrollmentLevel;
     }
 
     public AccessApprovalSettingsEnrolledServiceArgs(
@@ -68,8 +69,8 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
     }
 
     private AccessApprovalSettingsEnrolledServiceArgs() {
-        this.cloudProduct = Output.empty();
-        this.enrollmentLevel = Output.empty();
+        this.cloudProduct = Codegen.empty();
+        this.enrollmentLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AccessApprovalSettingsEnrolledServiceArgs extends io.pulumi.r
             return this;
         }
         public Builder enrollmentLevel(@Nullable String enrollmentLevel) {
-            this.enrollmentLevel = Output.ofNullable(enrollmentLevel);
+            this.enrollmentLevel = Codegen.ofNullable(enrollmentLevel);
             return this;
         }        public AccessApprovalSettingsEnrolledServiceArgs build() {
             return new AccessApprovalSettingsEnrolledServiceArgs(cloudProduct, enrollmentLevel);

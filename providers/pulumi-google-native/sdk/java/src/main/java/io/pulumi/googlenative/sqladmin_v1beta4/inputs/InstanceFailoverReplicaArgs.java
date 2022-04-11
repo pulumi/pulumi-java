@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> available;
 
     public Output<Boolean> getAvailable() {
-        return this.available == null ? Output.empty() : this.available;
+        return this.available == null ? Codegen.empty() : this.available;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public InstanceFailoverReplicaArgs(
@@ -49,8 +50,8 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
     }
 
     private InstanceFailoverReplicaArgs() {
-        this.available = Output.empty();
-        this.name = Output.empty();
+        this.available = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder available(@Nullable Boolean available) {
-            this.available = Output.ofNullable(available);
+            this.available = Codegen.ofNullable(available);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -88,7 +89,7 @@ public final class InstanceFailoverReplicaArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public InstanceFailoverReplicaArgs build() {
             return new InstanceFailoverReplicaArgs(available, name);

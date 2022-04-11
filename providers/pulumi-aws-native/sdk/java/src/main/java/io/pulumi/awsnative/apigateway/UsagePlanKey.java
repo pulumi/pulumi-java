@@ -9,6 +9,7 @@ import io.pulumi.awsnative.apigateway.enums.UsagePlanKeyKeyType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -83,7 +84,7 @@ public class UsagePlanKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public UsagePlanKey(String name, UsagePlanKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:apigateway:UsagePlanKey", name, args == null ? UsagePlanKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:apigateway:UsagePlanKey", name, args == null ? UsagePlanKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private UsagePlanKey(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

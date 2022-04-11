@@ -16,6 +16,7 @@ import io.pulumi.azurenative.logic.inputs.EdifactValidationOverrideArgs;
 import io.pulumi.azurenative.logic.inputs.EdifactValidationSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -48,7 +49,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<EdifactDelimiterOverrideArgs>> edifactDelimiterOverrides;
 
     public Output<List<EdifactDelimiterOverrideArgs>> getEdifactDelimiterOverrides() {
-        return this.edifactDelimiterOverrides == null ? Output.empty() : this.edifactDelimiterOverrides;
+        return this.edifactDelimiterOverrides == null ? Codegen.empty() : this.edifactDelimiterOverrides;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<EdifactEnvelopeOverrideArgs>> envelopeOverrides;
 
     public Output<List<EdifactEnvelopeOverrideArgs>> getEnvelopeOverrides() {
-        return this.envelopeOverrides == null ? Output.empty() : this.envelopeOverrides;
+        return this.envelopeOverrides == null ? Codegen.empty() : this.envelopeOverrides;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<EdifactMessageIdentifierArgs>> messageFilterList;
 
     public Output<List<EdifactMessageIdentifierArgs>> getMessageFilterList() {
-        return this.messageFilterList == null ? Output.empty() : this.messageFilterList;
+        return this.messageFilterList == null ? Codegen.empty() : this.messageFilterList;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<EdifactValidationOverrideArgs>> validationOverrides;
 
     public Output<List<EdifactValidationOverrideArgs>> getValidationOverrides() {
-        return this.validationOverrides == null ? Output.empty() : this.validationOverrides;
+        return this.validationOverrides == null ? Codegen.empty() : this.validationOverrides;
     }
 
     /**
@@ -176,17 +177,17 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private EdifactProtocolSettingsArgs() {
-        this.acknowledgementSettings = Output.empty();
-        this.edifactDelimiterOverrides = Output.empty();
-        this.envelopeOverrides = Output.empty();
-        this.envelopeSettings = Output.empty();
-        this.framingSettings = Output.empty();
-        this.messageFilter = Output.empty();
-        this.messageFilterList = Output.empty();
-        this.processingSettings = Output.empty();
-        this.schemaReferences = Output.empty();
-        this.validationOverrides = Output.empty();
-        this.validationSettings = Output.empty();
+        this.acknowledgementSettings = Codegen.empty();
+        this.edifactDelimiterOverrides = Codegen.empty();
+        this.envelopeOverrides = Codegen.empty();
+        this.envelopeSettings = Codegen.empty();
+        this.framingSettings = Codegen.empty();
+        this.messageFilter = Codegen.empty();
+        this.messageFilterList = Codegen.empty();
+        this.processingSettings = Codegen.empty();
+        this.schemaReferences = Codegen.empty();
+        this.validationOverrides = Codegen.empty();
+        this.validationSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder edifactDelimiterOverrides(@Nullable List<EdifactDelimiterOverrideArgs> edifactDelimiterOverrides) {
-            this.edifactDelimiterOverrides = Output.ofNullable(edifactDelimiterOverrides);
+            this.edifactDelimiterOverrides = Codegen.ofNullable(edifactDelimiterOverrides);
             return this;
         }
         public Builder edifactDelimiterOverrides(EdifactDelimiterOverrideArgs... edifactDelimiterOverrides) {
@@ -253,7 +254,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder envelopeOverrides(@Nullable List<EdifactEnvelopeOverrideArgs> envelopeOverrides) {
-            this.envelopeOverrides = Output.ofNullable(envelopeOverrides);
+            this.envelopeOverrides = Codegen.ofNullable(envelopeOverrides);
             return this;
         }
         public Builder envelopeOverrides(EdifactEnvelopeOverrideArgs... envelopeOverrides) {
@@ -288,7 +289,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder messageFilterList(@Nullable List<EdifactMessageIdentifierArgs> messageFilterList) {
-            this.messageFilterList = Output.ofNullable(messageFilterList);
+            this.messageFilterList = Codegen.ofNullable(messageFilterList);
             return this;
         }
         public Builder messageFilterList(EdifactMessageIdentifierArgs... messageFilterList) {
@@ -318,7 +319,7 @@ public final class EdifactProtocolSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder validationOverrides(@Nullable List<EdifactValidationOverrideArgs> validationOverrides) {
-            this.validationOverrides = Output.ofNullable(validationOverrides);
+            this.validationOverrides = Codegen.ofNullable(validationOverrides);
             return this;
         }
         public Builder validationOverrides(EdifactValidationOverrideArgs... validationOverrides) {

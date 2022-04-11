@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleClusterConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class MonitoringScheduleMonitoringResourcesArgs extends io.pulumi.r
     }
 
     private MonitoringScheduleMonitoringResourcesArgs() {
-        this.clusterConfig = Output.empty();
+        this.clusterConfig = Codegen.empty();
     }
 
     public static Builder builder() {

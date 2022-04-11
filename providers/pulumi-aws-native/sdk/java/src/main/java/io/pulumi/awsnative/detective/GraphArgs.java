@@ -6,6 +6,7 @@ package io.pulumi.awsnative.detective;
 import io.pulumi.awsnative.detective.inputs.GraphTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +20,7 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GraphTagArgs>> tags;
 
     public Output<List<GraphTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GraphArgs(@Nullable Output<List<GraphTagArgs>> tags) {
@@ -27,7 +28,7 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GraphArgs() {
-        this.tags = Output.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class GraphArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<GraphTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(GraphTagArgs... tags) {

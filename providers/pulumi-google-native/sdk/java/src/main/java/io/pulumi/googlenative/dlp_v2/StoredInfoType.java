@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dlp_v2;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dlp_v2.StoredInfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeVersionResponse;
@@ -85,7 +86,7 @@ public class StoredInfoType extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StoredInfoType(String name, StoredInfoTypeArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dlp/v2:StoredInfoType", name, args == null ? StoredInfoTypeArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dlp/v2:StoredInfoType", name, args == null ? StoredInfoTypeArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StoredInfoType(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

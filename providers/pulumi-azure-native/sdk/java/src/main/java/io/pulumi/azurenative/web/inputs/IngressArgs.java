@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.TrafficWeightArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +33,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> allowInsecure;
 
     public Output<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
+        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> external;
 
     public Output<Boolean> getExternal() {
-        return this.external == null ? Output.empty() : this.external;
+        return this.external == null ? Codegen.empty() : this.external;
     }
 
     /**
@@ -54,14 +55,14 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> targetPort;
 
     public Output<Integer> getTargetPort() {
-        return this.targetPort == null ? Output.empty() : this.targetPort;
+        return this.targetPort == null ? Codegen.empty() : this.targetPort;
     }
 
     @Import(name="traffic")
       private final @Nullable Output<List<TrafficWeightArgs>> traffic;
 
     public Output<List<TrafficWeightArgs>> getTraffic() {
-        return this.traffic == null ? Output.empty() : this.traffic;
+        return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,IngressTransportMethod>> transport;
 
     public Output<Either<String,IngressTransportMethod>> getTransport() {
-        return this.transport == null ? Output.empty() : this.transport;
+        return this.transport == null ? Codegen.empty() : this.transport;
     }
 
     public IngressArgs(
@@ -82,18 +83,18 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
         @Nullable Output<List<TrafficWeightArgs>> traffic,
         @Nullable Output<Either<String,IngressTransportMethod>> transport) {
         this.allowInsecure = allowInsecure;
-        this.external = external == null ? Output.ofNullable(false) : external;
+        this.external = external == null ? Codegen.ofNullable(false) : external;
         this.targetPort = targetPort;
         this.traffic = traffic;
         this.transport = transport;
     }
 
     private IngressArgs() {
-        this.allowInsecure = Output.empty();
-        this.external = Output.empty();
-        this.targetPort = Output.empty();
-        this.traffic = Output.empty();
-        this.transport = Output.empty();
+        this.allowInsecure = Codegen.empty();
+        this.external = Codegen.empty();
+        this.targetPort = Codegen.empty();
+        this.traffic = Codegen.empty();
+        this.transport = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Output.ofNullable(allowInsecure);
+            this.allowInsecure = Codegen.ofNullable(allowInsecure);
             return this;
         }
         public Builder external(@Nullable Output<Boolean> external) {
@@ -137,7 +138,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder external(@Nullable Boolean external) {
-            this.external = Output.ofNullable(external);
+            this.external = Codegen.ofNullable(external);
             return this;
         }
         public Builder targetPort(@Nullable Output<Integer> targetPort) {
@@ -145,7 +146,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetPort(@Nullable Integer targetPort) {
-            this.targetPort = Output.ofNullable(targetPort);
+            this.targetPort = Codegen.ofNullable(targetPort);
             return this;
         }
         public Builder traffic(@Nullable Output<List<TrafficWeightArgs>> traffic) {
@@ -153,7 +154,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder traffic(@Nullable List<TrafficWeightArgs> traffic) {
-            this.traffic = Output.ofNullable(traffic);
+            this.traffic = Codegen.ofNullable(traffic);
             return this;
         }
         public Builder traffic(TrafficWeightArgs... traffic) {
@@ -164,7 +165,7 @@ public final class IngressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transport(@Nullable Either<String,IngressTransportMethod> transport) {
-            this.transport = Output.ofNullable(transport);
+            this.transport = Codegen.ofNullable(transport);
             return this;
         }        public IngressArgs build() {
             return new IngressArgs(allowInsecure, external, targetPort, traffic, transport);

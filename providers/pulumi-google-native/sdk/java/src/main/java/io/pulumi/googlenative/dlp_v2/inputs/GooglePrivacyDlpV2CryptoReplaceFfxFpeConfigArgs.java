@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
@@ -31,7 +32,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
       private final @Nullable Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> commonAlphabet;
 
     public Output<GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet> getCommonAlphabet() {
-        return this.commonAlphabet == null ? Output.empty() : this.commonAlphabet;
+        return this.commonAlphabet == null ? Codegen.empty() : this.commonAlphabet;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
       private final @Nullable Output<String> customAlphabet;
 
     public Output<String> getCustomAlphabet() {
-        return this.customAlphabet == null ? Output.empty() : this.customAlphabet;
+        return this.customAlphabet == null ? Codegen.empty() : this.customAlphabet;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
       private final @Nullable Output<Integer> radix;
 
     public Output<Integer> getRadix() {
-        return this.radix == null ? Output.empty() : this.radix;
+        return this.radix == null ? Codegen.empty() : this.radix;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
       private final @Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType;
 
     public Output<GooglePrivacyDlpV2InfoTypeArgs> getSurrogateInfoType() {
-        return this.surrogateInfoType == null ? Output.empty() : this.surrogateInfoType;
+        return this.surrogateInfoType == null ? Codegen.empty() : this.surrogateInfoType;
     }
 
     public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs(
@@ -105,12 +106,12 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
     }
 
     private GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs() {
-        this.commonAlphabet = Output.empty();
-        this.context = Output.empty();
-        this.cryptoKey = Output.empty();
-        this.customAlphabet = Output.empty();
-        this.radix = Output.empty();
-        this.surrogateInfoType = Output.empty();
+        this.commonAlphabet = Codegen.empty();
+        this.context = Codegen.empty();
+        this.cryptoKey = Codegen.empty();
+        this.customAlphabet = Codegen.empty();
+        this.radix = Codegen.empty();
+        this.surrogateInfoType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
             return this;
         }
         public Builder commonAlphabet(@Nullable GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigCommonAlphabet commonAlphabet) {
-            this.commonAlphabet = Output.ofNullable(commonAlphabet);
+            this.commonAlphabet = Codegen.ofNullable(commonAlphabet);
             return this;
         }
         public Builder context(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> context) {
@@ -156,7 +157,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
             return this;
         }
         public Builder context(@Nullable GooglePrivacyDlpV2FieldIdArgs context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder cryptoKey(Output<GooglePrivacyDlpV2CryptoKeyArgs> cryptoKey) {
@@ -172,7 +173,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
             return this;
         }
         public Builder customAlphabet(@Nullable String customAlphabet) {
-            this.customAlphabet = Output.ofNullable(customAlphabet);
+            this.customAlphabet = Codegen.ofNullable(customAlphabet);
             return this;
         }
         public Builder radix(@Nullable Output<Integer> radix) {
@@ -180,7 +181,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
             return this;
         }
         public Builder radix(@Nullable Integer radix) {
-            this.radix = Output.ofNullable(radix);
+            this.radix = Codegen.ofNullable(radix);
             return this;
         }
         public Builder surrogateInfoType(@Nullable Output<GooglePrivacyDlpV2InfoTypeArgs> surrogateInfoType) {
@@ -188,7 +189,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs extends io.pu
             return this;
         }
         public Builder surrogateInfoType(@Nullable GooglePrivacyDlpV2InfoTypeArgs surrogateInfoType) {
-            this.surrogateInfoType = Output.ofNullable(surrogateInfoType);
+            this.surrogateInfoType = Codegen.ofNullable(surrogateInfoType);
             return this;
         }        public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs build() {
             return new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigArgs(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);

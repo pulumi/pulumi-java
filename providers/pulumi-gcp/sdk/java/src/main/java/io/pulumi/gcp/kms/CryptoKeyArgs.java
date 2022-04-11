@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.kms.inputs.CryptoKeyVersionTemplateArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destroyScheduledDuration;
 
     public Output<String> getDestroyScheduledDuration() {
-        return this.destroyScheduledDuration == null ? Output.empty() : this.destroyScheduledDuration;
+        return this.destroyScheduledDuration == null ? Codegen.empty() : this.destroyScheduledDuration;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> importOnly;
 
     public Output<Boolean> getImportOnly() {
-        return this.importOnly == null ? Output.empty() : this.importOnly;
+        return this.importOnly == null ? Codegen.empty() : this.importOnly;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
-        return this.purpose == null ? Output.empty() : this.purpose;
+        return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rotationPeriod;
 
     public Output<String> getRotationPeriod() {
-        return this.rotationPeriod == null ? Output.empty() : this.rotationPeriod;
+        return this.rotationPeriod == null ? Codegen.empty() : this.rotationPeriod;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> skipInitialVersionCreation;
 
     public Output<Boolean> getSkipInitialVersionCreation() {
-        return this.skipInitialVersionCreation == null ? Output.empty() : this.skipInitialVersionCreation;
+        return this.skipInitialVersionCreation == null ? Codegen.empty() : this.skipInitialVersionCreation;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate;
 
     public Output<CryptoKeyVersionTemplateArgs> getVersionTemplate() {
-        return this.versionTemplate == null ? Output.empty() : this.versionTemplate;
+        return this.versionTemplate == null ? Codegen.empty() : this.versionTemplate;
     }
 
     public CryptoKeyArgs(
@@ -149,15 +150,15 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CryptoKeyArgs() {
-        this.destroyScheduledDuration = Output.empty();
-        this.importOnly = Output.empty();
-        this.keyRing = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.purpose = Output.empty();
-        this.rotationPeriod = Output.empty();
-        this.skipInitialVersionCreation = Output.empty();
-        this.versionTemplate = Output.empty();
+        this.destroyScheduledDuration = Codegen.empty();
+        this.importOnly = Codegen.empty();
+        this.keyRing = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.purpose = Codegen.empty();
+        this.rotationPeriod = Codegen.empty();
+        this.skipInitialVersionCreation = Codegen.empty();
+        this.versionTemplate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -201,7 +202,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destroyScheduledDuration(@Nullable String destroyScheduledDuration) {
-            this.destroyScheduledDuration = Output.ofNullable(destroyScheduledDuration);
+            this.destroyScheduledDuration = Codegen.ofNullable(destroyScheduledDuration);
             return this;
         }
         public Builder importOnly(@Nullable Output<Boolean> importOnly) {
@@ -209,7 +210,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder importOnly(@Nullable Boolean importOnly) {
-            this.importOnly = Output.ofNullable(importOnly);
+            this.importOnly = Codegen.ofNullable(importOnly);
             return this;
         }
         public Builder keyRing(Output<String> keyRing) {
@@ -225,7 +226,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -233,7 +234,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder purpose(@Nullable Output<String> purpose) {
@@ -241,7 +242,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Output.ofNullable(purpose);
+            this.purpose = Codegen.ofNullable(purpose);
             return this;
         }
         public Builder rotationPeriod(@Nullable Output<String> rotationPeriod) {
@@ -249,7 +250,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rotationPeriod(@Nullable String rotationPeriod) {
-            this.rotationPeriod = Output.ofNullable(rotationPeriod);
+            this.rotationPeriod = Codegen.ofNullable(rotationPeriod);
             return this;
         }
         public Builder skipInitialVersionCreation(@Nullable Output<Boolean> skipInitialVersionCreation) {
@@ -257,7 +258,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipInitialVersionCreation(@Nullable Boolean skipInitialVersionCreation) {
-            this.skipInitialVersionCreation = Output.ofNullable(skipInitialVersionCreation);
+            this.skipInitialVersionCreation = Codegen.ofNullable(skipInitialVersionCreation);
             return this;
         }
         public Builder versionTemplate(@Nullable Output<CryptoKeyVersionTemplateArgs> versionTemplate) {
@@ -265,7 +266,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionTemplate(@Nullable CryptoKeyVersionTemplateArgs versionTemplate) {
-            this.versionTemplate = Output.ofNullable(versionTemplate);
+            this.versionTemplate = Codegen.ofNullable(versionTemplate);
             return this;
         }        public CryptoKeyArgs build() {
             return new CryptoKeyArgs(destroyScheduledDuration, importOnly, keyRing, labels, name, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplate);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> context;
 
     public Output<String> getContext() {
-        return this.context == null ? Output.empty() : this.context;
+        return this.context == null ? Codegen.empty() : this.context;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> importance;
 
     public Output<String> getImportance() {
-        return this.importance == null ? Output.empty() : this.importance;
+        return this.importance == null ? Codegen.empty() : this.importance;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> workloadClassifierName;
 
     public Output<String> getWorkloadClassifierName() {
-        return this.workloadClassifierName == null ? Output.empty() : this.workloadClassifierName;
+        return this.workloadClassifierName == null ? Codegen.empty() : this.workloadClassifierName;
     }
 
     /**
@@ -161,17 +162,17 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
     }
 
     private SqlPoolWorkloadClassifierArgs() {
-        this.context = Output.empty();
-        this.endTime = Output.empty();
-        this.importance = Output.empty();
-        this.label = Output.empty();
-        this.memberName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlPoolName = Output.empty();
-        this.startTime = Output.empty();
-        this.workloadClassifierName = Output.empty();
-        this.workloadGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.context = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.importance = Codegen.empty();
+        this.label = Codegen.empty();
+        this.memberName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlPoolName = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.workloadClassifierName = Codegen.empty();
+        this.workloadGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder context(@Nullable String context) {
-            this.context = Output.ofNullable(context);
+            this.context = Codegen.ofNullable(context);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -227,7 +228,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder importance(@Nullable Output<String> importance) {
@@ -235,7 +236,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder importance(@Nullable String importance) {
-            this.importance = Output.ofNullable(importance);
+            this.importance = Codegen.ofNullable(importance);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -243,7 +244,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder memberName(Output<String> memberName) {
@@ -275,7 +276,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder workloadClassifierName(@Nullable Output<String> workloadClassifierName) {
@@ -283,7 +284,7 @@ public final class SqlPoolWorkloadClassifierArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder workloadClassifierName(@Nullable String workloadClassifierName) {
-            this.workloadClassifierName = Output.ofNullable(workloadClassifierName);
+            this.workloadClassifierName = Codegen.ofNullable(workloadClassifierName);
             return this;
         }
         public Builder workloadGroupName(Output<String> workloadGroupName) {

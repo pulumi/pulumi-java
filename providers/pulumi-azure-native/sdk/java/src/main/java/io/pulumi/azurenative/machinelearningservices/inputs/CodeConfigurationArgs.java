@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> codeId;
 
     public Output<String> getCodeId() {
-        return this.codeId == null ? Output.empty() : this.codeId;
+        return this.codeId == null ? Codegen.empty() : this.codeId;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CodeConfigurationArgs() {
-        this.codeId = Output.empty();
-        this.scoringScript = Output.empty();
+        this.codeId = Codegen.empty();
+        this.scoringScript = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class CodeConfigurationArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder codeId(@Nullable String codeId) {
-            this.codeId = Output.ofNullable(codeId);
+            this.codeId = Codegen.ofNullable(codeId);
             return this;
         }
         public Builder scoringScript(Output<String> scoringScript) {

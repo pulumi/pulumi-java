@@ -75,3 +75,5 @@ var StringJoiner = JavaUtil.Dot("StringJoiner")
 var Optionals = PulumiInternal.Dot("Optionals")
 
 var Void = JavaLang.Dot("Void")
+
+var Codegen = PulumiInternal.Dot("Codegen")

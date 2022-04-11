@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.ClusterTelemetryType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ClusterTelemetryType> type;
 
     public Output<ClusterTelemetryType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ClusterTelemetryArgs(@Nullable Output<ClusterTelemetryType> type) {
@@ -34,7 +35,7 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ClusterTelemetryArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ClusterTelemetryArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable ClusterTelemetryType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ClusterTelemetryArgs build() {
             return new ClusterTelemetryArgs(type);

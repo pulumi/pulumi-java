@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> subnetPrefixLength;
 
     public Output<Integer> getSubnetPrefixLength() {
-        return this.subnetPrefixLength == null ? Output.empty() : this.subnetPrefixLength;
+        return this.subnetPrefixLength == null ? Codegen.empty() : this.subnetPrefixLength;
     }
 
     public IPRangeArgs(
@@ -62,9 +63,9 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPRangeArgs() {
-        this.address = Output.empty();
-        this.name = Output.empty();
-        this.subnetPrefixLength = Output.empty();
+        this.address = Codegen.empty();
+        this.name = Codegen.empty();
+        this.subnetPrefixLength = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder subnetPrefixLength(@Nullable Output<Integer> subnetPrefixLength) {
@@ -112,7 +113,7 @@ public final class IPRangeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetPrefixLength(@Nullable Integer subnetPrefixLength) {
-            this.subnetPrefixLength = Output.ofNullable(subnetPrefixLength);
+            this.subnetPrefixLength = Codegen.ofNullable(subnetPrefixLength);
             return this;
         }        public IPRangeArgs build() {
             return new IPRangeArgs(address, name, subnetPrefixLength);

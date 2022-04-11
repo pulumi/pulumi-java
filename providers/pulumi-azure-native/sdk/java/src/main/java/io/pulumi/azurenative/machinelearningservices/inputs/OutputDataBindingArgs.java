@@ -7,6 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> datastoreId;
 
     public Output<String> getDatastoreId() {
-        return this.datastoreId == null ? Output.empty() : this.datastoreId;
+        return this.datastoreId == null ? Codegen.empty() : this.datastoreId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,DataBindingMode>> mode;
 
     public Output<Either<String,DataBindingMode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> pathOnCompute;
 
     public Output<String> getPathOnCompute() {
-        return this.pathOnCompute == null ? Output.empty() : this.pathOnCompute;
+        return this.pathOnCompute == null ? Codegen.empty() : this.pathOnCompute;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> pathOnDatastore;
 
     public Output<String> getPathOnDatastore() {
-        return this.pathOnDatastore == null ? Output.empty() : this.pathOnDatastore;
+        return this.pathOnDatastore == null ? Codegen.empty() : this.pathOnDatastore;
     }
 
     public OutputDataBindingArgs(
@@ -72,10 +73,10 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
     }
 
     private OutputDataBindingArgs() {
-        this.datastoreId = Output.empty();
-        this.mode = Output.empty();
-        this.pathOnCompute = Output.empty();
-        this.pathOnDatastore = Output.empty();
+        this.datastoreId = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.pathOnCompute = Codegen.empty();
+        this.pathOnDatastore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder datastoreId(@Nullable String datastoreId) {
-            this.datastoreId = Output.ofNullable(datastoreId);
+            this.datastoreId = Codegen.ofNullable(datastoreId);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,DataBindingMode>> mode) {
@@ -117,7 +118,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder mode(@Nullable Either<String,DataBindingMode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder pathOnCompute(@Nullable Output<String> pathOnCompute) {
@@ -125,7 +126,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder pathOnCompute(@Nullable String pathOnCompute) {
-            this.pathOnCompute = Output.ofNullable(pathOnCompute);
+            this.pathOnCompute = Codegen.ofNullable(pathOnCompute);
             return this;
         }
         public Builder pathOnDatastore(@Nullable Output<String> pathOnDatastore) {
@@ -133,7 +134,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder pathOnDatastore(@Nullable String pathOnDatastore) {
-            this.pathOnDatastore = Output.ofNullable(pathOnDatastore);
+            this.pathOnDatastore = Codegen.ofNullable(pathOnDatastore);
             return this;
         }        public OutputDataBindingArgs build() {
             return new OutputDataBindingArgs(datastoreId, mode, pathOnCompute, pathOnDatastore);

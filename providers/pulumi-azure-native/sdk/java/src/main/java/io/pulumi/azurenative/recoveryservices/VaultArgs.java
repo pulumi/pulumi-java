@@ -8,6 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SkuArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityDataArgs> identity;
 
     public Output<IdentityDataArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<VaultPropertiesArgs> properties;
 
     public Output<VaultPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vaultName;
 
     public Output<String> getVaultName() {
-        return this.vaultName == null ? Output.empty() : this.vaultName;
+        return this.vaultName == null ? Codegen.empty() : this.vaultName;
     }
 
     public VaultArgs(
@@ -113,13 +114,13 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultArgs() {
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.vaultName = Output.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityDataArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -167,7 +168,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<VaultPropertiesArgs> properties) {
@@ -175,7 +176,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable VaultPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -191,7 +192,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -199,7 +200,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vaultName(@Nullable Output<String> vaultName) {
@@ -207,7 +208,7 @@ public final class VaultArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vaultName(@Nullable String vaultName) {
-            this.vaultName = Output.ofNullable(vaultName);
+            this.vaultName = Codegen.ofNullable(vaultName);
             return this;
         }        public VaultArgs build() {
             return new VaultArgs(identity, location, properties, resourceGroupName, sku, tags, vaultName);

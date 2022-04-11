@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> db;
 
     public Output<String> getDb() {
-        return this.db == null ? Output.empty() : this.db;
+        return this.db == null ? Codegen.empty() : this.db;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public RoleArgs(
@@ -48,8 +49,8 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleArgs() {
-        this.db = Output.empty();
-        this.role = Output.empty();
+        this.db = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder db(@Nullable String db) {
-            this.db = Output.ofNullable(db);
+            this.db = Codegen.ofNullable(db);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -87,7 +88,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public RoleArgs build() {
             return new RoleArgs(db, role);

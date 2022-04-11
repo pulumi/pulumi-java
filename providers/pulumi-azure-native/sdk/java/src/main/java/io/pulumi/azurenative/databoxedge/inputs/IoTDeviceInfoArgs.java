@@ -6,6 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.AuthenticationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AuthenticationArgs> authentication;
 
     public Output<AuthenticationArgs> getAuthentication() {
-        return this.authentication == null ? Output.empty() : this.authentication;
+        return this.authentication == null ? Codegen.empty() : this.authentication;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ioTHostHubId;
 
     public Output<String> getIoTHostHubId() {
-        return this.ioTHostHubId == null ? Output.empty() : this.ioTHostHubId;
+        return this.ioTHostHubId == null ? Codegen.empty() : this.ioTHostHubId;
     }
 
     public IoTDeviceInfoArgs(
@@ -75,10 +76,10 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IoTDeviceInfoArgs() {
-        this.authentication = Output.empty();
-        this.deviceId = Output.empty();
-        this.ioTHostHub = Output.empty();
-        this.ioTHostHubId = Output.empty();
+        this.authentication = Codegen.empty();
+        this.deviceId = Codegen.empty();
+        this.ioTHostHub = Codegen.empty();
+        this.ioTHostHubId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authentication(@Nullable AuthenticationArgs authentication) {
-            this.authentication = Output.ofNullable(authentication);
+            this.authentication = Codegen.ofNullable(authentication);
             return this;
         }
         public Builder deviceId(Output<String> deviceId) {
@@ -136,7 +137,7 @@ public final class IoTDeviceInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ioTHostHubId(@Nullable String ioTHostHubId) {
-            this.ioTHostHubId = Output.ofNullable(ioTHostHubId);
+            this.ioTHostHubId = Codegen.ofNullable(ioTHostHubId);
             return this;
         }        public IoTDeviceInfoArgs build() {
             return new IoTDeviceInfoArgs(authentication, deviceId, ioTHostHub, ioTHostHubId);

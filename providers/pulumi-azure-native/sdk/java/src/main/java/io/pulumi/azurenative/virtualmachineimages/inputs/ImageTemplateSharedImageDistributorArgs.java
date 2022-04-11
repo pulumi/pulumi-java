@@ -7,6 +7,7 @@ import io.pulumi.azurenative.virtualmachineimages.enums.SharedImageStorageAccoun
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
       private final @Nullable Output<Map<String,String>> artifactTags;
 
     public Output<Map<String,String>> getArtifactTags() {
-        return this.artifactTags == null ? Output.empty() : this.artifactTags;
+        return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
       private final @Nullable Output<Boolean> excludeFromLatest;
 
     public Output<Boolean> getExcludeFromLatest() {
-        return this.excludeFromLatest == null ? Output.empty() : this.excludeFromLatest;
+        return this.excludeFromLatest == null ? Codegen.empty() : this.excludeFromLatest;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
       private final @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType;
 
     public Output<Either<String,SharedImageStorageAccountType>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
         @Nullable Output<Either<String,SharedImageStorageAccountType>> storageAccountType,
         Output<String> type) {
         this.artifactTags = artifactTags;
-        this.excludeFromLatest = excludeFromLatest == null ? Output.ofNullable(false) : excludeFromLatest;
+        this.excludeFromLatest = excludeFromLatest == null ? Codegen.ofNullable(false) : excludeFromLatest;
         this.galleryImageId = Objects.requireNonNull(galleryImageId, "expected parameter 'galleryImageId' to be non-null");
         this.replicationRegions = Objects.requireNonNull(replicationRegions, "expected parameter 'replicationRegions' to be non-null");
         this.runOutputName = Objects.requireNonNull(runOutputName, "expected parameter 'runOutputName' to be non-null");
@@ -119,13 +120,13 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
     }
 
     private ImageTemplateSharedImageDistributorArgs() {
-        this.artifactTags = Output.empty();
-        this.excludeFromLatest = Output.empty();
-        this.galleryImageId = Output.empty();
-        this.replicationRegions = Output.empty();
-        this.runOutputName = Output.empty();
-        this.storageAccountType = Output.empty();
-        this.type = Output.empty();
+        this.artifactTags = Codegen.empty();
+        this.excludeFromLatest = Codegen.empty();
+        this.galleryImageId = Codegen.empty();
+        this.replicationRegions = Codegen.empty();
+        this.runOutputName = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -165,7 +166,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
             return this;
         }
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Output.ofNullable(artifactTags);
+            this.artifactTags = Codegen.ofNullable(artifactTags);
             return this;
         }
         public Builder excludeFromLatest(@Nullable Output<Boolean> excludeFromLatest) {
@@ -173,7 +174,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
             return this;
         }
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
-            this.excludeFromLatest = Output.ofNullable(excludeFromLatest);
+            this.excludeFromLatest = Codegen.ofNullable(excludeFromLatest);
             return this;
         }
         public Builder galleryImageId(Output<String> galleryImageId) {
@@ -208,7 +209,7 @@ public final class ImageTemplateSharedImageDistributorArgs extends io.pulumi.res
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,SharedImageStorageAccountType> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }
         public Builder type(Output<String> type) {

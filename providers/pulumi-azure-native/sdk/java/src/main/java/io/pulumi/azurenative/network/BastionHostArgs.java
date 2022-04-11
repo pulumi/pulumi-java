@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.BastionHostIPConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bastionHostName;
 
     public Output<String> getBastionHostName() {
-        return this.bastionHostName == null ? Output.empty() : this.bastionHostName;
+        return this.bastionHostName == null ? Codegen.empty() : this.bastionHostName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dnsName;
 
     public Output<String> getDnsName() {
-        return this.dnsName == null ? Output.empty() : this.dnsName;
+        return this.dnsName == null ? Codegen.empty() : this.dnsName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations;
 
     public Output<List<BastionHostIPConfigurationArgs>> getIpConfigurations() {
-        return this.ipConfigurations == null ? Output.empty() : this.ipConfigurations;
+        return this.ipConfigurations == null ? Codegen.empty() : this.ipConfigurations;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public BastionHostArgs(
@@ -112,13 +113,13 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BastionHostArgs() {
-        this.bastionHostName = Output.empty();
-        this.dnsName = Output.empty();
-        this.id = Output.empty();
-        this.ipConfigurations = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.bastionHostName = Codegen.empty();
+        this.dnsName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.ipConfigurations = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bastionHostName(@Nullable String bastionHostName) {
-            this.bastionHostName = Output.ofNullable(bastionHostName);
+            this.bastionHostName = Codegen.ofNullable(bastionHostName);
             return this;
         }
         public Builder dnsName(@Nullable Output<String> dnsName) {
@@ -166,7 +167,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsName(@Nullable String dnsName) {
-            this.dnsName = Output.ofNullable(dnsName);
+            this.dnsName = Codegen.ofNullable(dnsName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -174,7 +175,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipConfigurations(@Nullable Output<List<BastionHostIPConfigurationArgs>> ipConfigurations) {
@@ -182,7 +183,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipConfigurations(@Nullable List<BastionHostIPConfigurationArgs> ipConfigurations) {
-            this.ipConfigurations = Output.ofNullable(ipConfigurations);
+            this.ipConfigurations = Codegen.ofNullable(ipConfigurations);
             return this;
         }
         public Builder ipConfigurations(BastionHostIPConfigurationArgs... ipConfigurations) {
@@ -193,7 +194,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -209,7 +210,7 @@ public final class BastionHostArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public BastionHostArgs build() {
             return new BastionHostArgs(bastionHostName, dnsName, id, ipConfigurations, location, resourceGroupName, tags);

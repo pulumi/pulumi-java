@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.settings.k8s.io_v1alpha1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.PodPresetListArgs;
@@ -99,7 +100,7 @@ public class PodPresetList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PodPresetList(String name, PodPresetListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:settings.k8s.io/v1alpha1:PodPresetList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:settings.k8s.io/v1alpha1:PodPresetList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private PodPresetList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

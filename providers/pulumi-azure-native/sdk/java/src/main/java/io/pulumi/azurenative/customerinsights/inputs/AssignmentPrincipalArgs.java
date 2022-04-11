@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> principalMetadata;
 
     public Output<Map<String,String>> getPrincipalMetadata() {
-        return this.principalMetadata == null ? Output.empty() : this.principalMetadata;
+        return this.principalMetadata == null ? Codegen.empty() : this.principalMetadata;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
     }
 
     private AssignmentPrincipalArgs() {
-        this.principalId = Output.empty();
-        this.principalMetadata = Output.empty();
-        this.principalType = Output.empty();
+        this.principalId = Codegen.empty();
+        this.principalMetadata = Codegen.empty();
+        this.principalType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class AssignmentPrincipalArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder principalMetadata(@Nullable Map<String,String> principalMetadata) {
-            this.principalMetadata = Output.ofNullable(principalMetadata);
+            this.principalMetadata = Codegen.ofNullable(principalMetadata);
             return this;
         }
         public Builder principalType(Output<String> principalType) {

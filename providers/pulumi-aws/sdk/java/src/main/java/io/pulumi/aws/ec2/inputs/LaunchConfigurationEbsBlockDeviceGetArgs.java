@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,7 +21,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> deleteOnTermination;
 
     public Output<Boolean> getDeleteOnTermination() {
-        return this.deleteOnTermination == null ? Output.empty() : this.deleteOnTermination;
+        return this.deleteOnTermination == null ? Codegen.empty() : this.deleteOnTermination;
     }
 
     @Import(name="deviceName", required=true)
@@ -34,49 +35,49 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> encrypted;
 
     public Output<Boolean> getEncrypted() {
-        return this.encrypted == null ? Output.empty() : this.encrypted;
+        return this.encrypted == null ? Codegen.empty() : this.encrypted;
     }
 
     @Import(name="iops")
       private final @Nullable Output<Integer> iops;
 
     public Output<Integer> getIops() {
-        return this.iops == null ? Output.empty() : this.iops;
+        return this.iops == null ? Codegen.empty() : this.iops;
     }
 
     @Import(name="noDevice")
       private final @Nullable Output<Boolean> noDevice;
 
     public Output<Boolean> getNoDevice() {
-        return this.noDevice == null ? Output.empty() : this.noDevice;
+        return this.noDevice == null ? Codegen.empty() : this.noDevice;
     }
 
     @Import(name="snapshotId")
       private final @Nullable Output<String> snapshotId;
 
     public Output<String> getSnapshotId() {
-        return this.snapshotId == null ? Output.empty() : this.snapshotId;
+        return this.snapshotId == null ? Codegen.empty() : this.snapshotId;
     }
 
     @Import(name="throughput")
       private final @Nullable Output<Integer> throughput;
 
     public Output<Integer> getThroughput() {
-        return this.throughput == null ? Output.empty() : this.throughput;
+        return this.throughput == null ? Codegen.empty() : this.throughput;
     }
 
     @Import(name="volumeSize")
       private final @Nullable Output<Integer> volumeSize;
 
     public Output<Integer> getVolumeSize() {
-        return this.volumeSize == null ? Output.empty() : this.volumeSize;
+        return this.volumeSize == null ? Codegen.empty() : this.volumeSize;
     }
 
     @Import(name="volumeType")
       private final @Nullable Output<String> volumeType;
 
     public Output<String> getVolumeType() {
-        return this.volumeType == null ? Output.empty() : this.volumeType;
+        return this.volumeType == null ? Codegen.empty() : this.volumeType;
     }
 
     public LaunchConfigurationEbsBlockDeviceGetArgs(
@@ -101,15 +102,15 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
     }
 
     private LaunchConfigurationEbsBlockDeviceGetArgs() {
-        this.deleteOnTermination = Output.empty();
-        this.deviceName = Output.empty();
-        this.encrypted = Output.empty();
-        this.iops = Output.empty();
-        this.noDevice = Output.empty();
-        this.snapshotId = Output.empty();
-        this.throughput = Output.empty();
-        this.volumeSize = Output.empty();
-        this.volumeType = Output.empty();
+        this.deleteOnTermination = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.encrypted = Codegen.empty();
+        this.iops = Codegen.empty();
+        this.noDevice = Codegen.empty();
+        this.snapshotId = Codegen.empty();
+        this.throughput = Codegen.empty();
+        this.volumeSize = Codegen.empty();
+        this.volumeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder deleteOnTermination(@Nullable Boolean deleteOnTermination) {
-            this.deleteOnTermination = Output.ofNullable(deleteOnTermination);
+            this.deleteOnTermination = Codegen.ofNullable(deleteOnTermination);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -169,7 +170,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder encrypted(@Nullable Boolean encrypted) {
-            this.encrypted = Output.ofNullable(encrypted);
+            this.encrypted = Codegen.ofNullable(encrypted);
             return this;
         }
         public Builder iops(@Nullable Output<Integer> iops) {
@@ -177,7 +178,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder iops(@Nullable Integer iops) {
-            this.iops = Output.ofNullable(iops);
+            this.iops = Codegen.ofNullable(iops);
             return this;
         }
         public Builder noDevice(@Nullable Output<Boolean> noDevice) {
@@ -185,7 +186,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder noDevice(@Nullable Boolean noDevice) {
-            this.noDevice = Output.ofNullable(noDevice);
+            this.noDevice = Codegen.ofNullable(noDevice);
             return this;
         }
         public Builder snapshotId(@Nullable Output<String> snapshotId) {
@@ -193,7 +194,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder snapshotId(@Nullable String snapshotId) {
-            this.snapshotId = Output.ofNullable(snapshotId);
+            this.snapshotId = Codegen.ofNullable(snapshotId);
             return this;
         }
         public Builder throughput(@Nullable Output<Integer> throughput) {
@@ -201,7 +202,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder throughput(@Nullable Integer throughput) {
-            this.throughput = Output.ofNullable(throughput);
+            this.throughput = Codegen.ofNullable(throughput);
             return this;
         }
         public Builder volumeSize(@Nullable Output<Integer> volumeSize) {
@@ -209,7 +210,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder volumeSize(@Nullable Integer volumeSize) {
-            this.volumeSize = Output.ofNullable(volumeSize);
+            this.volumeSize = Codegen.ofNullable(volumeSize);
             return this;
         }
         public Builder volumeType(@Nullable Output<String> volumeType) {
@@ -217,7 +218,7 @@ public final class LaunchConfigurationEbsBlockDeviceGetArgs extends io.pulumi.re
             return this;
         }
         public Builder volumeType(@Nullable String volumeType) {
-            this.volumeType = Output.ofNullable(volumeType);
+            this.volumeType = Codegen.ofNullable(volumeType);
             return this;
         }        public LaunchConfigurationEbsBlockDeviceGetArgs build() {
             return new LaunchConfigurationEbsBlockDeviceGetArgs(deleteOnTermination, deviceName, encrypted, iops, noDevice, snapshotId, throughput, volumeSize, volumeType);

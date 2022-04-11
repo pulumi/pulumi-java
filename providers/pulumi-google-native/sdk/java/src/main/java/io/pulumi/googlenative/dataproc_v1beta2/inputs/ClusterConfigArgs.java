@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.AutoscalingConfigArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.EncryptionConfigArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.EndpointConfigArgs;
@@ -38,7 +39,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AutoscalingConfigArgs> autoscalingConfig;
 
     public Output<AutoscalingConfigArgs> getAutoscalingConfig() {
-        return this.autoscalingConfig == null ? Output.empty() : this.autoscalingConfig;
+        return this.autoscalingConfig == null ? Codegen.empty() : this.autoscalingConfig;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> configBucket;
 
     public Output<String> getConfigBucket() {
-        return this.configBucket == null ? Output.empty() : this.configBucket;
+        return this.configBucket == null ? Codegen.empty() : this.configBucket;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionConfigArgs> encryptionConfig;
 
     public Output<EncryptionConfigArgs> getEncryptionConfig() {
-        return this.encryptionConfig == null ? Output.empty() : this.encryptionConfig;
+        return this.encryptionConfig == null ? Codegen.empty() : this.encryptionConfig;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointConfigArgs> endpointConfig;
 
     public Output<EndpointConfigArgs> getEndpointConfig() {
-        return this.endpointConfig == null ? Output.empty() : this.endpointConfig;
+        return this.endpointConfig == null ? Codegen.empty() : this.endpointConfig;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GceClusterConfigArgs> gceClusterConfig;
 
     public Output<GceClusterConfigArgs> getGceClusterConfig() {
-        return this.gceClusterConfig == null ? Output.empty() : this.gceClusterConfig;
+        return this.gceClusterConfig == null ? Codegen.empty() : this.gceClusterConfig;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GkeClusterConfigArgs> gkeClusterConfig;
 
     public Output<GkeClusterConfigArgs> getGkeClusterConfig() {
-        return this.gkeClusterConfig == null ? Output.empty() : this.gkeClusterConfig;
+        return this.gkeClusterConfig == null ? Codegen.empty() : this.gkeClusterConfig;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<NodeInitializationActionArgs>> initializationActions;
 
     public Output<List<NodeInitializationActionArgs>> getInitializationActions() {
-        return this.initializationActions == null ? Output.empty() : this.initializationActions;
+        return this.initializationActions == null ? Codegen.empty() : this.initializationActions;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LifecycleConfigArgs> lifecycleConfig;
 
     public Output<LifecycleConfigArgs> getLifecycleConfig() {
-        return this.lifecycleConfig == null ? Output.empty() : this.lifecycleConfig;
+        return this.lifecycleConfig == null ? Codegen.empty() : this.lifecycleConfig;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceGroupConfigArgs> masterConfig;
 
     public Output<InstanceGroupConfigArgs> getMasterConfig() {
-        return this.masterConfig == null ? Output.empty() : this.masterConfig;
+        return this.masterConfig == null ? Codegen.empty() : this.masterConfig;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MetastoreConfigArgs> metastoreConfig;
 
     public Output<MetastoreConfigArgs> getMetastoreConfig() {
-        return this.metastoreConfig == null ? Output.empty() : this.metastoreConfig;
+        return this.metastoreConfig == null ? Codegen.empty() : this.metastoreConfig;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceGroupConfigArgs> secondaryWorkerConfig;
 
     public Output<InstanceGroupConfigArgs> getSecondaryWorkerConfig() {
-        return this.secondaryWorkerConfig == null ? Output.empty() : this.secondaryWorkerConfig;
+        return this.secondaryWorkerConfig == null ? Codegen.empty() : this.secondaryWorkerConfig;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SecurityConfigArgs> securityConfig;
 
     public Output<SecurityConfigArgs> getSecurityConfig() {
-        return this.securityConfig == null ? Output.empty() : this.securityConfig;
+        return this.securityConfig == null ? Codegen.empty() : this.securityConfig;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SoftwareConfigArgs> softwareConfig;
 
     public Output<SoftwareConfigArgs> getSoftwareConfig() {
-        return this.softwareConfig == null ? Output.empty() : this.softwareConfig;
+        return this.softwareConfig == null ? Codegen.empty() : this.softwareConfig;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tempBucket;
 
     public Output<String> getTempBucket() {
-        return this.tempBucket == null ? Output.empty() : this.tempBucket;
+        return this.tempBucket == null ? Codegen.empty() : this.tempBucket;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceGroupConfigArgs> workerConfig;
 
     public Output<InstanceGroupConfigArgs> getWorkerConfig() {
-        return this.workerConfig == null ? Output.empty() : this.workerConfig;
+        return this.workerConfig == null ? Codegen.empty() : this.workerConfig;
     }
 
     public ClusterConfigArgs(
@@ -229,21 +230,21 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterConfigArgs() {
-        this.autoscalingConfig = Output.empty();
-        this.configBucket = Output.empty();
-        this.encryptionConfig = Output.empty();
-        this.endpointConfig = Output.empty();
-        this.gceClusterConfig = Output.empty();
-        this.gkeClusterConfig = Output.empty();
-        this.initializationActions = Output.empty();
-        this.lifecycleConfig = Output.empty();
-        this.masterConfig = Output.empty();
-        this.metastoreConfig = Output.empty();
-        this.secondaryWorkerConfig = Output.empty();
-        this.securityConfig = Output.empty();
-        this.softwareConfig = Output.empty();
-        this.tempBucket = Output.empty();
-        this.workerConfig = Output.empty();
+        this.autoscalingConfig = Codegen.empty();
+        this.configBucket = Codegen.empty();
+        this.encryptionConfig = Codegen.empty();
+        this.endpointConfig = Codegen.empty();
+        this.gceClusterConfig = Codegen.empty();
+        this.gkeClusterConfig = Codegen.empty();
+        this.initializationActions = Codegen.empty();
+        this.lifecycleConfig = Codegen.empty();
+        this.masterConfig = Codegen.empty();
+        this.metastoreConfig = Codegen.empty();
+        this.secondaryWorkerConfig = Codegen.empty();
+        this.securityConfig = Codegen.empty();
+        this.softwareConfig = Codegen.empty();
+        this.tempBucket = Codegen.empty();
+        this.workerConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -299,7 +300,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder autoscalingConfig(@Nullable AutoscalingConfigArgs autoscalingConfig) {
-            this.autoscalingConfig = Output.ofNullable(autoscalingConfig);
+            this.autoscalingConfig = Codegen.ofNullable(autoscalingConfig);
             return this;
         }
         public Builder configBucket(@Nullable Output<String> configBucket) {
@@ -307,7 +308,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configBucket(@Nullable String configBucket) {
-            this.configBucket = Output.ofNullable(configBucket);
+            this.configBucket = Codegen.ofNullable(configBucket);
             return this;
         }
         public Builder encryptionConfig(@Nullable Output<EncryptionConfigArgs> encryptionConfig) {
@@ -315,7 +316,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionConfig(@Nullable EncryptionConfigArgs encryptionConfig) {
-            this.encryptionConfig = Output.ofNullable(encryptionConfig);
+            this.encryptionConfig = Codegen.ofNullable(encryptionConfig);
             return this;
         }
         public Builder endpointConfig(@Nullable Output<EndpointConfigArgs> endpointConfig) {
@@ -323,7 +324,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpointConfig(@Nullable EndpointConfigArgs endpointConfig) {
-            this.endpointConfig = Output.ofNullable(endpointConfig);
+            this.endpointConfig = Codegen.ofNullable(endpointConfig);
             return this;
         }
         public Builder gceClusterConfig(@Nullable Output<GceClusterConfigArgs> gceClusterConfig) {
@@ -331,7 +332,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gceClusterConfig(@Nullable GceClusterConfigArgs gceClusterConfig) {
-            this.gceClusterConfig = Output.ofNullable(gceClusterConfig);
+            this.gceClusterConfig = Codegen.ofNullable(gceClusterConfig);
             return this;
         }
         public Builder gkeClusterConfig(@Nullable Output<GkeClusterConfigArgs> gkeClusterConfig) {
@@ -339,7 +340,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gkeClusterConfig(@Nullable GkeClusterConfigArgs gkeClusterConfig) {
-            this.gkeClusterConfig = Output.ofNullable(gkeClusterConfig);
+            this.gkeClusterConfig = Codegen.ofNullable(gkeClusterConfig);
             return this;
         }
         public Builder initializationActions(@Nullable Output<List<NodeInitializationActionArgs>> initializationActions) {
@@ -347,7 +348,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder initializationActions(@Nullable List<NodeInitializationActionArgs> initializationActions) {
-            this.initializationActions = Output.ofNullable(initializationActions);
+            this.initializationActions = Codegen.ofNullable(initializationActions);
             return this;
         }
         public Builder initializationActions(NodeInitializationActionArgs... initializationActions) {
@@ -358,7 +359,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lifecycleConfig(@Nullable LifecycleConfigArgs lifecycleConfig) {
-            this.lifecycleConfig = Output.ofNullable(lifecycleConfig);
+            this.lifecycleConfig = Codegen.ofNullable(lifecycleConfig);
             return this;
         }
         public Builder masterConfig(@Nullable Output<InstanceGroupConfigArgs> masterConfig) {
@@ -366,7 +367,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder masterConfig(@Nullable InstanceGroupConfigArgs masterConfig) {
-            this.masterConfig = Output.ofNullable(masterConfig);
+            this.masterConfig = Codegen.ofNullable(masterConfig);
             return this;
         }
         public Builder metastoreConfig(@Nullable Output<MetastoreConfigArgs> metastoreConfig) {
@@ -374,7 +375,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metastoreConfig(@Nullable MetastoreConfigArgs metastoreConfig) {
-            this.metastoreConfig = Output.ofNullable(metastoreConfig);
+            this.metastoreConfig = Codegen.ofNullable(metastoreConfig);
             return this;
         }
         public Builder secondaryWorkerConfig(@Nullable Output<InstanceGroupConfigArgs> secondaryWorkerConfig) {
@@ -382,7 +383,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryWorkerConfig(@Nullable InstanceGroupConfigArgs secondaryWorkerConfig) {
-            this.secondaryWorkerConfig = Output.ofNullable(secondaryWorkerConfig);
+            this.secondaryWorkerConfig = Codegen.ofNullable(secondaryWorkerConfig);
             return this;
         }
         public Builder securityConfig(@Nullable Output<SecurityConfigArgs> securityConfig) {
@@ -390,7 +391,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder securityConfig(@Nullable SecurityConfigArgs securityConfig) {
-            this.securityConfig = Output.ofNullable(securityConfig);
+            this.securityConfig = Codegen.ofNullable(securityConfig);
             return this;
         }
         public Builder softwareConfig(@Nullable Output<SoftwareConfigArgs> softwareConfig) {
@@ -398,7 +399,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder softwareConfig(@Nullable SoftwareConfigArgs softwareConfig) {
-            this.softwareConfig = Output.ofNullable(softwareConfig);
+            this.softwareConfig = Codegen.ofNullable(softwareConfig);
             return this;
         }
         public Builder tempBucket(@Nullable Output<String> tempBucket) {
@@ -406,7 +407,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tempBucket(@Nullable String tempBucket) {
-            this.tempBucket = Output.ofNullable(tempBucket);
+            this.tempBucket = Codegen.ofNullable(tempBucket);
             return this;
         }
         public Builder workerConfig(@Nullable Output<InstanceGroupConfigArgs> workerConfig) {
@@ -414,7 +415,7 @@ public final class ClusterConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workerConfig(@Nullable InstanceGroupConfigArgs workerConfig) {
-            this.workerConfig = Output.ofNullable(workerConfig);
+            this.workerConfig = Codegen.ofNullable(workerConfig);
             return this;
         }        public ClusterConfigArgs build() {
             return new ClusterConfigArgs(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);

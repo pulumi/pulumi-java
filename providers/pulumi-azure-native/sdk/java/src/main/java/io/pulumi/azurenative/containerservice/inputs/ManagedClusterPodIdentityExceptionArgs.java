@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class ManagedClusterPodIdentityExceptionArgs extends io.pulumi.reso
     }
 
     private ManagedClusterPodIdentityExceptionArgs() {
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.podLabels = Output.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.podLabels = Codegen.empty();
     }
 
     public static Builder builder() {

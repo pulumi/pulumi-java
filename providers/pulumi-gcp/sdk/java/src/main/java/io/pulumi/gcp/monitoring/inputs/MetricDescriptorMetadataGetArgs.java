@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> ingestDelay;
 
     public Output<String> getIngestDelay() {
-        return this.ingestDelay == null ? Output.empty() : this.ingestDelay;
+        return this.ingestDelay == null ? Codegen.empty() : this.ingestDelay;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> samplePeriod;
 
     public Output<String> getSamplePeriod() {
-        return this.samplePeriod == null ? Output.empty() : this.samplePeriod;
+        return this.samplePeriod == null ? Codegen.empty() : this.samplePeriod;
     }
 
     public MetricDescriptorMetadataGetArgs(
@@ -44,8 +45,8 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
     }
 
     private MetricDescriptorMetadataGetArgs() {
-        this.ingestDelay = Output.empty();
-        this.samplePeriod = Output.empty();
+        this.ingestDelay = Codegen.empty();
+        this.samplePeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ingestDelay(@Nullable String ingestDelay) {
-            this.ingestDelay = Output.ofNullable(ingestDelay);
+            this.ingestDelay = Codegen.ofNullable(ingestDelay);
             return this;
         }
         public Builder samplePeriod(@Nullable Output<String> samplePeriod) {
@@ -83,7 +84,7 @@ public final class MetricDescriptorMetadataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder samplePeriod(@Nullable String samplePeriod) {
-            this.samplePeriod = Output.ofNullable(samplePeriod);
+            this.samplePeriod = Codegen.ofNullable(samplePeriod);
             return this;
         }        public MetricDescriptorMetadataGetArgs build() {
             return new MetricDescriptorMetadataGetArgs(ingestDelay, samplePeriod);

@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.DeviceDeviceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.device = Output.empty();
-        this.deviceFleetName = Output.empty();
+        this.device = Codegen.empty();
+        this.deviceFleetName = Codegen.empty();
     }
 
     public static Builder builder() {

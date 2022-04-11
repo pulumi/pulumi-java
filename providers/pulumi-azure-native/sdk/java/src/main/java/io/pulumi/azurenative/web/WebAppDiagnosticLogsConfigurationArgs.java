@@ -8,6 +8,7 @@ import io.pulumi.azurenative.web.inputs.EnabledConfigArgs;
 import io.pulumi.azurenative.web.inputs.HttpLogsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<ApplicationLogsConfigArgs> applicationLogs;
 
     public Output<ApplicationLogsConfigArgs> getApplicationLogs() {
-        return this.applicationLogs == null ? Output.empty() : this.applicationLogs;
+        return this.applicationLogs == null ? Codegen.empty() : this.applicationLogs;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<EnabledConfigArgs> detailedErrorMessages;
 
     public Output<EnabledConfigArgs> getDetailedErrorMessages() {
-        return this.detailedErrorMessages == null ? Output.empty() : this.detailedErrorMessages;
+        return this.detailedErrorMessages == null ? Codegen.empty() : this.detailedErrorMessages;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<EnabledConfigArgs> failedRequestsTracing;
 
     public Output<EnabledConfigArgs> getFailedRequestsTracing() {
-        return this.failedRequestsTracing == null ? Output.empty() : this.failedRequestsTracing;
+        return this.failedRequestsTracing == null ? Codegen.empty() : this.failedRequestsTracing;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<HttpLogsConfigArgs> httpLogs;
 
     public Output<HttpLogsConfigArgs> getHttpLogs() {
-        return this.httpLogs == null ? Output.empty() : this.httpLogs;
+        return this.httpLogs == null ? Codegen.empty() : this.httpLogs;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -112,13 +113,13 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
     }
 
     private WebAppDiagnosticLogsConfigurationArgs() {
-        this.applicationLogs = Output.empty();
-        this.detailedErrorMessages = Output.empty();
-        this.failedRequestsTracing = Output.empty();
-        this.httpLogs = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.applicationLogs = Codegen.empty();
+        this.detailedErrorMessages = Codegen.empty();
+        this.failedRequestsTracing = Codegen.empty();
+        this.httpLogs = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder applicationLogs(@Nullable ApplicationLogsConfigArgs applicationLogs) {
-            this.applicationLogs = Output.ofNullable(applicationLogs);
+            this.applicationLogs = Codegen.ofNullable(applicationLogs);
             return this;
         }
         public Builder detailedErrorMessages(@Nullable Output<EnabledConfigArgs> detailedErrorMessages) {
@@ -166,7 +167,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder detailedErrorMessages(@Nullable EnabledConfigArgs detailedErrorMessages) {
-            this.detailedErrorMessages = Output.ofNullable(detailedErrorMessages);
+            this.detailedErrorMessages = Codegen.ofNullable(detailedErrorMessages);
             return this;
         }
         public Builder failedRequestsTracing(@Nullable Output<EnabledConfigArgs> failedRequestsTracing) {
@@ -174,7 +175,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder failedRequestsTracing(@Nullable EnabledConfigArgs failedRequestsTracing) {
-            this.failedRequestsTracing = Output.ofNullable(failedRequestsTracing);
+            this.failedRequestsTracing = Codegen.ofNullable(failedRequestsTracing);
             return this;
         }
         public Builder httpLogs(@Nullable Output<HttpLogsConfigArgs> httpLogs) {
@@ -182,7 +183,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder httpLogs(@Nullable HttpLogsConfigArgs httpLogs) {
-            this.httpLogs = Output.ofNullable(httpLogs);
+            this.httpLogs = Codegen.ofNullable(httpLogs);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -190,7 +191,7 @@ public final class WebAppDiagnosticLogsConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder name(Output<String> name) {

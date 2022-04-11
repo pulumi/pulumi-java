@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -86,11 +87,11 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
     }
 
     private IdentityProviderInputArgs() {
-        this.aadAuthority = Output.empty();
-        this.applicationId = Output.empty();
-        this.audience = Output.empty();
-        this.objectId = Output.empty();
-        this.tenantId = Output.empty();
+        this.aadAuthority = Codegen.empty();
+        this.applicationId = Codegen.empty();
+        this.audience = Codegen.empty();
+        this.objectId = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {

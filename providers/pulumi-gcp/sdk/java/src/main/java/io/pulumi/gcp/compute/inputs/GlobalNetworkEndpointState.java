@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> globalNetworkEndpointGroup;
 
     public Output<String> getGlobalNetworkEndpointGroup() {
-        return this.globalNetworkEndpointGroup == null ? Output.empty() : this.globalNetworkEndpointGroup;
+        return this.globalNetworkEndpointGroup == null ? Codegen.empty() : this.globalNetworkEndpointGroup;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public GlobalNetworkEndpointState(
@@ -86,11 +87,11 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
     }
 
     private GlobalNetworkEndpointState() {
-        this.fqdn = Output.empty();
-        this.globalNetworkEndpointGroup = Output.empty();
-        this.ipAddress = Output.empty();
-        this.port = Output.empty();
-        this.project = Output.empty();
+        this.fqdn = Codegen.empty();
+        this.globalNetworkEndpointGroup = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.port = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder globalNetworkEndpointGroup(@Nullable Output<String> globalNetworkEndpointGroup) {
@@ -134,7 +135,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder globalNetworkEndpointGroup(@Nullable String globalNetworkEndpointGroup) {
-            this.globalNetworkEndpointGroup = Output.ofNullable(globalNetworkEndpointGroup);
+            this.globalNetworkEndpointGroup = Codegen.ofNullable(globalNetworkEndpointGroup);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -142,7 +143,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -150,7 +151,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -158,7 +159,7 @@ public final class GlobalNetworkEndpointState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public GlobalNetworkEndpointState build() {
             return new GlobalNetworkEndpointState(fqdn, globalNetworkEndpointGroup, ipAddress, port, project);

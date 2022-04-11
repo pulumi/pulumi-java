@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> filterInArns;
 
     public Output<List<String>> getFilterInArns() {
-        return this.filterInArns == null ? Output.empty() : this.filterInArns;
+        return this.filterInArns == null ? Codegen.empty() : this.filterInArns;
     }
 
     @Import(name="networkInsightsPathId", required=true)
@@ -34,7 +35,7 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<NetworkInsightsAnalysisTagArgs>> tags;
 
     public Output<List<NetworkInsightsAnalysisTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public NetworkInsightsAnalysisArgs(
@@ -47,9 +48,9 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
     }
 
     private NetworkInsightsAnalysisArgs() {
-        this.filterInArns = Output.empty();
-        this.networkInsightsPathId = Output.empty();
-        this.tags = Output.empty();
+        this.filterInArns = Codegen.empty();
+        this.networkInsightsPathId = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder filterInArns(@Nullable List<String> filterInArns) {
-            this.filterInArns = Output.ofNullable(filterInArns);
+            this.filterInArns = Codegen.ofNullable(filterInArns);
             return this;
         }
         public Builder filterInArns(String... filterInArns) {
@@ -100,7 +101,7 @@ public final class NetworkInsightsAnalysisArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable List<NetworkInsightsAnalysisTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(NetworkInsightsAnalysisTagArgs... tags) {

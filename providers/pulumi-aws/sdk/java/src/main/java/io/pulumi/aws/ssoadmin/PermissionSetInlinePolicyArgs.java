@@ -5,6 +5,7 @@ package io.pulumi.aws.ssoadmin;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class PermissionSetInlinePolicyArgs extends io.pulumi.resources.Res
     }
 
     private PermissionSetInlinePolicyArgs() {
-        this.inlinePolicy = Output.empty();
-        this.instanceArn = Output.empty();
-        this.permissionSetArn = Output.empty();
+        this.inlinePolicy = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.permissionSetArn = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebaseml_v1beta2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.ModelStateArgs;
 import io.pulumi.googlenative.firebaseml_v1beta2.inputs.TfLiteModelArgs;
 import java.lang.String;
@@ -36,14 +37,14 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ModelStateArgs> state;
 
     public Output<ModelStateArgs> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TfLiteModelArgs> tfliteModel;
 
     public Output<TfLiteModelArgs> getTfliteModel() {
-        return this.tfliteModel == null ? Output.empty() : this.tfliteModel;
+        return this.tfliteModel == null ? Codegen.empty() : this.tfliteModel;
     }
 
     public ModelArgs(
@@ -95,12 +96,12 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ModelArgs() {
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.tfliteModel = Output.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tfliteModel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -154,7 +155,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<ModelStateArgs> state) {
@@ -162,7 +163,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable ModelStateArgs state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -170,7 +171,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -181,7 +182,7 @@ public final class ModelArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tfliteModel(@Nullable TfLiteModelArgs tfliteModel) {
-            this.tfliteModel = Output.ofNullable(tfliteModel);
+            this.tfliteModel = Codegen.ofNullable(tfliteModel);
             return this;
         }        public ModelArgs build() {
             return new ModelArgs(displayName, name, project, state, tags, tfliteModel);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cacheId;
 
     public Output<String> getCacheId() {
-        return this.cacheId == null ? Output.empty() : this.cacheId;
+        return this.cacheId == null ? Codegen.empty() : this.cacheId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     /**
@@ -109,13 +110,13 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CacheArgs() {
-        this.cacheId = Output.empty();
-        this.connectionString = Output.empty();
-        this.description = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceId = Output.empty();
-        this.serviceName = Output.empty();
-        this.useFromLocation = Output.empty();
+        this.cacheId = Codegen.empty();
+        this.connectionString = Codegen.empty();
+        this.description = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.useFromLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cacheId(@Nullable String cacheId) {
-            this.cacheId = Output.ofNullable(cacheId);
+            this.cacheId = Codegen.ofNullable(cacheId);
             return this;
         }
         public Builder connectionString(Output<String> connectionString) {
@@ -171,7 +172,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -187,7 +188,7 @@ public final class CacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {

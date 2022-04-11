@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.AnnotationSourceArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ImageAnnotationArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.ResourceAnnotationArgs;
@@ -27,7 +28,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AnnotationSourceArgs> annotationSource;
 
     public Output<AnnotationSourceArgs> getAnnotationSource() {
-        return this.annotationSource == null ? Output.empty() : this.annotationSource;
+        return this.annotationSource == null ? Codegen.empty() : this.annotationSource;
     }
 
     @Import(name="annotationStoreId", required=true)
@@ -45,7 +46,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> customData;
 
     public Output<Map<String,String>> getCustomData() {
-        return this.customData == null ? Output.empty() : this.customData;
+        return this.customData == null ? Codegen.empty() : this.customData;
     }
 
     @Import(name="datasetId", required=true)
@@ -63,14 +64,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageAnnotationArgs> imageAnnotation;
 
     public Output<ImageAnnotationArgs> getImageAnnotation() {
-        return this.imageAnnotation == null ? Output.empty() : this.imageAnnotation;
+        return this.imageAnnotation == null ? Codegen.empty() : this.imageAnnotation;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -81,14 +82,14 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceAnnotationArgs> resourceAnnotation;
 
     public Output<ResourceAnnotationArgs> getResourceAnnotation() {
-        return this.resourceAnnotation == null ? Output.empty() : this.resourceAnnotation;
+        return this.resourceAnnotation == null ? Codegen.empty() : this.resourceAnnotation;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SensitiveTextAnnotationArgs> textAnnotation;
 
     public Output<SensitiveTextAnnotationArgs> getTextAnnotation() {
-        return this.textAnnotation == null ? Output.empty() : this.textAnnotation;
+        return this.textAnnotation == null ? Codegen.empty() : this.textAnnotation;
     }
 
     public AnnotationArgs(
@@ -137,16 +138,16 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AnnotationArgs() {
-        this.annotationSource = Output.empty();
-        this.annotationStoreId = Output.empty();
-        this.customData = Output.empty();
-        this.datasetId = Output.empty();
-        this.imageAnnotation = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.resourceAnnotation = Output.empty();
-        this.textAnnotation = Output.empty();
+        this.annotationSource = Codegen.empty();
+        this.annotationStoreId = Codegen.empty();
+        this.customData = Codegen.empty();
+        this.datasetId = Codegen.empty();
+        this.imageAnnotation = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.resourceAnnotation = Codegen.empty();
+        this.textAnnotation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotationSource(@Nullable AnnotationSourceArgs annotationSource) {
-            this.annotationSource = Output.ofNullable(annotationSource);
+            this.annotationSource = Codegen.ofNullable(annotationSource);
             return this;
         }
         public Builder annotationStoreId(Output<String> annotationStoreId) {
@@ -208,7 +209,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customData(@Nullable Map<String,String> customData) {
-            this.customData = Output.ofNullable(customData);
+            this.customData = Codegen.ofNullable(customData);
             return this;
         }
         public Builder datasetId(Output<String> datasetId) {
@@ -224,7 +225,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageAnnotation(@Nullable ImageAnnotationArgs imageAnnotation) {
-            this.imageAnnotation = Output.ofNullable(imageAnnotation);
+            this.imageAnnotation = Codegen.ofNullable(imageAnnotation);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -232,7 +233,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -240,7 +241,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -248,7 +249,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder resourceAnnotation(@Nullable Output<ResourceAnnotationArgs> resourceAnnotation) {
@@ -256,7 +257,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceAnnotation(@Nullable ResourceAnnotationArgs resourceAnnotation) {
-            this.resourceAnnotation = Output.ofNullable(resourceAnnotation);
+            this.resourceAnnotation = Codegen.ofNullable(resourceAnnotation);
             return this;
         }
         public Builder textAnnotation(@Nullable Output<SensitiveTextAnnotationArgs> textAnnotation) {
@@ -264,7 +265,7 @@ public final class AnnotationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder textAnnotation(@Nullable SensitiveTextAnnotationArgs textAnnotation) {
-            this.textAnnotation = Output.ofNullable(textAnnotation);
+            this.textAnnotation = Codegen.ofNullable(textAnnotation);
             return this;
         }        public AnnotationArgs build() {
             return new AnnotationArgs(annotationSource, annotationStoreId, customData, datasetId, imageAnnotation, location, name, project, resourceAnnotation, textAnnotation);

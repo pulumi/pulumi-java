@@ -9,6 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeSsisProperties
 import io.pulumi.azurenative.datafactory.inputs.ManagedVirtualNetworkReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
       private final @Nullable Output<IntegrationRuntimeComputePropertiesArgs> computeProperties;
 
     public Output<IntegrationRuntimeComputePropertiesArgs> getComputeProperties() {
-        return this.computeProperties == null ? Output.empty() : this.computeProperties;
+        return this.computeProperties == null ? Codegen.empty() : this.computeProperties;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
       private final @Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork;
 
     public Output<IntegrationRuntimeCustomerVirtualNetworkArgs> getCustomerVirtualNetwork() {
-        return this.customerVirtualNetwork == null ? Output.empty() : this.customerVirtualNetwork;
+        return this.customerVirtualNetwork == null ? Codegen.empty() : this.customerVirtualNetwork;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
       private final @Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork;
 
     public Output<ManagedVirtualNetworkReferenceArgs> getManagedVirtualNetwork() {
-        return this.managedVirtualNetwork == null ? Output.empty() : this.managedVirtualNetwork;
+        return this.managedVirtualNetwork == null ? Codegen.empty() : this.managedVirtualNetwork;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
       private final @Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties;
 
     public Output<IntegrationRuntimeSsisPropertiesArgs> getSsisProperties() {
-        return this.ssisProperties == null ? Output.empty() : this.ssisProperties;
+        return this.ssisProperties == null ? Codegen.empty() : this.ssisProperties;
     }
 
     /**
@@ -105,12 +106,12 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
     }
 
     private ManagedIntegrationRuntimeArgs() {
-        this.computeProperties = Output.empty();
-        this.customerVirtualNetwork = Output.empty();
-        this.description = Output.empty();
-        this.managedVirtualNetwork = Output.empty();
-        this.ssisProperties = Output.empty();
-        this.type = Output.empty();
+        this.computeProperties = Codegen.empty();
+        this.customerVirtualNetwork = Codegen.empty();
+        this.description = Codegen.empty();
+        this.managedVirtualNetwork = Codegen.empty();
+        this.ssisProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder computeProperties(@Nullable IntegrationRuntimeComputePropertiesArgs computeProperties) {
-            this.computeProperties = Output.ofNullable(computeProperties);
+            this.computeProperties = Codegen.ofNullable(computeProperties);
             return this;
         }
         public Builder customerVirtualNetwork(@Nullable Output<IntegrationRuntimeCustomerVirtualNetworkArgs> customerVirtualNetwork) {
@@ -156,7 +157,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder customerVirtualNetwork(@Nullable IntegrationRuntimeCustomerVirtualNetworkArgs customerVirtualNetwork) {
-            this.customerVirtualNetwork = Output.ofNullable(customerVirtualNetwork);
+            this.customerVirtualNetwork = Codegen.ofNullable(customerVirtualNetwork);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -164,7 +165,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder managedVirtualNetwork(@Nullable Output<ManagedVirtualNetworkReferenceArgs> managedVirtualNetwork) {
@@ -172,7 +173,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder managedVirtualNetwork(@Nullable ManagedVirtualNetworkReferenceArgs managedVirtualNetwork) {
-            this.managedVirtualNetwork = Output.ofNullable(managedVirtualNetwork);
+            this.managedVirtualNetwork = Codegen.ofNullable(managedVirtualNetwork);
             return this;
         }
         public Builder ssisProperties(@Nullable Output<IntegrationRuntimeSsisPropertiesArgs> ssisProperties) {
@@ -180,7 +181,7 @@ public final class ManagedIntegrationRuntimeArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder ssisProperties(@Nullable IntegrationRuntimeSsisPropertiesArgs ssisProperties) {
-            this.ssisProperties = Output.ofNullable(ssisProperties);
+            this.ssisProperties = Codegen.ofNullable(ssisProperties);
             return this;
         }
         public Builder type(Output<String> type) {

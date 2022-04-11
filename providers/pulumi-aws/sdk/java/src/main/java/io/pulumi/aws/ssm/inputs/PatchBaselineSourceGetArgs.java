@@ -5,6 +5,7 @@ package io.pulumi.aws.ssm.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class PatchBaselineSourceGetArgs extends io.pulumi.resources.Resour
     }
 
     private PatchBaselineSourceGetArgs() {
-        this.configuration = Output.empty();
-        this.name = Output.empty();
-        this.products = Output.empty();
+        this.configuration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.products = Codegen.empty();
     }
 
     public static Builder builder() {

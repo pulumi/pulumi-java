@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.ShareSettingsShareType;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> folderMap;
 
     public Output<Map<String,String>> getFolderMap() {
-        return this.folderMap == null ? Output.empty() : this.folderMap;
+        return this.folderMap == null ? Codegen.empty() : this.folderMap;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> projectMap;
 
     public Output<Map<String,String>> getProjectMap() {
-        return this.projectMap == null ? Output.empty() : this.projectMap;
+        return this.projectMap == null ? Codegen.empty() : this.projectMap;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> projects;
 
     public Output<List<String>> getProjects() {
-        return this.projects == null ? Output.empty() : this.projects;
+        return this.projects == null ? Codegen.empty() : this.projects;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ShareSettingsShareType> shareType;
 
     public Output<ShareSettingsShareType> getShareType() {
-        return this.shareType == null ? Output.empty() : this.shareType;
+        return this.shareType == null ? Codegen.empty() : this.shareType;
     }
 
     public ShareSettingsArgs(
@@ -77,10 +78,10 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ShareSettingsArgs() {
-        this.folderMap = Output.empty();
-        this.projectMap = Output.empty();
-        this.projects = Output.empty();
-        this.shareType = Output.empty();
+        this.folderMap = Codegen.empty();
+        this.projectMap = Codegen.empty();
+        this.projects = Codegen.empty();
+        this.shareType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder folderMap(@Nullable Map<String,String> folderMap) {
-            this.folderMap = Output.ofNullable(folderMap);
+            this.folderMap = Codegen.ofNullable(folderMap);
             return this;
         }
         public Builder projectMap(@Nullable Output<Map<String,String>> projectMap) {
@@ -122,7 +123,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projectMap(@Nullable Map<String,String> projectMap) {
-            this.projectMap = Output.ofNullable(projectMap);
+            this.projectMap = Codegen.ofNullable(projectMap);
             return this;
         }
         public Builder projects(@Nullable Output<List<String>> projects) {
@@ -130,7 +131,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder projects(@Nullable List<String> projects) {
-            this.projects = Output.ofNullable(projects);
+            this.projects = Codegen.ofNullable(projects);
             return this;
         }
         public Builder projects(String... projects) {
@@ -141,7 +142,7 @@ public final class ShareSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareType(@Nullable ShareSettingsShareType shareType) {
-            this.shareType = Output.ofNullable(shareType);
+            this.shareType = Codegen.ofNullable(shareType);
             return this;
         }        public ShareSettingsArgs build() {
             return new ShareSettingsArgs(folderMap, projectMap, projects, shareType);

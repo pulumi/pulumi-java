@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,Object>> additionalCopyOptions;
 
     public Output<Map<String,Object>> getAdditionalCopyOptions() {
-        return this.additionalCopyOptions == null ? Output.empty() : this.additionalCopyOptions;
+        return this.additionalCopyOptions == null ? Codegen.empty() : this.additionalCopyOptions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,Object>> additionalFormatOptions;
 
     public Output<Map<String,Object>> getAdditionalFormatOptions() {
-        return this.additionalFormatOptions == null ? Output.empty() : this.additionalFormatOptions;
+        return this.additionalFormatOptions == null ? Codegen.empty() : this.additionalFormatOptions;
     }
 
     /**
@@ -64,9 +65,9 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
     }
 
     private SnowflakeImportCopyCommandArgs() {
-        this.additionalCopyOptions = Output.empty();
-        this.additionalFormatOptions = Output.empty();
-        this.type = Output.empty();
+        this.additionalCopyOptions = Codegen.empty();
+        this.additionalFormatOptions = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder additionalCopyOptions(@Nullable Map<String,Object> additionalCopyOptions) {
-            this.additionalCopyOptions = Output.ofNullable(additionalCopyOptions);
+            this.additionalCopyOptions = Codegen.ofNullable(additionalCopyOptions);
             return this;
         }
         public Builder additionalFormatOptions(@Nullable Output<Map<String,Object>> additionalFormatOptions) {
@@ -106,7 +107,7 @@ public final class SnowflakeImportCopyCommandArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder additionalFormatOptions(@Nullable Map<String,Object> additionalFormatOptions) {
-            this.additionalFormatOptions = Output.ofNullable(additionalFormatOptions);
+            this.additionalFormatOptions = Codegen.ofNullable(additionalFormatOptions);
             return this;
         }
         public Builder type(Output<String> type) {

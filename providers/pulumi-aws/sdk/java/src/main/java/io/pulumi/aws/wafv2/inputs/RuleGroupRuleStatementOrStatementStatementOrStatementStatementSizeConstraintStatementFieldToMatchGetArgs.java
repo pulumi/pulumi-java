@@ -12,6 +12,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementOrSt
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> allQueryArguments;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs> getAllQueryArguments() {
-        return this.allQueryArguments == null ? Output.empty() : this.allQueryArguments;
+        return this.allQueryArguments == null ? Codegen.empty() : this.allQueryArguments;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs> body;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs> getBody() {
-        return this.body == null ? Output.empty() : this.body;
+        return this.body == null ? Codegen.empty() : this.body;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs> method;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs> getMethod() {
-        return this.method == null ? Output.empty() : this.method;
+        return this.method == null ? Codegen.empty() : this.method;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> queryString;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> getQueryString() {
-        return this.queryString == null ? Output.empty() : this.queryString;
+        return this.queryString == null ? Codegen.empty() : this.queryString;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> singleHeader;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> getSingleHeader() {
-        return this.singleHeader == null ? Output.empty() : this.singleHeader;
+        return this.singleHeader == null ? Codegen.empty() : this.singleHeader;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> getSingleQueryArgument() {
-        return this.singleQueryArgument == null ? Output.empty() : this.singleQueryArgument;
+        return this.singleQueryArgument == null ? Codegen.empty() : this.singleQueryArgument;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> uriPath;
 
     public Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> getUriPath() {
-        return this.uriPath == null ? Output.empty() : this.uriPath;
+        return this.uriPath == null ? Codegen.empty() : this.uriPath;
     }
 
     public RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs(
@@ -115,13 +116,13 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
     }
 
     private RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs() {
-        this.allQueryArguments = Output.empty();
-        this.body = Output.empty();
-        this.method = Output.empty();
-        this.queryString = Output.empty();
-        this.singleHeader = Output.empty();
-        this.singleQueryArgument = Output.empty();
-        this.uriPath = Output.empty();
+        this.allQueryArguments = Codegen.empty();
+        this.body = Codegen.empty();
+        this.method = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.singleHeader = Codegen.empty();
+        this.singleQueryArgument = Codegen.empty();
+        this.uriPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder allQueryArguments(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchAllQueryArgumentsGetArgs allQueryArguments) {
-            this.allQueryArguments = Output.ofNullable(allQueryArguments);
+            this.allQueryArguments = Codegen.ofNullable(allQueryArguments);
             return this;
         }
         public Builder body(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs> body) {
@@ -169,7 +170,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder body(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchBodyGetArgs body) {
-            this.body = Output.ofNullable(body);
+            this.body = Codegen.ofNullable(body);
             return this;
         }
         public Builder method(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs> method) {
@@ -177,7 +178,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder method(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchMethodGetArgs method) {
-            this.method = Output.ofNullable(method);
+            this.method = Codegen.ofNullable(method);
             return this;
         }
         public Builder queryString(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs> queryString) {
@@ -185,7 +186,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder queryString(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchQueryStringGetArgs queryString) {
-            this.queryString = Output.ofNullable(queryString);
+            this.queryString = Codegen.ofNullable(queryString);
             return this;
         }
         public Builder singleHeader(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs> singleHeader) {
@@ -193,7 +194,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder singleHeader(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleHeaderGetArgs singleHeader) {
-            this.singleHeader = Output.ofNullable(singleHeader);
+            this.singleHeader = Codegen.ofNullable(singleHeader);
             return this;
         }
         public Builder singleQueryArgument(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs> singleQueryArgument) {
@@ -201,7 +202,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder singleQueryArgument(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchSingleQueryArgumentGetArgs singleQueryArgument) {
-            this.singleQueryArgument = Output.ofNullable(singleQueryArgument);
+            this.singleQueryArgument = Codegen.ofNullable(singleQueryArgument);
             return this;
         }
         public Builder uriPath(@Nullable Output<RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs> uriPath) {
@@ -209,7 +210,7 @@ public final class RuleGroupRuleStatementOrStatementStatementOrStatementStatemen
             return this;
         }
         public Builder uriPath(@Nullable RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchUriPathGetArgs uriPath) {
-            this.uriPath = Output.ofNullable(uriPath);
+            this.uriPath = Codegen.ofNullable(uriPath);
             return this;
         }        public RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs build() {
             return new RuleGroupRuleStatementOrStatementStatementOrStatementStatementSizeConstraintStatementFieldToMatchGetArgs(allQueryArguments, body, method, queryString, singleHeader, singleQueryArgument, uriPath);

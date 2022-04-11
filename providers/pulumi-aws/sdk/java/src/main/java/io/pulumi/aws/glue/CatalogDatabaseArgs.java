@@ -6,6 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.CatalogDatabaseTargetDatabaseArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> locationUri;
 
     public Output<String> getLocationUri() {
-        return this.locationUri == null ? Output.empty() : this.locationUri;
+        return this.locationUri == null ? Codegen.empty() : this.locationUri;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase;
 
     public Output<CatalogDatabaseTargetDatabaseArgs> getTargetDatabase() {
-        return this.targetDatabase == null ? Output.empty() : this.targetDatabase;
+        return this.targetDatabase == null ? Codegen.empty() : this.targetDatabase;
     }
 
     public CatalogDatabaseArgs(
@@ -98,12 +99,12 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CatalogDatabaseArgs() {
-        this.catalogId = Output.empty();
-        this.description = Output.empty();
-        this.locationUri = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.targetDatabase = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.locationUri = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.targetDatabase = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -149,7 +150,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder locationUri(@Nullable Output<String> locationUri) {
@@ -157,7 +158,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder locationUri(@Nullable String locationUri) {
-            this.locationUri = Output.ofNullable(locationUri);
+            this.locationUri = Codegen.ofNullable(locationUri);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -165,7 +166,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -173,7 +174,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder targetDatabase(@Nullable Output<CatalogDatabaseTargetDatabaseArgs> targetDatabase) {
@@ -181,7 +182,7 @@ public final class CatalogDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetDatabase(@Nullable CatalogDatabaseTargetDatabaseArgs targetDatabase) {
-            this.targetDatabase = Output.ofNullable(targetDatabase);
+            this.targetDatabase = Codegen.ofNullable(targetDatabase);
             return this;
         }        public CatalogDatabaseArgs build() {
             return new CatalogDatabaseArgs(catalogId, description, locationUri, name, parameters, targetDatabase);

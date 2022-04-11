@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
       private final @Nullable Output<List<Either<String,Roles>>> roles;
 
     public Output<List<Either<String,Roles>>> getRoles() {
-        return this.roles == null ? Output.empty() : this.roles;
+        return this.roles == null ? Codegen.empty() : this.roles;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
       private final @Nullable Output<Either<String,State>> state;
 
     public Output<Either<String,State>> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public SecurityContactPropertiesNotificationsByRoleArgs(
@@ -52,8 +53,8 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
     }
 
     private SecurityContactPropertiesNotificationsByRoleArgs() {
-        this.roles = Output.empty();
-        this.state = Output.empty();
+        this.roles = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
             return this;
         }
         public Builder roles(@Nullable List<Either<String,Roles>> roles) {
-            this.roles = Output.ofNullable(roles);
+            this.roles = Codegen.ofNullable(roles);
             return this;
         }
         public Builder roles(Either<String,Roles>... roles) {
@@ -94,7 +95,7 @@ public final class SecurityContactPropertiesNotificationsByRoleArgs extends io.p
             return this;
         }
         public Builder state(@Nullable Either<String,State> state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public SecurityContactPropertiesNotificationsByRoleArgs build() {
             return new SecurityContactPropertiesNotificationsByRoleArgs(roles, state);

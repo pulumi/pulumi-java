@@ -5,6 +5,7 @@ package io.pulumi.googlenative.memcache_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> params;
 
     public Output<Map<String,String>> getParams() {
-        return this.params == null ? Output.empty() : this.params;
+        return this.params == null ? Codegen.empty() : this.params;
     }
 
     public MemcacheParametersArgs(@Nullable Output<Map<String,String>> params) {
@@ -31,7 +32,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MemcacheParametersArgs() {
-        this.params = Output.empty();
+        this.params = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class MemcacheParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder params(@Nullable Map<String,String> params) {
-            this.params = Output.ofNullable(params);
+            this.params = Codegen.ofNullable(params);
             return this;
         }        public MemcacheParametersArgs build() {
             return new MemcacheParametersArgs(params);

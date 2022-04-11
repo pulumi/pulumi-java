@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sql.inputs.JobStepExecutionOptionsArgs;
 import io.pulumi.azurenative.sql.inputs.JobStepOutputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -48,7 +49,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobStepExecutionOptionsArgs> executionOptions;
 
     public Output<JobStepExecutionOptionsArgs> getExecutionOptions() {
-        return this.executionOptions == null ? Output.empty() : this.executionOptions;
+        return this.executionOptions == null ? Codegen.empty() : this.executionOptions;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<JobStepOutputArgs> output;
 
     public Output<JobStepOutputArgs> getOutput() {
-        return this.output == null ? Output.empty() : this.output;
+        return this.output == null ? Codegen.empty() : this.output;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> stepId;
 
     public Output<Integer> getStepId() {
-        return this.stepId == null ? Output.empty() : this.stepId;
+        return this.stepId == null ? Codegen.empty() : this.stepId;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stepName;
 
     public Output<String> getStepName() {
-        return this.stepName == null ? Output.empty() : this.stepName;
+        return this.stepName == null ? Codegen.empty() : this.stepName;
     }
 
     /**
@@ -165,17 +166,17 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JobStepArgs() {
-        this.action = Output.empty();
-        this.credential = Output.empty();
-        this.executionOptions = Output.empty();
-        this.jobAgentName = Output.empty();
-        this.jobName = Output.empty();
-        this.output = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.stepId = Output.empty();
-        this.stepName = Output.empty();
-        this.targetGroup = Output.empty();
+        this.action = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.executionOptions = Codegen.empty();
+        this.jobAgentName = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.output = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.stepId = Codegen.empty();
+        this.stepName = Codegen.empty();
+        this.targetGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -239,7 +240,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionOptions(@Nullable JobStepExecutionOptionsArgs executionOptions) {
-            this.executionOptions = Output.ofNullable(executionOptions);
+            this.executionOptions = Codegen.ofNullable(executionOptions);
             return this;
         }
         public Builder jobAgentName(Output<String> jobAgentName) {
@@ -263,7 +264,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder output(@Nullable JobStepOutputArgs output) {
-            this.output = Output.ofNullable(output);
+            this.output = Codegen.ofNullable(output);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -287,7 +288,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stepId(@Nullable Integer stepId) {
-            this.stepId = Output.ofNullable(stepId);
+            this.stepId = Codegen.ofNullable(stepId);
             return this;
         }
         public Builder stepName(@Nullable Output<String> stepName) {
@@ -295,7 +296,7 @@ public final class JobStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stepName(@Nullable String stepName) {
-            this.stepName = Output.ofNullable(stepName);
+            this.stepName = Codegen.ofNullable(stepName);
             return this;
         }
         public Builder targetGroup(Output<String> targetGroup) {

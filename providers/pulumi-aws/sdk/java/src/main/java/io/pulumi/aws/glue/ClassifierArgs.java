@@ -9,6 +9,7 @@ import io.pulumi.aws.glue.inputs.ClassifierJsonClassifierArgs;
 import io.pulumi.aws.glue.inputs.ClassifierXmlClassifierArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClassifierCsvClassifierArgs> csvClassifier;
 
     public Output<ClassifierCsvClassifierArgs> getCsvClassifier() {
-        return this.csvClassifier == null ? Output.empty() : this.csvClassifier;
+        return this.csvClassifier == null ? Codegen.empty() : this.csvClassifier;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClassifierGrokClassifierArgs> grokClassifier;
 
     public Output<ClassifierGrokClassifierArgs> getGrokClassifier() {
-        return this.grokClassifier == null ? Output.empty() : this.grokClassifier;
+        return this.grokClassifier == null ? Codegen.empty() : this.grokClassifier;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier;
 
     public Output<ClassifierJsonClassifierArgs> getJsonClassifier() {
-        return this.jsonClassifier == null ? Output.empty() : this.jsonClassifier;
+        return this.jsonClassifier == null ? Codegen.empty() : this.jsonClassifier;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier;
 
     public Output<ClassifierXmlClassifierArgs> getXmlClassifier() {
-        return this.xmlClassifier == null ? Output.empty() : this.xmlClassifier;
+        return this.xmlClassifier == null ? Codegen.empty() : this.xmlClassifier;
     }
 
     public ClassifierArgs(
@@ -87,11 +88,11 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClassifierArgs() {
-        this.csvClassifier = Output.empty();
-        this.grokClassifier = Output.empty();
-        this.jsonClassifier = Output.empty();
-        this.name = Output.empty();
-        this.xmlClassifier = Output.empty();
+        this.csvClassifier = Codegen.empty();
+        this.grokClassifier = Codegen.empty();
+        this.jsonClassifier = Codegen.empty();
+        this.name = Codegen.empty();
+        this.xmlClassifier = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder csvClassifier(@Nullable ClassifierCsvClassifierArgs csvClassifier) {
-            this.csvClassifier = Output.ofNullable(csvClassifier);
+            this.csvClassifier = Codegen.ofNullable(csvClassifier);
             return this;
         }
         public Builder grokClassifier(@Nullable Output<ClassifierGrokClassifierArgs> grokClassifier) {
@@ -135,7 +136,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grokClassifier(@Nullable ClassifierGrokClassifierArgs grokClassifier) {
-            this.grokClassifier = Output.ofNullable(grokClassifier);
+            this.grokClassifier = Codegen.ofNullable(grokClassifier);
             return this;
         }
         public Builder jsonClassifier(@Nullable Output<ClassifierJsonClassifierArgs> jsonClassifier) {
@@ -143,7 +144,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jsonClassifier(@Nullable ClassifierJsonClassifierArgs jsonClassifier) {
-            this.jsonClassifier = Output.ofNullable(jsonClassifier);
+            this.jsonClassifier = Codegen.ofNullable(jsonClassifier);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -151,7 +152,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder xmlClassifier(@Nullable Output<ClassifierXmlClassifierArgs> xmlClassifier) {
@@ -159,7 +160,7 @@ public final class ClassifierArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder xmlClassifier(@Nullable ClassifierXmlClassifierArgs xmlClassifier) {
-            this.xmlClassifier = Output.ofNullable(xmlClassifier);
+            this.xmlClassifier = Codegen.ofNullable(xmlClassifier);
             return this;
         }        public ClassifierArgs build() {
             return new ClassifierArgs(csvClassifier, grokClassifier, jsonClassifier, name, xmlClassifier);

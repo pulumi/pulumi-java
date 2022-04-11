@@ -7,6 +7,7 @@ import io.pulumi.azurenative.maintenance.enums.MaintenanceScope;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Map<String,String>> extensionProperties;
 
     public Output<Map<String,String>> getExtensionProperties() {
-        return this.extensionProperties == null ? Output.empty() : this.extensionProperties;
+        return this.extensionProperties == null ? Codegen.empty() : this.extensionProperties;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,MaintenanceScope>> maintenanceScope;
 
     public Output<Either<String,MaintenanceScope>> getMaintenanceScope() {
-        return this.maintenanceScope == null ? Output.empty() : this.maintenanceScope;
+        return this.maintenanceScope == null ? Codegen.empty() : this.maintenanceScope;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public MaintenanceConfigurationArgs(
@@ -112,13 +113,13 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
     }
 
     private MaintenanceConfigurationArgs() {
-        this.extensionProperties = Output.empty();
-        this.location = Output.empty();
-        this.maintenanceScope = Output.empty();
-        this.namespace = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.extensionProperties = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maintenanceScope = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder extensionProperties(@Nullable Map<String,String> extensionProperties) {
-            this.extensionProperties = Output.ofNullable(extensionProperties);
+            this.extensionProperties = Codegen.ofNullable(extensionProperties);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -166,7 +167,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maintenanceScope(@Nullable Output<Either<String,MaintenanceScope>> maintenanceScope) {
@@ -174,7 +175,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder maintenanceScope(@Nullable Either<String,MaintenanceScope> maintenanceScope) {
-            this.maintenanceScope = Output.ofNullable(maintenanceScope);
+            this.maintenanceScope = Codegen.ofNullable(maintenanceScope);
             return this;
         }
         public Builder namespace(@Nullable Output<String> namespace) {
@@ -182,7 +183,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -198,7 +199,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -206,7 +207,7 @@ public final class MaintenanceConfigurationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public MaintenanceConfigurationArgs build() {
             return new MaintenanceConfigurationArgs(extensionProperties, location, maintenanceScope, namespace, resourceGroupName, resourceName, tags);

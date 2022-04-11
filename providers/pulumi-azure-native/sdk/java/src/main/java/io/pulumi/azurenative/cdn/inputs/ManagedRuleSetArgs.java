@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.ManagedRuleGroupOverrideArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> anomalyScore;
 
     public Output<Integer> getAnomalyScore() {
-        return this.anomalyScore == null ? Output.empty() : this.anomalyScore;
+        return this.anomalyScore == null ? Codegen.empty() : this.anomalyScore;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides;
 
     public Output<List<ManagedRuleGroupOverrideArgs>> getRuleGroupOverrides() {
-        return this.ruleGroupOverrides == null ? Output.empty() : this.ruleGroupOverrides;
+        return this.ruleGroupOverrides == null ? Codegen.empty() : this.ruleGroupOverrides;
     }
 
     /**
@@ -77,10 +78,10 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ManagedRuleSetArgs() {
-        this.anomalyScore = Output.empty();
-        this.ruleGroupOverrides = Output.empty();
-        this.ruleSetType = Output.empty();
-        this.ruleSetVersion = Output.empty();
+        this.anomalyScore = Codegen.empty();
+        this.ruleGroupOverrides = Codegen.empty();
+        this.ruleSetType = Codegen.empty();
+        this.ruleSetVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder anomalyScore(@Nullable Integer anomalyScore) {
-            this.anomalyScore = Output.ofNullable(anomalyScore);
+            this.anomalyScore = Codegen.ofNullable(anomalyScore);
             return this;
         }
         public Builder ruleGroupOverrides(@Nullable Output<List<ManagedRuleGroupOverrideArgs>> ruleGroupOverrides) {
@@ -122,7 +123,7 @@ public final class ManagedRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleGroupOverrides(@Nullable List<ManagedRuleGroupOverrideArgs> ruleGroupOverrides) {
-            this.ruleGroupOverrides = Output.ofNullable(ruleGroupOverrides);
+            this.ruleGroupOverrides = Codegen.ofNullable(ruleGroupOverrides);
             return this;
         }
         public Builder ruleGroupOverrides(ManagedRuleGroupOverrideArgs... ruleGroupOverrides) {

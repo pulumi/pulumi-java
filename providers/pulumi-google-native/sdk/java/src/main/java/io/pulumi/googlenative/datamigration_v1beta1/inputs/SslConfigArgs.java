@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientCertificate;
 
     public Output<String> getClientCertificate() {
-        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
+        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientKey;
 
     public Output<String> getClientKey() {
-        return this.clientKey == null ? Output.empty() : this.clientKey;
+        return this.clientKey == null ? Codegen.empty() : this.clientKey;
     }
 
     public SslConfigArgs(
@@ -61,9 +62,9 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslConfigArgs() {
-        this.caCertificate = Output.empty();
-        this.clientCertificate = Output.empty();
-        this.clientKey = Output.empty();
+        this.caCertificate = Codegen.empty();
+        this.clientCertificate = Codegen.empty();
+        this.clientKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -103,7 +104,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificate(@Nullable String clientCertificate) {
-            this.clientCertificate = Output.ofNullable(clientCertificate);
+            this.clientCertificate = Codegen.ofNullable(clientCertificate);
             return this;
         }
         public Builder clientKey(@Nullable Output<String> clientKey) {
@@ -111,7 +112,7 @@ public final class SslConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientKey(@Nullable String clientKey) {
-            this.clientKey = Output.ofNullable(clientKey);
+            this.clientKey = Codegen.ofNullable(clientKey);
             return this;
         }        public SslConfigArgs build() {
             return new SslConfigArgs(caCertificate, clientCertificate, clientKey);

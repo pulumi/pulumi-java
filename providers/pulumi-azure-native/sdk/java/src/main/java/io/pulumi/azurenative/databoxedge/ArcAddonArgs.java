@@ -5,6 +5,7 @@ package io.pulumi.azurenative.databoxedge;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> addonName;
 
     public Output<String> getAddonName() {
-        return this.addonName == null ? Output.empty() : this.addonName;
+        return this.addonName == null ? Codegen.empty() : this.addonName;
     }
 
     /**
@@ -123,14 +124,14 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArcAddonArgs() {
-        this.addonName = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceLocation = Output.empty();
-        this.resourceName = Output.empty();
-        this.roleName = Output.empty();
-        this.subscriptionId = Output.empty();
+        this.addonName = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceLocation = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ArcAddonArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addonName(@Nullable String addonName) {
-            this.addonName = Output.ofNullable(addonName);
+            this.addonName = Codegen.ofNullable(addonName);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {

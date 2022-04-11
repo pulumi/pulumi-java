@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker;
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointDeploymentConfigArgs> deploymentConfig;
 
     public Output<EndpointDeploymentConfigArgs> getDeploymentConfig() {
-        return this.deploymentConfig == null ? Output.empty() : this.deploymentConfig;
+        return this.deploymentConfig == null ? Codegen.empty() : this.deploymentConfig;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public EndpointArgs(
@@ -72,10 +73,10 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.deploymentConfig = Output.empty();
-        this.endpointConfigName = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.deploymentConfig = Codegen.empty();
+        this.endpointConfigName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentConfig(@Nullable EndpointDeploymentConfigArgs deploymentConfig) {
-            this.deploymentConfig = Output.ofNullable(deploymentConfig);
+            this.deploymentConfig = Codegen.ofNullable(deploymentConfig);
             return this;
         }
         public Builder endpointConfigName(Output<String> endpointConfigName) {
@@ -125,7 +126,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -133,7 +134,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(deploymentConfig, endpointConfigName, name, tags);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleActionArgs;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleConditionArgs;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
     }
 
     private BucketLifecycleRuleArgs() {
-        this.action = Output.empty();
-        this.condition = Output.empty();
+        this.action = Codegen.empty();
+        this.condition = Codegen.empty();
     }
 
     public static Builder builder() {

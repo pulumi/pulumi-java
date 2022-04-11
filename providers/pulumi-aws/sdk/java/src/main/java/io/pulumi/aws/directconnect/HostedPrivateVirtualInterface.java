@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.HostedPrivateVirtualInterfaceState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -242,7 +243,7 @@ public class HostedPrivateVirtualInterface extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedPrivateVirtualInterface(String name, HostedPrivateVirtualInterfaceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/hostedPrivateVirtualInterface:HostedPrivateVirtualInterface", name, args == null ? HostedPrivateVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/hostedPrivateVirtualInterface:HostedPrivateVirtualInterface", name, args == null ? HostedPrivateVirtualInterfaceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedPrivateVirtualInterface(String name, Output<String> id, @Nullable HostedPrivateVirtualInterfaceState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

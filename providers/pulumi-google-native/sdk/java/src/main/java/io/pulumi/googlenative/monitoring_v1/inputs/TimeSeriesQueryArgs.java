@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<TimeSeriesFilterArgs> timeSeriesFilter;
 
     public Output<TimeSeriesFilterArgs> getTimeSeriesFilter() {
-        return this.timeSeriesFilter == null ? Output.empty() : this.timeSeriesFilter;
+        return this.timeSeriesFilter == null ? Codegen.empty() : this.timeSeriesFilter;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
 
     public Output<TimeSeriesFilterRatioArgs> getTimeSeriesFilterRatio() {
-        return this.timeSeriesFilterRatio == null ? Output.empty() : this.timeSeriesFilterRatio;
+        return this.timeSeriesFilterRatio == null ? Codegen.empty() : this.timeSeriesFilterRatio;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> timeSeriesQueryLanguage;
 
     public Output<String> getTimeSeriesQueryLanguage() {
-        return this.timeSeriesQueryLanguage == null ? Output.empty() : this.timeSeriesQueryLanguage;
+        return this.timeSeriesQueryLanguage == null ? Codegen.empty() : this.timeSeriesQueryLanguage;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> unitOverride;
 
     public Output<String> getUnitOverride() {
-        return this.unitOverride == null ? Output.empty() : this.unitOverride;
+        return this.unitOverride == null ? Codegen.empty() : this.unitOverride;
     }
 
     public TimeSeriesQueryArgs(
@@ -76,10 +77,10 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TimeSeriesQueryArgs() {
-        this.timeSeriesFilter = Output.empty();
-        this.timeSeriesFilterRatio = Output.empty();
-        this.timeSeriesQueryLanguage = Output.empty();
-        this.unitOverride = Output.empty();
+        this.timeSeriesFilter = Codegen.empty();
+        this.timeSeriesFilterRatio = Codegen.empty();
+        this.timeSeriesQueryLanguage = Codegen.empty();
+        this.unitOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder timeSeriesFilter(@Nullable TimeSeriesFilterArgs timeSeriesFilter) {
-            this.timeSeriesFilter = Output.ofNullable(timeSeriesFilter);
+            this.timeSeriesFilter = Codegen.ofNullable(timeSeriesFilter);
             return this;
         }
         public Builder timeSeriesFilterRatio(@Nullable Output<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio) {
@@ -121,7 +122,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder timeSeriesFilterRatio(@Nullable TimeSeriesFilterRatioArgs timeSeriesFilterRatio) {
-            this.timeSeriesFilterRatio = Output.ofNullable(timeSeriesFilterRatio);
+            this.timeSeriesFilterRatio = Codegen.ofNullable(timeSeriesFilterRatio);
             return this;
         }
         public Builder timeSeriesQueryLanguage(@Nullable Output<String> timeSeriesQueryLanguage) {
@@ -129,7 +130,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder timeSeriesQueryLanguage(@Nullable String timeSeriesQueryLanguage) {
-            this.timeSeriesQueryLanguage = Output.ofNullable(timeSeriesQueryLanguage);
+            this.timeSeriesQueryLanguage = Codegen.ofNullable(timeSeriesQueryLanguage);
             return this;
         }
         public Builder unitOverride(@Nullable Output<String> unitOverride) {
@@ -137,7 +138,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder unitOverride(@Nullable String unitOverride) {
-            this.unitOverride = Output.ofNullable(unitOverride);
+            this.unitOverride = Codegen.ofNullable(unitOverride);
             return this;
         }        public TimeSeriesQueryArgs build() {
             return new TimeSeriesQueryArgs(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);

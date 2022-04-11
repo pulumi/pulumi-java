@@ -5,6 +5,7 @@ package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class EdgeCacheKeysetPublicKeyGetArgs extends io.pulumi.resources.R
     }
 
     private EdgeCacheKeysetPublicKeyGetArgs() {
-        this.id = Output.empty();
-        this.value = Output.empty();
+        this.id = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

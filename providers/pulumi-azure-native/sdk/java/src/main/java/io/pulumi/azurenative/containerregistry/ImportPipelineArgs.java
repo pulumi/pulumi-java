@@ -10,6 +10,7 @@ import io.pulumi.azurenative.containerregistry.inputs.PipelineTriggerPropertiesA
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> importPipelineName;
 
     public Output<String> getImportPipelineName() {
-        return this.importPipelineName == null ? Output.empty() : this.importPipelineName;
+        return this.importPipelineName == null ? Codegen.empty() : this.importPipelineName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
     public Output<List<Either<String,PipelineOptions>>> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PipelineTriggerPropertiesArgs> trigger;
 
     public Output<PipelineTriggerPropertiesArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public ImportPipelineArgs(
@@ -128,14 +129,14 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImportPipelineArgs() {
-        this.identity = Output.empty();
-        this.importPipelineName = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.registryName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.source = Output.empty();
-        this.trigger = Output.empty();
+        this.identity = Codegen.empty();
+        this.importPipelineName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.registryName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.source = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder importPipelineName(@Nullable Output<String> importPipelineName) {
@@ -185,7 +186,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder importPipelineName(@Nullable String importPipelineName) {
-            this.importPipelineName = Output.ofNullable(importPipelineName);
+            this.importPipelineName = Codegen.ofNullable(importPipelineName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -193,7 +194,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<List<Either<String,PipelineOptions>>> options) {
@@ -201,7 +202,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder options(@Nullable List<Either<String,PipelineOptions>> options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder options(Either<String,PipelineOptions>... options) {
@@ -236,7 +237,7 @@ public final class ImportPipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trigger(@Nullable PipelineTriggerPropertiesArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public ImportPipelineArgs build() {
             return new ImportPipelineArgs(identity, importPipelineName, location, options, registryName, resourceGroupName, source, trigger);

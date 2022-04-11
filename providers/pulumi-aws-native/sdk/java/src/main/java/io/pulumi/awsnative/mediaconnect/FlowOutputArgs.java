@@ -8,6 +8,7 @@ import io.pulumi.awsnative.mediaconnect.inputs.FlowOutputEncryptionArgs;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowOutputVpcInterfaceAttachmentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> cidrAllowList;
 
     public Output<List<String>> getCidrAllowList() {
-        return this.cidrAllowList == null ? Output.empty() : this.cidrAllowList;
+        return this.cidrAllowList == null ? Codegen.empty() : this.cidrAllowList;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowOutputEncryptionArgs> encryption;
 
     public Output<FlowOutputEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxLatency;
 
     public Output<Integer> getMaxLatency() {
-        return this.maxLatency == null ? Output.empty() : this.maxLatency;
+        return this.maxLatency == null ? Codegen.empty() : this.maxLatency;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minLatency;
 
     public Output<Integer> getMinLatency() {
-        return this.minLatency == null ? Output.empty() : this.minLatency;
+        return this.minLatency == null ? Codegen.empty() : this.minLatency;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> remoteId;
 
     public Output<String> getRemoteId() {
-        return this.remoteId == null ? Output.empty() : this.remoteId;
+        return this.remoteId == null ? Codegen.empty() : this.remoteId;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> smoothingLatency;
 
     public Output<Integer> getSmoothingLatency() {
-        return this.smoothingLatency == null ? Output.empty() : this.smoothingLatency;
+        return this.smoothingLatency == null ? Codegen.empty() : this.smoothingLatency;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> streamId;
 
     public Output<String> getStreamId() {
-        return this.streamId == null ? Output.empty() : this.streamId;
+        return this.streamId == null ? Codegen.empty() : this.streamId;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment;
 
     public Output<FlowOutputVpcInterfaceAttachmentArgs> getVpcInterfaceAttachment() {
-        return this.vpcInterfaceAttachment == null ? Output.empty() : this.vpcInterfaceAttachment;
+        return this.vpcInterfaceAttachment == null ? Codegen.empty() : this.vpcInterfaceAttachment;
     }
 
     public FlowOutputArgs(
@@ -205,20 +206,20 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FlowOutputArgs() {
-        this.cidrAllowList = Output.empty();
-        this.description = Output.empty();
-        this.destination = Output.empty();
-        this.encryption = Output.empty();
-        this.flowArn = Output.empty();
-        this.maxLatency = Output.empty();
-        this.minLatency = Output.empty();
-        this.name = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.remoteId = Output.empty();
-        this.smoothingLatency = Output.empty();
-        this.streamId = Output.empty();
-        this.vpcInterfaceAttachment = Output.empty();
+        this.cidrAllowList = Codegen.empty();
+        this.description = Codegen.empty();
+        this.destination = Codegen.empty();
+        this.encryption = Codegen.empty();
+        this.flowArn = Codegen.empty();
+        this.maxLatency = Codegen.empty();
+        this.minLatency = Codegen.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.remoteId = Codegen.empty();
+        this.smoothingLatency = Codegen.empty();
+        this.streamId = Codegen.empty();
+        this.vpcInterfaceAttachment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -272,7 +273,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cidrAllowList(@Nullable List<String> cidrAllowList) {
-            this.cidrAllowList = Output.ofNullable(cidrAllowList);
+            this.cidrAllowList = Codegen.ofNullable(cidrAllowList);
             return this;
         }
         public Builder cidrAllowList(String... cidrAllowList) {
@@ -283,7 +284,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder destination(@Nullable Output<String> destination) {
@@ -291,7 +292,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder encryption(@Nullable Output<FlowOutputEncryptionArgs> encryption) {
@@ -299,7 +300,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable FlowOutputEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder flowArn(Output<String> flowArn) {
@@ -315,7 +316,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxLatency(@Nullable Integer maxLatency) {
-            this.maxLatency = Output.ofNullable(maxLatency);
+            this.maxLatency = Codegen.ofNullable(maxLatency);
             return this;
         }
         public Builder minLatency(@Nullable Output<Integer> minLatency) {
@@ -323,7 +324,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minLatency(@Nullable Integer minLatency) {
-            this.minLatency = Output.ofNullable(minLatency);
+            this.minLatency = Codegen.ofNullable(minLatency);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -331,7 +332,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -339,7 +340,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(Output<FlowOutputProtocol> protocol) {
@@ -355,7 +356,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteId(@Nullable String remoteId) {
-            this.remoteId = Output.ofNullable(remoteId);
+            this.remoteId = Codegen.ofNullable(remoteId);
             return this;
         }
         public Builder smoothingLatency(@Nullable Output<Integer> smoothingLatency) {
@@ -363,7 +364,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder smoothingLatency(@Nullable Integer smoothingLatency) {
-            this.smoothingLatency = Output.ofNullable(smoothingLatency);
+            this.smoothingLatency = Codegen.ofNullable(smoothingLatency);
             return this;
         }
         public Builder streamId(@Nullable Output<String> streamId) {
@@ -371,7 +372,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamId(@Nullable String streamId) {
-            this.streamId = Output.ofNullable(streamId);
+            this.streamId = Codegen.ofNullable(streamId);
             return this;
         }
         public Builder vpcInterfaceAttachment(@Nullable Output<FlowOutputVpcInterfaceAttachmentArgs> vpcInterfaceAttachment) {
@@ -379,7 +380,7 @@ public final class FlowOutputArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcInterfaceAttachment(@Nullable FlowOutputVpcInterfaceAttachmentArgs vpcInterfaceAttachment) {
-            this.vpcInterfaceAttachment = Output.ofNullable(vpcInterfaceAttachment);
+            this.vpcInterfaceAttachment = Codegen.ofNullable(vpcInterfaceAttachment);
             return this;
         }        public FlowOutputArgs build() {
             return new FlowOutputArgs(cidrAllowList, description, destination, encryption, flowArn, maxLatency, minLatency, name, port, protocol, remoteId, smoothingLatency, streamId, vpcInterfaceAttachment);

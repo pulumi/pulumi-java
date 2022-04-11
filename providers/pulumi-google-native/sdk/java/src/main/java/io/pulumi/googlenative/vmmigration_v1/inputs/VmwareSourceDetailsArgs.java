@@ -5,6 +5,7 @@ package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> vcenterIp;
 
     public Output<String> getVcenterIp() {
-        return this.vcenterIp == null ? Output.empty() : this.vcenterIp;
+        return this.vcenterIp == null ? Codegen.empty() : this.vcenterIp;
     }
 
     public VmwareSourceDetailsArgs(
@@ -74,10 +75,10 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
     }
 
     private VmwareSourceDetailsArgs() {
-        this.password = Output.empty();
-        this.thumbprint = Output.empty();
-        this.username = Output.empty();
-        this.vcenterIp = Output.empty();
+        this.password = Codegen.empty();
+        this.thumbprint = Codegen.empty();
+        this.username = Codegen.empty();
+        this.vcenterIp = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -119,7 +120,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -127,7 +128,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }
         public Builder vcenterIp(@Nullable Output<String> vcenterIp) {
@@ -135,7 +136,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder vcenterIp(@Nullable String vcenterIp) {
-            this.vcenterIp = Output.ofNullable(vcenterIp);
+            this.vcenterIp = Codegen.ofNullable(vcenterIp);
             return this;
         }        public VmwareSourceDetailsArgs build() {
             return new VmwareSourceDetailsArgs(password, thumbprint, username, vcenterIp);

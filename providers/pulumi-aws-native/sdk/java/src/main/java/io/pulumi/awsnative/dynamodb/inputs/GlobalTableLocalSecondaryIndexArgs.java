@@ -7,6 +7,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableKeySchemaArgs;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableProjectionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -47,9 +48,9 @@ public final class GlobalTableLocalSecondaryIndexArgs extends io.pulumi.resource
     }
 
     private GlobalTableLocalSecondaryIndexArgs() {
-        this.indexName = Output.empty();
-        this.keySchema = Output.empty();
-        this.projection = Output.empty();
+        this.indexName = Codegen.empty();
+        this.keySchema = Codegen.empty();
+        this.projection = Codegen.empty();
     }
 
     public static Builder builder() {

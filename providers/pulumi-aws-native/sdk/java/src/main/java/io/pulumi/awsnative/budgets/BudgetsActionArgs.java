@@ -11,6 +11,7 @@ import io.pulumi.awsnative.budgets.inputs.BudgetsActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSubscriberArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BudgetsActionApprovalModel> approvalModel;
 
     public Output<BudgetsActionApprovalModel> getApprovalModel() {
-        return this.approvalModel == null ? Output.empty() : this.approvalModel;
+        return this.approvalModel == null ? Codegen.empty() : this.approvalModel;
     }
 
     @Import(name="budgetName", required=true)
@@ -97,14 +98,14 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BudgetsActionArgs() {
-        this.actionThreshold = Output.empty();
-        this.actionType = Output.empty();
-        this.approvalModel = Output.empty();
-        this.budgetName = Output.empty();
-        this.definition = Output.empty();
-        this.executionRoleArn = Output.empty();
-        this.notificationType = Output.empty();
-        this.subscribers = Output.empty();
+        this.actionThreshold = Codegen.empty();
+        this.actionType = Codegen.empty();
+        this.approvalModel = Codegen.empty();
+        this.budgetName = Codegen.empty();
+        this.definition = Codegen.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.notificationType = Codegen.empty();
+        this.subscribers = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class BudgetsActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder approvalModel(@Nullable BudgetsActionApprovalModel approvalModel) {
-            this.approvalModel = Output.ofNullable(approvalModel);
+            this.approvalModel = Codegen.ofNullable(approvalModel);
             return this;
         }
         public Builder budgetName(Output<String> budgetName) {

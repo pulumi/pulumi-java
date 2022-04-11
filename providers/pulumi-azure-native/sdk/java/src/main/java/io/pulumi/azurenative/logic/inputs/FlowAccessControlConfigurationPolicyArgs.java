@@ -7,6 +7,7 @@ import io.pulumi.azurenative.logic.inputs.IpAddressRangeArgs;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
       private final @Nullable Output<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
 
     public Output<List<IpAddressRangeArgs>> getAllowedCallerIpAddresses() {
-        return this.allowedCallerIpAddresses == null ? Output.empty() : this.allowedCallerIpAddresses;
+        return this.allowedCallerIpAddresses == null ? Codegen.empty() : this.allowedCallerIpAddresses;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
       private final @Nullable Output<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
     public Output<OpenAuthenticationAccessPoliciesArgs> getOpenAuthenticationPolicies() {
-        return this.openAuthenticationPolicies == null ? Output.empty() : this.openAuthenticationPolicies;
+        return this.openAuthenticationPolicies == null ? Codegen.empty() : this.openAuthenticationPolicies;
     }
 
     public FlowAccessControlConfigurationPolicyArgs(
@@ -50,8 +51,8 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
     }
 
     private FlowAccessControlConfigurationPolicyArgs() {
-        this.allowedCallerIpAddresses = Output.empty();
-        this.openAuthenticationPolicies = Output.empty();
+        this.allowedCallerIpAddresses = Codegen.empty();
+        this.openAuthenticationPolicies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder allowedCallerIpAddresses(@Nullable List<IpAddressRangeArgs> allowedCallerIpAddresses) {
-            this.allowedCallerIpAddresses = Output.ofNullable(allowedCallerIpAddresses);
+            this.allowedCallerIpAddresses = Codegen.ofNullable(allowedCallerIpAddresses);
             return this;
         }
         public Builder allowedCallerIpAddresses(IpAddressRangeArgs... allowedCallerIpAddresses) {
@@ -92,7 +93,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
             return this;
         }
         public Builder openAuthenticationPolicies(@Nullable OpenAuthenticationAccessPoliciesArgs openAuthenticationPolicies) {
-            this.openAuthenticationPolicies = Output.ofNullable(openAuthenticationPolicies);
+            this.openAuthenticationPolicies = Codegen.ofNullable(openAuthenticationPolicies);
             return this;
         }        public FlowAccessControlConfigurationPolicyArgs build() {
             return new FlowAccessControlConfigurationPolicyArgs(allowedCallerIpAddresses, openAuthenticationPolicies);

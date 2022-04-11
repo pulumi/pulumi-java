@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs;
@@ -28,7 +29,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs>> accelerators;
 
     public Output<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs>> getAccelerators() {
-        return this.accelerators == null ? Output.empty() : this.accelerators;
+        return this.accelerators == null ? Codegen.empty() : this.accelerators;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs> diskConfig;
 
     public Output<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs> getDiskConfig() {
-        return this.diskConfig == null ? Output.empty() : this.diskConfig;
+        return this.diskConfig == null ? Codegen.empty() : this.diskConfig;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<String> image;
 
     public Output<String> getImage() {
-        return this.image == null ? Output.empty() : this.image;
+        return this.image == null ? Codegen.empty() : this.image;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<List<String>> instanceNames;
 
     public Output<List<String>> getInstanceNames() {
-        return this.instanceNames == null ? Output.empty() : this.instanceNames;
+        return this.instanceNames == null ? Codegen.empty() : this.instanceNames;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<Boolean> isPreemptible;
 
     public Output<Boolean> getIsPreemptible() {
-        return this.isPreemptible == null ? Output.empty() : this.isPreemptible;
+        return this.isPreemptible == null ? Codegen.empty() : this.isPreemptible;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<String> machineType;
 
     public Output<String> getMachineType() {
-        return this.machineType == null ? Output.empty() : this.machineType;
+        return this.machineType == null ? Codegen.empty() : this.machineType;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs>> managedGroupConfigs;
 
     public Output<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs>> getManagedGroupConfigs() {
-        return this.managedGroupConfigs == null ? Output.empty() : this.managedGroupConfigs;
+        return this.managedGroupConfigs == null ? Codegen.empty() : this.managedGroupConfigs;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<String> minCpuPlatform;
 
     public Output<String> getMinCpuPlatform() {
-        return this.minCpuPlatform == null ? Output.empty() : this.minCpuPlatform;
+        return this.minCpuPlatform == null ? Codegen.empty() : this.minCpuPlatform;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<Integer> numInstances;
 
     public Output<Integer> getNumInstances() {
-        return this.numInstances == null ? Output.empty() : this.numInstances;
+        return this.numInstances == null ? Codegen.empty() : this.numInstances;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
       private final @Nullable Output<String> preemptibility;
 
     public Output<String> getPreemptibility() {
-        return this.preemptibility == null ? Output.empty() : this.preemptibility;
+        return this.preemptibility == null ? Codegen.empty() : this.preemptibility;
     }
 
     public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs(
@@ -157,16 +158,16 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
     }
 
     private WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs() {
-        this.accelerators = Output.empty();
-        this.diskConfig = Output.empty();
-        this.image = Output.empty();
-        this.instanceNames = Output.empty();
-        this.isPreemptible = Output.empty();
-        this.machineType = Output.empty();
-        this.managedGroupConfigs = Output.empty();
-        this.minCpuPlatform = Output.empty();
-        this.numInstances = Output.empty();
-        this.preemptibility = Output.empty();
+        this.accelerators = Codegen.empty();
+        this.diskConfig = Codegen.empty();
+        this.image = Codegen.empty();
+        this.instanceNames = Codegen.empty();
+        this.isPreemptible = Codegen.empty();
+        this.machineType = Codegen.empty();
+        this.managedGroupConfigs = Codegen.empty();
+        this.minCpuPlatform = Codegen.empty();
+        this.numInstances = Codegen.empty();
+        this.preemptibility = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -212,7 +213,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder accelerators(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs> accelerators) {
-            this.accelerators = Output.ofNullable(accelerators);
+            this.accelerators = Codegen.ofNullable(accelerators);
             return this;
         }
         public Builder accelerators(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigAcceleratorGetArgs... accelerators) {
@@ -223,7 +224,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder diskConfig(@Nullable WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigDiskConfigGetArgs diskConfig) {
-            this.diskConfig = Output.ofNullable(diskConfig);
+            this.diskConfig = Codegen.ofNullable(diskConfig);
             return this;
         }
         public Builder image(@Nullable Output<String> image) {
@@ -231,7 +232,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder image(@Nullable String image) {
-            this.image = Output.ofNullable(image);
+            this.image = Codegen.ofNullable(image);
             return this;
         }
         public Builder instanceNames(@Nullable Output<List<String>> instanceNames) {
@@ -239,7 +240,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder instanceNames(@Nullable List<String> instanceNames) {
-            this.instanceNames = Output.ofNullable(instanceNames);
+            this.instanceNames = Codegen.ofNullable(instanceNames);
             return this;
         }
         public Builder instanceNames(String... instanceNames) {
@@ -250,7 +251,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder isPreemptible(@Nullable Boolean isPreemptible) {
-            this.isPreemptible = Output.ofNullable(isPreemptible);
+            this.isPreemptible = Codegen.ofNullable(isPreemptible);
             return this;
         }
         public Builder machineType(@Nullable Output<String> machineType) {
@@ -258,7 +259,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder machineType(@Nullable String machineType) {
-            this.machineType = Output.ofNullable(machineType);
+            this.machineType = Codegen.ofNullable(machineType);
             return this;
         }
         public Builder managedGroupConfigs(@Nullable Output<List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs>> managedGroupConfigs) {
@@ -266,7 +267,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder managedGroupConfigs(@Nullable List<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs> managedGroupConfigs) {
-            this.managedGroupConfigs = Output.ofNullable(managedGroupConfigs);
+            this.managedGroupConfigs = Codegen.ofNullable(managedGroupConfigs);
             return this;
         }
         public Builder managedGroupConfigs(WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigManagedGroupConfigGetArgs... managedGroupConfigs) {
@@ -277,7 +278,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder minCpuPlatform(@Nullable String minCpuPlatform) {
-            this.minCpuPlatform = Output.ofNullable(minCpuPlatform);
+            this.minCpuPlatform = Codegen.ofNullable(minCpuPlatform);
             return this;
         }
         public Builder numInstances(@Nullable Output<Integer> numInstances) {
@@ -285,7 +286,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder numInstances(@Nullable Integer numInstances) {
-            this.numInstances = Output.ofNullable(numInstances);
+            this.numInstances = Codegen.ofNullable(numInstances);
             return this;
         }
         public Builder preemptibility(@Nullable Output<String> preemptibility) {
@@ -293,7 +294,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerC
             return this;
         }
         public Builder preemptibility(@Nullable String preemptibility) {
-            this.preemptibility = Output.ofNullable(preemptibility);
+            this.preemptibility = Codegen.ofNullable(preemptibility);
             return this;
         }        public WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs(accelerators, diskConfig, image, instanceNames, isPreemptible, machineType, managedGroupConfigs, minCpuPlatform, numInstances, preemptibility);

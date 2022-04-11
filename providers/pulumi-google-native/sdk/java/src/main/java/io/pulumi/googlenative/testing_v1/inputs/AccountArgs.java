@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.GoogleAutoArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleAutoArgs> googleAuto;
 
     public Output<GoogleAutoArgs> getGoogleAuto() {
-        return this.googleAuto == null ? Output.empty() : this.googleAuto;
+        return this.googleAuto == null ? Codegen.empty() : this.googleAuto;
     }
 
     public AccountArgs(@Nullable Output<GoogleAutoArgs> googleAuto) {
@@ -34,7 +35,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.googleAuto = Output.empty();
+        this.googleAuto = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder googleAuto(@Nullable GoogleAutoArgs googleAuto) {
-            this.googleAuto = Output.ofNullable(googleAuto);
+            this.googleAuto = Codegen.ofNullable(googleAuto);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(googleAuto);

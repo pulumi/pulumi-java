@@ -13,6 +13,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StorageQueueEventSubscriptionDesti
 import io.pulumi.azurenative.eventgrid.inputs.WebHookEventSubscriptionDestinationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
       private final @Nullable Output<Object> destination;
 
     public Output<Object> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
       private final @Nullable Output<EventSubscriptionIdentityArgs> identity;
 
     public Output<EventSubscriptionIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     public DeliveryWithResourceIdentityArgs(
@@ -57,8 +58,8 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
     }
 
     private DeliveryWithResourceIdentityArgs() {
-        this.destination = Output.empty();
-        this.identity = Output.empty();
+        this.destination = Codegen.empty();
+        this.identity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder destination(@Nullable Object destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder identity(@Nullable Output<EventSubscriptionIdentityArgs> identity) {
@@ -96,7 +97,7 @@ public final class DeliveryWithResourceIdentityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder identity(@Nullable EventSubscriptionIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }        public DeliveryWithResourceIdentityArgs build() {
             return new DeliveryWithResourceIdentityArgs(destination, identity);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lightsail.inputs.BucketAccessRulesArgs;
 import io.pulumi.awsnative.lightsail.inputs.BucketTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +23,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BucketAccessRulesArgs> accessRules;
 
     public Output<BucketAccessRulesArgs> getAccessRules() {
-        return this.accessRules == null ? Output.empty() : this.accessRules;
+        return this.accessRules == null ? Codegen.empty() : this.accessRules;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bucketName;
 
     public Output<String> getBucketName() {
-        return this.bucketName == null ? Output.empty() : this.bucketName;
+        return this.bucketName == null ? Codegen.empty() : this.bucketName;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> objectVersioning;
 
     public Output<Boolean> getObjectVersioning() {
-        return this.objectVersioning == null ? Output.empty() : this.objectVersioning;
+        return this.objectVersioning == null ? Codegen.empty() : this.objectVersioning;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> readOnlyAccessAccounts;
 
     public Output<List<String>> getReadOnlyAccessAccounts() {
-        return this.readOnlyAccessAccounts == null ? Output.empty() : this.readOnlyAccessAccounts;
+        return this.readOnlyAccessAccounts == null ? Codegen.empty() : this.readOnlyAccessAccounts;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> resourcesReceivingAccess;
 
     public Output<List<String>> getResourcesReceivingAccess() {
-        return this.resourcesReceivingAccess == null ? Output.empty() : this.resourcesReceivingAccess;
+        return this.resourcesReceivingAccess == null ? Codegen.empty() : this.resourcesReceivingAccess;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<BucketTagArgs>> tags;
 
     public Output<List<BucketTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public BucketArgs(
@@ -109,13 +110,13 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketArgs() {
-        this.accessRules = Output.empty();
-        this.bucketName = Output.empty();
-        this.bundleId = Output.empty();
-        this.objectVersioning = Output.empty();
-        this.readOnlyAccessAccounts = Output.empty();
-        this.resourcesReceivingAccess = Output.empty();
-        this.tags = Output.empty();
+        this.accessRules = Codegen.empty();
+        this.bucketName = Codegen.empty();
+        this.bundleId = Codegen.empty();
+        this.objectVersioning = Codegen.empty();
+        this.readOnlyAccessAccounts = Codegen.empty();
+        this.resourcesReceivingAccess = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accessRules(@Nullable BucketAccessRulesArgs accessRules) {
-            this.accessRules = Output.ofNullable(accessRules);
+            this.accessRules = Codegen.ofNullable(accessRules);
             return this;
         }
         public Builder bucketName(@Nullable Output<String> bucketName) {
@@ -163,7 +164,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bucketName(@Nullable String bucketName) {
-            this.bucketName = Output.ofNullable(bucketName);
+            this.bucketName = Codegen.ofNullable(bucketName);
             return this;
         }
         public Builder bundleId(Output<String> bundleId) {
@@ -179,7 +180,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectVersioning(@Nullable Boolean objectVersioning) {
-            this.objectVersioning = Output.ofNullable(objectVersioning);
+            this.objectVersioning = Codegen.ofNullable(objectVersioning);
             return this;
         }
         public Builder readOnlyAccessAccounts(@Nullable Output<List<String>> readOnlyAccessAccounts) {
@@ -187,7 +188,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readOnlyAccessAccounts(@Nullable List<String> readOnlyAccessAccounts) {
-            this.readOnlyAccessAccounts = Output.ofNullable(readOnlyAccessAccounts);
+            this.readOnlyAccessAccounts = Codegen.ofNullable(readOnlyAccessAccounts);
             return this;
         }
         public Builder readOnlyAccessAccounts(String... readOnlyAccessAccounts) {
@@ -198,7 +199,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourcesReceivingAccess(@Nullable List<String> resourcesReceivingAccess) {
-            this.resourcesReceivingAccess = Output.ofNullable(resourcesReceivingAccess);
+            this.resourcesReceivingAccess = Codegen.ofNullable(resourcesReceivingAccess);
             return this;
         }
         public Builder resourcesReceivingAccess(String... resourcesReceivingAccess) {
@@ -209,7 +210,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<BucketTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(BucketTagArgs... tags) {

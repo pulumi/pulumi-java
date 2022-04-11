@@ -5,6 +5,7 @@ package io.pulumi.aws.backup.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupVaultArn;
 
     public Output<String> getBackupVaultArn() {
-        return this.backupVaultArn == null ? Output.empty() : this.backupVaultArn;
+        return this.backupVaultArn == null ? Codegen.empty() : this.backupVaultArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> backupVaultName;
 
     public Output<String> getBackupVaultName() {
-        return this.backupVaultName == null ? Output.empty() : this.backupVaultName;
+        return this.backupVaultName == null ? Codegen.empty() : this.backupVaultName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public VaultPolicyState(
@@ -57,9 +58,9 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private VaultPolicyState() {
-        this.backupVaultArn = Output.empty();
-        this.backupVaultName = Output.empty();
-        this.policy = Output.empty();
+        this.backupVaultArn = Codegen.empty();
+        this.backupVaultName = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupVaultArn(@Nullable String backupVaultArn) {
-            this.backupVaultArn = Output.ofNullable(backupVaultArn);
+            this.backupVaultArn = Codegen.ofNullable(backupVaultArn);
             return this;
         }
         public Builder backupVaultName(@Nullable Output<String> backupVaultName) {
@@ -99,7 +100,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupVaultName(@Nullable String backupVaultName) {
-            this.backupVaultName = Output.ofNullable(backupVaultName);
+            this.backupVaultName = Codegen.ofNullable(backupVaultName);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -107,7 +108,7 @@ public final class VaultPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public VaultPolicyState build() {
             return new VaultPolicyState(backupVaultArn, backupVaultName, policy);

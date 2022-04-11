@@ -7,6 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicyNatRuleActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class FirewallPolicyNatRuleActionArgs extends io.pulumi.resources.R
       private final @Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type;
 
     public Output<Either<String,FirewallPolicyNatRuleActionType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public FirewallPolicyNatRuleActionArgs(@Nullable Output<Either<String,FirewallPolicyNatRuleActionType>> type) {
@@ -36,7 +37,7 @@ public final class FirewallPolicyNatRuleActionArgs extends io.pulumi.resources.R
     }
 
     private FirewallPolicyNatRuleActionArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class FirewallPolicyNatRuleActionArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder type(@Nullable Either<String,FirewallPolicyNatRuleActionType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public FirewallPolicyNatRuleActionArgs build() {
             return new FirewallPolicyNatRuleActionArgs(type);
