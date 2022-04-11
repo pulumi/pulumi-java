@@ -7,6 +7,7 @@ import io.pulumi.aws.signer.inputs.SigningJobDestinationArgs;
 import io.pulumi.aws.signer.inputs.SigningJobSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> ignoreSigningJobFailure;
 
     public Output<Boolean> getIgnoreSigningJobFailure() {
-        return this.ignoreSigningJobFailure == null ? Output.empty() : this.ignoreSigningJobFailure;
+        return this.ignoreSigningJobFailure == null ? Codegen.empty() : this.ignoreSigningJobFailure;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SigningJobArgs() {
-        this.destination = Output.empty();
-        this.ignoreSigningJobFailure = Output.empty();
-        this.profileName = Output.empty();
-        this.source = Output.empty();
+        this.destination = Codegen.empty();
+        this.ignoreSigningJobFailure = Codegen.empty();
+        this.profileName = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -118,7 +119,7 @@ public final class SigningJobArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ignoreSigningJobFailure(@Nullable Boolean ignoreSigningJobFailure) {
-            this.ignoreSigningJobFailure = Output.ofNullable(ignoreSigningJobFailure);
+            this.ignoreSigningJobFailure = Codegen.ofNullable(ignoreSigningJobFailure);
             return this;
         }
         public Builder profileName(Output<String> profileName) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition;
 import java.lang.Boolean;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
       private final @Nullable Output<Boolean> force;
 
     public Output<Boolean> getForce() {
-        return this.force == null ? Output.empty() : this.force;
+        return this.force == null ? Codegen.empty() : this.force;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
       private final @Nullable Output<String> tableUri;
 
     public Output<String> getTableUri() {
-        return this.tableUri == null ? Output.empty() : this.tableUri;
+        return this.tableUri == null ? Codegen.empty() : this.tableUri;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
       private final @Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition;
 
     public Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> getWriteDisposition() {
-        return this.writeDisposition == null ? Output.empty() : this.writeDisposition;
+        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
     }
 
     public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
     }
 
     private GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs() {
-        this.force = Output.empty();
-        this.tableUri = Output.empty();
-        this.writeDisposition = Output.empty();
+        this.force = Codegen.empty();
+        this.tableUri = Codegen.empty();
+        this.writeDisposition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
             return this;
         }
         public Builder force(@Nullable Boolean force) {
-            this.force = Output.ofNullable(force);
+            this.force = Codegen.ofNullable(force);
             return this;
         }
         public Builder tableUri(@Nullable Output<String> tableUri) {
@@ -105,7 +106,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
             return this;
         }
         public Builder tableUri(@Nullable String tableUri) {
-            this.tableUri = Output.ofNullable(tableUri);
+            this.tableUri = Codegen.ofNullable(tableUri);
             return this;
         }
         public Builder writeDisposition(@Nullable Output<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition> writeDisposition) {
@@ -113,7 +114,7 @@ public final class GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs exte
             return this;
         }
         public Builder writeDisposition(@Nullable GoogleCloudHealthcareV1beta1DicomBigQueryDestinationWriteDisposition writeDisposition) {
-            this.writeDisposition = Output.ofNullable(writeDisposition);
+            this.writeDisposition = Codegen.ofNullable(writeDisposition);
             return this;
         }        public GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs(force, tableUri, writeDisposition);

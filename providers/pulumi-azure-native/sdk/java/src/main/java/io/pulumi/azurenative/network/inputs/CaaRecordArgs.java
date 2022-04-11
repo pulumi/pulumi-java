@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> flags;
 
     public Output<Integer> getFlags() {
-        return this.flags == null ? Output.empty() : this.flags;
+        return this.flags == null ? Codegen.empty() : this.flags;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public CaaRecordArgs(
@@ -62,9 +63,9 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CaaRecordArgs() {
-        this.flags = Output.empty();
-        this.tag = Output.empty();
-        this.value = Output.empty();
+        this.flags = Codegen.empty();
+        this.tag = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder flags(@Nullable Integer flags) {
-            this.flags = Output.ofNullable(flags);
+            this.flags = Codegen.ofNullable(flags);
             return this;
         }
         public Builder tag(@Nullable Output<String> tag) {
@@ -104,7 +105,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -112,7 +113,7 @@ public final class CaaRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public CaaRecordArgs build() {
             return new CaaRecordArgs(flags, tag, value);

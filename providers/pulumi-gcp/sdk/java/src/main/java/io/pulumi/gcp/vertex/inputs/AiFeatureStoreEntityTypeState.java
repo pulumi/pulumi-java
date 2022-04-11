@@ -5,6 +5,7 @@ package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<String> featurestore;
 
     public Output<String> getFeaturestore() {
-        return this.featurestore == null ? Output.empty() : this.featurestore;
+        return this.featurestore == null ? Codegen.empty() : this.featurestore;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig;
 
     public Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> getMonitoringConfig() {
-        return this.monitoringConfig == null ? Output.empty() : this.monitoringConfig;
+        return this.monitoringConfig == null ? Codegen.empty() : this.monitoringConfig;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     public AiFeatureStoreEntityTypeState(
@@ -115,13 +116,13 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
     }
 
     private AiFeatureStoreEntityTypeState() {
-        this.createTime = Output.empty();
-        this.etag = Output.empty();
-        this.featurestore = Output.empty();
-        this.labels = Output.empty();
-        this.monitoringConfig = Output.empty();
-        this.name = Output.empty();
-        this.updateTime = Output.empty();
+        this.createTime = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.featurestore = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.monitoringConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.updateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -169,7 +170,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder featurestore(@Nullable Output<String> featurestore) {
@@ -177,7 +178,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder featurestore(@Nullable String featurestore) {
-            this.featurestore = Output.ofNullable(featurestore);
+            this.featurestore = Codegen.ofNullable(featurestore);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -185,7 +186,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder monitoringConfig(@Nullable Output<AiFeatureStoreEntityTypeMonitoringConfigGetArgs> monitoringConfig) {
@@ -193,7 +194,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder monitoringConfig(@Nullable AiFeatureStoreEntityTypeMonitoringConfigGetArgs monitoringConfig) {
-            this.monitoringConfig = Output.ofNullable(monitoringConfig);
+            this.monitoringConfig = Codegen.ofNullable(monitoringConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -201,7 +202,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -209,7 +210,7 @@ public final class AiFeatureStoreEntityTypeState extends io.pulumi.resources.Res
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }        public AiFeatureStoreEntityTypeState build() {
             return new AiFeatureStoreEntityTypeState(createTime, etag, featurestore, labels, monitoringConfig, name, updateTime);

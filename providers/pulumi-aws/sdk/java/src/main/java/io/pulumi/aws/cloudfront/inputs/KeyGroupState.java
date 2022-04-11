@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> items;
 
     public Output<List<String>> getItems() {
-        return this.items == null ? Output.empty() : this.items;
+        return this.items == null ? Codegen.empty() : this.items;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public KeyGroupState(
@@ -71,10 +72,10 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private KeyGroupState() {
-        this.comment = Output.empty();
-        this.etag = Output.empty();
-        this.items = Output.empty();
-        this.name = Output.empty();
+        this.comment = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.items = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -116,7 +117,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder items(@Nullable Output<List<String>> items) {
@@ -124,7 +125,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder items(@Nullable List<String> items) {
-            this.items = Output.ofNullable(items);
+            this.items = Codegen.ofNullable(items);
             return this;
         }
         public Builder items(String... items) {
@@ -135,7 +136,7 @@ public final class KeyGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public KeyGroupState build() {
             return new KeyGroupState(comment, etag, items, name);

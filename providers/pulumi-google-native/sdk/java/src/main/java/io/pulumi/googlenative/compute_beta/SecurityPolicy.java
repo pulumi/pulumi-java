@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.SecurityPolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
@@ -276,7 +277,7 @@ public class SecurityPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public SecurityPolicy(String name, @Nullable SecurityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:SecurityPolicy", name, args == null ? SecurityPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:SecurityPolicy", name, args == null ? SecurityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private SecurityPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

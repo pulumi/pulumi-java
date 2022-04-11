@@ -5,6 +5,7 @@ package io.pulumi.awsnative.glue;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class SchemaVersionMetadataArgs extends io.pulumi.resources.Resourc
     }
 
     private SchemaVersionMetadataArgs() {
-        this.key = Output.empty();
-        this.schemaVersionId = Output.empty();
-        this.value = Output.empty();
+        this.key = Codegen.empty();
+        this.schemaVersionId = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

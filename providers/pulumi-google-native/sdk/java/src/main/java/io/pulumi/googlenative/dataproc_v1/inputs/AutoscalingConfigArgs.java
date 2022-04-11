@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policyUri;
 
     public Output<String> getPolicyUri() {
-        return this.policyUri == null ? Output.empty() : this.policyUri;
+        return this.policyUri == null ? Codegen.empty() : this.policyUri;
     }
 
     public AutoscalingConfigArgs(@Nullable Output<String> policyUri) {
@@ -34,7 +35,7 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AutoscalingConfigArgs() {
-        this.policyUri = Output.empty();
+        this.policyUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AutoscalingConfigArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyUri(@Nullable String policyUri) {
-            this.policyUri = Output.ofNullable(policyUri);
+            this.policyUri = Codegen.ofNullable(policyUri);
             return this;
         }        public AutoscalingConfigArgs build() {
             return new AutoscalingConfigArgs(policyUri);

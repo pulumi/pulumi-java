@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
       private final @Nullable Output<String> dynamicRouting;
 
     public Output<String> getDynamicRouting() {
-        return this.dynamicRouting == null ? Output.empty() : this.dynamicRouting;
+        return this.dynamicRouting == null ? Codegen.empty() : this.dynamicRouting;
     }
 
     public TransitGatewayPeeringAttachmentOptionsArgs(@Nullable Output<String> dynamicRouting) {
@@ -30,7 +31,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
     }
 
     private TransitGatewayPeeringAttachmentOptionsArgs() {
-        this.dynamicRouting = Output.empty();
+        this.dynamicRouting = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
             return this;
         }
         public Builder dynamicRouting(@Nullable String dynamicRouting) {
-            this.dynamicRouting = Output.ofNullable(dynamicRouting);
+            this.dynamicRouting = Codegen.ofNullable(dynamicRouting);
             return this;
         }        public TransitGatewayPeeringAttachmentOptionsArgs build() {
             return new TransitGatewayPeeringAttachmentOptionsArgs(dynamicRouting);

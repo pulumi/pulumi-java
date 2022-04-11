@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -86,11 +87,11 @@ public final class EdifactProcessingSettingsArgs extends io.pulumi.resources.Res
     }
 
     private EdifactProcessingSettingsArgs() {
-        this.createEmptyXmlTagsForTrailingSeparators = Output.empty();
-        this.maskSecurityInfo = Output.empty();
-        this.preserveInterchange = Output.empty();
-        this.suspendInterchangeOnError = Output.empty();
-        this.useDotAsDecimalSeparator = Output.empty();
+        this.createEmptyXmlTagsForTrailingSeparators = Codegen.empty();
+        this.maskSecurityInfo = Codegen.empty();
+        this.preserveInterchange = Codegen.empty();
+        this.suspendInterchangeOnError = Codegen.empty();
+        this.useDotAsDecimalSeparator = Codegen.empty();
     }
 
     public static Builder builder() {

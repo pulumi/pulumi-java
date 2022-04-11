@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,String>> disks;
 
     public Output<Map<String,String>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     public StatefulPolicyPreservedStateArgs(@Nullable Output<Map<String,String>> disks) {
@@ -35,7 +36,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
     }
 
     private StatefulPolicyPreservedStateArgs() {
-        this.disks = Output.empty();
+        this.disks = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class StatefulPolicyPreservedStateArgs extends io.pulumi.resources.
             return this;
         }
         public Builder disks(@Nullable Map<String,String> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }        public StatefulPolicyPreservedStateArgs build() {
             return new StatefulPolicyPreservedStateArgs(disks);

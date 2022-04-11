@@ -13,6 +13,7 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -125,7 +126,7 @@ public class NetworkInsightsAnalysis extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkInsightsAnalysis(String name, NetworkInsightsAnalysisArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:ec2:NetworkInsightsAnalysis", name, args == null ? NetworkInsightsAnalysisArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:ec2:NetworkInsightsAnalysis", name, args == null ? NetworkInsightsAnalysisArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkInsightsAnalysis(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

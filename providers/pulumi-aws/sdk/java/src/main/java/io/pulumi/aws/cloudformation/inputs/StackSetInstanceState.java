@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudformation.inputs;
 import io.pulumi.aws.cloudformation.inputs.StackSetInstanceDeploymentTargetsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> accountId;
 
     public Output<String> getAccountId() {
-        return this.accountId == null ? Output.empty() : this.accountId;
+        return this.accountId == null ? Codegen.empty() : this.accountId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets;
 
     public Output<StackSetInstanceDeploymentTargetsGetArgs> getDeploymentTargets() {
-        return this.deploymentTargets == null ? Output.empty() : this.deploymentTargets;
+        return this.deploymentTargets == null ? Codegen.empty() : this.deploymentTargets;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> organizationalUnitId;
 
     public Output<String> getOrganizationalUnitId() {
-        return this.organizationalUnitId == null ? Output.empty() : this.organizationalUnitId;
+        return this.organizationalUnitId == null ? Codegen.empty() : this.organizationalUnitId;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> parameterOverrides;
 
     public Output<Map<String,String>> getParameterOverrides() {
-        return this.parameterOverrides == null ? Output.empty() : this.parameterOverrides;
+        return this.parameterOverrides == null ? Codegen.empty() : this.parameterOverrides;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> retainStack;
 
     public Output<Boolean> getRetainStack() {
-        return this.retainStack == null ? Output.empty() : this.retainStack;
+        return this.retainStack == null ? Codegen.empty() : this.retainStack;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> stackId;
 
     public Output<String> getStackId() {
-        return this.stackId == null ? Output.empty() : this.stackId;
+        return this.stackId == null ? Codegen.empty() : this.stackId;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> stackSetName;
 
     public Output<String> getStackSetName() {
-        return this.stackSetName == null ? Output.empty() : this.stackSetName;
+        return this.stackSetName == null ? Codegen.empty() : this.stackSetName;
     }
 
     public StackSetInstanceState(
@@ -125,14 +126,14 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
     }
 
     private StackSetInstanceState() {
-        this.accountId = Output.empty();
-        this.deploymentTargets = Output.empty();
-        this.organizationalUnitId = Output.empty();
-        this.parameterOverrides = Output.empty();
-        this.region = Output.empty();
-        this.retainStack = Output.empty();
-        this.stackId = Output.empty();
-        this.stackSetName = Output.empty();
+        this.accountId = Codegen.empty();
+        this.deploymentTargets = Codegen.empty();
+        this.organizationalUnitId = Codegen.empty();
+        this.parameterOverrides = Codegen.empty();
+        this.region = Codegen.empty();
+        this.retainStack = Codegen.empty();
+        this.stackId = Codegen.empty();
+        this.stackSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -174,7 +175,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder accountId(@Nullable String accountId) {
-            this.accountId = Output.ofNullable(accountId);
+            this.accountId = Codegen.ofNullable(accountId);
             return this;
         }
         public Builder deploymentTargets(@Nullable Output<StackSetInstanceDeploymentTargetsGetArgs> deploymentTargets) {
@@ -182,7 +183,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder deploymentTargets(@Nullable StackSetInstanceDeploymentTargetsGetArgs deploymentTargets) {
-            this.deploymentTargets = Output.ofNullable(deploymentTargets);
+            this.deploymentTargets = Codegen.ofNullable(deploymentTargets);
             return this;
         }
         public Builder organizationalUnitId(@Nullable Output<String> organizationalUnitId) {
@@ -190,7 +191,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder organizationalUnitId(@Nullable String organizationalUnitId) {
-            this.organizationalUnitId = Output.ofNullable(organizationalUnitId);
+            this.organizationalUnitId = Codegen.ofNullable(organizationalUnitId);
             return this;
         }
         public Builder parameterOverrides(@Nullable Output<Map<String,String>> parameterOverrides) {
@@ -198,7 +199,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parameterOverrides(@Nullable Map<String,String> parameterOverrides) {
-            this.parameterOverrides = Output.ofNullable(parameterOverrides);
+            this.parameterOverrides = Codegen.ofNullable(parameterOverrides);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -206,7 +207,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder retainStack(@Nullable Output<Boolean> retainStack) {
@@ -214,7 +215,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder retainStack(@Nullable Boolean retainStack) {
-            this.retainStack = Output.ofNullable(retainStack);
+            this.retainStack = Codegen.ofNullable(retainStack);
             return this;
         }
         public Builder stackId(@Nullable Output<String> stackId) {
@@ -222,7 +223,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder stackId(@Nullable String stackId) {
-            this.stackId = Output.ofNullable(stackId);
+            this.stackId = Codegen.ofNullable(stackId);
             return this;
         }
         public Builder stackSetName(@Nullable Output<String> stackSetName) {
@@ -230,7 +231,7 @@ public final class StackSetInstanceState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder stackSetName(@Nullable String stackSetName) {
-            this.stackSetName = Output.ofNullable(stackSetName);
+            this.stackSetName = Codegen.ofNullable(stackSetName);
             return this;
         }        public StackSetInstanceState build() {
             return new StackSetInstanceState(accountId, deploymentTargets, organizationalUnitId, parameterOverrides, region, retainStack, stackId, stackSetName);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceRepoSourceGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildSourceStorageSourceGetArgs;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class TriggerBuildSourceGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TriggerBuildSourceRepoSourceGetArgs> repoSource;
 
     public Output<TriggerBuildSourceRepoSourceGetArgs> getRepoSource() {
-        return this.repoSource == null ? Output.empty() : this.repoSource;
+        return this.repoSource == null ? Codegen.empty() : this.repoSource;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TriggerBuildSourceGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<TriggerBuildSourceStorageSourceGetArgs> storageSource;
 
     public Output<TriggerBuildSourceStorageSourceGetArgs> getStorageSource() {
-        return this.storageSource == null ? Output.empty() : this.storageSource;
+        return this.storageSource == null ? Codegen.empty() : this.storageSource;
     }
 
     public TriggerBuildSourceGetArgs(
@@ -47,8 +48,8 @@ public final class TriggerBuildSourceGetArgs extends io.pulumi.resources.Resourc
     }
 
     private TriggerBuildSourceGetArgs() {
-        this.repoSource = Output.empty();
-        this.storageSource = Output.empty();
+        this.repoSource = Codegen.empty();
+        this.storageSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class TriggerBuildSourceGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder repoSource(@Nullable TriggerBuildSourceRepoSourceGetArgs repoSource) {
-            this.repoSource = Output.ofNullable(repoSource);
+            this.repoSource = Codegen.ofNullable(repoSource);
             return this;
         }
         public Builder storageSource(@Nullable Output<TriggerBuildSourceStorageSourceGetArgs> storageSource) {
@@ -86,7 +87,7 @@ public final class TriggerBuildSourceGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder storageSource(@Nullable TriggerBuildSourceStorageSourceGetArgs storageSource) {
-            this.storageSource = Output.ofNullable(storageSource);
+            this.storageSource = Codegen.ofNullable(storageSource);
             return this;
         }        public TriggerBuildSourceGetArgs build() {
             return new TriggerBuildSourceGetArgs(repoSource, storageSource);

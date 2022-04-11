@@ -6,6 +6,7 @@ package io.pulumi.gcp.container;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AwsNodePoolArgs;
 import io.pulumi.gcp.container.inputs.AwsNodePoolState;
@@ -294,7 +295,7 @@ public class AwsNodePool extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AwsNodePool(String name, AwsNodePoolArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:container/awsNodePool:AwsNodePool", name, args == null ? AwsNodePoolArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:container/awsNodePool:AwsNodePool", name, args == null ? AwsNodePoolArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AwsNodePool(String name, Output<String> id, @Nullable AwsNodePoolState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

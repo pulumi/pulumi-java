@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
       private final @Nullable Output<String> consumerGroup;
 
     public Output<String> getConsumerGroup() {
-        return this.consumerGroup == null ? Output.empty() : this.consumerGroup;
+        return this.consumerGroup == null ? Codegen.empty() : this.consumerGroup;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
       private final @Nullable Output<String> eventHubName;
 
     public Output<String> getEventHubName() {
-        return this.eventHubName == null ? Output.empty() : this.eventHubName;
+        return this.eventHubName == null ? Codegen.empty() : this.eventHubName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
       private final @Nullable Output<String> fullyQualifiedEventHubNamespace;
 
     public Output<String> getFullyQualifiedEventHubNamespace() {
-        return this.fullyQualifiedEventHubNamespace == null ? Output.empty() : this.fullyQualifiedEventHubNamespace;
+        return this.fullyQualifiedEventHubNamespace == null ? Codegen.empty() : this.fullyQualifiedEventHubNamespace;
     }
 
     public IotEventHubIngestionEndpointConfigurationArgs(
@@ -61,9 +62,9 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
     }
 
     private IotEventHubIngestionEndpointConfigurationArgs() {
-        this.consumerGroup = Output.empty();
-        this.eventHubName = Output.empty();
-        this.fullyQualifiedEventHubNamespace = Output.empty();
+        this.consumerGroup = Codegen.empty();
+        this.eventHubName = Codegen.empty();
+        this.fullyQualifiedEventHubNamespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
             return this;
         }
         public Builder consumerGroup(@Nullable String consumerGroup) {
-            this.consumerGroup = Output.ofNullable(consumerGroup);
+            this.consumerGroup = Codegen.ofNullable(consumerGroup);
             return this;
         }
         public Builder eventHubName(@Nullable Output<String> eventHubName) {
@@ -103,7 +104,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
             return this;
         }
         public Builder eventHubName(@Nullable String eventHubName) {
-            this.eventHubName = Output.ofNullable(eventHubName);
+            this.eventHubName = Codegen.ofNullable(eventHubName);
             return this;
         }
         public Builder fullyQualifiedEventHubNamespace(@Nullable Output<String> fullyQualifiedEventHubNamespace) {
@@ -111,7 +112,7 @@ public final class IotEventHubIngestionEndpointConfigurationArgs extends io.pulu
             return this;
         }
         public Builder fullyQualifiedEventHubNamespace(@Nullable String fullyQualifiedEventHubNamespace) {
-            this.fullyQualifiedEventHubNamespace = Output.ofNullable(fullyQualifiedEventHubNamespace);
+            this.fullyQualifiedEventHubNamespace = Codegen.ofNullable(fullyQualifiedEventHubNamespace);
             return this;
         }        public IotEventHubIngestionEndpointConfigurationArgs build() {
             return new IotEventHubIngestionEndpointConfigurationArgs(consumerGroup, eventHubName, fullyQualifiedEventHubNamespace);

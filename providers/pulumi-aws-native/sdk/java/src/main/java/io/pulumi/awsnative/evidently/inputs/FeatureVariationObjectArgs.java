@@ -5,6 +5,7 @@ package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -20,35 +21,35 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> booleanValue;
 
     public Output<Boolean> getBooleanValue() {
-        return this.booleanValue == null ? Output.empty() : this.booleanValue;
+        return this.booleanValue == null ? Codegen.empty() : this.booleanValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
-        return this.doubleValue == null ? Output.empty() : this.doubleValue;
+        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="longValue")
       private final @Nullable Output<Double> longValue;
 
     public Output<Double> getLongValue() {
-        return this.longValue == null ? Output.empty() : this.longValue;
+        return this.longValue == null ? Codegen.empty() : this.longValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     @Import(name="variationName")
       private final @Nullable Output<String> variationName;
 
     public Output<String> getVariationName() {
-        return this.variationName == null ? Output.empty() : this.variationName;
+        return this.variationName == null ? Codegen.empty() : this.variationName;
     }
 
     public FeatureVariationObjectArgs(
@@ -65,11 +66,11 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
     }
 
     private FeatureVariationObjectArgs() {
-        this.booleanValue = Output.empty();
-        this.doubleValue = Output.empty();
-        this.longValue = Output.empty();
-        this.stringValue = Output.empty();
-        this.variationName = Output.empty();
+        this.booleanValue = Codegen.empty();
+        this.doubleValue = Codegen.empty();
+        this.longValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
+        this.variationName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder booleanValue(@Nullable Boolean booleanValue) {
-            this.booleanValue = Output.ofNullable(booleanValue);
+            this.booleanValue = Codegen.ofNullable(booleanValue);
             return this;
         }
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
@@ -113,7 +114,7 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Output.ofNullable(doubleValue);
+            this.doubleValue = Codegen.ofNullable(doubleValue);
             return this;
         }
         public Builder longValue(@Nullable Output<Double> longValue) {
@@ -121,7 +122,7 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder longValue(@Nullable Double longValue) {
-            this.longValue = Output.ofNullable(longValue);
+            this.longValue = Codegen.ofNullable(longValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -129,7 +130,7 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }
         public Builder variationName(@Nullable Output<String> variationName) {
@@ -137,7 +138,7 @@ public final class FeatureVariationObjectArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder variationName(@Nullable String variationName) {
-            this.variationName = Output.ofNullable(variationName);
+            this.variationName = Codegen.ofNullable(variationName);
             return this;
         }        public FeatureVariationObjectArgs build() {
             return new FeatureVariationObjectArgs(booleanValue, doubleValue, longValue, stringValue, variationName);

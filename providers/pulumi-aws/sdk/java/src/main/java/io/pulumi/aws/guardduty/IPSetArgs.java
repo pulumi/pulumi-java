@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -68,7 +69,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IPSetArgs(
@@ -98,12 +99,12 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IPSetArgs() {
-        this.activate = Output.empty();
-        this.detectorId = Output.empty();
-        this.format = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.activate = Codegen.empty();
+        this.detectorId = Codegen.empty();
+        this.format = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -181,7 +182,7 @@ public final class IPSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IPSetArgs build() {
             return new IPSetArgs(activate, detectorId, format, location, name, tags);

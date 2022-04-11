@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
     }
 
     private BackendAuthorizationHeaderCredentialsArgs() {
-        this.parameter = Output.empty();
-        this.scheme = Output.empty();
+        this.parameter = Codegen.empty();
+        this.scheme = Codegen.empty();
     }
 
     public static Builder builder() {

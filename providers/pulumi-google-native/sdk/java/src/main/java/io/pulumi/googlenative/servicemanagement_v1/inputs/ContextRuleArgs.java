@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedRequestExtensions;
 
     public Output<List<String>> getAllowedRequestExtensions() {
-        return this.allowedRequestExtensions == null ? Output.empty() : this.allowedRequestExtensions;
+        return this.allowedRequestExtensions == null ? Codegen.empty() : this.allowedRequestExtensions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedResponseExtensions;
 
     public Output<List<String>> getAllowedResponseExtensions() {
-        return this.allowedResponseExtensions == null ? Output.empty() : this.allowedResponseExtensions;
+        return this.allowedResponseExtensions == null ? Codegen.empty() : this.allowedResponseExtensions;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> provided;
 
     public Output<List<String>> getProvided() {
-        return this.provided == null ? Output.empty() : this.provided;
+        return this.provided == null ? Codegen.empty() : this.provided;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> requested;
 
     public Output<List<String>> getRequested() {
-        return this.requested == null ? Output.empty() : this.requested;
+        return this.requested == null ? Codegen.empty() : this.requested;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> selector;
 
     public Output<String> getSelector() {
-        return this.selector == null ? Output.empty() : this.selector;
+        return this.selector == null ? Codegen.empty() : this.selector;
     }
 
     public ContextRuleArgs(
@@ -88,11 +89,11 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContextRuleArgs() {
-        this.allowedRequestExtensions = Output.empty();
-        this.allowedResponseExtensions = Output.empty();
-        this.provided = Output.empty();
-        this.requested = Output.empty();
-        this.selector = Output.empty();
+        this.allowedRequestExtensions = Codegen.empty();
+        this.allowedResponseExtensions = Codegen.empty();
+        this.provided = Codegen.empty();
+        this.requested = Codegen.empty();
+        this.selector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedRequestExtensions(@Nullable List<String> allowedRequestExtensions) {
-            this.allowedRequestExtensions = Output.ofNullable(allowedRequestExtensions);
+            this.allowedRequestExtensions = Codegen.ofNullable(allowedRequestExtensions);
             return this;
         }
         public Builder allowedRequestExtensions(String... allowedRequestExtensions) {
@@ -139,7 +140,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedResponseExtensions(@Nullable List<String> allowedResponseExtensions) {
-            this.allowedResponseExtensions = Output.ofNullable(allowedResponseExtensions);
+            this.allowedResponseExtensions = Codegen.ofNullable(allowedResponseExtensions);
             return this;
         }
         public Builder allowedResponseExtensions(String... allowedResponseExtensions) {
@@ -150,7 +151,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder provided(@Nullable List<String> provided) {
-            this.provided = Output.ofNullable(provided);
+            this.provided = Codegen.ofNullable(provided);
             return this;
         }
         public Builder provided(String... provided) {
@@ -161,7 +162,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requested(@Nullable List<String> requested) {
-            this.requested = Output.ofNullable(requested);
+            this.requested = Codegen.ofNullable(requested);
             return this;
         }
         public Builder requested(String... requested) {
@@ -172,7 +173,7 @@ public final class ContextRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selector(@Nullable String selector) {
-            this.selector = Output.ofNullable(selector);
+            this.selector = Codegen.ofNullable(selector);
             return this;
         }        public ContextRuleArgs build() {
             return new ContextRuleArgs(allowedRequestExtensions, allowedResponseExtensions, provided, requested, selector);

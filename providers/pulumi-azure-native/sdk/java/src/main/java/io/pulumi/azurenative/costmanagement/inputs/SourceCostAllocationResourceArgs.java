@@ -7,6 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.CostAllocationResourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -63,9 +64,9 @@ public final class SourceCostAllocationResourceArgs extends io.pulumi.resources.
     }
 
     private SourceCostAllocationResourceArgs() {
-        this.name = Output.empty();
-        this.resourceType = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

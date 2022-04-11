@@ -5,6 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class IntentConclusionStatementMessageGetArgs extends io.pulumi.res
       private final @Nullable Output<Integer> groupNumber;
 
     public Output<Integer> getGroupNumber() {
-        return this.groupNumber == null ? Output.empty() : this.groupNumber;
+        return this.groupNumber == null ? Codegen.empty() : this.groupNumber;
     }
 
     public IntentConclusionStatementMessageGetArgs(
@@ -59,9 +60,9 @@ public final class IntentConclusionStatementMessageGetArgs extends io.pulumi.res
     }
 
     private IntentConclusionStatementMessageGetArgs() {
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.groupNumber = Output.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.groupNumber = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class IntentConclusionStatementMessageGetArgs extends io.pulumi.res
             return this;
         }
         public Builder groupNumber(@Nullable Integer groupNumber) {
-            this.groupNumber = Output.ofNullable(groupNumber);
+            this.groupNumber = Codegen.ofNullable(groupNumber);
             return this;
         }        public IntentConclusionStatementMessageGetArgs build() {
             return new IntentConclusionStatementMessageGetArgs(content, contentType, groupNumber);

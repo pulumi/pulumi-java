@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> dataInconsistency;
 
     public Output<Object> getDataInconsistency() {
-        return this.dataInconsistency == null ? Output.empty() : this.dataInconsistency;
+        return this.dataInconsistency == null ? Codegen.empty() : this.dataInconsistency;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> fileMissing;
 
     public Output<Object> getFileMissing() {
-        return this.fileMissing == null ? Output.empty() : this.fileMissing;
+        return this.fileMissing == null ? Codegen.empty() : this.fileMissing;
     }
 
     public SkipErrorFileArgs(
@@ -48,8 +49,8 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SkipErrorFileArgs() {
-        this.dataInconsistency = Output.empty();
-        this.fileMissing = Output.empty();
+        this.dataInconsistency = Codegen.empty();
+        this.fileMissing = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataInconsistency(@Nullable Object dataInconsistency) {
-            this.dataInconsistency = Output.ofNullable(dataInconsistency);
+            this.dataInconsistency = Codegen.ofNullable(dataInconsistency);
             return this;
         }
         public Builder fileMissing(@Nullable Output<Object> fileMissing) {
@@ -87,7 +88,7 @@ public final class SkipErrorFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fileMissing(@Nullable Object fileMissing) {
-            this.fileMissing = Output.ofNullable(fileMissing);
+            this.fileMissing = Codegen.ofNullable(fileMissing);
             return this;
         }        public SkipErrorFileArgs build() {
             return new SkipErrorFileArgs(dataInconsistency, fileMissing);

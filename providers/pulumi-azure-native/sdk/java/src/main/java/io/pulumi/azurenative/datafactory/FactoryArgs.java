@@ -12,6 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.GlobalParameterSpecificationArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EncryptionConfigurationArgs> encryption;
 
     public Output<EncryptionConfigurationArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> factoryName;
 
     public Output<String> getFactoryName() {
-        return this.factoryName == null ? Output.empty() : this.factoryName;
+        return this.factoryName == null ? Codegen.empty() : this.factoryName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters;
 
     public Output<Map<String,GlobalParameterSpecificationArgs>> getGlobalParameters() {
-        return this.globalParameters == null ? Output.empty() : this.globalParameters;
+        return this.globalParameters == null ? Codegen.empty() : this.globalParameters;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FactoryIdentityArgs> identity;
 
     public Output<FactoryIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration;
 
     public Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> getRepoConfiguration() {
-        return this.repoConfiguration == null ? Output.empty() : this.repoConfiguration;
+        return this.repoConfiguration == null ? Codegen.empty() : this.repoConfiguration;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FactoryArgs(
@@ -143,15 +144,15 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FactoryArgs() {
-        this.encryption = Output.empty();
-        this.factoryName = Output.empty();
-        this.globalParameters = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.repoConfiguration = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.encryption = Codegen.empty();
+        this.factoryName = Codegen.empty();
+        this.globalParameters = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.repoConfiguration = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryption(@Nullable EncryptionConfigurationArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder factoryName(@Nullable Output<String> factoryName) {
@@ -203,7 +204,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder factoryName(@Nullable String factoryName) {
-            this.factoryName = Output.ofNullable(factoryName);
+            this.factoryName = Codegen.ofNullable(factoryName);
             return this;
         }
         public Builder globalParameters(@Nullable Output<Map<String,GlobalParameterSpecificationArgs>> globalParameters) {
@@ -211,7 +212,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder globalParameters(@Nullable Map<String,GlobalParameterSpecificationArgs> globalParameters) {
-            this.globalParameters = Output.ofNullable(globalParameters);
+            this.globalParameters = Codegen.ofNullable(globalParameters);
             return this;
         }
         public Builder identity(@Nullable Output<FactoryIdentityArgs> identity) {
@@ -219,7 +220,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable FactoryIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -227,7 +228,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -235,7 +236,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder repoConfiguration(@Nullable Output<Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs>> repoConfiguration) {
@@ -243,7 +244,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repoConfiguration(@Nullable Either<FactoryGitHubConfigurationArgs,FactoryVSTSConfigurationArgs> repoConfiguration) {
-            this.repoConfiguration = Output.ofNullable(repoConfiguration);
+            this.repoConfiguration = Codegen.ofNullable(repoConfiguration);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -259,7 +260,7 @@ public final class FactoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public FactoryArgs build() {
             return new FactoryArgs(encryption, factoryName, globalParameters, identity, location, publicNetworkAccess, repoConfiguration, resourceGroupName, tags);

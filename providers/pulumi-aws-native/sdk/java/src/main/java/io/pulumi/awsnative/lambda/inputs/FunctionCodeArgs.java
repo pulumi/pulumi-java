@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageUri;
 
     public Output<String> getImageUri() {
-        return this.imageUri == null ? Output.empty() : this.imageUri;
+        return this.imageUri == null ? Codegen.empty() : this.imageUri;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3Bucket;
 
     public Output<String> getS3Bucket() {
-        return this.s3Bucket == null ? Output.empty() : this.s3Bucket;
+        return this.s3Bucket == null ? Codegen.empty() : this.s3Bucket;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3Key;
 
     public Output<String> getS3Key() {
-        return this.s3Key == null ? Output.empty() : this.s3Key;
+        return this.s3Key == null ? Codegen.empty() : this.s3Key;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3ObjectVersion;
 
     public Output<String> getS3ObjectVersion() {
-        return this.s3ObjectVersion == null ? Output.empty() : this.s3ObjectVersion;
+        return this.s3ObjectVersion == null ? Codegen.empty() : this.s3ObjectVersion;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> zipFile;
 
     public Output<String> getZipFile() {
-        return this.zipFile == null ? Output.empty() : this.zipFile;
+        return this.zipFile == null ? Codegen.empty() : this.zipFile;
     }
 
     public FunctionCodeArgs(
@@ -83,11 +84,11 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FunctionCodeArgs() {
-        this.imageUri = Output.empty();
-        this.s3Bucket = Output.empty();
-        this.s3Key = Output.empty();
-        this.s3ObjectVersion = Output.empty();
-        this.zipFile = Output.empty();
+        this.imageUri = Codegen.empty();
+        this.s3Bucket = Codegen.empty();
+        this.s3Key = Codegen.empty();
+        this.s3ObjectVersion = Codegen.empty();
+        this.zipFile = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageUri(@Nullable String imageUri) {
-            this.imageUri = Output.ofNullable(imageUri);
+            this.imageUri = Codegen.ofNullable(imageUri);
             return this;
         }
         public Builder s3Bucket(@Nullable Output<String> s3Bucket) {
@@ -131,7 +132,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3Bucket(@Nullable String s3Bucket) {
-            this.s3Bucket = Output.ofNullable(s3Bucket);
+            this.s3Bucket = Codegen.ofNullable(s3Bucket);
             return this;
         }
         public Builder s3Key(@Nullable Output<String> s3Key) {
@@ -139,7 +140,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3Key(@Nullable String s3Key) {
-            this.s3Key = Output.ofNullable(s3Key);
+            this.s3Key = Codegen.ofNullable(s3Key);
             return this;
         }
         public Builder s3ObjectVersion(@Nullable Output<String> s3ObjectVersion) {
@@ -147,7 +148,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3ObjectVersion(@Nullable String s3ObjectVersion) {
-            this.s3ObjectVersion = Output.ofNullable(s3ObjectVersion);
+            this.s3ObjectVersion = Codegen.ofNullable(s3ObjectVersion);
             return this;
         }
         public Builder zipFile(@Nullable Output<String> zipFile) {
@@ -155,7 +156,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zipFile(@Nullable String zipFile) {
-            this.zipFile = Output.ofNullable(zipFile);
+            this.zipFile = Codegen.ofNullable(zipFile);
             return this;
         }        public FunctionCodeArgs build() {
             return new FunctionCodeArgs(imageUri, s3Bucket, s3Key, s3ObjectVersion, zipFile);

@@ -9,6 +9,7 @@ import io.pulumi.aws.chime.inputs.VoiceConnectorState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -108,7 +109,7 @@ public class VoiceConnector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VoiceConnector(String name, VoiceConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:chime/voiceConnector:VoiceConnector", name, args == null ? VoiceConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:chime/voiceConnector:VoiceConnector", name, args == null ? VoiceConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VoiceConnector(String name, Output<String> id, @Nullable VoiceConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

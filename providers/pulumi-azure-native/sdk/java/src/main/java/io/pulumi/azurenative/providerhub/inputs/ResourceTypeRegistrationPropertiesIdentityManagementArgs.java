@@ -7,6 +7,7 @@ import io.pulumi.azurenative.providerhub.enums.IdentityManagementTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +21,14 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
       private final @Nullable Output<String> applicationId;
 
     public Output<String> getApplicationId() {
-        return this.applicationId == null ? Output.empty() : this.applicationId;
+        return this.applicationId == null ? Codegen.empty() : this.applicationId;
     }
 
     @Import(name="type")
       private final @Nullable Output<Either<String,IdentityManagementTypes>> type;
 
     public Output<Either<String,IdentityManagementTypes>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ResourceTypeRegistrationPropertiesIdentityManagementArgs(
@@ -38,8 +39,8 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     }
 
     private ResourceTypeRegistrationPropertiesIdentityManagementArgs() {
-        this.applicationId = Output.empty();
-        this.type = Output.empty();
+        this.applicationId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
             return this;
         }
         public Builder applicationId(@Nullable String applicationId) {
-            this.applicationId = Output.ofNullable(applicationId);
+            this.applicationId = Codegen.ofNullable(applicationId);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,IdentityManagementTypes>> type) {
@@ -77,7 +78,7 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
             return this;
         }
         public Builder type(@Nullable Either<String,IdentityManagementTypes> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ResourceTypeRegistrationPropertiesIdentityManagementArgs build() {
             return new ResourceTypeRegistrationPropertiesIdentityManagementArgs(applicationId, type);

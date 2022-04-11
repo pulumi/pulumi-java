@@ -9,6 +9,7 @@ import io.pulumi.aws.servicecatalog.inputs.ConstraintState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -157,7 +158,7 @@ public class Constraint extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Constraint(String name, ConstraintArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:servicecatalog/constraint:Constraint", name, args == null ? ConstraintArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:servicecatalog/constraint:Constraint", name, args == null ? ConstraintArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Constraint(String name, Output<String> id, @Nullable ConstraintState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

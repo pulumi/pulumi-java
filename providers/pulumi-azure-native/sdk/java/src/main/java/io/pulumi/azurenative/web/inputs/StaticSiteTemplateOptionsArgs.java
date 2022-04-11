@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> isPrivate;
 
     public Output<Boolean> getIsPrivate() {
-        return this.isPrivate == null ? Output.empty() : this.isPrivate;
+        return this.isPrivate == null ? Codegen.empty() : this.isPrivate;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> owner;
 
     public Output<String> getOwner() {
-        return this.owner == null ? Output.empty() : this.owner;
+        return this.owner == null ? Codegen.empty() : this.owner;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> templateRepositoryUrl;
 
     public Output<String> getTemplateRepositoryUrl() {
-        return this.templateRepositoryUrl == null ? Output.empty() : this.templateRepositoryUrl;
+        return this.templateRepositoryUrl == null ? Codegen.empty() : this.templateRepositoryUrl;
     }
 
     public StaticSiteTemplateOptionsArgs(
@@ -88,11 +89,11 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
     }
 
     private StaticSiteTemplateOptionsArgs() {
-        this.description = Output.empty();
-        this.isPrivate = Output.empty();
-        this.owner = Output.empty();
-        this.repositoryName = Output.empty();
-        this.templateRepositoryUrl = Output.empty();
+        this.description = Codegen.empty();
+        this.isPrivate = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.templateRepositoryUrl = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder isPrivate(@Nullable Output<Boolean> isPrivate) {
@@ -136,7 +137,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder isPrivate(@Nullable Boolean isPrivate) {
-            this.isPrivate = Output.ofNullable(isPrivate);
+            this.isPrivate = Codegen.ofNullable(isPrivate);
             return this;
         }
         public Builder owner(@Nullable Output<String> owner) {
@@ -144,7 +145,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder owner(@Nullable String owner) {
-            this.owner = Output.ofNullable(owner);
+            this.owner = Codegen.ofNullable(owner);
             return this;
         }
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
@@ -152,7 +153,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }
         public Builder templateRepositoryUrl(@Nullable Output<String> templateRepositoryUrl) {
@@ -160,7 +161,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder templateRepositoryUrl(@Nullable String templateRepositoryUrl) {
-            this.templateRepositoryUrl = Output.ofNullable(templateRepositoryUrl);
+            this.templateRepositoryUrl = Codegen.ofNullable(templateRepositoryUrl);
             return this;
         }        public StaticSiteTemplateOptionsArgs build() {
             return new StaticSiteTemplateOptionsArgs(description, isPrivate, owner, repositoryName, templateRepositoryUrl);

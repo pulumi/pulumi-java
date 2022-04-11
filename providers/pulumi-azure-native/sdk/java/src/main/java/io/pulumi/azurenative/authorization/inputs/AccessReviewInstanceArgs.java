@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> endDateTime;
 
     public Output<String> getEndDateTime() {
-        return this.endDateTime == null ? Output.empty() : this.endDateTime;
+        return this.endDateTime == null ? Codegen.empty() : this.endDateTime;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> startDateTime;
 
     public Output<String> getStartDateTime() {
-        return this.startDateTime == null ? Output.empty() : this.startDateTime;
+        return this.startDateTime == null ? Codegen.empty() : this.startDateTime;
     }
 
     public AccessReviewInstanceArgs(
@@ -48,8 +49,8 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
     }
 
     private AccessReviewInstanceArgs() {
-        this.endDateTime = Output.empty();
-        this.startDateTime = Output.empty();
+        this.endDateTime = Codegen.empty();
+        this.startDateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder endDateTime(@Nullable String endDateTime) {
-            this.endDateTime = Output.ofNullable(endDateTime);
+            this.endDateTime = Codegen.ofNullable(endDateTime);
             return this;
         }
         public Builder startDateTime(@Nullable Output<String> startDateTime) {
@@ -87,7 +88,7 @@ public final class AccessReviewInstanceArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder startDateTime(@Nullable String startDateTime) {
-            this.startDateTime = Output.ofNullable(startDateTime);
+            this.startDateTime = Codegen.ofNullable(startDateTime);
             return this;
         }        public AccessReviewInstanceArgs build() {
             return new AccessReviewInstanceArgs(endDateTime, startDateTime);

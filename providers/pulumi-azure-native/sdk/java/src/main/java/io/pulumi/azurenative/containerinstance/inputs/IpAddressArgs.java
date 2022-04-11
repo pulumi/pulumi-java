@@ -8,6 +8,7 @@ import io.pulumi.azurenative.containerinstance.inputs.PortArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dnsNameLabel;
 
     public Output<String> getDnsNameLabel() {
-        return this.dnsNameLabel == null ? Output.empty() : this.dnsNameLabel;
+        return this.dnsNameLabel == null ? Codegen.empty() : this.dnsNameLabel;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ip;
 
     public Output<String> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpAddressArgs() {
-        this.dnsNameLabel = Output.empty();
-        this.ip = Output.empty();
-        this.ports = Output.empty();
-        this.type = Output.empty();
+        this.dnsNameLabel = Codegen.empty();
+        this.ip = Codegen.empty();
+        this.ports = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dnsNameLabel(@Nullable String dnsNameLabel) {
-            this.dnsNameLabel = Output.ofNullable(dnsNameLabel);
+            this.dnsNameLabel = Codegen.ofNullable(dnsNameLabel);
             return this;
         }
         public Builder ip(@Nullable Output<String> ip) {
@@ -123,7 +124,7 @@ public final class IpAddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ip(@Nullable String ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }
         public Builder ports(Output<List<PortArgs>> ports) {

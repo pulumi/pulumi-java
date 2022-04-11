@@ -6,6 +6,7 @@ package io.pulumi.googlenative.containeranalysis_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.containeranalysis_v1beta1.OccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DetailsResponse;
@@ -320,7 +321,7 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Occurrence(String name, OccurrenceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:containeranalysis/v1beta1:Occurrence", name, args == null ? OccurrenceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:containeranalysis/v1beta1:Occurrence", name, args == null ? OccurrenceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Occurrence(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

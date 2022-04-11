@@ -11,6 +11,7 @@ import io.pulumi.aws.fsx.outputs.OpenZfsFileSystemRootVolumeConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -394,7 +395,7 @@ public class OpenZfsFileSystem extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public OpenZfsFileSystem(String name, OpenZfsFileSystemArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:fsx/openZfsFileSystem:OpenZfsFileSystem", name, args == null ? OpenZfsFileSystemArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:fsx/openZfsFileSystem:OpenZfsFileSystem", name, args == null ? OpenZfsFileSystemArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OpenZfsFileSystem(String name, Output<String> id, @Nullable OpenZfsFileSystemState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

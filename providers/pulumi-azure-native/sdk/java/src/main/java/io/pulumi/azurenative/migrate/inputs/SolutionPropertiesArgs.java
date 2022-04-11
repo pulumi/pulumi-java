@@ -6,6 +6,7 @@ package io.pulumi.azurenative.migrate.inputs;
 import io.pulumi.azurenative.migrate.inputs.SolutionDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> cleanupState;
 
     public Output<String> getCleanupState() {
-        return this.cleanupState == null ? Output.empty() : this.cleanupState;
+        return this.cleanupState == null ? Codegen.empty() : this.cleanupState;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<SolutionDetailsArgs> details;
 
     public Output<SolutionDetailsArgs> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> goal;
 
     public Output<String> getGoal() {
-        return this.goal == null ? Output.empty() : this.goal;
+        return this.goal == null ? Codegen.empty() : this.goal;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> purpose;
 
     public Output<String> getPurpose() {
-        return this.purpose == null ? Output.empty() : this.purpose;
+        return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> tool;
 
     public Output<String> getTool() {
-        return this.tool == null ? Output.empty() : this.tool;
+        return this.tool == null ? Codegen.empty() : this.tool;
     }
 
     public SolutionPropertiesArgs(
@@ -101,12 +102,12 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private SolutionPropertiesArgs() {
-        this.cleanupState = Output.empty();
-        this.details = Output.empty();
-        this.goal = Output.empty();
-        this.purpose = Output.empty();
-        this.status = Output.empty();
-        this.tool = Output.empty();
+        this.cleanupState = Codegen.empty();
+        this.details = Codegen.empty();
+        this.goal = Codegen.empty();
+        this.purpose = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tool = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cleanupState(@Nullable String cleanupState) {
-            this.cleanupState = Output.ofNullable(cleanupState);
+            this.cleanupState = Codegen.ofNullable(cleanupState);
             return this;
         }
         public Builder details(@Nullable Output<SolutionDetailsArgs> details) {
@@ -152,7 +153,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder details(@Nullable SolutionDetailsArgs details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder goal(@Nullable Output<String> goal) {
@@ -160,7 +161,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder goal(@Nullable String goal) {
-            this.goal = Output.ofNullable(goal);
+            this.goal = Codegen.ofNullable(goal);
             return this;
         }
         public Builder purpose(@Nullable Output<String> purpose) {
@@ -168,7 +169,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder purpose(@Nullable String purpose) {
-            this.purpose = Output.ofNullable(purpose);
+            this.purpose = Codegen.ofNullable(purpose);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -176,7 +177,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tool(@Nullable Output<String> tool) {
@@ -184,7 +185,7 @@ public final class SolutionPropertiesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tool(@Nullable String tool) {
-            this.tool = Output.ofNullable(tool);
+            this.tool = Codegen.ofNullable(tool);
             return this;
         }        public SolutionPropertiesArgs build() {
             return new SolutionPropertiesArgs(cleanupState, details, goal, purpose, status, tool);

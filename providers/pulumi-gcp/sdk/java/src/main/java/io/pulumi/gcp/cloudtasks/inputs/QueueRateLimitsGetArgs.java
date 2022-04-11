@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudtasks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> maxBurstSize;
 
     public Output<Integer> getMaxBurstSize() {
-        return this.maxBurstSize == null ? Output.empty() : this.maxBurstSize;
+        return this.maxBurstSize == null ? Codegen.empty() : this.maxBurstSize;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> maxConcurrentDispatches;
 
     public Output<Integer> getMaxConcurrentDispatches() {
-        return this.maxConcurrentDispatches == null ? Output.empty() : this.maxConcurrentDispatches;
+        return this.maxConcurrentDispatches == null ? Codegen.empty() : this.maxConcurrentDispatches;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Double> maxDispatchesPerSecond;
 
     public Output<Double> getMaxDispatchesPerSecond() {
-        return this.maxDispatchesPerSecond == null ? Output.empty() : this.maxDispatchesPerSecond;
+        return this.maxDispatchesPerSecond == null ? Codegen.empty() : this.maxDispatchesPerSecond;
     }
 
     public QueueRateLimitsGetArgs(
@@ -67,9 +68,9 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private QueueRateLimitsGetArgs() {
-        this.maxBurstSize = Output.empty();
-        this.maxConcurrentDispatches = Output.empty();
-        this.maxDispatchesPerSecond = Output.empty();
+        this.maxBurstSize = Codegen.empty();
+        this.maxConcurrentDispatches = Codegen.empty();
+        this.maxDispatchesPerSecond = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxBurstSize(@Nullable Integer maxBurstSize) {
-            this.maxBurstSize = Output.ofNullable(maxBurstSize);
+            this.maxBurstSize = Codegen.ofNullable(maxBurstSize);
             return this;
         }
         public Builder maxConcurrentDispatches(@Nullable Output<Integer> maxConcurrentDispatches) {
@@ -109,7 +110,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxConcurrentDispatches(@Nullable Integer maxConcurrentDispatches) {
-            this.maxConcurrentDispatches = Output.ofNullable(maxConcurrentDispatches);
+            this.maxConcurrentDispatches = Codegen.ofNullable(maxConcurrentDispatches);
             return this;
         }
         public Builder maxDispatchesPerSecond(@Nullable Output<Double> maxDispatchesPerSecond) {
@@ -117,7 +118,7 @@ public final class QueueRateLimitsGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder maxDispatchesPerSecond(@Nullable Double maxDispatchesPerSecond) {
-            this.maxDispatchesPerSecond = Output.ofNullable(maxDispatchesPerSecond);
+            this.maxDispatchesPerSecond = Codegen.ofNullable(maxDispatchesPerSecond);
             return this;
         }        public QueueRateLimitsGetArgs build() {
             return new QueueRateLimitsGetArgs(maxBurstSize, maxConcurrentDispatches, maxDispatchesPerSecond);

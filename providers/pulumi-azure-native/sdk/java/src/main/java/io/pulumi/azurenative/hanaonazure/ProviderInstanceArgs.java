@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hanaonazure;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> metadata;
 
     public Output<String> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> properties;
 
     public Output<String> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> providerInstanceName;
 
     public Output<String> getProviderInstanceName() {
-        return this.providerInstanceName == null ? Output.empty() : this.providerInstanceName;
+        return this.providerInstanceName == null ? Codegen.empty() : this.providerInstanceName;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ProviderInstanceArgs(
@@ -96,12 +97,12 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProviderInstanceArgs() {
-        this.metadata = Output.empty();
-        this.properties = Output.empty();
-        this.providerInstanceName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sapMonitorName = Output.empty();
-        this.type = Output.empty();
+        this.metadata = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.providerInstanceName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sapMonitorName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metadata(@Nullable String metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder properties(@Nullable Output<String> properties) {
@@ -147,7 +148,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder properties(@Nullable String properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder providerInstanceName(@Nullable Output<String> providerInstanceName) {
@@ -155,7 +156,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder providerInstanceName(@Nullable String providerInstanceName) {
-            this.providerInstanceName = Output.ofNullable(providerInstanceName);
+            this.providerInstanceName = Codegen.ofNullable(providerInstanceName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -179,7 +180,7 @@ public final class ProviderInstanceArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ProviderInstanceArgs build() {
             return new ProviderInstanceArgs(metadata, properties, providerInstanceName, resourceGroupName, sapMonitorName, type);

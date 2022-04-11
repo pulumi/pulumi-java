@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> analyticalStorageTtl;
 
     public Output<Integer> getAnalyticalStorageTtl() {
-        return this.analyticalStorageTtl == null ? Output.empty() : this.analyticalStorageTtl;
+        return this.analyticalStorageTtl == null ? Codegen.empty() : this.analyticalStorageTtl;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<MongoIndexArgs>> indexes;
 
     public Output<List<MongoIndexArgs>> getIndexes() {
-        return this.indexes == null ? Output.empty() : this.indexes;
+        return this.indexes == null ? Codegen.empty() : this.indexes;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,String>> shardKey;
 
     public Output<Map<String,String>> getShardKey() {
-        return this.shardKey == null ? Output.empty() : this.shardKey;
+        return this.shardKey == null ? Codegen.empty() : this.shardKey;
     }
 
     public MongoDBCollectionResourceArgs(
@@ -78,10 +79,10 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
     }
 
     private MongoDBCollectionResourceArgs() {
-        this.analyticalStorageTtl = Output.empty();
-        this.id = Output.empty();
-        this.indexes = Output.empty();
-        this.shardKey = Output.empty();
+        this.analyticalStorageTtl = Codegen.empty();
+        this.id = Codegen.empty();
+        this.indexes = Codegen.empty();
+        this.shardKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder analyticalStorageTtl(@Nullable Integer analyticalStorageTtl) {
-            this.analyticalStorageTtl = Output.ofNullable(analyticalStorageTtl);
+            this.analyticalStorageTtl = Codegen.ofNullable(analyticalStorageTtl);
             return this;
         }
         public Builder id(Output<String> id) {
@@ -131,7 +132,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder indexes(@Nullable List<MongoIndexArgs> indexes) {
-            this.indexes = Output.ofNullable(indexes);
+            this.indexes = Codegen.ofNullable(indexes);
             return this;
         }
         public Builder indexes(MongoIndexArgs... indexes) {
@@ -142,7 +143,7 @@ public final class MongoDBCollectionResourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder shardKey(@Nullable Map<String,String> shardKey) {
-            this.shardKey = Output.ofNullable(shardKey);
+            this.shardKey = Codegen.ofNullable(shardKey);
             return this;
         }        public MongoDBCollectionResourceArgs build() {
             return new MongoDBCollectionResourceArgs(analyticalStorageTtl, id, indexes, shardKey);

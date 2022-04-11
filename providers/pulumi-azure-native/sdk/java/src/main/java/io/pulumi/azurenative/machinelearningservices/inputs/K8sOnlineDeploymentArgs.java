@@ -15,6 +15,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ProbeSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -35,7 +36,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> appInsightsEnabled;
 
     public Output<Boolean> getAppInsightsEnabled() {
-        return this.appInsightsEnabled == null ? Output.empty() : this.appInsightsEnabled;
+        return this.appInsightsEnabled == null ? Codegen.empty() : this.appInsightsEnabled;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<CodeConfigurationArgs> codeConfiguration;
 
     public Output<CodeConfigurationArgs> getCodeConfiguration() {
-        return this.codeConfiguration == null ? Output.empty() : this.codeConfiguration;
+        return this.codeConfiguration == null ? Codegen.empty() : this.codeConfiguration;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements;
 
     public Output<ContainerResourceRequirementsArgs> getContainerResourceRequirements() {
-        return this.containerResourceRequirements == null ? Output.empty() : this.containerResourceRequirements;
+        return this.containerResourceRequirements == null ? Codegen.empty() : this.containerResourceRequirements;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> environmentId;
 
     public Output<String> getEnvironmentId() {
-        return this.environmentId == null ? Output.empty() : this.environmentId;
+        return this.environmentId == null ? Codegen.empty() : this.environmentId;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> environmentVariables;
 
     public Output<Map<String,String>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ProbeSettingsArgs> livenessProbe;
 
     public Output<ProbeSettingsArgs> getLivenessProbe() {
-        return this.livenessProbe == null ? Output.empty() : this.livenessProbe;
+        return this.livenessProbe == null ? Codegen.empty() : this.livenessProbe;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> model;
 
     public Output<Object> getModel() {
-        return this.model == null ? Output.empty() : this.model;
+        return this.model == null ? Codegen.empty() : this.model;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<OnlineRequestSettingsArgs> requestSettings;
 
     public Output<OnlineRequestSettingsArgs> getRequestSettings() {
-        return this.requestSettings == null ? Output.empty() : this.requestSettings;
+        return this.requestSettings == null ? Codegen.empty() : this.requestSettings;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings;
 
     public Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> getScaleSettings() {
-        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
+        return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 
     public K8sOnlineDeploymentArgs(
@@ -188,18 +189,18 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
     }
 
     private K8sOnlineDeploymentArgs() {
-        this.appInsightsEnabled = Output.empty();
-        this.codeConfiguration = Output.empty();
-        this.containerResourceRequirements = Output.empty();
-        this.description = Output.empty();
-        this.endpointComputeType = Output.empty();
-        this.environmentId = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.livenessProbe = Output.empty();
-        this.model = Output.empty();
-        this.properties = Output.empty();
-        this.requestSettings = Output.empty();
-        this.scaleSettings = Output.empty();
+        this.appInsightsEnabled = Codegen.empty();
+        this.codeConfiguration = Codegen.empty();
+        this.containerResourceRequirements = Codegen.empty();
+        this.description = Codegen.empty();
+        this.endpointComputeType = Codegen.empty();
+        this.environmentId = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.livenessProbe = Codegen.empty();
+        this.model = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.requestSettings = Codegen.empty();
+        this.scaleSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -249,7 +250,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder appInsightsEnabled(@Nullable Boolean appInsightsEnabled) {
-            this.appInsightsEnabled = Output.ofNullable(appInsightsEnabled);
+            this.appInsightsEnabled = Codegen.ofNullable(appInsightsEnabled);
             return this;
         }
         public Builder codeConfiguration(@Nullable Output<CodeConfigurationArgs> codeConfiguration) {
@@ -257,7 +258,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder codeConfiguration(@Nullable CodeConfigurationArgs codeConfiguration) {
-            this.codeConfiguration = Output.ofNullable(codeConfiguration);
+            this.codeConfiguration = Codegen.ofNullable(codeConfiguration);
             return this;
         }
         public Builder containerResourceRequirements(@Nullable Output<ContainerResourceRequirementsArgs> containerResourceRequirements) {
@@ -265,7 +266,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder containerResourceRequirements(@Nullable ContainerResourceRequirementsArgs containerResourceRequirements) {
-            this.containerResourceRequirements = Output.ofNullable(containerResourceRequirements);
+            this.containerResourceRequirements = Codegen.ofNullable(containerResourceRequirements);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -273,7 +274,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder endpointComputeType(Output<String> endpointComputeType) {
@@ -289,7 +290,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder environmentId(@Nullable String environmentId) {
-            this.environmentId = Output.ofNullable(environmentId);
+            this.environmentId = Codegen.ofNullable(environmentId);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
@@ -297,7 +298,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder livenessProbe(@Nullable Output<ProbeSettingsArgs> livenessProbe) {
@@ -305,7 +306,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder livenessProbe(@Nullable ProbeSettingsArgs livenessProbe) {
-            this.livenessProbe = Output.ofNullable(livenessProbe);
+            this.livenessProbe = Codegen.ofNullable(livenessProbe);
             return this;
         }
         public Builder model(@Nullable Output<Object> model) {
@@ -313,7 +314,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder model(@Nullable Object model) {
-            this.model = Output.ofNullable(model);
+            this.model = Codegen.ofNullable(model);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -321,7 +322,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder requestSettings(@Nullable Output<OnlineRequestSettingsArgs> requestSettings) {
@@ -329,7 +330,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder requestSettings(@Nullable OnlineRequestSettingsArgs requestSettings) {
-            this.requestSettings = Output.ofNullable(requestSettings);
+            this.requestSettings = Codegen.ofNullable(requestSettings);
             return this;
         }
         public Builder scaleSettings(@Nullable Output<Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs>> scaleSettings) {
@@ -337,7 +338,7 @@ public final class K8sOnlineDeploymentArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder scaleSettings(@Nullable Either<AutoScaleSettingsArgs,ManualScaleSettingsArgs> scaleSettings) {
-            this.scaleSettings = Output.ofNullable(scaleSettings);
+            this.scaleSettings = Codegen.ofNullable(scaleSettings);
             return this;
         }        public K8sOnlineDeploymentArgs build() {
             return new K8sOnlineDeploymentArgs(appInsightsEnabled, codeConfiguration, containerResourceRequirements, description, endpointComputeType, environmentId, environmentVariables, livenessProbe, model, properties, requestSettings, scaleSettings);

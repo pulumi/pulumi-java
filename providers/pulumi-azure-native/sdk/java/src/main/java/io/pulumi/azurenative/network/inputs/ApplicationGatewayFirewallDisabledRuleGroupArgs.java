@@ -5,6 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
       private final @Nullable Output<List<Integer>> rules;
 
     public Output<List<Integer>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public ApplicationGatewayFirewallDisabledRuleGroupArgs(
@@ -50,8 +51,8 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
     }
 
     private ApplicationGatewayFirewallDisabledRuleGroupArgs() {
-        this.ruleGroupName = Output.empty();
-        this.rules = Output.empty();
+        this.ruleGroupName = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
             return this;
         }
         public Builder rules(@Nullable List<Integer> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(Integer... rules) {

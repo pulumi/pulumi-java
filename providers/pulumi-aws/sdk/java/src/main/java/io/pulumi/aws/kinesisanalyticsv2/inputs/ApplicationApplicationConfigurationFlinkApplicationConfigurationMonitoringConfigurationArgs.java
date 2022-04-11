@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<String> logLevel;
 
     public Output<String> getLogLevel() {
-        return this.logLevel == null ? Output.empty() : this.logLevel;
+        return this.logLevel == null ? Codegen.empty() : this.logLevel;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
       private final @Nullable Output<String> metricsLevel;
 
     public Output<String> getMetricsLevel() {
-        return this.metricsLevel == null ? Output.empty() : this.metricsLevel;
+        return this.metricsLevel == null ? Codegen.empty() : this.metricsLevel;
     }
 
     public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs(
@@ -57,9 +58,9 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
     }
 
     private ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs() {
-        this.configurationType = Output.empty();
-        this.logLevel = Output.empty();
-        this.metricsLevel = Output.empty();
+        this.configurationType = Codegen.empty();
+        this.logLevel = Codegen.empty();
+        this.metricsLevel = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder logLevel(@Nullable String logLevel) {
-            this.logLevel = Output.ofNullable(logLevel);
+            this.logLevel = Codegen.ofNullable(logLevel);
             return this;
         }
         public Builder metricsLevel(@Nullable Output<String> metricsLevel) {
@@ -107,7 +108,7 @@ public final class ApplicationApplicationConfigurationFlinkApplicationConfigurat
             return this;
         }
         public Builder metricsLevel(@Nullable String metricsLevel) {
-            this.metricsLevel = Output.ofNullable(metricsLevel);
+            this.metricsLevel = Codegen.ofNullable(metricsLevel);
             return this;
         }        public ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs build() {
             return new ApplicationApplicationConfigurationFlinkApplicationConfigurationMonitoringConfigurationArgs(configurationType, logLevel, metricsLevel);

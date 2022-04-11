@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +23,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DataSourceConfigurationArgs> dataSourceConfiguration;
 
     public Output<DataSourceConfigurationArgs> getDataSourceConfiguration() {
-        return this.dataSourceConfiguration == null ? Output.empty() : this.dataSourceConfiguration;
+        return this.dataSourceConfiguration == null ? Codegen.empty() : this.dataSourceConfiguration;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="indexId", required=true)
@@ -43,21 +44,21 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="roleArn")
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="schedule")
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DataSourceTagArgs>> tags;
 
     public Output<List<DataSourceTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="type", required=true)
@@ -98,14 +99,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSourceArgs() {
-        this.dataSourceConfiguration = Output.empty();
-        this.description = Output.empty();
-        this.indexId = Output.empty();
-        this.name = Output.empty();
-        this.roleArn = Output.empty();
-        this.schedule = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.dataSourceConfiguration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.indexId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSourceConfiguration(@Nullable DataSourceConfigurationArgs dataSourceConfiguration) {
-            this.dataSourceConfiguration = Output.ofNullable(dataSourceConfiguration);
+            this.dataSourceConfiguration = Codegen.ofNullable(dataSourceConfiguration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -155,7 +156,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder indexId(Output<String> indexId) {
@@ -171,7 +172,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -179,7 +180,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -187,7 +188,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder tags(@Nullable Output<List<DataSourceTagArgs>> tags) {
@@ -195,7 +196,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DataSourceTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DataSourceTagArgs... tags) {

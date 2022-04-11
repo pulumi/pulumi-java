@@ -6,6 +6,7 @@ package io.pulumi.aws.networkfirewall.inputs;
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionActionDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCu
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionArgs() {
-        this.actionDefinition = Output.empty();
-        this.actionName = Output.empty();
+        this.actionDefinition = Codegen.empty();
+        this.actionName = Codegen.empty();
     }
 
     public static Builder builder() {

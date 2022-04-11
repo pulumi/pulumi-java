@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 import io.pulumi.awsnative.ssmincidents.inputs.ReplicationSetRegionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
       private final @Nullable Output<ReplicationSetRegionConfigurationArgs> regionConfiguration;
 
     public Output<ReplicationSetRegionConfigurationArgs> getRegionConfiguration() {
-        return this.regionConfiguration == null ? Output.empty() : this.regionConfiguration;
+        return this.regionConfiguration == null ? Codegen.empty() : this.regionConfiguration;
     }
 
     @Import(name="regionName")
       private final @Nullable Output<String> regionName;
 
     public Output<String> getRegionName() {
-        return this.regionName == null ? Output.empty() : this.regionName;
+        return this.regionName == null ? Codegen.empty() : this.regionName;
     }
 
     public ReplicationSetReplicationRegionArgs(
@@ -41,8 +42,8 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
     }
 
     private ReplicationSetReplicationRegionArgs() {
-        this.regionConfiguration = Output.empty();
-        this.regionName = Output.empty();
+        this.regionConfiguration = Codegen.empty();
+        this.regionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder regionConfiguration(@Nullable ReplicationSetRegionConfigurationArgs regionConfiguration) {
-            this.regionConfiguration = Output.ofNullable(regionConfiguration);
+            this.regionConfiguration = Codegen.ofNullable(regionConfiguration);
             return this;
         }
         public Builder regionName(@Nullable Output<String> regionName) {
@@ -80,7 +81,7 @@ public final class ReplicationSetReplicationRegionArgs extends io.pulumi.resourc
             return this;
         }
         public Builder regionName(@Nullable String regionName) {
-            this.regionName = Output.ofNullable(regionName);
+            this.regionName = Codegen.ofNullable(regionName);
             return this;
         }        public ReplicationSetReplicationRegionArgs build() {
             return new ReplicationSetReplicationRegionArgs(regionConfiguration, regionName);

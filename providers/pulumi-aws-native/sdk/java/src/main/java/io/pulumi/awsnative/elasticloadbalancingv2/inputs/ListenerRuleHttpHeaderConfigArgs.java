@@ -5,6 +5,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<String> httpHeaderName;
 
     public Output<String> getHttpHeaderName() {
-        return this.httpHeaderName == null ? Output.empty() : this.httpHeaderName;
+        return this.httpHeaderName == null ? Codegen.empty() : this.httpHeaderName;
     }
 
     @Import(name="values")
       private final @Nullable Output<List<String>> values;
 
     public Output<List<String>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public ListenerRuleHttpHeaderConfigArgs(
@@ -37,8 +38,8 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
     }
 
     private ListenerRuleHttpHeaderConfigArgs() {
-        this.httpHeaderName = Output.empty();
-        this.values = Output.empty();
+        this.httpHeaderName = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder httpHeaderName(@Nullable String httpHeaderName) {
-            this.httpHeaderName = Output.ofNullable(httpHeaderName);
+            this.httpHeaderName = Codegen.ofNullable(httpHeaderName);
             return this;
         }
         public Builder values(@Nullable Output<List<String>> values) {
@@ -76,7 +77,7 @@ public final class ListenerRuleHttpHeaderConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder values(@Nullable List<String> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(String... values) {

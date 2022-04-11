@@ -5,6 +5,7 @@ package io.pulumi.aws.quicksight;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> awsAccountId;
 
     public Output<String> getAwsAccountId() {
-        return this.awsAccountId == null ? Output.empty() : this.awsAccountId;
+        return this.awsAccountId == null ? Codegen.empty() : this.awsAccountId;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public GroupMembershipArgs(
@@ -70,10 +71,10 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GroupMembershipArgs() {
-        this.awsAccountId = Output.empty();
-        this.groupName = Output.empty();
-        this.memberName = Output.empty();
-        this.namespace = Output.empty();
+        this.awsAccountId = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.memberName = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder awsAccountId(@Nullable String awsAccountId) {
-            this.awsAccountId = Output.ofNullable(awsAccountId);
+            this.awsAccountId = Codegen.ofNullable(awsAccountId);
             return this;
         }
         public Builder groupName(Output<String> groupName) {
@@ -131,7 +132,7 @@ public final class GroupMembershipArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public GroupMembershipArgs build() {
             return new GroupMembershipArgs(awsAccountId, groupName, memberName, namespace);

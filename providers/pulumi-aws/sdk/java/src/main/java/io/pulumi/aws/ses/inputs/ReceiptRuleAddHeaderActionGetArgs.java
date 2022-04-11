@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class ReceiptRuleAddHeaderActionGetArgs extends io.pulumi.resources
     }
 
     private ReceiptRuleAddHeaderActionGetArgs() {
-        this.headerName = Output.empty();
-        this.headerValue = Output.empty();
-        this.position = Output.empty();
+        this.headerName = Codegen.empty();
+        this.headerValue = Codegen.empty();
+        this.position = Codegen.empty();
     }
 
     public static Builder builder() {

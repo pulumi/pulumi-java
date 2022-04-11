@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VertexArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VertexArgs>> vertices;
 
     public Output<List<VertexArgs>> getVertices() {
-        return this.vertices == null ? Output.empty() : this.vertices;
+        return this.vertices == null ? Codegen.empty() : this.vertices;
     }
 
     public BoundingPolyArgs(
@@ -50,8 +51,8 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BoundingPolyArgs() {
-        this.label = Output.empty();
-        this.vertices = Output.empty();
+        this.label = Codegen.empty();
+        this.vertices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder vertices(@Nullable Output<List<VertexArgs>> vertices) {
@@ -89,7 +90,7 @@ public final class BoundingPolyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vertices(@Nullable List<VertexArgs> vertices) {
-            this.vertices = Output.ofNullable(vertices);
+            this.vertices = Codegen.ofNullable(vertices);
             return this;
         }
         public Builder vertices(VertexArgs... vertices) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Double> dailyQuotaGb;
 
     public Output<Double> getDailyQuotaGb() {
-        return this.dailyQuotaGb == null ? Output.empty() : this.dailyQuotaGb;
+        return this.dailyQuotaGb == null ? Codegen.empty() : this.dailyQuotaGb;
     }
 
     public WorkspaceCappingArgs(@Nullable Output<Double> dailyQuotaGb) {
@@ -34,7 +35,7 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WorkspaceCappingArgs() {
-        this.dailyQuotaGb = Output.empty();
+        this.dailyQuotaGb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class WorkspaceCappingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder dailyQuotaGb(@Nullable Double dailyQuotaGb) {
-            this.dailyQuotaGb = Output.ofNullable(dailyQuotaGb);
+            this.dailyQuotaGb = Codegen.ofNullable(dailyQuotaGb);
             return this;
         }        public WorkspaceCappingArgs build() {
             return new WorkspaceCappingArgs(dailyQuotaGb);

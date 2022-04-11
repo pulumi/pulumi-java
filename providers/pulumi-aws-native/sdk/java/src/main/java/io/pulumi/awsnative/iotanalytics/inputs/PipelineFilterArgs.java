@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -32,7 +33,7 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> next;
 
     public Output<String> getNext() {
-        return this.next == null ? Output.empty() : this.next;
+        return this.next == null ? Codegen.empty() : this.next;
     }
 
     public PipelineFilterArgs(
@@ -45,9 +46,9 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineFilterArgs() {
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.next = Output.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.next = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class PipelineFilterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder next(@Nullable String next) {
-            this.next = Output.ofNullable(next);
+            this.next = Codegen.ofNullable(next);
             return this;
         }        public PipelineFilterArgs build() {
             return new PipelineFilterArgs(filter, name, next);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> diskEncryptionSetId;
 
     public Output<String> getDiskEncryptionSetId() {
-        return this.diskEncryptionSetId == null ? Output.empty() : this.diskEncryptionSetId;
+        return this.diskEncryptionSetId == null ? Codegen.empty() : this.diskEncryptionSetId;
     }
 
     public OSDiskImageEncryptionArgs(@Nullable Output<String> diskEncryptionSetId) {
@@ -34,7 +35,7 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
     }
 
     private OSDiskImageEncryptionArgs() {
-        this.diskEncryptionSetId = Output.empty();
+        this.diskEncryptionSetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class OSDiskImageEncryptionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder diskEncryptionSetId(@Nullable String diskEncryptionSetId) {
-            this.diskEncryptionSetId = Output.ofNullable(diskEncryptionSetId);
+            this.diskEncryptionSetId = Codegen.ofNullable(diskEncryptionSetId);
             return this;
         }        public OSDiskImageEncryptionArgs build() {
             return new OSDiskImageEncryptionArgs(diskEncryptionSetId);

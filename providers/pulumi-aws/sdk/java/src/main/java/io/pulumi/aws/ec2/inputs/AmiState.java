@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.inputs.AmiEbsBlockDeviceGetArgs;
 import io.pulumi.aws.ec2.inputs.AmiEphemeralBlockDeviceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> architecture;
 
     public Output<String> getArchitecture() {
-        return this.architecture == null ? Output.empty() : this.architecture;
+        return this.architecture == null ? Codegen.empty() : this.architecture;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices;
 
     public Output<List<AmiEbsBlockDeviceGetArgs>> getEbsBlockDevices() {
-        return this.ebsBlockDevices == null ? Output.empty() : this.ebsBlockDevices;
+        return this.ebsBlockDevices == null ? Codegen.empty() : this.ebsBlockDevices;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enaSupport;
 
     public Output<Boolean> getEnaSupport() {
-        return this.enaSupport == null ? Output.empty() : this.enaSupport;
+        return this.enaSupport == null ? Codegen.empty() : this.enaSupport;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices;
 
     public Output<List<AmiEphemeralBlockDeviceGetArgs>> getEphemeralBlockDevices() {
-        return this.ephemeralBlockDevices == null ? Output.empty() : this.ephemeralBlockDevices;
+        return this.ephemeralBlockDevices == null ? Codegen.empty() : this.ephemeralBlockDevices;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> hypervisor;
 
     public Output<String> getHypervisor() {
-        return this.hypervisor == null ? Output.empty() : this.hypervisor;
+        return this.hypervisor == null ? Codegen.empty() : this.hypervisor;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageLocation;
 
     public Output<String> getImageLocation() {
-        return this.imageLocation == null ? Output.empty() : this.imageLocation;
+        return this.imageLocation == null ? Codegen.empty() : this.imageLocation;
     }
 
     /**
@@ -118,7 +119,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageOwnerAlias;
 
     public Output<String> getImageOwnerAlias() {
-        return this.imageOwnerAlias == null ? Output.empty() : this.imageOwnerAlias;
+        return this.imageOwnerAlias == null ? Codegen.empty() : this.imageOwnerAlias;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageType;
 
     public Output<String> getImageType() {
-        return this.imageType == null ? Output.empty() : this.imageType;
+        return this.imageType == null ? Codegen.empty() : this.imageType;
     }
 
     /**
@@ -141,14 +142,14 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
-        return this.kernelId == null ? Output.empty() : this.kernelId;
+        return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
     @Import(name="manageEbsSnapshots")
       private final @Nullable Output<Boolean> manageEbsSnapshots;
 
     public Output<Boolean> getManageEbsSnapshots() {
-        return this.manageEbsSnapshots == null ? Output.empty() : this.manageEbsSnapshots;
+        return this.manageEbsSnapshots == null ? Codegen.empty() : this.manageEbsSnapshots;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platform;
 
     public Output<String> getPlatform() {
-        return this.platform == null ? Output.empty() : this.platform;
+        return this.platform == null ? Codegen.empty() : this.platform;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> platformDetails;
 
     public Output<String> getPlatformDetails() {
-        return this.platformDetails == null ? Output.empty() : this.platformDetails;
+        return this.platformDetails == null ? Codegen.empty() : this.platformDetails;
     }
 
     /**
@@ -203,7 +204,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> public_;
 
     public Output<Boolean> getPublic_() {
-        return this.public_ == null ? Output.empty() : this.public_;
+        return this.public_ == null ? Codegen.empty() : this.public_;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ramdiskId;
 
     public Output<String> getRamdiskId() {
-        return this.ramdiskId == null ? Output.empty() : this.ramdiskId;
+        return this.ramdiskId == null ? Codegen.empty() : this.ramdiskId;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rootDeviceName;
 
     public Output<String> getRootDeviceName() {
-        return this.rootDeviceName == null ? Output.empty() : this.rootDeviceName;
+        return this.rootDeviceName == null ? Codegen.empty() : this.rootDeviceName;
     }
 
     /**
@@ -237,7 +238,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rootSnapshotId;
 
     public Output<String> getRootSnapshotId() {
-        return this.rootSnapshotId == null ? Output.empty() : this.rootSnapshotId;
+        return this.rootSnapshotId == null ? Codegen.empty() : this.rootSnapshotId;
     }
 
     /**
@@ -249,7 +250,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sriovNetSupport;
 
     public Output<String> getSriovNetSupport() {
-        return this.sriovNetSupport == null ? Output.empty() : this.sriovNetSupport;
+        return this.sriovNetSupport == null ? Codegen.empty() : this.sriovNetSupport;
     }
 
     /**
@@ -260,7 +261,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -271,7 +272,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -282,7 +283,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> usageOperation;
 
     public Output<String> getUsageOperation() {
-        return this.usageOperation == null ? Output.empty() : this.usageOperation;
+        return this.usageOperation == null ? Codegen.empty() : this.usageOperation;
     }
 
     /**
@@ -295,7 +296,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> virtualizationType;
 
     public Output<String> getVirtualizationType() {
-        return this.virtualizationType == null ? Output.empty() : this.virtualizationType;
+        return this.virtualizationType == null ? Codegen.empty() : this.virtualizationType;
     }
 
     public AmiState(
@@ -352,31 +353,31 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AmiState() {
-        this.architecture = Output.empty();
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.ebsBlockDevices = Output.empty();
-        this.enaSupport = Output.empty();
-        this.ephemeralBlockDevices = Output.empty();
-        this.hypervisor = Output.empty();
-        this.imageLocation = Output.empty();
-        this.imageOwnerAlias = Output.empty();
-        this.imageType = Output.empty();
-        this.kernelId = Output.empty();
-        this.manageEbsSnapshots = Output.empty();
-        this.name = Output.empty();
-        this.ownerId = Output.empty();
-        this.platform = Output.empty();
-        this.platformDetails = Output.empty();
-        this.public_ = Output.empty();
-        this.ramdiskId = Output.empty();
-        this.rootDeviceName = Output.empty();
-        this.rootSnapshotId = Output.empty();
-        this.sriovNetSupport = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.usageOperation = Output.empty();
-        this.virtualizationType = Output.empty();
+        this.architecture = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ebsBlockDevices = Codegen.empty();
+        this.enaSupport = Codegen.empty();
+        this.ephemeralBlockDevices = Codegen.empty();
+        this.hypervisor = Codegen.empty();
+        this.imageLocation = Codegen.empty();
+        this.imageOwnerAlias = Codegen.empty();
+        this.imageType = Codegen.empty();
+        this.kernelId = Codegen.empty();
+        this.manageEbsSnapshots = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.platform = Codegen.empty();
+        this.platformDetails = Codegen.empty();
+        this.public_ = Codegen.empty();
+        this.ramdiskId = Codegen.empty();
+        this.rootDeviceName = Codegen.empty();
+        this.rootSnapshotId = Codegen.empty();
+        this.sriovNetSupport = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.usageOperation = Codegen.empty();
+        this.virtualizationType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -452,7 +453,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder architecture(@Nullable String architecture) {
-            this.architecture = Output.ofNullable(architecture);
+            this.architecture = Codegen.ofNullable(architecture);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -460,7 +461,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -468,7 +469,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ebsBlockDevices(@Nullable Output<List<AmiEbsBlockDeviceGetArgs>> ebsBlockDevices) {
@@ -476,7 +477,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ebsBlockDevices(@Nullable List<AmiEbsBlockDeviceGetArgs> ebsBlockDevices) {
-            this.ebsBlockDevices = Output.ofNullable(ebsBlockDevices);
+            this.ebsBlockDevices = Codegen.ofNullable(ebsBlockDevices);
             return this;
         }
         public Builder ebsBlockDevices(AmiEbsBlockDeviceGetArgs... ebsBlockDevices) {
@@ -487,7 +488,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enaSupport(@Nullable Boolean enaSupport) {
-            this.enaSupport = Output.ofNullable(enaSupport);
+            this.enaSupport = Codegen.ofNullable(enaSupport);
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable Output<List<AmiEphemeralBlockDeviceGetArgs>> ephemeralBlockDevices) {
@@ -495,7 +496,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ephemeralBlockDevices(@Nullable List<AmiEphemeralBlockDeviceGetArgs> ephemeralBlockDevices) {
-            this.ephemeralBlockDevices = Output.ofNullable(ephemeralBlockDevices);
+            this.ephemeralBlockDevices = Codegen.ofNullable(ephemeralBlockDevices);
             return this;
         }
         public Builder ephemeralBlockDevices(AmiEphemeralBlockDeviceGetArgs... ephemeralBlockDevices) {
@@ -506,7 +507,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hypervisor(@Nullable String hypervisor) {
-            this.hypervisor = Output.ofNullable(hypervisor);
+            this.hypervisor = Codegen.ofNullable(hypervisor);
             return this;
         }
         public Builder imageLocation(@Nullable Output<String> imageLocation) {
@@ -514,7 +515,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageLocation(@Nullable String imageLocation) {
-            this.imageLocation = Output.ofNullable(imageLocation);
+            this.imageLocation = Codegen.ofNullable(imageLocation);
             return this;
         }
         public Builder imageOwnerAlias(@Nullable Output<String> imageOwnerAlias) {
@@ -522,7 +523,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageOwnerAlias(@Nullable String imageOwnerAlias) {
-            this.imageOwnerAlias = Output.ofNullable(imageOwnerAlias);
+            this.imageOwnerAlias = Codegen.ofNullable(imageOwnerAlias);
             return this;
         }
         public Builder imageType(@Nullable Output<String> imageType) {
@@ -530,7 +531,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageType(@Nullable String imageType) {
-            this.imageType = Output.ofNullable(imageType);
+            this.imageType = Codegen.ofNullable(imageType);
             return this;
         }
         public Builder kernelId(@Nullable Output<String> kernelId) {
@@ -538,7 +539,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Output.ofNullable(kernelId);
+            this.kernelId = Codegen.ofNullable(kernelId);
             return this;
         }
         public Builder manageEbsSnapshots(@Nullable Output<Boolean> manageEbsSnapshots) {
@@ -546,7 +547,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder manageEbsSnapshots(@Nullable Boolean manageEbsSnapshots) {
-            this.manageEbsSnapshots = Output.ofNullable(manageEbsSnapshots);
+            this.manageEbsSnapshots = Codegen.ofNullable(manageEbsSnapshots);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -554,7 +555,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -562,7 +563,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder platform(@Nullable Output<String> platform) {
@@ -570,7 +571,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platform(@Nullable String platform) {
-            this.platform = Output.ofNullable(platform);
+            this.platform = Codegen.ofNullable(platform);
             return this;
         }
         public Builder platformDetails(@Nullable Output<String> platformDetails) {
@@ -578,7 +579,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder platformDetails(@Nullable String platformDetails) {
-            this.platformDetails = Output.ofNullable(platformDetails);
+            this.platformDetails = Codegen.ofNullable(platformDetails);
             return this;
         }
         public Builder public_(@Nullable Output<Boolean> public_) {
@@ -586,7 +587,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder public_(@Nullable Boolean public_) {
-            this.public_ = Output.ofNullable(public_);
+            this.public_ = Codegen.ofNullable(public_);
             return this;
         }
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
@@ -594,7 +595,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ramdiskId(@Nullable String ramdiskId) {
-            this.ramdiskId = Output.ofNullable(ramdiskId);
+            this.ramdiskId = Codegen.ofNullable(ramdiskId);
             return this;
         }
         public Builder rootDeviceName(@Nullable Output<String> rootDeviceName) {
@@ -602,7 +603,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootDeviceName(@Nullable String rootDeviceName) {
-            this.rootDeviceName = Output.ofNullable(rootDeviceName);
+            this.rootDeviceName = Codegen.ofNullable(rootDeviceName);
             return this;
         }
         public Builder rootSnapshotId(@Nullable Output<String> rootSnapshotId) {
@@ -610,7 +611,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootSnapshotId(@Nullable String rootSnapshotId) {
-            this.rootSnapshotId = Output.ofNullable(rootSnapshotId);
+            this.rootSnapshotId = Codegen.ofNullable(rootSnapshotId);
             return this;
         }
         public Builder sriovNetSupport(@Nullable Output<String> sriovNetSupport) {
@@ -618,7 +619,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sriovNetSupport(@Nullable String sriovNetSupport) {
-            this.sriovNetSupport = Output.ofNullable(sriovNetSupport);
+            this.sriovNetSupport = Codegen.ofNullable(sriovNetSupport);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -626,7 +627,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -634,7 +635,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder usageOperation(@Nullable Output<String> usageOperation) {
@@ -642,7 +643,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usageOperation(@Nullable String usageOperation) {
-            this.usageOperation = Output.ofNullable(usageOperation);
+            this.usageOperation = Codegen.ofNullable(usageOperation);
             return this;
         }
         public Builder virtualizationType(@Nullable Output<String> virtualizationType) {
@@ -650,7 +651,7 @@ public final class AmiState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder virtualizationType(@Nullable String virtualizationType) {
-            this.virtualizationType = Output.ofNullable(virtualizationType);
+            this.virtualizationType = Codegen.ofNullable(virtualizationType);
             return this;
         }        public AmiState build() {
             return new AmiState(architecture, arn, description, ebsBlockDevices, enaSupport, ephemeralBlockDevices, hypervisor, imageLocation, imageOwnerAlias, imageType, kernelId, manageEbsSnapshots, name, ownerId, platform, platformDetails, public_, ramdiskId, rootDeviceName, rootSnapshotId, sriovNetSupport, tags, tagsAll, usageOperation, virtualizationType);

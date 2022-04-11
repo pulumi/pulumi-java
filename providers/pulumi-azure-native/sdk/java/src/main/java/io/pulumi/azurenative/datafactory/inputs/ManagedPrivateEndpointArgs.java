@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> fqdns;
 
     public Output<List<String>> getFqdns() {
-        return this.fqdns == null ? Output.empty() : this.fqdns;
+        return this.fqdns == null ? Codegen.empty() : this.fqdns;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> groupId;
 
     public Output<String> getGroupId() {
-        return this.groupId == null ? Output.empty() : this.groupId;
+        return this.groupId == null ? Codegen.empty() : this.groupId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> privateLinkResourceId;
 
     public Output<String> getPrivateLinkResourceId() {
-        return this.privateLinkResourceId == null ? Output.empty() : this.privateLinkResourceId;
+        return this.privateLinkResourceId == null ? Codegen.empty() : this.privateLinkResourceId;
     }
 
     public ManagedPrivateEndpointArgs(
@@ -62,9 +63,9 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
     }
 
     private ManagedPrivateEndpointArgs() {
-        this.fqdns = Output.empty();
-        this.groupId = Output.empty();
-        this.privateLinkResourceId = Output.empty();
+        this.fqdns = Codegen.empty();
+        this.groupId = Codegen.empty();
+        this.privateLinkResourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder fqdns(@Nullable List<String> fqdns) {
-            this.fqdns = Output.ofNullable(fqdns);
+            this.fqdns = Codegen.ofNullable(fqdns);
             return this;
         }
         public Builder fqdns(String... fqdns) {
@@ -107,7 +108,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder groupId(@Nullable String groupId) {
-            this.groupId = Output.ofNullable(groupId);
+            this.groupId = Codegen.ofNullable(groupId);
             return this;
         }
         public Builder privateLinkResourceId(@Nullable Output<String> privateLinkResourceId) {
@@ -115,7 +116,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
-            this.privateLinkResourceId = Output.ofNullable(privateLinkResourceId);
+            this.privateLinkResourceId = Codegen.ofNullable(privateLinkResourceId);
             return this;
         }        public ManagedPrivateEndpointArgs build() {
             return new ManagedPrivateEndpointArgs(fqdns, groupId, privateLinkResourceId);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
       private final @Nullable Output<Boolean> allEffective;
 
     public Output<Boolean> getAllEffective() {
-        return this.allEffective == null ? Output.empty() : this.allEffective;
+        return this.allEffective == null ? Codegen.empty() : this.allEffective;
     }
 
     public InstanceGroupManagerStatusStatefulPerInstanceConfigArgs(@Nullable Output<Boolean> allEffective) {
@@ -30,7 +31,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
     }
 
     private InstanceGroupManagerStatusStatefulPerInstanceConfigArgs() {
-        this.allEffective = Output.empty();
+        this.allEffective = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class InstanceGroupManagerStatusStatefulPerInstanceConfigArgs exten
             return this;
         }
         public Builder allEffective(@Nullable Boolean allEffective) {
-            this.allEffective = Output.ofNullable(allEffective);
+            this.allEffective = Codegen.ofNullable(allEffective);
             return this;
         }        public InstanceGroupManagerStatusStatefulPerInstanceConfigArgs build() {
             return new InstanceGroupManagerStatusStatefulPerInstanceConfigArgs(allEffective);

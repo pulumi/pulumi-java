@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> configurationStatus;
 
     public Output<String> getConfigurationStatus() {
-        return this.configurationStatus == null ? Output.empty() : this.configurationStatus;
+        return this.configurationStatus == null ? Codegen.empty() : this.configurationStatus;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> enforcementSupport;
 
     public Output<String> getEnforcementSupport() {
-        return this.enforcementSupport == null ? Output.empty() : this.enforcementSupport;
+        return this.enforcementSupport == null ? Codegen.empty() : this.enforcementSupport;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> recommendationAction;
 
     public Output<String> getRecommendationAction() {
-        return this.recommendationAction == null ? Output.empty() : this.recommendationAction;
+        return this.recommendationAction == null ? Codegen.empty() : this.recommendationAction;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public VmRecommendationArgs(
@@ -74,10 +75,10 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private VmRecommendationArgs() {
-        this.configurationStatus = Output.empty();
-        this.enforcementSupport = Output.empty();
-        this.recommendationAction = Output.empty();
-        this.resourceId = Output.empty();
+        this.configurationStatus = Codegen.empty();
+        this.enforcementSupport = Codegen.empty();
+        this.recommendationAction = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder configurationStatus(@Nullable String configurationStatus) {
-            this.configurationStatus = Output.ofNullable(configurationStatus);
+            this.configurationStatus = Codegen.ofNullable(configurationStatus);
             return this;
         }
         public Builder enforcementSupport(@Nullable Output<String> enforcementSupport) {
@@ -119,7 +120,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enforcementSupport(@Nullable String enforcementSupport) {
-            this.enforcementSupport = Output.ofNullable(enforcementSupport);
+            this.enforcementSupport = Codegen.ofNullable(enforcementSupport);
             return this;
         }
         public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
@@ -127,7 +128,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder recommendationAction(@Nullable String recommendationAction) {
-            this.recommendationAction = Output.ofNullable(recommendationAction);
+            this.recommendationAction = Codegen.ofNullable(recommendationAction);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -135,7 +136,7 @@ public final class VmRecommendationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public VmRecommendationArgs build() {
             return new VmRecommendationArgs(configurationStatus, enforcementSupport, recommendationAction, resourceId);

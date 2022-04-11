@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorConfigArgs;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> anomalyDetectorDescription;
 
     public Output<String> getAnomalyDetectorDescription() {
-        return this.anomalyDetectorDescription == null ? Output.empty() : this.anomalyDetectorDescription;
+        return this.anomalyDetectorDescription == null ? Codegen.empty() : this.anomalyDetectorDescription;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> anomalyDetectorName;
 
     public Output<String> getAnomalyDetectorName() {
-        return this.anomalyDetectorName == null ? Output.empty() : this.anomalyDetectorName;
+        return this.anomalyDetectorName == null ? Codegen.empty() : this.anomalyDetectorName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AnomalyDetectorArgs() {
-        this.anomalyDetectorConfig = Output.empty();
-        this.anomalyDetectorDescription = Output.empty();
-        this.anomalyDetectorName = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.metricSetList = Output.empty();
+        this.anomalyDetectorConfig = Codegen.empty();
+        this.anomalyDetectorDescription = Codegen.empty();
+        this.anomalyDetectorName = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.metricSetList = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder anomalyDetectorDescription(@Nullable String anomalyDetectorDescription) {
-            this.anomalyDetectorDescription = Output.ofNullable(anomalyDetectorDescription);
+            this.anomalyDetectorDescription = Codegen.ofNullable(anomalyDetectorDescription);
             return this;
         }
         public Builder anomalyDetectorName(@Nullable Output<String> anomalyDetectorName) {
@@ -142,7 +143,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder anomalyDetectorName(@Nullable String anomalyDetectorName) {
-            this.anomalyDetectorName = Output.ofNullable(anomalyDetectorName);
+            this.anomalyDetectorName = Codegen.ofNullable(anomalyDetectorName);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -150,7 +151,7 @@ public final class AnomalyDetectorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder metricSetList(Output<List<AnomalyDetectorMetricSetArgs>> metricSetList) {

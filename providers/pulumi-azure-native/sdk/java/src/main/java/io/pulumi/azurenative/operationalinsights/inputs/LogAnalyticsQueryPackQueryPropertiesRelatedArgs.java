@@ -5,6 +5,7 @@ package io.pulumi.azurenative.operationalinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
       private final @Nullable Output<List<String>> categories;
 
     public Output<List<String>> getCategories() {
-        return this.categories == null ? Output.empty() : this.categories;
+        return this.categories == null ? Codegen.empty() : this.categories;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
       private final @Nullable Output<List<String>> resourceTypes;
 
     public Output<List<String>> getResourceTypes() {
-        return this.resourceTypes == null ? Output.empty() : this.resourceTypes;
+        return this.resourceTypes == null ? Codegen.empty() : this.resourceTypes;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
       private final @Nullable Output<List<String>> solutions;
 
     public Output<List<String>> getSolutions() {
-        return this.solutions == null ? Output.empty() : this.solutions;
+        return this.solutions == null ? Codegen.empty() : this.solutions;
     }
 
     public LogAnalyticsQueryPackQueryPropertiesRelatedArgs(
@@ -62,9 +63,9 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
     }
 
     private LogAnalyticsQueryPackQueryPropertiesRelatedArgs() {
-        this.categories = Output.empty();
-        this.resourceTypes = Output.empty();
-        this.solutions = Output.empty();
+        this.categories = Codegen.empty();
+        this.resourceTypes = Codegen.empty();
+        this.solutions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
             return this;
         }
         public Builder categories(@Nullable List<String> categories) {
-            this.categories = Output.ofNullable(categories);
+            this.categories = Codegen.ofNullable(categories);
             return this;
         }
         public Builder categories(String... categories) {
@@ -107,7 +108,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
             return this;
         }
         public Builder resourceTypes(@Nullable List<String> resourceTypes) {
-            this.resourceTypes = Output.ofNullable(resourceTypes);
+            this.resourceTypes = Codegen.ofNullable(resourceTypes);
             return this;
         }
         public Builder resourceTypes(String... resourceTypes) {
@@ -118,7 +119,7 @@ public final class LogAnalyticsQueryPackQueryPropertiesRelatedArgs extends io.pu
             return this;
         }
         public Builder solutions(@Nullable List<String> solutions) {
-            this.solutions = Output.ofNullable(solutions);
+            this.solutions = Codegen.ofNullable(solutions);
             return this;
         }
         public Builder solutions(String... solutions) {

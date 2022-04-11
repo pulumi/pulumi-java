@@ -7,6 +7,7 @@ import io.pulumi.azurenative.visualstudio.enums.AccountResourceRequestOperationT
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> accountName;
 
     public Output<String> getAccountName() {
-        return this.accountName == null ? Output.empty() : this.accountName;
+        return this.accountName == null ? Codegen.empty() : this.accountName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,AccountResourceRequestOperationType>> operationType;
 
     public Output<Either<String,AccountResourceRequestOperationType>> getOperationType() {
-        return this.operationType == null ? Output.empty() : this.operationType;
+        return this.operationType == null ? Codegen.empty() : this.operationType;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AccountArgs(
@@ -112,13 +113,13 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AccountArgs() {
-        this.accountName = Output.empty();
-        this.location = Output.empty();
-        this.operationType = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.operationType = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder accountName(@Nullable String accountName) {
-            this.accountName = Output.ofNullable(accountName);
+            this.accountName = Codegen.ofNullable(accountName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -166,7 +167,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder operationType(@Nullable Output<Either<String,AccountResourceRequestOperationType>> operationType) {
@@ -174,7 +175,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operationType(@Nullable Either<String,AccountResourceRequestOperationType> operationType) {
-            this.operationType = Output.ofNullable(operationType);
+            this.operationType = Codegen.ofNullable(operationType);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -182,7 +183,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -198,7 +199,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -206,7 +207,7 @@ public final class AccountArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AccountArgs build() {
             return new AccountArgs(accountName, location, operationType, properties, resourceGroupName, resourceName, tags);

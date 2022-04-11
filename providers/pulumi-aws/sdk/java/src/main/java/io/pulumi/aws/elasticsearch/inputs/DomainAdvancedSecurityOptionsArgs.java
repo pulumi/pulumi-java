@@ -6,6 +6,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 import io.pulumi.aws.elasticsearch.inputs.DomainAdvancedSecurityOptionsMasterUserOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
       private final @Nullable Output<Boolean> internalUserDatabaseEnabled;
 
     public Output<Boolean> getInternalUserDatabaseEnabled() {
-        return this.internalUserDatabaseEnabled == null ? Output.empty() : this.internalUserDatabaseEnabled;
+        return this.internalUserDatabaseEnabled == null ? Codegen.empty() : this.internalUserDatabaseEnabled;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
       private final @Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions;
 
     public Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> getMasterUserOptions() {
-        return this.masterUserOptions == null ? Output.empty() : this.masterUserOptions;
+        return this.masterUserOptions == null ? Codegen.empty() : this.masterUserOptions;
     }
 
     public DomainAdvancedSecurityOptionsArgs(
@@ -58,9 +59,9 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
     }
 
     private DomainAdvancedSecurityOptionsArgs() {
-        this.enabled = Output.empty();
-        this.internalUserDatabaseEnabled = Output.empty();
-        this.masterUserOptions = Output.empty();
+        this.enabled = Codegen.empty();
+        this.internalUserDatabaseEnabled = Codegen.empty();
+        this.masterUserOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder internalUserDatabaseEnabled(@Nullable Boolean internalUserDatabaseEnabled) {
-            this.internalUserDatabaseEnabled = Output.ofNullable(internalUserDatabaseEnabled);
+            this.internalUserDatabaseEnabled = Codegen.ofNullable(internalUserDatabaseEnabled);
             return this;
         }
         public Builder masterUserOptions(@Nullable Output<DomainAdvancedSecurityOptionsMasterUserOptionsArgs> masterUserOptions) {
@@ -108,7 +109,7 @@ public final class DomainAdvancedSecurityOptionsArgs extends io.pulumi.resources
             return this;
         }
         public Builder masterUserOptions(@Nullable DomainAdvancedSecurityOptionsMasterUserOptionsArgs masterUserOptions) {
-            this.masterUserOptions = Output.ofNullable(masterUserOptions);
+            this.masterUserOptions = Codegen.ofNullable(masterUserOptions);
             return this;
         }        public DomainAdvancedSecurityOptionsArgs build() {
             return new DomainAdvancedSecurityOptionsArgs(enabled, internalUserDatabaseEnabled, masterUserOptions);

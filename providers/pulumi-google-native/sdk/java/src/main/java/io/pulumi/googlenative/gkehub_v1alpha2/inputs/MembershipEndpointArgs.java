@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.EdgeClusterArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.GkeClusterArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.KubernetesResourceArgs;
@@ -30,7 +31,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<EdgeClusterArgs> edgeCluster;
 
     public Output<EdgeClusterArgs> getEdgeCluster() {
-        return this.edgeCluster == null ? Output.empty() : this.edgeCluster;
+        return this.edgeCluster == null ? Codegen.empty() : this.edgeCluster;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<GkeClusterArgs> gkeCluster;
 
     public Output<GkeClusterArgs> getGkeCluster() {
-        return this.gkeCluster == null ? Output.empty() : this.gkeCluster;
+        return this.gkeCluster == null ? Codegen.empty() : this.gkeCluster;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<KubernetesResourceArgs> kubernetesResource;
 
     public Output<KubernetesResourceArgs> getKubernetesResource() {
-        return this.kubernetesResource == null ? Output.empty() : this.kubernetesResource;
+        return this.kubernetesResource == null ? Codegen.empty() : this.kubernetesResource;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<MultiCloudClusterArgs> multiCloudCluster;
 
     public Output<MultiCloudClusterArgs> getMultiCloudCluster() {
-        return this.multiCloudCluster == null ? Output.empty() : this.multiCloudCluster;
+        return this.multiCloudCluster == null ? Codegen.empty() : this.multiCloudCluster;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<OnPremClusterArgs> onPremCluster;
 
     public Output<OnPremClusterArgs> getOnPremCluster() {
-        return this.onPremCluster == null ? Output.empty() : this.onPremCluster;
+        return this.onPremCluster == null ? Codegen.empty() : this.onPremCluster;
     }
 
     public MembershipEndpointArgs(
@@ -91,11 +92,11 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
     }
 
     private MembershipEndpointArgs() {
-        this.edgeCluster = Output.empty();
-        this.gkeCluster = Output.empty();
-        this.kubernetesResource = Output.empty();
-        this.multiCloudCluster = Output.empty();
-        this.onPremCluster = Output.empty();
+        this.edgeCluster = Codegen.empty();
+        this.gkeCluster = Codegen.empty();
+        this.kubernetesResource = Codegen.empty();
+        this.multiCloudCluster = Codegen.empty();
+        this.onPremCluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder edgeCluster(@Nullable EdgeClusterArgs edgeCluster) {
-            this.edgeCluster = Output.ofNullable(edgeCluster);
+            this.edgeCluster = Codegen.ofNullable(edgeCluster);
             return this;
         }
         public Builder gkeCluster(@Nullable Output<GkeClusterArgs> gkeCluster) {
@@ -139,7 +140,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder gkeCluster(@Nullable GkeClusterArgs gkeCluster) {
-            this.gkeCluster = Output.ofNullable(gkeCluster);
+            this.gkeCluster = Codegen.ofNullable(gkeCluster);
             return this;
         }
         public Builder kubernetesResource(@Nullable Output<KubernetesResourceArgs> kubernetesResource) {
@@ -147,7 +148,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder kubernetesResource(@Nullable KubernetesResourceArgs kubernetesResource) {
-            this.kubernetesResource = Output.ofNullable(kubernetesResource);
+            this.kubernetesResource = Codegen.ofNullable(kubernetesResource);
             return this;
         }
         public Builder multiCloudCluster(@Nullable Output<MultiCloudClusterArgs> multiCloudCluster) {
@@ -155,7 +156,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder multiCloudCluster(@Nullable MultiCloudClusterArgs multiCloudCluster) {
-            this.multiCloudCluster = Output.ofNullable(multiCloudCluster);
+            this.multiCloudCluster = Codegen.ofNullable(multiCloudCluster);
             return this;
         }
         public Builder onPremCluster(@Nullable Output<OnPremClusterArgs> onPremCluster) {
@@ -163,7 +164,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder onPremCluster(@Nullable OnPremClusterArgs onPremCluster) {
-            this.onPremCluster = Output.ofNullable(onPremCluster);
+            this.onPremCluster = Codegen.ofNullable(onPremCluster);
             return this;
         }        public MembershipEndpointArgs build() {
             return new MembershipEndpointArgs(edgeCluster, gkeCluster, kubernetesResource, multiCloudCluster, onPremCluster);

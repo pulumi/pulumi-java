@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
     }
 
     private CertificateProviderInstanceArgs() {
-        this.pluginInstance = Output.empty();
+        this.pluginInstance = Codegen.empty();
     }
 
     public static Builder builder() {

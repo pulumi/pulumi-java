@@ -6,6 +6,7 @@ package io.pulumi.gcp.dns;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.RecordSetArgs;
 import io.pulumi.gcp.dns.inputs.RecordSetState;
@@ -153,7 +154,7 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RecordSet(String name, RecordSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:dns/recordSet:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:dns/recordSet:RecordSet", name, args == null ? RecordSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RecordSet(String name, Output<String> id, @Nullable RecordSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

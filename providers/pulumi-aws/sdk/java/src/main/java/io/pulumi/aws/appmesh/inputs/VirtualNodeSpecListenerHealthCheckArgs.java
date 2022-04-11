@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -110,13 +111,13 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
     }
 
     private VirtualNodeSpecListenerHealthCheckArgs() {
-        this.healthyThreshold = Output.empty();
-        this.intervalMillis = Output.empty();
-        this.path = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.timeoutMillis = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.intervalMillis = Codegen.empty();
+        this.path = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.timeoutMillis = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -180,7 +181,7 @@ public final class VirtualNodeSpecListenerHealthCheckArgs extends io.pulumi.reso
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(Output<String> protocol) {

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.OpenAuthenticationPolicyClaimArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
       private final @Nullable Output<List<OpenAuthenticationPolicyClaimArgs>> claims;
 
     public Output<List<OpenAuthenticationPolicyClaimArgs>> getClaims() {
-        return this.claims == null ? Output.empty() : this.claims;
+        return this.claims == null ? Codegen.empty() : this.claims;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
       private final @Nullable Output<Either<String,OpenAuthenticationProviderType>> type;
 
     public Output<Either<String,OpenAuthenticationProviderType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public OpenAuthenticationAccessPolicyArgs(
@@ -52,8 +53,8 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
     }
 
     private OpenAuthenticationAccessPolicyArgs() {
-        this.claims = Output.empty();
-        this.type = Output.empty();
+        this.claims = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
             return this;
         }
         public Builder claims(@Nullable List<OpenAuthenticationPolicyClaimArgs> claims) {
-            this.claims = Output.ofNullable(claims);
+            this.claims = Codegen.ofNullable(claims);
             return this;
         }
         public Builder claims(OpenAuthenticationPolicyClaimArgs... claims) {
@@ -94,7 +95,7 @@ public final class OpenAuthenticationAccessPolicyArgs extends io.pulumi.resource
             return this;
         }
         public Builder type(@Nullable Either<String,OpenAuthenticationProviderType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public OpenAuthenticationAccessPolicyArgs build() {
             return new OpenAuthenticationAccessPolicyArgs(claims, type);

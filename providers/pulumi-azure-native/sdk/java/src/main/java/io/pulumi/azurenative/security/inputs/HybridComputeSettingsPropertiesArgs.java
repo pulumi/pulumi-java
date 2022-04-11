@@ -9,6 +9,7 @@ import io.pulumi.azurenative.security.inputs.ServicePrincipalPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -41,7 +42,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<ProxyServerPropertiesArgs> proxyServer;
 
     public Output<ProxyServerPropertiesArgs> getProxyServer() {
-        return this.proxyServer == null ? Output.empty() : this.proxyServer;
+        return this.proxyServer == null ? Codegen.empty() : this.proxyServer;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
+        return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
       private final @Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal;
 
     public Output<ServicePrincipalPropertiesArgs> getServicePrincipal() {
-        return this.servicePrincipal == null ? Output.empty() : this.servicePrincipal;
+        return this.servicePrincipal == null ? Codegen.empty() : this.servicePrincipal;
     }
 
     public HybridComputeSettingsPropertiesArgs(
@@ -91,11 +92,11 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
     }
 
     private HybridComputeSettingsPropertiesArgs() {
-        this.autoProvision = Output.empty();
-        this.proxyServer = Output.empty();
-        this.region = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.servicePrincipal = Output.empty();
+        this.autoProvision = Codegen.empty();
+        this.proxyServer = Codegen.empty();
+        this.region = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.servicePrincipal = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder proxyServer(@Nullable ProxyServerPropertiesArgs proxyServer) {
-            this.proxyServer = Output.ofNullable(proxyServer);
+            this.proxyServer = Codegen.ofNullable(proxyServer);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -147,7 +148,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
@@ -155,7 +156,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Output.ofNullable(resourceGroupName);
+            this.resourceGroupName = Codegen.ofNullable(resourceGroupName);
             return this;
         }
         public Builder servicePrincipal(@Nullable Output<ServicePrincipalPropertiesArgs> servicePrincipal) {
@@ -163,7 +164,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
             return this;
         }
         public Builder servicePrincipal(@Nullable ServicePrincipalPropertiesArgs servicePrincipal) {
-            this.servicePrincipal = Output.ofNullable(servicePrincipal);
+            this.servicePrincipal = Codegen.ofNullable(servicePrincipal);
             return this;
         }        public HybridComputeSettingsPropertiesArgs build() {
             return new HybridComputeSettingsPropertiesArgs(autoProvision, proxyServer, region, resourceGroupName, servicePrincipal);

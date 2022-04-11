@@ -9,6 +9,7 @@ import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.azurenative.blueprint.inputs.ResourceGroupValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> assignmentName;
 
     public Output<String> getAssignmentName() {
-        return this.assignmentName == null ? Output.empty() : this.assignmentName;
+        return this.assignmentName == null ? Codegen.empty() : this.assignmentName;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> blueprintId;
 
     public Output<String> getBlueprintId() {
-        return this.blueprintId == null ? Output.empty() : this.blueprintId;
+        return this.blueprintId == null ? Codegen.empty() : this.blueprintId;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AssignmentLockSettingsArgs> locks;
 
     public Output<AssignmentLockSettingsArgs> getLocks() {
-        return this.locks == null ? Output.empty() : this.locks;
+        return this.locks == null ? Codegen.empty() : this.locks;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public AssignmentArgs(
@@ -166,17 +167,17 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignmentArgs() {
-        this.assignmentName = Output.empty();
-        this.blueprintId = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.locks = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroups = Output.empty();
-        this.resourceScope = Output.empty();
-        this.scope = Output.empty();
+        this.assignmentName = Codegen.empty();
+        this.blueprintId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.locks = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroups = Codegen.empty();
+        this.resourceScope = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -224,7 +225,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assignmentName(@Nullable String assignmentName) {
-            this.assignmentName = Output.ofNullable(assignmentName);
+            this.assignmentName = Codegen.ofNullable(assignmentName);
             return this;
         }
         public Builder blueprintId(@Nullable Output<String> blueprintId) {
@@ -232,7 +233,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blueprintId(@Nullable String blueprintId) {
-            this.blueprintId = Output.ofNullable(blueprintId);
+            this.blueprintId = Codegen.ofNullable(blueprintId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -240,7 +241,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -248,7 +249,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder identity(Output<ManagedServiceIdentityArgs> identity) {
@@ -264,7 +265,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder locks(@Nullable Output<AssignmentLockSettingsArgs> locks) {
@@ -272,7 +273,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locks(@Nullable AssignmentLockSettingsArgs locks) {
-            this.locks = Output.ofNullable(locks);
+            this.locks = Codegen.ofNullable(locks);
             return this;
         }
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
@@ -304,7 +305,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public AssignmentArgs build() {
             return new AssignmentArgs(assignmentName, blueprintId, description, displayName, identity, location, locks, parameters, resourceGroups, resourceScope, scope);

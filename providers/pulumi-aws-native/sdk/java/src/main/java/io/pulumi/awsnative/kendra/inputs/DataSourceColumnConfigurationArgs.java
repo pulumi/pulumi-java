@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,14 +42,14 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
       private final @Nullable Output<String> documentTitleColumnName;
 
     public Output<String> getDocumentTitleColumnName() {
-        return this.documentTitleColumnName == null ? Output.empty() : this.documentTitleColumnName;
+        return this.documentTitleColumnName == null ? Codegen.empty() : this.documentTitleColumnName;
     }
 
     @Import(name="fieldMappings")
       private final @Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Output<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
-        return this.fieldMappings == null ? Output.empty() : this.fieldMappings;
+        return this.fieldMappings == null ? Codegen.empty() : this.fieldMappings;
     }
 
     public DataSourceColumnConfigurationArgs(
@@ -65,11 +66,11 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
     }
 
     private DataSourceColumnConfigurationArgs() {
-        this.changeDetectingColumns = Output.empty();
-        this.documentDataColumnName = Output.empty();
-        this.documentIdColumnName = Output.empty();
-        this.documentTitleColumnName = Output.empty();
-        this.fieldMappings = Output.empty();
+        this.changeDetectingColumns = Codegen.empty();
+        this.documentDataColumnName = Codegen.empty();
+        this.documentIdColumnName = Codegen.empty();
+        this.documentTitleColumnName = Codegen.empty();
+        this.fieldMappings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder documentTitleColumnName(@Nullable String documentTitleColumnName) {
-            this.documentTitleColumnName = Output.ofNullable(documentTitleColumnName);
+            this.documentTitleColumnName = Codegen.ofNullable(documentTitleColumnName);
             return this;
         }
         public Builder fieldMappings(@Nullable Output<List<DataSourceToIndexFieldMappingArgs>> fieldMappings) {
@@ -140,7 +141,7 @@ public final class DataSourceColumnConfigurationArgs extends io.pulumi.resources
             return this;
         }
         public Builder fieldMappings(@Nullable List<DataSourceToIndexFieldMappingArgs> fieldMappings) {
-            this.fieldMappings = Output.ofNullable(fieldMappings);
+            this.fieldMappings = Codegen.ofNullable(fieldMappings);
             return this;
         }
         public Builder fieldMappings(DataSourceToIndexFieldMappingArgs... fieldMappings) {

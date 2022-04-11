@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azuredata;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> cores;
 
     public Output<Integer> getCores() {
-        return this.cores == null ? Output.empty() : this.cores;
+        return this.cores == null ? Codegen.empty() : this.cores;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> edition;
 
     public Output<String> getEdition() {
-        return this.edition == null ? Output.empty() : this.edition;
+        return this.edition == null ? Codegen.empty() : this.edition;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> propertyBag;
 
     public Output<String> getPropertyBag() {
-        return this.propertyBag == null ? Output.empty() : this.propertyBag;
+        return this.propertyBag == null ? Codegen.empty() : this.propertyBag;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> registrationID;
 
     public Output<String> getRegistrationID() {
-        return this.registrationID == null ? Output.empty() : this.registrationID;
+        return this.registrationID == null ? Codegen.empty() : this.registrationID;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sqlServerName;
 
     public Output<String> getSqlServerName() {
-        return this.sqlServerName == null ? Output.empty() : this.sqlServerName;
+        return this.sqlServerName == null ? Codegen.empty() : this.sqlServerName;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public SqlServerArgs(
@@ -123,14 +124,14 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SqlServerArgs() {
-        this.cores = Output.empty();
-        this.edition = Output.empty();
-        this.propertyBag = Output.empty();
-        this.registrationID = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sqlServerName = Output.empty();
-        this.sqlServerRegistrationName = Output.empty();
-        this.version = Output.empty();
+        this.cores = Codegen.empty();
+        this.edition = Codegen.empty();
+        this.propertyBag = Codegen.empty();
+        this.registrationID = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sqlServerName = Codegen.empty();
+        this.sqlServerRegistrationName = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cores(@Nullable Integer cores) {
-            this.cores = Output.ofNullable(cores);
+            this.cores = Codegen.ofNullable(cores);
             return this;
         }
         public Builder edition(@Nullable Output<String> edition) {
@@ -180,7 +181,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder edition(@Nullable String edition) {
-            this.edition = Output.ofNullable(edition);
+            this.edition = Codegen.ofNullable(edition);
             return this;
         }
         public Builder propertyBag(@Nullable Output<String> propertyBag) {
@@ -188,7 +189,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder propertyBag(@Nullable String propertyBag) {
-            this.propertyBag = Output.ofNullable(propertyBag);
+            this.propertyBag = Codegen.ofNullable(propertyBag);
             return this;
         }
         public Builder registrationID(@Nullable Output<String> registrationID) {
@@ -196,7 +197,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder registrationID(@Nullable String registrationID) {
-            this.registrationID = Output.ofNullable(registrationID);
+            this.registrationID = Codegen.ofNullable(registrationID);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -212,7 +213,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqlServerName(@Nullable String sqlServerName) {
-            this.sqlServerName = Output.ofNullable(sqlServerName);
+            this.sqlServerName = Codegen.ofNullable(sqlServerName);
             return this;
         }
         public Builder sqlServerRegistrationName(Output<String> sqlServerRegistrationName) {
@@ -228,7 +229,7 @@ public final class SqlServerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public SqlServerArgs build() {
             return new SqlServerArgs(cores, edition, propertyBag, registrationID, resourceGroupName, sqlServerName, sqlServerRegistrationName, version);

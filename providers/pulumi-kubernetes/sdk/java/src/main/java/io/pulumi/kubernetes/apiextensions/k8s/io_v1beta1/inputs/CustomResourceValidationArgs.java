@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.JSONSchemaPropsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema;
 
     public Output<JSONSchemaPropsArgs> getOpenAPIV3Schema() {
-        return this.openAPIV3Schema == null ? Output.empty() : this.openAPIV3Schema;
+        return this.openAPIV3Schema == null ? Codegen.empty() : this.openAPIV3Schema;
     }
 
     public CustomResourceValidationArgs(@Nullable Output<JSONSchemaPropsArgs> openAPIV3Schema) {
@@ -34,7 +35,7 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
     }
 
     private CustomResourceValidationArgs() {
-        this.openAPIV3Schema = Output.empty();
+        this.openAPIV3Schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CustomResourceValidationArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder openAPIV3Schema(@Nullable JSONSchemaPropsArgs openAPIV3Schema) {
-            this.openAPIV3Schema = Output.ofNullable(openAPIV3Schema);
+            this.openAPIV3Schema = Codegen.ofNullable(openAPIV3Schema);
             return this;
         }        public CustomResourceValidationArgs build() {
             return new CustomResourceValidationArgs(openAPIV3Schema);

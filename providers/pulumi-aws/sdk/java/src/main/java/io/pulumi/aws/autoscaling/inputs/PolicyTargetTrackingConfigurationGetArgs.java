@@ -7,6 +7,7 @@ import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationCustomi
 import io.pulumi.aws.autoscaling.inputs.PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
       private final @Nullable Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> customizedMetricSpecification;
 
     public Output<PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs> getCustomizedMetricSpecification() {
-        return this.customizedMetricSpecification == null ? Output.empty() : this.customizedMetricSpecification;
+        return this.customizedMetricSpecification == null ? Codegen.empty() : this.customizedMetricSpecification;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> disableScaleIn;
 
     public Output<Boolean> getDisableScaleIn() {
-        return this.disableScaleIn == null ? Output.empty() : this.disableScaleIn;
+        return this.disableScaleIn == null ? Codegen.empty() : this.disableScaleIn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
       private final @Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification;
 
     public Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> getPredefinedMetricSpecification() {
-        return this.predefinedMetricSpecification == null ? Output.empty() : this.predefinedMetricSpecification;
+        return this.predefinedMetricSpecification == null ? Codegen.empty() : this.predefinedMetricSpecification;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
     }
 
     private PolicyTargetTrackingConfigurationGetArgs() {
-        this.customizedMetricSpecification = Output.empty();
-        this.disableScaleIn = Output.empty();
-        this.predefinedMetricSpecification = Output.empty();
-        this.targetValue = Output.empty();
+        this.customizedMetricSpecification = Codegen.empty();
+        this.disableScaleIn = Codegen.empty();
+        this.predefinedMetricSpecification = Codegen.empty();
+        this.targetValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder customizedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationCustomizedMetricSpecificationGetArgs customizedMetricSpecification) {
-            this.customizedMetricSpecification = Output.ofNullable(customizedMetricSpecification);
+            this.customizedMetricSpecification = Codegen.ofNullable(customizedMetricSpecification);
             return this;
         }
         public Builder disableScaleIn(@Nullable Output<Boolean> disableScaleIn) {
@@ -118,7 +119,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder disableScaleIn(@Nullable Boolean disableScaleIn) {
-            this.disableScaleIn = Output.ofNullable(disableScaleIn);
+            this.disableScaleIn = Codegen.ofNullable(disableScaleIn);
             return this;
         }
         public Builder predefinedMetricSpecification(@Nullable Output<PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs> predefinedMetricSpecification) {
@@ -126,7 +127,7 @@ public final class PolicyTargetTrackingConfigurationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder predefinedMetricSpecification(@Nullable PolicyTargetTrackingConfigurationPredefinedMetricSpecificationGetArgs predefinedMetricSpecification) {
-            this.predefinedMetricSpecification = Output.ofNullable(predefinedMetricSpecification);
+            this.predefinedMetricSpecification = Codegen.ofNullable(predefinedMetricSpecification);
             return this;
         }
         public Builder targetValue(Output<Double> targetValue) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.inputs.TimeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -76,10 +77,10 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BandwidthScheduleArgs() {
-        this.days = Output.empty();
-        this.rateInMbps = Output.empty();
-        this.start = Output.empty();
-        this.stop = Output.empty();
+        this.days = Codegen.empty();
+        this.rateInMbps = Codegen.empty();
+        this.start = Codegen.empty();
+        this.stop = Codegen.empty();
     }
 
     public static Builder builder() {

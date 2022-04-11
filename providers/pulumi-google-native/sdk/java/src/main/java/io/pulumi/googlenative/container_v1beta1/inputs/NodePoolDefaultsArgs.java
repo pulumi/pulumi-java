@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.NodeConfigDefaultsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults;
 
     public Output<NodeConfigDefaultsArgs> getNodeConfigDefaults() {
-        return this.nodeConfigDefaults == null ? Output.empty() : this.nodeConfigDefaults;
+        return this.nodeConfigDefaults == null ? Codegen.empty() : this.nodeConfigDefaults;
     }
 
     public NodePoolDefaultsArgs(@Nullable Output<NodeConfigDefaultsArgs> nodeConfigDefaults) {
@@ -34,7 +35,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private NodePoolDefaultsArgs() {
-        this.nodeConfigDefaults = Output.empty();
+        this.nodeConfigDefaults = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class NodePoolDefaultsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder nodeConfigDefaults(@Nullable NodeConfigDefaultsArgs nodeConfigDefaults) {
-            this.nodeConfigDefaults = Output.ofNullable(nodeConfigDefaults);
+            this.nodeConfigDefaults = Codegen.ofNullable(nodeConfigDefaults);
             return this;
         }        public NodePoolDefaultsArgs build() {
             return new NodePoolDefaultsArgs(nodeConfigDefaults);

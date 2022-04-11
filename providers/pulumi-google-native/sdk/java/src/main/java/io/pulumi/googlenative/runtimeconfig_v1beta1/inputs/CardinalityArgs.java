@@ -5,6 +5,7 @@ package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> number;
 
     public Output<Integer> getNumber() {
-        return this.number == null ? Output.empty() : this.number;
+        return this.number == null ? Codegen.empty() : this.number;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     public CardinalityArgs(
@@ -49,8 +50,8 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CardinalityArgs() {
-        this.number = Output.empty();
-        this.path = Output.empty();
+        this.number = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder number(@Nullable Integer number) {
-            this.number = Output.ofNullable(number);
+            this.number = Codegen.ofNullable(number);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -88,7 +89,7 @@ public final class CardinalityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }        public CardinalityArgs build() {
             return new CardinalityArgs(number, path);

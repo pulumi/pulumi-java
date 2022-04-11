@@ -7,6 +7,7 @@ import io.pulumi.azurenative.managedservices.inputs.PlanArgs;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationDefinitionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<PlanArgs> plan;
 
     public Output<PlanArgs> getPlan() {
-        return this.plan == null ? Output.empty() : this.plan;
+        return this.plan == null ? Codegen.empty() : this.plan;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<RegistrationDefinitionPropertiesArgs> properties;
 
     public Output<RegistrationDefinitionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> registrationDefinitionId;
 
     public Output<String> getRegistrationDefinitionId() {
-        return this.registrationDefinitionId == null ? Output.empty() : this.registrationDefinitionId;
+        return this.registrationDefinitionId == null ? Codegen.empty() : this.registrationDefinitionId;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
     }
 
     private RegistrationDefinitionArgs() {
-        this.plan = Output.empty();
-        this.properties = Output.empty();
-        this.registrationDefinitionId = Output.empty();
-        this.scope = Output.empty();
+        this.plan = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.registrationDefinitionId = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder plan(@Nullable PlanArgs plan) {
-            this.plan = Output.ofNullable(plan);
+            this.plan = Codegen.ofNullable(plan);
             return this;
         }
         public Builder properties(@Nullable Output<RegistrationDefinitionPropertiesArgs> properties) {
@@ -117,7 +118,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder properties(@Nullable RegistrationDefinitionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder registrationDefinitionId(@Nullable Output<String> registrationDefinitionId) {
@@ -125,7 +126,7 @@ public final class RegistrationDefinitionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder registrationDefinitionId(@Nullable String registrationDefinitionId) {
-            this.registrationDefinitionId = Output.ofNullable(registrationDefinitionId);
+            this.registrationDefinitionId = Codegen.ofNullable(registrationDefinitionId);
             return this;
         }
         public Builder scope(Output<String> scope) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.apimanagement.enums.SchemaType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
-        return this.schemaId == null ? Output.empty() : this.schemaId;
+        return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public SchemaArgs(
@@ -98,12 +99,12 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaArgs() {
-        this.description = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.schemaId = Output.empty();
-        this.schemaType = Output.empty();
-        this.serviceName = Output.empty();
-        this.value = Output.empty();
+        this.description = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.schemaId = Codegen.empty();
+        this.schemaType = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -157,7 +158,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Output.ofNullable(schemaId);
+            this.schemaId = Codegen.ofNullable(schemaId);
             return this;
         }
         public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
@@ -181,7 +182,7 @@ public final class SchemaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public SchemaArgs build() {
             return new SchemaArgs(description, resourceGroupName, schemaId, schemaType, serviceName, value);

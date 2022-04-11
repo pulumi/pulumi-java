@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.inputs.AssignedStandardItemArgs;
 import io.pulumi.azurenative.security.inputs.AssignmentPropertiesAdditionalDataArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +28,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AssignmentPropertiesAdditionalDataArgs> additionalData;
 
     public Output<AssignmentPropertiesAdditionalDataArgs> getAdditionalData() {
-        return this.additionalData == null ? Output.empty() : this.additionalData;
+        return this.additionalData == null ? Codegen.empty() : this.additionalData;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AssignedComponentItemArgs> assignedComponent;
 
     public Output<AssignedComponentItemArgs> getAssignedComponent() {
-        return this.assignedComponent == null ? Output.empty() : this.assignedComponent;
+        return this.assignedComponent == null ? Codegen.empty() : this.assignedComponent;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AssignedStandardItemArgs> assignedStandard;
 
     public Output<AssignedStandardItemArgs> getAssignedStandard() {
-        return this.assignedStandard == null ? Output.empty() : this.assignedStandard;
+        return this.assignedStandard == null ? Codegen.empty() : this.assignedStandard;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> assignmentId;
 
     public Output<String> getAssignmentId() {
-        return this.assignmentId == null ? Output.empty() : this.assignmentId;
+        return this.assignmentId == null ? Codegen.empty() : this.assignmentId;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> effect;
 
     public Output<String> getEffect() {
-        return this.effect == null ? Output.empty() : this.effect;
+        return this.effect == null ? Codegen.empty() : this.effect;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> expiresOn;
 
     public Output<String> getExpiresOn() {
-        return this.expiresOn == null ? Output.empty() : this.expiresOn;
+        return this.expiresOn == null ? Codegen.empty() : this.expiresOn;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public AssignmentArgs(
@@ -205,20 +206,20 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssignmentArgs() {
-        this.additionalData = Output.empty();
-        this.assignedComponent = Output.empty();
-        this.assignedStandard = Output.empty();
-        this.assignmentId = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.effect = Output.empty();
-        this.expiresOn = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
+        this.additionalData = Codegen.empty();
+        this.assignedComponent = Codegen.empty();
+        this.assignedStandard = Codegen.empty();
+        this.assignmentId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.effect = Codegen.empty();
+        this.expiresOn = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -272,7 +273,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder additionalData(@Nullable AssignmentPropertiesAdditionalDataArgs additionalData) {
-            this.additionalData = Output.ofNullable(additionalData);
+            this.additionalData = Codegen.ofNullable(additionalData);
             return this;
         }
         public Builder assignedComponent(@Nullable Output<AssignedComponentItemArgs> assignedComponent) {
@@ -280,7 +281,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assignedComponent(@Nullable AssignedComponentItemArgs assignedComponent) {
-            this.assignedComponent = Output.ofNullable(assignedComponent);
+            this.assignedComponent = Codegen.ofNullable(assignedComponent);
             return this;
         }
         public Builder assignedStandard(@Nullable Output<AssignedStandardItemArgs> assignedStandard) {
@@ -288,7 +289,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assignedStandard(@Nullable AssignedStandardItemArgs assignedStandard) {
-            this.assignedStandard = Output.ofNullable(assignedStandard);
+            this.assignedStandard = Codegen.ofNullable(assignedStandard);
             return this;
         }
         public Builder assignmentId(@Nullable Output<String> assignmentId) {
@@ -296,7 +297,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder assignmentId(@Nullable String assignmentId) {
-            this.assignmentId = Output.ofNullable(assignmentId);
+            this.assignmentId = Codegen.ofNullable(assignmentId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -304,7 +305,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -312,7 +313,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder effect(@Nullable Output<String> effect) {
@@ -320,7 +321,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder effect(@Nullable String effect) {
-            this.effect = Output.ofNullable(effect);
+            this.effect = Codegen.ofNullable(effect);
             return this;
         }
         public Builder expiresOn(@Nullable Output<String> expiresOn) {
@@ -328,7 +329,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expiresOn(@Nullable String expiresOn) {
-            this.expiresOn = Output.ofNullable(expiresOn);
+            this.expiresOn = Codegen.ofNullable(expiresOn);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -336,7 +337,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -344,7 +345,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -352,7 +353,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -368,7 +369,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -376,7 +377,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public AssignmentArgs build() {
             return new AssignmentArgs(additionalData, assignedComponent, assignedStandard, assignmentId, description, displayName, effect, expiresOn, kind, location, metadata, resourceGroupName, scope, tags);

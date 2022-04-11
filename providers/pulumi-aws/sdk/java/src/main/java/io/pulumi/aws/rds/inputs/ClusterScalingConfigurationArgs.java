@@ -5,6 +5,7 @@ package io.pulumi.aws.rds.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> autoPause;
 
     public Output<Boolean> getAutoPause() {
-        return this.autoPause == null ? Output.empty() : this.autoPause;
+        return this.autoPause == null ? Codegen.empty() : this.autoPause;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> maxCapacity;
 
     public Output<Integer> getMaxCapacity() {
-        return this.maxCapacity == null ? Output.empty() : this.maxCapacity;
+        return this.maxCapacity == null ? Codegen.empty() : this.maxCapacity;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> minCapacity;
 
     public Output<Integer> getMinCapacity() {
-        return this.minCapacity == null ? Output.empty() : this.minCapacity;
+        return this.minCapacity == null ? Codegen.empty() : this.minCapacity;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> secondsUntilAutoPause;
 
     public Output<Integer> getSecondsUntilAutoPause() {
-        return this.secondsUntilAutoPause == null ? Output.empty() : this.secondsUntilAutoPause;
+        return this.secondsUntilAutoPause == null ? Codegen.empty() : this.secondsUntilAutoPause;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> timeoutAction;
 
     public Output<String> getTimeoutAction() {
-        return this.timeoutAction == null ? Output.empty() : this.timeoutAction;
+        return this.timeoutAction == null ? Codegen.empty() : this.timeoutAction;
     }
 
     public ClusterScalingConfigurationArgs(
@@ -85,11 +86,11 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
     }
 
     private ClusterScalingConfigurationArgs() {
-        this.autoPause = Output.empty();
-        this.maxCapacity = Output.empty();
-        this.minCapacity = Output.empty();
-        this.secondsUntilAutoPause = Output.empty();
-        this.timeoutAction = Output.empty();
+        this.autoPause = Codegen.empty();
+        this.maxCapacity = Codegen.empty();
+        this.minCapacity = Codegen.empty();
+        this.secondsUntilAutoPause = Codegen.empty();
+        this.timeoutAction = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder autoPause(@Nullable Boolean autoPause) {
-            this.autoPause = Output.ofNullable(autoPause);
+            this.autoPause = Codegen.ofNullable(autoPause);
             return this;
         }
         public Builder maxCapacity(@Nullable Output<Integer> maxCapacity) {
@@ -133,7 +134,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder maxCapacity(@Nullable Integer maxCapacity) {
-            this.maxCapacity = Output.ofNullable(maxCapacity);
+            this.maxCapacity = Codegen.ofNullable(maxCapacity);
             return this;
         }
         public Builder minCapacity(@Nullable Output<Integer> minCapacity) {
@@ -141,7 +142,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder minCapacity(@Nullable Integer minCapacity) {
-            this.minCapacity = Output.ofNullable(minCapacity);
+            this.minCapacity = Codegen.ofNullable(minCapacity);
             return this;
         }
         public Builder secondsUntilAutoPause(@Nullable Output<Integer> secondsUntilAutoPause) {
@@ -149,7 +150,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder secondsUntilAutoPause(@Nullable Integer secondsUntilAutoPause) {
-            this.secondsUntilAutoPause = Output.ofNullable(secondsUntilAutoPause);
+            this.secondsUntilAutoPause = Codegen.ofNullable(secondsUntilAutoPause);
             return this;
         }
         public Builder timeoutAction(@Nullable Output<String> timeoutAction) {
@@ -157,7 +158,7 @@ public final class ClusterScalingConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder timeoutAction(@Nullable String timeoutAction) {
-            this.timeoutAction = Output.ofNullable(timeoutAction);
+            this.timeoutAction = Codegen.ofNullable(timeoutAction);
             return this;
         }        public ClusterScalingConfigurationArgs build() {
             return new ClusterScalingConfigurationArgs(autoPause, maxCapacity, minCapacity, secondsUntilAutoPause, timeoutAction);

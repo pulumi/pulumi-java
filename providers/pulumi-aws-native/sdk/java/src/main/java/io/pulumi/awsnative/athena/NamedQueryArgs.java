@@ -5,6 +5,7 @@ package io.pulumi.awsnative.athena;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workGroup;
 
     public Output<String> getWorkGroup() {
-        return this.workGroup == null ? Output.empty() : this.workGroup;
+        return this.workGroup == null ? Codegen.empty() : this.workGroup;
     }
 
     public NamedQueryArgs(
@@ -83,11 +84,11 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamedQueryArgs() {
-        this.database = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.queryString = Output.empty();
-        this.workGroup = Output.empty();
+        this.database = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.queryString = Codegen.empty();
+        this.workGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -139,7 +140,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder queryString(Output<String> queryString) {
@@ -155,7 +156,7 @@ public final class NamedQueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workGroup(@Nullable String workGroup) {
-            this.workGroup = Output.ofNullable(workGroup);
+            this.workGroup = Codegen.ofNullable(workGroup);
             return this;
         }        public NamedQueryArgs build() {
             return new NamedQueryArgs(database, description, name, queryString, workGroup);

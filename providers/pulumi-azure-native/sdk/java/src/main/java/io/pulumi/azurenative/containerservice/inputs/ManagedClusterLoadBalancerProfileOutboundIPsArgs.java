@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
       private final @Nullable Output<List<ResourceReferenceArgs>> publicIPs;
 
     public Output<List<ResourceReferenceArgs>> getPublicIPs() {
-        return this.publicIPs == null ? Output.empty() : this.publicIPs;
+        return this.publicIPs == null ? Codegen.empty() : this.publicIPs;
     }
 
     public ManagedClusterLoadBalancerProfileOutboundIPsArgs(@Nullable Output<List<ResourceReferenceArgs>> publicIPs) {
@@ -35,7 +36,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
     }
 
     private ManagedClusterLoadBalancerProfileOutboundIPsArgs() {
-        this.publicIPs = Output.empty();
+        this.publicIPs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ManagedClusterLoadBalancerProfileOutboundIPsArgs extends io.p
             return this;
         }
         public Builder publicIPs(@Nullable List<ResourceReferenceArgs> publicIPs) {
-            this.publicIPs = Output.ofNullable(publicIPs);
+            this.publicIPs = Codegen.ofNullable(publicIPs);
             return this;
         }
         public Builder publicIPs(ResourceReferenceArgs... publicIPs) {

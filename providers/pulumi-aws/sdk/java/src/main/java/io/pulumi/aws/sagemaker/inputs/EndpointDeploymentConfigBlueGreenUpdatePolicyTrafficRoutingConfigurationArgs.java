@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePol
 import io.pulumi.aws.sagemaker.inputs.EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
       private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> canarySize;
 
     public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs> getCanarySize() {
-        return this.canarySize == null ? Output.empty() : this.canarySize;
+        return this.canarySize == null ? Codegen.empty() : this.canarySize;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
       private final @Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize;
 
     public Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> getLinearStepSize() {
-        return this.linearStepSize == null ? Output.empty() : this.linearStepSize;
+        return this.linearStepSize == null ? Codegen.empty() : this.linearStepSize;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     }
 
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationArgs() {
-        this.canarySize = Output.empty();
-        this.linearStepSize = Output.empty();
-        this.type = Output.empty();
-        this.waitIntervalInSeconds = Output.empty();
+        this.canarySize = Codegen.empty();
+        this.linearStepSize = Codegen.empty();
+        this.type = Codegen.empty();
+        this.waitIntervalInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             return this;
         }
         public Builder canarySize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs canarySize) {
-            this.canarySize = Output.ofNullable(canarySize);
+            this.canarySize = Codegen.ofNullable(canarySize);
             return this;
         }
         public Builder linearStepSize(@Nullable Output<EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs> linearStepSize) {
@@ -118,7 +119,7 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
             return this;
         }
         public Builder linearStepSize(@Nullable EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationLinearStepSizeArgs linearStepSize) {
-            this.linearStepSize = Output.ofNullable(linearStepSize);
+            this.linearStepSize = Codegen.ofNullable(linearStepSize);
             return this;
         }
         public Builder type(Output<String> type) {

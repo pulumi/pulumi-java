@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.SkuArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkProfileArgs> networkProfile;
 
     public Output<NetworkProfileArgs> getNetworkProfile() {
-        return this.networkProfile == null ? Output.empty() : this.networkProfile;
+        return this.networkProfile == null ? Codegen.empty() : this.networkProfile;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stampId;
 
     public Output<String> getStampId() {
-        return this.stampId == null ? Output.empty() : this.stampId;
+        return this.stampId == null ? Codegen.empty() : this.stampId;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public DedicatedHsmArgs(
@@ -126,14 +127,14 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DedicatedHsmArgs() {
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.networkProfile = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.stampId = Output.empty();
-        this.tags = Output.empty();
-        this.zones = Output.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.networkProfile = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.stampId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -183,7 +184,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder networkProfile(@Nullable Output<NetworkProfileArgs> networkProfile) {
@@ -191,7 +192,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkProfile(@Nullable NetworkProfileArgs networkProfile) {
-            this.networkProfile = Output.ofNullable(networkProfile);
+            this.networkProfile = Codegen.ofNullable(networkProfile);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -215,7 +216,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stampId(@Nullable String stampId) {
-            this.stampId = Output.ofNullable(stampId);
+            this.stampId = Codegen.ofNullable(stampId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -223,7 +224,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -231,7 +232,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeClusterArgs;
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.ScopeNamespaceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScopeClusterArgs> cluster;
 
     public Output<ScopeClusterArgs> getCluster() {
-        return this.cluster == null ? Output.empty() : this.cluster;
+        return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScopeNamespaceArgs> namespace;
 
     public Output<ScopeNamespaceArgs> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     public ScopeArgs(
@@ -49,8 +50,8 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScopeArgs() {
-        this.cluster = Output.empty();
-        this.namespace = Output.empty();
+        this.cluster = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cluster(@Nullable ScopeClusterArgs cluster) {
-            this.cluster = Output.ofNullable(cluster);
+            this.cluster = Codegen.ofNullable(cluster);
             return this;
         }
         public Builder namespace(@Nullable Output<ScopeNamespaceArgs> namespace) {
@@ -88,7 +89,7 @@ public final class ScopeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namespace(@Nullable ScopeNamespaceArgs namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }        public ScopeArgs build() {
             return new ScopeArgs(cluster, namespace);

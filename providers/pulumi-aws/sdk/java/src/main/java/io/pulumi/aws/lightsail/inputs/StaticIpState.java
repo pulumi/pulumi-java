@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> supportCode;
 
     public Output<String> getSupportCode() {
-        return this.supportCode == null ? Output.empty() : this.supportCode;
+        return this.supportCode == null ? Codegen.empty() : this.supportCode;
     }
 
     public StaticIpState(
@@ -70,10 +71,10 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StaticIpState() {
-        this.arn = Output.empty();
-        this.ipAddress = Output.empty();
-        this.name = Output.empty();
-        this.supportCode = Output.empty();
+        this.arn = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.supportCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -115,7 +116,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -123,7 +124,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder supportCode(@Nullable Output<String> supportCode) {
@@ -131,7 +132,7 @@ public final class StaticIpState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder supportCode(@Nullable String supportCode) {
-            this.supportCode = Output.ofNullable(supportCode);
+            this.supportCode = Codegen.ofNullable(supportCode);
             return this;
         }        public StaticIpState build() {
             return new StaticIpState(arn, ipAddress, name, supportCode);

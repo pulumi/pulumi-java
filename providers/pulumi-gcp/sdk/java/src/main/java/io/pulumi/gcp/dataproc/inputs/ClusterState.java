@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterClusterConfigGetArgs> clusterConfig;
 
     public Output<ClusterClusterConfigGetArgs> getClusterConfig() {
-        return this.clusterConfig == null ? Output.empty() : this.clusterConfig;
+        return this.clusterConfig == null ? Codegen.empty() : this.clusterConfig;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> gracefulDecommissionTimeout;
 
     public Output<String> getGracefulDecommissionTimeout() {
-        return this.gracefulDecommissionTimeout == null ? Output.empty() : this.gracefulDecommissionTimeout;
+        return this.gracefulDecommissionTimeout == null ? Codegen.empty() : this.gracefulDecommissionTimeout;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     public ClusterState(
@@ -105,12 +106,12 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterState() {
-        this.clusterConfig = Output.empty();
-        this.gracefulDecommissionTimeout = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.region = Output.empty();
+        this.clusterConfig = Codegen.empty();
+        this.gracefulDecommissionTimeout = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.region = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterConfig(@Nullable ClusterClusterConfigGetArgs clusterConfig) {
-            this.clusterConfig = Output.ofNullable(clusterConfig);
+            this.clusterConfig = Codegen.ofNullable(clusterConfig);
             return this;
         }
         public Builder gracefulDecommissionTimeout(@Nullable Output<String> gracefulDecommissionTimeout) {
@@ -156,7 +157,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gracefulDecommissionTimeout(@Nullable String gracefulDecommissionTimeout) {
-            this.gracefulDecommissionTimeout = Output.ofNullable(gracefulDecommissionTimeout);
+            this.gracefulDecommissionTimeout = Codegen.ofNullable(gracefulDecommissionTimeout);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -164,7 +165,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -172,7 +173,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -180,7 +181,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -188,7 +189,7 @@ public final class ClusterState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }        public ClusterState build() {
             return new ClusterState(clusterConfig, gracefulDecommissionTimeout, labels, name, project, region);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> audience;
 
     public Output<String> getAudience() {
-        return this.audience == null ? Output.empty() : this.audience;
+        return this.audience == null ? Codegen.empty() : this.audience;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> issuer;
 
     public Output<String> getIssuer() {
-        return this.issuer == null ? Output.empty() : this.issuer;
+        return this.issuer == null ? Codegen.empty() : this.issuer;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subject;
 
     public Output<String> getSubject() {
-        return this.subject == null ? Output.empty() : this.subject;
+        return this.subject == null ? Codegen.empty() : this.subject;
     }
 
     public JwtClaimsArgs(
@@ -61,9 +62,9 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private JwtClaimsArgs() {
-        this.audience = Output.empty();
-        this.issuer = Output.empty();
-        this.subject = Output.empty();
+        this.audience = Codegen.empty();
+        this.issuer = Codegen.empty();
+        this.subject = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder audience(@Nullable String audience) {
-            this.audience = Output.ofNullable(audience);
+            this.audience = Codegen.ofNullable(audience);
             return this;
         }
         public Builder issuer(@Nullable Output<String> issuer) {
@@ -103,7 +104,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder issuer(@Nullable String issuer) {
-            this.issuer = Output.ofNullable(issuer);
+            this.issuer = Codegen.ofNullable(issuer);
             return this;
         }
         public Builder subject(@Nullable Output<String> subject) {
@@ -111,7 +112,7 @@ public final class JwtClaimsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subject(@Nullable String subject) {
-            this.subject = Output.ofNullable(subject);
+            this.subject = Codegen.ofNullable(subject);
             return this;
         }        public JwtClaimsArgs build() {
             return new JwtClaimsArgs(audience, issuer, subject);

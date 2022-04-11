@@ -5,6 +5,7 @@ package io.pulumi.aws.directconnect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> amazonAddress;
 
     public Output<String> getAmazonAddress() {
-        return this.amazonAddress == null ? Output.empty() : this.amazonAddress;
+        return this.amazonAddress == null ? Codegen.empty() : this.amazonAddress;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bgpAuthKey;
 
     public Output<String> getBgpAuthKey() {
-        return this.bgpAuthKey == null ? Output.empty() : this.bgpAuthKey;
+        return this.bgpAuthKey == null ? Codegen.empty() : this.bgpAuthKey;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerAddress;
 
     public Output<String> getCustomerAddress() {
-        return this.customerAddress == null ? Output.empty() : this.customerAddress;
+        return this.customerAddress == null ? Codegen.empty() : this.customerAddress;
     }
 
     /**
@@ -99,12 +100,12 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BgpPeerArgs() {
-        this.addressFamily = Output.empty();
-        this.amazonAddress = Output.empty();
-        this.bgpAsn = Output.empty();
-        this.bgpAuthKey = Output.empty();
-        this.customerAddress = Output.empty();
-        this.virtualInterfaceId = Output.empty();
+        this.addressFamily = Codegen.empty();
+        this.amazonAddress = Codegen.empty();
+        this.bgpAsn = Codegen.empty();
+        this.bgpAuthKey = Codegen.empty();
+        this.customerAddress = Codegen.empty();
+        this.virtualInterfaceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder amazonAddress(@Nullable String amazonAddress) {
-            this.amazonAddress = Output.ofNullable(amazonAddress);
+            this.amazonAddress = Codegen.ofNullable(amazonAddress);
             return this;
         }
         public Builder bgpAsn(Output<Integer> bgpAsn) {
@@ -166,7 +167,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bgpAuthKey(@Nullable String bgpAuthKey) {
-            this.bgpAuthKey = Output.ofNullable(bgpAuthKey);
+            this.bgpAuthKey = Codegen.ofNullable(bgpAuthKey);
             return this;
         }
         public Builder customerAddress(@Nullable Output<String> customerAddress) {
@@ -174,7 +175,7 @@ public final class BgpPeerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerAddress(@Nullable String customerAddress) {
-            this.customerAddress = Output.ofNullable(customerAddress);
+            this.customerAddress = Codegen.ofNullable(customerAddress);
             return this;
         }
         public Builder virtualInterfaceId(Output<String> virtualInterfaceId) {

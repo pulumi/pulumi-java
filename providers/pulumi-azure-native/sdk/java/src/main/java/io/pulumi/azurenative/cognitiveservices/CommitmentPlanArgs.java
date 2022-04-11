@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cognitiveservices;
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPlanPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> commitmentPlanName;
 
     public Output<String> getCommitmentPlanName() {
-        return this.commitmentPlanName == null ? Output.empty() : this.commitmentPlanName;
+        return this.commitmentPlanName == null ? Codegen.empty() : this.commitmentPlanName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CommitmentPlanPropertiesArgs> properties;
 
     public Output<CommitmentPlanPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CommitmentPlanArgs() {
-        this.accountName = Output.empty();
-        this.commitmentPlanName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.commitmentPlanName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder commitmentPlanName(@Nullable String commitmentPlanName) {
-            this.commitmentPlanName = Output.ofNullable(commitmentPlanName);
+            this.commitmentPlanName = Codegen.ofNullable(commitmentPlanName);
             return this;
         }
         public Builder properties(@Nullable Output<CommitmentPlanPropertiesArgs> properties) {
@@ -124,7 +125,7 @@ public final class CommitmentPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable CommitmentPlanPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

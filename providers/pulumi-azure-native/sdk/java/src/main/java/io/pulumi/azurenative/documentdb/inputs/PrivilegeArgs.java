@@ -6,6 +6,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 import io.pulumi.azurenative.documentdb.inputs.PrivilegeResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> actions;
 
     public Output<List<String>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PrivilegeResourceArgs> resource;
 
     public Output<PrivilegeResourceArgs> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     public PrivilegeArgs(
@@ -50,8 +51,8 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PrivilegeArgs() {
-        this.actions = Output.empty();
-        this.resource = Output.empty();
+        this.actions = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable List<String> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(String... actions) {
@@ -92,7 +93,7 @@ public final class PrivilegeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resource(@Nullable PrivilegeResourceArgs resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }        public PrivilegeArgs build() {
             return new PrivilegeArgs(actions, resource);

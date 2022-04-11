@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
       private final @Nullable Output<String> idleTimeout;
 
     public Output<String> getIdleTimeout() {
-        return this.idleTimeout == null ? Output.empty() : this.idleTimeout;
+        return this.idleTimeout == null ? Codegen.empty() : this.idleTimeout;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
     }
 
     private StandardAppVersionBasicScalingGetArgs() {
-        this.idleTimeout = Output.empty();
-        this.maxInstances = Output.empty();
+        this.idleTimeout = Codegen.empty();
+        this.maxInstances = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class StandardAppVersionBasicScalingGetArgs extends io.pulumi.resou
             return this;
         }
         public Builder idleTimeout(@Nullable String idleTimeout) {
-            this.idleTimeout = Output.ofNullable(idleTimeout);
+            this.idleTimeout = Codegen.ofNullable(idleTimeout);
             return this;
         }
         public Builder maxInstances(Output<Integer> maxInstances) {

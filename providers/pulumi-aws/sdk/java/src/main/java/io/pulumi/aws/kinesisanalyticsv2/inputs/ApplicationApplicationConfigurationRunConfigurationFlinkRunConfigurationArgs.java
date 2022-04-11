@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
       private final @Nullable Output<Boolean> allowNonRestoredState;
 
     public Output<Boolean> getAllowNonRestoredState() {
-        return this.allowNonRestoredState == null ? Output.empty() : this.allowNonRestoredState;
+        return this.allowNonRestoredState == null ? Codegen.empty() : this.allowNonRestoredState;
     }
 
     public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs(@Nullable Output<Boolean> allowNonRestoredState) {
@@ -30,7 +31,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
     }
 
     private ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs() {
-        this.allowNonRestoredState = Output.empty();
+        this.allowNonRestoredState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ApplicationApplicationConfigurationRunConfigurationFlinkRunCo
             return this;
         }
         public Builder allowNonRestoredState(@Nullable Boolean allowNonRestoredState) {
-            this.allowNonRestoredState = Output.ofNullable(allowNonRestoredState);
+            this.allowNonRestoredState = Codegen.ofNullable(allowNonRestoredState);
             return this;
         }        public ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs build() {
             return new ApplicationApplicationConfigurationRunConfigurationFlinkRunConfigurationArgs(allowNonRestoredState);

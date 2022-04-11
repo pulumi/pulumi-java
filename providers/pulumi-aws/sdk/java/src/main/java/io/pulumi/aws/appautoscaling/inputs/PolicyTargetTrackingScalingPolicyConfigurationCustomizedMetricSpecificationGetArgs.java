@@ -6,6 +6,7 @@ package io.pulumi.aws.appautoscaling.inputs;
 import io.pulumi.aws.appautoscaling.inputs.PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
       private final @Nullable Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> dimensions;
 
     public Output<List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
       private final @Nullable Output<String> unit;
 
     public Output<String> getUnit() {
-        return this.unit == null ? Output.empty() : this.unit;
+        return this.unit == null ? Codegen.empty() : this.unit;
     }
 
     public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs(
@@ -85,11 +86,11 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
     }
 
     private PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs() {
-        this.dimensions = Output.empty();
-        this.metricName = Output.empty();
-        this.namespace = Output.empty();
-        this.statistic = Output.empty();
-        this.unit = Output.empty();
+        this.dimensions = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.statistic = Codegen.empty();
+        this.unit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
             return this;
         }
         public Builder dimensions(@Nullable List<PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationDimensionGetArgs... dimensions) {
@@ -160,7 +161,7 @@ public final class PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetri
             return this;
         }
         public Builder unit(@Nullable String unit) {
-            this.unit = Output.ofNullable(unit);
+            this.unit = Codegen.ofNullable(unit);
             return this;
         }        public PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs build() {
             return new PolicyTargetTrackingScalingPolicyConfigurationCustomizedMetricSpecificationGetArgs(dimensions, metricName, namespace, statistic, unit);

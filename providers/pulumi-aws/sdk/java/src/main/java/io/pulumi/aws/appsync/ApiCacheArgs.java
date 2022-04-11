@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -46,7 +47,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
     public Output<Boolean> getAtRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Output.empty() : this.atRestEncryptionEnabled;
+        return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
     public Output<Boolean> getTransitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Output.empty() : this.transitEncryptionEnabled;
+        return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
     }
 
     /**
@@ -98,12 +99,12 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiCacheArgs() {
-        this.apiCachingBehavior = Output.empty();
-        this.apiId = Output.empty();
-        this.atRestEncryptionEnabled = Output.empty();
-        this.transitEncryptionEnabled = Output.empty();
-        this.ttl = Output.empty();
-        this.type = Output.empty();
+        this.apiCachingBehavior = Codegen.empty();
+        this.apiId = Codegen.empty();
+        this.atRestEncryptionEnabled = Codegen.empty();
+        this.transitEncryptionEnabled = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
+            this.atRestEncryptionEnabled = Codegen.ofNullable(atRestEncryptionEnabled);
             return this;
         }
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
@@ -165,7 +166,7 @@ public final class ApiCacheArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
+            this.transitEncryptionEnabled = Codegen.ofNullable(transitEncryptionEnabled);
             return this;
         }
         public Builder ttl(Output<Integer> ttl) {

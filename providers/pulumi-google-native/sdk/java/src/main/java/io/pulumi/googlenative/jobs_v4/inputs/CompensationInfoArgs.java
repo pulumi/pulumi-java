@@ -5,6 +5,7 @@ package io.pulumi.googlenative.jobs_v4.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.jobs_v4.inputs.CompensationEntryArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<CompensationEntryArgs>> entries;
 
     public Output<List<CompensationEntryArgs>> getEntries() {
-        return this.entries == null ? Output.empty() : this.entries;
+        return this.entries == null ? Codegen.empty() : this.entries;
     }
 
     public CompensationInfoArgs(@Nullable Output<List<CompensationEntryArgs>> entries) {
@@ -35,7 +36,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private CompensationInfoArgs() {
-        this.entries = Output.empty();
+        this.entries = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CompensationInfoArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder entries(@Nullable List<CompensationEntryArgs> entries) {
-            this.entries = Output.ofNullable(entries);
+            this.entries = Codegen.ofNullable(entries);
             return this;
         }
         public Builder entries(CompensationEntryArgs... entries) {

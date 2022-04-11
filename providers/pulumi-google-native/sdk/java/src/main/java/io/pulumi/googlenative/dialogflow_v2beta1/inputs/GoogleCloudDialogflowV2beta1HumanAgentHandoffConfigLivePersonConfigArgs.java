@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePerson
     }
 
     private GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigArgs() {
-        this.accountNumber = Output.empty();
+        this.accountNumber = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.aws.ssm.inputs;
 import io.pulumi.aws.ssm.inputs.MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
       private final @Nullable Output<String> documentVersion;
 
     public Output<String> getDocumentVersion() {
-        return this.documentVersion == null ? Output.empty() : this.documentVersion;
+        return this.documentVersion == null ? Codegen.empty() : this.documentVersion;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
       private final @Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs>> parameters;
 
     public Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     public MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs(
@@ -46,8 +47,8 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
     }
 
     private MaintenanceWindowTaskTaskInvocationParametersAutomationParametersGetArgs() {
-        this.documentVersion = Output.empty();
-        this.parameters = Output.empty();
+        this.documentVersion = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
             return this;
         }
         public Builder documentVersion(@Nullable String documentVersion) {
-            this.documentVersion = Output.ofNullable(documentVersion);
+            this.documentVersion = Codegen.ofNullable(documentVersion);
             return this;
         }
         public Builder parameters(@Nullable Output<List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs>> parameters) {
@@ -85,7 +86,7 @@ public final class MaintenanceWindowTaskTaskInvocationParametersAutomationParame
             return this;
         }
         public Builder parameters(@Nullable List<MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(MaintenanceWindowTaskTaskInvocationParametersAutomationParametersParameterGetArgs... parameters) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> excludePrefixes;
 
     public Output<List<String>> getExcludePrefixes() {
-        return this.excludePrefixes == null ? Output.empty() : this.excludePrefixes;
+        return this.excludePrefixes == null ? Codegen.empty() : this.excludePrefixes;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> includePrefixes;
 
     public Output<List<String>> getIncludePrefixes() {
-        return this.includePrefixes == null ? Output.empty() : this.includePrefixes;
+        return this.includePrefixes == null ? Codegen.empty() : this.includePrefixes;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lastModifiedBefore;
 
     public Output<String> getLastModifiedBefore() {
-        return this.lastModifiedBefore == null ? Output.empty() : this.lastModifiedBefore;
+        return this.lastModifiedBefore == null ? Codegen.empty() : this.lastModifiedBefore;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> lastModifiedSince;
 
     public Output<String> getLastModifiedSince() {
-        return this.lastModifiedSince == null ? Output.empty() : this.lastModifiedSince;
+        return this.lastModifiedSince == null ? Codegen.empty() : this.lastModifiedSince;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> maxTimeElapsedSinceLastModification;
 
     public Output<String> getMaxTimeElapsedSinceLastModification() {
-        return this.maxTimeElapsedSinceLastModification == null ? Output.empty() : this.maxTimeElapsedSinceLastModification;
+        return this.maxTimeElapsedSinceLastModification == null ? Codegen.empty() : this.maxTimeElapsedSinceLastModification;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> minTimeElapsedSinceLastModification;
 
     public Output<String> getMinTimeElapsedSinceLastModification() {
-        return this.minTimeElapsedSinceLastModification == null ? Output.empty() : this.minTimeElapsedSinceLastModification;
+        return this.minTimeElapsedSinceLastModification == null ? Codegen.empty() : this.minTimeElapsedSinceLastModification;
     }
 
     public ObjectConditionsArgs(
@@ -101,12 +102,12 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ObjectConditionsArgs() {
-        this.excludePrefixes = Output.empty();
-        this.includePrefixes = Output.empty();
-        this.lastModifiedBefore = Output.empty();
-        this.lastModifiedSince = Output.empty();
-        this.maxTimeElapsedSinceLastModification = Output.empty();
-        this.minTimeElapsedSinceLastModification = Output.empty();
+        this.excludePrefixes = Codegen.empty();
+        this.includePrefixes = Codegen.empty();
+        this.lastModifiedBefore = Codegen.empty();
+        this.lastModifiedSince = Codegen.empty();
+        this.maxTimeElapsedSinceLastModification = Codegen.empty();
+        this.minTimeElapsedSinceLastModification = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder excludePrefixes(@Nullable List<String> excludePrefixes) {
-            this.excludePrefixes = Output.ofNullable(excludePrefixes);
+            this.excludePrefixes = Codegen.ofNullable(excludePrefixes);
             return this;
         }
         public Builder excludePrefixes(String... excludePrefixes) {
@@ -155,7 +156,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder includePrefixes(@Nullable List<String> includePrefixes) {
-            this.includePrefixes = Output.ofNullable(includePrefixes);
+            this.includePrefixes = Codegen.ofNullable(includePrefixes);
             return this;
         }
         public Builder includePrefixes(String... includePrefixes) {
@@ -166,7 +167,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lastModifiedBefore(@Nullable String lastModifiedBefore) {
-            this.lastModifiedBefore = Output.ofNullable(lastModifiedBefore);
+            this.lastModifiedBefore = Codegen.ofNullable(lastModifiedBefore);
             return this;
         }
         public Builder lastModifiedSince(@Nullable Output<String> lastModifiedSince) {
@@ -174,7 +175,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder lastModifiedSince(@Nullable String lastModifiedSince) {
-            this.lastModifiedSince = Output.ofNullable(lastModifiedSince);
+            this.lastModifiedSince = Codegen.ofNullable(lastModifiedSince);
             return this;
         }
         public Builder maxTimeElapsedSinceLastModification(@Nullable Output<String> maxTimeElapsedSinceLastModification) {
@@ -182,7 +183,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder maxTimeElapsedSinceLastModification(@Nullable String maxTimeElapsedSinceLastModification) {
-            this.maxTimeElapsedSinceLastModification = Output.ofNullable(maxTimeElapsedSinceLastModification);
+            this.maxTimeElapsedSinceLastModification = Codegen.ofNullable(maxTimeElapsedSinceLastModification);
             return this;
         }
         public Builder minTimeElapsedSinceLastModification(@Nullable Output<String> minTimeElapsedSinceLastModification) {
@@ -190,7 +191,7 @@ public final class ObjectConditionsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder minTimeElapsedSinceLastModification(@Nullable String minTimeElapsedSinceLastModification) {
-            this.minTimeElapsedSinceLastModification = Output.ofNullable(minTimeElapsedSinceLastModification);
+            this.minTimeElapsedSinceLastModification = Codegen.ofNullable(minTimeElapsedSinceLastModification);
             return this;
         }        public ObjectConditionsArgs build() {
             return new ObjectConditionsArgs(excludePrefixes, includePrefixes, lastModifiedBefore, lastModifiedSince, maxTimeElapsedSinceLastModification, minTimeElapsedSinceLastModification);

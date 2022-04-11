@@ -5,6 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> healthyThreshold;
 
     public Output<Integer> getHealthyThreshold() {
-        return this.healthyThreshold == null ? Output.empty() : this.healthyThreshold;
+        return this.healthyThreshold == null ? Codegen.empty() : this.healthyThreshold;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> intervalSeconds;
 
     public Output<Integer> getIntervalSeconds() {
-        return this.intervalSeconds == null ? Output.empty() : this.intervalSeconds;
+        return this.intervalSeconds == null ? Codegen.empty() : this.intervalSeconds;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> successCodes;
 
     public Output<String> getSuccessCodes() {
-        return this.successCodes == null ? Output.empty() : this.successCodes;
+        return this.successCodes == null ? Codegen.empty() : this.successCodes;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> timeoutSeconds;
 
     public Output<Integer> getTimeoutSeconds() {
-        return this.timeoutSeconds == null ? Output.empty() : this.timeoutSeconds;
+        return this.timeoutSeconds == null ? Codegen.empty() : this.timeoutSeconds;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> unhealthyThreshold;
 
     public Output<Integer> getUnhealthyThreshold() {
-        return this.unhealthyThreshold == null ? Output.empty() : this.unhealthyThreshold;
+        return this.unhealthyThreshold == null ? Codegen.empty() : this.unhealthyThreshold;
     }
 
     public ContainerHealthCheckConfigArgs(
@@ -101,12 +102,12 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
     }
 
     private ContainerHealthCheckConfigArgs() {
-        this.healthyThreshold = Output.empty();
-        this.intervalSeconds = Output.empty();
-        this.path = Output.empty();
-        this.successCodes = Output.empty();
-        this.timeoutSeconds = Output.empty();
-        this.unhealthyThreshold = Output.empty();
+        this.healthyThreshold = Codegen.empty();
+        this.intervalSeconds = Codegen.empty();
+        this.path = Codegen.empty();
+        this.successCodes = Codegen.empty();
+        this.timeoutSeconds = Codegen.empty();
+        this.unhealthyThreshold = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder healthyThreshold(@Nullable Integer healthyThreshold) {
-            this.healthyThreshold = Output.ofNullable(healthyThreshold);
+            this.healthyThreshold = Codegen.ofNullable(healthyThreshold);
             return this;
         }
         public Builder intervalSeconds(@Nullable Output<Integer> intervalSeconds) {
@@ -152,7 +153,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder intervalSeconds(@Nullable Integer intervalSeconds) {
-            this.intervalSeconds = Output.ofNullable(intervalSeconds);
+            this.intervalSeconds = Codegen.ofNullable(intervalSeconds);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -160,7 +161,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder successCodes(@Nullable Output<String> successCodes) {
@@ -168,7 +169,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder successCodes(@Nullable String successCodes) {
-            this.successCodes = Output.ofNullable(successCodes);
+            this.successCodes = Codegen.ofNullable(successCodes);
             return this;
         }
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
@@ -176,7 +177,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder timeoutSeconds(@Nullable Integer timeoutSeconds) {
-            this.timeoutSeconds = Output.ofNullable(timeoutSeconds);
+            this.timeoutSeconds = Codegen.ofNullable(timeoutSeconds);
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
@@ -184,7 +185,7 @@ public final class ContainerHealthCheckConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder unhealthyThreshold(@Nullable Integer unhealthyThreshold) {
-            this.unhealthyThreshold = Output.ofNullable(unhealthyThreshold);
+            this.unhealthyThreshold = Codegen.ofNullable(unhealthyThreshold);
             return this;
         }        public ContainerHealthCheckConfigArgs build() {
             return new ContainerHealthCheckConfigArgs(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);

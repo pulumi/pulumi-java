@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.RoleRefArgs;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.inputs.SubjectArgs;
@@ -30,7 +31,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SubjectArgs>> subjects;
 
     public Output<List<SubjectArgs>> getSubjects() {
-        return this.subjects == null ? Output.empty() : this.subjects;
+        return this.subjects == null ? Codegen.empty() : this.subjects;
     }
 
     public RoleBindingArgs(
@@ -91,11 +92,11 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleBindingArgs() {
-        this.apiVersion = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.roleRef = Output.empty();
-        this.subjects = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.roleRef = Codegen.empty();
+        this.subjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -139,7 +140,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -147,7 +148,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder roleRef(Output<RoleRefArgs> roleRef) {
@@ -163,7 +164,7 @@ public final class RoleBindingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subjects(@Nullable List<SubjectArgs> subjects) {
-            this.subjects = Output.ofNullable(subjects);
+            this.subjects = Codegen.ofNullable(subjects);
             return this;
         }
         public Builder subjects(SubjectArgs... subjects) {

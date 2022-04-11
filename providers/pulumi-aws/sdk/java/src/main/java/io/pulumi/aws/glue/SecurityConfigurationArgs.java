@@ -6,6 +6,7 @@ package io.pulumi.aws.glue;
 import io.pulumi.aws.glue.inputs.SecurityConfigurationEncryptionConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public SecurityConfigurationArgs(
@@ -45,8 +46,8 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
     }
 
     private SecurityConfigurationArgs() {
-        this.encryptionConfiguration = Output.empty();
-        this.name = Output.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class SecurityConfigurationArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public SecurityConfigurationArgs build() {
             return new SecurityConfigurationArgs(encryptionConfiguration, name);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
       private final @Nullable Output<String> httpProxy;
 
     public Output<String> getHttpProxy() {
-        return this.httpProxy == null ? Output.empty() : this.httpProxy;
+        return this.httpProxy == null ? Codegen.empty() : this.httpProxy;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
       private final @Nullable Output<String> httpsProxy;
 
     public Output<String> getHttpsProxy() {
-        return this.httpsProxy == null ? Output.empty() : this.httpsProxy;
+        return this.httpsProxy == null ? Codegen.empty() : this.httpsProxy;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> noProxy;
 
     public Output<List<String>> getNoProxy() {
-        return this.noProxy == null ? Output.empty() : this.noProxy;
+        return this.noProxy == null ? Codegen.empty() : this.noProxy;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
       private final @Nullable Output<String> trustedCa;
 
     public Output<String> getTrustedCa() {
-        return this.trustedCa == null ? Output.empty() : this.trustedCa;
+        return this.trustedCa == null ? Codegen.empty() : this.trustedCa;
     }
 
     public ManagedClusterHTTPProxyConfigArgs(
@@ -75,10 +76,10 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
     }
 
     private ManagedClusterHTTPProxyConfigArgs() {
-        this.httpProxy = Output.empty();
-        this.httpsProxy = Output.empty();
-        this.noProxy = Output.empty();
-        this.trustedCa = Output.empty();
+        this.httpProxy = Codegen.empty();
+        this.httpsProxy = Codegen.empty();
+        this.noProxy = Codegen.empty();
+        this.trustedCa = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder httpProxy(@Nullable String httpProxy) {
-            this.httpProxy = Output.ofNullable(httpProxy);
+            this.httpProxy = Codegen.ofNullable(httpProxy);
             return this;
         }
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
@@ -120,7 +121,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder httpsProxy(@Nullable String httpsProxy) {
-            this.httpsProxy = Output.ofNullable(httpsProxy);
+            this.httpsProxy = Codegen.ofNullable(httpsProxy);
             return this;
         }
         public Builder noProxy(@Nullable Output<List<String>> noProxy) {
@@ -128,7 +129,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder noProxy(@Nullable List<String> noProxy) {
-            this.noProxy = Output.ofNullable(noProxy);
+            this.noProxy = Codegen.ofNullable(noProxy);
             return this;
         }
         public Builder noProxy(String... noProxy) {
@@ -139,7 +140,7 @@ public final class ManagedClusterHTTPProxyConfigArgs extends io.pulumi.resources
             return this;
         }
         public Builder trustedCa(@Nullable String trustedCa) {
-            this.trustedCa = Output.ofNullable(trustedCa);
+            this.trustedCa = Codegen.ofNullable(trustedCa);
             return this;
         }        public ManagedClusterHTTPProxyConfigArgs build() {
             return new ManagedClusterHTTPProxyConfigArgs(httpProxy, httpsProxy, noProxy, trustedCa);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.diagflow;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxPageArgs;
 import io.pulumi.gcp.diagflow.inputs.CxPageState;
@@ -246,7 +247,7 @@ public class CxPage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CxPage(String name, CxPageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:diagflow/cxPage:CxPage", name, args == null ? CxPageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:diagflow/cxPage:CxPage", name, args == null ? CxPageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CxPage(String name, Output<String> id, @Nullable CxPageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

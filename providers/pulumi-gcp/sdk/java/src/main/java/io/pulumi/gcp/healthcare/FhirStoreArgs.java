@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreNotificationConfigArgs;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigArgs;
 import java.lang.Boolean;
@@ -44,7 +45,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableReferentialIntegrity;
 
     public Output<Boolean> getDisableReferentialIntegrity() {
-        return this.disableReferentialIntegrity == null ? Output.empty() : this.disableReferentialIntegrity;
+        return this.disableReferentialIntegrity == null ? Codegen.empty() : this.disableReferentialIntegrity;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableResourceVersioning;
 
     public Output<Boolean> getDisableResourceVersioning() {
-        return this.disableResourceVersioning == null ? Output.empty() : this.disableResourceVersioning;
+        return this.disableResourceVersioning == null ? Codegen.empty() : this.disableResourceVersioning;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableHistoryImport;
 
     public Output<Boolean> getEnableHistoryImport() {
-        return this.enableHistoryImport == null ? Output.empty() : this.enableHistoryImport;
+        return this.enableHistoryImport == null ? Codegen.empty() : this.enableHistoryImport;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableUpdateCreate;
 
     public Output<Boolean> getEnableUpdateCreate() {
-        return this.enableUpdateCreate == null ? Output.empty() : this.enableUpdateCreate;
+        return this.enableUpdateCreate == null ? Codegen.empty() : this.enableUpdateCreate;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig;
 
     public Output<FhirStoreNotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs;
 
     public Output<List<FhirStoreStreamConfigArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
+        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 
     /**
@@ -164,7 +165,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public FhirStoreArgs(
@@ -191,16 +192,16 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FhirStoreArgs() {
-        this.dataset = Output.empty();
-        this.disableReferentialIntegrity = Output.empty();
-        this.disableResourceVersioning = Output.empty();
-        this.enableHistoryImport = Output.empty();
-        this.enableUpdateCreate = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.streamConfigs = Output.empty();
-        this.version = Output.empty();
+        this.dataset = Codegen.empty();
+        this.disableReferentialIntegrity = Codegen.empty();
+        this.disableResourceVersioning = Codegen.empty();
+        this.enableHistoryImport = Codegen.empty();
+        this.enableUpdateCreate = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.streamConfigs = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -254,7 +255,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
-            this.disableReferentialIntegrity = Output.ofNullable(disableReferentialIntegrity);
+            this.disableReferentialIntegrity = Codegen.ofNullable(disableReferentialIntegrity);
             return this;
         }
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
@@ -262,7 +263,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
-            this.disableResourceVersioning = Output.ofNullable(disableResourceVersioning);
+            this.disableResourceVersioning = Codegen.ofNullable(disableResourceVersioning);
             return this;
         }
         public Builder enableHistoryImport(@Nullable Output<Boolean> enableHistoryImport) {
@@ -270,7 +271,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableHistoryImport(@Nullable Boolean enableHistoryImport) {
-            this.enableHistoryImport = Output.ofNullable(enableHistoryImport);
+            this.enableHistoryImport = Codegen.ofNullable(enableHistoryImport);
             return this;
         }
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
@@ -278,7 +279,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
-            this.enableUpdateCreate = Output.ofNullable(enableUpdateCreate);
+            this.enableUpdateCreate = Codegen.ofNullable(enableUpdateCreate);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -286,7 +287,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -294,7 +295,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<FhirStoreNotificationConfigArgs> notificationConfig) {
@@ -302,7 +303,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable FhirStoreNotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder streamConfigs(@Nullable Output<List<FhirStoreStreamConfigArgs>> streamConfigs) {
@@ -310,7 +311,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamConfigs(@Nullable List<FhirStoreStreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Output.ofNullable(streamConfigs);
+            this.streamConfigs = Codegen.ofNullable(streamConfigs);
             return this;
         }
         public Builder streamConfigs(FhirStoreStreamConfigArgs... streamConfigs) {
@@ -321,7 +322,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public FhirStoreArgs build() {
             return new FhirStoreArgs(dataset, disableReferentialIntegrity, disableResourceVersioning, enableHistoryImport, enableUpdateCreate, labels, name, notificationConfig, streamConfigs, version);

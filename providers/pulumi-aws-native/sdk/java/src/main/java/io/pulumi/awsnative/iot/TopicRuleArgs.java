@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.inputs.TopicRulePayloadArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +22,14 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ruleName;
 
     public Output<String> getRuleName() {
-        return this.ruleName == null ? Output.empty() : this.ruleName;
+        return this.ruleName == null ? Codegen.empty() : this.ruleName;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<TopicRuleTagArgs>> tags;
 
     public Output<List<TopicRuleTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="topicRulePayload", required=true)
@@ -48,9 +49,9 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicRuleArgs() {
-        this.ruleName = Output.empty();
-        this.tags = Output.empty();
-        this.topicRulePayload = Output.empty();
+        this.ruleName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.topicRulePayload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ruleName(@Nullable String ruleName) {
-            this.ruleName = Output.ofNullable(ruleName);
+            this.ruleName = Codegen.ofNullable(ruleName);
             return this;
         }
         public Builder tags(@Nullable Output<List<TopicRuleTagArgs>> tags) {
@@ -90,7 +91,7 @@ public final class TopicRuleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<TopicRuleTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(TopicRuleTagArgs... tags) {

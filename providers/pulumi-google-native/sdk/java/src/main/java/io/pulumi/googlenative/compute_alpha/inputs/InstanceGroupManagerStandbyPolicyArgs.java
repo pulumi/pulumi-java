@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> initialDelaySec;
 
     public Output<Integer> getInitialDelaySec() {
-        return this.initialDelaySec == null ? Output.empty() : this.initialDelaySec;
+        return this.initialDelaySec == null ? Codegen.empty() : this.initialDelaySec;
     }
 
     public InstanceGroupManagerStandbyPolicyArgs(@Nullable Output<Integer> initialDelaySec) {
@@ -26,7 +27,7 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
     }
 
     private InstanceGroupManagerStandbyPolicyArgs() {
-        this.initialDelaySec = Output.empty();
+        this.initialDelaySec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class InstanceGroupManagerStandbyPolicyArgs extends io.pulumi.resou
             return this;
         }
         public Builder initialDelaySec(@Nullable Integer initialDelaySec) {
-            this.initialDelaySec = Output.ofNullable(initialDelaySec);
+            this.initialDelaySec = Codegen.ofNullable(initialDelaySec);
             return this;
         }        public InstanceGroupManagerStandbyPolicyArgs build() {
             return new InstanceGroupManagerStandbyPolicyArgs(initialDelaySec);

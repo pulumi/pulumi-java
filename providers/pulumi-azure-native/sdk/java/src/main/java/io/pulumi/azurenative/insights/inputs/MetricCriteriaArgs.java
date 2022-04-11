@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.inputs.MetricDimensionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -45,7 +46,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetricDimensionArgs>> dimensions;
 
     public Output<List<MetricDimensionArgs>> getDimensions() {
-        return this.dimensions == null ? Output.empty() : this.dimensions;
+        return this.dimensions == null ? Codegen.empty() : this.dimensions;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metricNamespace;
 
     public Output<String> getMetricNamespace() {
-        return this.metricNamespace == null ? Output.empty() : this.metricNamespace;
+        return this.metricNamespace == null ? Codegen.empty() : this.metricNamespace;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> skipMetricValidation;
 
     public Output<Boolean> getSkipMetricValidation() {
-        return this.skipMetricValidation == null ? Output.empty() : this.skipMetricValidation;
+        return this.skipMetricValidation == null ? Codegen.empty() : this.skipMetricValidation;
     }
 
     /**
@@ -147,15 +148,15 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MetricCriteriaArgs() {
-        this.criterionType = Output.empty();
-        this.dimensions = Output.empty();
-        this.metricName = Output.empty();
-        this.metricNamespace = Output.empty();
-        this.name = Output.empty();
-        this.operator = Output.empty();
-        this.skipMetricValidation = Output.empty();
-        this.threshold = Output.empty();
-        this.timeAggregation = Output.empty();
+        this.criterionType = Codegen.empty();
+        this.dimensions = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.metricNamespace = Codegen.empty();
+        this.name = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.skipMetricValidation = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.timeAggregation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dimensions(@Nullable List<MetricDimensionArgs> dimensions) {
-            this.dimensions = Output.ofNullable(dimensions);
+            this.dimensions = Codegen.ofNullable(dimensions);
             return this;
         }
         public Builder dimensions(MetricDimensionArgs... dimensions) {
@@ -226,7 +227,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricNamespace(@Nullable String metricNamespace) {
-            this.metricNamespace = Output.ofNullable(metricNamespace);
+            this.metricNamespace = Codegen.ofNullable(metricNamespace);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -250,7 +251,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder skipMetricValidation(@Nullable Boolean skipMetricValidation) {
-            this.skipMetricValidation = Output.ofNullable(skipMetricValidation);
+            this.skipMetricValidation = Codegen.ofNullable(skipMetricValidation);
             return this;
         }
         public Builder threshold(Output<Double> threshold) {

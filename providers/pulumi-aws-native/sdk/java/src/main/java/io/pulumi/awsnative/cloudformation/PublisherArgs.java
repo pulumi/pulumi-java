@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectionArn;
 
     public Output<String> getConnectionArn() {
-        return this.connectionArn == null ? Output.empty() : this.connectionArn;
+        return this.connectionArn == null ? Codegen.empty() : this.connectionArn;
     }
 
     public PublisherArgs(
@@ -45,8 +46,8 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PublisherArgs() {
-        this.acceptTermsAndConditions = Output.empty();
-        this.connectionArn = Output.empty();
+        this.acceptTermsAndConditions = Codegen.empty();
+        this.connectionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class PublisherArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionArn(@Nullable String connectionArn) {
-            this.connectionArn = Output.ofNullable(connectionArn);
+            this.connectionArn = Codegen.ofNullable(connectionArn);
             return this;
         }        public PublisherArgs build() {
             return new PublisherArgs(acceptTermsAndConditions, connectionArn);

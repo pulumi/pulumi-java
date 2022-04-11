@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.enums.NodeTaintEffect;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NodeTaintEffect> effect;
 
     public Output<NodeTaintEffect> getEffect() {
-        return this.effect == null ? Output.empty() : this.effect;
+        return this.effect == null ? Codegen.empty() : this.effect;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public NodeTaintArgs(
@@ -62,9 +63,9 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NodeTaintArgs() {
-        this.effect = Output.empty();
-        this.key = Output.empty();
-        this.value = Output.empty();
+        this.effect = Codegen.empty();
+        this.key = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder effect(@Nullable NodeTaintEffect effect) {
-            this.effect = Output.ofNullable(effect);
+            this.effect = Codegen.ofNullable(effect);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -104,7 +105,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -112,7 +113,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public NodeTaintArgs build() {
             return new NodeTaintArgs(effect, key, value);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.cloudfront;
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -25,7 +26,7 @@ public final class ResponseHeadersPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private ResponseHeadersPolicyArgs() {
-        this.responseHeadersPolicyConfig = Output.empty();
+        this.responseHeadersPolicyConfig = Codegen.empty();
     }
 
     public static Builder builder() {

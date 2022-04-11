@@ -6,6 +6,7 @@ package io.pulumi.aws.sagemaker.inputs;
 import io.pulumi.aws.sagemaker.inputs.CodeRepositoryGitConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> codeRepositoryName;
 
     public Output<String> getCodeRepositoryName() {
-        return this.codeRepositoryName == null ? Output.empty() : this.codeRepositoryName;
+        return this.codeRepositoryName == null ? Codegen.empty() : this.codeRepositoryName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig;
 
     public Output<CodeRepositoryGitConfigGetArgs> getGitConfig() {
-        return this.gitConfig == null ? Output.empty() : this.gitConfig;
+        return this.gitConfig == null ? Codegen.empty() : this.gitConfig;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public CodeRepositoryState(
@@ -85,11 +86,11 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
     }
 
     private CodeRepositoryState() {
-        this.arn = Output.empty();
-        this.codeRepositoryName = Output.empty();
-        this.gitConfig = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.codeRepositoryName = Codegen.empty();
+        this.gitConfig = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder codeRepositoryName(@Nullable Output<String> codeRepositoryName) {
@@ -133,7 +134,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder codeRepositoryName(@Nullable String codeRepositoryName) {
-            this.codeRepositoryName = Output.ofNullable(codeRepositoryName);
+            this.codeRepositoryName = Codegen.ofNullable(codeRepositoryName);
             return this;
         }
         public Builder gitConfig(@Nullable Output<CodeRepositoryGitConfigGetArgs> gitConfig) {
@@ -141,7 +142,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder gitConfig(@Nullable CodeRepositoryGitConfigGetArgs gitConfig) {
-            this.gitConfig = Output.ofNullable(gitConfig);
+            this.gitConfig = Codegen.ofNullable(gitConfig);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -149,7 +150,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -157,7 +158,7 @@ public final class CodeRepositoryState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public CodeRepositoryState build() {
             return new CodeRepositoryState(arn, codeRepositoryName, gitConfig, tags, tagsAll);

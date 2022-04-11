@@ -8,6 +8,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyFairPlayOfflineRentalC
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +76,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> offlineRentalConfiguration;
 
     public Output<ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs> getOfflineRentalConfiguration() {
-        return this.offlineRentalConfiguration == null ? Output.empty() : this.offlineRentalConfiguration;
+        return this.offlineRentalConfiguration == null ? Codegen.empty() : this.offlineRentalConfiguration;
     }
 
     /**
@@ -118,13 +119,13 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
     }
 
     private ContentKeyPolicyFairPlayConfigurationArgs() {
-        this.ask = Output.empty();
-        this.fairPlayPfx = Output.empty();
-        this.fairPlayPfxPassword = Output.empty();
-        this.odataType = Output.empty();
-        this.offlineRentalConfiguration = Output.empty();
-        this.rentalAndLeaseKeyType = Output.empty();
-        this.rentalDuration = Output.empty();
+        this.ask = Codegen.empty();
+        this.fairPlayPfx = Codegen.empty();
+        this.fairPlayPfxPassword = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.offlineRentalConfiguration = Codegen.empty();
+        this.rentalAndLeaseKeyType = Codegen.empty();
+        this.rentalDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class ContentKeyPolicyFairPlayConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder offlineRentalConfiguration(@Nullable ContentKeyPolicyFairPlayOfflineRentalConfigurationArgs offlineRentalConfiguration) {
-            this.offlineRentalConfiguration = Output.ofNullable(offlineRentalConfiguration);
+            this.offlineRentalConfiguration = Codegen.ofNullable(offlineRentalConfiguration);
             return this;
         }
         public Builder rentalAndLeaseKeyType(Output<Either<String,ContentKeyPolicyFairPlayRentalAndLeaseKeyType>> rentalAndLeaseKeyType) {

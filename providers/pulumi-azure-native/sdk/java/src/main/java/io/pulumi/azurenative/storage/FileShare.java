@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -295,7 +296,7 @@ public class FileShare extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FileShare(String name, FileShareArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:storage:FileShare", name, args == null ? FileShareArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:storage:FileShare", name, args == null ? FileShareArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FileShare(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

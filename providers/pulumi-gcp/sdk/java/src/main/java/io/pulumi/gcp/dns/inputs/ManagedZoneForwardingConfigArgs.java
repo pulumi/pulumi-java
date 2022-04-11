@@ -5,6 +5,7 @@ package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dns.inputs.ManagedZoneForwardingConfigTargetNameServerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +34,7 @@ public final class ManagedZoneForwardingConfigArgs extends io.pulumi.resources.R
     }
 
     private ManagedZoneForwardingConfigArgs() {
-        this.targetNameServers = Output.empty();
+        this.targetNameServers = Codegen.empty();
     }
 
     public static Builder builder() {

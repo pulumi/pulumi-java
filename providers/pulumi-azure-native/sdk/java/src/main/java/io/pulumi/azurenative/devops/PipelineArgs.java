@@ -8,6 +8,7 @@ import io.pulumi.azurenative.devops.inputs.BootstrapConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> pipelineName;
 
     public Output<String> getPipelineName() {
-        return this.pipelineName == null ? Output.empty() : this.pipelineName;
+        return this.pipelineName == null ? Codegen.empty() : this.pipelineName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PipelineArgs(
@@ -100,12 +101,12 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PipelineArgs() {
-        this.bootstrapConfiguration = Output.empty();
-        this.location = Output.empty();
-        this.pipelineName = Output.empty();
-        this.pipelineType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.bootstrapConfiguration = Codegen.empty();
+        this.location = Codegen.empty();
+        this.pipelineName = Codegen.empty();
+        this.pipelineType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder pipelineName(@Nullable Output<String> pipelineName) {
@@ -159,7 +160,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pipelineName(@Nullable String pipelineName) {
-            this.pipelineName = Output.ofNullable(pipelineName);
+            this.pipelineName = Codegen.ofNullable(pipelineName);
             return this;
         }
         public Builder pipelineType(Output<Either<String,PipelineTypeEnum>> pipelineType) {
@@ -183,7 +184,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PipelineArgs build() {
             return new PipelineArgs(bootstrapConfiguration, location, pipelineName, pipelineType, resourceGroupName, tags);

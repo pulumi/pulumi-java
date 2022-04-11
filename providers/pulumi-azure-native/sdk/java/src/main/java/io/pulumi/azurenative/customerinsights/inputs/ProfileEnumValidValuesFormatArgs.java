@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
       private final @Nullable Output<Map<String,String>> localizedValueNames;
 
     public Output<Map<String,String>> getLocalizedValueNames() {
-        return this.localizedValueNames == null ? Output.empty() : this.localizedValueNames;
+        return this.localizedValueNames == null ? Codegen.empty() : this.localizedValueNames;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> value;
 
     public Output<Integer> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ProfileEnumValidValuesFormatArgs(
@@ -50,8 +51,8 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
     }
 
     private ProfileEnumValidValuesFormatArgs() {
-        this.localizedValueNames = Output.empty();
-        this.value = Output.empty();
+        this.localizedValueNames = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
             return this;
         }
         public Builder localizedValueNames(@Nullable Map<String,String> localizedValueNames) {
-            this.localizedValueNames = Output.ofNullable(localizedValueNames);
+            this.localizedValueNames = Codegen.ofNullable(localizedValueNames);
             return this;
         }
         public Builder value(@Nullable Output<Integer> value) {
@@ -89,7 +90,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
             return this;
         }
         public Builder value(@Nullable Integer value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ProfileEnumValidValuesFormatArgs build() {
             return new ProfileEnumValidValuesFormatArgs(localizedValueNames, value);

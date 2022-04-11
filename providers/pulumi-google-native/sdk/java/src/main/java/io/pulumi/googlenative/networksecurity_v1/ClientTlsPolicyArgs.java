@@ -5,6 +5,7 @@ package io.pulumi.googlenative.networksecurity_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleCloudNetworksecurityV1CertificateProviderArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.ValidationCAArgs;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> clientCertificate;
 
     public Output<GoogleCloudNetworksecurityV1CertificateProviderArgs> getClientCertificate() {
-        return this.clientCertificate == null ? Output.empty() : this.clientCertificate;
+        return this.clientCertificate == null ? Codegen.empty() : this.clientCertificate;
     }
 
     @Import(name="clientTlsPolicyId", required=true)
@@ -44,7 +45,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -55,14 +56,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,14 +74,14 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ValidationCAArgs>> serverValidationCa;
 
     public Output<List<ValidationCAArgs>> getServerValidationCa() {
-        return this.serverValidationCa == null ? Output.empty() : this.serverValidationCa;
+        return this.serverValidationCa == null ? Codegen.empty() : this.serverValidationCa;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> sni;
 
     public Output<String> getSni() {
-        return this.sni == null ? Output.empty() : this.sni;
+        return this.sni == null ? Codegen.empty() : this.sni;
     }
 
     public ClientTlsPolicyArgs(
@@ -127,15 +128,15 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClientTlsPolicyArgs() {
-        this.clientCertificate = Output.empty();
-        this.clientTlsPolicyId = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serverValidationCa = Output.empty();
-        this.sni = Output.empty();
+        this.clientCertificate = Codegen.empty();
+        this.clientTlsPolicyId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serverValidationCa = Codegen.empty();
+        this.sni = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder clientCertificate(@Nullable GoogleCloudNetworksecurityV1CertificateProviderArgs clientCertificate) {
-            this.clientCertificate = Output.ofNullable(clientCertificate);
+            this.clientCertificate = Codegen.ofNullable(clientCertificate);
             return this;
         }
         public Builder clientTlsPolicyId(Output<String> clientTlsPolicyId) {
@@ -195,7 +196,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -203,7 +204,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -211,7 +212,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -219,7 +220,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -227,7 +228,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serverValidationCa(@Nullable Output<List<ValidationCAArgs>> serverValidationCa) {
@@ -235,7 +236,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serverValidationCa(@Nullable List<ValidationCAArgs> serverValidationCa) {
-            this.serverValidationCa = Output.ofNullable(serverValidationCa);
+            this.serverValidationCa = Codegen.ofNullable(serverValidationCa);
             return this;
         }
         public Builder serverValidationCa(ValidationCAArgs... serverValidationCa) {
@@ -246,7 +247,7 @@ public final class ClientTlsPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sni(@Nullable String sni) {
-            this.sni = Output.ofNullable(sni);
+            this.sni = Codegen.ofNullable(sni);
             return this;
         }        public ClientTlsPolicyArgs build() {
             return new ClientTlsPolicyArgs(clientCertificate, clientTlsPolicyId, description, labels, location, name, project, serverValidationCa, sni);

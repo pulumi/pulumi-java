@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicedirectory_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="namespaceId", required=true)
@@ -55,7 +56,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceId", required=true)
@@ -81,12 +82,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.annotations = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.namespaceId = Output.empty();
-        this.project = Output.empty();
-        this.serviceId = Output.empty();
+        this.annotations = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespaceId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -132,7 +133,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -140,7 +141,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespaceId(Output<String> namespaceId) {
@@ -156,7 +157,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceId(Output<String> serviceId) {

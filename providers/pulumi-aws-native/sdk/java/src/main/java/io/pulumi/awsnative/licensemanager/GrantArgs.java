@@ -5,6 +5,7 @@ package io.pulumi.awsnative.licensemanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> allowedOperations;
 
     public Output<List<String>> getAllowedOperations() {
-        return this.allowedOperations == null ? Output.empty() : this.allowedOperations;
+        return this.allowedOperations == null ? Codegen.empty() : this.allowedOperations;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> grantName;
 
     public Output<String> getGrantName() {
-        return this.grantName == null ? Output.empty() : this.grantName;
+        return this.grantName == null ? Codegen.empty() : this.grantName;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> homeRegion;
 
     public Output<String> getHomeRegion() {
-        return this.homeRegion == null ? Output.empty() : this.homeRegion;
+        return this.homeRegion == null ? Codegen.empty() : this.homeRegion;
     }
 
     /**
@@ -52,21 +53,21 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> licenseArn;
 
     public Output<String> getLicenseArn() {
-        return this.licenseArn == null ? Output.empty() : this.licenseArn;
+        return this.licenseArn == null ? Codegen.empty() : this.licenseArn;
     }
 
     @Import(name="principals")
       private final @Nullable Output<List<String>> principals;
 
     public Output<List<String>> getPrincipals() {
-        return this.principals == null ? Output.empty() : this.principals;
+        return this.principals == null ? Codegen.empty() : this.principals;
     }
 
     @Import(name="status")
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public GrantArgs(
@@ -85,12 +86,12 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GrantArgs() {
-        this.allowedOperations = Output.empty();
-        this.grantName = Output.empty();
-        this.homeRegion = Output.empty();
-        this.licenseArn = Output.empty();
-        this.principals = Output.empty();
-        this.status = Output.empty();
+        this.allowedOperations = Codegen.empty();
+        this.grantName = Codegen.empty();
+        this.homeRegion = Codegen.empty();
+        this.licenseArn = Codegen.empty();
+        this.principals = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder allowedOperations(@Nullable List<String> allowedOperations) {
-            this.allowedOperations = Output.ofNullable(allowedOperations);
+            this.allowedOperations = Codegen.ofNullable(allowedOperations);
             return this;
         }
         public Builder allowedOperations(String... allowedOperations) {
@@ -139,7 +140,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder grantName(@Nullable String grantName) {
-            this.grantName = Output.ofNullable(grantName);
+            this.grantName = Codegen.ofNullable(grantName);
             return this;
         }
         public Builder homeRegion(@Nullable Output<String> homeRegion) {
@@ -147,7 +148,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder homeRegion(@Nullable String homeRegion) {
-            this.homeRegion = Output.ofNullable(homeRegion);
+            this.homeRegion = Codegen.ofNullable(homeRegion);
             return this;
         }
         public Builder licenseArn(@Nullable Output<String> licenseArn) {
@@ -155,7 +156,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder licenseArn(@Nullable String licenseArn) {
-            this.licenseArn = Output.ofNullable(licenseArn);
+            this.licenseArn = Codegen.ofNullable(licenseArn);
             return this;
         }
         public Builder principals(@Nullable Output<List<String>> principals) {
@@ -163,7 +164,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder principals(@Nullable List<String> principals) {
-            this.principals = Output.ofNullable(principals);
+            this.principals = Codegen.ofNullable(principals);
             return this;
         }
         public Builder principals(String... principals) {
@@ -174,7 +175,7 @@ public final class GrantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public GrantArgs build() {
             return new GrantArgs(allowedOperations, grantName, homeRegion, licenseArn, principals, status);

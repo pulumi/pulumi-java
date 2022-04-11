@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.TypePrimitive;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.FieldArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FieldArgs>> fields;
 
     public Output<List<FieldArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TypePrimitive> primitive;
 
     public Output<TypePrimitive> getPrimitive() {
-        return this.primitive == null ? Output.empty() : this.primitive;
+        return this.primitive == null ? Codegen.empty() : this.primitive;
     }
 
     public TypeArgs(
@@ -64,9 +65,9 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TypeArgs() {
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.primitive = Output.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.primitive = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<FieldArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(FieldArgs... fields) {
@@ -109,7 +110,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder primitive(@Nullable Output<TypePrimitive> primitive) {
@@ -117,7 +118,7 @@ public final class TypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primitive(@Nullable TypePrimitive primitive) {
-            this.primitive = Output.ofNullable(primitive);
+            this.primitive = Codegen.ofNullable(primitive);
             return this;
         }        public TypeArgs build() {
             return new TypeArgs(fields, name, primitive);

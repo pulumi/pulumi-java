@@ -6,6 +6,7 @@ package io.pulumi.azurenative.portal.inputs;
 import io.pulumi.azurenative.portal.inputs.DashboardPartsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +32,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -66,9 +67,9 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardLensArgs() {
-        this.metadata = Output.empty();
-        this.order = Output.empty();
-        this.parts = Output.empty();
+        this.metadata = Codegen.empty();
+        this.order = Codegen.empty();
+        this.parts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DashboardLensArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder order(Output<Integer> order) {

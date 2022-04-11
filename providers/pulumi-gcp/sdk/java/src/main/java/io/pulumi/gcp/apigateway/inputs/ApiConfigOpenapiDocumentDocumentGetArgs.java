@@ -5,6 +5,7 @@ package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ApiConfigOpenapiDocumentDocumentGetArgs extends io.pulumi.res
     }
 
     private ApiConfigOpenapiDocumentDocumentGetArgs() {
-        this.contents = Output.empty();
-        this.path = Output.empty();
+        this.contents = Codegen.empty();
+        this.path = Codegen.empty();
     }
 
     public static Builder builder() {

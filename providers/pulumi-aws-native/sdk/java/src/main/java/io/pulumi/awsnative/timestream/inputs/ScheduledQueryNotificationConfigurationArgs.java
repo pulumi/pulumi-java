@@ -6,6 +6,7 @@ package io.pulumi.awsnative.timestream.inputs;
 import io.pulumi.awsnative.timestream.inputs.ScheduledQuerySnsConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class ScheduledQueryNotificationConfigurationArgs extends io.pulumi
     }
 
     private ScheduledQueryNotificationConfigurationArgs() {
-        this.snsConfiguration = Output.empty();
+        this.snsConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {

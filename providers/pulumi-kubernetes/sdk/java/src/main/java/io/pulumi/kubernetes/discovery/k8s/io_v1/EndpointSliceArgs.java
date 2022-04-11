@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.EndpointPortArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -42,7 +43,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<EndpointPortArgs>> ports;
 
     public Output<List<EndpointPortArgs>> getPorts() {
-        return this.ports == null ? Output.empty() : this.ports;
+        return this.ports == null ? Codegen.empty() : this.ports;
     }
 
     public EndpointSliceArgs(
@@ -105,12 +106,12 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointSliceArgs() {
-        this.addressType = Output.empty();
-        this.apiVersion = Output.empty();
-        this.endpoints = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.ports = Output.empty();
+        this.addressType = Codegen.empty();
+        this.apiVersion = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.ports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -156,7 +157,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder endpoints(Output<List<EndpointArgs>> endpoints) {
@@ -175,7 +176,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -183,7 +184,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder ports(@Nullable Output<List<EndpointPortArgs>> ports) {
@@ -191,7 +192,7 @@ public final class EndpointSliceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ports(@Nullable List<EndpointPortArgs> ports) {
-            this.ports = Output.ofNullable(ports);
+            this.ports = Codegen.ofNullable(ports);
             return this;
         }
         public Builder ports(EndpointPortArgs... ports) {

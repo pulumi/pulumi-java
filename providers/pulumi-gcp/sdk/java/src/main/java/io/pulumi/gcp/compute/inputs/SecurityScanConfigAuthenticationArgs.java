@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationCustomAccountArgs;
 import io.pulumi.gcp.compute.inputs.SecurityScanConfigAuthenticationGoogleAccountArgs;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
       private final @Nullable Output<SecurityScanConfigAuthenticationCustomAccountArgs> customAccount;
 
     public Output<SecurityScanConfigAuthenticationCustomAccountArgs> getCustomAccount() {
-        return this.customAccount == null ? Output.empty() : this.customAccount;
+        return this.customAccount == null ? Codegen.empty() : this.customAccount;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
       private final @Nullable Output<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount;
 
     public Output<SecurityScanConfigAuthenticationGoogleAccountArgs> getGoogleAccount() {
-        return this.googleAccount == null ? Output.empty() : this.googleAccount;
+        return this.googleAccount == null ? Codegen.empty() : this.googleAccount;
     }
 
     public SecurityScanConfigAuthenticationArgs(
@@ -47,8 +48,8 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
     }
 
     private SecurityScanConfigAuthenticationArgs() {
-        this.customAccount = Output.empty();
-        this.googleAccount = Output.empty();
+        this.customAccount = Codegen.empty();
+        this.googleAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -78,7 +79,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
             return this;
         }
         public Builder customAccount(@Nullable SecurityScanConfigAuthenticationCustomAccountArgs customAccount) {
-            this.customAccount = Output.ofNullable(customAccount);
+            this.customAccount = Codegen.ofNullable(customAccount);
             return this;
         }
         public Builder googleAccount(@Nullable Output<SecurityScanConfigAuthenticationGoogleAccountArgs> googleAccount) {
@@ -86,7 +87,7 @@ public final class SecurityScanConfigAuthenticationArgs extends io.pulumi.resour
             return this;
         }
         public Builder googleAccount(@Nullable SecurityScanConfigAuthenticationGoogleAccountArgs googleAccount) {
-            this.googleAccount = Output.ofNullable(googleAccount);
+            this.googleAccount = Codegen.ofNullable(googleAccount);
             return this;
         }        public SecurityScanConfigAuthenticationArgs build() {
             return new SecurityScanConfigAuthenticationArgs(customAccount, googleAccount);

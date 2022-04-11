@@ -5,6 +5,7 @@ package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
       private final @Nullable Output<String> projectNumber;
 
     public Output<String> getProjectNumber() {
-        return this.projectNumber == null ? Output.empty() : this.projectNumber;
+        return this.projectNumber == null ? Codegen.empty() : this.projectNumber;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
       private final @Nullable Output<String> team;
 
     public Output<String> getTeam() {
-        return this.team == null ? Output.empty() : this.team;
+        return this.team == null ? Codegen.empty() : this.team;
     }
 
     public BucketAccessControlProjectTeamArgs(
@@ -48,8 +49,8 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
     }
 
     private BucketAccessControlProjectTeamArgs() {
-        this.projectNumber = Output.empty();
-        this.team = Output.empty();
+        this.projectNumber = Codegen.empty();
+        this.team = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
             return this;
         }
         public Builder projectNumber(@Nullable String projectNumber) {
-            this.projectNumber = Output.ofNullable(projectNumber);
+            this.projectNumber = Codegen.ofNullable(projectNumber);
             return this;
         }
         public Builder team(@Nullable Output<String> team) {
@@ -87,7 +88,7 @@ public final class BucketAccessControlProjectTeamArgs extends io.pulumi.resource
             return this;
         }
         public Builder team(@Nullable String team) {
-            this.team = Output.ofNullable(team);
+            this.team = Codegen.ofNullable(team);
             return this;
         }        public BucketAccessControlProjectTeamArgs build() {
             return new BucketAccessControlProjectTeamArgs(projectNumber, team);

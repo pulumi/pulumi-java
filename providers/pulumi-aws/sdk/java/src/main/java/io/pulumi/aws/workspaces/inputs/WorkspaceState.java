@@ -6,6 +6,7 @@ package io.pulumi.aws.workspaces.inputs;
 import io.pulumi.aws.workspaces.inputs.WorkspaceWorkspacePropertiesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> computerName;
 
     public Output<String> getComputerName() {
-        return this.computerName == null ? Output.empty() : this.computerName;
+        return this.computerName == null ? Codegen.empty() : this.computerName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> directoryId;
 
     public Output<String> getDirectoryId() {
-        return this.directoryId == null ? Output.empty() : this.directoryId;
+        return this.directoryId == null ? Codegen.empty() : this.directoryId;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> rootVolumeEncryptionEnabled;
 
     public Output<Boolean> getRootVolumeEncryptionEnabled() {
-        return this.rootVolumeEncryptionEnabled == null ? Output.empty() : this.rootVolumeEncryptionEnabled;
+        return this.rootVolumeEncryptionEnabled == null ? Codegen.empty() : this.rootVolumeEncryptionEnabled;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> userVolumeEncryptionEnabled;
 
     public Output<Boolean> getUserVolumeEncryptionEnabled() {
-        return this.userVolumeEncryptionEnabled == null ? Output.empty() : this.userVolumeEncryptionEnabled;
+        return this.userVolumeEncryptionEnabled == null ? Codegen.empty() : this.userVolumeEncryptionEnabled;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> volumeEncryptionKey;
 
     public Output<String> getVolumeEncryptionKey() {
-        return this.volumeEncryptionKey == null ? Output.empty() : this.volumeEncryptionKey;
+        return this.volumeEncryptionKey == null ? Codegen.empty() : this.volumeEncryptionKey;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties;
 
     public Output<WorkspaceWorkspacePropertiesGetArgs> getWorkspaceProperties() {
-        return this.workspaceProperties == null ? Output.empty() : this.workspaceProperties;
+        return this.workspaceProperties == null ? Codegen.empty() : this.workspaceProperties;
     }
 
     public WorkspaceState(
@@ -177,18 +178,18 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkspaceState() {
-        this.bundleId = Output.empty();
-        this.computerName = Output.empty();
-        this.directoryId = Output.empty();
-        this.ipAddress = Output.empty();
-        this.rootVolumeEncryptionEnabled = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.userName = Output.empty();
-        this.userVolumeEncryptionEnabled = Output.empty();
-        this.volumeEncryptionKey = Output.empty();
-        this.workspaceProperties = Output.empty();
+        this.bundleId = Codegen.empty();
+        this.computerName = Codegen.empty();
+        this.directoryId = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.rootVolumeEncryptionEnabled = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.userName = Codegen.empty();
+        this.userVolumeEncryptionEnabled = Codegen.empty();
+        this.volumeEncryptionKey = Codegen.empty();
+        this.workspaceProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -238,7 +239,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }
         public Builder computerName(@Nullable Output<String> computerName) {
@@ -246,7 +247,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder computerName(@Nullable String computerName) {
-            this.computerName = Output.ofNullable(computerName);
+            this.computerName = Codegen.ofNullable(computerName);
             return this;
         }
         public Builder directoryId(@Nullable Output<String> directoryId) {
@@ -254,7 +255,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder directoryId(@Nullable String directoryId) {
-            this.directoryId = Output.ofNullable(directoryId);
+            this.directoryId = Codegen.ofNullable(directoryId);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -262,7 +263,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder rootVolumeEncryptionEnabled(@Nullable Output<Boolean> rootVolumeEncryptionEnabled) {
@@ -270,7 +271,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rootVolumeEncryptionEnabled(@Nullable Boolean rootVolumeEncryptionEnabled) {
-            this.rootVolumeEncryptionEnabled = Output.ofNullable(rootVolumeEncryptionEnabled);
+            this.rootVolumeEncryptionEnabled = Codegen.ofNullable(rootVolumeEncryptionEnabled);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -278,7 +279,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -286,7 +287,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -294,7 +295,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -302,7 +303,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }
         public Builder userVolumeEncryptionEnabled(@Nullable Output<Boolean> userVolumeEncryptionEnabled) {
@@ -310,7 +311,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userVolumeEncryptionEnabled(@Nullable Boolean userVolumeEncryptionEnabled) {
-            this.userVolumeEncryptionEnabled = Output.ofNullable(userVolumeEncryptionEnabled);
+            this.userVolumeEncryptionEnabled = Codegen.ofNullable(userVolumeEncryptionEnabled);
             return this;
         }
         public Builder volumeEncryptionKey(@Nullable Output<String> volumeEncryptionKey) {
@@ -318,7 +319,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder volumeEncryptionKey(@Nullable String volumeEncryptionKey) {
-            this.volumeEncryptionKey = Output.ofNullable(volumeEncryptionKey);
+            this.volumeEncryptionKey = Codegen.ofNullable(volumeEncryptionKey);
             return this;
         }
         public Builder workspaceProperties(@Nullable Output<WorkspaceWorkspacePropertiesGetArgs> workspaceProperties) {
@@ -326,7 +327,7 @@ public final class WorkspaceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceProperties(@Nullable WorkspaceWorkspacePropertiesGetArgs workspaceProperties) {
-            this.workspaceProperties = Output.ofNullable(workspaceProperties);
+            this.workspaceProperties = Codegen.ofNullable(workspaceProperties);
             return this;
         }        public WorkspaceState build() {
             return new WorkspaceState(bundleId, computerName, directoryId, ipAddress, rootVolumeEncryptionEnabled, state, tags, tagsAll, userName, userVolumeEncryptionEnabled, volumeEncryptionKey, workspaceProperties);

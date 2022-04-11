@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
       private final @Nullable Output<String> targetFlow;
 
     public Output<String> getTargetFlow() {
-        return this.targetFlow == null ? Output.empty() : this.targetFlow;
+        return this.targetFlow == null ? Codegen.empty() : this.targetFlow;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
       private final @Nullable Output<String> targetPage;
 
     public Output<String> getTargetPage() {
-        return this.targetPage == null ? Output.empty() : this.targetPage;
+        return this.targetPage == null ? Codegen.empty() : this.targetPage;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
       private final @Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
     public Output<GoogleCloudDialogflowCxV3FulfillmentArgs> getTriggerFulfillment() {
-        return this.triggerFulfillment == null ? Output.empty() : this.triggerFulfillment;
+        return this.triggerFulfillment == null ? Codegen.empty() : this.triggerFulfillment;
     }
 
     public GoogleCloudDialogflowCxV3EventHandlerArgs(
@@ -75,10 +76,10 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
     }
 
     private GoogleCloudDialogflowCxV3EventHandlerArgs() {
-        this.event = Output.empty();
-        this.targetFlow = Output.empty();
-        this.targetPage = Output.empty();
-        this.triggerFulfillment = Output.empty();
+        this.event = Codegen.empty();
+        this.targetFlow = Codegen.empty();
+        this.targetPage = Codegen.empty();
+        this.triggerFulfillment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
             return this;
         }
         public Builder targetFlow(@Nullable String targetFlow) {
-            this.targetFlow = Output.ofNullable(targetFlow);
+            this.targetFlow = Codegen.ofNullable(targetFlow);
             return this;
         }
         public Builder targetPage(@Nullable Output<String> targetPage) {
@@ -128,7 +129,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
             return this;
         }
         public Builder targetPage(@Nullable String targetPage) {
-            this.targetPage = Output.ofNullable(targetPage);
+            this.targetPage = Codegen.ofNullable(targetPage);
             return this;
         }
         public Builder triggerFulfillment(@Nullable Output<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment) {
@@ -136,7 +137,7 @@ public final class GoogleCloudDialogflowCxV3EventHandlerArgs extends io.pulumi.r
             return this;
         }
         public Builder triggerFulfillment(@Nullable GoogleCloudDialogflowCxV3FulfillmentArgs triggerFulfillment) {
-            this.triggerFulfillment = Output.ofNullable(triggerFulfillment);
+            this.triggerFulfillment = Codegen.ofNullable(triggerFulfillment);
             return this;
         }        public GoogleCloudDialogflowCxV3EventHandlerArgs build() {
             return new GoogleCloudDialogflowCxV3EventHandlerArgs(event, targetFlow, targetPage, triggerFulfillment);

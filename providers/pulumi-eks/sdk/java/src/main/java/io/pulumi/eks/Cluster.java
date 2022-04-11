@@ -10,6 +10,7 @@ import io.pulumi.aws.iam.Role;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.eks.ClusterArgs;
 import io.pulumi.eks.Utilities;
 import io.pulumi.eks.outputs.CoreData;
@@ -187,7 +188,7 @@ public class Cluster extends io.pulumi.resources.ComponentResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Cluster(String name, @Nullable ClusterArgs args, @Nullable io.pulumi.resources.ComponentResourceOptions options) {
-        super("eks:index:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Output.empty()), true);
+        super("eks:index:Cluster", name, args == null ? ClusterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()), true);
     }
 
     private static io.pulumi.resources.ComponentResourceOptions makeResourceOptions(@Nullable io.pulumi.resources.ComponentResourceOptions options, @Nullable Output<String> id) {

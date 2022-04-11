@@ -11,6 +11,7 @@ import io.pulumi.azurenative.web.inputs.WsdlDefinitionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions;
 
     public Output<ApiResourceDefinitionsArgs> getApiDefinitions() {
-        return this.apiDefinitions == null ? Output.empty() : this.apiDefinitions;
+        return this.apiDefinitions == null ? Codegen.empty() : this.apiDefinitions;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<Either<String,ApiType>> apiType;
 
     public Output<Either<String,ApiType>> getApiType() {
-        return this.apiType == null ? Output.empty() : this.apiType;
+        return this.apiType == null ? Codegen.empty() : this.apiType;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<ApiResourceBackendServiceArgs> backendService;
 
     public Output<ApiResourceBackendServiceArgs> getBackendService() {
-        return this.backendService == null ? Output.empty() : this.backendService;
+        return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<String> brandColor;
 
     public Output<String> getBrandColor() {
-        return this.brandColor == null ? Output.empty() : this.brandColor;
+        return this.brandColor == null ? Codegen.empty() : this.brandColor;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> capabilities;
 
     public Output<List<String>> getCapabilities() {
-        return this.capabilities == null ? Output.empty() : this.capabilities;
+        return this.capabilities == null ? Codegen.empty() : this.capabilities;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters;
 
     public Output<Map<String,ConnectionParameterArgs>> getConnectionParameters() {
-        return this.connectionParameters == null ? Output.empty() : this.connectionParameters;
+        return this.connectionParameters == null ? Codegen.empty() : this.connectionParameters;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<String> iconUri;
 
     public Output<String> getIconUri() {
-        return this.iconUri == null ? Output.empty() : this.iconUri;
+        return this.iconUri == null ? Codegen.empty() : this.iconUri;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<List<String>> runtimeUrls;
 
     public Output<List<String>> getRuntimeUrls() {
-        return this.runtimeUrls == null ? Output.empty() : this.runtimeUrls;
+        return this.runtimeUrls == null ? Codegen.empty() : this.runtimeUrls;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<Object> swagger;
 
     public Output<Object> getSwagger() {
-        return this.swagger == null ? Output.empty() : this.swagger;
+        return this.swagger == null ? Codegen.empty() : this.swagger;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
       private final @Nullable Output<WsdlDefinitionArgs> wsdlDefinition;
 
     public Output<WsdlDefinitionArgs> getWsdlDefinition() {
-        return this.wsdlDefinition == null ? Output.empty() : this.wsdlDefinition;
+        return this.wsdlDefinition == null ? Codegen.empty() : this.wsdlDefinition;
     }
 
     public CustomApiPropertiesDefinitionArgs(
@@ -187,18 +188,18 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
     }
 
     private CustomApiPropertiesDefinitionArgs() {
-        this.apiDefinitions = Output.empty();
-        this.apiType = Output.empty();
-        this.backendService = Output.empty();
-        this.brandColor = Output.empty();
-        this.capabilities = Output.empty();
-        this.connectionParameters = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.iconUri = Output.empty();
-        this.runtimeUrls = Output.empty();
-        this.swagger = Output.empty();
-        this.wsdlDefinition = Output.empty();
+        this.apiDefinitions = Codegen.empty();
+        this.apiType = Codegen.empty();
+        this.backendService = Codegen.empty();
+        this.brandColor = Codegen.empty();
+        this.capabilities = Codegen.empty();
+        this.connectionParameters = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.iconUri = Codegen.empty();
+        this.runtimeUrls = Codegen.empty();
+        this.swagger = Codegen.empty();
+        this.wsdlDefinition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder apiDefinitions(@Nullable ApiResourceDefinitionsArgs apiDefinitions) {
-            this.apiDefinitions = Output.ofNullable(apiDefinitions);
+            this.apiDefinitions = Codegen.ofNullable(apiDefinitions);
             return this;
         }
         public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
@@ -256,7 +257,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder apiType(@Nullable Either<String,ApiType> apiType) {
-            this.apiType = Output.ofNullable(apiType);
+            this.apiType = Codegen.ofNullable(apiType);
             return this;
         }
         public Builder backendService(@Nullable Output<ApiResourceBackendServiceArgs> backendService) {
@@ -264,7 +265,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder backendService(@Nullable ApiResourceBackendServiceArgs backendService) {
-            this.backendService = Output.ofNullable(backendService);
+            this.backendService = Codegen.ofNullable(backendService);
             return this;
         }
         public Builder brandColor(@Nullable Output<String> brandColor) {
@@ -272,7 +273,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = Output.ofNullable(brandColor);
+            this.brandColor = Codegen.ofNullable(brandColor);
             return this;
         }
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
@@ -280,7 +281,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder capabilities(@Nullable List<String> capabilities) {
-            this.capabilities = Output.ofNullable(capabilities);
+            this.capabilities = Codegen.ofNullable(capabilities);
             return this;
         }
         public Builder capabilities(String... capabilities) {
@@ -291,7 +292,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder connectionParameters(@Nullable Map<String,ConnectionParameterArgs> connectionParameters) {
-            this.connectionParameters = Output.ofNullable(connectionParameters);
+            this.connectionParameters = Codegen.ofNullable(connectionParameters);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -299,7 +300,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -307,7 +308,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder iconUri(@Nullable Output<String> iconUri) {
@@ -315,7 +316,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = Output.ofNullable(iconUri);
+            this.iconUri = Codegen.ofNullable(iconUri);
             return this;
         }
         public Builder runtimeUrls(@Nullable Output<List<String>> runtimeUrls) {
@@ -323,7 +324,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder runtimeUrls(@Nullable List<String> runtimeUrls) {
-            this.runtimeUrls = Output.ofNullable(runtimeUrls);
+            this.runtimeUrls = Codegen.ofNullable(runtimeUrls);
             return this;
         }
         public Builder runtimeUrls(String... runtimeUrls) {
@@ -334,7 +335,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder swagger(@Nullable Object swagger) {
-            this.swagger = Output.ofNullable(swagger);
+            this.swagger = Codegen.ofNullable(swagger);
             return this;
         }
         public Builder wsdlDefinition(@Nullable Output<WsdlDefinitionArgs> wsdlDefinition) {
@@ -342,7 +343,7 @@ public final class CustomApiPropertiesDefinitionArgs extends io.pulumi.resources
             return this;
         }
         public Builder wsdlDefinition(@Nullable WsdlDefinitionArgs wsdlDefinition) {
-            this.wsdlDefinition = Output.ofNullable(wsdlDefinition);
+            this.wsdlDefinition = Codegen.ofNullable(wsdlDefinition);
             return this;
         }        public CustomApiPropertiesDefinitionArgs build() {
             return new CustomApiPropertiesDefinitionArgs(apiDefinitions, apiType, backendService, brandColor, capabilities, connectionParameters, description, displayName, iconUri, runtimeUrls, swagger, wsdlDefinition);

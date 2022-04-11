@@ -7,6 +7,7 @@ import io.pulumi.awsnative.transfer.inputs.WorkflowStepArgs;
 import io.pulumi.awsnative.transfer.inputs.WorkflowTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkflowStepArgs>> onExceptionSteps;
 
     public Output<List<WorkflowStepArgs>> getOnExceptionSteps() {
-        return this.onExceptionSteps == null ? Output.empty() : this.onExceptionSteps;
+        return this.onExceptionSteps == null ? Codegen.empty() : this.onExceptionSteps;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkflowTagArgs>> tags;
 
     public Output<List<WorkflowTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public WorkflowArgs(
@@ -73,10 +74,10 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowArgs() {
-        this.description = Output.empty();
-        this.onExceptionSteps = Output.empty();
-        this.steps = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.onExceptionSteps = Codegen.empty();
+        this.steps = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder onExceptionSteps(@Nullable Output<List<WorkflowStepArgs>> onExceptionSteps) {
@@ -118,7 +119,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onExceptionSteps(@Nullable List<WorkflowStepArgs> onExceptionSteps) {
-            this.onExceptionSteps = Output.ofNullable(onExceptionSteps);
+            this.onExceptionSteps = Codegen.ofNullable(onExceptionSteps);
             return this;
         }
         public Builder onExceptionSteps(WorkflowStepArgs... onExceptionSteps) {
@@ -140,7 +141,7 @@ public final class WorkflowArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<WorkflowTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(WorkflowTagArgs... tags) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.efs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> bypassPolicyLockoutSafetyCheck;
 
     public Output<Boolean> getBypassPolicyLockoutSafetyCheck() {
-        return this.bypassPolicyLockoutSafetyCheck == null ? Output.empty() : this.bypassPolicyLockoutSafetyCheck;
+        return this.bypassPolicyLockoutSafetyCheck == null ? Codegen.empty() : this.bypassPolicyLockoutSafetyCheck;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> fileSystemId;
 
     public Output<String> getFileSystemId() {
-        return this.fileSystemId == null ? Output.empty() : this.fileSystemId;
+        return this.fileSystemId == null ? Codegen.empty() : this.fileSystemId;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public FileSystemPolicyState(
@@ -58,9 +59,9 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
     }
 
     private FileSystemPolicyState() {
-        this.bypassPolicyLockoutSafetyCheck = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.policy = Output.empty();
+        this.bypassPolicyLockoutSafetyCheck = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bypassPolicyLockoutSafetyCheck(@Nullable Boolean bypassPolicyLockoutSafetyCheck) {
-            this.bypassPolicyLockoutSafetyCheck = Output.ofNullable(bypassPolicyLockoutSafetyCheck);
+            this.bypassPolicyLockoutSafetyCheck = Codegen.ofNullable(bypassPolicyLockoutSafetyCheck);
             return this;
         }
         public Builder fileSystemId(@Nullable Output<String> fileSystemId) {
@@ -100,7 +101,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fileSystemId(@Nullable String fileSystemId) {
-            this.fileSystemId = Output.ofNullable(fileSystemId);
+            this.fileSystemId = Codegen.ofNullable(fileSystemId);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -108,7 +109,7 @@ public final class FileSystemPolicyState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public FileSystemPolicyState build() {
             return new FileSystemPolicyState(bypassPolicyLockoutSafetyCheck, fileSystemId, policy);

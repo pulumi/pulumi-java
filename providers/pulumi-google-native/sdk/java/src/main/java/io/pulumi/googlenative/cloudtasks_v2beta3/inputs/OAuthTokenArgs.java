@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudtasks_v2beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccountEmail;
 
     public Output<String> getServiceAccountEmail() {
-        return this.serviceAccountEmail == null ? Output.empty() : this.serviceAccountEmail;
+        return this.serviceAccountEmail == null ? Codegen.empty() : this.serviceAccountEmail;
     }
 
     public OAuthTokenArgs(
@@ -48,8 +49,8 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OAuthTokenArgs() {
-        this.scope = Output.empty();
-        this.serviceAccountEmail = Output.empty();
+        this.scope = Codegen.empty();
+        this.serviceAccountEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }
         public Builder serviceAccountEmail(@Nullable Output<String> serviceAccountEmail) {
@@ -87,7 +88,7 @@ public final class OAuthTokenArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccountEmail(@Nullable String serviceAccountEmail) {
-            this.serviceAccountEmail = Output.ofNullable(serviceAccountEmail);
+            this.serviceAccountEmail = Codegen.ofNullable(serviceAccountEmail);
             return this;
         }        public OAuthTokenArgs build() {
             return new OAuthTokenArgs(scope, serviceAccountEmail);

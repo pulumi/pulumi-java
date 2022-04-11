@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.EndpointSliceListArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.outputs.EndpointSlice;
@@ -99,7 +100,7 @@ public class EndpointSliceList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public EndpointSliceList(String name, EndpointSliceListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:discovery.k8s.io/v1:EndpointSliceList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:discovery.k8s.io/v1:EndpointSliceList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private EndpointSliceList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tag;
 
     public Output<String> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     public ContainerImageArgs(
@@ -48,8 +49,8 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContainerImageArgs() {
-        this.repository = Output.empty();
-        this.tag = Output.empty();
+        this.repository = Codegen.empty();
+        this.tag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ContainerImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tag(@Nullable String tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }        public ContainerImageArgs build() {
             return new ContainerImageArgs(repository, tag);

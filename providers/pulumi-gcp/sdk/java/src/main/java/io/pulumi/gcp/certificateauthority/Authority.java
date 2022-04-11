@@ -6,6 +6,7 @@ package io.pulumi.gcp.certificateauthority;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.AuthorityArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityState;
@@ -358,7 +359,7 @@ public class Authority extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Authority(String name, AuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:certificateauthority/authority:Authority", name, args == null ? AuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:certificateauthority/authority:Authority", name, args == null ? AuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Authority(String name, Output<String> id, @Nullable AuthorityState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

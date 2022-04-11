@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityinsights.inputs.IncidentInfoArgs;
 import io.pulumi.azurenative.securityinsights.inputs.UserInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bookmarkId;
 
     public Output<String> getBookmarkId() {
-        return this.bookmarkId == null ? Output.empty() : this.bookmarkId;
+        return this.bookmarkId == null ? Codegen.empty() : this.bookmarkId;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
-        return this.created == null ? Output.empty() : this.created;
+        return this.created == null ? Codegen.empty() : this.created;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UserInfoArgs> createdBy;
 
     public Output<UserInfoArgs> getCreatedBy() {
-        return this.createdBy == null ? Output.empty() : this.createdBy;
+        return this.createdBy == null ? Codegen.empty() : this.createdBy;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eventTime;
 
     public Output<String> getEventTime() {
-        return this.eventTime == null ? Output.empty() : this.eventTime;
+        return this.eventTime == null ? Codegen.empty() : this.eventTime;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IncidentInfoArgs> incidentInfo;
 
     public Output<IncidentInfoArgs> getIncidentInfo() {
-        return this.incidentInfo == null ? Output.empty() : this.incidentInfo;
+        return this.incidentInfo == null ? Codegen.empty() : this.incidentInfo;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> labels;
 
     public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notes;
 
     public Output<String> getNotes() {
-        return this.notes == null ? Output.empty() : this.notes;
+        return this.notes == null ? Codegen.empty() : this.notes;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queryEndTime;
 
     public Output<String> getQueryEndTime() {
-        return this.queryEndTime == null ? Output.empty() : this.queryEndTime;
+        return this.queryEndTime == null ? Codegen.empty() : this.queryEndTime;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queryResult;
 
     public Output<String> getQueryResult() {
-        return this.queryResult == null ? Output.empty() : this.queryResult;
+        return this.queryResult == null ? Codegen.empty() : this.queryResult;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> queryStartTime;
 
     public Output<String> getQueryStartTime() {
-        return this.queryStartTime == null ? Output.empty() : this.queryStartTime;
+        return this.queryStartTime == null ? Codegen.empty() : this.queryStartTime;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> updated;
 
     public Output<String> getUpdated() {
-        return this.updated == null ? Output.empty() : this.updated;
+        return this.updated == null ? Codegen.empty() : this.updated;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<UserInfoArgs> updatedBy;
 
     public Output<UserInfoArgs> getUpdatedBy() {
-        return this.updatedBy == null ? Output.empty() : this.updatedBy;
+        return this.updatedBy == null ? Codegen.empty() : this.updatedBy;
     }
 
     /**
@@ -229,22 +230,22 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BookmarkArgs() {
-        this.bookmarkId = Output.empty();
-        this.created = Output.empty();
-        this.createdBy = Output.empty();
-        this.displayName = Output.empty();
-        this.eventTime = Output.empty();
-        this.incidentInfo = Output.empty();
-        this.labels = Output.empty();
-        this.notes = Output.empty();
-        this.query = Output.empty();
-        this.queryEndTime = Output.empty();
-        this.queryResult = Output.empty();
-        this.queryStartTime = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.updated = Output.empty();
-        this.updatedBy = Output.empty();
-        this.workspaceName = Output.empty();
+        this.bookmarkId = Codegen.empty();
+        this.created = Codegen.empty();
+        this.createdBy = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.eventTime = Codegen.empty();
+        this.incidentInfo = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.notes = Codegen.empty();
+        this.query = Codegen.empty();
+        this.queryEndTime = Codegen.empty();
+        this.queryResult = Codegen.empty();
+        this.queryStartTime = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.updated = Codegen.empty();
+        this.updatedBy = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -302,7 +303,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bookmarkId(@Nullable String bookmarkId) {
-            this.bookmarkId = Output.ofNullable(bookmarkId);
+            this.bookmarkId = Codegen.ofNullable(bookmarkId);
             return this;
         }
         public Builder created(@Nullable Output<String> created) {
@@ -310,7 +311,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder created(@Nullable String created) {
-            this.created = Output.ofNullable(created);
+            this.created = Codegen.ofNullable(created);
             return this;
         }
         public Builder createdBy(@Nullable Output<UserInfoArgs> createdBy) {
@@ -318,7 +319,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdBy(@Nullable UserInfoArgs createdBy) {
-            this.createdBy = Output.ofNullable(createdBy);
+            this.createdBy = Codegen.ofNullable(createdBy);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -334,7 +335,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventTime(@Nullable String eventTime) {
-            this.eventTime = Output.ofNullable(eventTime);
+            this.eventTime = Codegen.ofNullable(eventTime);
             return this;
         }
         public Builder incidentInfo(@Nullable Output<IncidentInfoArgs> incidentInfo) {
@@ -342,7 +343,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder incidentInfo(@Nullable IncidentInfoArgs incidentInfo) {
-            this.incidentInfo = Output.ofNullable(incidentInfo);
+            this.incidentInfo = Codegen.ofNullable(incidentInfo);
             return this;
         }
         public Builder labels(@Nullable Output<List<String>> labels) {
@@ -350,7 +351,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {
@@ -361,7 +362,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notes(@Nullable String notes) {
-            this.notes = Output.ofNullable(notes);
+            this.notes = Codegen.ofNullable(notes);
             return this;
         }
         public Builder query(Output<String> query) {
@@ -377,7 +378,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryEndTime(@Nullable String queryEndTime) {
-            this.queryEndTime = Output.ofNullable(queryEndTime);
+            this.queryEndTime = Codegen.ofNullable(queryEndTime);
             return this;
         }
         public Builder queryResult(@Nullable Output<String> queryResult) {
@@ -385,7 +386,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryResult(@Nullable String queryResult) {
-            this.queryResult = Output.ofNullable(queryResult);
+            this.queryResult = Codegen.ofNullable(queryResult);
             return this;
         }
         public Builder queryStartTime(@Nullable Output<String> queryStartTime) {
@@ -393,7 +394,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder queryStartTime(@Nullable String queryStartTime) {
-            this.queryStartTime = Output.ofNullable(queryStartTime);
+            this.queryStartTime = Codegen.ofNullable(queryStartTime);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -409,7 +410,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updated(@Nullable String updated) {
-            this.updated = Output.ofNullable(updated);
+            this.updated = Codegen.ofNullable(updated);
             return this;
         }
         public Builder updatedBy(@Nullable Output<UserInfoArgs> updatedBy) {
@@ -417,7 +418,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder updatedBy(@Nullable UserInfoArgs updatedBy) {
-            this.updatedBy = Output.ofNullable(updatedBy);
+            this.updatedBy = Codegen.ofNullable(updatedBy);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

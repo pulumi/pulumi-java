@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdAggregationGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionThresholdTriggerGetArgs;
@@ -40,7 +41,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
       private final @Nullable Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> aggregations;
 
     public Output<List<AlertPolicyConditionConditionThresholdAggregationGetArgs>> getAggregations() {
-        return this.aggregations == null ? Output.empty() : this.aggregations;
+        return this.aggregations == null ? Codegen.empty() : this.aggregations;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
       private final @Nullable Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> denominatorAggregations;
 
     public Output<List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs>> getDenominatorAggregations() {
-        return this.denominatorAggregations == null ? Output.empty() : this.denominatorAggregations;
+        return this.denominatorAggregations == null ? Codegen.empty() : this.denominatorAggregations;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
       private final @Nullable Output<String> denominatorFilter;
 
     public Output<String> getDenominatorFilter() {
-        return this.denominatorFilter == null ? Output.empty() : this.denominatorFilter;
+        return this.denominatorFilter == null ? Codegen.empty() : this.denominatorFilter;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
       private final @Nullable Output<Double> thresholdValue;
 
     public Output<Double> getThresholdValue() {
-        return this.thresholdValue == null ? Output.empty() : this.thresholdValue;
+        return this.thresholdValue == null ? Codegen.empty() : this.thresholdValue;
     }
 
     /**
@@ -178,7 +179,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
       private final @Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger;
 
     public Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> getTrigger() {
-        return this.trigger == null ? Output.empty() : this.trigger;
+        return this.trigger == null ? Codegen.empty() : this.trigger;
     }
 
     public AlertPolicyConditionConditionThresholdGetArgs(
@@ -201,14 +202,14 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
     }
 
     private AlertPolicyConditionConditionThresholdGetArgs() {
-        this.aggregations = Output.empty();
-        this.comparison = Output.empty();
-        this.denominatorAggregations = Output.empty();
-        this.denominatorFilter = Output.empty();
-        this.duration = Output.empty();
-        this.filter = Output.empty();
-        this.thresholdValue = Output.empty();
-        this.trigger = Output.empty();
+        this.aggregations = Codegen.empty();
+        this.comparison = Codegen.empty();
+        this.denominatorAggregations = Codegen.empty();
+        this.denominatorFilter = Codegen.empty();
+        this.duration = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.thresholdValue = Codegen.empty();
+        this.trigger = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             return this;
         }
         public Builder aggregations(@Nullable List<AlertPolicyConditionConditionThresholdAggregationGetArgs> aggregations) {
-            this.aggregations = Output.ofNullable(aggregations);
+            this.aggregations = Codegen.ofNullable(aggregations);
             return this;
         }
         public Builder aggregations(AlertPolicyConditionConditionThresholdAggregationGetArgs... aggregations) {
@@ -269,7 +270,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             return this;
         }
         public Builder denominatorAggregations(@Nullable List<AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs> denominatorAggregations) {
-            this.denominatorAggregations = Output.ofNullable(denominatorAggregations);
+            this.denominatorAggregations = Codegen.ofNullable(denominatorAggregations);
             return this;
         }
         public Builder denominatorAggregations(AlertPolicyConditionConditionThresholdDenominatorAggregationGetArgs... denominatorAggregations) {
@@ -280,7 +281,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             return this;
         }
         public Builder denominatorFilter(@Nullable String denominatorFilter) {
-            this.denominatorFilter = Output.ofNullable(denominatorFilter);
+            this.denominatorFilter = Codegen.ofNullable(denominatorFilter);
             return this;
         }
         public Builder duration(Output<String> duration) {
@@ -296,7 +297,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder thresholdValue(@Nullable Output<Double> thresholdValue) {
@@ -304,7 +305,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             return this;
         }
         public Builder thresholdValue(@Nullable Double thresholdValue) {
-            this.thresholdValue = Output.ofNullable(thresholdValue);
+            this.thresholdValue = Codegen.ofNullable(thresholdValue);
             return this;
         }
         public Builder trigger(@Nullable Output<AlertPolicyConditionConditionThresholdTriggerGetArgs> trigger) {
@@ -312,7 +313,7 @@ public final class AlertPolicyConditionConditionThresholdGetArgs extends io.pulu
             return this;
         }
         public Builder trigger(@Nullable AlertPolicyConditionConditionThresholdTriggerGetArgs trigger) {
-            this.trigger = Output.ofNullable(trigger);
+            this.trigger = Codegen.ofNullable(trigger);
             return this;
         }        public AlertPolicyConditionConditionThresholdGetArgs build() {
             return new AlertPolicyConditionConditionThresholdGetArgs(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);

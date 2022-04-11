@@ -5,6 +5,7 @@ package io.pulumi.aws.docdb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> applyImmediately;
 
     public Output<Boolean> getApplyImmediately() {
-        return this.applyImmediately == null ? Output.empty() : this.applyImmediately;
+        return this.applyImmediately == null ? Codegen.empty() : this.applyImmediately;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Boolean> autoMinorVersionUpgrade;
 
     public Output<Boolean> getAutoMinorVersionUpgrade() {
-        return this.autoMinorVersionUpgrade == null ? Output.empty() : this.autoMinorVersionUpgrade;
+        return this.autoMinorVersionUpgrade == null ? Codegen.empty() : this.autoMinorVersionUpgrade;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> caCertIdentifier;
 
     public Output<String> getCaCertIdentifier() {
-        return this.caCertIdentifier == null ? Output.empty() : this.caCertIdentifier;
+        return this.caCertIdentifier == null ? Codegen.empty() : this.caCertIdentifier;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> engine;
 
     public Output<String> getEngine() {
-        return this.engine == null ? Output.empty() : this.engine;
+        return this.engine == null ? Codegen.empty() : this.engine;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> identifier;
 
     public Output<String> getIdentifier() {
-        return this.identifier == null ? Output.empty() : this.identifier;
+        return this.identifier == null ? Codegen.empty() : this.identifier;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> identifierPrefix;
 
     public Output<String> getIdentifierPrefix() {
-        return this.identifierPrefix == null ? Output.empty() : this.identifierPrefix;
+        return this.identifierPrefix == null ? Codegen.empty() : this.identifierPrefix;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> preferredMaintenanceWindow;
 
     public Output<String> getPreferredMaintenanceWindow() {
-        return this.preferredMaintenanceWindow == null ? Output.empty() : this.preferredMaintenanceWindow;
+        return this.preferredMaintenanceWindow == null ? Codegen.empty() : this.preferredMaintenanceWindow;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> promotionTier;
 
     public Output<Integer> getPromotionTier() {
-        return this.promotionTier == null ? Output.empty() : this.promotionTier;
+        return this.promotionTier == null ? Codegen.empty() : this.promotionTier;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterInstanceArgs(
@@ -193,18 +194,18 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ClusterInstanceArgs() {
-        this.applyImmediately = Output.empty();
-        this.autoMinorVersionUpgrade = Output.empty();
-        this.availabilityZone = Output.empty();
-        this.caCertIdentifier = Output.empty();
-        this.clusterIdentifier = Output.empty();
-        this.engine = Output.empty();
-        this.identifier = Output.empty();
-        this.identifierPrefix = Output.empty();
-        this.instanceClass = Output.empty();
-        this.preferredMaintenanceWindow = Output.empty();
-        this.promotionTier = Output.empty();
-        this.tags = Output.empty();
+        this.applyImmediately = Codegen.empty();
+        this.autoMinorVersionUpgrade = Codegen.empty();
+        this.availabilityZone = Codegen.empty();
+        this.caCertIdentifier = Codegen.empty();
+        this.clusterIdentifier = Codegen.empty();
+        this.engine = Codegen.empty();
+        this.identifier = Codegen.empty();
+        this.identifierPrefix = Codegen.empty();
+        this.instanceClass = Codegen.empty();
+        this.preferredMaintenanceWindow = Codegen.empty();
+        this.promotionTier = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -254,7 +255,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder applyImmediately(@Nullable Boolean applyImmediately) {
-            this.applyImmediately = Output.ofNullable(applyImmediately);
+            this.applyImmediately = Codegen.ofNullable(applyImmediately);
             return this;
         }
         public Builder autoMinorVersionUpgrade(@Nullable Output<Boolean> autoMinorVersionUpgrade) {
@@ -262,7 +263,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder autoMinorVersionUpgrade(@Nullable Boolean autoMinorVersionUpgrade) {
-            this.autoMinorVersionUpgrade = Output.ofNullable(autoMinorVersionUpgrade);
+            this.autoMinorVersionUpgrade = Codegen.ofNullable(autoMinorVersionUpgrade);
             return this;
         }
         public Builder availabilityZone(@Nullable Output<String> availabilityZone) {
@@ -270,7 +271,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder caCertIdentifier(@Nullable Output<String> caCertIdentifier) {
@@ -278,7 +279,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder caCertIdentifier(@Nullable String caCertIdentifier) {
-            this.caCertIdentifier = Output.ofNullable(caCertIdentifier);
+            this.caCertIdentifier = Codegen.ofNullable(caCertIdentifier);
             return this;
         }
         public Builder clusterIdentifier(Output<String> clusterIdentifier) {
@@ -294,7 +295,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder engine(@Nullable String engine) {
-            this.engine = Output.ofNullable(engine);
+            this.engine = Codegen.ofNullable(engine);
             return this;
         }
         public Builder identifier(@Nullable Output<String> identifier) {
@@ -302,7 +303,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder identifier(@Nullable String identifier) {
-            this.identifier = Output.ofNullable(identifier);
+            this.identifier = Codegen.ofNullable(identifier);
             return this;
         }
         public Builder identifierPrefix(@Nullable Output<String> identifierPrefix) {
@@ -310,7 +311,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder identifierPrefix(@Nullable String identifierPrefix) {
-            this.identifierPrefix = Output.ofNullable(identifierPrefix);
+            this.identifierPrefix = Codegen.ofNullable(identifierPrefix);
             return this;
         }
         public Builder instanceClass(Output<String> instanceClass) {
@@ -326,7 +327,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder preferredMaintenanceWindow(@Nullable String preferredMaintenanceWindow) {
-            this.preferredMaintenanceWindow = Output.ofNullable(preferredMaintenanceWindow);
+            this.preferredMaintenanceWindow = Codegen.ofNullable(preferredMaintenanceWindow);
             return this;
         }
         public Builder promotionTier(@Nullable Output<Integer> promotionTier) {
@@ -334,7 +335,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder promotionTier(@Nullable Integer promotionTier) {
-            this.promotionTier = Output.ofNullable(promotionTier);
+            this.promotionTier = Codegen.ofNullable(promotionTier);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -342,7 +343,7 @@ public final class ClusterInstanceArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterInstanceArgs build() {
             return new ClusterInstanceArgs(applyImmediately, autoMinorVersionUpgrade, availabilityZone, caCertIdentifier, clusterIdentifier, engine, identifier, identifierPrefix, instanceClass, preferredMaintenanceWindow, promotionTier, tags);

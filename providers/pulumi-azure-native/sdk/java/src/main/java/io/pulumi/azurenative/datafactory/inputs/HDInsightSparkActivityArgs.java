@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<Object>> arguments;
 
     public Output<List<Object>> getArguments() {
-        return this.arguments == null ? Output.empty() : this.arguments;
+        return this.arguments == null ? Codegen.empty() : this.arguments;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> className;
 
     public Output<String> getClassName() {
-        return this.className == null ? Output.empty() : this.className;
+        return this.className == null ? Codegen.empty() : this.className;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
     public Output<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
-        return this.getDebugInfo == null ? Output.empty() : this.getDebugInfo;
+        return this.getDebugInfo == null ? Codegen.empty() : this.getDebugInfo;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Output<LinkedServiceReferenceArgs> getLinkedServiceName() {
-        return this.linkedServiceName == null ? Output.empty() : this.linkedServiceName;
+        return this.linkedServiceName == null ? Codegen.empty() : this.linkedServiceName;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<ActivityPolicyArgs> policy;
 
     public Output<ActivityPolicyArgs> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Object> proxyUser;
 
     public Output<Object> getProxyUser() {
-        return this.proxyUser == null ? Output.empty() : this.proxyUser;
+        return this.proxyUser == null ? Codegen.empty() : this.proxyUser;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,Object>> sparkConfig;
 
     public Output<Map<String,Object>> getSparkConfig() {
-        return this.sparkConfig == null ? Output.empty() : this.sparkConfig;
+        return this.sparkConfig == null ? Codegen.empty() : this.sparkConfig;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService;
 
     public Output<LinkedServiceReferenceArgs> getSparkJobLinkedService() {
-        return this.sparkJobLinkedService == null ? Output.empty() : this.sparkJobLinkedService;
+        return this.sparkJobLinkedService == null ? Codegen.empty() : this.sparkJobLinkedService;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public HDInsightSparkActivityArgs(
@@ -227,21 +228,21 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
     }
 
     private HDInsightSparkActivityArgs() {
-        this.arguments = Output.empty();
-        this.className = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.entryFilePath = Output.empty();
-        this.getDebugInfo = Output.empty();
-        this.linkedServiceName = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
-        this.proxyUser = Output.empty();
-        this.rootPath = Output.empty();
-        this.sparkConfig = Output.empty();
-        this.sparkJobLinkedService = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.arguments = Codegen.empty();
+        this.className = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.entryFilePath = Codegen.empty();
+        this.getDebugInfo = Codegen.empty();
+        this.linkedServiceName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.proxyUser = Codegen.empty();
+        this.rootPath = Codegen.empty();
+        this.sparkConfig = Codegen.empty();
+        this.sparkJobLinkedService = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -297,7 +298,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder arguments(@Nullable List<Object> arguments) {
-            this.arguments = Output.ofNullable(arguments);
+            this.arguments = Codegen.ofNullable(arguments);
             return this;
         }
         public Builder arguments(Object... arguments) {
@@ -308,7 +309,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder className(@Nullable String className) {
-            this.className = Output.ofNullable(className);
+            this.className = Codegen.ofNullable(className);
             return this;
         }
         public Builder dependsOn(@Nullable Output<List<ActivityDependencyArgs>> dependsOn) {
@@ -316,7 +317,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -327,7 +328,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder entryFilePath(Output<Object> entryFilePath) {
@@ -343,7 +344,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder getDebugInfo(@Nullable Either<String,HDInsightActivityDebugInfoOption> getDebugInfo) {
-            this.getDebugInfo = Output.ofNullable(getDebugInfo);
+            this.getDebugInfo = Codegen.ofNullable(getDebugInfo);
             return this;
         }
         public Builder linkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> linkedServiceName) {
@@ -351,7 +352,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceArgs linkedServiceName) {
-            this.linkedServiceName = Output.ofNullable(linkedServiceName);
+            this.linkedServiceName = Codegen.ofNullable(linkedServiceName);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -367,7 +368,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder policy(@Nullable ActivityPolicyArgs policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder proxyUser(@Nullable Output<Object> proxyUser) {
@@ -375,7 +376,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder proxyUser(@Nullable Object proxyUser) {
-            this.proxyUser = Output.ofNullable(proxyUser);
+            this.proxyUser = Codegen.ofNullable(proxyUser);
             return this;
         }
         public Builder rootPath(Output<Object> rootPath) {
@@ -391,7 +392,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sparkConfig(@Nullable Map<String,Object> sparkConfig) {
-            this.sparkConfig = Output.ofNullable(sparkConfig);
+            this.sparkConfig = Codegen.ofNullable(sparkConfig);
             return this;
         }
         public Builder sparkJobLinkedService(@Nullable Output<LinkedServiceReferenceArgs> sparkJobLinkedService) {
@@ -399,7 +400,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sparkJobLinkedService(@Nullable LinkedServiceReferenceArgs sparkJobLinkedService) {
-            this.sparkJobLinkedService = Output.ofNullable(sparkJobLinkedService);
+            this.sparkJobLinkedService = Codegen.ofNullable(sparkJobLinkedService);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -415,7 +416,7 @@ public final class HDInsightSparkActivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

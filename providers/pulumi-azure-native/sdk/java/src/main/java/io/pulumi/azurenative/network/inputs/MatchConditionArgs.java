@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.MatchVariableArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -54,7 +55,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> negationConditon;
 
     public Output<Boolean> getNegationConditon() {
-        return this.negationConditon == null ? Output.empty() : this.negationConditon;
+        return this.negationConditon == null ? Codegen.empty() : this.negationConditon;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
     public Output<List<Either<String,WebApplicationFirewallTransform>>> getTransforms() {
-        return this.transforms == null ? Output.empty() : this.transforms;
+        return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 
     public MatchConditionArgs(
@@ -93,11 +94,11 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MatchConditionArgs() {
-        this.matchValues = Output.empty();
-        this.matchVariables = Output.empty();
-        this.negationConditon = Output.empty();
-        this.operator = Output.empty();
-        this.transforms = Output.empty();
+        this.matchValues = Codegen.empty();
+        this.matchVariables = Codegen.empty();
+        this.negationConditon = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.transforms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder negationConditon(@Nullable Boolean negationConditon) {
-            this.negationConditon = Output.ofNullable(negationConditon);
+            this.negationConditon = Codegen.ofNullable(negationConditon);
             return this;
         }
         public Builder operator(Output<Either<String,WebApplicationFirewallOperator>> operator) {
@@ -171,7 +172,7 @@ public final class MatchConditionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transforms(@Nullable List<Either<String,WebApplicationFirewallTransform>> transforms) {
-            this.transforms = Output.ofNullable(transforms);
+            this.transforms = Codegen.ofNullable(transforms);
             return this;
         }
         public Builder transforms(Either<String,WebApplicationFirewallTransform>... transforms) {

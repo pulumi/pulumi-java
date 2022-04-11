@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> shareSubscriptionName;
 
     public Output<String> getShareSubscriptionName() {
-        return this.shareSubscriptionName == null ? Output.empty() : this.shareSubscriptionName;
+        return this.shareSubscriptionName == null ? Codegen.empty() : this.shareSubscriptionName;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ShareSubscriptionArgs() {
-        this.accountName = Output.empty();
-        this.expirationDate = Output.empty();
-        this.invitationId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
-        this.sourceShareLocation = Output.empty();
+        this.accountName = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.invitationId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
+        this.sourceShareLocation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder invitationId(Output<String> invitationId) {
@@ -171,7 +172,7 @@ public final class ShareSubscriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder shareSubscriptionName(@Nullable String shareSubscriptionName) {
-            this.shareSubscriptionName = Output.ofNullable(shareSubscriptionName);
+            this.shareSubscriptionName = Codegen.ofNullable(shareSubscriptionName);
             return this;
         }
         public Builder sourceShareLocation(Output<String> sourceShareLocation) {

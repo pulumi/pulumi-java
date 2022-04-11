@@ -7,6 +7,7 @@ import io.pulumi.azurenative.certificateregistration.enums.CertificateProductTyp
 import io.pulumi.azurenative.certificateregistration.inputs.AppServiceCertificateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> autoRenew;
 
     public Output<Boolean> getAutoRenew() {
-        return this.autoRenew == null ? Output.empty() : this.autoRenew;
+        return this.autoRenew == null ? Codegen.empty() : this.autoRenew;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> certificateOrderName;
 
     public Output<String> getCertificateOrderName() {
-        return this.certificateOrderName == null ? Output.empty() : this.certificateOrderName;
+        return this.certificateOrderName == null ? Codegen.empty() : this.certificateOrderName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,AppServiceCertificateArgs>> certificates;
 
     public Output<Map<String,AppServiceCertificateArgs>> getCertificates() {
-        return this.certificates == null ? Output.empty() : this.certificates;
+        return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> csr;
 
     public Output<String> getCsr() {
-        return this.csr == null ? Output.empty() : this.csr;
+        return this.csr == null ? Codegen.empty() : this.csr;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> distinguishedName;
 
     public Output<String> getDistinguishedName() {
-        return this.distinguishedName == null ? Output.empty() : this.distinguishedName;
+        return this.distinguishedName == null ? Codegen.empty() : this.distinguishedName;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> keySize;
 
     public Output<Integer> getKeySize() {
-        return this.keySize == null ? Output.empty() : this.keySize;
+        return this.keySize == null ? Codegen.empty() : this.keySize;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Integer> validityInYears;
 
     public Output<Integer> getValidityInYears() {
-        return this.validityInYears == null ? Output.empty() : this.validityInYears;
+        return this.validityInYears == null ? Codegen.empty() : this.validityInYears;
     }
 
     public AppServiceCertificateOrderArgs(
@@ -164,33 +165,33 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
         Output<String> resourceGroupName,
         @Nullable Output<Map<String,String>> tags,
         @Nullable Output<Integer> validityInYears) {
-        this.autoRenew = autoRenew == null ? Output.ofNullable(true) : autoRenew;
+        this.autoRenew = autoRenew == null ? Codegen.ofNullable(true) : autoRenew;
         this.certificateOrderName = certificateOrderName;
         this.certificates = certificates;
         this.csr = csr;
         this.distinguishedName = distinguishedName;
-        this.keySize = keySize == null ? Output.ofNullable(2048) : keySize;
+        this.keySize = keySize == null ? Codegen.ofNullable(2048) : keySize;
         this.kind = kind;
         this.location = location;
         this.productType = Objects.requireNonNull(productType, "expected parameter 'productType' to be non-null");
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.tags = tags;
-        this.validityInYears = validityInYears == null ? Output.ofNullable(1) : validityInYears;
+        this.validityInYears = validityInYears == null ? Codegen.ofNullable(1) : validityInYears;
     }
 
     private AppServiceCertificateOrderArgs() {
-        this.autoRenew = Output.empty();
-        this.certificateOrderName = Output.empty();
-        this.certificates = Output.empty();
-        this.csr = Output.empty();
-        this.distinguishedName = Output.empty();
-        this.keySize = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.productType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.validityInYears = Output.empty();
+        this.autoRenew = Codegen.empty();
+        this.certificateOrderName = Codegen.empty();
+        this.certificates = Codegen.empty();
+        this.csr = Codegen.empty();
+        this.distinguishedName = Codegen.empty();
+        this.keySize = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.productType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.validityInYears = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -240,7 +241,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder autoRenew(@Nullable Boolean autoRenew) {
-            this.autoRenew = Output.ofNullable(autoRenew);
+            this.autoRenew = Codegen.ofNullable(autoRenew);
             return this;
         }
         public Builder certificateOrderName(@Nullable Output<String> certificateOrderName) {
@@ -248,7 +249,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder certificateOrderName(@Nullable String certificateOrderName) {
-            this.certificateOrderName = Output.ofNullable(certificateOrderName);
+            this.certificateOrderName = Codegen.ofNullable(certificateOrderName);
             return this;
         }
         public Builder certificates(@Nullable Output<Map<String,AppServiceCertificateArgs>> certificates) {
@@ -256,7 +257,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder certificates(@Nullable Map<String,AppServiceCertificateArgs> certificates) {
-            this.certificates = Output.ofNullable(certificates);
+            this.certificates = Codegen.ofNullable(certificates);
             return this;
         }
         public Builder csr(@Nullable Output<String> csr) {
@@ -264,7 +265,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder csr(@Nullable String csr) {
-            this.csr = Output.ofNullable(csr);
+            this.csr = Codegen.ofNullable(csr);
             return this;
         }
         public Builder distinguishedName(@Nullable Output<String> distinguishedName) {
@@ -272,7 +273,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder distinguishedName(@Nullable String distinguishedName) {
-            this.distinguishedName = Output.ofNullable(distinguishedName);
+            this.distinguishedName = Codegen.ofNullable(distinguishedName);
             return this;
         }
         public Builder keySize(@Nullable Output<Integer> keySize) {
@@ -280,7 +281,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder keySize(@Nullable Integer keySize) {
-            this.keySize = Output.ofNullable(keySize);
+            this.keySize = Codegen.ofNullable(keySize);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -288,7 +289,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -296,7 +297,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder productType(Output<CertificateProductType> productType) {
@@ -320,7 +321,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder validityInYears(@Nullable Output<Integer> validityInYears) {
@@ -328,7 +329,7 @@ public final class AppServiceCertificateOrderArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder validityInYears(@Nullable Integer validityInYears) {
-            this.validityInYears = Output.ofNullable(validityInYears);
+            this.validityInYears = Codegen.ofNullable(validityInYears);
             return this;
         }        public AppServiceCertificateOrderArgs build() {
             return new AppServiceCertificateOrderArgs(autoRenew, certificateOrderName, certificates, csr, distinguishedName, keySize, kind, location, productType, resourceGroupName, tags, validityInYears);

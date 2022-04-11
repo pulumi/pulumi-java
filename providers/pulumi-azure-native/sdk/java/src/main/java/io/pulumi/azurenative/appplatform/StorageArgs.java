@@ -6,6 +6,7 @@ package io.pulumi.azurenative.appplatform;
 import io.pulumi.azurenative.appplatform.inputs.StorageAccountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StorageAccountArgs> properties;
 
     public Output<StorageAccountArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> storageName;
 
     public Output<String> getStorageName() {
-        return this.storageName == null ? Output.empty() : this.storageName;
+        return this.storageName == null ? Codegen.empty() : this.storageName;
     }
 
     public StorageArgs(
@@ -71,10 +72,10 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageArgs() {
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.storageName = Output.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.storageName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable StorageAccountArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -132,7 +133,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageName(@Nullable String storageName) {
-            this.storageName = Output.ofNullable(storageName);
+            this.storageName = Codegen.ofNullable(storageName);
             return this;
         }        public StorageArgs build() {
             return new StorageArgs(properties, resourceGroupName, serviceName, storageName);

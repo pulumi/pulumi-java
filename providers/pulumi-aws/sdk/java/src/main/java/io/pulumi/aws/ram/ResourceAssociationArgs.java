@@ -5,6 +5,7 @@ package io.pulumi.aws.ram;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
     }
 
     private ResourceAssociationArgs() {
-        this.resourceArn = Output.empty();
-        this.resourceShareArn = Output.empty();
+        this.resourceArn = Codegen.empty();
+        this.resourceShareArn = Codegen.empty();
     }
 
     public static Builder builder() {

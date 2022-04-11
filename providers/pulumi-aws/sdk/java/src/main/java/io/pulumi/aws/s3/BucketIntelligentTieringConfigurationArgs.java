@@ -7,6 +7,7 @@ import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationFilterArgs;
 import io.pulumi.aws.s3.inputs.BucketIntelligentTieringConfigurationTieringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +37,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<BucketIntelligentTieringConfigurationFilterArgs> filter;
 
     public Output<BucketIntelligentTieringConfigurationFilterArgs> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
     }
 
     private BucketIntelligentTieringConfigurationArgs() {
-        this.bucket = Output.empty();
-        this.filter = Output.empty();
-        this.name = Output.empty();
-        this.status = Output.empty();
-        this.tierings = Output.empty();
+        this.bucket = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.name = Codegen.empty();
+        this.status = Codegen.empty();
+        this.tierings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder filter(@Nullable BucketIntelligentTieringConfigurationFilterArgs filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -142,7 +143,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder status(@Nullable Output<String> status) {
@@ -150,7 +151,7 @@ public final class BucketIntelligentTieringConfigurationArgs extends io.pulumi.r
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }
         public Builder tierings(Output<List<BucketIntelligentTieringConfigurationTieringArgs>> tierings) {

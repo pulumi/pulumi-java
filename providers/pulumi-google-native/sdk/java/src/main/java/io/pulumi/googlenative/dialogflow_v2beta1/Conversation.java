@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.ConversationArgs;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse;
@@ -142,7 +143,7 @@ public class Conversation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Conversation(String name, ConversationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:Conversation", name, args == null ? ConversationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Conversation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

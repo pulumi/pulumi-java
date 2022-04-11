@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> primary;
 
     public Output<String> getPrimary() {
-        return this.primary == null ? Output.empty() : this.primary;
+        return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secondary;
 
     public Output<String> getSecondary() {
-        return this.secondary == null ? Output.empty() : this.secondary;
+        return this.secondary == null ? Codegen.empty() : this.secondary;
     }
 
     public WebServiceKeysArgs(
@@ -48,8 +49,8 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebServiceKeysArgs() {
-        this.primary = Output.empty();
-        this.secondary = Output.empty();
+        this.primary = Codegen.empty();
+        this.secondary = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder primary(@Nullable String primary) {
-            this.primary = Output.ofNullable(primary);
+            this.primary = Codegen.ofNullable(primary);
             return this;
         }
         public Builder secondary(@Nullable Output<String> secondary) {
@@ -87,7 +88,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondary(@Nullable String secondary) {
-            this.secondary = Output.ofNullable(secondary);
+            this.secondary = Codegen.ofNullable(secondary);
             return this;
         }        public WebServiceKeysArgs build() {
             return new WebServiceKeysArgs(primary, secondary);

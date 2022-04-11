@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionHealthCheckServiceArgs;
 import java.lang.String;
@@ -209,7 +210,7 @@ public class RegionHealthCheckService extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionHealthCheckService(String name, RegionHealthCheckServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:RegionHealthCheckService", name, args == null ? RegionHealthCheckServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:RegionHealthCheckService", name, args == null ? RegionHealthCheckServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionHealthCheckService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

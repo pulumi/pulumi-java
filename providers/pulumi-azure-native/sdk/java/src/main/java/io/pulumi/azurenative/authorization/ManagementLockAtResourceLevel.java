@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -124,7 +125,7 @@ public class ManagementLockAtResourceLevel extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public ManagementLockAtResourceLevel(String name, ManagementLockAtResourceLevelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:authorization:ManagementLockAtResourceLevel", name, args == null ? ManagementLockAtResourceLevelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:authorization:ManagementLockAtResourceLevel", name, args == null ? ManagementLockAtResourceLevelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ManagementLockAtResourceLevel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

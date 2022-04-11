@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class SecureIotDeviceRemoteTunnelArgs extends io.pulumi.resources.R
     }
 
     private SecureIotDeviceRemoteTunnelArgs() {
-        this.deviceId = Output.empty();
-        this.iotHubName = Output.empty();
-        this.type = Output.empty();
+        this.deviceId = Codegen.empty();
+        this.iotHubName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

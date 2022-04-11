@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> destination;
 
     public Output<String> getDestination() {
-        return this.destination == null ? Output.empty() : this.destination;
+        return this.destination == null ? Codegen.empty() : this.destination;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> sha256Checksum;
 
     public Output<String> getSha256Checksum() {
-        return this.sha256Checksum == null ? Output.empty() : this.sha256Checksum;
+        return this.sha256Checksum == null ? Codegen.empty() : this.sha256Checksum;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> sourceUri;
 
     public Output<String> getSourceUri() {
-        return this.sourceUri == null ? Output.empty() : this.sourceUri;
+        return this.sourceUri == null ? Codegen.empty() : this.sourceUri;
     }
 
     /**
@@ -82,17 +83,17 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
         Output<String> type) {
         this.destination = destination;
         this.name = name;
-        this.sha256Checksum = sha256Checksum == null ? Output.ofNullable("") : sha256Checksum;
+        this.sha256Checksum = sha256Checksum == null ? Codegen.ofNullable("") : sha256Checksum;
         this.sourceUri = sourceUri;
         this.type = Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ImageTemplateFileCustomizerArgs() {
-        this.destination = Output.empty();
-        this.name = Output.empty();
-        this.sha256Checksum = Output.empty();
-        this.sourceUri = Output.empty();
-        this.type = Output.empty();
+        this.destination = Codegen.empty();
+        this.name = Codegen.empty();
+        this.sha256Checksum = Codegen.empty();
+        this.sourceUri = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder destination(@Nullable String destination) {
-            this.destination = Output.ofNullable(destination);
+            this.destination = Codegen.ofNullable(destination);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -136,7 +137,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder sha256Checksum(@Nullable Output<String> sha256Checksum) {
@@ -144,7 +145,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sha256Checksum(@Nullable String sha256Checksum) {
-            this.sha256Checksum = Output.ofNullable(sha256Checksum);
+            this.sha256Checksum = Codegen.ofNullable(sha256Checksum);
             return this;
         }
         public Builder sourceUri(@Nullable Output<String> sourceUri) {
@@ -152,7 +153,7 @@ public final class ImageTemplateFileCustomizerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder sourceUri(@Nullable String sourceUri) {
-            this.sourceUri = Output.ofNullable(sourceUri);
+            this.sourceUri = Codegen.ofNullable(sourceUri);
             return this;
         }
         public Builder type(Output<String> type) {

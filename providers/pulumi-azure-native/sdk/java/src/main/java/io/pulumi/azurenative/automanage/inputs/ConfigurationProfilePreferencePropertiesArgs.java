@@ -7,6 +7,7 @@ import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceAnt
 import io.pulumi.azurenative.automanage.inputs.ConfigurationProfilePreferenceVmBackupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
       private final @Nullable Output<ConfigurationProfilePreferenceAntiMalwareArgs> antiMalware;
 
     public Output<ConfigurationProfilePreferenceAntiMalwareArgs> getAntiMalware() {
-        return this.antiMalware == null ? Output.empty() : this.antiMalware;
+        return this.antiMalware == null ? Codegen.empty() : this.antiMalware;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
       private final @Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup;
 
     public Output<ConfigurationProfilePreferenceVmBackupArgs> getVmBackup() {
-        return this.vmBackup == null ? Output.empty() : this.vmBackup;
+        return this.vmBackup == null ? Codegen.empty() : this.vmBackup;
     }
 
     public ConfigurationProfilePreferencePropertiesArgs(
@@ -49,8 +50,8 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
     }
 
     private ConfigurationProfilePreferencePropertiesArgs() {
-        this.antiMalware = Output.empty();
-        this.vmBackup = Output.empty();
+        this.antiMalware = Codegen.empty();
+        this.vmBackup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
             return this;
         }
         public Builder antiMalware(@Nullable ConfigurationProfilePreferenceAntiMalwareArgs antiMalware) {
-            this.antiMalware = Output.ofNullable(antiMalware);
+            this.antiMalware = Codegen.ofNullable(antiMalware);
             return this;
         }
         public Builder vmBackup(@Nullable Output<ConfigurationProfilePreferenceVmBackupArgs> vmBackup) {
@@ -88,7 +89,7 @@ public final class ConfigurationProfilePreferencePropertiesArgs extends io.pulum
             return this;
         }
         public Builder vmBackup(@Nullable ConfigurationProfilePreferenceVmBackupArgs vmBackup) {
-            this.vmBackup = Output.ofNullable(vmBackup);
+            this.vmBackup = Codegen.ofNullable(vmBackup);
             return this;
         }        public ConfigurationProfilePreferencePropertiesArgs build() {
             return new ConfigurationProfilePreferencePropertiesArgs(antiMalware, vmBackup);

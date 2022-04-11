@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ResolverQueryLogConfigAssociationArgs extends io.pulumi.resou
     }
 
     private ResolverQueryLogConfigAssociationArgs() {
-        this.resolverQueryLogConfigId = Output.empty();
-        this.resourceId = Output.empty();
+        this.resolverQueryLogConfigId = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {

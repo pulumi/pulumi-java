@@ -12,6 +12,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -155,7 +156,7 @@ public class IntegrationServiceEnvironment extends io.pulumi.resources.CustomRes
      * @param options A bag of options that control this resource's behavior.
      */
     public IntegrationServiceEnvironment(String name, IntegrationServiceEnvironmentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:logic:IntegrationServiceEnvironment", name, args == null ? IntegrationServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:logic:IntegrationServiceEnvironment", name, args == null ? IntegrationServiceEnvironmentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IntegrationServiceEnvironment(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

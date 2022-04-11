@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public NetworkArgs(
@@ -61,9 +62,9 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NetworkArgs() {
-        this.network = Output.empty();
-        this.project = Output.empty();
-        this.subnetwork = Output.empty();
+        this.network = Codegen.empty();
+        this.project = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -103,7 +104,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -111,7 +112,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public NetworkArgs build() {
             return new NetworkArgs(network, project, subnetwork);

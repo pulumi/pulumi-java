@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +21,7 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<DatasetFilterArgs>> filters;
 
     public Output<List<DatasetFilterArgs>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     @Import(name="sqlQuery", required=true)
@@ -38,8 +39,8 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DatasetQueryActionArgs() {
-        this.filters = Output.empty();
-        this.sqlQuery = Output.empty();
+        this.filters = Codegen.empty();
+        this.sqlQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class DatasetQueryActionArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder filters(@Nullable List<DatasetFilterArgs> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(DatasetFilterArgs... filters) {

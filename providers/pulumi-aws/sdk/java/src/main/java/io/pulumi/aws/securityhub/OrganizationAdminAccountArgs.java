@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class OrganizationAdminAccountArgs extends io.pulumi.resources.Reso
     }
 
     private OrganizationAdminAccountArgs() {
-        this.adminAccountId = Output.empty();
+        this.adminAccountId = Codegen.empty();
     }
 
     public static Builder builder() {

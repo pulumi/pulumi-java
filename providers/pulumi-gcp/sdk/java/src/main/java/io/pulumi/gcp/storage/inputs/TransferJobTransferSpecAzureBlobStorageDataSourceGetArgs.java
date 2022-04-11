@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentialsGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
     }
 
     private TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs() {
-        this.azureCredentials = Output.empty();
-        this.container = Output.empty();
-        this.path = Output.empty();
-        this.storageAccount = Output.empty();
+        this.azureCredentials = Codegen.empty();
+        this.container = Codegen.empty();
+        this.path = Codegen.empty();
+        this.storageAccount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSourceGetArgs exte
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder storageAccount(Output<String> storageAccount) {

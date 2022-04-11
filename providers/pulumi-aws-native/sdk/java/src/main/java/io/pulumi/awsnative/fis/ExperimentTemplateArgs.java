@@ -8,6 +8,7 @@ import io.pulumi.awsnative.fis.inputs.ExperimentTemplateStopConditionArgs;
 import io.pulumi.awsnative.fis.inputs.ExperimentTemplateTargetMapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +24,7 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<ExperimentTemplateActionMapArgs> actions;
 
     public Output<ExperimentTemplateActionMapArgs> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     @Import(name="description", required=true)
@@ -77,12 +78,12 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ExperimentTemplateArgs() {
-        this.actions = Output.empty();
-        this.description = Output.empty();
-        this.roleArn = Output.empty();
-        this.stopConditions = Output.empty();
-        this.tags = Output.empty();
-        this.targets = Output.empty();
+        this.actions = Codegen.empty();
+        this.description = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stopConditions = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ExperimentTemplateArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder actions(@Nullable ExperimentTemplateActionMapArgs actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder description(Output<String> description) {

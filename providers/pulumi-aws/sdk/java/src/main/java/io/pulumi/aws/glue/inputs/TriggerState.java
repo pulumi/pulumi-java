@@ -7,6 +7,7 @@ import io.pulumi.aws.glue.inputs.TriggerActionGetArgs;
 import io.pulumi.aws.glue.inputs.TriggerPredicateGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TriggerActionGetArgs>> actions;
 
     public Output<List<TriggerActionGetArgs>> getActions() {
-        return this.actions == null ? Output.empty() : this.actions;
+        return this.actions == null ? Codegen.empty() : this.actions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TriggerPredicateGetArgs> predicate;
 
     public Output<TriggerPredicateGetArgs> getPredicate() {
-        return this.predicate == null ? Output.empty() : this.predicate;
+        return this.predicate == null ? Codegen.empty() : this.predicate;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> schedule;
 
     public Output<String> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> startOnCreation;
 
     public Output<Boolean> getStartOnCreation() {
-        return this.startOnCreation == null ? Output.empty() : this.startOnCreation;
+        return this.startOnCreation == null ? Codegen.empty() : this.startOnCreation;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workflowName;
 
     public Output<String> getWorkflowName() {
-        return this.workflowName == null ? Output.empty() : this.workflowName;
+        return this.workflowName == null ? Codegen.empty() : this.workflowName;
     }
 
     public TriggerState(
@@ -192,19 +193,19 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TriggerState() {
-        this.actions = Output.empty();
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.enabled = Output.empty();
-        this.name = Output.empty();
-        this.predicate = Output.empty();
-        this.schedule = Output.empty();
-        this.startOnCreation = Output.empty();
-        this.state = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.type = Output.empty();
-        this.workflowName = Output.empty();
+        this.actions = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.predicate = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.startOnCreation = Codegen.empty();
+        this.state = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.type = Codegen.empty();
+        this.workflowName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -256,7 +257,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder actions(@Nullable List<TriggerActionGetArgs> actions) {
-            this.actions = Output.ofNullable(actions);
+            this.actions = Codegen.ofNullable(actions);
             return this;
         }
         public Builder actions(TriggerActionGetArgs... actions) {
@@ -267,7 +268,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -275,7 +276,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -283,7 +284,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -291,7 +292,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder predicate(@Nullable Output<TriggerPredicateGetArgs> predicate) {
@@ -299,7 +300,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder predicate(@Nullable TriggerPredicateGetArgs predicate) {
-            this.predicate = Output.ofNullable(predicate);
+            this.predicate = Codegen.ofNullable(predicate);
             return this;
         }
         public Builder schedule(@Nullable Output<String> schedule) {
@@ -307,7 +308,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedule(@Nullable String schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }
         public Builder startOnCreation(@Nullable Output<Boolean> startOnCreation) {
@@ -315,7 +316,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startOnCreation(@Nullable Boolean startOnCreation) {
-            this.startOnCreation = Output.ofNullable(startOnCreation);
+            this.startOnCreation = Codegen.ofNullable(startOnCreation);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -323,7 +324,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -331,7 +332,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -339,7 +340,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -347,7 +348,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder workflowName(@Nullable Output<String> workflowName) {
@@ -355,7 +356,7 @@ public final class TriggerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workflowName(@Nullable String workflowName) {
-            this.workflowName = Output.ofNullable(workflowName);
+            this.workflowName = Codegen.ofNullable(workflowName);
             return this;
         }        public TriggerState build() {
             return new TriggerState(actions, arn, description, enabled, name, predicate, schedule, startOnCreation, state, tags, tagsAll, type, workflowName);

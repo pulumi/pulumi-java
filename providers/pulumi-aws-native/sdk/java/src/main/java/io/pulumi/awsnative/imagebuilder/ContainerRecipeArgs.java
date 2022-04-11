@@ -10,6 +10,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeInstanceConfigurat
 import io.pulumi.awsnative.imagebuilder.inputs.ContainerRecipeTargetContainerRepositoryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<ContainerRecipeComponentConfigurationArgs>> components;
 
     public Output<List<ContainerRecipeComponentConfigurationArgs>> getComponents() {
-        return this.components == null ? Output.empty() : this.components;
+        return this.components == null ? Codegen.empty() : this.components;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ContainerRecipeContainerType> containerType;
 
     public Output<ContainerRecipeContainerType> getContainerType() {
-        return this.containerType == null ? Output.empty() : this.containerType;
+        return this.containerType == null ? Codegen.empty() : this.containerType;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> dockerfileTemplateData;
 
     public Output<String> getDockerfileTemplateData() {
-        return this.dockerfileTemplateData == null ? Output.empty() : this.dockerfileTemplateData;
+        return this.dockerfileTemplateData == null ? Codegen.empty() : this.dockerfileTemplateData;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> dockerfileTemplateUri;
 
     public Output<String> getDockerfileTemplateUri() {
-        return this.dockerfileTemplateUri == null ? Output.empty() : this.dockerfileTemplateUri;
+        return this.dockerfileTemplateUri == null ? Codegen.empty() : this.dockerfileTemplateUri;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> imageOsVersionOverride;
 
     public Output<String> getImageOsVersionOverride() {
-        return this.imageOsVersionOverride == null ? Output.empty() : this.imageOsVersionOverride;
+        return this.imageOsVersionOverride == null ? Codegen.empty() : this.imageOsVersionOverride;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration;
 
     public Output<ContainerRecipeInstanceConfigurationArgs> getInstanceConfiguration() {
-        return this.instanceConfiguration == null ? Output.empty() : this.instanceConfiguration;
+        return this.instanceConfiguration == null ? Codegen.empty() : this.instanceConfiguration;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kmsKeyId;
 
     public Output<String> getKmsKeyId() {
-        return this.kmsKeyId == null ? Output.empty() : this.kmsKeyId;
+        return this.kmsKeyId == null ? Codegen.empty() : this.kmsKeyId;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> parentImage;
 
     public Output<String> getParentImage() {
-        return this.parentImage == null ? Output.empty() : this.parentImage;
+        return this.parentImage == null ? Codegen.empty() : this.parentImage;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ContainerRecipePlatformOverride> platformOverride;
 
     public Output<ContainerRecipePlatformOverride> getPlatformOverride() {
-        return this.platformOverride == null ? Output.empty() : this.platformOverride;
+        return this.platformOverride == null ? Codegen.empty() : this.platformOverride;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository;
 
     public Output<ContainerRecipeTargetContainerRepositoryArgs> getTargetRepository() {
-        return this.targetRepository == null ? Output.empty() : this.targetRepository;
+        return this.targetRepository == null ? Codegen.empty() : this.targetRepository;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> workingDirectory;
 
     public Output<String> getWorkingDirectory() {
-        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
+        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 
     public ContainerRecipeArgs(
@@ -220,21 +221,21 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ContainerRecipeArgs() {
-        this.components = Output.empty();
-        this.containerType = Output.empty();
-        this.description = Output.empty();
-        this.dockerfileTemplateData = Output.empty();
-        this.dockerfileTemplateUri = Output.empty();
-        this.imageOsVersionOverride = Output.empty();
-        this.instanceConfiguration = Output.empty();
-        this.kmsKeyId = Output.empty();
-        this.name = Output.empty();
-        this.parentImage = Output.empty();
-        this.platformOverride = Output.empty();
-        this.tags = Output.empty();
-        this.targetRepository = Output.empty();
-        this.version = Output.empty();
-        this.workingDirectory = Output.empty();
+        this.components = Codegen.empty();
+        this.containerType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.dockerfileTemplateData = Codegen.empty();
+        this.dockerfileTemplateUri = Codegen.empty();
+        this.imageOsVersionOverride = Codegen.empty();
+        this.instanceConfiguration = Codegen.empty();
+        this.kmsKeyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentImage = Codegen.empty();
+        this.platformOverride = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetRepository = Codegen.empty();
+        this.version = Codegen.empty();
+        this.workingDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -290,7 +291,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder components(@Nullable List<ContainerRecipeComponentConfigurationArgs> components) {
-            this.components = Output.ofNullable(components);
+            this.components = Codegen.ofNullable(components);
             return this;
         }
         public Builder components(ContainerRecipeComponentConfigurationArgs... components) {
@@ -301,7 +302,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder containerType(@Nullable ContainerRecipeContainerType containerType) {
-            this.containerType = Output.ofNullable(containerType);
+            this.containerType = Codegen.ofNullable(containerType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -309,7 +310,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder dockerfileTemplateData(@Nullable Output<String> dockerfileTemplateData) {
@@ -317,7 +318,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dockerfileTemplateData(@Nullable String dockerfileTemplateData) {
-            this.dockerfileTemplateData = Output.ofNullable(dockerfileTemplateData);
+            this.dockerfileTemplateData = Codegen.ofNullable(dockerfileTemplateData);
             return this;
         }
         public Builder dockerfileTemplateUri(@Nullable Output<String> dockerfileTemplateUri) {
@@ -325,7 +326,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dockerfileTemplateUri(@Nullable String dockerfileTemplateUri) {
-            this.dockerfileTemplateUri = Output.ofNullable(dockerfileTemplateUri);
+            this.dockerfileTemplateUri = Codegen.ofNullable(dockerfileTemplateUri);
             return this;
         }
         public Builder imageOsVersionOverride(@Nullable Output<String> imageOsVersionOverride) {
@@ -333,7 +334,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder imageOsVersionOverride(@Nullable String imageOsVersionOverride) {
-            this.imageOsVersionOverride = Output.ofNullable(imageOsVersionOverride);
+            this.imageOsVersionOverride = Codegen.ofNullable(imageOsVersionOverride);
             return this;
         }
         public Builder instanceConfiguration(@Nullable Output<ContainerRecipeInstanceConfigurationArgs> instanceConfiguration) {
@@ -341,7 +342,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instanceConfiguration(@Nullable ContainerRecipeInstanceConfigurationArgs instanceConfiguration) {
-            this.instanceConfiguration = Output.ofNullable(instanceConfiguration);
+            this.instanceConfiguration = Codegen.ofNullable(instanceConfiguration);
             return this;
         }
         public Builder kmsKeyId(@Nullable Output<String> kmsKeyId) {
@@ -349,7 +350,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kmsKeyId(@Nullable String kmsKeyId) {
-            this.kmsKeyId = Output.ofNullable(kmsKeyId);
+            this.kmsKeyId = Codegen.ofNullable(kmsKeyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -357,7 +358,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentImage(@Nullable Output<String> parentImage) {
@@ -365,7 +366,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder parentImage(@Nullable String parentImage) {
-            this.parentImage = Output.ofNullable(parentImage);
+            this.parentImage = Codegen.ofNullable(parentImage);
             return this;
         }
         public Builder platformOverride(@Nullable Output<ContainerRecipePlatformOverride> platformOverride) {
@@ -373,7 +374,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder platformOverride(@Nullable ContainerRecipePlatformOverride platformOverride) {
-            this.platformOverride = Output.ofNullable(platformOverride);
+            this.platformOverride = Codegen.ofNullable(platformOverride);
             return this;
         }
         public Builder tags(@Nullable Output<Object> tags) {
@@ -381,7 +382,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Object tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetRepository(@Nullable Output<ContainerRecipeTargetContainerRepositoryArgs> targetRepository) {
@@ -389,7 +390,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder targetRepository(@Nullable ContainerRecipeTargetContainerRepositoryArgs targetRepository) {
-            this.targetRepository = Output.ofNullable(targetRepository);
+            this.targetRepository = Codegen.ofNullable(targetRepository);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -397,7 +398,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }
         public Builder workingDirectory(@Nullable Output<String> workingDirectory) {
@@ -405,7 +406,7 @@ public final class ContainerRecipeArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder workingDirectory(@Nullable String workingDirectory) {
-            this.workingDirectory = Output.ofNullable(workingDirectory);
+            this.workingDirectory = Codegen.ofNullable(workingDirectory);
             return this;
         }        public ContainerRecipeArgs build() {
             return new ContainerRecipeArgs(components, containerType, description, dockerfileTemplateData, dockerfileTemplateUri, imageOsVersionOverride, instanceConfiguration, kmsKeyId, name, parentImage, platformOverride, tags, targetRepository, version, workingDirectory);

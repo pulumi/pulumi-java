@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.NetworkEdgeSecurityServiceArgs;
 import java.lang.String;
@@ -158,7 +159,7 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public NetworkEdgeSecurityService(String name, NetworkEdgeSecurityServiceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:NetworkEdgeSecurityService", name, args == null ? NetworkEdgeSecurityServiceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:NetworkEdgeSecurityService", name, args == null ? NetworkEdgeSecurityServiceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NetworkEdgeSecurityService(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

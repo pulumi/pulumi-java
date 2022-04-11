@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudasset_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudasset_v1.inputs.IamPolicyAnalysisQueryArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery;
 
     public Output<IamPolicyAnalysisQueryArgs> getIamPolicyAnalysisQuery() {
-        return this.iamPolicyAnalysisQuery == null ? Output.empty() : this.iamPolicyAnalysisQuery;
+        return this.iamPolicyAnalysisQuery == null ? Codegen.empty() : this.iamPolicyAnalysisQuery;
     }
 
     public QueryContentArgs(@Nullable Output<IamPolicyAnalysisQueryArgs> iamPolicyAnalysisQuery) {
@@ -34,7 +35,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryContentArgs() {
-        this.iamPolicyAnalysisQuery = Output.empty();
+        this.iamPolicyAnalysisQuery = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class QueryContentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iamPolicyAnalysisQuery(@Nullable IamPolicyAnalysisQueryArgs iamPolicyAnalysisQuery) {
-            this.iamPolicyAnalysisQuery = Output.ofNullable(iamPolicyAnalysisQuery);
+            this.iamPolicyAnalysisQuery = Codegen.ofNullable(iamPolicyAnalysisQuery);
             return this;
         }        public QueryContentArgs build() {
             return new QueryContentArgs(iamPolicyAnalysisQuery);

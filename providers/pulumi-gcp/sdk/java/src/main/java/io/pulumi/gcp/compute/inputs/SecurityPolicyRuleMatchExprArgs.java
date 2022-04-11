@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -30,7 +31,7 @@ public final class SecurityPolicyRuleMatchExprArgs extends io.pulumi.resources.R
     }
 
     private SecurityPolicyRuleMatchExprArgs() {
-        this.expression = Output.empty();
+        this.expression = Codegen.empty();
     }
 
     public static Builder builder() {

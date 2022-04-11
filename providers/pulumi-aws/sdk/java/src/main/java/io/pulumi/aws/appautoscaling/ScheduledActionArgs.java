@@ -6,6 +6,7 @@ package io.pulumi.aws.appautoscaling;
 import io.pulumi.aws.appautoscaling.inputs.ScheduledActionScalableTargetActionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> timezone;
 
     public Output<String> getTimezone() {
-        return this.timezone == null ? Output.empty() : this.timezone;
+        return this.timezone == null ? Codegen.empty() : this.timezone;
     }
 
     public ScheduledActionArgs(
@@ -136,15 +137,15 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScheduledActionArgs() {
-        this.endTime = Output.empty();
-        this.name = Output.empty();
-        this.resourceId = Output.empty();
-        this.scalableDimension = Output.empty();
-        this.scalableTargetAction = Output.empty();
-        this.schedule = Output.empty();
-        this.serviceNamespace = Output.empty();
-        this.startTime = Output.empty();
-        this.timezone = Output.empty();
+        this.endTime = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceId = Codegen.empty();
+        this.scalableDimension = Codegen.empty();
+        this.scalableTargetAction = Codegen.empty();
+        this.schedule = Codegen.empty();
+        this.serviceNamespace = Codegen.empty();
+        this.startTime = Codegen.empty();
+        this.timezone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -196,7 +197,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceId(Output<String> resourceId) {
@@ -244,7 +245,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }
         public Builder timezone(@Nullable Output<String> timezone) {
@@ -252,7 +253,7 @@ public final class ScheduledActionArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder timezone(@Nullable String timezone) {
-            this.timezone = Output.ofNullable(timezone);
+            this.timezone = Codegen.ofNullable(timezone);
             return this;
         }        public ScheduledActionArgs build() {
             return new ScheduledActionArgs(endTime, name, resourceId, scalableDimension, scalableTargetAction, schedule, serviceNamespace, startTime, timezone);

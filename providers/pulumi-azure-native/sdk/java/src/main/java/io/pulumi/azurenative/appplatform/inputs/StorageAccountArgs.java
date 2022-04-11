@@ -5,6 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -61,9 +62,9 @@ public final class StorageAccountArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StorageAccountArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.storageType = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.storageType = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.location.enums.MapPricingPlan;
 import io.pulumi.awsnative.location.inputs.MapConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,21 +28,21 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="mapName")
       private final @Nullable Output<String> mapName;
 
     public Output<String> getMapName() {
-        return this.mapName == null ? Output.empty() : this.mapName;
+        return this.mapName == null ? Codegen.empty() : this.mapName;
     }
 
     @Import(name="pricingPlan")
       private final @Nullable Output<MapPricingPlan> pricingPlan;
 
     public Output<MapPricingPlan> getPricingPlan() {
-        return this.pricingPlan == null ? Output.empty() : this.pricingPlan;
+        return this.pricingPlan == null ? Codegen.empty() : this.pricingPlan;
     }
 
     public MapArgs(
@@ -56,10 +57,10 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MapArgs() {
-        this.configuration = Output.empty();
-        this.description = Output.empty();
-        this.mapName = Output.empty();
-        this.pricingPlan = Output.empty();
+        this.configuration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.mapName = Codegen.empty();
+        this.pricingPlan = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -101,7 +102,7 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder mapName(@Nullable Output<String> mapName) {
@@ -109,7 +110,7 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mapName(@Nullable String mapName) {
-            this.mapName = Output.ofNullable(mapName);
+            this.mapName = Codegen.ofNullable(mapName);
             return this;
         }
         public Builder pricingPlan(@Nullable Output<MapPricingPlan> pricingPlan) {
@@ -117,7 +118,7 @@ public final class MapArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pricingPlan(@Nullable MapPricingPlan pricingPlan) {
-            this.pricingPlan = Output.ofNullable(pricingPlan);
+            this.pricingPlan = Codegen.ofNullable(pricingPlan);
             return this;
         }        public MapArgs build() {
             return new MapArgs(configuration, description, mapName, pricingPlan);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> numFacetBuckets;
 
     public Output<Integer> getNumFacetBuckets() {
-        return this.numFacetBuckets == null ? Output.empty() : this.numFacetBuckets;
+        return this.numFacetBuckets == null ? Codegen.empty() : this.numFacetBuckets;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectType;
 
     public Output<String> getObjectType() {
-        return this.objectType == null ? Output.empty() : this.objectType;
+        return this.objectType == null ? Codegen.empty() : this.objectType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> operatorName;
 
     public Output<String> getOperatorName() {
-        return this.operatorName == null ? Output.empty() : this.operatorName;
+        return this.operatorName == null ? Codegen.empty() : this.operatorName;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceName;
 
     public Output<String> getSourceName() {
-        return this.sourceName == null ? Output.empty() : this.sourceName;
+        return this.sourceName == null ? Codegen.empty() : this.sourceName;
     }
 
     public FacetOptionsArgs(
@@ -75,10 +76,10 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FacetOptionsArgs() {
-        this.numFacetBuckets = Output.empty();
-        this.objectType = Output.empty();
-        this.operatorName = Output.empty();
-        this.sourceName = Output.empty();
+        this.numFacetBuckets = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.operatorName = Codegen.empty();
+        this.sourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder numFacetBuckets(@Nullable Integer numFacetBuckets) {
-            this.numFacetBuckets = Output.ofNullable(numFacetBuckets);
+            this.numFacetBuckets = Codegen.ofNullable(numFacetBuckets);
             return this;
         }
         public Builder objectType(@Nullable Output<String> objectType) {
@@ -120,7 +121,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = Output.ofNullable(objectType);
+            this.objectType = Codegen.ofNullable(objectType);
             return this;
         }
         public Builder operatorName(@Nullable Output<String> operatorName) {
@@ -128,7 +129,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder operatorName(@Nullable String operatorName) {
-            this.operatorName = Output.ofNullable(operatorName);
+            this.operatorName = Codegen.ofNullable(operatorName);
             return this;
         }
         public Builder sourceName(@Nullable Output<String> sourceName) {
@@ -136,7 +137,7 @@ public final class FacetOptionsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceName(@Nullable String sourceName) {
-            this.sourceName = Output.ofNullable(sourceName);
+            this.sourceName = Codegen.ofNullable(sourceName);
             return this;
         }        public FacetOptionsArgs build() {
             return new FacetOptionsArgs(numFacetBuckets, objectType, operatorName, sourceName);

@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,7 +27,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> dataTraceEnabled;
 
     public Output<Boolean> getDataTraceEnabled() {
-        return this.dataTraceEnabled == null ? Output.empty() : this.dataTraceEnabled;
+        return this.dataTraceEnabled == null ? Codegen.empty() : this.dataTraceEnabled;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> detailedMetricsEnabled;
 
     public Output<Boolean> getDetailedMetricsEnabled() {
-        return this.detailedMetricsEnabled == null ? Output.empty() : this.detailedMetricsEnabled;
+        return this.detailedMetricsEnabled == null ? Codegen.empty() : this.detailedMetricsEnabled;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> loggingLevel;
 
     public Output<String> getLoggingLevel() {
-        return this.loggingLevel == null ? Output.empty() : this.loggingLevel;
+        return this.loggingLevel == null ? Codegen.empty() : this.loggingLevel;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> throttlingBurstLimit;
 
     public Output<Integer> getThrottlingBurstLimit() {
-        return this.throttlingBurstLimit == null ? Output.empty() : this.throttlingBurstLimit;
+        return this.throttlingBurstLimit == null ? Codegen.empty() : this.throttlingBurstLimit;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Double> throttlingRateLimit;
 
     public Output<Double> getThrottlingRateLimit() {
-        return this.throttlingRateLimit == null ? Output.empty() : this.throttlingRateLimit;
+        return this.throttlingRateLimit == null ? Codegen.empty() : this.throttlingRateLimit;
     }
 
     public StageRouteSettingGetArgs(
@@ -101,12 +102,12 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
     }
 
     private StageRouteSettingGetArgs() {
-        this.dataTraceEnabled = Output.empty();
-        this.detailedMetricsEnabled = Output.empty();
-        this.loggingLevel = Output.empty();
-        this.routeKey = Output.empty();
-        this.throttlingBurstLimit = Output.empty();
-        this.throttlingRateLimit = Output.empty();
+        this.dataTraceEnabled = Codegen.empty();
+        this.detailedMetricsEnabled = Codegen.empty();
+        this.loggingLevel = Codegen.empty();
+        this.routeKey = Codegen.empty();
+        this.throttlingBurstLimit = Codegen.empty();
+        this.throttlingRateLimit = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder dataTraceEnabled(@Nullable Boolean dataTraceEnabled) {
-            this.dataTraceEnabled = Output.ofNullable(dataTraceEnabled);
+            this.dataTraceEnabled = Codegen.ofNullable(dataTraceEnabled);
             return this;
         }
         public Builder detailedMetricsEnabled(@Nullable Output<Boolean> detailedMetricsEnabled) {
@@ -152,7 +153,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder detailedMetricsEnabled(@Nullable Boolean detailedMetricsEnabled) {
-            this.detailedMetricsEnabled = Output.ofNullable(detailedMetricsEnabled);
+            this.detailedMetricsEnabled = Codegen.ofNullable(detailedMetricsEnabled);
             return this;
         }
         public Builder loggingLevel(@Nullable Output<String> loggingLevel) {
@@ -160,7 +161,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder loggingLevel(@Nullable String loggingLevel) {
-            this.loggingLevel = Output.ofNullable(loggingLevel);
+            this.loggingLevel = Codegen.ofNullable(loggingLevel);
             return this;
         }
         public Builder routeKey(Output<String> routeKey) {
@@ -176,7 +177,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder throttlingBurstLimit(@Nullable Integer throttlingBurstLimit) {
-            this.throttlingBurstLimit = Output.ofNullable(throttlingBurstLimit);
+            this.throttlingBurstLimit = Codegen.ofNullable(throttlingBurstLimit);
             return this;
         }
         public Builder throttlingRateLimit(@Nullable Output<Double> throttlingRateLimit) {
@@ -184,7 +185,7 @@ public final class StageRouteSettingGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder throttlingRateLimit(@Nullable Double throttlingRateLimit) {
-            this.throttlingRateLimit = Output.ofNullable(throttlingRateLimit);
+            this.throttlingRateLimit = Codegen.ofNullable(throttlingRateLimit);
             return this;
         }        public StageRouteSettingGetArgs build() {
             return new StageRouteSettingGetArgs(dataTraceEnabled, detailedMetricsEnabled, loggingLevel, routeKey, throttlingBurstLimit, throttlingRateLimit);

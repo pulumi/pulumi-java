@@ -10,6 +10,7 @@ import io.pulumi.azurenative.machinelearningcompute.inputs.SystemServiceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> agentCount;
 
     public Output<Integer> getAgentCount() {
-        return this.agentCount == null ? Output.empty() : this.agentCount;
+        return this.agentCount == null ? Codegen.empty() : this.agentCount;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize;
 
     public Output<Either<String,AgentVMSizeTypes>> getAgentVmSize() {
-        return this.agentVmSize == null ? Output.empty() : this.agentVmSize;
+        return this.agentVmSize == null ? Codegen.empty() : this.agentVmSize;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> masterCount;
 
     public Output<Integer> getMasterCount() {
-        return this.masterCount == null ? Output.empty() : this.masterCount;
+        return this.masterCount == null ? Codegen.empty() : this.masterCount;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties;
 
     public Output<KubernetesClusterPropertiesArgs> getOrchestratorProperties() {
-        return this.orchestratorProperties == null ? Output.empty() : this.orchestratorProperties;
+        return this.orchestratorProperties == null ? Codegen.empty() : this.orchestratorProperties;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<SystemServiceArgs>> systemServices;
 
     public Output<List<SystemServiceArgs>> getSystemServices() {
-        return this.systemServices == null ? Output.empty() : this.systemServices;
+        return this.systemServices == null ? Codegen.empty() : this.systemServices;
     }
 
     public AcsClusterPropertiesArgs(
@@ -98,21 +99,21 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
         @Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties,
         Output<Either<String,OrchestratorType>> orchestratorType,
         @Nullable Output<List<SystemServiceArgs>> systemServices) {
-        this.agentCount = agentCount == null ? Output.ofNullable(2) : agentCount;
+        this.agentCount = agentCount == null ? Codegen.ofNullable(2) : agentCount;
         this.agentVmSize = agentVmSize == null ? Output.ofLeft("Standard_D3_v2") : agentVmSize;
-        this.masterCount = masterCount == null ? Output.ofNullable(1) : masterCount;
+        this.masterCount = masterCount == null ? Codegen.ofNullable(1) : masterCount;
         this.orchestratorProperties = orchestratorProperties;
         this.orchestratorType = Objects.requireNonNull(orchestratorType, "expected parameter 'orchestratorType' to be non-null");
         this.systemServices = systemServices;
     }
 
     private AcsClusterPropertiesArgs() {
-        this.agentCount = Output.empty();
-        this.agentVmSize = Output.empty();
-        this.masterCount = Output.empty();
-        this.orchestratorProperties = Output.empty();
-        this.orchestratorType = Output.empty();
-        this.systemServices = Output.empty();
+        this.agentCount = Codegen.empty();
+        this.agentVmSize = Codegen.empty();
+        this.masterCount = Codegen.empty();
+        this.orchestratorProperties = Codegen.empty();
+        this.orchestratorType = Codegen.empty();
+        this.systemServices = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = Output.ofNullable(agentCount);
+            this.agentCount = Codegen.ofNullable(agentCount);
             return this;
         }
         public Builder agentVmSize(@Nullable Output<Either<String,AgentVMSizeTypes>> agentVmSize) {
@@ -158,7 +159,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder agentVmSize(@Nullable Either<String,AgentVMSizeTypes> agentVmSize) {
-            this.agentVmSize = Output.ofNullable(agentVmSize);
+            this.agentVmSize = Codegen.ofNullable(agentVmSize);
             return this;
         }
         public Builder masterCount(@Nullable Output<Integer> masterCount) {
@@ -166,7 +167,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder masterCount(@Nullable Integer masterCount) {
-            this.masterCount = Output.ofNullable(masterCount);
+            this.masterCount = Codegen.ofNullable(masterCount);
             return this;
         }
         public Builder orchestratorProperties(@Nullable Output<KubernetesClusterPropertiesArgs> orchestratorProperties) {
@@ -174,7 +175,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder orchestratorProperties(@Nullable KubernetesClusterPropertiesArgs orchestratorProperties) {
-            this.orchestratorProperties = Output.ofNullable(orchestratorProperties);
+            this.orchestratorProperties = Codegen.ofNullable(orchestratorProperties);
             return this;
         }
         public Builder orchestratorType(Output<Either<String,OrchestratorType>> orchestratorType) {
@@ -190,7 +191,7 @@ public final class AcsClusterPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder systemServices(@Nullable List<SystemServiceArgs> systemServices) {
-            this.systemServices = Output.ofNullable(systemServices);
+            this.systemServices = Codegen.ofNullable(systemServices);
             return this;
         }
         public Builder systemServices(SystemServiceArgs... systemServices) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> created;
 
     public Output<String> getCreated() {
-        return this.created == null ? Output.empty() : this.created;
+        return this.created == null ? Codegen.empty() : this.created;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> lastModified;
 
     public Output<String> getLastModified() {
-        return this.lastModified == null ? Output.empty() : this.lastModified;
+        return this.lastModified == null ? Codegen.empty() : this.lastModified;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> lastStarted;
 
     public Output<String> getLastStarted() {
-        return this.lastStarted == null ? Output.empty() : this.lastStarted;
+        return this.lastStarted == null ? Codegen.empty() : this.lastStarted;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> lastStopped;
 
     public Output<String> getLastStopped() {
-        return this.lastStopped == null ? Output.empty() : this.lastStopped;
+        return this.lastStopped == null ? Codegen.empty() : this.lastStopped;
     }
 
     public CanaryTimelineGetArgs(
@@ -70,10 +71,10 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private CanaryTimelineGetArgs() {
-        this.created = Output.empty();
-        this.lastModified = Output.empty();
-        this.lastStarted = Output.empty();
-        this.lastStopped = Output.empty();
+        this.created = Codegen.empty();
+        this.lastModified = Codegen.empty();
+        this.lastStarted = Codegen.empty();
+        this.lastStopped = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder created(@Nullable String created) {
-            this.created = Output.ofNullable(created);
+            this.created = Codegen.ofNullable(created);
             return this;
         }
         public Builder lastModified(@Nullable Output<String> lastModified) {
@@ -115,7 +116,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder lastModified(@Nullable String lastModified) {
-            this.lastModified = Output.ofNullable(lastModified);
+            this.lastModified = Codegen.ofNullable(lastModified);
             return this;
         }
         public Builder lastStarted(@Nullable Output<String> lastStarted) {
@@ -123,7 +124,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder lastStarted(@Nullable String lastStarted) {
-            this.lastStarted = Output.ofNullable(lastStarted);
+            this.lastStarted = Codegen.ofNullable(lastStarted);
             return this;
         }
         public Builder lastStopped(@Nullable Output<String> lastStopped) {
@@ -131,7 +132,7 @@ public final class CanaryTimelineGetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder lastStopped(@Nullable String lastStopped) {
-            this.lastStopped = Output.ofNullable(lastStopped);
+            this.lastStopped = Codegen.ofNullable(lastStopped);
             return this;
         }        public CanaryTimelineGetArgs build() {
             return new CanaryTimelineGetArgs(created, lastModified, lastStarted, lastStopped);

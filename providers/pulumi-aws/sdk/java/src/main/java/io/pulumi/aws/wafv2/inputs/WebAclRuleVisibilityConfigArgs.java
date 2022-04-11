@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class WebAclRuleVisibilityConfigArgs extends io.pulumi.resources.Re
     }
 
     private WebAclRuleVisibilityConfigArgs() {
-        this.cloudwatchMetricsEnabled = Output.empty();
-        this.metricName = Output.empty();
-        this.sampledRequestsEnabled = Output.empty();
+        this.cloudwatchMetricsEnabled = Codegen.empty();
+        this.metricName = Codegen.empty();
+        this.sampledRequestsEnabled = Codegen.empty();
     }
 
     public static Builder builder() {

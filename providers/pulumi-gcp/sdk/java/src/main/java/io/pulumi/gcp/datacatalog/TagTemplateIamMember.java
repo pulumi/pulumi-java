@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateIamMemberArgs;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamMemberState;
@@ -80,7 +81,7 @@ public class TagTemplateIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagTemplateIamMember(String name, TagTemplateIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/tagTemplateIamMember:TagTemplateIamMember", name, args == null ? TagTemplateIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/tagTemplateIamMember:TagTemplateIamMember", name, args == null ? TagTemplateIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagTemplateIamMember(String name, Output<String> id, @Nullable TagTemplateIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

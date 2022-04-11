@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Object> apiVersion;
 
     public Output<Object> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Object> environmentUrl;
 
     public Output<Object> getEnvironmentUrl() {
-        return this.environmentUrl == null ? Output.empty() : this.environmentUrl;
+        return this.environmentUrl == null ? Codegen.empty() : this.environmentUrl;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Object> extendedProperties;
 
     public Output<Object> getExtendedProperties() {
-        return this.extendedProperties == null ? Output.empty() : this.extendedProperties;
+        return this.extendedProperties == null ? Codegen.empty() : this.extendedProperties;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecurityToken() {
-        return this.securityToken == null ? Output.empty() : this.securityToken;
+        return this.securityToken == null ? Codegen.empty() : this.securityToken;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
       private final @Nullable Output<Object> username;
 
     public Output<Object> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public SalesforceServiceCloudLinkedServiceArgs(
@@ -187,18 +188,18 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
     }
 
     private SalesforceServiceCloudLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.apiVersion = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.environmentUrl = Output.empty();
-        this.extendedProperties = Output.empty();
-        this.parameters = Output.empty();
-        this.password = Output.empty();
-        this.securityToken = Output.empty();
-        this.type = Output.empty();
-        this.username = Output.empty();
+        this.annotations = Codegen.empty();
+        this.apiVersion = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.environmentUrl = Codegen.empty();
+        this.extendedProperties = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.password = Codegen.empty();
+        this.securityToken = Codegen.empty();
+        this.type = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -259,7 +260,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder apiVersion(@Nullable Object apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -267,7 +268,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -275,7 +276,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -283,7 +284,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder environmentUrl(@Nullable Output<Object> environmentUrl) {
@@ -291,7 +292,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder environmentUrl(@Nullable Object environmentUrl) {
-            this.environmentUrl = Output.ofNullable(environmentUrl);
+            this.environmentUrl = Codegen.ofNullable(environmentUrl);
             return this;
         }
         public Builder extendedProperties(@Nullable Output<Object> extendedProperties) {
@@ -299,7 +300,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder extendedProperties(@Nullable Object extendedProperties) {
-            this.extendedProperties = Output.ofNullable(extendedProperties);
+            this.extendedProperties = Codegen.ofNullable(extendedProperties);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -307,7 +308,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
@@ -315,7 +316,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder securityToken(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> securityToken) {
@@ -323,7 +324,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder securityToken(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> securityToken) {
-            this.securityToken = Output.ofNullable(securityToken);
+            this.securityToken = Codegen.ofNullable(securityToken);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -339,7 +340,7 @@ public final class SalesforceServiceCloudLinkedServiceArgs extends io.pulumi.res
             return this;
         }
         public Builder username(@Nullable Object username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public SalesforceServiceCloudLinkedServiceArgs build() {
             return new SalesforceServiceCloudLinkedServiceArgs(annotations, apiVersion, connectVia, description, encryptedCredential, environmentUrl, extendedProperties, parameters, password, securityToken, type, username);

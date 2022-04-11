@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
       private final @Nullable Output<String> failureCondition;
 
     public Output<String> getFailureCondition() {
-        return this.failureCondition == null ? Output.empty() : this.failureCondition;
+        return this.failureCondition == null ? Codegen.empty() : this.failureCondition;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
       private final @Nullable Output<String> rolloutCondition;
 
     public Output<String> getRolloutCondition() {
-        return this.rolloutCondition == null ? Output.empty() : this.rolloutCondition;
+        return this.rolloutCondition == null ? Codegen.empty() : this.rolloutCondition;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps;
 
     public Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> getRolloutSteps() {
-        return this.rolloutSteps == null ? Output.empty() : this.rolloutSteps;
+        return this.rolloutSteps == null ? Codegen.empty() : this.rolloutSteps;
     }
 
     public GoogleCloudDialogflowCxV3beta1RolloutConfigArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
     }
 
     private GoogleCloudDialogflowCxV3beta1RolloutConfigArgs() {
-        this.failureCondition = Output.empty();
-        this.rolloutCondition = Output.empty();
-        this.rolloutSteps = Output.empty();
+        this.failureCondition = Codegen.empty();
+        this.rolloutCondition = Codegen.empty();
+        this.rolloutSteps = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
             return this;
         }
         public Builder failureCondition(@Nullable String failureCondition) {
-            this.failureCondition = Output.ofNullable(failureCondition);
+            this.failureCondition = Codegen.ofNullable(failureCondition);
             return this;
         }
         public Builder rolloutCondition(@Nullable Output<String> rolloutCondition) {
@@ -105,7 +106,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
             return this;
         }
         public Builder rolloutCondition(@Nullable String rolloutCondition) {
-            this.rolloutCondition = Output.ofNullable(rolloutCondition);
+            this.rolloutCondition = Codegen.ofNullable(rolloutCondition);
             return this;
         }
         public Builder rolloutSteps(@Nullable Output<List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs>> rolloutSteps) {
@@ -113,7 +114,7 @@ public final class GoogleCloudDialogflowCxV3beta1RolloutConfigArgs extends io.pu
             return this;
         }
         public Builder rolloutSteps(@Nullable List<GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs> rolloutSteps) {
-            this.rolloutSteps = Output.ofNullable(rolloutSteps);
+            this.rolloutSteps = Codegen.ofNullable(rolloutSteps);
             return this;
         }
         public Builder rolloutSteps(GoogleCloudDialogflowCxV3beta1RolloutConfigRolloutStepArgs... rolloutSteps) {

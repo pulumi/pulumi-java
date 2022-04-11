@@ -5,6 +5,7 @@ package io.pulumi.azurenative.resources;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> managedBy;
 
     public Output<String> getManagedBy() {
-        return this.managedBy == null ? Output.empty() : this.managedBy;
+        return this.managedBy == null ? Codegen.empty() : this.managedBy;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceGroupName;
 
     public Output<String> getResourceGroupName() {
-        return this.resourceGroupName == null ? Output.empty() : this.resourceGroupName;
+        return this.resourceGroupName == null ? Codegen.empty() : this.resourceGroupName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResourceGroupArgs(
@@ -71,10 +72,10 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceGroupArgs() {
-        this.location = Output.empty();
-        this.managedBy = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.location = Codegen.empty();
+        this.managedBy = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder managedBy(@Nullable Output<String> managedBy) {
@@ -116,7 +117,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedBy(@Nullable String managedBy) {
-            this.managedBy = Output.ofNullable(managedBy);
+            this.managedBy = Codegen.ofNullable(managedBy);
             return this;
         }
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
@@ -124,7 +125,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
-            this.resourceGroupName = Output.ofNullable(resourceGroupName);
+            this.resourceGroupName = Codegen.ofNullable(resourceGroupName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -132,7 +133,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResourceGroupArgs build() {
             return new ResourceGroupArgs(location, managedBy, resourceGroupName, tags);

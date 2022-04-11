@@ -11,6 +11,7 @@ import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupAssociationT
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -227,7 +228,7 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallRuleGroupAssociation(String name, FirewallRuleGroupAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:route53resolver:FirewallRuleGroupAssociation", name, args == null ? FirewallRuleGroupAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:route53resolver:FirewallRuleGroupAssociation", name, args == null ? FirewallRuleGroupAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirewallRuleGroupAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

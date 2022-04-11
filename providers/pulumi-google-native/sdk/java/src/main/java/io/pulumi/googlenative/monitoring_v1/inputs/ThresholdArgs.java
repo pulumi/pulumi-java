@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdColor;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdDirection;
 import io.pulumi.googlenative.monitoring_v1.enums.ThresholdTargetAxis;
@@ -30,7 +31,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ThresholdColor> color;
 
     public Output<ThresholdColor> getColor() {
-        return this.color == null ? Output.empty() : this.color;
+        return this.color == null ? Codegen.empty() : this.color;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ThresholdDirection> direction;
 
     public Output<ThresholdDirection> getDirection() {
-        return this.direction == null ? Output.empty() : this.direction;
+        return this.direction == null ? Codegen.empty() : this.direction;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ThresholdTargetAxis> targetAxis;
 
     public Output<ThresholdTargetAxis> getTargetAxis() {
-        return this.targetAxis == null ? Output.empty() : this.targetAxis;
+        return this.targetAxis == null ? Codegen.empty() : this.targetAxis;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> value;
 
     public Output<Double> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public ThresholdArgs(
@@ -91,11 +92,11 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThresholdArgs() {
-        this.color = Output.empty();
-        this.direction = Output.empty();
-        this.label = Output.empty();
-        this.targetAxis = Output.empty();
-        this.value = Output.empty();
+        this.color = Codegen.empty();
+        this.direction = Codegen.empty();
+        this.label = Codegen.empty();
+        this.targetAxis = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder color(@Nullable ThresholdColor color) {
-            this.color = Output.ofNullable(color);
+            this.color = Codegen.ofNullable(color);
             return this;
         }
         public Builder direction(@Nullable Output<ThresholdDirection> direction) {
@@ -139,7 +140,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder direction(@Nullable ThresholdDirection direction) {
-            this.direction = Output.ofNullable(direction);
+            this.direction = Codegen.ofNullable(direction);
             return this;
         }
         public Builder label(@Nullable Output<String> label) {
@@ -147,7 +148,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder targetAxis(@Nullable Output<ThresholdTargetAxis> targetAxis) {
@@ -155,7 +156,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetAxis(@Nullable ThresholdTargetAxis targetAxis) {
-            this.targetAxis = Output.ofNullable(targetAxis);
+            this.targetAxis = Codegen.ofNullable(targetAxis);
             return this;
         }
         public Builder value(@Nullable Output<Double> value) {
@@ -163,7 +164,7 @@ public final class ThresholdArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable Double value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public ThresholdArgs build() {
             return new ThresholdArgs(color, direction, label, targetAxis, value);

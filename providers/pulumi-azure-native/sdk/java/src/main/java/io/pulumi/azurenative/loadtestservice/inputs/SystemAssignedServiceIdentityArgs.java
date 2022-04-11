@@ -7,6 +7,7 @@ import io.pulumi.azurenative.loadtestservice.enums.SystemAssignedServiceIdentity
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,7 +36,7 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
     }
 
     private SystemAssignedServiceIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> keyring;
 
     public Output<String> getKeyring() {
-        return this.keyring == null ? Output.empty() : this.keyring;
+        return this.keyring == null ? Codegen.empty() : this.keyring;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> pool;
 
     public Output<String> getPool() {
-        return this.pool == null ? Output.empty() : this.pool;
+        return this.pool == null ? Codegen.empty() : this.pool;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> readOnly;
 
     public Output<Boolean> getReadOnly() {
-        return this.readOnly == null ? Output.empty() : this.readOnly;
+        return this.readOnly == null ? Codegen.empty() : this.readOnly;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<SecretReferenceArgs> secretRef;
 
     public Output<SecretReferenceArgs> getSecretRef() {
-        return this.secretRef == null ? Output.empty() : this.secretRef;
+        return this.secretRef == null ? Codegen.empty() : this.secretRef;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> user;
 
     public Output<String> getUser() {
-        return this.user == null ? Output.empty() : this.user;
+        return this.user == null ? Codegen.empty() : this.user;
     }
 
     public RBDPersistentVolumeSourceArgs(
@@ -129,14 +130,14 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
     }
 
     private RBDPersistentVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.image = Output.empty();
-        this.keyring = Output.empty();
-        this.monitors = Output.empty();
-        this.pool = Output.empty();
-        this.readOnly = Output.empty();
-        this.secretRef = Output.empty();
-        this.user = Output.empty();
+        this.fsType = Codegen.empty();
+        this.image = Codegen.empty();
+        this.keyring = Codegen.empty();
+        this.monitors = Codegen.empty();
+        this.pool = Codegen.empty();
+        this.readOnly = Codegen.empty();
+        this.secretRef = Codegen.empty();
+        this.user = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder image(Output<String> image) {
@@ -194,7 +195,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder keyring(@Nullable String keyring) {
-            this.keyring = Output.ofNullable(keyring);
+            this.keyring = Codegen.ofNullable(keyring);
             return this;
         }
         public Builder monitors(Output<List<String>> monitors) {
@@ -213,7 +214,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder pool(@Nullable String pool) {
-            this.pool = Output.ofNullable(pool);
+            this.pool = Codegen.ofNullable(pool);
             return this;
         }
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
@@ -221,7 +222,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder readOnly(@Nullable Boolean readOnly) {
-            this.readOnly = Output.ofNullable(readOnly);
+            this.readOnly = Codegen.ofNullable(readOnly);
             return this;
         }
         public Builder secretRef(@Nullable Output<SecretReferenceArgs> secretRef) {
@@ -229,7 +230,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder secretRef(@Nullable SecretReferenceArgs secretRef) {
-            this.secretRef = Output.ofNullable(secretRef);
+            this.secretRef = Codegen.ofNullable(secretRef);
             return this;
         }
         public Builder user(@Nullable Output<String> user) {
@@ -237,7 +238,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder user(@Nullable String user) {
-            this.user = Output.ofNullable(user);
+            this.user = Codegen.ofNullable(user);
             return this;
         }        public RBDPersistentVolumeSourceArgs build() {
             return new RBDPersistentVolumeSourceArgs(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);

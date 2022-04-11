@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional;
 import io.pulumi.aws.wafregional.inputs.GeoMatchSetGeoMatchConstraintArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GeoMatchSetGeoMatchConstraintArgs>> geoMatchConstraints;
 
     public Output<List<GeoMatchSetGeoMatchConstraintArgs>> getGeoMatchConstraints() {
-        return this.geoMatchConstraints == null ? Output.empty() : this.geoMatchConstraints;
+        return this.geoMatchConstraints == null ? Codegen.empty() : this.geoMatchConstraints;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public GeoMatchSetArgs(
@@ -46,8 +47,8 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GeoMatchSetArgs() {
-        this.geoMatchConstraints = Output.empty();
-        this.name = Output.empty();
+        this.geoMatchConstraints = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder geoMatchConstraints(@Nullable List<GeoMatchSetGeoMatchConstraintArgs> geoMatchConstraints) {
-            this.geoMatchConstraints = Output.ofNullable(geoMatchConstraints);
+            this.geoMatchConstraints = Codegen.ofNullable(geoMatchConstraints);
             return this;
         }
         public Builder geoMatchConstraints(GeoMatchSetGeoMatchConstraintArgs... geoMatchConstraints) {
@@ -88,7 +89,7 @@ public final class GeoMatchSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public GeoMatchSetArgs build() {
             return new GeoMatchSetArgs(geoMatchConstraints, name);

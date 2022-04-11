@@ -8,6 +8,7 @@ import io.pulumi.azurenative.powerbi.enums.AzureSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -46,8 +47,8 @@ public final class AzureSkuArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AzureSkuArgs() {
-        this.name = Output.empty();
-        this.tier = Output.empty();
+        this.name = Codegen.empty();
+        this.tier = Codegen.empty();
     }
 
     public static Builder builder() {

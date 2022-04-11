@@ -6,6 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluencePageFieldName;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DataSourceConfluencePageToIndexFieldMappingArgs extends io.pu
       private final @Nullable Output<String> dateFieldFormat;
 
     public Output<String> getDateFieldFormat() {
-        return this.dateFieldFormat == null ? Output.empty() : this.dateFieldFormat;
+        return this.dateFieldFormat == null ? Codegen.empty() : this.dateFieldFormat;
     }
 
     @Import(name="indexFieldName", required=true)
@@ -46,9 +47,9 @@ public final class DataSourceConfluencePageToIndexFieldMappingArgs extends io.pu
     }
 
     private DataSourceConfluencePageToIndexFieldMappingArgs() {
-        this.dataSourceFieldName = Output.empty();
-        this.dateFieldFormat = Output.empty();
-        this.indexFieldName = Output.empty();
+        this.dataSourceFieldName = Codegen.empty();
+        this.dateFieldFormat = Codegen.empty();
+        this.indexFieldName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class DataSourceConfluencePageToIndexFieldMappingArgs extends io.pu
             return this;
         }
         public Builder dateFieldFormat(@Nullable String dateFieldFormat) {
-            this.dateFieldFormat = Output.ofNullable(dateFieldFormat);
+            this.dateFieldFormat = Codegen.ofNullable(dateFieldFormat);
             return this;
         }
         public Builder indexFieldName(Output<String> indexFieldName) {

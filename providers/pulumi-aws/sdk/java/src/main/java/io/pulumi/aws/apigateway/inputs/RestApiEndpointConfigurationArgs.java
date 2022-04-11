@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<String>> vpcEndpointIds;
 
     public Output<List<String>> getVpcEndpointIds() {
-        return this.vpcEndpointIds == null ? Output.empty() : this.vpcEndpointIds;
+        return this.vpcEndpointIds == null ? Codegen.empty() : this.vpcEndpointIds;
     }
 
     public RestApiEndpointConfigurationArgs(
@@ -45,8 +46,8 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
     }
 
     private RestApiEndpointConfigurationArgs() {
-        this.types = Output.empty();
-        this.vpcEndpointIds = Output.empty();
+        this.types = Codegen.empty();
+        this.vpcEndpointIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class RestApiEndpointConfigurationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder vpcEndpointIds(@Nullable List<String> vpcEndpointIds) {
-            this.vpcEndpointIds = Output.ofNullable(vpcEndpointIds);
+            this.vpcEndpointIds = Codegen.ofNullable(vpcEndpointIds);
             return this;
         }
         public Builder vpcEndpointIds(String... vpcEndpointIds) {

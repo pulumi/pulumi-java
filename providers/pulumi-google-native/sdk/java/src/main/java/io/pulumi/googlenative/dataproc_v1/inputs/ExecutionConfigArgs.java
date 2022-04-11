@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> kmsKey;
 
     public Output<String> getKmsKey() {
-        return this.kmsKey == null ? Output.empty() : this.kmsKey;
+        return this.kmsKey == null ? Codegen.empty() : this.kmsKey;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<String>> networkTags;
 
     public Output<List<String>> getNetworkTags() {
-        return this.networkTags == null ? Output.empty() : this.networkTags;
+        return this.networkTags == null ? Codegen.empty() : this.networkTags;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> networkUri;
 
     public Output<String> getNetworkUri() {
-        return this.networkUri == null ? Output.empty() : this.networkUri;
+        return this.networkUri == null ? Codegen.empty() : this.networkUri;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> subnetworkUri;
 
     public Output<String> getSubnetworkUri() {
-        return this.subnetworkUri == null ? Output.empty() : this.subnetworkUri;
+        return this.subnetworkUri == null ? Codegen.empty() : this.subnetworkUri;
     }
 
     public ExecutionConfigArgs(
@@ -88,11 +89,11 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ExecutionConfigArgs() {
-        this.kmsKey = Output.empty();
-        this.networkTags = Output.empty();
-        this.networkUri = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.subnetworkUri = Output.empty();
+        this.kmsKey = Codegen.empty();
+        this.networkTags = Codegen.empty();
+        this.networkUri = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.subnetworkUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder kmsKey(@Nullable String kmsKey) {
-            this.kmsKey = Output.ofNullable(kmsKey);
+            this.kmsKey = Codegen.ofNullable(kmsKey);
             return this;
         }
         public Builder networkTags(@Nullable Output<List<String>> networkTags) {
@@ -136,7 +137,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networkTags(@Nullable List<String> networkTags) {
-            this.networkTags = Output.ofNullable(networkTags);
+            this.networkTags = Codegen.ofNullable(networkTags);
             return this;
         }
         public Builder networkTags(String... networkTags) {
@@ -147,7 +148,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder networkUri(@Nullable String networkUri) {
-            this.networkUri = Output.ofNullable(networkUri);
+            this.networkUri = Codegen.ofNullable(networkUri);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -155,7 +156,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder subnetworkUri(@Nullable Output<String> subnetworkUri) {
@@ -163,7 +164,7 @@ public final class ExecutionConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subnetworkUri(@Nullable String subnetworkUri) {
-            this.subnetworkUri = Output.ofNullable(subnetworkUri);
+            this.subnetworkUri = Codegen.ofNullable(subnetworkUri);
             return this;
         }        public ExecutionConfigArgs build() {
             return new ExecutionConfigArgs(kmsKey, networkTags, networkUri, serviceAccount, subnetworkUri);

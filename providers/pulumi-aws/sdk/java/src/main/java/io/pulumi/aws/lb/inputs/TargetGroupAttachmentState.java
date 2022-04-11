@@ -5,6 +5,7 @@ package io.pulumi.aws.lb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> targetGroupArn;
 
     public Output<String> getTargetGroupArn() {
-        return this.targetGroupArn == null ? Output.empty() : this.targetGroupArn;
+        return this.targetGroupArn == null ? Codegen.empty() : this.targetGroupArn;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
       private final @Nullable Output<String> targetId;
 
     public Output<String> getTargetId() {
-        return this.targetId == null ? Output.empty() : this.targetId;
+        return this.targetId == null ? Codegen.empty() : this.targetId;
     }
 
     public TargetGroupAttachmentState(
@@ -71,10 +72,10 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
     }
 
     private TargetGroupAttachmentState() {
-        this.availabilityZone = Output.empty();
-        this.port = Output.empty();
-        this.targetGroupArn = Output.empty();
-        this.targetId = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.port = Codegen.empty();
+        this.targetGroupArn = Codegen.empty();
+        this.targetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -116,7 +117,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder targetGroupArn(@Nullable Output<String> targetGroupArn) {
@@ -124,7 +125,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder targetGroupArn(@Nullable String targetGroupArn) {
-            this.targetGroupArn = Output.ofNullable(targetGroupArn);
+            this.targetGroupArn = Codegen.ofNullable(targetGroupArn);
             return this;
         }
         public Builder targetId(@Nullable Output<String> targetId) {
@@ -132,7 +133,7 @@ public final class TargetGroupAttachmentState extends io.pulumi.resources.Resour
             return this;
         }
         public Builder targetId(@Nullable String targetId) {
-            this.targetId = Output.ofNullable(targetId);
+            this.targetId = Codegen.ofNullable(targetId);
             return this;
         }        public TargetGroupAttachmentState build() {
             return new TargetGroupAttachmentState(availabilityZone, port, targetGroupArn, targetId);

@@ -6,6 +6,7 @@ package io.pulumi.aws.connect.inputs;
 import io.pulumi.aws.connect.inputs.QuickConnectQuickConnectConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceId;
 
     public Output<String> getInstanceId() {
-        return this.instanceId == null ? Output.empty() : this.instanceId;
+        return this.instanceId == null ? Codegen.empty() : this.instanceId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig;
 
     public Output<QuickConnectQuickConnectConfigGetArgs> getQuickConnectConfig() {
-        return this.quickConnectConfig == null ? Output.empty() : this.quickConnectConfig;
+        return this.quickConnectConfig == null ? Codegen.empty() : this.quickConnectConfig;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> quickConnectId;
 
     public Output<String> getQuickConnectId() {
-        return this.quickConnectId == null ? Output.empty() : this.quickConnectId;
+        return this.quickConnectId == null ? Codegen.empty() : this.quickConnectId;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public QuickConnectState(
@@ -124,14 +125,14 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
     }
 
     private QuickConnectState() {
-        this.arn = Output.empty();
-        this.description = Output.empty();
-        this.instanceId = Output.empty();
-        this.name = Output.empty();
-        this.quickConnectConfig = Output.empty();
-        this.quickConnectId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.quickConnectConfig = Codegen.empty();
+        this.quickConnectId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -173,7 +174,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -181,7 +182,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instanceId(@Nullable Output<String> instanceId) {
@@ -189,7 +190,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceId(@Nullable String instanceId) {
-            this.instanceId = Output.ofNullable(instanceId);
+            this.instanceId = Codegen.ofNullable(instanceId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -197,7 +198,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder quickConnectConfig(@Nullable Output<QuickConnectQuickConnectConfigGetArgs> quickConnectConfig) {
@@ -205,7 +206,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quickConnectConfig(@Nullable QuickConnectQuickConnectConfigGetArgs quickConnectConfig) {
-            this.quickConnectConfig = Output.ofNullable(quickConnectConfig);
+            this.quickConnectConfig = Codegen.ofNullable(quickConnectConfig);
             return this;
         }
         public Builder quickConnectId(@Nullable Output<String> quickConnectId) {
@@ -213,7 +214,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder quickConnectId(@Nullable String quickConnectId) {
-            this.quickConnectId = Output.ofNullable(quickConnectId);
+            this.quickConnectId = Codegen.ofNullable(quickConnectId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -221,7 +222,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -229,7 +230,7 @@ public final class QuickConnectState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public QuickConnectState build() {
             return new QuickConnectState(arn, description, instanceId, name, quickConnectConfig, quickConnectId, tags, tagsAll);

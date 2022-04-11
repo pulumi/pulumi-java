@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
-        return this.forwardedIpConfig == null ? Output.empty() : this.forwardedIpConfig;
+        return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
     }
 
     public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementGetArgs(
@@ -46,8 +47,8 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementGetArgs() {
-        this.countryCodes = Output.empty();
-        this.forwardedIpConfig = Output.empty();
+        this.countryCodes = Codegen.empty();
+        this.forwardedIpConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementAndSta
             return this;
         }
         public Builder forwardedIpConfig(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs forwardedIpConfig) {
-            this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
+            this.forwardedIpConfig = Codegen.ofNullable(forwardedIpConfig);
             return this;
         }        public WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementGetArgs build() {
             return new WebAclRuleStatementRateBasedStatementScopeDownStatementAndStatementStatementGeoMatchStatementGetArgs(countryCodes, forwardedIpConfig);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.OrganizationSecurityPolicyArgs;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyState;
@@ -155,7 +156,7 @@ public class OrganizationSecurityPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationSecurityPolicy(String name, OrganizationSecurityPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy", name, args == null ? OrganizationSecurityPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/organizationSecurityPolicy:OrganizationSecurityPolicy", name, args == null ? OrganizationSecurityPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationSecurityPolicy(String name, Output<String> id, @Nullable OrganizationSecurityPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

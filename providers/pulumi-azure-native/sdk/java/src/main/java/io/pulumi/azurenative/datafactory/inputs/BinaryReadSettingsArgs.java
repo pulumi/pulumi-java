@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Object> compressionProperties;
 
     public Output<Object> getCompressionProperties() {
-        return this.compressionProperties == null ? Output.empty() : this.compressionProperties;
+        return this.compressionProperties == null ? Codegen.empty() : this.compressionProperties;
     }
 
     /**
@@ -53,8 +54,8 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BinaryReadSettingsArgs() {
-        this.compressionProperties = Output.empty();
-        this.type = Output.empty();
+        this.compressionProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class BinaryReadSettingsArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder compressionProperties(@Nullable Object compressionProperties) {
-            this.compressionProperties = Output.ofNullable(compressionProperties);
+            this.compressionProperties = Codegen.ofNullable(compressionProperties);
             return this;
         }
         public Builder type(Output<String> type) {

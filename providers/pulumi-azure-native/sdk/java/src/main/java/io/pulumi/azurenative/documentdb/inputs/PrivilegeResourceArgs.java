@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> collection;
 
     public Output<String> getCollection() {
-        return this.collection == null ? Output.empty() : this.collection;
+        return this.collection == null ? Codegen.empty() : this.collection;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> db;
 
     public Output<String> getDb() {
-        return this.db == null ? Output.empty() : this.db;
+        return this.db == null ? Codegen.empty() : this.db;
     }
 
     public PrivilegeResourceArgs(
@@ -48,8 +49,8 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PrivilegeResourceArgs() {
-        this.collection = Output.empty();
-        this.db = Output.empty();
+        this.collection = Codegen.empty();
+        this.db = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder collection(@Nullable String collection) {
-            this.collection = Output.ofNullable(collection);
+            this.collection = Codegen.ofNullable(collection);
             return this;
         }
         public Builder db(@Nullable Output<String> db) {
@@ -87,7 +88,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder db(@Nullable String db) {
-            this.db = Output.ofNullable(db);
+            this.db = Codegen.ofNullable(db);
             return this;
         }        public PrivilegeResourceArgs build() {
             return new PrivilegeResourceArgs(collection, db);

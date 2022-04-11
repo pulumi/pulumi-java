@@ -5,6 +5,7 @@ package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> audiences;
 
     public Output<String> getAudiences() {
-        return this.audiences == null ? Output.empty() : this.audiences;
+        return this.audiences == null ? Codegen.empty() : this.audiences;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> providerId;
 
     public Output<String> getProviderId() {
-        return this.providerId == null ? Output.empty() : this.providerId;
+        return this.providerId == null ? Codegen.empty() : this.providerId;
     }
 
     public AuthRequirementArgs(
@@ -48,8 +49,8 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private AuthRequirementArgs() {
-        this.audiences = Output.empty();
-        this.providerId = Output.empty();
+        this.audiences = Codegen.empty();
+        this.providerId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder audiences(@Nullable String audiences) {
-            this.audiences = Output.ofNullable(audiences);
+            this.audiences = Codegen.ofNullable(audiences);
             return this;
         }
         public Builder providerId(@Nullable Output<String> providerId) {
@@ -87,7 +88,7 @@ public final class AuthRequirementArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder providerId(@Nullable String providerId) {
-            this.providerId = Output.ofNullable(providerId);
+            this.providerId = Codegen.ofNullable(providerId);
             return this;
         }        public AuthRequirementArgs build() {
             return new AuthRequirementArgs(audiences, providerId);

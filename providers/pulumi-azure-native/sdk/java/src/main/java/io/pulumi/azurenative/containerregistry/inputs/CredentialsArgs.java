@@ -7,6 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.CustomRegistryCredentialsA
 import io.pulumi.azurenative.containerregistry.inputs.SourceRegistryCredentialsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
 
     public Output<Map<String,CustomRegistryCredentialsArgs>> getCustomRegistries() {
-        return this.customRegistries == null ? Output.empty() : this.customRegistries;
+        return this.customRegistries == null ? Codegen.empty() : this.customRegistries;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
 
     public Output<SourceRegistryCredentialsArgs> getSourceRegistry() {
-        return this.sourceRegistry == null ? Output.empty() : this.sourceRegistry;
+        return this.sourceRegistry == null ? Codegen.empty() : this.sourceRegistry;
     }
 
     public CredentialsArgs(
@@ -53,8 +54,8 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CredentialsArgs() {
-        this.customRegistries = Output.empty();
-        this.sourceRegistry = Output.empty();
+        this.customRegistries = Codegen.empty();
+        this.sourceRegistry = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customRegistries(@Nullable Map<String,CustomRegistryCredentialsArgs> customRegistries) {
-            this.customRegistries = Output.ofNullable(customRegistries);
+            this.customRegistries = Codegen.ofNullable(customRegistries);
             return this;
         }
         public Builder sourceRegistry(@Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
@@ -92,7 +93,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceRegistry(@Nullable SourceRegistryCredentialsArgs sourceRegistry) {
-            this.sourceRegistry = Output.ofNullable(sourceRegistry);
+            this.sourceRegistry = Codegen.ofNullable(sourceRegistry);
             return this;
         }        public CredentialsArgs build() {
             return new CredentialsArgs(customRegistries, sourceRegistry);

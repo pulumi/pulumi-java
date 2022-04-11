@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
       private final @Nullable Output<String> profileId;
 
     public Output<String> getProfileId() {
-        return this.profileId == null ? Output.empty() : this.profileId;
+        return this.profileId == null ? Codegen.empty() : this.profileId;
     }
 
     public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(
@@ -57,9 +58,9 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
     }
 
     private FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs() {
-        this.contentType = Output.empty();
-        this.format = Output.empty();
-        this.profileId = Output.empty();
+        this.contentType = Codegen.empty();
+        this.format = Codegen.empty();
+        this.profileId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class FieldLevelEncryptionConfigContentTypeProfileConfigContentType
             return this;
         }
         public Builder profileId(@Nullable String profileId) {
-            this.profileId = Output.ofNullable(profileId);
+            this.profileId = Codegen.ofNullable(profileId);
             return this;
         }        public FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs build() {
             return new FieldLevelEncryptionConfigContentTypeProfileConfigContentTypeProfilesItemGetArgs(contentType, format, profileId);

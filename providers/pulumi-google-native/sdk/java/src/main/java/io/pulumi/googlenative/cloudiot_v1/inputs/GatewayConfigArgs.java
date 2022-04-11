@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayAuthMethod;
 import io.pulumi.googlenative.cloudiot_v1.enums.GatewayConfigGatewayType;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GatewayConfigGatewayAuthMethod> gatewayAuthMethod;
 
     public Output<GatewayConfigGatewayAuthMethod> getGatewayAuthMethod() {
-        return this.gatewayAuthMethod == null ? Output.empty() : this.gatewayAuthMethod;
+        return this.gatewayAuthMethod == null ? Codegen.empty() : this.gatewayAuthMethod;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GatewayConfigGatewayType> gatewayType;
 
     public Output<GatewayConfigGatewayType> getGatewayType() {
-        return this.gatewayType == null ? Output.empty() : this.gatewayType;
+        return this.gatewayType == null ? Codegen.empty() : this.gatewayType;
     }
 
     public GatewayConfigArgs(
@@ -49,8 +50,8 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GatewayConfigArgs() {
-        this.gatewayAuthMethod = Output.empty();
-        this.gatewayType = Output.empty();
+        this.gatewayAuthMethod = Codegen.empty();
+        this.gatewayType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayAuthMethod(@Nullable GatewayConfigGatewayAuthMethod gatewayAuthMethod) {
-            this.gatewayAuthMethod = Output.ofNullable(gatewayAuthMethod);
+            this.gatewayAuthMethod = Codegen.ofNullable(gatewayAuthMethod);
             return this;
         }
         public Builder gatewayType(@Nullable Output<GatewayConfigGatewayType> gatewayType) {
@@ -88,7 +89,7 @@ public final class GatewayConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gatewayType(@Nullable GatewayConfigGatewayType gatewayType) {
-            this.gatewayType = Output.ofNullable(gatewayType);
+            this.gatewayType = Codegen.ofNullable(gatewayType);
             return this;
         }        public GatewayConfigArgs build() {
             return new GatewayConfigArgs(gatewayAuthMethod, gatewayType);

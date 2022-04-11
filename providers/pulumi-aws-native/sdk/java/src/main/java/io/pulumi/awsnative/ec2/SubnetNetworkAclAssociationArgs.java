@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class SubnetNetworkAclAssociationArgs extends io.pulumi.resources.R
     }
 
     private SubnetNetworkAclAssociationArgs() {
-        this.networkAclId = Output.empty();
-        this.subnetId = Output.empty();
+        this.networkAclId = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {

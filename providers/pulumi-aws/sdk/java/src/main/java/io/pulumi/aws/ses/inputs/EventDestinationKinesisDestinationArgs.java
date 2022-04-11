@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class EventDestinationKinesisDestinationArgs extends io.pulumi.reso
     }
 
     private EventDestinationKinesisDestinationArgs() {
-        this.roleArn = Output.empty();
-        this.streamArn = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.streamArn = Codegen.empty();
     }
 
     public static Builder builder() {

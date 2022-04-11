@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2transitgateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> blackhole;
 
     public Output<Boolean> getBlackhole() {
-        return this.blackhole == null ? Output.empty() : this.blackhole;
+        return this.blackhole == null ? Codegen.empty() : this.blackhole;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> prefixListId;
 
     public Output<String> getPrefixListId() {
-        return this.prefixListId == null ? Output.empty() : this.prefixListId;
+        return this.prefixListId == null ? Codegen.empty() : this.prefixListId;
     }
 
     @Import(name="prefixListOwnerId")
       private final @Nullable Output<String> prefixListOwnerId;
 
     public Output<String> getPrefixListOwnerId() {
-        return this.prefixListOwnerId == null ? Output.empty() : this.prefixListOwnerId;
+        return this.prefixListOwnerId == null ? Codegen.empty() : this.prefixListOwnerId;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> transitGatewayAttachmentId;
 
     public Output<String> getTransitGatewayAttachmentId() {
-        return this.transitGatewayAttachmentId == null ? Output.empty() : this.transitGatewayAttachmentId;
+        return this.transitGatewayAttachmentId == null ? Codegen.empty() : this.transitGatewayAttachmentId;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
       private final @Nullable Output<String> transitGatewayRouteTableId;
 
     public Output<String> getTransitGatewayRouteTableId() {
-        return this.transitGatewayRouteTableId == null ? Output.empty() : this.transitGatewayRouteTableId;
+        return this.transitGatewayRouteTableId == null ? Codegen.empty() : this.transitGatewayRouteTableId;
     }
 
     public PrefixListReferenceState(
@@ -80,11 +81,11 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
     }
 
     private PrefixListReferenceState() {
-        this.blackhole = Output.empty();
-        this.prefixListId = Output.empty();
-        this.prefixListOwnerId = Output.empty();
-        this.transitGatewayAttachmentId = Output.empty();
-        this.transitGatewayRouteTableId = Output.empty();
+        this.blackhole = Codegen.empty();
+        this.prefixListId = Codegen.empty();
+        this.prefixListOwnerId = Codegen.empty();
+        this.transitGatewayAttachmentId = Codegen.empty();
+        this.transitGatewayRouteTableId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder blackhole(@Nullable Boolean blackhole) {
-            this.blackhole = Output.ofNullable(blackhole);
+            this.blackhole = Codegen.ofNullable(blackhole);
             return this;
         }
         public Builder prefixListId(@Nullable Output<String> prefixListId) {
@@ -128,7 +129,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder prefixListId(@Nullable String prefixListId) {
-            this.prefixListId = Output.ofNullable(prefixListId);
+            this.prefixListId = Codegen.ofNullable(prefixListId);
             return this;
         }
         public Builder prefixListOwnerId(@Nullable Output<String> prefixListOwnerId) {
@@ -136,7 +137,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder prefixListOwnerId(@Nullable String prefixListOwnerId) {
-            this.prefixListOwnerId = Output.ofNullable(prefixListOwnerId);
+            this.prefixListOwnerId = Codegen.ofNullable(prefixListOwnerId);
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable Output<String> transitGatewayAttachmentId) {
@@ -144,7 +145,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder transitGatewayAttachmentId(@Nullable String transitGatewayAttachmentId) {
-            this.transitGatewayAttachmentId = Output.ofNullable(transitGatewayAttachmentId);
+            this.transitGatewayAttachmentId = Codegen.ofNullable(transitGatewayAttachmentId);
             return this;
         }
         public Builder transitGatewayRouteTableId(@Nullable Output<String> transitGatewayRouteTableId) {
@@ -152,7 +153,7 @@ public final class PrefixListReferenceState extends io.pulumi.resources.Resource
             return this;
         }
         public Builder transitGatewayRouteTableId(@Nullable String transitGatewayRouteTableId) {
-            this.transitGatewayRouteTableId = Output.ofNullable(transitGatewayRouteTableId);
+            this.transitGatewayRouteTableId = Codegen.ofNullable(transitGatewayRouteTableId);
             return this;
         }        public PrefixListReferenceState build() {
             return new PrefixListReferenceState(blackhole, prefixListId, prefixListOwnerId, transitGatewayAttachmentId, transitGatewayRouteTableId);

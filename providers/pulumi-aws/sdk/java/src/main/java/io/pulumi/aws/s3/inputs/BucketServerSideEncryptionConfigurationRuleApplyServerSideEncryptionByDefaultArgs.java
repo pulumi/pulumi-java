@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
       private final @Nullable Output<String> kmsMasterKeyId;
 
     public Output<String> getKmsMasterKeyId() {
-        return this.kmsMasterKeyId == null ? Output.empty() : this.kmsMasterKeyId;
+        return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
     }
 
     private BucketServerSideEncryptionConfigurationRuleApplyServerSideEncryptionByDefaultArgs() {
-        this.kmsMasterKeyId = Output.empty();
-        this.sseAlgorithm = Output.empty();
+        this.kmsMasterKeyId = Codegen.empty();
+        this.sseAlgorithm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BucketServerSideEncryptionConfigurationRuleApplyServerSideEnc
             return this;
         }
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
-            this.kmsMasterKeyId = Output.ofNullable(kmsMasterKeyId);
+            this.kmsMasterKeyId = Codegen.ofNullable(kmsMasterKeyId);
             return this;
         }
         public Builder sseAlgorithm(Output<String> sseAlgorithm) {

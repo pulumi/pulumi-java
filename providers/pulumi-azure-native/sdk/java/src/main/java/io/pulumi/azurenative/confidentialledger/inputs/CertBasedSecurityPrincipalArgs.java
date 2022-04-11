@@ -7,6 +7,7 @@ import io.pulumi.azurenative.confidentialledger.enums.LedgerRoleName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> cert;
 
     public Output<String> getCert() {
-        return this.cert == null ? Output.empty() : this.cert;
+        return this.cert == null ? Codegen.empty() : this.cert;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
     public Output<Either<String,LedgerRoleName>> getLedgerRoleName() {
-        return this.ledgerRoleName == null ? Output.empty() : this.ledgerRoleName;
+        return this.ledgerRoleName == null ? Codegen.empty() : this.ledgerRoleName;
     }
 
     public CertBasedSecurityPrincipalArgs(
@@ -50,8 +51,8 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
     }
 
     private CertBasedSecurityPrincipalArgs() {
-        this.cert = Output.empty();
-        this.ledgerRoleName = Output.empty();
+        this.cert = Codegen.empty();
+        this.ledgerRoleName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cert(@Nullable String cert) {
-            this.cert = Output.ofNullable(cert);
+            this.cert = Codegen.ofNullable(cert);
             return this;
         }
         public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
@@ -89,7 +90,7 @@ public final class CertBasedSecurityPrincipalArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder ledgerRoleName(@Nullable Either<String,LedgerRoleName> ledgerRoleName) {
-            this.ledgerRoleName = Output.ofNullable(ledgerRoleName);
+            this.ledgerRoleName = Codegen.ofNullable(ledgerRoleName);
             return this;
         }        public CertBasedSecurityPrincipalArgs build() {
             return new CertBasedSecurityPrincipalArgs(cert, ledgerRoleName);

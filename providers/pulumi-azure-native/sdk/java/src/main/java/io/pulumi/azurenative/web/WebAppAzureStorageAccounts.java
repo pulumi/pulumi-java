@@ -10,6 +10,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -108,7 +109,7 @@ public class WebAppAzureStorageAccounts extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public WebAppAzureStorageAccounts(String name, WebAppAzureStorageAccountsArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:web:WebAppAzureStorageAccounts", name, args == null ? WebAppAzureStorageAccountsArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:web:WebAppAzureStorageAccounts", name, args == null ? WebAppAzureStorageAccountsArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebAppAzureStorageAccounts(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cronJobDuration;
 
     public Output<String> getCronJobDuration() {
-        return this.cronJobDuration == null ? Output.empty() : this.cronJobDuration;
+        return this.cronJobDuration == null ? Codegen.empty() : this.cronJobDuration;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cronSpec;
 
     public Output<String> getCronSpec() {
-        return this.cronSpec == null ? Output.empty() : this.cronSpec;
+        return this.cronSpec == null ? Codegen.empty() : this.cronSpec;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public ScheduleArgs(
@@ -74,10 +75,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.cronJobDuration = Output.empty();
-        this.cronSpec = Output.empty();
-        this.endTime = Output.empty();
-        this.startTime = Output.empty();
+        this.cronJobDuration = Codegen.empty();
+        this.cronSpec = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cronJobDuration(@Nullable String cronJobDuration) {
-            this.cronJobDuration = Output.ofNullable(cronJobDuration);
+            this.cronJobDuration = Codegen.ofNullable(cronJobDuration);
             return this;
         }
         public Builder cronSpec(@Nullable Output<String> cronSpec) {
@@ -119,7 +120,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cronSpec(@Nullable String cronSpec) {
-            this.cronSpec = Output.ofNullable(cronSpec);
+            this.cronSpec = Codegen.ofNullable(cronSpec);
             return this;
         }
         public Builder endTime(@Nullable Output<String> endTime) {
@@ -127,7 +128,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -135,7 +136,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public ScheduleArgs build() {
             return new ScheduleArgs(cronJobDuration, cronSpec, endTime, startTime);

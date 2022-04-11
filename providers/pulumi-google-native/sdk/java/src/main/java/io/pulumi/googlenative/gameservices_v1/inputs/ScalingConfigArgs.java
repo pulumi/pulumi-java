@@ -5,6 +5,7 @@ package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.gameservices_v1.inputs.LabelSelectorArgs;
 import io.pulumi.googlenative.gameservices_v1.inputs.ScheduleArgs;
 import java.lang.String;
@@ -51,7 +52,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ScheduleArgs>> schedules;
 
     public Output<List<ScheduleArgs>> getSchedules() {
-        return this.schedules == null ? Output.empty() : this.schedules;
+        return this.schedules == null ? Codegen.empty() : this.schedules;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<LabelSelectorArgs>> selectors;
 
     public Output<List<LabelSelectorArgs>> getSelectors() {
-        return this.selectors == null ? Output.empty() : this.selectors;
+        return this.selectors == null ? Codegen.empty() : this.selectors;
     }
 
     public ScalingConfigArgs(
@@ -77,10 +78,10 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScalingConfigArgs() {
-        this.fleetAutoscalerSpec = Output.empty();
-        this.name = Output.empty();
-        this.schedules = Output.empty();
-        this.selectors = Output.empty();
+        this.fleetAutoscalerSpec = Codegen.empty();
+        this.name = Codegen.empty();
+        this.schedules = Codegen.empty();
+        this.selectors = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder schedules(@Nullable List<ScheduleArgs> schedules) {
-            this.schedules = Output.ofNullable(schedules);
+            this.schedules = Codegen.ofNullable(schedules);
             return this;
         }
         public Builder schedules(ScheduleArgs... schedules) {
@@ -141,7 +142,7 @@ public final class ScalingConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder selectors(@Nullable List<LabelSelectorArgs> selectors) {
-            this.selectors = Output.ofNullable(selectors);
+            this.selectors = Codegen.ofNullable(selectors);
             return this;
         }
         public Builder selectors(LabelSelectorArgs... selectors) {

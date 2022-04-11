@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticsearch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -58,9 +59,9 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
     }
 
     private DomainLogPublishingOptionArgs() {
-        this.cloudwatchLogGroupArn = Output.empty();
-        this.enabled = Output.empty();
-        this.logType = Output.empty();
+        this.cloudwatchLogGroupArn = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.logType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class DomainLogPublishingOptionArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder logType(Output<String> logType) {

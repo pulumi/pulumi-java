@@ -5,6 +5,7 @@ package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endTimeOffset;
 
     public Output<String> getEndTimeOffset() {
-        return this.endTimeOffset == null ? Output.empty() : this.endTimeOffset;
+        return this.endTimeOffset == null ? Codegen.empty() : this.endTimeOffset;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> inputs;
 
     public Output<List<String>> getInputs() {
-        return this.inputs == null ? Output.empty() : this.inputs;
+        return this.inputs == null ? Codegen.empty() : this.inputs;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> startTimeOffset;
 
     public Output<String> getStartTimeOffset() {
-        return this.startTimeOffset == null ? Output.empty() : this.startTimeOffset;
+        return this.startTimeOffset == null ? Codegen.empty() : this.startTimeOffset;
     }
 
     public EditAtomArgs(
@@ -75,10 +76,10 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EditAtomArgs() {
-        this.endTimeOffset = Output.empty();
-        this.inputs = Output.empty();
-        this.key = Output.empty();
-        this.startTimeOffset = Output.empty();
+        this.endTimeOffset = Codegen.empty();
+        this.inputs = Codegen.empty();
+        this.key = Codegen.empty();
+        this.startTimeOffset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endTimeOffset(@Nullable String endTimeOffset) {
-            this.endTimeOffset = Output.ofNullable(endTimeOffset);
+            this.endTimeOffset = Codegen.ofNullable(endTimeOffset);
             return this;
         }
         public Builder inputs(@Nullable Output<List<String>> inputs) {
@@ -120,7 +121,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputs(@Nullable List<String> inputs) {
-            this.inputs = Output.ofNullable(inputs);
+            this.inputs = Codegen.ofNullable(inputs);
             return this;
         }
         public Builder inputs(String... inputs) {
@@ -131,7 +132,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }
         public Builder startTimeOffset(@Nullable Output<String> startTimeOffset) {
@@ -139,7 +140,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTimeOffset(@Nullable String startTimeOffset) {
-            this.startTimeOffset = Output.ofNullable(startTimeOffset);
+            this.startTimeOffset = Codegen.ofNullable(startTimeOffset);
             return this;
         }        public EditAtomArgs build() {
             return new EditAtomArgs(endTimeOffset, inputs, key, startTimeOffset);

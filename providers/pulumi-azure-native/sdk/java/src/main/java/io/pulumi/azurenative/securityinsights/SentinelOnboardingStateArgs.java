@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Boolean> customerManagedKey;
 
     public Output<Boolean> getCustomerManagedKey() {
-        return this.customerManagedKey == null ? Output.empty() : this.customerManagedKey;
+        return this.customerManagedKey == null ? Codegen.empty() : this.customerManagedKey;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> sentinelOnboardingStateName;
 
     public Output<String> getSentinelOnboardingStateName() {
-        return this.sentinelOnboardingStateName == null ? Output.empty() : this.sentinelOnboardingStateName;
+        return this.sentinelOnboardingStateName == null ? Codegen.empty() : this.sentinelOnboardingStateName;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
     }
 
     private SentinelOnboardingStateArgs() {
-        this.customerManagedKey = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sentinelOnboardingStateName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.customerManagedKey = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sentinelOnboardingStateName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customerManagedKey(@Nullable Boolean customerManagedKey) {
-            this.customerManagedKey = Output.ofNullable(customerManagedKey);
+            this.customerManagedKey = Codegen.ofNullable(customerManagedKey);
             return this;
         }
         public Builder operationalInsightsResourceProvider(Output<String> operationalInsightsResourceProvider) {
@@ -148,7 +149,7 @@ public final class SentinelOnboardingStateArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sentinelOnboardingStateName(@Nullable String sentinelOnboardingStateName) {
-            this.sentinelOnboardingStateName = Output.ofNullable(sentinelOnboardingStateName);
+            this.sentinelOnboardingStateName = Codegen.ofNullable(sentinelOnboardingStateName);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

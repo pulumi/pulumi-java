@@ -12,6 +12,7 @@ import io.pulumi.azurenative.logic.inputs.AS2SecuritySettingsArgs;
 import io.pulumi.azurenative.logic.inputs.AS2ValidationSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -118,13 +119,13 @@ public final class AS2ProtocolSettingsArgs extends io.pulumi.resources.ResourceA
     }
 
     private AS2ProtocolSettingsArgs() {
-        this.acknowledgementConnectionSettings = Output.empty();
-        this.envelopeSettings = Output.empty();
-        this.errorSettings = Output.empty();
-        this.mdnSettings = Output.empty();
-        this.messageConnectionSettings = Output.empty();
-        this.securitySettings = Output.empty();
-        this.validationSettings = Output.empty();
+        this.acknowledgementConnectionSettings = Codegen.empty();
+        this.envelopeSettings = Codegen.empty();
+        this.errorSettings = Codegen.empty();
+        this.mdnSettings = Codegen.empty();
+        this.messageConnectionSettings = Codegen.empty();
+        this.securitySettings = Codegen.empty();
+        this.validationSettings = Codegen.empty();
     }
 
     public static Builder builder() {

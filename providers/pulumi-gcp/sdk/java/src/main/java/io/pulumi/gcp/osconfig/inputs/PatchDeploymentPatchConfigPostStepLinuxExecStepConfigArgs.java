@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
       private final @Nullable Output<List<Integer>> allowedSuccessCodes;
 
     public Output<List<Integer>> getAllowedSuccessCodes() {
-        return this.allowedSuccessCodes == null ? Output.empty() : this.allowedSuccessCodes;
+        return this.allowedSuccessCodes == null ? Codegen.empty() : this.allowedSuccessCodes;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
       private final @Nullable Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs> gcsObject;
 
     public Output<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs> getGcsObject() {
-        return this.gcsObject == null ? Output.empty() : this.gcsObject;
+        return this.gcsObject == null ? Codegen.empty() : this.gcsObject;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
       private final @Nullable Output<String> interpreter;
 
     public Output<String> getInterpreter() {
-        return this.interpreter == null ? Output.empty() : this.interpreter;
+        return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
       private final @Nullable Output<String> localPath;
 
     public Output<String> getLocalPath() {
-        return this.localPath == null ? Output.empty() : this.localPath;
+        return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
     public PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs(
@@ -76,10 +77,10 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
     }
 
     private PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs() {
-        this.allowedSuccessCodes = Output.empty();
-        this.gcsObject = Output.empty();
-        this.interpreter = Output.empty();
-        this.localPath = Output.empty();
+        this.allowedSuccessCodes = Codegen.empty();
+        this.gcsObject = Codegen.empty();
+        this.interpreter = Codegen.empty();
+        this.localPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
             return this;
         }
         public Builder allowedSuccessCodes(@Nullable List<Integer> allowedSuccessCodes) {
-            this.allowedSuccessCodes = Output.ofNullable(allowedSuccessCodes);
+            this.allowedSuccessCodes = Codegen.ofNullable(allowedSuccessCodes);
             return this;
         }
         public Builder allowedSuccessCodes(Integer... allowedSuccessCodes) {
@@ -124,7 +125,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
             return this;
         }
         public Builder gcsObject(@Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObjectArgs gcsObject) {
-            this.gcsObject = Output.ofNullable(gcsObject);
+            this.gcsObject = Codegen.ofNullable(gcsObject);
             return this;
         }
         public Builder interpreter(@Nullable Output<String> interpreter) {
@@ -132,7 +133,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
             return this;
         }
         public Builder interpreter(@Nullable String interpreter) {
-            this.interpreter = Output.ofNullable(interpreter);
+            this.interpreter = Codegen.ofNullable(interpreter);
             return this;
         }
         public Builder localPath(@Nullable Output<String> localPath) {
@@ -140,7 +141,7 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs ext
             return this;
         }
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Output.ofNullable(localPath);
+            this.localPath = Codegen.ofNullable(localPath);
             return this;
         }        public PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs build() {
             return new PatchDeploymentPatchConfigPostStepLinuxExecStepConfigArgs(allowedSuccessCodes, gcsObject, interpreter, localPath);

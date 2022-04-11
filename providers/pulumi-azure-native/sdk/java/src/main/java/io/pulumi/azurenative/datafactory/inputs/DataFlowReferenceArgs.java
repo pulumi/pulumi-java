@@ -5,6 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Object> datasetParameters;
 
     public Output<Object> getDatasetParameters() {
-        return this.datasetParameters == null ? Output.empty() : this.datasetParameters;
+        return this.datasetParameters == null ? Codegen.empty() : this.datasetParameters;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,Object>> parameters;
 
     public Output<Map<String,Object>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DataFlowReferenceArgs() {
-        this.datasetParameters = Output.empty();
-        this.parameters = Output.empty();
-        this.referenceName = Output.empty();
-        this.type = Output.empty();
+        this.datasetParameters = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.referenceName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder datasetParameters(@Nullable Object datasetParameters) {
-            this.datasetParameters = Output.ofNullable(datasetParameters);
+            this.datasetParameters = Codegen.ofNullable(datasetParameters);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
@@ -121,7 +122,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parameters(@Nullable Map<String,Object> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder referenceName(Output<String> referenceName) {

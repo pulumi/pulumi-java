@@ -10,6 +10,7 @@ import io.pulumi.aws.macie.outputs.S3BucketAssociationClassificationType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -104,7 +105,7 @@ public class S3BucketAssociation extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public S3BucketAssociation(String name, S3BucketAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:macie/s3BucketAssociation:S3BucketAssociation", name, args == null ? S3BucketAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:macie/s3BucketAssociation:S3BucketAssociation", name, args == null ? S3BucketAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private S3BucketAssociation(String name, Output<String> id, @Nullable S3BucketAssociationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

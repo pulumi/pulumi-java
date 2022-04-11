@@ -5,6 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class GlobalTableKeySchemaArgs extends io.pulumi.resources.Resource
     }
 
     private GlobalTableKeySchemaArgs() {
-        this.attributeName = Output.empty();
-        this.keyType = Output.empty();
+        this.attributeName = Codegen.empty();
+        this.keyType = Codegen.empty();
     }
 
     public static Builder builder() {

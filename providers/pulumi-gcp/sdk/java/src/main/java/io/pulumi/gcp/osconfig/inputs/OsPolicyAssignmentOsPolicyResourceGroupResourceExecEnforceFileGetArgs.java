@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs;
 import java.lang.Boolean;
@@ -25,7 +26,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
       private final @Nullable Output<Boolean> allowInsecure;
 
     public Output<Boolean> getAllowInsecure() {
-        return this.allowInsecure == null ? Output.empty() : this.allowInsecure;
+        return this.allowInsecure == null ? Codegen.empty() : this.allowInsecure;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> getGcs() {
-        return this.gcs == null ? Output.empty() : this.gcs;
+        return this.gcs == null ? Codegen.empty() : this.gcs;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
       private final @Nullable Output<String> localPath;
 
     public Output<String> getLocalPath() {
-        return this.localPath == null ? Output.empty() : this.localPath;
+        return this.localPath == null ? Codegen.empty() : this.localPath;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> getRemote() {
-        return this.remote == null ? Output.empty() : this.remote;
+        return this.remote == null ? Codegen.empty() : this.remote;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs(
@@ -73,10 +74,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs() {
-        this.allowInsecure = Output.empty();
-        this.gcs = Output.empty();
-        this.localPath = Output.empty();
-        this.remote = Output.empty();
+        this.allowInsecure = Codegen.empty();
+        this.gcs = Codegen.empty();
+        this.localPath = Codegen.empty();
+        this.remote = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             return this;
         }
         public Builder allowInsecure(@Nullable Boolean allowInsecure) {
-            this.allowInsecure = Output.ofNullable(allowInsecure);
+            this.allowInsecure = Codegen.ofNullable(allowInsecure);
             return this;
         }
         public Builder gcs(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs> gcs) {
@@ -118,7 +119,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             return this;
         }
         public Builder gcs(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGcsGetArgs gcs) {
-            this.gcs = Output.ofNullable(gcs);
+            this.gcs = Codegen.ofNullable(gcs);
             return this;
         }
         public Builder localPath(@Nullable Output<String> localPath) {
@@ -126,7 +127,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             return this;
         }
         public Builder localPath(@Nullable String localPath) {
-            this.localPath = Output.ofNullable(localPath);
+            this.localPath = Codegen.ofNullable(localPath);
             return this;
         }
         public Builder remote(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs> remote) {
@@ -134,7 +135,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             return this;
         }
         public Builder remote(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteGetArgs remote) {
-            this.remote = Output.ofNullable(remote);
+            this.remote = Codegen.ofNullable(remote);
             return this;
         }        public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileGetArgs(allowInsecure, gcs, localPath, remote);

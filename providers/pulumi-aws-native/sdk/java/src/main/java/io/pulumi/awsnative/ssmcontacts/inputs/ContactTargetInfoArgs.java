@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ssmcontacts.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class ContactTargetInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ContactTargetInfoArgs() {
-        this.contactId = Output.empty();
-        this.isEssential = Output.empty();
+        this.contactId = Codegen.empty();
+        this.isEssential = Codegen.empty();
     }
 
     public static Builder builder() {

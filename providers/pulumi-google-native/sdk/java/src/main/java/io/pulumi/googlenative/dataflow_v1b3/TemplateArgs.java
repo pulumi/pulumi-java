@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataflow_v1b3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.RuntimeEnvironmentArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RuntimeEnvironmentArgs> environment;
 
     public Output<RuntimeEnvironmentArgs> getEnvironment() {
-        return this.environment == null ? Output.empty() : this.environment;
+        return this.environment == null ? Codegen.empty() : this.environment;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -68,14 +69,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> parameters;
 
     public Output<Map<String,String>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public TemplateArgs(
@@ -94,12 +95,12 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TemplateArgs() {
-        this.environment = Output.empty();
-        this.gcsPath = Output.empty();
-        this.jobName = Output.empty();
-        this.location = Output.empty();
-        this.parameters = Output.empty();
-        this.project = Output.empty();
+        this.environment = Codegen.empty();
+        this.gcsPath = Codegen.empty();
+        this.jobName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder environment(@Nullable RuntimeEnvironmentArgs environment) {
-            this.environment = Output.ofNullable(environment);
+            this.environment = Codegen.ofNullable(environment);
             return this;
         }
         public Builder gcsPath(Output<String> gcsPath) {
@@ -161,7 +162,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
@@ -169,7 +170,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable Map<String,String> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -177,7 +178,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public TemplateArgs build() {
             return new TemplateArgs(environment, gcsPath, jobName, location, parameters, project);

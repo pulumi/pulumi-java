@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs;
@@ -27,7 +28,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> dictionary;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs> getDictionary() {
-        return this.dictionary == null ? Output.empty() : this.dictionary;
+        return this.dictionary == null ? Codegen.empty() : this.dictionary;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
       private final @Nullable Output<String> exclusionType;
 
     public Output<String> getExclusionType() {
-        return this.exclusionType == null ? Output.empty() : this.exclusionType;
+        return this.exclusionType == null ? Codegen.empty() : this.exclusionType;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
       private final @Nullable Output<String> likelihood;
 
     public Output<String> getLikelihood() {
-        return this.likelihood == null ? Output.empty() : this.likelihood;
+        return this.likelihood == null ? Codegen.empty() : this.likelihood;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> getRegex() {
-        return this.regex == null ? Output.empty() : this.regex;
+        return this.regex == null ? Codegen.empty() : this.regex;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
       private final @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType;
 
     public Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> getStoredType() {
-        return this.storedType == null ? Output.empty() : this.storedType;
+        return this.storedType == null ? Codegen.empty() : this.storedType;
     }
 
     public PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(
@@ -111,12 +112,12 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
     }
 
     private PreventionInspectTemplateInspectConfigCustomInfoTypeArgs() {
-        this.dictionary = Output.empty();
-        this.exclusionType = Output.empty();
-        this.infoType = Output.empty();
-        this.likelihood = Output.empty();
-        this.regex = Output.empty();
-        this.storedType = Output.empty();
+        this.dictionary = Codegen.empty();
+        this.exclusionType = Codegen.empty();
+        this.infoType = Codegen.empty();
+        this.likelihood = Codegen.empty();
+        this.regex = Codegen.empty();
+        this.storedType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -154,7 +155,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             return this;
         }
         public Builder dictionary(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs dictionary) {
-            this.dictionary = Output.ofNullable(dictionary);
+            this.dictionary = Codegen.ofNullable(dictionary);
             return this;
         }
         public Builder exclusionType(@Nullable Output<String> exclusionType) {
@@ -162,7 +163,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             return this;
         }
         public Builder exclusionType(@Nullable String exclusionType) {
-            this.exclusionType = Output.ofNullable(exclusionType);
+            this.exclusionType = Codegen.ofNullable(exclusionType);
             return this;
         }
         public Builder infoType(Output<PreventionInspectTemplateInspectConfigCustomInfoTypeInfoTypeArgs> infoType) {
@@ -178,7 +179,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             return this;
         }
         public Builder likelihood(@Nullable String likelihood) {
-            this.likelihood = Output.ofNullable(likelihood);
+            this.likelihood = Codegen.ofNullable(likelihood);
             return this;
         }
         public Builder regex(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs> regex) {
@@ -186,7 +187,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             return this;
         }
         public Builder regex(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeRegexArgs regex) {
-            this.regex = Output.ofNullable(regex);
+            this.regex = Codegen.ofNullable(regex);
             return this;
         }
         public Builder storedType(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs> storedType) {
@@ -194,7 +195,7 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeArgs exte
             return this;
         }
         public Builder storedType(@Nullable PreventionInspectTemplateInspectConfigCustomInfoTypeStoredTypeArgs storedType) {
-            this.storedType = Output.ofNullable(storedType);
+            this.storedType = Codegen.ofNullable(storedType);
             return this;
         }        public PreventionInspectTemplateInspectConfigCustomInfoTypeArgs build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeArgs(dictionary, exclusionType, infoType, likelihood, regex, storedType);

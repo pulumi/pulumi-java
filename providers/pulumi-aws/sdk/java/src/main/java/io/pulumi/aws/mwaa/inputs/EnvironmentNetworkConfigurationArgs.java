@@ -5,6 +5,7 @@ package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class EnvironmentNetworkConfigurationArgs extends io.pulumi.resourc
     }
 
     private EnvironmentNetworkConfigurationArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
     }
 
     public static Builder builder() {

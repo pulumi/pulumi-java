@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     public GoogleCloudRetailV2betaRuleFilterActionArgs(@Nullable Output<String> filter) {
@@ -34,7 +35,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
     }
 
     private GoogleCloudRetailV2betaRuleFilterActionArgs() {
-        this.filter = Output.empty();
+        this.filter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudRetailV2betaRuleFilterActionArgs extends io.pulumi
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }        public GoogleCloudRetailV2betaRuleFilterActionArgs build() {
             return new GoogleCloudRetailV2betaRuleFilterActionArgs(filter);

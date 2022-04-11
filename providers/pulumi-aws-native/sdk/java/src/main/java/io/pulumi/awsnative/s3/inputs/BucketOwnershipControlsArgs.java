@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketOwnershipControlsRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 
@@ -26,7 +27,7 @@ public final class BucketOwnershipControlsArgs extends io.pulumi.resources.Resou
     }
 
     private BucketOwnershipControlsArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class ConnectionBasicAuthParametersArgs extends io.pulumi.resources
     }
 
     private ConnectionBasicAuthParametersArgs() {
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {

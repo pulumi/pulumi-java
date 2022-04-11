@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
       private final @Nullable Output<String> deliveryStream;
 
     public Output<String> getDeliveryStream() {
-        return this.deliveryStream == null ? Output.empty() : this.deliveryStream;
+        return this.deliveryStream == null ? Codegen.empty() : this.deliveryStream;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
     }
 
     private ConnectorFirehoseLogDeliveryArgs() {
-        this.deliveryStream = Output.empty();
-        this.enabled = Output.empty();
+        this.deliveryStream = Codegen.empty();
+        this.enabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ConnectorFirehoseLogDeliveryArgs extends io.pulumi.resources.
             return this;
         }
         public Builder deliveryStream(@Nullable String deliveryStream) {
-            this.deliveryStream = Output.ofNullable(deliveryStream);
+            this.deliveryStream = Codegen.ofNullable(deliveryStream);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {

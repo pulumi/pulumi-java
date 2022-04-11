@@ -12,6 +12,7 @@ import io.pulumi.azurenative.network.inputs.VpnSiteLinkConnectionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -36,7 +37,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> connectionBandwidth;
 
     public Output<Integer> getConnectionBandwidth() {
-        return this.connectionBandwidth == null ? Output.empty() : this.connectionBandwidth;
+        return this.connectionBandwidth == null ? Codegen.empty() : this.connectionBandwidth;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> dpdTimeoutSeconds;
 
     public Output<Integer> getDpdTimeoutSeconds() {
-        return this.dpdTimeoutSeconds == null ? Output.empty() : this.dpdTimeoutSeconds;
+        return this.dpdTimeoutSeconds == null ? Codegen.empty() : this.dpdTimeoutSeconds;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableBgp;
 
     public Output<Boolean> getEnableBgp() {
-        return this.enableBgp == null ? Output.empty() : this.enableBgp;
+        return this.enableBgp == null ? Codegen.empty() : this.enableBgp;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableInternetSecurity;
 
     public Output<Boolean> getEnableInternetSecurity() {
-        return this.enableInternetSecurity == null ? Output.empty() : this.enableInternetSecurity;
+        return this.enableInternetSecurity == null ? Codegen.empty() : this.enableInternetSecurity;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableRateLimiting;
 
     public Output<Boolean> getEnableRateLimiting() {
-        return this.enableRateLimiting == null ? Output.empty() : this.enableRateLimiting;
+        return this.enableRateLimiting == null ? Codegen.empty() : this.enableRateLimiting;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies;
 
     public Output<List<IpsecPolicyArgs>> getIpsecPolicies() {
-        return this.ipsecPolicies == null ? Output.empty() : this.ipsecPolicies;
+        return this.ipsecPolicies == null ? Codegen.empty() : this.ipsecPolicies;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> remoteVpnSite;
 
     public Output<SubResourceArgs> getRemoteVpnSite() {
-        return this.remoteVpnSite == null ? Output.empty() : this.remoteVpnSite;
+        return this.remoteVpnSite == null ? Codegen.empty() : this.remoteVpnSite;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RoutingConfigurationArgs> routingConfiguration;
 
     public Output<RoutingConfigurationArgs> getRoutingConfiguration() {
-        return this.routingConfiguration == null ? Output.empty() : this.routingConfiguration;
+        return this.routingConfiguration == null ? Codegen.empty() : this.routingConfiguration;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> routingWeight;
 
     public Output<Integer> getRoutingWeight() {
-        return this.routingWeight == null ? Output.empty() : this.routingWeight;
+        return this.routingWeight == null ? Codegen.empty() : this.routingWeight;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sharedKey;
 
     public Output<String> getSharedKey() {
-        return this.sharedKey == null ? Output.empty() : this.sharedKey;
+        return this.sharedKey == null ? Codegen.empty() : this.sharedKey;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies;
 
     public Output<List<TrafficSelectorPolicyArgs>> getTrafficSelectorPolicies() {
-        return this.trafficSelectorPolicies == null ? Output.empty() : this.trafficSelectorPolicies;
+        return this.trafficSelectorPolicies == null ? Codegen.empty() : this.trafficSelectorPolicies;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> useLocalAzureIpAddress;
 
     public Output<Boolean> getUseLocalAzureIpAddress() {
-        return this.useLocalAzureIpAddress == null ? Output.empty() : this.useLocalAzureIpAddress;
+        return this.useLocalAzureIpAddress == null ? Codegen.empty() : this.useLocalAzureIpAddress;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> usePolicyBasedTrafficSelectors;
 
     public Output<Boolean> getUsePolicyBasedTrafficSelectors() {
-        return this.usePolicyBasedTrafficSelectors == null ? Output.empty() : this.usePolicyBasedTrafficSelectors;
+        return this.usePolicyBasedTrafficSelectors == null ? Codegen.empty() : this.usePolicyBasedTrafficSelectors;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType;
 
     public Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> getVpnConnectionProtocolType() {
-        return this.vpnConnectionProtocolType == null ? Output.empty() : this.vpnConnectionProtocolType;
+        return this.vpnConnectionProtocolType == null ? Codegen.empty() : this.vpnConnectionProtocolType;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<VpnSiteLinkConnectionArgs>> vpnLinkConnections;
 
     public Output<List<VpnSiteLinkConnectionArgs>> getVpnLinkConnections() {
-        return this.vpnLinkConnections == null ? Output.empty() : this.vpnLinkConnections;
+        return this.vpnLinkConnections == null ? Codegen.empty() : this.vpnLinkConnections;
     }
 
     public VpnConnectionArgs(
@@ -253,23 +254,23 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpnConnectionArgs() {
-        this.connectionBandwidth = Output.empty();
-        this.dpdTimeoutSeconds = Output.empty();
-        this.enableBgp = Output.empty();
-        this.enableInternetSecurity = Output.empty();
-        this.enableRateLimiting = Output.empty();
-        this.id = Output.empty();
-        this.ipsecPolicies = Output.empty();
-        this.name = Output.empty();
-        this.remoteVpnSite = Output.empty();
-        this.routingConfiguration = Output.empty();
-        this.routingWeight = Output.empty();
-        this.sharedKey = Output.empty();
-        this.trafficSelectorPolicies = Output.empty();
-        this.useLocalAzureIpAddress = Output.empty();
-        this.usePolicyBasedTrafficSelectors = Output.empty();
-        this.vpnConnectionProtocolType = Output.empty();
-        this.vpnLinkConnections = Output.empty();
+        this.connectionBandwidth = Codegen.empty();
+        this.dpdTimeoutSeconds = Codegen.empty();
+        this.enableBgp = Codegen.empty();
+        this.enableInternetSecurity = Codegen.empty();
+        this.enableRateLimiting = Codegen.empty();
+        this.id = Codegen.empty();
+        this.ipsecPolicies = Codegen.empty();
+        this.name = Codegen.empty();
+        this.remoteVpnSite = Codegen.empty();
+        this.routingConfiguration = Codegen.empty();
+        this.routingWeight = Codegen.empty();
+        this.sharedKey = Codegen.empty();
+        this.trafficSelectorPolicies = Codegen.empty();
+        this.useLocalAzureIpAddress = Codegen.empty();
+        this.usePolicyBasedTrafficSelectors = Codegen.empty();
+        this.vpnConnectionProtocolType = Codegen.empty();
+        this.vpnLinkConnections = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -329,7 +330,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionBandwidth(@Nullable Integer connectionBandwidth) {
-            this.connectionBandwidth = Output.ofNullable(connectionBandwidth);
+            this.connectionBandwidth = Codegen.ofNullable(connectionBandwidth);
             return this;
         }
         public Builder dpdTimeoutSeconds(@Nullable Output<Integer> dpdTimeoutSeconds) {
@@ -337,7 +338,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dpdTimeoutSeconds(@Nullable Integer dpdTimeoutSeconds) {
-            this.dpdTimeoutSeconds = Output.ofNullable(dpdTimeoutSeconds);
+            this.dpdTimeoutSeconds = Codegen.ofNullable(dpdTimeoutSeconds);
             return this;
         }
         public Builder enableBgp(@Nullable Output<Boolean> enableBgp) {
@@ -345,7 +346,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableBgp(@Nullable Boolean enableBgp) {
-            this.enableBgp = Output.ofNullable(enableBgp);
+            this.enableBgp = Codegen.ofNullable(enableBgp);
             return this;
         }
         public Builder enableInternetSecurity(@Nullable Output<Boolean> enableInternetSecurity) {
@@ -353,7 +354,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableInternetSecurity(@Nullable Boolean enableInternetSecurity) {
-            this.enableInternetSecurity = Output.ofNullable(enableInternetSecurity);
+            this.enableInternetSecurity = Codegen.ofNullable(enableInternetSecurity);
             return this;
         }
         public Builder enableRateLimiting(@Nullable Output<Boolean> enableRateLimiting) {
@@ -361,7 +362,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableRateLimiting(@Nullable Boolean enableRateLimiting) {
-            this.enableRateLimiting = Output.ofNullable(enableRateLimiting);
+            this.enableRateLimiting = Codegen.ofNullable(enableRateLimiting);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -369,7 +370,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipsecPolicies(@Nullable Output<List<IpsecPolicyArgs>> ipsecPolicies) {
@@ -377,7 +378,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipsecPolicies(@Nullable List<IpsecPolicyArgs> ipsecPolicies) {
-            this.ipsecPolicies = Output.ofNullable(ipsecPolicies);
+            this.ipsecPolicies = Codegen.ofNullable(ipsecPolicies);
             return this;
         }
         public Builder ipsecPolicies(IpsecPolicyArgs... ipsecPolicies) {
@@ -388,7 +389,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder remoteVpnSite(@Nullable Output<SubResourceArgs> remoteVpnSite) {
@@ -396,7 +397,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder remoteVpnSite(@Nullable SubResourceArgs remoteVpnSite) {
-            this.remoteVpnSite = Output.ofNullable(remoteVpnSite);
+            this.remoteVpnSite = Codegen.ofNullable(remoteVpnSite);
             return this;
         }
         public Builder routingConfiguration(@Nullable Output<RoutingConfigurationArgs> routingConfiguration) {
@@ -404,7 +405,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingConfiguration(@Nullable RoutingConfigurationArgs routingConfiguration) {
-            this.routingConfiguration = Output.ofNullable(routingConfiguration);
+            this.routingConfiguration = Codegen.ofNullable(routingConfiguration);
             return this;
         }
         public Builder routingWeight(@Nullable Output<Integer> routingWeight) {
@@ -412,7 +413,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routingWeight(@Nullable Integer routingWeight) {
-            this.routingWeight = Output.ofNullable(routingWeight);
+            this.routingWeight = Codegen.ofNullable(routingWeight);
             return this;
         }
         public Builder sharedKey(@Nullable Output<String> sharedKey) {
@@ -420,7 +421,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sharedKey(@Nullable String sharedKey) {
-            this.sharedKey = Output.ofNullable(sharedKey);
+            this.sharedKey = Codegen.ofNullable(sharedKey);
             return this;
         }
         public Builder trafficSelectorPolicies(@Nullable Output<List<TrafficSelectorPolicyArgs>> trafficSelectorPolicies) {
@@ -428,7 +429,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trafficSelectorPolicies(@Nullable List<TrafficSelectorPolicyArgs> trafficSelectorPolicies) {
-            this.trafficSelectorPolicies = Output.ofNullable(trafficSelectorPolicies);
+            this.trafficSelectorPolicies = Codegen.ofNullable(trafficSelectorPolicies);
             return this;
         }
         public Builder trafficSelectorPolicies(TrafficSelectorPolicyArgs... trafficSelectorPolicies) {
@@ -439,7 +440,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder useLocalAzureIpAddress(@Nullable Boolean useLocalAzureIpAddress) {
-            this.useLocalAzureIpAddress = Output.ofNullable(useLocalAzureIpAddress);
+            this.useLocalAzureIpAddress = Codegen.ofNullable(useLocalAzureIpAddress);
             return this;
         }
         public Builder usePolicyBasedTrafficSelectors(@Nullable Output<Boolean> usePolicyBasedTrafficSelectors) {
@@ -447,7 +448,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder usePolicyBasedTrafficSelectors(@Nullable Boolean usePolicyBasedTrafficSelectors) {
-            this.usePolicyBasedTrafficSelectors = Output.ofNullable(usePolicyBasedTrafficSelectors);
+            this.usePolicyBasedTrafficSelectors = Codegen.ofNullable(usePolicyBasedTrafficSelectors);
             return this;
         }
         public Builder vpnConnectionProtocolType(@Nullable Output<Either<String,VirtualNetworkGatewayConnectionProtocol>> vpnConnectionProtocolType) {
@@ -455,7 +456,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnConnectionProtocolType(@Nullable Either<String,VirtualNetworkGatewayConnectionProtocol> vpnConnectionProtocolType) {
-            this.vpnConnectionProtocolType = Output.ofNullable(vpnConnectionProtocolType);
+            this.vpnConnectionProtocolType = Codegen.ofNullable(vpnConnectionProtocolType);
             return this;
         }
         public Builder vpnLinkConnections(@Nullable Output<List<VpnSiteLinkConnectionArgs>> vpnLinkConnections) {
@@ -463,7 +464,7 @@ public final class VpnConnectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpnLinkConnections(@Nullable List<VpnSiteLinkConnectionArgs> vpnLinkConnections) {
-            this.vpnLinkConnections = Output.ofNullable(vpnLinkConnections);
+            this.vpnLinkConnections = Codegen.ofNullable(vpnLinkConnections);
             return this;
         }
         public Builder vpnLinkConnections(VpnSiteLinkConnectionArgs... vpnLinkConnections) {

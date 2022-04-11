@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_beta.enums.SslPolicyMinTlsVersion;
 import io.pulumi.googlenative.compute_beta.enums.SslPolicyProfile;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> customFeatures;
 
     public Output<List<String>> getCustomFeatures() {
-        return this.customFeatures == null ? Output.empty() : this.customFeatures;
+        return this.customFeatures == null ? Codegen.empty() : this.customFeatures;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SslPolicyMinTlsVersion> minTlsVersion;
 
     public Output<SslPolicyMinTlsVersion> getMinTlsVersion() {
-        return this.minTlsVersion == null ? Output.empty() : this.minTlsVersion;
+        return this.minTlsVersion == null ? Codegen.empty() : this.minTlsVersion;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -69,21 +70,21 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SslPolicyProfile> profile;
 
     public Output<SslPolicyProfile> getProfile() {
-        return this.profile == null ? Output.empty() : this.profile;
+        return this.profile == null ? Codegen.empty() : this.profile;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     public SslPolicyArgs(
@@ -104,13 +105,13 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SslPolicyArgs() {
-        this.customFeatures = Output.empty();
-        this.description = Output.empty();
-        this.minTlsVersion = Output.empty();
-        this.name = Output.empty();
-        this.profile = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
+        this.customFeatures = Codegen.empty();
+        this.description = Codegen.empty();
+        this.minTlsVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.profile = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customFeatures(@Nullable List<String> customFeatures) {
-            this.customFeatures = Output.ofNullable(customFeatures);
+            this.customFeatures = Codegen.ofNullable(customFeatures);
             return this;
         }
         public Builder customFeatures(String... customFeatures) {
@@ -161,7 +162,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder minTlsVersion(@Nullable Output<SslPolicyMinTlsVersion> minTlsVersion) {
@@ -169,7 +170,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minTlsVersion(@Nullable SslPolicyMinTlsVersion minTlsVersion) {
-            this.minTlsVersion = Output.ofNullable(minTlsVersion);
+            this.minTlsVersion = Codegen.ofNullable(minTlsVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -177,7 +178,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder profile(@Nullable Output<SslPolicyProfile> profile) {
@@ -185,7 +186,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder profile(@Nullable SslPolicyProfile profile) {
-            this.profile = Output.ofNullable(profile);
+            this.profile = Codegen.ofNullable(profile);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -193,7 +194,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -201,7 +202,7 @@ public final class SslPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }        public SslPolicyArgs build() {
             return new SslPolicyArgs(customFeatures, description, minTlsVersion, name, profile, project, requestId);

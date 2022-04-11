@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends io.pulum
       private final @Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Output<GooglePrivacyDlpV2FieldIdArgs> getField() {
-        return this.field == null ? Output.empty() : this.field;
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     public GooglePrivacyDlpV2CategoricalStatsConfigArgs(@Nullable Output<GooglePrivacyDlpV2FieldIdArgs> field) {
@@ -34,7 +35,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends io.pulum
     }
 
     private GooglePrivacyDlpV2CategoricalStatsConfigArgs() {
-        this.field = Output.empty();
+        this.field = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigArgs extends io.pulum
             return this;
         }
         public Builder field(@Nullable GooglePrivacyDlpV2FieldIdArgs field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }        public GooglePrivacyDlpV2CategoricalStatsConfigArgs build() {
             return new GooglePrivacyDlpV2CategoricalStatsConfigArgs(field);

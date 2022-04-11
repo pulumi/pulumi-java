@@ -5,6 +5,7 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -45,8 +46,8 @@ public final class ServicePerimeterResourceArgs extends io.pulumi.resources.Reso
     }
 
     private ServicePerimeterResourceArgs() {
-        this.perimeterName = Output.empty();
-        this.resource = Output.empty();
+        this.perimeterName = Codegen.empty();
+        this.resource = Codegen.empty();
     }
 
     public static Builder builder() {

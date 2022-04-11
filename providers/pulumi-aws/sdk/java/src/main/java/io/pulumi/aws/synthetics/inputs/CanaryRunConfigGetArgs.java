@@ -5,6 +5,7 @@ package io.pulumi.aws.synthetics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> activeTracing;
 
     public Output<Boolean> getActiveTracing() {
-        return this.activeTracing == null ? Output.empty() : this.activeTracing;
+        return this.activeTracing == null ? Codegen.empty() : this.activeTracing;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> memoryInMb;
 
     public Output<Integer> getMemoryInMb() {
-        return this.memoryInMb == null ? Output.empty() : this.memoryInMb;
+        return this.memoryInMb == null ? Codegen.empty() : this.memoryInMb;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Integer> timeoutInSeconds;
 
     public Output<Integer> getTimeoutInSeconds() {
-        return this.timeoutInSeconds == null ? Output.empty() : this.timeoutInSeconds;
+        return this.timeoutInSeconds == null ? Codegen.empty() : this.timeoutInSeconds;
     }
 
     public CanaryRunConfigGetArgs(
@@ -58,9 +59,9 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CanaryRunConfigGetArgs() {
-        this.activeTracing = Output.empty();
-        this.memoryInMb = Output.empty();
-        this.timeoutInSeconds = Output.empty();
+        this.activeTracing = Codegen.empty();
+        this.memoryInMb = Codegen.empty();
+        this.timeoutInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder activeTracing(@Nullable Boolean activeTracing) {
-            this.activeTracing = Output.ofNullable(activeTracing);
+            this.activeTracing = Codegen.ofNullable(activeTracing);
             return this;
         }
         public Builder memoryInMb(@Nullable Output<Integer> memoryInMb) {
@@ -100,7 +101,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder memoryInMb(@Nullable Integer memoryInMb) {
-            this.memoryInMb = Output.ofNullable(memoryInMb);
+            this.memoryInMb = Codegen.ofNullable(memoryInMb);
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Output<Integer> timeoutInSeconds) {
@@ -108,7 +109,7 @@ public final class CanaryRunConfigGetArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder timeoutInSeconds(@Nullable Integer timeoutInSeconds) {
-            this.timeoutInSeconds = Output.ofNullable(timeoutInSeconds);
+            this.timeoutInSeconds = Codegen.ofNullable(timeoutInSeconds);
             return this;
         }        public CanaryRunConfigGetArgs build() {
             return new CanaryRunConfigGetArgs(activeTracing, memoryInMb, timeoutInSeconds);

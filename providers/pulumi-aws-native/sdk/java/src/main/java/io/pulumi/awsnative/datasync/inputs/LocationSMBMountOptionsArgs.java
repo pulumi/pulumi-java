@@ -6,6 +6,7 @@ package io.pulumi.awsnative.datasync.inputs;
 import io.pulumi.awsnative.datasync.enums.LocationSMBMountOptionsVersion;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<LocationSMBMountOptionsVersion> version;
 
     public Output<LocationSMBMountOptionsVersion> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public LocationSMBMountOptionsArgs(@Nullable Output<LocationSMBMountOptionsVersion> version) {
@@ -34,7 +35,7 @@ public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.Resou
     }
 
     private LocationSMBMountOptionsArgs() {
-        this.version = Output.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LocationSMBMountOptionsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder version(@Nullable LocationSMBMountOptionsVersion version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public LocationSMBMountOptionsArgs build() {
             return new LocationSMBMountOptionsArgs(version);

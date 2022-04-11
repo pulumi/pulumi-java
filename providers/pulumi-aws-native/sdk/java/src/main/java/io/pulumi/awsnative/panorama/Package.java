@@ -10,6 +10,7 @@ import io.pulumi.awsnative.panorama.outputs.PackageTag;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -80,7 +81,7 @@ public class Package extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Package(String name, @Nullable PackageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:panorama:Package", name, args == null ? PackageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:panorama:Package", name, args == null ? PackageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Package(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

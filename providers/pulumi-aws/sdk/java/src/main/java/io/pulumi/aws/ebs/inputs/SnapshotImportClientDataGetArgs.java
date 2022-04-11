@@ -5,6 +5,7 @@ package io.pulumi.aws.ebs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> uploadEnd;
 
     public Output<String> getUploadEnd() {
-        return this.uploadEnd == null ? Output.empty() : this.uploadEnd;
+        return this.uploadEnd == null ? Codegen.empty() : this.uploadEnd;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<Double> uploadSize;
 
     public Output<Double> getUploadSize() {
-        return this.uploadSize == null ? Output.empty() : this.uploadSize;
+        return this.uploadSize == null ? Codegen.empty() : this.uploadSize;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> uploadStart;
 
     public Output<String> getUploadStart() {
-        return this.uploadStart == null ? Output.empty() : this.uploadStart;
+        return this.uploadStart == null ? Codegen.empty() : this.uploadStart;
     }
 
     public SnapshotImportClientDataGetArgs(
@@ -71,10 +72,10 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
     }
 
     private SnapshotImportClientDataGetArgs() {
-        this.comment = Output.empty();
-        this.uploadEnd = Output.empty();
-        this.uploadSize = Output.empty();
-        this.uploadStart = Output.empty();
+        this.comment = Codegen.empty();
+        this.uploadEnd = Codegen.empty();
+        this.uploadSize = Codegen.empty();
+        this.uploadStart = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder uploadEnd(@Nullable Output<String> uploadEnd) {
@@ -116,7 +117,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder uploadEnd(@Nullable String uploadEnd) {
-            this.uploadEnd = Output.ofNullable(uploadEnd);
+            this.uploadEnd = Codegen.ofNullable(uploadEnd);
             return this;
         }
         public Builder uploadSize(@Nullable Output<Double> uploadSize) {
@@ -124,7 +125,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder uploadSize(@Nullable Double uploadSize) {
-            this.uploadSize = Output.ofNullable(uploadSize);
+            this.uploadSize = Codegen.ofNullable(uploadSize);
             return this;
         }
         public Builder uploadStart(@Nullable Output<String> uploadStart) {
@@ -132,7 +133,7 @@ public final class SnapshotImportClientDataGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder uploadStart(@Nullable String uploadStart) {
-            this.uploadStart = Output.ofNullable(uploadStart);
+            this.uploadStart = Codegen.ofNullable(uploadStart);
             return this;
         }        public SnapshotImportClientDataGetArgs build() {
             return new SnapshotImportClientDataGetArgs(comment, uploadEnd, uploadSize, uploadStart);

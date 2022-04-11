@@ -6,6 +6,7 @@ package io.pulumi.aws.datasync.inputs;
 import io.pulumi.aws.datasync.inputs.S3LocationS3ConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> agentArns;
 
     public Output<List<String>> getAgentArns() {
-        return this.agentArns == null ? Output.empty() : this.agentArns;
+        return this.agentArns == null ? Codegen.empty() : this.agentArns;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3BucketArn;
 
     public Output<String> getS3BucketArn() {
-        return this.s3BucketArn == null ? Output.empty() : this.s3BucketArn;
+        return this.s3BucketArn == null ? Codegen.empty() : this.s3BucketArn;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<S3LocationS3ConfigGetArgs> s3Config;
 
     public Output<S3LocationS3ConfigGetArgs> getS3Config() {
-        return this.s3Config == null ? Output.empty() : this.s3Config;
+        return this.s3Config == null ? Codegen.empty() : this.s3Config;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> s3StorageClass;
 
     public Output<String> getS3StorageClass() {
-        return this.s3StorageClass == null ? Output.empty() : this.s3StorageClass;
+        return this.s3StorageClass == null ? Codegen.empty() : this.s3StorageClass;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subdirectory;
 
     public Output<String> getSubdirectory() {
-        return this.subdirectory == null ? Output.empty() : this.subdirectory;
+        return this.subdirectory == null ? Codegen.empty() : this.subdirectory;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,14 +103,14 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     @Import(name="uri")
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public S3LocationState(
@@ -134,15 +135,15 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
     }
 
     private S3LocationState() {
-        this.agentArns = Output.empty();
-        this.arn = Output.empty();
-        this.s3BucketArn = Output.empty();
-        this.s3Config = Output.empty();
-        this.s3StorageClass = Output.empty();
-        this.subdirectory = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uri = Output.empty();
+        this.agentArns = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.s3BucketArn = Codegen.empty();
+        this.s3Config = Codegen.empty();
+        this.s3StorageClass = Codegen.empty();
+        this.subdirectory = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentArns(@Nullable List<String> agentArns) {
-            this.agentArns = Output.ofNullable(agentArns);
+            this.agentArns = Codegen.ofNullable(agentArns);
             return this;
         }
         public Builder agentArns(String... agentArns) {
@@ -197,7 +198,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder s3BucketArn(@Nullable Output<String> s3BucketArn) {
@@ -205,7 +206,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3BucketArn(@Nullable String s3BucketArn) {
-            this.s3BucketArn = Output.ofNullable(s3BucketArn);
+            this.s3BucketArn = Codegen.ofNullable(s3BucketArn);
             return this;
         }
         public Builder s3Config(@Nullable Output<S3LocationS3ConfigGetArgs> s3Config) {
@@ -213,7 +214,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3Config(@Nullable S3LocationS3ConfigGetArgs s3Config) {
-            this.s3Config = Output.ofNullable(s3Config);
+            this.s3Config = Codegen.ofNullable(s3Config);
             return this;
         }
         public Builder s3StorageClass(@Nullable Output<String> s3StorageClass) {
@@ -221,7 +222,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3StorageClass(@Nullable String s3StorageClass) {
-            this.s3StorageClass = Output.ofNullable(s3StorageClass);
+            this.s3StorageClass = Codegen.ofNullable(s3StorageClass);
             return this;
         }
         public Builder subdirectory(@Nullable Output<String> subdirectory) {
@@ -229,7 +230,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subdirectory(@Nullable String subdirectory) {
-            this.subdirectory = Output.ofNullable(subdirectory);
+            this.subdirectory = Codegen.ofNullable(subdirectory);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -237,7 +238,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -245,7 +246,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -253,7 +254,7 @@ public final class S3LocationState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public S3LocationState build() {
             return new S3LocationState(agentArns, arn, s3BucketArn, s3Config, s3StorageClass, subdirectory, tags, tagsAll, uri);

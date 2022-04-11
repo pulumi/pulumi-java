@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> badServiceFilter;
 
     public Output<String> getBadServiceFilter() {
-        return this.badServiceFilter == null ? Output.empty() : this.badServiceFilter;
+        return this.badServiceFilter == null ? Codegen.empty() : this.badServiceFilter;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> goodServiceFilter;
 
     public Output<String> getGoodServiceFilter() {
-        return this.goodServiceFilter == null ? Output.empty() : this.goodServiceFilter;
+        return this.goodServiceFilter == null ? Codegen.empty() : this.goodServiceFilter;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> totalServiceFilter;
 
     public Output<String> getTotalServiceFilter() {
-        return this.totalServiceFilter == null ? Output.empty() : this.totalServiceFilter;
+        return this.totalServiceFilter == null ? Codegen.empty() : this.totalServiceFilter;
     }
 
     public TimeSeriesRatioArgs(
@@ -61,9 +62,9 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private TimeSeriesRatioArgs() {
-        this.badServiceFilter = Output.empty();
-        this.goodServiceFilter = Output.empty();
-        this.totalServiceFilter = Output.empty();
+        this.badServiceFilter = Codegen.empty();
+        this.goodServiceFilter = Codegen.empty();
+        this.totalServiceFilter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder badServiceFilter(@Nullable String badServiceFilter) {
-            this.badServiceFilter = Output.ofNullable(badServiceFilter);
+            this.badServiceFilter = Codegen.ofNullable(badServiceFilter);
             return this;
         }
         public Builder goodServiceFilter(@Nullable Output<String> goodServiceFilter) {
@@ -103,7 +104,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder goodServiceFilter(@Nullable String goodServiceFilter) {
-            this.goodServiceFilter = Output.ofNullable(goodServiceFilter);
+            this.goodServiceFilter = Codegen.ofNullable(goodServiceFilter);
             return this;
         }
         public Builder totalServiceFilter(@Nullable Output<String> totalServiceFilter) {
@@ -111,7 +112,7 @@ public final class TimeSeriesRatioArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder totalServiceFilter(@Nullable String totalServiceFilter) {
-            this.totalServiceFilter = Output.ofNullable(totalServiceFilter);
+            this.totalServiceFilter = Codegen.ofNullable(totalServiceFilter);
             return this;
         }        public TimeSeriesRatioArgs build() {
             return new TimeSeriesRatioArgs(badServiceFilter, goodServiceFilter, totalServiceFilter);

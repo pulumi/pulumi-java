@@ -5,6 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> count;
 
     public Output<Object> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Object> none;
 
     public Output<Object> getNone() {
-        return this.none == null ? Output.empty() : this.none;
+        return this.none == null ? Codegen.empty() : this.none;
     }
 
     public WebACLOverrideActionArgs(
@@ -48,8 +49,8 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
     }
 
     private WebACLOverrideActionArgs() {
-        this.count = Output.empty();
-        this.none = Output.empty();
+        this.count = Codegen.empty();
+        this.none = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder count(@Nullable Object count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }
         public Builder none(@Nullable Output<Object> none) {
@@ -87,7 +88,7 @@ public final class WebACLOverrideActionArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder none(@Nullable Object none) {
-            this.none = Output.ofNullable(none);
+            this.none = Codegen.ofNullable(none);
             return this;
         }        public WebACLOverrideActionArgs build() {
             return new WebACLOverrideActionArgs(count, none);

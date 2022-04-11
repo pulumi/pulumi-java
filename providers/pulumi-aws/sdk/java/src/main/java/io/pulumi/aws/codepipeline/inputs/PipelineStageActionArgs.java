@@ -5,6 +5,7 @@ package io.pulumi.aws.codepipeline.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +37,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> configuration;
 
     public Output<Map<String,String>> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> inputArtifacts;
 
     public Output<List<String>> getInputArtifacts() {
-        return this.inputArtifacts == null ? Output.empty() : this.inputArtifacts;
+        return this.inputArtifacts == null ? Codegen.empty() : this.inputArtifacts;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> namespace;
 
     public Output<String> getNamespace() {
-        return this.namespace == null ? Output.empty() : this.namespace;
+        return this.namespace == null ? Codegen.empty() : this.namespace;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> outputArtifacts;
 
     public Output<List<String>> getOutputArtifacts() {
-        return this.outputArtifacts == null ? Output.empty() : this.outputArtifacts;
+        return this.outputArtifacts == null ? Codegen.empty() : this.outputArtifacts;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Integer> runOrder;
 
     public Output<Integer> getRunOrder() {
-        return this.runOrder == null ? Output.empty() : this.runOrder;
+        return this.runOrder == null ? Codegen.empty() : this.runOrder;
     }
 
     /**
@@ -177,18 +178,18 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private PipelineStageActionArgs() {
-        this.category = Output.empty();
-        this.configuration = Output.empty();
-        this.inputArtifacts = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
-        this.outputArtifacts = Output.empty();
-        this.owner = Output.empty();
-        this.provider = Output.empty();
-        this.region = Output.empty();
-        this.roleArn = Output.empty();
-        this.runOrder = Output.empty();
-        this.version = Output.empty();
+        this.category = Codegen.empty();
+        this.configuration = Codegen.empty();
+        this.inputArtifacts = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
+        this.outputArtifacts = Codegen.empty();
+        this.owner = Codegen.empty();
+        this.provider = Codegen.empty();
+        this.region = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.runOrder = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder configuration(@Nullable Map<String,String> configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder inputArtifacts(@Nullable Output<List<String>> inputArtifacts) {
@@ -254,7 +255,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder inputArtifacts(@Nullable List<String> inputArtifacts) {
-            this.inputArtifacts = Output.ofNullable(inputArtifacts);
+            this.inputArtifacts = Codegen.ofNullable(inputArtifacts);
             return this;
         }
         public Builder inputArtifacts(String... inputArtifacts) {
@@ -273,7 +274,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder namespace(@Nullable String namespace) {
-            this.namespace = Output.ofNullable(namespace);
+            this.namespace = Codegen.ofNullable(namespace);
             return this;
         }
         public Builder outputArtifacts(@Nullable Output<List<String>> outputArtifacts) {
@@ -281,7 +282,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder outputArtifacts(@Nullable List<String> outputArtifacts) {
-            this.outputArtifacts = Output.ofNullable(outputArtifacts);
+            this.outputArtifacts = Codegen.ofNullable(outputArtifacts);
             return this;
         }
         public Builder outputArtifacts(String... outputArtifacts) {
@@ -308,7 +309,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder roleArn(@Nullable Output<String> roleArn) {
@@ -316,7 +317,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder runOrder(@Nullable Output<Integer> runOrder) {
@@ -324,7 +325,7 @@ public final class PipelineStageActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder runOrder(@Nullable Integer runOrder) {
-            this.runOrder = Output.ofNullable(runOrder);
+            this.runOrder = Codegen.ofNullable(runOrder);
             return this;
         }
         public Builder version(Output<String> version) {

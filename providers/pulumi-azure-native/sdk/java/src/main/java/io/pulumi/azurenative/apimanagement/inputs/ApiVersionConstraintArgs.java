@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> minApiVersion;
 
     public Output<String> getMinApiVersion() {
-        return this.minApiVersion == null ? Output.empty() : this.minApiVersion;
+        return this.minApiVersion == null ? Codegen.empty() : this.minApiVersion;
     }
 
     public ApiVersionConstraintArgs(@Nullable Output<String> minApiVersion) {
@@ -34,7 +35,7 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
     }
 
     private ApiVersionConstraintArgs() {
-        this.minApiVersion = Output.empty();
+        this.minApiVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ApiVersionConstraintArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder minApiVersion(@Nullable String minApiVersion) {
-            this.minApiVersion = Output.ofNullable(minApiVersion);
+            this.minApiVersion = Codegen.ofNullable(minApiVersion);
             return this;
         }        public ApiVersionConstraintArgs build() {
             return new ApiVersionConstraintArgs(minApiVersion);

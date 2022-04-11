@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,14 +21,14 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
       private final @Nullable Output<Boolean> enableDefaultValidation;
 
     public Output<Boolean> getEnableDefaultValidation() {
-        return this.enableDefaultValidation == null ? Output.empty() : this.enableDefaultValidation;
+        return this.enableDefaultValidation == null ? Codegen.empty() : this.enableDefaultValidation;
     }
 
     @Import(name="resourceTypesWithCustomValidation")
       private final @Nullable Output<List<String>> resourceTypesWithCustomValidation;
 
     public Output<List<String>> getResourceTypesWithCustomValidation() {
-        return this.resourceTypesWithCustomValidation == null ? Output.empty() : this.resourceTypesWithCustomValidation;
+        return this.resourceTypesWithCustomValidation == null ? Codegen.empty() : this.resourceTypesWithCustomValidation;
     }
 
     public ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs(
@@ -38,8 +39,8 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
     }
 
     private ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecificationsArgs() {
-        this.enableDefaultValidation = Output.empty();
-        this.resourceTypesWithCustomValidation = Output.empty();
+        this.enableDefaultValidation = Codegen.empty();
+        this.resourceTypesWithCustomValidation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
             return this;
         }
         public Builder enableDefaultValidation(@Nullable Boolean enableDefaultValidation) {
-            this.enableDefaultValidation = Output.ofNullable(enableDefaultValidation);
+            this.enableDefaultValidation = Codegen.ofNullable(enableDefaultValidation);
             return this;
         }
         public Builder resourceTypesWithCustomValidation(@Nullable Output<List<String>> resourceTypesWithCustomValidation) {
@@ -77,7 +78,7 @@ public final class ResourceTypeRegistrationPropertiesCheckNameAvailabilitySpecif
             return this;
         }
         public Builder resourceTypesWithCustomValidation(@Nullable List<String> resourceTypesWithCustomValidation) {
-            this.resourceTypesWithCustomValidation = Output.ofNullable(resourceTypesWithCustomValidation);
+            this.resourceTypesWithCustomValidation = Codegen.ofNullable(resourceTypesWithCustomValidation);
             return this;
         }
         public Builder resourceTypesWithCustomValidation(String... resourceTypesWithCustomValidation) {

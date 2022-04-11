@@ -7,6 +7,7 @@ import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigConfigurationGetA
 import io.pulumi.aws.emr.inputs.InstanceFleetInstanceTypeConfigEbsConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +28,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> bidPrice;
 
     public Output<String> getBidPrice() {
-        return this.bidPrice == null ? Output.empty() : this.bidPrice;
+        return this.bidPrice == null ? Codegen.empty() : this.bidPrice;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
       private final @Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice;
 
     public Output<Double> getBidPriceAsPercentageOfOnDemandPrice() {
-        return this.bidPriceAsPercentageOfOnDemandPrice == null ? Output.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
+        return this.bidPriceAsPercentageOfOnDemandPrice == null ? Codegen.empty() : this.bidPriceAsPercentageOfOnDemandPrice;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
       private final @Nullable Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations;
 
     public Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> getConfigurations() {
-        return this.configurations == null ? Output.empty() : this.configurations;
+        return this.configurations == null ? Codegen.empty() : this.configurations;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
       private final @Nullable Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> ebsConfigs;
 
     public Output<List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs>> getEbsConfigs() {
-        return this.ebsConfigs == null ? Output.empty() : this.ebsConfigs;
+        return this.ebsConfigs == null ? Codegen.empty() : this.ebsConfigs;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> weightedCapacity;
 
     public Output<Integer> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public InstanceFleetInstanceTypeConfigGetArgs(
@@ -101,12 +102,12 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
     }
 
     private InstanceFleetInstanceTypeConfigGetArgs() {
-        this.bidPrice = Output.empty();
-        this.bidPriceAsPercentageOfOnDemandPrice = Output.empty();
-        this.configurations = Output.empty();
-        this.ebsConfigs = Output.empty();
-        this.instanceType = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.bidPrice = Codegen.empty();
+        this.bidPriceAsPercentageOfOnDemandPrice = Codegen.empty();
+        this.configurations = Codegen.empty();
+        this.ebsConfigs = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder bidPrice(@Nullable String bidPrice) {
-            this.bidPrice = Output.ofNullable(bidPrice);
+            this.bidPrice = Codegen.ofNullable(bidPrice);
             return this;
         }
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Output<Double> bidPriceAsPercentageOfOnDemandPrice) {
@@ -152,7 +153,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder bidPriceAsPercentageOfOnDemandPrice(@Nullable Double bidPriceAsPercentageOfOnDemandPrice) {
-            this.bidPriceAsPercentageOfOnDemandPrice = Output.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
+            this.bidPriceAsPercentageOfOnDemandPrice = Codegen.ofNullable(bidPriceAsPercentageOfOnDemandPrice);
             return this;
         }
         public Builder configurations(@Nullable Output<List<InstanceFleetInstanceTypeConfigConfigurationGetArgs>> configurations) {
@@ -160,7 +161,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder configurations(@Nullable List<InstanceFleetInstanceTypeConfigConfigurationGetArgs> configurations) {
-            this.configurations = Output.ofNullable(configurations);
+            this.configurations = Codegen.ofNullable(configurations);
             return this;
         }
         public Builder configurations(InstanceFleetInstanceTypeConfigConfigurationGetArgs... configurations) {
@@ -171,7 +172,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder ebsConfigs(@Nullable List<InstanceFleetInstanceTypeConfigEbsConfigGetArgs> ebsConfigs) {
-            this.ebsConfigs = Output.ofNullable(ebsConfigs);
+            this.ebsConfigs = Codegen.ofNullable(ebsConfigs);
             return this;
         }
         public Builder ebsConfigs(InstanceFleetInstanceTypeConfigEbsConfigGetArgs... ebsConfigs) {
@@ -190,7 +191,7 @@ public final class InstanceFleetInstanceTypeConfigGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder weightedCapacity(@Nullable Integer weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public InstanceFleetInstanceTypeConfigGetArgs build() {
             return new InstanceFleetInstanceTypeConfigGetArgs(bidPrice, bidPriceAsPercentageOfOnDemandPrice, configurations, ebsConfigs, instanceType, weightedCapacity);

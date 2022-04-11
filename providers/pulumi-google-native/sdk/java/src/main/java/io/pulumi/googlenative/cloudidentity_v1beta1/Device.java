@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudidentity_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1beta1.DeviceArgs;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.AndroidAttributesResponse;
@@ -451,7 +452,7 @@ public class Device extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Device(String name, @Nullable DeviceArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudidentity/v1beta1:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudidentity/v1beta1:Device", name, args == null ? DeviceArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Device(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

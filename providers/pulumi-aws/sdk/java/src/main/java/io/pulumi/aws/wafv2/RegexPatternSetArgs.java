@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2;
 import io.pulumi.aws.wafv2.inputs.RegexPatternSetRegularExpressionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions;
 
     public Output<List<RegexPatternSetRegularExpressionArgs>> getRegularExpressions() {
-        return this.regularExpressions == null ? Output.empty() : this.regularExpressions;
+        return this.regularExpressions == null ? Codegen.empty() : this.regularExpressions;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RegexPatternSetArgs(
@@ -86,11 +87,11 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private RegexPatternSetArgs() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.regularExpressions = Output.empty();
-        this.scope = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.regularExpressions = Codegen.empty();
+        this.scope = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -134,7 +135,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder regularExpressions(@Nullable Output<List<RegexPatternSetRegularExpressionArgs>> regularExpressions) {
@@ -142,7 +143,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder regularExpressions(@Nullable List<RegexPatternSetRegularExpressionArgs> regularExpressions) {
-            this.regularExpressions = Output.ofNullable(regularExpressions);
+            this.regularExpressions = Codegen.ofNullable(regularExpressions);
             return this;
         }
         public Builder regularExpressions(RegexPatternSetRegularExpressionArgs... regularExpressions) {
@@ -161,7 +162,7 @@ public final class RegexPatternSetArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RegexPatternSetArgs build() {
             return new RegexPatternSetArgs(description, name, regularExpressions, scope, tags);

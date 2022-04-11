@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class FlowDefinitionHumanLoopRequestSourceGetArgs extends io.pulumi
     }
 
     private FlowDefinitionHumanLoopRequestSourceGetArgs() {
-        this.awsManagedHumanLoopRequestSource = Output.empty();
+        this.awsManagedHumanLoopRequestSource = Codegen.empty();
     }
 
     public static Builder builder() {

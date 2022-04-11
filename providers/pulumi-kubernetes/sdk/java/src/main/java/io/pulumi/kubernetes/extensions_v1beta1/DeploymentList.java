@@ -6,6 +6,7 @@ package io.pulumi.kubernetes.extensions_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.extensions_v1beta1.DeploymentListArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.Deployment;
@@ -99,7 +100,7 @@ public class DeploymentList extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DeploymentList(String name, DeploymentListArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("kubernetes:extensions/v1beta1:DeploymentList", name, makeArgs(args), makeResourceOptions(options, Output.empty()));
+        super("kubernetes:extensions/v1beta1:DeploymentList", name, makeArgs(args), makeResourceOptions(options, Codegen.empty()));
     }
 
     private DeploymentList(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

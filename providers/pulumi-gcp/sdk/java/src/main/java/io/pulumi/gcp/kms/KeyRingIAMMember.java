@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.KeyRingIAMMemberArgs;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMMemberState;
@@ -162,7 +163,7 @@ public class KeyRingIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public KeyRingIAMMember(String name, KeyRingIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/keyRingIAMMember:KeyRingIAMMember", name, args == null ? KeyRingIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/keyRingIAMMember:KeyRingIAMMember", name, args == null ? KeyRingIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private KeyRingIAMMember(String name, Output<String> id, @Nullable KeyRingIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

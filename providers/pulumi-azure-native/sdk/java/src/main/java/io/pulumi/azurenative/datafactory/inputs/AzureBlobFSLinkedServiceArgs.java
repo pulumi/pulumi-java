@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -35,7 +36,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> accountKey;
 
     public Output<Object> getAccountKey() {
-        return this.accountKey == null ? Output.empty() : this.accountKey;
+        return this.accountKey == null ? Codegen.empty() : this.accountKey;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> azureCloudType;
 
     public Output<Object> getAzureCloudType() {
-        return this.azureCloudType == null ? Output.empty() : this.azureCloudType;
+        return this.azureCloudType == null ? Codegen.empty() : this.azureCloudType;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<CredentialReferenceArgs> credential;
 
     public Output<CredentialReferenceArgs> getCredential() {
-        return this.credential == null ? Output.empty() : this.credential;
+        return this.credential == null ? Codegen.empty() : this.credential;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalCredential() {
-        return this.servicePrincipalCredential == null ? Output.empty() : this.servicePrincipalCredential;
+        return this.servicePrincipalCredential == null ? Codegen.empty() : this.servicePrincipalCredential;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> servicePrincipalCredentialType;
 
     public Output<Object> getServicePrincipalCredentialType() {
-        return this.servicePrincipalCredentialType == null ? Output.empty() : this.servicePrincipalCredentialType;
+        return this.servicePrincipalCredentialType == null ? Codegen.empty() : this.servicePrincipalCredentialType;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
+        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -156,7 +157,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
+        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -167,7 +168,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Object> tenant;
 
     public Output<Object> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -227,21 +228,21 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
     }
 
     private AzureBlobFSLinkedServiceArgs() {
-        this.accountKey = Output.empty();
-        this.annotations = Output.empty();
-        this.azureCloudType = Output.empty();
-        this.connectVia = Output.empty();
-        this.credential = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.parameters = Output.empty();
-        this.servicePrincipalCredential = Output.empty();
-        this.servicePrincipalCredentialType = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.servicePrincipalKey = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
-        this.url = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.annotations = Codegen.empty();
+        this.azureCloudType = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.credential = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.servicePrincipalCredential = Codegen.empty();
+        this.servicePrincipalCredentialType = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.servicePrincipalKey = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -297,7 +298,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder accountKey(@Nullable Object accountKey) {
-            this.accountKey = Output.ofNullable(accountKey);
+            this.accountKey = Codegen.ofNullable(accountKey);
             return this;
         }
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
@@ -305,7 +306,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -316,7 +317,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder azureCloudType(@Nullable Object azureCloudType) {
-            this.azureCloudType = Output.ofNullable(azureCloudType);
+            this.azureCloudType = Codegen.ofNullable(azureCloudType);
             return this;
         }
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
@@ -324,7 +325,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
@@ -332,7 +333,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder credential(@Nullable CredentialReferenceArgs credential) {
-            this.credential = Output.ofNullable(credential);
+            this.credential = Codegen.ofNullable(credential);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -340,7 +341,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -348,7 +349,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
@@ -356,7 +357,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder servicePrincipalCredential(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalCredential) {
@@ -364,7 +365,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder servicePrincipalCredential(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalCredential) {
-            this.servicePrincipalCredential = Output.ofNullable(servicePrincipalCredential);
+            this.servicePrincipalCredential = Codegen.ofNullable(servicePrincipalCredential);
             return this;
         }
         public Builder servicePrincipalCredentialType(@Nullable Output<Object> servicePrincipalCredentialType) {
@@ -372,7 +373,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder servicePrincipalCredentialType(@Nullable Object servicePrincipalCredentialType) {
-            this.servicePrincipalCredentialType = Output.ofNullable(servicePrincipalCredentialType);
+            this.servicePrincipalCredentialType = Codegen.ofNullable(servicePrincipalCredentialType);
             return this;
         }
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
@@ -380,7 +381,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
@@ -388,7 +389,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
             return this;
         }
         public Builder tenant(@Nullable Output<Object> tenant) {
@@ -396,7 +397,7 @@ public final class AzureBlobFSLinkedServiceArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder type(Output<String> type) {

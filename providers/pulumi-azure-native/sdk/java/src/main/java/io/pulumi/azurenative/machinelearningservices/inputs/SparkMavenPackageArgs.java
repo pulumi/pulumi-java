@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> artifact;
 
     public Output<String> getArtifact() {
-        return this.artifact == null ? Output.empty() : this.artifact;
+        return this.artifact == null ? Codegen.empty() : this.artifact;
     }
 
     @Import(name="group")
       private final @Nullable Output<String> group;
 
     public Output<String> getGroup() {
-        return this.group == null ? Output.empty() : this.group;
+        return this.group == null ? Codegen.empty() : this.group;
     }
 
     @Import(name="version")
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public SparkMavenPackageArgs(
@@ -45,9 +46,9 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SparkMavenPackageArgs() {
-        this.artifact = Output.empty();
-        this.group = Output.empty();
-        this.version = Output.empty();
+        this.artifact = Codegen.empty();
+        this.group = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder artifact(@Nullable String artifact) {
-            this.artifact = Output.ofNullable(artifact);
+            this.artifact = Codegen.ofNullable(artifact);
             return this;
         }
         public Builder group(@Nullable Output<String> group) {
@@ -87,7 +88,7 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder group(@Nullable String group) {
-            this.group = Output.ofNullable(group);
+            this.group = Codegen.ofNullable(group);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -95,7 +96,7 @@ public final class SparkMavenPackageArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public SparkMavenPackageArgs build() {
             return new SparkMavenPackageArgs(artifact, group, version);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.TemplateContentsInterpreter;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ImportFileArgs;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ImportFileArgs>> imports;
 
     public Output<List<ImportFileArgs>> getImports() {
-        return this.imports == null ? Output.empty() : this.imports;
+        return this.imports == null ? Codegen.empty() : this.imports;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<TemplateContentsInterpreter> interpreter;
 
     public Output<TemplateContentsInterpreter> getInterpreter() {
-        return this.interpreter == null ? Output.empty() : this.interpreter;
+        return this.interpreter == null ? Codegen.empty() : this.interpreter;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> mainTemplate;
 
     public Output<String> getMainTemplate() {
-        return this.mainTemplate == null ? Output.empty() : this.mainTemplate;
+        return this.mainTemplate == null ? Codegen.empty() : this.mainTemplate;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> schema;
 
     public Output<String> getSchema() {
-        return this.schema == null ? Output.empty() : this.schema;
+        return this.schema == null ? Codegen.empty() : this.schema;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> template;
 
     public Output<String> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     public TemplateContentsArgs(
@@ -90,11 +91,11 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TemplateContentsArgs() {
-        this.imports = Output.empty();
-        this.interpreter = Output.empty();
-        this.mainTemplate = Output.empty();
-        this.schema = Output.empty();
-        this.template = Output.empty();
+        this.imports = Codegen.empty();
+        this.interpreter = Codegen.empty();
+        this.mainTemplate = Codegen.empty();
+        this.schema = Codegen.empty();
+        this.template = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder imports(@Nullable List<ImportFileArgs> imports) {
-            this.imports = Output.ofNullable(imports);
+            this.imports = Codegen.ofNullable(imports);
             return this;
         }
         public Builder imports(ImportFileArgs... imports) {
@@ -141,7 +142,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder interpreter(@Nullable TemplateContentsInterpreter interpreter) {
-            this.interpreter = Output.ofNullable(interpreter);
+            this.interpreter = Codegen.ofNullable(interpreter);
             return this;
         }
         public Builder mainTemplate(@Nullable Output<String> mainTemplate) {
@@ -149,7 +150,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder mainTemplate(@Nullable String mainTemplate) {
-            this.mainTemplate = Output.ofNullable(mainTemplate);
+            this.mainTemplate = Codegen.ofNullable(mainTemplate);
             return this;
         }
         public Builder schema(@Nullable Output<String> schema) {
@@ -157,7 +158,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder schema(@Nullable String schema) {
-            this.schema = Output.ofNullable(schema);
+            this.schema = Codegen.ofNullable(schema);
             return this;
         }
         public Builder template(@Nullable Output<String> template) {
@@ -165,7 +166,7 @@ public final class TemplateContentsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder template(@Nullable String template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }        public TemplateContentsArgs build() {
             return new TemplateContentsArgs(imports, interpreter, mainTemplate, schema, template);

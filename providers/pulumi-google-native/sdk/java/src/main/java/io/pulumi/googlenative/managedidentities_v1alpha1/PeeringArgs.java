@@ -5,6 +5,7 @@ package io.pulumi.googlenative.managedidentities_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="peeringId", required=true)
@@ -59,7 +60,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public PeeringArgs(
@@ -76,11 +77,11 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PeeringArgs() {
-        this.authorizedNetwork = Output.empty();
-        this.domainResource = Output.empty();
-        this.labels = Output.empty();
-        this.peeringId = Output.empty();
-        this.project = Output.empty();
+        this.authorizedNetwork = Codegen.empty();
+        this.domainResource = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.peeringId = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder peeringId(Output<String> peeringId) {
@@ -148,7 +149,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public PeeringArgs build() {
             return new PeeringArgs(authorizedNetwork, domainResource, labels, peeringId, project);

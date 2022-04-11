@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AzureClusterControlPlaneMainVolumeArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> sizeGib;
 
     public Output<Integer> getSizeGib() {
-        return this.sizeGib == null ? Output.empty() : this.sizeGib;
+        return this.sizeGib == null ? Codegen.empty() : this.sizeGib;
     }
 
     public AzureClusterControlPlaneMainVolumeArgs(@Nullable Output<Integer> sizeGib) {
@@ -30,7 +31,7 @@ public final class AzureClusterControlPlaneMainVolumeArgs extends io.pulumi.reso
     }
 
     private AzureClusterControlPlaneMainVolumeArgs() {
-        this.sizeGib = Output.empty();
+        this.sizeGib = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class AzureClusterControlPlaneMainVolumeArgs extends io.pulumi.reso
             return this;
         }
         public Builder sizeGib(@Nullable Integer sizeGib) {
-            this.sizeGib = Output.ofNullable(sizeGib);
+            this.sizeGib = Codegen.ofNullable(sizeGib);
             return this;
         }        public AzureClusterControlPlaneMainVolumeArgs build() {
             return new AzureClusterControlPlaneMainVolumeArgs(sizeGib);

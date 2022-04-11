@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> artifactIdentifier;
 
     public Output<String> getArtifactIdentifier() {
-        return this.artifactIdentifier == null ? Output.empty() : this.artifactIdentifier;
+        return this.artifactIdentifier == null ? Codegen.empty() : this.artifactIdentifier;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> bucketOwnerAccess;
 
     public Output<String> getBucketOwnerAccess() {
-        return this.bucketOwnerAccess == null ? Output.empty() : this.bucketOwnerAccess;
+        return this.bucketOwnerAccess == null ? Codegen.empty() : this.bucketOwnerAccess;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> encryptionDisabled;
 
     public Output<Boolean> getEncryptionDisabled() {
-        return this.encryptionDisabled == null ? Output.empty() : this.encryptionDisabled;
+        return this.encryptionDisabled == null ? Codegen.empty() : this.encryptionDisabled;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> namespaceType;
 
     public Output<String> getNamespaceType() {
-        return this.namespaceType == null ? Output.empty() : this.namespaceType;
+        return this.namespaceType == null ? Codegen.empty() : this.namespaceType;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> overrideArtifactName;
 
     public Output<Boolean> getOverrideArtifactName() {
-        return this.overrideArtifactName == null ? Output.empty() : this.overrideArtifactName;
+        return this.overrideArtifactName == null ? Codegen.empty() : this.overrideArtifactName;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> packaging;
 
     public Output<String> getPackaging() {
-        return this.packaging == null ? Output.empty() : this.packaging;
+        return this.packaging == null ? Codegen.empty() : this.packaging;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -149,16 +150,16 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private ProjectArtifactsGetArgs() {
-        this.artifactIdentifier = Output.empty();
-        this.bucketOwnerAccess = Output.empty();
-        this.encryptionDisabled = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.namespaceType = Output.empty();
-        this.overrideArtifactName = Output.empty();
-        this.packaging = Output.empty();
-        this.path = Output.empty();
-        this.type = Output.empty();
+        this.artifactIdentifier = Codegen.empty();
+        this.bucketOwnerAccess = Codegen.empty();
+        this.encryptionDisabled = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespaceType = Codegen.empty();
+        this.overrideArtifactName = Codegen.empty();
+        this.packaging = Codegen.empty();
+        this.path = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -204,7 +205,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder artifactIdentifier(@Nullable String artifactIdentifier) {
-            this.artifactIdentifier = Output.ofNullable(artifactIdentifier);
+            this.artifactIdentifier = Codegen.ofNullable(artifactIdentifier);
             return this;
         }
         public Builder bucketOwnerAccess(@Nullable Output<String> bucketOwnerAccess) {
@@ -212,7 +213,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder bucketOwnerAccess(@Nullable String bucketOwnerAccess) {
-            this.bucketOwnerAccess = Output.ofNullable(bucketOwnerAccess);
+            this.bucketOwnerAccess = Codegen.ofNullable(bucketOwnerAccess);
             return this;
         }
         public Builder encryptionDisabled(@Nullable Output<Boolean> encryptionDisabled) {
@@ -220,7 +221,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder encryptionDisabled(@Nullable Boolean encryptionDisabled) {
-            this.encryptionDisabled = Output.ofNullable(encryptionDisabled);
+            this.encryptionDisabled = Codegen.ofNullable(encryptionDisabled);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -228,7 +229,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -236,7 +237,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namespaceType(@Nullable Output<String> namespaceType) {
@@ -244,7 +245,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder namespaceType(@Nullable String namespaceType) {
-            this.namespaceType = Output.ofNullable(namespaceType);
+            this.namespaceType = Codegen.ofNullable(namespaceType);
             return this;
         }
         public Builder overrideArtifactName(@Nullable Output<Boolean> overrideArtifactName) {
@@ -252,7 +253,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder overrideArtifactName(@Nullable Boolean overrideArtifactName) {
-            this.overrideArtifactName = Output.ofNullable(overrideArtifactName);
+            this.overrideArtifactName = Codegen.ofNullable(overrideArtifactName);
             return this;
         }
         public Builder packaging(@Nullable Output<String> packaging) {
@@ -260,7 +261,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder packaging(@Nullable String packaging) {
-            this.packaging = Output.ofNullable(packaging);
+            this.packaging = Codegen.ofNullable(packaging);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -268,7 +269,7 @@ public final class ProjectArtifactsGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder type(Output<String> type) {

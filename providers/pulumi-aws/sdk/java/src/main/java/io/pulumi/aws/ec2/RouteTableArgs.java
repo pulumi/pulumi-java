@@ -6,6 +6,7 @@ package io.pulumi.aws.ec2;
 import io.pulumi.aws.ec2.inputs.RouteTableRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> propagatingVgws;
 
     public Output<List<String>> getPropagatingVgws() {
-        return this.propagatingVgws == null ? Output.empty() : this.propagatingVgws;
+        return this.propagatingVgws == null ? Codegen.empty() : this.propagatingVgws;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<RouteTableRouteArgs>> routes;
 
     public Output<List<RouteTableRouteArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteTableArgs() {
-        this.propagatingVgws = Output.empty();
-        this.routes = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.propagatingVgws = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder propagatingVgws(@Nullable List<String> propagatingVgws) {
-            this.propagatingVgws = Output.ofNullable(propagatingVgws);
+            this.propagatingVgws = Codegen.ofNullable(propagatingVgws);
             return this;
         }
         public Builder propagatingVgws(String... propagatingVgws) {
@@ -121,7 +122,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable List<RouteTableRouteArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(RouteTableRouteArgs... routes) {
@@ -132,7 +133,7 @@ public final class RouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

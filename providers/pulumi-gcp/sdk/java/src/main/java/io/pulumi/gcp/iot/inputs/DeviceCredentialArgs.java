@@ -5,6 +5,7 @@ package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialPublicKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> expirationTime;
 
     public Output<String> getExpirationTime() {
-        return this.expirationTime == null ? Output.empty() : this.expirationTime;
+        return this.expirationTime == null ? Codegen.empty() : this.expirationTime;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DeviceCredentialArgs() {
-        this.expirationTime = Output.empty();
-        this.publicKey = Output.empty();
+        this.expirationTime = Codegen.empty();
+        this.publicKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class DeviceCredentialArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expirationTime(@Nullable String expirationTime) {
-            this.expirationTime = Output.ofNullable(expirationTime);
+            this.expirationTime = Codegen.ofNullable(expirationTime);
             return this;
         }
         public Builder publicKey(Output<DeviceCredentialPublicKeyArgs> publicKey) {

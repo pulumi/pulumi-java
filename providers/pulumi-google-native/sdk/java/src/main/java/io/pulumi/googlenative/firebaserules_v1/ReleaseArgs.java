@@ -5,6 +5,7 @@ package io.pulumi.googlenative.firebaserules_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +23,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> rulesetName;
 
     public Output<String> getRulesetName() {
-        return this.rulesetName == null ? Output.empty() : this.rulesetName;
+        return this.rulesetName == null ? Codegen.empty() : this.rulesetName;
     }
 
     public ReleaseArgs(
@@ -53,9 +54,9 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReleaseArgs() {
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rulesetName = Output.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rulesetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -95,7 +96,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rulesetName(@Nullable Output<String> rulesetName) {
@@ -103,7 +104,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rulesetName(@Nullable String rulesetName) {
-            this.rulesetName = Output.ofNullable(rulesetName);
+            this.rulesetName = Codegen.ofNullable(rulesetName);
             return this;
         }        public ReleaseArgs build() {
             return new ReleaseArgs(name, project, rulesetName);

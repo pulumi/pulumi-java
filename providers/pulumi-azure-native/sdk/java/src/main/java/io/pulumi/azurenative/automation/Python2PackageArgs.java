@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public Python2PackageArgs(
@@ -85,11 +86,11 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Python2PackageArgs() {
-        this.automationAccountName = Output.empty();
-        this.contentLink = Output.empty();
-        this.packageName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.contentLink = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -157,7 +158,7 @@ public final class Python2PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public Python2PackageArgs build() {
             return new Python2PackageArgs(automationAccountName, contentLink, packageName, resourceGroupName, tags);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowPrefixFormat;
 import io.pulumi.awsnative.appflow.enums.FlowPrefixType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<FlowPrefixFormat> prefixFormat;
 
     public Output<FlowPrefixFormat> getPrefixFormat() {
-        return this.prefixFormat == null ? Output.empty() : this.prefixFormat;
+        return this.prefixFormat == null ? Codegen.empty() : this.prefixFormat;
     }
 
     @Import(name="prefixType")
       private final @Nullable Output<FlowPrefixType> prefixType;
 
     public Output<FlowPrefixType> getPrefixType() {
-        return this.prefixType == null ? Output.empty() : this.prefixType;
+        return this.prefixType == null ? Codegen.empty() : this.prefixType;
     }
 
     public FlowPrefixConfigArgs(
@@ -37,8 +38,8 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FlowPrefixConfigArgs() {
-        this.prefixFormat = Output.empty();
-        this.prefixType = Output.empty();
+        this.prefixFormat = Codegen.empty();
+        this.prefixType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder prefixFormat(@Nullable FlowPrefixFormat prefixFormat) {
-            this.prefixFormat = Output.ofNullable(prefixFormat);
+            this.prefixFormat = Codegen.ofNullable(prefixFormat);
             return this;
         }
         public Builder prefixType(@Nullable Output<FlowPrefixType> prefixType) {
@@ -76,7 +77,7 @@ public final class FlowPrefixConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder prefixType(@Nullable FlowPrefixType prefixType) {
-            this.prefixType = Output.ofNullable(prefixType);
+            this.prefixType = Codegen.ofNullable(prefixType);
             return this;
         }        public FlowPrefixConfigArgs build() {
             return new FlowPrefixConfigArgs(prefixFormat, prefixType);

@@ -8,6 +8,7 @@ import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionBlockArgs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleActionCountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<RuleGroupRuleActionAllowArgs> allow;
 
     public Output<RuleGroupRuleActionAllowArgs> getAllow() {
-        return this.allow == null ? Output.empty() : this.allow;
+        return this.allow == null ? Codegen.empty() : this.allow;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<RuleGroupRuleActionBlockArgs> block;
 
     public Output<RuleGroupRuleActionBlockArgs> getBlock() {
-        return this.block == null ? Output.empty() : this.block;
+        return this.block == null ? Codegen.empty() : this.block;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<RuleGroupRuleActionCountArgs> count;
 
     public Output<RuleGroupRuleActionCountArgs> getCount() {
-        return this.count == null ? Output.empty() : this.count;
+        return this.count == null ? Codegen.empty() : this.count;
     }
 
     public RuleGroupRuleActionArgs(
@@ -59,9 +60,9 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
     }
 
     private RuleGroupRuleActionArgs() {
-        this.allow = Output.empty();
-        this.block = Output.empty();
-        this.count = Output.empty();
+        this.allow = Codegen.empty();
+        this.block = Codegen.empty();
+        this.count = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder allow(@Nullable RuleGroupRuleActionAllowArgs allow) {
-            this.allow = Output.ofNullable(allow);
+            this.allow = Codegen.ofNullable(allow);
             return this;
         }
         public Builder block(@Nullable Output<RuleGroupRuleActionBlockArgs> block) {
@@ -101,7 +102,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder block(@Nullable RuleGroupRuleActionBlockArgs block) {
-            this.block = Output.ofNullable(block);
+            this.block = Codegen.ofNullable(block);
             return this;
         }
         public Builder count(@Nullable Output<RuleGroupRuleActionCountArgs> count) {
@@ -109,7 +110,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder count(@Nullable RuleGroupRuleActionCountArgs count) {
-            this.count = Output.ofNullable(count);
+            this.count = Codegen.ofNullable(count);
             return this;
         }        public RuleGroupRuleActionArgs build() {
             return new RuleGroupRuleActionArgs(allow, block, count);

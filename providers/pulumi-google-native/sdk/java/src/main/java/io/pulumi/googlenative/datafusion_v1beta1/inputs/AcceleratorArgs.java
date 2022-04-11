@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datafusion_v1beta1.enums.AcceleratorAcceleratorType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AcceleratorAcceleratorType> acceleratorType;
 
     public Output<AcceleratorAcceleratorType> getAcceleratorType() {
-        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
+        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
     public AcceleratorArgs(@Nullable Output<AcceleratorAcceleratorType> acceleratorType) {
@@ -34,7 +35,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AcceleratorArgs() {
-        this.acceleratorType = Output.empty();
+        this.acceleratorType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceleratorType(@Nullable AcceleratorAcceleratorType acceleratorType) {
-            this.acceleratorType = Output.ofNullable(acceleratorType);
+            this.acceleratorType = Codegen.ofNullable(acceleratorType);
             return this;
         }        public AcceleratorArgs build() {
             return new AcceleratorArgs(acceleratorType);

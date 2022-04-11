@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionCode;
 
     public Output<String> getVersionCode() {
-        return this.versionCode == null ? Output.empty() : this.versionCode;
+        return this.versionCode == null ? Codegen.empty() : this.versionCode;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public AndroidAppInfoArgs(
@@ -74,10 +75,10 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AndroidAppInfoArgs() {
-        this.name = Output.empty();
-        this.packageName = Output.empty();
-        this.versionCode = Output.empty();
-        this.versionName = Output.empty();
+        this.name = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.versionCode = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder packageName(@Nullable Output<String> packageName) {
@@ -119,7 +120,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder versionCode(@Nullable Output<String> versionCode) {
@@ -127,7 +128,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionCode(@Nullable String versionCode) {
-            this.versionCode = Output.ofNullable(versionCode);
+            this.versionCode = Codegen.ofNullable(versionCode);
             return this;
         }
         public Builder versionName(@Nullable Output<String> versionName) {
@@ -135,7 +136,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public AndroidAppInfoArgs build() {
             return new AndroidAppInfoArgs(name, packageName, versionCode, versionName);

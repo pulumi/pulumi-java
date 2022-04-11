@@ -5,6 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
       private final @Nullable Output<Double> port;
 
     public Output<Double> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public DataSourceRedshiftParametersArgs(
@@ -78,10 +79,10 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
     }
 
     private DataSourceRedshiftParametersArgs() {
-        this.clusterId = Output.empty();
-        this.database = Output.empty();
-        this.host = Output.empty();
-        this.port = Output.empty();
+        this.clusterId = Codegen.empty();
+        this.database = Codegen.empty();
+        this.host = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder database(Output<String> database) {
@@ -131,7 +132,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder port(@Nullable Output<Double> port) {
@@ -139,7 +140,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
             return this;
         }
         public Builder port(@Nullable Double port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public DataSourceRedshiftParametersArgs build() {
             return new DataSourceRedshiftParametersArgs(clusterId, database, host, port);

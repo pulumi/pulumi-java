@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
       private final @Nullable Output<String> killChainName;
 
     public Output<String> getKillChainName() {
-        return this.killChainName == null ? Output.empty() : this.killChainName;
+        return this.killChainName == null ? Codegen.empty() : this.killChainName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
       private final @Nullable Output<String> phaseName;
 
     public Output<String> getPhaseName() {
-        return this.phaseName == null ? Output.empty() : this.phaseName;
+        return this.phaseName == null ? Codegen.empty() : this.phaseName;
     }
 
     public ThreatIntelligenceKillChainPhaseArgs(
@@ -48,8 +49,8 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
     }
 
     private ThreatIntelligenceKillChainPhaseArgs() {
-        this.killChainName = Output.empty();
-        this.phaseName = Output.empty();
+        this.killChainName = Codegen.empty();
+        this.phaseName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
             return this;
         }
         public Builder killChainName(@Nullable String killChainName) {
-            this.killChainName = Output.ofNullable(killChainName);
+            this.killChainName = Codegen.ofNullable(killChainName);
             return this;
         }
         public Builder phaseName(@Nullable Output<String> phaseName) {
@@ -87,7 +88,7 @@ public final class ThreatIntelligenceKillChainPhaseArgs extends io.pulumi.resour
             return this;
         }
         public Builder phaseName(@Nullable String phaseName) {
-            this.phaseName = Output.ofNullable(phaseName);
+            this.phaseName = Codegen.ofNullable(phaseName);
             return this;
         }        public ThreatIntelligenceKillChainPhaseArgs build() {
             return new ThreatIntelligenceKillChainPhaseArgs(killChainName, phaseName);

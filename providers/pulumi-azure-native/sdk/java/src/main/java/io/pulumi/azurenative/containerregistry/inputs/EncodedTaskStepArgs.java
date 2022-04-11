@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> contextAccessToken;
 
     public Output<String> getContextAccessToken() {
-        return this.contextAccessToken == null ? Output.empty() : this.contextAccessToken;
+        return this.contextAccessToken == null ? Codegen.empty() : this.contextAccessToken;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> contextPath;
 
     public Output<String> getContextPath() {
-        return this.contextPath == null ? Output.empty() : this.contextPath;
+        return this.contextPath == null ? Codegen.empty() : this.contextPath;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> encodedValuesContent;
 
     public Output<String> getEncodedValuesContent() {
-        return this.encodedValuesContent == null ? Output.empty() : this.encodedValuesContent;
+        return this.encodedValuesContent == null ? Codegen.empty() : this.encodedValuesContent;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<SetValueArgs>> values;
 
     public Output<List<SetValueArgs>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public EncodedTaskStepArgs(
@@ -103,12 +104,12 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private EncodedTaskStepArgs() {
-        this.contextAccessToken = Output.empty();
-        this.contextPath = Output.empty();
-        this.encodedTaskContent = Output.empty();
-        this.encodedValuesContent = Output.empty();
-        this.type = Output.empty();
-        this.values = Output.empty();
+        this.contextAccessToken = Codegen.empty();
+        this.contextPath = Codegen.empty();
+        this.encodedTaskContent = Codegen.empty();
+        this.encodedValuesContent = Codegen.empty();
+        this.type = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
-            this.contextAccessToken = Output.ofNullable(contextAccessToken);
+            this.contextAccessToken = Codegen.ofNullable(contextAccessToken);
             return this;
         }
         public Builder contextPath(@Nullable Output<String> contextPath) {
@@ -154,7 +155,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder contextPath(@Nullable String contextPath) {
-            this.contextPath = Output.ofNullable(contextPath);
+            this.contextPath = Codegen.ofNullable(contextPath);
             return this;
         }
         public Builder encodedTaskContent(Output<String> encodedTaskContent) {
@@ -170,7 +171,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
-            this.encodedValuesContent = Output.ofNullable(encodedValuesContent);
+            this.encodedValuesContent = Codegen.ofNullable(encodedValuesContent);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -186,7 +187,7 @@ public final class EncodedTaskStepArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder values(@Nullable List<SetValueArgs> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(SetValueArgs... values) {

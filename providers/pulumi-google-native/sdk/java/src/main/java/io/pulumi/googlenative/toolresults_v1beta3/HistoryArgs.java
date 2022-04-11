@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.HistoryTestPlatform;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> historyId;
 
     public Output<String> getHistoryId() {
-        return this.historyId == null ? Output.empty() : this.historyId;
+        return this.historyId == null ? Codegen.empty() : this.historyId;
     }
 
     /**
@@ -45,21 +46,21 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HistoryTestPlatform> testPlatform;
 
     public Output<HistoryTestPlatform> getTestPlatform() {
-        return this.testPlatform == null ? Output.empty() : this.testPlatform;
+        return this.testPlatform == null ? Codegen.empty() : this.testPlatform;
     }
 
     public HistoryArgs(
@@ -89,12 +90,12 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HistoryArgs() {
-        this.displayName = Output.empty();
-        this.historyId = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.testPlatform = Output.empty();
+        this.displayName = Codegen.empty();
+        this.historyId = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.testPlatform = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder historyId(@Nullable Output<String> historyId) {
@@ -140,7 +141,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder historyId(@Nullable String historyId) {
-            this.historyId = Output.ofNullable(historyId);
+            this.historyId = Codegen.ofNullable(historyId);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -148,7 +149,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -156,7 +157,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -164,7 +165,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder testPlatform(@Nullable Output<HistoryTestPlatform> testPlatform) {
@@ -172,7 +173,7 @@ public final class HistoryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder testPlatform(@Nullable HistoryTestPlatform testPlatform) {
-            this.testPlatform = Output.ofNullable(testPlatform);
+            this.testPlatform = Codegen.ofNullable(testPlatform);
             return this;
         }        public HistoryArgs build() {
             return new HistoryArgs(displayName, historyId, name, project, requestId, testPlatform);

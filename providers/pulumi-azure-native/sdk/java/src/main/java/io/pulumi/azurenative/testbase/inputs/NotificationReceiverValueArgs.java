@@ -8,6 +8,7 @@ import io.pulumi.azurenative.testbase.inputs.SubscriptionReceiverValueArgs;
 import io.pulumi.azurenative.testbase.inputs.UserObjectReceiverValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -28,7 +29,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
       private final @Nullable Output<DistributionGroupListReceiverValueArgs> distributionGroupListReceiverValue;
 
     public Output<DistributionGroupListReceiverValueArgs> getDistributionGroupListReceiverValue() {
-        return this.distributionGroupListReceiverValue == null ? Output.empty() : this.distributionGroupListReceiverValue;
+        return this.distributionGroupListReceiverValue == null ? Codegen.empty() : this.distributionGroupListReceiverValue;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
       private final @Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue;
 
     public Output<SubscriptionReceiverValueArgs> getSubscriptionReceiverValue() {
-        return this.subscriptionReceiverValue == null ? Output.empty() : this.subscriptionReceiverValue;
+        return this.subscriptionReceiverValue == null ? Codegen.empty() : this.subscriptionReceiverValue;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
       private final @Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue;
 
     public Output<UserObjectReceiverValueArgs> getUserObjectReceiverValue() {
-        return this.userObjectReceiverValue == null ? Output.empty() : this.userObjectReceiverValue;
+        return this.userObjectReceiverValue == null ? Codegen.empty() : this.userObjectReceiverValue;
     }
 
     public NotificationReceiverValueArgs(
@@ -63,9 +64,9 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
     }
 
     private NotificationReceiverValueArgs() {
-        this.distributionGroupListReceiverValue = Output.empty();
-        this.subscriptionReceiverValue = Output.empty();
-        this.userObjectReceiverValue = Output.empty();
+        this.distributionGroupListReceiverValue = Codegen.empty();
+        this.subscriptionReceiverValue = Codegen.empty();
+        this.userObjectReceiverValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder distributionGroupListReceiverValue(@Nullable DistributionGroupListReceiverValueArgs distributionGroupListReceiverValue) {
-            this.distributionGroupListReceiverValue = Output.ofNullable(distributionGroupListReceiverValue);
+            this.distributionGroupListReceiverValue = Codegen.ofNullable(distributionGroupListReceiverValue);
             return this;
         }
         public Builder subscriptionReceiverValue(@Nullable Output<SubscriptionReceiverValueArgs> subscriptionReceiverValue) {
@@ -105,7 +106,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder subscriptionReceiverValue(@Nullable SubscriptionReceiverValueArgs subscriptionReceiverValue) {
-            this.subscriptionReceiverValue = Output.ofNullable(subscriptionReceiverValue);
+            this.subscriptionReceiverValue = Codegen.ofNullable(subscriptionReceiverValue);
             return this;
         }
         public Builder userObjectReceiverValue(@Nullable Output<UserObjectReceiverValueArgs> userObjectReceiverValue) {
@@ -113,7 +114,7 @@ public final class NotificationReceiverValueArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder userObjectReceiverValue(@Nullable UserObjectReceiverValueArgs userObjectReceiverValue) {
-            this.userObjectReceiverValue = Output.ofNullable(userObjectReceiverValue);
+            this.userObjectReceiverValue = Codegen.ofNullable(userObjectReceiverValue);
             return this;
         }        public NotificationReceiverValueArgs build() {
             return new NotificationReceiverValueArgs(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);

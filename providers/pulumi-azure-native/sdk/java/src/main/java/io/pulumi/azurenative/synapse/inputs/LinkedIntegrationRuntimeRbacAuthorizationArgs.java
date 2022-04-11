@@ -5,6 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class LinkedIntegrationRuntimeRbacAuthorizationArgs extends io.pulu
     }
 
     private LinkedIntegrationRuntimeRbacAuthorizationArgs() {
-        this.authorizationType = Output.empty();
-        this.resourceId = Output.empty();
+        this.authorizationType = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {

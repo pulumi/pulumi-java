@@ -5,6 +5,7 @@ package io.pulumi.googlenative.composer_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.composer_v1.enums.EnvironmentState;
 import io.pulumi.googlenative.composer_v1.inputs.EnvironmentConfigArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnvironmentConfigArgs> config;
 
     public Output<EnvironmentConfigArgs> getConfig() {
-        return this.config == null ? Output.empty() : this.config;
+        return this.config == null ? Codegen.empty() : this.config;
     }
 
     /**
@@ -36,14 +37,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -54,14 +55,14 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EnvironmentState> state;
 
     public Output<EnvironmentState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public EnvironmentArgs(
@@ -91,12 +92,12 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EnvironmentArgs() {
-        this.config = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
+        this.config = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder config(@Nullable EnvironmentConfigArgs config) {
-            this.config = Output.ofNullable(config);
+            this.config = Codegen.ofNullable(config);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -142,7 +143,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -150,7 +151,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -158,7 +159,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -166,7 +167,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<EnvironmentState> state) {
@@ -174,7 +175,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable EnvironmentState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public EnvironmentArgs build() {
             return new EnvironmentArgs(config, labels, location, name, project, state);

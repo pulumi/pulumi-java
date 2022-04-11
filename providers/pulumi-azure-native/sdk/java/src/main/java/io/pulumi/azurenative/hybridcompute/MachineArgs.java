@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybridcompute.inputs.LocationDataArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.MachineIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,14 +26,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientPublicKey;
 
     public Output<String> getClientPublicKey() {
-        return this.clientPublicKey == null ? Output.empty() : this.clientPublicKey;
+        return this.clientPublicKey == null ? Codegen.empty() : this.clientPublicKey;
     }
 
     @Import(name="identity")
       private final @Nullable Output<MachineIdentityArgs> identity;
 
     public Output<MachineIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LocationDataArgs> locationData;
 
     public Output<LocationDataArgs> getLocationData() {
-        return this.locationData == null ? Output.empty() : this.locationData;
+        return this.locationData == null ? Codegen.empty() : this.locationData;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vmId;
 
     public Output<String> getVmId() {
-        return this.vmId == null ? Output.empty() : this.vmId;
+        return this.vmId == null ? Codegen.empty() : this.vmId;
     }
 
     public MachineArgs(
@@ -121,14 +122,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MachineArgs() {
-        this.clientPublicKey = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.locationData = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.vmId = Output.empty();
+        this.clientPublicKey = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.locationData = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -170,7 +171,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientPublicKey(@Nullable String clientPublicKey) {
-            this.clientPublicKey = Output.ofNullable(clientPublicKey);
+            this.clientPublicKey = Codegen.ofNullable(clientPublicKey);
             return this;
         }
         public Builder identity(@Nullable Output<MachineIdentityArgs> identity) {
@@ -178,7 +179,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable MachineIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -186,7 +187,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder locationData(@Nullable Output<LocationDataArgs> locationData) {
@@ -194,7 +195,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationData(@Nullable LocationDataArgs locationData) {
-            this.locationData = Output.ofNullable(locationData);
+            this.locationData = Codegen.ofNullable(locationData);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -202,7 +203,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -218,7 +219,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vmId(@Nullable Output<String> vmId) {
@@ -226,7 +227,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmId(@Nullable String vmId) {
-            this.vmId = Output.ofNullable(vmId);
+            this.vmId = Codegen.ofNullable(vmId);
             return this;
         }        public MachineArgs build() {
             return new MachineArgs(clientPublicKey, identity, location, locationData, name, resourceGroupName, tags, vmId);

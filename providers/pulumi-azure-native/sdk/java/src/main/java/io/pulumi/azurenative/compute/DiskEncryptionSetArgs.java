@@ -9,6 +9,7 @@ import io.pulumi.azurenative.compute.inputs.KeyForDiskEncryptionSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
 
     public Output<KeyForDiskEncryptionSetArgs> getActiveKey() {
-        return this.activeKey == null ? Output.empty() : this.activeKey;
+        return this.activeKey == null ? Codegen.empty() : this.activeKey;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> diskEncryptionSetName;
 
     public Output<String> getDiskEncryptionSetName() {
-        return this.diskEncryptionSetName == null ? Output.empty() : this.diskEncryptionSetName;
+        return this.diskEncryptionSetName == null ? Codegen.empty() : this.diskEncryptionSetName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
 
     public Output<Either<String,DiskEncryptionSetType>> getEncryptionType() {
-        return this.encryptionType == null ? Output.empty() : this.encryptionType;
+        return this.encryptionType == null ? Codegen.empty() : this.encryptionType;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<EncryptionSetIdentityArgs> identity;
 
     public Output<EncryptionSetIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
 
     public Output<Boolean> getRotationToLatestKeyVersionEnabled() {
-        return this.rotationToLatestKeyVersionEnabled == null ? Output.empty() : this.rotationToLatestKeyVersionEnabled;
+        return this.rotationToLatestKeyVersionEnabled == null ? Codegen.empty() : this.rotationToLatestKeyVersionEnabled;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DiskEncryptionSetArgs(
@@ -128,14 +129,14 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DiskEncryptionSetArgs() {
-        this.activeKey = Output.empty();
-        this.diskEncryptionSetName = Output.empty();
-        this.encryptionType = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.rotationToLatestKeyVersionEnabled = Output.empty();
-        this.tags = Output.empty();
+        this.activeKey = Codegen.empty();
+        this.diskEncryptionSetName = Codegen.empty();
+        this.encryptionType = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.rotationToLatestKeyVersionEnabled = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder activeKey(@Nullable KeyForDiskEncryptionSetArgs activeKey) {
-            this.activeKey = Output.ofNullable(activeKey);
+            this.activeKey = Codegen.ofNullable(activeKey);
             return this;
         }
         public Builder diskEncryptionSetName(@Nullable Output<String> diskEncryptionSetName) {
@@ -185,7 +186,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder diskEncryptionSetName(@Nullable String diskEncryptionSetName) {
-            this.diskEncryptionSetName = Output.ofNullable(diskEncryptionSetName);
+            this.diskEncryptionSetName = Codegen.ofNullable(diskEncryptionSetName);
             return this;
         }
         public Builder encryptionType(@Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType) {
@@ -193,7 +194,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder encryptionType(@Nullable Either<String,DiskEncryptionSetType> encryptionType) {
-            this.encryptionType = Output.ofNullable(encryptionType);
+            this.encryptionType = Codegen.ofNullable(encryptionType);
             return this;
         }
         public Builder identity(@Nullable Output<EncryptionSetIdentityArgs> identity) {
@@ -201,7 +202,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder identity(@Nullable EncryptionSetIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -209,7 +210,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -225,7 +226,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder rotationToLatestKeyVersionEnabled(@Nullable Boolean rotationToLatestKeyVersionEnabled) {
-            this.rotationToLatestKeyVersionEnabled = Output.ofNullable(rotationToLatestKeyVersionEnabled);
+            this.rotationToLatestKeyVersionEnabled = Codegen.ofNullable(rotationToLatestKeyVersionEnabled);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -233,7 +234,7 @@ public final class DiskEncryptionSetArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DiskEncryptionSetArgs build() {
             return new DiskEncryptionSetArgs(activeKey, diskEncryptionSetName, encryptionType, identity, location, resourceGroupName, rotationToLatestKeyVersionEnabled, tags);

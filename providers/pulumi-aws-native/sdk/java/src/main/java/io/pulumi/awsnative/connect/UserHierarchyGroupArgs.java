@@ -5,6 +5,7 @@ package io.pulumi.awsnative.connect;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> parentGroupArn;
 
     public Output<String> getParentGroupArn() {
-        return this.parentGroupArn == null ? Output.empty() : this.parentGroupArn;
+        return this.parentGroupArn == null ? Codegen.empty() : this.parentGroupArn;
     }
 
     public UserHierarchyGroupArgs(
@@ -57,9 +58,9 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
     }
 
     private UserHierarchyGroupArgs() {
-        this.instanceArn = Output.empty();
-        this.name = Output.empty();
-        this.parentGroupArn = Output.empty();
+        this.instanceArn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parentGroupArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parentGroupArn(@Nullable Output<String> parentGroupArn) {
@@ -107,7 +108,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder parentGroupArn(@Nullable String parentGroupArn) {
-            this.parentGroupArn = Output.ofNullable(parentGroupArn);
+            this.parentGroupArn = Codegen.ofNullable(parentGroupArn);
             return this;
         }        public UserHierarchyGroupArgs build() {
             return new UserHierarchyGroupArgs(instanceArn, name, parentGroupArn);

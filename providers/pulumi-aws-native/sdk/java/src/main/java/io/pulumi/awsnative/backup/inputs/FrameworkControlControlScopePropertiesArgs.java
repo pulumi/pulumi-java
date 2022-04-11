@@ -6,6 +6,7 @@ package io.pulumi.awsnative.backup.inputs;
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
       private final @Nullable Output<List<String>> complianceResourceIds;
 
     public Output<List<String>> getComplianceResourceIds() {
-        return this.complianceResourceIds == null ? Output.empty() : this.complianceResourceIds;
+        return this.complianceResourceIds == null ? Codegen.empty() : this.complianceResourceIds;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
       private final @Nullable Output<List<String>> complianceResourceTypes;
 
     public Output<List<String>> getComplianceResourceTypes() {
-        return this.complianceResourceTypes == null ? Output.empty() : this.complianceResourceTypes;
+        return this.complianceResourceTypes == null ? Codegen.empty() : this.complianceResourceTypes;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
       private final @Nullable Output<List<FrameworkTagArgs>> tags;
 
     public Output<List<FrameworkTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public FrameworkControlControlScopePropertiesArgs(
@@ -63,9 +64,9 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
     }
 
     private FrameworkControlControlScopePropertiesArgs() {
-        this.complianceResourceIds = Output.empty();
-        this.complianceResourceTypes = Output.empty();
-        this.tags = Output.empty();
+        this.complianceResourceIds = Codegen.empty();
+        this.complianceResourceTypes = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder complianceResourceIds(@Nullable List<String> complianceResourceIds) {
-            this.complianceResourceIds = Output.ofNullable(complianceResourceIds);
+            this.complianceResourceIds = Codegen.ofNullable(complianceResourceIds);
             return this;
         }
         public Builder complianceResourceIds(String... complianceResourceIds) {
@@ -108,7 +109,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder complianceResourceTypes(@Nullable List<String> complianceResourceTypes) {
-            this.complianceResourceTypes = Output.ofNullable(complianceResourceTypes);
+            this.complianceResourceTypes = Codegen.ofNullable(complianceResourceTypes);
             return this;
         }
         public Builder complianceResourceTypes(String... complianceResourceTypes) {
@@ -119,7 +120,7 @@ public final class FrameworkControlControlScopePropertiesArgs extends io.pulumi.
             return this;
         }
         public Builder tags(@Nullable List<FrameworkTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FrameworkTagArgs... tags) {

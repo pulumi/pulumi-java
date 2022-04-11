@@ -5,6 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> label;
 
     public Output<String> getLabel() {
-        return this.label == null ? Output.empty() : this.label;
+        return this.label == null ? Codegen.empty() : this.label;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     public DefaultKeyArgs(
@@ -48,8 +49,8 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DefaultKeyArgs() {
-        this.label = Output.empty();
-        this.policyName = Output.empty();
+        this.label = Codegen.empty();
+        this.policyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder label(@Nullable String label) {
-            this.label = Output.ofNullable(label);
+            this.label = Codegen.ofNullable(label);
             return this;
         }
         public Builder policyName(@Nullable Output<String> policyName) {
@@ -87,7 +88,7 @@ public final class DefaultKeyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }        public DefaultKeyArgs build() {
             return new DefaultKeyArgs(label, policyName);

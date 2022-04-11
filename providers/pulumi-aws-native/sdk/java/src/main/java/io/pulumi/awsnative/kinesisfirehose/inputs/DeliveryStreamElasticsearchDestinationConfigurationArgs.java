@@ -13,6 +13,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationCon
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,28 +27,28 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
       private final @Nullable Output<DeliveryStreamElasticsearchBufferingHintsArgs> bufferingHints;
 
     public Output<DeliveryStreamElasticsearchBufferingHintsArgs> getBufferingHints() {
-        return this.bufferingHints == null ? Output.empty() : this.bufferingHints;
+        return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
+        return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="clusterEndpoint")
       private final @Nullable Output<String> clusterEndpoint;
 
     public Output<String> getClusterEndpoint() {
-        return this.clusterEndpoint == null ? Output.empty() : this.clusterEndpoint;
+        return this.clusterEndpoint == null ? Codegen.empty() : this.clusterEndpoint;
     }
 
     @Import(name="domainARN")
       private final @Nullable Output<String> domainARN;
 
     public Output<String> getDomainARN() {
-        return this.domainARN == null ? Output.empty() : this.domainARN;
+        return this.domainARN == null ? Codegen.empty() : this.domainARN;
     }
 
     @Import(name="indexName", required=true)
@@ -61,21 +62,21 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> indexRotationPeriod;
 
     public Output<DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod> getIndexRotationPeriod() {
-        return this.indexRotationPeriod == null ? Output.empty() : this.indexRotationPeriod;
+        return this.indexRotationPeriod == null ? Codegen.empty() : this.indexRotationPeriod;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
+        return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="retryOptions")
       private final @Nullable Output<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions;
 
     public Output<DeliveryStreamElasticsearchRetryOptionsArgs> getRetryOptions() {
-        return this.retryOptions == null ? Output.empty() : this.retryOptions;
+        return this.retryOptions == null ? Codegen.empty() : this.retryOptions;
     }
 
     @Import(name="roleARN", required=true)
@@ -89,7 +90,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
       private final @Nullable Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Output<DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode> getS3BackupMode() {
-        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
+        return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     @Import(name="s3Configuration", required=true)
@@ -103,14 +104,14 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DeliveryStreamVpcConfigurationArgs> vpcConfiguration;
 
     public Output<DeliveryStreamVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
+        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 
     public DeliveryStreamElasticsearchDestinationConfigurationArgs(
@@ -143,19 +144,19 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
     }
 
     private DeliveryStreamElasticsearchDestinationConfigurationArgs() {
-        this.bufferingHints = Output.empty();
-        this.cloudWatchLoggingOptions = Output.empty();
-        this.clusterEndpoint = Output.empty();
-        this.domainARN = Output.empty();
-        this.indexName = Output.empty();
-        this.indexRotationPeriod = Output.empty();
-        this.processingConfiguration = Output.empty();
-        this.retryOptions = Output.empty();
-        this.roleARN = Output.empty();
-        this.s3BackupMode = Output.empty();
-        this.s3Configuration = Output.empty();
-        this.typeName = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.bufferingHints = Codegen.empty();
+        this.cloudWatchLoggingOptions = Codegen.empty();
+        this.clusterEndpoint = Codegen.empty();
+        this.domainARN = Codegen.empty();
+        this.indexName = Codegen.empty();
+        this.indexRotationPeriod = Codegen.empty();
+        this.processingConfiguration = Codegen.empty();
+        this.retryOptions = Codegen.empty();
+        this.roleARN = Codegen.empty();
+        this.s3BackupMode = Codegen.empty();
+        this.s3Configuration = Codegen.empty();
+        this.typeName = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder bufferingHints(@Nullable DeliveryStreamElasticsearchBufferingHintsArgs bufferingHints) {
-            this.bufferingHints = Output.ofNullable(bufferingHints);
+            this.bufferingHints = Codegen.ofNullable(bufferingHints);
             return this;
         }
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
@@ -215,7 +216,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
+            this.cloudWatchLoggingOptions = Codegen.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
         public Builder clusterEndpoint(@Nullable Output<String> clusterEndpoint) {
@@ -223,7 +224,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder clusterEndpoint(@Nullable String clusterEndpoint) {
-            this.clusterEndpoint = Output.ofNullable(clusterEndpoint);
+            this.clusterEndpoint = Codegen.ofNullable(clusterEndpoint);
             return this;
         }
         public Builder domainARN(@Nullable Output<String> domainARN) {
@@ -231,7 +232,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder domainARN(@Nullable String domainARN) {
-            this.domainARN = Output.ofNullable(domainARN);
+            this.domainARN = Codegen.ofNullable(domainARN);
             return this;
         }
         public Builder indexName(Output<String> indexName) {
@@ -247,7 +248,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder indexRotationPeriod(@Nullable DeliveryStreamElasticsearchDestinationConfigurationIndexRotationPeriod indexRotationPeriod) {
-            this.indexRotationPeriod = Output.ofNullable(indexRotationPeriod);
+            this.indexRotationPeriod = Codegen.ofNullable(indexRotationPeriod);
             return this;
         }
         public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
@@ -255,7 +256,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Output.ofNullable(processingConfiguration);
+            this.processingConfiguration = Codegen.ofNullable(processingConfiguration);
             return this;
         }
         public Builder retryOptions(@Nullable Output<DeliveryStreamElasticsearchRetryOptionsArgs> retryOptions) {
@@ -263,7 +264,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder retryOptions(@Nullable DeliveryStreamElasticsearchRetryOptionsArgs retryOptions) {
-            this.retryOptions = Output.ofNullable(retryOptions);
+            this.retryOptions = Codegen.ofNullable(retryOptions);
             return this;
         }
         public Builder roleARN(Output<String> roleARN) {
@@ -279,7 +280,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder s3BackupMode(@Nullable DeliveryStreamElasticsearchDestinationConfigurationS3BackupMode s3BackupMode) {
-            this.s3BackupMode = Output.ofNullable(s3BackupMode);
+            this.s3BackupMode = Codegen.ofNullable(s3BackupMode);
             return this;
         }
         public Builder s3Configuration(Output<DeliveryStreamS3DestinationConfigurationArgs> s3Configuration) {
@@ -295,7 +296,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }
         public Builder vpcConfiguration(@Nullable Output<DeliveryStreamVpcConfigurationArgs> vpcConfiguration) {
@@ -303,7 +304,7 @@ public final class DeliveryStreamElasticsearchDestinationConfigurationArgs exten
             return this;
         }
         public Builder vpcConfiguration(@Nullable DeliveryStreamVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
             return this;
         }        public DeliveryStreamElasticsearchDestinationConfigurationArgs build() {
             return new DeliveryStreamElasticsearchDestinationConfigurationArgs(bufferingHints, cloudWatchLoggingOptions, clusterEndpoint, domainARN, indexName, indexRotationPeriod, processingConfiguration, retryOptions, roleARN, s3BackupMode, s3Configuration, typeName, vpcConfiguration);

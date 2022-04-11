@@ -7,6 +7,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleInPolicyArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorScaleOutPolicyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -80,11 +81,11 @@ public final class ConnectorAutoScalingArgs extends io.pulumi.resources.Resource
     }
 
     private ConnectorAutoScalingArgs() {
-        this.maxWorkerCount = Output.empty();
-        this.mcuCount = Output.empty();
-        this.minWorkerCount = Output.empty();
-        this.scaleInPolicy = Output.empty();
-        this.scaleOutPolicy = Output.empty();
+        this.maxWorkerCount = Codegen.empty();
+        this.mcuCount = Codegen.empty();
+        this.minWorkerCount = Codegen.empty();
+        this.scaleInPolicy = Codegen.empty();
+        this.scaleOutPolicy = Codegen.empty();
     }
 
     public static Builder builder() {

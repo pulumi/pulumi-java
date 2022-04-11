@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.AddressAddressType;
 import io.pulumi.googlenative.compute_v1.enums.AddressIpVersion;
 import io.pulumi.googlenative.compute_v1.enums.AddressNetworkTier;
@@ -27,7 +28,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> address;
 
     public Output<String> getAddress() {
-        return this.address == null ? Output.empty() : this.address;
+        return this.address == null ? Codegen.empty() : this.address;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressAddressType> addressType;
 
     public Output<AddressAddressType> getAddressType() {
-        return this.addressType == null ? Output.empty() : this.addressType;
+        return this.addressType == null ? Codegen.empty() : this.addressType;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressIpVersion> ipVersion;
 
     public Output<AddressIpVersion> getIpVersion() {
-        return this.ipVersion == null ? Output.empty() : this.ipVersion;
+        return this.ipVersion == null ? Codegen.empty() : this.ipVersion;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> network;
 
     public Output<String> getNetwork() {
-        return this.network == null ? Output.empty() : this.network;
+        return this.network == null ? Codegen.empty() : this.network;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressNetworkTier> networkTier;
 
     public Output<AddressNetworkTier> getNetworkTier() {
-        return this.networkTier == null ? Output.empty() : this.networkTier;
+        return this.networkTier == null ? Codegen.empty() : this.networkTier;
     }
 
     /**
@@ -104,14 +105,14 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> prefixLength;
 
     public Output<Integer> getPrefixLength() {
-        return this.prefixLength == null ? Output.empty() : this.prefixLength;
+        return this.prefixLength == null ? Codegen.empty() : this.prefixLength;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AddressPurpose> purpose;
 
     public Output<AddressPurpose> getPurpose() {
-        return this.purpose == null ? Output.empty() : this.purpose;
+        return this.purpose == null ? Codegen.empty() : this.purpose;
     }
 
     @Import(name="region", required=true)
@@ -136,7 +137,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     public AddressArgs(
@@ -180,19 +181,19 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AddressArgs() {
-        this.address = Output.empty();
-        this.addressType = Output.empty();
-        this.description = Output.empty();
-        this.ipVersion = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.networkTier = Output.empty();
-        this.prefixLength = Output.empty();
-        this.project = Output.empty();
-        this.purpose = Output.empty();
-        this.region = Output.empty();
-        this.requestId = Output.empty();
-        this.subnetwork = Output.empty();
+        this.address = Codegen.empty();
+        this.addressType = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ipVersion = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.networkTier = Codegen.empty();
+        this.prefixLength = Codegen.empty();
+        this.project = Codegen.empty();
+        this.purpose = Codegen.empty();
+        this.region = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.subnetwork = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -244,7 +245,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder address(@Nullable String address) {
-            this.address = Output.ofNullable(address);
+            this.address = Codegen.ofNullable(address);
             return this;
         }
         public Builder addressType(@Nullable Output<AddressAddressType> addressType) {
@@ -252,7 +253,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder addressType(@Nullable AddressAddressType addressType) {
-            this.addressType = Output.ofNullable(addressType);
+            this.addressType = Codegen.ofNullable(addressType);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -260,7 +261,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ipVersion(@Nullable Output<AddressIpVersion> ipVersion) {
@@ -268,7 +269,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipVersion(@Nullable AddressIpVersion ipVersion) {
-            this.ipVersion = Output.ofNullable(ipVersion);
+            this.ipVersion = Codegen.ofNullable(ipVersion);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -276,7 +277,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(@Nullable Output<String> network) {
@@ -284,7 +285,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder network(@Nullable String network) {
-            this.network = Output.ofNullable(network);
+            this.network = Codegen.ofNullable(network);
             return this;
         }
         public Builder networkTier(@Nullable Output<AddressNetworkTier> networkTier) {
@@ -292,7 +293,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkTier(@Nullable AddressNetworkTier networkTier) {
-            this.networkTier = Output.ofNullable(networkTier);
+            this.networkTier = Codegen.ofNullable(networkTier);
             return this;
         }
         public Builder prefixLength(@Nullable Output<Integer> prefixLength) {
@@ -300,7 +301,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder prefixLength(@Nullable Integer prefixLength) {
-            this.prefixLength = Output.ofNullable(prefixLength);
+            this.prefixLength = Codegen.ofNullable(prefixLength);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -308,7 +309,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder purpose(@Nullable Output<AddressPurpose> purpose) {
@@ -316,7 +317,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder purpose(@Nullable AddressPurpose purpose) {
-            this.purpose = Output.ofNullable(purpose);
+            this.purpose = Codegen.ofNullable(purpose);
             return this;
         }
         public Builder region(Output<String> region) {
@@ -332,7 +333,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -340,7 +341,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }        public AddressArgs build() {
             return new AddressArgs(address, addressType, description, ipVersion, name, network, networkTier, prefixLength, project, purpose, region, requestId, subnetwork);

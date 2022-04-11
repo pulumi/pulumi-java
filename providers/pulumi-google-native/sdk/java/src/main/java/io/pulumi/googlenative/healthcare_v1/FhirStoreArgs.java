@@ -5,6 +5,7 @@ package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.healthcare_v1.enums.FhirStoreVersion;
 import io.pulumi.googlenative.healthcare_v1.inputs.NotificationConfigArgs;
 import io.pulumi.googlenative.healthcare_v1.inputs.StreamConfigArgs;
@@ -36,7 +37,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> defaultSearchHandlingStrict;
 
     public Output<Boolean> getDefaultSearchHandlingStrict() {
-        return this.defaultSearchHandlingStrict == null ? Output.empty() : this.defaultSearchHandlingStrict;
+        return this.defaultSearchHandlingStrict == null ? Codegen.empty() : this.defaultSearchHandlingStrict;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableReferentialIntegrity;
 
     public Output<Boolean> getDisableReferentialIntegrity() {
-        return this.disableReferentialIntegrity == null ? Output.empty() : this.disableReferentialIntegrity;
+        return this.disableReferentialIntegrity == null ? Codegen.empty() : this.disableReferentialIntegrity;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> disableResourceVersioning;
 
     public Output<Boolean> getDisableResourceVersioning() {
-        return this.disableResourceVersioning == null ? Output.empty() : this.disableResourceVersioning;
+        return this.disableResourceVersioning == null ? Codegen.empty() : this.disableResourceVersioning;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableUpdateCreate;
 
     public Output<Boolean> getEnableUpdateCreate() {
-        return this.enableUpdateCreate == null ? Output.empty() : this.enableUpdateCreate;
+        return this.enableUpdateCreate == null ? Codegen.empty() : this.enableUpdateCreate;
     }
 
     @Import(name="fhirStoreId")
       private final @Nullable Output<String> fhirStoreId;
 
     public Output<String> getFhirStoreId() {
-        return this.fhirStoreId == null ? Output.empty() : this.fhirStoreId;
+        return this.fhirStoreId == null ? Codegen.empty() : this.fhirStoreId;
     }
 
     /**
@@ -87,14 +88,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -105,14 +106,14 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NotificationConfigArgs> notificationConfig;
 
     public Output<NotificationConfigArgs> getNotificationConfig() {
-        return this.notificationConfig == null ? Output.empty() : this.notificationConfig;
+        return this.notificationConfig == null ? Codegen.empty() : this.notificationConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StreamConfigArgs>> streamConfigs;
 
     public Output<List<StreamConfigArgs>> getStreamConfigs() {
-        return this.streamConfigs == null ? Output.empty() : this.streamConfigs;
+        return this.streamConfigs == null ? Codegen.empty() : this.streamConfigs;
     }
 
     /**
@@ -134,7 +135,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ValidationConfigArgs> validationConfig;
 
     public Output<ValidationConfigArgs> getValidationConfig() {
-        return this.validationConfig == null ? Output.empty() : this.validationConfig;
+        return this.validationConfig == null ? Codegen.empty() : this.validationConfig;
     }
 
     /**
@@ -145,7 +146,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FhirStoreVersion> version;
 
     public Output<FhirStoreVersion> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public FhirStoreArgs(
@@ -178,19 +179,19 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FhirStoreArgs() {
-        this.datasetId = Output.empty();
-        this.defaultSearchHandlingStrict = Output.empty();
-        this.disableReferentialIntegrity = Output.empty();
-        this.disableResourceVersioning = Output.empty();
-        this.enableUpdateCreate = Output.empty();
-        this.fhirStoreId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.notificationConfig = Output.empty();
-        this.project = Output.empty();
-        this.streamConfigs = Output.empty();
-        this.validationConfig = Output.empty();
-        this.version = Output.empty();
+        this.datasetId = Codegen.empty();
+        this.defaultSearchHandlingStrict = Codegen.empty();
+        this.disableReferentialIntegrity = Codegen.empty();
+        this.disableResourceVersioning = Codegen.empty();
+        this.enableUpdateCreate = Codegen.empty();
+        this.fhirStoreId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.notificationConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.streamConfigs = Codegen.empty();
+        this.validationConfig = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -250,7 +251,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultSearchHandlingStrict(@Nullable Boolean defaultSearchHandlingStrict) {
-            this.defaultSearchHandlingStrict = Output.ofNullable(defaultSearchHandlingStrict);
+            this.defaultSearchHandlingStrict = Codegen.ofNullable(defaultSearchHandlingStrict);
             return this;
         }
         public Builder disableReferentialIntegrity(@Nullable Output<Boolean> disableReferentialIntegrity) {
@@ -258,7 +259,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableReferentialIntegrity(@Nullable Boolean disableReferentialIntegrity) {
-            this.disableReferentialIntegrity = Output.ofNullable(disableReferentialIntegrity);
+            this.disableReferentialIntegrity = Codegen.ofNullable(disableReferentialIntegrity);
             return this;
         }
         public Builder disableResourceVersioning(@Nullable Output<Boolean> disableResourceVersioning) {
@@ -266,7 +267,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder disableResourceVersioning(@Nullable Boolean disableResourceVersioning) {
-            this.disableResourceVersioning = Output.ofNullable(disableResourceVersioning);
+            this.disableResourceVersioning = Codegen.ofNullable(disableResourceVersioning);
             return this;
         }
         public Builder enableUpdateCreate(@Nullable Output<Boolean> enableUpdateCreate) {
@@ -274,7 +275,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableUpdateCreate(@Nullable Boolean enableUpdateCreate) {
-            this.enableUpdateCreate = Output.ofNullable(enableUpdateCreate);
+            this.enableUpdateCreate = Codegen.ofNullable(enableUpdateCreate);
             return this;
         }
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
@@ -282,7 +283,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
-            this.fhirStoreId = Output.ofNullable(fhirStoreId);
+            this.fhirStoreId = Codegen.ofNullable(fhirStoreId);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -290,7 +291,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -298,7 +299,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder notificationConfig(@Nullable Output<NotificationConfigArgs> notificationConfig) {
@@ -306,7 +307,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfig(@Nullable NotificationConfigArgs notificationConfig) {
-            this.notificationConfig = Output.ofNullable(notificationConfig);
+            this.notificationConfig = Codegen.ofNullable(notificationConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -314,7 +315,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder streamConfigs(@Nullable Output<List<StreamConfigArgs>> streamConfigs) {
@@ -322,7 +323,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder streamConfigs(@Nullable List<StreamConfigArgs> streamConfigs) {
-            this.streamConfigs = Output.ofNullable(streamConfigs);
+            this.streamConfigs = Codegen.ofNullable(streamConfigs);
             return this;
         }
         public Builder streamConfigs(StreamConfigArgs... streamConfigs) {
@@ -333,7 +334,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validationConfig(@Nullable ValidationConfigArgs validationConfig) {
-            this.validationConfig = Output.ofNullable(validationConfig);
+            this.validationConfig = Codegen.ofNullable(validationConfig);
             return this;
         }
         public Builder version(@Nullable Output<FhirStoreVersion> version) {
@@ -341,7 +342,7 @@ public final class FhirStoreArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder version(@Nullable FhirStoreVersion version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public FhirStoreArgs build() {
             return new FhirStoreArgs(datasetId, defaultSearchHandlingStrict, disableReferentialIntegrity, disableResourceVersioning, enableUpdateCreate, fhirStoreId, labels, location, notificationConfig, project, streamConfigs, validationConfig, version);

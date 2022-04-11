@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.enums.SpotFleetSpotPlacementTenancy;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,21 +20,21 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> availabilityZone;
 
     public Output<String> getAvailabilityZone() {
-        return this.availabilityZone == null ? Output.empty() : this.availabilityZone;
+        return this.availabilityZone == null ? Codegen.empty() : this.availabilityZone;
     }
 
     @Import(name="groupName")
       private final @Nullable Output<String> groupName;
 
     public Output<String> getGroupName() {
-        return this.groupName == null ? Output.empty() : this.groupName;
+        return this.groupName == null ? Codegen.empty() : this.groupName;
     }
 
     @Import(name="tenancy")
       private final @Nullable Output<SpotFleetSpotPlacementTenancy> tenancy;
 
     public Output<SpotFleetSpotPlacementTenancy> getTenancy() {
-        return this.tenancy == null ? Output.empty() : this.tenancy;
+        return this.tenancy == null ? Codegen.empty() : this.tenancy;
     }
 
     public SpotFleetSpotPlacementArgs(
@@ -46,9 +47,9 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
     }
 
     private SpotFleetSpotPlacementArgs() {
-        this.availabilityZone = Output.empty();
-        this.groupName = Output.empty();
-        this.tenancy = Output.empty();
+        this.availabilityZone = Codegen.empty();
+        this.groupName = Codegen.empty();
+        this.tenancy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder availabilityZone(@Nullable String availabilityZone) {
-            this.availabilityZone = Output.ofNullable(availabilityZone);
+            this.availabilityZone = Codegen.ofNullable(availabilityZone);
             return this;
         }
         public Builder groupName(@Nullable Output<String> groupName) {
@@ -88,7 +89,7 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder groupName(@Nullable String groupName) {
-            this.groupName = Output.ofNullable(groupName);
+            this.groupName = Codegen.ofNullable(groupName);
             return this;
         }
         public Builder tenancy(@Nullable Output<SpotFleetSpotPlacementTenancy> tenancy) {
@@ -96,7 +97,7 @@ public final class SpotFleetSpotPlacementArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tenancy(@Nullable SpotFleetSpotPlacementTenancy tenancy) {
-            this.tenancy = Output.ofNullable(tenancy);
+            this.tenancy = Codegen.ofNullable(tenancy);
             return this;
         }        public SpotFleetSpotPlacementArgs build() {
             return new SpotFleetSpotPlacementArgs(availabilityZone, groupName, tenancy);

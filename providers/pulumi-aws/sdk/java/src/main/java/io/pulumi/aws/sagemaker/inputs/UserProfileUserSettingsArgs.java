@@ -9,6 +9,7 @@ import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsSharingSettingsArgs
 import io.pulumi.aws.sagemaker.inputs.UserProfileUserSettingsTensorBoardAppSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<UserProfileUserSettingsJupyterServerAppSettingsArgs> jupyterServerAppSettings;
 
     public Output<UserProfileUserSettingsJupyterServerAppSettingsArgs> getJupyterServerAppSettings() {
-        return this.jupyterServerAppSettings == null ? Output.empty() : this.jupyterServerAppSettings;
+        return this.jupyterServerAppSettings == null ? Codegen.empty() : this.jupyterServerAppSettings;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings;
 
     public Output<UserProfileUserSettingsKernelGatewayAppSettingsArgs> getKernelGatewayAppSettings() {
-        return this.kernelGatewayAppSettings == null ? Output.empty() : this.kernelGatewayAppSettings;
+        return this.kernelGatewayAppSettings == null ? Codegen.empty() : this.kernelGatewayAppSettings;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> securityGroups;
 
     public Output<List<String>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<UserProfileUserSettingsSharingSettingsArgs> sharingSettings;
 
     public Output<UserProfileUserSettingsSharingSettingsArgs> getSharingSettings() {
-        return this.sharingSettings == null ? Output.empty() : this.sharingSettings;
+        return this.sharingSettings == null ? Codegen.empty() : this.sharingSettings;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings;
 
     public Output<UserProfileUserSettingsTensorBoardAppSettingsArgs> getTensorBoardAppSettings() {
-        return this.tensorBoardAppSettings == null ? Output.empty() : this.tensorBoardAppSettings;
+        return this.tensorBoardAppSettings == null ? Codegen.empty() : this.tensorBoardAppSettings;
     }
 
     public UserProfileUserSettingsArgs(
@@ -101,12 +102,12 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private UserProfileUserSettingsArgs() {
-        this.executionRole = Output.empty();
-        this.jupyterServerAppSettings = Output.empty();
-        this.kernelGatewayAppSettings = Output.empty();
-        this.securityGroups = Output.empty();
-        this.sharingSettings = Output.empty();
-        this.tensorBoardAppSettings = Output.empty();
+        this.executionRole = Codegen.empty();
+        this.jupyterServerAppSettings = Codegen.empty();
+        this.kernelGatewayAppSettings = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.sharingSettings = Codegen.empty();
+        this.tensorBoardAppSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder jupyterServerAppSettings(@Nullable UserProfileUserSettingsJupyterServerAppSettingsArgs jupyterServerAppSettings) {
-            this.jupyterServerAppSettings = Output.ofNullable(jupyterServerAppSettings);
+            this.jupyterServerAppSettings = Codegen.ofNullable(jupyterServerAppSettings);
             return this;
         }
         public Builder kernelGatewayAppSettings(@Nullable Output<UserProfileUserSettingsKernelGatewayAppSettingsArgs> kernelGatewayAppSettings) {
@@ -160,7 +161,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder kernelGatewayAppSettings(@Nullable UserProfileUserSettingsKernelGatewayAppSettingsArgs kernelGatewayAppSettings) {
-            this.kernelGatewayAppSettings = Output.ofNullable(kernelGatewayAppSettings);
+            this.kernelGatewayAppSettings = Codegen.ofNullable(kernelGatewayAppSettings);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<String>> securityGroups) {
@@ -168,7 +169,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder securityGroups(@Nullable List<String> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(String... securityGroups) {
@@ -179,7 +180,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder sharingSettings(@Nullable UserProfileUserSettingsSharingSettingsArgs sharingSettings) {
-            this.sharingSettings = Output.ofNullable(sharingSettings);
+            this.sharingSettings = Codegen.ofNullable(sharingSettings);
             return this;
         }
         public Builder tensorBoardAppSettings(@Nullable Output<UserProfileUserSettingsTensorBoardAppSettingsArgs> tensorBoardAppSettings) {
@@ -187,7 +188,7 @@ public final class UserProfileUserSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tensorBoardAppSettings(@Nullable UserProfileUserSettingsTensorBoardAppSettingsArgs tensorBoardAppSettings) {
-            this.tensorBoardAppSettings = Output.ofNullable(tensorBoardAppSettings);
+            this.tensorBoardAppSettings = Codegen.ofNullable(tensorBoardAppSettings);
             return this;
         }        public UserProfileUserSettingsArgs build() {
             return new UserProfileUserSettingsArgs(executionRole, jupyterServerAppSettings, kernelGatewayAppSettings, securityGroups, sharingSettings, tensorBoardAppSettings);

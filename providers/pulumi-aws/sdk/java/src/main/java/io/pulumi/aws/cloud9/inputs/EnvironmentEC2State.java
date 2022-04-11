@@ -5,6 +5,7 @@ package io.pulumi.aws.cloud9.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Integer> automaticStopTimeMinutes;
 
     public Output<Integer> getAutomaticStopTimeMinutes() {
-        return this.automaticStopTimeMinutes == null ? Output.empty() : this.automaticStopTimeMinutes;
+        return this.automaticStopTimeMinutes == null ? Codegen.empty() : this.automaticStopTimeMinutes;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> ownerArn;
 
     public Output<String> getOwnerArn() {
-        return this.ownerArn == null ? Output.empty() : this.ownerArn;
+        return this.ownerArn == null ? Codegen.empty() : this.ownerArn;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public EnvironmentEC2State(
@@ -150,16 +151,16 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
     }
 
     private EnvironmentEC2State() {
-        this.arn = Output.empty();
-        this.automaticStopTimeMinutes = Output.empty();
-        this.description = Output.empty();
-        this.instanceType = Output.empty();
-        this.name = Output.empty();
-        this.ownerArn = Output.empty();
-        this.subnetId = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.type = Output.empty();
+        this.arn = Codegen.empty();
+        this.automaticStopTimeMinutes = Codegen.empty();
+        this.description = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.name = Codegen.empty();
+        this.ownerArn = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -205,7 +206,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder automaticStopTimeMinutes(@Nullable Output<Integer> automaticStopTimeMinutes) {
@@ -213,7 +214,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder automaticStopTimeMinutes(@Nullable Integer automaticStopTimeMinutes) {
-            this.automaticStopTimeMinutes = Output.ofNullable(automaticStopTimeMinutes);
+            this.automaticStopTimeMinutes = Codegen.ofNullable(automaticStopTimeMinutes);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -221,7 +222,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -229,7 +230,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -237,7 +238,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder ownerArn(@Nullable Output<String> ownerArn) {
@@ -245,7 +246,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder ownerArn(@Nullable String ownerArn) {
-            this.ownerArn = Output.ofNullable(ownerArn);
+            this.ownerArn = Codegen.ofNullable(ownerArn);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -253,7 +254,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -261,7 +262,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -269,7 +270,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -277,7 +278,7 @@ public final class EnvironmentEC2State extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public EnvironmentEC2State build() {
             return new EnvironmentEC2State(arn, automaticStopTimeMinutes, description, instanceType, name, ownerArn, subnetId, tags, tagsAll, type);

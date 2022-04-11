@@ -5,6 +5,7 @@ package io.pulumi.awsnative.location.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class MapConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private MapConfigurationArgs() {
-        this.style = Output.empty();
+        this.style = Codegen.empty();
     }
 
     public static Builder builder() {

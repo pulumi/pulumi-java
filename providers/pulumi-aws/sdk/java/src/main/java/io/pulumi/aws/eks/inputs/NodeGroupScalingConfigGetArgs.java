@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class NodeGroupScalingConfigGetArgs extends io.pulumi.resources.Res
     }
 
     private NodeGroupScalingConfigGetArgs() {
-        this.desiredSize = Output.empty();
-        this.maxSize = Output.empty();
-        this.minSize = Output.empty();
+        this.desiredSize = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.minSize = Codegen.empty();
     }
 
     public static Builder builder() {

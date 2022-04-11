@@ -5,6 +5,7 @@ package io.pulumi.googlenative.artifactregistry_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.artifactregistry_v1.enums.MavenRepositoryConfigVersionPolicy;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> allowSnapshotOverwrites;
 
     public Output<Boolean> getAllowSnapshotOverwrites() {
-        return this.allowSnapshotOverwrites == null ? Output.empty() : this.allowSnapshotOverwrites;
+        return this.allowSnapshotOverwrites == null ? Codegen.empty() : this.allowSnapshotOverwrites;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy;
 
     public Output<MavenRepositoryConfigVersionPolicy> getVersionPolicy() {
-        return this.versionPolicy == null ? Output.empty() : this.versionPolicy;
+        return this.versionPolicy == null ? Codegen.empty() : this.versionPolicy;
     }
 
     public MavenRepositoryConfigArgs(
@@ -49,8 +50,8 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
     }
 
     private MavenRepositoryConfigArgs() {
-        this.allowSnapshotOverwrites = Output.empty();
-        this.versionPolicy = Output.empty();
+        this.allowSnapshotOverwrites = Codegen.empty();
+        this.versionPolicy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder allowSnapshotOverwrites(@Nullable Boolean allowSnapshotOverwrites) {
-            this.allowSnapshotOverwrites = Output.ofNullable(allowSnapshotOverwrites);
+            this.allowSnapshotOverwrites = Codegen.ofNullable(allowSnapshotOverwrites);
             return this;
         }
         public Builder versionPolicy(@Nullable Output<MavenRepositoryConfigVersionPolicy> versionPolicy) {
@@ -88,7 +89,7 @@ public final class MavenRepositoryConfigArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder versionPolicy(@Nullable MavenRepositoryConfigVersionPolicy versionPolicy) {
-            this.versionPolicy = Output.ofNullable(versionPolicy);
+            this.versionPolicy = Codegen.ofNullable(versionPolicy);
             return this;
         }        public MavenRepositoryConfigArgs build() {
             return new MavenRepositoryConfigArgs(allowSnapshotOverwrites, versionPolicy);

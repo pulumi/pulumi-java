@@ -5,6 +5,7 @@ package io.pulumi.aws.applicationloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> allocationId;
 
     public Output<String> getAllocationId() {
-        return this.allocationId == null ? Output.empty() : this.allocationId;
+        return this.allocationId == null ? Codegen.empty() : this.allocationId;
     }
 
     /**
@@ -33,14 +34,14 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> ipv6Address;
 
     public Output<String> getIpv6Address() {
-        return this.ipv6Address == null ? Output.empty() : this.ipv6Address;
+        return this.ipv6Address == null ? Codegen.empty() : this.ipv6Address;
     }
 
     @Import(name="outpostId")
       private final @Nullable Output<String> outpostId;
 
     public Output<String> getOutpostId() {
-        return this.outpostId == null ? Output.empty() : this.outpostId;
+        return this.outpostId == null ? Codegen.empty() : this.outpostId;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> privateIpv4Address;
 
     public Output<String> getPrivateIpv4Address() {
-        return this.privateIpv4Address == null ? Output.empty() : this.privateIpv4Address;
+        return this.privateIpv4Address == null ? Codegen.empty() : this.privateIpv4Address;
     }
 
     /**
@@ -79,11 +80,11 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
     }
 
     private LoadBalancerSubnetMappingGetArgs() {
-        this.allocationId = Output.empty();
-        this.ipv6Address = Output.empty();
-        this.outpostId = Output.empty();
-        this.privateIpv4Address = Output.empty();
-        this.subnetId = Output.empty();
+        this.allocationId = Codegen.empty();
+        this.ipv6Address = Codegen.empty();
+        this.outpostId = Codegen.empty();
+        this.privateIpv4Address = Codegen.empty();
+        this.subnetId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder allocationId(@Nullable String allocationId) {
-            this.allocationId = Output.ofNullable(allocationId);
+            this.allocationId = Codegen.ofNullable(allocationId);
             return this;
         }
         public Builder ipv6Address(@Nullable Output<String> ipv6Address) {
@@ -127,7 +128,7 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ipv6Address(@Nullable String ipv6Address) {
-            this.ipv6Address = Output.ofNullable(ipv6Address);
+            this.ipv6Address = Codegen.ofNullable(ipv6Address);
             return this;
         }
         public Builder outpostId(@Nullable Output<String> outpostId) {
@@ -135,7 +136,7 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder outpostId(@Nullable String outpostId) {
-            this.outpostId = Output.ofNullable(outpostId);
+            this.outpostId = Codegen.ofNullable(outpostId);
             return this;
         }
         public Builder privateIpv4Address(@Nullable Output<String> privateIpv4Address) {
@@ -143,7 +144,7 @@ public final class LoadBalancerSubnetMappingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder privateIpv4Address(@Nullable String privateIpv4Address) {
-            this.privateIpv4Address = Output.ofNullable(privateIpv4Address);
+            this.privateIpv4Address = Codegen.ofNullable(privateIpv4Address);
             return this;
         }
         public Builder subnetId(Output<String> subnetId) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsArgs;
@@ -29,7 +30,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<List<String>> contentOptions;
 
     public Output<List<String>> getContentOptions() {
-        return this.contentOptions == null ? Output.empty() : this.contentOptions;
+        return this.contentOptions == null ? Codegen.empty() : this.contentOptions;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> customInfoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs>> getCustomInfoTypes() {
-        return this.customInfoTypes == null ? Output.empty() : this.customInfoTypes;
+        return this.customInfoTypes == null ? Codegen.empty() : this.customInfoTypes;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<Boolean> excludeInfoTypes;
 
     public Output<Boolean> getExcludeInfoTypes() {
-        return this.excludeInfoTypes == null ? Output.empty() : this.excludeInfoTypes;
+        return this.excludeInfoTypes == null ? Codegen.empty() : this.excludeInfoTypes;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<Boolean> includeQuote;
 
     public Output<Boolean> getIncludeQuote() {
-        return this.includeQuote == null ? Output.empty() : this.includeQuote;
+        return this.includeQuote == null ? Codegen.empty() : this.includeQuote;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes;
 
     public Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> getInfoTypes() {
-        return this.infoTypes == null ? Output.empty() : this.infoTypes;
+        return this.infoTypes == null ? Codegen.empty() : this.infoTypes;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<PreventionInspectTemplateInspectConfigLimitsArgs> limits;
 
     public Output<PreventionInspectTemplateInspectConfigLimitsArgs> getLimits() {
-        return this.limits == null ? Output.empty() : this.limits;
+        return this.limits == null ? Codegen.empty() : this.limits;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<String> minLikelihood;
 
     public Output<String> getMinLikelihood() {
-        return this.minLikelihood == null ? Output.empty() : this.minLikelihood;
+        return this.minLikelihood == null ? Codegen.empty() : this.minLikelihood;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
       private final @Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets;
 
     public Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> getRuleSets() {
-        return this.ruleSets == null ? Output.empty() : this.ruleSets;
+        return this.ruleSets == null ? Codegen.empty() : this.ruleSets;
     }
 
     public PreventionInspectTemplateInspectConfigArgs(
@@ -137,14 +138,14 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
     }
 
     private PreventionInspectTemplateInspectConfigArgs() {
-        this.contentOptions = Output.empty();
-        this.customInfoTypes = Output.empty();
-        this.excludeInfoTypes = Output.empty();
-        this.includeQuote = Output.empty();
-        this.infoTypes = Output.empty();
-        this.limits = Output.empty();
-        this.minLikelihood = Output.empty();
-        this.ruleSets = Output.empty();
+        this.contentOptions = Codegen.empty();
+        this.customInfoTypes = Codegen.empty();
+        this.excludeInfoTypes = Codegen.empty();
+        this.includeQuote = Codegen.empty();
+        this.infoTypes = Codegen.empty();
+        this.limits = Codegen.empty();
+        this.minLikelihood = Codegen.empty();
+        this.ruleSets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder contentOptions(@Nullable List<String> contentOptions) {
-            this.contentOptions = Output.ofNullable(contentOptions);
+            this.contentOptions = Codegen.ofNullable(contentOptions);
             return this;
         }
         public Builder contentOptions(String... contentOptions) {
@@ -197,7 +198,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder customInfoTypes(@Nullable List<PreventionInspectTemplateInspectConfigCustomInfoTypeArgs> customInfoTypes) {
-            this.customInfoTypes = Output.ofNullable(customInfoTypes);
+            this.customInfoTypes = Codegen.ofNullable(customInfoTypes);
             return this;
         }
         public Builder customInfoTypes(PreventionInspectTemplateInspectConfigCustomInfoTypeArgs... customInfoTypes) {
@@ -208,7 +209,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder excludeInfoTypes(@Nullable Boolean excludeInfoTypes) {
-            this.excludeInfoTypes = Output.ofNullable(excludeInfoTypes);
+            this.excludeInfoTypes = Codegen.ofNullable(excludeInfoTypes);
             return this;
         }
         public Builder includeQuote(@Nullable Output<Boolean> includeQuote) {
@@ -216,7 +217,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder includeQuote(@Nullable Boolean includeQuote) {
-            this.includeQuote = Output.ofNullable(includeQuote);
+            this.includeQuote = Codegen.ofNullable(includeQuote);
             return this;
         }
         public Builder infoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigInfoTypeArgs>> infoTypes) {
@@ -224,7 +225,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder infoTypes(@Nullable List<PreventionInspectTemplateInspectConfigInfoTypeArgs> infoTypes) {
-            this.infoTypes = Output.ofNullable(infoTypes);
+            this.infoTypes = Codegen.ofNullable(infoTypes);
             return this;
         }
         public Builder infoTypes(PreventionInspectTemplateInspectConfigInfoTypeArgs... infoTypes) {
@@ -235,7 +236,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder limits(@Nullable PreventionInspectTemplateInspectConfigLimitsArgs limits) {
-            this.limits = Output.ofNullable(limits);
+            this.limits = Codegen.ofNullable(limits);
             return this;
         }
         public Builder minLikelihood(@Nullable Output<String> minLikelihood) {
@@ -243,7 +244,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder minLikelihood(@Nullable String minLikelihood) {
-            this.minLikelihood = Output.ofNullable(minLikelihood);
+            this.minLikelihood = Codegen.ofNullable(minLikelihood);
             return this;
         }
         public Builder ruleSets(@Nullable Output<List<PreventionInspectTemplateInspectConfigRuleSetArgs>> ruleSets) {
@@ -251,7 +252,7 @@ public final class PreventionInspectTemplateInspectConfigArgs extends io.pulumi.
             return this;
         }
         public Builder ruleSets(@Nullable List<PreventionInspectTemplateInspectConfigRuleSetArgs> ruleSets) {
-            this.ruleSets = Output.ofNullable(ruleSets);
+            this.ruleSets = Codegen.ofNullable(ruleSets);
             return this;
         }
         public Builder ruleSets(PreventionInspectTemplateInspectConfigRuleSetArgs... ruleSets) {

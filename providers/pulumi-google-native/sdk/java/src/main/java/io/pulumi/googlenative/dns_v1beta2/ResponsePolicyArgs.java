@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyGKEClusterArgs;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyNetworkArgs;
 import java.lang.String;
@@ -21,7 +22,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientOperationId;
 
     public Output<String> getClientOperationId() {
-        return this.clientOperationId == null ? Output.empty() : this.clientOperationId;
+        return this.clientOperationId == null ? Codegen.empty() : this.clientOperationId;
     }
 
     /**
@@ -32,7 +33,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters;
 
     public Output<List<ResponsePolicyGKEClusterArgs>> getGkeClusters() {
-        return this.gkeClusters == null ? Output.empty() : this.gkeClusters;
+        return this.gkeClusters == null ? Codegen.empty() : this.gkeClusters;
     }
 
     /**
@@ -54,14 +55,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -72,14 +73,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ResponsePolicyNetworkArgs>> networks;
 
     public Output<List<ResponsePolicyNetworkArgs>> getNetworks() {
-        return this.networks == null ? Output.empty() : this.networks;
+        return this.networks == null ? Codegen.empty() : this.networks;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> responsePolicyName;
 
     public Output<String> getResponsePolicyName() {
-        return this.responsePolicyName == null ? Output.empty() : this.responsePolicyName;
+        return this.responsePolicyName == null ? Codegen.empty() : this.responsePolicyName;
     }
 
     public ResponsePolicyArgs(
@@ -113,14 +114,14 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResponsePolicyArgs() {
-        this.clientOperationId = Output.empty();
-        this.description = Output.empty();
-        this.gkeClusters = Output.empty();
-        this.id = Output.empty();
-        this.kind = Output.empty();
-        this.networks = Output.empty();
-        this.project = Output.empty();
-        this.responsePolicyName = Output.empty();
+        this.clientOperationId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.gkeClusters = Codegen.empty();
+        this.id = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.networks = Codegen.empty();
+        this.project = Codegen.empty();
+        this.responsePolicyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientOperationId(@Nullable String clientOperationId) {
-            this.clientOperationId = Output.ofNullable(clientOperationId);
+            this.clientOperationId = Codegen.ofNullable(clientOperationId);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -170,7 +171,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder gkeClusters(@Nullable Output<List<ResponsePolicyGKEClusterArgs>> gkeClusters) {
@@ -178,7 +179,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gkeClusters(@Nullable List<ResponsePolicyGKEClusterArgs> gkeClusters) {
-            this.gkeClusters = Output.ofNullable(gkeClusters);
+            this.gkeClusters = Codegen.ofNullable(gkeClusters);
             return this;
         }
         public Builder gkeClusters(ResponsePolicyGKEClusterArgs... gkeClusters) {
@@ -189,7 +190,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -197,7 +198,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder networks(@Nullable Output<List<ResponsePolicyNetworkArgs>> networks) {
@@ -205,7 +206,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networks(@Nullable List<ResponsePolicyNetworkArgs> networks) {
-            this.networks = Output.ofNullable(networks);
+            this.networks = Codegen.ofNullable(networks);
             return this;
         }
         public Builder networks(ResponsePolicyNetworkArgs... networks) {
@@ -216,7 +217,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder responsePolicyName(@Nullable Output<String> responsePolicyName) {
@@ -224,7 +225,7 @@ public final class ResponsePolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responsePolicyName(@Nullable String responsePolicyName) {
-            this.responsePolicyName = Output.ofNullable(responsePolicyName);
+            this.responsePolicyName = Codegen.ofNullable(responsePolicyName);
             return this;
         }        public ResponsePolicyArgs build() {
             return new ResponsePolicyArgs(clientOperationId, description, gkeClusters, id, kind, networks, project, responsePolicyName);

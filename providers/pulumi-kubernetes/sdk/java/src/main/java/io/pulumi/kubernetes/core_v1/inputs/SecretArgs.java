@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -39,7 +40,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> data;
 
     public Output<Map<String,String>> getData() {
-        return this.data == null ? Output.empty() : this.data;
+        return this.data == null ? Codegen.empty() : this.data;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> immutable;
 
     public Output<Boolean> getImmutable() {
-        return this.immutable == null ? Output.empty() : this.immutable;
+        return this.immutable == null ? Codegen.empty() : this.immutable;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ObjectMetaArgs> metadata;
 
     public Output<ObjectMetaArgs> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> stringData;
 
     public Output<Map<String,String>> getStringData() {
-        return this.stringData == null ? Output.empty() : this.stringData;
+        return this.stringData == null ? Codegen.empty() : this.stringData;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SecretArgs(
@@ -126,13 +127,13 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.apiVersion = Output.empty();
-        this.data = Output.empty();
-        this.immutable = Output.empty();
-        this.kind = Output.empty();
-        this.metadata = Output.empty();
-        this.stringData = Output.empty();
-        this.type = Output.empty();
+        this.apiVersion = Codegen.empty();
+        this.data = Codegen.empty();
+        this.immutable = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.stringData = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,15 +173,15 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder data(@Nullable Output<Map<String,String>> data) {
-            this.data = Output.ofNullable(data).asSecret();
+            this.data = Codegen.secret(data);
             return this;
         }
         public Builder data(@Nullable Map<String,String> data) {
-            this.data = Output.ofNullable(data).asSecret();
+            this.data = Codegen.secret(data);
             return this;
         }
         public Builder immutable(@Nullable Output<Boolean> immutable) {
@@ -188,7 +189,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder immutable(@Nullable Boolean immutable) {
-            this.immutable = Output.ofNullable(immutable);
+            this.immutable = Codegen.ofNullable(immutable);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -196,7 +197,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
@@ -204,15 +205,15 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable ObjectMetaArgs metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder stringData(@Nullable Output<Map<String,String>> stringData) {
-            this.stringData = Output.ofNullable(stringData).asSecret();
+            this.stringData = Codegen.secret(stringData);
             return this;
         }
         public Builder stringData(@Nullable Map<String,String> stringData) {
-            this.stringData = Output.ofNullable(stringData).asSecret();
+            this.stringData = Codegen.secret(stringData);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -220,7 +221,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SecretArgs build() {
             return new SecretArgs(apiVersion, data, immutable, kind, metadata, stringData, type);

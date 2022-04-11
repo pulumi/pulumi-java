@@ -11,6 +11,7 @@ import io.pulumi.azurenative.webpubsub.inputs.WebPubSubNetworkACLsArgs;
 import io.pulumi.azurenative.webpubsub.inputs.WebPubSubTlsSettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EventHandlerSettingsArgs> eventHandler;
 
     public Output<EventHandlerSettingsArgs> getEventHandler() {
-        return this.eventHandler == null ? Output.empty() : this.eventHandler;
+        return this.eventHandler == null ? Codegen.empty() : this.eventHandler;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WebPubSubFeatureArgs>> features;
 
     public Output<List<WebPubSubFeatureArgs>> getFeatures() {
-        return this.features == null ? Output.empty() : this.features;
+        return this.features == null ? Codegen.empty() : this.features;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ManagedIdentityArgs> identity;
 
     public Output<ManagedIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WebPubSubNetworkACLsArgs> networkACLs;
 
     public Output<WebPubSubNetworkACLsArgs> getNetworkACLs() {
-        return this.networkACLs == null ? Output.empty() : this.networkACLs;
+        return this.networkACLs == null ? Codegen.empty() : this.networkACLs;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicNetworkAccess;
 
     public Output<String> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceSkuArgs> sku;
 
     public Output<ResourceSkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WebPubSubTlsSettingsArgs> tls;
 
     public Output<WebPubSubTlsSettingsArgs> getTls() {
-        return this.tls == null ? Output.empty() : this.tls;
+        return this.tls == null ? Codegen.empty() : this.tls;
     }
 
     public WebPubSubArgs(
@@ -167,7 +168,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
         this.identity = identity;
         this.location = location;
         this.networkACLs = networkACLs;
-        this.publicNetworkAccess = publicNetworkAccess == null ? Output.ofNullable("Enabled") : publicNetworkAccess;
+        this.publicNetworkAccess = publicNetworkAccess == null ? Codegen.ofNullable("Enabled") : publicNetworkAccess;
         this.resourceGroupName = Objects.requireNonNull(resourceGroupName, "expected parameter 'resourceGroupName' to be non-null");
         this.resourceName = resourceName;
         this.sku = sku;
@@ -176,17 +177,17 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebPubSubArgs() {
-        this.eventHandler = Output.empty();
-        this.features = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.networkACLs = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
-        this.tls = Output.empty();
+        this.eventHandler = Codegen.empty();
+        this.features = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.networkACLs = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -234,7 +235,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eventHandler(@Nullable EventHandlerSettingsArgs eventHandler) {
-            this.eventHandler = Output.ofNullable(eventHandler);
+            this.eventHandler = Codegen.ofNullable(eventHandler);
             return this;
         }
         public Builder features(@Nullable Output<List<WebPubSubFeatureArgs>> features) {
@@ -242,7 +243,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder features(@Nullable List<WebPubSubFeatureArgs> features) {
-            this.features = Output.ofNullable(features);
+            this.features = Codegen.ofNullable(features);
             return this;
         }
         public Builder features(WebPubSubFeatureArgs... features) {
@@ -253,7 +254,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ManagedIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -261,7 +262,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder networkACLs(@Nullable Output<WebPubSubNetworkACLsArgs> networkACLs) {
@@ -269,7 +270,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkACLs(@Nullable WebPubSubNetworkACLsArgs networkACLs) {
-            this.networkACLs = Output.ofNullable(networkACLs);
+            this.networkACLs = Codegen.ofNullable(networkACLs);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<String> publicNetworkAccess) {
@@ -277,7 +278,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -293,7 +294,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder sku(@Nullable Output<ResourceSkuArgs> sku) {
@@ -301,7 +302,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable ResourceSkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -309,7 +310,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tls(@Nullable Output<WebPubSubTlsSettingsArgs> tls) {
@@ -317,7 +318,7 @@ public final class WebPubSubArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tls(@Nullable WebPubSubTlsSettingsArgs tls) {
-            this.tls = Output.ofNullable(tls);
+            this.tls = Codegen.ofNullable(tls);
             return this;
         }        public WebPubSubArgs build() {
             return new WebPubSubArgs(eventHandler, features, identity, location, networkACLs, publicNetworkAccess, resourceGroupName, resourceName, sku, tags, tls);

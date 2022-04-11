@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> policyNames;
 
     public Output<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Output.empty() : this.policyNames;
+        return this.policyNames == null ? Codegen.empty() : this.policyNames;
     }
 
     public ListenerPolicyArgs(
@@ -59,9 +60,9 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerPolicyArgs() {
-        this.loadBalancerName = Output.empty();
-        this.loadBalancerPort = Output.empty();
-        this.policyNames = Output.empty();
+        this.loadBalancerName = Codegen.empty();
+        this.loadBalancerPort = Codegen.empty();
+        this.policyNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ListenerPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Output.ofNullable(policyNames);
+            this.policyNames = Codegen.ofNullable(policyNames);
             return this;
         }
         public Builder policyNames(String... policyNames) {

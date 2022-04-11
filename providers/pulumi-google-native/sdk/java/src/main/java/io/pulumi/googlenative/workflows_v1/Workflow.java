@@ -6,6 +6,7 @@ package io.pulumi.googlenative.workflows_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.workflows_v1.WorkflowArgs;
 import java.lang.String;
@@ -181,7 +182,7 @@ public class Workflow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Workflow(String name, WorkflowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:workflows/v1:Workflow", name, args == null ? WorkflowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:workflows/v1:Workflow", name, args == null ? WorkflowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Workflow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

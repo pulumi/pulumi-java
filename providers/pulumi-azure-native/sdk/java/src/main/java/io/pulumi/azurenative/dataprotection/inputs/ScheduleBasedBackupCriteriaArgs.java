@@ -11,6 +11,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DayArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<Either<String,AbsoluteMarker>>> absoluteCriteria;
 
     public Output<List<Either<String,AbsoluteMarker>>> getAbsoluteCriteria() {
-        return this.absoluteCriteria == null ? Output.empty() : this.absoluteCriteria;
+        return this.absoluteCriteria == null ? Codegen.empty() : this.absoluteCriteria;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<DayArgs>> daysOfMonth;
 
     public Output<List<DayArgs>> getDaysOfMonth() {
-        return this.daysOfMonth == null ? Output.empty() : this.daysOfMonth;
+        return this.daysOfMonth == null ? Codegen.empty() : this.daysOfMonth;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<Either<String,DayOfWeek>>> daysOfTheWeek;
 
     public Output<List<Either<String,DayOfWeek>>> getDaysOfTheWeek() {
-        return this.daysOfTheWeek == null ? Output.empty() : this.daysOfTheWeek;
+        return this.daysOfTheWeek == null ? Codegen.empty() : this.daysOfTheWeek;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<Either<String,Month>>> monthsOfYear;
 
     public Output<List<Either<String,Month>>> getMonthsOfYear() {
-        return this.monthsOfYear == null ? Output.empty() : this.monthsOfYear;
+        return this.monthsOfYear == null ? Codegen.empty() : this.monthsOfYear;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> scheduleTimes;
 
     public Output<List<String>> getScheduleTimes() {
-        return this.scheduleTimes == null ? Output.empty() : this.scheduleTimes;
+        return this.scheduleTimes == null ? Codegen.empty() : this.scheduleTimes;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<Either<String,WeekNumber>>> weeksOfTheMonth;
 
     public Output<List<Either<String,WeekNumber>>> getWeeksOfTheMonth() {
-        return this.weeksOfTheMonth == null ? Output.empty() : this.weeksOfTheMonth;
+        return this.weeksOfTheMonth == null ? Codegen.empty() : this.weeksOfTheMonth;
     }
 
     public ScheduleBasedBackupCriteriaArgs(
@@ -122,13 +123,13 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
     }
 
     private ScheduleBasedBackupCriteriaArgs() {
-        this.absoluteCriteria = Output.empty();
-        this.daysOfMonth = Output.empty();
-        this.daysOfTheWeek = Output.empty();
-        this.monthsOfYear = Output.empty();
-        this.objectType = Output.empty();
-        this.scheduleTimes = Output.empty();
-        this.weeksOfTheMonth = Output.empty();
+        this.absoluteCriteria = Codegen.empty();
+        this.daysOfMonth = Codegen.empty();
+        this.daysOfTheWeek = Codegen.empty();
+        this.monthsOfYear = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.scheduleTimes = Codegen.empty();
+        this.weeksOfTheMonth = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -168,7 +169,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder absoluteCriteria(@Nullable List<Either<String,AbsoluteMarker>> absoluteCriteria) {
-            this.absoluteCriteria = Output.ofNullable(absoluteCriteria);
+            this.absoluteCriteria = Codegen.ofNullable(absoluteCriteria);
             return this;
         }
         public Builder absoluteCriteria(Either<String,AbsoluteMarker>... absoluteCriteria) {
@@ -179,7 +180,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder daysOfMonth(@Nullable List<DayArgs> daysOfMonth) {
-            this.daysOfMonth = Output.ofNullable(daysOfMonth);
+            this.daysOfMonth = Codegen.ofNullable(daysOfMonth);
             return this;
         }
         public Builder daysOfMonth(DayArgs... daysOfMonth) {
@@ -190,7 +191,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder daysOfTheWeek(@Nullable List<Either<String,DayOfWeek>> daysOfTheWeek) {
-            this.daysOfTheWeek = Output.ofNullable(daysOfTheWeek);
+            this.daysOfTheWeek = Codegen.ofNullable(daysOfTheWeek);
             return this;
         }
         public Builder daysOfTheWeek(Either<String,DayOfWeek>... daysOfTheWeek) {
@@ -201,7 +202,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder monthsOfYear(@Nullable List<Either<String,Month>> monthsOfYear) {
-            this.monthsOfYear = Output.ofNullable(monthsOfYear);
+            this.monthsOfYear = Codegen.ofNullable(monthsOfYear);
             return this;
         }
         public Builder monthsOfYear(Either<String,Month>... monthsOfYear) {
@@ -220,7 +221,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder scheduleTimes(@Nullable List<String> scheduleTimes) {
-            this.scheduleTimes = Output.ofNullable(scheduleTimes);
+            this.scheduleTimes = Codegen.ofNullable(scheduleTimes);
             return this;
         }
         public Builder scheduleTimes(String... scheduleTimes) {
@@ -231,7 +232,7 @@ public final class ScheduleBasedBackupCriteriaArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder weeksOfTheMonth(@Nullable List<Either<String,WeekNumber>> weeksOfTheMonth) {
-            this.weeksOfTheMonth = Output.ofNullable(weeksOfTheMonth);
+            this.weeksOfTheMonth = Codegen.ofNullable(weeksOfTheMonth);
             return this;
         }
         public Builder weeksOfTheMonth(Either<String,WeekNumber>... weeksOfTheMonth) {

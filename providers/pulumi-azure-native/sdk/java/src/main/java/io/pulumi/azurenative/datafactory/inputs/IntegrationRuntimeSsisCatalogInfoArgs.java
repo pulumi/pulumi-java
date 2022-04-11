@@ -8,6 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
       private final @Nullable Output<SecureStringArgs> catalogAdminPassword;
 
     public Output<SecureStringArgs> getCatalogAdminPassword() {
-        return this.catalogAdminPassword == null ? Output.empty() : this.catalogAdminPassword;
+        return this.catalogAdminPassword == null ? Codegen.empty() : this.catalogAdminPassword;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
       private final @Nullable Output<String> catalogAdminUserName;
 
     public Output<String> getCatalogAdminUserName() {
-        return this.catalogAdminUserName == null ? Output.empty() : this.catalogAdminUserName;
+        return this.catalogAdminUserName == null ? Codegen.empty() : this.catalogAdminUserName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
       private final @Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
 
     public Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> getCatalogPricingTier() {
-        return this.catalogPricingTier == null ? Output.empty() : this.catalogPricingTier;
+        return this.catalogPricingTier == null ? Codegen.empty() : this.catalogPricingTier;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
       private final @Nullable Output<String> catalogServerEndpoint;
 
     public Output<String> getCatalogServerEndpoint() {
-        return this.catalogServerEndpoint == null ? Output.empty() : this.catalogServerEndpoint;
+        return this.catalogServerEndpoint == null ? Codegen.empty() : this.catalogServerEndpoint;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
       private final @Nullable Output<String> dualStandbyPairName;
 
     public Output<String> getDualStandbyPairName() {
-        return this.dualStandbyPairName == null ? Output.empty() : this.dualStandbyPairName;
+        return this.dualStandbyPairName == null ? Codegen.empty() : this.dualStandbyPairName;
     }
 
     public IntegrationRuntimeSsisCatalogInfoArgs(
@@ -90,11 +91,11 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
     }
 
     private IntegrationRuntimeSsisCatalogInfoArgs() {
-        this.catalogAdminPassword = Output.empty();
-        this.catalogAdminUserName = Output.empty();
-        this.catalogPricingTier = Output.empty();
-        this.catalogServerEndpoint = Output.empty();
-        this.dualStandbyPairName = Output.empty();
+        this.catalogAdminPassword = Codegen.empty();
+        this.catalogAdminUserName = Codegen.empty();
+        this.catalogPricingTier = Codegen.empty();
+        this.catalogServerEndpoint = Codegen.empty();
+        this.dualStandbyPairName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder catalogAdminPassword(@Nullable SecureStringArgs catalogAdminPassword) {
-            this.catalogAdminPassword = Output.ofNullable(catalogAdminPassword);
+            this.catalogAdminPassword = Codegen.ofNullable(catalogAdminPassword);
             return this;
         }
         public Builder catalogAdminUserName(@Nullable Output<String> catalogAdminUserName) {
@@ -138,7 +139,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder catalogAdminUserName(@Nullable String catalogAdminUserName) {
-            this.catalogAdminUserName = Output.ofNullable(catalogAdminUserName);
+            this.catalogAdminUserName = Codegen.ofNullable(catalogAdminUserName);
             return this;
         }
         public Builder catalogPricingTier(@Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier) {
@@ -146,7 +147,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder catalogPricingTier(@Nullable Either<String,IntegrationRuntimeSsisCatalogPricingTier> catalogPricingTier) {
-            this.catalogPricingTier = Output.ofNullable(catalogPricingTier);
+            this.catalogPricingTier = Codegen.ofNullable(catalogPricingTier);
             return this;
         }
         public Builder catalogServerEndpoint(@Nullable Output<String> catalogServerEndpoint) {
@@ -154,7 +155,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder catalogServerEndpoint(@Nullable String catalogServerEndpoint) {
-            this.catalogServerEndpoint = Output.ofNullable(catalogServerEndpoint);
+            this.catalogServerEndpoint = Codegen.ofNullable(catalogServerEndpoint);
             return this;
         }
         public Builder dualStandbyPairName(@Nullable Output<String> dualStandbyPairName) {
@@ -162,7 +163,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             return this;
         }
         public Builder dualStandbyPairName(@Nullable String dualStandbyPairName) {
-            this.dualStandbyPairName = Output.ofNullable(dualStandbyPairName);
+            this.dualStandbyPairName = Codegen.ofNullable(dualStandbyPairName);
             return this;
         }        public IntegrationRuntimeSsisCatalogInfoArgs build() {
             return new IntegrationRuntimeSsisCatalogInfoArgs(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint, dualStandbyPairName);

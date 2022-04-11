@@ -5,6 +5,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     public StudioComponentLicenseServiceConfigurationArgs(@Nullable Output<String> endpoint) {
@@ -34,7 +35,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
     }
 
     private StudioComponentLicenseServiceConfigurationArgs() {
-        this.endpoint = Output.empty();
+        this.endpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }        public StudioComponentLicenseServiceConfigurationArgs build() {
             return new StudioComponentLicenseServiceConfigurationArgs(endpoint);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,9 +45,9 @@ public final class ClusterMaintenancePolicyRecurringWindowArgs extends io.pulumi
     }
 
     private ClusterMaintenancePolicyRecurringWindowArgs() {
-        this.endTime = Output.empty();
-        this.recurrence = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.recurrence = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

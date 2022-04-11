@@ -8,6 +8,7 @@ import io.pulumi.azurenative.operationalinsights.enums.ColumnTypeEnum;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
     public Output<Either<String,ColumnDataTypeHintEnum>> getDataTypeHint() {
-        return this.dataTypeHint == null ? Output.empty() : this.dataTypeHint;
+        return this.dataTypeHint == null ? Codegen.empty() : this.dataTypeHint;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ColumnTypeEnum>> type;
 
     public Output<Either<String,ColumnTypeEnum>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ColumnArgs(
@@ -90,11 +91,11 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ColumnArgs() {
-        this.dataTypeHint = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.dataTypeHint = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -130,7 +131,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataTypeHint(@Nullable Either<String,ColumnDataTypeHintEnum> dataTypeHint) {
-            this.dataTypeHint = Output.ofNullable(dataTypeHint);
+            this.dataTypeHint = Codegen.ofNullable(dataTypeHint);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -138,7 +139,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -146,7 +147,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -154,7 +155,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,ColumnTypeEnum>> type) {
@@ -162,7 +163,7 @@ public final class ColumnArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable Either<String,ColumnTypeEnum> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ColumnArgs build() {
             return new ColumnArgs(dataTypeHint, description, displayName, name, type);

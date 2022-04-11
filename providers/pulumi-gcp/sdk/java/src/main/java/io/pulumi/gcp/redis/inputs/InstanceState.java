@@ -5,6 +5,7 @@ package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyGetArgs;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenanceScheduleGetArgs;
 import io.pulumi.gcp.redis.inputs.InstanceNodeGetArgs;
@@ -33,7 +34,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alternativeLocationId;
 
     public Output<String> getAlternativeLocationId() {
-        return this.alternativeLocationId == null ? Output.empty() : this.alternativeLocationId;
+        return this.alternativeLocationId == null ? Codegen.empty() : this.alternativeLocationId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
-        return this.authEnabled == null ? Output.empty() : this.authEnabled;
+        return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authString;
 
     public Output<String> getAuthString() {
-        return this.authString == null ? Output.empty() : this.authString;
+        return this.authString == null ? Codegen.empty() : this.authString;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
+        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectMode;
 
     public Output<String> getConnectMode() {
-        return this.connectMode == null ? Output.empty() : this.connectMode;
+        return this.connectMode == null ? Codegen.empty() : this.connectMode;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> currentLocationId;
 
     public Output<String> getCurrentLocationId() {
-        return this.currentLocationId == null ? Output.empty() : this.currentLocationId;
+        return this.currentLocationId == null ? Codegen.empty() : this.currentLocationId;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> locationId;
 
     public Output<String> getLocationId() {
-        return this.locationId == null ? Output.empty() : this.locationId;
+        return this.locationId == null ? Codegen.empty() : this.locationId;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceMaintenancePolicyGetArgs> maintenancePolicy;
 
     public Output<InstanceMaintenancePolicyGetArgs> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
+        return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule;
 
     public Output<InstanceMaintenanceScheduleGetArgs> getMaintenanceSchedule() {
-        return this.maintenanceSchedule == null ? Output.empty() : this.maintenanceSchedule;
+        return this.maintenanceSchedule == null ? Codegen.empty() : this.maintenanceSchedule;
     }
 
     /**
@@ -193,7 +194,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> memorySizeGb;
 
     public Output<Integer> getMemorySizeGb() {
-        return this.memorySizeGb == null ? Output.empty() : this.memorySizeGb;
+        return this.memorySizeGb == null ? Codegen.empty() : this.memorySizeGb;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceNodeGetArgs>> nodes;
 
     public Output<List<InstanceNodeGetArgs>> getNodes() {
-        return this.nodes == null ? Output.empty() : this.nodes;
+        return this.nodes == null ? Codegen.empty() : this.nodes;
     }
 
     /**
@@ -228,7 +229,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> persistenceIamIdentity;
 
     public Output<String> getPersistenceIamIdentity() {
-        return this.persistenceIamIdentity == null ? Output.empty() : this.persistenceIamIdentity;
+        return this.persistenceIamIdentity == null ? Codegen.empty() : this.persistenceIamIdentity;
     }
 
     /**
@@ -239,7 +240,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -251,7 +252,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -264,7 +265,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> readEndpoint;
 
     public Output<String> getReadEndpoint() {
-        return this.readEndpoint == null ? Output.empty() : this.readEndpoint;
+        return this.readEndpoint == null ? Codegen.empty() : this.readEndpoint;
     }
 
     /**
@@ -276,7 +277,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> readEndpointPort;
 
     public Output<Integer> getReadEndpointPort() {
-        return this.readEndpointPort == null ? Output.empty() : this.readEndpointPort;
+        return this.readEndpointPort == null ? Codegen.empty() : this.readEndpointPort;
     }
 
     /**
@@ -291,7 +292,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> readReplicasMode;
 
     public Output<String> getReadReplicasMode() {
-        return this.readReplicasMode == null ? Output.empty() : this.readReplicasMode;
+        return this.readReplicasMode == null ? Codegen.empty() : this.readReplicasMode;
     }
 
     /**
@@ -304,7 +305,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> redisConfigs;
 
     public Output<Map<String,String>> getRedisConfigs() {
-        return this.redisConfigs == null ? Output.empty() : this.redisConfigs;
+        return this.redisConfigs == null ? Codegen.empty() : this.redisConfigs;
     }
 
     /**
@@ -317,7 +318,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> redisVersion;
 
     public Output<String> getRedisVersion() {
-        return this.redisVersion == null ? Output.empty() : this.redisVersion;
+        return this.redisVersion == null ? Codegen.empty() : this.redisVersion;
     }
 
     /**
@@ -328,7 +329,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> region;
 
     public Output<String> getRegion() {
-        return this.region == null ? Output.empty() : this.region;
+        return this.region == null ? Codegen.empty() : this.region;
     }
 
     /**
@@ -341,7 +342,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Output.empty() : this.replicaCount;
+        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
     /**
@@ -356,7 +357,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
+        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 
     /**
@@ -367,7 +368,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InstanceServerCaCertGetArgs>> serverCaCerts;
 
     public Output<List<InstanceServerCaCertGetArgs>> getServerCaCerts() {
-        return this.serverCaCerts == null ? Output.empty() : this.serverCaCerts;
+        return this.serverCaCerts == null ? Codegen.empty() : this.serverCaCerts;
     }
 
     /**
@@ -382,7 +383,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> tier;
 
     public Output<String> getTier() {
-        return this.tier == null ? Output.empty() : this.tier;
+        return this.tier == null ? Codegen.empty() : this.tier;
     }
 
     /**
@@ -396,7 +397,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> transitEncryptionMode;
 
     public Output<String> getTransitEncryptionMode() {
-        return this.transitEncryptionMode == null ? Output.empty() : this.transitEncryptionMode;
+        return this.transitEncryptionMode == null ? Codegen.empty() : this.transitEncryptionMode;
     }
 
     public InstanceState(
@@ -463,36 +464,36 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceState() {
-        this.alternativeLocationId = Output.empty();
-        this.authEnabled = Output.empty();
-        this.authString = Output.empty();
-        this.authorizedNetwork = Output.empty();
-        this.connectMode = Output.empty();
-        this.createTime = Output.empty();
-        this.currentLocationId = Output.empty();
-        this.displayName = Output.empty();
-        this.host = Output.empty();
-        this.labels = Output.empty();
-        this.locationId = Output.empty();
-        this.maintenancePolicy = Output.empty();
-        this.maintenanceSchedule = Output.empty();
-        this.memorySizeGb = Output.empty();
-        this.name = Output.empty();
-        this.nodes = Output.empty();
-        this.persistenceIamIdentity = Output.empty();
-        this.port = Output.empty();
-        this.project = Output.empty();
-        this.readEndpoint = Output.empty();
-        this.readEndpointPort = Output.empty();
-        this.readReplicasMode = Output.empty();
-        this.redisConfigs = Output.empty();
-        this.redisVersion = Output.empty();
-        this.region = Output.empty();
-        this.replicaCount = Output.empty();
-        this.reservedIpRange = Output.empty();
-        this.serverCaCerts = Output.empty();
-        this.tier = Output.empty();
-        this.transitEncryptionMode = Output.empty();
+        this.alternativeLocationId = Codegen.empty();
+        this.authEnabled = Codegen.empty();
+        this.authString = Codegen.empty();
+        this.authorizedNetwork = Codegen.empty();
+        this.connectMode = Codegen.empty();
+        this.createTime = Codegen.empty();
+        this.currentLocationId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.host = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.locationId = Codegen.empty();
+        this.maintenancePolicy = Codegen.empty();
+        this.maintenanceSchedule = Codegen.empty();
+        this.memorySizeGb = Codegen.empty();
+        this.name = Codegen.empty();
+        this.nodes = Codegen.empty();
+        this.persistenceIamIdentity = Codegen.empty();
+        this.port = Codegen.empty();
+        this.project = Codegen.empty();
+        this.readEndpoint = Codegen.empty();
+        this.readEndpointPort = Codegen.empty();
+        this.readReplicasMode = Codegen.empty();
+        this.redisConfigs = Codegen.empty();
+        this.redisVersion = Codegen.empty();
+        this.region = Codegen.empty();
+        this.replicaCount = Codegen.empty();
+        this.reservedIpRange = Codegen.empty();
+        this.serverCaCerts = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.transitEncryptionMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -578,7 +579,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alternativeLocationId(@Nullable String alternativeLocationId) {
-            this.alternativeLocationId = Output.ofNullable(alternativeLocationId);
+            this.alternativeLocationId = Codegen.ofNullable(alternativeLocationId);
             return this;
         }
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
@@ -586,7 +587,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = Output.ofNullable(authEnabled);
+            this.authEnabled = Codegen.ofNullable(authEnabled);
             return this;
         }
         public Builder authString(@Nullable Output<String> authString) {
@@ -594,7 +595,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authString(@Nullable String authString) {
-            this.authString = Output.ofNullable(authString);
+            this.authString = Codegen.ofNullable(authString);
             return this;
         }
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
@@ -602,7 +603,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
             return this;
         }
         public Builder connectMode(@Nullable Output<String> connectMode) {
@@ -610,7 +611,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectMode(@Nullable String connectMode) {
-            this.connectMode = Output.ofNullable(connectMode);
+            this.connectMode = Codegen.ofNullable(connectMode);
             return this;
         }
         public Builder createTime(@Nullable Output<String> createTime) {
@@ -618,7 +619,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder currentLocationId(@Nullable Output<String> currentLocationId) {
@@ -626,7 +627,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder currentLocationId(@Nullable String currentLocationId) {
-            this.currentLocationId = Output.ofNullable(currentLocationId);
+            this.currentLocationId = Codegen.ofNullable(currentLocationId);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -634,7 +635,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -642,7 +643,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -650,7 +651,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder locationId(@Nullable Output<String> locationId) {
@@ -658,7 +659,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locationId(@Nullable String locationId) {
-            this.locationId = Output.ofNullable(locationId);
+            this.locationId = Codegen.ofNullable(locationId);
             return this;
         }
         public Builder maintenancePolicy(@Nullable Output<InstanceMaintenancePolicyGetArgs> maintenancePolicy) {
@@ -666,7 +667,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenancePolicy(@Nullable InstanceMaintenancePolicyGetArgs maintenancePolicy) {
-            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Codegen.ofNullable(maintenancePolicy);
             return this;
         }
         public Builder maintenanceSchedule(@Nullable Output<InstanceMaintenanceScheduleGetArgs> maintenanceSchedule) {
@@ -674,7 +675,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenanceSchedule(@Nullable InstanceMaintenanceScheduleGetArgs maintenanceSchedule) {
-            this.maintenanceSchedule = Output.ofNullable(maintenanceSchedule);
+            this.maintenanceSchedule = Codegen.ofNullable(maintenanceSchedule);
             return this;
         }
         public Builder memorySizeGb(@Nullable Output<Integer> memorySizeGb) {
@@ -682,7 +683,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memorySizeGb(@Nullable Integer memorySizeGb) {
-            this.memorySizeGb = Output.ofNullable(memorySizeGb);
+            this.memorySizeGb = Codegen.ofNullable(memorySizeGb);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -690,7 +691,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder nodes(@Nullable Output<List<InstanceNodeGetArgs>> nodes) {
@@ -698,7 +699,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder nodes(@Nullable List<InstanceNodeGetArgs> nodes) {
-            this.nodes = Output.ofNullable(nodes);
+            this.nodes = Codegen.ofNullable(nodes);
             return this;
         }
         public Builder nodes(InstanceNodeGetArgs... nodes) {
@@ -709,7 +710,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder persistenceIamIdentity(@Nullable String persistenceIamIdentity) {
-            this.persistenceIamIdentity = Output.ofNullable(persistenceIamIdentity);
+            this.persistenceIamIdentity = Codegen.ofNullable(persistenceIamIdentity);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -717,7 +718,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -725,7 +726,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder readEndpoint(@Nullable Output<String> readEndpoint) {
@@ -733,7 +734,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readEndpoint(@Nullable String readEndpoint) {
-            this.readEndpoint = Output.ofNullable(readEndpoint);
+            this.readEndpoint = Codegen.ofNullable(readEndpoint);
             return this;
         }
         public Builder readEndpointPort(@Nullable Output<Integer> readEndpointPort) {
@@ -741,7 +742,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readEndpointPort(@Nullable Integer readEndpointPort) {
-            this.readEndpointPort = Output.ofNullable(readEndpointPort);
+            this.readEndpointPort = Codegen.ofNullable(readEndpointPort);
             return this;
         }
         public Builder readReplicasMode(@Nullable Output<String> readReplicasMode) {
@@ -749,7 +750,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readReplicasMode(@Nullable String readReplicasMode) {
-            this.readReplicasMode = Output.ofNullable(readReplicasMode);
+            this.readReplicasMode = Codegen.ofNullable(readReplicasMode);
             return this;
         }
         public Builder redisConfigs(@Nullable Output<Map<String,String>> redisConfigs) {
@@ -757,7 +758,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redisConfigs(@Nullable Map<String,String> redisConfigs) {
-            this.redisConfigs = Output.ofNullable(redisConfigs);
+            this.redisConfigs = Codegen.ofNullable(redisConfigs);
             return this;
         }
         public Builder redisVersion(@Nullable Output<String> redisVersion) {
@@ -765,7 +766,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redisVersion(@Nullable String redisVersion) {
-            this.redisVersion = Output.ofNullable(redisVersion);
+            this.redisVersion = Codegen.ofNullable(redisVersion);
             return this;
         }
         public Builder region(@Nullable Output<String> region) {
@@ -773,7 +774,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder region(@Nullable String region) {
-            this.region = Output.ofNullable(region);
+            this.region = Codegen.ofNullable(region);
             return this;
         }
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
@@ -781,7 +782,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Output.ofNullable(replicaCount);
+            this.replicaCount = Codegen.ofNullable(replicaCount);
             return this;
         }
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
@@ -789,7 +790,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Output.ofNullable(reservedIpRange);
+            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
             return this;
         }
         public Builder serverCaCerts(@Nullable Output<List<InstanceServerCaCertGetArgs>> serverCaCerts) {
@@ -797,7 +798,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverCaCerts(@Nullable List<InstanceServerCaCertGetArgs> serverCaCerts) {
-            this.serverCaCerts = Output.ofNullable(serverCaCerts);
+            this.serverCaCerts = Codegen.ofNullable(serverCaCerts);
             return this;
         }
         public Builder serverCaCerts(InstanceServerCaCertGetArgs... serverCaCerts) {
@@ -808,7 +809,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tier(@Nullable String tier) {
-            this.tier = Output.ofNullable(tier);
+            this.tier = Codegen.ofNullable(tier);
             return this;
         }
         public Builder transitEncryptionMode(@Nullable Output<String> transitEncryptionMode) {
@@ -816,7 +817,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitEncryptionMode(@Nullable String transitEncryptionMode) {
-            this.transitEncryptionMode = Output.ofNullable(transitEncryptionMode);
+            this.transitEncryptionMode = Codegen.ofNullable(transitEncryptionMode);
             return this;
         }        public InstanceState build() {
             return new InstanceState(alternativeLocationId, authEnabled, authString, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, labels, locationId, maintenancePolicy, maintenanceSchedule, memorySizeGb, name, nodes, persistenceIamIdentity, port, project, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, region, replicaCount, reservedIpRange, serverCaCerts, tier, transitEncryptionMode);

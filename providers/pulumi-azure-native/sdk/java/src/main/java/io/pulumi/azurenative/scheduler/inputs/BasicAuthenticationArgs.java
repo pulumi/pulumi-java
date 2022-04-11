@@ -5,6 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public BasicAuthenticationArgs(
@@ -58,9 +59,9 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
     }
 
     private BasicAuthenticationArgs() {
-        this.password = Output.empty();
-        this.type = Output.empty();
-        this.username = Output.empty();
+        this.password = Codegen.empty();
+        this.type = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -108,7 +109,7 @@ public final class BasicAuthenticationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public BasicAuthenticationArgs build() {
             return new BasicAuthenticationArgs(password, type, username);

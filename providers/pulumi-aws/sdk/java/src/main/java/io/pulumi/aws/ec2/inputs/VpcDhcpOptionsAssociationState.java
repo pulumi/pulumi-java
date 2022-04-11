@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
       private final @Nullable Output<String> dhcpOptionsId;
 
     public Output<String> getDhcpOptionsId() {
-        return this.dhcpOptionsId == null ? Output.empty() : this.dhcpOptionsId;
+        return this.dhcpOptionsId == null ? Codegen.empty() : this.dhcpOptionsId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public VpcDhcpOptionsAssociationState(
@@ -44,8 +45,8 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
     }
 
     private VpcDhcpOptionsAssociationState() {
-        this.dhcpOptionsId = Output.empty();
-        this.vpcId = Output.empty();
+        this.dhcpOptionsId = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder dhcpOptionsId(@Nullable String dhcpOptionsId) {
-            this.dhcpOptionsId = Output.ofNullable(dhcpOptionsId);
+            this.dhcpOptionsId = Codegen.ofNullable(dhcpOptionsId);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -83,7 +84,7 @@ public final class VpcDhcpOptionsAssociationState extends io.pulumi.resources.Re
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public VpcDhcpOptionsAssociationState build() {
             return new VpcDhcpOptionsAssociationState(dhcpOptionsId, vpcId);

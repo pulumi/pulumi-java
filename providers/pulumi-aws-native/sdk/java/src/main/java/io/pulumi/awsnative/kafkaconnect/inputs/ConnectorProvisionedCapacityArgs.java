@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> mcuCount;
 
     public Output<Integer> getMcuCount() {
-        return this.mcuCount == null ? Output.empty() : this.mcuCount;
+        return this.mcuCount == null ? Codegen.empty() : this.mcuCount;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
     }
 
     private ConnectorProvisionedCapacityArgs() {
-        this.mcuCount = Output.empty();
-        this.workerCount = Output.empty();
+        this.mcuCount = Codegen.empty();
+        this.workerCount = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
             return this;
         }
         public Builder mcuCount(@Nullable Integer mcuCount) {
-            this.mcuCount = Output.ofNullable(mcuCount);
+            this.mcuCount = Codegen.ofNullable(mcuCount);
             return this;
         }
         public Builder workerCount(Output<Integer> workerCount) {

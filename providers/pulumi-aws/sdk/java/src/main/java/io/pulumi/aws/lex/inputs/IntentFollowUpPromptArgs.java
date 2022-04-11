@@ -7,6 +7,7 @@ import io.pulumi.aws.lex.inputs.IntentFollowUpPromptPromptArgs;
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -46,8 +47,8 @@ public final class IntentFollowUpPromptArgs extends io.pulumi.resources.Resource
     }
 
     private IntentFollowUpPromptArgs() {
-        this.prompt = Output.empty();
-        this.rejectionStatement = Output.empty();
+        this.prompt = Codegen.empty();
+        this.rejectionStatement = Codegen.empty();
     }
 
     public static Builder builder() {

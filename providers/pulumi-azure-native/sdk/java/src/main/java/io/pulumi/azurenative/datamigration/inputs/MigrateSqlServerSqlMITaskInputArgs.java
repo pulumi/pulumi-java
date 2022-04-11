@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
       private final @Nullable Output<FileShareArgs> backupFileShare;
 
     public Output<FileShareArgs> getBackupFileShare() {
-        return this.backupFileShare == null ? Output.empty() : this.backupFileShare;
+        return this.backupFileShare == null ? Codegen.empty() : this.backupFileShare;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
       private final @Nullable Output<Either<String,BackupMode>> backupMode;
 
     public Output<Either<String,BackupMode>> getBackupMode() {
-        return this.backupMode == null ? Output.empty() : this.backupMode;
+        return this.backupMode == null ? Codegen.empty() : this.backupMode;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> selectedAgentJobs;
 
     public Output<List<String>> getSelectedAgentJobs() {
-        return this.selectedAgentJobs == null ? Output.empty() : this.selectedAgentJobs;
+        return this.selectedAgentJobs == null ? Codegen.empty() : this.selectedAgentJobs;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> selectedLogins;
 
     public Output<List<String>> getSelectedLogins() {
-        return this.selectedLogins == null ? Output.empty() : this.selectedLogins;
+        return this.selectedLogins == null ? Codegen.empty() : this.selectedLogins;
     }
 
     /**
@@ -133,14 +134,14 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
     }
 
     private MigrateSqlServerSqlMITaskInputArgs() {
-        this.backupBlobShare = Output.empty();
-        this.backupFileShare = Output.empty();
-        this.backupMode = Output.empty();
-        this.selectedAgentJobs = Output.empty();
-        this.selectedDatabases = Output.empty();
-        this.selectedLogins = Output.empty();
-        this.sourceConnectionInfo = Output.empty();
-        this.targetConnectionInfo = Output.empty();
+        this.backupBlobShare = Codegen.empty();
+        this.backupFileShare = Codegen.empty();
+        this.backupMode = Codegen.empty();
+        this.selectedAgentJobs = Codegen.empty();
+        this.selectedDatabases = Codegen.empty();
+        this.selectedLogins = Codegen.empty();
+        this.sourceConnectionInfo = Codegen.empty();
+        this.targetConnectionInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder backupFileShare(@Nullable FileShareArgs backupFileShare) {
-            this.backupFileShare = Output.ofNullable(backupFileShare);
+            this.backupFileShare = Codegen.ofNullable(backupFileShare);
             return this;
         }
         public Builder backupMode(@Nullable Output<Either<String,BackupMode>> backupMode) {
@@ -198,7 +199,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder backupMode(@Nullable Either<String,BackupMode> backupMode) {
-            this.backupMode = Output.ofNullable(backupMode);
+            this.backupMode = Codegen.ofNullable(backupMode);
             return this;
         }
         public Builder selectedAgentJobs(@Nullable Output<List<String>> selectedAgentJobs) {
@@ -206,7 +207,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder selectedAgentJobs(@Nullable List<String> selectedAgentJobs) {
-            this.selectedAgentJobs = Output.ofNullable(selectedAgentJobs);
+            this.selectedAgentJobs = Codegen.ofNullable(selectedAgentJobs);
             return this;
         }
         public Builder selectedAgentJobs(String... selectedAgentJobs) {
@@ -228,7 +229,7 @@ public final class MigrateSqlServerSqlMITaskInputArgs extends io.pulumi.resource
             return this;
         }
         public Builder selectedLogins(@Nullable List<String> selectedLogins) {
-            this.selectedLogins = Output.ofNullable(selectedLogins);
+            this.selectedLogins = Codegen.ofNullable(selectedLogins);
             return this;
         }
         public Builder selectedLogins(String... selectedLogins) {

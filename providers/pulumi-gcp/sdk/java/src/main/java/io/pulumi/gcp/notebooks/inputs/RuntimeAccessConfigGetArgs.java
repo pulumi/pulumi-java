@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> accessType;
 
     public Output<String> getAccessType() {
-        return this.accessType == null ? Output.empty() : this.accessType;
+        return this.accessType == null ? Codegen.empty() : this.accessType;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> proxyUri;
 
     public Output<String> getProxyUri() {
-        return this.proxyUri == null ? Output.empty() : this.proxyUri;
+        return this.proxyUri == null ? Codegen.empty() : this.proxyUri;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> runtimeOwner;
 
     public Output<String> getRuntimeOwner() {
-        return this.runtimeOwner == null ? Output.empty() : this.runtimeOwner;
+        return this.runtimeOwner == null ? Codegen.empty() : this.runtimeOwner;
     }
 
     public RuntimeAccessConfigGetArgs(
@@ -61,9 +62,9 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
     }
 
     private RuntimeAccessConfigGetArgs() {
-        this.accessType = Output.empty();
-        this.proxyUri = Output.empty();
-        this.runtimeOwner = Output.empty();
+        this.accessType = Codegen.empty();
+        this.proxyUri = Codegen.empty();
+        this.runtimeOwner = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder accessType(@Nullable String accessType) {
-            this.accessType = Output.ofNullable(accessType);
+            this.accessType = Codegen.ofNullable(accessType);
             return this;
         }
         public Builder proxyUri(@Nullable Output<String> proxyUri) {
@@ -103,7 +104,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder proxyUri(@Nullable String proxyUri) {
-            this.proxyUri = Output.ofNullable(proxyUri);
+            this.proxyUri = Codegen.ofNullable(proxyUri);
             return this;
         }
         public Builder runtimeOwner(@Nullable Output<String> runtimeOwner) {
@@ -111,7 +112,7 @@ public final class RuntimeAccessConfigGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder runtimeOwner(@Nullable String runtimeOwner) {
-            this.runtimeOwner = Output.ofNullable(runtimeOwner);
+            this.runtimeOwner = Codegen.ofNullable(runtimeOwner);
             return this;
         }        public RuntimeAccessConfigGetArgs build() {
             return new RuntimeAccessConfigGetArgs(accessType, proxyUri, runtimeOwner);

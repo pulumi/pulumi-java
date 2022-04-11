@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<ResourceRecordSetArgs>> localDatas;
 
     public Output<List<ResourceRecordSetArgs>> getLocalDatas() {
-        return this.localDatas == null ? Output.empty() : this.localDatas;
+        return this.localDatas == null ? Codegen.empty() : this.localDatas;
     }
 
     public ResponsePolicyRuleLocalDataArgs(@Nullable Output<List<ResourceRecordSetArgs>> localDatas) {
@@ -31,7 +32,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
     }
 
     private ResponsePolicyRuleLocalDataArgs() {
-        this.localDatas = Output.empty();
+        this.localDatas = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class ResponsePolicyRuleLocalDataArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder localDatas(@Nullable List<ResourceRecordSetArgs> localDatas) {
-            this.localDatas = Output.ofNullable(localDatas);
+            this.localDatas = Codegen.ofNullable(localDatas);
             return this;
         }
         public Builder localDatas(ResourceRecordSetArgs... localDatas) {

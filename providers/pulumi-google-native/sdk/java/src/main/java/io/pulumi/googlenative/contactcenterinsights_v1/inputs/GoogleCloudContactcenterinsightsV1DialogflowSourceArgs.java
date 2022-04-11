@@ -5,6 +5,7 @@ package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
       private final @Nullable Output<String> audioUri;
 
     public Output<String> getAudioUri() {
-        return this.audioUri == null ? Output.empty() : this.audioUri;
+        return this.audioUri == null ? Codegen.empty() : this.audioUri;
     }
 
     public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(@Nullable Output<String> audioUri) {
@@ -34,7 +35,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
     }
 
     private GoogleCloudContactcenterinsightsV1DialogflowSourceArgs() {
-        this.audioUri = Output.empty();
+        this.audioUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudContactcenterinsightsV1DialogflowSourceArgs extend
             return this;
         }
         public Builder audioUri(@Nullable String audioUri) {
-            this.audioUri = Output.ofNullable(audioUri);
+            this.audioUri = Codegen.ofNullable(audioUri);
             return this;
         }        public GoogleCloudContactcenterinsightsV1DialogflowSourceArgs build() {
             return new GoogleCloudContactcenterinsightsV1DialogflowSourceArgs(audioUri);

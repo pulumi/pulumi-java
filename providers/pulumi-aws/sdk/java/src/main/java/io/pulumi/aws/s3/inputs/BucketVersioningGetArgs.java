@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Boolean> mfaDelete;
 
     public Output<Boolean> getMfaDelete() {
-        return this.mfaDelete == null ? Output.empty() : this.mfaDelete;
+        return this.mfaDelete == null ? Codegen.empty() : this.mfaDelete;
     }
 
     public BucketVersioningGetArgs(
@@ -44,8 +45,8 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private BucketVersioningGetArgs() {
-        this.enabled = Output.empty();
-        this.mfaDelete = Output.empty();
+        this.enabled = Codegen.empty();
+        this.mfaDelete = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder mfaDelete(@Nullable Output<Boolean> mfaDelete) {
@@ -83,7 +84,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder mfaDelete(@Nullable Boolean mfaDelete) {
-            this.mfaDelete = Output.ofNullable(mfaDelete);
+            this.mfaDelete = Codegen.ofNullable(mfaDelete);
             return this;
         }        public BucketVersioningGetArgs build() {
             return new BucketVersioningGetArgs(enabled, mfaDelete);

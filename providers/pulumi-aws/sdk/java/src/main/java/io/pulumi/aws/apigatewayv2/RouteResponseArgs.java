@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> modelSelectionExpression;
 
     public Output<String> getModelSelectionExpression() {
-        return this.modelSelectionExpression == null ? Output.empty() : this.modelSelectionExpression;
+        return this.modelSelectionExpression == null ? Codegen.empty() : this.modelSelectionExpression;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> responseModels;
 
     public Output<Map<String,String>> getResponseModels() {
-        return this.responseModels == null ? Output.empty() : this.responseModels;
+        return this.responseModels == null ? Codegen.empty() : this.responseModels;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RouteResponseArgs() {
-        this.apiId = Output.empty();
-        this.modelSelectionExpression = Output.empty();
-        this.responseModels = Output.empty();
-        this.routeId = Output.empty();
-        this.routeResponseKey = Output.empty();
+        this.apiId = Codegen.empty();
+        this.modelSelectionExpression = Codegen.empty();
+        this.responseModels = Codegen.empty();
+        this.routeId = Codegen.empty();
+        this.routeResponseKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder modelSelectionExpression(@Nullable String modelSelectionExpression) {
-            this.modelSelectionExpression = Output.ofNullable(modelSelectionExpression);
+            this.modelSelectionExpression = Codegen.ofNullable(modelSelectionExpression);
             return this;
         }
         public Builder responseModels(@Nullable Output<Map<String,String>> responseModels) {
@@ -140,7 +141,7 @@ public final class RouteResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder responseModels(@Nullable Map<String,String> responseModels) {
-            this.responseModels = Output.ofNullable(responseModels);
+            this.responseModels = Codegen.ofNullable(responseModels);
             return this;
         }
         public Builder routeId(Output<String> routeId) {

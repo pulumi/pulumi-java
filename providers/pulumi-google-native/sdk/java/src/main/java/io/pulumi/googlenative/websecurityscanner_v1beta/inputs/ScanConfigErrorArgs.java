@@ -5,6 +5,7 @@ package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigErrorCode;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<ScanConfigErrorCode> code;
 
     public Output<ScanConfigErrorCode> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> fieldName;
 
     public Output<String> getFieldName() {
-        return this.fieldName == null ? Output.empty() : this.fieldName;
+        return this.fieldName == null ? Codegen.empty() : this.fieldName;
     }
 
     public ScanConfigErrorArgs(
@@ -49,8 +50,8 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ScanConfigErrorArgs() {
-        this.code = Output.empty();
-        this.fieldName = Output.empty();
+        this.code = Codegen.empty();
+        this.fieldName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder code(@Nullable ScanConfigErrorCode code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder fieldName(@Nullable Output<String> fieldName) {
@@ -88,7 +89,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder fieldName(@Nullable String fieldName) {
-            this.fieldName = Output.ofNullable(fieldName);
+            this.fieldName = Codegen.ofNullable(fieldName);
             return this;
         }        public ScanConfigErrorArgs build() {
             return new ScanConfigErrorArgs(code, fieldName);

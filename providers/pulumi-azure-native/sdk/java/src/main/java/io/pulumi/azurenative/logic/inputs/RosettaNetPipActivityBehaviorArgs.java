@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipConfidentialityScope;
 import io.pulumi.azurenative.logic.enums.RosettaNetResponseType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -129,14 +130,14 @@ public final class RosettaNetPipActivityBehaviorArgs extends io.pulumi.resources
     }
 
     private RosettaNetPipActivityBehaviorArgs() {
-        this.actionType = Output.empty();
-        this.isAuthorizationRequired = Output.empty();
-        this.isSecuredTransportRequired = Output.empty();
-        this.nonRepudiationOfOriginAndContent = Output.empty();
-        this.persistentConfidentialityScope = Output.empty();
-        this.responseType = Output.empty();
-        this.retryCount = Output.empty();
-        this.timeToPerformInSeconds = Output.empty();
+        this.actionType = Codegen.empty();
+        this.isAuthorizationRequired = Codegen.empty();
+        this.isSecuredTransportRequired = Codegen.empty();
+        this.nonRepudiationOfOriginAndContent = Codegen.empty();
+        this.persistentConfidentialityScope = Codegen.empty();
+        this.responseType = Codegen.empty();
+        this.retryCount = Codegen.empty();
+        this.timeToPerformInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {

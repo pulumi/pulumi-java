@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Integer> code;
 
     public Output<Integer> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<String>> recommendations;
 
     public Output<List<String>> getRecommendations() {
-        return this.recommendations == null ? Output.empty() : this.recommendations;
+        return this.recommendations == null ? Codegen.empty() : this.recommendations;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public MABContainerHealthDetailsArgs(
@@ -76,10 +77,10 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
     }
 
     private MABContainerHealthDetailsArgs() {
-        this.code = Output.empty();
-        this.message = Output.empty();
-        this.recommendations = Output.empty();
-        this.title = Output.empty();
+        this.code = Codegen.empty();
+        this.message = Codegen.empty();
+        this.recommendations = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder code(@Nullable Integer code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -121,7 +122,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder recommendations(@Nullable Output<List<String>> recommendations) {
@@ -129,7 +130,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder recommendations(@Nullable List<String> recommendations) {
-            this.recommendations = Output.ofNullable(recommendations);
+            this.recommendations = Codegen.ofNullable(recommendations);
             return this;
         }
         public Builder recommendations(String... recommendations) {
@@ -140,7 +141,7 @@ public final class MABContainerHealthDetailsArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public MABContainerHealthDetailsArgs build() {
             return new MABContainerHealthDetailsArgs(code, message, recommendations, title);

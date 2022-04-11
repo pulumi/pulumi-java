@@ -6,6 +6,7 @@ package io.pulumi.azurenative.operationalinsights;
 import io.pulumi.azurenative.operationalinsights.inputs.LogAnalyticsQueryPackQueryPropertiesRelatedArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> properties;
 
     public Output<Object> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> related;
 
     public Output<LogAnalyticsQueryPackQueryPropertiesRelatedArgs> getRelated() {
-        return this.related == null ? Output.empty() : this.related;
+        return this.related == null ? Codegen.empty() : this.related;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,List<String>>> tags;
 
     public Output<Map<String,List<String>>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public QueryArgs(
@@ -139,15 +140,15 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private QueryArgs() {
-        this.body = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.id = Output.empty();
-        this.properties = Output.empty();
-        this.queryPackName = Output.empty();
-        this.related = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.body = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.queryPackName = Codegen.empty();
+        this.related = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -199,7 +200,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -215,7 +216,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder properties(@Nullable Output<Object> properties) {
@@ -223,7 +224,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable Object properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder queryPackName(Output<String> queryPackName) {
@@ -239,7 +240,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder related(@Nullable LogAnalyticsQueryPackQueryPropertiesRelatedArgs related) {
-            this.related = Output.ofNullable(related);
+            this.related = Codegen.ofNullable(related);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -255,7 +256,7 @@ public final class QueryArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,List<String>> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public QueryArgs build() {
             return new QueryArgs(body, description, displayName, id, properties, queryPackName, related, resourceGroupName, tags);

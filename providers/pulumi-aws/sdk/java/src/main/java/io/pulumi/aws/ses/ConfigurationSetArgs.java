@@ -6,6 +6,7 @@ package io.pulumi.aws.ses;
 import io.pulumi.aws.ses.inputs.ConfigurationSetDeliveryOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ConfigurationSetDeliveryOptionsArgs> deliveryOptions;
 
     public Output<ConfigurationSetDeliveryOptionsArgs> getDeliveryOptions() {
-        return this.deliveryOptions == null ? Output.empty() : this.deliveryOptions;
+        return this.deliveryOptions == null ? Codegen.empty() : this.deliveryOptions;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> reputationMetricsEnabled;
 
     public Output<Boolean> getReputationMetricsEnabled() {
-        return this.reputationMetricsEnabled == null ? Output.empty() : this.reputationMetricsEnabled;
+        return this.reputationMetricsEnabled == null ? Codegen.empty() : this.reputationMetricsEnabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> sendingEnabled;
 
     public Output<Boolean> getSendingEnabled() {
-        return this.sendingEnabled == null ? Output.empty() : this.sendingEnabled;
+        return this.sendingEnabled == null ? Codegen.empty() : this.sendingEnabled;
     }
 
     public ConfigurationSetArgs(
@@ -72,10 +73,10 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ConfigurationSetArgs() {
-        this.deliveryOptions = Output.empty();
-        this.name = Output.empty();
-        this.reputationMetricsEnabled = Output.empty();
-        this.sendingEnabled = Output.empty();
+        this.deliveryOptions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.reputationMetricsEnabled = Codegen.empty();
+        this.sendingEnabled = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder deliveryOptions(@Nullable ConfigurationSetDeliveryOptionsArgs deliveryOptions) {
-            this.deliveryOptions = Output.ofNullable(deliveryOptions);
+            this.deliveryOptions = Codegen.ofNullable(deliveryOptions);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -117,7 +118,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder reputationMetricsEnabled(@Nullable Output<Boolean> reputationMetricsEnabled) {
@@ -125,7 +126,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder reputationMetricsEnabled(@Nullable Boolean reputationMetricsEnabled) {
-            this.reputationMetricsEnabled = Output.ofNullable(reputationMetricsEnabled);
+            this.reputationMetricsEnabled = Codegen.ofNullable(reputationMetricsEnabled);
             return this;
         }
         public Builder sendingEnabled(@Nullable Output<Boolean> sendingEnabled) {
@@ -133,7 +134,7 @@ public final class ConfigurationSetArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder sendingEnabled(@Nullable Boolean sendingEnabled) {
-            this.sendingEnabled = Output.ofNullable(sendingEnabled);
+            this.sendingEnabled = Codegen.ofNullable(sendingEnabled);
             return this;
         }        public ConfigurationSetArgs build() {
             return new ConfigurationSetArgs(deliveryOptions, name, reputationMetricsEnabled, sendingEnabled);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<String>> secondaryIpRangeNames;
 
     public Output<List<String>> getSecondaryIpRangeNames() {
-        return this.secondaryIpRangeNames == null ? Output.empty() : this.secondaryIpRangeNames;
+        return this.secondaryIpRangeNames == null ? Codegen.empty() : this.secondaryIpRangeNames;
     }
 
     /**
@@ -64,9 +65,9 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
     }
 
     private RouterNatSubnetworkGetArgs() {
-        this.name = Output.empty();
-        this.secondaryIpRangeNames = Output.empty();
-        this.sourceIpRangesToNats = Output.empty();
+        this.name = Codegen.empty();
+        this.secondaryIpRangeNames = Codegen.empty();
+        this.sourceIpRangesToNats = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class RouterNatSubnetworkGetArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder secondaryIpRangeNames(@Nullable List<String> secondaryIpRangeNames) {
-            this.secondaryIpRangeNames = Output.ofNullable(secondaryIpRangeNames);
+            this.secondaryIpRangeNames = Codegen.ofNullable(secondaryIpRangeNames);
             return this;
         }
         public Builder secondaryIpRangeNames(String... secondaryIpRangeNames) {

@@ -10,6 +10,7 @@ import io.pulumi.aws.dms.inputs.EndpointMongodbSettingsArgs;
 import io.pulumi.aws.dms.inputs.EndpointS3SettingsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> databaseName;
 
     public Output<String> getDatabaseName() {
-        return this.databaseName == null ? Output.empty() : this.databaseName;
+        return this.databaseName == null ? Codegen.empty() : this.databaseName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings;
 
     public Output<EndpointElasticsearchSettingsArgs> getElasticsearchSettings() {
-        return this.elasticsearchSettings == null ? Output.empty() : this.elasticsearchSettings;
+        return this.elasticsearchSettings == null ? Codegen.empty() : this.elasticsearchSettings;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> extraConnectionAttributes;
 
     public Output<String> getExtraConnectionAttributes() {
-        return this.extraConnectionAttributes == null ? Output.empty() : this.extraConnectionAttributes;
+        return this.extraConnectionAttributes == null ? Codegen.empty() : this.extraConnectionAttributes;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings;
 
     public Output<EndpointKafkaSettingsArgs> getKafkaSettings() {
-        return this.kafkaSettings == null ? Output.empty() : this.kafkaSettings;
+        return this.kafkaSettings == null ? Codegen.empty() : this.kafkaSettings;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings;
 
     public Output<EndpointKinesisSettingsArgs> getKinesisSettings() {
-        return this.kinesisSettings == null ? Output.empty() : this.kinesisSettings;
+        return this.kinesisSettings == null ? Codegen.empty() : this.kinesisSettings;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings;
 
     public Output<EndpointMongodbSettingsArgs> getMongodbSettings() {
-        return this.mongodbSettings == null ? Output.empty() : this.mongodbSettings;
+        return this.mongodbSettings == null ? Codegen.empty() : this.mongodbSettings;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -172,7 +173,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EndpointS3SettingsArgs> s3Settings;
 
     public Output<EndpointS3SettingsArgs> getS3Settings() {
-        return this.s3Settings == null ? Output.empty() : this.s3Settings;
+        return this.s3Settings == null ? Codegen.empty() : this.s3Settings;
     }
 
     /**
@@ -183,7 +184,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretsManagerAccessRoleArn;
 
     public Output<String> getSecretsManagerAccessRoleArn() {
-        return this.secretsManagerAccessRoleArn == null ? Output.empty() : this.secretsManagerAccessRoleArn;
+        return this.secretsManagerAccessRoleArn == null ? Codegen.empty() : this.secretsManagerAccessRoleArn;
     }
 
     /**
@@ -194,7 +195,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretsManagerArn;
 
     public Output<String> getSecretsManagerArn() {
-        return this.secretsManagerArn == null ? Output.empty() : this.secretsManagerArn;
+        return this.secretsManagerArn == null ? Codegen.empty() : this.secretsManagerArn;
     }
 
     /**
@@ -205,7 +206,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serverName;
 
     public Output<String> getServerName() {
-        return this.serverName == null ? Output.empty() : this.serverName;
+        return this.serverName == null ? Codegen.empty() : this.serverName;
     }
 
     /**
@@ -216,7 +217,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceAccessRole;
 
     public Output<String> getServiceAccessRole() {
-        return this.serviceAccessRole == null ? Output.empty() : this.serviceAccessRole;
+        return this.serviceAccessRole == null ? Codegen.empty() : this.serviceAccessRole;
     }
 
     /**
@@ -227,7 +228,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sslMode;
 
     public Output<String> getSslMode() {
-        return this.sslMode == null ? Output.empty() : this.sslMode;
+        return this.sslMode == null ? Codegen.empty() : this.sslMode;
     }
 
     /**
@@ -238,7 +239,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -249,7 +250,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public EndpointArgs(
@@ -298,27 +299,27 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EndpointArgs() {
-        this.certificateArn = Output.empty();
-        this.databaseName = Output.empty();
-        this.elasticsearchSettings = Output.empty();
-        this.endpointId = Output.empty();
-        this.endpointType = Output.empty();
-        this.engineName = Output.empty();
-        this.extraConnectionAttributes = Output.empty();
-        this.kafkaSettings = Output.empty();
-        this.kinesisSettings = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.mongodbSettings = Output.empty();
-        this.password = Output.empty();
-        this.port = Output.empty();
-        this.s3Settings = Output.empty();
-        this.secretsManagerAccessRoleArn = Output.empty();
-        this.secretsManagerArn = Output.empty();
-        this.serverName = Output.empty();
-        this.serviceAccessRole = Output.empty();
-        this.sslMode = Output.empty();
-        this.tags = Output.empty();
-        this.username = Output.empty();
+        this.certificateArn = Codegen.empty();
+        this.databaseName = Codegen.empty();
+        this.elasticsearchSettings = Codegen.empty();
+        this.endpointId = Codegen.empty();
+        this.endpointType = Codegen.empty();
+        this.engineName = Codegen.empty();
+        this.extraConnectionAttributes = Codegen.empty();
+        this.kafkaSettings = Codegen.empty();
+        this.kinesisSettings = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.mongodbSettings = Codegen.empty();
+        this.password = Codegen.empty();
+        this.port = Codegen.empty();
+        this.s3Settings = Codegen.empty();
+        this.secretsManagerAccessRoleArn = Codegen.empty();
+        this.secretsManagerArn = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.serviceAccessRole = Codegen.empty();
+        this.sslMode = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -386,7 +387,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder databaseName(@Nullable Output<String> databaseName) {
@@ -394,7 +395,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder databaseName(@Nullable String databaseName) {
-            this.databaseName = Output.ofNullable(databaseName);
+            this.databaseName = Codegen.ofNullable(databaseName);
             return this;
         }
         public Builder elasticsearchSettings(@Nullable Output<EndpointElasticsearchSettingsArgs> elasticsearchSettings) {
@@ -402,7 +403,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elasticsearchSettings(@Nullable EndpointElasticsearchSettingsArgs elasticsearchSettings) {
-            this.elasticsearchSettings = Output.ofNullable(elasticsearchSettings);
+            this.elasticsearchSettings = Codegen.ofNullable(elasticsearchSettings);
             return this;
         }
         public Builder endpointId(Output<String> endpointId) {
@@ -434,7 +435,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extraConnectionAttributes(@Nullable String extraConnectionAttributes) {
-            this.extraConnectionAttributes = Output.ofNullable(extraConnectionAttributes);
+            this.extraConnectionAttributes = Codegen.ofNullable(extraConnectionAttributes);
             return this;
         }
         public Builder kafkaSettings(@Nullable Output<EndpointKafkaSettingsArgs> kafkaSettings) {
@@ -442,7 +443,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kafkaSettings(@Nullable EndpointKafkaSettingsArgs kafkaSettings) {
-            this.kafkaSettings = Output.ofNullable(kafkaSettings);
+            this.kafkaSettings = Codegen.ofNullable(kafkaSettings);
             return this;
         }
         public Builder kinesisSettings(@Nullable Output<EndpointKinesisSettingsArgs> kinesisSettings) {
@@ -450,7 +451,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kinesisSettings(@Nullable EndpointKinesisSettingsArgs kinesisSettings) {
-            this.kinesisSettings = Output.ofNullable(kinesisSettings);
+            this.kinesisSettings = Codegen.ofNullable(kinesisSettings);
             return this;
         }
         public Builder kmsKeyArn(@Nullable Output<String> kmsKeyArn) {
@@ -458,7 +459,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder mongodbSettings(@Nullable Output<EndpointMongodbSettingsArgs> mongodbSettings) {
@@ -466,7 +467,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mongodbSettings(@Nullable EndpointMongodbSettingsArgs mongodbSettings) {
-            this.mongodbSettings = Output.ofNullable(mongodbSettings);
+            this.mongodbSettings = Codegen.ofNullable(mongodbSettings);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -474,7 +475,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -482,7 +483,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder s3Settings(@Nullable Output<EndpointS3SettingsArgs> s3Settings) {
@@ -490,7 +491,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder s3Settings(@Nullable EndpointS3SettingsArgs s3Settings) {
-            this.s3Settings = Output.ofNullable(s3Settings);
+            this.s3Settings = Codegen.ofNullable(s3Settings);
             return this;
         }
         public Builder secretsManagerAccessRoleArn(@Nullable Output<String> secretsManagerAccessRoleArn) {
@@ -498,7 +499,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretsManagerAccessRoleArn(@Nullable String secretsManagerAccessRoleArn) {
-            this.secretsManagerAccessRoleArn = Output.ofNullable(secretsManagerAccessRoleArn);
+            this.secretsManagerAccessRoleArn = Codegen.ofNullable(secretsManagerAccessRoleArn);
             return this;
         }
         public Builder secretsManagerArn(@Nullable Output<String> secretsManagerArn) {
@@ -506,7 +507,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretsManagerArn(@Nullable String secretsManagerArn) {
-            this.secretsManagerArn = Output.ofNullable(secretsManagerArn);
+            this.secretsManagerArn = Codegen.ofNullable(secretsManagerArn);
             return this;
         }
         public Builder serverName(@Nullable Output<String> serverName) {
@@ -514,7 +515,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverName(@Nullable String serverName) {
-            this.serverName = Output.ofNullable(serverName);
+            this.serverName = Codegen.ofNullable(serverName);
             return this;
         }
         public Builder serviceAccessRole(@Nullable Output<String> serviceAccessRole) {
@@ -522,7 +523,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceAccessRole(@Nullable String serviceAccessRole) {
-            this.serviceAccessRole = Output.ofNullable(serviceAccessRole);
+            this.serviceAccessRole = Codegen.ofNullable(serviceAccessRole);
             return this;
         }
         public Builder sslMode(@Nullable Output<String> sslMode) {
@@ -530,7 +531,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslMode(@Nullable String sslMode) {
-            this.sslMode = Output.ofNullable(sslMode);
+            this.sslMode = Codegen.ofNullable(sslMode);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -538,7 +539,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -546,7 +547,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public EndpointArgs build() {
             return new EndpointArgs(certificateArn, databaseName, elasticsearchSettings, endpointId, endpointType, engineName, extraConnectionAttributes, kafkaSettings, kinesisSettings, kmsKeyArn, mongodbSettings, password, port, s3Settings, secretsManagerAccessRoleArn, secretsManagerArn, serverName, serviceAccessRole, sslMode, tags, username);

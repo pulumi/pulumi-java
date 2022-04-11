@@ -6,6 +6,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 import io.pulumi.awsnative.quicksight.inputs.ThemeBorderStyleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,7 +23,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ThemeBorderStyleArgs> border;
 
     public Output<ThemeBorderStyleArgs> getBorder() {
-        return this.border == null ? Output.empty() : this.border;
+        return this.border == null ? Codegen.empty() : this.border;
     }
 
     public ThemeTileStyleArgs(@Nullable Output<ThemeBorderStyleArgs> border) {
@@ -30,7 +31,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ThemeTileStyleArgs() {
-        this.border = Output.empty();
+        this.border = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -58,7 +59,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder border(@Nullable ThemeBorderStyleArgs border) {
-            this.border = Output.ofNullable(border);
+            this.border = Codegen.ofNullable(border);
             return this;
         }        public ThemeTileStyleArgs build() {
             return new ThemeTileStyleArgs(border);

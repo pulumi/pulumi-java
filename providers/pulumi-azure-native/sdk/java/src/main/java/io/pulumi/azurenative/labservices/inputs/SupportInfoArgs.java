@@ -5,6 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> email;
 
     public Output<String> getEmail() {
-        return this.email == null ? Output.empty() : this.email;
+        return this.email == null ? Codegen.empty() : this.email;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instructions;
 
     public Output<String> getInstructions() {
-        return this.instructions == null ? Output.empty() : this.instructions;
+        return this.instructions == null ? Codegen.empty() : this.instructions;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> phone;
 
     public Output<String> getPhone() {
-        return this.phone == null ? Output.empty() : this.phone;
+        return this.phone == null ? Codegen.empty() : this.phone;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public SupportInfoArgs(
@@ -74,10 +75,10 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SupportInfoArgs() {
-        this.email = Output.empty();
-        this.instructions = Output.empty();
-        this.phone = Output.empty();
-        this.url = Output.empty();
+        this.email = Codegen.empty();
+        this.instructions = Codegen.empty();
+        this.phone = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder email(@Nullable String email) {
-            this.email = Output.ofNullable(email);
+            this.email = Codegen.ofNullable(email);
             return this;
         }
         public Builder instructions(@Nullable Output<String> instructions) {
@@ -119,7 +120,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instructions(@Nullable String instructions) {
-            this.instructions = Output.ofNullable(instructions);
+            this.instructions = Codegen.ofNullable(instructions);
             return this;
         }
         public Builder phone(@Nullable Output<String> phone) {
@@ -127,7 +128,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder phone(@Nullable String phone) {
-            this.phone = Output.ofNullable(phone);
+            this.phone = Codegen.ofNullable(phone);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -135,7 +136,7 @@ public final class SupportInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public SupportInfoArgs build() {
             return new SupportInfoArgs(email, instructions, phone, url);

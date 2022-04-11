@@ -6,6 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.FieldDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -36,7 +37,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> connectionTypeName;
 
     public Output<String> getConnectionTypeName() {
-        return this.connectionTypeName == null ? Output.empty() : this.connectionTypeName;
+        return this.connectionTypeName == null ? Codegen.empty() : this.connectionTypeName;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isGlobal;
 
     public Output<Boolean> getIsGlobal() {
-        return this.isGlobal == null ? Output.empty() : this.isGlobal;
+        return this.isGlobal == null ? Codegen.empty() : this.isGlobal;
     }
 
     /**
@@ -99,12 +100,12 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ConnectionTypeArgs() {
-        this.automationAccountName = Output.empty();
-        this.connectionTypeName = Output.empty();
-        this.fieldDefinitions = Output.empty();
-        this.isGlobal = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.connectionTypeName = Codegen.empty();
+        this.fieldDefinitions = Codegen.empty();
+        this.isGlobal = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -150,7 +151,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectionTypeName(@Nullable String connectionTypeName) {
-            this.connectionTypeName = Output.ofNullable(connectionTypeName);
+            this.connectionTypeName = Codegen.ofNullable(connectionTypeName);
             return this;
         }
         public Builder fieldDefinitions(Output<Map<String,FieldDefinitionArgs>> fieldDefinitions) {
@@ -166,7 +167,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isGlobal(@Nullable Boolean isGlobal) {
-            this.isGlobal = Output.ofNullable(isGlobal);
+            this.isGlobal = Codegen.ofNullable(isGlobal);
             return this;
         }
         public Builder name(Output<String> name) {

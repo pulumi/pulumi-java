@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
       private final @Nullable Output<String> lastUpdateTime;
 
     public Output<String> getLastUpdateTime() {
-        return this.lastUpdateTime == null ? Output.empty() : this.lastUpdateTime;
+        return this.lastUpdateTime == null ? Codegen.empty() : this.lastUpdateTime;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics;
 
     public Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> getVersionMetrics() {
-        return this.versionMetrics == null ? Output.empty() : this.versionMetrics;
+        return this.versionMetrics == null ? Codegen.empty() : this.versionMetrics;
     }
 
     public GoogleCloudDialogflowCxV3ExperimentResultArgs(
@@ -50,8 +51,8 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
     }
 
     private GoogleCloudDialogflowCxV3ExperimentResultArgs() {
-        this.lastUpdateTime = Output.empty();
-        this.versionMetrics = Output.empty();
+        this.lastUpdateTime = Codegen.empty();
+        this.versionMetrics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
             return this;
         }
         public Builder lastUpdateTime(@Nullable String lastUpdateTime) {
-            this.lastUpdateTime = Output.ofNullable(lastUpdateTime);
+            this.lastUpdateTime = Codegen.ofNullable(lastUpdateTime);
             return this;
         }
         public Builder versionMetrics(@Nullable Output<List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs>> versionMetrics) {
@@ -89,7 +90,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultArgs extends io.pulu
             return this;
         }
         public Builder versionMetrics(@Nullable List<GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs> versionMetrics) {
-            this.versionMetrics = Output.ofNullable(versionMetrics);
+            this.versionMetrics = Codegen.ofNullable(versionMetrics);
             return this;
         }
         public Builder versionMetrics(GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsArgs... versionMetrics) {

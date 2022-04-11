@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.PublicDelegatedPrefixArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.PublicDelegatedPrefixPublicDelegatedSubPrefixResponse;
@@ -225,7 +226,7 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PublicDelegatedPrefix(String name, PublicDelegatedPrefixArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:PublicDelegatedPrefix", name, args == null ? PublicDelegatedPrefixArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:PublicDelegatedPrefix", name, args == null ? PublicDelegatedPrefixArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PublicDelegatedPrefix(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

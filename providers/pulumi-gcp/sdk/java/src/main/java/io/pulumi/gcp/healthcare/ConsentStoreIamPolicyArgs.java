@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,9 +60,9 @@ public final class ConsentStoreIamPolicyArgs extends io.pulumi.resources.Resourc
     }
 
     private ConsentStoreIamPolicyArgs() {
-        this.consentStoreId = Output.empty();
-        this.dataset = Output.empty();
-        this.policyData = Output.empty();
+        this.consentStoreId = Codegen.empty();
+        this.dataset = Codegen.empty();
+        this.policyData = Codegen.empty();
     }
 
     public static Builder builder() {

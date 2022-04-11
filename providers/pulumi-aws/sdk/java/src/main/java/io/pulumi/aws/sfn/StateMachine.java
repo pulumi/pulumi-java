@@ -11,6 +11,7 @@ import io.pulumi.aws.sfn.outputs.StateMachineTracingConfiguration;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -208,7 +209,7 @@ public class StateMachine extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StateMachine(String name, StateMachineArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:sfn/stateMachine:StateMachine", name, args == null ? StateMachineArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:sfn/stateMachine:StateMachine", name, args == null ? StateMachineArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StateMachine(String name, Output<String> id, @Nullable StateMachineState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

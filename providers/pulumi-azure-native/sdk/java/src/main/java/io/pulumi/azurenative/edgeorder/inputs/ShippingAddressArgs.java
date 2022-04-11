@@ -7,6 +7,7 @@ import io.pulumi.azurenative.edgeorder.enums.AddressType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Either<String,AddressType>> addressType;
 
     public Output<Either<String,AddressType>> getAddressType() {
-        return this.addressType == null ? Output.empty() : this.addressType;
+        return this.addressType == null ? Codegen.empty() : this.addressType;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> city;
 
     public Output<String> getCity() {
-        return this.city == null ? Output.empty() : this.city;
+        return this.city == null ? Codegen.empty() : this.city;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> companyName;
 
     public Output<String> getCompanyName() {
-        return this.companyName == null ? Output.empty() : this.companyName;
+        return this.companyName == null ? Codegen.empty() : this.companyName;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> postalCode;
 
     public Output<String> getPostalCode() {
-        return this.postalCode == null ? Output.empty() : this.postalCode;
+        return this.postalCode == null ? Codegen.empty() : this.postalCode;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> stateOrProvince;
 
     public Output<String> getStateOrProvince() {
-        return this.stateOrProvince == null ? Output.empty() : this.stateOrProvince;
+        return this.stateOrProvince == null ? Codegen.empty() : this.stateOrProvince;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> streetAddress2;
 
     public Output<String> getStreetAddress2() {
-        return this.streetAddress2 == null ? Output.empty() : this.streetAddress2;
+        return this.streetAddress2 == null ? Codegen.empty() : this.streetAddress2;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> streetAddress3;
 
     public Output<String> getStreetAddress3() {
-        return this.streetAddress3 == null ? Output.empty() : this.streetAddress3;
+        return this.streetAddress3 == null ? Codegen.empty() : this.streetAddress3;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> zipExtendedCode;
 
     public Output<String> getZipExtendedCode() {
-        return this.zipExtendedCode == null ? Output.empty() : this.zipExtendedCode;
+        return this.zipExtendedCode == null ? Codegen.empty() : this.zipExtendedCode;
     }
 
     public ShippingAddressArgs(
@@ -154,16 +155,16 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ShippingAddressArgs() {
-        this.addressType = Output.empty();
-        this.city = Output.empty();
-        this.companyName = Output.empty();
-        this.country = Output.empty();
-        this.postalCode = Output.empty();
-        this.stateOrProvince = Output.empty();
-        this.streetAddress1 = Output.empty();
-        this.streetAddress2 = Output.empty();
-        this.streetAddress3 = Output.empty();
-        this.zipExtendedCode = Output.empty();
+        this.addressType = Codegen.empty();
+        this.city = Codegen.empty();
+        this.companyName = Codegen.empty();
+        this.country = Codegen.empty();
+        this.postalCode = Codegen.empty();
+        this.stateOrProvince = Codegen.empty();
+        this.streetAddress1 = Codegen.empty();
+        this.streetAddress2 = Codegen.empty();
+        this.streetAddress3 = Codegen.empty();
+        this.zipExtendedCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -209,7 +210,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder addressType(@Nullable Either<String,AddressType> addressType) {
-            this.addressType = Output.ofNullable(addressType);
+            this.addressType = Codegen.ofNullable(addressType);
             return this;
         }
         public Builder city(@Nullable Output<String> city) {
@@ -217,7 +218,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder city(@Nullable String city) {
-            this.city = Output.ofNullable(city);
+            this.city = Codegen.ofNullable(city);
             return this;
         }
         public Builder companyName(@Nullable Output<String> companyName) {
@@ -225,7 +226,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder companyName(@Nullable String companyName) {
-            this.companyName = Output.ofNullable(companyName);
+            this.companyName = Codegen.ofNullable(companyName);
             return this;
         }
         public Builder country(Output<String> country) {
@@ -241,7 +242,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder postalCode(@Nullable String postalCode) {
-            this.postalCode = Output.ofNullable(postalCode);
+            this.postalCode = Codegen.ofNullable(postalCode);
             return this;
         }
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
@@ -249,7 +250,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder stateOrProvince(@Nullable String stateOrProvince) {
-            this.stateOrProvince = Output.ofNullable(stateOrProvince);
+            this.stateOrProvince = Codegen.ofNullable(stateOrProvince);
             return this;
         }
         public Builder streetAddress1(Output<String> streetAddress1) {
@@ -265,7 +266,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder streetAddress2(@Nullable String streetAddress2) {
-            this.streetAddress2 = Output.ofNullable(streetAddress2);
+            this.streetAddress2 = Codegen.ofNullable(streetAddress2);
             return this;
         }
         public Builder streetAddress3(@Nullable Output<String> streetAddress3) {
@@ -273,7 +274,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder streetAddress3(@Nullable String streetAddress3) {
-            this.streetAddress3 = Output.ofNullable(streetAddress3);
+            this.streetAddress3 = Codegen.ofNullable(streetAddress3);
             return this;
         }
         public Builder zipExtendedCode(@Nullable Output<String> zipExtendedCode) {
@@ -281,7 +282,7 @@ public final class ShippingAddressArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder zipExtendedCode(@Nullable String zipExtendedCode) {
-            this.zipExtendedCode = Output.ofNullable(zipExtendedCode);
+            this.zipExtendedCode = Codegen.ofNullable(zipExtendedCode);
             return this;
         }        public ShippingAddressArgs build() {
             return new ShippingAddressArgs(addressType, city, companyName, country, postalCode, stateOrProvince, streetAddress1, streetAddress2, streetAddress3, zipExtendedCode);

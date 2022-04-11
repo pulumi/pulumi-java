@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeInfoTypeGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInf
     }
 
     private PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs() {
-        this.infoType = Output.empty();
-        this.maxFindings = Output.empty();
+        this.infoType = Codegen.empty();
+        this.maxFindings = Codegen.empty();
     }
 
     public static Builder builder() {

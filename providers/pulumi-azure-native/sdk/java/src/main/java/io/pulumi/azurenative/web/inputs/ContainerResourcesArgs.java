@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> memory;
 
     public Output<String> getMemory() {
-        return this.memory == null ? Output.empty() : this.memory;
+        return this.memory == null ? Codegen.empty() : this.memory;
     }
 
     public ContainerResourcesArgs(
@@ -49,8 +50,8 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
     }
 
     private ContainerResourcesArgs() {
-        this.cpu = Output.empty();
-        this.memory = Output.empty();
+        this.cpu = Codegen.empty();
+        this.memory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder memory(@Nullable Output<String> memory) {
@@ -88,7 +89,7 @@ public final class ContainerResourcesArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder memory(@Nullable String memory) {
-            this.memory = Output.ofNullable(memory);
+            this.memory = Codegen.ofNullable(memory);
             return this;
         }        public ContainerResourcesArgs build() {
             return new ContainerResourcesArgs(cpu, memory);

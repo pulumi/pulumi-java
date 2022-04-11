@@ -8,6 +8,7 @@ import io.pulumi.azurenative.sql.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
       private final @Nullable Output<Either<String,AdministratorType>> administratorType;
 
     public Output<Either<String,AdministratorType>> getAdministratorType() {
-        return this.administratorType == null ? Output.empty() : this.administratorType;
+        return this.administratorType == null ? Codegen.empty() : this.administratorType;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
       private final @Nullable Output<Boolean> azureADOnlyAuthentication;
 
     public Output<Boolean> getAzureADOnlyAuthentication() {
-        return this.azureADOnlyAuthentication == null ? Output.empty() : this.azureADOnlyAuthentication;
+        return this.azureADOnlyAuthentication == null ? Codegen.empty() : this.azureADOnlyAuthentication;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
       private final @Nullable Output<String> login;
 
     public Output<String> getLogin() {
-        return this.login == null ? Output.empty() : this.login;
+        return this.login == null ? Codegen.empty() : this.login;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
       private final @Nullable Output<Either<String,PrincipalType>> principalType;
 
     public Output<Either<String,PrincipalType>> getPrincipalType() {
-        return this.principalType == null ? Output.empty() : this.principalType;
+        return this.principalType == null ? Codegen.empty() : this.principalType;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
       private final @Nullable Output<String> sid;
 
     public Output<String> getSid() {
-        return this.sid == null ? Output.empty() : this.sid;
+        return this.sid == null ? Codegen.empty() : this.sid;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ManagedInstanceExternalAdministratorArgs(
@@ -104,12 +105,12 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
     }
 
     private ManagedInstanceExternalAdministratorArgs() {
-        this.administratorType = Output.empty();
-        this.azureADOnlyAuthentication = Output.empty();
-        this.login = Output.empty();
-        this.principalType = Output.empty();
-        this.sid = Output.empty();
-        this.tenantId = Output.empty();
+        this.administratorType = Codegen.empty();
+        this.azureADOnlyAuthentication = Codegen.empty();
+        this.login = Codegen.empty();
+        this.principalType = Codegen.empty();
+        this.sid = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             return this;
         }
         public Builder administratorType(@Nullable Either<String,AdministratorType> administratorType) {
-            this.administratorType = Output.ofNullable(administratorType);
+            this.administratorType = Codegen.ofNullable(administratorType);
             return this;
         }
         public Builder azureADOnlyAuthentication(@Nullable Output<Boolean> azureADOnlyAuthentication) {
@@ -155,7 +156,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             return this;
         }
         public Builder azureADOnlyAuthentication(@Nullable Boolean azureADOnlyAuthentication) {
-            this.azureADOnlyAuthentication = Output.ofNullable(azureADOnlyAuthentication);
+            this.azureADOnlyAuthentication = Codegen.ofNullable(azureADOnlyAuthentication);
             return this;
         }
         public Builder login(@Nullable Output<String> login) {
@@ -163,7 +164,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             return this;
         }
         public Builder login(@Nullable String login) {
-            this.login = Output.ofNullable(login);
+            this.login = Codegen.ofNullable(login);
             return this;
         }
         public Builder principalType(@Nullable Output<Either<String,PrincipalType>> principalType) {
@@ -171,7 +172,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             return this;
         }
         public Builder principalType(@Nullable Either<String,PrincipalType> principalType) {
-            this.principalType = Output.ofNullable(principalType);
+            this.principalType = Codegen.ofNullable(principalType);
             return this;
         }
         public Builder sid(@Nullable Output<String> sid) {
@@ -179,7 +180,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             return this;
         }
         public Builder sid(@Nullable String sid) {
-            this.sid = Output.ofNullable(sid);
+            this.sid = Codegen.ofNullable(sid);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -187,7 +188,7 @@ public final class ManagedInstanceExternalAdministratorArgs extends io.pulumi.re
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ManagedInstanceExternalAdministratorArgs build() {
             return new ManagedInstanceExternalAdministratorArgs(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);

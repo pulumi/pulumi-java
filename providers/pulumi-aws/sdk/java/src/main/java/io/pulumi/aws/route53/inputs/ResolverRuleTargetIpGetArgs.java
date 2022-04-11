@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public ResolverRuleTargetIpGetArgs(
@@ -45,8 +46,8 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
     }
 
     private ResolverRuleTargetIpGetArgs() {
-        this.ip = Output.empty();
-        this.port = Output.empty();
+        this.ip = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class ResolverRuleTargetIpGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public ResolverRuleTargetIpGetArgs build() {
             return new ResolverRuleTargetIpGetArgs(ip, port);

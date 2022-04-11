@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,21 +19,21 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
       private final @Nullable Output<Boolean> crossResourceGroupMoveEnabled;
 
     public Output<Boolean> getCrossResourceGroupMoveEnabled() {
-        return this.crossResourceGroupMoveEnabled == null ? Output.empty() : this.crossResourceGroupMoveEnabled;
+        return this.crossResourceGroupMoveEnabled == null ? Codegen.empty() : this.crossResourceGroupMoveEnabled;
     }
 
     @Import(name="crossSubscriptionMoveEnabled")
       private final @Nullable Output<Boolean> crossSubscriptionMoveEnabled;
 
     public Output<Boolean> getCrossSubscriptionMoveEnabled() {
-        return this.crossSubscriptionMoveEnabled == null ? Output.empty() : this.crossSubscriptionMoveEnabled;
+        return this.crossSubscriptionMoveEnabled == null ? Codegen.empty() : this.crossSubscriptionMoveEnabled;
     }
 
     @Import(name="validationRequired")
       private final @Nullable Output<Boolean> validationRequired;
 
     public Output<Boolean> getValidationRequired() {
-        return this.validationRequired == null ? Output.empty() : this.validationRequired;
+        return this.validationRequired == null ? Codegen.empty() : this.validationRequired;
     }
 
     public ResourceTypeRegistrationPropertiesResourceMovePolicyArgs(
@@ -45,9 +46,9 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
     }
 
     private ResourceTypeRegistrationPropertiesResourceMovePolicyArgs() {
-        this.crossResourceGroupMoveEnabled = Output.empty();
-        this.crossSubscriptionMoveEnabled = Output.empty();
-        this.validationRequired = Output.empty();
+        this.crossResourceGroupMoveEnabled = Codegen.empty();
+        this.crossSubscriptionMoveEnabled = Codegen.empty();
+        this.validationRequired = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
             return this;
         }
         public Builder crossResourceGroupMoveEnabled(@Nullable Boolean crossResourceGroupMoveEnabled) {
-            this.crossResourceGroupMoveEnabled = Output.ofNullable(crossResourceGroupMoveEnabled);
+            this.crossResourceGroupMoveEnabled = Codegen.ofNullable(crossResourceGroupMoveEnabled);
             return this;
         }
         public Builder crossSubscriptionMoveEnabled(@Nullable Output<Boolean> crossSubscriptionMoveEnabled) {
@@ -87,7 +88,7 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
             return this;
         }
         public Builder crossSubscriptionMoveEnabled(@Nullable Boolean crossSubscriptionMoveEnabled) {
-            this.crossSubscriptionMoveEnabled = Output.ofNullable(crossSubscriptionMoveEnabled);
+            this.crossSubscriptionMoveEnabled = Codegen.ofNullable(crossSubscriptionMoveEnabled);
             return this;
         }
         public Builder validationRequired(@Nullable Output<Boolean> validationRequired) {
@@ -95,7 +96,7 @@ public final class ResourceTypeRegistrationPropertiesResourceMovePolicyArgs exte
             return this;
         }
         public Builder validationRequired(@Nullable Boolean validationRequired) {
-            this.validationRequired = Output.ofNullable(validationRequired);
+            this.validationRequired = Codegen.ofNullable(validationRequired);
             return this;
         }        public ResourceTypeRegistrationPropertiesResourceMovePolicyArgs build() {
             return new ResourceTypeRegistrationPropertiesResourceMovePolicyArgs(crossResourceGroupMoveEnabled, crossSubscriptionMoveEnabled, validationRequired);

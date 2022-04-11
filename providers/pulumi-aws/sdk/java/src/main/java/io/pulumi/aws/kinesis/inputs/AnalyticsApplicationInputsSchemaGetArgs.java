@@ -7,6 +7,7 @@ import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordColumn
 import io.pulumi.aws.kinesis.inputs.AnalyticsApplicationInputsSchemaRecordFormatGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
       private final @Nullable Output<String> recordEncoding;
 
     public Output<String> getRecordEncoding() {
-        return this.recordEncoding == null ? Output.empty() : this.recordEncoding;
+        return this.recordEncoding == null ? Codegen.empty() : this.recordEncoding;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
     }
 
     private AnalyticsApplicationInputsSchemaGetArgs() {
-        this.recordColumns = Output.empty();
-        this.recordEncoding = Output.empty();
-        this.recordFormat = Output.empty();
+        this.recordColumns = Codegen.empty();
+        this.recordEncoding = Codegen.empty();
+        this.recordFormat = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class AnalyticsApplicationInputsSchemaGetArgs extends io.pulumi.res
             return this;
         }
         public Builder recordEncoding(@Nullable String recordEncoding) {
-            this.recordEncoding = Output.ofNullable(recordEncoding);
+            this.recordEncoding = Codegen.ofNullable(recordEncoding);
             return this;
         }
         public Builder recordFormat(Output<AnalyticsApplicationInputsSchemaRecordFormatGetArgs> recordFormat) {

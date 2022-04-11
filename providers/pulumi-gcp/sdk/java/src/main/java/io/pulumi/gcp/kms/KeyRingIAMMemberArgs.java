@@ -5,6 +5,7 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<KeyRingIAMMemberConditionArgs> condition;
 
     public Output<KeyRingIAMMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private KeyRingIAMMemberArgs() {
-        this.condition = Output.empty();
-        this.keyRingId = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.keyRingId = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable KeyRingIAMMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder keyRingId(Output<String> keyRingId) {

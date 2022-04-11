@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.TrialState;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_Trial_ParameterArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__MeasurementArgs;
@@ -26,14 +27,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudMlV1__MeasurementArgs> finalMeasurement;
 
     public Output<GoogleCloudMlV1__MeasurementArgs> getFinalMeasurement() {
-        return this.finalMeasurement == null ? Output.empty() : this.finalMeasurement;
+        return this.finalMeasurement == null ? Codegen.empty() : this.finalMeasurement;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements;
 
     public Output<List<GoogleCloudMlV1__MeasurementArgs>> getMeasurements() {
-        return this.measurements == null ? Output.empty() : this.measurements;
+        return this.measurements == null ? Codegen.empty() : this.measurements;
     }
 
     /**
@@ -55,14 +56,14 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> parameters;
 
     public Output<List<GoogleCloudMlV1_Trial_ParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TrialState> state;
 
     public Output<TrialState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="studyId", required=true)
@@ -101,13 +102,13 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrialArgs() {
-        this.finalMeasurement = Output.empty();
-        this.location = Output.empty();
-        this.measurements = Output.empty();
-        this.parameters = Output.empty();
-        this.project = Output.empty();
-        this.state = Output.empty();
-        this.studyId = Output.empty();
+        this.finalMeasurement = Codegen.empty();
+        this.location = Codegen.empty();
+        this.measurements = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.project = Codegen.empty();
+        this.state = Codegen.empty();
+        this.studyId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -147,7 +148,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder finalMeasurement(@Nullable GoogleCloudMlV1__MeasurementArgs finalMeasurement) {
-            this.finalMeasurement = Output.ofNullable(finalMeasurement);
+            this.finalMeasurement = Codegen.ofNullable(finalMeasurement);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -155,7 +156,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder measurements(@Nullable Output<List<GoogleCloudMlV1__MeasurementArgs>> measurements) {
@@ -163,7 +164,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder measurements(@Nullable List<GoogleCloudMlV1__MeasurementArgs> measurements) {
-            this.measurements = Output.ofNullable(measurements);
+            this.measurements = Codegen.ofNullable(measurements);
             return this;
         }
         public Builder measurements(GoogleCloudMlV1__MeasurementArgs... measurements) {
@@ -174,7 +175,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<GoogleCloudMlV1_Trial_ParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(GoogleCloudMlV1_Trial_ParameterArgs... parameters) {
@@ -185,7 +186,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder state(@Nullable Output<TrialState> state) {
@@ -193,7 +194,7 @@ public final class TrialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable TrialState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder studyId(Output<String> studyId) {

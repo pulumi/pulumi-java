@@ -8,6 +8,7 @@ import io.pulumi.aws.s3.inputs.BucketNotificationQueueArgs;
 import io.pulumi.aws.s3.inputs.BucketNotificationTopicArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +39,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> eventbridge;
 
     public Output<Boolean> getEventbridge() {
-        return this.eventbridge == null ? Output.empty() : this.eventbridge;
+        return this.eventbridge == null ? Codegen.empty() : this.eventbridge;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions;
 
     public Output<List<BucketNotificationLambdaFunctionArgs>> getLambdaFunctions() {
-        return this.lambdaFunctions == null ? Output.empty() : this.lambdaFunctions;
+        return this.lambdaFunctions == null ? Codegen.empty() : this.lambdaFunctions;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<BucketNotificationQueueArgs>> queues;
 
     public Output<List<BucketNotificationQueueArgs>> getQueues() {
-        return this.queues == null ? Output.empty() : this.queues;
+        return this.queues == null ? Codegen.empty() : this.queues;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<List<BucketNotificationTopicArgs>> topics;
 
     public Output<List<BucketNotificationTopicArgs>> getTopics() {
-        return this.topics == null ? Output.empty() : this.topics;
+        return this.topics == null ? Codegen.empty() : this.topics;
     }
 
     public BucketNotificationArgs(
@@ -88,11 +89,11 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
     }
 
     private BucketNotificationArgs() {
-        this.bucket = Output.empty();
-        this.eventbridge = Output.empty();
-        this.lambdaFunctions = Output.empty();
-        this.queues = Output.empty();
-        this.topics = Output.empty();
+        this.bucket = Codegen.empty();
+        this.eventbridge = Codegen.empty();
+        this.lambdaFunctions = Codegen.empty();
+        this.queues = Codegen.empty();
+        this.topics = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder eventbridge(@Nullable Boolean eventbridge) {
-            this.eventbridge = Output.ofNullable(eventbridge);
+            this.eventbridge = Codegen.ofNullable(eventbridge);
             return this;
         }
         public Builder lambdaFunctions(@Nullable Output<List<BucketNotificationLambdaFunctionArgs>> lambdaFunctions) {
@@ -144,7 +145,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder lambdaFunctions(@Nullable List<BucketNotificationLambdaFunctionArgs> lambdaFunctions) {
-            this.lambdaFunctions = Output.ofNullable(lambdaFunctions);
+            this.lambdaFunctions = Codegen.ofNullable(lambdaFunctions);
             return this;
         }
         public Builder lambdaFunctions(BucketNotificationLambdaFunctionArgs... lambdaFunctions) {
@@ -155,7 +156,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder queues(@Nullable List<BucketNotificationQueueArgs> queues) {
-            this.queues = Output.ofNullable(queues);
+            this.queues = Codegen.ofNullable(queues);
             return this;
         }
         public Builder queues(BucketNotificationQueueArgs... queues) {
@@ -166,7 +167,7 @@ public final class BucketNotificationArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder topics(@Nullable List<BucketNotificationTopicArgs> topics) {
-            this.topics = Output.ofNullable(topics);
+            this.topics = Codegen.ofNullable(topics);
             return this;
         }
         public Builder topics(BucketNotificationTopicArgs... topics) {

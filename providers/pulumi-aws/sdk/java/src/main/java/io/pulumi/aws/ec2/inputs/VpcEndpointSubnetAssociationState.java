@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
       private final @Nullable Output<String> vpcEndpointId;
 
     public Output<String> getVpcEndpointId() {
-        return this.vpcEndpointId == null ? Output.empty() : this.vpcEndpointId;
+        return this.vpcEndpointId == null ? Codegen.empty() : this.vpcEndpointId;
     }
 
     public VpcEndpointSubnetAssociationState(
@@ -44,8 +45,8 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
     }
 
     private VpcEndpointSubnetAssociationState() {
-        this.subnetId = Output.empty();
-        this.vpcEndpointId = Output.empty();
+        this.subnetId = Codegen.empty();
+        this.vpcEndpointId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder vpcEndpointId(@Nullable Output<String> vpcEndpointId) {
@@ -83,7 +84,7 @@ public final class VpcEndpointSubnetAssociationState extends io.pulumi.resources
             return this;
         }
         public Builder vpcEndpointId(@Nullable String vpcEndpointId) {
-            this.vpcEndpointId = Output.ofNullable(vpcEndpointId);
+            this.vpcEndpointId = Codegen.ofNullable(vpcEndpointId);
             return this;
         }        public VpcEndpointSubnetAssociationState build() {
             return new VpcEndpointSubnetAssociationState(subnetId, vpcEndpointId);

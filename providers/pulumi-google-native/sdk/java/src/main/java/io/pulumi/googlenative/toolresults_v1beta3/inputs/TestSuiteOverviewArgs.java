@@ -5,6 +5,7 @@ package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceArgs;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<DurationArgs> elapsedTime;
 
     public Output<DurationArgs> getElapsedTime() {
-        return this.elapsedTime == null ? Output.empty() : this.elapsedTime;
+        return this.elapsedTime == null ? Codegen.empty() : this.elapsedTime;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> errorCount;
 
     public Output<Integer> getErrorCount() {
-        return this.errorCount == null ? Output.empty() : this.errorCount;
+        return this.errorCount == null ? Codegen.empty() : this.errorCount;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> failureCount;
 
     public Output<Integer> getFailureCount() {
-        return this.failureCount == null ? Output.empty() : this.failureCount;
+        return this.failureCount == null ? Codegen.empty() : this.failureCount;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> flakyCount;
 
     public Output<Integer> getFlakyCount() {
-        return this.flakyCount == null ? Output.empty() : this.flakyCount;
+        return this.flakyCount == null ? Codegen.empty() : this.flakyCount;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> skippedCount;
 
     public Output<Integer> getSkippedCount() {
-        return this.skippedCount == null ? Output.empty() : this.skippedCount;
+        return this.skippedCount == null ? Codegen.empty() : this.skippedCount;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> totalCount;
 
     public Output<Integer> getTotalCount() {
-        return this.totalCount == null ? Output.empty() : this.totalCount;
+        return this.totalCount == null ? Codegen.empty() : this.totalCount;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FileReferenceArgs> xmlSource;
 
     public Output<FileReferenceArgs> getXmlSource() {
-        return this.xmlSource == null ? Output.empty() : this.xmlSource;
+        return this.xmlSource == null ? Codegen.empty() : this.xmlSource;
     }
 
     public TestSuiteOverviewArgs(
@@ -129,14 +130,14 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
     }
 
     private TestSuiteOverviewArgs() {
-        this.elapsedTime = Output.empty();
-        this.errorCount = Output.empty();
-        this.failureCount = Output.empty();
-        this.flakyCount = Output.empty();
-        this.name = Output.empty();
-        this.skippedCount = Output.empty();
-        this.totalCount = Output.empty();
-        this.xmlSource = Output.empty();
+        this.elapsedTime = Codegen.empty();
+        this.errorCount = Codegen.empty();
+        this.failureCount = Codegen.empty();
+        this.flakyCount = Codegen.empty();
+        this.name = Codegen.empty();
+        this.skippedCount = Codegen.empty();
+        this.totalCount = Codegen.empty();
+        this.xmlSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -178,7 +179,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder elapsedTime(@Nullable DurationArgs elapsedTime) {
-            this.elapsedTime = Output.ofNullable(elapsedTime);
+            this.elapsedTime = Codegen.ofNullable(elapsedTime);
             return this;
         }
         public Builder errorCount(@Nullable Output<Integer> errorCount) {
@@ -186,7 +187,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder errorCount(@Nullable Integer errorCount) {
-            this.errorCount = Output.ofNullable(errorCount);
+            this.errorCount = Codegen.ofNullable(errorCount);
             return this;
         }
         public Builder failureCount(@Nullable Output<Integer> failureCount) {
@@ -194,7 +195,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder failureCount(@Nullable Integer failureCount) {
-            this.failureCount = Output.ofNullable(failureCount);
+            this.failureCount = Codegen.ofNullable(failureCount);
             return this;
         }
         public Builder flakyCount(@Nullable Output<Integer> flakyCount) {
@@ -202,7 +203,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder flakyCount(@Nullable Integer flakyCount) {
-            this.flakyCount = Output.ofNullable(flakyCount);
+            this.flakyCount = Codegen.ofNullable(flakyCount);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -210,7 +211,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder skippedCount(@Nullable Output<Integer> skippedCount) {
@@ -218,7 +219,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder skippedCount(@Nullable Integer skippedCount) {
-            this.skippedCount = Output.ofNullable(skippedCount);
+            this.skippedCount = Codegen.ofNullable(skippedCount);
             return this;
         }
         public Builder totalCount(@Nullable Output<Integer> totalCount) {
@@ -226,7 +227,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder totalCount(@Nullable Integer totalCount) {
-            this.totalCount = Output.ofNullable(totalCount);
+            this.totalCount = Codegen.ofNullable(totalCount);
             return this;
         }
         public Builder xmlSource(@Nullable Output<FileReferenceArgs> xmlSource) {
@@ -234,7 +235,7 @@ public final class TestSuiteOverviewArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder xmlSource(@Nullable FileReferenceArgs xmlSource) {
-            this.xmlSource = Output.ofNullable(xmlSource);
+            this.xmlSource = Codegen.ofNullable(xmlSource);
             return this;
         }        public TestSuiteOverviewArgs build() {
             return new TestSuiteOverviewArgs(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);

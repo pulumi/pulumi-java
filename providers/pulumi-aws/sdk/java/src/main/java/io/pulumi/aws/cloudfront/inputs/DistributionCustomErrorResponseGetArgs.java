@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> errorCachingMinTtl;
 
     public Output<Integer> getErrorCachingMinTtl() {
-        return this.errorCachingMinTtl == null ? Output.empty() : this.errorCachingMinTtl;
+        return this.errorCachingMinTtl == null ? Codegen.empty() : this.errorCachingMinTtl;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
       private final @Nullable Output<Integer> responseCode;
 
     public Output<Integer> getResponseCode() {
-        return this.responseCode == null ? Output.empty() : this.responseCode;
+        return this.responseCode == null ? Codegen.empty() : this.responseCode;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> responsePagePath;
 
     public Output<String> getResponsePagePath() {
-        return this.responsePagePath == null ? Output.empty() : this.responsePagePath;
+        return this.responsePagePath == null ? Codegen.empty() : this.responsePagePath;
     }
 
     public DistributionCustomErrorResponseGetArgs(
@@ -76,10 +77,10 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
     }
 
     private DistributionCustomErrorResponseGetArgs() {
-        this.errorCachingMinTtl = Output.empty();
-        this.errorCode = Output.empty();
-        this.responseCode = Output.empty();
-        this.responsePagePath = Output.empty();
+        this.errorCachingMinTtl = Codegen.empty();
+        this.errorCode = Codegen.empty();
+        this.responseCode = Codegen.empty();
+        this.responsePagePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder errorCachingMinTtl(@Nullable Integer errorCachingMinTtl) {
-            this.errorCachingMinTtl = Output.ofNullable(errorCachingMinTtl);
+            this.errorCachingMinTtl = Codegen.ofNullable(errorCachingMinTtl);
             return this;
         }
         public Builder errorCode(Output<Integer> errorCode) {
@@ -129,7 +130,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder responseCode(@Nullable Integer responseCode) {
-            this.responseCode = Output.ofNullable(responseCode);
+            this.responseCode = Codegen.ofNullable(responseCode);
             return this;
         }
         public Builder responsePagePath(@Nullable Output<String> responsePagePath) {
@@ -137,7 +138,7 @@ public final class DistributionCustomErrorResponseGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder responsePagePath(@Nullable String responsePagePath) {
-            this.responsePagePath = Output.ofNullable(responsePagePath);
+            this.responsePagePath = Codegen.ofNullable(responsePagePath);
             return this;
         }        public DistributionCustomErrorResponseGetArgs build() {
             return new DistributionCustomErrorResponseGetArgs(errorCachingMinTtl, errorCode, responseCode, responsePagePath);

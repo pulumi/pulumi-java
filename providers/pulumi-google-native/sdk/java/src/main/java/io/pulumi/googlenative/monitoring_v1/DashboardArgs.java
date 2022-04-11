@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.ColumnLayoutArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.GridLayoutArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.MosaicLayoutArgs;
@@ -27,7 +28,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ColumnLayoutArgs> columnLayout;
 
     public Output<ColumnLayoutArgs> getColumnLayout() {
-        return this.columnLayout == null ? Output.empty() : this.columnLayout;
+        return this.columnLayout == null ? Codegen.empty() : this.columnLayout;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GridLayoutArgs> gridLayout;
 
     public Output<GridLayoutArgs> getGridLayout() {
-        return this.gridLayout == null ? Output.empty() : this.gridLayout;
+        return this.gridLayout == null ? Codegen.empty() : this.gridLayout;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MosaicLayoutArgs> mosaicLayout;
 
     public Output<MosaicLayoutArgs> getMosaicLayout() {
-        return this.mosaicLayout == null ? Output.empty() : this.mosaicLayout;
+        return this.mosaicLayout == null ? Codegen.empty() : this.mosaicLayout;
     }
 
     /**
@@ -93,14 +94,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -111,14 +112,14 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RowLayoutArgs> rowLayout;
 
     public Output<RowLayoutArgs> getRowLayout() {
-        return this.rowLayout == null ? Output.empty() : this.rowLayout;
+        return this.rowLayout == null ? Codegen.empty() : this.rowLayout;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public DashboardArgs(
@@ -145,16 +146,16 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.columnLayout = Output.empty();
-        this.displayName = Output.empty();
-        this.etag = Output.empty();
-        this.gridLayout = Output.empty();
-        this.labels = Output.empty();
-        this.mosaicLayout = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.rowLayout = Output.empty();
-        this.validateOnly = Output.empty();
+        this.columnLayout = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.gridLayout = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.mosaicLayout = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.rowLayout = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -200,7 +201,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columnLayout(@Nullable ColumnLayoutArgs columnLayout) {
-            this.columnLayout = Output.ofNullable(columnLayout);
+            this.columnLayout = Codegen.ofNullable(columnLayout);
             return this;
         }
         public Builder displayName(Output<String> displayName) {
@@ -216,7 +217,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder gridLayout(@Nullable Output<GridLayoutArgs> gridLayout) {
@@ -224,7 +225,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder gridLayout(@Nullable GridLayoutArgs gridLayout) {
-            this.gridLayout = Output.ofNullable(gridLayout);
+            this.gridLayout = Codegen.ofNullable(gridLayout);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -232,7 +233,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder mosaicLayout(@Nullable Output<MosaicLayoutArgs> mosaicLayout) {
@@ -240,7 +241,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mosaicLayout(@Nullable MosaicLayoutArgs mosaicLayout) {
-            this.mosaicLayout = Output.ofNullable(mosaicLayout);
+            this.mosaicLayout = Codegen.ofNullable(mosaicLayout);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -248,7 +249,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -256,7 +257,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder rowLayout(@Nullable Output<RowLayoutArgs> rowLayout) {
@@ -264,7 +265,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rowLayout(@Nullable RowLayoutArgs rowLayout) {
-            this.rowLayout = Output.ofNullable(rowLayout);
+            this.rowLayout = Codegen.ofNullable(rowLayout);
             return this;
         }
         public Builder validateOnly(@Nullable Output<String> validateOnly) {
@@ -272,7 +273,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public DashboardArgs build() {
             return new DashboardArgs(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, project, rowLayout, validateOnly);

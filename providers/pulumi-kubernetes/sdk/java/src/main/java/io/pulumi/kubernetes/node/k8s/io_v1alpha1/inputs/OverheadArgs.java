@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> podFixed;
 
     public Output<Map<String,String>> getPodFixed() {
-        return this.podFixed == null ? Output.empty() : this.podFixed;
+        return this.podFixed == null ? Codegen.empty() : this.podFixed;
     }
 
     public OverheadArgs(@Nullable Output<Map<String,String>> podFixed) {
@@ -35,7 +36,7 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private OverheadArgs() {
-        this.podFixed = Output.empty();
+        this.podFixed = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class OverheadArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder podFixed(@Nullable Map<String,String> podFixed) {
-            this.podFixed = Output.ofNullable(podFixed);
+            this.podFixed = Codegen.ofNullable(podFixed);
             return this;
         }        public OverheadArgs build() {
             return new OverheadArgs(podFixed);

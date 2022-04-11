@@ -5,6 +5,7 @@ package io.pulumi.awsnative.refactorspaces.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> healthUrl;
 
     public Output<String> getHealthUrl() {
-        return this.healthUrl == null ? Output.empty() : this.healthUrl;
+        return this.healthUrl == null ? Codegen.empty() : this.healthUrl;
     }
 
     @Import(name="url", required=true)
@@ -36,8 +37,8 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
     }
 
     private ServiceUrlEndpointInputArgs() {
-        this.healthUrl = Output.empty();
-        this.url = Output.empty();
+        this.healthUrl = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceUrlEndpointInputArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder healthUrl(@Nullable String healthUrl) {
-            this.healthUrl = Output.ofNullable(healthUrl);
+            this.healthUrl = Codegen.ofNullable(healthUrl);
             return this;
         }
         public Builder url(Output<String> url) {

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> originAccessIdentity;
 
     public Output<String> getOriginAccessIdentity() {
-        return this.originAccessIdentity == null ? Output.empty() : this.originAccessIdentity;
+        return this.originAccessIdentity == null ? Codegen.empty() : this.originAccessIdentity;
     }
 
     public DistributionS3OriginConfigArgs(@Nullable Output<String> originAccessIdentity) {
@@ -26,7 +27,7 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
     }
 
     private DistributionS3OriginConfigArgs() {
-        this.originAccessIdentity = Output.empty();
+        this.originAccessIdentity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class DistributionS3OriginConfigArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder originAccessIdentity(@Nullable String originAccessIdentity) {
-            this.originAccessIdentity = Output.ofNullable(originAccessIdentity);
+            this.originAccessIdentity = Codegen.ofNullable(originAccessIdentity);
             return this;
         }        public DistributionS3OriginConfigArgs build() {
             return new DistributionS3OriginConfigArgs(originAccessIdentity);

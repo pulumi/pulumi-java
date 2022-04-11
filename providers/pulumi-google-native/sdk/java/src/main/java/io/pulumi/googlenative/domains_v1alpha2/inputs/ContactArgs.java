@@ -5,6 +5,7 @@ package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.PostalAddressArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> faxNumber;
 
     public Output<String> getFaxNumber() {
-        return this.faxNumber == null ? Output.empty() : this.faxNumber;
+        return this.faxNumber == null ? Codegen.empty() : this.faxNumber;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ContactArgs() {
-        this.email = Output.empty();
-        this.faxNumber = Output.empty();
-        this.phoneNumber = Output.empty();
-        this.postalAddress = Output.empty();
+        this.email = Codegen.empty();
+        this.faxNumber = Codegen.empty();
+        this.phoneNumber = Codegen.empty();
+        this.postalAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder faxNumber(@Nullable String faxNumber) {
-            this.faxNumber = Output.ofNullable(faxNumber);
+            this.faxNumber = Codegen.ofNullable(faxNumber);
             return this;
         }
         public Builder phoneNumber(Output<String> phoneNumber) {

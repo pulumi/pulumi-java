@@ -5,6 +5,7 @@ package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> completed;
 
     public Output<String> getCompleted() {
-        return this.completed == null ? Output.empty() : this.completed;
+        return this.completed == null ? Codegen.empty() : this.completed;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> error;
 
     public Output<String> getError() {
-        return this.error == null ? Output.empty() : this.error;
+        return this.error == null ? Codegen.empty() : this.error;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> progressing;
 
     public Output<String> getProgressing() {
-        return this.progressing == null ? Output.empty() : this.progressing;
+        return this.progressing == null ? Codegen.empty() : this.progressing;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> warning;
 
     public Output<String> getWarning() {
-        return this.warning == null ? Output.empty() : this.warning;
+        return this.warning == null ? Codegen.empty() : this.warning;
     }
 
     public PipelineNotificationsArgs(
@@ -70,10 +71,10 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
     }
 
     private PipelineNotificationsArgs() {
-        this.completed = Output.empty();
-        this.error = Output.empty();
-        this.progressing = Output.empty();
-        this.warning = Output.empty();
+        this.completed = Codegen.empty();
+        this.error = Codegen.empty();
+        this.progressing = Codegen.empty();
+        this.warning = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder completed(@Nullable String completed) {
-            this.completed = Output.ofNullable(completed);
+            this.completed = Codegen.ofNullable(completed);
             return this;
         }
         public Builder error(@Nullable Output<String> error) {
@@ -115,7 +116,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder error(@Nullable String error) {
-            this.error = Output.ofNullable(error);
+            this.error = Codegen.ofNullable(error);
             return this;
         }
         public Builder progressing(@Nullable Output<String> progressing) {
@@ -123,7 +124,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder progressing(@Nullable String progressing) {
-            this.progressing = Output.ofNullable(progressing);
+            this.progressing = Codegen.ofNullable(progressing);
             return this;
         }
         public Builder warning(@Nullable Output<String> warning) {
@@ -131,7 +132,7 @@ public final class PipelineNotificationsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder warning(@Nullable String warning) {
-            this.warning = Output.ofNullable(warning);
+            this.warning = Codegen.ofNullable(warning);
             return this;
         }        public PipelineNotificationsArgs build() {
             return new PipelineNotificationsArgs(completed, error, progressing, warning);

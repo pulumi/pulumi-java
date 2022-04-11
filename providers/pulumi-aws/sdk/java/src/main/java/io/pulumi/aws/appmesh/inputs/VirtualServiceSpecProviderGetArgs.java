@@ -7,6 +7,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualNodeGetArgs
 import io.pulumi.aws.appmesh.inputs.VirtualServiceSpecProviderVirtualRouterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
       private final @Nullable Output<VirtualServiceSpecProviderVirtualNodeGetArgs> virtualNode;
 
     public Output<VirtualServiceSpecProviderVirtualNodeGetArgs> getVirtualNode() {
-        return this.virtualNode == null ? Output.empty() : this.virtualNode;
+        return this.virtualNode == null ? Codegen.empty() : this.virtualNode;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
       private final @Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter;
 
     public Output<VirtualServiceSpecProviderVirtualRouterGetArgs> getVirtualRouter() {
-        return this.virtualRouter == null ? Output.empty() : this.virtualRouter;
+        return this.virtualRouter == null ? Codegen.empty() : this.virtualRouter;
     }
 
     public VirtualServiceSpecProviderGetArgs(
@@ -45,8 +46,8 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
     }
 
     private VirtualServiceSpecProviderGetArgs() {
-        this.virtualNode = Output.empty();
-        this.virtualRouter = Output.empty();
+        this.virtualNode = Codegen.empty();
+        this.virtualRouter = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder virtualNode(@Nullable VirtualServiceSpecProviderVirtualNodeGetArgs virtualNode) {
-            this.virtualNode = Output.ofNullable(virtualNode);
+            this.virtualNode = Codegen.ofNullable(virtualNode);
             return this;
         }
         public Builder virtualRouter(@Nullable Output<VirtualServiceSpecProviderVirtualRouterGetArgs> virtualRouter) {
@@ -84,7 +85,7 @@ public final class VirtualServiceSpecProviderGetArgs extends io.pulumi.resources
             return this;
         }
         public Builder virtualRouter(@Nullable VirtualServiceSpecProviderVirtualRouterGetArgs virtualRouter) {
-            this.virtualRouter = Output.ofNullable(virtualRouter);
+            this.virtualRouter = Codegen.ofNullable(virtualRouter);
             return this;
         }        public VirtualServiceSpecProviderGetArgs build() {
             return new VirtualServiceSpecProviderGetArgs(virtualNode, virtualRouter);

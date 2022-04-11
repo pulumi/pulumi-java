@@ -5,6 +5,7 @@ package io.pulumi.aws.appsync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiCachingBehavior;
 
     public Output<String> getApiCachingBehavior() {
-        return this.apiCachingBehavior == null ? Output.empty() : this.apiCachingBehavior;
+        return this.apiCachingBehavior == null ? Codegen.empty() : this.apiCachingBehavior;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> atRestEncryptionEnabled;
 
     public Output<Boolean> getAtRestEncryptionEnabled() {
-        return this.atRestEncryptionEnabled == null ? Output.empty() : this.atRestEncryptionEnabled;
+        return this.atRestEncryptionEnabled == null ? Codegen.empty() : this.atRestEncryptionEnabled;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> transitEncryptionEnabled;
 
     public Output<Boolean> getTransitEncryptionEnabled() {
-        return this.transitEncryptionEnabled == null ? Output.empty() : this.transitEncryptionEnabled;
+        return this.transitEncryptionEnabled == null ? Codegen.empty() : this.transitEncryptionEnabled;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> ttl;
 
     public Output<Integer> getTtl() {
-        return this.ttl == null ? Output.empty() : this.ttl;
+        return this.ttl == null ? Codegen.empty() : this.ttl;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ApiCacheState(
@@ -98,12 +99,12 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiCacheState() {
-        this.apiCachingBehavior = Output.empty();
-        this.apiId = Output.empty();
-        this.atRestEncryptionEnabled = Output.empty();
-        this.transitEncryptionEnabled = Output.empty();
-        this.ttl = Output.empty();
-        this.type = Output.empty();
+        this.apiCachingBehavior = Codegen.empty();
+        this.apiId = Codegen.empty();
+        this.atRestEncryptionEnabled = Codegen.empty();
+        this.transitEncryptionEnabled = Codegen.empty();
+        this.ttl = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiCachingBehavior(@Nullable String apiCachingBehavior) {
-            this.apiCachingBehavior = Output.ofNullable(apiCachingBehavior);
+            this.apiCachingBehavior = Codegen.ofNullable(apiCachingBehavior);
             return this;
         }
         public Builder apiId(@Nullable Output<String> apiId) {
@@ -149,7 +150,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder atRestEncryptionEnabled(@Nullable Output<Boolean> atRestEncryptionEnabled) {
@@ -157,7 +158,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder atRestEncryptionEnabled(@Nullable Boolean atRestEncryptionEnabled) {
-            this.atRestEncryptionEnabled = Output.ofNullable(atRestEncryptionEnabled);
+            this.atRestEncryptionEnabled = Codegen.ofNullable(atRestEncryptionEnabled);
             return this;
         }
         public Builder transitEncryptionEnabled(@Nullable Output<Boolean> transitEncryptionEnabled) {
@@ -165,7 +166,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitEncryptionEnabled(@Nullable Boolean transitEncryptionEnabled) {
-            this.transitEncryptionEnabled = Output.ofNullable(transitEncryptionEnabled);
+            this.transitEncryptionEnabled = Codegen.ofNullable(transitEncryptionEnabled);
             return this;
         }
         public Builder ttl(@Nullable Output<Integer> ttl) {
@@ -173,7 +174,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ttl(@Nullable Integer ttl) {
-            this.ttl = Output.ofNullable(ttl);
+            this.ttl = Codegen.ofNullable(ttl);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -181,7 +182,7 @@ public final class ApiCacheState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ApiCacheState build() {
             return new ApiCacheState(apiCachingBehavior, apiId, atRestEncryptionEnabled, transitEncryptionEnabled, ttl, type);

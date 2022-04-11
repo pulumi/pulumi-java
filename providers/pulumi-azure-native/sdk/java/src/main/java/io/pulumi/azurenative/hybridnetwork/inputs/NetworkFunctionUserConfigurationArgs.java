@@ -7,6 +7,7 @@ import io.pulumi.azurenative.hybridnetwork.inputs.NetworkFunctionUserConfigurati
 import io.pulumi.azurenative.hybridnetwork.inputs.NetworkInterfaceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Output<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<NetworkFunctionUserConfigurationOsProfileArgs> osProfile;
 
     public Output<NetworkFunctionUserConfigurationOsProfileArgs> getOsProfile() {
-        return this.osProfile == null ? Output.empty() : this.osProfile;
+        return this.osProfile == null ? Codegen.empty() : this.osProfile;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<String> roleName;
 
     public Output<String> getRoleName() {
-        return this.roleName == null ? Output.empty() : this.roleName;
+        return this.roleName == null ? Codegen.empty() : this.roleName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
       private final @Nullable Output<Object> userDataParameters;
 
     public Output<Object> getUserDataParameters() {
-        return this.userDataParameters == null ? Output.empty() : this.userDataParameters;
+        return this.userDataParameters == null ? Codegen.empty() : this.userDataParameters;
     }
 
     public NetworkFunctionUserConfigurationArgs(
@@ -78,10 +79,10 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
     }
 
     private NetworkFunctionUserConfigurationArgs() {
-        this.networkInterfaces = Output.empty();
-        this.osProfile = Output.empty();
-        this.roleName = Output.empty();
-        this.userDataParameters = Output.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.osProfile = Codegen.empty();
+        this.roleName = Codegen.empty();
+        this.userDataParameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(NetworkInterfaceArgs... networkInterfaces) {
@@ -126,7 +127,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder osProfile(@Nullable NetworkFunctionUserConfigurationOsProfileArgs osProfile) {
-            this.osProfile = Output.ofNullable(osProfile);
+            this.osProfile = Codegen.ofNullable(osProfile);
             return this;
         }
         public Builder roleName(@Nullable Output<String> roleName) {
@@ -134,7 +135,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder roleName(@Nullable String roleName) {
-            this.roleName = Output.ofNullable(roleName);
+            this.roleName = Codegen.ofNullable(roleName);
             return this;
         }
         public Builder userDataParameters(@Nullable Output<Object> userDataParameters) {
@@ -142,7 +143,7 @@ public final class NetworkFunctionUserConfigurationArgs extends io.pulumi.resour
             return this;
         }
         public Builder userDataParameters(@Nullable Object userDataParameters) {
-            this.userDataParameters = Output.ofNullable(userDataParameters);
+            this.userDataParameters = Codegen.ofNullable(userDataParameters);
             return this;
         }        public NetworkFunctionUserConfigurationArgs build() {
             return new NetworkFunctionUserConfigurationArgs(networkInterfaces, osProfile, roleName, userDataParameters);

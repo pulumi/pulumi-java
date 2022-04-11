@@ -9,6 +9,7 @@ import io.pulumi.aws.ec2.inputs.FleetSpotOptionsGetArgs;
 import io.pulumi.aws.ec2.inputs.FleetTargetCapacitySpecificationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> excessCapacityTerminationPolicy;
 
     public Output<String> getExcessCapacityTerminationPolicy() {
-        return this.excessCapacityTerminationPolicy == null ? Output.empty() : this.excessCapacityTerminationPolicy;
+        return this.excessCapacityTerminationPolicy == null ? Codegen.empty() : this.excessCapacityTerminationPolicy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig;
 
     public Output<FleetLaunchTemplateConfigGetArgs> getLaunchTemplateConfig() {
-        return this.launchTemplateConfig == null ? Output.empty() : this.launchTemplateConfig;
+        return this.launchTemplateConfig == null ? Codegen.empty() : this.launchTemplateConfig;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions;
 
     public Output<FleetOnDemandOptionsGetArgs> getOnDemandOptions() {
-        return this.onDemandOptions == null ? Output.empty() : this.onDemandOptions;
+        return this.onDemandOptions == null ? Codegen.empty() : this.onDemandOptions;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> replaceUnhealthyInstances;
 
     public Output<Boolean> getReplaceUnhealthyInstances() {
-        return this.replaceUnhealthyInstances == null ? Output.empty() : this.replaceUnhealthyInstances;
+        return this.replaceUnhealthyInstances == null ? Codegen.empty() : this.replaceUnhealthyInstances;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetSpotOptionsGetArgs> spotOptions;
 
     public Output<FleetSpotOptionsGetArgs> getSpotOptions() {
-        return this.spotOptions == null ? Output.empty() : this.spotOptions;
+        return this.spotOptions == null ? Codegen.empty() : this.spotOptions;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification;
 
     public Output<FleetTargetCapacitySpecificationGetArgs> getTargetCapacitySpecification() {
-        return this.targetCapacitySpecification == null ? Output.empty() : this.targetCapacitySpecification;
+        return this.targetCapacitySpecification == null ? Codegen.empty() : this.targetCapacitySpecification;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> terminateInstances;
 
     public Output<Boolean> getTerminateInstances() {
-        return this.terminateInstances == null ? Output.empty() : this.terminateInstances;
+        return this.terminateInstances == null ? Codegen.empty() : this.terminateInstances;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> terminateInstancesWithExpiration;
 
     public Output<Boolean> getTerminateInstancesWithExpiration() {
-        return this.terminateInstancesWithExpiration == null ? Output.empty() : this.terminateInstancesWithExpiration;
+        return this.terminateInstancesWithExpiration == null ? Codegen.empty() : this.terminateInstancesWithExpiration;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public FleetState(
@@ -167,17 +168,17 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetState() {
-        this.excessCapacityTerminationPolicy = Output.empty();
-        this.launchTemplateConfig = Output.empty();
-        this.onDemandOptions = Output.empty();
-        this.replaceUnhealthyInstances = Output.empty();
-        this.spotOptions = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.targetCapacitySpecification = Output.empty();
-        this.terminateInstances = Output.empty();
-        this.terminateInstancesWithExpiration = Output.empty();
-        this.type = Output.empty();
+        this.excessCapacityTerminationPolicy = Codegen.empty();
+        this.launchTemplateConfig = Codegen.empty();
+        this.onDemandOptions = Codegen.empty();
+        this.replaceUnhealthyInstances = Codegen.empty();
+        this.spotOptions = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.targetCapacitySpecification = Codegen.empty();
+        this.terminateInstances = Codegen.empty();
+        this.terminateInstancesWithExpiration = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excessCapacityTerminationPolicy(@Nullable String excessCapacityTerminationPolicy) {
-            this.excessCapacityTerminationPolicy = Output.ofNullable(excessCapacityTerminationPolicy);
+            this.excessCapacityTerminationPolicy = Codegen.ofNullable(excessCapacityTerminationPolicy);
             return this;
         }
         public Builder launchTemplateConfig(@Nullable Output<FleetLaunchTemplateConfigGetArgs> launchTemplateConfig) {
@@ -233,7 +234,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchTemplateConfig(@Nullable FleetLaunchTemplateConfigGetArgs launchTemplateConfig) {
-            this.launchTemplateConfig = Output.ofNullable(launchTemplateConfig);
+            this.launchTemplateConfig = Codegen.ofNullable(launchTemplateConfig);
             return this;
         }
         public Builder onDemandOptions(@Nullable Output<FleetOnDemandOptionsGetArgs> onDemandOptions) {
@@ -241,7 +242,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder onDemandOptions(@Nullable FleetOnDemandOptionsGetArgs onDemandOptions) {
-            this.onDemandOptions = Output.ofNullable(onDemandOptions);
+            this.onDemandOptions = Codegen.ofNullable(onDemandOptions);
             return this;
         }
         public Builder replaceUnhealthyInstances(@Nullable Output<Boolean> replaceUnhealthyInstances) {
@@ -249,7 +250,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replaceUnhealthyInstances(@Nullable Boolean replaceUnhealthyInstances) {
-            this.replaceUnhealthyInstances = Output.ofNullable(replaceUnhealthyInstances);
+            this.replaceUnhealthyInstances = Codegen.ofNullable(replaceUnhealthyInstances);
             return this;
         }
         public Builder spotOptions(@Nullable Output<FleetSpotOptionsGetArgs> spotOptions) {
@@ -257,7 +258,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder spotOptions(@Nullable FleetSpotOptionsGetArgs spotOptions) {
-            this.spotOptions = Output.ofNullable(spotOptions);
+            this.spotOptions = Codegen.ofNullable(spotOptions);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -265,7 +266,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -273,7 +274,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder targetCapacitySpecification(@Nullable Output<FleetTargetCapacitySpecificationGetArgs> targetCapacitySpecification) {
@@ -281,7 +282,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetCapacitySpecification(@Nullable FleetTargetCapacitySpecificationGetArgs targetCapacitySpecification) {
-            this.targetCapacitySpecification = Output.ofNullable(targetCapacitySpecification);
+            this.targetCapacitySpecification = Codegen.ofNullable(targetCapacitySpecification);
             return this;
         }
         public Builder terminateInstances(@Nullable Output<Boolean> terminateInstances) {
@@ -289,7 +290,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terminateInstances(@Nullable Boolean terminateInstances) {
-            this.terminateInstances = Output.ofNullable(terminateInstances);
+            this.terminateInstances = Codegen.ofNullable(terminateInstances);
             return this;
         }
         public Builder terminateInstancesWithExpiration(@Nullable Output<Boolean> terminateInstancesWithExpiration) {
@@ -297,7 +298,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder terminateInstancesWithExpiration(@Nullable Boolean terminateInstancesWithExpiration) {
-            this.terminateInstancesWithExpiration = Output.ofNullable(terminateInstancesWithExpiration);
+            this.terminateInstancesWithExpiration = Codegen.ofNullable(terminateInstancesWithExpiration);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -305,7 +306,7 @@ public final class FleetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public FleetState build() {
             return new FleetState(excessCapacityTerminationPolicy, launchTemplateConfig, onDemandOptions, replaceUnhealthyInstances, spotOptions, tags, tagsAll, targetCapacitySpecification, terminateInstances, terminateInstancesWithExpiration, type);

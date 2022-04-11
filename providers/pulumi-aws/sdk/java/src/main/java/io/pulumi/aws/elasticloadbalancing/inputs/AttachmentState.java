@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> elb;
 
     public Output<String> getElb() {
-        return this.elb == null ? Output.empty() : this.elb;
+        return this.elb == null ? Codegen.empty() : this.elb;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     public AttachmentState(
@@ -44,8 +45,8 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private AttachmentState() {
-        this.elb = Output.empty();
-        this.instance = Output.empty();
+        this.elb = Codegen.empty();
+        this.instance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder elb(@Nullable String elb) {
-            this.elb = Output.ofNullable(elb);
+            this.elb = Codegen.ofNullable(elb);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -83,7 +84,7 @@ public final class AttachmentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }        public AttachmentState build() {
             return new AttachmentState(elb, instance);

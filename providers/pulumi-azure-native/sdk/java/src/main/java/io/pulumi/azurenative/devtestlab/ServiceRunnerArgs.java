@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.inputs.IdentityPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IdentityPropertiesArgs> identity;
 
     public Output<IdentityPropertiesArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ServiceRunnerArgs(
@@ -98,12 +99,12 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceRunnerArgs() {
-        this.identity = Output.empty();
-        this.labName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.identity = Codegen.empty();
+        this.labName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable IdentityPropertiesArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder labName(Output<String> labName) {
@@ -157,7 +158,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -165,7 +166,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -181,7 +182,7 @@ public final class ServiceRunnerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ServiceRunnerArgs build() {
             return new ServiceRunnerArgs(identity, labName, location, name, resourceGroupName, tags);

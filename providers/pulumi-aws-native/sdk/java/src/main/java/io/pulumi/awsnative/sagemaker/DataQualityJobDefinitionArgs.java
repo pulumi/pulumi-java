@@ -13,6 +13,7 @@ import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionStoppingCond
 import io.pulumi.awsnative.sagemaker.inputs.DataQualityJobDefinitionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> dataQualityBaselineConfig;
 
     public Output<DataQualityJobDefinitionDataQualityBaselineConfigArgs> getDataQualityBaselineConfig() {
-        return this.dataQualityBaselineConfig == null ? Output.empty() : this.dataQualityBaselineConfig;
+        return this.dataQualityBaselineConfig == null ? Codegen.empty() : this.dataQualityBaselineConfig;
     }
 
     @Import(name="dataQualityJobInput", required=true)
@@ -55,7 +56,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> jobDefinitionName;
 
     public Output<String> getJobDefinitionName() {
-        return this.jobDefinitionName == null ? Output.empty() : this.jobDefinitionName;
+        return this.jobDefinitionName == null ? Codegen.empty() : this.jobDefinitionName;
     }
 
     @Import(name="jobResources", required=true)
@@ -69,7 +70,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<DataQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Output<DataQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
-        return this.networkConfig == null ? Output.empty() : this.networkConfig;
+        return this.networkConfig == null ? Codegen.empty() : this.networkConfig;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<DataQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Output<DataQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
-        return this.stoppingCondition == null ? Output.empty() : this.stoppingCondition;
+        return this.stoppingCondition == null ? Codegen.empty() : this.stoppingCondition;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags;
 
     public Output<List<DataQualityJobDefinitionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DataQualityJobDefinitionArgs(
@@ -125,16 +126,16 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
     }
 
     private DataQualityJobDefinitionArgs() {
-        this.dataQualityAppSpecification = Output.empty();
-        this.dataQualityBaselineConfig = Output.empty();
-        this.dataQualityJobInput = Output.empty();
-        this.dataQualityJobOutputConfig = Output.empty();
-        this.jobDefinitionName = Output.empty();
-        this.jobResources = Output.empty();
-        this.networkConfig = Output.empty();
-        this.roleArn = Output.empty();
-        this.stoppingCondition = Output.empty();
-        this.tags = Output.empty();
+        this.dataQualityAppSpecification = Codegen.empty();
+        this.dataQualityBaselineConfig = Codegen.empty();
+        this.dataQualityJobInput = Codegen.empty();
+        this.dataQualityJobOutputConfig = Codegen.empty();
+        this.jobDefinitionName = Codegen.empty();
+        this.jobResources = Codegen.empty();
+        this.networkConfig = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.stoppingCondition = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder dataQualityBaselineConfig(@Nullable DataQualityJobDefinitionDataQualityBaselineConfigArgs dataQualityBaselineConfig) {
-            this.dataQualityBaselineConfig = Output.ofNullable(dataQualityBaselineConfig);
+            this.dataQualityBaselineConfig = Codegen.ofNullable(dataQualityBaselineConfig);
             return this;
         }
         public Builder dataQualityJobInput(Output<DataQualityJobDefinitionDataQualityJobInputArgs> dataQualityJobInput) {
@@ -212,7 +213,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder jobDefinitionName(@Nullable String jobDefinitionName) {
-            this.jobDefinitionName = Output.ofNullable(jobDefinitionName);
+            this.jobDefinitionName = Codegen.ofNullable(jobDefinitionName);
             return this;
         }
         public Builder jobResources(Output<DataQualityJobDefinitionMonitoringResourcesArgs> jobResources) {
@@ -228,7 +229,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder networkConfig(@Nullable DataQualityJobDefinitionNetworkConfigArgs networkConfig) {
-            this.networkConfig = Output.ofNullable(networkConfig);
+            this.networkConfig = Codegen.ofNullable(networkConfig);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -244,7 +245,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder stoppingCondition(@Nullable DataQualityJobDefinitionStoppingConditionArgs stoppingCondition) {
-            this.stoppingCondition = Output.ofNullable(stoppingCondition);
+            this.stoppingCondition = Codegen.ofNullable(stoppingCondition);
             return this;
         }
         public Builder tags(@Nullable Output<List<DataQualityJobDefinitionTagArgs>> tags) {
@@ -252,7 +253,7 @@ public final class DataQualityJobDefinitionArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder tags(@Nullable List<DataQualityJobDefinitionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DataQualityJobDefinitionTagArgs... tags) {

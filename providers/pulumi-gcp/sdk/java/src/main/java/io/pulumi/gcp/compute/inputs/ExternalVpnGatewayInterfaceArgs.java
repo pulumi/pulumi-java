@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> id;
 
     public Output<Integer> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     public ExternalVpnGatewayInterfaceArgs(
@@ -52,8 +53,8 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
     }
 
     private ExternalVpnGatewayInterfaceArgs() {
-        this.id = Output.empty();
-        this.ipAddress = Output.empty();
+        this.id = Codegen.empty();
+        this.ipAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder id(@Nullable Integer id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -91,7 +92,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }        public ExternalVpnGatewayInterfaceArgs build() {
             return new ExternalVpnGatewayInterfaceArgs(id, ipAddress);

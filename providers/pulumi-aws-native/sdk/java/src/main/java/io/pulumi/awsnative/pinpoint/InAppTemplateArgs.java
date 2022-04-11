@@ -7,6 +7,7 @@ import io.pulumi.awsnative.pinpoint.enums.InAppTemplateLayout;
 import io.pulumi.awsnative.pinpoint.inputs.InAppTemplateInAppMessageContentArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,35 +23,35 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<InAppTemplateInAppMessageContentArgs>> content;
 
     public Output<List<InAppTemplateInAppMessageContentArgs>> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     @Import(name="customConfig")
       private final @Nullable Output<Object> customConfig;
 
     public Output<Object> getCustomConfig() {
-        return this.customConfig == null ? Output.empty() : this.customConfig;
+        return this.customConfig == null ? Codegen.empty() : this.customConfig;
     }
 
     @Import(name="layout")
       private final @Nullable Output<InAppTemplateLayout> layout;
 
     public Output<InAppTemplateLayout> getLayout() {
-        return this.layout == null ? Output.empty() : this.layout;
+        return this.layout == null ? Codegen.empty() : this.layout;
     }
 
     @Import(name="tags")
       private final @Nullable Output<Object> tags;
 
     public Output<Object> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="templateDescription")
       private final @Nullable Output<String> templateDescription;
 
     public Output<String> getTemplateDescription() {
-        return this.templateDescription == null ? Output.empty() : this.templateDescription;
+        return this.templateDescription == null ? Codegen.empty() : this.templateDescription;
     }
 
     @Import(name="templateName", required=true)
@@ -76,12 +77,12 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InAppTemplateArgs() {
-        this.content = Output.empty();
-        this.customConfig = Output.empty();
-        this.layout = Output.empty();
-        this.tags = Output.empty();
-        this.templateDescription = Output.empty();
-        this.templateName = Output.empty();
+        this.content = Codegen.empty();
+        this.customConfig = Codegen.empty();
+        this.layout = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.templateDescription = Codegen.empty();
+        this.templateName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable List<InAppTemplateInAppMessageContentArgs> content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder content(InAppTemplateInAppMessageContentArgs... content) {
@@ -130,7 +131,7 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customConfig(@Nullable Object customConfig) {
-            this.customConfig = Output.ofNullable(customConfig);
+            this.customConfig = Codegen.ofNullable(customConfig);
             return this;
         }
         public Builder layout(@Nullable Output<InAppTemplateLayout> layout) {
@@ -138,7 +139,7 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder layout(@Nullable InAppTemplateLayout layout) {
-            this.layout = Output.ofNullable(layout);
+            this.layout = Codegen.ofNullable(layout);
             return this;
         }
         public Builder tags(@Nullable Output<Object> tags) {
@@ -146,7 +147,7 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Object tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder templateDescription(@Nullable Output<String> templateDescription) {
@@ -154,7 +155,7 @@ public final class InAppTemplateArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateDescription(@Nullable String templateDescription) {
-            this.templateDescription = Output.ofNullable(templateDescription);
+            this.templateDescription = Codegen.ofNullable(templateDescription);
             return this;
         }
         public Builder templateName(Output<String> templateName) {

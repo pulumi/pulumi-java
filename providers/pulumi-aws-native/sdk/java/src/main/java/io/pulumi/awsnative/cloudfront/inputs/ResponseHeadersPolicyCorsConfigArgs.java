@@ -9,6 +9,7 @@ import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyAccessControlA
 import io.pulumi.awsnative.cloudfront.inputs.ResponseHeadersPolicyAccessControlExposeHeadersArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -51,14 +52,14 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
       private final @Nullable Output<ResponseHeadersPolicyAccessControlExposeHeadersArgs> accessControlExposeHeaders;
 
     public Output<ResponseHeadersPolicyAccessControlExposeHeadersArgs> getAccessControlExposeHeaders() {
-        return this.accessControlExposeHeaders == null ? Output.empty() : this.accessControlExposeHeaders;
+        return this.accessControlExposeHeaders == null ? Codegen.empty() : this.accessControlExposeHeaders;
     }
 
     @Import(name="accessControlMaxAgeSec")
       private final @Nullable Output<Integer> accessControlMaxAgeSec;
 
     public Output<Integer> getAccessControlMaxAgeSec() {
-        return this.accessControlMaxAgeSec == null ? Output.empty() : this.accessControlMaxAgeSec;
+        return this.accessControlMaxAgeSec == null ? Codegen.empty() : this.accessControlMaxAgeSec;
     }
 
     @Import(name="originOverride", required=true)
@@ -86,13 +87,13 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
     }
 
     private ResponseHeadersPolicyCorsConfigArgs() {
-        this.accessControlAllowCredentials = Output.empty();
-        this.accessControlAllowHeaders = Output.empty();
-        this.accessControlAllowMethods = Output.empty();
-        this.accessControlAllowOrigins = Output.empty();
-        this.accessControlExposeHeaders = Output.empty();
-        this.accessControlMaxAgeSec = Output.empty();
-        this.originOverride = Output.empty();
+        this.accessControlAllowCredentials = Codegen.empty();
+        this.accessControlAllowHeaders = Codegen.empty();
+        this.accessControlAllowMethods = Codegen.empty();
+        this.accessControlAllowOrigins = Codegen.empty();
+        this.accessControlExposeHeaders = Codegen.empty();
+        this.accessControlMaxAgeSec = Codegen.empty();
+        this.originOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -164,7 +165,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder accessControlExposeHeaders(@Nullable ResponseHeadersPolicyAccessControlExposeHeadersArgs accessControlExposeHeaders) {
-            this.accessControlExposeHeaders = Output.ofNullable(accessControlExposeHeaders);
+            this.accessControlExposeHeaders = Codegen.ofNullable(accessControlExposeHeaders);
             return this;
         }
         public Builder accessControlMaxAgeSec(@Nullable Output<Integer> accessControlMaxAgeSec) {
@@ -172,7 +173,7 @@ public final class ResponseHeadersPolicyCorsConfigArgs extends io.pulumi.resourc
             return this;
         }
         public Builder accessControlMaxAgeSec(@Nullable Integer accessControlMaxAgeSec) {
-            this.accessControlMaxAgeSec = Output.ofNullable(accessControlMaxAgeSec);
+            this.accessControlMaxAgeSec = Codegen.ofNullable(accessControlMaxAgeSec);
             return this;
         }
         public Builder originOverride(Output<Boolean> originOverride) {

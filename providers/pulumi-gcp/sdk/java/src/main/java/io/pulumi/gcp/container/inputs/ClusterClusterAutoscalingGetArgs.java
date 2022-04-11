@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs;
 import io.pulumi.gcp.container.inputs.ClusterClusterAutoscalingResourceLimitGetArgs;
 import java.lang.Boolean;
@@ -27,7 +28,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
       private final @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
 
     public Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> getAutoProvisioningDefaults() {
-        return this.autoProvisioningDefaults == null ? Output.empty() : this.autoProvisioningDefaults;
+        return this.autoProvisioningDefaults == null ? Codegen.empty() : this.autoProvisioningDefaults;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> autoscalingProfile;
 
     public Output<String> getAutoscalingProfile() {
-        return this.autoscalingProfile == null ? Output.empty() : this.autoscalingProfile;
+        return this.autoscalingProfile == null ? Codegen.empty() : this.autoscalingProfile;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
       private final @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
     public Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> getResourceLimits() {
-        return this.resourceLimits == null ? Output.empty() : this.resourceLimits;
+        return this.resourceLimits == null ? Codegen.empty() : this.resourceLimits;
     }
 
     public ClusterClusterAutoscalingGetArgs(
@@ -82,10 +83,10 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
     }
 
     private ClusterClusterAutoscalingGetArgs() {
-        this.autoProvisioningDefaults = Output.empty();
-        this.autoscalingProfile = Output.empty();
-        this.enabled = Output.empty();
-        this.resourceLimits = Output.empty();
+        this.autoProvisioningDefaults = Codegen.empty();
+        this.autoscalingProfile = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.resourceLimits = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -119,7 +120,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder autoProvisioningDefaults(@Nullable ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs autoProvisioningDefaults) {
-            this.autoProvisioningDefaults = Output.ofNullable(autoProvisioningDefaults);
+            this.autoProvisioningDefaults = Codegen.ofNullable(autoProvisioningDefaults);
             return this;
         }
         public Builder autoscalingProfile(@Nullable Output<String> autoscalingProfile) {
@@ -127,7 +128,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder autoscalingProfile(@Nullable String autoscalingProfile) {
-            this.autoscalingProfile = Output.ofNullable(autoscalingProfile);
+            this.autoscalingProfile = Codegen.ofNullable(autoscalingProfile);
             return this;
         }
         public Builder enabled(Output<Boolean> enabled) {
@@ -143,7 +144,7 @@ public final class ClusterClusterAutoscalingGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder resourceLimits(@Nullable List<ClusterClusterAutoscalingResourceLimitGetArgs> resourceLimits) {
-            this.resourceLimits = Output.ofNullable(resourceLimits);
+            this.resourceLimits = Codegen.ofNullable(resourceLimits);
             return this;
         }
         public Builder resourceLimits(ClusterClusterAutoscalingResourceLimitGetArgs... resourceLimits) {

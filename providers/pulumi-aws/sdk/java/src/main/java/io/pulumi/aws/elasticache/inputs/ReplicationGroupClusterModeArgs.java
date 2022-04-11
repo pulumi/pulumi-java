@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> numNodeGroups;
 
     public Output<Integer> getNumNodeGroups() {
-        return this.numNodeGroups == null ? Output.empty() : this.numNodeGroups;
+        return this.numNodeGroups == null ? Codegen.empty() : this.numNodeGroups;
     }
 
     /**
@@ -44,8 +45,8 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
     }
 
     private ReplicationGroupClusterModeArgs() {
-        this.numNodeGroups = Output.empty();
-        this.replicasPerNodeGroup = Output.empty();
+        this.numNodeGroups = Codegen.empty();
+        this.replicasPerNodeGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ReplicationGroupClusterModeArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder numNodeGroups(@Nullable Integer numNodeGroups) {
-            this.numNodeGroups = Output.ofNullable(numNodeGroups);
+            this.numNodeGroups = Codegen.ofNullable(numNodeGroups);
             return this;
         }
         public Builder replicasPerNodeGroup(Output<Integer> replicasPerNodeGroup) {

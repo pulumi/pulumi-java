@@ -6,6 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.TableSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     /**
@@ -72,14 +73,14 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
         this.description = description;
         this.properties = Objects.requireNonNull(properties, "expected parameter 'properties' to be non-null");
         this.title = title;
-        this.type = type == null ? Output.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
+        this.type = type == null ? Codegen.ofNullable("object") : Objects.requireNonNull(type, "expected parameter 'type' to be non-null");
     }
 
     private ServiceInputOutputSpecificationArgs() {
-        this.description = Output.empty();
-        this.properties = Output.empty();
-        this.title = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.title = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder properties(Output<Map<String,TableSpecificationArgs>> properties) {
@@ -129,7 +130,7 @@ public final class ServiceInputOutputSpecificationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }
         public Builder type(Output<String> type) {

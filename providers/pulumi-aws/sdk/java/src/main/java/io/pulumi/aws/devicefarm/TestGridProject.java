@@ -10,6 +10,7 @@ import io.pulumi.aws.devicefarm.outputs.TestGridProjectVpcConfig;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -137,7 +138,7 @@ public class TestGridProject extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TestGridProject(String name, @Nullable TestGridProjectArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:devicefarm/testGridProject:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:devicefarm/testGridProject:TestGridProject", name, args == null ? TestGridProjectArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TestGridProject(String name, Output<String> id, @Nullable TestGridProjectState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

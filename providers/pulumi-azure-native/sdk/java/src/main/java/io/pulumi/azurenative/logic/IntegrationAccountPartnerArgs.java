@@ -8,6 +8,7 @@ import io.pulumi.azurenative.logic.inputs.PartnerContentArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -49,7 +50,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
-        return this.partnerName == null ? Output.empty() : this.partnerName;
+        return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public IntegrationAccountPartnerArgs(
@@ -127,14 +128,14 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
     }
 
     private IntegrationAccountPartnerArgs() {
-        this.content = Output.empty();
-        this.integrationAccountName = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.partnerName = Output.empty();
-        this.partnerType = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.content = Codegen.empty();
+        this.integrationAccountName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.partnerName = Codegen.empty();
+        this.partnerType = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -192,7 +193,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -200,7 +201,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder partnerName(@Nullable Output<String> partnerName) {
@@ -208,7 +209,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Output.ofNullable(partnerName);
+            this.partnerName = Codegen.ofNullable(partnerName);
             return this;
         }
         public Builder partnerType(Output<Either<String,PartnerType>> partnerType) {
@@ -232,7 +233,7 @@ public final class IntegrationAccountPartnerArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public IntegrationAccountPartnerArgs build() {
             return new IntegrationAccountPartnerArgs(content, integrationAccountName, location, metadata, partnerName, partnerType, resourceGroupName, tags);

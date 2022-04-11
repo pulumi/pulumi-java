@@ -8,6 +8,7 @@ import io.pulumi.azurenative.cdn.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
       private final @Nullable Output<List<String>> matchValues;
 
     public Output<List<String>> getMatchValues() {
-        return this.matchValues == null ? Output.empty() : this.matchValues;
+        return this.matchValues == null ? Codegen.empty() : this.matchValues;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
       private final @Nullable Output<Boolean> negateCondition;
 
     public Output<Boolean> getNegateCondition() {
-        return this.negateCondition == null ? Output.empty() : this.negateCondition;
+        return this.negateCondition == null ? Codegen.empty() : this.negateCondition;
     }
 
     @Import(name="odataType", required=true)
@@ -71,7 +72,7 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
       private final @Nullable Output<List<Either<String,Transform>>> transforms;
 
     public Output<List<Either<String,Transform>>> getTransforms() {
-        return this.transforms == null ? Output.empty() : this.transforms;
+        return this.transforms == null ? Codegen.empty() : this.transforms;
     }
 
     public RemoteAddressMatchConditionParametersArgs(
@@ -88,11 +89,11 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
     }
 
     private RemoteAddressMatchConditionParametersArgs() {
-        this.matchValues = Output.empty();
-        this.negateCondition = Output.empty();
-        this.odataType = Output.empty();
-        this.operator = Output.empty();
-        this.transforms = Output.empty();
+        this.matchValues = Codegen.empty();
+        this.negateCondition = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.transforms = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
             return this;
         }
         public Builder matchValues(@Nullable List<String> matchValues) {
-            this.matchValues = Output.ofNullable(matchValues);
+            this.matchValues = Codegen.ofNullable(matchValues);
             return this;
         }
         public Builder matchValues(String... matchValues) {
@@ -139,7 +140,7 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
             return this;
         }
         public Builder negateCondition(@Nullable Boolean negateCondition) {
-            this.negateCondition = Output.ofNullable(negateCondition);
+            this.negateCondition = Codegen.ofNullable(negateCondition);
             return this;
         }
         public Builder odataType(Output<String> odataType) {
@@ -163,7 +164,7 @@ public final class RemoteAddressMatchConditionParametersArgs extends io.pulumi.r
             return this;
         }
         public Builder transforms(@Nullable List<Either<String,Transform>> transforms) {
-            this.transforms = Output.ofNullable(transforms);
+            this.transforms = Codegen.ofNullable(transforms);
             return this;
         }
         public Builder transforms(Either<String,Transform>... transforms) {

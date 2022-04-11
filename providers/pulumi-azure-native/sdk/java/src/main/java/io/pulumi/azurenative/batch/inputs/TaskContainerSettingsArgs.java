@@ -7,6 +7,7 @@ import io.pulumi.azurenative.batch.enums.ContainerWorkingDirectory;
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> containerRunOptions;
 
     public Output<String> getContainerRunOptions() {
-        return this.containerRunOptions == null ? Output.empty() : this.containerRunOptions;
+        return this.containerRunOptions == null ? Codegen.empty() : this.containerRunOptions;
     }
 
     /**
@@ -46,14 +47,14 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ContainerRegistryArgs> registry;
 
     public Output<ContainerRegistryArgs> getRegistry() {
-        return this.registry == null ? Output.empty() : this.registry;
+        return this.registry == null ? Codegen.empty() : this.registry;
     }
 
     @Import(name="workingDirectory")
       private final @Nullable Output<ContainerWorkingDirectory> workingDirectory;
 
     public Output<ContainerWorkingDirectory> getWorkingDirectory() {
-        return this.workingDirectory == null ? Output.empty() : this.workingDirectory;
+        return this.workingDirectory == null ? Codegen.empty() : this.workingDirectory;
     }
 
     public TaskContainerSettingsArgs(
@@ -68,10 +69,10 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private TaskContainerSettingsArgs() {
-        this.containerRunOptions = Output.empty();
-        this.imageName = Output.empty();
-        this.registry = Output.empty();
-        this.workingDirectory = Output.empty();
+        this.containerRunOptions = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.registry = Codegen.empty();
+        this.workingDirectory = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder containerRunOptions(@Nullable String containerRunOptions) {
-            this.containerRunOptions = Output.ofNullable(containerRunOptions);
+            this.containerRunOptions = Codegen.ofNullable(containerRunOptions);
             return this;
         }
         public Builder imageName(Output<String> imageName) {
@@ -121,7 +122,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder registry(@Nullable ContainerRegistryArgs registry) {
-            this.registry = Output.ofNullable(registry);
+            this.registry = Codegen.ofNullable(registry);
             return this;
         }
         public Builder workingDirectory(@Nullable Output<ContainerWorkingDirectory> workingDirectory) {
@@ -129,7 +130,7 @@ public final class TaskContainerSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder workingDirectory(@Nullable ContainerWorkingDirectory workingDirectory) {
-            this.workingDirectory = Output.ofNullable(workingDirectory);
+            this.workingDirectory = Codegen.ofNullable(workingDirectory);
             return this;
         }        public TaskContainerSettingsArgs build() {
             return new TaskContainerSettingsArgs(containerRunOptions, imageName, registry, workingDirectory);

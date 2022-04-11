@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> applianceModeSupport;
 
     public Output<String> getApplianceModeSupport() {
-        return this.applianceModeSupport == null ? Output.empty() : this.applianceModeSupport;
+        return this.applianceModeSupport == null ? Codegen.empty() : this.applianceModeSupport;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dnsSupport;
 
     public Output<String> getDnsSupport() {
-        return this.dnsSupport == null ? Output.empty() : this.dnsSupport;
+        return this.dnsSupport == null ? Codegen.empty() : this.dnsSupport;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> ipv6Support;
 
     public Output<String> getIpv6Support() {
-        return this.ipv6Support == null ? Output.empty() : this.ipv6Support;
+        return this.ipv6Support == null ? Codegen.empty() : this.ipv6Support;
     }
 
     public OptionsPropertiesArgs(
@@ -61,9 +62,9 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private OptionsPropertiesArgs() {
-        this.applianceModeSupport = Output.empty();
-        this.dnsSupport = Output.empty();
-        this.ipv6Support = Output.empty();
+        this.applianceModeSupport = Codegen.empty();
+        this.dnsSupport = Codegen.empty();
+        this.ipv6Support = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder applianceModeSupport(@Nullable String applianceModeSupport) {
-            this.applianceModeSupport = Output.ofNullable(applianceModeSupport);
+            this.applianceModeSupport = Codegen.ofNullable(applianceModeSupport);
             return this;
         }
         public Builder dnsSupport(@Nullable Output<String> dnsSupport) {
@@ -103,7 +104,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dnsSupport(@Nullable String dnsSupport) {
-            this.dnsSupport = Output.ofNullable(dnsSupport);
+            this.dnsSupport = Codegen.ofNullable(dnsSupport);
             return this;
         }
         public Builder ipv6Support(@Nullable Output<String> ipv6Support) {
@@ -111,7 +112,7 @@ public final class OptionsPropertiesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder ipv6Support(@Nullable String ipv6Support) {
-            this.ipv6Support = Output.ofNullable(ipv6Support);
+            this.ipv6Support = Codegen.ofNullable(ipv6Support);
             return this;
         }        public OptionsPropertiesArgs build() {
             return new OptionsPropertiesArgs(applianceModeSupport, dnsSupport, ipv6Support);

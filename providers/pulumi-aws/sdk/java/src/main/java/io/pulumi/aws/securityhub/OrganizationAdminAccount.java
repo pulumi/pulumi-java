@@ -9,6 +9,7 @@ import io.pulumi.aws.securityhub.inputs.OrganizationAdminAccountState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -65,7 +66,7 @@ public class OrganizationAdminAccount extends io.pulumi.resources.CustomResource
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationAdminAccount(String name, OrganizationAdminAccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/organizationAdminAccount:OrganizationAdminAccount", name, args == null ? OrganizationAdminAccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:securityhub/organizationAdminAccount:OrganizationAdminAccount", name, args == null ? OrganizationAdminAccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationAdminAccount(String name, Output<String> id, @Nullable OrganizationAdminAccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.MetricCriteriaArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends i
       private final @Nullable Output<List<MetricCriteriaArgs>> allOf;
 
     public Output<List<MetricCriteriaArgs>> getAllOf() {
-        return this.allOf == null ? Output.empty() : this.allOf;
+        return this.allOf == null ? Codegen.empty() : this.allOf;
     }
 
     /**
@@ -51,8 +52,8 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends i
     }
 
     private MetricAlertSingleResourceMultipleMetricCriteriaArgs() {
-        this.allOf = Output.empty();
-        this.odataType = Output.empty();
+        this.allOf = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class MetricAlertSingleResourceMultipleMetricCriteriaArgs extends i
             return this;
         }
         public Builder allOf(@Nullable List<MetricCriteriaArgs> allOf) {
-            this.allOf = Output.ofNullable(allOf);
+            this.allOf = Codegen.ofNullable(allOf);
             return this;
         }
         public Builder allOf(MetricCriteriaArgs... allOf) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesDispatchRuleArgs;
 import java.lang.String;
 import java.util.List;
@@ -37,7 +38,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public ApplicationUrlDispatchRulesArgs(
@@ -48,8 +49,8 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
     }
 
     private ApplicationUrlDispatchRulesArgs() {
-        this.dispatchRules = Output.empty();
-        this.project = Output.empty();
+        this.dispatchRules = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class ApplicationUrlDispatchRulesArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public ApplicationUrlDispatchRulesArgs build() {
             return new ApplicationUrlDispatchRulesArgs(dispatchRules, project);

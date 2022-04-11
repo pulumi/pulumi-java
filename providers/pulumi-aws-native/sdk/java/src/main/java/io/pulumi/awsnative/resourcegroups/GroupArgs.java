@@ -8,6 +8,7 @@ import io.pulumi.awsnative.resourcegroups.inputs.GroupResourceQueryArgs;
 import io.pulumi.awsnative.resourcegroups.inputs.GroupTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +23,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GroupConfigurationItemArgs>> configuration;
 
     public Output<List<GroupConfigurationItemArgs>> getConfiguration() {
-        return this.configuration == null ? Output.empty() : this.configuration;
+        return this.configuration == null ? Codegen.empty() : this.configuration;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,28 +45,28 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="resourceQuery")
       private final @Nullable Output<GroupResourceQueryArgs> resourceQuery;
 
     public Output<GroupResourceQueryArgs> getResourceQuery() {
-        return this.resourceQuery == null ? Output.empty() : this.resourceQuery;
+        return this.resourceQuery == null ? Codegen.empty() : this.resourceQuery;
     }
 
     @Import(name="resources")
       private final @Nullable Output<List<String>> resources;
 
     public Output<List<String>> getResources() {
-        return this.resources == null ? Output.empty() : this.resources;
+        return this.resources == null ? Codegen.empty() : this.resources;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<GroupTagArgs>> tags;
 
     public Output<List<GroupTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GroupArgs(
@@ -84,12 +85,12 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private GroupArgs() {
-        this.configuration = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.resourceQuery = Output.empty();
-        this.resources = Output.empty();
-        this.tags = Output.empty();
+        this.configuration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceQuery = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configuration(@Nullable List<GroupConfigurationItemArgs> configuration) {
-            this.configuration = Output.ofNullable(configuration);
+            this.configuration = Codegen.ofNullable(configuration);
             return this;
         }
         public Builder configuration(GroupConfigurationItemArgs... configuration) {
@@ -138,7 +139,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -146,7 +147,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceQuery(@Nullable Output<GroupResourceQueryArgs> resourceQuery) {
@@ -154,7 +155,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceQuery(@Nullable GroupResourceQueryArgs resourceQuery) {
-            this.resourceQuery = Output.ofNullable(resourceQuery);
+            this.resourceQuery = Codegen.ofNullable(resourceQuery);
             return this;
         }
         public Builder resources(@Nullable Output<List<String>> resources) {
@@ -162,7 +163,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resources(@Nullable List<String> resources) {
-            this.resources = Output.ofNullable(resources);
+            this.resources = Codegen.ofNullable(resources);
             return this;
         }
         public Builder resources(String... resources) {
@@ -173,7 +174,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<GroupTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(GroupTagArgs... tags) {

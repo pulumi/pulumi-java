@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Integer> bandwidthInGbps;
 
     public Output<Integer> getBandwidthInGbps() {
-        return this.bandwidthInGbps == null ? Output.empty() : this.bandwidthInGbps;
+        return this.bandwidthInGbps == null ? Codegen.empty() : this.bandwidthInGbps;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation;
 
     public Output<Either<String,ExpressRoutePortsEncapsulation>> getEncapsulation() {
-        return this.encapsulation == null ? Output.empty() : this.encapsulation;
+        return this.encapsulation == null ? Codegen.empty() : this.encapsulation;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> expressRoutePortName;
 
     public Output<String> getExpressRoutePortName() {
-        return this.expressRoutePortName == null ? Output.empty() : this.expressRoutePortName;
+        return this.expressRoutePortName == null ? Codegen.empty() : this.expressRoutePortName;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ManagedServiceIdentityArgs> identity;
 
     public Output<ManagedServiceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ExpressRouteLinkArgs>> links;
 
     public Output<List<ExpressRouteLinkArgs>> getLinks() {
-        return this.links == null ? Output.empty() : this.links;
+        return this.links == null ? Codegen.empty() : this.links;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> peeringLocation;
 
     public Output<String> getPeeringLocation() {
-        return this.peeringLocation == null ? Output.empty() : this.peeringLocation;
+        return this.peeringLocation == null ? Codegen.empty() : this.peeringLocation;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ExpressRoutePortArgs(
@@ -155,16 +156,16 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ExpressRoutePortArgs() {
-        this.bandwidthInGbps = Output.empty();
-        this.encapsulation = Output.empty();
-        this.expressRoutePortName = Output.empty();
-        this.id = Output.empty();
-        this.identity = Output.empty();
-        this.links = Output.empty();
-        this.location = Output.empty();
-        this.peeringLocation = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.bandwidthInGbps = Codegen.empty();
+        this.encapsulation = Codegen.empty();
+        this.expressRoutePortName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.links = Codegen.empty();
+        this.location = Codegen.empty();
+        this.peeringLocation = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -210,7 +211,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder bandwidthInGbps(@Nullable Integer bandwidthInGbps) {
-            this.bandwidthInGbps = Output.ofNullable(bandwidthInGbps);
+            this.bandwidthInGbps = Codegen.ofNullable(bandwidthInGbps);
             return this;
         }
         public Builder encapsulation(@Nullable Output<Either<String,ExpressRoutePortsEncapsulation>> encapsulation) {
@@ -218,7 +219,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder encapsulation(@Nullable Either<String,ExpressRoutePortsEncapsulation> encapsulation) {
-            this.encapsulation = Output.ofNullable(encapsulation);
+            this.encapsulation = Codegen.ofNullable(encapsulation);
             return this;
         }
         public Builder expressRoutePortName(@Nullable Output<String> expressRoutePortName) {
@@ -226,7 +227,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expressRoutePortName(@Nullable String expressRoutePortName) {
-            this.expressRoutePortName = Output.ofNullable(expressRoutePortName);
+            this.expressRoutePortName = Codegen.ofNullable(expressRoutePortName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -234,7 +235,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
@@ -242,7 +243,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder identity(@Nullable ManagedServiceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder links(@Nullable Output<List<ExpressRouteLinkArgs>> links) {
@@ -250,7 +251,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder links(@Nullable List<ExpressRouteLinkArgs> links) {
-            this.links = Output.ofNullable(links);
+            this.links = Codegen.ofNullable(links);
             return this;
         }
         public Builder links(ExpressRouteLinkArgs... links) {
@@ -261,7 +262,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder peeringLocation(@Nullable Output<String> peeringLocation) {
@@ -269,7 +270,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder peeringLocation(@Nullable String peeringLocation) {
-            this.peeringLocation = Output.ofNullable(peeringLocation);
+            this.peeringLocation = Codegen.ofNullable(peeringLocation);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -285,7 +286,7 @@ public final class ExpressRoutePortArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ExpressRoutePortArgs build() {
             return new ExpressRoutePortArgs(bandwidthInGbps, encapsulation, expressRoutePortName, id, identity, links, location, peeringLocation, resourceGroupName, tags);

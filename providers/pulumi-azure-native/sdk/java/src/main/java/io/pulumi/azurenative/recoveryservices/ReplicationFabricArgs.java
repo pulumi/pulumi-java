@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.FabricCreationInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> fabricName;
 
     public Output<String> getFabricName() {
-        return this.fabricName == null ? Output.empty() : this.fabricName;
+        return this.fabricName == null ? Codegen.empty() : this.fabricName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<FabricCreationInputPropertiesArgs> properties;
 
     public Output<FabricCreationInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationFabricArgs() {
-        this.fabricName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.fabricName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder fabricName(@Nullable String fabricName) {
-            this.fabricName = Output.ofNullable(fabricName);
+            this.fabricName = Codegen.ofNullable(fabricName);
             return this;
         }
         public Builder properties(@Nullable Output<FabricCreationInputPropertiesArgs> properties) {
@@ -116,7 +117,7 @@ public final class ReplicationFabricArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder properties(@Nullable FabricCreationInputPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.alb.inputs;
 import io.pulumi.aws.alb.inputs.ListenerDefaultActionGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alpnPolicy;
 
     public Output<String> getAlpnPolicy() {
-        return this.alpnPolicy == null ? Output.empty() : this.alpnPolicy;
+        return this.alpnPolicy == null ? Codegen.empty() : this.alpnPolicy;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateArn;
 
     public Output<String> getCertificateArn() {
-        return this.certificateArn == null ? Output.empty() : this.certificateArn;
+        return this.certificateArn == null ? Codegen.empty() : this.certificateArn;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions;
 
     public Output<List<ListenerDefaultActionGetArgs>> getDefaultActions() {
-        return this.defaultActions == null ? Output.empty() : this.defaultActions;
+        return this.defaultActions == null ? Codegen.empty() : this.defaultActions;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> loadBalancerArn;
 
     public Output<String> getLoadBalancerArn() {
-        return this.loadBalancerArn == null ? Output.empty() : this.loadBalancerArn;
+        return this.loadBalancerArn == null ? Codegen.empty() : this.loadBalancerArn;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> protocol;
 
     public Output<String> getProtocol() {
-        return this.protocol == null ? Output.empty() : this.protocol;
+        return this.protocol == null ? Codegen.empty() : this.protocol;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sslPolicy;
 
     public Output<String> getSslPolicy() {
-        return this.sslPolicy == null ? Output.empty() : this.sslPolicy;
+        return this.sslPolicy == null ? Codegen.empty() : this.sslPolicy;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public ListenerState(
@@ -152,16 +153,16 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerState() {
-        this.alpnPolicy = Output.empty();
-        this.arn = Output.empty();
-        this.certificateArn = Output.empty();
-        this.defaultActions = Output.empty();
-        this.loadBalancerArn = Output.empty();
-        this.port = Output.empty();
-        this.protocol = Output.empty();
-        this.sslPolicy = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.alpnPolicy = Codegen.empty();
+        this.arn = Codegen.empty();
+        this.certificateArn = Codegen.empty();
+        this.defaultActions = Codegen.empty();
+        this.loadBalancerArn = Codegen.empty();
+        this.port = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.sslPolicy = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -207,7 +208,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alpnPolicy(@Nullable String alpnPolicy) {
-            this.alpnPolicy = Output.ofNullable(alpnPolicy);
+            this.alpnPolicy = Codegen.ofNullable(alpnPolicy);
             return this;
         }
         public Builder arn(@Nullable Output<String> arn) {
@@ -215,7 +216,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder certificateArn(@Nullable Output<String> certificateArn) {
@@ -223,7 +224,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateArn(@Nullable String certificateArn) {
-            this.certificateArn = Output.ofNullable(certificateArn);
+            this.certificateArn = Codegen.ofNullable(certificateArn);
             return this;
         }
         public Builder defaultActions(@Nullable Output<List<ListenerDefaultActionGetArgs>> defaultActions) {
@@ -231,7 +232,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultActions(@Nullable List<ListenerDefaultActionGetArgs> defaultActions) {
-            this.defaultActions = Output.ofNullable(defaultActions);
+            this.defaultActions = Codegen.ofNullable(defaultActions);
             return this;
         }
         public Builder defaultActions(ListenerDefaultActionGetArgs... defaultActions) {
@@ -242,7 +243,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loadBalancerArn(@Nullable String loadBalancerArn) {
-            this.loadBalancerArn = Output.ofNullable(loadBalancerArn);
+            this.loadBalancerArn = Codegen.ofNullable(loadBalancerArn);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -250,7 +251,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder protocol(@Nullable Output<String> protocol) {
@@ -258,7 +259,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocol(@Nullable String protocol) {
-            this.protocol = Output.ofNullable(protocol);
+            this.protocol = Codegen.ofNullable(protocol);
             return this;
         }
         public Builder sslPolicy(@Nullable Output<String> sslPolicy) {
@@ -266,7 +267,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslPolicy(@Nullable String sslPolicy) {
-            this.sslPolicy = Output.ofNullable(sslPolicy);
+            this.sslPolicy = Codegen.ofNullable(sslPolicy);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -274,7 +275,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -282,7 +283,7 @@ public final class ListenerState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public ListenerState build() {
             return new ListenerState(alpnPolicy, arn, certificateArn, defaultActions, loadBalancerArn, port, protocol, sslPolicy, tags, tagsAll);

@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingCo
     }
 
     private EndpointDeploymentConfigBlueGreenUpdatePolicyTrafficRoutingConfigurationCanarySizeArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

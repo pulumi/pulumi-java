@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceGroupNamedPortArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupNamedPortState;
@@ -147,7 +148,7 @@ public class InstanceGroupNamedPort extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceGroupNamedPort(String name, InstanceGroupNamedPortArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort", name, args == null ? InstanceGroupNamedPortArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/instanceGroupNamedPort:InstanceGroupNamedPort", name, args == null ? InstanceGroupNamedPortArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceGroupNamedPort(String name, Output<String> id, @Nullable InstanceGroupNamedPortState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

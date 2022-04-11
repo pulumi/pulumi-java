@@ -5,6 +5,7 @@ package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs extend
       private final @Nullable Output<Boolean> enableIntegrityMonitoring;
 
     public Output<Boolean> getEnableIntegrityMonitoring() {
-        return this.enableIntegrityMonitoring == null ? Output.empty() : this.enableIntegrityMonitoring;
+        return this.enableIntegrityMonitoring == null ? Codegen.empty() : this.enableIntegrityMonitoring;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs extend
       private final @Nullable Output<Boolean> enableSecureBoot;
 
     public Output<Boolean> getEnableSecureBoot() {
-        return this.enableSecureBoot == null ? Output.empty() : this.enableSecureBoot;
+        return this.enableSecureBoot == null ? Codegen.empty() : this.enableSecureBoot;
     }
 
     public ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs(
@@ -44,8 +45,8 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs extend
     }
 
     private ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs() {
-        this.enableIntegrityMonitoring = Output.empty();
-        this.enableSecureBoot = Output.empty();
+        this.enableIntegrityMonitoring = Codegen.empty();
+        this.enableSecureBoot = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs extend
             return this;
         }
         public Builder enableIntegrityMonitoring(@Nullable Boolean enableIntegrityMonitoring) {
-            this.enableIntegrityMonitoring = Output.ofNullable(enableIntegrityMonitoring);
+            this.enableIntegrityMonitoring = Codegen.ofNullable(enableIntegrityMonitoring);
             return this;
         }
         public Builder enableSecureBoot(@Nullable Output<Boolean> enableSecureBoot) {
@@ -83,7 +84,7 @@ public final class ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs extend
             return this;
         }
         public Builder enableSecureBoot(@Nullable Boolean enableSecureBoot) {
-            this.enableSecureBoot = Output.ofNullable(enableSecureBoot);
+            this.enableSecureBoot = Codegen.ofNullable(enableSecureBoot);
             return this;
         }        public ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs build() {
             return new ClusterNodePoolNodeConfigShieldedInstanceConfigGetArgs(enableIntegrityMonitoring, enableSecureBoot);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DatasetArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetState;
@@ -293,7 +294,7 @@ public class Dataset extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Dataset(String name, DatasetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/dataset:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/dataset:Dataset", name, args == null ? DatasetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Dataset(String name, Output<String> id, @Nullable DatasetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

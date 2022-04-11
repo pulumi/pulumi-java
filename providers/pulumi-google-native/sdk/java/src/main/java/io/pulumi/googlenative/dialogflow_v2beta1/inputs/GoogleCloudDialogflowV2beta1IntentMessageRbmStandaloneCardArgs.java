@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardCardOrientation;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageRbmCardContentArgs;
@@ -50,7 +51,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
       private final @Nullable Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> thumbnailImageAlignment;
 
     public Output<GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment> getThumbnailImageAlignment() {
-        return this.thumbnailImageAlignment == null ? Output.empty() : this.thumbnailImageAlignment;
+        return this.thumbnailImageAlignment == null ? Codegen.empty() : this.thumbnailImageAlignment;
     }
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs(
@@ -63,9 +64,9 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
     }
 
     private GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs() {
-        this.cardContent = Output.empty();
-        this.cardOrientation = Output.empty();
-        this.thumbnailImageAlignment = Output.empty();
+        this.cardContent = Codegen.empty();
+        this.cardOrientation = Codegen.empty();
+        this.thumbnailImageAlignment = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArg
             return this;
         }
         public Builder thumbnailImageAlignment(@Nullable GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardThumbnailImageAlignment thumbnailImageAlignment) {
-            this.thumbnailImageAlignment = Output.ofNullable(thumbnailImageAlignment);
+            this.thumbnailImageAlignment = Codegen.ofNullable(thumbnailImageAlignment);
             return this;
         }        public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardArgs(cardContent, cardOrientation, thumbnailImageAlignment);

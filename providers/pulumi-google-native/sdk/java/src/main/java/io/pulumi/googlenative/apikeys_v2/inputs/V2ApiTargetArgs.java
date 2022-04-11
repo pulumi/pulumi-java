@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> methods;
 
     public Output<List<String>> getMethods() {
-        return this.methods == null ? Output.empty() : this.methods;
+        return this.methods == null ? Codegen.empty() : this.methods;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public V2ApiTargetArgs(
@@ -49,8 +50,8 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private V2ApiTargetArgs() {
-        this.methods = Output.empty();
-        this.service = Output.empty();
+        this.methods = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder methods(@Nullable List<String> methods) {
-            this.methods = Output.ofNullable(methods);
+            this.methods = Codegen.ofNullable(methods);
             return this;
         }
         public Builder methods(String... methods) {
@@ -91,7 +92,7 @@ public final class V2ApiTargetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public V2ApiTargetArgs build() {
             return new V2ApiTargetArgs(methods, service);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.documentdb.enums.IndexKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DataType>> dataType;
 
     public Output<Either<String,DataType>> getDataType() {
-        return this.dataType == null ? Output.empty() : this.dataType;
+        return this.dataType == null ? Codegen.empty() : this.dataType;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,IndexKind>> kind;
 
     public Output<Either<String,IndexKind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> precision;
 
     public Output<Integer> getPrecision() {
-        return this.precision == null ? Output.empty() : this.precision;
+        return this.precision == null ? Codegen.empty() : this.precision;
     }
 
     public IndexesArgs(
@@ -65,9 +66,9 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IndexesArgs() {
-        this.dataType = Output.empty();
-        this.kind = Output.empty();
-        this.precision = Output.empty();
+        this.dataType = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.precision = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataType(@Nullable Either<String,DataType> dataType) {
-            this.dataType = Output.ofNullable(dataType);
+            this.dataType = Codegen.ofNullable(dataType);
             return this;
         }
         public Builder kind(@Nullable Output<Either<String,IndexKind>> kind) {
@@ -107,7 +108,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable Either<String,IndexKind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder precision(@Nullable Output<Integer> precision) {
@@ -115,7 +116,7 @@ public final class IndexesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder precision(@Nullable Integer precision) {
-            this.precision = Output.ofNullable(precision);
+            this.precision = Codegen.ofNullable(precision);
             return this;
         }        public IndexesArgs build() {
             return new IndexesArgs(dataType, kind, precision);

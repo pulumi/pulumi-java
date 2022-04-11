@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.AnalyticsConfigurationStorageClassAnalysisDataExportGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class AnalyticsConfigurationStorageClassAnalysisGetArgs extends io.
     }
 
     private AnalyticsConfigurationStorageClassAnalysisGetArgs() {
-        this.dataExport = Output.empty();
+        this.dataExport = Codegen.empty();
     }
 
     public static Builder builder() {

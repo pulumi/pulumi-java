@@ -6,6 +6,7 @@ package io.pulumi.gcp.spanner;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMMemberArgs;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMMemberState;
@@ -171,7 +172,7 @@ public class DatabaseIAMMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public DatabaseIAMMember(String name, DatabaseIAMMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:spanner/databaseIAMMember:DatabaseIAMMember", name, args == null ? DatabaseIAMMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:spanner/databaseIAMMember:DatabaseIAMMember", name, args == null ? DatabaseIAMMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private DatabaseIAMMember(String name, Output<String> id, @Nullable DatabaseIAMMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

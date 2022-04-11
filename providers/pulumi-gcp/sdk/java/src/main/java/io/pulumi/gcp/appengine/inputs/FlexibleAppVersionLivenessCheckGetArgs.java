@@ -5,6 +5,7 @@ package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> checkInterval;
 
     public Output<String> getCheckInterval() {
-        return this.checkInterval == null ? Output.empty() : this.checkInterval;
+        return this.checkInterval == null ? Codegen.empty() : this.checkInterval;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
       private final @Nullable Output<Double> failureThreshold;
 
     public Output<Double> getFailureThreshold() {
-        return this.failureThreshold == null ? Output.empty() : this.failureThreshold;
+        return this.failureThreshold == null ? Codegen.empty() : this.failureThreshold;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> initialDelay;
 
     public Output<String> getInitialDelay() {
-        return this.initialDelay == null ? Output.empty() : this.initialDelay;
+        return this.initialDelay == null ? Codegen.empty() : this.initialDelay;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
       private final @Nullable Output<Double> successThreshold;
 
     public Output<Double> getSuccessThreshold() {
-        return this.successThreshold == null ? Output.empty() : this.successThreshold;
+        return this.successThreshold == null ? Codegen.empty() : this.successThreshold;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> timeout;
 
     public Output<String> getTimeout() {
-        return this.timeout == null ? Output.empty() : this.timeout;
+        return this.timeout == null ? Codegen.empty() : this.timeout;
     }
 
     public FlexibleAppVersionLivenessCheckGetArgs(
@@ -111,13 +112,13 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
     }
 
     private FlexibleAppVersionLivenessCheckGetArgs() {
-        this.checkInterval = Output.empty();
-        this.failureThreshold = Output.empty();
-        this.host = Output.empty();
-        this.initialDelay = Output.empty();
-        this.path = Output.empty();
-        this.successThreshold = Output.empty();
-        this.timeout = Output.empty();
+        this.checkInterval = Codegen.empty();
+        this.failureThreshold = Codegen.empty();
+        this.host = Codegen.empty();
+        this.initialDelay = Codegen.empty();
+        this.path = Codegen.empty();
+        this.successThreshold = Codegen.empty();
+        this.timeout = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder checkInterval(@Nullable String checkInterval) {
-            this.checkInterval = Output.ofNullable(checkInterval);
+            this.checkInterval = Codegen.ofNullable(checkInterval);
             return this;
         }
         public Builder failureThreshold(@Nullable Output<Double> failureThreshold) {
@@ -165,7 +166,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder failureThreshold(@Nullable Double failureThreshold) {
-            this.failureThreshold = Output.ofNullable(failureThreshold);
+            this.failureThreshold = Codegen.ofNullable(failureThreshold);
             return this;
         }
         public Builder host(@Nullable Output<String> host) {
@@ -173,7 +174,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder initialDelay(@Nullable Output<String> initialDelay) {
@@ -181,7 +182,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder initialDelay(@Nullable String initialDelay) {
-            this.initialDelay = Output.ofNullable(initialDelay);
+            this.initialDelay = Codegen.ofNullable(initialDelay);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -197,7 +198,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder successThreshold(@Nullable Double successThreshold) {
-            this.successThreshold = Output.ofNullable(successThreshold);
+            this.successThreshold = Codegen.ofNullable(successThreshold);
             return this;
         }
         public Builder timeout(@Nullable Output<String> timeout) {
@@ -205,7 +206,7 @@ public final class FlexibleAppVersionLivenessCheckGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder timeout(@Nullable String timeout) {
-            this.timeout = Output.ofNullable(timeout);
+            this.timeout = Codegen.ofNullable(timeout);
             return this;
         }        public FlexibleAppVersionLivenessCheckGetArgs build() {
             return new FlexibleAppVersionLivenessCheckGetArgs(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);

@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.HostedPublicVirtualInterfaceAccepterSt
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -109,7 +110,7 @@ public class HostedPublicVirtualInterfaceAccepter extends io.pulumi.resources.Cu
      * @param options A bag of options that control this resource's behavior.
      */
     public HostedPublicVirtualInterfaceAccepter(String name, HostedPublicVirtualInterfaceAccepterArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, args == null ? HostedPublicVirtualInterfaceAccepterArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/hostedPublicVirtualInterfaceAccepter:HostedPublicVirtualInterfaceAccepter", name, args == null ? HostedPublicVirtualInterfaceAccepterArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private HostedPublicVirtualInterfaceAccepter(String name, Output<String> id, @Nullable HostedPublicVirtualInterfaceAccepterState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

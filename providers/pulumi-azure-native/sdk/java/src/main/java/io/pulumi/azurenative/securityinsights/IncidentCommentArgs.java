@@ -5,6 +5,7 @@ package io.pulumi.azurenative.securityinsights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> incidentCommentId;
 
     public Output<String> getIncidentCommentId() {
-        return this.incidentCommentId == null ? Output.empty() : this.incidentCommentId;
+        return this.incidentCommentId == null ? Codegen.empty() : this.incidentCommentId;
     }
 
     /**
@@ -96,12 +97,12 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private IncidentCommentArgs() {
-        this.incidentCommentId = Output.empty();
-        this.incidentId = Output.empty();
-        this.message = Output.empty();
-        this.operationalInsightsResourceProvider = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.workspaceName = Output.empty();
+        this.incidentCommentId = Codegen.empty();
+        this.incidentId = Codegen.empty();
+        this.message = Codegen.empty();
+        this.operationalInsightsResourceProvider = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class IncidentCommentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder incidentCommentId(@Nullable String incidentCommentId) {
-            this.incidentCommentId = Output.ofNullable(incidentCommentId);
+            this.incidentCommentId = Codegen.ofNullable(incidentCommentId);
             return this;
         }
         public Builder incidentId(Output<String> incidentId) {

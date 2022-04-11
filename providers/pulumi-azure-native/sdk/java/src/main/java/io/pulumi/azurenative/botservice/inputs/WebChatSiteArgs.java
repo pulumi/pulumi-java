@@ -5,6 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -56,14 +57,14 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
         Output<Boolean> isWebchatPreviewEnabled,
         Output<String> siteName) {
         this.isEnabled = Objects.requireNonNull(isEnabled, "expected parameter 'isEnabled' to be non-null");
-        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Output.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
+        this.isWebchatPreviewEnabled = isWebchatPreviewEnabled == null ? Codegen.ofNullable(false) : Objects.requireNonNull(isWebchatPreviewEnabled, "expected parameter 'isWebchatPreviewEnabled' to be non-null");
         this.siteName = Objects.requireNonNull(siteName, "expected parameter 'siteName' to be non-null");
     }
 
     private WebChatSiteArgs() {
-        this.isEnabled = Output.empty();
-        this.isWebchatPreviewEnabled = Output.empty();
-        this.siteName = Output.empty();
+        this.isEnabled = Codegen.empty();
+        this.isWebchatPreviewEnabled = Codegen.empty();
+        this.siteName = Codegen.empty();
     }
 
     public static Builder builder() {

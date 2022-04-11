@@ -9,6 +9,7 @@ import io.pulumi.azurenative.insights.inputs.SyslogDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +32,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
       private final @Nullable Output<List<ExtensionDataSourceArgs>> extensions;
 
     public Output<List<ExtensionDataSourceArgs>> getExtensions() {
-        return this.extensions == null ? Output.empty() : this.extensions;
+        return this.extensions == null ? Codegen.empty() : this.extensions;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
       private final @Nullable Output<List<PerfCounterDataSourceArgs>> performanceCounters;
 
     public Output<List<PerfCounterDataSourceArgs>> getPerformanceCounters() {
-        return this.performanceCounters == null ? Output.empty() : this.performanceCounters;
+        return this.performanceCounters == null ? Codegen.empty() : this.performanceCounters;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
       private final @Nullable Output<List<SyslogDataSourceArgs>> syslog;
 
     public Output<List<SyslogDataSourceArgs>> getSyslog() {
-        return this.syslog == null ? Output.empty() : this.syslog;
+        return this.syslog == null ? Codegen.empty() : this.syslog;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
       private final @Nullable Output<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
     public Output<List<WindowsEventLogDataSourceArgs>> getWindowsEventLogs() {
-        return this.windowsEventLogs == null ? Output.empty() : this.windowsEventLogs;
+        return this.windowsEventLogs == null ? Codegen.empty() : this.windowsEventLogs;
     }
 
     public DataCollectionRuleDataSourcesArgs(
@@ -79,10 +80,10 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
     }
 
     private DataCollectionRuleDataSourcesArgs() {
-        this.extensions = Output.empty();
-        this.performanceCounters = Output.empty();
-        this.syslog = Output.empty();
-        this.windowsEventLogs = Output.empty();
+        this.extensions = Codegen.empty();
+        this.performanceCounters = Codegen.empty();
+        this.syslog = Codegen.empty();
+        this.windowsEventLogs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
             return this;
         }
         public Builder extensions(@Nullable List<ExtensionDataSourceArgs> extensions) {
-            this.extensions = Output.ofNullable(extensions);
+            this.extensions = Codegen.ofNullable(extensions);
             return this;
         }
         public Builder extensions(ExtensionDataSourceArgs... extensions) {
@@ -127,7 +128,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
             return this;
         }
         public Builder performanceCounters(@Nullable List<PerfCounterDataSourceArgs> performanceCounters) {
-            this.performanceCounters = Output.ofNullable(performanceCounters);
+            this.performanceCounters = Codegen.ofNullable(performanceCounters);
             return this;
         }
         public Builder performanceCounters(PerfCounterDataSourceArgs... performanceCounters) {
@@ -138,7 +139,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
             return this;
         }
         public Builder syslog(@Nullable List<SyslogDataSourceArgs> syslog) {
-            this.syslog = Output.ofNullable(syslog);
+            this.syslog = Codegen.ofNullable(syslog);
             return this;
         }
         public Builder syslog(SyslogDataSourceArgs... syslog) {
@@ -149,7 +150,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
             return this;
         }
         public Builder windowsEventLogs(@Nullable List<WindowsEventLogDataSourceArgs> windowsEventLogs) {
-            this.windowsEventLogs = Output.ofNullable(windowsEventLogs);
+            this.windowsEventLogs = Codegen.ofNullable(windowsEventLogs);
             return this;
         }
         public Builder windowsEventLogs(WindowsEventLogDataSourceArgs... windowsEventLogs) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> envMap;
 
     public Output<Map<String,String>> getEnvMap() {
-        return this.envMap == null ? Output.empty() : this.envMap;
+        return this.envMap == null ? Codegen.empty() : this.envMap;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsKeyName;
 
     public Output<String> getKmsKeyName() {
-        return this.kmsKeyName == null ? Output.empty() : this.kmsKeyName;
+        return this.kmsKeyName == null ? Codegen.empty() : this.kmsKeyName;
     }
 
     public InlineSecretArgs(
@@ -49,8 +50,8 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InlineSecretArgs() {
-        this.envMap = Output.empty();
-        this.kmsKeyName = Output.empty();
+        this.envMap = Codegen.empty();
+        this.kmsKeyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder envMap(@Nullable Map<String,String> envMap) {
-            this.envMap = Output.ofNullable(envMap);
+            this.envMap = Codegen.ofNullable(envMap);
             return this;
         }
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
@@ -88,7 +89,7 @@ public final class InlineSecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsKeyName(@Nullable String kmsKeyName) {
-            this.kmsKeyName = Output.ofNullable(kmsKeyName);
+            this.kmsKeyName = Codegen.ofNullable(kmsKeyName);
             return this;
         }        public InlineSecretArgs build() {
             return new InlineSecretArgs(envMap, kmsKeyName);

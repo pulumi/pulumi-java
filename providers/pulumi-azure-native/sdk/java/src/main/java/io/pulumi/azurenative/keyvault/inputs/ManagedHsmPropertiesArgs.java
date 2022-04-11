@@ -9,6 +9,7 @@ import io.pulumi.azurenative.keyvault.inputs.MHSMNetworkRuleSetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +34,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<CreateMode> createMode;
 
     public Output<CreateMode> getCreateMode() {
-        return this.createMode == null ? Output.empty() : this.createMode;
+        return this.createMode == null ? Codegen.empty() : this.createMode;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enablePurgeProtection;
 
     public Output<Boolean> getEnablePurgeProtection() {
-        return this.enablePurgeProtection == null ? Output.empty() : this.enablePurgeProtection;
+        return this.enablePurgeProtection == null ? Codegen.empty() : this.enablePurgeProtection;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> enableSoftDelete;
 
     public Output<Boolean> getEnableSoftDelete() {
-        return this.enableSoftDelete == null ? Output.empty() : this.enableSoftDelete;
+        return this.enableSoftDelete == null ? Codegen.empty() : this.enableSoftDelete;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<List<String>> initialAdminObjectIds;
 
     public Output<List<String>> getInitialAdminObjectIds() {
-        return this.initialAdminObjectIds == null ? Output.empty() : this.initialAdminObjectIds;
+        return this.initialAdminObjectIds == null ? Codegen.empty() : this.initialAdminObjectIds;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<MHSMNetworkRuleSetArgs> networkAcls;
 
     public Output<MHSMNetworkRuleSetArgs> getNetworkAcls() {
-        return this.networkAcls == null ? Output.empty() : this.networkAcls;
+        return this.networkAcls == null ? Codegen.empty() : this.networkAcls;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Output<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> softDeleteRetentionInDays;
 
     public Output<Integer> getSoftDeleteRetentionInDays() {
-        return this.softDeleteRetentionInDays == null ? Output.empty() : this.softDeleteRetentionInDays;
+        return this.softDeleteRetentionInDays == null ? Codegen.empty() : this.softDeleteRetentionInDays;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public ManagedHsmPropertiesArgs(
@@ -123,24 +124,24 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
         @Nullable Output<Integer> softDeleteRetentionInDays,
         @Nullable Output<String> tenantId) {
         this.createMode = createMode;
-        this.enablePurgeProtection = enablePurgeProtection == null ? Output.ofNullable(true) : enablePurgeProtection;
-        this.enableSoftDelete = enableSoftDelete == null ? Output.ofNullable(true) : enableSoftDelete;
+        this.enablePurgeProtection = enablePurgeProtection == null ? Codegen.ofNullable(true) : enablePurgeProtection;
+        this.enableSoftDelete = enableSoftDelete == null ? Codegen.ofNullable(true) : enableSoftDelete;
         this.initialAdminObjectIds = initialAdminObjectIds;
         this.networkAcls = networkAcls;
         this.publicNetworkAccess = publicNetworkAccess;
-        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Output.ofNullable(90) : softDeleteRetentionInDays;
+        this.softDeleteRetentionInDays = softDeleteRetentionInDays == null ? Codegen.ofNullable(90) : softDeleteRetentionInDays;
         this.tenantId = tenantId;
     }
 
     private ManagedHsmPropertiesArgs() {
-        this.createMode = Output.empty();
-        this.enablePurgeProtection = Output.empty();
-        this.enableSoftDelete = Output.empty();
-        this.initialAdminObjectIds = Output.empty();
-        this.networkAcls = Output.empty();
-        this.publicNetworkAccess = Output.empty();
-        this.softDeleteRetentionInDays = Output.empty();
-        this.tenantId = Output.empty();
+        this.createMode = Codegen.empty();
+        this.enablePurgeProtection = Codegen.empty();
+        this.enableSoftDelete = Codegen.empty();
+        this.initialAdminObjectIds = Codegen.empty();
+        this.networkAcls = Codegen.empty();
+        this.publicNetworkAccess = Codegen.empty();
+        this.softDeleteRetentionInDays = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder createMode(@Nullable CreateMode createMode) {
-            this.createMode = Output.ofNullable(createMode);
+            this.createMode = Codegen.ofNullable(createMode);
             return this;
         }
         public Builder enablePurgeProtection(@Nullable Output<Boolean> enablePurgeProtection) {
@@ -190,7 +191,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enablePurgeProtection(@Nullable Boolean enablePurgeProtection) {
-            this.enablePurgeProtection = Output.ofNullable(enablePurgeProtection);
+            this.enablePurgeProtection = Codegen.ofNullable(enablePurgeProtection);
             return this;
         }
         public Builder enableSoftDelete(@Nullable Output<Boolean> enableSoftDelete) {
@@ -198,7 +199,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder enableSoftDelete(@Nullable Boolean enableSoftDelete) {
-            this.enableSoftDelete = Output.ofNullable(enableSoftDelete);
+            this.enableSoftDelete = Codegen.ofNullable(enableSoftDelete);
             return this;
         }
         public Builder initialAdminObjectIds(@Nullable Output<List<String>> initialAdminObjectIds) {
@@ -206,7 +207,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder initialAdminObjectIds(@Nullable List<String> initialAdminObjectIds) {
-            this.initialAdminObjectIds = Output.ofNullable(initialAdminObjectIds);
+            this.initialAdminObjectIds = Codegen.ofNullable(initialAdminObjectIds);
             return this;
         }
         public Builder initialAdminObjectIds(String... initialAdminObjectIds) {
@@ -217,7 +218,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder networkAcls(@Nullable MHSMNetworkRuleSetArgs networkAcls) {
-            this.networkAcls = Output.ofNullable(networkAcls);
+            this.networkAcls = Codegen.ofNullable(networkAcls);
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
@@ -225,7 +226,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,PublicNetworkAccess> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }
         public Builder softDeleteRetentionInDays(@Nullable Output<Integer> softDeleteRetentionInDays) {
@@ -233,7 +234,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder softDeleteRetentionInDays(@Nullable Integer softDeleteRetentionInDays) {
-            this.softDeleteRetentionInDays = Output.ofNullable(softDeleteRetentionInDays);
+            this.softDeleteRetentionInDays = Codegen.ofNullable(softDeleteRetentionInDays);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -241,7 +242,7 @@ public final class ManagedHsmPropertiesArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public ManagedHsmPropertiesArgs build() {
             return new ManagedHsmPropertiesArgs(createMode, enablePurgeProtection, enableSoftDelete, initialAdminObjectIds, networkAcls, publicNetworkAccess, softDeleteRetentionInDays, tenantId);

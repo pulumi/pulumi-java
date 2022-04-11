@@ -8,6 +8,7 @@ import io.pulumi.azurenative.security.enums.RecommendationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -50,8 +51,8 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
     }
 
     private RecommendationConfigurationPropertiesArgs() {
-        this.recommendationType = Output.empty();
-        this.status = Output.empty();
+        this.recommendationType = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {

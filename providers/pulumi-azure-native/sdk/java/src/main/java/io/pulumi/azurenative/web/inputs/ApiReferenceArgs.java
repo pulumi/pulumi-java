@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> brandColor;
 
     public Output<String> getBrandColor() {
-        return this.brandColor == null ? Output.empty() : this.brandColor;
+        return this.brandColor == null ? Codegen.empty() : this.brandColor;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> iconUri;
 
     public Output<String> getIconUri() {
-        return this.iconUri == null ? Output.empty() : this.iconUri;
+        return this.iconUri == null ? Codegen.empty() : this.iconUri;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> swagger;
 
     public Output<Object> getSwagger() {
-        return this.swagger == null ? Output.empty() : this.swagger;
+        return this.swagger == null ? Codegen.empty() : this.swagger;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ApiReferenceArgs(
@@ -123,14 +124,14 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiReferenceArgs() {
-        this.brandColor = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.iconUri = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.swagger = Output.empty();
-        this.type = Output.empty();
+        this.brandColor = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.iconUri = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.swagger = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -172,7 +173,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder brandColor(@Nullable String brandColor) {
-            this.brandColor = Output.ofNullable(brandColor);
+            this.brandColor = Codegen.ofNullable(brandColor);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -180,7 +181,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -188,7 +189,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder iconUri(@Nullable Output<String> iconUri) {
@@ -196,7 +197,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder iconUri(@Nullable String iconUri) {
-            this.iconUri = Output.ofNullable(iconUri);
+            this.iconUri = Codegen.ofNullable(iconUri);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -204,7 +205,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -212,7 +213,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder swagger(@Nullable Output<Object> swagger) {
@@ -220,7 +221,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder swagger(@Nullable Object swagger) {
-            this.swagger = Output.ofNullable(swagger);
+            this.swagger = Codegen.ofNullable(swagger);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -228,7 +229,7 @@ public final class ApiReferenceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ApiReferenceArgs build() {
             return new ApiReferenceArgs(brandColor, description, displayName, iconUri, id, name, swagger, type);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -33,7 +34,7 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
       private final @Nullable Output<Map<String,Object>> httpPorts;
 
     public Output<Map<String,Object>> getHttpPorts() {
-        return this.httpPorts == null ? Output.empty() : this.httpPorts;
+        return this.httpPorts == null ? Codegen.empty() : this.httpPorts;
     }
 
     public ClusterClusterConfigEndpointConfigArgs(
@@ -44,8 +45,8 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
     }
 
     private ClusterClusterConfigEndpointConfigArgs() {
-        this.enableHttpPortAccess = Output.empty();
-        this.httpPorts = Output.empty();
+        this.enableHttpPortAccess = Codegen.empty();
+        this.httpPorts = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
             return this;
         }
         public Builder httpPorts(@Nullable Map<String,Object> httpPorts) {
-            this.httpPorts = Output.ofNullable(httpPorts);
+            this.httpPorts = Codegen.ofNullable(httpPorts);
             return this;
         }        public ClusterClusterConfigEndpointConfigArgs build() {
             return new ClusterClusterConfigEndpointConfigArgs(enableHttpPortAccess, httpPorts);

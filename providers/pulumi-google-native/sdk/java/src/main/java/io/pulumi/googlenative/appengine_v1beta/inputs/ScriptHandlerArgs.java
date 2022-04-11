@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scriptPath;
 
     public Output<String> getScriptPath() {
-        return this.scriptPath == null ? Output.empty() : this.scriptPath;
+        return this.scriptPath == null ? Codegen.empty() : this.scriptPath;
     }
 
     public ScriptHandlerArgs(@Nullable Output<String> scriptPath) {
@@ -34,7 +35,7 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScriptHandlerArgs() {
-        this.scriptPath = Output.empty();
+        this.scriptPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ScriptHandlerArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptPath(@Nullable String scriptPath) {
-            this.scriptPath = Output.ofNullable(scriptPath);
+            this.scriptPath = Codegen.ofNullable(scriptPath);
             return this;
         }        public ScriptHandlerArgs build() {
             return new ScriptHandlerArgs(scriptPath);

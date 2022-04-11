@@ -10,6 +10,7 @@ import io.pulumi.aws.codestarnotifications.outputs.NotificationRuleTarget;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -182,7 +183,7 @@ public class NotificationRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NotificationRule(String name, NotificationRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:codestarnotifications/notificationRule:NotificationRule", name, args == null ? NotificationRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:codestarnotifications/notificationRule:NotificationRule", name, args == null ? NotificationRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NotificationRule(String name, Output<String> id, @Nullable NotificationRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

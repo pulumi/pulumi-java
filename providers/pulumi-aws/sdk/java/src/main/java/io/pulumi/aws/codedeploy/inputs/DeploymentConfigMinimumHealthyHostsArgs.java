@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
       private final @Nullable Output<Integer> value;
 
     public Output<Integer> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public DeploymentConfigMinimumHealthyHostsArgs(
@@ -48,8 +49,8 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
     }
 
     private DeploymentConfigMinimumHealthyHostsArgs() {
-        this.type = Output.empty();
-        this.value = Output.empty();
+        this.type = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder value(@Nullable Output<Integer> value) {
@@ -87,7 +88,7 @@ public final class DeploymentConfigMinimumHealthyHostsArgs extends io.pulumi.res
             return this;
         }
         public Builder value(@Nullable Integer value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public DeploymentConfigMinimumHealthyHostsArgs build() {
             return new DeploymentConfigMinimumHealthyHostsArgs(type, value);

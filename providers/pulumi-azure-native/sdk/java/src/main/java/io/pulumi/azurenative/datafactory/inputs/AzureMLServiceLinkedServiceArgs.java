@@ -10,6 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<Object>> annotations;
 
     public Output<List<Object>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Output<IntegrationRuntimeReferenceArgs> getConnectVia() {
-        return this.connectVia == null ? Output.empty() : this.connectVia;
+        return this.connectVia == null ? Codegen.empty() : this.connectVia;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Object> encryptedCredential;
 
     public Output<Object> getEncryptedCredential() {
-        return this.encryptedCredential == null ? Output.empty() : this.encryptedCredential;
+        return this.encryptedCredential == null ? Codegen.empty() : this.encryptedCredential;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Output<Map<String,ParameterSpecificationArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Object> servicePrincipalId;
 
     public Output<Object> getServicePrincipalId() {
-        return this.servicePrincipalId == null ? Output.empty() : this.servicePrincipalId;
+        return this.servicePrincipalId == null ? Codegen.empty() : this.servicePrincipalId;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
-        return this.servicePrincipalKey == null ? Output.empty() : this.servicePrincipalKey;
+        return this.servicePrincipalKey == null ? Codegen.empty() : this.servicePrincipalKey;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
       private final @Nullable Output<Object> tenant;
 
     public Output<Object> getTenant() {
-        return this.tenant == null ? Output.empty() : this.tenant;
+        return this.tenant == null ? Codegen.empty() : this.tenant;
     }
 
     /**
@@ -187,18 +188,18 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
     }
 
     private AzureMLServiceLinkedServiceArgs() {
-        this.annotations = Output.empty();
-        this.connectVia = Output.empty();
-        this.description = Output.empty();
-        this.encryptedCredential = Output.empty();
-        this.mlWorkspaceName = Output.empty();
-        this.parameters = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.servicePrincipalId = Output.empty();
-        this.servicePrincipalKey = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.tenant = Output.empty();
-        this.type = Output.empty();
+        this.annotations = Codegen.empty();
+        this.connectVia = Codegen.empty();
+        this.description = Codegen.empty();
+        this.encryptedCredential = Codegen.empty();
+        this.mlWorkspaceName = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.servicePrincipalId = Codegen.empty();
+        this.servicePrincipalKey = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.tenant = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -248,7 +249,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder annotations(@Nullable List<Object> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder annotations(Object... annotations) {
@@ -259,7 +260,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceArgs connectVia) {
-            this.connectVia = Output.ofNullable(connectVia);
+            this.connectVia = Codegen.ofNullable(connectVia);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -267,7 +268,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
@@ -275,7 +276,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
-            this.encryptedCredential = Output.ofNullable(encryptedCredential);
+            this.encryptedCredential = Codegen.ofNullable(encryptedCredential);
             return this;
         }
         public Builder mlWorkspaceName(Output<Object> mlWorkspaceName) {
@@ -291,7 +292,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder parameters(@Nullable Map<String,ParameterSpecificationArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder resourceGroupName(Output<Object> resourceGroupName) {
@@ -307,7 +308,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
-            this.servicePrincipalId = Output.ofNullable(servicePrincipalId);
+            this.servicePrincipalId = Codegen.ofNullable(servicePrincipalId);
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
@@ -315,7 +316,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
-            this.servicePrincipalKey = Output.ofNullable(servicePrincipalKey);
+            this.servicePrincipalKey = Codegen.ofNullable(servicePrincipalKey);
             return this;
         }
         public Builder subscriptionId(Output<Object> subscriptionId) {
@@ -331,7 +332,7 @@ public final class AzureMLServiceLinkedServiceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder tenant(@Nullable Object tenant) {
-            this.tenant = Output.ofNullable(tenant);
+            this.tenant = Codegen.ofNullable(tenant);
             return this;
         }
         public Builder type(Output<String> type) {

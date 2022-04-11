@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketS3KeyFilterArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class BucketNotificationFilterArgs extends io.pulumi.resources.Reso
     }
 
     private BucketNotificationFilterArgs() {
-        this.s3Key = Output.empty();
+        this.s3Key = Codegen.empty();
     }
 
     public static Builder builder() {

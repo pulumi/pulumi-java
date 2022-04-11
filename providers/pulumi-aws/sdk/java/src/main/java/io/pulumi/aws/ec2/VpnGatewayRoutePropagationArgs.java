@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class VpnGatewayRoutePropagationArgs extends io.pulumi.resources.Re
     }
 
     private VpnGatewayRoutePropagationArgs() {
-        this.routeTableId = Output.empty();
-        this.vpnGatewayId = Output.empty();
+        this.routeTableId = Codegen.empty();
+        this.vpnGatewayId = Codegen.empty();
     }
 
     public static Builder builder() {

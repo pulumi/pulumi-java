@@ -9,6 +9,7 @@ import io.pulumi.azurenative.automation.inputs.RunbookDraftArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -40,7 +41,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RunbookDraftArgs> draft;
 
     public Output<RunbookDraftArgs> getDraft() {
-        return this.draft == null ? Output.empty() : this.draft;
+        return this.draft == null ? Codegen.empty() : this.draft;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> logActivityTrace;
 
     public Output<Integer> getLogActivityTrace() {
-        return this.logActivityTrace == null ? Output.empty() : this.logActivityTrace;
+        return this.logActivityTrace == null ? Codegen.empty() : this.logActivityTrace;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> logProgress;
 
     public Output<Boolean> getLogProgress() {
-        return this.logProgress == null ? Output.empty() : this.logProgress;
+        return this.logProgress == null ? Codegen.empty() : this.logProgress;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> logVerbose;
 
     public Output<Boolean> getLogVerbose() {
-        return this.logVerbose == null ? Output.empty() : this.logVerbose;
+        return this.logVerbose == null ? Codegen.empty() : this.logVerbose;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ContentLinkArgs> publishContentLink;
 
     public Output<ContentLinkArgs> getPublishContentLink() {
-        return this.publishContentLink == null ? Output.empty() : this.publishContentLink;
+        return this.publishContentLink == null ? Codegen.empty() : this.publishContentLink;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> runbookName;
 
     public Output<String> getRunbookName() {
-        return this.runbookName == null ? Output.empty() : this.runbookName;
+        return this.runbookName == null ? Codegen.empty() : this.runbookName;
     }
 
     /**
@@ -161,7 +162,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public RunbookArgs(
@@ -194,19 +195,19 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RunbookArgs() {
-        this.automationAccountName = Output.empty();
-        this.description = Output.empty();
-        this.draft = Output.empty();
-        this.location = Output.empty();
-        this.logActivityTrace = Output.empty();
-        this.logProgress = Output.empty();
-        this.logVerbose = Output.empty();
-        this.name = Output.empty();
-        this.publishContentLink = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.runbookName = Output.empty();
-        this.runbookType = Output.empty();
-        this.tags = Output.empty();
+        this.automationAccountName = Codegen.empty();
+        this.description = Codegen.empty();
+        this.draft = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logActivityTrace = Codegen.empty();
+        this.logProgress = Codegen.empty();
+        this.logVerbose = Codegen.empty();
+        this.name = Codegen.empty();
+        this.publishContentLink = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.runbookName = Codegen.empty();
+        this.runbookType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -266,7 +267,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder draft(@Nullable Output<RunbookDraftArgs> draft) {
@@ -274,7 +275,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder draft(@Nullable RunbookDraftArgs draft) {
-            this.draft = Output.ofNullable(draft);
+            this.draft = Codegen.ofNullable(draft);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -282,7 +283,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logActivityTrace(@Nullable Output<Integer> logActivityTrace) {
@@ -290,7 +291,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logActivityTrace(@Nullable Integer logActivityTrace) {
-            this.logActivityTrace = Output.ofNullable(logActivityTrace);
+            this.logActivityTrace = Codegen.ofNullable(logActivityTrace);
             return this;
         }
         public Builder logProgress(@Nullable Output<Boolean> logProgress) {
@@ -298,7 +299,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logProgress(@Nullable Boolean logProgress) {
-            this.logProgress = Output.ofNullable(logProgress);
+            this.logProgress = Codegen.ofNullable(logProgress);
             return this;
         }
         public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
@@ -306,7 +307,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logVerbose(@Nullable Boolean logVerbose) {
-            this.logVerbose = Output.ofNullable(logVerbose);
+            this.logVerbose = Codegen.ofNullable(logVerbose);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -314,7 +315,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder publishContentLink(@Nullable Output<ContentLinkArgs> publishContentLink) {
@@ -322,7 +323,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publishContentLink(@Nullable ContentLinkArgs publishContentLink) {
-            this.publishContentLink = Output.ofNullable(publishContentLink);
+            this.publishContentLink = Codegen.ofNullable(publishContentLink);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -338,7 +339,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runbookName(@Nullable String runbookName) {
-            this.runbookName = Output.ofNullable(runbookName);
+            this.runbookName = Codegen.ofNullable(runbookName);
             return this;
         }
         public Builder runbookType(Output<Either<String,RunbookTypeEnum>> runbookType) {
@@ -354,7 +355,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public RunbookArgs build() {
             return new RunbookArgs(automationAccountName, description, draft, location, logActivityTrace, logProgress, logVerbose, name, publishContentLink, resourceGroupName, runbookName, runbookType, tags);

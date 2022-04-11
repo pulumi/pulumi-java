@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigtable.inputs.TableIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +21,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<TableIamBindingConditionGetArgs> condition;
 
     public Output<TableIamBindingConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -42,14 +43,14 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     @Import(name="members")
       private final @Nullable Output<List<String>> members;
 
     public Output<List<String>> getMembers() {
-        return this.members == null ? Output.empty() : this.members;
+        return this.members == null ? Codegen.empty() : this.members;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     public TableIamBindingState(
@@ -106,13 +107,13 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
     }
 
     private TableIamBindingState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.instance = Output.empty();
-        this.members = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
-        this.table = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.instance = Codegen.empty();
+        this.members = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable TableIamBindingConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -160,7 +161,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder instance(@Nullable Output<String> instance) {
@@ -168,7 +169,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder members(@Nullable Output<List<String>> members) {
@@ -176,7 +177,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder members(@Nullable List<String> members) {
-            this.members = Output.ofNullable(members);
+            this.members = Codegen.ofNullable(members);
             return this;
         }
         public Builder members(String... members) {
@@ -187,7 +188,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -195,7 +196,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -203,7 +204,7 @@ public final class TableIamBindingState extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }        public TableIamBindingState build() {
             return new TableIamBindingState(condition, etag, instance, members, project, role, table);

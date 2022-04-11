@@ -9,6 +9,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.WarmStoreConfigurationPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> environmentName;
 
     public Output<String> getEnvironmentName() {
-        return this.environmentName == null ? Output.empty() : this.environmentName;
+        return this.environmentName == null ? Codegen.empty() : this.environmentName;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<WarmStoreConfigurationPropertiesArgs> warmStoreConfiguration;
 
     public Output<WarmStoreConfigurationPropertiesArgs> getWarmStoreConfiguration() {
-        return this.warmStoreConfiguration == null ? Output.empty() : this.warmStoreConfiguration;
+        return this.warmStoreConfiguration == null ? Codegen.empty() : this.warmStoreConfiguration;
     }
 
     public Gen2EnvironmentArgs(
@@ -142,15 +143,15 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private Gen2EnvironmentArgs() {
-        this.environmentName = Output.empty();
-        this.kind = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.storageConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.timeSeriesIdProperties = Output.empty();
-        this.warmStoreConfiguration = Output.empty();
+        this.environmentName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.storageConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.timeSeriesIdProperties = Codegen.empty();
+        this.warmStoreConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -194,7 +195,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder environmentName(@Nullable String environmentName) {
-            this.environmentName = Output.ofNullable(environmentName);
+            this.environmentName = Codegen.ofNullable(environmentName);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -210,7 +211,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -242,7 +243,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder timeSeriesIdProperties(Output<List<TimeSeriesIdPropertyArgs>> timeSeriesIdProperties) {
@@ -261,7 +262,7 @@ public final class Gen2EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder warmStoreConfiguration(@Nullable WarmStoreConfigurationPropertiesArgs warmStoreConfiguration) {
-            this.warmStoreConfiguration = Output.ofNullable(warmStoreConfiguration);
+            this.warmStoreConfiguration = Codegen.ofNullable(warmStoreConfiguration);
             return this;
         }        public Gen2EnvironmentArgs build() {
             return new Gen2EnvironmentArgs(environmentName, kind, location, resourceGroupName, sku, storageConfiguration, tags, timeSeriesIdProperties, warmStoreConfiguration);

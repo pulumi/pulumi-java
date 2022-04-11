@@ -5,6 +5,7 @@ package io.pulumi.aws.glue.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CatalogTablePartitionKeyGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class CatalogTablePartitionKeyGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public CatalogTablePartitionKeyGetArgs(
@@ -57,9 +58,9 @@ public final class CatalogTablePartitionKeyGetArgs extends io.pulumi.resources.R
     }
 
     private CatalogTablePartitionKeyGetArgs() {
-        this.comment = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.comment = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class CatalogTablePartitionKeyGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -107,7 +108,7 @@ public final class CatalogTablePartitionKeyGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public CatalogTablePartitionKeyGetArgs build() {
             return new CatalogTablePartitionKeyGetArgs(comment, name, type);

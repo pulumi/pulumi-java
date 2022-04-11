@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs;
@@ -30,7 +31,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> cloudRepo;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs> getCloudRepo() {
-        return this.cloudRepo == null ? Output.empty() : this.cloudRepo;
+        return this.cloudRepo == null ? Codegen.empty() : this.cloudRepo;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> getGerrit() {
-        return this.gerrit == null ? Output.empty() : this.gerrit;
+        return this.gerrit == null ? Codegen.empty() : this.gerrit;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
       private final @Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git;
 
     public Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> getGit() {
-        return this.git == null ? Output.empty() : this.git;
+        return this.git == null ? Codegen.empty() : this.git;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs(
@@ -78,10 +79,10 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
     }
 
     private GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs() {
-        this.cloudRepo = Output.empty();
-        this.gerrit = Output.empty();
-        this.git = Output.empty();
-        this.labels = Output.empty();
+        this.cloudRepo = Codegen.empty();
+        this.gerrit = Codegen.empty();
+        this.git = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
             return this;
         }
         public Builder cloudRepo(@Nullable GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextArgs cloudRepo) {
-            this.cloudRepo = Output.ofNullable(cloudRepo);
+            this.cloudRepo = Codegen.ofNullable(cloudRepo);
             return this;
         }
         public Builder gerrit(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs> gerrit) {
@@ -123,7 +124,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
             return this;
         }
         public Builder gerrit(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextArgs gerrit) {
-            this.gerrit = Output.ofNullable(gerrit);
+            this.gerrit = Codegen.ofNullable(gerrit);
             return this;
         }
         public Builder git(@Nullable Output<GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs> git) {
@@ -131,7 +132,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
             return this;
         }
         public Builder git(@Nullable GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextArgs git) {
-            this.git = Output.ofNullable(git);
+            this.git = Codegen.ofNullable(git);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -139,7 +140,7 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs exte
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs(cloudRepo, gerrit, git, labels);

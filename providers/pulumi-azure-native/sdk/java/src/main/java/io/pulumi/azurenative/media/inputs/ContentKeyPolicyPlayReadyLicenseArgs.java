@@ -11,6 +11,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyPlayReadyPlayRightArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -44,7 +45,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
       private final @Nullable Output<String> beginDate;
 
     public Output<String> getBeginDate() {
-        return this.beginDate == null ? Output.empty() : this.beginDate;
+        return this.beginDate == null ? Codegen.empty() : this.beginDate;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
       private final @Nullable Output<String> expirationDate;
 
     public Output<String> getExpirationDate() {
-        return this.expirationDate == null ? Output.empty() : this.expirationDate;
+        return this.expirationDate == null ? Codegen.empty() : this.expirationDate;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
       private final @Nullable Output<String> gracePeriod;
 
     public Output<String> getGracePeriod() {
-        return this.gracePeriod == null ? Output.empty() : this.gracePeriod;
+        return this.gracePeriod == null ? Codegen.empty() : this.gracePeriod;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
       private final @Nullable Output<ContentKeyPolicyPlayReadyPlayRightArgs> playRight;
 
     public Output<ContentKeyPolicyPlayReadyPlayRightArgs> getPlayRight() {
-        return this.playRight == null ? Output.empty() : this.playRight;
+        return this.playRight == null ? Codegen.empty() : this.playRight;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
       private final @Nullable Output<String> relativeBeginDate;
 
     public Output<String> getRelativeBeginDate() {
-        return this.relativeBeginDate == null ? Output.empty() : this.relativeBeginDate;
+        return this.relativeBeginDate == null ? Codegen.empty() : this.relativeBeginDate;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
       private final @Nullable Output<String> relativeExpirationDate;
 
     public Output<String> getRelativeExpirationDate() {
-        return this.relativeExpirationDate == null ? Output.empty() : this.relativeExpirationDate;
+        return this.relativeExpirationDate == null ? Codegen.empty() : this.relativeExpirationDate;
     }
 
     public ContentKeyPolicyPlayReadyLicenseArgs(
@@ -159,16 +160,16 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
     }
 
     private ContentKeyPolicyPlayReadyLicenseArgs() {
-        this.allowTestDevices = Output.empty();
-        this.beginDate = Output.empty();
-        this.contentKeyLocation = Output.empty();
-        this.contentType = Output.empty();
-        this.expirationDate = Output.empty();
-        this.gracePeriod = Output.empty();
-        this.licenseType = Output.empty();
-        this.playRight = Output.empty();
-        this.relativeBeginDate = Output.empty();
-        this.relativeExpirationDate = Output.empty();
+        this.allowTestDevices = Codegen.empty();
+        this.beginDate = Codegen.empty();
+        this.contentKeyLocation = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.expirationDate = Codegen.empty();
+        this.gracePeriod = Codegen.empty();
+        this.licenseType = Codegen.empty();
+        this.playRight = Codegen.empty();
+        this.relativeBeginDate = Codegen.empty();
+        this.relativeExpirationDate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -222,7 +223,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             return this;
         }
         public Builder beginDate(@Nullable String beginDate) {
-            this.beginDate = Output.ofNullable(beginDate);
+            this.beginDate = Codegen.ofNullable(beginDate);
             return this;
         }
         public Builder contentKeyLocation(Output<Either<ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs,ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierArgs>> contentKeyLocation) {
@@ -246,7 +247,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             return this;
         }
         public Builder expirationDate(@Nullable String expirationDate) {
-            this.expirationDate = Output.ofNullable(expirationDate);
+            this.expirationDate = Codegen.ofNullable(expirationDate);
             return this;
         }
         public Builder gracePeriod(@Nullable Output<String> gracePeriod) {
@@ -254,7 +255,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             return this;
         }
         public Builder gracePeriod(@Nullable String gracePeriod) {
-            this.gracePeriod = Output.ofNullable(gracePeriod);
+            this.gracePeriod = Codegen.ofNullable(gracePeriod);
             return this;
         }
         public Builder licenseType(Output<Either<String,ContentKeyPolicyPlayReadyLicenseType>> licenseType) {
@@ -270,7 +271,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             return this;
         }
         public Builder playRight(@Nullable ContentKeyPolicyPlayReadyPlayRightArgs playRight) {
-            this.playRight = Output.ofNullable(playRight);
+            this.playRight = Codegen.ofNullable(playRight);
             return this;
         }
         public Builder relativeBeginDate(@Nullable Output<String> relativeBeginDate) {
@@ -278,7 +279,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             return this;
         }
         public Builder relativeBeginDate(@Nullable String relativeBeginDate) {
-            this.relativeBeginDate = Output.ofNullable(relativeBeginDate);
+            this.relativeBeginDate = Codegen.ofNullable(relativeBeginDate);
             return this;
         }
         public Builder relativeExpirationDate(@Nullable Output<String> relativeExpirationDate) {
@@ -286,7 +287,7 @@ public final class ContentKeyPolicyPlayReadyLicenseArgs extends io.pulumi.resour
             return this;
         }
         public Builder relativeExpirationDate(@Nullable String relativeExpirationDate) {
-            this.relativeExpirationDate = Output.ofNullable(relativeExpirationDate);
+            this.relativeExpirationDate = Codegen.ofNullable(relativeExpirationDate);
             return this;
         }        public ContentKeyPolicyPlayReadyLicenseArgs build() {
             return new ContentKeyPolicyPlayReadyLicenseArgs(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);

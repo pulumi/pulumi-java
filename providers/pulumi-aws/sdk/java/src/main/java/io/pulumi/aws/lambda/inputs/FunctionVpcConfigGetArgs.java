@@ -5,6 +5,7 @@ package io.pulumi.aws.lambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +42,7 @@ public final class FunctionVpcConfigGetArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     public FunctionVpcConfigGetArgs(
@@ -54,9 +55,9 @@ public final class FunctionVpcConfigGetArgs extends io.pulumi.resources.Resource
     }
 
     private FunctionVpcConfigGetArgs() {
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.vpcId = Output.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class FunctionVpcConfigGetArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }        public FunctionVpcConfigGetArgs build() {
             return new FunctionVpcConfigGetArgs(securityGroupIds, subnetIds, vpcId);

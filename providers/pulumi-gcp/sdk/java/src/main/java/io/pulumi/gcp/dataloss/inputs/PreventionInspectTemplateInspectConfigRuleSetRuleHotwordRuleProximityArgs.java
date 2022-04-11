@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
       private final @Nullable Output<Integer> windowAfter;
 
     public Output<Integer> getWindowAfter() {
-        return this.windowAfter == null ? Output.empty() : this.windowAfter;
+        return this.windowAfter == null ? Codegen.empty() : this.windowAfter;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
       private final @Nullable Output<Integer> windowBefore;
 
     public Output<Integer> getWindowBefore() {
-        return this.windowBefore == null ? Output.empty() : this.windowBefore;
+        return this.windowBefore == null ? Codegen.empty() : this.windowBefore;
     }
 
     public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs(
@@ -44,8 +45,8 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
     }
 
     private PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs() {
-        this.windowAfter = Output.empty();
-        this.windowBefore = Output.empty();
+        this.windowAfter = Codegen.empty();
+        this.windowBefore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             return this;
         }
         public Builder windowAfter(@Nullable Integer windowAfter) {
-            this.windowAfter = Output.ofNullable(windowAfter);
+            this.windowAfter = Codegen.ofNullable(windowAfter);
             return this;
         }
         public Builder windowBefore(@Nullable Output<Integer> windowBefore) {
@@ -83,7 +84,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             return this;
         }
         public Builder windowBefore(@Nullable Integer windowBefore) {
-            this.windowBefore = Output.ofNullable(windowBefore);
+            this.windowBefore = Codegen.ofNullable(windowBefore);
             return this;
         }        public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximityArgs(windowAfter, windowBefore);

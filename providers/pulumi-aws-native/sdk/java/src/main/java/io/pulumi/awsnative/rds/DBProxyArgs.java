@@ -8,6 +8,7 @@ import io.pulumi.awsnative.rds.inputs.DBProxyAuthFormatArgs;
 import io.pulumi.awsnative.rds.inputs.DBProxyTagFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -39,7 +40,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dBProxyName;
 
     public Output<String> getDBProxyName() {
-        return this.dBProxyName == null ? Output.empty() : this.dBProxyName;
+        return this.dBProxyName == null ? Codegen.empty() : this.dBProxyName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> debugLogging;
 
     public Output<Boolean> getDebugLogging() {
-        return this.debugLogging == null ? Output.empty() : this.debugLogging;
+        return this.debugLogging == null ? Codegen.empty() : this.debugLogging;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> idleClientTimeout;
 
     public Output<Integer> getIdleClientTimeout() {
-        return this.idleClientTimeout == null ? Output.empty() : this.idleClientTimeout;
+        return this.idleClientTimeout == null ? Codegen.empty() : this.idleClientTimeout;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requireTLS;
 
     public Output<Boolean> getRequireTLS() {
-        return this.requireTLS == null ? Output.empty() : this.requireTLS;
+        return this.requireTLS == null ? Codegen.empty() : this.requireTLS;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DBProxyTagFormatArgs>> tags;
 
     public Output<List<DBProxyTagFormatArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> vpcSecurityGroupIds;
 
     public Output<List<String>> getVpcSecurityGroupIds() {
-        return this.vpcSecurityGroupIds == null ? Output.empty() : this.vpcSecurityGroupIds;
+        return this.vpcSecurityGroupIds == null ? Codegen.empty() : this.vpcSecurityGroupIds;
     }
 
     /**
@@ -154,16 +155,16 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DBProxyArgs() {
-        this.auth = Output.empty();
-        this.dBProxyName = Output.empty();
-        this.debugLogging = Output.empty();
-        this.engineFamily = Output.empty();
-        this.idleClientTimeout = Output.empty();
-        this.requireTLS = Output.empty();
-        this.roleArn = Output.empty();
-        this.tags = Output.empty();
-        this.vpcSecurityGroupIds = Output.empty();
-        this.vpcSubnetIds = Output.empty();
+        this.auth = Codegen.empty();
+        this.dBProxyName = Codegen.empty();
+        this.debugLogging = Codegen.empty();
+        this.engineFamily = Codegen.empty();
+        this.idleClientTimeout = Codegen.empty();
+        this.requireTLS = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcSecurityGroupIds = Codegen.empty();
+        this.vpcSubnetIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dBProxyName(@Nullable String dBProxyName) {
-            this.dBProxyName = Output.ofNullable(dBProxyName);
+            this.dBProxyName = Codegen.ofNullable(dBProxyName);
             return this;
         }
         public Builder debugLogging(@Nullable Output<Boolean> debugLogging) {
@@ -228,7 +229,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder debugLogging(@Nullable Boolean debugLogging) {
-            this.debugLogging = Output.ofNullable(debugLogging);
+            this.debugLogging = Codegen.ofNullable(debugLogging);
             return this;
         }
         public Builder engineFamily(Output<DBProxyEngineFamily> engineFamily) {
@@ -244,7 +245,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleClientTimeout(@Nullable Integer idleClientTimeout) {
-            this.idleClientTimeout = Output.ofNullable(idleClientTimeout);
+            this.idleClientTimeout = Codegen.ofNullable(idleClientTimeout);
             return this;
         }
         public Builder requireTLS(@Nullable Output<Boolean> requireTLS) {
@@ -252,7 +253,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireTLS(@Nullable Boolean requireTLS) {
-            this.requireTLS = Output.ofNullable(requireTLS);
+            this.requireTLS = Codegen.ofNullable(requireTLS);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {
@@ -268,7 +269,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DBProxyTagFormatArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DBProxyTagFormatArgs... tags) {
@@ -279,7 +280,7 @@ public final class DBProxyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcSecurityGroupIds(@Nullable List<String> vpcSecurityGroupIds) {
-            this.vpcSecurityGroupIds = Output.ofNullable(vpcSecurityGroupIds);
+            this.vpcSecurityGroupIds = Codegen.ofNullable(vpcSecurityGroupIds);
             return this;
         }
         public Builder vpcSecurityGroupIds(String... vpcSecurityGroupIds) {

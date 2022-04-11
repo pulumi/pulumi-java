@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
     }
 
     private VMwareV2FabricCreationInputArgs() {
-        this.instanceType = Output.empty();
-        this.migrationSolutionId = Output.empty();
-        this.vmwareSiteId = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.migrationSolutionId = Codegen.empty();
+        this.vmwareSiteId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class VMwareV2FabricCreationInputArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder migrationSolutionId(Output<String> migrationSolutionId) {

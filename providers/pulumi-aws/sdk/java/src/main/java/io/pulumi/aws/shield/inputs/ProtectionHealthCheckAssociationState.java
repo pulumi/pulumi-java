@@ -5,6 +5,7 @@ package io.pulumi.aws.shield.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
       private final @Nullable Output<String> healthCheckArn;
 
     public Output<String> getHealthCheckArn() {
-        return this.healthCheckArn == null ? Output.empty() : this.healthCheckArn;
+        return this.healthCheckArn == null ? Codegen.empty() : this.healthCheckArn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
       private final @Nullable Output<String> shieldProtectionId;
 
     public Output<String> getShieldProtectionId() {
-        return this.shieldProtectionId == null ? Output.empty() : this.shieldProtectionId;
+        return this.shieldProtectionId == null ? Codegen.empty() : this.shieldProtectionId;
     }
 
     public ProtectionHealthCheckAssociationState(
@@ -44,8 +45,8 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
     }
 
     private ProtectionHealthCheckAssociationState() {
-        this.healthCheckArn = Output.empty();
-        this.shieldProtectionId = Output.empty();
+        this.healthCheckArn = Codegen.empty();
+        this.shieldProtectionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
             return this;
         }
         public Builder healthCheckArn(@Nullable String healthCheckArn) {
-            this.healthCheckArn = Output.ofNullable(healthCheckArn);
+            this.healthCheckArn = Codegen.ofNullable(healthCheckArn);
             return this;
         }
         public Builder shieldProtectionId(@Nullable Output<String> shieldProtectionId) {
@@ -83,7 +84,7 @@ public final class ProtectionHealthCheckAssociationState extends io.pulumi.resou
             return this;
         }
         public Builder shieldProtectionId(@Nullable String shieldProtectionId) {
-            this.shieldProtectionId = Output.ofNullable(shieldProtectionId);
+            this.shieldProtectionId = Codegen.ofNullable(shieldProtectionId);
             return this;
         }        public ProtectionHealthCheckAssociationState build() {
             return new ProtectionHealthCheckAssociationState(healthCheckArn, shieldProtectionId);

@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> identity;
 
     public Output<String> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     public IdentityPolicyState(
@@ -57,9 +58,9 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
     }
 
     private IdentityPolicyState() {
-        this.identity = Output.empty();
-        this.name = Output.empty();
-        this.policy = Output.empty();
+        this.identity = Codegen.empty();
+        this.name = Codegen.empty();
+        this.policy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder identity(@Nullable String identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -99,7 +100,7 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -107,7 +108,7 @@ public final class IdentityPolicyState extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }        public IdentityPolicyState build() {
             return new IdentityPolicyState(identity, name, policy);

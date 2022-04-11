@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> delayEvaluation;
 
     public Output<Integer> getDelayEvaluation() {
-        return this.delayEvaluation == null ? Output.empty() : this.delayEvaluation;
+        return this.delayEvaluation == null ? Codegen.empty() : this.delayEvaluation;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> evaluationInterval;
 
     public Output<Integer> getEvaluationInterval() {
-        return this.evaluationInterval == null ? Output.empty() : this.evaluationInterval;
+        return this.evaluationInterval == null ? Codegen.empty() : this.evaluationInterval;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> slackAmount;
 
     public Output<Double> getSlackAmount() {
-        return this.slackAmount == null ? Output.empty() : this.slackAmount;
+        return this.slackAmount == null ? Codegen.empty() : this.slackAmount;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> slackFactor;
 
     public Output<Double> getSlackFactor() {
-        return this.slackFactor == null ? Output.empty() : this.slackFactor;
+        return this.slackFactor == null ? Codegen.empty() : this.slackFactor;
     }
 
     public BanditPolicyArgs(
@@ -89,11 +90,11 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BanditPolicyArgs() {
-        this.delayEvaluation = Output.empty();
-        this.evaluationInterval = Output.empty();
-        this.policyType = Output.empty();
-        this.slackAmount = Output.empty();
-        this.slackFactor = Output.empty();
+        this.delayEvaluation = Codegen.empty();
+        this.evaluationInterval = Codegen.empty();
+        this.policyType = Codegen.empty();
+        this.slackAmount = Codegen.empty();
+        this.slackFactor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -129,7 +130,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder delayEvaluation(@Nullable Integer delayEvaluation) {
-            this.delayEvaluation = Output.ofNullable(delayEvaluation);
+            this.delayEvaluation = Codegen.ofNullable(delayEvaluation);
             return this;
         }
         public Builder evaluationInterval(@Nullable Output<Integer> evaluationInterval) {
@@ -137,7 +138,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder evaluationInterval(@Nullable Integer evaluationInterval) {
-            this.evaluationInterval = Output.ofNullable(evaluationInterval);
+            this.evaluationInterval = Codegen.ofNullable(evaluationInterval);
             return this;
         }
         public Builder policyType(Output<String> policyType) {
@@ -153,7 +154,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slackAmount(@Nullable Double slackAmount) {
-            this.slackAmount = Output.ofNullable(slackAmount);
+            this.slackAmount = Codegen.ofNullable(slackAmount);
             return this;
         }
         public Builder slackFactor(@Nullable Output<Double> slackFactor) {
@@ -161,7 +162,7 @@ public final class BanditPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder slackFactor(@Nullable Double slackFactor) {
-            this.slackFactor = Output.ofNullable(slackFactor);
+            this.slackFactor = Codegen.ofNullable(slackFactor);
             return this;
         }        public BanditPolicyArgs build() {
             return new BanditPolicyArgs(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class LicenseProvisionalConfigurationArgs extends io.pulumi.resourc
     }
 
     private LicenseProvisionalConfigurationArgs() {
-        this.maxTimeToLiveInMinutes = Output.empty();
+        this.maxTimeToLiveInMinutes = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_v1.enums.ImageRawDiskContainerType;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageRawDiskContainerType> containerType;
 
     public Output<ImageRawDiskContainerType> getContainerType() {
-        return this.containerType == null ? Output.empty() : this.containerType;
+        return this.containerType == null ? Codegen.empty() : this.containerType;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> source;
 
     public Output<String> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public ImageRawDiskArgs(
@@ -49,8 +50,8 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageRawDiskArgs() {
-        this.containerType = Output.empty();
-        this.source = Output.empty();
+        this.containerType = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder containerType(@Nullable ImageRawDiskContainerType containerType) {
-            this.containerType = Output.ofNullable(containerType);
+            this.containerType = Codegen.ofNullable(containerType);
             return this;
         }
         public Builder source(@Nullable Output<String> source) {
@@ -88,7 +89,7 @@ public final class ImageRawDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable String source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public ImageRawDiskArgs build() {
             return new ImageRawDiskArgs(containerType, source);

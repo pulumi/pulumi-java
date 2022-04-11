@@ -5,6 +5,7 @@ package io.pulumi.aws.globalaccelerator.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> ipAddresses;
 
     public Output<List<String>> getIpAddresses() {
-        return this.ipAddresses == null ? Output.empty() : this.ipAddresses;
+        return this.ipAddresses == null ? Codegen.empty() : this.ipAddresses;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> ipFamily;
 
     public Output<String> getIpFamily() {
-        return this.ipFamily == null ? Output.empty() : this.ipFamily;
+        return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 
     public AcceleratorIpSetGetArgs(
@@ -45,8 +46,8 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private AcceleratorIpSetGetArgs() {
-        this.ipAddresses = Output.empty();
-        this.ipFamily = Output.empty();
+        this.ipAddresses = Codegen.empty();
+        this.ipFamily = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ipAddresses(@Nullable List<String> ipAddresses) {
-            this.ipAddresses = Output.ofNullable(ipAddresses);
+            this.ipAddresses = Codegen.ofNullable(ipAddresses);
             return this;
         }
         public Builder ipAddresses(String... ipAddresses) {
@@ -87,7 +88,7 @@ public final class AcceleratorIpSetGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Output.ofNullable(ipFamily);
+            this.ipFamily = Codegen.ofNullable(ipFamily);
             return this;
         }        public AcceleratorIpSetGetArgs build() {
             return new AcceleratorIpSetGetArgs(ipAddresses, ipFamily);

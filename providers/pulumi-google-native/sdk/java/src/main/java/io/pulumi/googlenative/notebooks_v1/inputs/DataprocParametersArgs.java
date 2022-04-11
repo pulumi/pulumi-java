@@ -5,6 +5,7 @@ package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DataprocParametersArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> cluster;
 
     public Output<String> getCluster() {
-        return this.cluster == null ? Output.empty() : this.cluster;
+        return this.cluster == null ? Codegen.empty() : this.cluster;
     }
 
     public DataprocParametersArgs(@Nullable Output<String> cluster) {
@@ -34,7 +35,7 @@ public final class DataprocParametersArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DataprocParametersArgs() {
-        this.cluster = Output.empty();
+        this.cluster = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class DataprocParametersArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder cluster(@Nullable String cluster) {
-            this.cluster = Output.ofNullable(cluster);
+            this.cluster = Codegen.ofNullable(cluster);
             return this;
         }        public DataprocParametersArgs build() {
             return new DataprocParametersArgs(cluster);

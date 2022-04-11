@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.DistributionArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DistributionArgs>> distribution;
 
     public Output<List<DistributionArgs>> getDistribution() {
-        return this.distribution == null ? Output.empty() : this.distribution;
+        return this.distribution == null ? Codegen.empty() : this.distribution;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public PackageArgs(
@@ -50,8 +51,8 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PackageArgs() {
-        this.distribution = Output.empty();
-        this.name = Output.empty();
+        this.distribution = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder distribution(@Nullable List<DistributionArgs> distribution) {
-            this.distribution = Output.ofNullable(distribution);
+            this.distribution = Codegen.ofNullable(distribution);
             return this;
         }
         public Builder distribution(DistributionArgs... distribution) {
@@ -92,7 +93,7 @@ public final class PackageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public PackageArgs build() {
             return new PackageArgs(distribution, name);

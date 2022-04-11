@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateFieldTypeEnumTypeAllowedValueArgs;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class TagTemplateFieldTypeEnumTypeArgs extends io.pulumi.resources.
     }
 
     private TagTemplateFieldTypeEnumTypeArgs() {
-        this.allowedValues = Output.empty();
+        this.allowedValues = Codegen.empty();
     }
 
     public static Builder builder() {

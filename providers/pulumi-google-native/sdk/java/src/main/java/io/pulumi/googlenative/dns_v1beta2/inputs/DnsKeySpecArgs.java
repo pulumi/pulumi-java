@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecAlgorithm;
 import io.pulumi.googlenative.dns_v1beta2.enums.DnsKeySpecKeyType;
 import java.lang.Integer;
@@ -29,7 +30,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DnsKeySpecAlgorithm> algorithm;
 
     public Output<DnsKeySpecAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> keyLength;
 
     public Output<Integer> getKeyLength() {
-        return this.keyLength == null ? Output.empty() : this.keyLength;
+        return this.keyLength == null ? Codegen.empty() : this.keyLength;
     }
 
     /**
@@ -51,14 +52,14 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DnsKeySpecKeyType> keyType;
 
     public Output<DnsKeySpecKeyType> getKeyType() {
-        return this.keyType == null ? Output.empty() : this.keyType;
+        return this.keyType == null ? Codegen.empty() : this.keyType;
     }
 
     @Import(name="kind")
       private final @Nullable Output<String> kind;
 
     public Output<String> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     public DnsKeySpecArgs(
@@ -73,10 +74,10 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DnsKeySpecArgs() {
-        this.algorithm = Output.empty();
-        this.keyLength = Output.empty();
-        this.keyType = Output.empty();
-        this.kind = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.keyLength = Codegen.empty();
+        this.keyType = Codegen.empty();
+        this.kind = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder algorithm(@Nullable DnsKeySpecAlgorithm algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder keyLength(@Nullable Output<Integer> keyLength) {
@@ -118,7 +119,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyLength(@Nullable Integer keyLength) {
-            this.keyLength = Output.ofNullable(keyLength);
+            this.keyLength = Codegen.ofNullable(keyLength);
             return this;
         }
         public Builder keyType(@Nullable Output<DnsKeySpecKeyType> keyType) {
@@ -126,7 +127,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyType(@Nullable DnsKeySpecKeyType keyType) {
-            this.keyType = Output.ofNullable(keyType);
+            this.keyType = Codegen.ofNullable(keyType);
             return this;
         }
         public Builder kind(@Nullable Output<String> kind) {
@@ -134,7 +135,7 @@ public final class DnsKeySpecArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kind(@Nullable String kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }        public DnsKeySpecArgs build() {
             return new DnsKeySpecArgs(algorithm, keyLength, keyType, kind);

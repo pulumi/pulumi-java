@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
       private final @Nullable Output<String> promotionId;
 
     public Output<String> getPromotionId() {
-        return this.promotionId == null ? Output.empty() : this.promotionId;
+        return this.promotionId == null ? Codegen.empty() : this.promotionId;
     }
 
     public GoogleCloudRetailV2alphaPromotionArgs(@Nullable Output<String> promotionId) {
@@ -34,7 +35,7 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
     }
 
     private GoogleCloudRetailV2alphaPromotionArgs() {
-        this.promotionId = Output.empty();
+        this.promotionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class GoogleCloudRetailV2alphaPromotionArgs extends io.pulumi.resou
             return this;
         }
         public Builder promotionId(@Nullable String promotionId) {
-            this.promotionId = Output.ofNullable(promotionId);
+            this.promotionId = Codegen.ofNullable(promotionId);
             return this;
         }        public GoogleCloudRetailV2alphaPromotionArgs build() {
             return new GoogleCloudRetailV2alphaPromotionArgs(promotionId);

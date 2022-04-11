@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class RegularFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RegularFileArgs() {
-        this.content = Output.empty();
-        this.devicePath = Output.empty();
+        this.content = Codegen.empty();
+        this.devicePath = Codegen.empty();
     }
 
     public static Builder builder() {

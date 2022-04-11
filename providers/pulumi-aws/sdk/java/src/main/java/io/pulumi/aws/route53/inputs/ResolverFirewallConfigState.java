@@ -5,6 +5,7 @@ package io.pulumi.aws.route53.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> firewallFailOpen;
 
     public Output<String> getFirewallFailOpen() {
-        return this.firewallFailOpen == null ? Output.empty() : this.firewallFailOpen;
+        return this.firewallFailOpen == null ? Codegen.empty() : this.firewallFailOpen;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> ownerId;
 
     public Output<String> getOwnerId() {
-        return this.ownerId == null ? Output.empty() : this.ownerId;
+        return this.ownerId == null ? Codegen.empty() : this.ownerId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
       private final @Nullable Output<String> resourceId;
 
     public Output<String> getResourceId() {
-        return this.resourceId == null ? Output.empty() : this.resourceId;
+        return this.resourceId == null ? Codegen.empty() : this.resourceId;
     }
 
     public ResolverFirewallConfigState(
@@ -57,9 +58,9 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
     }
 
     private ResolverFirewallConfigState() {
-        this.firewallFailOpen = Output.empty();
-        this.ownerId = Output.empty();
-        this.resourceId = Output.empty();
+        this.firewallFailOpen = Codegen.empty();
+        this.ownerId = Codegen.empty();
+        this.resourceId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder firewallFailOpen(@Nullable String firewallFailOpen) {
-            this.firewallFailOpen = Output.ofNullable(firewallFailOpen);
+            this.firewallFailOpen = Codegen.ofNullable(firewallFailOpen);
             return this;
         }
         public Builder ownerId(@Nullable Output<String> ownerId) {
@@ -99,7 +100,7 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder ownerId(@Nullable String ownerId) {
-            this.ownerId = Output.ofNullable(ownerId);
+            this.ownerId = Codegen.ofNullable(ownerId);
             return this;
         }
         public Builder resourceId(@Nullable Output<String> resourceId) {
@@ -107,7 +108,7 @@ public final class ResolverFirewallConfigState extends io.pulumi.resources.Resou
             return this;
         }
         public Builder resourceId(@Nullable String resourceId) {
-            this.resourceId = Output.ofNullable(resourceId);
+            this.resourceId = Codegen.ofNullable(resourceId);
             return this;
         }        public ResolverFirewallConfigState build() {
             return new ResolverFirewallConfigState(firewallFailOpen, ownerId, resourceId);

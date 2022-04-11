@@ -6,6 +6,7 @@ package io.pulumi.awsnative.s3objectlambda.inputs;
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointTransformationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +26,14 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
       private final @Nullable Output<List<String>> allowedFeatures;
 
     public Output<List<String>> getAllowedFeatures() {
-        return this.allowedFeatures == null ? Output.empty() : this.allowedFeatures;
+        return this.allowedFeatures == null ? Codegen.empty() : this.allowedFeatures;
     }
 
     @Import(name="cloudWatchMetricsEnabled")
       private final @Nullable Output<Boolean> cloudWatchMetricsEnabled;
 
     public Output<Boolean> getCloudWatchMetricsEnabled() {
-        return this.cloudWatchMetricsEnabled == null ? Output.empty() : this.cloudWatchMetricsEnabled;
+        return this.cloudWatchMetricsEnabled == null ? Codegen.empty() : this.cloudWatchMetricsEnabled;
     }
 
     @Import(name="supportingAccessPoint", required=true)
@@ -61,10 +62,10 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
     }
 
     private AccessPointObjectLambdaConfigurationArgs() {
-        this.allowedFeatures = Output.empty();
-        this.cloudWatchMetricsEnabled = Output.empty();
-        this.supportingAccessPoint = Output.empty();
-        this.transformationConfigurations = Output.empty();
+        this.allowedFeatures = Codegen.empty();
+        this.cloudWatchMetricsEnabled = Codegen.empty();
+        this.supportingAccessPoint = Codegen.empty();
+        this.transformationConfigurations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder allowedFeatures(@Nullable List<String> allowedFeatures) {
-            this.allowedFeatures = Output.ofNullable(allowedFeatures);
+            this.allowedFeatures = Codegen.ofNullable(allowedFeatures);
             return this;
         }
         public Builder allowedFeatures(String... allowedFeatures) {
@@ -109,7 +110,7 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
             return this;
         }
         public Builder cloudWatchMetricsEnabled(@Nullable Boolean cloudWatchMetricsEnabled) {
-            this.cloudWatchMetricsEnabled = Output.ofNullable(cloudWatchMetricsEnabled);
+            this.cloudWatchMetricsEnabled = Codegen.ofNullable(cloudWatchMetricsEnabled);
             return this;
         }
         public Builder supportingAccessPoint(Output<String> supportingAccessPoint) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.workspaces.inputs;
 import io.pulumi.aws.workspaces.inputs.IpGroupRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IpGroupRuleGetArgs>> rules;
 
     public Output<List<IpGroupRuleGetArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public IpGroupState(
@@ -86,11 +87,11 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpGroupState() {
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.rules = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.rules = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -134,7 +135,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder rules(@Nullable Output<List<IpGroupRuleGetArgs>> rules) {
@@ -142,7 +143,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<IpGroupRuleGetArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(IpGroupRuleGetArgs... rules) {
@@ -153,7 +154,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -161,7 +162,7 @@ public final class IpGroupState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public IpGroupState build() {
             return new IpGroupState(description, name, rules, tags, tagsAll);

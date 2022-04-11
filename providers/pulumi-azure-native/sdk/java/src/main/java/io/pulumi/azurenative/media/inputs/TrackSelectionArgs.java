@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.TrackPropertyConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
 
     public Output<List<TrackPropertyConditionArgs>> getTrackSelections() {
-        return this.trackSelections == null ? Output.empty() : this.trackSelections;
+        return this.trackSelections == null ? Codegen.empty() : this.trackSelections;
     }
 
     public TrackSelectionArgs(@Nullable Output<List<TrackPropertyConditionArgs>> trackSelections) {
@@ -35,7 +36,7 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TrackSelectionArgs() {
-        this.trackSelections = Output.empty();
+        this.trackSelections = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trackSelections(@Nullable List<TrackPropertyConditionArgs> trackSelections) {
-            this.trackSelections = Output.ofNullable(trackSelections);
+            this.trackSelections = Codegen.ofNullable(trackSelections);
             return this;
         }
         public Builder trackSelections(TrackPropertyConditionArgs... trackSelections) {

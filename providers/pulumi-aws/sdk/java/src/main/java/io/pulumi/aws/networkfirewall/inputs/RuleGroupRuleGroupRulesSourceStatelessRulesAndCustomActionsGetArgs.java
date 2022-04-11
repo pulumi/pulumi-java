@@ -7,6 +7,7 @@ import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatele
 import io.pulumi.aws.networkfirewall.inputs.RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsStatelessRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
       private final @Nullable Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> customActions;
 
     public Output<List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs>> getCustomActions() {
-        return this.customActions == null ? Output.empty() : this.customActions;
+        return this.customActions == null ? Codegen.empty() : this.customActions;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
     }
 
     private RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGetArgs() {
-        this.customActions = Output.empty();
-        this.statelessRules = Output.empty();
+        this.customActions = Codegen.empty();
+        this.statelessRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsGe
             return this;
         }
         public Builder customActions(@Nullable List<RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs> customActions) {
-            this.customActions = Output.ofNullable(customActions);
+            this.customActions = Codegen.ofNullable(customActions);
             return this;
         }
         public Builder customActions(RuleGroupRuleGroupRulesSourceStatelessRulesAndCustomActionsCustomActionGetArgs... customActions) {

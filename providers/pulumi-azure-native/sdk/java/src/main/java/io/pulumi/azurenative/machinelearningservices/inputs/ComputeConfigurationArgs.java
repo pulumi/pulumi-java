@@ -5,6 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> isLocal;
 
     public Output<Boolean> getIsLocal() {
-        return this.isLocal == null ? Output.empty() : this.isLocal;
+        return this.isLocal == null ? Codegen.empty() : this.isLocal;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public ComputeConfigurationArgs(
@@ -103,12 +104,12 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private ComputeConfigurationArgs() {
-        this.instanceCount = Output.empty();
-        this.instanceType = Output.empty();
-        this.isLocal = Output.empty();
-        this.location = Output.empty();
-        this.properties = Output.empty();
-        this.target = Output.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.isLocal = Codegen.empty();
+        this.location = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -146,7 +147,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -154,7 +155,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder isLocal(@Nullable Output<Boolean> isLocal) {
@@ -162,7 +163,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder isLocal(@Nullable Boolean isLocal) {
-            this.isLocal = Output.ofNullable(isLocal);
+            this.isLocal = Codegen.ofNullable(isLocal);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -170,7 +171,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
@@ -178,7 +179,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -186,7 +187,7 @@ public final class ComputeConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public ComputeConfigurationArgs build() {
             return new ComputeConfigurationArgs(instanceCount, instanceType, isLocal, location, properties, target);

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.GeoBackupPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> geoBackupPolicyName;
 
     public Output<String> getGeoBackupPolicyName() {
-        return this.geoBackupPolicyName == null ? Output.empty() : this.geoBackupPolicyName;
+        return this.geoBackupPolicyName == null ? Codegen.empty() : this.geoBackupPolicyName;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private GeoBackupPolicyArgs() {
-        this.databaseName = Output.empty();
-        this.geoBackupPolicyName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serverName = Output.empty();
-        this.state = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.geoBackupPolicyName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class GeoBackupPolicyArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder geoBackupPolicyName(@Nullable String geoBackupPolicyName) {
-            this.geoBackupPolicyName = Output.ofNullable(geoBackupPolicyName);
+            this.geoBackupPolicyName = Codegen.ofNullable(geoBackupPolicyName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

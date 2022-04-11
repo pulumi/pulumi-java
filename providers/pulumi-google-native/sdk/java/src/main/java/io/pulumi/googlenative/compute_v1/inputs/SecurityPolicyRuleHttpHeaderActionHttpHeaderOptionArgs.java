@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
       private final @Nullable Output<String> headerName;
 
     public Output<String> getHeaderName() {
-        return this.headerName == null ? Output.empty() : this.headerName;
+        return this.headerName == null ? Codegen.empty() : this.headerName;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
       private final @Nullable Output<String> headerValue;
 
     public Output<String> getHeaderValue() {
-        return this.headerValue == null ? Output.empty() : this.headerValue;
+        return this.headerValue == null ? Codegen.empty() : this.headerValue;
     }
 
     public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(
@@ -44,8 +45,8 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
     }
 
     private SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs() {
-        this.headerName = Output.empty();
-        this.headerValue = Output.empty();
+        this.headerName = Codegen.empty();
+        this.headerValue = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
             return this;
         }
         public Builder headerName(@Nullable String headerName) {
-            this.headerName = Output.ofNullable(headerName);
+            this.headerName = Codegen.ofNullable(headerName);
             return this;
         }
         public Builder headerValue(@Nullable Output<String> headerValue) {
@@ -83,7 +84,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
             return this;
         }
         public Builder headerValue(@Nullable String headerValue) {
-            this.headerValue = Output.ofNullable(headerValue);
+            this.headerValue = Codegen.ofNullable(headerValue);
             return this;
         }        public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(headerName, headerValue);

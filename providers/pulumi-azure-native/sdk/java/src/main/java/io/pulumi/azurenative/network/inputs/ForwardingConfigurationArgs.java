@@ -9,6 +9,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<SubResourceArgs> backendPool;
 
     public Output<SubResourceArgs> getBackendPool() {
-        return this.backendPool == null ? Output.empty() : this.backendPool;
+        return this.backendPool == null ? Codegen.empty() : this.backendPool;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<CacheConfigurationArgs> cacheConfiguration;
 
     public Output<CacheConfigurationArgs> getCacheConfiguration() {
-        return this.cacheConfiguration == null ? Output.empty() : this.cacheConfiguration;
+        return this.cacheConfiguration == null ? Codegen.empty() : this.cacheConfiguration;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customForwardingPath;
 
     public Output<String> getCustomForwardingPath() {
-        return this.customForwardingPath == null ? Output.empty() : this.customForwardingPath;
+        return this.customForwardingPath == null ? Codegen.empty() : this.customForwardingPath;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
     public Output<Either<String,FrontDoorForwardingProtocol>> getForwardingProtocol() {
-        return this.forwardingProtocol == null ? Output.empty() : this.forwardingProtocol;
+        return this.forwardingProtocol == null ? Codegen.empty() : this.forwardingProtocol;
     }
 
     /**
@@ -91,11 +92,11 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
     }
 
     private ForwardingConfigurationArgs() {
-        this.backendPool = Output.empty();
-        this.cacheConfiguration = Output.empty();
-        this.customForwardingPath = Output.empty();
-        this.forwardingProtocol = Output.empty();
-        this.odataType = Output.empty();
+        this.backendPool = Codegen.empty();
+        this.cacheConfiguration = Codegen.empty();
+        this.customForwardingPath = Codegen.empty();
+        this.forwardingProtocol = Codegen.empty();
+        this.odataType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder backendPool(@Nullable SubResourceArgs backendPool) {
-            this.backendPool = Output.ofNullable(backendPool);
+            this.backendPool = Codegen.ofNullable(backendPool);
             return this;
         }
         public Builder cacheConfiguration(@Nullable Output<CacheConfigurationArgs> cacheConfiguration) {
@@ -139,7 +140,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder cacheConfiguration(@Nullable CacheConfigurationArgs cacheConfiguration) {
-            this.cacheConfiguration = Output.ofNullable(cacheConfiguration);
+            this.cacheConfiguration = Codegen.ofNullable(cacheConfiguration);
             return this;
         }
         public Builder customForwardingPath(@Nullable Output<String> customForwardingPath) {
@@ -147,7 +148,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customForwardingPath(@Nullable String customForwardingPath) {
-            this.customForwardingPath = Output.ofNullable(customForwardingPath);
+            this.customForwardingPath = Codegen.ofNullable(customForwardingPath);
             return this;
         }
         public Builder forwardingProtocol(@Nullable Output<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol) {
@@ -155,7 +156,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder forwardingProtocol(@Nullable Either<String,FrontDoorForwardingProtocol> forwardingProtocol) {
-            this.forwardingProtocol = Output.ofNullable(forwardingProtocol);
+            this.forwardingProtocol = Codegen.ofNullable(forwardingProtocol);
             return this;
         }
         public Builder odataType(Output<String> odataType) {

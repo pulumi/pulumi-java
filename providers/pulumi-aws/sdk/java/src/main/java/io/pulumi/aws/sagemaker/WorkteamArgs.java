@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.WorkteamMemberDefinitionArgs;
 import io.pulumi.aws.sagemaker.inputs.WorkteamNotificationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -48,7 +49,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkteamNotificationConfigurationArgs> notificationConfiguration;
 
     public Output<WorkteamNotificationConfigurationArgs> getNotificationConfiguration() {
-        return this.notificationConfiguration == null ? Output.empty() : this.notificationConfiguration;
+        return this.notificationConfiguration == null ? Codegen.empty() : this.notificationConfiguration;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -100,12 +101,12 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkteamArgs() {
-        this.description = Output.empty();
-        this.memberDefinitions = Output.empty();
-        this.notificationConfiguration = Output.empty();
-        this.tags = Output.empty();
-        this.workforceName = Output.empty();
-        this.workteamName = Output.empty();
+        this.description = Codegen.empty();
+        this.memberDefinitions = Codegen.empty();
+        this.notificationConfiguration = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workforceName = Codegen.empty();
+        this.workteamName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -162,7 +163,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notificationConfiguration(@Nullable WorkteamNotificationConfigurationArgs notificationConfiguration) {
-            this.notificationConfiguration = Output.ofNullable(notificationConfiguration);
+            this.notificationConfiguration = Codegen.ofNullable(notificationConfiguration);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -170,7 +171,7 @@ public final class WorkteamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workforceName(Output<String> workforceName) {

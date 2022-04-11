@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceArgs() {
-        this.parentId = Output.empty();
-        this.pathPart = Output.empty();
-        this.restApi = Output.empty();
+        this.parentId = Codegen.empty();
+        this.pathPart = Codegen.empty();
+        this.restApi = Codegen.empty();
     }
 
     public static Builder builder() {

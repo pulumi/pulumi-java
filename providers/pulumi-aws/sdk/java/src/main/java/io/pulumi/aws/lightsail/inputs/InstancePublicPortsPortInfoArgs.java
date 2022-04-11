@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> cidrs;
 
     public Output<List<String>> getCidrs() {
-        return this.cidrs == null ? Output.empty() : this.cidrs;
+        return this.cidrs == null ? Codegen.empty() : this.cidrs;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
     }
 
     private InstancePublicPortsPortInfoArgs() {
-        this.cidrs = Output.empty();
-        this.fromPort = Output.empty();
-        this.protocol = Output.empty();
-        this.toPort = Output.empty();
+        this.cidrs = Codegen.empty();
+        this.fromPort = Codegen.empty();
+        this.protocol = Codegen.empty();
+        this.toPort = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class InstancePublicPortsPortInfoArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder cidrs(@Nullable List<String> cidrs) {
-            this.cidrs = Output.ofNullable(cidrs);
+            this.cidrs = Codegen.ofNullable(cidrs);
             return this;
         }
         public Builder cidrs(String... cidrs) {

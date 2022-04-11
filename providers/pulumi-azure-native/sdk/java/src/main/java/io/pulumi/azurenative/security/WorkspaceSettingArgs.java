@@ -5,6 +5,7 @@ package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -44,7 +45,7 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> workspaceSettingName;
 
     public Output<String> getWorkspaceSettingName() {
-        return this.workspaceSettingName == null ? Output.empty() : this.workspaceSettingName;
+        return this.workspaceSettingName == null ? Codegen.empty() : this.workspaceSettingName;
     }
 
     public WorkspaceSettingArgs(
@@ -57,9 +58,9 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private WorkspaceSettingArgs() {
-        this.scope = Output.empty();
-        this.workspaceId = Output.empty();
-        this.workspaceSettingName = Output.empty();
+        this.scope = Codegen.empty();
+        this.workspaceId = Codegen.empty();
+        this.workspaceSettingName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class WorkspaceSettingArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder workspaceSettingName(@Nullable String workspaceSettingName) {
-            this.workspaceSettingName = Output.ofNullable(workspaceSettingName);
+            this.workspaceSettingName = Codegen.ofNullable(workspaceSettingName);
             return this;
         }        public WorkspaceSettingArgs build() {
             return new WorkspaceSettingArgs(scope, workspaceId, workspaceSettingName);

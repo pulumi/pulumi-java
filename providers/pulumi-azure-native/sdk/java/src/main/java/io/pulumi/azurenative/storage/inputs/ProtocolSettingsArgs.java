@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.SmbSettingArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<SmbSettingArgs> smb;
 
     public Output<SmbSettingArgs> getSmb() {
-        return this.smb == null ? Output.empty() : this.smb;
+        return this.smb == null ? Codegen.empty() : this.smb;
     }
 
     public ProtocolSettingsArgs(@Nullable Output<SmbSettingArgs> smb) {
@@ -34,7 +35,7 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ProtocolSettingsArgs() {
-        this.smb = Output.empty();
+        this.smb = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ProtocolSettingsArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder smb(@Nullable SmbSettingArgs smb) {
-            this.smb = Output.ofNullable(smb);
+            this.smb = Codegen.ofNullable(smb);
             return this;
         }        public ProtocolSettingsArgs build() {
             return new ProtocolSettingsArgs(smb);

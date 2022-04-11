@@ -6,6 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.BackupPlanResourceTypeArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> backupPlanTags;
 
     public Output<Object> getBackupPlanTags() {
-        return this.backupPlanTags == null ? Output.empty() : this.backupPlanTags;
+        return this.backupPlanTags == null ? Codegen.empty() : this.backupPlanTags;
     }
 
     public BackupPlanArgs(
@@ -37,8 +38,8 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BackupPlanArgs() {
-        this.backupPlan = Output.empty();
-        this.backupPlanTags = Output.empty();
+        this.backupPlan = Codegen.empty();
+        this.backupPlanTags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BackupPlanArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backupPlanTags(@Nullable Object backupPlanTags) {
-            this.backupPlanTags = Output.ofNullable(backupPlanTags);
+            this.backupPlanTags = Codegen.ofNullable(backupPlanTags);
             return this;
         }        public BackupPlanArgs build() {
             return new BackupPlanArgs(backupPlan, backupPlanTags);

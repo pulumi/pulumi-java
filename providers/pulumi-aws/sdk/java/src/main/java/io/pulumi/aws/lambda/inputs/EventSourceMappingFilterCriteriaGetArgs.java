@@ -6,6 +6,7 @@ package io.pulumi.aws.lambda.inputs;
 import io.pulumi.aws.lambda.inputs.EventSourceMappingFilterCriteriaFilterGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends io.pulumi.res
       private final @Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters;
 
     public Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> getFilters() {
-        return this.filters == null ? Output.empty() : this.filters;
+        return this.filters == null ? Codegen.empty() : this.filters;
     }
 
     public EventSourceMappingFilterCriteriaGetArgs(@Nullable Output<List<EventSourceMappingFilterCriteriaFilterGetArgs>> filters) {
@@ -31,7 +32,7 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends io.pulumi.res
     }
 
     private EventSourceMappingFilterCriteriaGetArgs() {
-        this.filters = Output.empty();
+        this.filters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class EventSourceMappingFilterCriteriaGetArgs extends io.pulumi.res
             return this;
         }
         public Builder filters(@Nullable List<EventSourceMappingFilterCriteriaFilterGetArgs> filters) {
-            this.filters = Output.ofNullable(filters);
+            this.filters = Codegen.ofNullable(filters);
             return this;
         }
         public Builder filters(EventSourceMappingFilterCriteriaFilterGetArgs... filters) {

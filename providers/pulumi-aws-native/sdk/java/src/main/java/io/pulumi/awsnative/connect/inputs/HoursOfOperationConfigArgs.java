@@ -7,6 +7,7 @@ import io.pulumi.awsnative.connect.enums.HoursOfOperationConfigDay;
 import io.pulumi.awsnative.connect.inputs.HoursOfOperationTimeSliceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -61,9 +62,9 @@ public final class HoursOfOperationConfigArgs extends io.pulumi.resources.Resour
     }
 
     private HoursOfOperationConfigArgs() {
-        this.day = Output.empty();
-        this.endTime = Output.empty();
-        this.startTime = Output.empty();
+        this.day = Codegen.empty();
+        this.endTime = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.enterpriseknowledgegraph.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
       private final @Nullable Output<Object> metadata;
 
     public Output<Object> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
       private final @Nullable Output<String> provisioningState;
 
     public Output<String> getProvisioningState() {
-        return this.provisioningState == null ? Output.empty() : this.provisioningState;
+        return this.provisioningState == null ? Codegen.empty() : this.provisioningState;
     }
 
     public EnterpriseKnowledgeGraphPropertiesArgs(
@@ -62,9 +63,9 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
     }
 
     private EnterpriseKnowledgeGraphPropertiesArgs() {
-        this.description = Output.empty();
-        this.metadata = Output.empty();
-        this.provisioningState = Output.empty();
+        this.description = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.provisioningState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder metadata(@Nullable Output<Object> metadata) {
@@ -104,7 +105,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder metadata(@Nullable Object metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
@@ -112,7 +113,7 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder provisioningState(@Nullable String provisioningState) {
-            this.provisioningState = Output.ofNullable(provisioningState);
+            this.provisioningState = Codegen.ofNullable(provisioningState);
             return this;
         }        public EnterpriseKnowledgeGraphPropertiesArgs build() {
             return new EnterpriseKnowledgeGraphPropertiesArgs(description, metadata, provisioningState);

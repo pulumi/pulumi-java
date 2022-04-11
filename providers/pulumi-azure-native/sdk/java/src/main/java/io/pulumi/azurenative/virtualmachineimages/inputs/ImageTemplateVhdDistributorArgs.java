@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
       private final @Nullable Output<Map<String,String>> artifactTags;
 
     public Output<Map<String,String>> getArtifactTags() {
-        return this.artifactTags == null ? Output.empty() : this.artifactTags;
+        return this.artifactTags == null ? Codegen.empty() : this.artifactTags;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
     }
 
     private ImageTemplateVhdDistributorArgs() {
-        this.artifactTags = Output.empty();
-        this.runOutputName = Output.empty();
-        this.type = Output.empty();
+        this.artifactTags = Codegen.empty();
+        this.runOutputName = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class ImageTemplateVhdDistributorArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder artifactTags(@Nullable Map<String,String> artifactTags) {
-            this.artifactTags = Output.ofNullable(artifactTags);
+            this.artifactTags = Codegen.ofNullable(artifactTags);
             return this;
         }
         public Builder runOutputName(Output<String> runOutputName) {

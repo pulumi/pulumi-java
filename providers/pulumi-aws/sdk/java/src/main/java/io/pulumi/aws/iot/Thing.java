@@ -9,6 +9,7 @@ import io.pulumi.aws.iot.inputs.ThingState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -137,7 +138,7 @@ public class Thing extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Thing(String name, @Nullable ThingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:iot/thing:Thing", name, args == null ? ThingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:iot/thing:Thing", name, args == null ? ThingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Thing(String name, Output<String> id, @Nullable ThingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

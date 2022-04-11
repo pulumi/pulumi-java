@@ -5,6 +5,7 @@ package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
       private final @Nullable Output<String> delegationServiceAccountEmail;
 
     public Output<String> getDelegationServiceAccountEmail() {
-        return this.delegationServiceAccountEmail == null ? Output.empty() : this.delegationServiceAccountEmail;
+        return this.delegationServiceAccountEmail == null ? Codegen.empty() : this.delegationServiceAccountEmail;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
       private final @Nullable Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> publicKeys;
 
     public Output<List<AttestorAttestationAuthorityNotePublicKeyGetArgs>> getPublicKeys() {
-        return this.publicKeys == null ? Output.empty() : this.publicKeys;
+        return this.publicKeys == null ? Codegen.empty() : this.publicKeys;
     }
 
     public AttestorAttestationAuthorityNoteGetArgs(
@@ -81,9 +82,9 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
     }
 
     private AttestorAttestationAuthorityNoteGetArgs() {
-        this.delegationServiceAccountEmail = Output.empty();
-        this.noteReference = Output.empty();
-        this.publicKeys = Output.empty();
+        this.delegationServiceAccountEmail = Codegen.empty();
+        this.noteReference = Codegen.empty();
+        this.publicKeys = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
             return this;
         }
         public Builder delegationServiceAccountEmail(@Nullable String delegationServiceAccountEmail) {
-            this.delegationServiceAccountEmail = Output.ofNullable(delegationServiceAccountEmail);
+            this.delegationServiceAccountEmail = Codegen.ofNullable(delegationServiceAccountEmail);
             return this;
         }
         public Builder noteReference(Output<String> noteReference) {
@@ -131,7 +132,7 @@ public final class AttestorAttestationAuthorityNoteGetArgs extends io.pulumi.res
             return this;
         }
         public Builder publicKeys(@Nullable List<AttestorAttestationAuthorityNotePublicKeyGetArgs> publicKeys) {
-            this.publicKeys = Output.ofNullable(publicKeys);
+            this.publicKeys = Codegen.ofNullable(publicKeys);
             return this;
         }
         public Builder publicKeys(AttestorAttestationAuthorityNotePublicKeyGetArgs... publicKeys) {

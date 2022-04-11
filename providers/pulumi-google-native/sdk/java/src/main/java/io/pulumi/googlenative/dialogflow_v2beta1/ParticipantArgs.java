@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.ParticipantRole;
 import java.lang.String;
 import java.util.Map;
@@ -31,14 +32,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> documentsMetadataFilters;
 
     public Output<Map<String,String>> getDocumentsMetadataFilters() {
-        return this.documentsMetadataFilters == null ? Output.empty() : this.documentsMetadataFilters;
+        return this.documentsMetadataFilters == null ? Codegen.empty() : this.documentsMetadataFilters;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -60,14 +61,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> obfuscatedExternalUserId;
 
     public Output<String> getObfuscatedExternalUserId() {
-        return this.obfuscatedExternalUserId == null ? Output.empty() : this.obfuscatedExternalUserId;
+        return this.obfuscatedExternalUserId == null ? Codegen.empty() : this.obfuscatedExternalUserId;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ParticipantRole> role;
 
     public Output<ParticipantRole> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public ParticipantArgs(
@@ -99,13 +100,13 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ParticipantArgs() {
-        this.conversationId = Output.empty();
-        this.documentsMetadataFilters = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.obfuscatedExternalUserId = Output.empty();
-        this.project = Output.empty();
-        this.role = Output.empty();
+        this.conversationId = Codegen.empty();
+        this.documentsMetadataFilters = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.obfuscatedExternalUserId = Codegen.empty();
+        this.project = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -153,7 +154,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder documentsMetadataFilters(@Nullable Map<String,String> documentsMetadataFilters) {
-            this.documentsMetadataFilters = Output.ofNullable(documentsMetadataFilters);
+            this.documentsMetadataFilters = Codegen.ofNullable(documentsMetadataFilters);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -161,7 +162,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -169,7 +170,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder obfuscatedExternalUserId(@Nullable Output<String> obfuscatedExternalUserId) {
@@ -177,7 +178,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder obfuscatedExternalUserId(@Nullable String obfuscatedExternalUserId) {
-            this.obfuscatedExternalUserId = Output.ofNullable(obfuscatedExternalUserId);
+            this.obfuscatedExternalUserId = Codegen.ofNullable(obfuscatedExternalUserId);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -185,7 +186,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder role(@Nullable Output<ParticipantRole> role) {
@@ -193,7 +194,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder role(@Nullable ParticipantRole role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public ParticipantArgs build() {
             return new ParticipantArgs(conversationId, documentsMetadataFilters, location, name, obfuscatedExternalUserId, project, role);

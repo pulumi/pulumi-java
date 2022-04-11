@@ -5,6 +5,7 @@ package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.StageArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<StageArgs>> stages;
 
     public Output<List<StageArgs>> getStages() {
-        return this.stages == null ? Output.empty() : this.stages;
+        return this.stages == null ? Codegen.empty() : this.stages;
     }
 
     public SerialPipelineArgs(@Nullable Output<List<StageArgs>> stages) {
@@ -35,7 +36,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SerialPipelineArgs() {
-        this.stages = Output.empty();
+        this.stages = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class SerialPipelineArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stages(@Nullable List<StageArgs> stages) {
-            this.stages = Output.ofNullable(stages);
+            this.stages = Codegen.ofNullable(stages);
             return this;
         }
         public Builder stages(StageArgs... stages) {

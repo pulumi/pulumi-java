@@ -6,6 +6,7 @@ package io.pulumi.aws.route53recoveryreadiness.inputs;
 import io.pulumi.aws.route53recoveryreadiness.inputs.ResourceSetResourceDnsTargetResourceTargetResourceGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
       private final @Nullable Output<String> hostedZoneArn;
 
     public Output<String> getHostedZoneArn() {
-        return this.hostedZoneArn == null ? Output.empty() : this.hostedZoneArn;
+        return this.hostedZoneArn == null ? Codegen.empty() : this.hostedZoneArn;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
       private final @Nullable Output<String> recordSetId;
 
     public Output<String> getRecordSetId() {
-        return this.recordSetId == null ? Output.empty() : this.recordSetId;
+        return this.recordSetId == null ? Codegen.empty() : this.recordSetId;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
       private final @Nullable Output<String> recordType;
 
     public Output<String> getRecordType() {
-        return this.recordType == null ? Output.empty() : this.recordType;
+        return this.recordType == null ? Codegen.empty() : this.recordType;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
       private final @Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceGetArgs> targetResource;
 
     public Output<ResourceSetResourceDnsTargetResourceTargetResourceGetArgs> getTargetResource() {
-        return this.targetResource == null ? Output.empty() : this.targetResource;
+        return this.targetResource == null ? Codegen.empty() : this.targetResource;
     }
 
     public ResourceSetResourceDnsTargetResourceGetArgs(
@@ -84,11 +85,11 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
     }
 
     private ResourceSetResourceDnsTargetResourceGetArgs() {
-        this.domainName = Output.empty();
-        this.hostedZoneArn = Output.empty();
-        this.recordSetId = Output.empty();
-        this.recordType = Output.empty();
-        this.targetResource = Output.empty();
+        this.domainName = Codegen.empty();
+        this.hostedZoneArn = Codegen.empty();
+        this.recordSetId = Codegen.empty();
+        this.recordType = Codegen.empty();
+        this.targetResource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -132,7 +133,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
             return this;
         }
         public Builder hostedZoneArn(@Nullable String hostedZoneArn) {
-            this.hostedZoneArn = Output.ofNullable(hostedZoneArn);
+            this.hostedZoneArn = Codegen.ofNullable(hostedZoneArn);
             return this;
         }
         public Builder recordSetId(@Nullable Output<String> recordSetId) {
@@ -140,7 +141,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
             return this;
         }
         public Builder recordSetId(@Nullable String recordSetId) {
-            this.recordSetId = Output.ofNullable(recordSetId);
+            this.recordSetId = Codegen.ofNullable(recordSetId);
             return this;
         }
         public Builder recordType(@Nullable Output<String> recordType) {
@@ -148,7 +149,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
             return this;
         }
         public Builder recordType(@Nullable String recordType) {
-            this.recordType = Output.ofNullable(recordType);
+            this.recordType = Codegen.ofNullable(recordType);
             return this;
         }
         public Builder targetResource(@Nullable Output<ResourceSetResourceDnsTargetResourceTargetResourceGetArgs> targetResource) {
@@ -156,7 +157,7 @@ public final class ResourceSetResourceDnsTargetResourceGetArgs extends io.pulumi
             return this;
         }
         public Builder targetResource(@Nullable ResourceSetResourceDnsTargetResourceTargetResourceGetArgs targetResource) {
-            this.targetResource = Output.ofNullable(targetResource);
+            this.targetResource = Codegen.ofNullable(targetResource);
             return this;
         }        public ResourceSetResourceDnsTargetResourceGetArgs build() {
             return new ResourceSetResourceDnsTargetResourceGetArgs(domainName, hostedZoneArn, recordSetId, recordType, targetResource);

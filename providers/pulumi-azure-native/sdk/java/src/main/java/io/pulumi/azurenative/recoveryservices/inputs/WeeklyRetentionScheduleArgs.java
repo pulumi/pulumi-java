@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.DayOfWeek;
 import io.pulumi.azurenative.recoveryservices.inputs.RetentionDurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<DayOfWeek>> daysOfTheWeek;
 
     public Output<List<DayOfWeek>> getDaysOfTheWeek() {
-        return this.daysOfTheWeek == null ? Output.empty() : this.daysOfTheWeek;
+        return this.daysOfTheWeek == null ? Codegen.empty() : this.daysOfTheWeek;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<RetentionDurationArgs> retentionDuration;
 
     public Output<RetentionDurationArgs> getRetentionDuration() {
-        return this.retentionDuration == null ? Output.empty() : this.retentionDuration;
+        return this.retentionDuration == null ? Codegen.empty() : this.retentionDuration;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> retentionTimes;
 
     public Output<List<String>> getRetentionTimes() {
-        return this.retentionTimes == null ? Output.empty() : this.retentionTimes;
+        return this.retentionTimes == null ? Codegen.empty() : this.retentionTimes;
     }
 
     public WeeklyRetentionScheduleArgs(
@@ -64,9 +65,9 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
     }
 
     private WeeklyRetentionScheduleArgs() {
-        this.daysOfTheWeek = Output.empty();
-        this.retentionDuration = Output.empty();
-        this.retentionTimes = Output.empty();
+        this.daysOfTheWeek = Codegen.empty();
+        this.retentionDuration = Codegen.empty();
+        this.retentionTimes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder daysOfTheWeek(@Nullable List<DayOfWeek> daysOfTheWeek) {
-            this.daysOfTheWeek = Output.ofNullable(daysOfTheWeek);
+            this.daysOfTheWeek = Codegen.ofNullable(daysOfTheWeek);
             return this;
         }
         public Builder daysOfTheWeek(DayOfWeek... daysOfTheWeek) {
@@ -109,7 +110,7 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionDuration(@Nullable RetentionDurationArgs retentionDuration) {
-            this.retentionDuration = Output.ofNullable(retentionDuration);
+            this.retentionDuration = Codegen.ofNullable(retentionDuration);
             return this;
         }
         public Builder retentionTimes(@Nullable Output<List<String>> retentionTimes) {
@@ -117,7 +118,7 @@ public final class WeeklyRetentionScheduleArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder retentionTimes(@Nullable List<String> retentionTimes) {
-            this.retentionTimes = Output.ofNullable(retentionTimes);
+            this.retentionTimes = Codegen.ofNullable(retentionTimes);
             return this;
         }
         public Builder retentionTimes(String... retentionTimes) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.IntentFollowUpPromptRejectionStatementMessageGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class IntentFollowUpPromptRejectionStatementGetArgs extends io.pulu
       private final @Nullable Output<String> responseCard;
 
     public Output<String> getResponseCard() {
-        return this.responseCard == null ? Output.empty() : this.responseCard;
+        return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 
     public IntentFollowUpPromptRejectionStatementGetArgs(
@@ -50,8 +51,8 @@ public final class IntentFollowUpPromptRejectionStatementGetArgs extends io.pulu
     }
 
     private IntentFollowUpPromptRejectionStatementGetArgs() {
-        this.messages = Output.empty();
-        this.responseCard = Output.empty();
+        this.messages = Codegen.empty();
+        this.responseCard = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class IntentFollowUpPromptRejectionStatementGetArgs extends io.pulu
             return this;
         }
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Output.ofNullable(responseCard);
+            this.responseCard = Codegen.ofNullable(responseCard);
             return this;
         }        public IntentFollowUpPromptRejectionStatementGetArgs build() {
             return new IntentFollowUpPromptRejectionStatementGetArgs(messages, responseCard);

@@ -5,6 +5,7 @@ package io.pulumi.aws.servicecatalog;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> shareTagOptions;
 
     public Output<Boolean> getShareTagOptions() {
-        return this.shareTagOptions == null ? Output.empty() : this.shareTagOptions;
+        return this.shareTagOptions == null ? Codegen.empty() : this.shareTagOptions;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> waitForAcceptance;
 
     public Output<Boolean> getWaitForAcceptance() {
-        return this.waitForAcceptance == null ? Output.empty() : this.waitForAcceptance;
+        return this.waitForAcceptance == null ? Codegen.empty() : this.waitForAcceptance;
     }
 
     public PortfolioShareArgs(
@@ -97,12 +98,12 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PortfolioShareArgs() {
-        this.acceptLanguage = Output.empty();
-        this.portfolioId = Output.empty();
-        this.principalId = Output.empty();
-        this.shareTagOptions = Output.empty();
-        this.type = Output.empty();
-        this.waitForAcceptance = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.portfolioId = Codegen.empty();
+        this.principalId = Codegen.empty();
+        this.shareTagOptions = Codegen.empty();
+        this.type = Codegen.empty();
+        this.waitForAcceptance = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -140,7 +141,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder portfolioId(Output<String> portfolioId) {
@@ -164,7 +165,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder shareTagOptions(@Nullable Boolean shareTagOptions) {
-            this.shareTagOptions = Output.ofNullable(shareTagOptions);
+            this.shareTagOptions = Codegen.ofNullable(shareTagOptions);
             return this;
         }
         public Builder type(Output<String> type) {
@@ -180,7 +181,7 @@ public final class PortfolioShareArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder waitForAcceptance(@Nullable Boolean waitForAcceptance) {
-            this.waitForAcceptance = Output.ofNullable(waitForAcceptance);
+            this.waitForAcceptance = Codegen.ofNullable(waitForAcceptance);
             return this;
         }        public PortfolioShareArgs build() {
             return new PortfolioShareArgs(acceptLanguage, portfolioId, principalId, shareTagOptions, type, waitForAcceptance);

@@ -5,6 +5,7 @@ package io.pulumi.aws.codecommit.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloneUrlHttp;
 
     public Output<String> getCloneUrlHttp() {
-        return this.cloneUrlHttp == null ? Output.empty() : this.cloneUrlHttp;
+        return this.cloneUrlHttp == null ? Codegen.empty() : this.cloneUrlHttp;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> cloneUrlSsh;
 
     public Output<String> getCloneUrlSsh() {
-        return this.cloneUrlSsh == null ? Output.empty() : this.cloneUrlSsh;
+        return this.cloneUrlSsh == null ? Codegen.empty() : this.cloneUrlSsh;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultBranch;
 
     public Output<String> getDefaultBranch() {
-        return this.defaultBranch == null ? Output.empty() : this.defaultBranch;
+        return this.defaultBranch == null ? Codegen.empty() : this.defaultBranch;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repositoryId;
 
     public Output<String> getRepositoryId() {
-        return this.repositoryId == null ? Output.empty() : this.repositoryId;
+        return this.repositoryId == null ? Codegen.empty() : this.repositoryId;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> repositoryName;
 
     public Output<String> getRepositoryName() {
-        return this.repositoryName == null ? Output.empty() : this.repositoryName;
+        return this.repositoryName == null ? Codegen.empty() : this.repositoryName;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     public RepositoryState(
@@ -136,15 +137,15 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepositoryState() {
-        this.arn = Output.empty();
-        this.cloneUrlHttp = Output.empty();
-        this.cloneUrlSsh = Output.empty();
-        this.defaultBranch = Output.empty();
-        this.description = Output.empty();
-        this.repositoryId = Output.empty();
-        this.repositoryName = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
+        this.arn = Codegen.empty();
+        this.cloneUrlHttp = Codegen.empty();
+        this.cloneUrlSsh = Codegen.empty();
+        this.defaultBranch = Codegen.empty();
+        this.description = Codegen.empty();
+        this.repositoryId = Codegen.empty();
+        this.repositoryName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -188,7 +189,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder cloneUrlHttp(@Nullable Output<String> cloneUrlHttp) {
@@ -196,7 +197,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloneUrlHttp(@Nullable String cloneUrlHttp) {
-            this.cloneUrlHttp = Output.ofNullable(cloneUrlHttp);
+            this.cloneUrlHttp = Codegen.ofNullable(cloneUrlHttp);
             return this;
         }
         public Builder cloneUrlSsh(@Nullable Output<String> cloneUrlSsh) {
@@ -204,7 +205,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cloneUrlSsh(@Nullable String cloneUrlSsh) {
-            this.cloneUrlSsh = Output.ofNullable(cloneUrlSsh);
+            this.cloneUrlSsh = Codegen.ofNullable(cloneUrlSsh);
             return this;
         }
         public Builder defaultBranch(@Nullable Output<String> defaultBranch) {
@@ -212,7 +213,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultBranch(@Nullable String defaultBranch) {
-            this.defaultBranch = Output.ofNullable(defaultBranch);
+            this.defaultBranch = Codegen.ofNullable(defaultBranch);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -220,7 +221,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder repositoryId(@Nullable Output<String> repositoryId) {
@@ -228,7 +229,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryId(@Nullable String repositoryId) {
-            this.repositoryId = Output.ofNullable(repositoryId);
+            this.repositoryId = Codegen.ofNullable(repositoryId);
             return this;
         }
         public Builder repositoryName(@Nullable Output<String> repositoryName) {
@@ -236,7 +237,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder repositoryName(@Nullable String repositoryName) {
-            this.repositoryName = Output.ofNullable(repositoryName);
+            this.repositoryName = Codegen.ofNullable(repositoryName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -244,7 +245,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -252,7 +253,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }        public RepositoryState build() {
             return new RepositoryState(arn, cloneUrlHttp, cloneUrlSsh, defaultBranch, description, repositoryId, repositoryName, tags, tagsAll);

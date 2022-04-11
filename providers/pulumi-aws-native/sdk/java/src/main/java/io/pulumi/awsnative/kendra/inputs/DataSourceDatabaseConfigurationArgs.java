@@ -11,6 +11,7 @@ import io.pulumi.awsnative.kendra.inputs.DataSourceSqlConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<DataSourceAclConfigurationArgs> aclConfiguration;
 
     public Output<DataSourceAclConfigurationArgs> getAclConfiguration() {
-        return this.aclConfiguration == null ? Output.empty() : this.aclConfiguration;
+        return this.aclConfiguration == null ? Codegen.empty() : this.aclConfiguration;
     }
 
     @Import(name="columnConfiguration", required=true)
@@ -51,14 +52,14 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<DataSourceSqlConfigurationArgs> sqlConfiguration;
 
     public Output<DataSourceSqlConfigurationArgs> getSqlConfiguration() {
-        return this.sqlConfiguration == null ? Output.empty() : this.sqlConfiguration;
+        return this.sqlConfiguration == null ? Codegen.empty() : this.sqlConfiguration;
     }
 
     @Import(name="vpcConfiguration")
       private final @Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration;
 
     public Output<DataSourceVpcConfigurationArgs> getVpcConfiguration() {
-        return this.vpcConfiguration == null ? Output.empty() : this.vpcConfiguration;
+        return this.vpcConfiguration == null ? Codegen.empty() : this.vpcConfiguration;
     }
 
     public DataSourceDatabaseConfigurationArgs(
@@ -77,12 +78,12 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
     }
 
     private DataSourceDatabaseConfigurationArgs() {
-        this.aclConfiguration = Output.empty();
-        this.columnConfiguration = Output.empty();
-        this.connectionConfiguration = Output.empty();
-        this.databaseEngineType = Output.empty();
-        this.sqlConfiguration = Output.empty();
-        this.vpcConfiguration = Output.empty();
+        this.aclConfiguration = Codegen.empty();
+        this.columnConfiguration = Codegen.empty();
+        this.connectionConfiguration = Codegen.empty();
+        this.databaseEngineType = Codegen.empty();
+        this.sqlConfiguration = Codegen.empty();
+        this.vpcConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -120,7 +121,7 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder aclConfiguration(@Nullable DataSourceAclConfigurationArgs aclConfiguration) {
-            this.aclConfiguration = Output.ofNullable(aclConfiguration);
+            this.aclConfiguration = Codegen.ofNullable(aclConfiguration);
             return this;
         }
         public Builder columnConfiguration(Output<DataSourceColumnConfigurationArgs> columnConfiguration) {
@@ -152,7 +153,7 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder sqlConfiguration(@Nullable DataSourceSqlConfigurationArgs sqlConfiguration) {
-            this.sqlConfiguration = Output.ofNullable(sqlConfiguration);
+            this.sqlConfiguration = Codegen.ofNullable(sqlConfiguration);
             return this;
         }
         public Builder vpcConfiguration(@Nullable Output<DataSourceVpcConfigurationArgs> vpcConfiguration) {
@@ -160,7 +161,7 @@ public final class DataSourceDatabaseConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder vpcConfiguration(@Nullable DataSourceVpcConfigurationArgs vpcConfiguration) {
-            this.vpcConfiguration = Output.ofNullable(vpcConfiguration);
+            this.vpcConfiguration = Codegen.ofNullable(vpcConfiguration);
             return this;
         }        public DataSourceDatabaseConfigurationArgs build() {
             return new DataSourceDatabaseConfigurationArgs(aclConfiguration, columnConfiguration, connectionConfiguration, databaseEngineType, sqlConfiguration, vpcConfiguration);

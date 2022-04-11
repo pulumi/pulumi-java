@@ -9,6 +9,7 @@ import io.pulumi.aws.organizations.inputs.AccountState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import javax.annotation.Nullable;
@@ -206,7 +207,7 @@ public class Account extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Account(String name, AccountArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:organizations/account:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:organizations/account:Account", name, args == null ? AccountArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Account(String name, Output<String> id, @Nullable AccountState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

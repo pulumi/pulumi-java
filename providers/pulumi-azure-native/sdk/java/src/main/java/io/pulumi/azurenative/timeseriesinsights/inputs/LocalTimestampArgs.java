@@ -8,6 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampTimeZoneOff
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -29,7 +30,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,LocalTimestampFormat>> format;
 
     public Output<Either<String,LocalTimestampFormat>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset;
 
     public Output<LocalTimestampTimeZoneOffsetArgs> getTimeZoneOffset() {
-        return this.timeZoneOffset == null ? Output.empty() : this.timeZoneOffset;
+        return this.timeZoneOffset == null ? Codegen.empty() : this.timeZoneOffset;
     }
 
     public LocalTimestampArgs(
@@ -51,8 +52,8 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LocalTimestampArgs() {
-        this.format = Output.empty();
-        this.timeZoneOffset = Output.empty();
+        this.format = Codegen.empty();
+        this.timeZoneOffset = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -82,7 +83,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable Either<String,LocalTimestampFormat> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder timeZoneOffset(@Nullable Output<LocalTimestampTimeZoneOffsetArgs> timeZoneOffset) {
@@ -90,7 +91,7 @@ public final class LocalTimestampArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder timeZoneOffset(@Nullable LocalTimestampTimeZoneOffsetArgs timeZoneOffset) {
-            this.timeZoneOffset = Output.ofNullable(timeZoneOffset);
+            this.timeZoneOffset = Codegen.ofNullable(timeZoneOffset);
             return this;
         }        public LocalTimestampArgs build() {
             return new LocalTimestampArgs(format, timeZoneOffset);

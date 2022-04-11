@@ -5,6 +5,7 @@ package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.LocalCopyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> defaultValue;
 
     public Output<String> getDefaultValue() {
-        return this.defaultValue == null ? Output.empty() : this.defaultValue;
+        return this.defaultValue == null ? Codegen.empty() : this.defaultValue;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<LocalCopyArgs> localCopy;
 
     public Output<LocalCopyArgs> getLocalCopy() {
-        return this.localCopy == null ? Output.empty() : this.localCopy;
+        return this.localCopy == null ? Codegen.empty() : this.localCopy;
     }
 
     /**
@@ -75,10 +76,10 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PipelineParameterArgs() {
-        this.defaultValue = Output.empty();
-        this.description = Output.empty();
-        this.localCopy = Output.empty();
-        this.name = Output.empty();
+        this.defaultValue = Codegen.empty();
+        this.description = Codegen.empty();
+        this.localCopy = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder defaultValue(@Nullable String defaultValue) {
-            this.defaultValue = Output.ofNullable(defaultValue);
+            this.defaultValue = Codegen.ofNullable(defaultValue);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -120,7 +121,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder localCopy(@Nullable Output<LocalCopyArgs> localCopy) {
@@ -128,7 +129,7 @@ public final class PipelineParameterArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder localCopy(@Nullable LocalCopyArgs localCopy) {
-            this.localCopy = Output.ofNullable(localCopy);
+            this.localCopy = Codegen.ofNullable(localCopy);
             return this;
         }
         public Builder name(Output<String> name) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.GatewayIamPolicyArgs;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamPolicyState;
@@ -151,7 +152,7 @@ public class GatewayIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public GatewayIamPolicy(String name, GatewayIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/gatewayIamPolicy:GatewayIamPolicy", name, args == null ? GatewayIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/gatewayIamPolicy:GatewayIamPolicy", name, args == null ? GatewayIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GatewayIamPolicy(String name, Output<String> id, @Nullable GatewayIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

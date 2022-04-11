@@ -5,6 +5,7 @@ package io.pulumi.aws.kinesisanalyticsv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ApplicationApplicationConfigurationSqlApplicationConfiguratio
     }
 
     private ApplicationApplicationConfigurationSqlApplicationConfigurationReferenceDataSourceReferenceSchemaRecordFormatMappingParametersCsvMappingParametersGetArgs() {
-        this.recordColumnDelimiter = Output.empty();
-        this.recordRowDelimiter = Output.empty();
+        this.recordColumnDelimiter = Codegen.empty();
+        this.recordRowDelimiter = Codegen.empty();
     }
 
     public static Builder builder() {

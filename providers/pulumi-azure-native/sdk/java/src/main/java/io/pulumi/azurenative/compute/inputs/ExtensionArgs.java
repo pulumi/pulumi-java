@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceExtensionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CloudServiceExtensionPropertiesArgs> properties;
 
     public Output<CloudServiceExtensionPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     public ExtensionArgs(
@@ -49,8 +50,8 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExtensionArgs() {
-        this.name = Output.empty();
-        this.properties = Output.empty();
+        this.name = Codegen.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder properties(@Nullable Output<CloudServiceExtensionPropertiesArgs> properties) {
@@ -88,7 +89,7 @@ public final class ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder properties(@Nullable CloudServiceExtensionPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }        public ExtensionArgs build() {
             return new ExtensionArgs(name, properties);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.datacatalog;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.PolicyTagArgs;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagState;
@@ -158,7 +159,7 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PolicyTag(String name, PolicyTagArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:datacatalog/policyTag:PolicyTag", name, args == null ? PolicyTagArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:datacatalog/policyTag:PolicyTag", name, args == null ? PolicyTagArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PolicyTag(String name, Output<String> id, @Nullable PolicyTagState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.ConnectToTargetSqlDbTaskInputArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends io.pulumi.reso
       private final @Nullable Output<ConnectToTargetSqlDbTaskInputArgs> input;
 
     public Output<ConnectToTargetSqlDbTaskInputArgs> getInput() {
-        return this.input == null ? Output.empty() : this.input;
+        return this.input == null ? Codegen.empty() : this.input;
     }
 
     /**
@@ -50,8 +51,8 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends io.pulumi.reso
     }
 
     private ConnectToTargetSqlDbTaskPropertiesArgs() {
-        this.input = Output.empty();
-        this.taskType = Output.empty();
+        this.input = Codegen.empty();
+        this.taskType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ConnectToTargetSqlDbTaskPropertiesArgs extends io.pulumi.reso
             return this;
         }
         public Builder input(@Nullable ConnectToTargetSqlDbTaskInputArgs input) {
-            this.input = Output.ofNullable(input);
+            this.input = Codegen.ofNullable(input);
             return this;
         }
         public Builder taskType(Output<String> taskType) {

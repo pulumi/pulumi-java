@@ -6,6 +6,7 @@ package io.pulumi.awsnative.location.inputs;
 import io.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
       private final @Nullable Output<PlaceIndexIntendedUse> intendedUse;
 
     public Output<PlaceIndexIntendedUse> getIntendedUse() {
-        return this.intendedUse == null ? Output.empty() : this.intendedUse;
+        return this.intendedUse == null ? Codegen.empty() : this.intendedUse;
     }
 
     public PlaceIndexDataSourceConfigurationArgs(@Nullable Output<PlaceIndexIntendedUse> intendedUse) {
@@ -26,7 +27,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     }
 
     private PlaceIndexDataSourceConfigurationArgs() {
-        this.intendedUse = Output.empty();
+        this.intendedUse = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
             return this;
         }
         public Builder intendedUse(@Nullable PlaceIndexIntendedUse intendedUse) {
-            this.intendedUse = Output.ofNullable(intendedUse);
+            this.intendedUse = Codegen.ofNullable(intendedUse);
             return this;
         }        public PlaceIndexDataSourceConfigurationArgs build() {
             return new PlaceIndexDataSourceConfigurationArgs(intendedUse);

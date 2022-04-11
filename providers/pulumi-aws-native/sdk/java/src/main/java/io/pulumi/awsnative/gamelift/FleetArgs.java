@@ -12,6 +12,7 @@ import io.pulumi.awsnative.gamelift.inputs.FleetResourceCreationLimitPolicyArgs;
 import io.pulumi.awsnative.gamelift.inputs.FleetRuntimeConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> buildId;
 
     public Output<String> getBuildId() {
-        return this.buildId == null ? Output.empty() : this.buildId;
+        return this.buildId == null ? Codegen.empty() : this.buildId;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration;
 
     public Output<FleetCertificateConfigurationArgs> getCertificateConfiguration() {
-        return this.certificateConfiguration == null ? Output.empty() : this.certificateConfiguration;
+        return this.certificateConfiguration == null ? Codegen.empty() : this.certificateConfiguration;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> desiredEC2Instances;
 
     public Output<Integer> getDesiredEC2Instances() {
-        return this.desiredEC2Instances == null ? Output.empty() : this.desiredEC2Instances;
+        return this.desiredEC2Instances == null ? Codegen.empty() : this.desiredEC2Instances;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions;
 
     public Output<List<FleetIpPermissionArgs>> getEC2InboundPermissions() {
-        return this.eC2InboundPermissions == null ? Output.empty() : this.eC2InboundPermissions;
+        return this.eC2InboundPermissions == null ? Codegen.empty() : this.eC2InboundPermissions;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> eC2InstanceType;
 
     public Output<String> getEC2InstanceType() {
-        return this.eC2InstanceType == null ? Output.empty() : this.eC2InstanceType;
+        return this.eC2InstanceType == null ? Codegen.empty() : this.eC2InstanceType;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetType> fleetType;
 
     public Output<FleetType> getFleetType() {
-        return this.fleetType == null ? Output.empty() : this.fleetType;
+        return this.fleetType == null ? Codegen.empty() : this.fleetType;
     }
 
     /**
@@ -108,14 +109,14 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceRoleARN;
 
     public Output<String> getInstanceRoleARN() {
-        return this.instanceRoleARN == null ? Output.empty() : this.instanceRoleARN;
+        return this.instanceRoleARN == null ? Codegen.empty() : this.instanceRoleARN;
     }
 
     @Import(name="locations")
       private final @Nullable Output<List<FleetLocationConfigurationArgs>> locations;
 
     public Output<List<FleetLocationConfigurationArgs>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> logPaths;
 
     public Output<List<String>> getLogPaths() {
-        return this.logPaths == null ? Output.empty() : this.logPaths;
+        return this.logPaths == null ? Codegen.empty() : this.logPaths;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> maxSize;
 
     public Output<Integer> getMaxSize() {
-        return this.maxSize == null ? Output.empty() : this.maxSize;
+        return this.maxSize == null ? Codegen.empty() : this.maxSize;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> metricGroups;
 
     public Output<List<String>> getMetricGroups() {
-        return this.metricGroups == null ? Output.empty() : this.metricGroups;
+        return this.metricGroups == null ? Codegen.empty() : this.metricGroups;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> minSize;
 
     public Output<Integer> getMinSize() {
-        return this.minSize == null ? Output.empty() : this.minSize;
+        return this.minSize == null ? Codegen.empty() : this.minSize;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy;
 
     public Output<FleetNewGameSessionProtectionPolicy> getNewGameSessionProtectionPolicy() {
-        return this.newGameSessionProtectionPolicy == null ? Output.empty() : this.newGameSessionProtectionPolicy;
+        return this.newGameSessionProtectionPolicy == null ? Codegen.empty() : this.newGameSessionProtectionPolicy;
     }
 
     /**
@@ -192,7 +193,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peerVpcAwsAccountId;
 
     public Output<String> getPeerVpcAwsAccountId() {
-        return this.peerVpcAwsAccountId == null ? Output.empty() : this.peerVpcAwsAccountId;
+        return this.peerVpcAwsAccountId == null ? Codegen.empty() : this.peerVpcAwsAccountId;
     }
 
     /**
@@ -203,7 +204,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> peerVpcId;
 
     public Output<String> getPeerVpcId() {
-        return this.peerVpcId == null ? Output.empty() : this.peerVpcId;
+        return this.peerVpcId == null ? Codegen.empty() : this.peerVpcId;
     }
 
     /**
@@ -214,7 +215,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy;
 
     public Output<FleetResourceCreationLimitPolicyArgs> getResourceCreationLimitPolicy() {
-        return this.resourceCreationLimitPolicy == null ? Output.empty() : this.resourceCreationLimitPolicy;
+        return this.resourceCreationLimitPolicy == null ? Codegen.empty() : this.resourceCreationLimitPolicy;
     }
 
     /**
@@ -227,7 +228,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration;
 
     public Output<FleetRuntimeConfigurationArgs> getRuntimeConfiguration() {
-        return this.runtimeConfiguration == null ? Output.empty() : this.runtimeConfiguration;
+        return this.runtimeConfiguration == null ? Codegen.empty() : this.runtimeConfiguration;
     }
 
     /**
@@ -240,7 +241,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> scriptId;
 
     public Output<String> getScriptId() {
-        return this.scriptId == null ? Output.empty() : this.scriptId;
+        return this.scriptId == null ? Codegen.empty() : this.scriptId;
     }
 
     /**
@@ -251,7 +252,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serverLaunchParameters;
 
     public Output<String> getServerLaunchParameters() {
-        return this.serverLaunchParameters == null ? Output.empty() : this.serverLaunchParameters;
+        return this.serverLaunchParameters == null ? Codegen.empty() : this.serverLaunchParameters;
     }
 
     /**
@@ -262,7 +263,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serverLaunchPath;
 
     public Output<String> getServerLaunchPath() {
-        return this.serverLaunchPath == null ? Output.empty() : this.serverLaunchPath;
+        return this.serverLaunchPath == null ? Codegen.empty() : this.serverLaunchPath;
     }
 
     public FleetArgs(
@@ -313,28 +314,28 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FleetArgs() {
-        this.buildId = Output.empty();
-        this.certificateConfiguration = Output.empty();
-        this.description = Output.empty();
-        this.desiredEC2Instances = Output.empty();
-        this.eC2InboundPermissions = Output.empty();
-        this.eC2InstanceType = Output.empty();
-        this.fleetType = Output.empty();
-        this.instanceRoleARN = Output.empty();
-        this.locations = Output.empty();
-        this.logPaths = Output.empty();
-        this.maxSize = Output.empty();
-        this.metricGroups = Output.empty();
-        this.minSize = Output.empty();
-        this.name = Output.empty();
-        this.newGameSessionProtectionPolicy = Output.empty();
-        this.peerVpcAwsAccountId = Output.empty();
-        this.peerVpcId = Output.empty();
-        this.resourceCreationLimitPolicy = Output.empty();
-        this.runtimeConfiguration = Output.empty();
-        this.scriptId = Output.empty();
-        this.serverLaunchParameters = Output.empty();
-        this.serverLaunchPath = Output.empty();
+        this.buildId = Codegen.empty();
+        this.certificateConfiguration = Codegen.empty();
+        this.description = Codegen.empty();
+        this.desiredEC2Instances = Codegen.empty();
+        this.eC2InboundPermissions = Codegen.empty();
+        this.eC2InstanceType = Codegen.empty();
+        this.fleetType = Codegen.empty();
+        this.instanceRoleARN = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.logPaths = Codegen.empty();
+        this.maxSize = Codegen.empty();
+        this.metricGroups = Codegen.empty();
+        this.minSize = Codegen.empty();
+        this.name = Codegen.empty();
+        this.newGameSessionProtectionPolicy = Codegen.empty();
+        this.peerVpcAwsAccountId = Codegen.empty();
+        this.peerVpcId = Codegen.empty();
+        this.resourceCreationLimitPolicy = Codegen.empty();
+        this.runtimeConfiguration = Codegen.empty();
+        this.scriptId = Codegen.empty();
+        this.serverLaunchParameters = Codegen.empty();
+        this.serverLaunchPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -404,7 +405,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder buildId(@Nullable String buildId) {
-            this.buildId = Output.ofNullable(buildId);
+            this.buildId = Codegen.ofNullable(buildId);
             return this;
         }
         public Builder certificateConfiguration(@Nullable Output<FleetCertificateConfigurationArgs> certificateConfiguration) {
@@ -412,7 +413,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateConfiguration(@Nullable FleetCertificateConfigurationArgs certificateConfiguration) {
-            this.certificateConfiguration = Output.ofNullable(certificateConfiguration);
+            this.certificateConfiguration = Codegen.ofNullable(certificateConfiguration);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -420,7 +421,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder desiredEC2Instances(@Nullable Output<Integer> desiredEC2Instances) {
@@ -428,7 +429,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder desiredEC2Instances(@Nullable Integer desiredEC2Instances) {
-            this.desiredEC2Instances = Output.ofNullable(desiredEC2Instances);
+            this.desiredEC2Instances = Codegen.ofNullable(desiredEC2Instances);
             return this;
         }
         public Builder eC2InboundPermissions(@Nullable Output<List<FleetIpPermissionArgs>> eC2InboundPermissions) {
@@ -436,7 +437,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eC2InboundPermissions(@Nullable List<FleetIpPermissionArgs> eC2InboundPermissions) {
-            this.eC2InboundPermissions = Output.ofNullable(eC2InboundPermissions);
+            this.eC2InboundPermissions = Codegen.ofNullable(eC2InboundPermissions);
             return this;
         }
         public Builder eC2InboundPermissions(FleetIpPermissionArgs... eC2InboundPermissions) {
@@ -447,7 +448,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder eC2InstanceType(@Nullable String eC2InstanceType) {
-            this.eC2InstanceType = Output.ofNullable(eC2InstanceType);
+            this.eC2InstanceType = Codegen.ofNullable(eC2InstanceType);
             return this;
         }
         public Builder fleetType(@Nullable Output<FleetType> fleetType) {
@@ -455,7 +456,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fleetType(@Nullable FleetType fleetType) {
-            this.fleetType = Output.ofNullable(fleetType);
+            this.fleetType = Codegen.ofNullable(fleetType);
             return this;
         }
         public Builder instanceRoleARN(@Nullable Output<String> instanceRoleARN) {
@@ -463,7 +464,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceRoleARN(@Nullable String instanceRoleARN) {
-            this.instanceRoleARN = Output.ofNullable(instanceRoleARN);
+            this.instanceRoleARN = Codegen.ofNullable(instanceRoleARN);
             return this;
         }
         public Builder locations(@Nullable Output<List<FleetLocationConfigurationArgs>> locations) {
@@ -471,7 +472,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locations(@Nullable List<FleetLocationConfigurationArgs> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(FleetLocationConfigurationArgs... locations) {
@@ -482,7 +483,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logPaths(@Nullable List<String> logPaths) {
-            this.logPaths = Output.ofNullable(logPaths);
+            this.logPaths = Codegen.ofNullable(logPaths);
             return this;
         }
         public Builder logPaths(String... logPaths) {
@@ -493,7 +494,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxSize(@Nullable Integer maxSize) {
-            this.maxSize = Output.ofNullable(maxSize);
+            this.maxSize = Codegen.ofNullable(maxSize);
             return this;
         }
         public Builder metricGroups(@Nullable Output<List<String>> metricGroups) {
@@ -501,7 +502,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metricGroups(@Nullable List<String> metricGroups) {
-            this.metricGroups = Output.ofNullable(metricGroups);
+            this.metricGroups = Codegen.ofNullable(metricGroups);
             return this;
         }
         public Builder metricGroups(String... metricGroups) {
@@ -512,7 +513,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder minSize(@Nullable Integer minSize) {
-            this.minSize = Output.ofNullable(minSize);
+            this.minSize = Codegen.ofNullable(minSize);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -520,7 +521,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder newGameSessionProtectionPolicy(@Nullable Output<FleetNewGameSessionProtectionPolicy> newGameSessionProtectionPolicy) {
@@ -528,7 +529,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder newGameSessionProtectionPolicy(@Nullable FleetNewGameSessionProtectionPolicy newGameSessionProtectionPolicy) {
-            this.newGameSessionProtectionPolicy = Output.ofNullable(newGameSessionProtectionPolicy);
+            this.newGameSessionProtectionPolicy = Codegen.ofNullable(newGameSessionProtectionPolicy);
             return this;
         }
         public Builder peerVpcAwsAccountId(@Nullable Output<String> peerVpcAwsAccountId) {
@@ -536,7 +537,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerVpcAwsAccountId(@Nullable String peerVpcAwsAccountId) {
-            this.peerVpcAwsAccountId = Output.ofNullable(peerVpcAwsAccountId);
+            this.peerVpcAwsAccountId = Codegen.ofNullable(peerVpcAwsAccountId);
             return this;
         }
         public Builder peerVpcId(@Nullable Output<String> peerVpcId) {
@@ -544,7 +545,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder peerVpcId(@Nullable String peerVpcId) {
-            this.peerVpcId = Output.ofNullable(peerVpcId);
+            this.peerVpcId = Codegen.ofNullable(peerVpcId);
             return this;
         }
         public Builder resourceCreationLimitPolicy(@Nullable Output<FleetResourceCreationLimitPolicyArgs> resourceCreationLimitPolicy) {
@@ -552,7 +553,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceCreationLimitPolicy(@Nullable FleetResourceCreationLimitPolicyArgs resourceCreationLimitPolicy) {
-            this.resourceCreationLimitPolicy = Output.ofNullable(resourceCreationLimitPolicy);
+            this.resourceCreationLimitPolicy = Codegen.ofNullable(resourceCreationLimitPolicy);
             return this;
         }
         public Builder runtimeConfiguration(@Nullable Output<FleetRuntimeConfigurationArgs> runtimeConfiguration) {
@@ -560,7 +561,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder runtimeConfiguration(@Nullable FleetRuntimeConfigurationArgs runtimeConfiguration) {
-            this.runtimeConfiguration = Output.ofNullable(runtimeConfiguration);
+            this.runtimeConfiguration = Codegen.ofNullable(runtimeConfiguration);
             return this;
         }
         public Builder scriptId(@Nullable Output<String> scriptId) {
@@ -568,7 +569,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scriptId(@Nullable String scriptId) {
-            this.scriptId = Output.ofNullable(scriptId);
+            this.scriptId = Codegen.ofNullable(scriptId);
             return this;
         }
         public Builder serverLaunchParameters(@Nullable Output<String> serverLaunchParameters) {
@@ -576,7 +577,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverLaunchParameters(@Nullable String serverLaunchParameters) {
-            this.serverLaunchParameters = Output.ofNullable(serverLaunchParameters);
+            this.serverLaunchParameters = Codegen.ofNullable(serverLaunchParameters);
             return this;
         }
         public Builder serverLaunchPath(@Nullable Output<String> serverLaunchPath) {
@@ -584,7 +585,7 @@ public final class FleetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serverLaunchPath(@Nullable String serverLaunchPath) {
-            this.serverLaunchPath = Output.ofNullable(serverLaunchPath);
+            this.serverLaunchPath = Codegen.ofNullable(serverLaunchPath);
             return this;
         }        public FleetArgs build() {
             return new FleetArgs(buildId, certificateConfiguration, description, desiredEC2Instances, eC2InboundPermissions, eC2InstanceType, fleetType, instanceRoleARN, locations, logPaths, maxSize, metricGroups, minSize, name, newGameSessionProtectionPolicy, peerVpcAwsAccountId, peerVpcId, resourceCreationLimitPolicy, runtimeConfiguration, scriptId, serverLaunchParameters, serverLaunchPath);

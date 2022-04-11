@@ -6,6 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.PoolIdentityType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -40,7 +41,7 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,Object>> userAssignedIdentities;
 
     public Output<Map<String,Object>> getUserAssignedIdentities() {
-        return this.userAssignedIdentities == null ? Output.empty() : this.userAssignedIdentities;
+        return this.userAssignedIdentities == null ? Codegen.empty() : this.userAssignedIdentities;
     }
 
     public BatchPoolIdentityArgs(
@@ -51,8 +52,8 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
     }
 
     private BatchPoolIdentityArgs() {
-        this.type = Output.empty();
-        this.userAssignedIdentities = Output.empty();
+        this.type = Codegen.empty();
+        this.userAssignedIdentities = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -90,7 +91,7 @@ public final class BatchPoolIdentityArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userAssignedIdentities(@Nullable Map<String,Object> userAssignedIdentities) {
-            this.userAssignedIdentities = Output.ofNullable(userAssignedIdentities);
+            this.userAssignedIdentities = Codegen.ofNullable(userAssignedIdentities);
             return this;
         }        public BatchPoolIdentityArgs build() {
             return new BatchPoolIdentityArgs(type, userAssignedIdentities);

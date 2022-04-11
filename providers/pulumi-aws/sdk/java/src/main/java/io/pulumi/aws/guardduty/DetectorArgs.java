@@ -6,6 +6,7 @@ package io.pulumi.aws.guardduty;
 import io.pulumi.aws.guardduty.inputs.DetectorDatasourcesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DetectorDatasourcesArgs> datasources;
 
     public Output<DetectorDatasourcesArgs> getDatasources() {
-        return this.datasources == null ? Output.empty() : this.datasources;
+        return this.datasources == null ? Codegen.empty() : this.datasources;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enable;
 
     public Output<Boolean> getEnable() {
-        return this.enable == null ? Output.empty() : this.enable;
+        return this.enable == null ? Codegen.empty() : this.enable;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> findingPublishingFrequency;
 
     public Output<String> getFindingPublishingFrequency() {
-        return this.findingPublishingFrequency == null ? Output.empty() : this.findingPublishingFrequency;
+        return this.findingPublishingFrequency == null ? Codegen.empty() : this.findingPublishingFrequency;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DetectorArgs(
@@ -73,10 +74,10 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DetectorArgs() {
-        this.datasources = Output.empty();
-        this.enable = Output.empty();
-        this.findingPublishingFrequency = Output.empty();
-        this.tags = Output.empty();
+        this.datasources = Codegen.empty();
+        this.enable = Codegen.empty();
+        this.findingPublishingFrequency = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasources(@Nullable DetectorDatasourcesArgs datasources) {
-            this.datasources = Output.ofNullable(datasources);
+            this.datasources = Codegen.ofNullable(datasources);
             return this;
         }
         public Builder enable(@Nullable Output<Boolean> enable) {
@@ -118,7 +119,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enable(@Nullable Boolean enable) {
-            this.enable = Output.ofNullable(enable);
+            this.enable = Codegen.ofNullable(enable);
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable Output<String> findingPublishingFrequency) {
@@ -126,7 +127,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder findingPublishingFrequency(@Nullable String findingPublishingFrequency) {
-            this.findingPublishingFrequency = Output.ofNullable(findingPublishingFrequency);
+            this.findingPublishingFrequency = Codegen.ofNullable(findingPublishingFrequency);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -134,7 +135,7 @@ public final class DetectorArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DetectorArgs build() {
             return new DetectorArgs(datasources, enable, findingPublishingFrequency, tags);

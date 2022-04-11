@@ -5,6 +5,7 @@ package io.pulumi.aws.inspector;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -30,7 +31,7 @@ public final class ResourceGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceGroupArgs() {
-        this.tags = Output.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {

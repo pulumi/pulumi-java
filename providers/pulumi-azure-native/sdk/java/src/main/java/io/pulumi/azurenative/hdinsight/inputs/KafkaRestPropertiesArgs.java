@@ -6,6 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.ClientGroupInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<ClientGroupInfoArgs> clientGroupInfo;
 
     public Output<ClientGroupInfoArgs> getClientGroupInfo() {
-        return this.clientGroupInfo == null ? Output.empty() : this.clientGroupInfo;
+        return this.clientGroupInfo == null ? Codegen.empty() : this.clientGroupInfo;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> configurationOverride;
 
     public Output<Map<String,String>> getConfigurationOverride() {
-        return this.configurationOverride == null ? Output.empty() : this.configurationOverride;
+        return this.configurationOverride == null ? Codegen.empty() : this.configurationOverride;
     }
 
     public KafkaRestPropertiesArgs(
@@ -50,8 +51,8 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
     }
 
     private KafkaRestPropertiesArgs() {
-        this.clientGroupInfo = Output.empty();
-        this.configurationOverride = Output.empty();
+        this.clientGroupInfo = Codegen.empty();
+        this.configurationOverride = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder clientGroupInfo(@Nullable ClientGroupInfoArgs clientGroupInfo) {
-            this.clientGroupInfo = Output.ofNullable(clientGroupInfo);
+            this.clientGroupInfo = Codegen.ofNullable(clientGroupInfo);
             return this;
         }
         public Builder configurationOverride(@Nullable Output<Map<String,String>> configurationOverride) {
@@ -89,7 +90,7 @@ public final class KafkaRestPropertiesArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder configurationOverride(@Nullable Map<String,String> configurationOverride) {
-            this.configurationOverride = Output.ofNullable(configurationOverride);
+            this.configurationOverride = Codegen.ofNullable(configurationOverride);
             return this;
         }        public KafkaRestPropertiesArgs build() {
             return new KafkaRestPropertiesArgs(clientGroupInfo, configurationOverride);

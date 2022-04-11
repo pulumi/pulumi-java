@@ -14,6 +14,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamProcessingConfig
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamS3DestinationConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,63 +35,63 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
       private final @Nullable Output<DeliveryStreamBufferingHintsArgs> bufferingHints;
 
     public Output<DeliveryStreamBufferingHintsArgs> getBufferingHints() {
-        return this.bufferingHints == null ? Output.empty() : this.bufferingHints;
+        return this.bufferingHints == null ? Codegen.empty() : this.bufferingHints;
     }
 
     @Import(name="cloudWatchLoggingOptions")
       private final @Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions;
 
     public Output<DeliveryStreamCloudWatchLoggingOptionsArgs> getCloudWatchLoggingOptions() {
-        return this.cloudWatchLoggingOptions == null ? Output.empty() : this.cloudWatchLoggingOptions;
+        return this.cloudWatchLoggingOptions == null ? Codegen.empty() : this.cloudWatchLoggingOptions;
     }
 
     @Import(name="compressionFormat")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat;
 
     public Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> getCompressionFormat() {
-        return this.compressionFormat == null ? Output.empty() : this.compressionFormat;
+        return this.compressionFormat == null ? Codegen.empty() : this.compressionFormat;
     }
 
     @Import(name="dataFormatConversionConfiguration")
       private final @Nullable Output<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration;
 
     public Output<DeliveryStreamDataFormatConversionConfigurationArgs> getDataFormatConversionConfiguration() {
-        return this.dataFormatConversionConfiguration == null ? Output.empty() : this.dataFormatConversionConfiguration;
+        return this.dataFormatConversionConfiguration == null ? Codegen.empty() : this.dataFormatConversionConfiguration;
     }
 
     @Import(name="dynamicPartitioningConfiguration")
       private final @Nullable Output<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration;
 
     public Output<DeliveryStreamDynamicPartitioningConfigurationArgs> getDynamicPartitioningConfiguration() {
-        return this.dynamicPartitioningConfiguration == null ? Output.empty() : this.dynamicPartitioningConfiguration;
+        return this.dynamicPartitioningConfiguration == null ? Codegen.empty() : this.dynamicPartitioningConfiguration;
     }
 
     @Import(name="encryptionConfiguration")
       private final @Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Output<DeliveryStreamEncryptionConfigurationArgs> getEncryptionConfiguration() {
-        return this.encryptionConfiguration == null ? Output.empty() : this.encryptionConfiguration;
+        return this.encryptionConfiguration == null ? Codegen.empty() : this.encryptionConfiguration;
     }
 
     @Import(name="errorOutputPrefix")
       private final @Nullable Output<String> errorOutputPrefix;
 
     public Output<String> getErrorOutputPrefix() {
-        return this.errorOutputPrefix == null ? Output.empty() : this.errorOutputPrefix;
+        return this.errorOutputPrefix == null ? Codegen.empty() : this.errorOutputPrefix;
     }
 
     @Import(name="prefix")
       private final @Nullable Output<String> prefix;
 
     public Output<String> getPrefix() {
-        return this.prefix == null ? Output.empty() : this.prefix;
+        return this.prefix == null ? Codegen.empty() : this.prefix;
     }
 
     @Import(name="processingConfiguration")
       private final @Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration;
 
     public Output<DeliveryStreamProcessingConfigurationArgs> getProcessingConfiguration() {
-        return this.processingConfiguration == null ? Output.empty() : this.processingConfiguration;
+        return this.processingConfiguration == null ? Codegen.empty() : this.processingConfiguration;
     }
 
     @Import(name="roleARN", required=true)
@@ -104,14 +105,14 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
       private final @Nullable Output<DeliveryStreamS3DestinationConfigurationArgs> s3BackupConfiguration;
 
     public Output<DeliveryStreamS3DestinationConfigurationArgs> getS3BackupConfiguration() {
-        return this.s3BackupConfiguration == null ? Output.empty() : this.s3BackupConfiguration;
+        return this.s3BackupConfiguration == null ? Codegen.empty() : this.s3BackupConfiguration;
     }
 
     @Import(name="s3BackupMode")
       private final @Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode;
 
     public Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> getS3BackupMode() {
-        return this.s3BackupMode == null ? Output.empty() : this.s3BackupMode;
+        return this.s3BackupMode == null ? Codegen.empty() : this.s3BackupMode;
     }
 
     public DeliveryStreamExtendedS3DestinationConfigurationArgs(
@@ -144,19 +145,19 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
     }
 
     private DeliveryStreamExtendedS3DestinationConfigurationArgs() {
-        this.bucketARN = Output.empty();
-        this.bufferingHints = Output.empty();
-        this.cloudWatchLoggingOptions = Output.empty();
-        this.compressionFormat = Output.empty();
-        this.dataFormatConversionConfiguration = Output.empty();
-        this.dynamicPartitioningConfiguration = Output.empty();
-        this.encryptionConfiguration = Output.empty();
-        this.errorOutputPrefix = Output.empty();
-        this.prefix = Output.empty();
-        this.processingConfiguration = Output.empty();
-        this.roleARN = Output.empty();
-        this.s3BackupConfiguration = Output.empty();
-        this.s3BackupMode = Output.empty();
+        this.bucketARN = Codegen.empty();
+        this.bufferingHints = Codegen.empty();
+        this.cloudWatchLoggingOptions = Codegen.empty();
+        this.compressionFormat = Codegen.empty();
+        this.dataFormatConversionConfiguration = Codegen.empty();
+        this.dynamicPartitioningConfiguration = Codegen.empty();
+        this.encryptionConfiguration = Codegen.empty();
+        this.errorOutputPrefix = Codegen.empty();
+        this.prefix = Codegen.empty();
+        this.processingConfiguration = Codegen.empty();
+        this.roleARN = Codegen.empty();
+        this.s3BackupConfiguration = Codegen.empty();
+        this.s3BackupMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -216,7 +217,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder bufferingHints(@Nullable DeliveryStreamBufferingHintsArgs bufferingHints) {
-            this.bufferingHints = Output.ofNullable(bufferingHints);
+            this.bufferingHints = Codegen.ofNullable(bufferingHints);
             return this;
         }
         public Builder cloudWatchLoggingOptions(@Nullable Output<DeliveryStreamCloudWatchLoggingOptionsArgs> cloudWatchLoggingOptions) {
@@ -224,7 +225,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder cloudWatchLoggingOptions(@Nullable DeliveryStreamCloudWatchLoggingOptionsArgs cloudWatchLoggingOptions) {
-            this.cloudWatchLoggingOptions = Output.ofNullable(cloudWatchLoggingOptions);
+            this.cloudWatchLoggingOptions = Codegen.ofNullable(cloudWatchLoggingOptions);
             return this;
         }
         public Builder compressionFormat(@Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat> compressionFormat) {
@@ -232,7 +233,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder compressionFormat(@Nullable DeliveryStreamExtendedS3DestinationConfigurationCompressionFormat compressionFormat) {
-            this.compressionFormat = Output.ofNullable(compressionFormat);
+            this.compressionFormat = Codegen.ofNullable(compressionFormat);
             return this;
         }
         public Builder dataFormatConversionConfiguration(@Nullable Output<DeliveryStreamDataFormatConversionConfigurationArgs> dataFormatConversionConfiguration) {
@@ -240,7 +241,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder dataFormatConversionConfiguration(@Nullable DeliveryStreamDataFormatConversionConfigurationArgs dataFormatConversionConfiguration) {
-            this.dataFormatConversionConfiguration = Output.ofNullable(dataFormatConversionConfiguration);
+            this.dataFormatConversionConfiguration = Codegen.ofNullable(dataFormatConversionConfiguration);
             return this;
         }
         public Builder dynamicPartitioningConfiguration(@Nullable Output<DeliveryStreamDynamicPartitioningConfigurationArgs> dynamicPartitioningConfiguration) {
@@ -248,7 +249,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder dynamicPartitioningConfiguration(@Nullable DeliveryStreamDynamicPartitioningConfigurationArgs dynamicPartitioningConfiguration) {
-            this.dynamicPartitioningConfiguration = Output.ofNullable(dynamicPartitioningConfiguration);
+            this.dynamicPartitioningConfiguration = Codegen.ofNullable(dynamicPartitioningConfiguration);
             return this;
         }
         public Builder encryptionConfiguration(@Nullable Output<DeliveryStreamEncryptionConfigurationArgs> encryptionConfiguration) {
@@ -256,7 +257,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder encryptionConfiguration(@Nullable DeliveryStreamEncryptionConfigurationArgs encryptionConfiguration) {
-            this.encryptionConfiguration = Output.ofNullable(encryptionConfiguration);
+            this.encryptionConfiguration = Codegen.ofNullable(encryptionConfiguration);
             return this;
         }
         public Builder errorOutputPrefix(@Nullable Output<String> errorOutputPrefix) {
@@ -264,7 +265,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder errorOutputPrefix(@Nullable String errorOutputPrefix) {
-            this.errorOutputPrefix = Output.ofNullable(errorOutputPrefix);
+            this.errorOutputPrefix = Codegen.ofNullable(errorOutputPrefix);
             return this;
         }
         public Builder prefix(@Nullable Output<String> prefix) {
@@ -272,7 +273,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder prefix(@Nullable String prefix) {
-            this.prefix = Output.ofNullable(prefix);
+            this.prefix = Codegen.ofNullable(prefix);
             return this;
         }
         public Builder processingConfiguration(@Nullable Output<DeliveryStreamProcessingConfigurationArgs> processingConfiguration) {
@@ -280,7 +281,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder processingConfiguration(@Nullable DeliveryStreamProcessingConfigurationArgs processingConfiguration) {
-            this.processingConfiguration = Output.ofNullable(processingConfiguration);
+            this.processingConfiguration = Codegen.ofNullable(processingConfiguration);
             return this;
         }
         public Builder roleARN(Output<String> roleARN) {
@@ -296,7 +297,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder s3BackupConfiguration(@Nullable DeliveryStreamS3DestinationConfigurationArgs s3BackupConfiguration) {
-            this.s3BackupConfiguration = Output.ofNullable(s3BackupConfiguration);
+            this.s3BackupConfiguration = Codegen.ofNullable(s3BackupConfiguration);
             return this;
         }
         public Builder s3BackupMode(@Nullable Output<DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode> s3BackupMode) {
@@ -304,7 +305,7 @@ public final class DeliveryStreamExtendedS3DestinationConfigurationArgs extends 
             return this;
         }
         public Builder s3BackupMode(@Nullable DeliveryStreamExtendedS3DestinationConfigurationS3BackupMode s3BackupMode) {
-            this.s3BackupMode = Output.ofNullable(s3BackupMode);
+            this.s3BackupMode = Codegen.ofNullable(s3BackupMode);
             return this;
         }        public DeliveryStreamExtendedS3DestinationConfigurationArgs build() {
             return new DeliveryStreamExtendedS3DestinationConfigurationArgs(bucketARN, bufferingHints, cloudWatchLoggingOptions, compressionFormat, dataFormatConversionConfiguration, dynamicPartitioningConfiguration, encryptionConfiguration, errorOutputPrefix, prefix, processingConfiguration, roleARN, s3BackupConfiguration, s3BackupMode);

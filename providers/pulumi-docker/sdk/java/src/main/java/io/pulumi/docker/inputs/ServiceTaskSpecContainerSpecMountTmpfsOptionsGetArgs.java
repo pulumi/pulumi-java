@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs extends 
       private final @Nullable Output<Integer> mode;
 
     public Output<Integer> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="sizeBytes")
       private final @Nullable Output<Integer> sizeBytes;
 
     public Output<Integer> getSizeBytes() {
-        return this.sizeBytes == null ? Output.empty() : this.sizeBytes;
+        return this.sizeBytes == null ? Codegen.empty() : this.sizeBytes;
     }
 
     public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(
@@ -36,8 +37,8 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs extends 
     }
 
     private ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs() {
-        this.mode = Output.empty();
-        this.sizeBytes = Output.empty();
+        this.mode = Codegen.empty();
+        this.sizeBytes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs extends 
             return this;
         }
         public Builder mode(@Nullable Integer mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
@@ -75,7 +76,7 @@ public final class ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs extends 
             return this;
         }
         public Builder sizeBytes(@Nullable Integer sizeBytes) {
-            this.sizeBytes = Output.ofNullable(sizeBytes);
+            this.sizeBytes = Codegen.ofNullable(sizeBytes);
             return this;
         }        public ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs build() {
             return new ServiceTaskSpecContainerSpecMountTmpfsOptionsGetArgs(mode, sizeBytes);

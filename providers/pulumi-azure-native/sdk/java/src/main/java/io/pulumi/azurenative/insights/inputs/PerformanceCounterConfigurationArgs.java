@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
       private final @Nullable Output<String> instance;
 
     public Output<String> getInstance() {
-        return this.instance == null ? Output.empty() : this.instance;
+        return this.instance == null ? Codegen.empty() : this.instance;
     }
 
     @Import(name="name", required=true)
@@ -45,9 +46,9 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
     }
 
     private PerformanceCounterConfigurationArgs() {
-        this.instance = Output.empty();
-        this.name = Output.empty();
-        this.samplingPeriod = Output.empty();
+        this.instance = Codegen.empty();
+        this.name = Codegen.empty();
+        this.samplingPeriod = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class PerformanceCounterConfigurationArgs extends io.pulumi.resourc
             return this;
         }
         public Builder instance(@Nullable String instance) {
-            this.instance = Output.ofNullable(instance);
+            this.instance = Codegen.ofNullable(instance);
             return this;
         }
         public Builder name(Output<String> name) {

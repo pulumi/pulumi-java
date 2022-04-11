@@ -9,6 +9,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.ResourceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +31,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Output<KeyVaultPropertiesArgs> getKeyVaultProperties() {
-        return this.keyVaultProperties == null ? Output.empty() : this.keyVaultProperties;
+        return this.keyVaultProperties == null ? Codegen.empty() : this.keyVaultProperties;
     }
 
     /**
@@ -65,9 +66,9 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AccountEncryptionArgs() {
-        this.identity = Output.empty();
-        this.keyVaultProperties = Output.empty();
-        this.type = Output.empty();
+        this.identity = Codegen.empty();
+        this.keyVaultProperties = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder keyVaultProperties(@Nullable Output<KeyVaultPropertiesArgs> keyVaultProperties) {
@@ -107,7 +108,7 @@ public final class AccountEncryptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder keyVaultProperties(@Nullable KeyVaultPropertiesArgs keyVaultProperties) {
-            this.keyVaultProperties = Output.ofNullable(keyVaultProperties);
+            this.keyVaultProperties = Codegen.ofNullable(keyVaultProperties);
             return this;
         }
         public Builder type(Output<Either<String,AccountEncryptionKeyType>> type) {

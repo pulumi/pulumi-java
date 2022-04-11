@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class UserPoolLambdaConfigCustomEmailSenderGetArgs extends io.pulum
     }
 
     private UserPoolLambdaConfigCustomEmailSenderGetArgs() {
-        this.lambdaArn = Output.empty();
-        this.lambdaVersion = Output.empty();
+        this.lambdaArn = Codegen.empty();
+        this.lambdaVersion = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.workspaces.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> computeTypeName;
 
     public Output<String> getComputeTypeName() {
-        return this.computeTypeName == null ? Output.empty() : this.computeTypeName;
+        return this.computeTypeName == null ? Codegen.empty() : this.computeTypeName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> rootVolumeSizeGib;
 
     public Output<Integer> getRootVolumeSizeGib() {
-        return this.rootVolumeSizeGib == null ? Output.empty() : this.rootVolumeSizeGib;
+        return this.rootVolumeSizeGib == null ? Codegen.empty() : this.rootVolumeSizeGib;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
       private final @Nullable Output<String> runningMode;
 
     public Output<String> getRunningMode() {
-        return this.runningMode == null ? Output.empty() : this.runningMode;
+        return this.runningMode == null ? Codegen.empty() : this.runningMode;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes;
 
     public Output<Integer> getRunningModeAutoStopTimeoutInMinutes() {
-        return this.runningModeAutoStopTimeoutInMinutes == null ? Output.empty() : this.runningModeAutoStopTimeoutInMinutes;
+        return this.runningModeAutoStopTimeoutInMinutes == null ? Codegen.empty() : this.runningModeAutoStopTimeoutInMinutes;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
       private final @Nullable Output<Integer> userVolumeSizeGib;
 
     public Output<Integer> getUserVolumeSizeGib() {
-        return this.userVolumeSizeGib == null ? Output.empty() : this.userVolumeSizeGib;
+        return this.userVolumeSizeGib == null ? Codegen.empty() : this.userVolumeSizeGib;
     }
 
     public WorkspaceWorkspacePropertiesGetArgs(
@@ -84,11 +85,11 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
     }
 
     private WorkspaceWorkspacePropertiesGetArgs() {
-        this.computeTypeName = Output.empty();
-        this.rootVolumeSizeGib = Output.empty();
-        this.runningMode = Output.empty();
-        this.runningModeAutoStopTimeoutInMinutes = Output.empty();
-        this.userVolumeSizeGib = Output.empty();
+        this.computeTypeName = Codegen.empty();
+        this.rootVolumeSizeGib = Codegen.empty();
+        this.runningMode = Codegen.empty();
+        this.runningModeAutoStopTimeoutInMinutes = Codegen.empty();
+        this.userVolumeSizeGib = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder computeTypeName(@Nullable String computeTypeName) {
-            this.computeTypeName = Output.ofNullable(computeTypeName);
+            this.computeTypeName = Codegen.ofNullable(computeTypeName);
             return this;
         }
         public Builder rootVolumeSizeGib(@Nullable Output<Integer> rootVolumeSizeGib) {
@@ -132,7 +133,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder rootVolumeSizeGib(@Nullable Integer rootVolumeSizeGib) {
-            this.rootVolumeSizeGib = Output.ofNullable(rootVolumeSizeGib);
+            this.rootVolumeSizeGib = Codegen.ofNullable(rootVolumeSizeGib);
             return this;
         }
         public Builder runningMode(@Nullable Output<String> runningMode) {
@@ -140,7 +141,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder runningMode(@Nullable String runningMode) {
-            this.runningMode = Output.ofNullable(runningMode);
+            this.runningMode = Codegen.ofNullable(runningMode);
             return this;
         }
         public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Output<Integer> runningModeAutoStopTimeoutInMinutes) {
@@ -148,7 +149,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder runningModeAutoStopTimeoutInMinutes(@Nullable Integer runningModeAutoStopTimeoutInMinutes) {
-            this.runningModeAutoStopTimeoutInMinutes = Output.ofNullable(runningModeAutoStopTimeoutInMinutes);
+            this.runningModeAutoStopTimeoutInMinutes = Codegen.ofNullable(runningModeAutoStopTimeoutInMinutes);
             return this;
         }
         public Builder userVolumeSizeGib(@Nullable Output<Integer> userVolumeSizeGib) {
@@ -156,7 +157,7 @@ public final class WorkspaceWorkspacePropertiesGetArgs extends io.pulumi.resourc
             return this;
         }
         public Builder userVolumeSizeGib(@Nullable Integer userVolumeSizeGib) {
-            this.userVolumeSizeGib = Output.ofNullable(userVolumeSizeGib);
+            this.userVolumeSizeGib = Codegen.ofNullable(userVolumeSizeGib);
             return this;
         }        public WorkspaceWorkspacePropertiesGetArgs build() {
             return new WorkspaceWorkspacePropertiesGetArgs(computeTypeName, rootVolumeSizeGib, runningMode, runningModeAutoStopTimeoutInMinutes, userVolumeSizeGib);

@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class RolePolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RolePolicyArgs() {
-        this.policyDocument = Output.empty();
-        this.policyName = Output.empty();
+        this.policyDocument = Codegen.empty();
+        this.policyName = Codegen.empty();
     }
 
     public static Builder builder() {

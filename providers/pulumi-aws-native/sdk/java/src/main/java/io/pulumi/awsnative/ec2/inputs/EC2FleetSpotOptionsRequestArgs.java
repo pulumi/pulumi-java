@@ -8,6 +8,7 @@ import io.pulumi.awsnative.ec2.enums.EC2FleetSpotOptionsRequestInstanceInterrupt
 import io.pulumi.awsnative.ec2.inputs.EC2FleetMaintenanceStrategiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,56 +24,56 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
       private final @Nullable Output<EC2FleetSpotOptionsRequestAllocationStrategy> allocationStrategy;
 
     public Output<EC2FleetSpotOptionsRequestAllocationStrategy> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
+        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     @Import(name="instanceInterruptionBehavior")
       private final @Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior;
 
     public Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> getInstanceInterruptionBehavior() {
-        return this.instanceInterruptionBehavior == null ? Output.empty() : this.instanceInterruptionBehavior;
+        return this.instanceInterruptionBehavior == null ? Codegen.empty() : this.instanceInterruptionBehavior;
     }
 
     @Import(name="instancePoolsToUseCount")
       private final @Nullable Output<Integer> instancePoolsToUseCount;
 
     public Output<Integer> getInstancePoolsToUseCount() {
-        return this.instancePoolsToUseCount == null ? Output.empty() : this.instancePoolsToUseCount;
+        return this.instancePoolsToUseCount == null ? Codegen.empty() : this.instancePoolsToUseCount;
     }
 
     @Import(name="maintenanceStrategies")
       private final @Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies;
 
     public Output<EC2FleetMaintenanceStrategiesArgs> getMaintenanceStrategies() {
-        return this.maintenanceStrategies == null ? Output.empty() : this.maintenanceStrategies;
+        return this.maintenanceStrategies == null ? Codegen.empty() : this.maintenanceStrategies;
     }
 
     @Import(name="maxTotalPrice")
       private final @Nullable Output<String> maxTotalPrice;
 
     public Output<String> getMaxTotalPrice() {
-        return this.maxTotalPrice == null ? Output.empty() : this.maxTotalPrice;
+        return this.maxTotalPrice == null ? Codegen.empty() : this.maxTotalPrice;
     }
 
     @Import(name="minTargetCapacity")
       private final @Nullable Output<Integer> minTargetCapacity;
 
     public Output<Integer> getMinTargetCapacity() {
-        return this.minTargetCapacity == null ? Output.empty() : this.minTargetCapacity;
+        return this.minTargetCapacity == null ? Codegen.empty() : this.minTargetCapacity;
     }
 
     @Import(name="singleAvailabilityZone")
       private final @Nullable Output<Boolean> singleAvailabilityZone;
 
     public Output<Boolean> getSingleAvailabilityZone() {
-        return this.singleAvailabilityZone == null ? Output.empty() : this.singleAvailabilityZone;
+        return this.singleAvailabilityZone == null ? Codegen.empty() : this.singleAvailabilityZone;
     }
 
     @Import(name="singleInstanceType")
       private final @Nullable Output<Boolean> singleInstanceType;
 
     public Output<Boolean> getSingleInstanceType() {
-        return this.singleInstanceType == null ? Output.empty() : this.singleInstanceType;
+        return this.singleInstanceType == null ? Codegen.empty() : this.singleInstanceType;
     }
 
     public EC2FleetSpotOptionsRequestArgs(
@@ -95,14 +96,14 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
     }
 
     private EC2FleetSpotOptionsRequestArgs() {
-        this.allocationStrategy = Output.empty();
-        this.instanceInterruptionBehavior = Output.empty();
-        this.instancePoolsToUseCount = Output.empty();
-        this.maintenanceStrategies = Output.empty();
-        this.maxTotalPrice = Output.empty();
-        this.minTargetCapacity = Output.empty();
-        this.singleAvailabilityZone = Output.empty();
-        this.singleInstanceType = Output.empty();
+        this.allocationStrategy = Codegen.empty();
+        this.instanceInterruptionBehavior = Codegen.empty();
+        this.instancePoolsToUseCount = Codegen.empty();
+        this.maintenanceStrategies = Codegen.empty();
+        this.maxTotalPrice = Codegen.empty();
+        this.minTargetCapacity = Codegen.empty();
+        this.singleAvailabilityZone = Codegen.empty();
+        this.singleInstanceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder allocationStrategy(@Nullable EC2FleetSpotOptionsRequestAllocationStrategy allocationStrategy) {
-            this.allocationStrategy = Output.ofNullable(allocationStrategy);
+            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable Output<EC2FleetSpotOptionsRequestInstanceInterruptionBehavior> instanceInterruptionBehavior) {
@@ -152,7 +153,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instanceInterruptionBehavior(@Nullable EC2FleetSpotOptionsRequestInstanceInterruptionBehavior instanceInterruptionBehavior) {
-            this.instanceInterruptionBehavior = Output.ofNullable(instanceInterruptionBehavior);
+            this.instanceInterruptionBehavior = Codegen.ofNullable(instanceInterruptionBehavior);
             return this;
         }
         public Builder instancePoolsToUseCount(@Nullable Output<Integer> instancePoolsToUseCount) {
@@ -160,7 +161,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder instancePoolsToUseCount(@Nullable Integer instancePoolsToUseCount) {
-            this.instancePoolsToUseCount = Output.ofNullable(instancePoolsToUseCount);
+            this.instancePoolsToUseCount = Codegen.ofNullable(instancePoolsToUseCount);
             return this;
         }
         public Builder maintenanceStrategies(@Nullable Output<EC2FleetMaintenanceStrategiesArgs> maintenanceStrategies) {
@@ -168,7 +169,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maintenanceStrategies(@Nullable EC2FleetMaintenanceStrategiesArgs maintenanceStrategies) {
-            this.maintenanceStrategies = Output.ofNullable(maintenanceStrategies);
+            this.maintenanceStrategies = Codegen.ofNullable(maintenanceStrategies);
             return this;
         }
         public Builder maxTotalPrice(@Nullable Output<String> maxTotalPrice) {
@@ -176,7 +177,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder maxTotalPrice(@Nullable String maxTotalPrice) {
-            this.maxTotalPrice = Output.ofNullable(maxTotalPrice);
+            this.maxTotalPrice = Codegen.ofNullable(maxTotalPrice);
             return this;
         }
         public Builder minTargetCapacity(@Nullable Output<Integer> minTargetCapacity) {
@@ -184,7 +185,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder minTargetCapacity(@Nullable Integer minTargetCapacity) {
-            this.minTargetCapacity = Output.ofNullable(minTargetCapacity);
+            this.minTargetCapacity = Codegen.ofNullable(minTargetCapacity);
             return this;
         }
         public Builder singleAvailabilityZone(@Nullable Output<Boolean> singleAvailabilityZone) {
@@ -192,7 +193,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder singleAvailabilityZone(@Nullable Boolean singleAvailabilityZone) {
-            this.singleAvailabilityZone = Output.ofNullable(singleAvailabilityZone);
+            this.singleAvailabilityZone = Codegen.ofNullable(singleAvailabilityZone);
             return this;
         }
         public Builder singleInstanceType(@Nullable Output<Boolean> singleInstanceType) {
@@ -200,7 +201,7 @@ public final class EC2FleetSpotOptionsRequestArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder singleInstanceType(@Nullable Boolean singleInstanceType) {
-            this.singleInstanceType = Output.ofNullable(singleInstanceType);
+            this.singleInstanceType = Codegen.ofNullable(singleInstanceType);
             return this;
         }        public EC2FleetSpotOptionsRequestArgs build() {
             return new EC2FleetSpotOptionsRequestArgs(allocationStrategy, instanceInterruptionBehavior, instancePoolsToUseCount, maintenanceStrategies, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);

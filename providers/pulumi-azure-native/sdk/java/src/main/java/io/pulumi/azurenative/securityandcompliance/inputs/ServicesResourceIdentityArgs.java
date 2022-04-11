@@ -7,6 +7,7 @@ import io.pulumi.azurenative.securityandcompliance.enums.ManagedServiceIdentityT
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class ServicesResourceIdentityArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<Either<String,ManagedServiceIdentityType>> type;
 
     public Output<Either<String,ManagedServiceIdentityType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public ServicesResourceIdentityArgs(@Nullable Output<Either<String,ManagedServiceIdentityType>> type) {
@@ -36,7 +37,7 @@ public final class ServicesResourceIdentityArgs extends io.pulumi.resources.Reso
     }
 
     private ServicesResourceIdentityArgs() {
-        this.type = Output.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class ServicesResourceIdentityArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder type(@Nullable Either<String,ManagedServiceIdentityType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public ServicesResourceIdentityArgs build() {
             return new ServicesResourceIdentityArgs(type);

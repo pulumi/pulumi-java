@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
       private final @Nullable Output<String> truststoreVersion;
 
     public Output<String> getTruststoreVersion() {
-        return this.truststoreVersion == null ? Output.empty() : this.truststoreVersion;
+        return this.truststoreVersion == null ? Codegen.empty() : this.truststoreVersion;
     }
 
     public DomainNameMutualTlsAuthenticationGetArgs(
@@ -45,8 +46,8 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
     }
 
     private DomainNameMutualTlsAuthenticationGetArgs() {
-        this.truststoreUri = Output.empty();
-        this.truststoreVersion = Output.empty();
+        this.truststoreUri = Codegen.empty();
+        this.truststoreVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class DomainNameMutualTlsAuthenticationGetArgs extends io.pulumi.re
             return this;
         }
         public Builder truststoreVersion(@Nullable String truststoreVersion) {
-            this.truststoreVersion = Output.ofNullable(truststoreVersion);
+            this.truststoreVersion = Codegen.ofNullable(truststoreVersion);
             return this;
         }        public DomainNameMutualTlsAuthenticationGetArgs build() {
             return new DomainNameMutualTlsAuthenticationGetArgs(truststoreUri, truststoreVersion);

@@ -8,6 +8,7 @@ import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -36,7 +37,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
     public Output<AsymmetricEncryptedSecretArgs> getEncryptedPassword() {
-        return this.encryptedPassword == null ? Output.empty() : this.encryptedPassword;
+        return this.encryptedPassword == null ? Codegen.empty() : this.encryptedPassword;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private UserArgs() {
-        this.deviceName = Output.empty();
-        this.encryptedPassword = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.userType = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.encryptedPassword = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.userType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -134,7 +135,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptedPassword(@Nullable AsymmetricEncryptedSecretArgs encryptedPassword) {
-            this.encryptedPassword = Output.ofNullable(encryptedPassword);
+            this.encryptedPassword = Codegen.ofNullable(encryptedPassword);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -142,7 +143,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

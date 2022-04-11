@@ -7,6 +7,7 @@ import io.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfigurationA
 import io.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
     public Output<StreamingPolicyPlayReadyConfigurationArgs> getPlayReady() {
-        return this.playReady == null ? Output.empty() : this.playReady;
+        return this.playReady == null ? Codegen.empty() : this.playReady;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine;
 
     public Output<StreamingPolicyWidevineConfigurationArgs> getWidevine() {
-        return this.widevine == null ? Output.empty() : this.widevine;
+        return this.widevine == null ? Codegen.empty() : this.widevine;
     }
 
     public CencDrmConfigurationArgs(
@@ -49,8 +50,8 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private CencDrmConfigurationArgs() {
-        this.playReady = Output.empty();
-        this.widevine = Output.empty();
+        this.playReady = Codegen.empty();
+        this.widevine = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder playReady(@Nullable StreamingPolicyPlayReadyConfigurationArgs playReady) {
-            this.playReady = Output.ofNullable(playReady);
+            this.playReady = Codegen.ofNullable(playReady);
             return this;
         }
         public Builder widevine(@Nullable Output<StreamingPolicyWidevineConfigurationArgs> widevine) {
@@ -88,7 +89,7 @@ public final class CencDrmConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder widevine(@Nullable StreamingPolicyWidevineConfigurationArgs widevine) {
-            this.widevine = Output.ofNullable(widevine);
+            this.widevine = Codegen.ofNullable(widevine);
             return this;
         }        public CencDrmConfigurationArgs build() {
             return new CencDrmConfigurationArgs(playReady, widevine);

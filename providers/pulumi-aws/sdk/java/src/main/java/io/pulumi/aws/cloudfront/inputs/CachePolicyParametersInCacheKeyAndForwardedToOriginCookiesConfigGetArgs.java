@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudfront.inputs;
 import io.pulumi.aws.cloudfront.inputs.CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
       private final @Nullable Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> cookies;
 
     public Output<CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs> getCookies() {
-        return this.cookies == null ? Output.empty() : this.cookies;
+        return this.cookies == null ? Codegen.empty() : this.cookies;
     }
 
     public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(
@@ -45,8 +46,8 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
     }
 
     private CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs() {
-        this.cookieBehavior = Output.empty();
-        this.cookies = Output.empty();
+        this.cookieBehavior = Codegen.empty();
+        this.cookies = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesCon
             return this;
         }
         public Builder cookies(@Nullable CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigCookiesGetArgs cookies) {
-            this.cookies = Output.ofNullable(cookies);
+            this.cookies = Codegen.ofNullable(cookies);
             return this;
         }        public CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOriginCookiesConfigGetArgs(cookieBehavior, cookies);

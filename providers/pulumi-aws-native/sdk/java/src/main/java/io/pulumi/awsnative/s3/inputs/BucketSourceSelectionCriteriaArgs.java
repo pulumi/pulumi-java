@@ -7,6 +7,7 @@ import io.pulumi.awsnative.s3.inputs.BucketReplicaModificationsArgs;
 import io.pulumi.awsnative.s3.inputs.BucketSseKmsEncryptedObjectsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
       private final @Nullable Output<BucketReplicaModificationsArgs> replicaModifications;
 
     public Output<BucketReplicaModificationsArgs> getReplicaModifications() {
-        return this.replicaModifications == null ? Output.empty() : this.replicaModifications;
+        return this.replicaModifications == null ? Codegen.empty() : this.replicaModifications;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
       private final @Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
     public Output<BucketSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
-        return this.sseKmsEncryptedObjects == null ? Output.empty() : this.sseKmsEncryptedObjects;
+        return this.sseKmsEncryptedObjects == null ? Codegen.empty() : this.sseKmsEncryptedObjects;
     }
 
     public BucketSourceSelectionCriteriaArgs(
@@ -49,8 +50,8 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
     }
 
     private BucketSourceSelectionCriteriaArgs() {
-        this.replicaModifications = Output.empty();
-        this.sseKmsEncryptedObjects = Output.empty();
+        this.replicaModifications = Codegen.empty();
+        this.sseKmsEncryptedObjects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
             return this;
         }
         public Builder replicaModifications(@Nullable BucketReplicaModificationsArgs replicaModifications) {
-            this.replicaModifications = Output.ofNullable(replicaModifications);
+            this.replicaModifications = Codegen.ofNullable(replicaModifications);
             return this;
         }
         public Builder sseKmsEncryptedObjects(@Nullable Output<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects) {
@@ -88,7 +89,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
             return this;
         }
         public Builder sseKmsEncryptedObjects(@Nullable BucketSseKmsEncryptedObjectsArgs sseKmsEncryptedObjects) {
-            this.sseKmsEncryptedObjects = Output.ofNullable(sseKmsEncryptedObjects);
+            this.sseKmsEncryptedObjects = Codegen.ofNullable(sseKmsEncryptedObjects);
             return this;
         }        public BucketSourceSelectionCriteriaArgs build() {
             return new BucketSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceDisk;
 
     public Output<String> getSourceDisk() {
-        return this.sourceDisk == null ? Output.empty() : this.sourceDisk;
+        return this.sourceDisk == null ? Codegen.empty() : this.sourceDisk;
     }
 
     public SavedDiskArgs(@Nullable Output<String> sourceDisk) {
@@ -34,7 +35,7 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SavedDiskArgs() {
-        this.sourceDisk = Output.empty();
+        this.sourceDisk = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class SavedDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceDisk(@Nullable String sourceDisk) {
-            this.sourceDisk = Output.ofNullable(sourceDisk);
+            this.sourceDisk = Codegen.ofNullable(sourceDisk);
             return this;
         }        public SavedDiskArgs build() {
             return new SavedDiskArgs(sourceDisk);

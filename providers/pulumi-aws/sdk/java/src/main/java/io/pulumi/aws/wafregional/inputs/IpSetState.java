@@ -6,6 +6,7 @@ package io.pulumi.aws.wafregional.inputs;
 import io.pulumi.aws.wafregional.inputs.IpSetIpSetDescriptorGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors;
 
     public Output<List<IpSetIpSetDescriptorGetArgs>> getIpSetDescriptors() {
-        return this.ipSetDescriptors == null ? Output.empty() : this.ipSetDescriptors;
+        return this.ipSetDescriptors == null ? Codegen.empty() : this.ipSetDescriptors;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public IpSetState(
@@ -59,9 +60,9 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
     }
 
     private IpSetState() {
-        this.arn = Output.empty();
-        this.ipSetDescriptors = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.ipSetDescriptors = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder ipSetDescriptors(@Nullable Output<List<IpSetIpSetDescriptorGetArgs>> ipSetDescriptors) {
@@ -101,7 +102,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ipSetDescriptors(@Nullable List<IpSetIpSetDescriptorGetArgs> ipSetDescriptors) {
-            this.ipSetDescriptors = Output.ofNullable(ipSetDescriptors);
+            this.ipSetDescriptors = Codegen.ofNullable(ipSetDescriptors);
             return this;
         }
         public Builder ipSetDescriptors(IpSetIpSetDescriptorGetArgs... ipSetDescriptors) {
@@ -112,7 +113,7 @@ public final class IpSetState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public IpSetState build() {
             return new IpSetState(arn, ipSetDescriptors, name);

@@ -6,6 +6,7 @@ package io.pulumi.gcp.kms;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.CryptoKeyIAMPolicyArgs;
 import io.pulumi.gcp.kms.inputs.CryptoKeyIAMPolicyState;
@@ -131,7 +132,7 @@ public class CryptoKeyIAMPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CryptoKeyIAMPolicy(String name, CryptoKeyIAMPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy", name, args == null ? CryptoKeyIAMPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:kms/cryptoKeyIAMPolicy:CryptoKeyIAMPolicy", name, args == null ? CryptoKeyIAMPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CryptoKeyIAMPolicy(String name, Output<String> id, @Nullable CryptoKeyIAMPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

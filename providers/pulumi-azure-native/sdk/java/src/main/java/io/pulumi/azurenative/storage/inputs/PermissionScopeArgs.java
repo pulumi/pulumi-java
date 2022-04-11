@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private PermissionScopeArgs() {
-        this.permissions = Output.empty();
-        this.resourceName = Output.empty();
-        this.service = Output.empty();
+        this.permissions = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {

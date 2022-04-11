@@ -6,6 +6,7 @@ package io.pulumi.gcp.iap;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamMemberState;
@@ -168,7 +169,7 @@ public class WebTypeAppEngingIamMember extends io.pulumi.resources.CustomResourc
      * @param options A bag of options that control this resource's behavior.
      */
     public WebTypeAppEngingIamMember(String name, WebTypeAppEngingIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:iap/webTypeAppEngingIamMember:WebTypeAppEngingIamMember", name, args == null ? WebTypeAppEngingIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:iap/webTypeAppEngingIamMember:WebTypeAppEngingIamMember", name, args == null ? WebTypeAppEngingIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private WebTypeAppEngingIamMember(String name, Output<String> id, @Nullable WebTypeAppEngingIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

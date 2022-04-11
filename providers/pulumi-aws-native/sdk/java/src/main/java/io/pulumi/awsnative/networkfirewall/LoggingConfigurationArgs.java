@@ -5,6 +5,7 @@ package io.pulumi.awsnative.networkfirewall;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> firewallName;
 
     public Output<String> getFirewallName() {
-        return this.firewallName == null ? Output.empty() : this.firewallName;
+        return this.firewallName == null ? Codegen.empty() : this.firewallName;
     }
 
     @Import(name="loggingConfiguration", required=true)
@@ -45,9 +46,9 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
     }
 
     private LoggingConfigurationArgs() {
-        this.firewallArn = Output.empty();
-        this.firewallName = Output.empty();
-        this.loggingConfiguration = Output.empty();
+        this.firewallArn = Codegen.empty();
+        this.firewallName = Codegen.empty();
+        this.loggingConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class LoggingConfigurationArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder firewallName(@Nullable String firewallName) {
-            this.firewallName = Output.ofNullable(firewallName);
+            this.firewallName = Codegen.ofNullable(firewallName);
             return this;
         }
         public Builder loggingConfiguration(Output<io.pulumi.awsnative.networkfirewall.inputs.LoggingConfigurationArgs> loggingConfiguration) {

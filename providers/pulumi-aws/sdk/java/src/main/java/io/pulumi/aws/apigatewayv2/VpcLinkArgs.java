@@ -5,6 +5,7 @@ package io.pulumi.aws.apigatewayv2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public VpcLinkArgs(
@@ -72,10 +73,10 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private VpcLinkArgs() {
-        this.name = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
@@ -139,7 +140,7 @@ public final class VpcLinkArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public VpcLinkArgs build() {
             return new VpcLinkArgs(name, securityGroupIds, subnetIds, tags);

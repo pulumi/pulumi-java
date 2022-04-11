@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs 
       private final @Nullable Output<Boolean> pullDeps;
 
     public Output<Boolean> getPullDeps() {
-        return this.pullDeps == null ? Output.empty() : this.pullDeps;
+        return this.pullDeps == null ? Codegen.empty() : this.pullDeps;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs 
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs() {
-        this.pullDeps = Output.empty();
-        this.source = Output.empty();
+        this.pullDeps = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs 
             return this;
         }
         public Builder pullDeps(@Nullable Boolean pullDeps) {
-            this.pullDeps = Output.ofNullable(pullDeps);
+            this.pullDeps = Codegen.ofNullable(pullDeps);
             return this;
         }
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceGetArgs> source) {

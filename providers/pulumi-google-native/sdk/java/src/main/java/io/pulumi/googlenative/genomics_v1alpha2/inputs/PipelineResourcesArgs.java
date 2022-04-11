@@ -5,6 +5,7 @@ package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.DiskArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -31,7 +32,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> acceleratorCount;
 
     public Output<String> getAcceleratorCount() {
-        return this.acceleratorCount == null ? Output.empty() : this.acceleratorCount;
+        return this.acceleratorCount == null ? Codegen.empty() : this.acceleratorCount;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> acceleratorType;
 
     public Output<String> getAcceleratorType() {
-        return this.acceleratorType == null ? Output.empty() : this.acceleratorType;
+        return this.acceleratorType == null ? Codegen.empty() : this.acceleratorType;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> bootDiskSizeGb;
 
     public Output<Integer> getBootDiskSizeGb() {
-        return this.bootDiskSizeGb == null ? Output.empty() : this.bootDiskSizeGb;
+        return this.bootDiskSizeGb == null ? Codegen.empty() : this.bootDiskSizeGb;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<DiskArgs>> disks;
 
     public Output<List<DiskArgs>> getDisks() {
-        return this.disks == null ? Output.empty() : this.disks;
+        return this.disks == null ? Codegen.empty() : this.disks;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Integer> minimumCpuCores;
 
     public Output<Integer> getMinimumCpuCores() {
-        return this.minimumCpuCores == null ? Output.empty() : this.minimumCpuCores;
+        return this.minimumCpuCores == null ? Codegen.empty() : this.minimumCpuCores;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Double> minimumRamGb;
 
     public Output<Double> getMinimumRamGb() {
-        return this.minimumRamGb == null ? Output.empty() : this.minimumRamGb;
+        return this.minimumRamGb == null ? Codegen.empty() : this.minimumRamGb;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> noAddress;
 
     public Output<Boolean> getNoAddress() {
-        return this.noAddress == null ? Output.empty() : this.noAddress;
+        return this.noAddress == null ? Codegen.empty() : this.noAddress;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Boolean> preemptible;
 
     public Output<Boolean> getPreemptible() {
-        return this.preemptible == null ? Output.empty() : this.preemptible;
+        return this.preemptible == null ? Codegen.empty() : this.preemptible;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<String>> zones;
 
     public Output<List<String>> getZones() {
-        return this.zones == null ? Output.empty() : this.zones;
+        return this.zones == null ? Codegen.empty() : this.zones;
     }
 
     public PipelineResourcesArgs(
@@ -144,15 +145,15 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PipelineResourcesArgs() {
-        this.acceleratorCount = Output.empty();
-        this.acceleratorType = Output.empty();
-        this.bootDiskSizeGb = Output.empty();
-        this.disks = Output.empty();
-        this.minimumCpuCores = Output.empty();
-        this.minimumRamGb = Output.empty();
-        this.noAddress = Output.empty();
-        this.preemptible = Output.empty();
-        this.zones = Output.empty();
+        this.acceleratorCount = Codegen.empty();
+        this.acceleratorType = Codegen.empty();
+        this.bootDiskSizeGb = Codegen.empty();
+        this.disks = Codegen.empty();
+        this.minimumCpuCores = Codegen.empty();
+        this.minimumRamGb = Codegen.empty();
+        this.noAddress = Codegen.empty();
+        this.preemptible = Codegen.empty();
+        this.zones = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder acceleratorCount(@Nullable String acceleratorCount) {
-            this.acceleratorCount = Output.ofNullable(acceleratorCount);
+            this.acceleratorCount = Codegen.ofNullable(acceleratorCount);
             return this;
         }
         public Builder acceleratorType(@Nullable Output<String> acceleratorType) {
@@ -204,7 +205,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder acceleratorType(@Nullable String acceleratorType) {
-            this.acceleratorType = Output.ofNullable(acceleratorType);
+            this.acceleratorType = Codegen.ofNullable(acceleratorType);
             return this;
         }
         public Builder bootDiskSizeGb(@Nullable Output<Integer> bootDiskSizeGb) {
@@ -212,7 +213,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder bootDiskSizeGb(@Nullable Integer bootDiskSizeGb) {
-            this.bootDiskSizeGb = Output.ofNullable(bootDiskSizeGb);
+            this.bootDiskSizeGb = Codegen.ofNullable(bootDiskSizeGb);
             return this;
         }
         public Builder disks(@Nullable Output<List<DiskArgs>> disks) {
@@ -220,7 +221,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder disks(@Nullable List<DiskArgs> disks) {
-            this.disks = Output.ofNullable(disks);
+            this.disks = Codegen.ofNullable(disks);
             return this;
         }
         public Builder disks(DiskArgs... disks) {
@@ -231,7 +232,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minimumCpuCores(@Nullable Integer minimumCpuCores) {
-            this.minimumCpuCores = Output.ofNullable(minimumCpuCores);
+            this.minimumCpuCores = Codegen.ofNullable(minimumCpuCores);
             return this;
         }
         public Builder minimumRamGb(@Nullable Output<Double> minimumRamGb) {
@@ -239,7 +240,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder minimumRamGb(@Nullable Double minimumRamGb) {
-            this.minimumRamGb = Output.ofNullable(minimumRamGb);
+            this.minimumRamGb = Codegen.ofNullable(minimumRamGb);
             return this;
         }
         public Builder noAddress(@Nullable Output<Boolean> noAddress) {
@@ -247,7 +248,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder noAddress(@Nullable Boolean noAddress) {
-            this.noAddress = Output.ofNullable(noAddress);
+            this.noAddress = Codegen.ofNullable(noAddress);
             return this;
         }
         public Builder preemptible(@Nullable Output<Boolean> preemptible) {
@@ -255,7 +256,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder preemptible(@Nullable Boolean preemptible) {
-            this.preemptible = Output.ofNullable(preemptible);
+            this.preemptible = Codegen.ofNullable(preemptible);
             return this;
         }
         public Builder zones(@Nullable Output<List<String>> zones) {
@@ -263,7 +264,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder zones(@Nullable List<String> zones) {
-            this.zones = Output.ofNullable(zones);
+            this.zones = Codegen.ofNullable(zones);
             return this;
         }
         public Builder zones(String... zones) {

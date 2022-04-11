@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -41,7 +42,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
       private final @Nullable Output<String> schemaType;
 
     public Output<String> getSchemaType() {
-        return this.schemaType == null ? Output.empty() : this.schemaType;
+        return this.schemaType == null ? Codegen.empty() : this.schemaType;
     }
 
     public FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs(
@@ -52,8 +53,8 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
     }
 
     private FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs() {
-        this.recursiveStructureDepth = Output.empty();
-        this.schemaType = Output.empty();
+        this.recursiveStructureDepth = Codegen.empty();
+        this.schemaType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
             return this;
         }
         public Builder schemaType(@Nullable String schemaType) {
-            this.schemaType = Output.ofNullable(schemaType);
+            this.schemaType = Codegen.ofNullable(schemaType);
             return this;
         }        public FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs build() {
             return new FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs(recursiveStructureDepth, schemaType);

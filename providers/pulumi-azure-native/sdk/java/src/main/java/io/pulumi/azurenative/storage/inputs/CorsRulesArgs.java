@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.CorsRuleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CorsRuleArgs>> corsRules;
 
     public Output<List<CorsRuleArgs>> getCorsRules() {
-        return this.corsRules == null ? Output.empty() : this.corsRules;
+        return this.corsRules == null ? Codegen.empty() : this.corsRules;
     }
 
     public CorsRulesArgs(@Nullable Output<List<CorsRuleArgs>> corsRules) {
@@ -35,7 +36,7 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CorsRulesArgs() {
-        this.corsRules = Output.empty();
+        this.corsRules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CorsRulesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder corsRules(@Nullable List<CorsRuleArgs> corsRules) {
-            this.corsRules = Output.ofNullable(corsRules);
+            this.corsRules = Codegen.ofNullable(corsRules);
             return this;
         }
         public Builder corsRules(CorsRuleArgs... corsRules) {

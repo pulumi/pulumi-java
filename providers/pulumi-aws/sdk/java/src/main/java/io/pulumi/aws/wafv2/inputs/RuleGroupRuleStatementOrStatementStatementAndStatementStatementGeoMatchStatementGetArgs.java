@@ -6,6 +6,7 @@ package io.pulumi.aws.wafv2.inputs;
 import io.pulumi.aws.wafv2.inputs.RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -35,7 +36,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
       private final @Nullable Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> forwardedIpConfig;
 
     public Output<RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs> getForwardedIpConfig() {
-        return this.forwardedIpConfig == null ? Output.empty() : this.forwardedIpConfig;
+        return this.forwardedIpConfig == null ? Codegen.empty() : this.forwardedIpConfig;
     }
 
     public RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs(
@@ -46,8 +47,8 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
     }
 
     private RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs() {
-        this.countryCodes = Output.empty();
-        this.forwardedIpConfig = Output.empty();
+        this.countryCodes = Codegen.empty();
+        this.forwardedIpConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class RuleGroupRuleStatementOrStatementStatementAndStatementStateme
             return this;
         }
         public Builder forwardedIpConfig(@Nullable RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementForwardedIpConfigGetArgs forwardedIpConfig) {
-            this.forwardedIpConfig = Output.ofNullable(forwardedIpConfig);
+            this.forwardedIpConfig = Codegen.ofNullable(forwardedIpConfig);
             return this;
         }        public RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs build() {
             return new RuleGroupRuleStatementOrStatementStatementAndStatementStatementGeoMatchStatementGetArgs(countryCodes, forwardedIpConfig);

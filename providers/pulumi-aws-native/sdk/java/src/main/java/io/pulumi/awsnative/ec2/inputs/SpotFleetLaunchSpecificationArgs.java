@@ -13,6 +13,7 @@ import io.pulumi.awsnative.ec2.inputs.SpotFleetSpotPlacementArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTagSpecificationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -29,21 +30,21 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
       private final @Nullable Output<List<SpotFleetBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Output<List<SpotFleetBlockDeviceMappingArgs>> getBlockDeviceMappings() {
-        return this.blockDeviceMappings == null ? Output.empty() : this.blockDeviceMappings;
+        return this.blockDeviceMappings == null ? Codegen.empty() : this.blockDeviceMappings;
     }
 
     @Import(name="ebsOptimized")
       private final @Nullable Output<Boolean> ebsOptimized;
 
     public Output<Boolean> getEbsOptimized() {
-        return this.ebsOptimized == null ? Output.empty() : this.ebsOptimized;
+        return this.ebsOptimized == null ? Codegen.empty() : this.ebsOptimized;
     }
 
     @Import(name="iamInstanceProfile")
       private final @Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile;
 
     public Output<SpotFleetIamInstanceProfileSpecificationArgs> getIamInstanceProfile() {
-        return this.iamInstanceProfile == null ? Output.empty() : this.iamInstanceProfile;
+        return this.iamInstanceProfile == null ? Codegen.empty() : this.iamInstanceProfile;
     }
 
     @Import(name="imageId", required=true)
@@ -57,98 +58,98 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
       private final @Nullable Output<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
     public Output<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
-        return this.instanceRequirements == null ? Output.empty() : this.instanceRequirements;
+        return this.instanceRequirements == null ? Codegen.empty() : this.instanceRequirements;
     }
 
     @Import(name="instanceType")
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     @Import(name="kernelId")
       private final @Nullable Output<String> kernelId;
 
     public Output<String> getKernelId() {
-        return this.kernelId == null ? Output.empty() : this.kernelId;
+        return this.kernelId == null ? Codegen.empty() : this.kernelId;
     }
 
     @Import(name="keyName")
       private final @Nullable Output<String> keyName;
 
     public Output<String> getKeyName() {
-        return this.keyName == null ? Output.empty() : this.keyName;
+        return this.keyName == null ? Codegen.empty() : this.keyName;
     }
 
     @Import(name="monitoring")
       private final @Nullable Output<SpotFleetMonitoringArgs> monitoring;
 
     public Output<SpotFleetMonitoringArgs> getMonitoring() {
-        return this.monitoring == null ? Output.empty() : this.monitoring;
+        return this.monitoring == null ? Codegen.empty() : this.monitoring;
     }
 
     @Import(name="networkInterfaces")
       private final @Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces;
 
     public Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> getNetworkInterfaces() {
-        return this.networkInterfaces == null ? Output.empty() : this.networkInterfaces;
+        return this.networkInterfaces == null ? Codegen.empty() : this.networkInterfaces;
     }
 
     @Import(name="placement")
       private final @Nullable Output<SpotFleetSpotPlacementArgs> placement;
 
     public Output<SpotFleetSpotPlacementArgs> getPlacement() {
-        return this.placement == null ? Output.empty() : this.placement;
+        return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     @Import(name="ramdiskId")
       private final @Nullable Output<String> ramdiskId;
 
     public Output<String> getRamdiskId() {
-        return this.ramdiskId == null ? Output.empty() : this.ramdiskId;
+        return this.ramdiskId == null ? Codegen.empty() : this.ramdiskId;
     }
 
     @Import(name="securityGroups")
       private final @Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups;
 
     public Output<List<SpotFleetGroupIdentifierArgs>> getSecurityGroups() {
-        return this.securityGroups == null ? Output.empty() : this.securityGroups;
+        return this.securityGroups == null ? Codegen.empty() : this.securityGroups;
     }
 
     @Import(name="spotPrice")
       private final @Nullable Output<String> spotPrice;
 
     public Output<String> getSpotPrice() {
-        return this.spotPrice == null ? Output.empty() : this.spotPrice;
+        return this.spotPrice == null ? Codegen.empty() : this.spotPrice;
     }
 
     @Import(name="subnetId")
       private final @Nullable Output<String> subnetId;
 
     public Output<String> getSubnetId() {
-        return this.subnetId == null ? Output.empty() : this.subnetId;
+        return this.subnetId == null ? Codegen.empty() : this.subnetId;
     }
 
     @Import(name="tagSpecifications")
       private final @Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications;
 
     public Output<List<SpotFleetTagSpecificationArgs>> getTagSpecifications() {
-        return this.tagSpecifications == null ? Output.empty() : this.tagSpecifications;
+        return this.tagSpecifications == null ? Codegen.empty() : this.tagSpecifications;
     }
 
     @Import(name="userData")
       private final @Nullable Output<String> userData;
 
     public Output<String> getUserData() {
-        return this.userData == null ? Output.empty() : this.userData;
+        return this.userData == null ? Codegen.empty() : this.userData;
     }
 
     @Import(name="weightedCapacity")
       private final @Nullable Output<Double> weightedCapacity;
 
     public Output<Double> getWeightedCapacity() {
-        return this.weightedCapacity == null ? Output.empty() : this.weightedCapacity;
+        return this.weightedCapacity == null ? Codegen.empty() : this.weightedCapacity;
     }
 
     public SpotFleetLaunchSpecificationArgs(
@@ -191,24 +192,24 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
     }
 
     private SpotFleetLaunchSpecificationArgs() {
-        this.blockDeviceMappings = Output.empty();
-        this.ebsOptimized = Output.empty();
-        this.iamInstanceProfile = Output.empty();
-        this.imageId = Output.empty();
-        this.instanceRequirements = Output.empty();
-        this.instanceType = Output.empty();
-        this.kernelId = Output.empty();
-        this.keyName = Output.empty();
-        this.monitoring = Output.empty();
-        this.networkInterfaces = Output.empty();
-        this.placement = Output.empty();
-        this.ramdiskId = Output.empty();
-        this.securityGroups = Output.empty();
-        this.spotPrice = Output.empty();
-        this.subnetId = Output.empty();
-        this.tagSpecifications = Output.empty();
-        this.userData = Output.empty();
-        this.weightedCapacity = Output.empty();
+        this.blockDeviceMappings = Codegen.empty();
+        this.ebsOptimized = Codegen.empty();
+        this.iamInstanceProfile = Codegen.empty();
+        this.imageId = Codegen.empty();
+        this.instanceRequirements = Codegen.empty();
+        this.instanceType = Codegen.empty();
+        this.kernelId = Codegen.empty();
+        this.keyName = Codegen.empty();
+        this.monitoring = Codegen.empty();
+        this.networkInterfaces = Codegen.empty();
+        this.placement = Codegen.empty();
+        this.ramdiskId = Codegen.empty();
+        this.securityGroups = Codegen.empty();
+        this.spotPrice = Codegen.empty();
+        this.subnetId = Codegen.empty();
+        this.tagSpecifications = Codegen.empty();
+        this.userData = Codegen.empty();
+        this.weightedCapacity = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -270,7 +271,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder blockDeviceMappings(@Nullable List<SpotFleetBlockDeviceMappingArgs> blockDeviceMappings) {
-            this.blockDeviceMappings = Output.ofNullable(blockDeviceMappings);
+            this.blockDeviceMappings = Codegen.ofNullable(blockDeviceMappings);
             return this;
         }
         public Builder blockDeviceMappings(SpotFleetBlockDeviceMappingArgs... blockDeviceMappings) {
@@ -281,7 +282,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ebsOptimized(@Nullable Boolean ebsOptimized) {
-            this.ebsOptimized = Output.ofNullable(ebsOptimized);
+            this.ebsOptimized = Codegen.ofNullable(ebsOptimized);
             return this;
         }
         public Builder iamInstanceProfile(@Nullable Output<SpotFleetIamInstanceProfileSpecificationArgs> iamInstanceProfile) {
@@ -289,7 +290,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder iamInstanceProfile(@Nullable SpotFleetIamInstanceProfileSpecificationArgs iamInstanceProfile) {
-            this.iamInstanceProfile = Output.ofNullable(iamInstanceProfile);
+            this.iamInstanceProfile = Codegen.ofNullable(iamInstanceProfile);
             return this;
         }
         public Builder imageId(Output<String> imageId) {
@@ -305,7 +306,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder instanceRequirements(@Nullable SpotFleetInstanceRequirementsRequestArgs instanceRequirements) {
-            this.instanceRequirements = Output.ofNullable(instanceRequirements);
+            this.instanceRequirements = Codegen.ofNullable(instanceRequirements);
             return this;
         }
         public Builder instanceType(@Nullable Output<String> instanceType) {
@@ -313,7 +314,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder kernelId(@Nullable Output<String> kernelId) {
@@ -321,7 +322,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder kernelId(@Nullable String kernelId) {
-            this.kernelId = Output.ofNullable(kernelId);
+            this.kernelId = Codegen.ofNullable(kernelId);
             return this;
         }
         public Builder keyName(@Nullable Output<String> keyName) {
@@ -329,7 +330,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder keyName(@Nullable String keyName) {
-            this.keyName = Output.ofNullable(keyName);
+            this.keyName = Codegen.ofNullable(keyName);
             return this;
         }
         public Builder monitoring(@Nullable Output<SpotFleetMonitoringArgs> monitoring) {
@@ -337,7 +338,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder monitoring(@Nullable SpotFleetMonitoringArgs monitoring) {
-            this.monitoring = Output.ofNullable(monitoring);
+            this.monitoring = Codegen.ofNullable(monitoring);
             return this;
         }
         public Builder networkInterfaces(@Nullable Output<List<SpotFleetInstanceNetworkInterfaceSpecificationArgs>> networkInterfaces) {
@@ -345,7 +346,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder networkInterfaces(@Nullable List<SpotFleetInstanceNetworkInterfaceSpecificationArgs> networkInterfaces) {
-            this.networkInterfaces = Output.ofNullable(networkInterfaces);
+            this.networkInterfaces = Codegen.ofNullable(networkInterfaces);
             return this;
         }
         public Builder networkInterfaces(SpotFleetInstanceNetworkInterfaceSpecificationArgs... networkInterfaces) {
@@ -356,7 +357,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder placement(@Nullable SpotFleetSpotPlacementArgs placement) {
-            this.placement = Output.ofNullable(placement);
+            this.placement = Codegen.ofNullable(placement);
             return this;
         }
         public Builder ramdiskId(@Nullable Output<String> ramdiskId) {
@@ -364,7 +365,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder ramdiskId(@Nullable String ramdiskId) {
-            this.ramdiskId = Output.ofNullable(ramdiskId);
+            this.ramdiskId = Codegen.ofNullable(ramdiskId);
             return this;
         }
         public Builder securityGroups(@Nullable Output<List<SpotFleetGroupIdentifierArgs>> securityGroups) {
@@ -372,7 +373,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder securityGroups(@Nullable List<SpotFleetGroupIdentifierArgs> securityGroups) {
-            this.securityGroups = Output.ofNullable(securityGroups);
+            this.securityGroups = Codegen.ofNullable(securityGroups);
             return this;
         }
         public Builder securityGroups(SpotFleetGroupIdentifierArgs... securityGroups) {
@@ -383,7 +384,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder spotPrice(@Nullable String spotPrice) {
-            this.spotPrice = Output.ofNullable(spotPrice);
+            this.spotPrice = Codegen.ofNullable(spotPrice);
             return this;
         }
         public Builder subnetId(@Nullable Output<String> subnetId) {
@@ -391,7 +392,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder subnetId(@Nullable String subnetId) {
-            this.subnetId = Output.ofNullable(subnetId);
+            this.subnetId = Codegen.ofNullable(subnetId);
             return this;
         }
         public Builder tagSpecifications(@Nullable Output<List<SpotFleetTagSpecificationArgs>> tagSpecifications) {
@@ -399,7 +400,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder tagSpecifications(@Nullable List<SpotFleetTagSpecificationArgs> tagSpecifications) {
-            this.tagSpecifications = Output.ofNullable(tagSpecifications);
+            this.tagSpecifications = Codegen.ofNullable(tagSpecifications);
             return this;
         }
         public Builder tagSpecifications(SpotFleetTagSpecificationArgs... tagSpecifications) {
@@ -410,7 +411,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder userData(@Nullable String userData) {
-            this.userData = Output.ofNullable(userData);
+            this.userData = Codegen.ofNullable(userData);
             return this;
         }
         public Builder weightedCapacity(@Nullable Output<Double> weightedCapacity) {
@@ -418,7 +419,7 @@ public final class SpotFleetLaunchSpecificationArgs extends io.pulumi.resources.
             return this;
         }
         public Builder weightedCapacity(@Nullable Double weightedCapacity) {
-            this.weightedCapacity = Output.ofNullable(weightedCapacity);
+            this.weightedCapacity = Codegen.ofNullable(weightedCapacity);
             return this;
         }        public SpotFleetLaunchSpecificationArgs build() {
             return new SpotFleetLaunchSpecificationArgs(blockDeviceMappings, ebsOptimized, iamInstanceProfile, imageId, instanceRequirements, instanceType, kernelId, keyName, monitoring, networkInterfaces, placement, ramdiskId, securityGroups, spotPrice, subnetId, tagSpecifications, userData, weightedCapacity);

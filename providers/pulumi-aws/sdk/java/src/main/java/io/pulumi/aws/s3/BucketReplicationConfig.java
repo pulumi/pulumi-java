@@ -10,6 +10,7 @@ import io.pulumi.aws.s3.outputs.BucketReplicationConfigRule;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -109,7 +110,7 @@ public class BucketReplicationConfig extends io.pulumi.resources.CustomResource 
      * @param options A bag of options that control this resource's behavior.
      */
     public BucketReplicationConfig(String name, BucketReplicationConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:s3/bucketReplicationConfig:BucketReplicationConfig", name, args == null ? BucketReplicationConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:s3/bucketReplicationConfig:BucketReplicationConfig", name, args == null ? BucketReplicationConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BucketReplicationConfig(String name, Output<String> id, @Nullable BucketReplicationConfigState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

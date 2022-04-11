@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudformation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
       private final @Nullable Output<List<String>> organizationalUnitIds;
 
     public Output<List<String>> getOrganizationalUnitIds() {
-        return this.organizationalUnitIds == null ? Output.empty() : this.organizationalUnitIds;
+        return this.organizationalUnitIds == null ? Codegen.empty() : this.organizationalUnitIds;
     }
 
     public StackSetInstanceDeploymentTargetsArgs(@Nullable Output<List<String>> organizationalUnitIds) {
@@ -27,7 +28,7 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
     }
 
     private StackSetInstanceDeploymentTargetsArgs() {
-        this.organizationalUnitIds = Output.empty();
+        this.organizationalUnitIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -55,7 +56,7 @@ public final class StackSetInstanceDeploymentTargetsArgs extends io.pulumi.resou
             return this;
         }
         public Builder organizationalUnitIds(@Nullable List<String> organizationalUnitIds) {
-            this.organizationalUnitIds = Output.ofNullable(organizationalUnitIds);
+            this.organizationalUnitIds = Codegen.ofNullable(organizationalUnitIds);
             return this;
         }
         public Builder organizationalUnitIds(String... organizationalUnitIds) {

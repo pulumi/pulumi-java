@@ -6,6 +6,7 @@ package io.pulumi.googlenative.clouddeploy_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.TargetIamPolicyArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.AuditConfigResponse;
@@ -102,7 +103,7 @@ public class TargetIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TargetIamPolicy(String name, TargetIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:clouddeploy/v1:TargetIamPolicy", name, args == null ? TargetIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:clouddeploy/v1:TargetIamPolicy", name, args == null ? TargetIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TargetIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

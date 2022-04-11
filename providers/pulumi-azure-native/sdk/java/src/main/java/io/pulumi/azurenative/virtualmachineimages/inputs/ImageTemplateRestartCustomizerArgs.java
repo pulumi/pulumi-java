@@ -5,6 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
       private final @Nullable Output<String> restartCheckCommand;
 
     public Output<String> getRestartCheckCommand() {
-        return this.restartCheckCommand == null ? Output.empty() : this.restartCheckCommand;
+        return this.restartCheckCommand == null ? Codegen.empty() : this.restartCheckCommand;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
       private final @Nullable Output<String> restartCommand;
 
     public Output<String> getRestartCommand() {
-        return this.restartCommand == null ? Output.empty() : this.restartCommand;
+        return this.restartCommand == null ? Codegen.empty() : this.restartCommand;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
       private final @Nullable Output<String> restartTimeout;
 
     public Output<String> getRestartTimeout() {
-        return this.restartTimeout == null ? Output.empty() : this.restartTimeout;
+        return this.restartTimeout == null ? Codegen.empty() : this.restartTimeout;
     }
 
     /**
@@ -88,11 +89,11 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
     }
 
     private ImageTemplateRestartCustomizerArgs() {
-        this.name = Output.empty();
-        this.restartCheckCommand = Output.empty();
-        this.restartCommand = Output.empty();
-        this.restartTimeout = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.restartCheckCommand = Codegen.empty();
+        this.restartCommand = Codegen.empty();
+        this.restartTimeout = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder restartCheckCommand(@Nullable Output<String> restartCheckCommand) {
@@ -136,7 +137,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
             return this;
         }
         public Builder restartCheckCommand(@Nullable String restartCheckCommand) {
-            this.restartCheckCommand = Output.ofNullable(restartCheckCommand);
+            this.restartCheckCommand = Codegen.ofNullable(restartCheckCommand);
             return this;
         }
         public Builder restartCommand(@Nullable Output<String> restartCommand) {
@@ -144,7 +145,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
             return this;
         }
         public Builder restartCommand(@Nullable String restartCommand) {
-            this.restartCommand = Output.ofNullable(restartCommand);
+            this.restartCommand = Codegen.ofNullable(restartCommand);
             return this;
         }
         public Builder restartTimeout(@Nullable Output<String> restartTimeout) {
@@ -152,7 +153,7 @@ public final class ImageTemplateRestartCustomizerArgs extends io.pulumi.resource
             return this;
         }
         public Builder restartTimeout(@Nullable String restartTimeout) {
-            this.restartTimeout = Output.ofNullable(restartTimeout);
+            this.restartTimeout = Codegen.ofNullable(restartTimeout);
             return this;
         }
         public Builder type(Output<String> type) {

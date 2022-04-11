@@ -5,6 +5,7 @@ package io.pulumi.aws.codedeploy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -57,9 +58,9 @@ public final class DeploymentGroupTriggerConfigurationGetArgs extends io.pulumi.
     }
 
     private DeploymentGroupTriggerConfigurationGetArgs() {
-        this.triggerEvents = Output.empty();
-        this.triggerName = Output.empty();
-        this.triggerTargetArn = Output.empty();
+        this.triggerEvents = Codegen.empty();
+        this.triggerName = Codegen.empty();
+        this.triggerTargetArn = Codegen.empty();
     }
 
     public static Builder builder() {

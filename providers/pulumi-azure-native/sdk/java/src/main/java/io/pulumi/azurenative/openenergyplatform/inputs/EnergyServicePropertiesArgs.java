@@ -6,6 +6,7 @@ package io.pulumi.azurenative.openenergyplatform.inputs;
 import io.pulumi.azurenative.openenergyplatform.inputs.DataPartitionNamesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +21,14 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> authAppId;
 
     public Output<String> getAuthAppId() {
-        return this.authAppId == null ? Output.empty() : this.authAppId;
+        return this.authAppId == null ? Codegen.empty() : this.authAppId;
     }
 
     @Import(name="dataPartitionNames")
       private final @Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames;
 
     public Output<List<DataPartitionNamesArgs>> getDataPartitionNames() {
-        return this.dataPartitionNames == null ? Output.empty() : this.dataPartitionNames;
+        return this.dataPartitionNames == null ? Codegen.empty() : this.dataPartitionNames;
     }
 
     public EnergyServicePropertiesArgs(
@@ -38,8 +39,8 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
     }
 
     private EnergyServicePropertiesArgs() {
-        this.authAppId = Output.empty();
-        this.dataPartitionNames = Output.empty();
+        this.authAppId = Codegen.empty();
+        this.dataPartitionNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -69,7 +70,7 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder authAppId(@Nullable String authAppId) {
-            this.authAppId = Output.ofNullable(authAppId);
+            this.authAppId = Codegen.ofNullable(authAppId);
             return this;
         }
         public Builder dataPartitionNames(@Nullable Output<List<DataPartitionNamesArgs>> dataPartitionNames) {
@@ -77,7 +78,7 @@ public final class EnergyServicePropertiesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dataPartitionNames(@Nullable List<DataPartitionNamesArgs> dataPartitionNames) {
-            this.dataPartitionNames = Output.ofNullable(dataPartitionNames);
+            this.dataPartitionNames = Codegen.ofNullable(dataPartitionNames);
             return this;
         }
         public Builder dataPartitionNames(DataPartitionNamesArgs... dataPartitionNames) {

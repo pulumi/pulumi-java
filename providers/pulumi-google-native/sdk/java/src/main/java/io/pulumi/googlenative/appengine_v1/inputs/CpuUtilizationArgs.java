@@ -5,6 +5,7 @@ package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> aggregationWindowLength;
 
     public Output<String> getAggregationWindowLength() {
-        return this.aggregationWindowLength == null ? Output.empty() : this.aggregationWindowLength;
+        return this.aggregationWindowLength == null ? Codegen.empty() : this.aggregationWindowLength;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> targetUtilization;
 
     public Output<Double> getTargetUtilization() {
-        return this.targetUtilization == null ? Output.empty() : this.targetUtilization;
+        return this.targetUtilization == null ? Codegen.empty() : this.targetUtilization;
     }
 
     public CpuUtilizationArgs(
@@ -49,8 +50,8 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CpuUtilizationArgs() {
-        this.aggregationWindowLength = Output.empty();
-        this.targetUtilization = Output.empty();
+        this.aggregationWindowLength = Codegen.empty();
+        this.targetUtilization = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aggregationWindowLength(@Nullable String aggregationWindowLength) {
-            this.aggregationWindowLength = Output.ofNullable(aggregationWindowLength);
+            this.aggregationWindowLength = Codegen.ofNullable(aggregationWindowLength);
             return this;
         }
         public Builder targetUtilization(@Nullable Output<Double> targetUtilization) {
@@ -88,7 +89,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder targetUtilization(@Nullable Double targetUtilization) {
-            this.targetUtilization = Output.ofNullable(targetUtilization);
+            this.targetUtilization = Codegen.ofNullable(targetUtilization);
             return this;
         }        public CpuUtilizationArgs build() {
             return new CpuUtilizationArgs(aggregationWindowLength, targetUtilization);

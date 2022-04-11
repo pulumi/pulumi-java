@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentVersionValueArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetOutputFileUriValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,28 +22,28 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
     public Output<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
-        return this.datasetContentVersionValue == null ? Output.empty() : this.datasetContentVersionValue;
+        return this.datasetContentVersionValue == null ? Codegen.empty() : this.datasetContentVersionValue;
     }
 
     @Import(name="doubleValue")
       private final @Nullable Output<Double> doubleValue;
 
     public Output<Double> getDoubleValue() {
-        return this.doubleValue == null ? Output.empty() : this.doubleValue;
+        return this.doubleValue == null ? Codegen.empty() : this.doubleValue;
     }
 
     @Import(name="outputFileUriValue")
       private final @Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
     public Output<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
-        return this.outputFileUriValue == null ? Output.empty() : this.outputFileUriValue;
+        return this.outputFileUriValue == null ? Codegen.empty() : this.outputFileUriValue;
     }
 
     @Import(name="stringValue")
       private final @Nullable Output<String> stringValue;
 
     public Output<String> getStringValue() {
-        return this.stringValue == null ? Output.empty() : this.stringValue;
+        return this.stringValue == null ? Codegen.empty() : this.stringValue;
     }
 
     @Import(name="variableName", required=true)
@@ -66,11 +67,11 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private DatasetVariableArgs() {
-        this.datasetContentVersionValue = Output.empty();
-        this.doubleValue = Output.empty();
-        this.outputFileUriValue = Output.empty();
-        this.stringValue = Output.empty();
-        this.variableName = Output.empty();
+        this.datasetContentVersionValue = Codegen.empty();
+        this.doubleValue = Codegen.empty();
+        this.outputFileUriValue = Codegen.empty();
+        this.stringValue = Codegen.empty();
+        this.variableName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -106,7 +107,7 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder datasetContentVersionValue(@Nullable DatasetContentVersionValueArgs datasetContentVersionValue) {
-            this.datasetContentVersionValue = Output.ofNullable(datasetContentVersionValue);
+            this.datasetContentVersionValue = Codegen.ofNullable(datasetContentVersionValue);
             return this;
         }
         public Builder doubleValue(@Nullable Output<Double> doubleValue) {
@@ -114,7 +115,7 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder doubleValue(@Nullable Double doubleValue) {
-            this.doubleValue = Output.ofNullable(doubleValue);
+            this.doubleValue = Codegen.ofNullable(doubleValue);
             return this;
         }
         public Builder outputFileUriValue(@Nullable Output<DatasetOutputFileUriValueArgs> outputFileUriValue) {
@@ -122,7 +123,7 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder outputFileUriValue(@Nullable DatasetOutputFileUriValueArgs outputFileUriValue) {
-            this.outputFileUriValue = Output.ofNullable(outputFileUriValue);
+            this.outputFileUriValue = Codegen.ofNullable(outputFileUriValue);
             return this;
         }
         public Builder stringValue(@Nullable Output<String> stringValue) {
@@ -130,7 +131,7 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder stringValue(@Nullable String stringValue) {
-            this.stringValue = Output.ofNullable(stringValue);
+            this.stringValue = Codegen.ofNullable(stringValue);
             return this;
         }
         public Builder variableName(Output<String> variableName) {

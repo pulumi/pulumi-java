@@ -5,6 +5,7 @@ package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> dependsOn;
 
     public Output<List<String>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> strongType;
 
     public Output<String> getStrongType() {
-        return this.strongType == null ? Output.empty() : this.strongType;
+        return this.strongType == null ? Codegen.empty() : this.strongType;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ResourceGroupDefinitionArgs(
@@ -115,13 +116,13 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
     }
 
     private ResourceGroupDefinitionArgs() {
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.strongType = Output.empty();
-        this.tags = Output.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.strongType = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -161,7 +162,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder dependsOn(@Nullable List<String> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(String... dependsOn) {
@@ -172,7 +173,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -180,7 +181,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -188,7 +189,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -196,7 +197,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder strongType(@Nullable Output<String> strongType) {
@@ -204,7 +205,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder strongType(@Nullable String strongType) {
-            this.strongType = Output.ofNullable(strongType);
+            this.strongType = Codegen.ofNullable(strongType);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -212,7 +213,7 @@ public final class ResourceGroupDefinitionArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ResourceGroupDefinitionArgs build() {
             return new ResourceGroupDefinitionArgs(dependsOn, description, displayName, location, name, strongType, tags);

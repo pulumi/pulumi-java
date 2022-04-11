@@ -15,6 +15,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.SettingArgs;
 import io.pulumi.azurenative.servicefabricmesh.inputs.VolumeReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> commands;
 
     public Output<List<String>> getCommands() {
-        return this.commands == null ? Output.empty() : this.commands;
+        return this.commands == null ? Codegen.empty() : this.commands;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<DiagnosticsRefArgs> diagnostics;
 
     public Output<DiagnosticsRefArgs> getDiagnostics() {
-        return this.diagnostics == null ? Output.empty() : this.diagnostics;
+        return this.diagnostics == null ? Codegen.empty() : this.diagnostics;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<EndpointPropertiesArgs>> endpoints;
 
     public Output<List<EndpointPropertiesArgs>> getEndpoints() {
-        return this.endpoints == null ? Output.empty() : this.endpoints;
+        return this.endpoints == null ? Codegen.empty() : this.endpoints;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<String> entrypoint;
 
     public Output<String> getEntrypoint() {
-        return this.entrypoint == null ? Output.empty() : this.entrypoint;
+        return this.entrypoint == null ? Codegen.empty() : this.entrypoint;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Output<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
-        return this.environmentVariables == null ? Output.empty() : this.environmentVariables;
+        return this.environmentVariables == null ? Codegen.empty() : this.environmentVariables;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<ImageRegistryCredentialArgs> imageRegistryCredential;
 
     public Output<ImageRegistryCredentialArgs> getImageRegistryCredential() {
-        return this.imageRegistryCredential == null ? Output.empty() : this.imageRegistryCredential;
+        return this.imageRegistryCredential == null ? Codegen.empty() : this.imageRegistryCredential;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<ContainerLabelArgs>> labels;
 
     public Output<List<ContainerLabelArgs>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<ReliableCollectionsRefArgs>> reliableCollectionsRefs;
 
     public Output<List<ReliableCollectionsRefArgs>> getReliableCollectionsRefs() {
-        return this.reliableCollectionsRefs == null ? Output.empty() : this.reliableCollectionsRefs;
+        return this.reliableCollectionsRefs == null ? Codegen.empty() : this.reliableCollectionsRefs;
     }
 
     /**
@@ -158,7 +159,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<SettingArgs>> settings;
 
     public Output<List<SettingArgs>> getSettings() {
-        return this.settings == null ? Output.empty() : this.settings;
+        return this.settings == null ? Codegen.empty() : this.settings;
     }
 
     /**
@@ -169,7 +170,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<VolumeReferenceArgs>> volumeRefs;
 
     public Output<List<VolumeReferenceArgs>> getVolumeRefs() {
-        return this.volumeRefs == null ? Output.empty() : this.volumeRefs;
+        return this.volumeRefs == null ? Codegen.empty() : this.volumeRefs;
     }
 
     /**
@@ -180,7 +181,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
       private final @Nullable Output<List<ApplicationScopedVolumeArgs>> volumes;
 
     public Output<List<ApplicationScopedVolumeArgs>> getVolumes() {
-        return this.volumes == null ? Output.empty() : this.volumes;
+        return this.volumes == null ? Codegen.empty() : this.volumes;
     }
 
     public ContainerCodePackagePropertiesArgs(
@@ -215,20 +216,20 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
     }
 
     private ContainerCodePackagePropertiesArgs() {
-        this.commands = Output.empty();
-        this.diagnostics = Output.empty();
-        this.endpoints = Output.empty();
-        this.entrypoint = Output.empty();
-        this.environmentVariables = Output.empty();
-        this.image = Output.empty();
-        this.imageRegistryCredential = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.reliableCollectionsRefs = Output.empty();
-        this.resources = Output.empty();
-        this.settings = Output.empty();
-        this.volumeRefs = Output.empty();
-        this.volumes = Output.empty();
+        this.commands = Codegen.empty();
+        this.diagnostics = Codegen.empty();
+        this.endpoints = Codegen.empty();
+        this.entrypoint = Codegen.empty();
+        this.environmentVariables = Codegen.empty();
+        this.image = Codegen.empty();
+        this.imageRegistryCredential = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.reliableCollectionsRefs = Codegen.empty();
+        this.resources = Codegen.empty();
+        this.settings = Codegen.empty();
+        this.volumeRefs = Codegen.empty();
+        this.volumes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -282,7 +283,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder commands(@Nullable List<String> commands) {
-            this.commands = Output.ofNullable(commands);
+            this.commands = Codegen.ofNullable(commands);
             return this;
         }
         public Builder commands(String... commands) {
@@ -293,7 +294,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder diagnostics(@Nullable DiagnosticsRefArgs diagnostics) {
-            this.diagnostics = Output.ofNullable(diagnostics);
+            this.diagnostics = Codegen.ofNullable(diagnostics);
             return this;
         }
         public Builder endpoints(@Nullable Output<List<EndpointPropertiesArgs>> endpoints) {
@@ -301,7 +302,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder endpoints(@Nullable List<EndpointPropertiesArgs> endpoints) {
-            this.endpoints = Output.ofNullable(endpoints);
+            this.endpoints = Codegen.ofNullable(endpoints);
             return this;
         }
         public Builder endpoints(EndpointPropertiesArgs... endpoints) {
@@ -312,7 +313,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder entrypoint(@Nullable String entrypoint) {
-            this.entrypoint = Output.ofNullable(entrypoint);
+            this.entrypoint = Codegen.ofNullable(entrypoint);
             return this;
         }
         public Builder environmentVariables(@Nullable Output<List<EnvironmentVariableArgs>> environmentVariables) {
@@ -320,7 +321,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder environmentVariables(@Nullable List<EnvironmentVariableArgs> environmentVariables) {
-            this.environmentVariables = Output.ofNullable(environmentVariables);
+            this.environmentVariables = Codegen.ofNullable(environmentVariables);
             return this;
         }
         public Builder environmentVariables(EnvironmentVariableArgs... environmentVariables) {
@@ -339,7 +340,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder imageRegistryCredential(@Nullable ImageRegistryCredentialArgs imageRegistryCredential) {
-            this.imageRegistryCredential = Output.ofNullable(imageRegistryCredential);
+            this.imageRegistryCredential = Codegen.ofNullable(imageRegistryCredential);
             return this;
         }
         public Builder labels(@Nullable Output<List<ContainerLabelArgs>> labels) {
@@ -347,7 +348,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder labels(@Nullable List<ContainerLabelArgs> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(ContainerLabelArgs... labels) {
@@ -366,7 +367,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder reliableCollectionsRefs(@Nullable List<ReliableCollectionsRefArgs> reliableCollectionsRefs) {
-            this.reliableCollectionsRefs = Output.ofNullable(reliableCollectionsRefs);
+            this.reliableCollectionsRefs = Codegen.ofNullable(reliableCollectionsRefs);
             return this;
         }
         public Builder reliableCollectionsRefs(ReliableCollectionsRefArgs... reliableCollectionsRefs) {
@@ -385,7 +386,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder settings(@Nullable List<SettingArgs> settings) {
-            this.settings = Output.ofNullable(settings);
+            this.settings = Codegen.ofNullable(settings);
             return this;
         }
         public Builder settings(SettingArgs... settings) {
@@ -396,7 +397,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder volumeRefs(@Nullable List<VolumeReferenceArgs> volumeRefs) {
-            this.volumeRefs = Output.ofNullable(volumeRefs);
+            this.volumeRefs = Codegen.ofNullable(volumeRefs);
             return this;
         }
         public Builder volumeRefs(VolumeReferenceArgs... volumeRefs) {
@@ -407,7 +408,7 @@ public final class ContainerCodePackagePropertiesArgs extends io.pulumi.resource
             return this;
         }
         public Builder volumes(@Nullable List<ApplicationScopedVolumeArgs> volumes) {
-            this.volumes = Output.ofNullable(volumes);
+            this.volumes = Codegen.ofNullable(volumes);
             return this;
         }
         public Builder volumes(ApplicationScopedVolumeArgs... volumes) {

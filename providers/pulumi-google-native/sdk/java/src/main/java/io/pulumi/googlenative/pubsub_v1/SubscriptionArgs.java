@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsub_v1.inputs.DeadLetterPolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.ExpirationPolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.PushConfigArgs;
@@ -29,7 +30,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> ackDeadlineSeconds;
 
     public Output<Integer> getAckDeadlineSeconds() {
-        return this.ackDeadlineSeconds == null ? Output.empty() : this.ackDeadlineSeconds;
+        return this.ackDeadlineSeconds == null ? Codegen.empty() : this.ackDeadlineSeconds;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy;
 
     public Output<DeadLetterPolicyArgs> getDeadLetterPolicy() {
-        return this.deadLetterPolicy == null ? Output.empty() : this.deadLetterPolicy;
+        return this.deadLetterPolicy == null ? Codegen.empty() : this.deadLetterPolicy;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> detached;
 
     public Output<Boolean> getDetached() {
-        return this.detached == null ? Output.empty() : this.detached;
+        return this.detached == null ? Codegen.empty() : this.detached;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableMessageOrdering;
 
     public Output<Boolean> getEnableMessageOrdering() {
-        return this.enableMessageOrdering == null ? Output.empty() : this.enableMessageOrdering;
+        return this.enableMessageOrdering == null ? Codegen.empty() : this.enableMessageOrdering;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExpirationPolicyArgs> expirationPolicy;
 
     public Output<ExpirationPolicyArgs> getExpirationPolicy() {
-        return this.expirationPolicy == null ? Output.empty() : this.expirationPolicy;
+        return this.expirationPolicy == null ? Codegen.empty() : this.expirationPolicy;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> filter;
 
     public Output<String> getFilter() {
-        return this.filter == null ? Output.empty() : this.filter;
+        return this.filter == null ? Codegen.empty() : this.filter;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -106,7 +107,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> messageRetentionDuration;
 
     public Output<String> getMessageRetentionDuration() {
-        return this.messageRetentionDuration == null ? Output.empty() : this.messageRetentionDuration;
+        return this.messageRetentionDuration == null ? Codegen.empty() : this.messageRetentionDuration;
     }
 
     /**
@@ -117,14 +118,14 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PushConfigArgs> pushConfig;
 
     public Output<PushConfigArgs> getPushConfig() {
-        return this.pushConfig == null ? Output.empty() : this.pushConfig;
+        return this.pushConfig == null ? Codegen.empty() : this.pushConfig;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> retainAckedMessages;
 
     public Output<Boolean> getRetainAckedMessages() {
-        return this.retainAckedMessages == null ? Output.empty() : this.retainAckedMessages;
+        return this.retainAckedMessages == null ? Codegen.empty() : this.retainAckedMessages;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RetryPolicyArgs> retryPolicy;
 
     public Output<RetryPolicyArgs> getRetryPolicy() {
-        return this.retryPolicy == null ? Output.empty() : this.retryPolicy;
+        return this.retryPolicy == null ? Codegen.empty() : this.retryPolicy;
     }
 
     @Import(name="subscriptionId", required=true)
@@ -212,21 +213,21 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SubscriptionArgs() {
-        this.ackDeadlineSeconds = Output.empty();
-        this.deadLetterPolicy = Output.empty();
-        this.detached = Output.empty();
-        this.enableMessageOrdering = Output.empty();
-        this.expirationPolicy = Output.empty();
-        this.filter = Output.empty();
-        this.labels = Output.empty();
-        this.messageRetentionDuration = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.pushConfig = Output.empty();
-        this.retainAckedMessages = Output.empty();
-        this.retryPolicy = Output.empty();
-        this.subscriptionId = Output.empty();
-        this.topic = Output.empty();
+        this.ackDeadlineSeconds = Codegen.empty();
+        this.deadLetterPolicy = Codegen.empty();
+        this.detached = Codegen.empty();
+        this.enableMessageOrdering = Codegen.empty();
+        this.expirationPolicy = Codegen.empty();
+        this.filter = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.messageRetentionDuration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pushConfig = Codegen.empty();
+        this.retainAckedMessages = Codegen.empty();
+        this.retryPolicy = Codegen.empty();
+        this.subscriptionId = Codegen.empty();
+        this.topic = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -282,7 +283,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ackDeadlineSeconds(@Nullable Integer ackDeadlineSeconds) {
-            this.ackDeadlineSeconds = Output.ofNullable(ackDeadlineSeconds);
+            this.ackDeadlineSeconds = Codegen.ofNullable(ackDeadlineSeconds);
             return this;
         }
         public Builder deadLetterPolicy(@Nullable Output<DeadLetterPolicyArgs> deadLetterPolicy) {
@@ -290,7 +291,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deadLetterPolicy(@Nullable DeadLetterPolicyArgs deadLetterPolicy) {
-            this.deadLetterPolicy = Output.ofNullable(deadLetterPolicy);
+            this.deadLetterPolicy = Codegen.ofNullable(deadLetterPolicy);
             return this;
         }
         public Builder detached(@Nullable Output<Boolean> detached) {
@@ -298,7 +299,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder detached(@Nullable Boolean detached) {
-            this.detached = Output.ofNullable(detached);
+            this.detached = Codegen.ofNullable(detached);
             return this;
         }
         public Builder enableMessageOrdering(@Nullable Output<Boolean> enableMessageOrdering) {
@@ -306,7 +307,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableMessageOrdering(@Nullable Boolean enableMessageOrdering) {
-            this.enableMessageOrdering = Output.ofNullable(enableMessageOrdering);
+            this.enableMessageOrdering = Codegen.ofNullable(enableMessageOrdering);
             return this;
         }
         public Builder expirationPolicy(@Nullable Output<ExpirationPolicyArgs> expirationPolicy) {
@@ -314,7 +315,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder expirationPolicy(@Nullable ExpirationPolicyArgs expirationPolicy) {
-            this.expirationPolicy = Output.ofNullable(expirationPolicy);
+            this.expirationPolicy = Codegen.ofNullable(expirationPolicy);
             return this;
         }
         public Builder filter(@Nullable Output<String> filter) {
@@ -322,7 +323,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder filter(@Nullable String filter) {
-            this.filter = Output.ofNullable(filter);
+            this.filter = Codegen.ofNullable(filter);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -330,7 +331,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder messageRetentionDuration(@Nullable Output<String> messageRetentionDuration) {
@@ -338,7 +339,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messageRetentionDuration(@Nullable String messageRetentionDuration) {
-            this.messageRetentionDuration = Output.ofNullable(messageRetentionDuration);
+            this.messageRetentionDuration = Codegen.ofNullable(messageRetentionDuration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -346,7 +347,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -354,7 +355,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pushConfig(@Nullable Output<PushConfigArgs> pushConfig) {
@@ -362,7 +363,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pushConfig(@Nullable PushConfigArgs pushConfig) {
-            this.pushConfig = Output.ofNullable(pushConfig);
+            this.pushConfig = Codegen.ofNullable(pushConfig);
             return this;
         }
         public Builder retainAckedMessages(@Nullable Output<Boolean> retainAckedMessages) {
@@ -370,7 +371,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retainAckedMessages(@Nullable Boolean retainAckedMessages) {
-            this.retainAckedMessages = Output.ofNullable(retainAckedMessages);
+            this.retainAckedMessages = Codegen.ofNullable(retainAckedMessages);
             return this;
         }
         public Builder retryPolicy(@Nullable Output<RetryPolicyArgs> retryPolicy) {
@@ -378,7 +379,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder retryPolicy(@Nullable RetryPolicyArgs retryPolicy) {
-            this.retryPolicy = Output.ofNullable(retryPolicy);
+            this.retryPolicy = Codegen.ofNullable(retryPolicy);
             return this;
         }
         public Builder subscriptionId(Output<String> subscriptionId) {

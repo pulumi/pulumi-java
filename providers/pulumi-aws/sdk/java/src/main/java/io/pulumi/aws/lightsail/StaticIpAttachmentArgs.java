@@ -5,6 +5,7 @@ package io.pulumi.aws.lightsail;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class StaticIpAttachmentArgs extends io.pulumi.resources.ResourceAr
     }
 
     private StaticIpAttachmentArgs() {
-        this.instanceName = Output.empty();
-        this.staticIpName = Output.empty();
+        this.instanceName = Codegen.empty();
+        this.staticIpName = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<List<ParameterContractArgs>> formParameters;
 
     public Output<List<ParameterContractArgs>> getFormParameters() {
-        return this.formParameters == null ? Output.empty() : this.formParameters;
+        return this.formParameters == null ? Codegen.empty() : this.formParameters;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> sample;
 
     public Output<String> getSample() {
-        return this.sample == null ? Output.empty() : this.sample;
+        return this.sample == null ? Codegen.empty() : this.sample;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> schemaId;
 
     public Output<String> getSchemaId() {
-        return this.schemaId == null ? Output.empty() : this.schemaId;
+        return this.schemaId == null ? Codegen.empty() : this.schemaId;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> typeName;
 
     public Output<String> getTypeName() {
-        return this.typeName == null ? Output.empty() : this.typeName;
+        return this.typeName == null ? Codegen.empty() : this.typeName;
     }
 
     public RepresentationContractArgs(
@@ -89,11 +90,11 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
     }
 
     private RepresentationContractArgs() {
-        this.contentType = Output.empty();
-        this.formParameters = Output.empty();
-        this.sample = Output.empty();
-        this.schemaId = Output.empty();
-        this.typeName = Output.empty();
+        this.contentType = Codegen.empty();
+        this.formParameters = Codegen.empty();
+        this.sample = Codegen.empty();
+        this.schemaId = Codegen.empty();
+        this.typeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder formParameters(@Nullable List<ParameterContractArgs> formParameters) {
-            this.formParameters = Output.ofNullable(formParameters);
+            this.formParameters = Codegen.ofNullable(formParameters);
             return this;
         }
         public Builder formParameters(ParameterContractArgs... formParameters) {
@@ -148,7 +149,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder sample(@Nullable String sample) {
-            this.sample = Output.ofNullable(sample);
+            this.sample = Codegen.ofNullable(sample);
             return this;
         }
         public Builder schemaId(@Nullable Output<String> schemaId) {
@@ -156,7 +157,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder schemaId(@Nullable String schemaId) {
-            this.schemaId = Output.ofNullable(schemaId);
+            this.schemaId = Codegen.ofNullable(schemaId);
             return this;
         }
         public Builder typeName(@Nullable Output<String> typeName) {
@@ -164,7 +165,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder typeName(@Nullable String typeName) {
-            this.typeName = Output.ofNullable(typeName);
+            this.typeName = Codegen.ofNullable(typeName);
             return this;
         }        public RepresentationContractArgs build() {
             return new RepresentationContractArgs(contentType, formParameters, sample, schemaId, typeName);

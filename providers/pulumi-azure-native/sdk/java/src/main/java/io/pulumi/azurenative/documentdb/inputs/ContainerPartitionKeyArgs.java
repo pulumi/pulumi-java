@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.enums.PartitionKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +31,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,PartitionKind>> kind;
 
     public Output<Either<String,PartitionKind>> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
-        return this.paths == null ? Output.empty() : this.paths;
+        return this.paths == null ? Codegen.empty() : this.paths;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> version;
 
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public ContainerPartitionKeyArgs(
@@ -65,9 +66,9 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
     }
 
     private ContainerPartitionKeyArgs() {
-        this.kind = Output.empty();
-        this.paths = Output.empty();
-        this.version = Output.empty();
+        this.kind = Codegen.empty();
+        this.paths = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder kind(@Nullable Either<String,PartitionKind> kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder paths(@Nullable Output<List<String>> paths) {
@@ -107,7 +108,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Output.ofNullable(paths);
+            this.paths = Codegen.ofNullable(paths);
             return this;
         }
         public Builder paths(String... paths) {
@@ -118,7 +119,7 @@ public final class ContainerPartitionKeyArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public ContainerPartitionKeyArgs build() {
             return new ContainerPartitionKeyArgs(kind, paths, version);

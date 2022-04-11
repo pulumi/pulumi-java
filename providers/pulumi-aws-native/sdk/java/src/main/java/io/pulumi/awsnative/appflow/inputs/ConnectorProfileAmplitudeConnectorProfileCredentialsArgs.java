@@ -5,6 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -39,8 +40,8 @@ public final class ConnectorProfileAmplitudeConnectorProfileCredentialsArgs exte
     }
 
     private ConnectorProfileAmplitudeConnectorProfileCredentialsArgs() {
-        this.apiKey = Output.empty();
-        this.secretKey = Output.empty();
+        this.apiKey = Codegen.empty();
+        this.secretKey = Codegen.empty();
     }
 
     public static Builder builder() {

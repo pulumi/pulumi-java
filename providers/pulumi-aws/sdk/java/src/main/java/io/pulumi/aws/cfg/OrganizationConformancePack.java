@@ -10,6 +10,7 @@ import io.pulumi.aws.cfg.outputs.OrganizationConformancePackInputParameter;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -167,7 +168,7 @@ public class OrganizationConformancePack extends io.pulumi.resources.CustomResou
      * @param options A bag of options that control this resource's behavior.
      */
     public OrganizationConformancePack(String name, @Nullable OrganizationConformancePackArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:cfg/organizationConformancePack:OrganizationConformancePack", name, args == null ? OrganizationConformancePackArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:cfg/organizationConformancePack:OrganizationConformancePack", name, args == null ? OrganizationConformancePackArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private OrganizationConformancePack(String name, Output<String> id, @Nullable OrganizationConformancePackState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

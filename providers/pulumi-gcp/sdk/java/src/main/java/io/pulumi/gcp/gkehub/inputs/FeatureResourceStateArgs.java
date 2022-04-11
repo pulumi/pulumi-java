@@ -5,6 +5,7 @@ package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Boolean> hasResources;
 
     public Output<Boolean> getHasResources() {
-        return this.hasResources == null ? Output.empty() : this.hasResources;
+        return this.hasResources == null ? Codegen.empty() : this.hasResources;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     public FeatureResourceStateArgs(
@@ -37,8 +38,8 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
     }
 
     private FeatureResourceStateArgs() {
-        this.hasResources = Output.empty();
-        this.state = Output.empty();
+        this.hasResources = Codegen.empty();
+        this.state = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder hasResources(@Nullable Boolean hasResources) {
-            this.hasResources = Output.ofNullable(hasResources);
+            this.hasResources = Codegen.ofNullable(hasResources);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -76,7 +77,7 @@ public final class FeatureResourceStateArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }        public FeatureResourceStateArgs build() {
             return new FeatureResourceStateArgs(hasResources, state);

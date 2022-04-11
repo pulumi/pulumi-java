@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerTriggerScheduleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class PreventionJobTriggerTriggerArgs extends io.pulumi.resources.R
       private final @Nullable Output<PreventionJobTriggerTriggerScheduleArgs> schedule;
 
     public Output<PreventionJobTriggerTriggerScheduleArgs> getSchedule() {
-        return this.schedule == null ? Output.empty() : this.schedule;
+        return this.schedule == null ? Codegen.empty() : this.schedule;
     }
 
     public PreventionJobTriggerTriggerArgs(@Nullable Output<PreventionJobTriggerTriggerScheduleArgs> schedule) {
@@ -31,7 +32,7 @@ public final class PreventionJobTriggerTriggerArgs extends io.pulumi.resources.R
     }
 
     private PreventionJobTriggerTriggerArgs() {
-        this.schedule = Output.empty();
+        this.schedule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class PreventionJobTriggerTriggerArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder schedule(@Nullable PreventionJobTriggerTriggerScheduleArgs schedule) {
-            this.schedule = Output.ofNullable(schedule);
+            this.schedule = Codegen.ofNullable(schedule);
             return this;
         }        public PreventionJobTriggerTriggerArgs build() {
             return new PreventionJobTriggerTriggerArgs(schedule);

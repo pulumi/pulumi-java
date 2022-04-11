@@ -6,6 +6,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v2beta1.ContextArgs;
 import java.lang.Integer;
@@ -85,7 +86,7 @@ public class Context extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Context(String name, ContextArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:dialogflow/v2beta1:Context", name, args == null ? ContextArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:dialogflow/v2beta1:Context", name, args == null ? ContextArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Context(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

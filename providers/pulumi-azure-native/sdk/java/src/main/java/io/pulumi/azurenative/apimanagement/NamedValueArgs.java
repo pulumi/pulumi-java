@@ -6,6 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -36,7 +37,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<KeyVaultContractCreatePropertiesArgs> keyVault;
 
     public Output<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
-        return this.keyVault == null ? Output.empty() : this.keyVault;
+        return this.keyVault == null ? Codegen.empty() : this.keyVault;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namedValueId;
 
     public Output<String> getNamedValueId() {
-        return this.namedValueId == null ? Output.empty() : this.namedValueId;
+        return this.namedValueId == null ? Codegen.empty() : this.namedValueId;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> secret;
 
     public Output<Boolean> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     public NamedValueArgs(
@@ -125,14 +126,14 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NamedValueArgs() {
-        this.displayName = Output.empty();
-        this.keyVault = Output.empty();
-        this.namedValueId = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secret = Output.empty();
-        this.serviceName = Output.empty();
-        this.tags = Output.empty();
-        this.value = Output.empty();
+        this.displayName = Codegen.empty();
+        this.keyVault = Codegen.empty();
+        this.namedValueId = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -182,7 +183,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyVault(@Nullable KeyVaultContractCreatePropertiesArgs keyVault) {
-            this.keyVault = Output.ofNullable(keyVault);
+            this.keyVault = Codegen.ofNullable(keyVault);
             return this;
         }
         public Builder namedValueId(@Nullable Output<String> namedValueId) {
@@ -190,7 +191,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namedValueId(@Nullable String namedValueId) {
-            this.namedValueId = Output.ofNullable(namedValueId);
+            this.namedValueId = Codegen.ofNullable(namedValueId);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -206,7 +207,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secret(@Nullable Boolean secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder serviceName(Output<String> serviceName) {
@@ -222,7 +223,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -233,7 +234,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }        public NamedValueArgs build() {
             return new NamedValueArgs(displayName, keyVault, namedValueId, resourceGroupName, secret, serviceName, tags, value);

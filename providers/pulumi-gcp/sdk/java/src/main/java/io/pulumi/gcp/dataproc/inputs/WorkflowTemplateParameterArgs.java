@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
       private final @Nullable Output<WorkflowTemplateParameterValidationArgs> validation;
 
     public Output<WorkflowTemplateParameterValidationArgs> getValidation() {
-        return this.validation == null ? Output.empty() : this.validation;
+        return this.validation == null ? Codegen.empty() : this.validation;
     }
 
     public WorkflowTemplateParameterArgs(
@@ -72,10 +73,10 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
     }
 
     private WorkflowTemplateParameterArgs() {
-        this.description = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.validation = Output.empty();
+        this.description = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.validation = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder fields(Output<List<String>> fields) {
@@ -136,7 +137,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder validation(@Nullable WorkflowTemplateParameterValidationArgs validation) {
-            this.validation = Output.ofNullable(validation);
+            this.validation = Codegen.ofNullable(validation);
             return this;
         }        public WorkflowTemplateParameterArgs build() {
             return new WorkflowTemplateParameterArgs(description, fields, name, validation);

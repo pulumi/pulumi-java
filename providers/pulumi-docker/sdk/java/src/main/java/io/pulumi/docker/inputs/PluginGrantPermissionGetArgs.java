@@ -5,6 +5,7 @@ package io.pulumi.docker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,8 +37,8 @@ public final class PluginGrantPermissionGetArgs extends io.pulumi.resources.Reso
     }
 
     private PluginGrantPermissionGetArgs() {
-        this.name = Output.empty();
-        this.values = Output.empty();
+        this.name = Codegen.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {

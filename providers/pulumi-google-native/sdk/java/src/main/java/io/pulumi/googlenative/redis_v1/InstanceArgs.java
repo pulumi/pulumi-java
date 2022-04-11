@@ -5,6 +5,7 @@ package io.pulumi.googlenative.redis_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.redis_v1.enums.InstanceConnectMode;
 import io.pulumi.googlenative.redis_v1.enums.InstanceReadReplicasMode;
 import io.pulumi.googlenative.redis_v1.enums.InstanceTier;
@@ -31,7 +32,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> alternativeLocationId;
 
     public Output<String> getAlternativeLocationId() {
-        return this.alternativeLocationId == null ? Output.empty() : this.alternativeLocationId;
+        return this.alternativeLocationId == null ? Codegen.empty() : this.alternativeLocationId;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> authEnabled;
 
     public Output<Boolean> getAuthEnabled() {
-        return this.authEnabled == null ? Output.empty() : this.authEnabled;
+        return this.authEnabled == null ? Codegen.empty() : this.authEnabled;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authorizedNetwork;
 
     public Output<String> getAuthorizedNetwork() {
-        return this.authorizedNetwork == null ? Output.empty() : this.authorizedNetwork;
+        return this.authorizedNetwork == null ? Codegen.empty() : this.authorizedNetwork;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceConnectMode> connectMode;
 
     public Output<InstanceConnectMode> getConnectMode() {
-        return this.connectMode == null ? Output.empty() : this.connectMode;
+        return this.connectMode == null ? Codegen.empty() : this.connectMode;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     @Import(name="instanceId", required=true)
@@ -93,7 +94,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MaintenancePolicyArgs> maintenancePolicy;
 
     public Output<MaintenancePolicyArgs> getMaintenancePolicy() {
-        return this.maintenancePolicy == null ? Output.empty() : this.maintenancePolicy;
+        return this.maintenancePolicy == null ? Codegen.empty() : this.maintenancePolicy;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -148,14 +149,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<PersistenceConfigArgs> persistenceConfig;
 
     public Output<PersistenceConfigArgs> getPersistenceConfig() {
-        return this.persistenceConfig == null ? Output.empty() : this.persistenceConfig;
+        return this.persistenceConfig == null ? Codegen.empty() : this.persistenceConfig;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceReadReplicasMode> readReplicasMode;
 
     public Output<InstanceReadReplicasMode> getReadReplicasMode() {
-        return this.readReplicasMode == null ? Output.empty() : this.readReplicasMode;
+        return this.readReplicasMode == null ? Codegen.empty() : this.readReplicasMode;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> redisConfigs;
 
     public Output<Map<String,String>> getRedisConfigs() {
-        return this.redisConfigs == null ? Output.empty() : this.redisConfigs;
+        return this.redisConfigs == null ? Codegen.empty() : this.redisConfigs;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> redisVersion;
 
     public Output<String> getRedisVersion() {
-        return this.redisVersion == null ? Output.empty() : this.redisVersion;
+        return this.redisVersion == null ? Codegen.empty() : this.redisVersion;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> replicaCount;
 
     public Output<Integer> getReplicaCount() {
-        return this.replicaCount == null ? Output.empty() : this.replicaCount;
+        return this.replicaCount == null ? Codegen.empty() : this.replicaCount;
     }
 
     /**
@@ -210,7 +211,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
+        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 
     /**
@@ -221,7 +222,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secondaryIpRange;
 
     public Output<String> getSecondaryIpRange() {
-        return this.secondaryIpRange == null ? Output.empty() : this.secondaryIpRange;
+        return this.secondaryIpRange == null ? Codegen.empty() : this.secondaryIpRange;
     }
 
     /**
@@ -243,7 +244,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InstanceTransitEncryptionMode> transitEncryptionMode;
 
     public Output<InstanceTransitEncryptionMode> getTransitEncryptionMode() {
-        return this.transitEncryptionMode == null ? Output.empty() : this.transitEncryptionMode;
+        return this.transitEncryptionMode == null ? Codegen.empty() : this.transitEncryptionMode;
     }
 
     public InstanceArgs(
@@ -292,27 +293,27 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InstanceArgs() {
-        this.alternativeLocationId = Output.empty();
-        this.authEnabled = Output.empty();
-        this.authorizedNetwork = Output.empty();
-        this.connectMode = Output.empty();
-        this.displayName = Output.empty();
-        this.instanceId = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.maintenancePolicy = Output.empty();
-        this.memorySizeGb = Output.empty();
-        this.name = Output.empty();
-        this.persistenceConfig = Output.empty();
-        this.project = Output.empty();
-        this.readReplicasMode = Output.empty();
-        this.redisConfigs = Output.empty();
-        this.redisVersion = Output.empty();
-        this.replicaCount = Output.empty();
-        this.reservedIpRange = Output.empty();
-        this.secondaryIpRange = Output.empty();
-        this.tier = Output.empty();
-        this.transitEncryptionMode = Output.empty();
+        this.alternativeLocationId = Codegen.empty();
+        this.authEnabled = Codegen.empty();
+        this.authorizedNetwork = Codegen.empty();
+        this.connectMode = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.instanceId = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.maintenancePolicy = Codegen.empty();
+        this.memorySizeGb = Codegen.empty();
+        this.name = Codegen.empty();
+        this.persistenceConfig = Codegen.empty();
+        this.project = Codegen.empty();
+        this.readReplicasMode = Codegen.empty();
+        this.redisConfigs = Codegen.empty();
+        this.redisVersion = Codegen.empty();
+        this.replicaCount = Codegen.empty();
+        this.reservedIpRange = Codegen.empty();
+        this.secondaryIpRange = Codegen.empty();
+        this.tier = Codegen.empty();
+        this.transitEncryptionMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -380,7 +381,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder alternativeLocationId(@Nullable String alternativeLocationId) {
-            this.alternativeLocationId = Output.ofNullable(alternativeLocationId);
+            this.alternativeLocationId = Codegen.ofNullable(alternativeLocationId);
             return this;
         }
         public Builder authEnabled(@Nullable Output<Boolean> authEnabled) {
@@ -388,7 +389,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authEnabled(@Nullable Boolean authEnabled) {
-            this.authEnabled = Output.ofNullable(authEnabled);
+            this.authEnabled = Codegen.ofNullable(authEnabled);
             return this;
         }
         public Builder authorizedNetwork(@Nullable Output<String> authorizedNetwork) {
@@ -396,7 +397,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedNetwork(@Nullable String authorizedNetwork) {
-            this.authorizedNetwork = Output.ofNullable(authorizedNetwork);
+            this.authorizedNetwork = Codegen.ofNullable(authorizedNetwork);
             return this;
         }
         public Builder connectMode(@Nullable Output<InstanceConnectMode> connectMode) {
@@ -404,7 +405,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder connectMode(@Nullable InstanceConnectMode connectMode) {
-            this.connectMode = Output.ofNullable(connectMode);
+            this.connectMode = Codegen.ofNullable(connectMode);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -412,7 +413,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder instanceId(Output<String> instanceId) {
@@ -428,7 +429,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -436,7 +437,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder maintenancePolicy(@Nullable Output<MaintenancePolicyArgs> maintenancePolicy) {
@@ -444,7 +445,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maintenancePolicy(@Nullable MaintenancePolicyArgs maintenancePolicy) {
-            this.maintenancePolicy = Output.ofNullable(maintenancePolicy);
+            this.maintenancePolicy = Codegen.ofNullable(maintenancePolicy);
             return this;
         }
         public Builder memorySizeGb(Output<Integer> memorySizeGb) {
@@ -460,7 +461,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder persistenceConfig(@Nullable Output<PersistenceConfigArgs> persistenceConfig) {
@@ -468,7 +469,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder persistenceConfig(@Nullable PersistenceConfigArgs persistenceConfig) {
-            this.persistenceConfig = Output.ofNullable(persistenceConfig);
+            this.persistenceConfig = Codegen.ofNullable(persistenceConfig);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -476,7 +477,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder readReplicasMode(@Nullable Output<InstanceReadReplicasMode> readReplicasMode) {
@@ -484,7 +485,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readReplicasMode(@Nullable InstanceReadReplicasMode readReplicasMode) {
-            this.readReplicasMode = Output.ofNullable(readReplicasMode);
+            this.readReplicasMode = Codegen.ofNullable(readReplicasMode);
             return this;
         }
         public Builder redisConfigs(@Nullable Output<Map<String,String>> redisConfigs) {
@@ -492,7 +493,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redisConfigs(@Nullable Map<String,String> redisConfigs) {
-            this.redisConfigs = Output.ofNullable(redisConfigs);
+            this.redisConfigs = Codegen.ofNullable(redisConfigs);
             return this;
         }
         public Builder redisVersion(@Nullable Output<String> redisVersion) {
@@ -500,7 +501,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder redisVersion(@Nullable String redisVersion) {
-            this.redisVersion = Output.ofNullable(redisVersion);
+            this.redisVersion = Codegen.ofNullable(redisVersion);
             return this;
         }
         public Builder replicaCount(@Nullable Output<Integer> replicaCount) {
@@ -508,7 +509,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder replicaCount(@Nullable Integer replicaCount) {
-            this.replicaCount = Output.ofNullable(replicaCount);
+            this.replicaCount = Codegen.ofNullable(replicaCount);
             return this;
         }
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
@@ -516,7 +517,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Output.ofNullable(reservedIpRange);
+            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
             return this;
         }
         public Builder secondaryIpRange(@Nullable Output<String> secondaryIpRange) {
@@ -524,7 +525,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secondaryIpRange(@Nullable String secondaryIpRange) {
-            this.secondaryIpRange = Output.ofNullable(secondaryIpRange);
+            this.secondaryIpRange = Codegen.ofNullable(secondaryIpRange);
             return this;
         }
         public Builder tier(Output<InstanceTier> tier) {
@@ -540,7 +541,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder transitEncryptionMode(@Nullable InstanceTransitEncryptionMode transitEncryptionMode) {
-            this.transitEncryptionMode = Output.ofNullable(transitEncryptionMode);
+            this.transitEncryptionMode = Codegen.ofNullable(transitEncryptionMode);
             return this;
         }        public InstanceArgs build() {
             return new InstanceArgs(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, displayName, instanceId, labels, location, maintenancePolicy, memorySizeGb, name, persistenceConfig, project, readReplicasMode, redisConfigs, redisVersion, replicaCount, reservedIpRange, secondaryIpRange, tier, transitEncryptionMode);

@@ -5,6 +5,7 @@ package io.pulumi.aws.iam.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> certificateBody;
 
     public Output<String> getCertificateBody() {
-        return this.certificateBody == null ? Output.empty() : this.certificateBody;
+        return this.certificateBody == null ? Codegen.empty() : this.certificateBody;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> certificateChain;
 
     public Output<String> getCertificateChain() {
-        return this.certificateChain == null ? Output.empty() : this.certificateChain;
+        return this.certificateChain == null ? Codegen.empty() : this.certificateChain;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> expiration;
 
     public Output<String> getExpiration() {
-        return this.expiration == null ? Output.empty() : this.expiration;
+        return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> path;
 
     public Output<String> getPath() {
-        return this.path == null ? Output.empty() : this.path;
+        return this.path == null ? Codegen.empty() : this.path;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> privateKey;
 
     public Output<String> getPrivateKey() {
-        return this.privateKey == null ? Output.empty() : this.privateKey;
+        return this.privateKey == null ? Codegen.empty() : this.privateKey;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -141,7 +142,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> uploadDate;
 
     public Output<String> getUploadDate() {
-        return this.uploadDate == null ? Output.empty() : this.uploadDate;
+        return this.uploadDate == null ? Codegen.empty() : this.uploadDate;
     }
 
     public ServerCertificateState(
@@ -170,17 +171,17 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
     }
 
     private ServerCertificateState() {
-        this.arn = Output.empty();
-        this.certificateBody = Output.empty();
-        this.certificateChain = Output.empty();
-        this.expiration = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.path = Output.empty();
-        this.privateKey = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.uploadDate = Output.empty();
+        this.arn = Codegen.empty();
+        this.certificateBody = Codegen.empty();
+        this.certificateChain = Codegen.empty();
+        this.expiration = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.path = Codegen.empty();
+        this.privateKey = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.uploadDate = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -228,7 +229,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder certificateBody(@Nullable Output<String> certificateBody) {
@@ -236,7 +237,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder certificateBody(@Nullable String certificateBody) {
-            this.certificateBody = Output.ofNullable(certificateBody);
+            this.certificateBody = Codegen.ofNullable(certificateBody);
             return this;
         }
         public Builder certificateChain(@Nullable Output<String> certificateChain) {
@@ -244,7 +245,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder certificateChain(@Nullable String certificateChain) {
-            this.certificateChain = Output.ofNullable(certificateChain);
+            this.certificateChain = Codegen.ofNullable(certificateChain);
             return this;
         }
         public Builder expiration(@Nullable Output<String> expiration) {
@@ -252,7 +253,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = Output.ofNullable(expiration);
+            this.expiration = Codegen.ofNullable(expiration);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -260,7 +261,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -268,7 +269,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder path(@Nullable Output<String> path) {
@@ -276,7 +277,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder path(@Nullable String path) {
-            this.path = Output.ofNullable(path);
+            this.path = Codegen.ofNullable(path);
             return this;
         }
         public Builder privateKey(@Nullable Output<String> privateKey) {
@@ -284,7 +285,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder privateKey(@Nullable String privateKey) {
-            this.privateKey = Output.ofNullable(privateKey);
+            this.privateKey = Codegen.ofNullable(privateKey);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -292,7 +293,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -300,7 +301,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder uploadDate(@Nullable Output<String> uploadDate) {
@@ -308,7 +309,7 @@ public final class ServerCertificateState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder uploadDate(@Nullable String uploadDate) {
-            this.uploadDate = Output.ofNullable(uploadDate);
+            this.uploadDate = Codegen.ofNullable(uploadDate);
             return this;
         }        public ServerCertificateState build() {
             return new ServerCertificateState(arn, certificateBody, certificateChain, expiration, name, namePrefix, path, privateKey, tags, tagsAll, uploadDate);

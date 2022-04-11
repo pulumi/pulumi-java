@@ -5,6 +5,7 @@ package io.pulumi.aws.connect.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class QuickConnectQuickConnectConfigQueueConfigGetArgs extends io.p
     }
 
     private QuickConnectQuickConnectConfigQueueConfigGetArgs() {
-        this.contactFlowId = Output.empty();
-        this.queueId = Output.empty();
+        this.contactFlowId = Codegen.empty();
+        this.queueId = Codegen.empty();
     }
 
     public static Builder builder() {

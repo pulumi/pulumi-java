@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> authType;
 
     public Output<String> getAuthType() {
-        return this.authType == null ? Output.empty() : this.authType;
+        return this.authType == null ? Codegen.empty() : this.authType;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> serverType;
 
     public Output<String> getServerType() {
-        return this.serverType == null ? Output.empty() : this.serverType;
+        return this.serverType == null ? Codegen.empty() : this.serverType;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> token;
 
     public Output<String> getToken() {
-        return this.token == null ? Output.empty() : this.token;
+        return this.token == null ? Codegen.empty() : this.token;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> userName;
 
     public Output<String> getUserName() {
-        return this.userName == null ? Output.empty() : this.userName;
+        return this.userName == null ? Codegen.empty() : this.userName;
     }
 
     public SourceCredentialState(
@@ -83,11 +84,11 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
     }
 
     private SourceCredentialState() {
-        this.arn = Output.empty();
-        this.authType = Output.empty();
-        this.serverType = Output.empty();
-        this.token = Output.empty();
-        this.userName = Output.empty();
+        this.arn = Codegen.empty();
+        this.authType = Codegen.empty();
+        this.serverType = Codegen.empty();
+        this.token = Codegen.empty();
+        this.userName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authType(@Nullable Output<String> authType) {
@@ -131,7 +132,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder authType(@Nullable String authType) {
-            this.authType = Output.ofNullable(authType);
+            this.authType = Codegen.ofNullable(authType);
             return this;
         }
         public Builder serverType(@Nullable Output<String> serverType) {
@@ -139,7 +140,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serverType(@Nullable String serverType) {
-            this.serverType = Output.ofNullable(serverType);
+            this.serverType = Codegen.ofNullable(serverType);
             return this;
         }
         public Builder token(@Nullable Output<String> token) {
@@ -147,7 +148,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder token(@Nullable String token) {
-            this.token = Output.ofNullable(token);
+            this.token = Codegen.ofNullable(token);
             return this;
         }
         public Builder userName(@Nullable Output<String> userName) {
@@ -155,7 +156,7 @@ public final class SourceCredentialState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder userName(@Nullable String userName) {
-            this.userName = Output.ofNullable(userName);
+            this.userName = Codegen.ofNullable(userName);
             return this;
         }        public SourceCredentialState build() {
             return new SourceCredentialState(arn, authType, serverType, token, userName);

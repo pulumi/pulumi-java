@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceCrowdingConfigArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceScoringConfigArgs;
@@ -28,7 +29,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceCrowdingConfigArgs> crowdingConfig;
 
     public Output<SourceCrowdingConfigArgs> getCrowdingConfig() {
-        return this.crowdingConfig == null ? Output.empty() : this.crowdingConfig;
+        return this.crowdingConfig == null ? Codegen.empty() : this.crowdingConfig;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceScoringConfigArgs> scoringConfig;
 
     public Output<SourceScoringConfigArgs> getScoringConfig() {
-        return this.scoringConfig == null ? Output.empty() : this.scoringConfig;
+        return this.scoringConfig == null ? Codegen.empty() : this.scoringConfig;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SourceArgs> source;
 
     public Output<SourceArgs> getSource() {
-        return this.source == null ? Output.empty() : this.source;
+        return this.source == null ? Codegen.empty() : this.source;
     }
 
     public SourceConfigArgs(
@@ -63,9 +64,9 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SourceConfigArgs() {
-        this.crowdingConfig = Output.empty();
-        this.scoringConfig = Output.empty();
-        this.source = Output.empty();
+        this.crowdingConfig = Codegen.empty();
+        this.scoringConfig = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder crowdingConfig(@Nullable SourceCrowdingConfigArgs crowdingConfig) {
-            this.crowdingConfig = Output.ofNullable(crowdingConfig);
+            this.crowdingConfig = Codegen.ofNullable(crowdingConfig);
             return this;
         }
         public Builder scoringConfig(@Nullable Output<SourceScoringConfigArgs> scoringConfig) {
@@ -105,7 +106,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scoringConfig(@Nullable SourceScoringConfigArgs scoringConfig) {
-            this.scoringConfig = Output.ofNullable(scoringConfig);
+            this.scoringConfig = Codegen.ofNullable(scoringConfig);
             return this;
         }
         public Builder source(@Nullable Output<SourceArgs> source) {
@@ -113,7 +114,7 @@ public final class SourceConfigArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder source(@Nullable SourceArgs source) {
-            this.source = Output.ofNullable(source);
+            this.source = Codegen.ofNullable(source);
             return this;
         }        public SourceConfigArgs build() {
             return new SourceConfigArgs(crowdingConfig, scoringConfig, source);

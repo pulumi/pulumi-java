@@ -9,6 +9,7 @@ import io.pulumi.aws.securityhub.inputs.StandardsControlState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -178,7 +179,7 @@ public class StandardsControl extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public StandardsControl(String name, StandardsControlArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:securityhub/standardsControl:StandardsControl", name, args == null ? StandardsControlArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:securityhub/standardsControl:StandardsControl", name, args == null ? StandardsControlArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private StandardsControl(String name, Output<String> id, @Nullable StandardsControlState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

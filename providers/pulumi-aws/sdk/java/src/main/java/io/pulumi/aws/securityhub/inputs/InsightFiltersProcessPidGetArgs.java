@@ -5,6 +5,7 @@ package io.pulumi.aws.securityhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> eq;
 
     public Output<String> getEq() {
-        return this.eq == null ? Output.empty() : this.eq;
+        return this.eq == null ? Codegen.empty() : this.eq;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> gte;
 
     public Output<String> getGte() {
-        return this.gte == null ? Output.empty() : this.gte;
+        return this.gte == null ? Codegen.empty() : this.gte;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> lte;
 
     public Output<String> getLte() {
-        return this.lte == null ? Output.empty() : this.lte;
+        return this.lte == null ? Codegen.empty() : this.lte;
     }
 
     public InsightFiltersProcessPidGetArgs(
@@ -57,9 +58,9 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
     }
 
     private InsightFiltersProcessPidGetArgs() {
-        this.eq = Output.empty();
-        this.gte = Output.empty();
-        this.lte = Output.empty();
+        this.eq = Codegen.empty();
+        this.gte = Codegen.empty();
+        this.lte = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder eq(@Nullable String eq) {
-            this.eq = Output.ofNullable(eq);
+            this.eq = Codegen.ofNullable(eq);
             return this;
         }
         public Builder gte(@Nullable Output<String> gte) {
@@ -99,7 +100,7 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder gte(@Nullable String gte) {
-            this.gte = Output.ofNullable(gte);
+            this.gte = Codegen.ofNullable(gte);
             return this;
         }
         public Builder lte(@Nullable Output<String> lte) {
@@ -107,7 +108,7 @@ public final class InsightFiltersProcessPidGetArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder lte(@Nullable String lte) {
-            this.lte = Output.ofNullable(lte);
+            this.lte = Codegen.ofNullable(lte);
             return this;
         }        public InsightFiltersProcessPidGetArgs build() {
             return new InsightFiltersProcessPidGetArgs(eq, gte, lte);

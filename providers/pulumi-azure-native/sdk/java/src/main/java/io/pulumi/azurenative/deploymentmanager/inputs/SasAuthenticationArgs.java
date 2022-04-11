@@ -5,6 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class SasAuthenticationArgs extends io.pulumi.resources.ResourceArg
     }
 
     private SasAuthenticationArgs() {
-        this.sasUri = Output.empty();
-        this.type = Output.empty();
+        this.sasUri = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

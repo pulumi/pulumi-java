@@ -7,6 +7,7 @@ import io.pulumi.awsnative.iot.enums.DimensionType;
 import io.pulumi.awsnative.iot.inputs.DimensionTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DimensionTagArgs>> tags;
 
     public Output<List<DimensionTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DimensionArgs() {
-        this.name = Output.empty();
-        this.stringValues = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.name = Codegen.empty();
+        this.stringValues = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder stringValues(Output<List<String>> stringValues) {
@@ -129,7 +130,7 @@ public final class DimensionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<DimensionTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(DimensionTagArgs... tags) {

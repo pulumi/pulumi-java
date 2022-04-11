@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__PredictionInputDataFormat;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__PredictionInputOutputDataFormat;
 import java.lang.String;
@@ -29,7 +30,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> batchSize;
 
     public Output<String> getBatchSize() {
-        return this.batchSize == null ? Output.empty() : this.batchSize;
+        return this.batchSize == null ? Codegen.empty() : this.batchSize;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> maxWorkerCount;
 
     public Output<String> getMaxWorkerCount() {
-        return this.maxWorkerCount == null ? Output.empty() : this.maxWorkerCount;
+        return this.maxWorkerCount == null ? Codegen.empty() : this.maxWorkerCount;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> modelName;
 
     public Output<String> getModelName() {
-        return this.modelName == null ? Output.empty() : this.modelName;
+        return this.modelName == null ? Codegen.empty() : this.modelName;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat;
 
     public Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> getOutputDataFormat() {
-        return this.outputDataFormat == null ? Output.empty() : this.outputDataFormat;
+        return this.outputDataFormat == null ? Codegen.empty() : this.outputDataFormat;
     }
 
     /**
@@ -117,7 +118,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> runtimeVersion;
 
     public Output<String> getRuntimeVersion() {
-        return this.runtimeVersion == null ? Output.empty() : this.runtimeVersion;
+        return this.runtimeVersion == null ? Codegen.empty() : this.runtimeVersion;
     }
 
     /**
@@ -128,7 +129,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> signatureName;
 
     public Output<String> getSignatureName() {
-        return this.signatureName == null ? Output.empty() : this.signatureName;
+        return this.signatureName == null ? Codegen.empty() : this.signatureName;
     }
 
     /**
@@ -139,7 +140,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     /**
@@ -150,7 +151,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
       private final @Nullable Output<String> versionName;
 
     public Output<String> getVersionName() {
-        return this.versionName == null ? Output.empty() : this.versionName;
+        return this.versionName == null ? Codegen.empty() : this.versionName;
     }
 
     public GoogleCloudMlV1__PredictionInputArgs(
@@ -181,18 +182,18 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
     }
 
     private GoogleCloudMlV1__PredictionInputArgs() {
-        this.batchSize = Output.empty();
-        this.dataFormat = Output.empty();
-        this.inputPaths = Output.empty();
-        this.maxWorkerCount = Output.empty();
-        this.modelName = Output.empty();
-        this.outputDataFormat = Output.empty();
-        this.outputPath = Output.empty();
-        this.region = Output.empty();
-        this.runtimeVersion = Output.empty();
-        this.signatureName = Output.empty();
-        this.uri = Output.empty();
-        this.versionName = Output.empty();
+        this.batchSize = Codegen.empty();
+        this.dataFormat = Codegen.empty();
+        this.inputPaths = Codegen.empty();
+        this.maxWorkerCount = Codegen.empty();
+        this.modelName = Codegen.empty();
+        this.outputDataFormat = Codegen.empty();
+        this.outputPath = Codegen.empty();
+        this.region = Codegen.empty();
+        this.runtimeVersion = Codegen.empty();
+        this.signatureName = Codegen.empty();
+        this.uri = Codegen.empty();
+        this.versionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -242,7 +243,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder batchSize(@Nullable String batchSize) {
-            this.batchSize = Output.ofNullable(batchSize);
+            this.batchSize = Codegen.ofNullable(batchSize);
             return this;
         }
         public Builder dataFormat(Output<GoogleCloudMlV1__PredictionInputDataFormat> dataFormat) {
@@ -269,7 +270,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder maxWorkerCount(@Nullable String maxWorkerCount) {
-            this.maxWorkerCount = Output.ofNullable(maxWorkerCount);
+            this.maxWorkerCount = Codegen.ofNullable(maxWorkerCount);
             return this;
         }
         public Builder modelName(@Nullable Output<String> modelName) {
@@ -277,7 +278,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder modelName(@Nullable String modelName) {
-            this.modelName = Output.ofNullable(modelName);
+            this.modelName = Codegen.ofNullable(modelName);
             return this;
         }
         public Builder outputDataFormat(@Nullable Output<GoogleCloudMlV1__PredictionInputOutputDataFormat> outputDataFormat) {
@@ -285,7 +286,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder outputDataFormat(@Nullable GoogleCloudMlV1__PredictionInputOutputDataFormat outputDataFormat) {
-            this.outputDataFormat = Output.ofNullable(outputDataFormat);
+            this.outputDataFormat = Codegen.ofNullable(outputDataFormat);
             return this;
         }
         public Builder outputPath(Output<String> outputPath) {
@@ -309,7 +310,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder runtimeVersion(@Nullable String runtimeVersion) {
-            this.runtimeVersion = Output.ofNullable(runtimeVersion);
+            this.runtimeVersion = Codegen.ofNullable(runtimeVersion);
             return this;
         }
         public Builder signatureName(@Nullable Output<String> signatureName) {
@@ -317,7 +318,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder signatureName(@Nullable String signatureName) {
-            this.signatureName = Output.ofNullable(signatureName);
+            this.signatureName = Codegen.ofNullable(signatureName);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -325,7 +326,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }
         public Builder versionName(@Nullable Output<String> versionName) {
@@ -333,7 +334,7 @@ public final class GoogleCloudMlV1__PredictionInputArgs extends io.pulumi.resour
             return this;
         }
         public Builder versionName(@Nullable String versionName) {
-            this.versionName = Output.ofNullable(versionName);
+            this.versionName = Codegen.ofNullable(versionName);
             return this;
         }        public GoogleCloudMlV1__PredictionInputArgs build() {
             return new GoogleCloudMlV1__PredictionInputArgs(batchSize, dataFormat, inputPaths, maxWorkerCount, modelName, outputDataFormat, outputPath, region, runtimeVersion, signatureName, uri, versionName);

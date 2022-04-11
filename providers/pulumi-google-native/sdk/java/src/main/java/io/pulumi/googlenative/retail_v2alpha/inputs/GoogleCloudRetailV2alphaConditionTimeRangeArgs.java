@@ -5,6 +5,7 @@ package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
       private final @Nullable Output<String> endTime;
 
     public Output<String> getEndTime() {
-        return this.endTime == null ? Output.empty() : this.endTime;
+        return this.endTime == null ? Codegen.empty() : this.endTime;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
       private final @Nullable Output<String> startTime;
 
     public Output<String> getStartTime() {
-        return this.startTime == null ? Output.empty() : this.startTime;
+        return this.startTime == null ? Codegen.empty() : this.startTime;
     }
 
     public GoogleCloudRetailV2alphaConditionTimeRangeArgs(
@@ -48,8 +49,8 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
     }
 
     private GoogleCloudRetailV2alphaConditionTimeRangeArgs() {
-        this.endTime = Output.empty();
-        this.startTime = Output.empty();
+        this.endTime = Codegen.empty();
+        this.startTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
             return this;
         }
         public Builder endTime(@Nullable String endTime) {
-            this.endTime = Output.ofNullable(endTime);
+            this.endTime = Codegen.ofNullable(endTime);
             return this;
         }
         public Builder startTime(@Nullable Output<String> startTime) {
@@ -87,7 +88,7 @@ public final class GoogleCloudRetailV2alphaConditionTimeRangeArgs extends io.pul
             return this;
         }
         public Builder startTime(@Nullable String startTime) {
-            this.startTime = Output.ofNullable(startTime);
+            this.startTime = Codegen.ofNullable(startTime);
             return this;
         }        public GoogleCloudRetailV2alphaConditionTimeRangeArgs build() {
             return new GoogleCloudRetailV2alphaConditionTimeRangeArgs(endTime, startTime);

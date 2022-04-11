@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigateway;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiConfigIamMemberArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigIamMemberState;
@@ -162,7 +163,7 @@ public class ApiConfigIamMember extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiConfigIamMember(String name, ApiConfigIamMemberArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigateway/apiConfigIamMember:ApiConfigIamMember", name, args == null ? ApiConfigIamMemberArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigateway/apiConfigIamMember:ApiConfigIamMember", name, args == null ? ApiConfigIamMemberArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiConfigIamMember(String name, Output<String> id, @Nullable ApiConfigIamMemberState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

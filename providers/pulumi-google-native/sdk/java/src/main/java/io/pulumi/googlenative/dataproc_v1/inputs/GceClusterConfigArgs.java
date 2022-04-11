@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dataproc_v1.enums.GceClusterConfigPrivateIpv6GoogleAccess;
 import io.pulumi.googlenative.dataproc_v1.inputs.ConfidentialInstanceConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.NodeGroupAffinityArgs;
@@ -34,7 +35,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ConfidentialInstanceConfigArgs> confidentialInstanceConfig;
 
     public Output<ConfidentialInstanceConfigArgs> getConfidentialInstanceConfig() {
-        return this.confidentialInstanceConfig == null ? Output.empty() : this.confidentialInstanceConfig;
+        return this.confidentialInstanceConfig == null ? Codegen.empty() : this.confidentialInstanceConfig;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> internalIpOnly;
 
     public Output<Boolean> getInternalIpOnly() {
-        return this.internalIpOnly == null ? Output.empty() : this.internalIpOnly;
+        return this.internalIpOnly == null ? Codegen.empty() : this.internalIpOnly;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> metadata;
 
     public Output<Map<String,String>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> networkUri;
 
     public Output<String> getNetworkUri() {
-        return this.networkUri == null ? Output.empty() : this.networkUri;
+        return this.networkUri == null ? Codegen.empty() : this.networkUri;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity;
 
     public Output<NodeGroupAffinityArgs> getNodeGroupAffinity() {
-        return this.nodeGroupAffinity == null ? Output.empty() : this.nodeGroupAffinity;
+        return this.nodeGroupAffinity == null ? Codegen.empty() : this.nodeGroupAffinity;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess;
 
     public Output<GceClusterConfigPrivateIpv6GoogleAccess> getPrivateIpv6GoogleAccess() {
-        return this.privateIpv6GoogleAccess == null ? Output.empty() : this.privateIpv6GoogleAccess;
+        return this.privateIpv6GoogleAccess == null ? Codegen.empty() : this.privateIpv6GoogleAccess;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ReservationAffinityArgs> reservationAffinity;
 
     public Output<ReservationAffinityArgs> getReservationAffinity() {
-        return this.reservationAffinity == null ? Output.empty() : this.reservationAffinity;
+        return this.reservationAffinity == null ? Codegen.empty() : this.reservationAffinity;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> serviceAccount;
 
     public Output<String> getServiceAccount() {
-        return this.serviceAccount == null ? Output.empty() : this.serviceAccount;
+        return this.serviceAccount == null ? Codegen.empty() : this.serviceAccount;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> serviceAccountScopes;
 
     public Output<List<String>> getServiceAccountScopes() {
-        return this.serviceAccountScopes == null ? Output.empty() : this.serviceAccountScopes;
+        return this.serviceAccountScopes == null ? Codegen.empty() : this.serviceAccountScopes;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Output<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
-        return this.shieldedInstanceConfig == null ? Output.empty() : this.shieldedInstanceConfig;
+        return this.shieldedInstanceConfig == null ? Codegen.empty() : this.shieldedInstanceConfig;
     }
 
     /**
@@ -144,7 +145,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> subnetworkUri;
 
     public Output<String> getSubnetworkUri() {
-        return this.subnetworkUri == null ? Output.empty() : this.subnetworkUri;
+        return this.subnetworkUri == null ? Codegen.empty() : this.subnetworkUri;
     }
 
     /**
@@ -155,7 +156,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<String>> tags;
 
     public Output<List<String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -166,7 +167,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> zoneUri;
 
     public Output<String> getZoneUri() {
-        return this.zoneUri == null ? Output.empty() : this.zoneUri;
+        return this.zoneUri == null ? Codegen.empty() : this.zoneUri;
     }
 
     public GceClusterConfigArgs(
@@ -199,19 +200,19 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private GceClusterConfigArgs() {
-        this.confidentialInstanceConfig = Output.empty();
-        this.internalIpOnly = Output.empty();
-        this.metadata = Output.empty();
-        this.networkUri = Output.empty();
-        this.nodeGroupAffinity = Output.empty();
-        this.privateIpv6GoogleAccess = Output.empty();
-        this.reservationAffinity = Output.empty();
-        this.serviceAccount = Output.empty();
-        this.serviceAccountScopes = Output.empty();
-        this.shieldedInstanceConfig = Output.empty();
-        this.subnetworkUri = Output.empty();
-        this.tags = Output.empty();
-        this.zoneUri = Output.empty();
+        this.confidentialInstanceConfig = Codegen.empty();
+        this.internalIpOnly = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.networkUri = Codegen.empty();
+        this.nodeGroupAffinity = Codegen.empty();
+        this.privateIpv6GoogleAccess = Codegen.empty();
+        this.reservationAffinity = Codegen.empty();
+        this.serviceAccount = Codegen.empty();
+        this.serviceAccountScopes = Codegen.empty();
+        this.shieldedInstanceConfig = Codegen.empty();
+        this.subnetworkUri = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.zoneUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -263,7 +264,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder confidentialInstanceConfig(@Nullable ConfidentialInstanceConfigArgs confidentialInstanceConfig) {
-            this.confidentialInstanceConfig = Output.ofNullable(confidentialInstanceConfig);
+            this.confidentialInstanceConfig = Codegen.ofNullable(confidentialInstanceConfig);
             return this;
         }
         public Builder internalIpOnly(@Nullable Output<Boolean> internalIpOnly) {
@@ -271,7 +272,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder internalIpOnly(@Nullable Boolean internalIpOnly) {
-            this.internalIpOnly = Output.ofNullable(internalIpOnly);
+            this.internalIpOnly = Codegen.ofNullable(internalIpOnly);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
@@ -279,7 +280,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder metadata(@Nullable Map<String,String> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder networkUri(@Nullable Output<String> networkUri) {
@@ -287,7 +288,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder networkUri(@Nullable String networkUri) {
-            this.networkUri = Output.ofNullable(networkUri);
+            this.networkUri = Codegen.ofNullable(networkUri);
             return this;
         }
         public Builder nodeGroupAffinity(@Nullable Output<NodeGroupAffinityArgs> nodeGroupAffinity) {
@@ -295,7 +296,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder nodeGroupAffinity(@Nullable NodeGroupAffinityArgs nodeGroupAffinity) {
-            this.nodeGroupAffinity = Output.ofNullable(nodeGroupAffinity);
+            this.nodeGroupAffinity = Codegen.ofNullable(nodeGroupAffinity);
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable Output<GceClusterConfigPrivateIpv6GoogleAccess> privateIpv6GoogleAccess) {
@@ -303,7 +304,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder privateIpv6GoogleAccess(@Nullable GceClusterConfigPrivateIpv6GoogleAccess privateIpv6GoogleAccess) {
-            this.privateIpv6GoogleAccess = Output.ofNullable(privateIpv6GoogleAccess);
+            this.privateIpv6GoogleAccess = Codegen.ofNullable(privateIpv6GoogleAccess);
             return this;
         }
         public Builder reservationAffinity(@Nullable Output<ReservationAffinityArgs> reservationAffinity) {
@@ -311,7 +312,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder reservationAffinity(@Nullable ReservationAffinityArgs reservationAffinity) {
-            this.reservationAffinity = Output.ofNullable(reservationAffinity);
+            this.reservationAffinity = Codegen.ofNullable(reservationAffinity);
             return this;
         }
         public Builder serviceAccount(@Nullable Output<String> serviceAccount) {
@@ -319,7 +320,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceAccount(@Nullable String serviceAccount) {
-            this.serviceAccount = Output.ofNullable(serviceAccount);
+            this.serviceAccount = Codegen.ofNullable(serviceAccount);
             return this;
         }
         public Builder serviceAccountScopes(@Nullable Output<List<String>> serviceAccountScopes) {
@@ -327,7 +328,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder serviceAccountScopes(@Nullable List<String> serviceAccountScopes) {
-            this.serviceAccountScopes = Output.ofNullable(serviceAccountScopes);
+            this.serviceAccountScopes = Codegen.ofNullable(serviceAccountScopes);
             return this;
         }
         public Builder serviceAccountScopes(String... serviceAccountScopes) {
@@ -338,7 +339,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder shieldedInstanceConfig(@Nullable ShieldedInstanceConfigArgs shieldedInstanceConfig) {
-            this.shieldedInstanceConfig = Output.ofNullable(shieldedInstanceConfig);
+            this.shieldedInstanceConfig = Codegen.ofNullable(shieldedInstanceConfig);
             return this;
         }
         public Builder subnetworkUri(@Nullable Output<String> subnetworkUri) {
@@ -346,7 +347,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder subnetworkUri(@Nullable String subnetworkUri) {
-            this.subnetworkUri = Output.ofNullable(subnetworkUri);
+            this.subnetworkUri = Codegen.ofNullable(subnetworkUri);
             return this;
         }
         public Builder tags(@Nullable Output<List<String>> tags) {
@@ -354,7 +355,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable List<String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(String... tags) {
@@ -365,7 +366,7 @@ public final class GceClusterConfigArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder zoneUri(@Nullable String zoneUri) {
-            this.zoneUri = Output.ofNullable(zoneUri);
+            this.zoneUri = Codegen.ofNullable(zoneUri);
             return this;
         }        public GceClusterConfigArgs build() {
             return new GceClusterConfigArgs(confidentialInstanceConfig, internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);

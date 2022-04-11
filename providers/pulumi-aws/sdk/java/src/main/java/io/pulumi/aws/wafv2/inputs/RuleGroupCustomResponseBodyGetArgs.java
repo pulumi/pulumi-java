@@ -5,6 +5,7 @@ package io.pulumi.aws.wafv2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class RuleGroupCustomResponseBodyGetArgs extends io.pulumi.resource
     }
 
     private RuleGroupCustomResponseBodyGetArgs() {
-        this.content = Output.empty();
-        this.contentType = Output.empty();
-        this.key = Output.empty();
+        this.content = Codegen.empty();
+        this.contentType = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {

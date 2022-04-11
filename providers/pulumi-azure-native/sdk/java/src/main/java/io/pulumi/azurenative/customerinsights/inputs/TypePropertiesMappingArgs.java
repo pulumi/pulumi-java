@@ -6,6 +6,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 import io.pulumi.azurenative.customerinsights.enums.LinkTypes;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<LinkTypes> linkType;
 
     public Output<LinkTypes> getLinkType() {
-        return this.linkType == null ? Output.empty() : this.linkType;
+        return this.linkType == null ? Codegen.empty() : this.linkType;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
     }
 
     private TypePropertiesMappingArgs() {
-        this.linkType = Output.empty();
-        this.sourcePropertyName = Output.empty();
-        this.targetPropertyName = Output.empty();
+        this.linkType = Codegen.empty();
+        this.sourcePropertyName = Codegen.empty();
+        this.targetPropertyName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class TypePropertiesMappingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder linkType(@Nullable LinkTypes linkType) {
-            this.linkType = Output.ofNullable(linkType);
+            this.linkType = Codegen.ofNullable(linkType);
             return this;
         }
         public Builder sourcePropertyName(Output<String> sourcePropertyName) {

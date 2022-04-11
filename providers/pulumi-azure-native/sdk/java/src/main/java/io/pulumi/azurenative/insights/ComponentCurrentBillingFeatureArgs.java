@@ -6,6 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentDataVolumeCapArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
       private final @Nullable Output<List<String>> currentBillingFeatures;
 
     public Output<List<String>> getCurrentBillingFeatures() {
-        return this.currentBillingFeatures == null ? Output.empty() : this.currentBillingFeatures;
+        return this.currentBillingFeatures == null ? Codegen.empty() : this.currentBillingFeatures;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
       private final @Nullable Output<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
     public Output<ApplicationInsightsComponentDataVolumeCapArgs> getDataVolumeCap() {
-        return this.dataVolumeCap == null ? Output.empty() : this.dataVolumeCap;
+        return this.dataVolumeCap == null ? Codegen.empty() : this.dataVolumeCap;
     }
 
     /**
@@ -72,10 +73,10 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
     }
 
     private ComponentCurrentBillingFeatureArgs() {
-        this.currentBillingFeatures = Output.empty();
-        this.dataVolumeCap = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.currentBillingFeatures = Codegen.empty();
+        this.dataVolumeCap = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
             return this;
         }
         public Builder currentBillingFeatures(@Nullable List<String> currentBillingFeatures) {
-            this.currentBillingFeatures = Output.ofNullable(currentBillingFeatures);
+            this.currentBillingFeatures = Codegen.ofNullable(currentBillingFeatures);
             return this;
         }
         public Builder currentBillingFeatures(String... currentBillingFeatures) {
@@ -120,7 +121,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
             return this;
         }
         public Builder dataVolumeCap(@Nullable ApplicationInsightsComponentDataVolumeCapArgs dataVolumeCap) {
-            this.dataVolumeCap = Output.ofNullable(dataVolumeCap);
+            this.dataVolumeCap = Codegen.ofNullable(dataVolumeCap);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

@@ -6,6 +6,7 @@ package io.pulumi.aws.ecs.inputs;
 import io.pulumi.aws.ecs.inputs.TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAuthorizationConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -57,9 +58,9 @@ public final class TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationAr
     }
 
     private TaskDefinitionVolumeFsxWindowsFileServerVolumeConfigurationArgs() {
-        this.authorizationConfig = Output.empty();
-        this.fileSystemId = Output.empty();
-        this.rootDirectory = Output.empty();
+        this.authorizationConfig = Codegen.empty();
+        this.fileSystemId = Codegen.empty();
+        this.rootDirectory = Codegen.empty();
     }
 
     public static Builder builder() {

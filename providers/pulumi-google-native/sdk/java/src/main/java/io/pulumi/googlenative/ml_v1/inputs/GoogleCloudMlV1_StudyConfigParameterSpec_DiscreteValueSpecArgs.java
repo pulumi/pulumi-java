@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
       private final @Nullable Output<List<Double>> values;
 
     public Output<List<Double>> getValues() {
-        return this.values == null ? Output.empty() : this.values;
+        return this.values == null ? Codegen.empty() : this.values;
     }
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs(@Nullable Output<List<Double>> values) {
@@ -31,7 +32,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
     }
 
     private GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArgs() {
-        this.values = Output.empty();
+        this.values = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -59,7 +60,7 @@ public final class GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecArg
             return this;
         }
         public Builder values(@Nullable List<Double> values) {
-            this.values = Output.ofNullable(values);
+            this.values = Codegen.ofNullable(values);
             return this;
         }
         public Builder values(Double... values) {

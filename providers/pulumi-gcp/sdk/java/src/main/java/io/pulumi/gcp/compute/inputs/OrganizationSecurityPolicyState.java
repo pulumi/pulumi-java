@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
       private final @Nullable Output<String> fingerprint;
 
     public Output<String> getFingerprint() {
-        return this.fingerprint == null ? Output.empty() : this.fingerprint;
+        return this.fingerprint == null ? Codegen.empty() : this.fingerprint;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
       private final @Nullable Output<String> policyId;
 
     public Output<String> getPolicyId() {
-        return this.policyId == null ? Output.empty() : this.policyId;
+        return this.policyId == null ? Codegen.empty() : this.policyId;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public OrganizationSecurityPolicyState(
@@ -101,12 +102,12 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
     }
 
     private OrganizationSecurityPolicyState() {
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.fingerprint = Output.empty();
-        this.parent = Output.empty();
-        this.policyId = Output.empty();
-        this.type = Output.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.fingerprint = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.policyId = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -152,7 +153,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fingerprint(@Nullable Output<String> fingerprint) {
@@ -160,7 +161,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             return this;
         }
         public Builder fingerprint(@Nullable String fingerprint) {
-            this.fingerprint = Output.ofNullable(fingerprint);
+            this.fingerprint = Codegen.ofNullable(fingerprint);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -168,7 +169,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder policyId(@Nullable Output<String> policyId) {
@@ -176,7 +177,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             return this;
         }
         public Builder policyId(@Nullable String policyId) {
-            this.policyId = Output.ofNullable(policyId);
+            this.policyId = Codegen.ofNullable(policyId);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -184,7 +185,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public OrganizationSecurityPolicyState build() {
             return new OrganizationSecurityPolicyState(description, displayName, fingerprint, parent, policyId, type);

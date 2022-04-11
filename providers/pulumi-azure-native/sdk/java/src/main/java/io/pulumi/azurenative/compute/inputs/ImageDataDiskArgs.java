@@ -10,6 +10,7 @@ import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -32,7 +33,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> blobUri;
 
     public Output<String> getBlobUri() {
-        return this.blobUri == null ? Output.empty() : this.blobUri;
+        return this.blobUri == null ? Codegen.empty() : this.blobUri;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<CachingTypes> caching;
 
     public Output<CachingTypes> getCaching() {
-        return this.caching == null ? Output.empty() : this.caching;
+        return this.caching == null ? Codegen.empty() : this.caching;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet;
 
     public Output<DiskEncryptionSetParametersArgs> getDiskEncryptionSet() {
-        return this.diskEncryptionSet == null ? Output.empty() : this.diskEncryptionSet;
+        return this.diskEncryptionSet == null ? Codegen.empty() : this.diskEncryptionSet;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> diskSizeGB;
 
     public Output<Integer> getDiskSizeGB() {
-        return this.diskSizeGB == null ? Output.empty() : this.diskSizeGB;
+        return this.diskSizeGB == null ? Codegen.empty() : this.diskSizeGB;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> managedDisk;
 
     public Output<SubResourceArgs> getManagedDisk() {
-        return this.managedDisk == null ? Output.empty() : this.managedDisk;
+        return this.managedDisk == null ? Codegen.empty() : this.managedDisk;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> snapshot;
 
     public Output<SubResourceArgs> getSnapshot() {
-        return this.snapshot == null ? Output.empty() : this.snapshot;
+        return this.snapshot == null ? Codegen.empty() : this.snapshot;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,StorageAccountTypes>> storageAccountType;
 
     public Output<Either<String,StorageAccountTypes>> getStorageAccountType() {
-        return this.storageAccountType == null ? Output.empty() : this.storageAccountType;
+        return this.storageAccountType == null ? Codegen.empty() : this.storageAccountType;
     }
 
     public ImageDataDiskArgs(
@@ -132,14 +133,14 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageDataDiskArgs() {
-        this.blobUri = Output.empty();
-        this.caching = Output.empty();
-        this.diskEncryptionSet = Output.empty();
-        this.diskSizeGB = Output.empty();
-        this.lun = Output.empty();
-        this.managedDisk = Output.empty();
-        this.snapshot = Output.empty();
-        this.storageAccountType = Output.empty();
+        this.blobUri = Codegen.empty();
+        this.caching = Codegen.empty();
+        this.diskEncryptionSet = Codegen.empty();
+        this.diskSizeGB = Codegen.empty();
+        this.lun = Codegen.empty();
+        this.managedDisk = Codegen.empty();
+        this.snapshot = Codegen.empty();
+        this.storageAccountType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -181,7 +182,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder blobUri(@Nullable String blobUri) {
-            this.blobUri = Output.ofNullable(blobUri);
+            this.blobUri = Codegen.ofNullable(blobUri);
             return this;
         }
         public Builder caching(@Nullable Output<CachingTypes> caching) {
@@ -189,7 +190,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder caching(@Nullable CachingTypes caching) {
-            this.caching = Output.ofNullable(caching);
+            this.caching = Codegen.ofNullable(caching);
             return this;
         }
         public Builder diskEncryptionSet(@Nullable Output<DiskEncryptionSetParametersArgs> diskEncryptionSet) {
@@ -197,7 +198,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskEncryptionSet(@Nullable DiskEncryptionSetParametersArgs diskEncryptionSet) {
-            this.diskEncryptionSet = Output.ofNullable(diskEncryptionSet);
+            this.diskEncryptionSet = Codegen.ofNullable(diskEncryptionSet);
             return this;
         }
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
@@ -205,7 +206,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder diskSizeGB(@Nullable Integer diskSizeGB) {
-            this.diskSizeGB = Output.ofNullable(diskSizeGB);
+            this.diskSizeGB = Codegen.ofNullable(diskSizeGB);
             return this;
         }
         public Builder lun(Output<Integer> lun) {
@@ -221,7 +222,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedDisk(@Nullable SubResourceArgs managedDisk) {
-            this.managedDisk = Output.ofNullable(managedDisk);
+            this.managedDisk = Codegen.ofNullable(managedDisk);
             return this;
         }
         public Builder snapshot(@Nullable Output<SubResourceArgs> snapshot) {
@@ -229,7 +230,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder snapshot(@Nullable SubResourceArgs snapshot) {
-            this.snapshot = Output.ofNullable(snapshot);
+            this.snapshot = Codegen.ofNullable(snapshot);
             return this;
         }
         public Builder storageAccountType(@Nullable Output<Either<String,StorageAccountTypes>> storageAccountType) {
@@ -237,7 +238,7 @@ public final class ImageDataDiskArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageAccountType(@Nullable Either<String,StorageAccountTypes> storageAccountType) {
-            this.storageAccountType = Output.ofNullable(storageAccountType);
+            this.storageAccountType = Codegen.ofNullable(storageAccountType);
             return this;
         }        public ImageDataDiskArgs build() {
             return new ImageDataDiskArgs(blobUri, caching, diskEncryptionSet, diskSizeGB, lun, managedDisk, snapshot, storageAccountType);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +25,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
       private final @Nullable Output<String> backendService;
 
     public Output<String> getBackendService() {
-        return this.backendService == null ? Output.empty() : this.backendService;
+        return this.backendService == null ? Codegen.empty() : this.backendService;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
       private final @Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction;
 
     public Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> getHeaderAction() {
-        return this.headerAction == null ? Output.empty() : this.headerAction;
+        return this.headerAction == null ? Codegen.empty() : this.headerAction;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
       private final @Nullable Output<Integer> weight;
 
     public Output<Integer> getWeight() {
-        return this.weight == null ? Output.empty() : this.weight;
+        return this.weight == null ? Codegen.empty() : this.weight;
     }
 
     public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs(
@@ -68,9 +69,9 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
     }
 
     private URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs() {
-        this.backendService = Output.empty();
-        this.headerAction = Output.empty();
-        this.weight = Output.empty();
+        this.backendService = Codegen.empty();
+        this.headerAction = Codegen.empty();
+        this.weight = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
             return this;
         }
         public Builder backendService(@Nullable String backendService) {
-            this.backendService = Output.ofNullable(backendService);
+            this.backendService = Codegen.ofNullable(backendService);
             return this;
         }
         public Builder headerAction(@Nullable Output<URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs> headerAction) {
@@ -110,7 +111,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
             return this;
         }
         public Builder headerAction(@Nullable URLMapPathMatcherDefaultRouteActionWeightedBackendServiceHeaderActionGetArgs headerAction) {
-            this.headerAction = Output.ofNullable(headerAction);
+            this.headerAction = Codegen.ofNullable(headerAction);
             return this;
         }
         public Builder weight(@Nullable Output<Integer> weight) {
@@ -118,7 +119,7 @@ public final class URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetA
             return this;
         }
         public Builder weight(@Nullable Integer weight) {
-            this.weight = Output.ofNullable(weight);
+            this.weight = Codegen.ofNullable(weight);
             return this;
         }        public URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs build() {
             return new URLMapPathMatcherDefaultRouteActionWeightedBackendServiceGetArgs(backendService, headerAction, weight);

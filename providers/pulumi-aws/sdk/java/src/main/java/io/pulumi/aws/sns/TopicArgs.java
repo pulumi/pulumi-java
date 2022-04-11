@@ -5,6 +5,7 @@ package io.pulumi.aws.sns;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> applicationFailureFeedbackRoleArn;
 
     public Output<String> getApplicationFailureFeedbackRoleArn() {
-        return this.applicationFailureFeedbackRoleArn == null ? Output.empty() : this.applicationFailureFeedbackRoleArn;
+        return this.applicationFailureFeedbackRoleArn == null ? Codegen.empty() : this.applicationFailureFeedbackRoleArn;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> applicationSuccessFeedbackRoleArn;
 
     public Output<String> getApplicationSuccessFeedbackRoleArn() {
-        return this.applicationSuccessFeedbackRoleArn == null ? Output.empty() : this.applicationSuccessFeedbackRoleArn;
+        return this.applicationSuccessFeedbackRoleArn == null ? Codegen.empty() : this.applicationSuccessFeedbackRoleArn;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> applicationSuccessFeedbackSampleRate;
 
     public Output<Integer> getApplicationSuccessFeedbackSampleRate() {
-        return this.applicationSuccessFeedbackSampleRate == null ? Output.empty() : this.applicationSuccessFeedbackSampleRate;
+        return this.applicationSuccessFeedbackSampleRate == null ? Codegen.empty() : this.applicationSuccessFeedbackSampleRate;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> contentBasedDeduplication;
 
     public Output<Boolean> getContentBasedDeduplication() {
-        return this.contentBasedDeduplication == null ? Output.empty() : this.contentBasedDeduplication;
+        return this.contentBasedDeduplication == null ? Codegen.empty() : this.contentBasedDeduplication;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deliveryPolicy;
 
     public Output<String> getDeliveryPolicy() {
-        return this.deliveryPolicy == null ? Output.empty() : this.deliveryPolicy;
+        return this.deliveryPolicy == null ? Codegen.empty() : this.deliveryPolicy;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> fifoTopic;
 
     public Output<Boolean> getFifoTopic() {
-        return this.fifoTopic == null ? Output.empty() : this.fifoTopic;
+        return this.fifoTopic == null ? Codegen.empty() : this.fifoTopic;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> firehoseFailureFeedbackRoleArn;
 
     public Output<String> getFirehoseFailureFeedbackRoleArn() {
-        return this.firehoseFailureFeedbackRoleArn == null ? Output.empty() : this.firehoseFailureFeedbackRoleArn;
+        return this.firehoseFailureFeedbackRoleArn == null ? Codegen.empty() : this.firehoseFailureFeedbackRoleArn;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> firehoseSuccessFeedbackRoleArn;
 
     public Output<String> getFirehoseSuccessFeedbackRoleArn() {
-        return this.firehoseSuccessFeedbackRoleArn == null ? Output.empty() : this.firehoseSuccessFeedbackRoleArn;
+        return this.firehoseSuccessFeedbackRoleArn == null ? Codegen.empty() : this.firehoseSuccessFeedbackRoleArn;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> firehoseSuccessFeedbackSampleRate;
 
     public Output<Integer> getFirehoseSuccessFeedbackSampleRate() {
-        return this.firehoseSuccessFeedbackSampleRate == null ? Output.empty() : this.firehoseSuccessFeedbackSampleRate;
+        return this.firehoseSuccessFeedbackSampleRate == null ? Codegen.empty() : this.firehoseSuccessFeedbackSampleRate;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> httpFailureFeedbackRoleArn;
 
     public Output<String> getHttpFailureFeedbackRoleArn() {
-        return this.httpFailureFeedbackRoleArn == null ? Output.empty() : this.httpFailureFeedbackRoleArn;
+        return this.httpFailureFeedbackRoleArn == null ? Codegen.empty() : this.httpFailureFeedbackRoleArn;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> httpSuccessFeedbackRoleArn;
 
     public Output<String> getHttpSuccessFeedbackRoleArn() {
-        return this.httpSuccessFeedbackRoleArn == null ? Output.empty() : this.httpSuccessFeedbackRoleArn;
+        return this.httpSuccessFeedbackRoleArn == null ? Codegen.empty() : this.httpSuccessFeedbackRoleArn;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> httpSuccessFeedbackSampleRate;
 
     public Output<Integer> getHttpSuccessFeedbackSampleRate() {
-        return this.httpSuccessFeedbackSampleRate == null ? Output.empty() : this.httpSuccessFeedbackSampleRate;
+        return this.httpSuccessFeedbackSampleRate == null ? Codegen.empty() : this.httpSuccessFeedbackSampleRate;
     }
 
     /**
@@ -168,7 +169,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> kmsMasterKeyId;
 
     public Output<String> getKmsMasterKeyId() {
-        return this.kmsMasterKeyId == null ? Output.empty() : this.kmsMasterKeyId;
+        return this.kmsMasterKeyId == null ? Codegen.empty() : this.kmsMasterKeyId;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lambdaFailureFeedbackRoleArn;
 
     public Output<String> getLambdaFailureFeedbackRoleArn() {
-        return this.lambdaFailureFeedbackRoleArn == null ? Output.empty() : this.lambdaFailureFeedbackRoleArn;
+        return this.lambdaFailureFeedbackRoleArn == null ? Codegen.empty() : this.lambdaFailureFeedbackRoleArn;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> lambdaSuccessFeedbackRoleArn;
 
     public Output<String> getLambdaSuccessFeedbackRoleArn() {
-        return this.lambdaSuccessFeedbackRoleArn == null ? Output.empty() : this.lambdaSuccessFeedbackRoleArn;
+        return this.lambdaSuccessFeedbackRoleArn == null ? Codegen.empty() : this.lambdaSuccessFeedbackRoleArn;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> lambdaSuccessFeedbackSampleRate;
 
     public Output<Integer> getLambdaSuccessFeedbackSampleRate() {
-        return this.lambdaSuccessFeedbackSampleRate == null ? Output.empty() : this.lambdaSuccessFeedbackSampleRate;
+        return this.lambdaSuccessFeedbackSampleRate == null ? Codegen.empty() : this.lambdaSuccessFeedbackSampleRate;
     }
 
     /**
@@ -212,7 +213,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -223,7 +224,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> namePrefix;
 
     public Output<String> getNamePrefix() {
-        return this.namePrefix == null ? Output.empty() : this.namePrefix;
+        return this.namePrefix == null ? Codegen.empty() : this.namePrefix;
     }
 
     /**
@@ -234,7 +235,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> policy;
 
     public Output<String> getPolicy() {
-        return this.policy == null ? Output.empty() : this.policy;
+        return this.policy == null ? Codegen.empty() : this.policy;
     }
 
     /**
@@ -245,7 +246,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sqsFailureFeedbackRoleArn;
 
     public Output<String> getSqsFailureFeedbackRoleArn() {
-        return this.sqsFailureFeedbackRoleArn == null ? Output.empty() : this.sqsFailureFeedbackRoleArn;
+        return this.sqsFailureFeedbackRoleArn == null ? Codegen.empty() : this.sqsFailureFeedbackRoleArn;
     }
 
     /**
@@ -256,7 +257,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sqsSuccessFeedbackRoleArn;
 
     public Output<String> getSqsSuccessFeedbackRoleArn() {
-        return this.sqsSuccessFeedbackRoleArn == null ? Output.empty() : this.sqsSuccessFeedbackRoleArn;
+        return this.sqsSuccessFeedbackRoleArn == null ? Codegen.empty() : this.sqsSuccessFeedbackRoleArn;
     }
 
     /**
@@ -267,7 +268,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> sqsSuccessFeedbackSampleRate;
 
     public Output<Integer> getSqsSuccessFeedbackSampleRate() {
-        return this.sqsSuccessFeedbackSampleRate == null ? Output.empty() : this.sqsSuccessFeedbackSampleRate;
+        return this.sqsSuccessFeedbackSampleRate == null ? Codegen.empty() : this.sqsSuccessFeedbackSampleRate;
     }
 
     /**
@@ -278,7 +279,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public TopicArgs(
@@ -333,30 +334,30 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TopicArgs() {
-        this.applicationFailureFeedbackRoleArn = Output.empty();
-        this.applicationSuccessFeedbackRoleArn = Output.empty();
-        this.applicationSuccessFeedbackSampleRate = Output.empty();
-        this.contentBasedDeduplication = Output.empty();
-        this.deliveryPolicy = Output.empty();
-        this.displayName = Output.empty();
-        this.fifoTopic = Output.empty();
-        this.firehoseFailureFeedbackRoleArn = Output.empty();
-        this.firehoseSuccessFeedbackRoleArn = Output.empty();
-        this.firehoseSuccessFeedbackSampleRate = Output.empty();
-        this.httpFailureFeedbackRoleArn = Output.empty();
-        this.httpSuccessFeedbackRoleArn = Output.empty();
-        this.httpSuccessFeedbackSampleRate = Output.empty();
-        this.kmsMasterKeyId = Output.empty();
-        this.lambdaFailureFeedbackRoleArn = Output.empty();
-        this.lambdaSuccessFeedbackRoleArn = Output.empty();
-        this.lambdaSuccessFeedbackSampleRate = Output.empty();
-        this.name = Output.empty();
-        this.namePrefix = Output.empty();
-        this.policy = Output.empty();
-        this.sqsFailureFeedbackRoleArn = Output.empty();
-        this.sqsSuccessFeedbackRoleArn = Output.empty();
-        this.sqsSuccessFeedbackSampleRate = Output.empty();
-        this.tags = Output.empty();
+        this.applicationFailureFeedbackRoleArn = Codegen.empty();
+        this.applicationSuccessFeedbackRoleArn = Codegen.empty();
+        this.applicationSuccessFeedbackSampleRate = Codegen.empty();
+        this.contentBasedDeduplication = Codegen.empty();
+        this.deliveryPolicy = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.fifoTopic = Codegen.empty();
+        this.firehoseFailureFeedbackRoleArn = Codegen.empty();
+        this.firehoseSuccessFeedbackRoleArn = Codegen.empty();
+        this.firehoseSuccessFeedbackSampleRate = Codegen.empty();
+        this.httpFailureFeedbackRoleArn = Codegen.empty();
+        this.httpSuccessFeedbackRoleArn = Codegen.empty();
+        this.httpSuccessFeedbackSampleRate = Codegen.empty();
+        this.kmsMasterKeyId = Codegen.empty();
+        this.lambdaFailureFeedbackRoleArn = Codegen.empty();
+        this.lambdaSuccessFeedbackRoleArn = Codegen.empty();
+        this.lambdaSuccessFeedbackSampleRate = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namePrefix = Codegen.empty();
+        this.policy = Codegen.empty();
+        this.sqsFailureFeedbackRoleArn = Codegen.empty();
+        this.sqsSuccessFeedbackRoleArn = Codegen.empty();
+        this.sqsSuccessFeedbackSampleRate = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -430,7 +431,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationFailureFeedbackRoleArn(@Nullable String applicationFailureFeedbackRoleArn) {
-            this.applicationFailureFeedbackRoleArn = Output.ofNullable(applicationFailureFeedbackRoleArn);
+            this.applicationFailureFeedbackRoleArn = Codegen.ofNullable(applicationFailureFeedbackRoleArn);
             return this;
         }
         public Builder applicationSuccessFeedbackRoleArn(@Nullable Output<String> applicationSuccessFeedbackRoleArn) {
@@ -438,7 +439,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationSuccessFeedbackRoleArn(@Nullable String applicationSuccessFeedbackRoleArn) {
-            this.applicationSuccessFeedbackRoleArn = Output.ofNullable(applicationSuccessFeedbackRoleArn);
+            this.applicationSuccessFeedbackRoleArn = Codegen.ofNullable(applicationSuccessFeedbackRoleArn);
             return this;
         }
         public Builder applicationSuccessFeedbackSampleRate(@Nullable Output<Integer> applicationSuccessFeedbackSampleRate) {
@@ -446,7 +447,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationSuccessFeedbackSampleRate(@Nullable Integer applicationSuccessFeedbackSampleRate) {
-            this.applicationSuccessFeedbackSampleRate = Output.ofNullable(applicationSuccessFeedbackSampleRate);
+            this.applicationSuccessFeedbackSampleRate = Codegen.ofNullable(applicationSuccessFeedbackSampleRate);
             return this;
         }
         public Builder contentBasedDeduplication(@Nullable Output<Boolean> contentBasedDeduplication) {
@@ -454,7 +455,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentBasedDeduplication(@Nullable Boolean contentBasedDeduplication) {
-            this.contentBasedDeduplication = Output.ofNullable(contentBasedDeduplication);
+            this.contentBasedDeduplication = Codegen.ofNullable(contentBasedDeduplication);
             return this;
         }
         public Builder deliveryPolicy(@Nullable Output<String> deliveryPolicy) {
@@ -462,7 +463,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deliveryPolicy(@Nullable String deliveryPolicy) {
-            this.deliveryPolicy = Output.ofNullable(deliveryPolicy);
+            this.deliveryPolicy = Codegen.ofNullable(deliveryPolicy);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -470,7 +471,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder fifoTopic(@Nullable Output<Boolean> fifoTopic) {
@@ -478,7 +479,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fifoTopic(@Nullable Boolean fifoTopic) {
-            this.fifoTopic = Output.ofNullable(fifoTopic);
+            this.fifoTopic = Codegen.ofNullable(fifoTopic);
             return this;
         }
         public Builder firehoseFailureFeedbackRoleArn(@Nullable Output<String> firehoseFailureFeedbackRoleArn) {
@@ -486,7 +487,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firehoseFailureFeedbackRoleArn(@Nullable String firehoseFailureFeedbackRoleArn) {
-            this.firehoseFailureFeedbackRoleArn = Output.ofNullable(firehoseFailureFeedbackRoleArn);
+            this.firehoseFailureFeedbackRoleArn = Codegen.ofNullable(firehoseFailureFeedbackRoleArn);
             return this;
         }
         public Builder firehoseSuccessFeedbackRoleArn(@Nullable Output<String> firehoseSuccessFeedbackRoleArn) {
@@ -494,7 +495,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firehoseSuccessFeedbackRoleArn(@Nullable String firehoseSuccessFeedbackRoleArn) {
-            this.firehoseSuccessFeedbackRoleArn = Output.ofNullable(firehoseSuccessFeedbackRoleArn);
+            this.firehoseSuccessFeedbackRoleArn = Codegen.ofNullable(firehoseSuccessFeedbackRoleArn);
             return this;
         }
         public Builder firehoseSuccessFeedbackSampleRate(@Nullable Output<Integer> firehoseSuccessFeedbackSampleRate) {
@@ -502,7 +503,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firehoseSuccessFeedbackSampleRate(@Nullable Integer firehoseSuccessFeedbackSampleRate) {
-            this.firehoseSuccessFeedbackSampleRate = Output.ofNullable(firehoseSuccessFeedbackSampleRate);
+            this.firehoseSuccessFeedbackSampleRate = Codegen.ofNullable(firehoseSuccessFeedbackSampleRate);
             return this;
         }
         public Builder httpFailureFeedbackRoleArn(@Nullable Output<String> httpFailureFeedbackRoleArn) {
@@ -510,7 +511,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpFailureFeedbackRoleArn(@Nullable String httpFailureFeedbackRoleArn) {
-            this.httpFailureFeedbackRoleArn = Output.ofNullable(httpFailureFeedbackRoleArn);
+            this.httpFailureFeedbackRoleArn = Codegen.ofNullable(httpFailureFeedbackRoleArn);
             return this;
         }
         public Builder httpSuccessFeedbackRoleArn(@Nullable Output<String> httpSuccessFeedbackRoleArn) {
@@ -518,7 +519,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpSuccessFeedbackRoleArn(@Nullable String httpSuccessFeedbackRoleArn) {
-            this.httpSuccessFeedbackRoleArn = Output.ofNullable(httpSuccessFeedbackRoleArn);
+            this.httpSuccessFeedbackRoleArn = Codegen.ofNullable(httpSuccessFeedbackRoleArn);
             return this;
         }
         public Builder httpSuccessFeedbackSampleRate(@Nullable Output<Integer> httpSuccessFeedbackSampleRate) {
@@ -526,7 +527,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder httpSuccessFeedbackSampleRate(@Nullable Integer httpSuccessFeedbackSampleRate) {
-            this.httpSuccessFeedbackSampleRate = Output.ofNullable(httpSuccessFeedbackSampleRate);
+            this.httpSuccessFeedbackSampleRate = Codegen.ofNullable(httpSuccessFeedbackSampleRate);
             return this;
         }
         public Builder kmsMasterKeyId(@Nullable Output<String> kmsMasterKeyId) {
@@ -534,7 +535,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder kmsMasterKeyId(@Nullable String kmsMasterKeyId) {
-            this.kmsMasterKeyId = Output.ofNullable(kmsMasterKeyId);
+            this.kmsMasterKeyId = Codegen.ofNullable(kmsMasterKeyId);
             return this;
         }
         public Builder lambdaFailureFeedbackRoleArn(@Nullable Output<String> lambdaFailureFeedbackRoleArn) {
@@ -542,7 +543,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaFailureFeedbackRoleArn(@Nullable String lambdaFailureFeedbackRoleArn) {
-            this.lambdaFailureFeedbackRoleArn = Output.ofNullable(lambdaFailureFeedbackRoleArn);
+            this.lambdaFailureFeedbackRoleArn = Codegen.ofNullable(lambdaFailureFeedbackRoleArn);
             return this;
         }
         public Builder lambdaSuccessFeedbackRoleArn(@Nullable Output<String> lambdaSuccessFeedbackRoleArn) {
@@ -550,7 +551,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaSuccessFeedbackRoleArn(@Nullable String lambdaSuccessFeedbackRoleArn) {
-            this.lambdaSuccessFeedbackRoleArn = Output.ofNullable(lambdaSuccessFeedbackRoleArn);
+            this.lambdaSuccessFeedbackRoleArn = Codegen.ofNullable(lambdaSuccessFeedbackRoleArn);
             return this;
         }
         public Builder lambdaSuccessFeedbackSampleRate(@Nullable Output<Integer> lambdaSuccessFeedbackSampleRate) {
@@ -558,7 +559,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lambdaSuccessFeedbackSampleRate(@Nullable Integer lambdaSuccessFeedbackSampleRate) {
-            this.lambdaSuccessFeedbackSampleRate = Output.ofNullable(lambdaSuccessFeedbackSampleRate);
+            this.lambdaSuccessFeedbackSampleRate = Codegen.ofNullable(lambdaSuccessFeedbackSampleRate);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -566,7 +567,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder namePrefix(@Nullable Output<String> namePrefix) {
@@ -574,7 +575,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder namePrefix(@Nullable String namePrefix) {
-            this.namePrefix = Output.ofNullable(namePrefix);
+            this.namePrefix = Codegen.ofNullable(namePrefix);
             return this;
         }
         public Builder policy(@Nullable Output<String> policy) {
@@ -582,7 +583,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder policy(@Nullable String policy) {
-            this.policy = Output.ofNullable(policy);
+            this.policy = Codegen.ofNullable(policy);
             return this;
         }
         public Builder sqsFailureFeedbackRoleArn(@Nullable Output<String> sqsFailureFeedbackRoleArn) {
@@ -590,7 +591,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqsFailureFeedbackRoleArn(@Nullable String sqsFailureFeedbackRoleArn) {
-            this.sqsFailureFeedbackRoleArn = Output.ofNullable(sqsFailureFeedbackRoleArn);
+            this.sqsFailureFeedbackRoleArn = Codegen.ofNullable(sqsFailureFeedbackRoleArn);
             return this;
         }
         public Builder sqsSuccessFeedbackRoleArn(@Nullable Output<String> sqsSuccessFeedbackRoleArn) {
@@ -598,7 +599,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqsSuccessFeedbackRoleArn(@Nullable String sqsSuccessFeedbackRoleArn) {
-            this.sqsSuccessFeedbackRoleArn = Output.ofNullable(sqsSuccessFeedbackRoleArn);
+            this.sqsSuccessFeedbackRoleArn = Codegen.ofNullable(sqsSuccessFeedbackRoleArn);
             return this;
         }
         public Builder sqsSuccessFeedbackSampleRate(@Nullable Output<Integer> sqsSuccessFeedbackSampleRate) {
@@ -606,7 +607,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sqsSuccessFeedbackSampleRate(@Nullable Integer sqsSuccessFeedbackSampleRate) {
-            this.sqsSuccessFeedbackSampleRate = Output.ofNullable(sqsSuccessFeedbackSampleRate);
+            this.sqsSuccessFeedbackSampleRate = Codegen.ofNullable(sqsSuccessFeedbackSampleRate);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -614,7 +615,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public TopicArgs build() {
             return new TopicArgs(applicationFailureFeedbackRoleArn, applicationSuccessFeedbackRoleArn, applicationSuccessFeedbackSampleRate, contentBasedDeduplication, deliveryPolicy, displayName, fifoTopic, firehoseFailureFeedbackRoleArn, firehoseSuccessFeedbackRoleArn, firehoseSuccessFeedbackSampleRate, httpFailureFeedbackRoleArn, httpSuccessFeedbackRoleArn, httpSuccessFeedbackSampleRate, kmsMasterKeyId, lambdaFailureFeedbackRoleArn, lambdaSuccessFeedbackRoleArn, lambdaSuccessFeedbackSampleRate, name, namePrefix, policy, sqsFailureFeedbackRoleArn, sqsSuccessFeedbackRoleArn, sqsSuccessFeedbackSampleRate, tags);

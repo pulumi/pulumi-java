@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.enums.VirtualMachineScaleSetScaleInRules;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
     public Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public ScaleInPolicyArgs(@Nullable Output<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules) {
@@ -37,7 +38,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScaleInPolicyArgs() {
-        this.rules = Output.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -65,7 +66,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder rules(@Nullable List<Either<String,VirtualMachineScaleSetScaleInRules>> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(Either<String,VirtualMachineScaleSetScaleInRules>... rules) {

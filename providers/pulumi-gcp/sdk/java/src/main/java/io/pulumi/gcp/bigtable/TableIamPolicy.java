@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigtable;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigtable.TableIamPolicyArgs;
 import io.pulumi.gcp.bigtable.inputs.TableIamPolicyState;
@@ -147,7 +148,7 @@ public class TableIamPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TableIamPolicy(String name, TableIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigtable/tableIamPolicy:TableIamPolicy", name, args == null ? TableIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigtable/tableIamPolicy:TableIamPolicy", name, args == null ? TableIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TableIamPolicy(String name, Output<String> id, @Nullable TableIamPolicyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

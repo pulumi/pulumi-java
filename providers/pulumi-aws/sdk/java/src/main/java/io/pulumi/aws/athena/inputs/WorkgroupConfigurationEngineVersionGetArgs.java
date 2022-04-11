@@ -5,6 +5,7 @@ package io.pulumi.aws.athena.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
       private final @Nullable Output<String> effectiveEngineVersion;
 
     public Output<String> getEffectiveEngineVersion() {
-        return this.effectiveEngineVersion == null ? Output.empty() : this.effectiveEngineVersion;
+        return this.effectiveEngineVersion == null ? Codegen.empty() : this.effectiveEngineVersion;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
       private final @Nullable Output<String> selectedEngineVersion;
 
     public Output<String> getSelectedEngineVersion() {
-        return this.selectedEngineVersion == null ? Output.empty() : this.selectedEngineVersion;
+        return this.selectedEngineVersion == null ? Codegen.empty() : this.selectedEngineVersion;
     }
 
     public WorkgroupConfigurationEngineVersionGetArgs(
@@ -44,8 +45,8 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
     }
 
     private WorkgroupConfigurationEngineVersionGetArgs() {
-        this.effectiveEngineVersion = Output.empty();
-        this.selectedEngineVersion = Output.empty();
+        this.effectiveEngineVersion = Codegen.empty();
+        this.selectedEngineVersion = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
             return this;
         }
         public Builder effectiveEngineVersion(@Nullable String effectiveEngineVersion) {
-            this.effectiveEngineVersion = Output.ofNullable(effectiveEngineVersion);
+            this.effectiveEngineVersion = Codegen.ofNullable(effectiveEngineVersion);
             return this;
         }
         public Builder selectedEngineVersion(@Nullable Output<String> selectedEngineVersion) {
@@ -83,7 +84,7 @@ public final class WorkgroupConfigurationEngineVersionGetArgs extends io.pulumi.
             return this;
         }
         public Builder selectedEngineVersion(@Nullable String selectedEngineVersion) {
-            this.selectedEngineVersion = Output.ofNullable(selectedEngineVersion);
+            this.selectedEngineVersion = Codegen.ofNullable(selectedEngineVersion);
             return this;
         }        public WorkgroupConfigurationEngineVersionGetArgs build() {
             return new WorkgroupConfigurationEngineVersionGetArgs(effectiveEngineVersion, selectedEngineVersion);

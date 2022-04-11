@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.ProtocolCustomSettingsFormatArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> ddosCustomPolicyName;
 
     public Output<String> getDdosCustomPolicyName() {
-        return this.ddosCustomPolicyName == null ? Output.empty() : this.ddosCustomPolicyName;
+        return this.ddosCustomPolicyName == null ? Codegen.empty() : this.ddosCustomPolicyName;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings;
 
     public Output<List<ProtocolCustomSettingsFormatArgs>> getProtocolCustomSettings() {
-        return this.protocolCustomSettings == null ? Output.empty() : this.protocolCustomSettings;
+        return this.protocolCustomSettings == null ? Codegen.empty() : this.protocolCustomSettings;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DdosCustomPolicyArgs(
@@ -99,12 +100,12 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DdosCustomPolicyArgs() {
-        this.ddosCustomPolicyName = Output.empty();
-        this.id = Output.empty();
-        this.location = Output.empty();
-        this.protocolCustomSettings = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.ddosCustomPolicyName = Codegen.empty();
+        this.id = Codegen.empty();
+        this.location = Codegen.empty();
+        this.protocolCustomSettings = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -142,7 +143,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder ddosCustomPolicyName(@Nullable String ddosCustomPolicyName) {
-            this.ddosCustomPolicyName = Output.ofNullable(ddosCustomPolicyName);
+            this.ddosCustomPolicyName = Codegen.ofNullable(ddosCustomPolicyName);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -150,7 +151,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -158,7 +159,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder protocolCustomSettings(@Nullable Output<List<ProtocolCustomSettingsFormatArgs>> protocolCustomSettings) {
@@ -166,7 +167,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder protocolCustomSettings(@Nullable List<ProtocolCustomSettingsFormatArgs> protocolCustomSettings) {
-            this.protocolCustomSettings = Output.ofNullable(protocolCustomSettings);
+            this.protocolCustomSettings = Codegen.ofNullable(protocolCustomSettings);
             return this;
         }
         public Builder protocolCustomSettings(ProtocolCustomSettingsFormatArgs... protocolCustomSettings) {
@@ -185,7 +186,7 @@ public final class DdosCustomPolicyArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DdosCustomPolicyArgs build() {
             return new DdosCustomPolicyArgs(ddosCustomPolicyName, id, location, protocolCustomSettings, resourceGroupName, tags);

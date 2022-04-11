@@ -5,6 +5,7 @@ package io.pulumi.aws.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class LaunchConfigurationEphemeralBlockDeviceGetArgs extends io.pul
     }
 
     private LaunchConfigurationEphemeralBlockDeviceGetArgs() {
-        this.deviceName = Output.empty();
-        this.virtualName = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.virtualName = Codegen.empty();
     }
 
     public static Builder builder() {

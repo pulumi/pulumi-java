@@ -5,6 +5,7 @@ package io.pulumi.gcp.datastore.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class DataStoreIndexPropertyArgs extends io.pulumi.resources.Resour
     }
 
     private DataStoreIndexPropertyArgs() {
-        this.direction = Output.empty();
-        this.name = Output.empty();
+        this.direction = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.aws.appmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -44,8 +45,8 @@ public final class RouteSpecGrpcRouteTimeoutPerRequestGetArgs extends io.pulumi.
     }
 
     private RouteSpecGrpcRouteTimeoutPerRequestGetArgs() {
-        this.unit = Output.empty();
-        this.value = Output.empty();
+        this.unit = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

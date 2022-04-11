@@ -5,6 +5,7 @@ package io.pulumi.aws.dms.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -34,7 +35,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> errorRetryDuration;
 
     public Output<Integer> getErrorRetryDuration() {
-        return this.errorRetryDuration == null ? Output.empty() : this.errorRetryDuration;
+        return this.errorRetryDuration == null ? Codegen.empty() : this.errorRetryDuration;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
       private final @Nullable Output<Integer> fullLoadErrorPercentage;
 
     public Output<Integer> getFullLoadErrorPercentage() {
-        return this.fullLoadErrorPercentage == null ? Output.empty() : this.fullLoadErrorPercentage;
+        return this.fullLoadErrorPercentage == null ? Codegen.empty() : this.fullLoadErrorPercentage;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
     }
 
     private EndpointElasticsearchSettingsGetArgs() {
-        this.endpointUri = Output.empty();
-        this.errorRetryDuration = Output.empty();
-        this.fullLoadErrorPercentage = Output.empty();
-        this.serviceAccessRoleArn = Output.empty();
+        this.endpointUri = Codegen.empty();
+        this.errorRetryDuration = Codegen.empty();
+        this.fullLoadErrorPercentage = Codegen.empty();
+        this.serviceAccessRoleArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -116,7 +117,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder errorRetryDuration(@Nullable Integer errorRetryDuration) {
-            this.errorRetryDuration = Output.ofNullable(errorRetryDuration);
+            this.errorRetryDuration = Codegen.ofNullable(errorRetryDuration);
             return this;
         }
         public Builder fullLoadErrorPercentage(@Nullable Output<Integer> fullLoadErrorPercentage) {
@@ -124,7 +125,7 @@ public final class EndpointElasticsearchSettingsGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder fullLoadErrorPercentage(@Nullable Integer fullLoadErrorPercentage) {
-            this.fullLoadErrorPercentage = Output.ofNullable(fullLoadErrorPercentage);
+            this.fullLoadErrorPercentage = Codegen.ofNullable(fullLoadErrorPercentage);
             return this;
         }
         public Builder serviceAccessRoleArn(Output<String> serviceAccessRoleArn) {

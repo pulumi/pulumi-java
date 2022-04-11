@@ -9,6 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.SslConfigurationArgs
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> agentCount;
 
     public Output<Integer> getAgentCount() {
-        return this.agentCount == null ? Output.empty() : this.agentCount;
+        return this.agentCount == null ? Codegen.empty() : this.agentCount;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> agentVmSize;
 
     public Output<String> getAgentVmSize() {
-        return this.agentVmSize == null ? Output.empty() : this.agentVmSize;
+        return this.agentVmSize == null ? Codegen.empty() : this.agentVmSize;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration;
 
     public Output<AksNetworkingConfigurationArgs> getAksNetworkingConfiguration() {
-        return this.aksNetworkingConfiguration == null ? Output.empty() : this.aksNetworkingConfiguration;
+        return this.aksNetworkingConfiguration == null ? Codegen.empty() : this.aksNetworkingConfiguration;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterFqdn;
 
     public Output<String> getClusterFqdn() {
-        return this.clusterFqdn == null ? Output.empty() : this.clusterFqdn;
+        return this.clusterFqdn == null ? Codegen.empty() : this.clusterFqdn;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ClusterPurpose>> clusterPurpose;
 
     public Output<Either<String,ClusterPurpose>> getClusterPurpose() {
-        return this.clusterPurpose == null ? Output.empty() : this.clusterPurpose;
+        return this.clusterPurpose == null ? Codegen.empty() : this.clusterPurpose;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SslConfigurationArgs> sslConfiguration;
 
     public Output<SslConfigurationArgs> getSslConfiguration() {
-        return this.sslConfiguration == null ? Output.empty() : this.sslConfiguration;
+        return this.sslConfiguration == null ? Codegen.empty() : this.sslConfiguration;
     }
 
     public AKSPropertiesArgs(
@@ -105,12 +106,12 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AKSPropertiesArgs() {
-        this.agentCount = Output.empty();
-        this.agentVmSize = Output.empty();
-        this.aksNetworkingConfiguration = Output.empty();
-        this.clusterFqdn = Output.empty();
-        this.clusterPurpose = Output.empty();
-        this.sslConfiguration = Output.empty();
+        this.agentCount = Codegen.empty();
+        this.agentVmSize = Codegen.empty();
+        this.aksNetworkingConfiguration = Codegen.empty();
+        this.clusterFqdn = Codegen.empty();
+        this.clusterPurpose = Codegen.empty();
+        this.sslConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -148,7 +149,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentCount(@Nullable Integer agentCount) {
-            this.agentCount = Output.ofNullable(agentCount);
+            this.agentCount = Codegen.ofNullable(agentCount);
             return this;
         }
         public Builder agentVmSize(@Nullable Output<String> agentVmSize) {
@@ -156,7 +157,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder agentVmSize(@Nullable String agentVmSize) {
-            this.agentVmSize = Output.ofNullable(agentVmSize);
+            this.agentVmSize = Codegen.ofNullable(agentVmSize);
             return this;
         }
         public Builder aksNetworkingConfiguration(@Nullable Output<AksNetworkingConfigurationArgs> aksNetworkingConfiguration) {
@@ -164,7 +165,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder aksNetworkingConfiguration(@Nullable AksNetworkingConfigurationArgs aksNetworkingConfiguration) {
-            this.aksNetworkingConfiguration = Output.ofNullable(aksNetworkingConfiguration);
+            this.aksNetworkingConfiguration = Codegen.ofNullable(aksNetworkingConfiguration);
             return this;
         }
         public Builder clusterFqdn(@Nullable Output<String> clusterFqdn) {
@@ -172,7 +173,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterFqdn(@Nullable String clusterFqdn) {
-            this.clusterFqdn = Output.ofNullable(clusterFqdn);
+            this.clusterFqdn = Codegen.ofNullable(clusterFqdn);
             return this;
         }
         public Builder clusterPurpose(@Nullable Output<Either<String,ClusterPurpose>> clusterPurpose) {
@@ -180,7 +181,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterPurpose(@Nullable Either<String,ClusterPurpose> clusterPurpose) {
-            this.clusterPurpose = Output.ofNullable(clusterPurpose);
+            this.clusterPurpose = Codegen.ofNullable(clusterPurpose);
             return this;
         }
         public Builder sslConfiguration(@Nullable Output<SslConfigurationArgs> sslConfiguration) {
@@ -188,7 +189,7 @@ public final class AKSPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sslConfiguration(@Nullable SslConfigurationArgs sslConfiguration) {
-            this.sslConfiguration = Output.ofNullable(sslConfiguration);
+            this.sslConfiguration = Codegen.ofNullable(sslConfiguration);
             return this;
         }        public AKSPropertiesArgs build() {
             return new AKSPropertiesArgs(agentCount, agentVmSize, aksNetworkingConfiguration, clusterFqdn, clusterPurpose, sslConfiguration);

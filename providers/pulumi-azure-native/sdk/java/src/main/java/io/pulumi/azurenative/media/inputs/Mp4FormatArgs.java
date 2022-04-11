@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.OutputFileArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -51,7 +52,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<OutputFileArgs>> outputFiles;
 
     public Output<List<OutputFileArgs>> getOutputFiles() {
-        return this.outputFiles == null ? Output.empty() : this.outputFiles;
+        return this.outputFiles == null ? Codegen.empty() : this.outputFiles;
     }
 
     public Mp4FormatArgs(
@@ -64,9 +65,9 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private Mp4FormatArgs() {
-        this.filenamePattern = Output.empty();
-        this.odataType = Output.empty();
-        this.outputFiles = Output.empty();
+        this.filenamePattern = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.outputFiles = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class Mp4FormatArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputFiles(@Nullable List<OutputFileArgs> outputFiles) {
-            this.outputFiles = Output.ofNullable(outputFiles);
+            this.outputFiles = Codegen.ofNullable(outputFiles);
             return this;
         }
         public Builder outputFiles(OutputFileArgs... outputFiles) {

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaLinuxProcess
 import io.pulumi.awsnative.greengrassv2.inputs.ComponentVersionLambdaContainerParamsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
       private final @Nullable Output<ComponentVersionLambdaContainerParamsArgs> containerParams;
 
     public Output<ComponentVersionLambdaContainerParamsArgs> getContainerParams() {
-        return this.containerParams == null ? Output.empty() : this.containerParams;
+        return this.containerParams == null ? Codegen.empty() : this.containerParams;
     }
 
     @Import(name="isolationMode")
       private final @Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode;
 
     public Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> getIsolationMode() {
-        return this.isolationMode == null ? Output.empty() : this.isolationMode;
+        return this.isolationMode == null ? Codegen.empty() : this.isolationMode;
     }
 
     public ComponentVersionLambdaLinuxProcessParamsArgs(
@@ -37,8 +38,8 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
     }
 
     private ComponentVersionLambdaLinuxProcessParamsArgs() {
-        this.containerParams = Output.empty();
-        this.isolationMode = Output.empty();
+        this.containerParams = Codegen.empty();
+        this.isolationMode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
             return this;
         }
         public Builder containerParams(@Nullable ComponentVersionLambdaContainerParamsArgs containerParams) {
-            this.containerParams = Output.ofNullable(containerParams);
+            this.containerParams = Codegen.ofNullable(containerParams);
             return this;
         }
         public Builder isolationMode(@Nullable Output<ComponentVersionLambdaLinuxProcessParamsIsolationMode> isolationMode) {
@@ -76,7 +77,7 @@ public final class ComponentVersionLambdaLinuxProcessParamsArgs extends io.pulum
             return this;
         }
         public Builder isolationMode(@Nullable ComponentVersionLambdaLinuxProcessParamsIsolationMode isolationMode) {
-            this.isolationMode = Output.ofNullable(isolationMode);
+            this.isolationMode = Codegen.ofNullable(isolationMode);
             return this;
         }        public ComponentVersionLambdaLinuxProcessParamsArgs build() {
             return new ComponentVersionLambdaLinuxProcessParamsArgs(containerParams, isolationMode);

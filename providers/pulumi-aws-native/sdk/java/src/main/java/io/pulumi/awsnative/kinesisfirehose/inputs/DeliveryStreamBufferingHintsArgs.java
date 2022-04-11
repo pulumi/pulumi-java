@@ -5,6 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class DeliveryStreamBufferingHintsArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> intervalInSeconds;
 
     public Output<Integer> getIntervalInSeconds() {
-        return this.intervalInSeconds == null ? Output.empty() : this.intervalInSeconds;
+        return this.intervalInSeconds == null ? Codegen.empty() : this.intervalInSeconds;
     }
 
     @Import(name="sizeInMBs")
       private final @Nullable Output<Integer> sizeInMBs;
 
     public Output<Integer> getSizeInMBs() {
-        return this.sizeInMBs == null ? Output.empty() : this.sizeInMBs;
+        return this.sizeInMBs == null ? Codegen.empty() : this.sizeInMBs;
     }
 
     public DeliveryStreamBufferingHintsArgs(
@@ -36,8 +37,8 @@ public final class DeliveryStreamBufferingHintsArgs extends io.pulumi.resources.
     }
 
     private DeliveryStreamBufferingHintsArgs() {
-        this.intervalInSeconds = Output.empty();
-        this.sizeInMBs = Output.empty();
+        this.intervalInSeconds = Codegen.empty();
+        this.sizeInMBs = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class DeliveryStreamBufferingHintsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
-            this.intervalInSeconds = Output.ofNullable(intervalInSeconds);
+            this.intervalInSeconds = Codegen.ofNullable(intervalInSeconds);
             return this;
         }
         public Builder sizeInMBs(@Nullable Output<Integer> sizeInMBs) {
@@ -75,7 +76,7 @@ public final class DeliveryStreamBufferingHintsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder sizeInMBs(@Nullable Integer sizeInMBs) {
-            this.sizeInMBs = Output.ofNullable(sizeInMBs);
+            this.sizeInMBs = Codegen.ofNullable(sizeInMBs);
             return this;
         }        public DeliveryStreamBufferingHintsArgs build() {
             return new DeliveryStreamBufferingHintsArgs(intervalInSeconds, sizeInMBs);

@@ -6,6 +6,7 @@ package io.pulumi.googlenative.monitoring_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.ServiceLevelObjectiveArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.ServiceLevelIndicatorResponse;
@@ -142,7 +143,7 @@ public class ServiceLevelObjective extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceLevelObjective(String name, ServiceLevelObjectiveArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:monitoring/v3:ServiceLevelObjective", name, args == null ? ServiceLevelObjectiveArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:monitoring/v3:ServiceLevelObjective", name, args == null ? ServiceLevelObjectiveArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceLevelObjective(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

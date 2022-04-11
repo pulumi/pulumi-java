@@ -5,6 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> externalDocsDescription;
 
     public Output<String> getExternalDocsDescription() {
-        return this.externalDocsDescription == null ? Output.empty() : this.externalDocsDescription;
+        return this.externalDocsDescription == null ? Codegen.empty() : this.externalDocsDescription;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> externalDocsUrl;
 
     public Output<String> getExternalDocsUrl() {
-        return this.externalDocsUrl == null ? Output.empty() : this.externalDocsUrl;
+        return this.externalDocsUrl == null ? Codegen.empty() : this.externalDocsUrl;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> tagDescriptionId;
 
     public Output<String> getTagDescriptionId() {
-        return this.tagDescriptionId == null ? Output.empty() : this.tagDescriptionId;
+        return this.tagDescriptionId == null ? Codegen.empty() : this.tagDescriptionId;
     }
 
     public ApiTagDescriptionArgs(
@@ -109,13 +110,13 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ApiTagDescriptionArgs() {
-        this.apiId = Output.empty();
-        this.description = Output.empty();
-        this.externalDocsDescription = Output.empty();
-        this.externalDocsUrl = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.tagDescriptionId = Output.empty();
+        this.apiId = Codegen.empty();
+        this.description = Codegen.empty();
+        this.externalDocsDescription = Codegen.empty();
+        this.externalDocsUrl = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.tagDescriptionId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -163,7 +164,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder externalDocsDescription(@Nullable Output<String> externalDocsDescription) {
@@ -171,7 +172,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder externalDocsDescription(@Nullable String externalDocsDescription) {
-            this.externalDocsDescription = Output.ofNullable(externalDocsDescription);
+            this.externalDocsDescription = Codegen.ofNullable(externalDocsDescription);
             return this;
         }
         public Builder externalDocsUrl(@Nullable Output<String> externalDocsUrl) {
@@ -179,7 +180,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder externalDocsUrl(@Nullable String externalDocsUrl) {
-            this.externalDocsUrl = Output.ofNullable(externalDocsUrl);
+            this.externalDocsUrl = Codegen.ofNullable(externalDocsUrl);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -203,7 +204,7 @@ public final class ApiTagDescriptionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder tagDescriptionId(@Nullable String tagDescriptionId) {
-            this.tagDescriptionId = Output.ofNullable(tagDescriptionId);
+            this.tagDescriptionId = Codegen.ofNullable(tagDescriptionId);
             return this;
         }        public ApiTagDescriptionArgs build() {
             return new ApiTagDescriptionArgs(apiId, description, externalDocsDescription, externalDocsUrl, resourceGroupName, serviceName, tagDescriptionId);

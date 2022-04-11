@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidApplicationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications;
 
     public Output<List<V2AndroidApplicationArgs>> getAllowedApplications() {
-        return this.allowedApplications == null ? Output.empty() : this.allowedApplications;
+        return this.allowedApplications == null ? Codegen.empty() : this.allowedApplications;
     }
 
     public V2AndroidKeyRestrictionsArgs(@Nullable Output<List<V2AndroidApplicationArgs>> allowedApplications) {
@@ -35,7 +36,7 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
     }
 
     private V2AndroidKeyRestrictionsArgs() {
-        this.allowedApplications = Output.empty();
+        this.allowedApplications = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder allowedApplications(@Nullable List<V2AndroidApplicationArgs> allowedApplications) {
-            this.allowedApplications = Output.ofNullable(allowedApplications);
+            this.allowedApplications = Codegen.ofNullable(allowedApplications);
             return this;
         }
         public Builder allowedApplications(V2AndroidApplicationArgs... allowedApplications) {

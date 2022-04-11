@@ -5,6 +5,7 @@ package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> key;
 
     public Output<String> getKey() {
-        return this.key == null ? Output.empty() : this.key;
+        return this.key == null ? Codegen.empty() : this.key;
     }
 
     public WorkflowS3InputFileLocationArgs(
@@ -48,8 +49,8 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
     }
 
     private WorkflowS3InputFileLocationArgs() {
-        this.bucket = Output.empty();
-        this.key = Output.empty();
+        this.bucket = Codegen.empty();
+        this.key = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder key(@Nullable Output<String> key) {
@@ -87,7 +88,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder key(@Nullable String key) {
-            this.key = Output.ofNullable(key);
+            this.key = Codegen.ofNullable(key);
             return this;
         }        public WorkflowS3InputFileLocationArgs build() {
             return new WorkflowS3InputFileLocationArgs(bucket, key);

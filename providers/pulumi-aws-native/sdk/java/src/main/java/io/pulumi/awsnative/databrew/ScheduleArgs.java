@@ -6,6 +6,7 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.databrew.inputs.ScheduleTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +32,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> jobNames;
 
     public Output<List<String>> getJobNames() {
-        return this.jobNames == null ? Output.empty() : this.jobNames;
+        return this.jobNames == null ? Codegen.empty() : this.jobNames;
     }
 
     /**
@@ -42,14 +43,14 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<ScheduleTagArgs>> tags;
 
     public Output<List<ScheduleTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ScheduleArgs(
@@ -64,10 +65,10 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ScheduleArgs() {
-        this.cronExpression = Output.empty();
-        this.jobNames = Output.empty();
-        this.name = Output.empty();
-        this.tags = Output.empty();
+        this.cronExpression = Codegen.empty();
+        this.jobNames = Codegen.empty();
+        this.name = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder jobNames(@Nullable List<String> jobNames) {
-            this.jobNames = Output.ofNullable(jobNames);
+            this.jobNames = Codegen.ofNullable(jobNames);
             return this;
         }
         public Builder jobNames(String... jobNames) {
@@ -120,7 +121,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder tags(@Nullable Output<List<ScheduleTagArgs>> tags) {
@@ -128,7 +129,7 @@ public final class ScheduleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ScheduleTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ScheduleTagArgs... tags) {

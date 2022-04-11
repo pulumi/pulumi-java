@@ -12,6 +12,7 @@ import io.pulumi.aws.apigatewayv2.outputs.StageRouteSetting;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -278,7 +279,7 @@ public class Stage extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Stage(String name, StageArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:apigatewayv2/stage:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:apigatewayv2/stage:Stage", name, args == null ? StageArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Stage(String name, Output<String> id, @Nullable StageState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

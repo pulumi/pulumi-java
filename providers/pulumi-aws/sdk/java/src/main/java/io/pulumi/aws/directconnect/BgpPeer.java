@@ -9,6 +9,7 @@ import io.pulumi.aws.directconnect.inputs.BgpPeerState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -174,7 +175,7 @@ public class BgpPeer extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BgpPeer(String name, BgpPeerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:directconnect/bgpPeer:BgpPeer", name, args == null ? BgpPeerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:directconnect/bgpPeer:BgpPeer", name, args == null ? BgpPeerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BgpPeer(String name, Output<String> id, @Nullable BgpPeerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingMetadataArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingSpecArgs;
 import java.lang.String;
@@ -47,7 +48,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -88,11 +89,11 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainMappingArgs() {
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.spec = Output.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.spec = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -144,7 +145,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -152,7 +153,7 @@ public final class DomainMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder spec(Output<DomainMappingSpecArgs> spec) {

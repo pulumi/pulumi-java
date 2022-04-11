@@ -7,6 +7,7 @@ import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesEc2Configura
 import io.pulumi.aws.batch.inputs.ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<String> allocationStrategy;
 
     public Output<String> getAllocationStrategy() {
-        return this.allocationStrategy == null ? Output.empty() : this.allocationStrategy;
+        return this.allocationStrategy == null ? Codegen.empty() : this.allocationStrategy;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<Integer> bidPercentage;
 
     public Output<Integer> getBidPercentage() {
-        return this.bidPercentage == null ? Output.empty() : this.bidPercentage;
+        return this.bidPercentage == null ? Codegen.empty() : this.bidPercentage;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<Integer> desiredVcpus;
 
     public Output<Integer> getDesiredVcpus() {
-        return this.desiredVcpus == null ? Output.empty() : this.desiredVcpus;
+        return this.desiredVcpus == null ? Codegen.empty() : this.desiredVcpus;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration;
 
     public Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> getEc2Configuration() {
-        return this.ec2Configuration == null ? Output.empty() : this.ec2Configuration;
+        return this.ec2Configuration == null ? Codegen.empty() : this.ec2Configuration;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<String> ec2KeyPair;
 
     public Output<String> getEc2KeyPair() {
-        return this.ec2KeyPair == null ? Output.empty() : this.ec2KeyPair;
+        return this.ec2KeyPair == null ? Codegen.empty() : this.ec2KeyPair;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<String> imageId;
 
     public Output<String> getImageId() {
-        return this.imageId == null ? Output.empty() : this.imageId;
+        return this.imageId == null ? Codegen.empty() : this.imageId;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<String> instanceRole;
 
     public Output<String> getInstanceRole() {
-        return this.instanceRole == null ? Output.empty() : this.instanceRole;
+        return this.instanceRole == null ? Codegen.empty() : this.instanceRole;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<List<String>> instanceTypes;
 
     public Output<List<String>> getInstanceTypes() {
-        return this.instanceTypes == null ? Output.empty() : this.instanceTypes;
+        return this.instanceTypes == null ? Codegen.empty() : this.instanceTypes;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> launchTemplate;
 
     public Output<ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs> getLaunchTemplate() {
-        return this.launchTemplate == null ? Output.empty() : this.launchTemplate;
+        return this.launchTemplate == null ? Codegen.empty() : this.launchTemplate;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<Integer> minVcpus;
 
     public Output<Integer> getMinVcpus() {
-        return this.minVcpus == null ? Output.empty() : this.minVcpus;
+        return this.minVcpus == null ? Codegen.empty() : this.minVcpus;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<String> spotIamFleetRole;
 
     public Output<String> getSpotIamFleetRole() {
-        return this.spotIamFleetRole == null ? Output.empty() : this.spotIamFleetRole;
+        return this.spotIamFleetRole == null ? Codegen.empty() : this.spotIamFleetRole;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -231,22 +232,22 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
     }
 
     private ComputeEnvironmentComputeResourcesGetArgs() {
-        this.allocationStrategy = Output.empty();
-        this.bidPercentage = Output.empty();
-        this.desiredVcpus = Output.empty();
-        this.ec2Configuration = Output.empty();
-        this.ec2KeyPair = Output.empty();
-        this.imageId = Output.empty();
-        this.instanceRole = Output.empty();
-        this.instanceTypes = Output.empty();
-        this.launchTemplate = Output.empty();
-        this.maxVcpus = Output.empty();
-        this.minVcpus = Output.empty();
-        this.securityGroupIds = Output.empty();
-        this.spotIamFleetRole = Output.empty();
-        this.subnets = Output.empty();
-        this.tags = Output.empty();
-        this.type = Output.empty();
+        this.allocationStrategy = Codegen.empty();
+        this.bidPercentage = Codegen.empty();
+        this.desiredVcpus = Codegen.empty();
+        this.ec2Configuration = Codegen.empty();
+        this.ec2KeyPair = Codegen.empty();
+        this.imageId = Codegen.empty();
+        this.instanceRole = Codegen.empty();
+        this.instanceTypes = Codegen.empty();
+        this.launchTemplate = Codegen.empty();
+        this.maxVcpus = Codegen.empty();
+        this.minVcpus = Codegen.empty();
+        this.securityGroupIds = Codegen.empty();
+        this.spotIamFleetRole = Codegen.empty();
+        this.subnets = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -304,7 +305,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder allocationStrategy(@Nullable String allocationStrategy) {
-            this.allocationStrategy = Output.ofNullable(allocationStrategy);
+            this.allocationStrategy = Codegen.ofNullable(allocationStrategy);
             return this;
         }
         public Builder bidPercentage(@Nullable Output<Integer> bidPercentage) {
@@ -312,7 +313,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder bidPercentage(@Nullable Integer bidPercentage) {
-            this.bidPercentage = Output.ofNullable(bidPercentage);
+            this.bidPercentage = Codegen.ofNullable(bidPercentage);
             return this;
         }
         public Builder desiredVcpus(@Nullable Output<Integer> desiredVcpus) {
@@ -320,7 +321,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder desiredVcpus(@Nullable Integer desiredVcpus) {
-            this.desiredVcpus = Output.ofNullable(desiredVcpus);
+            this.desiredVcpus = Codegen.ofNullable(desiredVcpus);
             return this;
         }
         public Builder ec2Configuration(@Nullable Output<ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs> ec2Configuration) {
@@ -328,7 +329,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder ec2Configuration(@Nullable ComputeEnvironmentComputeResourcesEc2ConfigurationGetArgs ec2Configuration) {
-            this.ec2Configuration = Output.ofNullable(ec2Configuration);
+            this.ec2Configuration = Codegen.ofNullable(ec2Configuration);
             return this;
         }
         public Builder ec2KeyPair(@Nullable Output<String> ec2KeyPair) {
@@ -336,7 +337,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder ec2KeyPair(@Nullable String ec2KeyPair) {
-            this.ec2KeyPair = Output.ofNullable(ec2KeyPair);
+            this.ec2KeyPair = Codegen.ofNullable(ec2KeyPair);
             return this;
         }
         public Builder imageId(@Nullable Output<String> imageId) {
@@ -344,7 +345,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder imageId(@Nullable String imageId) {
-            this.imageId = Output.ofNullable(imageId);
+            this.imageId = Codegen.ofNullable(imageId);
             return this;
         }
         public Builder instanceRole(@Nullable Output<String> instanceRole) {
@@ -352,7 +353,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder instanceRole(@Nullable String instanceRole) {
-            this.instanceRole = Output.ofNullable(instanceRole);
+            this.instanceRole = Codegen.ofNullable(instanceRole);
             return this;
         }
         public Builder instanceTypes(@Nullable Output<List<String>> instanceTypes) {
@@ -360,7 +361,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder instanceTypes(@Nullable List<String> instanceTypes) {
-            this.instanceTypes = Output.ofNullable(instanceTypes);
+            this.instanceTypes = Codegen.ofNullable(instanceTypes);
             return this;
         }
         public Builder instanceTypes(String... instanceTypes) {
@@ -371,7 +372,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder launchTemplate(@Nullable ComputeEnvironmentComputeResourcesLaunchTemplateGetArgs launchTemplate) {
-            this.launchTemplate = Output.ofNullable(launchTemplate);
+            this.launchTemplate = Codegen.ofNullable(launchTemplate);
             return this;
         }
         public Builder maxVcpus(Output<Integer> maxVcpus) {
@@ -387,7 +388,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder minVcpus(@Nullable Integer minVcpus) {
-            this.minVcpus = Output.ofNullable(minVcpus);
+            this.minVcpus = Codegen.ofNullable(minVcpus);
             return this;
         }
         public Builder securityGroupIds(Output<List<String>> securityGroupIds) {
@@ -406,7 +407,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder spotIamFleetRole(@Nullable String spotIamFleetRole) {
-            this.spotIamFleetRole = Output.ofNullable(spotIamFleetRole);
+            this.spotIamFleetRole = Codegen.ofNullable(spotIamFleetRole);
             return this;
         }
         public Builder subnets(Output<List<String>> subnets) {
@@ -425,7 +426,7 @@ public final class ComputeEnvironmentComputeResourcesGetArgs extends io.pulumi.r
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder type(Output<String> type) {

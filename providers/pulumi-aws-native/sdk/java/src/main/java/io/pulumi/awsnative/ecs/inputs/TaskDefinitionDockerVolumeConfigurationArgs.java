@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -20,35 +21,35 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
       private final @Nullable Output<Boolean> autoprovision;
 
     public Output<Boolean> getAutoprovision() {
-        return this.autoprovision == null ? Output.empty() : this.autoprovision;
+        return this.autoprovision == null ? Codegen.empty() : this.autoprovision;
     }
 
     @Import(name="driver")
       private final @Nullable Output<String> driver;
 
     public Output<String> getDriver() {
-        return this.driver == null ? Output.empty() : this.driver;
+        return this.driver == null ? Codegen.empty() : this.driver;
     }
 
     @Import(name="driverOpts")
       private final @Nullable Output<Object> driverOpts;
 
     public Output<Object> getDriverOpts() {
-        return this.driverOpts == null ? Output.empty() : this.driverOpts;
+        return this.driverOpts == null ? Codegen.empty() : this.driverOpts;
     }
 
     @Import(name="labels")
       private final @Nullable Output<Object> labels;
 
     public Output<Object> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="scope")
       private final @Nullable Output<String> scope;
 
     public Output<String> getScope() {
-        return this.scope == null ? Output.empty() : this.scope;
+        return this.scope == null ? Codegen.empty() : this.scope;
     }
 
     public TaskDefinitionDockerVolumeConfigurationArgs(
@@ -65,11 +66,11 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
     }
 
     private TaskDefinitionDockerVolumeConfigurationArgs() {
-        this.autoprovision = Output.empty();
-        this.driver = Output.empty();
-        this.driverOpts = Output.empty();
-        this.labels = Output.empty();
-        this.scope = Output.empty();
+        this.autoprovision = Codegen.empty();
+        this.driver = Codegen.empty();
+        this.driverOpts = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.scope = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder autoprovision(@Nullable Boolean autoprovision) {
-            this.autoprovision = Output.ofNullable(autoprovision);
+            this.autoprovision = Codegen.ofNullable(autoprovision);
             return this;
         }
         public Builder driver(@Nullable Output<String> driver) {
@@ -113,7 +114,7 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder driver(@Nullable String driver) {
-            this.driver = Output.ofNullable(driver);
+            this.driver = Codegen.ofNullable(driver);
             return this;
         }
         public Builder driverOpts(@Nullable Output<Object> driverOpts) {
@@ -121,7 +122,7 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder driverOpts(@Nullable Object driverOpts) {
-            this.driverOpts = Output.ofNullable(driverOpts);
+            this.driverOpts = Codegen.ofNullable(driverOpts);
             return this;
         }
         public Builder labels(@Nullable Output<Object> labels) {
@@ -129,7 +130,7 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder labels(@Nullable Object labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder scope(@Nullable Output<String> scope) {
@@ -137,7 +138,7 @@ public final class TaskDefinitionDockerVolumeConfigurationArgs extends io.pulumi
             return this;
         }
         public Builder scope(@Nullable String scope) {
-            this.scope = Output.ofNullable(scope);
+            this.scope = Codegen.ofNullable(scope);
             return this;
         }        public TaskDefinitionDockerVolumeConfigurationArgs build() {
             return new TaskDefinitionDockerVolumeConfigurationArgs(autoprovision, driver, driverOpts, labels, scope);

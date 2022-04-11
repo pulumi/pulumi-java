@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> sysctls;
 
     public Output<Map<String,String>> getSysctls() {
-        return this.sysctls == null ? Output.empty() : this.sysctls;
+        return this.sysctls == null ? Codegen.empty() : this.sysctls;
     }
 
     public LinuxNodeConfigArgs(@Nullable Output<Map<String,String>> sysctls) {
@@ -35,7 +36,7 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private LinuxNodeConfigArgs() {
-        this.sysctls = Output.empty();
+        this.sysctls = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class LinuxNodeConfigArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder sysctls(@Nullable Map<String,String> sysctls) {
-            this.sysctls = Output.ofNullable(sysctls);
+            this.sysctls = Codegen.ofNullable(sysctls);
             return this;
         }        public LinuxNodeConfigArgs build() {
             return new LinuxNodeConfigArgs(sysctls);

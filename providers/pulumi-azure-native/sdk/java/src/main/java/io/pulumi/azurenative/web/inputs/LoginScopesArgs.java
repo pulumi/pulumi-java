@@ -5,6 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     public LoginScopesArgs(@Nullable Output<List<String>> scopes) {
@@ -35,7 +36,7 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private LoginScopesArgs() {
-        this.scopes = Output.empty();
+        this.scopes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class LoginScopesArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {

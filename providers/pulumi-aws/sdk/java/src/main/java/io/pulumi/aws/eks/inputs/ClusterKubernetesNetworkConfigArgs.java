@@ -5,6 +5,7 @@ package io.pulumi.aws.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
       private final @Nullable Output<String> ipFamily;
 
     public Output<String> getIpFamily() {
-        return this.ipFamily == null ? Output.empty() : this.ipFamily;
+        return this.ipFamily == null ? Codegen.empty() : this.ipFamily;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
       private final @Nullable Output<String> serviceIpv4Cidr;
 
     public Output<String> getServiceIpv4Cidr() {
-        return this.serviceIpv4Cidr == null ? Output.empty() : this.serviceIpv4Cidr;
+        return this.serviceIpv4Cidr == null ? Codegen.empty() : this.serviceIpv4Cidr;
     }
 
     public ClusterKubernetesNetworkConfigArgs(
@@ -44,8 +45,8 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
     }
 
     private ClusterKubernetesNetworkConfigArgs() {
-        this.ipFamily = Output.empty();
-        this.serviceIpv4Cidr = Output.empty();
+        this.ipFamily = Codegen.empty();
+        this.serviceIpv4Cidr = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder ipFamily(@Nullable String ipFamily) {
-            this.ipFamily = Output.ofNullable(ipFamily);
+            this.ipFamily = Codegen.ofNullable(ipFamily);
             return this;
         }
         public Builder serviceIpv4Cidr(@Nullable Output<String> serviceIpv4Cidr) {
@@ -83,7 +84,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
             return this;
         }
         public Builder serviceIpv4Cidr(@Nullable String serviceIpv4Cidr) {
-            this.serviceIpv4Cidr = Output.ofNullable(serviceIpv4Cidr);
+            this.serviceIpv4Cidr = Codegen.ofNullable(serviceIpv4Cidr);
             return this;
         }        public ClusterKubernetesNetworkConfigArgs build() {
             return new ClusterKubernetesNetworkConfigArgs(ipFamily, serviceIpv4Cidr);

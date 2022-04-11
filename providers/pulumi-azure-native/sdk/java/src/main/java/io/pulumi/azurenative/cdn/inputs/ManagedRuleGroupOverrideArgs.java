@@ -6,6 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.ManagedRuleOverrideArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
 
     public Output<List<ManagedRuleOverrideArgs>> getRules() {
-        return this.rules == null ? Output.empty() : this.rules;
+        return this.rules == null ? Codegen.empty() : this.rules;
     }
 
     public ManagedRuleGroupOverrideArgs(
@@ -50,8 +51,8 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
     }
 
     private ManagedRuleGroupOverrideArgs() {
-        this.ruleGroupName = Output.empty();
-        this.rules = Output.empty();
+        this.ruleGroupName = Codegen.empty();
+        this.rules = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class ManagedRuleGroupOverrideArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder rules(@Nullable List<ManagedRuleOverrideArgs> rules) {
-            this.rules = Output.ofNullable(rules);
+            this.rules = Codegen.ofNullable(rules);
             return this;
         }
         public Builder rules(ManagedRuleOverrideArgs... rules) {

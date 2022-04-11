@@ -5,6 +5,7 @@ package io.pulumi.gcp.firebase.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     public WebAppState(
@@ -72,10 +73,10 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
     }
 
     private WebAppState() {
-        this.appId = Output.empty();
-        this.displayName = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
+        this.appId = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -109,7 +110,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -117,7 +118,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -125,7 +126,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -133,7 +134,7 @@ public final class WebAppState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }        public WebAppState build() {
             return new WebAppState(appId, displayName, name, project);

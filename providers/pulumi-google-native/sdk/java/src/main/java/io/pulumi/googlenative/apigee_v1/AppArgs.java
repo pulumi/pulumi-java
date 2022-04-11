@@ -5,6 +5,7 @@ package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> apiProducts;
 
     public Output<List<String>> getApiProducts() {
-        return this.apiProducts == null ? Output.empty() : this.apiProducts;
+        return this.apiProducts == null ? Codegen.empty() : this.apiProducts;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appFamily;
 
     public Output<String> getAppFamily() {
-        return this.appFamily == null ? Output.empty() : this.appFamily;
+        return this.appFamily == null ? Codegen.empty() : this.appFamily;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Output<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
-        return this.attributes == null ? Output.empty() : this.attributes;
+        return this.attributes == null ? Codegen.empty() : this.attributes;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> callbackUrl;
 
     public Output<String> getCallbackUrl() {
-        return this.callbackUrl == null ? Output.empty() : this.callbackUrl;
+        return this.callbackUrl == null ? Codegen.empty() : this.callbackUrl;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyExpiresIn;
 
     public Output<String> getKeyExpiresIn() {
-        return this.keyExpiresIn == null ? Output.empty() : this.keyExpiresIn;
+        return this.keyExpiresIn == null ? Codegen.empty() : this.keyExpiresIn;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="organizationId", required=true)
@@ -119,7 +120,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> scopes;
 
     public Output<List<String>> getScopes() {
-        return this.scopes == null ? Output.empty() : this.scopes;
+        return this.scopes == null ? Codegen.empty() : this.scopes;
     }
 
     /**
@@ -130,7 +131,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public AppArgs(
@@ -159,17 +160,17 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AppArgs() {
-        this.apiProducts = Output.empty();
-        this.appFamily = Output.empty();
-        this.appId = Output.empty();
-        this.attributes = Output.empty();
-        this.callbackUrl = Output.empty();
-        this.developerId = Output.empty();
-        this.keyExpiresIn = Output.empty();
-        this.name = Output.empty();
-        this.organizationId = Output.empty();
-        this.scopes = Output.empty();
-        this.status = Output.empty();
+        this.apiProducts = Codegen.empty();
+        this.appFamily = Codegen.empty();
+        this.appId = Codegen.empty();
+        this.attributes = Codegen.empty();
+        this.callbackUrl = Codegen.empty();
+        this.developerId = Codegen.empty();
+        this.keyExpiresIn = Codegen.empty();
+        this.name = Codegen.empty();
+        this.organizationId = Codegen.empty();
+        this.scopes = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -217,7 +218,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiProducts(@Nullable List<String> apiProducts) {
-            this.apiProducts = Output.ofNullable(apiProducts);
+            this.apiProducts = Codegen.ofNullable(apiProducts);
             return this;
         }
         public Builder apiProducts(String... apiProducts) {
@@ -228,7 +229,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appFamily(@Nullable String appFamily) {
-            this.appFamily = Output.ofNullable(appFamily);
+            this.appFamily = Codegen.ofNullable(appFamily);
             return this;
         }
         public Builder appId(@Nullable Output<String> appId) {
@@ -236,7 +237,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder attributes(@Nullable Output<List<GoogleCloudApigeeV1AttributeArgs>> attributes) {
@@ -244,7 +245,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder attributes(@Nullable List<GoogleCloudApigeeV1AttributeArgs> attributes) {
-            this.attributes = Output.ofNullable(attributes);
+            this.attributes = Codegen.ofNullable(attributes);
             return this;
         }
         public Builder attributes(GoogleCloudApigeeV1AttributeArgs... attributes) {
@@ -255,7 +256,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder callbackUrl(@Nullable String callbackUrl) {
-            this.callbackUrl = Output.ofNullable(callbackUrl);
+            this.callbackUrl = Codegen.ofNullable(callbackUrl);
             return this;
         }
         public Builder developerId(Output<String> developerId) {
@@ -271,7 +272,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyExpiresIn(@Nullable String keyExpiresIn) {
-            this.keyExpiresIn = Output.ofNullable(keyExpiresIn);
+            this.keyExpiresIn = Codegen.ofNullable(keyExpiresIn);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -279,7 +280,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder organizationId(Output<String> organizationId) {
@@ -295,7 +296,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scopes(@Nullable List<String> scopes) {
-            this.scopes = Output.ofNullable(scopes);
+            this.scopes = Codegen.ofNullable(scopes);
             return this;
         }
         public Builder scopes(String... scopes) {
@@ -306,7 +307,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public AppArgs build() {
             return new AppArgs(apiProducts, appFamily, appId, attributes, callbackUrl, developerId, keyExpiresIn, name, organizationId, scopes, status);

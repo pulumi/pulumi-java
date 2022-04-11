@@ -5,6 +5,7 @@ package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mainPageSuffix;
 
     public Output<String> getMainPageSuffix() {
-        return this.mainPageSuffix == null ? Output.empty() : this.mainPageSuffix;
+        return this.mainPageSuffix == null ? Codegen.empty() : this.mainPageSuffix;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> notFoundPage;
 
     public Output<String> getNotFoundPage() {
-        return this.notFoundPage == null ? Output.empty() : this.notFoundPage;
+        return this.notFoundPage == null ? Codegen.empty() : this.notFoundPage;
     }
 
     public BucketWebsiteArgs(
@@ -46,8 +47,8 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketWebsiteArgs() {
-        this.mainPageSuffix = Output.empty();
-        this.notFoundPage = Output.empty();
+        this.mainPageSuffix = Codegen.empty();
+        this.notFoundPage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mainPageSuffix(@Nullable String mainPageSuffix) {
-            this.mainPageSuffix = Output.ofNullable(mainPageSuffix);
+            this.mainPageSuffix = Codegen.ofNullable(mainPageSuffix);
             return this;
         }
         public Builder notFoundPage(@Nullable Output<String> notFoundPage) {
@@ -85,7 +86,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notFoundPage(@Nullable String notFoundPage) {
-            this.notFoundPage = Output.ofNullable(notFoundPage);
+            this.notFoundPage = Codegen.ofNullable(notFoundPage);
             return this;
         }        public BucketWebsiteArgs build() {
             return new BucketWebsiteArgs(mainPageSuffix, notFoundPage);

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.datastream_v1alpha1.enums.StreamState;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillAllStrategyArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.BackfillNoneStrategyArgs;
@@ -28,7 +29,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackfillAllStrategyArgs> backfillAll;
 
     public Output<BackfillAllStrategyArgs> getBackfillAll() {
-        return this.backfillAll == null ? Output.empty() : this.backfillAll;
+        return this.backfillAll == null ? Codegen.empty() : this.backfillAll;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BackfillNoneStrategyArgs> backfillNone;
 
     public Output<BackfillNoneStrategyArgs> getBackfillNone() {
-        return this.backfillNone == null ? Output.empty() : this.backfillNone;
+        return this.backfillNone == null ? Codegen.empty() : this.backfillNone;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> customerManagedEncryptionKey;
 
     public Output<String> getCustomerManagedEncryptionKey() {
-        return this.customerManagedEncryptionKey == null ? Output.empty() : this.customerManagedEncryptionKey;
+        return this.customerManagedEncryptionKey == null ? Codegen.empty() : this.customerManagedEncryptionKey;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> force;
 
     public Output<String> getForce() {
-        return this.force == null ? Output.empty() : this.force;
+        return this.force == null ? Codegen.empty() : this.force;
     }
 
     /**
@@ -90,28 +91,28 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="requestId")
       private final @Nullable Output<String> requestId;
 
     public Output<String> getRequestId() {
-        return this.requestId == null ? Output.empty() : this.requestId;
+        return this.requestId == null ? Codegen.empty() : this.requestId;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StreamState> state;
 
     public Output<StreamState> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="streamId", required=true)
@@ -147,7 +148,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public StreamArgs(
@@ -182,20 +183,20 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private StreamArgs() {
-        this.backfillAll = Output.empty();
-        this.backfillNone = Output.empty();
-        this.customerManagedEncryptionKey = Output.empty();
-        this.destinationConfig = Output.empty();
-        this.displayName = Output.empty();
-        this.force = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.project = Output.empty();
-        this.requestId = Output.empty();
-        this.sourceConfig = Output.empty();
-        this.state = Output.empty();
-        this.streamId = Output.empty();
-        this.validateOnly = Output.empty();
+        this.backfillAll = Codegen.empty();
+        this.backfillNone = Codegen.empty();
+        this.customerManagedEncryptionKey = Codegen.empty();
+        this.destinationConfig = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.force = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.project = Codegen.empty();
+        this.requestId = Codegen.empty();
+        this.sourceConfig = Codegen.empty();
+        this.state = Codegen.empty();
+        this.streamId = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -249,7 +250,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backfillAll(@Nullable BackfillAllStrategyArgs backfillAll) {
-            this.backfillAll = Output.ofNullable(backfillAll);
+            this.backfillAll = Codegen.ofNullable(backfillAll);
             return this;
         }
         public Builder backfillNone(@Nullable Output<BackfillNoneStrategyArgs> backfillNone) {
@@ -257,7 +258,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder backfillNone(@Nullable BackfillNoneStrategyArgs backfillNone) {
-            this.backfillNone = Output.ofNullable(backfillNone);
+            this.backfillNone = Codegen.ofNullable(backfillNone);
             return this;
         }
         public Builder customerManagedEncryptionKey(@Nullable Output<String> customerManagedEncryptionKey) {
@@ -265,7 +266,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customerManagedEncryptionKey(@Nullable String customerManagedEncryptionKey) {
-            this.customerManagedEncryptionKey = Output.ofNullable(customerManagedEncryptionKey);
+            this.customerManagedEncryptionKey = Codegen.ofNullable(customerManagedEncryptionKey);
             return this;
         }
         public Builder destinationConfig(Output<DestinationConfigArgs> destinationConfig) {
@@ -289,7 +290,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder force(@Nullable String force) {
-            this.force = Output.ofNullable(force);
+            this.force = Codegen.ofNullable(force);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -297,7 +298,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -305,7 +306,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -313,7 +314,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder requestId(@Nullable Output<String> requestId) {
@@ -321,7 +322,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requestId(@Nullable String requestId) {
-            this.requestId = Output.ofNullable(requestId);
+            this.requestId = Codegen.ofNullable(requestId);
             return this;
         }
         public Builder sourceConfig(Output<SourceConfigArgs> sourceConfig) {
@@ -337,7 +338,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder state(@Nullable StreamState state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder streamId(Output<String> streamId) {
@@ -353,7 +354,7 @@ public final class StreamArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public StreamArgs build() {
             return new StreamArgs(backfillAll, backfillNone, customerManagedEncryptionKey, destinationConfig, displayName, force, labels, location, project, requestId, sourceConfig, state, streamId, validateOnly);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterConnectionInfoGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> clusterId;
 
     public Output<String> getClusterId() {
-        return this.clusterId == null ? Output.empty() : this.clusterId;
+        return this.clusterId == null ? Codegen.empty() : this.clusterId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo;
 
     public Output<GameServerClusterConnectionInfoGetArgs> getConnectionInfo() {
-        return this.connectionInfo == null ? Output.empty() : this.connectionInfo;
+        return this.connectionInfo == null ? Codegen.empty() : this.connectionInfo;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> realmId;
 
     public Output<String> getRealmId() {
-        return this.realmId == null ? Output.empty() : this.realmId;
+        return this.realmId == null ? Codegen.empty() : this.realmId;
     }
 
     public GameServerClusterState(
@@ -130,14 +131,14 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
     }
 
     private GameServerClusterState() {
-        this.clusterId = Output.empty();
-        this.connectionInfo = Output.empty();
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.realmId = Output.empty();
+        this.clusterId = Codegen.empty();
+        this.connectionInfo = Codegen.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.realmId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -179,7 +180,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder clusterId(@Nullable String clusterId) {
-            this.clusterId = Output.ofNullable(clusterId);
+            this.clusterId = Codegen.ofNullable(clusterId);
             return this;
         }
         public Builder connectionInfo(@Nullable Output<GameServerClusterConnectionInfoGetArgs> connectionInfo) {
@@ -187,7 +188,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder connectionInfo(@Nullable GameServerClusterConnectionInfoGetArgs connectionInfo) {
-            this.connectionInfo = Output.ofNullable(connectionInfo);
+            this.connectionInfo = Codegen.ofNullable(connectionInfo);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -195,7 +196,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -203,7 +204,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -211,7 +212,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -219,7 +220,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -227,7 +228,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder realmId(@Nullable Output<String> realmId) {
@@ -235,7 +236,7 @@ public final class GameServerClusterState extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder realmId(@Nullable String realmId) {
-            this.realmId = Output.ofNullable(realmId);
+            this.realmId = Codegen.ofNullable(realmId);
             return this;
         }        public GameServerClusterState build() {
             return new GameServerClusterState(clusterId, connectionInfo, description, labels, location, name, project, realmId);

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -47,7 +48,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> mountOptions;
 
     public Output<String> getMountOptions() {
-        return this.mountOptions == null ? Output.empty() : this.mountOptions;
+        return this.mountOptions == null ? Codegen.empty() : this.mountOptions;
     }
 
     /**
@@ -75,11 +76,11 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     }
 
     private AzureFileShareConfigurationArgs() {
-        this.accountKey = Output.empty();
-        this.accountName = Output.empty();
-        this.azureFileUrl = Output.empty();
-        this.mountOptions = Output.empty();
-        this.relativeMountPath = Output.empty();
+        this.accountKey = Codegen.empty();
+        this.accountName = Codegen.empty();
+        this.azureFileUrl = Codegen.empty();
+        this.mountOptions = Codegen.empty();
+        this.relativeMountPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -139,7 +140,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder mountOptions(@Nullable String mountOptions) {
-            this.mountOptions = Output.ofNullable(mountOptions);
+            this.mountOptions = Codegen.ofNullable(mountOptions);
             return this;
         }
         public Builder relativeMountPath(Output<String> relativeMountPath) {

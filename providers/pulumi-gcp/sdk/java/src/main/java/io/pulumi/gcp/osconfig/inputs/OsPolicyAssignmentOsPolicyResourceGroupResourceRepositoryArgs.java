@@ -5,6 +5,7 @@ package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs;
@@ -25,7 +26,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> apt;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs> getApt() {
-        return this.apt == null ? Output.empty() : this.apt;
+        return this.apt == null ? Codegen.empty() : this.apt;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> getGoo() {
-        return this.goo == null ? Output.empty() : this.goo;
+        return this.goo == null ? Codegen.empty() : this.goo;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> getYum() {
-        return this.yum == null ? Output.empty() : this.yum;
+        return this.yum == null ? Codegen.empty() : this.yum;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
       private final @Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper;
 
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> getZypper() {
-        return this.zypper == null ? Output.empty() : this.zypper;
+        return this.zypper == null ? Codegen.empty() : this.zypper;
     }
 
     public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(
@@ -73,10 +74,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
     }
 
     private OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs() {
-        this.apt = Output.empty();
-        this.goo = Output.empty();
-        this.yum = Output.empty();
-        this.zypper = Output.empty();
+        this.apt = Codegen.empty();
+        this.goo = Codegen.empty();
+        this.yum = Codegen.empty();
+        this.zypper = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -110,7 +111,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
             return this;
         }
         public Builder apt(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryAptArgs apt) {
-            this.apt = Output.ofNullable(apt);
+            this.apt = Codegen.ofNullable(apt);
             return this;
         }
         public Builder goo(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs> goo) {
@@ -118,7 +119,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
             return this;
         }
         public Builder goo(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGooArgs goo) {
-            this.goo = Output.ofNullable(goo);
+            this.goo = Codegen.ofNullable(goo);
             return this;
         }
         public Builder yum(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs> yum) {
@@ -126,7 +127,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
             return this;
         }
         public Builder yum(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryYumArgs yum) {
-            this.yum = Output.ofNullable(yum);
+            this.yum = Codegen.ofNullable(yum);
             return this;
         }
         public Builder zypper(@Nullable Output<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs> zypper) {
@@ -134,7 +135,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs
             return this;
         }
         public Builder zypper(@Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypperArgs zypper) {
-            this.zypper = Output.ofNullable(zypper);
+            this.zypper = Codegen.ofNullable(zypper);
             return this;
         }        public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryArgs(apt, goo, yum, zypper);

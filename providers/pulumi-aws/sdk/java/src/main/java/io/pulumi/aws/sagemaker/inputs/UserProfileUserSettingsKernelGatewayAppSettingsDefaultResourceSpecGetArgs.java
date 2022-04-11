@@ -5,6 +5,7 @@ package io.pulumi.aws.sagemaker.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
       private final @Nullable Output<String> instanceType;
 
     public Output<String> getInstanceType() {
-        return this.instanceType == null ? Output.empty() : this.instanceType;
+        return this.instanceType == null ? Codegen.empty() : this.instanceType;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
       private final @Nullable Output<String> lifecycleConfigArn;
 
     public Output<String> getLifecycleConfigArn() {
-        return this.lifecycleConfigArn == null ? Output.empty() : this.lifecycleConfigArn;
+        return this.lifecycleConfigArn == null ? Codegen.empty() : this.lifecycleConfigArn;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
       private final @Nullable Output<String> sagemakerImageArn;
 
     public Output<String> getSagemakerImageArn() {
-        return this.sagemakerImageArn == null ? Output.empty() : this.sagemakerImageArn;
+        return this.sagemakerImageArn == null ? Codegen.empty() : this.sagemakerImageArn;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
       private final @Nullable Output<String> sagemakerImageVersionArn;
 
     public Output<String> getSagemakerImageVersionArn() {
-        return this.sagemakerImageVersionArn == null ? Output.empty() : this.sagemakerImageVersionArn;
+        return this.sagemakerImageVersionArn == null ? Codegen.empty() : this.sagemakerImageVersionArn;
     }
 
     public UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs(
@@ -70,10 +71,10 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
     }
 
     private UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs() {
-        this.instanceType = Output.empty();
-        this.lifecycleConfigArn = Output.empty();
-        this.sagemakerImageArn = Output.empty();
-        this.sagemakerImageVersionArn = Output.empty();
+        this.instanceType = Codegen.empty();
+        this.lifecycleConfigArn = Codegen.empty();
+        this.sagemakerImageArn = Codegen.empty();
+        this.sagemakerImageVersionArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
             return this;
         }
         public Builder instanceType(@Nullable String instanceType) {
-            this.instanceType = Output.ofNullable(instanceType);
+            this.instanceType = Codegen.ofNullable(instanceType);
             return this;
         }
         public Builder lifecycleConfigArn(@Nullable Output<String> lifecycleConfigArn) {
@@ -115,7 +116,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
             return this;
         }
         public Builder lifecycleConfigArn(@Nullable String lifecycleConfigArn) {
-            this.lifecycleConfigArn = Output.ofNullable(lifecycleConfigArn);
+            this.lifecycleConfigArn = Codegen.ofNullable(lifecycleConfigArn);
             return this;
         }
         public Builder sagemakerImageArn(@Nullable Output<String> sagemakerImageArn) {
@@ -123,7 +124,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
             return this;
         }
         public Builder sagemakerImageArn(@Nullable String sagemakerImageArn) {
-            this.sagemakerImageArn = Output.ofNullable(sagemakerImageArn);
+            this.sagemakerImageArn = Codegen.ofNullable(sagemakerImageArn);
             return this;
         }
         public Builder sagemakerImageVersionArn(@Nullable Output<String> sagemakerImageVersionArn) {
@@ -131,7 +132,7 @@ public final class UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourc
             return this;
         }
         public Builder sagemakerImageVersionArn(@Nullable String sagemakerImageVersionArn) {
-            this.sagemakerImageVersionArn = Output.ofNullable(sagemakerImageVersionArn);
+            this.sagemakerImageVersionArn = Codegen.ofNullable(sagemakerImageVersionArn);
             return this;
         }        public UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs build() {
             return new UserProfileUserSettingsKernelGatewayAppSettingsDefaultResourceSpecGetArgs(instanceType, lifecycleConfigArn, sagemakerImageArn, sagemakerImageVersionArn);

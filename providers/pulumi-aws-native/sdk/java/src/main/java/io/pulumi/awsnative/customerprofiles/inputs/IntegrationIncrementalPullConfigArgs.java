@@ -5,6 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class IntegrationIncrementalPullConfigArgs extends io.pulumi.resour
       private final @Nullable Output<String> datetimeTypeFieldName;
 
     public Output<String> getDatetimeTypeFieldName() {
-        return this.datetimeTypeFieldName == null ? Output.empty() : this.datetimeTypeFieldName;
+        return this.datetimeTypeFieldName == null ? Codegen.empty() : this.datetimeTypeFieldName;
     }
 
     public IntegrationIncrementalPullConfigArgs(@Nullable Output<String> datetimeTypeFieldName) {
@@ -26,7 +27,7 @@ public final class IntegrationIncrementalPullConfigArgs extends io.pulumi.resour
     }
 
     private IntegrationIncrementalPullConfigArgs() {
-        this.datetimeTypeFieldName = Output.empty();
+        this.datetimeTypeFieldName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class IntegrationIncrementalPullConfigArgs extends io.pulumi.resour
             return this;
         }
         public Builder datetimeTypeFieldName(@Nullable String datetimeTypeFieldName) {
-            this.datetimeTypeFieldName = Output.ofNullable(datetimeTypeFieldName);
+            this.datetimeTypeFieldName = Codegen.ofNullable(datetimeTypeFieldName);
             return this;
         }        public IntegrationIncrementalPullConfigArgs build() {
             return new IntegrationIncrementalPullConfigArgs(datetimeTypeFieldName);

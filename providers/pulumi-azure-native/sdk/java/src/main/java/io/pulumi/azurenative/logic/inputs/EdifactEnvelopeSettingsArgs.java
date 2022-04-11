@@ -5,6 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> applicationReferenceId;
 
     public Output<String> getApplicationReferenceId() {
-        return this.applicationReferenceId == null ? Output.empty() : this.applicationReferenceId;
+        return this.applicationReferenceId == null ? Codegen.empty() : this.applicationReferenceId;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> communicationAgreementId;
 
     public Output<String> getCommunicationAgreementId() {
-        return this.communicationAgreementId == null ? Output.empty() : this.communicationAgreementId;
+        return this.communicationAgreementId == null ? Codegen.empty() : this.communicationAgreementId;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> functionalGroupId;
 
     public Output<String> getFunctionalGroupId() {
-        return this.functionalGroupId == null ? Output.empty() : this.functionalGroupId;
+        return this.functionalGroupId == null ? Codegen.empty() : this.functionalGroupId;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupApplicationPassword;
 
     public Output<String> getGroupApplicationPassword() {
-        return this.groupApplicationPassword == null ? Output.empty() : this.groupApplicationPassword;
+        return this.groupApplicationPassword == null ? Codegen.empty() : this.groupApplicationPassword;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupApplicationReceiverId;
 
     public Output<String> getGroupApplicationReceiverId() {
-        return this.groupApplicationReceiverId == null ? Output.empty() : this.groupApplicationReceiverId;
+        return this.groupApplicationReceiverId == null ? Codegen.empty() : this.groupApplicationReceiverId;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupApplicationReceiverQualifier;
 
     public Output<String> getGroupApplicationReceiverQualifier() {
-        return this.groupApplicationReceiverQualifier == null ? Output.empty() : this.groupApplicationReceiverQualifier;
+        return this.groupApplicationReceiverQualifier == null ? Codegen.empty() : this.groupApplicationReceiverQualifier;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupApplicationSenderId;
 
     public Output<String> getGroupApplicationSenderId() {
-        return this.groupApplicationSenderId == null ? Output.empty() : this.groupApplicationSenderId;
+        return this.groupApplicationSenderId == null ? Codegen.empty() : this.groupApplicationSenderId;
     }
 
     /**
@@ -138,7 +139,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupApplicationSenderQualifier;
 
     public Output<String> getGroupApplicationSenderQualifier() {
-        return this.groupApplicationSenderQualifier == null ? Output.empty() : this.groupApplicationSenderQualifier;
+        return this.groupApplicationSenderQualifier == null ? Codegen.empty() : this.groupApplicationSenderQualifier;
     }
 
     /**
@@ -149,7 +150,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupAssociationAssignedCode;
 
     public Output<String> getGroupAssociationAssignedCode() {
-        return this.groupAssociationAssignedCode == null ? Output.empty() : this.groupAssociationAssignedCode;
+        return this.groupAssociationAssignedCode == null ? Codegen.empty() : this.groupAssociationAssignedCode;
     }
 
     /**
@@ -171,7 +172,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupControlNumberPrefix;
 
     public Output<String> getGroupControlNumberPrefix() {
-        return this.groupControlNumberPrefix == null ? Output.empty() : this.groupControlNumberPrefix;
+        return this.groupControlNumberPrefix == null ? Codegen.empty() : this.groupControlNumberPrefix;
     }
 
     /**
@@ -182,7 +183,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupControlNumberSuffix;
 
     public Output<String> getGroupControlNumberSuffix() {
-        return this.groupControlNumberSuffix == null ? Output.empty() : this.groupControlNumberSuffix;
+        return this.groupControlNumberSuffix == null ? Codegen.empty() : this.groupControlNumberSuffix;
     }
 
     /**
@@ -204,7 +205,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupControllingAgencyCode;
 
     public Output<String> getGroupControllingAgencyCode() {
-        return this.groupControllingAgencyCode == null ? Output.empty() : this.groupControllingAgencyCode;
+        return this.groupControllingAgencyCode == null ? Codegen.empty() : this.groupControllingAgencyCode;
     }
 
     /**
@@ -215,7 +216,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupMessageRelease;
 
     public Output<String> getGroupMessageRelease() {
-        return this.groupMessageRelease == null ? Output.empty() : this.groupMessageRelease;
+        return this.groupMessageRelease == null ? Codegen.empty() : this.groupMessageRelease;
     }
 
     /**
@@ -226,7 +227,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> groupMessageVersion;
 
     public Output<String> getGroupMessageVersion() {
-        return this.groupMessageVersion == null ? Output.empty() : this.groupMessageVersion;
+        return this.groupMessageVersion == null ? Codegen.empty() : this.groupMessageVersion;
     }
 
     /**
@@ -248,7 +249,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> interchangeControlNumberPrefix;
 
     public Output<String> getInterchangeControlNumberPrefix() {
-        return this.interchangeControlNumberPrefix == null ? Output.empty() : this.interchangeControlNumberPrefix;
+        return this.interchangeControlNumberPrefix == null ? Codegen.empty() : this.interchangeControlNumberPrefix;
     }
 
     /**
@@ -259,7 +260,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> interchangeControlNumberSuffix;
 
     public Output<String> getInterchangeControlNumberSuffix() {
-        return this.interchangeControlNumberSuffix == null ? Output.empty() : this.interchangeControlNumberSuffix;
+        return this.interchangeControlNumberSuffix == null ? Codegen.empty() : this.interchangeControlNumberSuffix;
     }
 
     /**
@@ -303,7 +304,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> processingPriorityCode;
 
     public Output<String> getProcessingPriorityCode() {
-        return this.processingPriorityCode == null ? Output.empty() : this.processingPriorityCode;
+        return this.processingPriorityCode == null ? Codegen.empty() : this.processingPriorityCode;
     }
 
     /**
@@ -314,7 +315,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> receiverInternalIdentification;
 
     public Output<String> getReceiverInternalIdentification() {
-        return this.receiverInternalIdentification == null ? Output.empty() : this.receiverInternalIdentification;
+        return this.receiverInternalIdentification == null ? Codegen.empty() : this.receiverInternalIdentification;
     }
 
     /**
@@ -325,7 +326,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> receiverInternalSubIdentification;
 
     public Output<String> getReceiverInternalSubIdentification() {
-        return this.receiverInternalSubIdentification == null ? Output.empty() : this.receiverInternalSubIdentification;
+        return this.receiverInternalSubIdentification == null ? Codegen.empty() : this.receiverInternalSubIdentification;
     }
 
     /**
@@ -336,7 +337,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> receiverReverseRoutingAddress;
 
     public Output<String> getReceiverReverseRoutingAddress() {
-        return this.receiverReverseRoutingAddress == null ? Output.empty() : this.receiverReverseRoutingAddress;
+        return this.receiverReverseRoutingAddress == null ? Codegen.empty() : this.receiverReverseRoutingAddress;
     }
 
     /**
@@ -347,7 +348,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> recipientReferencePasswordQualifier;
 
     public Output<String> getRecipientReferencePasswordQualifier() {
-        return this.recipientReferencePasswordQualifier == null ? Output.empty() : this.recipientReferencePasswordQualifier;
+        return this.recipientReferencePasswordQualifier == null ? Codegen.empty() : this.recipientReferencePasswordQualifier;
     }
 
     /**
@@ -358,7 +359,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> recipientReferencePasswordValue;
 
     public Output<String> getRecipientReferencePasswordValue() {
-        return this.recipientReferencePasswordValue == null ? Output.empty() : this.recipientReferencePasswordValue;
+        return this.recipientReferencePasswordValue == null ? Codegen.empty() : this.recipientReferencePasswordValue;
     }
 
     /**
@@ -402,7 +403,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> senderInternalIdentification;
 
     public Output<String> getSenderInternalIdentification() {
-        return this.senderInternalIdentification == null ? Output.empty() : this.senderInternalIdentification;
+        return this.senderInternalIdentification == null ? Codegen.empty() : this.senderInternalIdentification;
     }
 
     /**
@@ -413,7 +414,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> senderInternalSubIdentification;
 
     public Output<String> getSenderInternalSubIdentification() {
-        return this.senderInternalSubIdentification == null ? Output.empty() : this.senderInternalSubIdentification;
+        return this.senderInternalSubIdentification == null ? Codegen.empty() : this.senderInternalSubIdentification;
     }
 
     /**
@@ -424,7 +425,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> senderReverseRoutingAddress;
 
     public Output<String> getSenderReverseRoutingAddress() {
-        return this.senderReverseRoutingAddress == null ? Output.empty() : this.senderReverseRoutingAddress;
+        return this.senderReverseRoutingAddress == null ? Codegen.empty() : this.senderReverseRoutingAddress;
     }
 
     /**
@@ -446,7 +447,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> transactionSetControlNumberPrefix;
 
     public Output<String> getTransactionSetControlNumberPrefix() {
-        return this.transactionSetControlNumberPrefix == null ? Output.empty() : this.transactionSetControlNumberPrefix;
+        return this.transactionSetControlNumberPrefix == null ? Codegen.empty() : this.transactionSetControlNumberPrefix;
     }
 
     /**
@@ -457,7 +458,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> transactionSetControlNumberSuffix;
 
     public Output<String> getTransactionSetControlNumberSuffix() {
-        return this.transactionSetControlNumberSuffix == null ? Output.empty() : this.transactionSetControlNumberSuffix;
+        return this.transactionSetControlNumberSuffix == null ? Codegen.empty() : this.transactionSetControlNumberSuffix;
     }
 
     /**
@@ -557,47 +558,47 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
     }
 
     private EdifactEnvelopeSettingsArgs() {
-        this.applicationReferenceId = Output.empty();
-        this.applyDelimiterStringAdvice = Output.empty();
-        this.communicationAgreementId = Output.empty();
-        this.createGroupingSegments = Output.empty();
-        this.enableDefaultGroupHeaders = Output.empty();
-        this.functionalGroupId = Output.empty();
-        this.groupApplicationPassword = Output.empty();
-        this.groupApplicationReceiverId = Output.empty();
-        this.groupApplicationReceiverQualifier = Output.empty();
-        this.groupApplicationSenderId = Output.empty();
-        this.groupApplicationSenderQualifier = Output.empty();
-        this.groupAssociationAssignedCode = Output.empty();
-        this.groupControlNumberLowerBound = Output.empty();
-        this.groupControlNumberPrefix = Output.empty();
-        this.groupControlNumberSuffix = Output.empty();
-        this.groupControlNumberUpperBound = Output.empty();
-        this.groupControllingAgencyCode = Output.empty();
-        this.groupMessageRelease = Output.empty();
-        this.groupMessageVersion = Output.empty();
-        this.interchangeControlNumberLowerBound = Output.empty();
-        this.interchangeControlNumberPrefix = Output.empty();
-        this.interchangeControlNumberSuffix = Output.empty();
-        this.interchangeControlNumberUpperBound = Output.empty();
-        this.isTestInterchange = Output.empty();
-        this.overwriteExistingTransactionSetControlNumber = Output.empty();
-        this.processingPriorityCode = Output.empty();
-        this.receiverInternalIdentification = Output.empty();
-        this.receiverInternalSubIdentification = Output.empty();
-        this.receiverReverseRoutingAddress = Output.empty();
-        this.recipientReferencePasswordQualifier = Output.empty();
-        this.recipientReferencePasswordValue = Output.empty();
-        this.rolloverGroupControlNumber = Output.empty();
-        this.rolloverInterchangeControlNumber = Output.empty();
-        this.rolloverTransactionSetControlNumber = Output.empty();
-        this.senderInternalIdentification = Output.empty();
-        this.senderInternalSubIdentification = Output.empty();
-        this.senderReverseRoutingAddress = Output.empty();
-        this.transactionSetControlNumberLowerBound = Output.empty();
-        this.transactionSetControlNumberPrefix = Output.empty();
-        this.transactionSetControlNumberSuffix = Output.empty();
-        this.transactionSetControlNumberUpperBound = Output.empty();
+        this.applicationReferenceId = Codegen.empty();
+        this.applyDelimiterStringAdvice = Codegen.empty();
+        this.communicationAgreementId = Codegen.empty();
+        this.createGroupingSegments = Codegen.empty();
+        this.enableDefaultGroupHeaders = Codegen.empty();
+        this.functionalGroupId = Codegen.empty();
+        this.groupApplicationPassword = Codegen.empty();
+        this.groupApplicationReceiverId = Codegen.empty();
+        this.groupApplicationReceiverQualifier = Codegen.empty();
+        this.groupApplicationSenderId = Codegen.empty();
+        this.groupApplicationSenderQualifier = Codegen.empty();
+        this.groupAssociationAssignedCode = Codegen.empty();
+        this.groupControlNumberLowerBound = Codegen.empty();
+        this.groupControlNumberPrefix = Codegen.empty();
+        this.groupControlNumberSuffix = Codegen.empty();
+        this.groupControlNumberUpperBound = Codegen.empty();
+        this.groupControllingAgencyCode = Codegen.empty();
+        this.groupMessageRelease = Codegen.empty();
+        this.groupMessageVersion = Codegen.empty();
+        this.interchangeControlNumberLowerBound = Codegen.empty();
+        this.interchangeControlNumberPrefix = Codegen.empty();
+        this.interchangeControlNumberSuffix = Codegen.empty();
+        this.interchangeControlNumberUpperBound = Codegen.empty();
+        this.isTestInterchange = Codegen.empty();
+        this.overwriteExistingTransactionSetControlNumber = Codegen.empty();
+        this.processingPriorityCode = Codegen.empty();
+        this.receiverInternalIdentification = Codegen.empty();
+        this.receiverInternalSubIdentification = Codegen.empty();
+        this.receiverReverseRoutingAddress = Codegen.empty();
+        this.recipientReferencePasswordQualifier = Codegen.empty();
+        this.recipientReferencePasswordValue = Codegen.empty();
+        this.rolloverGroupControlNumber = Codegen.empty();
+        this.rolloverInterchangeControlNumber = Codegen.empty();
+        this.rolloverTransactionSetControlNumber = Codegen.empty();
+        this.senderInternalIdentification = Codegen.empty();
+        this.senderInternalSubIdentification = Codegen.empty();
+        this.senderReverseRoutingAddress = Codegen.empty();
+        this.transactionSetControlNumberLowerBound = Codegen.empty();
+        this.transactionSetControlNumberPrefix = Codegen.empty();
+        this.transactionSetControlNumberSuffix = Codegen.empty();
+        this.transactionSetControlNumberUpperBound = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -705,7 +706,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder applicationReferenceId(@Nullable String applicationReferenceId) {
-            this.applicationReferenceId = Output.ofNullable(applicationReferenceId);
+            this.applicationReferenceId = Codegen.ofNullable(applicationReferenceId);
             return this;
         }
         public Builder applyDelimiterStringAdvice(Output<Boolean> applyDelimiterStringAdvice) {
@@ -721,7 +722,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder communicationAgreementId(@Nullable String communicationAgreementId) {
-            this.communicationAgreementId = Output.ofNullable(communicationAgreementId);
+            this.communicationAgreementId = Codegen.ofNullable(communicationAgreementId);
             return this;
         }
         public Builder createGroupingSegments(Output<Boolean> createGroupingSegments) {
@@ -745,7 +746,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
-            this.functionalGroupId = Output.ofNullable(functionalGroupId);
+            this.functionalGroupId = Codegen.ofNullable(functionalGroupId);
             return this;
         }
         public Builder groupApplicationPassword(@Nullable Output<String> groupApplicationPassword) {
@@ -753,7 +754,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupApplicationPassword(@Nullable String groupApplicationPassword) {
-            this.groupApplicationPassword = Output.ofNullable(groupApplicationPassword);
+            this.groupApplicationPassword = Codegen.ofNullable(groupApplicationPassword);
             return this;
         }
         public Builder groupApplicationReceiverId(@Nullable Output<String> groupApplicationReceiverId) {
@@ -761,7 +762,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupApplicationReceiverId(@Nullable String groupApplicationReceiverId) {
-            this.groupApplicationReceiverId = Output.ofNullable(groupApplicationReceiverId);
+            this.groupApplicationReceiverId = Codegen.ofNullable(groupApplicationReceiverId);
             return this;
         }
         public Builder groupApplicationReceiverQualifier(@Nullable Output<String> groupApplicationReceiverQualifier) {
@@ -769,7 +770,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupApplicationReceiverQualifier(@Nullable String groupApplicationReceiverQualifier) {
-            this.groupApplicationReceiverQualifier = Output.ofNullable(groupApplicationReceiverQualifier);
+            this.groupApplicationReceiverQualifier = Codegen.ofNullable(groupApplicationReceiverQualifier);
             return this;
         }
         public Builder groupApplicationSenderId(@Nullable Output<String> groupApplicationSenderId) {
@@ -777,7 +778,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupApplicationSenderId(@Nullable String groupApplicationSenderId) {
-            this.groupApplicationSenderId = Output.ofNullable(groupApplicationSenderId);
+            this.groupApplicationSenderId = Codegen.ofNullable(groupApplicationSenderId);
             return this;
         }
         public Builder groupApplicationSenderQualifier(@Nullable Output<String> groupApplicationSenderQualifier) {
@@ -785,7 +786,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupApplicationSenderQualifier(@Nullable String groupApplicationSenderQualifier) {
-            this.groupApplicationSenderQualifier = Output.ofNullable(groupApplicationSenderQualifier);
+            this.groupApplicationSenderQualifier = Codegen.ofNullable(groupApplicationSenderQualifier);
             return this;
         }
         public Builder groupAssociationAssignedCode(@Nullable Output<String> groupAssociationAssignedCode) {
@@ -793,7 +794,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupAssociationAssignedCode(@Nullable String groupAssociationAssignedCode) {
-            this.groupAssociationAssignedCode = Output.ofNullable(groupAssociationAssignedCode);
+            this.groupAssociationAssignedCode = Codegen.ofNullable(groupAssociationAssignedCode);
             return this;
         }
         public Builder groupControlNumberLowerBound(Output<Double> groupControlNumberLowerBound) {
@@ -809,7 +810,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupControlNumberPrefix(@Nullable String groupControlNumberPrefix) {
-            this.groupControlNumberPrefix = Output.ofNullable(groupControlNumberPrefix);
+            this.groupControlNumberPrefix = Codegen.ofNullable(groupControlNumberPrefix);
             return this;
         }
         public Builder groupControlNumberSuffix(@Nullable Output<String> groupControlNumberSuffix) {
@@ -817,7 +818,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupControlNumberSuffix(@Nullable String groupControlNumberSuffix) {
-            this.groupControlNumberSuffix = Output.ofNullable(groupControlNumberSuffix);
+            this.groupControlNumberSuffix = Codegen.ofNullable(groupControlNumberSuffix);
             return this;
         }
         public Builder groupControlNumberUpperBound(Output<Double> groupControlNumberUpperBound) {
@@ -833,7 +834,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupControllingAgencyCode(@Nullable String groupControllingAgencyCode) {
-            this.groupControllingAgencyCode = Output.ofNullable(groupControllingAgencyCode);
+            this.groupControllingAgencyCode = Codegen.ofNullable(groupControllingAgencyCode);
             return this;
         }
         public Builder groupMessageRelease(@Nullable Output<String> groupMessageRelease) {
@@ -841,7 +842,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupMessageRelease(@Nullable String groupMessageRelease) {
-            this.groupMessageRelease = Output.ofNullable(groupMessageRelease);
+            this.groupMessageRelease = Codegen.ofNullable(groupMessageRelease);
             return this;
         }
         public Builder groupMessageVersion(@Nullable Output<String> groupMessageVersion) {
@@ -849,7 +850,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder groupMessageVersion(@Nullable String groupMessageVersion) {
-            this.groupMessageVersion = Output.ofNullable(groupMessageVersion);
+            this.groupMessageVersion = Codegen.ofNullable(groupMessageVersion);
             return this;
         }
         public Builder interchangeControlNumberLowerBound(Output<Double> interchangeControlNumberLowerBound) {
@@ -865,7 +866,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder interchangeControlNumberPrefix(@Nullable String interchangeControlNumberPrefix) {
-            this.interchangeControlNumberPrefix = Output.ofNullable(interchangeControlNumberPrefix);
+            this.interchangeControlNumberPrefix = Codegen.ofNullable(interchangeControlNumberPrefix);
             return this;
         }
         public Builder interchangeControlNumberSuffix(@Nullable Output<String> interchangeControlNumberSuffix) {
@@ -873,7 +874,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder interchangeControlNumberSuffix(@Nullable String interchangeControlNumberSuffix) {
-            this.interchangeControlNumberSuffix = Output.ofNullable(interchangeControlNumberSuffix);
+            this.interchangeControlNumberSuffix = Codegen.ofNullable(interchangeControlNumberSuffix);
             return this;
         }
         public Builder interchangeControlNumberUpperBound(Output<Double> interchangeControlNumberUpperBound) {
@@ -905,7 +906,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder processingPriorityCode(@Nullable String processingPriorityCode) {
-            this.processingPriorityCode = Output.ofNullable(processingPriorityCode);
+            this.processingPriorityCode = Codegen.ofNullable(processingPriorityCode);
             return this;
         }
         public Builder receiverInternalIdentification(@Nullable Output<String> receiverInternalIdentification) {
@@ -913,7 +914,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder receiverInternalIdentification(@Nullable String receiverInternalIdentification) {
-            this.receiverInternalIdentification = Output.ofNullable(receiverInternalIdentification);
+            this.receiverInternalIdentification = Codegen.ofNullable(receiverInternalIdentification);
             return this;
         }
         public Builder receiverInternalSubIdentification(@Nullable Output<String> receiverInternalSubIdentification) {
@@ -921,7 +922,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder receiverInternalSubIdentification(@Nullable String receiverInternalSubIdentification) {
-            this.receiverInternalSubIdentification = Output.ofNullable(receiverInternalSubIdentification);
+            this.receiverInternalSubIdentification = Codegen.ofNullable(receiverInternalSubIdentification);
             return this;
         }
         public Builder receiverReverseRoutingAddress(@Nullable Output<String> receiverReverseRoutingAddress) {
@@ -929,7 +930,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder receiverReverseRoutingAddress(@Nullable String receiverReverseRoutingAddress) {
-            this.receiverReverseRoutingAddress = Output.ofNullable(receiverReverseRoutingAddress);
+            this.receiverReverseRoutingAddress = Codegen.ofNullable(receiverReverseRoutingAddress);
             return this;
         }
         public Builder recipientReferencePasswordQualifier(@Nullable Output<String> recipientReferencePasswordQualifier) {
@@ -937,7 +938,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder recipientReferencePasswordQualifier(@Nullable String recipientReferencePasswordQualifier) {
-            this.recipientReferencePasswordQualifier = Output.ofNullable(recipientReferencePasswordQualifier);
+            this.recipientReferencePasswordQualifier = Codegen.ofNullable(recipientReferencePasswordQualifier);
             return this;
         }
         public Builder recipientReferencePasswordValue(@Nullable Output<String> recipientReferencePasswordValue) {
@@ -945,7 +946,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder recipientReferencePasswordValue(@Nullable String recipientReferencePasswordValue) {
-            this.recipientReferencePasswordValue = Output.ofNullable(recipientReferencePasswordValue);
+            this.recipientReferencePasswordValue = Codegen.ofNullable(recipientReferencePasswordValue);
             return this;
         }
         public Builder rolloverGroupControlNumber(Output<Boolean> rolloverGroupControlNumber) {
@@ -977,7 +978,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder senderInternalIdentification(@Nullable String senderInternalIdentification) {
-            this.senderInternalIdentification = Output.ofNullable(senderInternalIdentification);
+            this.senderInternalIdentification = Codegen.ofNullable(senderInternalIdentification);
             return this;
         }
         public Builder senderInternalSubIdentification(@Nullable Output<String> senderInternalSubIdentification) {
@@ -985,7 +986,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder senderInternalSubIdentification(@Nullable String senderInternalSubIdentification) {
-            this.senderInternalSubIdentification = Output.ofNullable(senderInternalSubIdentification);
+            this.senderInternalSubIdentification = Codegen.ofNullable(senderInternalSubIdentification);
             return this;
         }
         public Builder senderReverseRoutingAddress(@Nullable Output<String> senderReverseRoutingAddress) {
@@ -993,7 +994,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder senderReverseRoutingAddress(@Nullable String senderReverseRoutingAddress) {
-            this.senderReverseRoutingAddress = Output.ofNullable(senderReverseRoutingAddress);
+            this.senderReverseRoutingAddress = Codegen.ofNullable(senderReverseRoutingAddress);
             return this;
         }
         public Builder transactionSetControlNumberLowerBound(Output<Double> transactionSetControlNumberLowerBound) {
@@ -1009,7 +1010,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
-            this.transactionSetControlNumberPrefix = Output.ofNullable(transactionSetControlNumberPrefix);
+            this.transactionSetControlNumberPrefix = Codegen.ofNullable(transactionSetControlNumberPrefix);
             return this;
         }
         public Builder transactionSetControlNumberSuffix(@Nullable Output<String> transactionSetControlNumberSuffix) {
@@ -1017,7 +1018,7 @@ public final class EdifactEnvelopeSettingsArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
-            this.transactionSetControlNumberSuffix = Output.ofNullable(transactionSetControlNumberSuffix);
+            this.transactionSetControlNumberSuffix = Codegen.ofNullable(transactionSetControlNumberSuffix);
             return this;
         }
         public Builder transactionSetControlNumberUpperBound(Output<Double> transactionSetControlNumberUpperBound) {

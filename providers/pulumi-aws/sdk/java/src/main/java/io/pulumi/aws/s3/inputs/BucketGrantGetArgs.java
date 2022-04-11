@@ -5,6 +5,7 @@ package io.pulumi.aws.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public BucketGrantGetArgs(
@@ -71,10 +72,10 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private BucketGrantGetArgs() {
-        this.id = Output.empty();
-        this.permissions = Output.empty();
-        this.type = Output.empty();
-        this.uri = Output.empty();
+        this.id = Codegen.empty();
+        this.permissions = Codegen.empty();
+        this.type = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder permissions(Output<List<String>> permissions) {
@@ -135,7 +136,7 @@ public final class BucketGrantGetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public BucketGrantGetArgs build() {
             return new BucketGrantGetArgs(id, permissions, type, uri);

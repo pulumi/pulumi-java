@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.VpnTunnelArgs;
 import java.lang.Integer;
@@ -365,7 +366,7 @@ public class VpnTunnel extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public VpnTunnel(String name, VpnTunnelArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:VpnTunnel", name, args == null ? VpnTunnelArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:VpnTunnel", name, args == null ? VpnTunnelArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private VpnTunnel(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

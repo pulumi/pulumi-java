@@ -5,6 +5,7 @@ package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,35 +20,35 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> host;
 
     public Output<String> getHost() {
-        return this.host == null ? Output.empty() : this.host;
+        return this.host == null ? Codegen.empty() : this.host;
     }
 
     @Import(name="nodeId")
       private final @Nullable Output<String> nodeId;
 
     public Output<String> getNodeId() {
-        return this.nodeId == null ? Output.empty() : this.nodeId;
+        return this.nodeId == null ? Codegen.empty() : this.nodeId;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     @Import(name="state")
       private final @Nullable Output<String> state;
 
     public Output<String> getState() {
-        return this.state == null ? Output.empty() : this.state;
+        return this.state == null ? Codegen.empty() : this.state;
     }
 
     @Import(name="zone")
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public InstanceMemcacheNodeArgs(
@@ -64,11 +65,11 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
     }
 
     private InstanceMemcacheNodeArgs() {
-        this.host = Output.empty();
-        this.nodeId = Output.empty();
-        this.port = Output.empty();
-        this.state = Output.empty();
-        this.zone = Output.empty();
+        this.host = Codegen.empty();
+        this.nodeId = Codegen.empty();
+        this.port = Codegen.empty();
+        this.state = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder host(@Nullable String host) {
-            this.host = Output.ofNullable(host);
+            this.host = Codegen.ofNullable(host);
             return this;
         }
         public Builder nodeId(@Nullable Output<String> nodeId) {
@@ -112,7 +113,7 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder nodeId(@Nullable String nodeId) {
-            this.nodeId = Output.ofNullable(nodeId);
+            this.nodeId = Codegen.ofNullable(nodeId);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -120,7 +121,7 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }
         public Builder state(@Nullable Output<String> state) {
@@ -128,7 +129,7 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder state(@Nullable String state) {
-            this.state = Output.ofNullable(state);
+            this.state = Codegen.ofNullable(state);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -136,7 +137,7 @@ public final class InstanceMemcacheNodeArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public InstanceMemcacheNodeArgs build() {
             return new InstanceMemcacheNodeArgs(host, nodeId, port, state, zone);

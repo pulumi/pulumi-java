@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3objectlambda.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -41,8 +42,8 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
     }
 
     private AccessPointTransformationConfigurationArgs() {
-        this.actions = Output.empty();
-        this.contentTransformation = Output.empty();
+        this.actions = Codegen.empty();
+        this.contentTransformation = Codegen.empty();
     }
 
     public static Builder builder() {

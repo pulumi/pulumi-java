@@ -5,6 +5,7 @@ package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +28,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> column;
 
     public Output<String> getColumn() {
-        return this.column == null ? Output.empty() : this.column;
+        return this.column == null ? Codegen.empty() : this.column;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<TagFieldGetArgs>> fields;
 
     public Output<List<TagFieldGetArgs>> getFields() {
-        return this.fields == null ? Output.empty() : this.fields;
+        return this.fields == null ? Codegen.empty() : this.fields;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parent;
 
     public Output<String> getParent() {
-        return this.parent == null ? Output.empty() : this.parent;
+        return this.parent == null ? Codegen.empty() : this.parent;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> template;
 
     public Output<String> getTemplate() {
-        return this.template == null ? Output.empty() : this.template;
+        return this.template == null ? Codegen.empty() : this.template;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> templateDisplayname;
 
     public Output<String> getTemplateDisplayname() {
-        return this.templateDisplayname == null ? Output.empty() : this.templateDisplayname;
+        return this.templateDisplayname == null ? Codegen.empty() : this.templateDisplayname;
     }
 
     public TagState(
@@ -109,12 +110,12 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
     }
 
     private TagState() {
-        this.column = Output.empty();
-        this.fields = Output.empty();
-        this.name = Output.empty();
-        this.parent = Output.empty();
-        this.template = Output.empty();
-        this.templateDisplayname = Output.empty();
+        this.column = Codegen.empty();
+        this.fields = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parent = Codegen.empty();
+        this.template = Codegen.empty();
+        this.templateDisplayname = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -152,7 +153,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder column(@Nullable String column) {
-            this.column = Output.ofNullable(column);
+            this.column = Codegen.ofNullable(column);
             return this;
         }
         public Builder fields(@Nullable Output<List<TagFieldGetArgs>> fields) {
@@ -160,7 +161,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fields(@Nullable List<TagFieldGetArgs> fields) {
-            this.fields = Output.ofNullable(fields);
+            this.fields = Codegen.ofNullable(fields);
             return this;
         }
         public Builder fields(TagFieldGetArgs... fields) {
@@ -171,7 +172,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parent(@Nullable Output<String> parent) {
@@ -179,7 +180,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parent(@Nullable String parent) {
-            this.parent = Output.ofNullable(parent);
+            this.parent = Codegen.ofNullable(parent);
             return this;
         }
         public Builder template(@Nullable Output<String> template) {
@@ -187,7 +188,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder template(@Nullable String template) {
-            this.template = Output.ofNullable(template);
+            this.template = Codegen.ofNullable(template);
             return this;
         }
         public Builder templateDisplayname(@Nullable Output<String> templateDisplayname) {
@@ -195,7 +196,7 @@ public final class TagState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder templateDisplayname(@Nullable String templateDisplayname) {
-            this.templateDisplayname = Output.ofNullable(templateDisplayname);
+            this.templateDisplayname = Codegen.ofNullable(templateDisplayname);
             return this;
         }        public TagState build() {
             return new TagState(column, fields, name, parent, template, templateDisplayname);

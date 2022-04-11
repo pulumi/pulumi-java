@@ -5,6 +5,7 @@ package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.compute_alpha.enums.TlsValidationContextValidationSource;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import java.lang.String;
@@ -28,7 +29,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> certificatePath;
 
     public Output<String> getCertificatePath() {
-        return this.certificatePath == null ? Output.empty() : this.certificatePath;
+        return this.certificatePath == null ? Codegen.empty() : this.certificatePath;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<SdsConfigArgs> sdsConfig;
 
     public Output<SdsConfigArgs> getSdsConfig() {
-        return this.sdsConfig == null ? Output.empty() : this.sdsConfig;
+        return this.sdsConfig == null ? Codegen.empty() : this.sdsConfig;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<TlsValidationContextValidationSource> validationSource;
 
     public Output<TlsValidationContextValidationSource> getValidationSource() {
-        return this.validationSource == null ? Output.empty() : this.validationSource;
+        return this.validationSource == null ? Codegen.empty() : this.validationSource;
     }
 
     public TlsValidationContextArgs(
@@ -63,9 +64,9 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
     }
 
     private TlsValidationContextArgs() {
-        this.certificatePath = Output.empty();
-        this.sdsConfig = Output.empty();
-        this.validationSource = Output.empty();
+        this.certificatePath = Codegen.empty();
+        this.sdsConfig = Codegen.empty();
+        this.validationSource = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder certificatePath(@Nullable String certificatePath) {
-            this.certificatePath = Output.ofNullable(certificatePath);
+            this.certificatePath = Codegen.ofNullable(certificatePath);
             return this;
         }
         public Builder sdsConfig(@Nullable Output<SdsConfigArgs> sdsConfig) {
@@ -105,7 +106,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder sdsConfig(@Nullable SdsConfigArgs sdsConfig) {
-            this.sdsConfig = Output.ofNullable(sdsConfig);
+            this.sdsConfig = Codegen.ofNullable(sdsConfig);
             return this;
         }
         public Builder validationSource(@Nullable Output<TlsValidationContextValidationSource> validationSource) {
@@ -113,7 +114,7 @@ public final class TlsValidationContextArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder validationSource(@Nullable TlsValidationContextValidationSource validationSource) {
-            this.validationSource = Output.ofNullable(validationSource);
+            this.validationSource = Codegen.ofNullable(validationSource);
             return this;
         }        public TlsValidationContextArgs build() {
             return new TlsValidationContextArgs(certificatePath, sdsConfig, validationSource);

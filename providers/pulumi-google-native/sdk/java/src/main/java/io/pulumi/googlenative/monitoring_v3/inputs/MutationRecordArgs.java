@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mutateTime;
 
     public Output<String> getMutateTime() {
-        return this.mutateTime == null ? Output.empty() : this.mutateTime;
+        return this.mutateTime == null ? Codegen.empty() : this.mutateTime;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mutatedBy;
 
     public Output<String> getMutatedBy() {
-        return this.mutatedBy == null ? Output.empty() : this.mutatedBy;
+        return this.mutatedBy == null ? Codegen.empty() : this.mutatedBy;
     }
 
     public MutationRecordArgs(
@@ -48,8 +49,8 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MutationRecordArgs() {
-        this.mutateTime = Output.empty();
-        this.mutatedBy = Output.empty();
+        this.mutateTime = Codegen.empty();
+        this.mutatedBy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mutateTime(@Nullable String mutateTime) {
-            this.mutateTime = Output.ofNullable(mutateTime);
+            this.mutateTime = Codegen.ofNullable(mutateTime);
             return this;
         }
         public Builder mutatedBy(@Nullable Output<String> mutatedBy) {
@@ -87,7 +88,7 @@ public final class MutationRecordArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mutatedBy(@Nullable String mutatedBy) {
-            this.mutatedBy = Output.ofNullable(mutatedBy);
+            this.mutatedBy = Codegen.ofNullable(mutatedBy);
             return this;
         }        public MutationRecordArgs build() {
             return new MutationRecordArgs(mutateTime, mutatedBy);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.ssm.inputs;
 import io.pulumi.awsnative.ssm.inputs.AssociationS3OutputLocationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -18,7 +19,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
       private final @Nullable Output<AssociationS3OutputLocationArgs> s3Location;
 
     public Output<AssociationS3OutputLocationArgs> getS3Location() {
-        return this.s3Location == null ? Output.empty() : this.s3Location;
+        return this.s3Location == null ? Codegen.empty() : this.s3Location;
     }
 
     public AssociationInstanceAssociationOutputLocationArgs(@Nullable Output<AssociationS3OutputLocationArgs> s3Location) {
@@ -26,7 +27,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
     }
 
     private AssociationInstanceAssociationOutputLocationArgs() {
-        this.s3Location = Output.empty();
+        this.s3Location = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -54,7 +55,7 @@ public final class AssociationInstanceAssociationOutputLocationArgs extends io.p
             return this;
         }
         public Builder s3Location(@Nullable AssociationS3OutputLocationArgs s3Location) {
-            this.s3Location = Output.ofNullable(s3Location);
+            this.s3Location = Codegen.ofNullable(s3Location);
             return this;
         }        public AssociationInstanceAssociationOutputLocationArgs build() {
             return new AssociationInstanceAssociationOutputLocationArgs(s3Location);

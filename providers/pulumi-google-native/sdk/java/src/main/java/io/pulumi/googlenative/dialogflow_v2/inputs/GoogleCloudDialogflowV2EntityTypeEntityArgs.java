@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,8 +49,8 @@ public final class GoogleCloudDialogflowV2EntityTypeEntityArgs extends io.pulumi
     }
 
     private GoogleCloudDialogflowV2EntityTypeEntityArgs() {
-        this.synonyms = Output.empty();
-        this.value = Output.empty();
+        this.synonyms = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

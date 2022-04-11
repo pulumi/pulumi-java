@@ -6,6 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultSecretGroupArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
     public Output<List<CloudServiceVaultSecretGroupArgs>> getSecrets() {
-        return this.secrets == null ? Output.empty() : this.secrets;
+        return this.secrets == null ? Codegen.empty() : this.secrets;
     }
 
     public CloudServiceOsProfileArgs(@Nullable Output<List<CloudServiceVaultSecretGroupArgs>> secrets) {
@@ -35,7 +36,7 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
     }
 
     private CloudServiceOsProfileArgs() {
-        this.secrets = Output.empty();
+        this.secrets = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder secrets(@Nullable List<CloudServiceVaultSecretGroupArgs> secrets) {
-            this.secrets = Output.ofNullable(secrets);
+            this.secrets = Codegen.ofNullable(secrets);
             return this;
         }
         public Builder secrets(CloudServiceVaultSecretGroupArgs... secrets) {

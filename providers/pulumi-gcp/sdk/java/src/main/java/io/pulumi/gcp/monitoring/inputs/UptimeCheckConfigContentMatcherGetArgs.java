@@ -5,6 +5,7 @@ package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> matcher;
 
     public Output<String> getMatcher() {
-        return this.matcher == null ? Output.empty() : this.matcher;
+        return this.matcher == null ? Codegen.empty() : this.matcher;
     }
 
     public UptimeCheckConfigContentMatcherGetArgs(
@@ -46,8 +47,8 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends io.pulumi.reso
     }
 
     private UptimeCheckConfigContentMatcherGetArgs() {
-        this.content = Output.empty();
-        this.matcher = Output.empty();
+        this.content = Codegen.empty();
+        this.matcher = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class UptimeCheckConfigContentMatcherGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder matcher(@Nullable String matcher) {
-            this.matcher = Output.ofNullable(matcher);
+            this.matcher = Codegen.ofNullable(matcher);
             return this;
         }        public UptimeCheckConfigContentMatcherGetArgs build() {
             return new UptimeCheckConfigContentMatcherGetArgs(content, matcher);

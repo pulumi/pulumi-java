@@ -7,6 +7,7 @@ import io.pulumi.awsnative.networkfirewall.inputs.FirewallSubnetMappingArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,21 +23,21 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deleteProtection;
 
     public Output<Boolean> getDeleteProtection() {
-        return this.deleteProtection == null ? Output.empty() : this.deleteProtection;
+        return this.deleteProtection == null ? Codegen.empty() : this.deleteProtection;
     }
 
     @Import(name="description")
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     @Import(name="firewallName")
       private final @Nullable Output<String> firewallName;
 
     public Output<String> getFirewallName() {
-        return this.firewallName == null ? Output.empty() : this.firewallName;
+        return this.firewallName == null ? Codegen.empty() : this.firewallName;
     }
 
     @Import(name="firewallPolicyArn", required=true)
@@ -50,14 +51,14 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> firewallPolicyChangeProtection;
 
     public Output<Boolean> getFirewallPolicyChangeProtection() {
-        return this.firewallPolicyChangeProtection == null ? Output.empty() : this.firewallPolicyChangeProtection;
+        return this.firewallPolicyChangeProtection == null ? Codegen.empty() : this.firewallPolicyChangeProtection;
     }
 
     @Import(name="subnetChangeProtection")
       private final @Nullable Output<Boolean> subnetChangeProtection;
 
     public Output<Boolean> getSubnetChangeProtection() {
-        return this.subnetChangeProtection == null ? Output.empty() : this.subnetChangeProtection;
+        return this.subnetChangeProtection == null ? Codegen.empty() : this.subnetChangeProtection;
     }
 
     @Import(name="subnetMappings", required=true)
@@ -71,7 +72,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<FirewallTagArgs>> tags;
 
     public Output<List<FirewallTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="vpcId", required=true)
@@ -103,15 +104,15 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private FirewallArgs() {
-        this.deleteProtection = Output.empty();
-        this.description = Output.empty();
-        this.firewallName = Output.empty();
-        this.firewallPolicyArn = Output.empty();
-        this.firewallPolicyChangeProtection = Output.empty();
-        this.subnetChangeProtection = Output.empty();
-        this.subnetMappings = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.deleteProtection = Codegen.empty();
+        this.description = Codegen.empty();
+        this.firewallName = Codegen.empty();
+        this.firewallPolicyArn = Codegen.empty();
+        this.firewallPolicyChangeProtection = Codegen.empty();
+        this.subnetChangeProtection = Codegen.empty();
+        this.subnetMappings = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -155,7 +156,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteProtection(@Nullable Boolean deleteProtection) {
-            this.deleteProtection = Output.ofNullable(deleteProtection);
+            this.deleteProtection = Codegen.ofNullable(deleteProtection);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -163,7 +164,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder firewallName(@Nullable Output<String> firewallName) {
@@ -171,7 +172,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallName(@Nullable String firewallName) {
-            this.firewallName = Output.ofNullable(firewallName);
+            this.firewallName = Codegen.ofNullable(firewallName);
             return this;
         }
         public Builder firewallPolicyArn(Output<String> firewallPolicyArn) {
@@ -187,7 +188,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder firewallPolicyChangeProtection(@Nullable Boolean firewallPolicyChangeProtection) {
-            this.firewallPolicyChangeProtection = Output.ofNullable(firewallPolicyChangeProtection);
+            this.firewallPolicyChangeProtection = Codegen.ofNullable(firewallPolicyChangeProtection);
             return this;
         }
         public Builder subnetChangeProtection(@Nullable Output<Boolean> subnetChangeProtection) {
@@ -195,7 +196,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetChangeProtection(@Nullable Boolean subnetChangeProtection) {
-            this.subnetChangeProtection = Output.ofNullable(subnetChangeProtection);
+            this.subnetChangeProtection = Codegen.ofNullable(subnetChangeProtection);
             return this;
         }
         public Builder subnetMappings(Output<List<FirewallSubnetMappingArgs>> subnetMappings) {
@@ -214,7 +215,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<FirewallTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(FirewallTagArgs... tags) {

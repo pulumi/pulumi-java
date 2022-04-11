@@ -5,6 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class TaskScheduleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private TaskScheduleArgs() {
-        this.scheduleExpression = Output.empty();
+        this.scheduleExpression = Codegen.empty();
     }
 
     public static Builder builder() {

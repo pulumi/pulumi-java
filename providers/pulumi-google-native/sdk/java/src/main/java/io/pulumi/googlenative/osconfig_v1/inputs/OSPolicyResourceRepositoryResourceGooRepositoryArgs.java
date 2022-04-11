@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class OSPolicyResourceRepositoryResourceGooRepositoryArgs extends i
     }
 
     private OSPolicyResourceRepositoryResourceGooRepositoryArgs() {
-        this.name = Output.empty();
-        this.url = Output.empty();
+        this.name = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {

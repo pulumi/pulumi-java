@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.NodeTemplateArgs;
 import io.pulumi.gcp.compute.inputs.NodeTemplateState;
@@ -252,7 +253,7 @@ public class NodeTemplate extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public NodeTemplate(String name, @Nullable NodeTemplateArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/nodeTemplate:NodeTemplate", name, args == null ? NodeTemplateArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/nodeTemplate:NodeTemplate", name, args == null ? NodeTemplateArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private NodeTemplate(String name, Output<String> id, @Nullable NodeTemplateState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

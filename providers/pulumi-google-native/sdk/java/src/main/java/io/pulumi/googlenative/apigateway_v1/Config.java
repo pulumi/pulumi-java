@@ -6,6 +6,7 @@ package io.pulumi.googlenative.apigateway_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.apigateway_v1.ConfigArgs;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigFileResponse;
@@ -200,7 +201,7 @@ public class Config extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Config(String name, ConfigArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:apigateway/v1:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:apigateway/v1:Config", name, args == null ? ConfigArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Config(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

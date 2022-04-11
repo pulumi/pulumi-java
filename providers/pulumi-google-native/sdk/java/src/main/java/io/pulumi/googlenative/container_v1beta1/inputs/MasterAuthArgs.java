@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.container_v1beta1.inputs.ClientCertificateConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,14 +28,14 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClientCertificateConfigArgs> clientCertificateConfig;
 
     public Output<ClientCertificateConfigArgs> getClientCertificateConfig() {
-        return this.clientCertificateConfig == null ? Output.empty() : this.clientCertificateConfig;
+        return this.clientCertificateConfig == null ? Codegen.empty() : this.clientCertificateConfig;
     }
 
     @Import(name="clusterCaCertificate")
       private final @Nullable Output<String> clusterCaCertificate;
 
     public Output<String> getClusterCaCertificate() {
-        return this.clusterCaCertificate == null ? Output.empty() : this.clusterCaCertificate;
+        return this.clusterCaCertificate == null ? Codegen.empty() : this.clusterCaCertificate;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> password;
 
     public Output<String> getPassword() {
-        return this.password == null ? Output.empty() : this.password;
+        return this.password == null ? Codegen.empty() : this.password;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> username;
 
     public Output<String> getUsername() {
-        return this.username == null ? Output.empty() : this.username;
+        return this.username == null ? Codegen.empty() : this.username;
     }
 
     public MasterAuthArgs(
@@ -71,10 +72,10 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private MasterAuthArgs() {
-        this.clientCertificateConfig = Output.empty();
-        this.clusterCaCertificate = Output.empty();
-        this.password = Output.empty();
-        this.username = Output.empty();
+        this.clientCertificateConfig = Codegen.empty();
+        this.clusterCaCertificate = Codegen.empty();
+        this.password = Codegen.empty();
+        this.username = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientCertificateConfig(@Nullable ClientCertificateConfigArgs clientCertificateConfig) {
-            this.clientCertificateConfig = Output.ofNullable(clientCertificateConfig);
+            this.clientCertificateConfig = Codegen.ofNullable(clientCertificateConfig);
             return this;
         }
         public Builder clusterCaCertificate(@Nullable Output<String> clusterCaCertificate) {
@@ -116,7 +117,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterCaCertificate(@Nullable String clusterCaCertificate) {
-            this.clusterCaCertificate = Output.ofNullable(clusterCaCertificate);
+            this.clusterCaCertificate = Codegen.ofNullable(clusterCaCertificate);
             return this;
         }
         public Builder password(@Nullable Output<String> password) {
@@ -124,7 +125,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder password(@Nullable String password) {
-            this.password = Output.ofNullable(password);
+            this.password = Codegen.ofNullable(password);
             return this;
         }
         public Builder username(@Nullable Output<String> username) {
@@ -132,7 +133,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder username(@Nullable String username) {
-            this.username = Output.ofNullable(username);
+            this.username = Codegen.ofNullable(username);
             return this;
         }        public MasterAuthArgs build() {
             return new MasterAuthArgs(clientCertificateConfig, clusterCaCertificate, password, username);

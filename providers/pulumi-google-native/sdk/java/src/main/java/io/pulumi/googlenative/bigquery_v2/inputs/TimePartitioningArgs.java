@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> expirationMs;
 
     public Output<String> getExpirationMs() {
-        return this.expirationMs == null ? Output.empty() : this.expirationMs;
+        return this.expirationMs == null ? Codegen.empty() : this.expirationMs;
     }
 
     /**
@@ -34,14 +35,14 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> field;
 
     public Output<String> getField() {
-        return this.field == null ? Output.empty() : this.field;
+        return this.field == null ? Codegen.empty() : this.field;
     }
 
     @Import(name="requirePartitionFilter")
       private final @Nullable Output<Boolean> requirePartitionFilter;
 
     public Output<Boolean> getRequirePartitionFilter() {
-        return this.requirePartitionFilter == null ? Output.empty() : this.requirePartitionFilter;
+        return this.requirePartitionFilter == null ? Codegen.empty() : this.requirePartitionFilter;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public TimePartitioningArgs(
@@ -67,10 +68,10 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private TimePartitioningArgs() {
-        this.expirationMs = Output.empty();
-        this.field = Output.empty();
-        this.requirePartitionFilter = Output.empty();
-        this.type = Output.empty();
+        this.expirationMs = Codegen.empty();
+        this.field = Codegen.empty();
+        this.requirePartitionFilter = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -104,7 +105,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder expirationMs(@Nullable String expirationMs) {
-            this.expirationMs = Output.ofNullable(expirationMs);
+            this.expirationMs = Codegen.ofNullable(expirationMs);
             return this;
         }
         public Builder field(@Nullable Output<String> field) {
@@ -112,7 +113,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder field(@Nullable String field) {
-            this.field = Output.ofNullable(field);
+            this.field = Codegen.ofNullable(field);
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Output<Boolean> requirePartitionFilter) {
@@ -120,7 +121,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder requirePartitionFilter(@Nullable Boolean requirePartitionFilter) {
-            this.requirePartitionFilter = Output.ofNullable(requirePartitionFilter);
+            this.requirePartitionFilter = Codegen.ofNullable(requirePartitionFilter);
             return this;
         }
         public Builder type(@Nullable Output<String> type) {
@@ -128,7 +129,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public TimePartitioningArgs build() {
             return new TimePartitioningArgs(expirationMs, field, requirePartitionFilter, type);

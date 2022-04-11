@@ -11,6 +11,7 @@ import io.pulumi.azurenative.databox.inputs.PreferencesArgs;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -46,7 +47,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<DataExportDetailsArgs>> dataExportDetails;
 
     public Output<List<DataExportDetailsArgs>> getDataExportDetails() {
-        return this.dataExportDetails == null ? Output.empty() : this.dataExportDetails;
+        return this.dataExportDetails == null ? Codegen.empty() : this.dataExportDetails;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<DataImportDetailsArgs>> dataImportDetails;
 
     public Output<List<DataImportDetailsArgs>> getDataImportDetails() {
-        return this.dataImportDetails == null ? Output.empty() : this.dataImportDetails;
+        return this.dataImportDetails == null ? Codegen.empty() : this.dataImportDetails;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> expectedDataSizeInTeraBytes;
 
     public Output<Integer> getExpectedDataSizeInTeraBytes() {
-        return this.expectedDataSizeInTeraBytes == null ? Output.empty() : this.expectedDataSizeInTeraBytes;
+        return this.expectedDataSizeInTeraBytes == null ? Codegen.empty() : this.expectedDataSizeInTeraBytes;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<KeyEncryptionKeyArgs> keyEncryptionKey;
 
     public Output<KeyEncryptionKeyArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
+        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> passkey;
 
     public Output<String> getPasskey() {
-        return this.passkey == null ? Output.empty() : this.passkey;
+        return this.passkey == null ? Codegen.empty() : this.passkey;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<PreferencesArgs> preferences;
 
     public Output<PreferencesArgs> getPreferences() {
-        return this.preferences == null ? Output.empty() : this.preferences;
+        return this.preferences == null ? Codegen.empty() : this.preferences;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,Integer>> preferredDisks;
 
     public Output<Map<String,Integer>> getPreferredDisks() {
-        return this.preferredDisks == null ? Output.empty() : this.preferredDisks;
+        return this.preferredDisks == null ? Codegen.empty() : this.preferredDisks;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<ShippingAddressArgs> shippingAddress;
 
     public Output<ShippingAddressArgs> getShippingAddress() {
-        return this.shippingAddress == null ? Output.empty() : this.shippingAddress;
+        return this.shippingAddress == null ? Codegen.empty() : this.shippingAddress;
     }
 
     public DataBoxDiskJobDetailsArgs(
@@ -162,16 +163,16 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
     }
 
     private DataBoxDiskJobDetailsArgs() {
-        this.contactDetails = Output.empty();
-        this.dataExportDetails = Output.empty();
-        this.dataImportDetails = Output.empty();
-        this.expectedDataSizeInTeraBytes = Output.empty();
-        this.jobDetailsType = Output.empty();
-        this.keyEncryptionKey = Output.empty();
-        this.passkey = Output.empty();
-        this.preferences = Output.empty();
-        this.preferredDisks = Output.empty();
-        this.shippingAddress = Output.empty();
+        this.contactDetails = Codegen.empty();
+        this.dataExportDetails = Codegen.empty();
+        this.dataImportDetails = Codegen.empty();
+        this.expectedDataSizeInTeraBytes = Codegen.empty();
+        this.jobDetailsType = Codegen.empty();
+        this.keyEncryptionKey = Codegen.empty();
+        this.passkey = Codegen.empty();
+        this.preferences = Codegen.empty();
+        this.preferredDisks = Codegen.empty();
+        this.shippingAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -225,7 +226,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataExportDetails(@Nullable List<DataExportDetailsArgs> dataExportDetails) {
-            this.dataExportDetails = Output.ofNullable(dataExportDetails);
+            this.dataExportDetails = Codegen.ofNullable(dataExportDetails);
             return this;
         }
         public Builder dataExportDetails(DataExportDetailsArgs... dataExportDetails) {
@@ -236,7 +237,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dataImportDetails(@Nullable List<DataImportDetailsArgs> dataImportDetails) {
-            this.dataImportDetails = Output.ofNullable(dataImportDetails);
+            this.dataImportDetails = Codegen.ofNullable(dataImportDetails);
             return this;
         }
         public Builder dataImportDetails(DataImportDetailsArgs... dataImportDetails) {
@@ -247,7 +248,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder expectedDataSizeInTeraBytes(@Nullable Integer expectedDataSizeInTeraBytes) {
-            this.expectedDataSizeInTeraBytes = Output.ofNullable(expectedDataSizeInTeraBytes);
+            this.expectedDataSizeInTeraBytes = Codegen.ofNullable(expectedDataSizeInTeraBytes);
             return this;
         }
         public Builder jobDetailsType(Output<String> jobDetailsType) {
@@ -263,7 +264,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder keyEncryptionKey(@Nullable KeyEncryptionKeyArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
             return this;
         }
         public Builder passkey(@Nullable Output<String> passkey) {
@@ -271,7 +272,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder passkey(@Nullable String passkey) {
-            this.passkey = Output.ofNullable(passkey);
+            this.passkey = Codegen.ofNullable(passkey);
             return this;
         }
         public Builder preferences(@Nullable Output<PreferencesArgs> preferences) {
@@ -279,7 +280,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder preferences(@Nullable PreferencesArgs preferences) {
-            this.preferences = Output.ofNullable(preferences);
+            this.preferences = Codegen.ofNullable(preferences);
             return this;
         }
         public Builder preferredDisks(@Nullable Output<Map<String,Integer>> preferredDisks) {
@@ -287,7 +288,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder preferredDisks(@Nullable Map<String,Integer> preferredDisks) {
-            this.preferredDisks = Output.ofNullable(preferredDisks);
+            this.preferredDisks = Codegen.ofNullable(preferredDisks);
             return this;
         }
         public Builder shippingAddress(@Nullable Output<ShippingAddressArgs> shippingAddress) {
@@ -295,7 +296,7 @@ public final class DataBoxDiskJobDetailsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder shippingAddress(@Nullable ShippingAddressArgs shippingAddress) {
-            this.shippingAddress = Output.ofNullable(shippingAddress);
+            this.shippingAddress = Codegen.ofNullable(shippingAddress);
             return this;
         }        public DataBoxDiskJobDetailsArgs build() {
             return new DataBoxDiskJobDetailsArgs(contactDetails, dataExportDetails, dataImportDetails, expectedDataSizeInTeraBytes, jobDetailsType, keyEncryptionKey, passkey, preferences, preferredDisks, shippingAddress);

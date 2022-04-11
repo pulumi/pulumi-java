@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databox.enums.NotificationStageName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,13 +46,13 @@ public final class NotificationPreferenceArgs extends io.pulumi.resources.Resour
     public NotificationPreferenceArgs(
         Output<Boolean> sendNotification,
         Output<Either<String,NotificationStageName>> stageName) {
-        this.sendNotification = sendNotification == null ? Output.ofNullable(true) : Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
+        this.sendNotification = sendNotification == null ? Codegen.ofNullable(true) : Objects.requireNonNull(sendNotification, "expected parameter 'sendNotification' to be non-null");
         this.stageName = Objects.requireNonNull(stageName, "expected parameter 'stageName' to be non-null");
     }
 
     private NotificationPreferenceArgs() {
-        this.sendNotification = Output.empty();
-        this.stageName = Output.empty();
+        this.sendNotification = Codegen.empty();
+        this.stageName = Codegen.empty();
     }
 
     public static Builder builder() {

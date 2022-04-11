@@ -5,6 +5,7 @@ package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> bundleId;
 
     public Output<String> getBundleId() {
-        return this.bundleId == null ? Output.empty() : this.bundleId;
+        return this.bundleId == null ? Codegen.empty() : this.bundleId;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<FileReferenceArgs> content;
 
     public Output<FileReferenceArgs> getContent() {
-        return this.content == null ? Output.empty() : this.content;
+        return this.content == null ? Codegen.empty() : this.content;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> devicePath;
 
     public Output<String> getDevicePath() {
-        return this.devicePath == null ? Output.empty() : this.devicePath;
+        return this.devicePath == null ? Codegen.empty() : this.devicePath;
     }
 
     public IosDeviceFileArgs(
@@ -62,9 +63,9 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IosDeviceFileArgs() {
-        this.bundleId = Output.empty();
-        this.content = Output.empty();
-        this.devicePath = Output.empty();
+        this.bundleId = Codegen.empty();
+        this.content = Codegen.empty();
+        this.devicePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder bundleId(@Nullable String bundleId) {
-            this.bundleId = Output.ofNullable(bundleId);
+            this.bundleId = Codegen.ofNullable(bundleId);
             return this;
         }
         public Builder content(@Nullable Output<FileReferenceArgs> content) {
@@ -104,7 +105,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder content(@Nullable FileReferenceArgs content) {
-            this.content = Output.ofNullable(content);
+            this.content = Codegen.ofNullable(content);
             return this;
         }
         public Builder devicePath(@Nullable Output<String> devicePath) {
@@ -112,7 +113,7 @@ public final class IosDeviceFileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder devicePath(@Nullable String devicePath) {
-            this.devicePath = Output.ofNullable(devicePath);
+            this.devicePath = Codegen.ofNullable(devicePath);
             return this;
         }        public IosDeviceFileArgs build() {
             return new IosDeviceFileArgs(bundleId, content, devicePath);

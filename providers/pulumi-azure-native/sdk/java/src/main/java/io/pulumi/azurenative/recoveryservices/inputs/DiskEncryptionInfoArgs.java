@@ -7,6 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionKeyInfoArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.KeyEncryptionKeyInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -27,7 +28,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
     public Output<DiskEncryptionKeyInfoArgs> getDiskEncryptionKeyInfo() {
-        return this.diskEncryptionKeyInfo == null ? Output.empty() : this.diskEncryptionKeyInfo;
+        return this.diskEncryptionKeyInfo == null ? Codegen.empty() : this.diskEncryptionKeyInfo;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
     public Output<KeyEncryptionKeyInfoArgs> getKeyEncryptionKeyInfo() {
-        return this.keyEncryptionKeyInfo == null ? Output.empty() : this.keyEncryptionKeyInfo;
+        return this.keyEncryptionKeyInfo == null ? Codegen.empty() : this.keyEncryptionKeyInfo;
     }
 
     public DiskEncryptionInfoArgs(
@@ -49,8 +50,8 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
     }
 
     private DiskEncryptionInfoArgs() {
-        this.diskEncryptionKeyInfo = Output.empty();
-        this.keyEncryptionKeyInfo = Output.empty();
+        this.diskEncryptionKeyInfo = Codegen.empty();
+        this.keyEncryptionKeyInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder diskEncryptionKeyInfo(@Nullable DiskEncryptionKeyInfoArgs diskEncryptionKeyInfo) {
-            this.diskEncryptionKeyInfo = Output.ofNullable(diskEncryptionKeyInfo);
+            this.diskEncryptionKeyInfo = Codegen.ofNullable(diskEncryptionKeyInfo);
             return this;
         }
         public Builder keyEncryptionKeyInfo(@Nullable Output<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo) {
@@ -88,7 +89,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder keyEncryptionKeyInfo(@Nullable KeyEncryptionKeyInfoArgs keyEncryptionKeyInfo) {
-            this.keyEncryptionKeyInfo = Output.ofNullable(keyEncryptionKeyInfo);
+            this.keyEncryptionKeyInfo = Codegen.ofNullable(keyEncryptionKeyInfo);
             return this;
         }        public DiskEncryptionInfoArgs build() {
             return new DiskEncryptionInfoArgs(diskEncryptionKeyInfo, keyEncryptionKeyInfo);

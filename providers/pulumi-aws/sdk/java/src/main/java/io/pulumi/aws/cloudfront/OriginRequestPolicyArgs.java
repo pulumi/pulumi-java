@@ -8,6 +8,7 @@ import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyHeadersConfigArgs;
 import io.pulumi.aws.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +26,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> comment;
 
     public Output<String> getComment() {
-        return this.comment == null ? Output.empty() : this.comment;
+        return this.comment == null ? Codegen.empty() : this.comment;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -86,11 +87,11 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
     }
 
     private OriginRequestPolicyArgs() {
-        this.comment = Output.empty();
-        this.cookiesConfig = Output.empty();
-        this.headersConfig = Output.empty();
-        this.name = Output.empty();
-        this.queryStringsConfig = Output.empty();
+        this.comment = Codegen.empty();
+        this.cookiesConfig = Codegen.empty();
+        this.headersConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.queryStringsConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder comment(@Nullable String comment) {
-            this.comment = Output.ofNullable(comment);
+            this.comment = Codegen.ofNullable(comment);
             return this;
         }
         public Builder cookiesConfig(Output<OriginRequestPolicyCookiesConfigArgs> cookiesConfig) {
@@ -150,7 +151,7 @@ public final class OriginRequestPolicyArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder queryStringsConfig(Output<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig) {

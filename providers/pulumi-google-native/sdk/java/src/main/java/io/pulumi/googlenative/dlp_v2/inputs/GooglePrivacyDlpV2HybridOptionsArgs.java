@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TableOptionsArgs;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +30,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
       private final @Nullable Output<List<String>> requiredFindingLabelKeys;
 
     public Output<List<String>> getRequiredFindingLabelKeys() {
-        return this.requiredFindingLabelKeys == null ? Output.empty() : this.requiredFindingLabelKeys;
+        return this.requiredFindingLabelKeys == null ? Codegen.empty() : this.requiredFindingLabelKeys;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
       private final @Nullable Output<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
 
     public Output<GooglePrivacyDlpV2TableOptionsArgs> getTableOptions() {
-        return this.tableOptions == null ? Output.empty() : this.tableOptions;
+        return this.tableOptions == null ? Codegen.empty() : this.tableOptions;
     }
 
     public GooglePrivacyDlpV2HybridOptionsArgs(
@@ -77,10 +78,10 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
     }
 
     private GooglePrivacyDlpV2HybridOptionsArgs() {
-        this.description = Output.empty();
-        this.labels = Output.empty();
-        this.requiredFindingLabelKeys = Output.empty();
-        this.tableOptions = Output.empty();
+        this.description = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.requiredFindingLabelKeys = Codegen.empty();
+        this.tableOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -114,7 +115,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -122,7 +123,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder requiredFindingLabelKeys(@Nullable Output<List<String>> requiredFindingLabelKeys) {
@@ -130,7 +131,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder requiredFindingLabelKeys(@Nullable List<String> requiredFindingLabelKeys) {
-            this.requiredFindingLabelKeys = Output.ofNullable(requiredFindingLabelKeys);
+            this.requiredFindingLabelKeys = Codegen.ofNullable(requiredFindingLabelKeys);
             return this;
         }
         public Builder requiredFindingLabelKeys(String... requiredFindingLabelKeys) {
@@ -141,7 +142,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tableOptions(@Nullable GooglePrivacyDlpV2TableOptionsArgs tableOptions) {
-            this.tableOptions = Output.ofNullable(tableOptions);
+            this.tableOptions = Codegen.ofNullable(tableOptions);
             return this;
         }        public GooglePrivacyDlpV2HybridOptionsArgs build() {
             return new GooglePrivacyDlpV2HybridOptionsArgs(description, labels, requiredFindingLabelKeys, tableOptions);

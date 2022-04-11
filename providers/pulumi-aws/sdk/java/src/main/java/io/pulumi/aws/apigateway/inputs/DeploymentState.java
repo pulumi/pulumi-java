@@ -5,6 +5,7 @@ package io.pulumi.aws.apigateway.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> createdDate;
 
     public Output<String> getCreatedDate() {
-        return this.createdDate == null ? Output.empty() : this.createdDate;
+        return this.createdDate == null ? Codegen.empty() : this.createdDate;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> executionArn;
 
     public Output<String> getExecutionArn() {
-        return this.executionArn == null ? Output.empty() : this.executionArn;
+        return this.executionArn == null ? Codegen.empty() : this.executionArn;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> invokeUrl;
 
     public Output<String> getInvokeUrl() {
-        return this.invokeUrl == null ? Output.empty() : this.invokeUrl;
+        return this.invokeUrl == null ? Codegen.empty() : this.invokeUrl;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> restApi;
 
     public Output<String> getRestApi() {
-        return this.restApi == null ? Output.empty() : this.restApi;
+        return this.restApi == null ? Codegen.empty() : this.restApi;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stageDescription;
 
     public Output<String> getStageDescription() {
-        return this.stageDescription == null ? Output.empty() : this.stageDescription;
+        return this.stageDescription == null ? Codegen.empty() : this.stageDescription;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> stageName;
 
     public Output<String> getStageName() {
-        return this.stageName == null ? Output.empty() : this.stageName;
+        return this.stageName == null ? Codegen.empty() : this.stageName;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> triggers;
 
     public Output<Map<String,String>> getTriggers() {
-        return this.triggers == null ? Output.empty() : this.triggers;
+        return this.triggers == null ? Codegen.empty() : this.triggers;
     }
 
     /**
@@ -114,7 +115,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> variables;
 
     public Output<Map<String,String>> getVariables() {
-        return this.variables == null ? Output.empty() : this.variables;
+        return this.variables == null ? Codegen.empty() : this.variables;
     }
 
     public DeploymentState(
@@ -139,15 +140,15 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeploymentState() {
-        this.createdDate = Output.empty();
-        this.description = Output.empty();
-        this.executionArn = Output.empty();
-        this.invokeUrl = Output.empty();
-        this.restApi = Output.empty();
-        this.stageDescription = Output.empty();
-        this.stageName = Output.empty();
-        this.triggers = Output.empty();
-        this.variables = Output.empty();
+        this.createdDate = Codegen.empty();
+        this.description = Codegen.empty();
+        this.executionArn = Codegen.empty();
+        this.invokeUrl = Codegen.empty();
+        this.restApi = Codegen.empty();
+        this.stageDescription = Codegen.empty();
+        this.stageName = Codegen.empty();
+        this.triggers = Codegen.empty();
+        this.variables = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -191,7 +192,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createdDate(@Nullable String createdDate) {
-            this.createdDate = Output.ofNullable(createdDate);
+            this.createdDate = Codegen.ofNullable(createdDate);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -199,7 +200,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder executionArn(@Nullable Output<String> executionArn) {
@@ -207,7 +208,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder executionArn(@Nullable String executionArn) {
-            this.executionArn = Output.ofNullable(executionArn);
+            this.executionArn = Codegen.ofNullable(executionArn);
             return this;
         }
         public Builder invokeUrl(@Nullable Output<String> invokeUrl) {
@@ -215,7 +216,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder invokeUrl(@Nullable String invokeUrl) {
-            this.invokeUrl = Output.ofNullable(invokeUrl);
+            this.invokeUrl = Codegen.ofNullable(invokeUrl);
             return this;
         }
         public Builder restApi(@Nullable Output<String> restApi) {
@@ -227,7 +228,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageDescription(@Nullable String stageDescription) {
-            this.stageDescription = Output.ofNullable(stageDescription);
+            this.stageDescription = Codegen.ofNullable(stageDescription);
             return this;
         }
         public Builder stageName(@Nullable Output<String> stageName) {
@@ -235,7 +236,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stageName(@Nullable String stageName) {
-            this.stageName = Output.ofNullable(stageName);
+            this.stageName = Codegen.ofNullable(stageName);
             return this;
         }
         public Builder triggers(@Nullable Output<Map<String,String>> triggers) {
@@ -243,7 +244,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder triggers(@Nullable Map<String,String> triggers) {
-            this.triggers = Output.ofNullable(triggers);
+            this.triggers = Codegen.ofNullable(triggers);
             return this;
         }
         public Builder variables(@Nullable Output<Map<String,String>> variables) {
@@ -251,7 +252,7 @@ public final class DeploymentState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder variables(@Nullable Map<String,String> variables) {
-            this.variables = Output.ofNullable(variables);
+            this.variables = Codegen.ofNullable(variables);
             return this;
         }        public DeploymentState build() {
             return new DeploymentState(createdDate, description, executionArn, invokeUrl, restApi, stageDescription, stageName, triggers, variables);

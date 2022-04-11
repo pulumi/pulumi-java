@@ -5,6 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> metadataConfigurationPath;
 
     public Output<String> getMetadataConfigurationPath() {
-        return this.metadataConfigurationPath == null ? Output.empty() : this.metadataConfigurationPath;
+        return this.metadataConfigurationPath == null ? Codegen.empty() : this.metadataConfigurationPath;
     }
 
     public CustomProfileArgs(@Nullable Output<String> metadataConfigurationPath) {
@@ -34,7 +35,7 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CustomProfileArgs() {
-        this.metadataConfigurationPath = Output.empty();
+        this.metadataConfigurationPath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadataConfigurationPath(@Nullable String metadataConfigurationPath) {
-            this.metadataConfigurationPath = Output.ofNullable(metadataConfigurationPath);
+            this.metadataConfigurationPath = Codegen.ofNullable(metadataConfigurationPath);
             return this;
         }        public CustomProfileArgs build() {
             return new CustomProfileArgs(metadataConfigurationPath);

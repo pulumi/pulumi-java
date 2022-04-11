@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
       private final @Nullable Output<String> service;
 
     public Output<String> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
       private final @Nullable Output<String> urlMask;
 
     public Output<String> getUrlMask() {
-        return this.urlMask == null ? Output.empty() : this.urlMask;
+        return this.urlMask == null ? Codegen.empty() : this.urlMask;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
       private final @Nullable Output<String> version;
 
     public Output<String> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public RegionNetworkEndpointGroupAppEngineArgs(
@@ -66,9 +67,9 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
     }
 
     private RegionNetworkEndpointGroupAppEngineArgs() {
-        this.service = Output.empty();
-        this.urlMask = Output.empty();
-        this.version = Output.empty();
+        this.service = Codegen.empty();
+        this.urlMask = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
             return this;
         }
         public Builder service(@Nullable String service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }
         public Builder urlMask(@Nullable Output<String> urlMask) {
@@ -108,7 +109,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
             return this;
         }
         public Builder urlMask(@Nullable String urlMask) {
-            this.urlMask = Output.ofNullable(urlMask);
+            this.urlMask = Codegen.ofNullable(urlMask);
             return this;
         }
         public Builder version(@Nullable Output<String> version) {
@@ -116,7 +117,7 @@ public final class RegionNetworkEndpointGroupAppEngineArgs extends io.pulumi.res
             return this;
         }
         public Builder version(@Nullable String version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public RegionNetworkEndpointGroupAppEngineArgs build() {
             return new RegionNetworkEndpointGroupAppEngineArgs(service, urlMask, version);

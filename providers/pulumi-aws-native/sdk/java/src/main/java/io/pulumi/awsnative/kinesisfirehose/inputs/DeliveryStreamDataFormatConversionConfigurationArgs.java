@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamOutputFormatConf
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamSchemaConfigurationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,28 +22,28 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     @Import(name="inputFormatConfiguration")
       private final @Nullable Output<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration;
 
     public Output<DeliveryStreamInputFormatConfigurationArgs> getInputFormatConfiguration() {
-        return this.inputFormatConfiguration == null ? Output.empty() : this.inputFormatConfiguration;
+        return this.inputFormatConfiguration == null ? Codegen.empty() : this.inputFormatConfiguration;
     }
 
     @Import(name="outputFormatConfiguration")
       private final @Nullable Output<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration;
 
     public Output<DeliveryStreamOutputFormatConfigurationArgs> getOutputFormatConfiguration() {
-        return this.outputFormatConfiguration == null ? Output.empty() : this.outputFormatConfiguration;
+        return this.outputFormatConfiguration == null ? Codegen.empty() : this.outputFormatConfiguration;
     }
 
     @Import(name="schemaConfiguration")
       private final @Nullable Output<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration;
 
     public Output<DeliveryStreamSchemaConfigurationArgs> getSchemaConfiguration() {
-        return this.schemaConfiguration == null ? Output.empty() : this.schemaConfiguration;
+        return this.schemaConfiguration == null ? Codegen.empty() : this.schemaConfiguration;
     }
 
     public DeliveryStreamDataFormatConversionConfigurationArgs(
@@ -57,10 +58,10 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
     }
 
     private DeliveryStreamDataFormatConversionConfigurationArgs() {
-        this.enabled = Output.empty();
-        this.inputFormatConfiguration = Output.empty();
-        this.outputFormatConfiguration = Output.empty();
-        this.schemaConfiguration = Output.empty();
+        this.enabled = Codegen.empty();
+        this.inputFormatConfiguration = Codegen.empty();
+        this.outputFormatConfiguration = Codegen.empty();
+        this.schemaConfiguration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -94,7 +95,7 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder inputFormatConfiguration(@Nullable Output<DeliveryStreamInputFormatConfigurationArgs> inputFormatConfiguration) {
@@ -102,7 +103,7 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
             return this;
         }
         public Builder inputFormatConfiguration(@Nullable DeliveryStreamInputFormatConfigurationArgs inputFormatConfiguration) {
-            this.inputFormatConfiguration = Output.ofNullable(inputFormatConfiguration);
+            this.inputFormatConfiguration = Codegen.ofNullable(inputFormatConfiguration);
             return this;
         }
         public Builder outputFormatConfiguration(@Nullable Output<DeliveryStreamOutputFormatConfigurationArgs> outputFormatConfiguration) {
@@ -110,7 +111,7 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
             return this;
         }
         public Builder outputFormatConfiguration(@Nullable DeliveryStreamOutputFormatConfigurationArgs outputFormatConfiguration) {
-            this.outputFormatConfiguration = Output.ofNullable(outputFormatConfiguration);
+            this.outputFormatConfiguration = Codegen.ofNullable(outputFormatConfiguration);
             return this;
         }
         public Builder schemaConfiguration(@Nullable Output<DeliveryStreamSchemaConfigurationArgs> schemaConfiguration) {
@@ -118,7 +119,7 @@ public final class DeliveryStreamDataFormatConversionConfigurationArgs extends i
             return this;
         }
         public Builder schemaConfiguration(@Nullable DeliveryStreamSchemaConfigurationArgs schemaConfiguration) {
-            this.schemaConfiguration = Output.ofNullable(schemaConfiguration);
+            this.schemaConfiguration = Codegen.ofNullable(schemaConfiguration);
             return this;
         }        public DeliveryStreamDataFormatConversionConfigurationArgs build() {
             return new DeliveryStreamDataFormatConversionConfigurationArgs(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);

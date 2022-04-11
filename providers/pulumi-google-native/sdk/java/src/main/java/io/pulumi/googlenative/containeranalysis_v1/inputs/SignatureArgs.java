@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> publicKeyId;
 
     public Output<String> getPublicKeyId() {
-        return this.publicKeyId == null ? Output.empty() : this.publicKeyId;
+        return this.publicKeyId == null ? Codegen.empty() : this.publicKeyId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> signature;
 
     public Output<String> getSignature() {
-        return this.signature == null ? Output.empty() : this.signature;
+        return this.signature == null ? Codegen.empty() : this.signature;
     }
 
     public SignatureArgs(
@@ -48,8 +49,8 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SignatureArgs() {
-        this.publicKeyId = Output.empty();
-        this.signature = Output.empty();
+        this.publicKeyId = Codegen.empty();
+        this.signature = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder publicKeyId(@Nullable String publicKeyId) {
-            this.publicKeyId = Output.ofNullable(publicKeyId);
+            this.publicKeyId = Codegen.ofNullable(publicKeyId);
             return this;
         }
         public Builder signature(@Nullable Output<String> signature) {
@@ -87,7 +88,7 @@ public final class SignatureArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder signature(@Nullable String signature) {
-            this.signature = Output.ofNullable(signature);
+            this.signature = Codegen.ofNullable(signature);
             return this;
         }        public SignatureArgs build() {
             return new SignatureArgs(publicKeyId, signature);

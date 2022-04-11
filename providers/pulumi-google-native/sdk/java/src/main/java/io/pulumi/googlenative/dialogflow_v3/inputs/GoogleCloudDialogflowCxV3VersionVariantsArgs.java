@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3VersionVariantsVariantArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends io.pulum
       private final @Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants;
 
     public Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> getVariants() {
-        return this.variants == null ? Output.empty() : this.variants;
+        return this.variants == null ? Codegen.empty() : this.variants;
     }
 
     public GoogleCloudDialogflowCxV3VersionVariantsArgs(@Nullable Output<List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs>> variants) {
@@ -35,7 +36,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends io.pulum
     }
 
     private GoogleCloudDialogflowCxV3VersionVariantsArgs() {
-        this.variants = Output.empty();
+        this.variants = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsArgs extends io.pulum
             return this;
         }
         public Builder variants(@Nullable List<GoogleCloudDialogflowCxV3VersionVariantsVariantArgs> variants) {
-            this.variants = Output.ofNullable(variants);
+            this.variants = Codegen.ofNullable(variants);
             return this;
         }
         public Builder variants(GoogleCloudDialogflowCxV3VersionVariantsVariantArgs... variants) {

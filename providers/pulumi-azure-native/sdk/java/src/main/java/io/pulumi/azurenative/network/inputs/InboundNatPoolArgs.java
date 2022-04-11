@@ -8,6 +8,7 @@ import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -42,7 +43,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableFloatingIP;
 
     public Output<Boolean> getEnableFloatingIP() {
-        return this.enableFloatingIP == null ? Output.empty() : this.enableFloatingIP;
+        return this.enableFloatingIP == null ? Codegen.empty() : this.enableFloatingIP;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> enableTcpReset;
 
     public Output<Boolean> getEnableTcpReset() {
-        return this.enableTcpReset == null ? Output.empty() : this.enableTcpReset;
+        return this.enableTcpReset == null ? Codegen.empty() : this.enableTcpReset;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> frontendIPConfiguration;
 
     public Output<SubResourceArgs> getFrontendIPConfiguration() {
-        return this.frontendIPConfiguration == null ? Output.empty() : this.frontendIPConfiguration;
+        return this.frontendIPConfiguration == null ? Codegen.empty() : this.frontendIPConfiguration;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> idleTimeoutInMinutes;
 
     public Output<Integer> getIdleTimeoutInMinutes() {
-        return this.idleTimeoutInMinutes == null ? Output.empty() : this.idleTimeoutInMinutes;
+        return this.idleTimeoutInMinutes == null ? Codegen.empty() : this.idleTimeoutInMinutes;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -157,16 +158,16 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InboundNatPoolArgs() {
-        this.backendPort = Output.empty();
-        this.enableFloatingIP = Output.empty();
-        this.enableTcpReset = Output.empty();
-        this.frontendIPConfiguration = Output.empty();
-        this.frontendPortRangeEnd = Output.empty();
-        this.frontendPortRangeStart = Output.empty();
-        this.id = Output.empty();
-        this.idleTimeoutInMinutes = Output.empty();
-        this.name = Output.empty();
-        this.protocol = Output.empty();
+        this.backendPort = Codegen.empty();
+        this.enableFloatingIP = Codegen.empty();
+        this.enableTcpReset = Codegen.empty();
+        this.frontendIPConfiguration = Codegen.empty();
+        this.frontendPortRangeEnd = Codegen.empty();
+        this.frontendPortRangeStart = Codegen.empty();
+        this.id = Codegen.empty();
+        this.idleTimeoutInMinutes = Codegen.empty();
+        this.name = Codegen.empty();
+        this.protocol = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -220,7 +221,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableFloatingIP(@Nullable Boolean enableFloatingIP) {
-            this.enableFloatingIP = Output.ofNullable(enableFloatingIP);
+            this.enableFloatingIP = Codegen.ofNullable(enableFloatingIP);
             return this;
         }
         public Builder enableTcpReset(@Nullable Output<Boolean> enableTcpReset) {
@@ -228,7 +229,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enableTcpReset(@Nullable Boolean enableTcpReset) {
-            this.enableTcpReset = Output.ofNullable(enableTcpReset);
+            this.enableTcpReset = Codegen.ofNullable(enableTcpReset);
             return this;
         }
         public Builder frontendIPConfiguration(@Nullable Output<SubResourceArgs> frontendIPConfiguration) {
@@ -236,7 +237,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder frontendIPConfiguration(@Nullable SubResourceArgs frontendIPConfiguration) {
-            this.frontendIPConfiguration = Output.ofNullable(frontendIPConfiguration);
+            this.frontendIPConfiguration = Codegen.ofNullable(frontendIPConfiguration);
             return this;
         }
         public Builder frontendPortRangeEnd(Output<Integer> frontendPortRangeEnd) {
@@ -260,7 +261,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Output<Integer> idleTimeoutInMinutes) {
@@ -268,7 +269,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idleTimeoutInMinutes(@Nullable Integer idleTimeoutInMinutes) {
-            this.idleTimeoutInMinutes = Output.ofNullable(idleTimeoutInMinutes);
+            this.idleTimeoutInMinutes = Codegen.ofNullable(idleTimeoutInMinutes);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -276,7 +277,7 @@ public final class InboundNatPoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder protocol(Output<Either<String,TransportProtocol>> protocol) {

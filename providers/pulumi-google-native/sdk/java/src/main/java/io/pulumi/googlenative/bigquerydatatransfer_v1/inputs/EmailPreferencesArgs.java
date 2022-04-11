@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquerydatatransfer_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<Boolean> enableFailureEmail;
 
     public Output<Boolean> getEnableFailureEmail() {
-        return this.enableFailureEmail == null ? Output.empty() : this.enableFailureEmail;
+        return this.enableFailureEmail == null ? Codegen.empty() : this.enableFailureEmail;
     }
 
     public EmailPreferencesArgs(@Nullable Output<Boolean> enableFailureEmail) {
@@ -34,7 +35,7 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private EmailPreferencesArgs() {
-        this.enableFailureEmail = Output.empty();
+        this.enableFailureEmail = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class EmailPreferencesArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder enableFailureEmail(@Nullable Boolean enableFailureEmail) {
-            this.enableFailureEmail = Output.ofNullable(enableFailureEmail);
+            this.enableFailureEmail = Codegen.ofNullable(enableFailureEmail);
             return this;
         }        public EmailPreferencesArgs build() {
             return new EmailPreferencesArgs(enableFailureEmail);

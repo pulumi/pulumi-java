@@ -5,6 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
       private final @Nullable Output<Boolean> primary;
 
     public Output<Boolean> getPrimary() {
-        return this.primary == null ? Output.empty() : this.primary;
+        return this.primary == null ? Codegen.empty() : this.primary;
     }
 
     @Import(name="privateIpAddress", required=true)
@@ -37,8 +38,8 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
     }
 
     private SpotFleetPrivateIpAddressSpecificationArgs() {
-        this.primary = Output.empty();
-        this.privateIpAddress = Output.empty();
+        this.primary = Codegen.empty();
+        this.privateIpAddress = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class SpotFleetPrivateIpAddressSpecificationArgs extends io.pulumi.
             return this;
         }
         public Builder primary(@Nullable Boolean primary) {
-            this.primary = Output.ofNullable(primary);
+            this.primary = Codegen.ofNullable(primary);
             return this;
         }
         public Builder privateIpAddress(Output<String> privateIpAddress) {

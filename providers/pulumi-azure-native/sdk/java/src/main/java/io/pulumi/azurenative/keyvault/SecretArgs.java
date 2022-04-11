@@ -6,6 +6,7 @@ package io.pulumi.azurenative.keyvault;
 import io.pulumi.azurenative.keyvault.inputs.SecretPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -46,7 +47,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> secretName;
 
     public Output<String> getSecretName() {
-        return this.secretName == null ? Output.empty() : this.secretName;
+        return this.secretName == null ? Codegen.empty() : this.secretName;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SecretArgs() {
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.secretName = Output.empty();
-        this.tags = Output.empty();
-        this.vaultName = Output.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.secretName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vaultName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -141,7 +142,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder secretName(@Nullable String secretName) {
-            this.secretName = Output.ofNullable(secretName);
+            this.secretName = Codegen.ofNullable(secretName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -149,7 +150,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vaultName(Output<String> vaultName) {

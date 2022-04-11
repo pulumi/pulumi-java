@@ -5,6 +5,7 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.HashArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HashArgs> contentHash;
 
     public Output<HashArgs> getContentHash() {
-        return this.contentHash == null ? Output.empty() : this.contentHash;
+        return this.contentHash == null ? Codegen.empty() : this.contentHash;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> uri;
 
     public Output<String> getUri() {
-        return this.uri == null ? Output.empty() : this.uri;
+        return this.uri == null ? Codegen.empty() : this.uri;
     }
 
     public ResourceArgs(
@@ -62,9 +63,9 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceArgs() {
-        this.contentHash = Output.empty();
-        this.name = Output.empty();
-        this.uri = Output.empty();
+        this.contentHash = Codegen.empty();
+        this.name = Codegen.empty();
+        this.uri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contentHash(@Nullable HashArgs contentHash) {
-            this.contentHash = Output.ofNullable(contentHash);
+            this.contentHash = Codegen.ofNullable(contentHash);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -104,7 +105,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder uri(@Nullable Output<String> uri) {
@@ -112,7 +113,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder uri(@Nullable String uri) {
-            this.uri = Output.ofNullable(uri);
+            this.uri = Codegen.ofNullable(uri);
             return this;
         }        public ResourceArgs build() {
             return new ResourceArgs(contentHash, name, uri);

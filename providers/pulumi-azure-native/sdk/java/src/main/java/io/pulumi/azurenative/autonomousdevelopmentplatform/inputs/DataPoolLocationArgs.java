@@ -6,6 +6,7 @@ package io.pulumi.azurenative.autonomousdevelopmentplatform.inputs;
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolEncryptionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<DataPoolEncryptionArgs> encryption;
 
     public Output<DataPoolEncryptionArgs> getEncryption() {
-        return this.encryption == null ? Output.empty() : this.encryption;
+        return this.encryption == null ? Codegen.empty() : this.encryption;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DataPoolLocationArgs() {
-        this.encryption = Output.empty();
-        this.name = Output.empty();
+        this.encryption = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DataPoolLocationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder encryption(@Nullable DataPoolEncryptionArgs encryption) {
-            this.encryption = Output.ofNullable(encryption);
+            this.encryption = Codegen.ofNullable(encryption);
             return this;
         }
         public Builder name(Output<String> name) {

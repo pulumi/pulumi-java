@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.SecurityGroup;
 import io.pulumi.aws.eks.Cluster;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -47,7 +48,7 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -73,10 +74,10 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
     }
 
     private NodeGroupSecurityGroupArgs() {
-        this.clusterSecurityGroup = Output.empty();
-        this.eksCluster = Output.empty();
-        this.tags = Output.empty();
-        this.vpcId = Output.empty();
+        this.clusterSecurityGroup = Codegen.empty();
+        this.eksCluster = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.vpcId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -126,7 +127,7 @@ public final class NodeGroupSecurityGroupArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder vpcId(Output<String> vpcId) {

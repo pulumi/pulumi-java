@@ -5,6 +5,7 @@ package io.pulumi.aws.mq.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,9 +57,9 @@ public final class BrokerMaintenanceWindowStartTimeArgs extends io.pulumi.resour
     }
 
     private BrokerMaintenanceWindowStartTimeArgs() {
-        this.dayOfWeek = Output.empty();
-        this.timeOfDay = Output.empty();
-        this.timeZone = Output.empty();
+        this.dayOfWeek = Codegen.empty();
+        this.timeOfDay = Codegen.empty();
+        this.timeZone = Codegen.empty();
     }
 
     public static Builder builder() {

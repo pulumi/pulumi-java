@@ -5,6 +5,7 @@ package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.bigquery_v2.inputs.EncryptionConfigurationArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
 import java.lang.Object;
@@ -26,7 +27,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> createDisposition;
 
     public Output<String> getCreateDisposition() {
-        return this.createDisposition == null ? Output.empty() : this.createDisposition;
+        return this.createDisposition == null ? Codegen.empty() : this.createDisposition;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration;
 
     public Output<EncryptionConfigurationArgs> getDestinationEncryptionConfiguration() {
-        return this.destinationEncryptionConfiguration == null ? Output.empty() : this.destinationEncryptionConfiguration;
+        return this.destinationEncryptionConfiguration == null ? Codegen.empty() : this.destinationEncryptionConfiguration;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> destinationExpirationTime;
 
     public Output<Object> getDestinationExpirationTime() {
-        return this.destinationExpirationTime == null ? Output.empty() : this.destinationExpirationTime;
+        return this.destinationExpirationTime == null ? Codegen.empty() : this.destinationExpirationTime;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<TableReferenceArgs> destinationTable;
 
     public Output<TableReferenceArgs> getDestinationTable() {
-        return this.destinationTable == null ? Output.empty() : this.destinationTable;
+        return this.destinationTable == null ? Codegen.empty() : this.destinationTable;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> operationType;
 
     public Output<String> getOperationType() {
-        return this.operationType == null ? Output.empty() : this.operationType;
+        return this.operationType == null ? Codegen.empty() : this.operationType;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<TableReferenceArgs> sourceTable;
 
     public Output<TableReferenceArgs> getSourceTable() {
-        return this.sourceTable == null ? Output.empty() : this.sourceTable;
+        return this.sourceTable == null ? Codegen.empty() : this.sourceTable;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<List<TableReferenceArgs>> sourceTables;
 
     public Output<List<TableReferenceArgs>> getSourceTables() {
-        return this.sourceTables == null ? Output.empty() : this.sourceTables;
+        return this.sourceTables == null ? Codegen.empty() : this.sourceTables;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> writeDisposition;
 
     public Output<String> getWriteDisposition() {
-        return this.writeDisposition == null ? Output.empty() : this.writeDisposition;
+        return this.writeDisposition == null ? Codegen.empty() : this.writeDisposition;
     }
 
     public JobConfigurationTableCopyArgs(
@@ -126,14 +127,14 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
     }
 
     private JobConfigurationTableCopyArgs() {
-        this.createDisposition = Output.empty();
-        this.destinationEncryptionConfiguration = Output.empty();
-        this.destinationExpirationTime = Output.empty();
-        this.destinationTable = Output.empty();
-        this.operationType = Output.empty();
-        this.sourceTable = Output.empty();
-        this.sourceTables = Output.empty();
-        this.writeDisposition = Output.empty();
+        this.createDisposition = Codegen.empty();
+        this.destinationEncryptionConfiguration = Codegen.empty();
+        this.destinationExpirationTime = Codegen.empty();
+        this.destinationTable = Codegen.empty();
+        this.operationType = Codegen.empty();
+        this.sourceTable = Codegen.empty();
+        this.sourceTables = Codegen.empty();
+        this.writeDisposition = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder createDisposition(@Nullable String createDisposition) {
-            this.createDisposition = Output.ofNullable(createDisposition);
+            this.createDisposition = Codegen.ofNullable(createDisposition);
             return this;
         }
         public Builder destinationEncryptionConfiguration(@Nullable Output<EncryptionConfigurationArgs> destinationEncryptionConfiguration) {
@@ -183,7 +184,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder destinationEncryptionConfiguration(@Nullable EncryptionConfigurationArgs destinationEncryptionConfiguration) {
-            this.destinationEncryptionConfiguration = Output.ofNullable(destinationEncryptionConfiguration);
+            this.destinationEncryptionConfiguration = Codegen.ofNullable(destinationEncryptionConfiguration);
             return this;
         }
         public Builder destinationExpirationTime(@Nullable Output<Object> destinationExpirationTime) {
@@ -191,7 +192,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder destinationExpirationTime(@Nullable Object destinationExpirationTime) {
-            this.destinationExpirationTime = Output.ofNullable(destinationExpirationTime);
+            this.destinationExpirationTime = Codegen.ofNullable(destinationExpirationTime);
             return this;
         }
         public Builder destinationTable(@Nullable Output<TableReferenceArgs> destinationTable) {
@@ -199,7 +200,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder destinationTable(@Nullable TableReferenceArgs destinationTable) {
-            this.destinationTable = Output.ofNullable(destinationTable);
+            this.destinationTable = Codegen.ofNullable(destinationTable);
             return this;
         }
         public Builder operationType(@Nullable Output<String> operationType) {
@@ -207,7 +208,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder operationType(@Nullable String operationType) {
-            this.operationType = Output.ofNullable(operationType);
+            this.operationType = Codegen.ofNullable(operationType);
             return this;
         }
         public Builder sourceTable(@Nullable Output<TableReferenceArgs> sourceTable) {
@@ -215,7 +216,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sourceTable(@Nullable TableReferenceArgs sourceTable) {
-            this.sourceTable = Output.ofNullable(sourceTable);
+            this.sourceTable = Codegen.ofNullable(sourceTable);
             return this;
         }
         public Builder sourceTables(@Nullable Output<List<TableReferenceArgs>> sourceTables) {
@@ -223,7 +224,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder sourceTables(@Nullable List<TableReferenceArgs> sourceTables) {
-            this.sourceTables = Output.ofNullable(sourceTables);
+            this.sourceTables = Codegen.ofNullable(sourceTables);
             return this;
         }
         public Builder sourceTables(TableReferenceArgs... sourceTables) {
@@ -234,7 +235,7 @@ public final class JobConfigurationTableCopyArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder writeDisposition(@Nullable String writeDisposition) {
-            this.writeDisposition = Output.ofNullable(writeDisposition);
+            this.writeDisposition = Codegen.ofNullable(writeDisposition);
             return this;
         }        public JobConfigurationTableCopyArgs build() {
             return new JobConfigurationTableCopyArgs(createDisposition, destinationEncryptionConfiguration, destinationExpirationTime, destinationTable, operationType, sourceTable, sourceTables, writeDisposition);

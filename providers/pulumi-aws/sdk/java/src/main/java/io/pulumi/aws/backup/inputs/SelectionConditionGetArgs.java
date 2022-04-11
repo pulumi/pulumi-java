@@ -9,6 +9,7 @@ import io.pulumi.aws.backup.inputs.SelectionConditionStringNotEqualGetArgs;
 import io.pulumi.aws.backup.inputs.SelectionConditionStringNotLikeGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,28 +23,28 @@ public final class SelectionConditionGetArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<SelectionConditionStringEqualGetArgs>> stringEquals;
 
     public Output<List<SelectionConditionStringEqualGetArgs>> getStringEquals() {
-        return this.stringEquals == null ? Output.empty() : this.stringEquals;
+        return this.stringEquals == null ? Codegen.empty() : this.stringEquals;
     }
 
     @Import(name="stringLikes")
       private final @Nullable Output<List<SelectionConditionStringLikeGetArgs>> stringLikes;
 
     public Output<List<SelectionConditionStringLikeGetArgs>> getStringLikes() {
-        return this.stringLikes == null ? Output.empty() : this.stringLikes;
+        return this.stringLikes == null ? Codegen.empty() : this.stringLikes;
     }
 
     @Import(name="stringNotEquals")
       private final @Nullable Output<List<SelectionConditionStringNotEqualGetArgs>> stringNotEquals;
 
     public Output<List<SelectionConditionStringNotEqualGetArgs>> getStringNotEquals() {
-        return this.stringNotEquals == null ? Output.empty() : this.stringNotEquals;
+        return this.stringNotEquals == null ? Codegen.empty() : this.stringNotEquals;
     }
 
     @Import(name="stringNotLikes")
       private final @Nullable Output<List<SelectionConditionStringNotLikeGetArgs>> stringNotLikes;
 
     public Output<List<SelectionConditionStringNotLikeGetArgs>> getStringNotLikes() {
-        return this.stringNotLikes == null ? Output.empty() : this.stringNotLikes;
+        return this.stringNotLikes == null ? Codegen.empty() : this.stringNotLikes;
     }
 
     public SelectionConditionGetArgs(
@@ -58,10 +59,10 @@ public final class SelectionConditionGetArgs extends io.pulumi.resources.Resourc
     }
 
     private SelectionConditionGetArgs() {
-        this.stringEquals = Output.empty();
-        this.stringLikes = Output.empty();
-        this.stringNotEquals = Output.empty();
-        this.stringNotLikes = Output.empty();
+        this.stringEquals = Codegen.empty();
+        this.stringLikes = Codegen.empty();
+        this.stringNotEquals = Codegen.empty();
+        this.stringNotLikes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class SelectionConditionGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder stringEquals(@Nullable List<SelectionConditionStringEqualGetArgs> stringEquals) {
-            this.stringEquals = Output.ofNullable(stringEquals);
+            this.stringEquals = Codegen.ofNullable(stringEquals);
             return this;
         }
         public Builder stringEquals(SelectionConditionStringEqualGetArgs... stringEquals) {
@@ -106,7 +107,7 @@ public final class SelectionConditionGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder stringLikes(@Nullable List<SelectionConditionStringLikeGetArgs> stringLikes) {
-            this.stringLikes = Output.ofNullable(stringLikes);
+            this.stringLikes = Codegen.ofNullable(stringLikes);
             return this;
         }
         public Builder stringLikes(SelectionConditionStringLikeGetArgs... stringLikes) {
@@ -117,7 +118,7 @@ public final class SelectionConditionGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder stringNotEquals(@Nullable List<SelectionConditionStringNotEqualGetArgs> stringNotEquals) {
-            this.stringNotEquals = Output.ofNullable(stringNotEquals);
+            this.stringNotEquals = Codegen.ofNullable(stringNotEquals);
             return this;
         }
         public Builder stringNotEquals(SelectionConditionStringNotEqualGetArgs... stringNotEquals) {
@@ -128,7 +129,7 @@ public final class SelectionConditionGetArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder stringNotLikes(@Nullable List<SelectionConditionStringNotLikeGetArgs> stringNotLikes) {
-            this.stringNotLikes = Output.ofNullable(stringNotLikes);
+            this.stringNotLikes = Codegen.ofNullable(stringNotLikes);
             return this;
         }
         public Builder stringNotLikes(SelectionConditionStringNotLikeGetArgs... stringNotLikes) {

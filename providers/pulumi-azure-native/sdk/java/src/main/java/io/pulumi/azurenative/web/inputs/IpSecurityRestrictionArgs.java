@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.enums.IpFilterTag;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +32,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,List<String>>> headers;
 
     public Output<Map<String,List<String>>> getHeaders() {
-        return this.headers == null ? Output.empty() : this.headers;
+        return this.headers == null ? Codegen.empty() : this.headers;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> ipAddress;
 
     public Output<String> getIpAddress() {
-        return this.ipAddress == null ? Output.empty() : this.ipAddress;
+        return this.ipAddress == null ? Codegen.empty() : this.ipAddress;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -104,7 +105,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     /**
@@ -115,7 +116,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> subnetMask;
 
     public Output<String> getSubnetMask() {
-        return this.subnetMask == null ? Output.empty() : this.subnetMask;
+        return this.subnetMask == null ? Codegen.empty() : this.subnetMask;
     }
 
     /**
@@ -126,7 +127,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> subnetTrafficTag;
 
     public Output<Integer> getSubnetTrafficTag() {
-        return this.subnetTrafficTag == null ? Output.empty() : this.subnetTrafficTag;
+        return this.subnetTrafficTag == null ? Codegen.empty() : this.subnetTrafficTag;
     }
 
     /**
@@ -137,7 +138,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Either<String,IpFilterTag>> tag;
 
     public Output<Either<String,IpFilterTag>> getTag() {
-        return this.tag == null ? Output.empty() : this.tag;
+        return this.tag == null ? Codegen.empty() : this.tag;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> vnetSubnetResourceId;
 
     public Output<String> getVnetSubnetResourceId() {
-        return this.vnetSubnetResourceId == null ? Output.empty() : this.vnetSubnetResourceId;
+        return this.vnetSubnetResourceId == null ? Codegen.empty() : this.vnetSubnetResourceId;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Integer> vnetTrafficTag;
 
     public Output<Integer> getVnetTrafficTag() {
-        return this.vnetTrafficTag == null ? Output.empty() : this.vnetTrafficTag;
+        return this.vnetTrafficTag == null ? Codegen.empty() : this.vnetTrafficTag;
     }
 
     public IpSecurityRestrictionArgs(
@@ -188,17 +189,17 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
     }
 
     private IpSecurityRestrictionArgs() {
-        this.action = Output.empty();
-        this.description = Output.empty();
-        this.headers = Output.empty();
-        this.ipAddress = Output.empty();
-        this.name = Output.empty();
-        this.priority = Output.empty();
-        this.subnetMask = Output.empty();
-        this.subnetTrafficTag = Output.empty();
-        this.tag = Output.empty();
-        this.vnetSubnetResourceId = Output.empty();
-        this.vnetTrafficTag = Output.empty();
+        this.action = Codegen.empty();
+        this.description = Codegen.empty();
+        this.headers = Codegen.empty();
+        this.ipAddress = Codegen.empty();
+        this.name = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.subnetMask = Codegen.empty();
+        this.subnetTrafficTag = Codegen.empty();
+        this.tag = Codegen.empty();
+        this.vnetSubnetResourceId = Codegen.empty();
+        this.vnetTrafficTag = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -246,7 +247,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -254,7 +255,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder headers(@Nullable Output<Map<String,List<String>>> headers) {
@@ -262,7 +263,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder headers(@Nullable Map<String,List<String>> headers) {
-            this.headers = Output.ofNullable(headers);
+            this.headers = Codegen.ofNullable(headers);
             return this;
         }
         public Builder ipAddress(@Nullable Output<String> ipAddress) {
@@ -270,7 +271,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ipAddress(@Nullable String ipAddress) {
-            this.ipAddress = Output.ofNullable(ipAddress);
+            this.ipAddress = Codegen.ofNullable(ipAddress);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -278,7 +279,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -286,7 +287,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder subnetMask(@Nullable Output<String> subnetMask) {
@@ -294,7 +295,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subnetMask(@Nullable String subnetMask) {
-            this.subnetMask = Output.ofNullable(subnetMask);
+            this.subnetMask = Codegen.ofNullable(subnetMask);
             return this;
         }
         public Builder subnetTrafficTag(@Nullable Output<Integer> subnetTrafficTag) {
@@ -302,7 +303,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder subnetTrafficTag(@Nullable Integer subnetTrafficTag) {
-            this.subnetTrafficTag = Output.ofNullable(subnetTrafficTag);
+            this.subnetTrafficTag = Codegen.ofNullable(subnetTrafficTag);
             return this;
         }
         public Builder tag(@Nullable Output<Either<String,IpFilterTag>> tag) {
@@ -310,7 +311,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tag(@Nullable Either<String,IpFilterTag> tag) {
-            this.tag = Output.ofNullable(tag);
+            this.tag = Codegen.ofNullable(tag);
             return this;
         }
         public Builder vnetSubnetResourceId(@Nullable Output<String> vnetSubnetResourceId) {
@@ -318,7 +319,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder vnetSubnetResourceId(@Nullable String vnetSubnetResourceId) {
-            this.vnetSubnetResourceId = Output.ofNullable(vnetSubnetResourceId);
+            this.vnetSubnetResourceId = Codegen.ofNullable(vnetSubnetResourceId);
             return this;
         }
         public Builder vnetTrafficTag(@Nullable Output<Integer> vnetTrafficTag) {
@@ -326,7 +327,7 @@ public final class IpSecurityRestrictionArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder vnetTrafficTag(@Nullable Integer vnetTrafficTag) {
-            this.vnetTrafficTag = Output.ofNullable(vnetTrafficTag);
+            this.vnetTrafficTag = Codegen.ofNullable(vnetTrafficTag);
             return this;
         }        public IpSecurityRestrictionArgs build() {
             return new IpSecurityRestrictionArgs(action, description, headers, ipAddress, name, priority, subnetMask, subnetTrafficTag, tag, vnetSubnetResourceId, vnetTrafficTag);

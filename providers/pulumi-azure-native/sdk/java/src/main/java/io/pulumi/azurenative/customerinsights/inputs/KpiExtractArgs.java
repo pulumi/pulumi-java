@@ -5,6 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class KpiExtractArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private KpiExtractArgs() {
-        this.expression = Output.empty();
-        this.extractName = Output.empty();
+        this.expression = Codegen.empty();
+        this.extractName = Codegen.empty();
     }
 
     public static Builder builder() {

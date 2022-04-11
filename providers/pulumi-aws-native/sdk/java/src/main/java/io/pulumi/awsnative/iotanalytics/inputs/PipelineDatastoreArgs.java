@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class PipelineDatastoreArgs extends io.pulumi.resources.ResourceArg
     }
 
     private PipelineDatastoreArgs() {
-        this.datastoreName = Output.empty();
-        this.name = Output.empty();
+        this.datastoreName = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {

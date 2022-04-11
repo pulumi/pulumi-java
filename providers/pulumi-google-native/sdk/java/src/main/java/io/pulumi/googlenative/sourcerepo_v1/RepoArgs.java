@@ -5,6 +5,7 @@ package io.pulumi.googlenative.sourcerepo_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.sourcerepo_v1.inputs.MirrorConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<MirrorConfigArgs> mirrorConfig;
 
     public Output<MirrorConfigArgs> getMirrorConfig() {
-        return this.mirrorConfig == null ? Output.empty() : this.mirrorConfig;
+        return this.mirrorConfig == null ? Codegen.empty() : this.mirrorConfig;
     }
 
     /**
@@ -35,14 +36,14 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> pubsubConfigs;
 
     public Output<Map<String,String>> getPubsubConfigs() {
-        return this.pubsubConfigs == null ? Output.empty() : this.pubsubConfigs;
+        return this.pubsubConfigs == null ? Codegen.empty() : this.pubsubConfigs;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> size;
 
     public Output<String> getSize() {
-        return this.size == null ? Output.empty() : this.size;
+        return this.size == null ? Codegen.empty() : this.size;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     public RepoArgs(
@@ -94,12 +95,12 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RepoArgs() {
-        this.mirrorConfig = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.pubsubConfigs = Output.empty();
-        this.size = Output.empty();
-        this.url = Output.empty();
+        this.mirrorConfig = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.pubsubConfigs = Codegen.empty();
+        this.size = Codegen.empty();
+        this.url = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -137,7 +138,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mirrorConfig(@Nullable MirrorConfigArgs mirrorConfig) {
-            this.mirrorConfig = Output.ofNullable(mirrorConfig);
+            this.mirrorConfig = Codegen.ofNullable(mirrorConfig);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -145,7 +146,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -153,7 +154,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder pubsubConfigs(@Nullable Output<Map<String,String>> pubsubConfigs) {
@@ -161,7 +162,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder pubsubConfigs(@Nullable Map<String,String> pubsubConfigs) {
-            this.pubsubConfigs = Output.ofNullable(pubsubConfigs);
+            this.pubsubConfigs = Codegen.ofNullable(pubsubConfigs);
             return this;
         }
         public Builder size(@Nullable Output<String> size) {
@@ -169,7 +170,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder size(@Nullable String size) {
-            this.size = Output.ofNullable(size);
+            this.size = Codegen.ofNullable(size);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -177,7 +178,7 @@ public final class RepoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }        public RepoArgs build() {
             return new RepoArgs(mirrorConfig, name, project, pubsubConfigs, size, url);

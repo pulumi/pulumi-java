@@ -6,6 +6,7 @@ package io.pulumi.gcp.apigee;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.OrganizationArgs;
 import io.pulumi.gcp.apigee.inputs.OrganizationState;
@@ -219,7 +220,7 @@ public class Organization extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Organization(String name, OrganizationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:apigee/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:apigee/organization:Organization", name, args == null ? OrganizationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Organization(String name, Output<String> id, @Nullable OrganizationState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

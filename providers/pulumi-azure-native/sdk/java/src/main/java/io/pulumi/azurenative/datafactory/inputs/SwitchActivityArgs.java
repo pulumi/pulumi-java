@@ -46,6 +46,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -69,7 +70,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<SwitchCaseArgs>> cases;
 
     public Output<List<SwitchCaseArgs>> getCases() {
-        return this.cases == null ? Output.empty() : this.cases;
+        return this.cases == null ? Codegen.empty() : this.cases;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Object>> defaultActivities;
 
     public Output<List<Object>> getDefaultActivities() {
-        return this.defaultActivities == null ? Output.empty() : this.defaultActivities;
+        return this.defaultActivities == null ? Codegen.empty() : this.defaultActivities;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ActivityDependencyArgs>> dependsOn;
 
     public Output<List<ActivityDependencyArgs>> getDependsOn() {
-        return this.dependsOn == null ? Output.empty() : this.dependsOn;
+        return this.dependsOn == null ? Codegen.empty() : this.dependsOn;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -147,7 +148,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<UserPropertyArgs>> userProperties;
 
     public Output<List<UserPropertyArgs>> getUserProperties() {
-        return this.userProperties == null ? Output.empty() : this.userProperties;
+        return this.userProperties == null ? Codegen.empty() : this.userProperties;
     }
 
     public SwitchActivityArgs(
@@ -170,14 +171,14 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SwitchActivityArgs() {
-        this.cases = Output.empty();
-        this.defaultActivities = Output.empty();
-        this.dependsOn = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.on = Output.empty();
-        this.type = Output.empty();
-        this.userProperties = Output.empty();
+        this.cases = Codegen.empty();
+        this.defaultActivities = Codegen.empty();
+        this.dependsOn = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.on = Codegen.empty();
+        this.type = Codegen.empty();
+        this.userProperties = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -219,7 +220,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cases(@Nullable List<SwitchCaseArgs> cases) {
-            this.cases = Output.ofNullable(cases);
+            this.cases = Codegen.ofNullable(cases);
             return this;
         }
         public Builder cases(SwitchCaseArgs... cases) {
@@ -230,7 +231,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultActivities(@Nullable List<Object> defaultActivities) {
-            this.defaultActivities = Output.ofNullable(defaultActivities);
+            this.defaultActivities = Codegen.ofNullable(defaultActivities);
             return this;
         }
         public Builder defaultActivities(Object... defaultActivities) {
@@ -241,7 +242,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dependsOn(@Nullable List<ActivityDependencyArgs> dependsOn) {
-            this.dependsOn = Output.ofNullable(dependsOn);
+            this.dependsOn = Codegen.ofNullable(dependsOn);
             return this;
         }
         public Builder dependsOn(ActivityDependencyArgs... dependsOn) {
@@ -252,7 +253,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {
@@ -284,7 +285,7 @@ public final class SwitchActivityArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userProperties(@Nullable List<UserPropertyArgs> userProperties) {
-            this.userProperties = Output.ofNullable(userProperties);
+            this.userProperties = Codegen.ofNullable(userProperties);
             return this;
         }
         public Builder userProperties(UserPropertyArgs... userProperties) {

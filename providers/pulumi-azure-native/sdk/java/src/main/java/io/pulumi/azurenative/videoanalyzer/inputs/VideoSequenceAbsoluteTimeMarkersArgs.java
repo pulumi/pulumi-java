@@ -5,6 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class VideoSequenceAbsoluteTimeMarkersArgs extends io.pulumi.resour
     }
 
     private VideoSequenceAbsoluteTimeMarkersArgs() {
-        this.ranges = Output.empty();
-        this.type = Output.empty();
+        this.ranges = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {

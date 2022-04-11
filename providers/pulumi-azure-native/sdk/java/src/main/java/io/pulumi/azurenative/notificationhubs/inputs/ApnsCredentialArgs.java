@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apnsCertificate;
 
     public Output<String> getApnsCertificate() {
-        return this.apnsCertificate == null ? Output.empty() : this.apnsCertificate;
+        return this.apnsCertificate == null ? Codegen.empty() : this.apnsCertificate;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appId;
 
     public Output<String> getAppId() {
-        return this.appId == null ? Output.empty() : this.appId;
+        return this.appId == null ? Codegen.empty() : this.appId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> appName;
 
     public Output<String> getAppName() {
-        return this.appName == null ? Output.empty() : this.appName;
+        return this.appName == null ? Codegen.empty() : this.appName;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> certificateKey;
 
     public Output<String> getCertificateKey() {
-        return this.certificateKey == null ? Output.empty() : this.certificateKey;
+        return this.certificateKey == null ? Codegen.empty() : this.certificateKey;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> endpoint;
 
     public Output<String> getEndpoint() {
-        return this.endpoint == null ? Output.empty() : this.endpoint;
+        return this.endpoint == null ? Codegen.empty() : this.endpoint;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> keyId;
 
     public Output<String> getKeyId() {
-        return this.keyId == null ? Output.empty() : this.keyId;
+        return this.keyId == null ? Codegen.empty() : this.keyId;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     /**
@@ -103,7 +104,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> token;
 
     public Output<String> getToken() {
-        return this.token == null ? Output.empty() : this.token;
+        return this.token == null ? Codegen.empty() : this.token;
     }
 
     public ApnsCredentialArgs(
@@ -126,14 +127,14 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApnsCredentialArgs() {
-        this.apnsCertificate = Output.empty();
-        this.appId = Output.empty();
-        this.appName = Output.empty();
-        this.certificateKey = Output.empty();
-        this.endpoint = Output.empty();
-        this.keyId = Output.empty();
-        this.thumbprint = Output.empty();
-        this.token = Output.empty();
+        this.apnsCertificate = Codegen.empty();
+        this.appId = Codegen.empty();
+        this.appName = Codegen.empty();
+        this.certificateKey = Codegen.empty();
+        this.endpoint = Codegen.empty();
+        this.keyId = Codegen.empty();
+        this.thumbprint = Codegen.empty();
+        this.token = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -175,7 +176,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apnsCertificate(@Nullable String apnsCertificate) {
-            this.apnsCertificate = Output.ofNullable(apnsCertificate);
+            this.apnsCertificate = Codegen.ofNullable(apnsCertificate);
             return this;
         }
         public Builder appId(@Nullable Output<String> appId) {
@@ -183,7 +184,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appId(@Nullable String appId) {
-            this.appId = Output.ofNullable(appId);
+            this.appId = Codegen.ofNullable(appId);
             return this;
         }
         public Builder appName(@Nullable Output<String> appName) {
@@ -191,7 +192,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder appName(@Nullable String appName) {
-            this.appName = Output.ofNullable(appName);
+            this.appName = Codegen.ofNullable(appName);
             return this;
         }
         public Builder certificateKey(@Nullable Output<String> certificateKey) {
@@ -199,7 +200,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificateKey(@Nullable String certificateKey) {
-            this.certificateKey = Output.ofNullable(certificateKey);
+            this.certificateKey = Codegen.ofNullable(certificateKey);
             return this;
         }
         public Builder endpoint(@Nullable Output<String> endpoint) {
@@ -207,7 +208,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endpoint(@Nullable String endpoint) {
-            this.endpoint = Output.ofNullable(endpoint);
+            this.endpoint = Codegen.ofNullable(endpoint);
             return this;
         }
         public Builder keyId(@Nullable Output<String> keyId) {
@@ -215,7 +216,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder keyId(@Nullable String keyId) {
-            this.keyId = Output.ofNullable(keyId);
+            this.keyId = Codegen.ofNullable(keyId);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -223,7 +224,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }
         public Builder token(@Nullable Output<String> token) {
@@ -231,7 +232,7 @@ public final class ApnsCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder token(@Nullable String token) {
-            this.token = Output.ofNullable(token);
+            this.token = Codegen.ofNullable(token);
             return this;
         }        public ApnsCredentialArgs build() {
             return new ApnsCredentialArgs(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);

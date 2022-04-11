@@ -7,6 +7,7 @@ import io.pulumi.azurenative.databoxedge.inputs.FileSourceInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.RoleSinkInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> customContextTag;
 
     public Output<String> getCustomContextTag() {
-        return this.customContextTag == null ? Output.empty() : this.customContextTag;
+        return this.customContextTag == null ? Codegen.empty() : this.customContextTag;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -112,13 +113,13 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private FileEventTriggerArgs() {
-        this.customContextTag = Output.empty();
-        this.deviceName = Output.empty();
-        this.kind = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sinkInfo = Output.empty();
-        this.sourceInfo = Output.empty();
+        this.customContextTag = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sinkInfo = Codegen.empty();
+        this.sourceInfo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder customContextTag(@Nullable String customContextTag) {
-            this.customContextTag = Output.ofNullable(customContextTag);
+            this.customContextTag = Codegen.ofNullable(customContextTag);
             return this;
         }
         public Builder deviceName(Output<String> deviceName) {
@@ -182,7 +183,7 @@ public final class FileEventTriggerArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

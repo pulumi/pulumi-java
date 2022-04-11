@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices;
 import io.pulumi.azurenative.recoveryservices.inputs.CreatePolicyInputPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> policyName;
 
     public Output<String> getPolicyName() {
-        return this.policyName == null ? Output.empty() : this.policyName;
+        return this.policyName == null ? Codegen.empty() : this.policyName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<CreatePolicyInputPropertiesArgs> properties;
 
     public Output<CreatePolicyInputPropertiesArgs> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ReplicationPolicyArgs() {
-        this.policyName = Output.empty();
-        this.properties = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.resourceName = Output.empty();
+        this.policyName = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.resourceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder policyName(@Nullable String policyName) {
-            this.policyName = Output.ofNullable(policyName);
+            this.policyName = Codegen.ofNullable(policyName);
             return this;
         }
         public Builder properties(@Nullable Output<CreatePolicyInputPropertiesArgs> properties) {
@@ -116,7 +117,7 @@ public final class ReplicationPolicyArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder properties(@Nullable CreatePolicyInputPropertiesArgs properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

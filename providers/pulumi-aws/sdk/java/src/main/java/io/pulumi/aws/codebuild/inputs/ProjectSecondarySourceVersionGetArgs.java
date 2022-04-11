@@ -5,6 +5,7 @@ package io.pulumi.aws.codebuild.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -43,8 +44,8 @@ public final class ProjectSecondarySourceVersionGetArgs extends io.pulumi.resour
     }
 
     private ProjectSecondarySourceVersionGetArgs() {
-        this.sourceIdentifier = Output.empty();
-        this.sourceVersion = Output.empty();
+        this.sourceIdentifier = Codegen.empty();
+        this.sourceVersion = Codegen.empty();
     }
 
     public static Builder builder() {

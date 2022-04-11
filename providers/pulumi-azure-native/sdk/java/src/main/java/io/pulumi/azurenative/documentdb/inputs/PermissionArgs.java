@@ -5,6 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> dataActions;
 
     public Output<List<String>> getDataActions() {
-        return this.dataActions == null ? Output.empty() : this.dataActions;
+        return this.dataActions == null ? Codegen.empty() : this.dataActions;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> notDataActions;
 
     public Output<List<String>> getNotDataActions() {
-        return this.notDataActions == null ? Output.empty() : this.notDataActions;
+        return this.notDataActions == null ? Codegen.empty() : this.notDataActions;
     }
 
     public PermissionArgs(
@@ -49,8 +50,8 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionArgs() {
-        this.dataActions = Output.empty();
-        this.notDataActions = Output.empty();
+        this.dataActions = Codegen.empty();
+        this.notDataActions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataActions(@Nullable List<String> dataActions) {
-            this.dataActions = Output.ofNullable(dataActions);
+            this.dataActions = Codegen.ofNullable(dataActions);
             return this;
         }
         public Builder dataActions(String... dataActions) {
@@ -91,7 +92,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder notDataActions(@Nullable List<String> notDataActions) {
-            this.notDataActions = Output.ofNullable(notDataActions);
+            this.notDataActions = Codegen.ofNullable(notDataActions);
             return this;
         }
         public Builder notDataActions(String... notDataActions) {

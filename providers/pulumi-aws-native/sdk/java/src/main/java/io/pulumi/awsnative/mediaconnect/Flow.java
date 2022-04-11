@@ -10,6 +10,7 @@ import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -126,7 +127,7 @@ public class Flow extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Flow(String name, FlowArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:mediaconnect:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:mediaconnect:Flow", name, args == null ? FlowArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Flow(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

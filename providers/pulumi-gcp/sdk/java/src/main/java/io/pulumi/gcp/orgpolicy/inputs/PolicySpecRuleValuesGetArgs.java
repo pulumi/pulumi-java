@@ -5,6 +5,7 @@ package io.pulumi.gcp.orgpolicy.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> allowedValues;
 
     public Output<List<String>> getAllowedValues() {
-        return this.allowedValues == null ? Output.empty() : this.allowedValues;
+        return this.allowedValues == null ? Codegen.empty() : this.allowedValues;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<List<String>> deniedValues;
 
     public Output<List<String>> getDeniedValues() {
-        return this.deniedValues == null ? Output.empty() : this.deniedValues;
+        return this.deniedValues == null ? Codegen.empty() : this.deniedValues;
     }
 
     public PolicySpecRuleValuesGetArgs(
@@ -45,8 +46,8 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
     }
 
     private PolicySpecRuleValuesGetArgs() {
-        this.allowedValues = Output.empty();
-        this.deniedValues = Output.empty();
+        this.allowedValues = Codegen.empty();
+        this.deniedValues = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder allowedValues(@Nullable List<String> allowedValues) {
-            this.allowedValues = Output.ofNullable(allowedValues);
+            this.allowedValues = Codegen.ofNullable(allowedValues);
             return this;
         }
         public Builder allowedValues(String... allowedValues) {
@@ -87,7 +88,7 @@ public final class PolicySpecRuleValuesGetArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder deniedValues(@Nullable List<String> deniedValues) {
-            this.deniedValues = Output.ofNullable(deniedValues);
+            this.deniedValues = Codegen.ofNullable(deniedValues);
             return this;
         }
         public Builder deniedValues(String... deniedValues) {

@@ -11,6 +11,7 @@ import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +35,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SSISAccessCredentialArgs> accessCredential;
 
     public Output<SSISAccessCredentialArgs> getAccessCredential() {
-        return this.accessCredential == null ? Output.empty() : this.accessCredential;
+        return this.accessCredential == null ? Codegen.empty() : this.accessCredential;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<SSISChildPackageArgs>> childPackages;
 
     public Output<List<SSISChildPackageArgs>> getChildPackages() {
-        return this.childPackages == null ? Output.empty() : this.childPackages;
+        return this.childPackages == null ? Codegen.empty() : this.childPackages;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<SSISAccessCredentialArgs> configurationAccessCredential;
 
     public Output<SSISAccessCredentialArgs> getConfigurationAccessCredential() {
-        return this.configurationAccessCredential == null ? Output.empty() : this.configurationAccessCredential;
+        return this.configurationAccessCredential == null ? Codegen.empty() : this.configurationAccessCredential;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> configurationPath;
 
     public Output<Object> getConfigurationPath() {
-        return this.configurationPath == null ? Output.empty() : this.configurationPath;
+        return this.configurationPath == null ? Codegen.empty() : this.configurationPath;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> packageContent;
 
     public Output<Object> getPackageContent() {
-        return this.packageContent == null ? Output.empty() : this.packageContent;
+        return this.packageContent == null ? Codegen.empty() : this.packageContent;
     }
 
     /**
@@ -89,7 +90,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> packageLastModifiedDate;
 
     public Output<String> getPackageLastModifiedDate() {
-        return this.packageLastModifiedDate == null ? Output.empty() : this.packageLastModifiedDate;
+        return this.packageLastModifiedDate == null ? Codegen.empty() : this.packageLastModifiedDate;
     }
 
     /**
@@ -100,7 +101,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> packageName;
 
     public Output<String> getPackageName() {
-        return this.packageName == null ? Output.empty() : this.packageName;
+        return this.packageName == null ? Codegen.empty() : this.packageName;
     }
 
     /**
@@ -111,7 +112,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword;
 
     public Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPackagePassword() {
-        return this.packagePassword == null ? Output.empty() : this.packagePassword;
+        return this.packagePassword == null ? Codegen.empty() : this.packagePassword;
     }
 
     /**
@@ -122,7 +123,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Object> packagePath;
 
     public Output<Object> getPackagePath() {
-        return this.packagePath == null ? Output.empty() : this.packagePath;
+        return this.packagePath == null ? Codegen.empty() : this.packagePath;
     }
 
     /**
@@ -133,7 +134,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<String,SsisPackageLocationType>> type;
 
     public Output<Either<String,SsisPackageLocationType>> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public SSISPackageLocationArgs(
@@ -160,16 +161,16 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
     }
 
     private SSISPackageLocationArgs() {
-        this.accessCredential = Output.empty();
-        this.childPackages = Output.empty();
-        this.configurationAccessCredential = Output.empty();
-        this.configurationPath = Output.empty();
-        this.packageContent = Output.empty();
-        this.packageLastModifiedDate = Output.empty();
-        this.packageName = Output.empty();
-        this.packagePassword = Output.empty();
-        this.packagePath = Output.empty();
-        this.type = Output.empty();
+        this.accessCredential = Codegen.empty();
+        this.childPackages = Codegen.empty();
+        this.configurationAccessCredential = Codegen.empty();
+        this.configurationPath = Codegen.empty();
+        this.packageContent = Codegen.empty();
+        this.packageLastModifiedDate = Codegen.empty();
+        this.packageName = Codegen.empty();
+        this.packagePassword = Codegen.empty();
+        this.packagePath = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -215,7 +216,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder accessCredential(@Nullable SSISAccessCredentialArgs accessCredential) {
-            this.accessCredential = Output.ofNullable(accessCredential);
+            this.accessCredential = Codegen.ofNullable(accessCredential);
             return this;
         }
         public Builder childPackages(@Nullable Output<List<SSISChildPackageArgs>> childPackages) {
@@ -223,7 +224,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder childPackages(@Nullable List<SSISChildPackageArgs> childPackages) {
-            this.childPackages = Output.ofNullable(childPackages);
+            this.childPackages = Codegen.ofNullable(childPackages);
             return this;
         }
         public Builder childPackages(SSISChildPackageArgs... childPackages) {
@@ -234,7 +235,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder configurationAccessCredential(@Nullable SSISAccessCredentialArgs configurationAccessCredential) {
-            this.configurationAccessCredential = Output.ofNullable(configurationAccessCredential);
+            this.configurationAccessCredential = Codegen.ofNullable(configurationAccessCredential);
             return this;
         }
         public Builder configurationPath(@Nullable Output<Object> configurationPath) {
@@ -242,7 +243,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder configurationPath(@Nullable Object configurationPath) {
-            this.configurationPath = Output.ofNullable(configurationPath);
+            this.configurationPath = Codegen.ofNullable(configurationPath);
             return this;
         }
         public Builder packageContent(@Nullable Output<Object> packageContent) {
@@ -250,7 +251,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder packageContent(@Nullable Object packageContent) {
-            this.packageContent = Output.ofNullable(packageContent);
+            this.packageContent = Codegen.ofNullable(packageContent);
             return this;
         }
         public Builder packageLastModifiedDate(@Nullable Output<String> packageLastModifiedDate) {
@@ -258,7 +259,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder packageLastModifiedDate(@Nullable String packageLastModifiedDate) {
-            this.packageLastModifiedDate = Output.ofNullable(packageLastModifiedDate);
+            this.packageLastModifiedDate = Codegen.ofNullable(packageLastModifiedDate);
             return this;
         }
         public Builder packageName(@Nullable Output<String> packageName) {
@@ -266,7 +267,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder packageName(@Nullable String packageName) {
-            this.packageName = Output.ofNullable(packageName);
+            this.packageName = Codegen.ofNullable(packageName);
             return this;
         }
         public Builder packagePassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> packagePassword) {
@@ -274,7 +275,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder packagePassword(@Nullable Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> packagePassword) {
-            this.packagePassword = Output.ofNullable(packagePassword);
+            this.packagePassword = Codegen.ofNullable(packagePassword);
             return this;
         }
         public Builder packagePath(@Nullable Output<Object> packagePath) {
@@ -282,7 +283,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder packagePath(@Nullable Object packagePath) {
-            this.packagePath = Output.ofNullable(packagePath);
+            this.packagePath = Codegen.ofNullable(packagePath);
             return this;
         }
         public Builder type(@Nullable Output<Either<String,SsisPackageLocationType>> type) {
@@ -290,7 +291,7 @@ public final class SSISPackageLocationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder type(@Nullable Either<String,SsisPackageLocationType> type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public SSISPackageLocationArgs build() {
             return new SSISPackageLocationArgs(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);

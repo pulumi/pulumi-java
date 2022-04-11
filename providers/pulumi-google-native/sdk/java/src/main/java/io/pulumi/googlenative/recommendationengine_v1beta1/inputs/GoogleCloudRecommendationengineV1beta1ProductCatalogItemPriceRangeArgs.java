@@ -5,6 +5,7 @@ package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemPrice
     }
 
     private GoogleCloudRecommendationengineV1beta1ProductCatalogItemPriceRangeArgs() {
-        this.max = Output.empty();
-        this.min = Output.empty();
+        this.max = Codegen.empty();
+        this.min = Codegen.empty();
     }
 
     public static Builder builder() {

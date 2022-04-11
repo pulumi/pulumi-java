@@ -10,6 +10,7 @@ import io.pulumi.awsnative.sso.outputs.InstanceAccessControlAttributeConfigurati
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -77,7 +78,7 @@ public class InstanceAccessControlAttributeConfiguration extends io.pulumi.resou
      * @param options A bag of options that control this resource's behavior.
      */
     public InstanceAccessControlAttributeConfiguration(String name, InstanceAccessControlAttributeConfigurationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws-native:sso:InstanceAccessControlAttributeConfiguration", name, args == null ? InstanceAccessControlAttributeConfigurationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws-native:sso:InstanceAccessControlAttributeConfiguration", name, args == null ? InstanceAccessControlAttributeConfigurationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private InstanceAccessControlAttributeConfiguration(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

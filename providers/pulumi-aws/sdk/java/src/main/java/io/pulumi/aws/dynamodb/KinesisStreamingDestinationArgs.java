@@ -5,6 +5,7 @@ package io.pulumi.aws.dynamodb;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class KinesisStreamingDestinationArgs extends io.pulumi.resources.R
     }
 
     private KinesisStreamingDestinationArgs() {
-        this.streamArn = Output.empty();
-        this.tableName = Output.empty();
+        this.streamArn = Codegen.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {

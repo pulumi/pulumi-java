@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> adDomainJoinPassword;
 
     public Output<String> getAdDomainJoinPassword() {
-        return this.adDomainJoinPassword == null ? Output.empty() : this.adDomainJoinPassword;
+        return this.adDomainJoinPassword == null ? Codegen.empty() : this.adDomainJoinPassword;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> adDomainJoinUser;
 
     public Output<String> getAdDomainJoinUser() {
-        return this.adDomainJoinUser == null ? Output.empty() : this.adDomainJoinUser;
+        return this.adDomainJoinUser == null ? Codegen.empty() : this.adDomainJoinUser;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
       private final @Nullable Output<String> crossRealmTrustPrincipalPassword;
 
     public Output<String> getCrossRealmTrustPrincipalPassword() {
-        return this.crossRealmTrustPrincipalPassword == null ? Output.empty() : this.crossRealmTrustPrincipalPassword;
+        return this.crossRealmTrustPrincipalPassword == null ? Codegen.empty() : this.crossRealmTrustPrincipalPassword;
     }
 
     /**
@@ -83,11 +84,11 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
     }
 
     private ClusterKerberosAttributesGetArgs() {
-        this.adDomainJoinPassword = Output.empty();
-        this.adDomainJoinUser = Output.empty();
-        this.crossRealmTrustPrincipalPassword = Output.empty();
-        this.kdcAdminPassword = Output.empty();
-        this.realm = Output.empty();
+        this.adDomainJoinPassword = Codegen.empty();
+        this.adDomainJoinUser = Codegen.empty();
+        this.crossRealmTrustPrincipalPassword = Codegen.empty();
+        this.kdcAdminPassword = Codegen.empty();
+        this.realm = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -123,7 +124,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder adDomainJoinPassword(@Nullable String adDomainJoinPassword) {
-            this.adDomainJoinPassword = Output.ofNullable(adDomainJoinPassword);
+            this.adDomainJoinPassword = Codegen.ofNullable(adDomainJoinPassword);
             return this;
         }
         public Builder adDomainJoinUser(@Nullable Output<String> adDomainJoinUser) {
@@ -131,7 +132,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder adDomainJoinUser(@Nullable String adDomainJoinUser) {
-            this.adDomainJoinUser = Output.ofNullable(adDomainJoinUser);
+            this.adDomainJoinUser = Codegen.ofNullable(adDomainJoinUser);
             return this;
         }
         public Builder crossRealmTrustPrincipalPassword(@Nullable Output<String> crossRealmTrustPrincipalPassword) {
@@ -139,7 +140,7 @@ public final class ClusterKerberosAttributesGetArgs extends io.pulumi.resources.
             return this;
         }
         public Builder crossRealmTrustPrincipalPassword(@Nullable String crossRealmTrustPrincipalPassword) {
-            this.crossRealmTrustPrincipalPassword = Output.ofNullable(crossRealmTrustPrincipalPassword);
+            this.crossRealmTrustPrincipalPassword = Codegen.ofNullable(crossRealmTrustPrincipalPassword);
             return this;
         }
         public Builder kdcAdminPassword(Output<String> kdcAdminPassword) {

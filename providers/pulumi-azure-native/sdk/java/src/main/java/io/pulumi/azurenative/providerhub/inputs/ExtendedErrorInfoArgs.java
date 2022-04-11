@@ -6,6 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.inputs.TypedErrorInfoArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,35 +21,35 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<TypedErrorInfoArgs>> additionalInfo;
 
     public Output<List<TypedErrorInfoArgs>> getAdditionalInfo() {
-        return this.additionalInfo == null ? Output.empty() : this.additionalInfo;
+        return this.additionalInfo == null ? Codegen.empty() : this.additionalInfo;
     }
 
     @Import(name="code")
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     @Import(name="details")
       private final @Nullable Output<List<ExtendedErrorInfoArgs>> details;
 
     public Output<List<ExtendedErrorInfoArgs>> getDetails() {
-        return this.details == null ? Output.empty() : this.details;
+        return this.details == null ? Codegen.empty() : this.details;
     }
 
     @Import(name="message")
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     @Import(name="target")
       private final @Nullable Output<String> target;
 
     public Output<String> getTarget() {
-        return this.target == null ? Output.empty() : this.target;
+        return this.target == null ? Codegen.empty() : this.target;
     }
 
     public ExtendedErrorInfoArgs(
@@ -65,11 +66,11 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ExtendedErrorInfoArgs() {
-        this.additionalInfo = Output.empty();
-        this.code = Output.empty();
-        this.details = Output.empty();
-        this.message = Output.empty();
-        this.target = Output.empty();
+        this.additionalInfo = Codegen.empty();
+        this.code = Codegen.empty();
+        this.details = Codegen.empty();
+        this.message = Codegen.empty();
+        this.target = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder additionalInfo(@Nullable List<TypedErrorInfoArgs> additionalInfo) {
-            this.additionalInfo = Output.ofNullable(additionalInfo);
+            this.additionalInfo = Codegen.ofNullable(additionalInfo);
             return this;
         }
         public Builder additionalInfo(TypedErrorInfoArgs... additionalInfo) {
@@ -116,7 +117,7 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder details(@Nullable Output<List<ExtendedErrorInfoArgs>> details) {
@@ -124,7 +125,7 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder details(@Nullable List<ExtendedErrorInfoArgs> details) {
-            this.details = Output.ofNullable(details);
+            this.details = Codegen.ofNullable(details);
             return this;
         }
         public Builder details(ExtendedErrorInfoArgs... details) {
@@ -135,7 +136,7 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }
         public Builder target(@Nullable Output<String> target) {
@@ -143,7 +144,7 @@ public final class ExtendedErrorInfoArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder target(@Nullable String target) {
-            this.target = Output.ofNullable(target);
+            this.target = Codegen.ofNullable(target);
             return this;
         }        public ExtendedErrorInfoArgs build() {
             return new ExtendedErrorInfoArgs(additionalInfo, code, details, message, target);

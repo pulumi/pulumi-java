@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.NamespaceConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<List<NamespaceConditionArgs>> conditions;
 
     public Output<List<NamespaceConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     /**
@@ -43,7 +44,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> phase;
 
     public Output<String> getPhase() {
-        return this.phase == null ? Output.empty() : this.phase;
+        return this.phase == null ? Codegen.empty() : this.phase;
     }
 
     public NamespaceStatusArgs(
@@ -54,8 +55,8 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private NamespaceStatusArgs() {
-        this.conditions = Output.empty();
-        this.phase = Output.empty();
+        this.conditions = Codegen.empty();
+        this.phase = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder conditions(@Nullable List<NamespaceConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(NamespaceConditionArgs... conditions) {
@@ -96,7 +97,7 @@ public final class NamespaceStatusArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder phase(@Nullable String phase) {
-            this.phase = Output.ofNullable(phase);
+            this.phase = Codegen.ofNullable(phase);
             return this;
         }        public NamespaceStatusArgs build() {
             return new NamespaceStatusArgs(conditions, phase);

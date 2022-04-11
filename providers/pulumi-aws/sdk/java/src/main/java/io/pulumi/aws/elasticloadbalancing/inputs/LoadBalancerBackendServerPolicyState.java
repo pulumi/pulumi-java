@@ -5,6 +5,7 @@ package io.pulumi.aws.elasticloadbalancing.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +25,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
       private final @Nullable Output<Integer> instancePort;
 
     public Output<Integer> getInstancePort() {
-        return this.instancePort == null ? Output.empty() : this.instancePort;
+        return this.instancePort == null ? Codegen.empty() : this.instancePort;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
       private final @Nullable Output<String> loadBalancerName;
 
     public Output<String> getLoadBalancerName() {
-        return this.loadBalancerName == null ? Output.empty() : this.loadBalancerName;
+        return this.loadBalancerName == null ? Codegen.empty() : this.loadBalancerName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
       private final @Nullable Output<List<String>> policyNames;
 
     public Output<List<String>> getPolicyNames() {
-        return this.policyNames == null ? Output.empty() : this.policyNames;
+        return this.policyNames == null ? Codegen.empty() : this.policyNames;
     }
 
     public LoadBalancerBackendServerPolicyState(
@@ -59,9 +60,9 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
     }
 
     private LoadBalancerBackendServerPolicyState() {
-        this.instancePort = Output.empty();
-        this.loadBalancerName = Output.empty();
-        this.policyNames = Output.empty();
+        this.instancePort = Codegen.empty();
+        this.loadBalancerName = Codegen.empty();
+        this.policyNames = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
             return this;
         }
         public Builder instancePort(@Nullable Integer instancePort) {
-            this.instancePort = Output.ofNullable(instancePort);
+            this.instancePort = Codegen.ofNullable(instancePort);
             return this;
         }
         public Builder loadBalancerName(@Nullable Output<String> loadBalancerName) {
@@ -101,7 +102,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
             return this;
         }
         public Builder loadBalancerName(@Nullable String loadBalancerName) {
-            this.loadBalancerName = Output.ofNullable(loadBalancerName);
+            this.loadBalancerName = Codegen.ofNullable(loadBalancerName);
             return this;
         }
         public Builder policyNames(@Nullable Output<List<String>> policyNames) {
@@ -109,7 +110,7 @@ public final class LoadBalancerBackendServerPolicyState extends io.pulumi.resour
             return this;
         }
         public Builder policyNames(@Nullable List<String> policyNames) {
-            this.policyNames = Output.ofNullable(policyNames);
+            this.policyNames = Codegen.ofNullable(policyNames);
             return this;
         }
         public Builder policyNames(String... policyNames) {

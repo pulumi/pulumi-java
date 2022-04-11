@@ -6,6 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> bindingSelector;
 
     public Output<String> getBindingSelector() {
-        return this.bindingSelector == null ? Output.empty() : this.bindingSelector;
+        return this.bindingSelector == null ? Codegen.empty() : this.bindingSelector;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
     }
 
     private ManagedClusterPodIdentityArgs() {
-        this.bindingSelector = Output.empty();
-        this.identity = Output.empty();
-        this.name = Output.empty();
-        this.namespace = Output.empty();
+        this.bindingSelector = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.name = Codegen.empty();
+        this.namespace = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ManagedClusterPodIdentityArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder bindingSelector(@Nullable String bindingSelector) {
-            this.bindingSelector = Output.ofNullable(bindingSelector);
+            this.bindingSelector = Codegen.ofNullable(bindingSelector);
             return this;
         }
         public Builder identity(Output<UserAssignedIdentityArgs> identity) {

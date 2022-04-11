@@ -6,6 +6,7 @@ package io.pulumi.awsnative.sso;
 import io.pulumi.awsnative.sso.inputs.PermissionSetTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Object> inlinePolicy;
 
     public Output<Object> getInlinePolicy() {
-        return this.inlinePolicy == null ? Output.empty() : this.inlinePolicy;
+        return this.inlinePolicy == null ? Codegen.empty() : this.inlinePolicy;
     }
 
     /**
@@ -54,7 +55,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> managedPolicies;
 
     public Output<List<String>> getManagedPolicies() {
-        return this.managedPolicies == null ? Output.empty() : this.managedPolicies;
+        return this.managedPolicies == null ? Codegen.empty() : this.managedPolicies;
     }
 
     /**
@@ -65,7 +66,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> relayStateType;
 
     public Output<String> getRelayStateType() {
-        return this.relayStateType == null ? Output.empty() : this.relayStateType;
+        return this.relayStateType == null ? Codegen.empty() : this.relayStateType;
     }
 
     /**
@@ -87,14 +88,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sessionDuration;
 
     public Output<String> getSessionDuration() {
-        return this.sessionDuration == null ? Output.empty() : this.sessionDuration;
+        return this.sessionDuration == null ? Codegen.empty() : this.sessionDuration;
     }
 
     @Import(name="tags")
       private final @Nullable Output<List<PermissionSetTagArgs>> tags;
 
     public Output<List<PermissionSetTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PermissionSetArgs(
@@ -117,14 +118,14 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PermissionSetArgs() {
-        this.description = Output.empty();
-        this.inlinePolicy = Output.empty();
-        this.instanceArn = Output.empty();
-        this.managedPolicies = Output.empty();
-        this.name = Output.empty();
-        this.relayStateType = Output.empty();
-        this.sessionDuration = Output.empty();
-        this.tags = Output.empty();
+        this.description = Codegen.empty();
+        this.inlinePolicy = Codegen.empty();
+        this.instanceArn = Codegen.empty();
+        this.managedPolicies = Codegen.empty();
+        this.name = Codegen.empty();
+        this.relayStateType = Codegen.empty();
+        this.sessionDuration = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -166,7 +167,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder inlinePolicy(@Nullable Output<Object> inlinePolicy) {
@@ -174,7 +175,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inlinePolicy(@Nullable Object inlinePolicy) {
-            this.inlinePolicy = Output.ofNullable(inlinePolicy);
+            this.inlinePolicy = Codegen.ofNullable(inlinePolicy);
             return this;
         }
         public Builder instanceArn(Output<String> instanceArn) {
@@ -190,7 +191,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder managedPolicies(@Nullable List<String> managedPolicies) {
-            this.managedPolicies = Output.ofNullable(managedPolicies);
+            this.managedPolicies = Codegen.ofNullable(managedPolicies);
             return this;
         }
         public Builder managedPolicies(String... managedPolicies) {
@@ -201,7 +202,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder relayStateType(@Nullable Output<String> relayStateType) {
@@ -209,7 +210,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder relayStateType(@Nullable String relayStateType) {
-            this.relayStateType = Output.ofNullable(relayStateType);
+            this.relayStateType = Codegen.ofNullable(relayStateType);
             return this;
         }
         public Builder sessionDuration(@Nullable Output<String> sessionDuration) {
@@ -217,7 +218,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sessionDuration(@Nullable String sessionDuration) {
-            this.sessionDuration = Output.ofNullable(sessionDuration);
+            this.sessionDuration = Codegen.ofNullable(sessionDuration);
             return this;
         }
         public Builder tags(@Nullable Output<List<PermissionSetTagArgs>> tags) {
@@ -225,7 +226,7 @@ public final class PermissionSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<PermissionSetTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(PermissionSetTagArgs... tags) {

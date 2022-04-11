@@ -6,6 +6,7 @@ package io.pulumi.aws.servicecatalog;
 import io.pulumi.aws.servicecatalog.inputs.ServiceActionDefinitionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> acceptLanguage;
 
     public Output<String> getAcceptLanguage() {
-        return this.acceptLanguage == null ? Output.empty() : this.acceptLanguage;
+        return this.acceptLanguage == null ? Codegen.empty() : this.acceptLanguage;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public ServiceActionArgs(
@@ -71,10 +72,10 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceActionArgs() {
-        this.acceptLanguage = Output.empty();
-        this.definition = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
+        this.acceptLanguage = Codegen.empty();
+        this.definition = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -108,7 +109,7 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
-            this.acceptLanguage = Output.ofNullable(acceptLanguage);
+            this.acceptLanguage = Codegen.ofNullable(acceptLanguage);
             return this;
         }
         public Builder definition(Output<ServiceActionDefinitionArgs> definition) {
@@ -124,7 +125,7 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -132,7 +133,7 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public ServiceActionArgs build() {
             return new ServiceActionArgs(acceptLanguage, definition, description, name);

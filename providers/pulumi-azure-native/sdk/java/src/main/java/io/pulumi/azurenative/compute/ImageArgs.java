@@ -10,6 +10,7 @@ import io.pulumi.azurenative.compute.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
     public Output<ExtendedLocationArgs> getExtendedLocation() {
-        return this.extendedLocation == null ? Output.empty() : this.extendedLocation;
+        return this.extendedLocation == null ? Codegen.empty() : this.extendedLocation;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration;
 
     public Output<Either<String,HyperVGenerationTypes>> getHyperVGeneration() {
-        return this.hyperVGeneration == null ? Output.empty() : this.hyperVGeneration;
+        return this.hyperVGeneration == null ? Codegen.empty() : this.hyperVGeneration;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> imageName;
 
     public Output<String> getImageName() {
-        return this.imageName == null ? Output.empty() : this.imageName;
+        return this.imageName == null ? Codegen.empty() : this.imageName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubResourceArgs> sourceVirtualMachine;
 
     public Output<SubResourceArgs> getSourceVirtualMachine() {
-        return this.sourceVirtualMachine == null ? Output.empty() : this.sourceVirtualMachine;
+        return this.sourceVirtualMachine == null ? Codegen.empty() : this.sourceVirtualMachine;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ImageStorageProfileArgs> storageProfile;
 
     public Output<ImageStorageProfileArgs> getStorageProfile() {
-        return this.storageProfile == null ? Output.empty() : this.storageProfile;
+        return this.storageProfile == null ? Codegen.empty() : this.storageProfile;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ImageArgs(
@@ -128,14 +129,14 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ImageArgs() {
-        this.extendedLocation = Output.empty();
-        this.hyperVGeneration = Output.empty();
-        this.imageName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sourceVirtualMachine = Output.empty();
-        this.storageProfile = Output.empty();
-        this.tags = Output.empty();
+        this.extendedLocation = Codegen.empty();
+        this.hyperVGeneration = Codegen.empty();
+        this.imageName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sourceVirtualMachine = Codegen.empty();
+        this.storageProfile = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder extendedLocation(@Nullable ExtendedLocationArgs extendedLocation) {
-            this.extendedLocation = Output.ofNullable(extendedLocation);
+            this.extendedLocation = Codegen.ofNullable(extendedLocation);
             return this;
         }
         public Builder hyperVGeneration(@Nullable Output<Either<String,HyperVGenerationTypes>> hyperVGeneration) {
@@ -185,7 +186,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder hyperVGeneration(@Nullable Either<String,HyperVGenerationTypes> hyperVGeneration) {
-            this.hyperVGeneration = Output.ofNullable(hyperVGeneration);
+            this.hyperVGeneration = Codegen.ofNullable(hyperVGeneration);
             return this;
         }
         public Builder imageName(@Nullable Output<String> imageName) {
@@ -193,7 +194,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder imageName(@Nullable String imageName) {
-            this.imageName = Output.ofNullable(imageName);
+            this.imageName = Codegen.ofNullable(imageName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -201,7 +202,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -217,7 +218,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceVirtualMachine(@Nullable SubResourceArgs sourceVirtualMachine) {
-            this.sourceVirtualMachine = Output.ofNullable(sourceVirtualMachine);
+            this.sourceVirtualMachine = Codegen.ofNullable(sourceVirtualMachine);
             return this;
         }
         public Builder storageProfile(@Nullable Output<ImageStorageProfileArgs> storageProfile) {
@@ -225,7 +226,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder storageProfile(@Nullable ImageStorageProfileArgs storageProfile) {
-            this.storageProfile = Output.ofNullable(storageProfile);
+            this.storageProfile = Codegen.ofNullable(storageProfile);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -233,7 +234,7 @@ public final class ImageArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ImageArgs build() {
             return new ImageArgs(extendedLocation, hyperVGeneration, imageName, location, resourceGroupName, sourceVirtualMachine, storageProfile, tags);

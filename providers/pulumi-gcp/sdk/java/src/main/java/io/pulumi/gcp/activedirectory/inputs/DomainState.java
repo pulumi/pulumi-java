@@ -5,6 +5,7 @@ package io.pulumi.gcp.activedirectory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +26,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> admin;
 
     public Output<String> getAdmin() {
-        return this.admin == null ? Output.empty() : this.admin;
+        return this.admin == null ? Codegen.empty() : this.admin;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> authorizedNetworks;
 
     public Output<List<String>> getAuthorizedNetworks() {
-        return this.authorizedNetworks == null ? Output.empty() : this.authorizedNetworks;
+        return this.authorizedNetworks == null ? Codegen.empty() : this.authorizedNetworks;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> domainName;
 
     public Output<String> getDomainName() {
-        return this.domainName == null ? Output.empty() : this.domainName;
+        return this.domainName == null ? Codegen.empty() : this.domainName;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> fqdn;
 
     public Output<String> getFqdn() {
-        return this.fqdn == null ? Output.empty() : this.fqdn;
+        return this.fqdn == null ? Codegen.empty() : this.fqdn;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> locations;
 
     public Output<List<String>> getLocations() {
-        return this.locations == null ? Output.empty() : this.locations;
+        return this.locations == null ? Codegen.empty() : this.locations;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> reservedIpRange;
 
     public Output<String> getReservedIpRange() {
-        return this.reservedIpRange == null ? Output.empty() : this.reservedIpRange;
+        return this.reservedIpRange == null ? Codegen.empty() : this.reservedIpRange;
     }
 
     public DomainState(
@@ -144,15 +145,15 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
     }
 
     private DomainState() {
-        this.admin = Output.empty();
-        this.authorizedNetworks = Output.empty();
-        this.domainName = Output.empty();
-        this.fqdn = Output.empty();
-        this.labels = Output.empty();
-        this.locations = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.reservedIpRange = Output.empty();
+        this.admin = Codegen.empty();
+        this.authorizedNetworks = Codegen.empty();
+        this.domainName = Codegen.empty();
+        this.fqdn = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.locations = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.reservedIpRange = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -196,7 +197,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder admin(@Nullable String admin) {
-            this.admin = Output.ofNullable(admin);
+            this.admin = Codegen.ofNullable(admin);
             return this;
         }
         public Builder authorizedNetworks(@Nullable Output<List<String>> authorizedNetworks) {
@@ -204,7 +205,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authorizedNetworks(@Nullable List<String> authorizedNetworks) {
-            this.authorizedNetworks = Output.ofNullable(authorizedNetworks);
+            this.authorizedNetworks = Codegen.ofNullable(authorizedNetworks);
             return this;
         }
         public Builder authorizedNetworks(String... authorizedNetworks) {
@@ -215,7 +216,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder domainName(@Nullable String domainName) {
-            this.domainName = Output.ofNullable(domainName);
+            this.domainName = Codegen.ofNullable(domainName);
             return this;
         }
         public Builder fqdn(@Nullable Output<String> fqdn) {
@@ -223,7 +224,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder fqdn(@Nullable String fqdn) {
-            this.fqdn = Output.ofNullable(fqdn);
+            this.fqdn = Codegen.ofNullable(fqdn);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -231,7 +232,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder locations(@Nullable Output<List<String>> locations) {
@@ -239,7 +240,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locations(@Nullable List<String> locations) {
-            this.locations = Output.ofNullable(locations);
+            this.locations = Codegen.ofNullable(locations);
             return this;
         }
         public Builder locations(String... locations) {
@@ -250,7 +251,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -258,7 +259,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder reservedIpRange(@Nullable Output<String> reservedIpRange) {
@@ -266,7 +267,7 @@ public final class DomainState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder reservedIpRange(@Nullable String reservedIpRange) {
-            this.reservedIpRange = Output.ofNullable(reservedIpRange);
+            this.reservedIpRange = Codegen.ofNullable(reservedIpRange);
             return this;
         }        public DomainState build() {
             return new DomainState(admin, authorizedNetworks, domainName, fqdn, labels, locations, name, project, reservedIpRange);

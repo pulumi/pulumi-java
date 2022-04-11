@@ -6,6 +6,7 @@ package io.pulumi.aws.lex.inputs;
 import io.pulumi.aws.lex.inputs.BotClarificationPromptMessageGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -51,7 +52,7 @@ public final class BotClarificationPromptGetArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> responseCard;
 
     public Output<String> getResponseCard() {
-        return this.responseCard == null ? Output.empty() : this.responseCard;
+        return this.responseCard == null ? Codegen.empty() : this.responseCard;
     }
 
     public BotClarificationPromptGetArgs(
@@ -64,9 +65,9 @@ public final class BotClarificationPromptGetArgs extends io.pulumi.resources.Res
     }
 
     private BotClarificationPromptGetArgs() {
-        this.maxAttempts = Output.empty();
-        this.messages = Output.empty();
-        this.responseCard = Output.empty();
+        this.maxAttempts = Codegen.empty();
+        this.messages = Codegen.empty();
+        this.responseCard = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -117,7 +118,7 @@ public final class BotClarificationPromptGetArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder responseCard(@Nullable String responseCard) {
-            this.responseCard = Output.ofNullable(responseCard);
+            this.responseCard = Codegen.ofNullable(responseCard);
             return this;
         }        public BotClarificationPromptGetArgs build() {
             return new BotClarificationPromptGetArgs(maxAttempts, messages, responseCard);

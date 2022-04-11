@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -33,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1BigQuerySourceArgs extends io.p
     }
 
     private GoogleCloudDatalabelingV1beta1BigQuerySourceArgs() {
-        this.inputUri = Output.empty();
+        this.inputUri = Codegen.empty();
     }
 
     public static Builder builder() {

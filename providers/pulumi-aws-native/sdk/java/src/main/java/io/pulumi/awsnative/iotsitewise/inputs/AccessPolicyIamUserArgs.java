@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AccessPolicyIamUserArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     public AccessPolicyIamUserArgs(@Nullable Output<String> arn) {
@@ -34,7 +35,7 @@ public final class AccessPolicyIamUserArgs extends io.pulumi.resources.ResourceA
     }
 
     private AccessPolicyIamUserArgs() {
-        this.arn = Output.empty();
+        this.arn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AccessPolicyIamUserArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }        public AccessPolicyIamUserArgs build() {
             return new AccessPolicyIamUserArgs(arn);

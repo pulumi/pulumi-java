@@ -6,6 +6,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<List<AssetModelPropertyArgs>> compositeModelProperties;
 
     public Output<List<AssetModelPropertyArgs>> getCompositeModelProperties() {
-        return this.compositeModelProperties == null ? Output.empty() : this.compositeModelProperties;
+        return this.compositeModelProperties == null ? Codegen.empty() : this.compositeModelProperties;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -76,10 +77,10 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
     }
 
     private AssetModelCompositeModelArgs() {
-        this.compositeModelProperties = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.type = Output.empty();
+        this.compositeModelProperties = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder compositeModelProperties(@Nullable List<AssetModelPropertyArgs> compositeModelProperties) {
-            this.compositeModelProperties = Output.ofNullable(compositeModelProperties);
+            this.compositeModelProperties = Codegen.ofNullable(compositeModelProperties);
             return this;
         }
         public Builder compositeModelProperties(AssetModelPropertyArgs... compositeModelProperties) {
@@ -124,7 +125,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(Output<String> name) {

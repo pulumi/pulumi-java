@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> datasourceType;
 
     public Output<String> getDatasourceType() {
-        return this.datasourceType == null ? Output.empty() : this.datasourceType;
+        return this.datasourceType == null ? Codegen.empty() : this.datasourceType;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> objectType;
 
     public Output<String> getObjectType() {
-        return this.objectType == null ? Output.empty() : this.objectType;
+        return this.objectType == null ? Codegen.empty() : this.objectType;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceLocation;
 
     public Output<String> getResourceLocation() {
-        return this.resourceLocation == null ? Output.empty() : this.resourceLocation;
+        return this.resourceLocation == null ? Codegen.empty() : this.resourceLocation;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceName;
 
     public Output<String> getPropResourceName() {
-        return this.resourceName == null ? Output.empty() : this.resourceName;
+        return this.resourceName == null ? Codegen.empty() : this.resourceName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceType;
 
     public Output<String> getPropResourceType() {
-        return this.resourceType == null ? Output.empty() : this.resourceType;
+        return this.resourceType == null ? Codegen.empty() : this.resourceType;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceUri;
 
     public Output<String> getResourceUri() {
-        return this.resourceUri == null ? Output.empty() : this.resourceUri;
+        return this.resourceUri == null ? Codegen.empty() : this.resourceUri;
     }
 
     public DatasourceSetArgs(
@@ -113,13 +114,13 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DatasourceSetArgs() {
-        this.datasourceType = Output.empty();
-        this.objectType = Output.empty();
-        this.resourceID = Output.empty();
-        this.resourceLocation = Output.empty();
-        this.resourceName = Output.empty();
-        this.resourceType = Output.empty();
-        this.resourceUri = Output.empty();
+        this.datasourceType = Codegen.empty();
+        this.objectType = Codegen.empty();
+        this.resourceID = Codegen.empty();
+        this.resourceLocation = Codegen.empty();
+        this.resourceName = Codegen.empty();
+        this.resourceType = Codegen.empty();
+        this.resourceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -159,7 +160,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder datasourceType(@Nullable String datasourceType) {
-            this.datasourceType = Output.ofNullable(datasourceType);
+            this.datasourceType = Codegen.ofNullable(datasourceType);
             return this;
         }
         public Builder objectType(@Nullable Output<String> objectType) {
@@ -167,7 +168,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objectType(@Nullable String objectType) {
-            this.objectType = Output.ofNullable(objectType);
+            this.objectType = Codegen.ofNullable(objectType);
             return this;
         }
         public Builder resourceID(Output<String> resourceID) {
@@ -183,7 +184,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceLocation(@Nullable String resourceLocation) {
-            this.resourceLocation = Output.ofNullable(resourceLocation);
+            this.resourceLocation = Codegen.ofNullable(resourceLocation);
             return this;
         }
         public Builder resourceName(@Nullable Output<String> resourceName) {
@@ -191,7 +192,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceName(@Nullable String resourceName) {
-            this.resourceName = Output.ofNullable(resourceName);
+            this.resourceName = Codegen.ofNullable(resourceName);
             return this;
         }
         public Builder resourceType(@Nullable Output<String> resourceType) {
@@ -199,7 +200,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceType(@Nullable String resourceType) {
-            this.resourceType = Output.ofNullable(resourceType);
+            this.resourceType = Codegen.ofNullable(resourceType);
             return this;
         }
         public Builder resourceUri(@Nullable Output<String> resourceUri) {
@@ -207,7 +208,7 @@ public final class DatasourceSetArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceUri(@Nullable String resourceUri) {
-            this.resourceUri = Output.ofNullable(resourceUri);
+            this.resourceUri = Codegen.ofNullable(resourceUri);
             return this;
         }        public DatasourceSetArgs build() {
             return new DatasourceSetArgs(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);

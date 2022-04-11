@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SubResourceArgs> backendAddressPool;
 
     public Output<SubResourceArgs> getBackendAddressPool() {
-        return this.backendAddressPool == null ? Output.empty() : this.backendAddressPool;
+        return this.backendAddressPool == null ? Codegen.empty() : this.backendAddressPool;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SubResourceArgs> backendHttpSettings;
 
     public Output<SubResourceArgs> getBackendHttpSettings() {
-        return this.backendHttpSettings == null ? Output.empty() : this.backendHttpSettings;
+        return this.backendHttpSettings == null ? Codegen.empty() : this.backendHttpSettings;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SubResourceArgs> firewallPolicy;
 
     public Output<SubResourceArgs> getFirewallPolicy() {
-        return this.firewallPolicy == null ? Output.empty() : this.firewallPolicy;
+        return this.firewallPolicy == null ? Codegen.empty() : this.firewallPolicy;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<List<String>> paths;
 
     public Output<List<String>> getPaths() {
-        return this.paths == null ? Output.empty() : this.paths;
+        return this.paths == null ? Codegen.empty() : this.paths;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SubResourceArgs> redirectConfiguration;
 
     public Output<SubResourceArgs> getRedirectConfiguration() {
-        return this.redirectConfiguration == null ? Output.empty() : this.redirectConfiguration;
+        return this.redirectConfiguration == null ? Codegen.empty() : this.redirectConfiguration;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
       private final @Nullable Output<SubResourceArgs> rewriteRuleSet;
 
     public Output<SubResourceArgs> getRewriteRuleSet() {
-        return this.rewriteRuleSet == null ? Output.empty() : this.rewriteRuleSet;
+        return this.rewriteRuleSet == null ? Codegen.empty() : this.rewriteRuleSet;
     }
 
     public ApplicationGatewayPathRuleArgs(
@@ -128,14 +129,14 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
     }
 
     private ApplicationGatewayPathRuleArgs() {
-        this.backendAddressPool = Output.empty();
-        this.backendHttpSettings = Output.empty();
-        this.firewallPolicy = Output.empty();
-        this.id = Output.empty();
-        this.name = Output.empty();
-        this.paths = Output.empty();
-        this.redirectConfiguration = Output.empty();
-        this.rewriteRuleSet = Output.empty();
+        this.backendAddressPool = Codegen.empty();
+        this.backendHttpSettings = Codegen.empty();
+        this.firewallPolicy = Codegen.empty();
+        this.id = Codegen.empty();
+        this.name = Codegen.empty();
+        this.paths = Codegen.empty();
+        this.redirectConfiguration = Codegen.empty();
+        this.rewriteRuleSet = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder backendAddressPool(@Nullable SubResourceArgs backendAddressPool) {
-            this.backendAddressPool = Output.ofNullable(backendAddressPool);
+            this.backendAddressPool = Codegen.ofNullable(backendAddressPool);
             return this;
         }
         public Builder backendHttpSettings(@Nullable Output<SubResourceArgs> backendHttpSettings) {
@@ -185,7 +186,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder backendHttpSettings(@Nullable SubResourceArgs backendHttpSettings) {
-            this.backendHttpSettings = Output.ofNullable(backendHttpSettings);
+            this.backendHttpSettings = Codegen.ofNullable(backendHttpSettings);
             return this;
         }
         public Builder firewallPolicy(@Nullable Output<SubResourceArgs> firewallPolicy) {
@@ -193,7 +194,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder firewallPolicy(@Nullable SubResourceArgs firewallPolicy) {
-            this.firewallPolicy = Output.ofNullable(firewallPolicy);
+            this.firewallPolicy = Codegen.ofNullable(firewallPolicy);
             return this;
         }
         public Builder id(@Nullable Output<String> id) {
@@ -201,7 +202,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -209,7 +210,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder paths(@Nullable Output<List<String>> paths) {
@@ -217,7 +218,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder paths(@Nullable List<String> paths) {
-            this.paths = Output.ofNullable(paths);
+            this.paths = Codegen.ofNullable(paths);
             return this;
         }
         public Builder paths(String... paths) {
@@ -228,7 +229,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder redirectConfiguration(@Nullable SubResourceArgs redirectConfiguration) {
-            this.redirectConfiguration = Output.ofNullable(redirectConfiguration);
+            this.redirectConfiguration = Codegen.ofNullable(redirectConfiguration);
             return this;
         }
         public Builder rewriteRuleSet(@Nullable Output<SubResourceArgs> rewriteRuleSet) {
@@ -236,7 +237,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder rewriteRuleSet(@Nullable SubResourceArgs rewriteRuleSet) {
-            this.rewriteRuleSet = Output.ofNullable(rewriteRuleSet);
+            this.rewriteRuleSet = Codegen.ofNullable(rewriteRuleSet);
             return this;
         }        public ApplicationGatewayPathRuleArgs build() {
             return new ApplicationGatewayPathRuleArgs(backendAddressPool, backendHttpSettings, firewallPolicy, id, name, paths, redirectConfiguration, rewriteRuleSet);

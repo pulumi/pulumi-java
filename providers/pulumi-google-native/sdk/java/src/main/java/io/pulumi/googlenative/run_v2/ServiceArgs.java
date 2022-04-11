@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v2;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.run_v2.enums.ServiceIngress;
 import io.pulumi.googlenative.run_v2.enums.ServiceLaunchStage;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2BinaryAuthorizationArgs;
@@ -29,7 +30,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> annotations;
 
     public Output<Map<String,String>> getAnnotations() {
-        return this.annotations == null ? Output.empty() : this.annotations;
+        return this.annotations == null ? Codegen.empty() : this.annotations;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization;
 
     public Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> getBinaryAuthorization() {
-        return this.binaryAuthorization == null ? Output.empty() : this.binaryAuthorization;
+        return this.binaryAuthorization == null ? Codegen.empty() : this.binaryAuthorization;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> client;
 
     public Output<String> getClient() {
-        return this.client == null ? Output.empty() : this.client;
+        return this.client == null ? Codegen.empty() : this.client;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientVersion;
 
     public Output<String> getClientVersion() {
-        return this.clientVersion == null ? Output.empty() : this.clientVersion;
+        return this.clientVersion == null ? Codegen.empty() : this.clientVersion;
     }
 
     /**
@@ -73,7 +74,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -84,7 +85,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceIngress> ingress;
 
     public Output<ServiceIngress> getIngress() {
-        return this.ingress == null ? Output.empty() : this.ingress;
+        return this.ingress == null ? Codegen.empty() : this.ingress;
     }
 
     /**
@@ -95,7 +96,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -106,14 +107,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceLaunchStage> launchStage;
 
     public Output<ServiceLaunchStage> getLaunchStage() {
-        return this.launchStage == null ? Output.empty() : this.launchStage;
+        return this.launchStage == null ? Codegen.empty() : this.launchStage;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -124,14 +125,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     @Import(name="serviceId", required=true)
@@ -160,14 +161,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> traffic;
 
     public Output<List<GoogleCloudRunOpV2TrafficTargetArgs>> getTraffic() {
-        return this.traffic == null ? Output.empty() : this.traffic;
+        return this.traffic == null ? Codegen.empty() : this.traffic;
     }
 
     @Import(name="validateOnly")
       private final @Nullable Output<String> validateOnly;
 
     public Output<String> getValidateOnly() {
-        return this.validateOnly == null ? Output.empty() : this.validateOnly;
+        return this.validateOnly == null ? Codegen.empty() : this.validateOnly;
     }
 
     public ServiceArgs(
@@ -204,21 +205,21 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.annotations = Output.empty();
-        this.binaryAuthorization = Output.empty();
-        this.client = Output.empty();
-        this.clientVersion = Output.empty();
-        this.description = Output.empty();
-        this.ingress = Output.empty();
-        this.labels = Output.empty();
-        this.launchStage = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.serviceId = Output.empty();
-        this.template = Output.empty();
-        this.traffic = Output.empty();
-        this.validateOnly = Output.empty();
+        this.annotations = Codegen.empty();
+        this.binaryAuthorization = Codegen.empty();
+        this.client = Codegen.empty();
+        this.clientVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.ingress = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.launchStage = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.serviceId = Codegen.empty();
+        this.template = Codegen.empty();
+        this.traffic = Codegen.empty();
+        this.validateOnly = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -274,7 +275,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder annotations(@Nullable Map<String,String> annotations) {
-            this.annotations = Output.ofNullable(annotations);
+            this.annotations = Codegen.ofNullable(annotations);
             return this;
         }
         public Builder binaryAuthorization(@Nullable Output<GoogleCloudRunOpV2BinaryAuthorizationArgs> binaryAuthorization) {
@@ -282,7 +283,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder binaryAuthorization(@Nullable GoogleCloudRunOpV2BinaryAuthorizationArgs binaryAuthorization) {
-            this.binaryAuthorization = Output.ofNullable(binaryAuthorization);
+            this.binaryAuthorization = Codegen.ofNullable(binaryAuthorization);
             return this;
         }
         public Builder client(@Nullable Output<String> client) {
@@ -290,7 +291,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder client(@Nullable String client) {
-            this.client = Output.ofNullable(client);
+            this.client = Codegen.ofNullable(client);
             return this;
         }
         public Builder clientVersion(@Nullable Output<String> clientVersion) {
@@ -298,7 +299,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientVersion(@Nullable String clientVersion) {
-            this.clientVersion = Output.ofNullable(clientVersion);
+            this.clientVersion = Codegen.ofNullable(clientVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -306,7 +307,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder ingress(@Nullable Output<ServiceIngress> ingress) {
@@ -314,7 +315,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder ingress(@Nullable ServiceIngress ingress) {
-            this.ingress = Output.ofNullable(ingress);
+            this.ingress = Codegen.ofNullable(ingress);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -322,7 +323,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder launchStage(@Nullable Output<ServiceLaunchStage> launchStage) {
@@ -330,7 +331,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder launchStage(@Nullable ServiceLaunchStage launchStage) {
-            this.launchStage = Output.ofNullable(launchStage);
+            this.launchStage = Codegen.ofNullable(launchStage);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -338,7 +339,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -346,7 +347,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -354,7 +355,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder serviceId(Output<String> serviceId) {
@@ -378,7 +379,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder traffic(@Nullable List<GoogleCloudRunOpV2TrafficTargetArgs> traffic) {
-            this.traffic = Output.ofNullable(traffic);
+            this.traffic = Codegen.ofNullable(traffic);
             return this;
         }
         public Builder traffic(GoogleCloudRunOpV2TrafficTargetArgs... traffic) {
@@ -389,7 +390,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder validateOnly(@Nullable String validateOnly) {
-            this.validateOnly = Output.ofNullable(validateOnly);
+            this.validateOnly = Codegen.ofNullable(validateOnly);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(annotations, binaryAuthorization, client, clientVersion, description, ingress, labels, launchStage, location, name, project, serviceId, template, traffic, validateOnly);

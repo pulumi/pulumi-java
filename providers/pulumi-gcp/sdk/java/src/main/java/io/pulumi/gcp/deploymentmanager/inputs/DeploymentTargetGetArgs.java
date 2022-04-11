@@ -5,6 +5,7 @@ package io.pulumi.gcp.deploymentmanager.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetConfigGetArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetImportGetArgs;
 import java.util.List;
@@ -39,7 +40,7 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<DeploymentTargetImportGetArgs>> imports;
 
     public Output<List<DeploymentTargetImportGetArgs>> getImports() {
-        return this.imports == null ? Output.empty() : this.imports;
+        return this.imports == null ? Codegen.empty() : this.imports;
     }
 
     public DeploymentTargetGetArgs(
@@ -50,8 +51,8 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
     }
 
     private DeploymentTargetGetArgs() {
-        this.config = Output.empty();
-        this.imports = Output.empty();
+        this.config = Codegen.empty();
+        this.imports = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -89,7 +90,7 @@ public final class DeploymentTargetGetArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder imports(@Nullable List<DeploymentTargetImportGetArgs> imports) {
-            this.imports = Output.ofNullable(imports);
+            this.imports = Codegen.ofNullable(imports);
             return this;
         }
         public Builder imports(DeploymentTargetImportGetArgs... imports) {

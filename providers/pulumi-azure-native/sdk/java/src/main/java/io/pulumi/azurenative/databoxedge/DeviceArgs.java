@@ -9,6 +9,7 @@ import io.pulumi.azurenative.databoxedge.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
 
     public Output<Either<String,DataBoxEdgeDeviceStatus>> getDataBoxEdgeDeviceStatus() {
-        return this.dataBoxEdgeDeviceStatus == null ? Output.empty() : this.dataBoxEdgeDeviceStatus;
+        return this.dataBoxEdgeDeviceStatus == null ? Codegen.empty() : this.dataBoxEdgeDeviceStatus;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ResourceIdentityArgs> identity;
 
     public Output<ResourceIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -82,7 +83,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SkuArgs> sku;
 
     public Output<SkuArgs> getSku() {
-        return this.sku == null ? Output.empty() : this.sku;
+        return this.sku == null ? Codegen.empty() : this.sku;
     }
 
     /**
@@ -93,7 +94,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DeviceArgs(
@@ -114,13 +115,13 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DeviceArgs() {
-        this.dataBoxEdgeDeviceStatus = Output.empty();
-        this.deviceName = Output.empty();
-        this.identity = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.tags = Output.empty();
+        this.dataBoxEdgeDeviceStatus = Codegen.empty();
+        this.deviceName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -160,7 +161,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataBoxEdgeDeviceStatus(@Nullable Either<String,DataBoxEdgeDeviceStatus> dataBoxEdgeDeviceStatus) {
-            this.dataBoxEdgeDeviceStatus = Output.ofNullable(dataBoxEdgeDeviceStatus);
+            this.dataBoxEdgeDeviceStatus = Codegen.ofNullable(dataBoxEdgeDeviceStatus);
             return this;
         }
         public Builder deviceName(@Nullable Output<String> deviceName) {
@@ -168,7 +169,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
@@ -176,7 +177,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable ResourceIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -184,7 +185,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -200,7 +201,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sku(@Nullable SkuArgs sku) {
-            this.sku = Output.ofNullable(sku);
+            this.sku = Codegen.ofNullable(sku);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -208,7 +209,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DeviceArgs build() {
             return new DeviceArgs(dataBoxEdgeDeviceStatus, deviceName, identity, location, resourceGroupName, sku, tags);

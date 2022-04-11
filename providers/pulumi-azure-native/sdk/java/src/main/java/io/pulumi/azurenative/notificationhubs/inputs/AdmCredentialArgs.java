@@ -5,6 +5,7 @@ package io.pulumi.azurenative.notificationhubs.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authTokenUrl;
 
     public Output<String> getAuthTokenUrl() {
-        return this.authTokenUrl == null ? Output.empty() : this.authTokenUrl;
+        return this.authTokenUrl == null ? Codegen.empty() : this.authTokenUrl;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clientSecret;
 
     public Output<String> getClientSecret() {
-        return this.clientSecret == null ? Output.empty() : this.clientSecret;
+        return this.clientSecret == null ? Codegen.empty() : this.clientSecret;
     }
 
     public AdmCredentialArgs(
@@ -61,9 +62,9 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AdmCredentialArgs() {
-        this.authTokenUrl = Output.empty();
-        this.clientId = Output.empty();
-        this.clientSecret = Output.empty();
+        this.authTokenUrl = Codegen.empty();
+        this.clientId = Codegen.empty();
+        this.clientSecret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -95,7 +96,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authTokenUrl(@Nullable String authTokenUrl) {
-            this.authTokenUrl = Output.ofNullable(authTokenUrl);
+            this.authTokenUrl = Codegen.ofNullable(authTokenUrl);
             return this;
         }
         public Builder clientId(@Nullable Output<String> clientId) {
@@ -103,7 +104,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
@@ -111,7 +112,7 @@ public final class AdmCredentialArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientSecret(@Nullable String clientSecret) {
-            this.clientSecret = Output.ofNullable(clientSecret);
+            this.clientSecret = Codegen.ofNullable(clientSecret);
             return this;
         }        public AdmCredentialArgs build() {
             return new AdmCredentialArgs(authTokenUrl, clientId, clientSecret);

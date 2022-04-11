@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.BackendBucketArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendBucketCdnPolicyResponse;
@@ -211,7 +212,7 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public BackendBucket(String name, @Nullable BackendBucketArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/alpha:BackendBucket", name, args == null ? BackendBucketArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/alpha:BackendBucket", name, args == null ? BackendBucketArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private BackendBucket(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

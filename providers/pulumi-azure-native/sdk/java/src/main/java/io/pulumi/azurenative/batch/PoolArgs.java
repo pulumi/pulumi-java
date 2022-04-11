@@ -17,6 +17,7 @@ import io.pulumi.azurenative.batch.inputs.TaskSchedulingPolicyArgs;
 import io.pulumi.azurenative.batch.inputs.UserAccountArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +48,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> applicationLicenses;
 
     public Output<List<String>> getApplicationLicenses() {
-        return this.applicationLicenses == null ? Output.empty() : this.applicationLicenses;
+        return this.applicationLicenses == null ? Codegen.empty() : this.applicationLicenses;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ApplicationPackageReferenceArgs>> applicationPackages;
 
     public Output<List<ApplicationPackageReferenceArgs>> getApplicationPackages() {
-        return this.applicationPackages == null ? Output.empty() : this.applicationPackages;
+        return this.applicationPackages == null ? Codegen.empty() : this.applicationPackages;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<CertificateReferenceArgs>> certificates;
 
     public Output<List<CertificateReferenceArgs>> getCertificates() {
-        return this.certificates == null ? Output.empty() : this.certificates;
+        return this.certificates == null ? Codegen.empty() : this.certificates;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<DeploymentConfigurationArgs> deploymentConfiguration;
 
     public Output<DeploymentConfigurationArgs> getDeploymentConfiguration() {
-        return this.deploymentConfiguration == null ? Output.empty() : this.deploymentConfiguration;
+        return this.deploymentConfiguration == null ? Codegen.empty() : this.deploymentConfiguration;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<BatchPoolIdentityArgs> identity;
 
     public Output<BatchPoolIdentityArgs> getIdentity() {
-        return this.identity == null ? Output.empty() : this.identity;
+        return this.identity == null ? Codegen.empty() : this.identity;
     }
 
     /**
@@ -113,7 +114,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<InterNodeCommunicationState> interNodeCommunication;
 
     public Output<InterNodeCommunicationState> getInterNodeCommunication() {
-        return this.interNodeCommunication == null ? Output.empty() : this.interNodeCommunication;
+        return this.interNodeCommunication == null ? Codegen.empty() : this.interNodeCommunication;
     }
 
     /**
@@ -124,7 +125,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MetadataItemArgs>> metadata;
 
     public Output<List<MetadataItemArgs>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -135,7 +136,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<MountConfigurationArgs>> mountConfiguration;
 
     public Output<List<MountConfigurationArgs>> getMountConfiguration() {
-        return this.mountConfiguration == null ? Output.empty() : this.mountConfiguration;
+        return this.mountConfiguration == null ? Codegen.empty() : this.mountConfiguration;
     }
 
     /**
@@ -146,7 +147,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<NetworkConfigurationArgs> networkConfiguration;
 
     public Output<NetworkConfigurationArgs> getNetworkConfiguration() {
-        return this.networkConfiguration == null ? Output.empty() : this.networkConfiguration;
+        return this.networkConfiguration == null ? Codegen.empty() : this.networkConfiguration;
     }
 
     /**
@@ -157,7 +158,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> poolName;
 
     public Output<String> getPoolName() {
-        return this.poolName == null ? Output.empty() : this.poolName;
+        return this.poolName == null ? Codegen.empty() : this.poolName;
     }
 
     /**
@@ -179,7 +180,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ScaleSettingsArgs> scaleSettings;
 
     public Output<ScaleSettingsArgs> getScaleSettings() {
-        return this.scaleSettings == null ? Output.empty() : this.scaleSettings;
+        return this.scaleSettings == null ? Codegen.empty() : this.scaleSettings;
     }
 
     /**
@@ -190,7 +191,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<StartTaskArgs> startTask;
 
     public Output<StartTaskArgs> getStartTask() {
-        return this.startTask == null ? Output.empty() : this.startTask;
+        return this.startTask == null ? Codegen.empty() : this.startTask;
     }
 
     /**
@@ -201,7 +202,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy;
 
     public Output<TaskSchedulingPolicyArgs> getTaskSchedulingPolicy() {
-        return this.taskSchedulingPolicy == null ? Output.empty() : this.taskSchedulingPolicy;
+        return this.taskSchedulingPolicy == null ? Codegen.empty() : this.taskSchedulingPolicy;
     }
 
     /**
@@ -212,14 +213,14 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> taskSlotsPerNode;
 
     public Output<Integer> getTaskSlotsPerNode() {
-        return this.taskSlotsPerNode == null ? Output.empty() : this.taskSlotsPerNode;
+        return this.taskSlotsPerNode == null ? Codegen.empty() : this.taskSlotsPerNode;
     }
 
     @Import(name="userAccounts")
       private final @Nullable Output<List<UserAccountArgs>> userAccounts;
 
     public Output<List<UserAccountArgs>> getUserAccounts() {
-        return this.userAccounts == null ? Output.empty() : this.userAccounts;
+        return this.userAccounts == null ? Codegen.empty() : this.userAccounts;
     }
 
     /**
@@ -230,7 +231,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vmSize;
 
     public Output<String> getVmSize() {
-        return this.vmSize == null ? Output.empty() : this.vmSize;
+        return this.vmSize == null ? Codegen.empty() : this.vmSize;
     }
 
     public PoolArgs(
@@ -275,25 +276,25 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PoolArgs() {
-        this.accountName = Output.empty();
-        this.applicationLicenses = Output.empty();
-        this.applicationPackages = Output.empty();
-        this.certificates = Output.empty();
-        this.deploymentConfiguration = Output.empty();
-        this.displayName = Output.empty();
-        this.identity = Output.empty();
-        this.interNodeCommunication = Output.empty();
-        this.metadata = Output.empty();
-        this.mountConfiguration = Output.empty();
-        this.networkConfiguration = Output.empty();
-        this.poolName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.scaleSettings = Output.empty();
-        this.startTask = Output.empty();
-        this.taskSchedulingPolicy = Output.empty();
-        this.taskSlotsPerNode = Output.empty();
-        this.userAccounts = Output.empty();
-        this.vmSize = Output.empty();
+        this.accountName = Codegen.empty();
+        this.applicationLicenses = Codegen.empty();
+        this.applicationPackages = Codegen.empty();
+        this.certificates = Codegen.empty();
+        this.deploymentConfiguration = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.identity = Codegen.empty();
+        this.interNodeCommunication = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.mountConfiguration = Codegen.empty();
+        this.networkConfiguration = Codegen.empty();
+        this.poolName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.scaleSettings = Codegen.empty();
+        this.startTask = Codegen.empty();
+        this.taskSchedulingPolicy = Codegen.empty();
+        this.taskSlotsPerNode = Codegen.empty();
+        this.userAccounts = Codegen.empty();
+        this.vmSize = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -365,7 +366,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationLicenses(@Nullable List<String> applicationLicenses) {
-            this.applicationLicenses = Output.ofNullable(applicationLicenses);
+            this.applicationLicenses = Codegen.ofNullable(applicationLicenses);
             return this;
         }
         public Builder applicationLicenses(String... applicationLicenses) {
@@ -376,7 +377,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder applicationPackages(@Nullable List<ApplicationPackageReferenceArgs> applicationPackages) {
-            this.applicationPackages = Output.ofNullable(applicationPackages);
+            this.applicationPackages = Codegen.ofNullable(applicationPackages);
             return this;
         }
         public Builder applicationPackages(ApplicationPackageReferenceArgs... applicationPackages) {
@@ -387,7 +388,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder certificates(@Nullable List<CertificateReferenceArgs> certificates) {
-            this.certificates = Output.ofNullable(certificates);
+            this.certificates = Codegen.ofNullable(certificates);
             return this;
         }
         public Builder certificates(CertificateReferenceArgs... certificates) {
@@ -398,7 +399,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deploymentConfiguration(@Nullable DeploymentConfigurationArgs deploymentConfiguration) {
-            this.deploymentConfiguration = Output.ofNullable(deploymentConfiguration);
+            this.deploymentConfiguration = Codegen.ofNullable(deploymentConfiguration);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -406,7 +407,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder identity(@Nullable Output<BatchPoolIdentityArgs> identity) {
@@ -414,7 +415,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder identity(@Nullable BatchPoolIdentityArgs identity) {
-            this.identity = Output.ofNullable(identity);
+            this.identity = Codegen.ofNullable(identity);
             return this;
         }
         public Builder interNodeCommunication(@Nullable Output<InterNodeCommunicationState> interNodeCommunication) {
@@ -422,7 +423,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder interNodeCommunication(@Nullable InterNodeCommunicationState interNodeCommunication) {
-            this.interNodeCommunication = Output.ofNullable(interNodeCommunication);
+            this.interNodeCommunication = Codegen.ofNullable(interNodeCommunication);
             return this;
         }
         public Builder metadata(@Nullable Output<List<MetadataItemArgs>> metadata) {
@@ -430,7 +431,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable List<MetadataItemArgs> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder metadata(MetadataItemArgs... metadata) {
@@ -441,7 +442,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mountConfiguration(@Nullable List<MountConfigurationArgs> mountConfiguration) {
-            this.mountConfiguration = Output.ofNullable(mountConfiguration);
+            this.mountConfiguration = Codegen.ofNullable(mountConfiguration);
             return this;
         }
         public Builder mountConfiguration(MountConfigurationArgs... mountConfiguration) {
@@ -452,7 +453,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder networkConfiguration(@Nullable NetworkConfigurationArgs networkConfiguration) {
-            this.networkConfiguration = Output.ofNullable(networkConfiguration);
+            this.networkConfiguration = Codegen.ofNullable(networkConfiguration);
             return this;
         }
         public Builder poolName(@Nullable Output<String> poolName) {
@@ -460,7 +461,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder poolName(@Nullable String poolName) {
-            this.poolName = Output.ofNullable(poolName);
+            this.poolName = Codegen.ofNullable(poolName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -476,7 +477,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder scaleSettings(@Nullable ScaleSettingsArgs scaleSettings) {
-            this.scaleSettings = Output.ofNullable(scaleSettings);
+            this.scaleSettings = Codegen.ofNullable(scaleSettings);
             return this;
         }
         public Builder startTask(@Nullable Output<StartTaskArgs> startTask) {
@@ -484,7 +485,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder startTask(@Nullable StartTaskArgs startTask) {
-            this.startTask = Output.ofNullable(startTask);
+            this.startTask = Codegen.ofNullable(startTask);
             return this;
         }
         public Builder taskSchedulingPolicy(@Nullable Output<TaskSchedulingPolicyArgs> taskSchedulingPolicy) {
@@ -492,7 +493,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskSchedulingPolicy(@Nullable TaskSchedulingPolicyArgs taskSchedulingPolicy) {
-            this.taskSchedulingPolicy = Output.ofNullable(taskSchedulingPolicy);
+            this.taskSchedulingPolicy = Codegen.ofNullable(taskSchedulingPolicy);
             return this;
         }
         public Builder taskSlotsPerNode(@Nullable Output<Integer> taskSlotsPerNode) {
@@ -500,7 +501,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder taskSlotsPerNode(@Nullable Integer taskSlotsPerNode) {
-            this.taskSlotsPerNode = Output.ofNullable(taskSlotsPerNode);
+            this.taskSlotsPerNode = Codegen.ofNullable(taskSlotsPerNode);
             return this;
         }
         public Builder userAccounts(@Nullable Output<List<UserAccountArgs>> userAccounts) {
@@ -508,7 +509,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userAccounts(@Nullable List<UserAccountArgs> userAccounts) {
-            this.userAccounts = Output.ofNullable(userAccounts);
+            this.userAccounts = Codegen.ofNullable(userAccounts);
             return this;
         }
         public Builder userAccounts(UserAccountArgs... userAccounts) {
@@ -519,7 +520,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vmSize(@Nullable String vmSize) {
-            this.vmSize = Output.ofNullable(vmSize);
+            this.vmSize = Codegen.ofNullable(vmSize);
             return this;
         }        public PoolArgs build() {
             return new PoolArgs(accountName, applicationLicenses, applicationPackages, certificates, deploymentConfiguration, displayName, identity, interNodeCommunication, metadata, mountConfiguration, networkConfiguration, poolName, resourceGroupName, scaleSettings, startTask, taskSchedulingPolicy, taskSlotsPerNode, userAccounts, vmSize);

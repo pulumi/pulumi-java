@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.IngressServiceBackendArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<TypedLocalObjectReferenceArgs> resource;
 
     public Output<TypedLocalObjectReferenceArgs> getResource() {
-        return this.resource == null ? Output.empty() : this.resource;
+        return this.resource == null ? Codegen.empty() : this.resource;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IngressServiceBackendArgs> service;
 
     public Output<IngressServiceBackendArgs> getService() {
-        return this.service == null ? Output.empty() : this.service;
+        return this.service == null ? Codegen.empty() : this.service;
     }
 
     public IngressBackendArgs(
@@ -49,8 +50,8 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IngressBackendArgs() {
-        this.resource = Output.empty();
-        this.service = Output.empty();
+        this.resource = Codegen.empty();
+        this.service = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resource(@Nullable TypedLocalObjectReferenceArgs resource) {
-            this.resource = Output.ofNullable(resource);
+            this.resource = Codegen.ofNullable(resource);
             return this;
         }
         public Builder service(@Nullable Output<IngressServiceBackendArgs> service) {
@@ -88,7 +89,7 @@ public final class IngressBackendArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder service(@Nullable IngressServiceBackendArgs service) {
-            this.service = Output.ofNullable(service);
+            this.service = Codegen.ofNullable(service);
             return this;
         }        public IngressBackendArgs build() {
             return new IngressBackendArgs(resource, service);

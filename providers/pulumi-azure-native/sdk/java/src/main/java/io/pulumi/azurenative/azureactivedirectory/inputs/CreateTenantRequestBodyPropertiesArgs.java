@@ -5,6 +5,7 @@ package io.pulumi.azurenative.azureactivedirectory.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
       private final @Nullable Output<String> countryCode;
 
     public Output<String> getCountryCode() {
-        return this.countryCode == null ? Output.empty() : this.countryCode;
+        return this.countryCode == null ? Codegen.empty() : this.countryCode;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     public CreateTenantRequestBodyPropertiesArgs(
@@ -44,8 +45,8 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
     }
 
     private CreateTenantRequestBodyPropertiesArgs() {
-        this.countryCode = Output.empty();
-        this.displayName = Output.empty();
+        this.countryCode = Codegen.empty();
+        this.displayName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder countryCode(@Nullable String countryCode) {
-            this.countryCode = Output.ofNullable(countryCode);
+            this.countryCode = Codegen.ofNullable(countryCode);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -83,7 +84,7 @@ public final class CreateTenantRequestBodyPropertiesArgs extends io.pulumi.resou
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }        public CreateTenantRequestBodyPropertiesArgs build() {
             return new CreateTenantRequestBodyPropertiesArgs(countryCode, displayName);

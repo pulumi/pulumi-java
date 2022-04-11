@@ -5,6 +5,7 @@ package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,8 +45,8 @@ public final class IAMPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IAMPolicyArgs() {
-        this.policyData = Output.empty();
-        this.serviceAccountId = Output.empty();
+        this.policyData = Codegen.empty();
+        this.serviceAccountId = Codegen.empty();
     }
 
     public static Builder builder() {

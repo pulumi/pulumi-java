@@ -8,6 +8,7 @@ import io.pulumi.azurenative.documentdb.enums.ServiceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -37,7 +38,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> instanceCount;
 
     public Output<Integer> getInstanceCount() {
-        return this.instanceCount == null ? Output.empty() : this.instanceCount;
+        return this.instanceCount == null ? Codegen.empty() : this.instanceCount;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ServiceSize>> instanceSize;
 
     public Output<Either<String,ServiceSize>> getInstanceSize() {
-        return this.instanceSize == null ? Output.empty() : this.instanceSize;
+        return this.instanceSize == null ? Codegen.empty() : this.instanceSize;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceName;
 
     public Output<String> getServiceName() {
-        return this.serviceName == null ? Output.empty() : this.serviceName;
+        return this.serviceName == null ? Codegen.empty() : this.serviceName;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ServiceType>> serviceType;
 
     public Output<Either<String,ServiceType>> getServiceType() {
-        return this.serviceType == null ? Output.empty() : this.serviceType;
+        return this.serviceType == null ? Codegen.empty() : this.serviceType;
     }
 
     public ServiceArgs(
@@ -100,12 +101,12 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceArgs() {
-        this.accountName = Output.empty();
-        this.instanceCount = Output.empty();
-        this.instanceSize = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceType = Output.empty();
+        this.accountName = Codegen.empty();
+        this.instanceCount = Codegen.empty();
+        this.instanceSize = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -151,7 +152,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceCount(@Nullable Integer instanceCount) {
-            this.instanceCount = Output.ofNullable(instanceCount);
+            this.instanceCount = Codegen.ofNullable(instanceCount);
             return this;
         }
         public Builder instanceSize(@Nullable Output<Either<String,ServiceSize>> instanceSize) {
@@ -159,7 +160,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceSize(@Nullable Either<String,ServiceSize> instanceSize) {
-            this.instanceSize = Output.ofNullable(instanceSize);
+            this.instanceSize = Codegen.ofNullable(instanceSize);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -175,7 +176,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceName(@Nullable String serviceName) {
-            this.serviceName = Output.ofNullable(serviceName);
+            this.serviceName = Codegen.ofNullable(serviceName);
             return this;
         }
         public Builder serviceType(@Nullable Output<Either<String,ServiceType>> serviceType) {
@@ -183,7 +184,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceType(@Nullable Either<String,ServiceType> serviceType) {
-            this.serviceType = Output.ofNullable(serviceType);
+            this.serviceType = Codegen.ofNullable(serviceType);
             return this;
         }        public ServiceArgs build() {
             return new ServiceArgs(accountName, instanceCount, instanceSize, resourceGroupName, serviceName, serviceType);

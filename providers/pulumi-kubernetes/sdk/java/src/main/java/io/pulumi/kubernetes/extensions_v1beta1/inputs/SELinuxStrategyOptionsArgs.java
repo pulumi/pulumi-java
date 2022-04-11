@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.kubernetes.core_v1.inputs.SELinuxOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<SELinuxOptionsArgs> seLinuxOptions;
 
     public Output<SELinuxOptionsArgs> getSeLinuxOptions() {
-        return this.seLinuxOptions == null ? Output.empty() : this.seLinuxOptions;
+        return this.seLinuxOptions == null ? Codegen.empty() : this.seLinuxOptions;
     }
 
     public SELinuxStrategyOptionsArgs(
@@ -49,8 +50,8 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
     }
 
     private SELinuxStrategyOptionsArgs() {
-        this.rule = Output.empty();
-        this.seLinuxOptions = Output.empty();
+        this.rule = Codegen.empty();
+        this.seLinuxOptions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -88,7 +89,7 @@ public final class SELinuxStrategyOptionsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder seLinuxOptions(@Nullable SELinuxOptionsArgs seLinuxOptions) {
-            this.seLinuxOptions = Output.ofNullable(seLinuxOptions);
+            this.seLinuxOptions = Codegen.ofNullable(seLinuxOptions);
             return this;
         }        public SELinuxStrategyOptionsArgs build() {
             return new SELinuxStrategyOptionsArgs(rule, seLinuxOptions);

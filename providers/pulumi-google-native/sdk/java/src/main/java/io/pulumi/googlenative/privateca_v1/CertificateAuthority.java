@@ -6,6 +6,7 @@ package io.pulumi.googlenative.privateca_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.privateca_v1.CertificateAuthorityArgs;
 import io.pulumi.googlenative.privateca_v1.outputs.AccessUrlsResponse;
@@ -286,7 +287,7 @@ public class CertificateAuthority extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public CertificateAuthority(String name, CertificateAuthorityArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:privateca/v1:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:privateca/v1:CertificateAuthority", name, args == null ? CertificateAuthorityArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private CertificateAuthority(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

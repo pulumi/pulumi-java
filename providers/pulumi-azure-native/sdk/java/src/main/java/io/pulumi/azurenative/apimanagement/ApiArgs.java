@@ -14,6 +14,7 @@ import io.pulumi.azurenative.apimanagement.inputs.SubscriptionKeyParameterNamesC
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +34,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiId;
 
     public Output<String> getApiId() {
-        return this.apiId == null ? Output.empty() : this.apiId;
+        return this.apiId == null ? Codegen.empty() : this.apiId;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiRevision;
 
     public Output<String> getApiRevision() {
-        return this.apiRevision == null ? Output.empty() : this.apiRevision;
+        return this.apiRevision == null ? Codegen.empty() : this.apiRevision;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiRevisionDescription;
 
     public Output<String> getApiRevisionDescription() {
-        return this.apiRevisionDescription == null ? Output.empty() : this.apiRevisionDescription;
+        return this.apiRevisionDescription == null ? Codegen.empty() : this.apiRevisionDescription;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ApiType>> apiType;
 
     public Output<Either<String,ApiType>> getApiType() {
-        return this.apiType == null ? Output.empty() : this.apiType;
+        return this.apiType == null ? Codegen.empty() : this.apiType;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersion;
 
     public Output<String> getApiVersion() {
-        return this.apiVersion == null ? Output.empty() : this.apiVersion;
+        return this.apiVersion == null ? Codegen.empty() : this.apiVersion;
     }
 
     /**
@@ -88,7 +89,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersionDescription;
 
     public Output<String> getApiVersionDescription() {
-        return this.apiVersionDescription == null ? Output.empty() : this.apiVersionDescription;
+        return this.apiVersionDescription == null ? Codegen.empty() : this.apiVersionDescription;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet;
 
     public Output<ApiVersionSetContractDetailsArgs> getApiVersionSet() {
-        return this.apiVersionSet == null ? Output.empty() : this.apiVersionSet;
+        return this.apiVersionSet == null ? Codegen.empty() : this.apiVersionSet;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> apiVersionSetId;
 
     public Output<String> getApiVersionSetId() {
-        return this.apiVersionSetId == null ? Output.empty() : this.apiVersionSetId;
+        return this.apiVersionSetId == null ? Codegen.empty() : this.apiVersionSetId;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings;
 
     public Output<AuthenticationSettingsContractArgs> getAuthenticationSettings() {
-        return this.authenticationSettings == null ? Output.empty() : this.authenticationSettings;
+        return this.authenticationSettings == null ? Codegen.empty() : this.authenticationSettings;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ContentFormat>> format;
 
     public Output<Either<String,ContentFormat>> getFormat() {
-        return this.format == null ? Output.empty() : this.format;
+        return this.format == null ? Codegen.empty() : this.format;
     }
 
     /**
@@ -165,7 +166,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isCurrent;
 
     public Output<Boolean> getIsCurrent() {
-        return this.isCurrent == null ? Output.empty() : this.isCurrent;
+        return this.isCurrent == null ? Codegen.empty() : this.isCurrent;
     }
 
     /**
@@ -187,7 +188,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<Protocol>> protocols;
 
     public Output<List<Protocol>> getProtocols() {
-        return this.protocols == null ? Output.empty() : this.protocols;
+        return this.protocols == null ? Codegen.empty() : this.protocols;
     }
 
     /**
@@ -220,7 +221,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceUrl;
 
     public Output<String> getServiceUrl() {
-        return this.serviceUrl == null ? Output.empty() : this.serviceUrl;
+        return this.serviceUrl == null ? Codegen.empty() : this.serviceUrl;
     }
 
     /**
@@ -233,7 +234,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,SoapApiType>> soapApiType;
 
     public Output<Either<String,SoapApiType>> getSoapApiType() {
-        return this.soapApiType == null ? Output.empty() : this.soapApiType;
+        return this.soapApiType == null ? Codegen.empty() : this.soapApiType;
     }
 
     /**
@@ -244,7 +245,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> sourceApiId;
 
     public Output<String> getSourceApiId() {
-        return this.sourceApiId == null ? Output.empty() : this.sourceApiId;
+        return this.sourceApiId == null ? Codegen.empty() : this.sourceApiId;
     }
 
     /**
@@ -255,7 +256,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames;
 
     public Output<SubscriptionKeyParameterNamesContractArgs> getSubscriptionKeyParameterNames() {
-        return this.subscriptionKeyParameterNames == null ? Output.empty() : this.subscriptionKeyParameterNames;
+        return this.subscriptionKeyParameterNames == null ? Codegen.empty() : this.subscriptionKeyParameterNames;
     }
 
     /**
@@ -266,7 +267,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> subscriptionRequired;
 
     public Output<Boolean> getSubscriptionRequired() {
-        return this.subscriptionRequired == null ? Output.empty() : this.subscriptionRequired;
+        return this.subscriptionRequired == null ? Codegen.empty() : this.subscriptionRequired;
     }
 
     /**
@@ -277,7 +278,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> value;
 
     public Output<String> getValue() {
-        return this.value == null ? Output.empty() : this.value;
+        return this.value == null ? Codegen.empty() : this.value;
     }
 
     /**
@@ -288,7 +289,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector;
 
     public Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> getWsdlSelector() {
-        return this.wsdlSelector == null ? Output.empty() : this.wsdlSelector;
+        return this.wsdlSelector == null ? Codegen.empty() : this.wsdlSelector;
     }
 
     public ApiArgs(
@@ -343,30 +344,30 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ApiArgs() {
-        this.apiId = Output.empty();
-        this.apiRevision = Output.empty();
-        this.apiRevisionDescription = Output.empty();
-        this.apiType = Output.empty();
-        this.apiVersion = Output.empty();
-        this.apiVersionDescription = Output.empty();
-        this.apiVersionSet = Output.empty();
-        this.apiVersionSetId = Output.empty();
-        this.authenticationSettings = Output.empty();
-        this.description = Output.empty();
-        this.displayName = Output.empty();
-        this.format = Output.empty();
-        this.isCurrent = Output.empty();
-        this.path = Output.empty();
-        this.protocols = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceUrl = Output.empty();
-        this.soapApiType = Output.empty();
-        this.sourceApiId = Output.empty();
-        this.subscriptionKeyParameterNames = Output.empty();
-        this.subscriptionRequired = Output.empty();
-        this.value = Output.empty();
-        this.wsdlSelector = Output.empty();
+        this.apiId = Codegen.empty();
+        this.apiRevision = Codegen.empty();
+        this.apiRevisionDescription = Codegen.empty();
+        this.apiType = Codegen.empty();
+        this.apiVersion = Codegen.empty();
+        this.apiVersionDescription = Codegen.empty();
+        this.apiVersionSet = Codegen.empty();
+        this.apiVersionSetId = Codegen.empty();
+        this.authenticationSettings = Codegen.empty();
+        this.description = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.format = Codegen.empty();
+        this.isCurrent = Codegen.empty();
+        this.path = Codegen.empty();
+        this.protocols = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceUrl = Codegen.empty();
+        this.soapApiType = Codegen.empty();
+        this.sourceApiId = Codegen.empty();
+        this.subscriptionKeyParameterNames = Codegen.empty();
+        this.subscriptionRequired = Codegen.empty();
+        this.value = Codegen.empty();
+        this.wsdlSelector = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -440,7 +441,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiId(@Nullable String apiId) {
-            this.apiId = Output.ofNullable(apiId);
+            this.apiId = Codegen.ofNullable(apiId);
             return this;
         }
         public Builder apiRevision(@Nullable Output<String> apiRevision) {
@@ -448,7 +449,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiRevision(@Nullable String apiRevision) {
-            this.apiRevision = Output.ofNullable(apiRevision);
+            this.apiRevision = Codegen.ofNullable(apiRevision);
             return this;
         }
         public Builder apiRevisionDescription(@Nullable Output<String> apiRevisionDescription) {
@@ -456,7 +457,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiRevisionDescription(@Nullable String apiRevisionDescription) {
-            this.apiRevisionDescription = Output.ofNullable(apiRevisionDescription);
+            this.apiRevisionDescription = Codegen.ofNullable(apiRevisionDescription);
             return this;
         }
         public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
@@ -464,7 +465,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiType(@Nullable Either<String,ApiType> apiType) {
-            this.apiType = Output.ofNullable(apiType);
+            this.apiType = Codegen.ofNullable(apiType);
             return this;
         }
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
@@ -472,7 +473,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersion(@Nullable String apiVersion) {
-            this.apiVersion = Output.ofNullable(apiVersion);
+            this.apiVersion = Codegen.ofNullable(apiVersion);
             return this;
         }
         public Builder apiVersionDescription(@Nullable Output<String> apiVersionDescription) {
@@ -480,7 +481,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersionDescription(@Nullable String apiVersionDescription) {
-            this.apiVersionDescription = Output.ofNullable(apiVersionDescription);
+            this.apiVersionDescription = Codegen.ofNullable(apiVersionDescription);
             return this;
         }
         public Builder apiVersionSet(@Nullable Output<ApiVersionSetContractDetailsArgs> apiVersionSet) {
@@ -488,7 +489,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersionSet(@Nullable ApiVersionSetContractDetailsArgs apiVersionSet) {
-            this.apiVersionSet = Output.ofNullable(apiVersionSet);
+            this.apiVersionSet = Codegen.ofNullable(apiVersionSet);
             return this;
         }
         public Builder apiVersionSetId(@Nullable Output<String> apiVersionSetId) {
@@ -496,7 +497,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder apiVersionSetId(@Nullable String apiVersionSetId) {
-            this.apiVersionSetId = Output.ofNullable(apiVersionSetId);
+            this.apiVersionSetId = Codegen.ofNullable(apiVersionSetId);
             return this;
         }
         public Builder authenticationSettings(@Nullable Output<AuthenticationSettingsContractArgs> authenticationSettings) {
@@ -504,7 +505,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authenticationSettings(@Nullable AuthenticationSettingsContractArgs authenticationSettings) {
-            this.authenticationSettings = Output.ofNullable(authenticationSettings);
+            this.authenticationSettings = Codegen.ofNullable(authenticationSettings);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -512,7 +513,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder displayName(@Nullable Output<String> displayName) {
@@ -520,7 +521,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder format(@Nullable Output<Either<String,ContentFormat>> format) {
@@ -528,7 +529,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder format(@Nullable Either<String,ContentFormat> format) {
-            this.format = Output.ofNullable(format);
+            this.format = Codegen.ofNullable(format);
             return this;
         }
         public Builder isCurrent(@Nullable Output<Boolean> isCurrent) {
@@ -536,7 +537,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isCurrent(@Nullable Boolean isCurrent) {
-            this.isCurrent = Output.ofNullable(isCurrent);
+            this.isCurrent = Codegen.ofNullable(isCurrent);
             return this;
         }
         public Builder path(Output<String> path) {
@@ -552,7 +553,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder protocols(@Nullable List<Protocol> protocols) {
-            this.protocols = Output.ofNullable(protocols);
+            this.protocols = Codegen.ofNullable(protocols);
             return this;
         }
         public Builder protocols(Protocol... protocols) {
@@ -579,7 +580,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceUrl(@Nullable String serviceUrl) {
-            this.serviceUrl = Output.ofNullable(serviceUrl);
+            this.serviceUrl = Codegen.ofNullable(serviceUrl);
             return this;
         }
         public Builder soapApiType(@Nullable Output<Either<String,SoapApiType>> soapApiType) {
@@ -587,7 +588,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder soapApiType(@Nullable Either<String,SoapApiType> soapApiType) {
-            this.soapApiType = Output.ofNullable(soapApiType);
+            this.soapApiType = Codegen.ofNullable(soapApiType);
             return this;
         }
         public Builder sourceApiId(@Nullable Output<String> sourceApiId) {
@@ -595,7 +596,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder sourceApiId(@Nullable String sourceApiId) {
-            this.sourceApiId = Output.ofNullable(sourceApiId);
+            this.sourceApiId = Codegen.ofNullable(sourceApiId);
             return this;
         }
         public Builder subscriptionKeyParameterNames(@Nullable Output<SubscriptionKeyParameterNamesContractArgs> subscriptionKeyParameterNames) {
@@ -603,7 +604,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionKeyParameterNames(@Nullable SubscriptionKeyParameterNamesContractArgs subscriptionKeyParameterNames) {
-            this.subscriptionKeyParameterNames = Output.ofNullable(subscriptionKeyParameterNames);
+            this.subscriptionKeyParameterNames = Codegen.ofNullable(subscriptionKeyParameterNames);
             return this;
         }
         public Builder subscriptionRequired(@Nullable Output<Boolean> subscriptionRequired) {
@@ -611,7 +612,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subscriptionRequired(@Nullable Boolean subscriptionRequired) {
-            this.subscriptionRequired = Output.ofNullable(subscriptionRequired);
+            this.subscriptionRequired = Codegen.ofNullable(subscriptionRequired);
             return this;
         }
         public Builder value(@Nullable Output<String> value) {
@@ -619,7 +620,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder value(@Nullable String value) {
-            this.value = Output.ofNullable(value);
+            this.value = Codegen.ofNullable(value);
             return this;
         }
         public Builder wsdlSelector(@Nullable Output<ApiCreateOrUpdatePropertiesWsdlSelectorArgs> wsdlSelector) {
@@ -627,7 +628,7 @@ public final class ApiArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder wsdlSelector(@Nullable ApiCreateOrUpdatePropertiesWsdlSelectorArgs wsdlSelector) {
-            this.wsdlSelector = Output.ofNullable(wsdlSelector);
+            this.wsdlSelector = Codegen.ofNullable(wsdlSelector);
             return this;
         }        public ApiArgs build() {
             return new ApiArgs(apiId, apiRevision, apiRevisionDescription, apiType, apiVersion, apiVersionDescription, apiVersionSet, apiVersionSetId, authenticationSettings, description, displayName, format, isCurrent, path, protocols, resourceGroupName, serviceName, serviceUrl, soapApiType, sourceApiId, subscriptionKeyParameterNames, subscriptionRequired, value, wsdlSelector);

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.deploymentmanager.enums.DeploymentMode;
 import io.pulumi.azurenative.deploymentmanager.inputs.ServiceUnitArtifactsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +26,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ServiceUnitArtifactsArgs> artifacts;
 
     public Output<ServiceUnitArtifactsArgs> getArtifacts() {
-        return this.artifacts == null ? Output.empty() : this.artifacts;
+        return this.artifacts == null ? Codegen.empty() : this.artifacts;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceUnitName;
 
     public Output<String> getServiceUnitName() {
-        return this.serviceUnitName == null ? Output.empty() : this.serviceUnitName;
+        return this.serviceUnitName == null ? Codegen.empty() : this.serviceUnitName;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -138,15 +139,15 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ServiceUnitArgs() {
-        this.artifacts = Output.empty();
-        this.deploymentMode = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.serviceName = Output.empty();
-        this.serviceTopologyName = Output.empty();
-        this.serviceUnitName = Output.empty();
-        this.tags = Output.empty();
-        this.targetResourceGroup = Output.empty();
+        this.artifacts = Codegen.empty();
+        this.deploymentMode = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.serviceName = Codegen.empty();
+        this.serviceTopologyName = Codegen.empty();
+        this.serviceUnitName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.targetResourceGroup = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder artifacts(@Nullable ServiceUnitArtifactsArgs artifacts) {
-            this.artifacts = Output.ofNullable(artifacts);
+            this.artifacts = Codegen.ofNullable(artifacts);
             return this;
         }
         public Builder deploymentMode(Output<DeploymentMode> deploymentMode) {
@@ -206,7 +207,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -238,7 +239,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceUnitName(@Nullable String serviceUnitName) {
-            this.serviceUnitName = Output.ofNullable(serviceUnitName);
+            this.serviceUnitName = Codegen.ofNullable(serviceUnitName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -246,7 +247,7 @@ public final class ServiceUnitArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder targetResourceGroup(Output<String> targetResourceGroup) {

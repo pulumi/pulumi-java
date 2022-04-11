@@ -7,6 +7,7 @@ import io.pulumi.azurenative.eventgrid.enums.PartnerRegistrationVisibilityState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +30,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<List<String>> authorizedAzureSubscriptionIds;
 
     public Output<List<String>> getAuthorizedAzureSubscriptionIds() {
-        return this.authorizedAzureSubscriptionIds == null ? Output.empty() : this.authorizedAzureSubscriptionIds;
+        return this.authorizedAzureSubscriptionIds == null ? Codegen.empty() : this.authorizedAzureSubscriptionIds;
     }
 
     /**
@@ -40,7 +41,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> customerServiceUri;
 
     public Output<String> getCustomerServiceUri() {
-        return this.customerServiceUri == null ? Output.empty() : this.customerServiceUri;
+        return this.customerServiceUri == null ? Codegen.empty() : this.customerServiceUri;
     }
 
     /**
@@ -51,7 +52,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> logoUri;
 
     public Output<String> getLogoUri() {
-        return this.logoUri == null ? Output.empty() : this.logoUri;
+        return this.logoUri == null ? Codegen.empty() : this.logoUri;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> longDescription;
 
     public Output<String> getLongDescription() {
-        return this.longDescription == null ? Output.empty() : this.longDescription;
+        return this.longDescription == null ? Codegen.empty() : this.longDescription;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerCustomerServiceExtension;
 
     public Output<String> getPartnerCustomerServiceExtension() {
-        return this.partnerCustomerServiceExtension == null ? Output.empty() : this.partnerCustomerServiceExtension;
+        return this.partnerCustomerServiceExtension == null ? Codegen.empty() : this.partnerCustomerServiceExtension;
     }
 
     /**
@@ -99,7 +100,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerCustomerServiceNumber;
 
     public Output<String> getPartnerCustomerServiceNumber() {
-        return this.partnerCustomerServiceNumber == null ? Output.empty() : this.partnerCustomerServiceNumber;
+        return this.partnerCustomerServiceNumber == null ? Codegen.empty() : this.partnerCustomerServiceNumber;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerName;
 
     public Output<String> getPartnerName() {
-        return this.partnerName == null ? Output.empty() : this.partnerName;
+        return this.partnerName == null ? Codegen.empty() : this.partnerName;
     }
 
     /**
@@ -121,7 +122,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerRegistrationName;
 
     public Output<String> getPartnerRegistrationName() {
-        return this.partnerRegistrationName == null ? Output.empty() : this.partnerRegistrationName;
+        return this.partnerRegistrationName == null ? Codegen.empty() : this.partnerRegistrationName;
     }
 
     /**
@@ -132,7 +133,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerResourceTypeDescription;
 
     public Output<String> getPartnerResourceTypeDescription() {
-        return this.partnerResourceTypeDescription == null ? Output.empty() : this.partnerResourceTypeDescription;
+        return this.partnerResourceTypeDescription == null ? Codegen.empty() : this.partnerResourceTypeDescription;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerResourceTypeDisplayName;
 
     public Output<String> getPartnerResourceTypeDisplayName() {
-        return this.partnerResourceTypeDisplayName == null ? Output.empty() : this.partnerResourceTypeDisplayName;
+        return this.partnerResourceTypeDisplayName == null ? Codegen.empty() : this.partnerResourceTypeDisplayName;
     }
 
     /**
@@ -154,7 +155,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> partnerResourceTypeName;
 
     public Output<String> getPartnerResourceTypeName() {
-        return this.partnerResourceTypeName == null ? Output.empty() : this.partnerResourceTypeName;
+        return this.partnerResourceTypeName == null ? Codegen.empty() : this.partnerResourceTypeName;
     }
 
     /**
@@ -177,7 +178,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> setupUri;
 
     public Output<String> getSetupUri() {
-        return this.setupUri == null ? Output.empty() : this.setupUri;
+        return this.setupUri == null ? Codegen.empty() : this.setupUri;
     }
 
     /**
@@ -188,7 +189,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -199,7 +200,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState;
 
     public Output<Either<String,PartnerRegistrationVisibilityState>> getVisibilityState() {
-        return this.visibilityState == null ? Output.empty() : this.visibilityState;
+        return this.visibilityState == null ? Codegen.empty() : this.visibilityState;
     }
 
     public PartnerRegistrationArgs(
@@ -238,22 +239,22 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
     }
 
     private PartnerRegistrationArgs() {
-        this.authorizedAzureSubscriptionIds = Output.empty();
-        this.customerServiceUri = Output.empty();
-        this.location = Output.empty();
-        this.logoUri = Output.empty();
-        this.longDescription = Output.empty();
-        this.partnerCustomerServiceExtension = Output.empty();
-        this.partnerCustomerServiceNumber = Output.empty();
-        this.partnerName = Output.empty();
-        this.partnerRegistrationName = Output.empty();
-        this.partnerResourceTypeDescription = Output.empty();
-        this.partnerResourceTypeDisplayName = Output.empty();
-        this.partnerResourceTypeName = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.setupUri = Output.empty();
-        this.tags = Output.empty();
-        this.visibilityState = Output.empty();
+        this.authorizedAzureSubscriptionIds = Codegen.empty();
+        this.customerServiceUri = Codegen.empty();
+        this.location = Codegen.empty();
+        this.logoUri = Codegen.empty();
+        this.longDescription = Codegen.empty();
+        this.partnerCustomerServiceExtension = Codegen.empty();
+        this.partnerCustomerServiceNumber = Codegen.empty();
+        this.partnerName = Codegen.empty();
+        this.partnerRegistrationName = Codegen.empty();
+        this.partnerResourceTypeDescription = Codegen.empty();
+        this.partnerResourceTypeDisplayName = Codegen.empty();
+        this.partnerResourceTypeName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.setupUri = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.visibilityState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -311,7 +312,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder authorizedAzureSubscriptionIds(@Nullable List<String> authorizedAzureSubscriptionIds) {
-            this.authorizedAzureSubscriptionIds = Output.ofNullable(authorizedAzureSubscriptionIds);
+            this.authorizedAzureSubscriptionIds = Codegen.ofNullable(authorizedAzureSubscriptionIds);
             return this;
         }
         public Builder authorizedAzureSubscriptionIds(String... authorizedAzureSubscriptionIds) {
@@ -322,7 +323,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder customerServiceUri(@Nullable String customerServiceUri) {
-            this.customerServiceUri = Output.ofNullable(customerServiceUri);
+            this.customerServiceUri = Codegen.ofNullable(customerServiceUri);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -330,7 +331,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder logoUri(@Nullable Output<String> logoUri) {
@@ -338,7 +339,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder logoUri(@Nullable String logoUri) {
-            this.logoUri = Output.ofNullable(logoUri);
+            this.logoUri = Codegen.ofNullable(logoUri);
             return this;
         }
         public Builder longDescription(@Nullable Output<String> longDescription) {
@@ -346,7 +347,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder longDescription(@Nullable String longDescription) {
-            this.longDescription = Output.ofNullable(longDescription);
+            this.longDescription = Codegen.ofNullable(longDescription);
             return this;
         }
         public Builder partnerCustomerServiceExtension(@Nullable Output<String> partnerCustomerServiceExtension) {
@@ -354,7 +355,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerCustomerServiceExtension(@Nullable String partnerCustomerServiceExtension) {
-            this.partnerCustomerServiceExtension = Output.ofNullable(partnerCustomerServiceExtension);
+            this.partnerCustomerServiceExtension = Codegen.ofNullable(partnerCustomerServiceExtension);
             return this;
         }
         public Builder partnerCustomerServiceNumber(@Nullable Output<String> partnerCustomerServiceNumber) {
@@ -362,7 +363,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerCustomerServiceNumber(@Nullable String partnerCustomerServiceNumber) {
-            this.partnerCustomerServiceNumber = Output.ofNullable(partnerCustomerServiceNumber);
+            this.partnerCustomerServiceNumber = Codegen.ofNullable(partnerCustomerServiceNumber);
             return this;
         }
         public Builder partnerName(@Nullable Output<String> partnerName) {
@@ -370,7 +371,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerName(@Nullable String partnerName) {
-            this.partnerName = Output.ofNullable(partnerName);
+            this.partnerName = Codegen.ofNullable(partnerName);
             return this;
         }
         public Builder partnerRegistrationName(@Nullable Output<String> partnerRegistrationName) {
@@ -378,7 +379,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerRegistrationName(@Nullable String partnerRegistrationName) {
-            this.partnerRegistrationName = Output.ofNullable(partnerRegistrationName);
+            this.partnerRegistrationName = Codegen.ofNullable(partnerRegistrationName);
             return this;
         }
         public Builder partnerResourceTypeDescription(@Nullable Output<String> partnerResourceTypeDescription) {
@@ -386,7 +387,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerResourceTypeDescription(@Nullable String partnerResourceTypeDescription) {
-            this.partnerResourceTypeDescription = Output.ofNullable(partnerResourceTypeDescription);
+            this.partnerResourceTypeDescription = Codegen.ofNullable(partnerResourceTypeDescription);
             return this;
         }
         public Builder partnerResourceTypeDisplayName(@Nullable Output<String> partnerResourceTypeDisplayName) {
@@ -394,7 +395,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerResourceTypeDisplayName(@Nullable String partnerResourceTypeDisplayName) {
-            this.partnerResourceTypeDisplayName = Output.ofNullable(partnerResourceTypeDisplayName);
+            this.partnerResourceTypeDisplayName = Codegen.ofNullable(partnerResourceTypeDisplayName);
             return this;
         }
         public Builder partnerResourceTypeName(@Nullable Output<String> partnerResourceTypeName) {
@@ -402,7 +403,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder partnerResourceTypeName(@Nullable String partnerResourceTypeName) {
-            this.partnerResourceTypeName = Output.ofNullable(partnerResourceTypeName);
+            this.partnerResourceTypeName = Codegen.ofNullable(partnerResourceTypeName);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -418,7 +419,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder setupUri(@Nullable String setupUri) {
-            this.setupUri = Output.ofNullable(setupUri);
+            this.setupUri = Codegen.ofNullable(setupUri);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -426,7 +427,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder visibilityState(@Nullable Output<Either<String,PartnerRegistrationVisibilityState>> visibilityState) {
@@ -434,7 +435,7 @@ public final class PartnerRegistrationArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder visibilityState(@Nullable Either<String,PartnerRegistrationVisibilityState> visibilityState) {
-            this.visibilityState = Output.ofNullable(visibilityState);
+            this.visibilityState = Codegen.ofNullable(visibilityState);
             return this;
         }        public PartnerRegistrationArgs build() {
             return new PartnerRegistrationArgs(authorizedAzureSubscriptionIds, customerServiceUri, location, logoUri, longDescription, partnerCustomerServiceExtension, partnerCustomerServiceNumber, partnerName, partnerRegistrationName, partnerResourceTypeDescription, partnerResourceTypeDisplayName, partnerResourceTypeName, resourceGroupName, setupUri, tags, visibilityState);

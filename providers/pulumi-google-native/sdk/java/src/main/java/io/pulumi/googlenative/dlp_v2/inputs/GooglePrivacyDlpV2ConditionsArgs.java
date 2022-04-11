@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
       private final @Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
     public Output<List<GooglePrivacyDlpV2ConditionArgs>> getConditions() {
-        return this.conditions == null ? Output.empty() : this.conditions;
+        return this.conditions == null ? Codegen.empty() : this.conditions;
     }
 
     public GooglePrivacyDlpV2ConditionsArgs(@Nullable Output<List<GooglePrivacyDlpV2ConditionArgs>> conditions) {
@@ -35,7 +36,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
     }
 
     private GooglePrivacyDlpV2ConditionsArgs() {
-        this.conditions = Output.empty();
+        this.conditions = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
             return this;
         }
         public Builder conditions(@Nullable List<GooglePrivacyDlpV2ConditionArgs> conditions) {
-            this.conditions = Output.ofNullable(conditions);
+            this.conditions = Codegen.ofNullable(conditions);
             return this;
         }
         public Builder conditions(GooglePrivacyDlpV2ConditionArgs... conditions) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.lex.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
       private final @Nullable Output<String> kmsKeyArn;
 
     public Output<String> getKmsKeyArn() {
-        return this.kmsKeyArn == null ? Output.empty() : this.kmsKeyArn;
+        return this.kmsKeyArn == null ? Codegen.empty() : this.kmsKeyArn;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
       private final @Nullable Output<String> resourcePrefix;
 
     public Output<String> getResourcePrefix() {
-        return this.resourcePrefix == null ? Output.empty() : this.resourcePrefix;
+        return this.resourcePrefix == null ? Codegen.empty() : this.resourcePrefix;
     }
 
     public BotAliasConversationLogsLogSettingArgs(
@@ -83,11 +84,11 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
     }
 
     private BotAliasConversationLogsLogSettingArgs() {
-        this.destination = Output.empty();
-        this.kmsKeyArn = Output.empty();
-        this.logType = Output.empty();
-        this.resourceArn = Output.empty();
-        this.resourcePrefix = Output.empty();
+        this.destination = Codegen.empty();
+        this.kmsKeyArn = Codegen.empty();
+        this.logType = Codegen.empty();
+        this.resourceArn = Codegen.empty();
+        this.resourcePrefix = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -131,7 +132,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
             return this;
         }
         public Builder kmsKeyArn(@Nullable String kmsKeyArn) {
-            this.kmsKeyArn = Output.ofNullable(kmsKeyArn);
+            this.kmsKeyArn = Codegen.ofNullable(kmsKeyArn);
             return this;
         }
         public Builder logType(Output<String> logType) {
@@ -155,7 +156,7 @@ public final class BotAliasConversationLogsLogSettingArgs extends io.pulumi.reso
             return this;
         }
         public Builder resourcePrefix(@Nullable String resourcePrefix) {
-            this.resourcePrefix = Output.ofNullable(resourcePrefix);
+            this.resourcePrefix = Codegen.ofNullable(resourcePrefix);
             return this;
         }        public BotAliasConversationLogsLogSettingArgs build() {
             return new BotAliasConversationLogsLogSettingArgs(destination, kmsKeyArn, logType, resourceArn, resourcePrefix);

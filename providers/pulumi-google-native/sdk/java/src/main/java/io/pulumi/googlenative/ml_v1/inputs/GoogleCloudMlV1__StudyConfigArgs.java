@@ -5,6 +5,7 @@ package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__StudyConfigAlgorithm;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_MetricSpecArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfig_ParameterSpecArgs;
@@ -30,7 +31,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<GoogleCloudMlV1__StudyConfigAlgorithm> algorithm;
 
     public Output<GoogleCloudMlV1__StudyConfigAlgorithm> getAlgorithm() {
-        return this.algorithm == null ? Output.empty() : this.algorithm;
+        return this.algorithm == null ? Codegen.empty() : this.algorithm;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig;
 
     public Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> getAutomatedStoppingConfig() {
-        return this.automatedStoppingConfig == null ? Output.empty() : this.automatedStoppingConfig;
+        return this.automatedStoppingConfig == null ? Codegen.empty() : this.automatedStoppingConfig;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
       private final @Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics;
 
     public Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> getMetrics() {
-        return this.metrics == null ? Output.empty() : this.metrics;
+        return this.metrics == null ? Codegen.empty() : this.metrics;
     }
 
     /**
@@ -78,10 +79,10 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
     }
 
     private GoogleCloudMlV1__StudyConfigArgs() {
-        this.algorithm = Output.empty();
-        this.automatedStoppingConfig = Output.empty();
-        this.metrics = Output.empty();
-        this.parameters = Output.empty();
+        this.algorithm = Codegen.empty();
+        this.automatedStoppingConfig = Codegen.empty();
+        this.metrics = Codegen.empty();
+        this.parameters = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder algorithm(@Nullable GoogleCloudMlV1__StudyConfigAlgorithm algorithm) {
-            this.algorithm = Output.ofNullable(algorithm);
+            this.algorithm = Codegen.ofNullable(algorithm);
             return this;
         }
         public Builder automatedStoppingConfig(@Nullable Output<GoogleCloudMlV1__AutomatedStoppingConfigArgs> automatedStoppingConfig) {
@@ -123,7 +124,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder automatedStoppingConfig(@Nullable GoogleCloudMlV1__AutomatedStoppingConfigArgs automatedStoppingConfig) {
-            this.automatedStoppingConfig = Output.ofNullable(automatedStoppingConfig);
+            this.automatedStoppingConfig = Codegen.ofNullable(automatedStoppingConfig);
             return this;
         }
         public Builder metrics(@Nullable Output<List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs>> metrics) {
@@ -131,7 +132,7 @@ public final class GoogleCloudMlV1__StudyConfigArgs extends io.pulumi.resources.
             return this;
         }
         public Builder metrics(@Nullable List<GoogleCloudMlV1_StudyConfig_MetricSpecArgs> metrics) {
-            this.metrics = Output.ofNullable(metrics);
+            this.metrics = Codegen.ofNullable(metrics);
             return this;
         }
         public Builder metrics(GoogleCloudMlV1_StudyConfig_MetricSpecArgs... metrics) {

@@ -5,6 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -45,7 +46,7 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
       private final @Nullable Output<Boolean> preserveUnmatchedPath;
 
     public Output<Boolean> getPreserveUnmatchedPath() {
-        return this.preserveUnmatchedPath == null ? Output.empty() : this.preserveUnmatchedPath;
+        return this.preserveUnmatchedPath == null ? Codegen.empty() : this.preserveUnmatchedPath;
     }
 
     /**
@@ -71,10 +72,10 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
     }
 
     private UrlRewriteActionParametersArgs() {
-        this.destination = Output.empty();
-        this.odataType = Output.empty();
-        this.preserveUnmatchedPath = Output.empty();
-        this.sourcePattern = Output.empty();
+        this.destination = Codegen.empty();
+        this.odataType = Codegen.empty();
+        this.preserveUnmatchedPath = Codegen.empty();
+        this.sourcePattern = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class UrlRewriteActionParametersArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder preserveUnmatchedPath(@Nullable Boolean preserveUnmatchedPath) {
-            this.preserveUnmatchedPath = Output.ofNullable(preserveUnmatchedPath);
+            this.preserveUnmatchedPath = Codegen.ofNullable(preserveUnmatchedPath);
             return this;
         }
         public Builder sourcePattern(Output<String> sourcePattern) {

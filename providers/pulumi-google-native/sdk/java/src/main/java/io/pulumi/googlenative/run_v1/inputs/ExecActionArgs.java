@@ -5,6 +5,7 @@ package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> command;
 
     public Output<List<String>> getCommand() {
-        return this.command == null ? Output.empty() : this.command;
+        return this.command == null ? Codegen.empty() : this.command;
     }
 
     public ExecActionArgs(@Nullable Output<List<String>> command) {
@@ -35,7 +36,7 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ExecActionArgs() {
-        this.command = Output.empty();
+        this.command = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder command(@Nullable List<String> command) {
-            this.command = Output.ofNullable(command);
+            this.command = Codegen.ofNullable(command);
             return this;
         }
         public Builder command(String... command) {

@@ -9,6 +9,7 @@ import io.pulumi.core.Alias;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -124,7 +125,7 @@ public class GuestDiagnosticsSettingsAssociation extends io.pulumi.resources.Cus
      * @param options A bag of options that control this resource's behavior.
      */
     public GuestDiagnosticsSettingsAssociation(String name, GuestDiagnosticsSettingsAssociationArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("azure-native:insights:GuestDiagnosticsSettingsAssociation", name, args == null ? GuestDiagnosticsSettingsAssociationArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("azure-native:insights:GuestDiagnosticsSettingsAssociation", name, args == null ? GuestDiagnosticsSettingsAssociationArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private GuestDiagnosticsSettingsAssociation(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

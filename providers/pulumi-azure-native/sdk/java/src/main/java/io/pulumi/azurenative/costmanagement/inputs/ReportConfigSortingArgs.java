@@ -5,6 +5,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> direction;
 
     public Output<String> getDirection() {
-        return this.direction == null ? Output.empty() : this.direction;
+        return this.direction == null ? Codegen.empty() : this.direction;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
     }
 
     private ReportConfigSortingArgs() {
-        this.direction = Output.empty();
-        this.name = Output.empty();
+        this.direction = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ReportConfigSortingArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder direction(@Nullable String direction) {
-            this.direction = Output.ofNullable(direction);
+            this.direction = Codegen.ofNullable(direction);
             return this;
         }
         public Builder name(Output<String> name) {

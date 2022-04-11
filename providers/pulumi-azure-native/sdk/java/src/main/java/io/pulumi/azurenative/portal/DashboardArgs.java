@@ -6,6 +6,7 @@ package io.pulumi.azurenative.portal;
 import io.pulumi.azurenative.portal.inputs.DashboardLensArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dashboardName;
 
     public Output<String> getDashboardName() {
-        return this.dashboardName == null ? Output.empty() : this.dashboardName;
+        return this.dashboardName == null ? Codegen.empty() : this.dashboardName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<DashboardLensArgs>> lenses;
 
     public Output<List<DashboardLensArgs>> getLenses() {
-        return this.lenses == null ? Output.empty() : this.lenses;
+        return this.lenses == null ? Codegen.empty() : this.lenses;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,Object>> metadata;
 
     public Output<Map<String,Object>> getMetadata() {
-        return this.metadata == null ? Output.empty() : this.metadata;
+        return this.metadata == null ? Codegen.empty() : this.metadata;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DashboardArgs(
@@ -100,12 +101,12 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DashboardArgs() {
-        this.dashboardName = Output.empty();
-        this.lenses = Output.empty();
-        this.location = Output.empty();
-        this.metadata = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.dashboardName = Codegen.empty();
+        this.lenses = Codegen.empty();
+        this.location = Codegen.empty();
+        this.metadata = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dashboardName(@Nullable String dashboardName) {
-            this.dashboardName = Output.ofNullable(dashboardName);
+            this.dashboardName = Codegen.ofNullable(dashboardName);
             return this;
         }
         public Builder lenses(@Nullable Output<List<DashboardLensArgs>> lenses) {
@@ -151,7 +152,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder lenses(@Nullable List<DashboardLensArgs> lenses) {
-            this.lenses = Output.ofNullable(lenses);
+            this.lenses = Codegen.ofNullable(lenses);
             return this;
         }
         public Builder lenses(DashboardLensArgs... lenses) {
@@ -162,7 +163,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder metadata(@Nullable Output<Map<String,Object>> metadata) {
@@ -170,7 +171,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder metadata(@Nullable Map<String,Object> metadata) {
-            this.metadata = Output.ofNullable(metadata);
+            this.metadata = Codegen.ofNullable(metadata);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -186,7 +187,7 @@ public final class DashboardArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DashboardArgs build() {
             return new DashboardArgs(dashboardName, lenses, location, metadata, resourceGroupName, tags);

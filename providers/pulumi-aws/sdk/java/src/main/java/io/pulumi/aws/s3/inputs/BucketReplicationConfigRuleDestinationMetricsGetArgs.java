@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
       private final @Nullable Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> eventThreshold;
 
     public Output<BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs> getEventThreshold() {
-        return this.eventThreshold == null ? Output.empty() : this.eventThreshold;
+        return this.eventThreshold == null ? Codegen.empty() : this.eventThreshold;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
     }
 
     private BucketReplicationConfigRuleDestinationMetricsGetArgs() {
-        this.eventThreshold = Output.empty();
-        this.status = Output.empty();
+        this.eventThreshold = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class BucketReplicationConfigRuleDestinationMetricsGetArgs extends 
             return this;
         }
         public Builder eventThreshold(@Nullable BucketReplicationConfigRuleDestinationMetricsEventThresholdGetArgs eventThreshold) {
-            this.eventThreshold = Output.ofNullable(eventThreshold);
+            this.eventThreshold = Codegen.ofNullable(eventThreshold);
             return this;
         }
         public Builder status(Output<String> status) {

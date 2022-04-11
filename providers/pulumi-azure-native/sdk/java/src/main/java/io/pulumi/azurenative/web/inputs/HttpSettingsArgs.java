@@ -7,6 +7,7 @@ import io.pulumi.azurenative.web.inputs.ForwardProxyArgs;
 import io.pulumi.azurenative.web.inputs.HttpSettingsRoutesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ForwardProxyArgs> forwardProxy;
 
     public Output<ForwardProxyArgs> getForwardProxy() {
-        return this.forwardProxy == null ? Output.empty() : this.forwardProxy;
+        return this.forwardProxy == null ? Codegen.empty() : this.forwardProxy;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> requireHttps;
 
     public Output<Boolean> getRequireHttps() {
-        return this.requireHttps == null ? Output.empty() : this.requireHttps;
+        return this.requireHttps == null ? Codegen.empty() : this.requireHttps;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<HttpSettingsRoutesArgs> routes;
 
     public Output<HttpSettingsRoutesArgs> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     public HttpSettingsArgs(
@@ -63,9 +64,9 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HttpSettingsArgs() {
-        this.forwardProxy = Output.empty();
-        this.requireHttps = Output.empty();
-        this.routes = Output.empty();
+        this.forwardProxy = Codegen.empty();
+        this.requireHttps = Codegen.empty();
+        this.routes = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder forwardProxy(@Nullable ForwardProxyArgs forwardProxy) {
-            this.forwardProxy = Output.ofNullable(forwardProxy);
+            this.forwardProxy = Codegen.ofNullable(forwardProxy);
             return this;
         }
         public Builder requireHttps(@Nullable Output<Boolean> requireHttps) {
@@ -105,7 +106,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder requireHttps(@Nullable Boolean requireHttps) {
-            this.requireHttps = Output.ofNullable(requireHttps);
+            this.requireHttps = Codegen.ofNullable(requireHttps);
             return this;
         }
         public Builder routes(@Nullable Output<HttpSettingsRoutesArgs> routes) {
@@ -113,7 +114,7 @@ public final class HttpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable HttpSettingsRoutesArgs routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }        public HttpSettingsArgs build() {
             return new HttpSettingsArgs(forwardProxy, requireHttps, routes);

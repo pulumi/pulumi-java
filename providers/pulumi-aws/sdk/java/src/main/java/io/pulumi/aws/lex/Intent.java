@@ -16,6 +16,7 @@ import io.pulumi.aws.lex.outputs.IntentSlot;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -343,7 +344,7 @@ public class Intent extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Intent(String name, IntentArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:lex/intent:Intent", name, args == null ? IntentArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:lex/intent:Intent", name, args == null ? IntentArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Intent(String name, Output<String> id, @Nullable IntentState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

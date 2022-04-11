@@ -5,6 +5,7 @@ package io.pulumi.aws.emr.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -31,7 +32,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> authMode;
 
     public Output<String> getAuthMode() {
-        return this.authMode == null ? Output.empty() : this.authMode;
+        return this.authMode == null ? Codegen.empty() : this.authMode;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> defaultS3Location;
 
     public Output<String> getDefaultS3Location() {
-        return this.defaultS3Location == null ? Output.empty() : this.defaultS3Location;
+        return this.defaultS3Location == null ? Codegen.empty() : this.defaultS3Location;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> engineSecurityGroupId;
 
     public Output<String> getEngineSecurityGroupId() {
-        return this.engineSecurityGroupId == null ? Output.empty() : this.engineSecurityGroupId;
+        return this.engineSecurityGroupId == null ? Codegen.empty() : this.engineSecurityGroupId;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> idpAuthUrl;
 
     public Output<String> getIdpAuthUrl() {
-        return this.idpAuthUrl == null ? Output.empty() : this.idpAuthUrl;
+        return this.idpAuthUrl == null ? Codegen.empty() : this.idpAuthUrl;
     }
 
     /**
@@ -86,7 +87,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> idpRelayStateParameterName;
 
     public Output<String> getIdpRelayStateParameterName() {
-        return this.idpRelayStateParameterName == null ? Output.empty() : this.idpRelayStateParameterName;
+        return this.idpRelayStateParameterName == null ? Codegen.empty() : this.idpRelayStateParameterName;
     }
 
     /**
@@ -97,7 +98,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -108,7 +109,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> serviceRole;
 
     public Output<String> getServiceRole() {
-        return this.serviceRole == null ? Output.empty() : this.serviceRole;
+        return this.serviceRole == null ? Codegen.empty() : this.serviceRole;
     }
 
     /**
@@ -119,7 +120,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> subnetIds;
 
     public Output<List<String>> getSubnetIds() {
-        return this.subnetIds == null ? Output.empty() : this.subnetIds;
+        return this.subnetIds == null ? Codegen.empty() : this.subnetIds;
     }
 
     /**
@@ -130,14 +131,14 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     @Import(name="tagsAll")
       private final @Nullable Output<Map<String,String>> tagsAll;
 
     public Output<Map<String,String>> getTagsAll() {
-        return this.tagsAll == null ? Output.empty() : this.tagsAll;
+        return this.tagsAll == null ? Codegen.empty() : this.tagsAll;
     }
 
     /**
@@ -148,7 +149,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> url;
 
     public Output<String> getUrl() {
-        return this.url == null ? Output.empty() : this.url;
+        return this.url == null ? Codegen.empty() : this.url;
     }
 
     /**
@@ -159,7 +160,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> userRole;
 
     public Output<String> getUserRole() {
-        return this.userRole == null ? Output.empty() : this.userRole;
+        return this.userRole == null ? Codegen.empty() : this.userRole;
     }
 
     /**
@@ -170,7 +171,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> vpcId;
 
     public Output<String> getVpcId() {
-        return this.vpcId == null ? Output.empty() : this.vpcId;
+        return this.vpcId == null ? Codegen.empty() : this.vpcId;
     }
 
     /**
@@ -181,7 +182,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> workspaceSecurityGroupId;
 
     public Output<String> getWorkspaceSecurityGroupId() {
-        return this.workspaceSecurityGroupId == null ? Output.empty() : this.workspaceSecurityGroupId;
+        return this.workspaceSecurityGroupId == null ? Codegen.empty() : this.workspaceSecurityGroupId;
     }
 
     public StudioState(
@@ -220,22 +221,22 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
     }
 
     private StudioState() {
-        this.arn = Output.empty();
-        this.authMode = Output.empty();
-        this.defaultS3Location = Output.empty();
-        this.description = Output.empty();
-        this.engineSecurityGroupId = Output.empty();
-        this.idpAuthUrl = Output.empty();
-        this.idpRelayStateParameterName = Output.empty();
-        this.name = Output.empty();
-        this.serviceRole = Output.empty();
-        this.subnetIds = Output.empty();
-        this.tags = Output.empty();
-        this.tagsAll = Output.empty();
-        this.url = Output.empty();
-        this.userRole = Output.empty();
-        this.vpcId = Output.empty();
-        this.workspaceSecurityGroupId = Output.empty();
+        this.arn = Codegen.empty();
+        this.authMode = Codegen.empty();
+        this.defaultS3Location = Codegen.empty();
+        this.description = Codegen.empty();
+        this.engineSecurityGroupId = Codegen.empty();
+        this.idpAuthUrl = Codegen.empty();
+        this.idpRelayStateParameterName = Codegen.empty();
+        this.name = Codegen.empty();
+        this.serviceRole = Codegen.empty();
+        this.subnetIds = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.tagsAll = Codegen.empty();
+        this.url = Codegen.empty();
+        this.userRole = Codegen.empty();
+        this.vpcId = Codegen.empty();
+        this.workspaceSecurityGroupId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -293,7 +294,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder authMode(@Nullable Output<String> authMode) {
@@ -301,7 +302,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder authMode(@Nullable String authMode) {
-            this.authMode = Output.ofNullable(authMode);
+            this.authMode = Codegen.ofNullable(authMode);
             return this;
         }
         public Builder defaultS3Location(@Nullable Output<String> defaultS3Location) {
@@ -309,7 +310,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultS3Location(@Nullable String defaultS3Location) {
-            this.defaultS3Location = Output.ofNullable(defaultS3Location);
+            this.defaultS3Location = Codegen.ofNullable(defaultS3Location);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -317,7 +318,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder engineSecurityGroupId(@Nullable Output<String> engineSecurityGroupId) {
@@ -325,7 +326,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder engineSecurityGroupId(@Nullable String engineSecurityGroupId) {
-            this.engineSecurityGroupId = Output.ofNullable(engineSecurityGroupId);
+            this.engineSecurityGroupId = Codegen.ofNullable(engineSecurityGroupId);
             return this;
         }
         public Builder idpAuthUrl(@Nullable Output<String> idpAuthUrl) {
@@ -333,7 +334,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idpAuthUrl(@Nullable String idpAuthUrl) {
-            this.idpAuthUrl = Output.ofNullable(idpAuthUrl);
+            this.idpAuthUrl = Codegen.ofNullable(idpAuthUrl);
             return this;
         }
         public Builder idpRelayStateParameterName(@Nullable Output<String> idpRelayStateParameterName) {
@@ -341,7 +342,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder idpRelayStateParameterName(@Nullable String idpRelayStateParameterName) {
-            this.idpRelayStateParameterName = Output.ofNullable(idpRelayStateParameterName);
+            this.idpRelayStateParameterName = Codegen.ofNullable(idpRelayStateParameterName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -349,7 +350,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder serviceRole(@Nullable Output<String> serviceRole) {
@@ -357,7 +358,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder serviceRole(@Nullable String serviceRole) {
-            this.serviceRole = Output.ofNullable(serviceRole);
+            this.serviceRole = Codegen.ofNullable(serviceRole);
             return this;
         }
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
@@ -365,7 +366,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder subnetIds(@Nullable List<String> subnetIds) {
-            this.subnetIds = Output.ofNullable(subnetIds);
+            this.subnetIds = Codegen.ofNullable(subnetIds);
             return this;
         }
         public Builder subnetIds(String... subnetIds) {
@@ -376,7 +377,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tagsAll(@Nullable Output<Map<String,String>> tagsAll) {
@@ -384,7 +385,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagsAll(@Nullable Map<String,String> tagsAll) {
-            this.tagsAll = Output.ofNullable(tagsAll);
+            this.tagsAll = Codegen.ofNullable(tagsAll);
             return this;
         }
         public Builder url(@Nullable Output<String> url) {
@@ -392,7 +393,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder url(@Nullable String url) {
-            this.url = Output.ofNullable(url);
+            this.url = Codegen.ofNullable(url);
             return this;
         }
         public Builder userRole(@Nullable Output<String> userRole) {
@@ -400,7 +401,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder userRole(@Nullable String userRole) {
-            this.userRole = Output.ofNullable(userRole);
+            this.userRole = Codegen.ofNullable(userRole);
             return this;
         }
         public Builder vpcId(@Nullable Output<String> vpcId) {
@@ -408,7 +409,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder vpcId(@Nullable String vpcId) {
-            this.vpcId = Output.ofNullable(vpcId);
+            this.vpcId = Codegen.ofNullable(vpcId);
             return this;
         }
         public Builder workspaceSecurityGroupId(@Nullable Output<String> workspaceSecurityGroupId) {
@@ -416,7 +417,7 @@ public final class StudioState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder workspaceSecurityGroupId(@Nullable String workspaceSecurityGroupId) {
-            this.workspaceSecurityGroupId = Output.ofNullable(workspaceSecurityGroupId);
+            this.workspaceSecurityGroupId = Codegen.ofNullable(workspaceSecurityGroupId);
             return this;
         }        public StudioState build() {
             return new StudioState(arn, authMode, defaultS3Location, description, engineSecurityGroupId, idpAuthUrl, idpRelayStateParameterName, name, serviceRole, subnetIds, tags, tagsAll, url, userRole, vpcId, workspaceSecurityGroupId);

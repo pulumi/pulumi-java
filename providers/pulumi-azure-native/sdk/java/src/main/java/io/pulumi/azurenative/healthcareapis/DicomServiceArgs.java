@@ -5,6 +5,7 @@ package io.pulumi.azurenative.healthcareapis;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dicomServiceName;
 
     public Output<String> getDicomServiceName() {
-        return this.dicomServiceName == null ? Output.empty() : this.dicomServiceName;
+        return this.dicomServiceName == null ? Codegen.empty() : this.dicomServiceName;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DicomServiceArgs() {
-        this.dicomServiceName = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
-        this.workspaceName = Output.empty();
+        this.dicomServiceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
+        this.workspaceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dicomServiceName(@Nullable String dicomServiceName) {
-            this.dicomServiceName = Output.ofNullable(dicomServiceName);
+            this.dicomServiceName = Codegen.ofNullable(dicomServiceName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -132,7 +133,7 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -148,7 +149,7 @@ public final class DicomServiceArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder workspaceName(Output<String> workspaceName) {

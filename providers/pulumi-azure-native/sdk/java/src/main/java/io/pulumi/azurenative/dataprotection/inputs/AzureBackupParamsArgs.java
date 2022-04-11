@@ -5,6 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,8 +49,8 @@ public final class AzureBackupParamsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private AzureBackupParamsArgs() {
-        this.backupType = Output.empty();
-        this.objectType = Output.empty();
+        this.backupType = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {

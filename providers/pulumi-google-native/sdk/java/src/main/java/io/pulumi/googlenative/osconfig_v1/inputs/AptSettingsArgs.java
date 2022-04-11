@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.enums.AptSettingsType;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> exclusivePackages;
 
     public Output<List<String>> getExclusivePackages() {
-        return this.exclusivePackages == null ? Output.empty() : this.exclusivePackages;
+        return this.exclusivePackages == null ? Codegen.empty() : this.exclusivePackages;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<AptSettingsType> type;
 
     public Output<AptSettingsType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public AptSettingsArgs(
@@ -63,9 +64,9 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AptSettingsArgs() {
-        this.excludes = Output.empty();
-        this.exclusivePackages = Output.empty();
-        this.type = Output.empty();
+        this.excludes = Codegen.empty();
+        this.exclusivePackages = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(String... excludes) {
@@ -108,7 +109,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder exclusivePackages(@Nullable List<String> exclusivePackages) {
-            this.exclusivePackages = Output.ofNullable(exclusivePackages);
+            this.exclusivePackages = Codegen.ofNullable(exclusivePackages);
             return this;
         }
         public Builder exclusivePackages(String... exclusivePackages) {
@@ -119,7 +120,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable AptSettingsType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public AptSettingsArgs build() {
             return new AptSettingsArgs(excludes, exclusivePackages, type);

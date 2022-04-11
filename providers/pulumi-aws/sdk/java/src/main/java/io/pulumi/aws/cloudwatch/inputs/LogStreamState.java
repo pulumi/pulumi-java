@@ -5,6 +5,7 @@ package io.pulumi.aws.cloudwatch.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> logGroupName;
 
     public Output<String> getLogGroupName() {
-        return this.logGroupName == null ? Output.empty() : this.logGroupName;
+        return this.logGroupName == null ? Codegen.empty() : this.logGroupName;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     public LogStreamState(
@@ -57,9 +58,9 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
     }
 
     private LogStreamState() {
-        this.arn = Output.empty();
-        this.logGroupName = Output.empty();
-        this.name = Output.empty();
+        this.arn = Codegen.empty();
+        this.logGroupName = Codegen.empty();
+        this.name = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -91,7 +92,7 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder logGroupName(@Nullable Output<String> logGroupName) {
@@ -99,7 +100,7 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder logGroupName(@Nullable String logGroupName) {
-            this.logGroupName = Output.ofNullable(logGroupName);
+            this.logGroupName = Codegen.ofNullable(logGroupName);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -107,7 +108,7 @@ public final class LogStreamState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }        public LogStreamState build() {
             return new LogStreamState(arn, logGroupName, name);

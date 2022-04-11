@@ -7,6 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorCsvFormatDescrip
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorJsonFormatDescriptorArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,14 +20,14 @@ public final class AnomalyDetectorFileFormatDescriptorArgs extends io.pulumi.res
       private final @Nullable Output<AnomalyDetectorCsvFormatDescriptorArgs> csvFormatDescriptor;
 
     public Output<AnomalyDetectorCsvFormatDescriptorArgs> getCsvFormatDescriptor() {
-        return this.csvFormatDescriptor == null ? Output.empty() : this.csvFormatDescriptor;
+        return this.csvFormatDescriptor == null ? Codegen.empty() : this.csvFormatDescriptor;
     }
 
     @Import(name="jsonFormatDescriptor")
       private final @Nullable Output<AnomalyDetectorJsonFormatDescriptorArgs> jsonFormatDescriptor;
 
     public Output<AnomalyDetectorJsonFormatDescriptorArgs> getJsonFormatDescriptor() {
-        return this.jsonFormatDescriptor == null ? Output.empty() : this.jsonFormatDescriptor;
+        return this.jsonFormatDescriptor == null ? Codegen.empty() : this.jsonFormatDescriptor;
     }
 
     public AnomalyDetectorFileFormatDescriptorArgs(
@@ -37,8 +38,8 @@ public final class AnomalyDetectorFileFormatDescriptorArgs extends io.pulumi.res
     }
 
     private AnomalyDetectorFileFormatDescriptorArgs() {
-        this.csvFormatDescriptor = Output.empty();
-        this.jsonFormatDescriptor = Output.empty();
+        this.csvFormatDescriptor = Codegen.empty();
+        this.jsonFormatDescriptor = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class AnomalyDetectorFileFormatDescriptorArgs extends io.pulumi.res
             return this;
         }
         public Builder csvFormatDescriptor(@Nullable AnomalyDetectorCsvFormatDescriptorArgs csvFormatDescriptor) {
-            this.csvFormatDescriptor = Output.ofNullable(csvFormatDescriptor);
+            this.csvFormatDescriptor = Codegen.ofNullable(csvFormatDescriptor);
             return this;
         }
         public Builder jsonFormatDescriptor(@Nullable Output<AnomalyDetectorJsonFormatDescriptorArgs> jsonFormatDescriptor) {
@@ -76,7 +77,7 @@ public final class AnomalyDetectorFileFormatDescriptorArgs extends io.pulumi.res
             return this;
         }
         public Builder jsonFormatDescriptor(@Nullable AnomalyDetectorJsonFormatDescriptorArgs jsonFormatDescriptor) {
-            this.jsonFormatDescriptor = Output.ofNullable(jsonFormatDescriptor);
+            this.jsonFormatDescriptor = Codegen.ofNullable(jsonFormatDescriptor);
             return this;
         }        public AnomalyDetectorFileFormatDescriptorArgs build() {
             return new AnomalyDetectorFileFormatDescriptorArgs(csvFormatDescriptor, jsonFormatDescriptor);

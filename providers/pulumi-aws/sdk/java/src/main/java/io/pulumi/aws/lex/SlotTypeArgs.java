@@ -6,6 +6,7 @@ package io.pulumi.aws.lex;
 import io.pulumi.aws.lex.inputs.SlotTypeEnumerationValueArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +27,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> createVersion;
 
     public Output<Boolean> getCreateVersion() {
-        return this.createVersion == null ? Output.empty() : this.createVersion;
+        return this.createVersion == null ? Codegen.empty() : this.createVersion;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -62,7 +63,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> valueSelectionStrategy;
 
     public Output<String> getValueSelectionStrategy() {
-        return this.valueSelectionStrategy == null ? Output.empty() : this.valueSelectionStrategy;
+        return this.valueSelectionStrategy == null ? Codegen.empty() : this.valueSelectionStrategy;
     }
 
     public SlotTypeArgs(
@@ -93,11 +94,11 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SlotTypeArgs() {
-        this.createVersion = Output.empty();
-        this.description = Output.empty();
-        this.enumerationValues = Output.empty();
-        this.name = Output.empty();
-        this.valueSelectionStrategy = Output.empty();
+        this.createVersion = Codegen.empty();
+        this.description = Codegen.empty();
+        this.enumerationValues = Codegen.empty();
+        this.name = Codegen.empty();
+        this.valueSelectionStrategy = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder createVersion(@Nullable Boolean createVersion) {
-            this.createVersion = Output.ofNullable(createVersion);
+            this.createVersion = Codegen.ofNullable(createVersion);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -141,7 +142,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder enumerationValues(Output<List<SlotTypeEnumerationValueArgs>> enumerationValues) {
@@ -160,7 +161,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder valueSelectionStrategy(@Nullable Output<String> valueSelectionStrategy) {
@@ -168,7 +169,7 @@ public final class SlotTypeArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder valueSelectionStrategy(@Nullable String valueSelectionStrategy) {
-            this.valueSelectionStrategy = Output.ofNullable(valueSelectionStrategy);
+            this.valueSelectionStrategy = Codegen.ofNullable(valueSelectionStrategy);
             return this;
         }        public SlotTypeArgs build() {
             return new SlotTypeArgs(createVersion, description, enumerationValues, name, valueSelectionStrategy);

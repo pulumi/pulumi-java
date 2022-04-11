@@ -9,6 +9,7 @@ import io.pulumi.aws.appsync.inputs.ApiKeyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -107,7 +108,7 @@ public class ApiKey extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ApiKey(String name, ApiKeyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:appsync/apiKey:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:appsync/apiKey:ApiKey", name, args == null ? ApiKeyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ApiKey(String name, Output<String> id, @Nullable ApiKeyState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

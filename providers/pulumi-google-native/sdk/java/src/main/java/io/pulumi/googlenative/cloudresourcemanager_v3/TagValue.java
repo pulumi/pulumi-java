@@ -6,6 +6,7 @@ package io.pulumi.googlenative.cloudresourcemanager_v3;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.TagValueArgs;
 import java.lang.String;
@@ -152,7 +153,7 @@ public class TagValue extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public TagValue(String name, TagValueArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:cloudresourcemanager/v3:TagValue", name, args == null ? TagValueArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:cloudresourcemanager/v3:TagValue", name, args == null ? TagValueArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private TagValue(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

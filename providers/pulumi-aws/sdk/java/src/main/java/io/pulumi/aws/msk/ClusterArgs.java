@@ -11,6 +11,7 @@ import io.pulumi.aws.msk.inputs.ClusterLoggingInfoArgs;
 import io.pulumi.aws.msk.inputs.ClusterOpenMonitoringArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -41,7 +42,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterClientAuthenticationArgs> clientAuthentication;
 
     public Output<ClusterClientAuthenticationArgs> getClientAuthentication() {
-        return this.clientAuthentication == null ? Output.empty() : this.clientAuthentication;
+        return this.clientAuthentication == null ? Codegen.empty() : this.clientAuthentication;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> clusterName;
 
     public Output<String> getClusterName() {
-        return this.clusterName == null ? Output.empty() : this.clusterName;
+        return this.clusterName == null ? Codegen.empty() : this.clusterName;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterConfigurationInfoArgs> configurationInfo;
 
     public Output<ClusterConfigurationInfoArgs> getConfigurationInfo() {
-        return this.configurationInfo == null ? Output.empty() : this.configurationInfo;
+        return this.configurationInfo == null ? Codegen.empty() : this.configurationInfo;
     }
 
     /**
@@ -74,7 +75,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo;
 
     public Output<ClusterEncryptionInfoArgs> getEncryptionInfo() {
-        return this.encryptionInfo == null ? Output.empty() : this.encryptionInfo;
+        return this.encryptionInfo == null ? Codegen.empty() : this.encryptionInfo;
     }
 
     /**
@@ -85,7 +86,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> enhancedMonitoring;
 
     public Output<String> getEnhancedMonitoring() {
-        return this.enhancedMonitoring == null ? Output.empty() : this.enhancedMonitoring;
+        return this.enhancedMonitoring == null ? Codegen.empty() : this.enhancedMonitoring;
     }
 
     /**
@@ -107,7 +108,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterLoggingInfoArgs> loggingInfo;
 
     public Output<ClusterLoggingInfoArgs> getLoggingInfo() {
-        return this.loggingInfo == null ? Output.empty() : this.loggingInfo;
+        return this.loggingInfo == null ? Codegen.empty() : this.loggingInfo;
     }
 
     /**
@@ -129,7 +130,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ClusterOpenMonitoringArgs> openMonitoring;
 
     public Output<ClusterOpenMonitoringArgs> getOpenMonitoring() {
-        return this.openMonitoring == null ? Output.empty() : this.openMonitoring;
+        return this.openMonitoring == null ? Codegen.empty() : this.openMonitoring;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ClusterArgs(
@@ -169,17 +170,17 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ClusterArgs() {
-        this.brokerNodeGroupInfo = Output.empty();
-        this.clientAuthentication = Output.empty();
-        this.clusterName = Output.empty();
-        this.configurationInfo = Output.empty();
-        this.encryptionInfo = Output.empty();
-        this.enhancedMonitoring = Output.empty();
-        this.kafkaVersion = Output.empty();
-        this.loggingInfo = Output.empty();
-        this.numberOfBrokerNodes = Output.empty();
-        this.openMonitoring = Output.empty();
-        this.tags = Output.empty();
+        this.brokerNodeGroupInfo = Codegen.empty();
+        this.clientAuthentication = Codegen.empty();
+        this.clusterName = Codegen.empty();
+        this.configurationInfo = Codegen.empty();
+        this.encryptionInfo = Codegen.empty();
+        this.enhancedMonitoring = Codegen.empty();
+        this.kafkaVersion = Codegen.empty();
+        this.loggingInfo = Codegen.empty();
+        this.numberOfBrokerNodes = Codegen.empty();
+        this.openMonitoring = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -235,7 +236,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clientAuthentication(@Nullable ClusterClientAuthenticationArgs clientAuthentication) {
-            this.clientAuthentication = Output.ofNullable(clientAuthentication);
+            this.clientAuthentication = Codegen.ofNullable(clientAuthentication);
             return this;
         }
         public Builder clusterName(@Nullable Output<String> clusterName) {
@@ -243,7 +244,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder clusterName(@Nullable String clusterName) {
-            this.clusterName = Output.ofNullable(clusterName);
+            this.clusterName = Codegen.ofNullable(clusterName);
             return this;
         }
         public Builder configurationInfo(@Nullable Output<ClusterConfigurationInfoArgs> configurationInfo) {
@@ -251,7 +252,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder configurationInfo(@Nullable ClusterConfigurationInfoArgs configurationInfo) {
-            this.configurationInfo = Output.ofNullable(configurationInfo);
+            this.configurationInfo = Codegen.ofNullable(configurationInfo);
             return this;
         }
         public Builder encryptionInfo(@Nullable Output<ClusterEncryptionInfoArgs> encryptionInfo) {
@@ -259,7 +260,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encryptionInfo(@Nullable ClusterEncryptionInfoArgs encryptionInfo) {
-            this.encryptionInfo = Output.ofNullable(encryptionInfo);
+            this.encryptionInfo = Codegen.ofNullable(encryptionInfo);
             return this;
         }
         public Builder enhancedMonitoring(@Nullable Output<String> enhancedMonitoring) {
@@ -267,7 +268,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder enhancedMonitoring(@Nullable String enhancedMonitoring) {
-            this.enhancedMonitoring = Output.ofNullable(enhancedMonitoring);
+            this.enhancedMonitoring = Codegen.ofNullable(enhancedMonitoring);
             return this;
         }
         public Builder kafkaVersion(Output<String> kafkaVersion) {
@@ -283,7 +284,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder loggingInfo(@Nullable ClusterLoggingInfoArgs loggingInfo) {
-            this.loggingInfo = Output.ofNullable(loggingInfo);
+            this.loggingInfo = Codegen.ofNullable(loggingInfo);
             return this;
         }
         public Builder numberOfBrokerNodes(Output<Integer> numberOfBrokerNodes) {
@@ -299,7 +300,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder openMonitoring(@Nullable ClusterOpenMonitoringArgs openMonitoring) {
-            this.openMonitoring = Output.ofNullable(openMonitoring);
+            this.openMonitoring = Codegen.ofNullable(openMonitoring);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -307,7 +308,7 @@ public final class ClusterArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public ClusterArgs build() {
             return new ClusterArgs(brokerNodeGroupInfo, clientAuthentication, clusterName, configurationInfo, encryptionInfo, enhancedMonitoring, kafkaVersion, loggingInfo, numberOfBrokerNodes, openMonitoring, tags);

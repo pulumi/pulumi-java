@@ -5,6 +5,7 @@ package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.IntentDefaultResponsePlatformsItem;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.IntentWebhookState;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1ContextArgs;
@@ -31,7 +32,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> action;
 
     public Output<String> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -42,7 +43,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms;
 
     public Output<List<IntentDefaultResponsePlatformsItem>> getDefaultResponsePlatforms() {
-        return this.defaultResponsePlatforms == null ? Output.empty() : this.defaultResponsePlatforms;
+        return this.defaultResponsePlatforms == null ? Codegen.empty() : this.defaultResponsePlatforms;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> endInteraction;
 
     public Output<Boolean> getEndInteraction() {
-        return this.endInteraction == null ? Output.empty() : this.endInteraction;
+        return this.endInteraction == null ? Codegen.empty() : this.endInteraction;
     }
 
     /**
@@ -75,7 +76,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> events;
 
     public Output<List<String>> getEvents() {
-        return this.events == null ? Output.empty() : this.events;
+        return this.events == null ? Codegen.empty() : this.events;
     }
 
     /**
@@ -86,14 +87,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> inputContextNames;
 
     public Output<List<String>> getInputContextNames() {
-        return this.inputContextNames == null ? Output.empty() : this.inputContextNames;
+        return this.inputContextNames == null ? Codegen.empty() : this.inputContextNames;
     }
 
     @Import(name="intentView")
       private final @Nullable Output<String> intentView;
 
     public Output<String> getIntentView() {
-        return this.intentView == null ? Output.empty() : this.intentView;
+        return this.intentView == null ? Codegen.empty() : this.intentView;
     }
 
     /**
@@ -104,14 +105,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isFallback;
 
     public Output<Boolean> getIsFallback() {
-        return this.isFallback == null ? Output.empty() : this.isFallback;
+        return this.isFallback == null ? Codegen.empty() : this.isFallback;
     }
 
     @Import(name="languageCode")
       private final @Nullable Output<String> languageCode;
 
     public Output<String> getLanguageCode() {
-        return this.languageCode == null ? Output.empty() : this.languageCode;
+        return this.languageCode == null ? Codegen.empty() : this.languageCode;
     }
 
     /**
@@ -122,14 +123,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> liveAgentHandoff;
 
     public Output<Boolean> getLiveAgentHandoff() {
-        return this.liveAgentHandoff == null ? Output.empty() : this.liveAgentHandoff;
+        return this.liveAgentHandoff == null ? Codegen.empty() : this.liveAgentHandoff;
     }
 
     @Import(name="location")
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -140,7 +141,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> messages;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> getMessages() {
-        return this.messages == null ? Output.empty() : this.messages;
+        return this.messages == null ? Codegen.empty() : this.messages;
     }
 
     /**
@@ -151,7 +152,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> mlDisabled;
 
     public Output<Boolean> getMlDisabled() {
-        return this.mlDisabled == null ? Output.empty() : this.mlDisabled;
+        return this.mlDisabled == null ? Codegen.empty() : this.mlDisabled;
     }
 
     /**
@@ -162,7 +163,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -173,7 +174,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1ContextArgs>> outputContexts;
 
     public Output<List<GoogleCloudDialogflowV2beta1ContextArgs>> getOutputContexts() {
-        return this.outputContexts == null ? Output.empty() : this.outputContexts;
+        return this.outputContexts == null ? Codegen.empty() : this.outputContexts;
     }
 
     /**
@@ -184,7 +185,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> parameters;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentParameterArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -195,7 +196,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> parentFollowupIntentName;
 
     public Output<String> getParentFollowupIntentName() {
-        return this.parentFollowupIntentName == null ? Output.empty() : this.parentFollowupIntentName;
+        return this.parentFollowupIntentName == null ? Codegen.empty() : this.parentFollowupIntentName;
     }
 
     /**
@@ -206,14 +207,14 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> priority;
 
     public Output<Integer> getPriority() {
-        return this.priority == null ? Output.empty() : this.priority;
+        return this.priority == null ? Codegen.empty() : this.priority;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -224,7 +225,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> resetContexts;
 
     public Output<Boolean> getResetContexts() {
-        return this.resetContexts == null ? Output.empty() : this.resetContexts;
+        return this.resetContexts == null ? Codegen.empty() : this.resetContexts;
     }
 
     /**
@@ -235,7 +236,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> trainingPhrases;
 
     public Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> getTrainingPhrases() {
-        return this.trainingPhrases == null ? Output.empty() : this.trainingPhrases;
+        return this.trainingPhrases == null ? Codegen.empty() : this.trainingPhrases;
     }
 
     /**
@@ -246,7 +247,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<IntentWebhookState> webhookState;
 
     public Output<IntentWebhookState> getWebhookState() {
-        return this.webhookState == null ? Output.empty() : this.webhookState;
+        return this.webhookState == null ? Codegen.empty() : this.webhookState;
     }
 
     public IntentArgs(
@@ -297,28 +298,28 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private IntentArgs() {
-        this.action = Output.empty();
-        this.defaultResponsePlatforms = Output.empty();
-        this.displayName = Output.empty();
-        this.endInteraction = Output.empty();
-        this.events = Output.empty();
-        this.inputContextNames = Output.empty();
-        this.intentView = Output.empty();
-        this.isFallback = Output.empty();
-        this.languageCode = Output.empty();
-        this.liveAgentHandoff = Output.empty();
-        this.location = Output.empty();
-        this.messages = Output.empty();
-        this.mlDisabled = Output.empty();
-        this.name = Output.empty();
-        this.outputContexts = Output.empty();
-        this.parameters = Output.empty();
-        this.parentFollowupIntentName = Output.empty();
-        this.priority = Output.empty();
-        this.project = Output.empty();
-        this.resetContexts = Output.empty();
-        this.trainingPhrases = Output.empty();
-        this.webhookState = Output.empty();
+        this.action = Codegen.empty();
+        this.defaultResponsePlatforms = Codegen.empty();
+        this.displayName = Codegen.empty();
+        this.endInteraction = Codegen.empty();
+        this.events = Codegen.empty();
+        this.inputContextNames = Codegen.empty();
+        this.intentView = Codegen.empty();
+        this.isFallback = Codegen.empty();
+        this.languageCode = Codegen.empty();
+        this.liveAgentHandoff = Codegen.empty();
+        this.location = Codegen.empty();
+        this.messages = Codegen.empty();
+        this.mlDisabled = Codegen.empty();
+        this.name = Codegen.empty();
+        this.outputContexts = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.parentFollowupIntentName = Codegen.empty();
+        this.priority = Codegen.empty();
+        this.project = Codegen.empty();
+        this.resetContexts = Codegen.empty();
+        this.trainingPhrases = Codegen.empty();
+        this.webhookState = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -388,7 +389,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder action(@Nullable String action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder defaultResponsePlatforms(@Nullable Output<List<IntentDefaultResponsePlatformsItem>> defaultResponsePlatforms) {
@@ -396,7 +397,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder defaultResponsePlatforms(@Nullable List<IntentDefaultResponsePlatformsItem> defaultResponsePlatforms) {
-            this.defaultResponsePlatforms = Output.ofNullable(defaultResponsePlatforms);
+            this.defaultResponsePlatforms = Codegen.ofNullable(defaultResponsePlatforms);
             return this;
         }
         public Builder defaultResponsePlatforms(IntentDefaultResponsePlatformsItem... defaultResponsePlatforms) {
@@ -415,7 +416,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder endInteraction(@Nullable Boolean endInteraction) {
-            this.endInteraction = Output.ofNullable(endInteraction);
+            this.endInteraction = Codegen.ofNullable(endInteraction);
             return this;
         }
         public Builder events(@Nullable Output<List<String>> events) {
@@ -423,7 +424,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder events(@Nullable List<String> events) {
-            this.events = Output.ofNullable(events);
+            this.events = Codegen.ofNullable(events);
             return this;
         }
         public Builder events(String... events) {
@@ -434,7 +435,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inputContextNames(@Nullable List<String> inputContextNames) {
-            this.inputContextNames = Output.ofNullable(inputContextNames);
+            this.inputContextNames = Codegen.ofNullable(inputContextNames);
             return this;
         }
         public Builder inputContextNames(String... inputContextNames) {
@@ -445,7 +446,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder intentView(@Nullable String intentView) {
-            this.intentView = Output.ofNullable(intentView);
+            this.intentView = Codegen.ofNullable(intentView);
             return this;
         }
         public Builder isFallback(@Nullable Output<Boolean> isFallback) {
@@ -453,7 +454,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isFallback(@Nullable Boolean isFallback) {
-            this.isFallback = Output.ofNullable(isFallback);
+            this.isFallback = Codegen.ofNullable(isFallback);
             return this;
         }
         public Builder languageCode(@Nullable Output<String> languageCode) {
@@ -461,7 +462,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder languageCode(@Nullable String languageCode) {
-            this.languageCode = Output.ofNullable(languageCode);
+            this.languageCode = Codegen.ofNullable(languageCode);
             return this;
         }
         public Builder liveAgentHandoff(@Nullable Output<Boolean> liveAgentHandoff) {
@@ -469,7 +470,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder liveAgentHandoff(@Nullable Boolean liveAgentHandoff) {
-            this.liveAgentHandoff = Output.ofNullable(liveAgentHandoff);
+            this.liveAgentHandoff = Codegen.ofNullable(liveAgentHandoff);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -477,7 +478,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder messages(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentMessageArgs>> messages) {
@@ -485,7 +486,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder messages(@Nullable List<GoogleCloudDialogflowV2beta1IntentMessageArgs> messages) {
-            this.messages = Output.ofNullable(messages);
+            this.messages = Codegen.ofNullable(messages);
             return this;
         }
         public Builder messages(GoogleCloudDialogflowV2beta1IntentMessageArgs... messages) {
@@ -496,7 +497,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mlDisabled(@Nullable Boolean mlDisabled) {
-            this.mlDisabled = Output.ofNullable(mlDisabled);
+            this.mlDisabled = Codegen.ofNullable(mlDisabled);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -504,7 +505,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder outputContexts(@Nullable Output<List<GoogleCloudDialogflowV2beta1ContextArgs>> outputContexts) {
@@ -512,7 +513,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder outputContexts(@Nullable List<GoogleCloudDialogflowV2beta1ContextArgs> outputContexts) {
-            this.outputContexts = Output.ofNullable(outputContexts);
+            this.outputContexts = Codegen.ofNullable(outputContexts);
             return this;
         }
         public Builder outputContexts(GoogleCloudDialogflowV2beta1ContextArgs... outputContexts) {
@@ -523,7 +524,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parameters(@Nullable List<GoogleCloudDialogflowV2beta1IntentParameterArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(GoogleCloudDialogflowV2beta1IntentParameterArgs... parameters) {
@@ -534,7 +535,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder parentFollowupIntentName(@Nullable String parentFollowupIntentName) {
-            this.parentFollowupIntentName = Output.ofNullable(parentFollowupIntentName);
+            this.parentFollowupIntentName = Codegen.ofNullable(parentFollowupIntentName);
             return this;
         }
         public Builder priority(@Nullable Output<Integer> priority) {
@@ -542,7 +543,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder priority(@Nullable Integer priority) {
-            this.priority = Output.ofNullable(priority);
+            this.priority = Codegen.ofNullable(priority);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -550,7 +551,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder resetContexts(@Nullable Output<Boolean> resetContexts) {
@@ -558,7 +559,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resetContexts(@Nullable Boolean resetContexts) {
-            this.resetContexts = Output.ofNullable(resetContexts);
+            this.resetContexts = Codegen.ofNullable(resetContexts);
             return this;
         }
         public Builder trainingPhrases(@Nullable Output<List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs>> trainingPhrases) {
@@ -566,7 +567,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder trainingPhrases(@Nullable List<GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs> trainingPhrases) {
-            this.trainingPhrases = Output.ofNullable(trainingPhrases);
+            this.trainingPhrases = Codegen.ofNullable(trainingPhrases);
             return this;
         }
         public Builder trainingPhrases(GoogleCloudDialogflowV2beta1IntentTrainingPhraseArgs... trainingPhrases) {
@@ -577,7 +578,7 @@ public final class IntentArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder webhookState(@Nullable IntentWebhookState webhookState) {
-            this.webhookState = Output.ofNullable(webhookState);
+            this.webhookState = Codegen.ofNullable(webhookState);
             return this;
         }        public IntentArgs build() {
             return new IntentArgs(action, defaultResponsePlatforms, displayName, endInteraction, events, inputContextNames, intentView, isFallback, languageCode, liveAgentHandoff, location, messages, mlDisabled, name, outputContexts, parameters, parentFollowupIntentName, priority, project, resetContexts, trainingPhrases, webhookState);

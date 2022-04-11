@@ -6,6 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +30,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
     public Output<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
-        return this.inquiryDetails == null ? Output.empty() : this.inquiryDetails;
+        return this.inquiryDetails == null ? Codegen.empty() : this.inquiryDetails;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> status;
 
     public Output<String> getStatus() {
-        return this.status == null ? Output.empty() : this.status;
+        return this.status == null ? Codegen.empty() : this.status;
     }
 
     public InquiryInfoArgs(
@@ -52,8 +53,8 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private InquiryInfoArgs() {
-        this.inquiryDetails = Output.empty();
-        this.status = Output.empty();
+        this.inquiryDetails = Codegen.empty();
+        this.status = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -83,7 +84,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder inquiryDetails(@Nullable List<WorkloadInquiryDetailsArgs> inquiryDetails) {
-            this.inquiryDetails = Output.ofNullable(inquiryDetails);
+            this.inquiryDetails = Codegen.ofNullable(inquiryDetails);
             return this;
         }
         public Builder inquiryDetails(WorkloadInquiryDetailsArgs... inquiryDetails) {
@@ -94,7 +95,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder status(@Nullable String status) {
-            this.status = Output.ofNullable(status);
+            this.status = Codegen.ofNullable(status);
             return this;
         }        public InquiryInfoArgs build() {
             return new InquiryInfoArgs(inquiryDetails, status);

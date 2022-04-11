@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -37,7 +38,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     public ManagedClusterServicePrincipalProfileArgs(
@@ -48,8 +49,8 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
     }
 
     private ManagedClusterServicePrincipalProfileArgs() {
-        this.clientId = Output.empty();
-        this.secret = Output.empty();
+        this.clientId = Codegen.empty();
+        this.secret = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -87,7 +88,7 @@ public final class ManagedClusterServicePrincipalProfileArgs extends io.pulumi.r
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }        public ManagedClusterServicePrincipalProfileArgs build() {
             return new ManagedClusterServicePrincipalProfileArgs(clientId, secret);

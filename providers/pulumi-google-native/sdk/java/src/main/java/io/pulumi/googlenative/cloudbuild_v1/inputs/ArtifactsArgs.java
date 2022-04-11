@@ -5,6 +5,7 @@ package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactObjectsArgs;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> images;
 
     public Output<List<String>> getImages() {
-        return this.images == null ? Output.empty() : this.images;
+        return this.images == null ? Codegen.empty() : this.images;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<ArtifactObjectsArgs> objects;
 
     public Output<ArtifactObjectsArgs> getObjects() {
-        return this.objects == null ? Output.empty() : this.objects;
+        return this.objects == null ? Codegen.empty() : this.objects;
     }
 
     public ArtifactsArgs(
@@ -50,8 +51,8 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ArtifactsArgs() {
-        this.images = Output.empty();
-        this.objects = Output.empty();
+        this.images = Codegen.empty();
+        this.objects = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -81,7 +82,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder images(@Nullable List<String> images) {
-            this.images = Output.ofNullable(images);
+            this.images = Codegen.ofNullable(images);
             return this;
         }
         public Builder images(String... images) {
@@ -92,7 +93,7 @@ public final class ArtifactsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder objects(@Nullable ArtifactObjectsArgs objects) {
-            this.objects = Output.ofNullable(objects);
+            this.objects = Codegen.ofNullable(objects);
             return this;
         }        public ArtifactsArgs build() {
             return new ArtifactsArgs(images, objects);

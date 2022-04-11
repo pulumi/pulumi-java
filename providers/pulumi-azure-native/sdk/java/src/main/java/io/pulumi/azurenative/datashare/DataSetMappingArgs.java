@@ -7,6 +7,7 @@ import io.pulumi.azurenative.datashare.enums.DataSetMappingKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -35,7 +36,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> dataSetMappingName;
 
     public Output<String> getDataSetMappingName() {
-        return this.dataSetMappingName == null ? Output.empty() : this.dataSetMappingName;
+        return this.dataSetMappingName == null ? Codegen.empty() : this.dataSetMappingName;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DataSetMappingArgs() {
-        this.accountName = Output.empty();
-        this.dataSetMappingName = Output.empty();
-        this.kind = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.shareSubscriptionName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.dataSetMappingName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.shareSubscriptionName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -133,7 +134,7 @@ public final class DataSetMappingArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder dataSetMappingName(@Nullable String dataSetMappingName) {
-            this.dataSetMappingName = Output.ofNullable(dataSetMappingName);
+            this.dataSetMappingName = Codegen.ofNullable(dataSetMappingName);
             return this;
         }
         public Builder kind(Output<Either<String,DataSetMappingKind>> kind) {

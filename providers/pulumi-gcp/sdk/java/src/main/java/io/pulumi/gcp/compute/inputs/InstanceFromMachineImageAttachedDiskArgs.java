@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,35 +19,35 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
       private final @Nullable Output<String> deviceName;
 
     public Output<String> getDeviceName() {
-        return this.deviceName == null ? Output.empty() : this.deviceName;
+        return this.deviceName == null ? Codegen.empty() : this.deviceName;
     }
 
     @Import(name="diskEncryptionKeyRaw")
       private final @Nullable Output<String> diskEncryptionKeyRaw;
 
     public Output<String> getDiskEncryptionKeyRaw() {
-        return this.diskEncryptionKeyRaw == null ? Output.empty() : this.diskEncryptionKeyRaw;
+        return this.diskEncryptionKeyRaw == null ? Codegen.empty() : this.diskEncryptionKeyRaw;
     }
 
     @Import(name="diskEncryptionKeySha256")
       private final @Nullable Output<String> diskEncryptionKeySha256;
 
     public Output<String> getDiskEncryptionKeySha256() {
-        return this.diskEncryptionKeySha256 == null ? Output.empty() : this.diskEncryptionKeySha256;
+        return this.diskEncryptionKeySha256 == null ? Codegen.empty() : this.diskEncryptionKeySha256;
     }
 
     @Import(name="kmsKeySelfLink")
       private final @Nullable Output<String> kmsKeySelfLink;
 
     public Output<String> getKmsKeySelfLink() {
-        return this.kmsKeySelfLink == null ? Output.empty() : this.kmsKeySelfLink;
+        return this.kmsKeySelfLink == null ? Codegen.empty() : this.kmsKeySelfLink;
     }
 
     @Import(name="mode")
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     @Import(name="source", required=true)
@@ -72,12 +73,12 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
     }
 
     private InstanceFromMachineImageAttachedDiskArgs() {
-        this.deviceName = Output.empty();
-        this.diskEncryptionKeyRaw = Output.empty();
-        this.diskEncryptionKeySha256 = Output.empty();
-        this.kmsKeySelfLink = Output.empty();
-        this.mode = Output.empty();
-        this.source = Output.empty();
+        this.deviceName = Codegen.empty();
+        this.diskEncryptionKeyRaw = Codegen.empty();
+        this.diskEncryptionKeySha256 = Codegen.empty();
+        this.kmsKeySelfLink = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.source = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
             return this;
         }
         public Builder deviceName(@Nullable String deviceName) {
-            this.deviceName = Output.ofNullable(deviceName);
+            this.deviceName = Codegen.ofNullable(deviceName);
             return this;
         }
         public Builder diskEncryptionKeyRaw(@Nullable Output<String> diskEncryptionKeyRaw) {
@@ -123,7 +124,7 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
             return this;
         }
         public Builder diskEncryptionKeyRaw(@Nullable String diskEncryptionKeyRaw) {
-            this.diskEncryptionKeyRaw = Output.ofNullable(diskEncryptionKeyRaw);
+            this.diskEncryptionKeyRaw = Codegen.ofNullable(diskEncryptionKeyRaw);
             return this;
         }
         public Builder diskEncryptionKeySha256(@Nullable Output<String> diskEncryptionKeySha256) {
@@ -131,7 +132,7 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
             return this;
         }
         public Builder diskEncryptionKeySha256(@Nullable String diskEncryptionKeySha256) {
-            this.diskEncryptionKeySha256 = Output.ofNullable(diskEncryptionKeySha256);
+            this.diskEncryptionKeySha256 = Codegen.ofNullable(diskEncryptionKeySha256);
             return this;
         }
         public Builder kmsKeySelfLink(@Nullable Output<String> kmsKeySelfLink) {
@@ -139,7 +140,7 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
             return this;
         }
         public Builder kmsKeySelfLink(@Nullable String kmsKeySelfLink) {
-            this.kmsKeySelfLink = Output.ofNullable(kmsKeySelfLink);
+            this.kmsKeySelfLink = Codegen.ofNullable(kmsKeySelfLink);
             return this;
         }
         public Builder mode(@Nullable Output<String> mode) {
@@ -147,7 +148,7 @@ public final class InstanceFromMachineImageAttachedDiskArgs extends io.pulumi.re
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder source(Output<String> source) {

@@ -7,6 +7,7 @@ import io.pulumi.azurenative.devices.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Either<String,NetworkRuleIPAction>> action;
 
     public Output<Either<String,NetworkRuleIPAction>> getAction() {
-        return this.action == null ? Output.empty() : this.action;
+        return this.action == null ? Codegen.empty() : this.action;
     }
 
     /**
@@ -63,9 +64,9 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkRuleSetIpRuleArgs() {
-        this.action = Output.empty();
-        this.filterName = Output.empty();
-        this.ipMask = Output.empty();
+        this.action = Codegen.empty();
+        this.filterName = Codegen.empty();
+        this.ipMask = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder action(@Nullable Either<String,NetworkRuleIPAction> action) {
-            this.action = Output.ofNullable(action);
+            this.action = Codegen.ofNullable(action);
             return this;
         }
         public Builder filterName(Output<String> filterName) {

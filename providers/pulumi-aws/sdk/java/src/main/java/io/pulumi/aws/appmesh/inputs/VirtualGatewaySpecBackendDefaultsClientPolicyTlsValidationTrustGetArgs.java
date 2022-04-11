@@ -8,6 +8,7 @@ import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolic
 import io.pulumi.aws.appmesh.inputs.VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +25,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> acm;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs> getAcm() {
-        return this.acm == null ? Output.empty() : this.acm;
+        return this.acm == null ? Codegen.empty() : this.acm;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> getFile() {
-        return this.file == null ? Output.empty() : this.file;
+        return this.file == null ? Codegen.empty() : this.file;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
       private final @Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds;
 
     public Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> getSds() {
-        return this.sds == null ? Output.empty() : this.sds;
+        return this.sds == null ? Codegen.empty() : this.sds;
     }
 
     public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs(
@@ -59,9 +60,9 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
     }
 
     private VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs() {
-        this.acm = Output.empty();
-        this.file = Output.empty();
-        this.sds = Output.empty();
+        this.acm = Codegen.empty();
+        this.file = Codegen.empty();
+        this.sds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             return this;
         }
         public Builder acm(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustAcmGetArgs acm) {
-            this.acm = Output.ofNullable(acm);
+            this.acm = Codegen.ofNullable(acm);
             return this;
         }
         public Builder file(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs> file) {
@@ -101,7 +102,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             return this;
         }
         public Builder file(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustFileGetArgs file) {
-            this.file = Output.ofNullable(file);
+            this.file = Codegen.ofNullable(file);
             return this;
         }
         public Builder sds(@Nullable Output<VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs> sds) {
@@ -109,7 +110,7 @@ public final class VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTru
             return this;
         }
         public Builder sds(@Nullable VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustSdsGetArgs sds) {
-            this.sds = Output.ofNullable(sds);
+            this.sds = Codegen.ofNullable(sds);
             return this;
         }        public VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs build() {
             return new VirtualGatewaySpecBackendDefaultsClientPolicyTlsValidationTrustGetArgs(acm, file, sds);

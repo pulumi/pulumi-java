@@ -6,6 +6,7 @@ package io.pulumi.googlenative.gkehub_v1alpha;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1alpha.MembershipArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.AuthorityResponse;
@@ -213,7 +214,7 @@ public class Membership extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Membership(String name, MembershipArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:gkehub/v1alpha:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:gkehub/v1alpha:Membership", name, args == null ? MembershipArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Membership(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

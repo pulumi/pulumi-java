@@ -7,6 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.CassandraTableResourceArgs;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -47,7 +48,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
       private final @Nullable Output<CreateUpdateOptionsArgs> options;
 
     public Output<CreateUpdateOptionsArgs> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
       private final @Nullable Output<String> tableName;
 
     public Output<String> getTableName() {
-        return this.tableName == null ? Output.empty() : this.tableName;
+        return this.tableName == null ? Codegen.empty() : this.tableName;
     }
 
     /**
@@ -102,7 +103,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CassandraResourceCassandraTableArgs(
@@ -125,14 +126,14 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
     }
 
     private CassandraResourceCassandraTableArgs() {
-        this.accountName = Output.empty();
-        this.keyspaceName = Output.empty();
-        this.location = Output.empty();
-        this.options = Output.empty();
-        this.resource = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tableName = Output.empty();
-        this.tags = Output.empty();
+        this.accountName = Codegen.empty();
+        this.keyspaceName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.options = Codegen.empty();
+        this.resource = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tableName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -190,7 +191,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder options(@Nullable Output<CreateUpdateOptionsArgs> options) {
@@ -198,7 +199,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder options(@Nullable CreateUpdateOptionsArgs options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder resource(Output<CassandraTableResourceArgs> resource) {
@@ -222,7 +223,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tableName(@Nullable String tableName) {
-            this.tableName = Output.ofNullable(tableName);
+            this.tableName = Codegen.ofNullable(tableName);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -230,7 +231,7 @@ public final class CassandraResourceCassandraTableArgs extends io.pulumi.resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CassandraResourceCassandraTableArgs build() {
             return new CassandraResourceCassandraTableArgs(accountName, keyspaceName, location, options, resource, resourceGroupName, tableName, tags);

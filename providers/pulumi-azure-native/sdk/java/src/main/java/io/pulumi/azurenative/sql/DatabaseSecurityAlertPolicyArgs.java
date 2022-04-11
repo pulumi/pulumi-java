@@ -6,6 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.SecurityAlertsPolicyState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,7 +38,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> disabledAlerts;
 
     public Output<List<String>> getDisabledAlerts() {
-        return this.disabledAlerts == null ? Output.empty() : this.disabledAlerts;
+        return this.disabledAlerts == null ? Codegen.empty() : this.disabledAlerts;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Boolean> emailAccountAdmins;
 
     public Output<Boolean> getEmailAccountAdmins() {
-        return this.emailAccountAdmins == null ? Output.empty() : this.emailAccountAdmins;
+        return this.emailAccountAdmins == null ? Codegen.empty() : this.emailAccountAdmins;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<List<String>> emailAddresses;
 
     public Output<List<String>> getEmailAddresses() {
-        return this.emailAddresses == null ? Output.empty() : this.emailAddresses;
+        return this.emailAddresses == null ? Codegen.empty() : this.emailAddresses;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<Integer> retentionDays;
 
     public Output<Integer> getRetentionDays() {
-        return this.retentionDays == null ? Output.empty() : this.retentionDays;
+        return this.retentionDays == null ? Codegen.empty() : this.retentionDays;
     }
 
     /**
@@ -92,7 +93,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> securityAlertPolicyName;
 
     public Output<String> getSecurityAlertPolicyName() {
-        return this.securityAlertPolicyName == null ? Output.empty() : this.securityAlertPolicyName;
+        return this.securityAlertPolicyName == null ? Codegen.empty() : this.securityAlertPolicyName;
     }
 
     /**
@@ -125,7 +126,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> storageAccountAccessKey;
 
     public Output<String> getStorageAccountAccessKey() {
-        return this.storageAccountAccessKey == null ? Output.empty() : this.storageAccountAccessKey;
+        return this.storageAccountAccessKey == null ? Codegen.empty() : this.storageAccountAccessKey;
     }
 
     /**
@@ -136,7 +137,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> storageEndpoint;
 
     public Output<String> getStorageEndpoint() {
-        return this.storageEndpoint == null ? Output.empty() : this.storageEndpoint;
+        return this.storageEndpoint == null ? Codegen.empty() : this.storageEndpoint;
     }
 
     public DatabaseSecurityAlertPolicyArgs(
@@ -165,17 +166,17 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
     }
 
     private DatabaseSecurityAlertPolicyArgs() {
-        this.databaseName = Output.empty();
-        this.disabledAlerts = Output.empty();
-        this.emailAccountAdmins = Output.empty();
-        this.emailAddresses = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.retentionDays = Output.empty();
-        this.securityAlertPolicyName = Output.empty();
-        this.serverName = Output.empty();
-        this.state = Output.empty();
-        this.storageAccountAccessKey = Output.empty();
-        this.storageEndpoint = Output.empty();
+        this.databaseName = Codegen.empty();
+        this.disabledAlerts = Codegen.empty();
+        this.emailAccountAdmins = Codegen.empty();
+        this.emailAddresses = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.retentionDays = Codegen.empty();
+        this.securityAlertPolicyName = Codegen.empty();
+        this.serverName = Codegen.empty();
+        this.state = Codegen.empty();
+        this.storageAccountAccessKey = Codegen.empty();
+        this.storageEndpoint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -231,7 +232,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder disabledAlerts(@Nullable List<String> disabledAlerts) {
-            this.disabledAlerts = Output.ofNullable(disabledAlerts);
+            this.disabledAlerts = Codegen.ofNullable(disabledAlerts);
             return this;
         }
         public Builder disabledAlerts(String... disabledAlerts) {
@@ -242,7 +243,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder emailAccountAdmins(@Nullable Boolean emailAccountAdmins) {
-            this.emailAccountAdmins = Output.ofNullable(emailAccountAdmins);
+            this.emailAccountAdmins = Codegen.ofNullable(emailAccountAdmins);
             return this;
         }
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
@@ -250,7 +251,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder emailAddresses(@Nullable List<String> emailAddresses) {
-            this.emailAddresses = Output.ofNullable(emailAddresses);
+            this.emailAddresses = Codegen.ofNullable(emailAddresses);
             return this;
         }
         public Builder emailAddresses(String... emailAddresses) {
@@ -269,7 +270,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder retentionDays(@Nullable Integer retentionDays) {
-            this.retentionDays = Output.ofNullable(retentionDays);
+            this.retentionDays = Codegen.ofNullable(retentionDays);
             return this;
         }
         public Builder securityAlertPolicyName(@Nullable Output<String> securityAlertPolicyName) {
@@ -277,7 +278,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder securityAlertPolicyName(@Nullable String securityAlertPolicyName) {
-            this.securityAlertPolicyName = Output.ofNullable(securityAlertPolicyName);
+            this.securityAlertPolicyName = Codegen.ofNullable(securityAlertPolicyName);
             return this;
         }
         public Builder serverName(Output<String> serverName) {
@@ -301,7 +302,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder storageAccountAccessKey(@Nullable String storageAccountAccessKey) {
-            this.storageAccountAccessKey = Output.ofNullable(storageAccountAccessKey);
+            this.storageAccountAccessKey = Codegen.ofNullable(storageAccountAccessKey);
             return this;
         }
         public Builder storageEndpoint(@Nullable Output<String> storageEndpoint) {
@@ -309,7 +310,7 @@ public final class DatabaseSecurityAlertPolicyArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder storageEndpoint(@Nullable String storageEndpoint) {
-            this.storageEndpoint = Output.ofNullable(storageEndpoint);
+            this.storageEndpoint = Codegen.ofNullable(storageEndpoint);
             return this;
         }        public DatabaseSecurityAlertPolicyArgs build() {
             return new DatabaseSecurityAlertPolicyArgs(databaseName, disabledAlerts, emailAccountAdmins, emailAddresses, resourceGroupName, retentionDays, securityAlertPolicyName, serverName, state, storageAccountAccessKey, storageEndpoint);

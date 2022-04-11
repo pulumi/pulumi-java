@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -88,11 +89,11 @@ public final class CorsRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private CorsRuleArgs() {
-        this.allowedHeaders = Output.empty();
-        this.allowedMethods = Output.empty();
-        this.allowedOrigins = Output.empty();
-        this.exposedHeaders = Output.empty();
-        this.maxAgeInSeconds = Output.empty();
+        this.allowedHeaders = Codegen.empty();
+        this.allowedMethods = Codegen.empty();
+        this.allowedOrigins = Codegen.empty();
+        this.exposedHeaders = Codegen.empty();
+        this.maxAgeInSeconds = Codegen.empty();
     }
 
     public static Builder builder() {

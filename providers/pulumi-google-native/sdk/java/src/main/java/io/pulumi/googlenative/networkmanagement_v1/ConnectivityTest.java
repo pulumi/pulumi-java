@@ -6,6 +6,7 @@ package io.pulumi.googlenative.networkmanagement_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkmanagement_v1.ConnectivityTestArgs;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.EndpointResponse;
@@ -199,7 +200,7 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public ConnectivityTest(String name, ConnectivityTestArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:networkmanagement/v1:ConnectivityTest", name, args == null ? ConnectivityTestArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:networkmanagement/v1:ConnectivityTest", name, args == null ? ConnectivityTestArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ConnectivityTest(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

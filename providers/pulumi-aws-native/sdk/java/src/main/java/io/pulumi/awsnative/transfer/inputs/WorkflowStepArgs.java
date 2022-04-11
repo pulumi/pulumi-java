@@ -10,6 +10,7 @@ import io.pulumi.awsnative.transfer.inputs.WorkflowStepDeleteStepDetailsProperti
 import io.pulumi.awsnative.transfer.inputs.WorkflowStepTagStepDetailsPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -30,7 +31,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkflowStepCopyStepDetailsPropertiesArgs> copyStepDetails;
 
     public Output<WorkflowStepCopyStepDetailsPropertiesArgs> getCopyStepDetails() {
-        return this.copyStepDetails == null ? Output.empty() : this.copyStepDetails;
+        return this.copyStepDetails == null ? Codegen.empty() : this.copyStepDetails;
     }
 
     /**
@@ -41,7 +42,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails;
 
     public Output<WorkflowStepCustomStepDetailsPropertiesArgs> getCustomStepDetails() {
-        return this.customStepDetails == null ? Output.empty() : this.customStepDetails;
+        return this.customStepDetails == null ? Codegen.empty() : this.customStepDetails;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails;
 
     public Output<WorkflowStepDeleteStepDetailsPropertiesArgs> getDeleteStepDetails() {
-        return this.deleteStepDetails == null ? Output.empty() : this.deleteStepDetails;
+        return this.deleteStepDetails == null ? Codegen.empty() : this.deleteStepDetails;
     }
 
     /**
@@ -63,14 +64,14 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails;
 
     public Output<WorkflowStepTagStepDetailsPropertiesArgs> getTagStepDetails() {
-        return this.tagStepDetails == null ? Output.empty() : this.tagStepDetails;
+        return this.tagStepDetails == null ? Codegen.empty() : this.tagStepDetails;
     }
 
     @Import(name="type")
       private final @Nullable Output<WorkflowStepType> type;
 
     public Output<WorkflowStepType> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     public WorkflowStepArgs(
@@ -87,11 +88,11 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private WorkflowStepArgs() {
-        this.copyStepDetails = Output.empty();
-        this.customStepDetails = Output.empty();
-        this.deleteStepDetails = Output.empty();
-        this.tagStepDetails = Output.empty();
-        this.type = Output.empty();
+        this.copyStepDetails = Codegen.empty();
+        this.customStepDetails = Codegen.empty();
+        this.deleteStepDetails = Codegen.empty();
+        this.tagStepDetails = Codegen.empty();
+        this.type = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -127,7 +128,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder copyStepDetails(@Nullable WorkflowStepCopyStepDetailsPropertiesArgs copyStepDetails) {
-            this.copyStepDetails = Output.ofNullable(copyStepDetails);
+            this.copyStepDetails = Codegen.ofNullable(copyStepDetails);
             return this;
         }
         public Builder customStepDetails(@Nullable Output<WorkflowStepCustomStepDetailsPropertiesArgs> customStepDetails) {
@@ -135,7 +136,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder customStepDetails(@Nullable WorkflowStepCustomStepDetailsPropertiesArgs customStepDetails) {
-            this.customStepDetails = Output.ofNullable(customStepDetails);
+            this.customStepDetails = Codegen.ofNullable(customStepDetails);
             return this;
         }
         public Builder deleteStepDetails(@Nullable Output<WorkflowStepDeleteStepDetailsPropertiesArgs> deleteStepDetails) {
@@ -143,7 +144,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleteStepDetails(@Nullable WorkflowStepDeleteStepDetailsPropertiesArgs deleteStepDetails) {
-            this.deleteStepDetails = Output.ofNullable(deleteStepDetails);
+            this.deleteStepDetails = Codegen.ofNullable(deleteStepDetails);
             return this;
         }
         public Builder tagStepDetails(@Nullable Output<WorkflowStepTagStepDetailsPropertiesArgs> tagStepDetails) {
@@ -151,7 +152,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tagStepDetails(@Nullable WorkflowStepTagStepDetailsPropertiesArgs tagStepDetails) {
-            this.tagStepDetails = Output.ofNullable(tagStepDetails);
+            this.tagStepDetails = Codegen.ofNullable(tagStepDetails);
             return this;
         }
         public Builder type(@Nullable Output<WorkflowStepType> type) {
@@ -159,7 +160,7 @@ public final class WorkflowStepArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder type(@Nullable WorkflowStepType type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }        public WorkflowStepArgs build() {
             return new WorkflowStepArgs(copyStepDetails, customStepDetails, deleteStepDetails, tagStepDetails, type);

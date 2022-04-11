@@ -5,6 +5,7 @@ package io.pulumi.aws.fsx.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -35,8 +36,8 @@ public final class OpenZfsVolumeOriginSnapshotArgs extends io.pulumi.resources.R
     }
 
     private OpenZfsVolumeOriginSnapshotArgs() {
-        this.copyStrategy = Output.empty();
-        this.snapshotArn = Output.empty();
+        this.copyStrategy = Codegen.empty();
+        this.snapshotArn = Codegen.empty();
     }
 
     public static Builder builder() {

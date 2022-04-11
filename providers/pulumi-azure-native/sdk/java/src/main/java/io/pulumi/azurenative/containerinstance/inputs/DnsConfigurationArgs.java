@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +39,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> options;
 
     public Output<String> getOptions() {
-        return this.options == null ? Output.empty() : this.options;
+        return this.options == null ? Codegen.empty() : this.options;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<String> searchDomains;
 
     public Output<String> getSearchDomains() {
-        return this.searchDomains == null ? Output.empty() : this.searchDomains;
+        return this.searchDomains == null ? Codegen.empty() : this.searchDomains;
     }
 
     public DnsConfigurationArgs(
@@ -62,9 +63,9 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private DnsConfigurationArgs() {
-        this.nameServers = Output.empty();
-        this.options = Output.empty();
-        this.searchDomains = Output.empty();
+        this.nameServers = Codegen.empty();
+        this.options = Codegen.empty();
+        this.searchDomains = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -107,7 +108,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder options(@Nullable String options) {
-            this.options = Output.ofNullable(options);
+            this.options = Codegen.ofNullable(options);
             return this;
         }
         public Builder searchDomains(@Nullable Output<String> searchDomains) {
@@ -115,7 +116,7 @@ public final class DnsConfigurationArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder searchDomains(@Nullable String searchDomains) {
-            this.searchDomains = Output.ofNullable(searchDomains);
+            this.searchDomains = Codegen.ofNullable(searchDomains);
             return this;
         }        public DnsConfigurationArgs build() {
             return new DnsConfigurationArgs(nameServers, options, searchDomains);

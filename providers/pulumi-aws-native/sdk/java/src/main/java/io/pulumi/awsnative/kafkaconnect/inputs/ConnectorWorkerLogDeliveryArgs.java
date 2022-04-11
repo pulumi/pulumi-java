@@ -8,6 +8,7 @@ import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorFirehoseLogDeliveryArgs;
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorS3LogDeliveryArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,21 +25,21 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
       private final @Nullable Output<ConnectorCloudWatchLogsLogDeliveryArgs> cloudWatchLogs;
 
     public Output<ConnectorCloudWatchLogsLogDeliveryArgs> getCloudWatchLogs() {
-        return this.cloudWatchLogs == null ? Output.empty() : this.cloudWatchLogs;
+        return this.cloudWatchLogs == null ? Codegen.empty() : this.cloudWatchLogs;
     }
 
     @Import(name="firehose")
       private final @Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose;
 
     public Output<ConnectorFirehoseLogDeliveryArgs> getFirehose() {
-        return this.firehose == null ? Output.empty() : this.firehose;
+        return this.firehose == null ? Codegen.empty() : this.firehose;
     }
 
     @Import(name="s3")
       private final @Nullable Output<ConnectorS3LogDeliveryArgs> s3;
 
     public Output<ConnectorS3LogDeliveryArgs> getS3() {
-        return this.s3 == null ? Output.empty() : this.s3;
+        return this.s3 == null ? Codegen.empty() : this.s3;
     }
 
     public ConnectorWorkerLogDeliveryArgs(
@@ -51,9 +52,9 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
     }
 
     private ConnectorWorkerLogDeliveryArgs() {
-        this.cloudWatchLogs = Output.empty();
-        this.firehose = Output.empty();
-        this.s3 = Output.empty();
+        this.cloudWatchLogs = Codegen.empty();
+        this.firehose = Codegen.empty();
+        this.s3 = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -85,7 +86,7 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder cloudWatchLogs(@Nullable ConnectorCloudWatchLogsLogDeliveryArgs cloudWatchLogs) {
-            this.cloudWatchLogs = Output.ofNullable(cloudWatchLogs);
+            this.cloudWatchLogs = Codegen.ofNullable(cloudWatchLogs);
             return this;
         }
         public Builder firehose(@Nullable Output<ConnectorFirehoseLogDeliveryArgs> firehose) {
@@ -93,7 +94,7 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder firehose(@Nullable ConnectorFirehoseLogDeliveryArgs firehose) {
-            this.firehose = Output.ofNullable(firehose);
+            this.firehose = Codegen.ofNullable(firehose);
             return this;
         }
         public Builder s3(@Nullable Output<ConnectorS3LogDeliveryArgs> s3) {
@@ -101,7 +102,7 @@ public final class ConnectorWorkerLogDeliveryArgs extends io.pulumi.resources.Re
             return this;
         }
         public Builder s3(@Nullable ConnectorS3LogDeliveryArgs s3) {
-            this.s3 = Output.ofNullable(s3);
+            this.s3 = Codegen.ofNullable(s3);
             return this;
         }        public ConnectorWorkerLogDeliveryArgs build() {
             return new ConnectorWorkerLogDeliveryArgs(cloudWatchLogs, firehose, s3);

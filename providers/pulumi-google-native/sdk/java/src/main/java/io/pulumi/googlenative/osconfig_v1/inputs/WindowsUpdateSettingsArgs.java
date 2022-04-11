@@ -5,6 +5,7 @@ package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.osconfig_v1.enums.WindowsUpdateSettingsClassificationsItem;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<WindowsUpdateSettingsClassificationsItem>> classifications;
 
     public Output<List<WindowsUpdateSettingsClassificationsItem>> getClassifications() {
-        return this.classifications == null ? Output.empty() : this.classifications;
+        return this.classifications == null ? Codegen.empty() : this.classifications;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> excludes;
 
     public Output<List<String>> getExcludes() {
-        return this.excludes == null ? Output.empty() : this.excludes;
+        return this.excludes == null ? Codegen.empty() : this.excludes;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<List<String>> exclusivePatches;
 
     public Output<List<String>> getExclusivePatches() {
-        return this.exclusivePatches == null ? Output.empty() : this.exclusivePatches;
+        return this.exclusivePatches == null ? Codegen.empty() : this.exclusivePatches;
     }
 
     public WindowsUpdateSettingsArgs(
@@ -63,9 +64,9 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
     }
 
     private WindowsUpdateSettingsArgs() {
-        this.classifications = Output.empty();
-        this.excludes = Output.empty();
-        this.exclusivePatches = Output.empty();
+        this.classifications = Codegen.empty();
+        this.excludes = Codegen.empty();
+        this.exclusivePatches = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder classifications(@Nullable List<WindowsUpdateSettingsClassificationsItem> classifications) {
-            this.classifications = Output.ofNullable(classifications);
+            this.classifications = Codegen.ofNullable(classifications);
             return this;
         }
         public Builder classifications(WindowsUpdateSettingsClassificationsItem... classifications) {
@@ -108,7 +109,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder excludes(@Nullable List<String> excludes) {
-            this.excludes = Output.ofNullable(excludes);
+            this.excludes = Codegen.ofNullable(excludes);
             return this;
         }
         public Builder excludes(String... excludes) {
@@ -119,7 +120,7 @@ public final class WindowsUpdateSettingsArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder exclusivePatches(@Nullable List<String> exclusivePatches) {
-            this.exclusivePatches = Output.ofNullable(exclusivePatches);
+            this.exclusivePatches = Codegen.ofNullable(exclusivePatches);
             return this;
         }
         public Builder exclusivePatches(String... exclusivePatches) {

@@ -5,6 +5,7 @@ package io.pulumi.googlenative.datamigration_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> vm;
 
     public Output<String> getVm() {
-        return this.vm == null ? Output.empty() : this.vm;
+        return this.vm == null ? Codegen.empty() : this.vm;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> vpc;
 
     public Output<String> getVpc() {
-        return this.vpc == null ? Output.empty() : this.vpc;
+        return this.vpc == null ? Codegen.empty() : this.vpc;
     }
 
     public ReverseSshConnectivityArgs(
@@ -75,10 +76,10 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
     }
 
     private ReverseSshConnectivityArgs() {
-        this.vm = Output.empty();
-        this.vmIp = Output.empty();
-        this.vmPort = Output.empty();
-        this.vpc = Output.empty();
+        this.vm = Codegen.empty();
+        this.vmIp = Codegen.empty();
+        this.vmPort = Codegen.empty();
+        this.vpc = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vm(@Nullable String vm) {
-            this.vm = Output.ofNullable(vm);
+            this.vm = Codegen.ofNullable(vm);
             return this;
         }
         public Builder vmIp(Output<String> vmIp) {
@@ -136,7 +137,7 @@ public final class ReverseSshConnectivityArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder vpc(@Nullable String vpc) {
-            this.vpc = Output.ofNullable(vpc);
+            this.vpc = Codegen.ofNullable(vpc);
             return this;
         }        public ReverseSshConnectivityArgs build() {
             return new ReverseSshConnectivityArgs(vm, vmIp, vmPort, vpc);

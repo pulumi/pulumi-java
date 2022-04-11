@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_v1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.ServiceAttachmentIamPolicyArgs;
 import io.pulumi.googlenative.compute_v1.outputs.AuditConfigResponse;
@@ -117,7 +118,7 @@ public class ServiceAttachmentIamPolicy extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public ServiceAttachmentIamPolicy(String name, ServiceAttachmentIamPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/v1:ServiceAttachmentIamPolicy", name, args == null ? ServiceAttachmentIamPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/v1:ServiceAttachmentIamPolicy", name, args == null ? ServiceAttachmentIamPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private ServiceAttachmentIamPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

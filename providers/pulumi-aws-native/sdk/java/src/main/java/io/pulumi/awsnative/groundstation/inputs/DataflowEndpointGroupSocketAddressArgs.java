@@ -5,6 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="port")
       private final @Nullable Output<Integer> port;
 
     public Output<Integer> getPort() {
-        return this.port == null ? Output.empty() : this.port;
+        return this.port == null ? Codegen.empty() : this.port;
     }
 
     public DataflowEndpointGroupSocketAddressArgs(
@@ -37,8 +38,8 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
     }
 
     private DataflowEndpointGroupSocketAddressArgs() {
-        this.name = Output.empty();
-        this.port = Output.empty();
+        this.name = Codegen.empty();
+        this.port = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder port(@Nullable Output<Integer> port) {
@@ -76,7 +77,7 @@ public final class DataflowEndpointGroupSocketAddressArgs extends io.pulumi.reso
             return this;
         }
         public Builder port(@Nullable Integer port) {
-            this.port = Output.ofNullable(port);
+            this.port = Codegen.ofNullable(port);
             return this;
         }        public DataflowEndpointGroupSocketAddressArgs build() {
             return new DataflowEndpointGroupSocketAddressArgs(name, port);

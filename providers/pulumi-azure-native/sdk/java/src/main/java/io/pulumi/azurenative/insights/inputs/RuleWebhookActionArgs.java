@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -39,7 +40,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> properties;
 
     public Output<Map<String,String>> getProperties() {
-        return this.properties == null ? Output.empty() : this.properties;
+        return this.properties == null ? Codegen.empty() : this.properties;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> serviceUri;
 
     public Output<String> getServiceUri() {
-        return this.serviceUri == null ? Output.empty() : this.serviceUri;
+        return this.serviceUri == null ? Codegen.empty() : this.serviceUri;
     }
 
     public RuleWebhookActionArgs(
@@ -63,9 +64,9 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
     }
 
     private RuleWebhookActionArgs() {
-        this.odataType = Output.empty();
-        this.properties = Output.empty();
-        this.serviceUri = Output.empty();
+        this.odataType = Codegen.empty();
+        this.properties = Codegen.empty();
+        this.serviceUri = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -105,7 +106,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder properties(@Nullable Map<String,String> properties) {
-            this.properties = Output.ofNullable(properties);
+            this.properties = Codegen.ofNullable(properties);
             return this;
         }
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
@@ -113,7 +114,7 @@ public final class RuleWebhookActionArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder serviceUri(@Nullable String serviceUri) {
-            this.serviceUri = Output.ofNullable(serviceUri);
+            this.serviceUri = Codegen.ofNullable(serviceUri);
             return this;
         }        public RuleWebhookActionArgs build() {
             return new RuleWebhookActionArgs(odataType, properties, serviceUri);

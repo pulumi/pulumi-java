@@ -5,6 +5,7 @@ package io.pulumi.aws.cognito.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -69,10 +70,10 @@ public final class IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs exten
     }
 
     private IdentityPoolRoleAttachmentRoleMappingMappingRuleGetArgs() {
-        this.claim = Output.empty();
-        this.matchType = Output.empty();
-        this.roleArn = Output.empty();
-        this.value = Output.empty();
+        this.claim = Codegen.empty();
+        this.matchType = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.value = Codegen.empty();
     }
 
     public static Builder builder() {

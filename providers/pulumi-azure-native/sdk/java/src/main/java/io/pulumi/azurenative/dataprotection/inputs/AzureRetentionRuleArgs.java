@@ -6,6 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.inputs.SourceLifeCycleArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +26,7 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<Boolean> isDefault;
 
     public Output<Boolean> getIsDefault() {
-        return this.isDefault == null ? Output.empty() : this.isDefault;
+        return this.isDefault == null ? Codegen.empty() : this.isDefault;
     }
 
     @Import(name="lifecycles", required=true)
@@ -65,10 +66,10 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
     }
 
     private AzureRetentionRuleArgs() {
-        this.isDefault = Output.empty();
-        this.lifecycles = Output.empty();
-        this.name = Output.empty();
-        this.objectType = Output.empty();
+        this.isDefault = Codegen.empty();
+        this.lifecycles = Codegen.empty();
+        this.name = Codegen.empty();
+        this.objectType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -102,7 +103,7 @@ public final class AzureRetentionRuleArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder isDefault(@Nullable Boolean isDefault) {
-            this.isDefault = Output.ofNullable(isDefault);
+            this.isDefault = Codegen.ofNullable(isDefault);
             return this;
         }
         public Builder lifecycles(Output<List<SourceLifeCycleArgs>> lifecycles) {

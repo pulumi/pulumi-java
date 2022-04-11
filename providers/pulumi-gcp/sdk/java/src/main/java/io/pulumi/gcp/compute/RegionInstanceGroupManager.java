@@ -6,6 +6,7 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionInstanceGroupManagerArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerState;
@@ -388,7 +389,7 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
      * @param options A bag of options that control this resource's behavior.
      */
     public RegionInstanceGroupManager(String name, RegionInstanceGroupManagerArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:compute/regionInstanceGroupManager:RegionInstanceGroupManager", name, args == null ? RegionInstanceGroupManagerArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:compute/regionInstanceGroupManager:RegionInstanceGroupManager", name, args == null ? RegionInstanceGroupManagerArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegionInstanceGroupManager(String name, Output<String> id, @Nullable RegionInstanceGroupManagerState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

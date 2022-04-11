@@ -5,6 +5,7 @@ package io.pulumi.aws.mwaa.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,14 +19,14 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
       private final @Nullable Output<String> errorCode;
 
     public Output<String> getErrorCode() {
-        return this.errorCode == null ? Output.empty() : this.errorCode;
+        return this.errorCode == null ? Codegen.empty() : this.errorCode;
     }
 
     @Import(name="errorMessage")
       private final @Nullable Output<String> errorMessage;
 
     public Output<String> getErrorMessage() {
-        return this.errorMessage == null ? Output.empty() : this.errorMessage;
+        return this.errorMessage == null ? Codegen.empty() : this.errorMessage;
     }
 
     public EnvironmentLastUpdatedErrorGetArgs(
@@ -36,8 +37,8 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
     }
 
     private EnvironmentLastUpdatedErrorGetArgs() {
-        this.errorCode = Output.empty();
-        this.errorMessage = Output.empty();
+        this.errorCode = Codegen.empty();
+        this.errorMessage = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -67,7 +68,7 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder errorCode(@Nullable String errorCode) {
-            this.errorCode = Output.ofNullable(errorCode);
+            this.errorCode = Codegen.ofNullable(errorCode);
             return this;
         }
         public Builder errorMessage(@Nullable Output<String> errorMessage) {
@@ -75,7 +76,7 @@ public final class EnvironmentLastUpdatedErrorGetArgs extends io.pulumi.resource
             return this;
         }
         public Builder errorMessage(@Nullable String errorMessage) {
-            this.errorMessage = Output.ofNullable(errorMessage);
+            this.errorMessage = Codegen.ofNullable(errorMessage);
             return this;
         }        public EnvironmentLastUpdatedErrorGetArgs build() {
             return new EnvironmentLastUpdatedErrorGetArgs(errorCode, errorMessage);

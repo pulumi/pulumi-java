@@ -6,6 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.inputs.PrivateEndpointConnectionPropertiesArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -29,7 +30,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
     }
 
     private PrivateEndpointConnectionArgs() {
-        this.properties = Output.empty();
+        this.properties = Codegen.empty();
     }
 
     public static Builder builder() {

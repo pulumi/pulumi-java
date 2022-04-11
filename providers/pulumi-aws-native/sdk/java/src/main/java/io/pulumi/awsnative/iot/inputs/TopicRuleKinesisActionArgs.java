@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,7 +19,7 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<String> partitionKey;
 
     public Output<String> getPartitionKey() {
-        return this.partitionKey == null ? Output.empty() : this.partitionKey;
+        return this.partitionKey == null ? Codegen.empty() : this.partitionKey;
     }
 
     @Import(name="roleArn", required=true)
@@ -45,9 +46,9 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
     }
 
     private TopicRuleKinesisActionArgs() {
-        this.partitionKey = Output.empty();
-        this.roleArn = Output.empty();
-        this.streamName = Output.empty();
+        this.partitionKey = Codegen.empty();
+        this.roleArn = Codegen.empty();
+        this.streamName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class TopicRuleKinesisActionArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder partitionKey(@Nullable String partitionKey) {
-            this.partitionKey = Output.ofNullable(partitionKey);
+            this.partitionKey = Codegen.ofNullable(partitionKey);
             return this;
         }
         public Builder roleArn(Output<String> roleArn) {

@@ -6,6 +6,7 @@ package io.pulumi.gcp.vpcaccess;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vpcaccess.ConnectorArgs;
 import io.pulumi.gcp.vpcaccess.inputs.ConnectorState;
@@ -259,7 +260,7 @@ public class Connector extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public Connector(String name, @Nullable ConnectorArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:vpcaccess/connector:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:vpcaccess/connector:Connector", name, args == null ? ConnectorArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private Connector(String name, Output<String> id, @Nullable ConnectorState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

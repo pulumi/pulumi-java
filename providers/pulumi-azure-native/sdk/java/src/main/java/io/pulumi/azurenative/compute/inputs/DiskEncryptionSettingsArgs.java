@@ -7,6 +7,7 @@ import io.pulumi.azurenative.compute.inputs.KeyVaultKeyReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.KeyVaultSecretReferenceArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<KeyVaultSecretReferenceArgs> diskEncryptionKey;
 
     public Output<KeyVaultSecretReferenceArgs> getDiskEncryptionKey() {
-        return this.diskEncryptionKey == null ? Output.empty() : this.diskEncryptionKey;
+        return this.diskEncryptionKey == null ? Codegen.empty() : this.diskEncryptionKey;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<Boolean> enabled;
 
     public Output<Boolean> getEnabled() {
-        return this.enabled == null ? Output.empty() : this.enabled;
+        return this.enabled == null ? Codegen.empty() : this.enabled;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
       private final @Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey;
 
     public Output<KeyVaultKeyReferenceArgs> getKeyEncryptionKey() {
-        return this.keyEncryptionKey == null ? Output.empty() : this.keyEncryptionKey;
+        return this.keyEncryptionKey == null ? Codegen.empty() : this.keyEncryptionKey;
     }
 
     public DiskEncryptionSettingsArgs(
@@ -63,9 +64,9 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
     }
 
     private DiskEncryptionSettingsArgs() {
-        this.diskEncryptionKey = Output.empty();
-        this.enabled = Output.empty();
-        this.keyEncryptionKey = Output.empty();
+        this.diskEncryptionKey = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.keyEncryptionKey = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -97,7 +98,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder diskEncryptionKey(@Nullable KeyVaultSecretReferenceArgs diskEncryptionKey) {
-            this.diskEncryptionKey = Output.ofNullable(diskEncryptionKey);
+            this.diskEncryptionKey = Codegen.ofNullable(diskEncryptionKey);
             return this;
         }
         public Builder enabled(@Nullable Output<Boolean> enabled) {
@@ -105,7 +106,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder enabled(@Nullable Boolean enabled) {
-            this.enabled = Output.ofNullable(enabled);
+            this.enabled = Codegen.ofNullable(enabled);
             return this;
         }
         public Builder keyEncryptionKey(@Nullable Output<KeyVaultKeyReferenceArgs> keyEncryptionKey) {
@@ -113,7 +114,7 @@ public final class DiskEncryptionSettingsArgs extends io.pulumi.resources.Resour
             return this;
         }
         public Builder keyEncryptionKey(@Nullable KeyVaultKeyReferenceArgs keyEncryptionKey) {
-            this.keyEncryptionKey = Output.ofNullable(keyEncryptionKey);
+            this.keyEncryptionKey = Codegen.ofNullable(keyEncryptionKey);
             return this;
         }        public DiskEncryptionSettingsArgs build() {
             return new DiskEncryptionSettingsArgs(diskEncryptionKey, enabled, keyEncryptionKey);

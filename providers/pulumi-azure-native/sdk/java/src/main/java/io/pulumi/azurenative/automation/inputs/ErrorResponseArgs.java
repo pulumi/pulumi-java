@@ -5,6 +5,7 @@ package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> code;
 
     public Output<String> getCode() {
-        return this.code == null ? Output.empty() : this.code;
+        return this.code == null ? Codegen.empty() : this.code;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> message;
 
     public Output<String> getMessage() {
-        return this.message == null ? Output.empty() : this.message;
+        return this.message == null ? Codegen.empty() : this.message;
     }
 
     public ErrorResponseArgs(
@@ -48,8 +49,8 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ErrorResponseArgs() {
-        this.code = Output.empty();
-        this.message = Output.empty();
+        this.code = Codegen.empty();
+        this.message = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder code(@Nullable String code) {
-            this.code = Output.ofNullable(code);
+            this.code = Codegen.ofNullable(code);
             return this;
         }
         public Builder message(@Nullable Output<String> message) {
@@ -87,7 +88,7 @@ public final class ErrorResponseArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder message(@Nullable String message) {
-            this.message = Output.ofNullable(message);
+            this.message = Codegen.ofNullable(message);
             return this;
         }        public ErrorResponseArgs build() {
             return new ErrorResponseArgs(code, message);

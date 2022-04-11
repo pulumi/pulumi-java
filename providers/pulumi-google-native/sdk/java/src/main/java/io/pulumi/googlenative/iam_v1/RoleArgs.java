@@ -5,6 +5,7 @@ package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.iam_v1.enums.RoleStage;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> deleted;
 
     public Output<Boolean> getDeleted() {
-        return this.deleted == null ? Output.empty() : this.deleted;
+        return this.deleted == null ? Codegen.empty() : this.deleted;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> includedPermissions;
 
     public Output<List<String>> getIncludedPermissions() {
-        return this.includedPermissions == null ? Output.empty() : this.includedPermissions;
+        return this.includedPermissions == null ? Codegen.empty() : this.includedPermissions;
     }
 
     /**
@@ -69,14 +70,14 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     @Import(name="project")
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -87,7 +88,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleId;
 
     public Output<String> getRoleId() {
-        return this.roleId == null ? Output.empty() : this.roleId;
+        return this.roleId == null ? Codegen.empty() : this.roleId;
     }
 
     /**
@@ -98,7 +99,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<RoleStage> stage;
 
     public Output<RoleStage> getStage() {
-        return this.stage == null ? Output.empty() : this.stage;
+        return this.stage == null ? Codegen.empty() : this.stage;
     }
 
     /**
@@ -109,7 +110,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> title;
 
     public Output<String> getTitle() {
-        return this.title == null ? Output.empty() : this.title;
+        return this.title == null ? Codegen.empty() : this.title;
     }
 
     public RoleArgs(
@@ -134,15 +135,15 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private RoleArgs() {
-        this.deleted = Output.empty();
-        this.description = Output.empty();
-        this.etag = Output.empty();
-        this.includedPermissions = Output.empty();
-        this.name = Output.empty();
-        this.project = Output.empty();
-        this.roleId = Output.empty();
-        this.stage = Output.empty();
-        this.title = Output.empty();
+        this.deleted = Codegen.empty();
+        this.description = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.includedPermissions = Codegen.empty();
+        this.name = Codegen.empty();
+        this.project = Codegen.empty();
+        this.roleId = Codegen.empty();
+        this.stage = Codegen.empty();
+        this.title = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -186,7 +187,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder deleted(@Nullable Boolean deleted) {
-            this.deleted = Output.ofNullable(deleted);
+            this.deleted = Codegen.ofNullable(deleted);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -194,7 +195,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -202,7 +203,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder includedPermissions(@Nullable Output<List<String>> includedPermissions) {
@@ -210,7 +211,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder includedPermissions(@Nullable List<String> includedPermissions) {
-            this.includedPermissions = Output.ofNullable(includedPermissions);
+            this.includedPermissions = Codegen.ofNullable(includedPermissions);
             return this;
         }
         public Builder includedPermissions(String... includedPermissions) {
@@ -221,7 +222,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -229,7 +230,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder roleId(@Nullable Output<String> roleId) {
@@ -237,7 +238,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleId(@Nullable String roleId) {
-            this.roleId = Output.ofNullable(roleId);
+            this.roleId = Codegen.ofNullable(roleId);
             return this;
         }
         public Builder stage(@Nullable Output<RoleStage> stage) {
@@ -245,7 +246,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder stage(@Nullable RoleStage stage) {
-            this.stage = Output.ofNullable(stage);
+            this.stage = Codegen.ofNullable(stage);
             return this;
         }
         public Builder title(@Nullable Output<String> title) {
@@ -253,7 +254,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder title(@Nullable String title) {
-            this.title = Output.ofNullable(title);
+            this.title = Codegen.ofNullable(title);
             return this;
         }        public RoleArgs build() {
             return new RoleArgs(deleted, description, etag, includedPermissions, name, project, roleId, stage, title);

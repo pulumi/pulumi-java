@@ -5,6 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> date;
 
     public Output<Integer> getDate() {
-        return this.date == null ? Output.empty() : this.date;
+        return this.date == null ? Codegen.empty() : this.date;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Boolean> isLast;
 
     public Output<Boolean> getIsLast() {
-        return this.isLast == null ? Output.empty() : this.isLast;
+        return this.isLast == null ? Codegen.empty() : this.isLast;
     }
 
     public DayArgs(
@@ -49,8 +50,8 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DayArgs() {
-        this.date = Output.empty();
-        this.isLast = Output.empty();
+        this.date = Codegen.empty();
+        this.isLast = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder date(@Nullable Integer date) {
-            this.date = Output.ofNullable(date);
+            this.date = Codegen.ofNullable(date);
             return this;
         }
         public Builder isLast(@Nullable Output<Boolean> isLast) {
@@ -88,7 +89,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder isLast(@Nullable Boolean isLast) {
-            this.isLast = Output.ofNullable(isLast);
+            this.isLast = Codegen.ofNullable(isLast);
             return this;
         }        public DayArgs build() {
             return new DayArgs(date, isLast);

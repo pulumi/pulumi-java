@@ -5,6 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,14 +24,14 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> delimiter;
 
     public Output<String> getDelimiter() {
-        return this.delimiter == null ? Output.empty() : this.delimiter;
+        return this.delimiter == null ? Codegen.empty() : this.delimiter;
     }
 
     @Import(name="headerRow")
       private final @Nullable Output<Boolean> headerRow;
 
     public Output<Boolean> getHeaderRow() {
-        return this.headerRow == null ? Output.empty() : this.headerRow;
+        return this.headerRow == null ? Codegen.empty() : this.headerRow;
     }
 
     public DatasetCsvOptionsArgs(
@@ -41,8 +42,8 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
     }
 
     private DatasetCsvOptionsArgs() {
-        this.delimiter = Output.empty();
-        this.headerRow = Output.empty();
+        this.delimiter = Codegen.empty();
+        this.headerRow = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder delimiter(@Nullable String delimiter) {
-            this.delimiter = Output.ofNullable(delimiter);
+            this.delimiter = Codegen.ofNullable(delimiter);
             return this;
         }
         public Builder headerRow(@Nullable Output<Boolean> headerRow) {
@@ -80,7 +81,7 @@ public final class DatasetCsvOptionsArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder headerRow(@Nullable Boolean headerRow) {
-            this.headerRow = Output.ofNullable(headerRow);
+            this.headerRow = Codegen.ofNullable(headerRow);
             return this;
         }        public DatasetCsvOptionsArgs build() {
             return new DatasetCsvOptionsArgs(delimiter, headerRow);

@@ -5,6 +5,7 @@ package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +25,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
       private final @Nullable Output<String> diskName;
 
     public Output<String> getDiskName() {
-        return this.diskName == null ? Output.empty() : this.diskName;
+        return this.diskName == null ? Codegen.empty() : this.diskName;
     }
 
     /**
@@ -52,7 +53,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
       private final @Nullable Output<Integer> diskSizeGb;
 
     public Output<Integer> getDiskSizeGb() {
-        return this.diskSizeGb == null ? Output.empty() : this.diskSizeGb;
+        return this.diskSizeGb == null ? Codegen.empty() : this.diskSizeGb;
     }
 
     /**
@@ -66,7 +67,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
       private final @Nullable Output<String> diskType;
 
     public Output<String> getDiskType() {
-        return this.diskType == null ? Output.empty() : this.diskType;
+        return this.diskType == null ? Codegen.empty() : this.diskType;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs(
@@ -96,11 +97,11 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
     }
 
     private RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs() {
-        this.description = Output.empty();
-        this.diskName = Output.empty();
-        this.diskSizeGb = Output.empty();
-        this.diskType = Output.empty();
-        this.labels = Output.empty();
+        this.description = Codegen.empty();
+        this.diskName = Codegen.empty();
+        this.diskSizeGb = Codegen.empty();
+        this.diskType = Codegen.empty();
+        this.labels = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -136,7 +137,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder diskName(@Nullable Output<String> diskName) {
@@ -144,7 +145,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             return this;
         }
         public Builder diskName(@Nullable String diskName) {
-            this.diskName = Output.ofNullable(diskName);
+            this.diskName = Codegen.ofNullable(diskName);
             return this;
         }
         public Builder diskSizeGb(@Nullable Output<Integer> diskSizeGb) {
@@ -152,7 +153,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             return this;
         }
         public Builder diskSizeGb(@Nullable Integer diskSizeGb) {
-            this.diskSizeGb = Output.ofNullable(diskSizeGb);
+            this.diskSizeGb = Codegen.ofNullable(diskSizeGb);
             return this;
         }
         public Builder diskType(@Nullable Output<String> diskType) {
@@ -160,7 +161,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             return this;
         }
         public Builder diskType(@Nullable String diskType) {
-            this.diskType = Output.ofNullable(diskType);
+            this.diskType = Codegen.ofNullable(diskType);
             return this;
         }
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
@@ -168,7 +169,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializePa
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }        public RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParamsGetArgs(description, diskName, diskSizeGb, diskType, labels);

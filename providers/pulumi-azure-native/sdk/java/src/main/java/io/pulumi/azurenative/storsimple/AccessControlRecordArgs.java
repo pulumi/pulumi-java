@@ -6,6 +6,7 @@ package io.pulumi.azurenative.storsimple;
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> accessControlRecordName;
 
     public Output<String> getAccessControlRecordName() {
-        return this.accessControlRecordName == null ? Output.empty() : this.accessControlRecordName;
+        return this.accessControlRecordName == null ? Codegen.empty() : this.accessControlRecordName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
       private final @Nullable Output<Kind> kind;
 
     public Output<Kind> getKind() {
-        return this.kind == null ? Output.empty() : this.kind;
+        return this.kind == null ? Codegen.empty() : this.kind;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
     }
 
     private AccessControlRecordArgs() {
-        this.accessControlRecordName = Output.empty();
-        this.initiatorName = Output.empty();
-        this.kind = Output.empty();
-        this.managerName = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accessControlRecordName = Codegen.empty();
+        this.initiatorName = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.managerName = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder accessControlRecordName(@Nullable String accessControlRecordName) {
-            this.accessControlRecordName = Output.ofNullable(accessControlRecordName);
+            this.accessControlRecordName = Codegen.ofNullable(accessControlRecordName);
             return this;
         }
         public Builder initiatorName(Output<String> initiatorName) {
@@ -140,7 +141,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder kind(@Nullable Kind kind) {
-            this.kind = Output.ofNullable(kind);
+            this.kind = Codegen.ofNullable(kind);
             return this;
         }
         public Builder managerName(Output<String> managerName) {

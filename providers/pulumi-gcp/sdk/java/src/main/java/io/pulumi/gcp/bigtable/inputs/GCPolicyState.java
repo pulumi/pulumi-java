@@ -5,6 +5,7 @@ package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxAgeGetArgs;
 import io.pulumi.gcp.bigtable.inputs.GCPolicyMaxVersionGetArgs;
 import java.lang.String;
@@ -25,7 +26,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> columnFamily;
 
     public Output<String> getColumnFamily() {
-        return this.columnFamily == null ? Output.empty() : this.columnFamily;
+        return this.columnFamily == null ? Codegen.empty() : this.columnFamily;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> instanceName;
 
     public Output<String> getInstanceName() {
-        return this.instanceName == null ? Output.empty() : this.instanceName;
+        return this.instanceName == null ? Codegen.empty() : this.instanceName;
     }
 
     /**
@@ -47,7 +48,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<GCPolicyMaxAgeGetArgs> maxAge;
 
     public Output<GCPolicyMaxAgeGetArgs> getMaxAge() {
-        return this.maxAge == null ? Output.empty() : this.maxAge;
+        return this.maxAge == null ? Codegen.empty() : this.maxAge;
     }
 
     /**
@@ -58,7 +59,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions;
 
     public Output<List<GCPolicyMaxVersionGetArgs>> getMaxVersions() {
-        return this.maxVersions == null ? Output.empty() : this.maxVersions;
+        return this.maxVersions == null ? Codegen.empty() : this.maxVersions;
     }
 
     /**
@@ -69,7 +70,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> mode;
 
     public Output<String> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -80,7 +81,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -91,7 +92,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> table;
 
     public Output<String> getTable() {
-        return this.table == null ? Output.empty() : this.table;
+        return this.table == null ? Codegen.empty() : this.table;
     }
 
     public GCPolicyState(
@@ -112,13 +113,13 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
     }
 
     private GCPolicyState() {
-        this.columnFamily = Output.empty();
-        this.instanceName = Output.empty();
-        this.maxAge = Output.empty();
-        this.maxVersions = Output.empty();
-        this.mode = Output.empty();
-        this.project = Output.empty();
-        this.table = Output.empty();
+        this.columnFamily = Codegen.empty();
+        this.instanceName = Codegen.empty();
+        this.maxAge = Codegen.empty();
+        this.maxVersions = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.project = Codegen.empty();
+        this.table = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -158,7 +159,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columnFamily(@Nullable String columnFamily) {
-            this.columnFamily = Output.ofNullable(columnFamily);
+            this.columnFamily = Codegen.ofNullable(columnFamily);
             return this;
         }
         public Builder instanceName(@Nullable Output<String> instanceName) {
@@ -166,7 +167,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder instanceName(@Nullable String instanceName) {
-            this.instanceName = Output.ofNullable(instanceName);
+            this.instanceName = Codegen.ofNullable(instanceName);
             return this;
         }
         public Builder maxAge(@Nullable Output<GCPolicyMaxAgeGetArgs> maxAge) {
@@ -174,7 +175,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxAge(@Nullable GCPolicyMaxAgeGetArgs maxAge) {
-            this.maxAge = Output.ofNullable(maxAge);
+            this.maxAge = Codegen.ofNullable(maxAge);
             return this;
         }
         public Builder maxVersions(@Nullable Output<List<GCPolicyMaxVersionGetArgs>> maxVersions) {
@@ -182,7 +183,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder maxVersions(@Nullable List<GCPolicyMaxVersionGetArgs> maxVersions) {
-            this.maxVersions = Output.ofNullable(maxVersions);
+            this.maxVersions = Codegen.ofNullable(maxVersions);
             return this;
         }
         public Builder maxVersions(GCPolicyMaxVersionGetArgs... maxVersions) {
@@ -193,7 +194,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder mode(@Nullable String mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -201,7 +202,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder table(@Nullable Output<String> table) {
@@ -209,7 +210,7 @@ public final class GCPolicyState extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder table(@Nullable String table) {
-            this.table = Output.ofNullable(table);
+            this.table = Codegen.ofNullable(table);
             return this;
         }        public GCPolicyState build() {
             return new GCPolicyState(columnFamily, instanceName, maxAge, maxVersions, mode, project, table);

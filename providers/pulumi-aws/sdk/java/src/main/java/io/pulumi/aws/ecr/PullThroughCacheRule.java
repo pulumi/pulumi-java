@@ -9,6 +9,7 @@ import io.pulumi.aws.ecr.inputs.PullThroughCacheRuleState;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -96,7 +97,7 @@ public class PullThroughCacheRule extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public PullThroughCacheRule(String name, PullThroughCacheRuleArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, args == null ? PullThroughCacheRuleArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:ecr/pullThroughCacheRule:PullThroughCacheRule", name, args == null ? PullThroughCacheRuleArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private PullThroughCacheRule(String name, Output<String> id, @Nullable PullThroughCacheRuleState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

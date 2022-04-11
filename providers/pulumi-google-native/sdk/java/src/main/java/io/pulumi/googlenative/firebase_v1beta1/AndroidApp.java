@@ -6,6 +6,7 @@ package io.pulumi.googlenative.firebase_v1beta1;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebase_v1beta1.AndroidAppArgs;
 import java.lang.String;
@@ -112,7 +113,7 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public AndroidApp(String name, @Nullable AndroidAppArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:firebase/v1beta1:AndroidApp", name, args == null ? AndroidAppArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:firebase/v1beta1:AndroidApp", name, args == null ? AndroidAppArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private AndroidApp(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

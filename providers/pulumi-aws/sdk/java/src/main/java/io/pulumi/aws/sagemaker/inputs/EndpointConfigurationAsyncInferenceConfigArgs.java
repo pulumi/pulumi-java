@@ -7,6 +7,7 @@ import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigC
 import io.pulumi.aws.sagemaker.inputs.EndpointConfigurationAsyncInferenceConfigOutputConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +24,7 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
       private final @Nullable Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> clientConfig;
 
     public Output<EndpointConfigurationAsyncInferenceConfigClientConfigArgs> getClientConfig() {
-        return this.clientConfig == null ? Output.empty() : this.clientConfig;
+        return this.clientConfig == null ? Codegen.empty() : this.clientConfig;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
     }
 
     private EndpointConfigurationAsyncInferenceConfigArgs() {
-        this.clientConfig = Output.empty();
-        this.outputConfig = Output.empty();
+        this.clientConfig = Codegen.empty();
+        this.outputConfig = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class EndpointConfigurationAsyncInferenceConfigArgs extends io.pulu
             return this;
         }
         public Builder clientConfig(@Nullable EndpointConfigurationAsyncInferenceConfigClientConfigArgs clientConfig) {
-            this.clientConfig = Output.ofNullable(clientConfig);
+            this.clientConfig = Codegen.ofNullable(clientConfig);
             return this;
         }
         public Builder outputConfig(Output<EndpointConfigurationAsyncInferenceConfigOutputConfigArgs> outputConfig) {

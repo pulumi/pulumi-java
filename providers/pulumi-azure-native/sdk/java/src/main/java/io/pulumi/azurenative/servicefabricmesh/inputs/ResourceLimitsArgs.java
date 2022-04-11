@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> cpu;
 
     public Output<Double> getCpu() {
-        return this.cpu == null ? Output.empty() : this.cpu;
+        return this.cpu == null ? Codegen.empty() : this.cpu;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Double> memoryInGB;
 
     public Output<Double> getMemoryInGB() {
-        return this.memoryInGB == null ? Output.empty() : this.memoryInGB;
+        return this.memoryInGB == null ? Codegen.empty() : this.memoryInGB;
     }
 
     public ResourceLimitsArgs(
@@ -48,8 +49,8 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ResourceLimitsArgs() {
-        this.cpu = Output.empty();
-        this.memoryInGB = Output.empty();
+        this.cpu = Codegen.empty();
+        this.memoryInGB = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder cpu(@Nullable Double cpu) {
-            this.cpu = Output.ofNullable(cpu);
+            this.cpu = Codegen.ofNullable(cpu);
             return this;
         }
         public Builder memoryInGB(@Nullable Output<Double> memoryInGB) {
@@ -87,7 +88,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder memoryInGB(@Nullable Double memoryInGB) {
-            this.memoryInGB = Output.ofNullable(memoryInGB);
+            this.memoryInGB = Codegen.ofNullable(memoryInGB);
             return this;
         }        public ResourceLimitsArgs build() {
             return new ResourceLimitsArgs(cpu, memoryInGB);

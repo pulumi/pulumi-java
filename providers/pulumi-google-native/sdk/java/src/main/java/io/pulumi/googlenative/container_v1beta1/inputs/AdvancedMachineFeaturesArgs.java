@@ -5,6 +5,7 @@ package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> threadsPerCore;
 
     public Output<String> getThreadsPerCore() {
-        return this.threadsPerCore == null ? Output.empty() : this.threadsPerCore;
+        return this.threadsPerCore == null ? Codegen.empty() : this.threadsPerCore;
     }
 
     public AdvancedMachineFeaturesArgs(@Nullable Output<String> threadsPerCore) {
@@ -34,7 +35,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
     }
 
     private AdvancedMachineFeaturesArgs() {
-        this.threadsPerCore = Output.empty();
+        this.threadsPerCore = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class AdvancedMachineFeaturesArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder threadsPerCore(@Nullable String threadsPerCore) {
-            this.threadsPerCore = Output.ofNullable(threadsPerCore);
+            this.threadsPerCore = Codegen.ofNullable(threadsPerCore);
             return this;
         }        public AdvancedMachineFeaturesArgs build() {
             return new AdvancedMachineFeaturesArgs(threadsPerCore);

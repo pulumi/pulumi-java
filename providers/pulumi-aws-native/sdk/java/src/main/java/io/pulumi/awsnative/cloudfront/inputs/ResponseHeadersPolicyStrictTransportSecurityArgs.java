@@ -5,6 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -26,7 +27,7 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
       private final @Nullable Output<Boolean> includeSubdomains;
 
     public Output<Boolean> getIncludeSubdomains() {
-        return this.includeSubdomains == null ? Output.empty() : this.includeSubdomains;
+        return this.includeSubdomains == null ? Codegen.empty() : this.includeSubdomains;
     }
 
     @Import(name="override", required=true)
@@ -40,7 +41,7 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
       private final @Nullable Output<Boolean> preload;
 
     public Output<Boolean> getPreload() {
-        return this.preload == null ? Output.empty() : this.preload;
+        return this.preload == null ? Codegen.empty() : this.preload;
     }
 
     public ResponseHeadersPolicyStrictTransportSecurityArgs(
@@ -55,10 +56,10 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     }
 
     private ResponseHeadersPolicyStrictTransportSecurityArgs() {
-        this.accessControlMaxAgeSec = Output.empty();
-        this.includeSubdomains = Output.empty();
-        this.override = Output.empty();
-        this.preload = Output.empty();
+        this.accessControlMaxAgeSec = Codegen.empty();
+        this.includeSubdomains = Codegen.empty();
+        this.override = Codegen.empty();
+        this.preload = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -100,7 +101,7 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
             return this;
         }
         public Builder includeSubdomains(@Nullable Boolean includeSubdomains) {
-            this.includeSubdomains = Output.ofNullable(includeSubdomains);
+            this.includeSubdomains = Codegen.ofNullable(includeSubdomains);
             return this;
         }
         public Builder override(Output<Boolean> override) {
@@ -116,7 +117,7 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
             return this;
         }
         public Builder preload(@Nullable Boolean preload) {
-            this.preload = Output.ofNullable(preload);
+            this.preload = Codegen.ofNullable(preload);
             return this;
         }        public ResponseHeadersPolicyStrictTransportSecurityArgs build() {
             return new ResponseHeadersPolicyStrictTransportSecurityArgs(accessControlMaxAgeSec, includeSubdomains, override, preload);

@@ -6,6 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProviderArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +28,7 @@ public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.
       private final @Nullable Output<Integer> keyRotationIntervalSeconds;
 
     public Output<Integer> getKeyRotationIntervalSeconds() {
-        return this.keyRotationIntervalSeconds == null ? Output.empty() : this.keyRotationIntervalSeconds;
+        return this.keyRotationIntervalSeconds == null ? Codegen.empty() : this.keyRotationIntervalSeconds;
     }
 
     @Import(name="spekeKeyProvider", required=true)
@@ -45,8 +46,8 @@ public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.
     }
 
     private OriginEndpointDashEncryptionArgs() {
-        this.keyRotationIntervalSeconds = Output.empty();
-        this.spekeKeyProvider = Output.empty();
+        this.keyRotationIntervalSeconds = Codegen.empty();
+        this.spekeKeyProvider = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class OriginEndpointDashEncryptionArgs extends io.pulumi.resources.
             return this;
         }
         public Builder keyRotationIntervalSeconds(@Nullable Integer keyRotationIntervalSeconds) {
-            this.keyRotationIntervalSeconds = Output.ofNullable(keyRotationIntervalSeconds);
+            this.keyRotationIntervalSeconds = Codegen.ofNullable(keyRotationIntervalSeconds);
             return this;
         }
         public Builder spekeKeyProvider(Output<OriginEndpointSpekeKeyProviderArgs> spekeKeyProvider) {

@@ -5,6 +5,7 @@ package io.pulumi.aws.guardduty.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -29,7 +30,7 @@ public final class OrganizationConfigurationDatasourcesS3LogsArgs extends io.pul
     }
 
     private OrganizationConfigurationDatasourcesS3LogsArgs() {
-        this.autoEnable = Output.empty();
+        this.autoEnable = Codegen.empty();
     }
 
     public static Builder builder() {

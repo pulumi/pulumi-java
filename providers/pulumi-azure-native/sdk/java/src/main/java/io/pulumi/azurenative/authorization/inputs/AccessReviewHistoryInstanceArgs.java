@@ -5,6 +5,7 @@ package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> displayName;
 
     public Output<String> getDisplayName() {
-        return this.displayName == null ? Output.empty() : this.displayName;
+        return this.displayName == null ? Codegen.empty() : this.displayName;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> expiration;
 
     public Output<String> getExpiration() {
-        return this.expiration == null ? Output.empty() : this.expiration;
+        return this.expiration == null ? Codegen.empty() : this.expiration;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> fulfilledDateTime;
 
     public Output<String> getFulfilledDateTime() {
-        return this.fulfilledDateTime == null ? Output.empty() : this.fulfilledDateTime;
+        return this.fulfilledDateTime == null ? Codegen.empty() : this.fulfilledDateTime;
     }
 
     /**
@@ -59,7 +60,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> reviewHistoryPeriodEndDateTime;
 
     public Output<String> getReviewHistoryPeriodEndDateTime() {
-        return this.reviewHistoryPeriodEndDateTime == null ? Output.empty() : this.reviewHistoryPeriodEndDateTime;
+        return this.reviewHistoryPeriodEndDateTime == null ? Codegen.empty() : this.reviewHistoryPeriodEndDateTime;
     }
 
     /**
@@ -70,7 +71,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> reviewHistoryPeriodStartDateTime;
 
     public Output<String> getReviewHistoryPeriodStartDateTime() {
-        return this.reviewHistoryPeriodStartDateTime == null ? Output.empty() : this.reviewHistoryPeriodStartDateTime;
+        return this.reviewHistoryPeriodStartDateTime == null ? Codegen.empty() : this.reviewHistoryPeriodStartDateTime;
     }
 
     /**
@@ -81,7 +82,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> runDateTime;
 
     public Output<String> getRunDateTime() {
-        return this.runDateTime == null ? Output.empty() : this.runDateTime;
+        return this.runDateTime == null ? Codegen.empty() : this.runDateTime;
     }
 
     public AccessReviewHistoryInstanceArgs(
@@ -100,12 +101,12 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
     }
 
     private AccessReviewHistoryInstanceArgs() {
-        this.displayName = Output.empty();
-        this.expiration = Output.empty();
-        this.fulfilledDateTime = Output.empty();
-        this.reviewHistoryPeriodEndDateTime = Output.empty();
-        this.reviewHistoryPeriodStartDateTime = Output.empty();
-        this.runDateTime = Output.empty();
+        this.displayName = Codegen.empty();
+        this.expiration = Codegen.empty();
+        this.fulfilledDateTime = Codegen.empty();
+        this.reviewHistoryPeriodEndDateTime = Codegen.empty();
+        this.reviewHistoryPeriodStartDateTime = Codegen.empty();
+        this.runDateTime = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -143,7 +144,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder displayName(@Nullable String displayName) {
-            this.displayName = Output.ofNullable(displayName);
+            this.displayName = Codegen.ofNullable(displayName);
             return this;
         }
         public Builder expiration(@Nullable Output<String> expiration) {
@@ -151,7 +152,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder expiration(@Nullable String expiration) {
-            this.expiration = Output.ofNullable(expiration);
+            this.expiration = Codegen.ofNullable(expiration);
             return this;
         }
         public Builder fulfilledDateTime(@Nullable Output<String> fulfilledDateTime) {
@@ -159,7 +160,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder fulfilledDateTime(@Nullable String fulfilledDateTime) {
-            this.fulfilledDateTime = Output.ofNullable(fulfilledDateTime);
+            this.fulfilledDateTime = Codegen.ofNullable(fulfilledDateTime);
             return this;
         }
         public Builder reviewHistoryPeriodEndDateTime(@Nullable Output<String> reviewHistoryPeriodEndDateTime) {
@@ -167,7 +168,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder reviewHistoryPeriodEndDateTime(@Nullable String reviewHistoryPeriodEndDateTime) {
-            this.reviewHistoryPeriodEndDateTime = Output.ofNullable(reviewHistoryPeriodEndDateTime);
+            this.reviewHistoryPeriodEndDateTime = Codegen.ofNullable(reviewHistoryPeriodEndDateTime);
             return this;
         }
         public Builder reviewHistoryPeriodStartDateTime(@Nullable Output<String> reviewHistoryPeriodStartDateTime) {
@@ -175,7 +176,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder reviewHistoryPeriodStartDateTime(@Nullable String reviewHistoryPeriodStartDateTime) {
-            this.reviewHistoryPeriodStartDateTime = Output.ofNullable(reviewHistoryPeriodStartDateTime);
+            this.reviewHistoryPeriodStartDateTime = Codegen.ofNullable(reviewHistoryPeriodStartDateTime);
             return this;
         }
         public Builder runDateTime(@Nullable Output<String> runDateTime) {
@@ -183,7 +184,7 @@ public final class AccessReviewHistoryInstanceArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder runDateTime(@Nullable String runDateTime) {
-            this.runDateTime = Output.ofNullable(runDateTime);
+            this.runDateTime = Codegen.ofNullable(runDateTime);
             return this;
         }        public AccessReviewHistoryInstanceArgs build() {
             return new AccessReviewHistoryInstanceArgs(displayName, expiration, fulfilledDateTime, reviewHistoryPeriodEndDateTime, reviewHistoryPeriodStartDateTime, runDateTime);

@@ -7,6 +7,7 @@ import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleActionArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleRuleConditionArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -57,10 +58,10 @@ public final class ListenerRuleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ListenerRuleArgs() {
-        this.actions = Output.empty();
-        this.conditions = Output.empty();
-        this.listenerArn = Output.empty();
-        this.priority = Output.empty();
+        this.actions = Codegen.empty();
+        this.conditions = Codegen.empty();
+        this.listenerArn = Codegen.empty();
+        this.priority = Codegen.empty();
     }
 
     public static Builder builder() {

@@ -5,6 +5,7 @@ package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementGetArgs;
@@ -28,7 +29,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> createTime;
 
     public Output<String> getCreateTime() {
-        return this.createTime == null ? Output.empty() : this.createTime;
+        return this.createTime == null ? Codegen.empty() : this.createTime;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> dagTimeout;
 
     public Output<String> getDagTimeout() {
-        return this.dagTimeout == null ? Output.empty() : this.dagTimeout;
+        return this.dagTimeout == null ? Codegen.empty() : this.dagTimeout;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs;
 
     public Output<List<WorkflowTemplateJobGetArgs>> getJobs() {
-        return this.jobs == null ? Output.empty() : this.jobs;
+        return this.jobs == null ? Codegen.empty() : this.jobs;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<Map<String,String>> labels;
 
     public Output<Map<String,String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -72,7 +73,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -83,7 +84,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters;
 
     public Output<List<WorkflowTemplateParameterGetArgs>> getParameters() {
-        return this.parameters == null ? Output.empty() : this.parameters;
+        return this.parameters == null ? Codegen.empty() : this.parameters;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<WorkflowTemplatePlacementGetArgs> placement;
 
     public Output<WorkflowTemplatePlacementGetArgs> getPlacement() {
-        return this.placement == null ? Output.empty() : this.placement;
+        return this.placement == null ? Codegen.empty() : this.placement;
     }
 
     /**
@@ -116,7 +117,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -127,7 +128,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> updateTime;
 
     public Output<String> getUpdateTime() {
-        return this.updateTime == null ? Output.empty() : this.updateTime;
+        return this.updateTime == null ? Codegen.empty() : this.updateTime;
     }
 
     /**
@@ -143,7 +144,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
 
     @Deprecated /* version is not useful as a configurable field, and will be removed in the future. */
     public Output<Integer> getVersion() {
-        return this.version == null ? Output.empty() : this.version;
+        return this.version == null ? Codegen.empty() : this.version;
     }
 
     public WorkflowTemplateState(
@@ -172,17 +173,17 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
     }
 
     private WorkflowTemplateState() {
-        this.createTime = Output.empty();
-        this.dagTimeout = Output.empty();
-        this.jobs = Output.empty();
-        this.labels = Output.empty();
-        this.location = Output.empty();
-        this.name = Output.empty();
-        this.parameters = Output.empty();
-        this.placement = Output.empty();
-        this.project = Output.empty();
-        this.updateTime = Output.empty();
-        this.version = Output.empty();
+        this.createTime = Codegen.empty();
+        this.dagTimeout = Codegen.empty();
+        this.jobs = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.location = Codegen.empty();
+        this.name = Codegen.empty();
+        this.parameters = Codegen.empty();
+        this.placement = Codegen.empty();
+        this.project = Codegen.empty();
+        this.updateTime = Codegen.empty();
+        this.version = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -230,7 +231,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder createTime(@Nullable String createTime) {
-            this.createTime = Output.ofNullable(createTime);
+            this.createTime = Codegen.ofNullable(createTime);
             return this;
         }
         public Builder dagTimeout(@Nullable Output<String> dagTimeout) {
@@ -238,7 +239,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder dagTimeout(@Nullable String dagTimeout) {
-            this.dagTimeout = Output.ofNullable(dagTimeout);
+            this.dagTimeout = Codegen.ofNullable(dagTimeout);
             return this;
         }
         public Builder jobs(@Nullable Output<List<WorkflowTemplateJobGetArgs>> jobs) {
@@ -246,7 +247,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder jobs(@Nullable List<WorkflowTemplateJobGetArgs> jobs) {
-            this.jobs = Output.ofNullable(jobs);
+            this.jobs = Codegen.ofNullable(jobs);
             return this;
         }
         public Builder jobs(WorkflowTemplateJobGetArgs... jobs) {
@@ -257,7 +258,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder labels(@Nullable Map<String,String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -265,7 +266,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -273,7 +274,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder parameters(@Nullable Output<List<WorkflowTemplateParameterGetArgs>> parameters) {
@@ -281,7 +282,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder parameters(@Nullable List<WorkflowTemplateParameterGetArgs> parameters) {
-            this.parameters = Output.ofNullable(parameters);
+            this.parameters = Codegen.ofNullable(parameters);
             return this;
         }
         public Builder parameters(WorkflowTemplateParameterGetArgs... parameters) {
@@ -292,7 +293,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder placement(@Nullable WorkflowTemplatePlacementGetArgs placement) {
-            this.placement = Output.ofNullable(placement);
+            this.placement = Codegen.ofNullable(placement);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -300,7 +301,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder updateTime(@Nullable Output<String> updateTime) {
@@ -308,7 +309,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder updateTime(@Nullable String updateTime) {
-            this.updateTime = Output.ofNullable(updateTime);
+            this.updateTime = Codegen.ofNullable(updateTime);
             return this;
         }
         public Builder version(@Nullable Output<Integer> version) {
@@ -316,7 +317,7 @@ public final class WorkflowTemplateState extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder version(@Nullable Integer version) {
-            this.version = Output.ofNullable(version);
+            this.version = Codegen.ofNullable(version);
             return this;
         }        public WorkflowTemplateState build() {
             return new WorkflowTemplateState(createTime, dagTimeout, jobs, labels, location, name, parameters, placement, project, updateTime, version);

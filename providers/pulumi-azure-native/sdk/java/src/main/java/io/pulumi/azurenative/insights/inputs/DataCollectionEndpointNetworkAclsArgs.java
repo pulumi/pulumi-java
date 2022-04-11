@@ -7,6 +7,7 @@ import io.pulumi.azurenative.insights.enums.KnownPublicNetworkAccessOptions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +29,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
       private final @Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess;
 
     public Output<Either<String,KnownPublicNetworkAccessOptions>> getPublicNetworkAccess() {
-        return this.publicNetworkAccess == null ? Output.empty() : this.publicNetworkAccess;
+        return this.publicNetworkAccess == null ? Codegen.empty() : this.publicNetworkAccess;
     }
 
     public DataCollectionEndpointNetworkAclsArgs(@Nullable Output<Either<String,KnownPublicNetworkAccessOptions>> publicNetworkAccess) {
@@ -36,7 +37,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
     }
 
     private DataCollectionEndpointNetworkAclsArgs() {
-        this.publicNetworkAccess = Output.empty();
+        this.publicNetworkAccess = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -64,7 +65,7 @@ public final class DataCollectionEndpointNetworkAclsArgs extends io.pulumi.resou
             return this;
         }
         public Builder publicNetworkAccess(@Nullable Either<String,KnownPublicNetworkAccessOptions> publicNetworkAccess) {
-            this.publicNetworkAccess = Output.ofNullable(publicNetworkAccess);
+            this.publicNetworkAccess = Codegen.ofNullable(publicNetworkAccess);
             return this;
         }        public DataCollectionEndpointNetworkAclsArgs build() {
             return new DataCollectionEndpointNetworkAclsArgs(publicNetworkAccess);

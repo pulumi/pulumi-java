@@ -5,6 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
       private final @Nullable Output<String> clientId;
 
     public Output<String> getClientId() {
-        return this.clientId == null ? Output.empty() : this.clientId;
+        return this.clientId == null ? Codegen.empty() : this.clientId;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
       private final @Nullable Output<String> customerAdminGroupId;
 
     public Output<String> getCustomerAdminGroupId() {
-        return this.customerAdminGroupId == null ? Output.empty() : this.customerAdminGroupId;
+        return this.customerAdminGroupId == null ? Codegen.empty() : this.customerAdminGroupId;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
       private final @Nullable Output<String> secret;
 
     public Output<String> getSecret() {
-        return this.secret == null ? Output.empty() : this.secret;
+        return this.secret == null ? Codegen.empty() : this.secret;
     }
 
     /**
@@ -71,7 +72,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
       private final @Nullable Output<String> tenantId;
 
     public Output<String> getTenantId() {
-        return this.tenantId == null ? Output.empty() : this.tenantId;
+        return this.tenantId == null ? Codegen.empty() : this.tenantId;
     }
 
     public OpenShiftManagedClusterAADIdentityProviderArgs(
@@ -88,11 +89,11 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
     }
 
     private OpenShiftManagedClusterAADIdentityProviderArgs() {
-        this.clientId = Output.empty();
-        this.customerAdminGroupId = Output.empty();
-        this.kind = Output.empty();
-        this.secret = Output.empty();
-        this.tenantId = Output.empty();
+        this.clientId = Codegen.empty();
+        this.customerAdminGroupId = Codegen.empty();
+        this.kind = Codegen.empty();
+        this.secret = Codegen.empty();
+        this.tenantId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -128,7 +129,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
             return this;
         }
         public Builder clientId(@Nullable String clientId) {
-            this.clientId = Output.ofNullable(clientId);
+            this.clientId = Codegen.ofNullable(clientId);
             return this;
         }
         public Builder customerAdminGroupId(@Nullable Output<String> customerAdminGroupId) {
@@ -136,7 +137,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
             return this;
         }
         public Builder customerAdminGroupId(@Nullable String customerAdminGroupId) {
-            this.customerAdminGroupId = Output.ofNullable(customerAdminGroupId);
+            this.customerAdminGroupId = Codegen.ofNullable(customerAdminGroupId);
             return this;
         }
         public Builder kind(Output<String> kind) {
@@ -152,7 +153,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
             return this;
         }
         public Builder secret(@Nullable String secret) {
-            this.secret = Output.ofNullable(secret);
+            this.secret = Codegen.ofNullable(secret);
             return this;
         }
         public Builder tenantId(@Nullable Output<String> tenantId) {
@@ -160,7 +161,7 @@ public final class OpenShiftManagedClusterAADIdentityProviderArgs extends io.pul
             return this;
         }
         public Builder tenantId(@Nullable String tenantId) {
-            this.tenantId = Output.ofNullable(tenantId);
+            this.tenantId = Codegen.ofNullable(tenantId);
             return this;
         }        public OpenShiftManagedClusterAADIdentityProviderArgs build() {
             return new OpenShiftManagedClusterAADIdentityProviderArgs(clientId, customerAdminGroupId, kind, secret, tenantId);

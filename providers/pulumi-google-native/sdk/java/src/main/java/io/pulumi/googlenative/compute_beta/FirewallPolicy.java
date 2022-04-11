@@ -6,6 +6,7 @@ package io.pulumi.googlenative.compute_beta;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.FirewallPolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallPolicyAssociationResponse;
@@ -213,7 +214,7 @@ public class FirewallPolicy extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public FirewallPolicy(String name, @Nullable FirewallPolicyArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("google-native:compute/beta:FirewallPolicy", name, args == null ? FirewallPolicyArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("google-native:compute/beta:FirewallPolicy", name, args == null ? FirewallPolicyArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private FirewallPolicy(String name, Output<String> id, @Nullable io.pulumi.resources.CustomResourceOptions options) {

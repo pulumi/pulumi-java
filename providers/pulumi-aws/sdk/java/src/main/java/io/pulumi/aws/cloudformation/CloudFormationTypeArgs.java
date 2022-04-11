@@ -6,6 +6,7 @@ package io.pulumi.aws.cloudformation;
 import io.pulumi.aws.cloudformation.inputs.CloudFormationTypeLoggingConfigArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> executionRoleArn;
 
     public Output<String> getExecutionRoleArn() {
-        return this.executionRoleArn == null ? Output.empty() : this.executionRoleArn;
+        return this.executionRoleArn == null ? Codegen.empty() : this.executionRoleArn;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig;
 
     public Output<CloudFormationTypeLoggingConfigArgs> getLoggingConfig() {
-        return this.loggingConfig == null ? Output.empty() : this.loggingConfig;
+        return this.loggingConfig == null ? Codegen.empty() : this.loggingConfig;
     }
 
     /**
@@ -56,7 +57,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
       private final @Nullable Output<String> type;
 
     public Output<String> getType() {
-        return this.type == null ? Output.empty() : this.type;
+        return this.type == null ? Codegen.empty() : this.type;
     }
 
     /**
@@ -84,11 +85,11 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
     }
 
     private CloudFormationTypeArgs() {
-        this.executionRoleArn = Output.empty();
-        this.loggingConfig = Output.empty();
-        this.schemaHandlerPackage = Output.empty();
-        this.type = Output.empty();
-        this.typeName = Output.empty();
+        this.executionRoleArn = Codegen.empty();
+        this.loggingConfig = Codegen.empty();
+        this.schemaHandlerPackage = Codegen.empty();
+        this.type = Codegen.empty();
+        this.typeName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder executionRoleArn(@Nullable String executionRoleArn) {
-            this.executionRoleArn = Output.ofNullable(executionRoleArn);
+            this.executionRoleArn = Codegen.ofNullable(executionRoleArn);
             return this;
         }
         public Builder loggingConfig(@Nullable Output<CloudFormationTypeLoggingConfigArgs> loggingConfig) {
@@ -132,7 +133,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder loggingConfig(@Nullable CloudFormationTypeLoggingConfigArgs loggingConfig) {
-            this.loggingConfig = Output.ofNullable(loggingConfig);
+            this.loggingConfig = Codegen.ofNullable(loggingConfig);
             return this;
         }
         public Builder schemaHandlerPackage(Output<String> schemaHandlerPackage) {
@@ -148,7 +149,7 @@ public final class CloudFormationTypeArgs extends io.pulumi.resources.ResourceAr
             return this;
         }
         public Builder type(@Nullable String type) {
-            this.type = Output.ofNullable(type);
+            this.type = Codegen.ofNullable(type);
             return this;
         }
         public Builder typeName(Output<String> typeName) {

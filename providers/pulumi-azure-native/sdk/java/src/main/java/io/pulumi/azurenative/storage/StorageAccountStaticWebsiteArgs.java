@@ -5,6 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> error404Document;
 
     public Output<String> getError404Document() {
-        return this.error404Document == null ? Output.empty() : this.error404Document;
+        return this.error404Document == null ? Codegen.empty() : this.error404Document;
     }
 
     /**
@@ -44,7 +45,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
       private final @Nullable Output<String> indexDocument;
 
     public Output<String> getIndexDocument() {
-        return this.indexDocument == null ? Output.empty() : this.indexDocument;
+        return this.indexDocument == null ? Codegen.empty() : this.indexDocument;
     }
 
     /**
@@ -70,10 +71,10 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
     }
 
     private StorageAccountStaticWebsiteArgs() {
-        this.accountName = Output.empty();
-        this.error404Document = Output.empty();
-        this.indexDocument = Output.empty();
-        this.resourceGroupName = Output.empty();
+        this.accountName = Codegen.empty();
+        this.error404Document = Codegen.empty();
+        this.indexDocument = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -115,7 +116,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder error404Document(@Nullable String error404Document) {
-            this.error404Document = Output.ofNullable(error404Document);
+            this.error404Document = Codegen.ofNullable(error404Document);
             return this;
         }
         public Builder indexDocument(@Nullable Output<String> indexDocument) {
@@ -123,7 +124,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder indexDocument(@Nullable String indexDocument) {
-            this.indexDocument = Output.ofNullable(indexDocument);
+            this.indexDocument = Codegen.ofNullable(indexDocument);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {

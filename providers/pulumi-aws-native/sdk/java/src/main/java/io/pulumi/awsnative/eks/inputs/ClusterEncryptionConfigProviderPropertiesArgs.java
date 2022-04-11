@@ -5,6 +5,7 @@ package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
       private final @Nullable Output<String> keyArn;
 
     public Output<String> getKeyArn() {
-        return this.keyArn == null ? Output.empty() : this.keyArn;
+        return this.keyArn == null ? Codegen.empty() : this.keyArn;
     }
 
     public ClusterEncryptionConfigProviderPropertiesArgs(@Nullable Output<String> keyArn) {
@@ -34,7 +35,7 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
     }
 
     private ClusterEncryptionConfigProviderPropertiesArgs() {
-        this.keyArn = Output.empty();
+        this.keyArn = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class ClusterEncryptionConfigProviderPropertiesArgs extends io.pulu
             return this;
         }
         public Builder keyArn(@Nullable String keyArn) {
-            this.keyArn = Output.ofNullable(keyArn);
+            this.keyArn = Codegen.ofNullable(keyArn);
             return this;
         }        public ClusterEncryptionConfigProviderPropertiesArgs build() {
             return new ClusterEncryptionConfigProviderPropertiesArgs(keyArn);

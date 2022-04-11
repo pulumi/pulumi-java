@@ -5,6 +5,7 @@ package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
       private final @Nullable Output<ServiceIamMemberConditionArgs> condition;
 
     public Output<ServiceIamMemberConditionArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     @Import(name="member", required=true)
@@ -61,10 +62,10 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
     }
 
     private ServiceIamMemberArgs() {
-        this.condition = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
-        this.serviceName = Output.empty();
+        this.condition = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
+        this.serviceName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -98,7 +99,7 @@ public final class ServiceIamMemberArgs extends io.pulumi.resources.ResourceArgs
             return this;
         }
         public Builder condition(@Nullable ServiceIamMemberConditionArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder member(Output<String> member) {

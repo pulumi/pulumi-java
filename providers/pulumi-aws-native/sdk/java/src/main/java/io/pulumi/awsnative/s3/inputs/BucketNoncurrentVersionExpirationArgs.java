@@ -5,6 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
       private final @Nullable Output<Integer> newerNoncurrentVersions;
 
     public Output<Integer> getNewerNoncurrentVersions() {
-        return this.newerNoncurrentVersions == null ? Output.empty() : this.newerNoncurrentVersions;
+        return this.newerNoncurrentVersions == null ? Codegen.empty() : this.newerNoncurrentVersions;
     }
 
     /**
@@ -48,8 +49,8 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
     }
 
     private BucketNoncurrentVersionExpirationArgs() {
-        this.newerNoncurrentVersions = Output.empty();
-        this.noncurrentDays = Output.empty();
+        this.newerNoncurrentVersions = Codegen.empty();
+        this.noncurrentDays = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -79,7 +80,7 @@ public final class BucketNoncurrentVersionExpirationArgs extends io.pulumi.resou
             return this;
         }
         public Builder newerNoncurrentVersions(@Nullable Integer newerNoncurrentVersions) {
-            this.newerNoncurrentVersions = Output.ofNullable(newerNoncurrentVersions);
+            this.newerNoncurrentVersions = Codegen.ofNullable(newerNoncurrentVersions);
             return this;
         }
         public Builder noncurrentDays(Output<Integer> noncurrentDays) {

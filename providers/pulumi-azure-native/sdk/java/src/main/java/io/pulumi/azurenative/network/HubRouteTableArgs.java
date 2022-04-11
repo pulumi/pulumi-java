@@ -6,6 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.inputs.HubRouteArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> id;
 
     public Output<String> getId() {
-        return this.id == null ? Output.empty() : this.id;
+        return this.id == null ? Codegen.empty() : this.id;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> labels;
 
     public Output<List<String>> getLabels() {
-        return this.labels == null ? Output.empty() : this.labels;
+        return this.labels == null ? Codegen.empty() : this.labels;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -68,7 +69,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> routeTableName;
 
     public Output<String> getRouteTableName() {
-        return this.routeTableName == null ? Output.empty() : this.routeTableName;
+        return this.routeTableName == null ? Codegen.empty() : this.routeTableName;
     }
 
     /**
@@ -79,7 +80,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<HubRouteArgs>> routes;
 
     public Output<List<HubRouteArgs>> getRoutes() {
-        return this.routes == null ? Output.empty() : this.routes;
+        return this.routes == null ? Codegen.empty() : this.routes;
     }
 
     /**
@@ -111,13 +112,13 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private HubRouteTableArgs() {
-        this.id = Output.empty();
-        this.labels = Output.empty();
-        this.name = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.routeTableName = Output.empty();
-        this.routes = Output.empty();
-        this.virtualHubName = Output.empty();
+        this.id = Codegen.empty();
+        this.labels = Codegen.empty();
+        this.name = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.routeTableName = Codegen.empty();
+        this.routes = Codegen.empty();
+        this.virtualHubName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -157,7 +158,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder id(@Nullable String id) {
-            this.id = Output.ofNullable(id);
+            this.id = Codegen.ofNullable(id);
             return this;
         }
         public Builder labels(@Nullable Output<List<String>> labels) {
@@ -165,7 +166,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder labels(@Nullable List<String> labels) {
-            this.labels = Output.ofNullable(labels);
+            this.labels = Codegen.ofNullable(labels);
             return this;
         }
         public Builder labels(String... labels) {
@@ -176,7 +177,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -192,7 +193,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routeTableName(@Nullable String routeTableName) {
-            this.routeTableName = Output.ofNullable(routeTableName);
+            this.routeTableName = Codegen.ofNullable(routeTableName);
             return this;
         }
         public Builder routes(@Nullable Output<List<HubRouteArgs>> routes) {
@@ -200,7 +201,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder routes(@Nullable List<HubRouteArgs> routes) {
-            this.routes = Output.ofNullable(routes);
+            this.routes = Codegen.ofNullable(routes);
             return this;
         }
         public Builder routes(HubRouteArgs... routes) {

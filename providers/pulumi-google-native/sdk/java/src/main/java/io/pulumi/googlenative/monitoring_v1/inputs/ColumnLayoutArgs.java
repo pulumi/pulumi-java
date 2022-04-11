@@ -5,6 +5,7 @@ package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.monitoring_v1.inputs.ColumnArgs;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ColumnArgs>> columns;
 
     public Output<List<ColumnArgs>> getColumns() {
-        return this.columns == null ? Output.empty() : this.columns;
+        return this.columns == null ? Codegen.empty() : this.columns;
     }
 
     public ColumnLayoutArgs(@Nullable Output<List<ColumnArgs>> columns) {
@@ -35,7 +36,7 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ColumnLayoutArgs() {
-        this.columns = Output.empty();
+        this.columns = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -63,7 +64,7 @@ public final class ColumnLayoutArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder columns(@Nullable List<ColumnArgs> columns) {
-            this.columns = Output.ofNullable(columns);
+            this.columns = Codegen.ofNullable(columns);
             return this;
         }
         public Builder columns(ColumnArgs... columns) {

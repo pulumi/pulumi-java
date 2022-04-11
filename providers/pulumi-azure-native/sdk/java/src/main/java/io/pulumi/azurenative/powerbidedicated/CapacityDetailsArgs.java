@@ -10,6 +10,7 @@ import io.pulumi.azurenative.powerbidedicated.inputs.SystemDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +29,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<DedicatedCapacityAdministratorsArgs> administration;
 
     public Output<DedicatedCapacityAdministratorsArgs> getAdministration() {
-        return this.administration == null ? Output.empty() : this.administration;
+        return this.administration == null ? Codegen.empty() : this.administration;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> dedicatedCapacityName;
 
     public Output<String> getDedicatedCapacityName() {
-        return this.dedicatedCapacityName == null ? Output.empty() : this.dedicatedCapacityName;
+        return this.dedicatedCapacityName == null ? Codegen.empty() : this.dedicatedCapacityName;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Either<String,Mode>> mode;
 
     public Output<Either<String,Mode>> getMode() {
-        return this.mode == null ? Output.empty() : this.mode;
+        return this.mode == null ? Codegen.empty() : this.mode;
     }
 
     /**
@@ -94,7 +95,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<SystemDataArgs> systemData;
 
     public Output<SystemDataArgs> getSystemData() {
-        return this.systemData == null ? Output.empty() : this.systemData;
+        return this.systemData == null ? Codegen.empty() : this.systemData;
     }
 
     /**
@@ -105,7 +106,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public CapacityDetailsArgs(
@@ -128,14 +129,14 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private CapacityDetailsArgs() {
-        this.administration = Output.empty();
-        this.dedicatedCapacityName = Output.empty();
-        this.location = Output.empty();
-        this.mode = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.sku = Output.empty();
-        this.systemData = Output.empty();
-        this.tags = Output.empty();
+        this.administration = Codegen.empty();
+        this.dedicatedCapacityName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.mode = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.sku = Codegen.empty();
+        this.systemData = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -177,7 +178,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder administration(@Nullable DedicatedCapacityAdministratorsArgs administration) {
-            this.administration = Output.ofNullable(administration);
+            this.administration = Codegen.ofNullable(administration);
             return this;
         }
         public Builder dedicatedCapacityName(@Nullable Output<String> dedicatedCapacityName) {
@@ -185,7 +186,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder dedicatedCapacityName(@Nullable String dedicatedCapacityName) {
-            this.dedicatedCapacityName = Output.ofNullable(dedicatedCapacityName);
+            this.dedicatedCapacityName = Codegen.ofNullable(dedicatedCapacityName);
             return this;
         }
         public Builder location(@Nullable Output<String> location) {
@@ -193,7 +194,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder mode(@Nullable Output<Either<String,Mode>> mode) {
@@ -201,7 +202,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder mode(@Nullable Either<String,Mode> mode) {
-            this.mode = Output.ofNullable(mode);
+            this.mode = Codegen.ofNullable(mode);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -225,7 +226,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder systemData(@Nullable SystemDataArgs systemData) {
-            this.systemData = Output.ofNullable(systemData);
+            this.systemData = Codegen.ofNullable(systemData);
             return this;
         }
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
@@ -233,7 +234,7 @@ public final class CapacityDetailsArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public CapacityDetailsArgs build() {
             return new CapacityDetailsArgs(administration, dedicatedCapacityName, location, mode, resourceGroupName, sku, systemData, tags);

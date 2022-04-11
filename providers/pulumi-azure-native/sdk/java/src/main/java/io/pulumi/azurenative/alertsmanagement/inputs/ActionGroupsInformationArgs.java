@@ -5,6 +5,7 @@ package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customEmailSubject;
 
     public Output<String> getCustomEmailSubject() {
-        return this.customEmailSubject == null ? Output.empty() : this.customEmailSubject;
+        return this.customEmailSubject == null ? Codegen.empty() : this.customEmailSubject;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
       private final @Nullable Output<String> customWebhookPayload;
 
     public Output<String> getCustomWebhookPayload() {
-        return this.customWebhookPayload == null ? Output.empty() : this.customWebhookPayload;
+        return this.customWebhookPayload == null ? Codegen.empty() : this.customWebhookPayload;
     }
 
     /**
@@ -62,9 +63,9 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
     }
 
     private ActionGroupsInformationArgs() {
-        this.customEmailSubject = Output.empty();
-        this.customWebhookPayload = Output.empty();
-        this.groupIds = Output.empty();
+        this.customEmailSubject = Codegen.empty();
+        this.customWebhookPayload = Codegen.empty();
+        this.groupIds = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -96,7 +97,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customEmailSubject(@Nullable String customEmailSubject) {
-            this.customEmailSubject = Output.ofNullable(customEmailSubject);
+            this.customEmailSubject = Codegen.ofNullable(customEmailSubject);
             return this;
         }
         public Builder customWebhookPayload(@Nullable Output<String> customWebhookPayload) {
@@ -104,7 +105,7 @@ public final class ActionGroupsInformationArgs extends io.pulumi.resources.Resou
             return this;
         }
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
-            this.customWebhookPayload = Output.ofNullable(customWebhookPayload);
+            this.customWebhookPayload = Codegen.ofNullable(customWebhookPayload);
             return this;
         }
         public Builder groupIds(Output<List<String>> groupIds) {

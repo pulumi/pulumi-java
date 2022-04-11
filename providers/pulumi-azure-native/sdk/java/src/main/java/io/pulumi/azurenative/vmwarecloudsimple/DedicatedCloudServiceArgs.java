@@ -5,6 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> dedicatedCloudServiceName;
 
     public Output<String> getDedicatedCloudServiceName() {
-        return this.dedicatedCloudServiceName == null ? Output.empty() : this.dedicatedCloudServiceName;
+        return this.dedicatedCloudServiceName == null ? Codegen.empty() : this.dedicatedCloudServiceName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public DedicatedCloudServiceArgs(
@@ -84,11 +85,11 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
     }
 
     private DedicatedCloudServiceArgs() {
-        this.dedicatedCloudServiceName = Output.empty();
-        this.gatewaySubnet = Output.empty();
-        this.location = Output.empty();
-        this.resourceGroupName = Output.empty();
-        this.tags = Output.empty();
+        this.dedicatedCloudServiceName = Codegen.empty();
+        this.gatewaySubnet = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceGroupName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder dedicatedCloudServiceName(@Nullable String dedicatedCloudServiceName) {
-            this.dedicatedCloudServiceName = Output.ofNullable(dedicatedCloudServiceName);
+            this.dedicatedCloudServiceName = Codegen.ofNullable(dedicatedCloudServiceName);
             return this;
         }
         public Builder gatewaySubnet(Output<String> gatewaySubnet) {
@@ -140,7 +141,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceGroupName(Output<String> resourceGroupName) {
@@ -156,7 +157,7 @@ public final class DedicatedCloudServiceArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public DedicatedCloudServiceArgs build() {
             return new DedicatedCloudServiceArgs(dedicatedCloudServiceName, gatewaySubnet, location, resourceGroupName, tags);

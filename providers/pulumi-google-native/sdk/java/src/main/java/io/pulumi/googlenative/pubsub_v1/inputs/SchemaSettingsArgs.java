@@ -5,6 +5,7 @@ package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.pubsub_v1.enums.SchemaSettingsEncoding;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<SchemaSettingsEncoding> encoding;
 
     public Output<SchemaSettingsEncoding> getEncoding() {
-        return this.encoding == null ? Output.empty() : this.encoding;
+        return this.encoding == null ? Codegen.empty() : this.encoding;
     }
 
     /**
@@ -49,8 +50,8 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private SchemaSettingsArgs() {
-        this.encoding = Output.empty();
-        this.schema = Output.empty();
+        this.encoding = Codegen.empty();
+        this.schema = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class SchemaSettingsArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder encoding(@Nullable SchemaSettingsEncoding encoding) {
-            this.encoding = Output.ofNullable(encoding);
+            this.encoding = Codegen.ofNullable(encoding);
             return this;
         }
         public Builder schema(Output<String> schema) {

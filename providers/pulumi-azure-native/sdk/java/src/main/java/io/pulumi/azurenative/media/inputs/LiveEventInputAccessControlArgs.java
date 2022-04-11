@@ -6,6 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.IPAccessControlArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +27,7 @@ public final class LiveEventInputAccessControlArgs extends io.pulumi.resources.R
       private final @Nullable Output<IPAccessControlArgs> ip;
 
     public Output<IPAccessControlArgs> getIp() {
-        return this.ip == null ? Output.empty() : this.ip;
+        return this.ip == null ? Codegen.empty() : this.ip;
     }
 
     public LiveEventInputAccessControlArgs(@Nullable Output<IPAccessControlArgs> ip) {
@@ -34,7 +35,7 @@ public final class LiveEventInputAccessControlArgs extends io.pulumi.resources.R
     }
 
     private LiveEventInputAccessControlArgs() {
-        this.ip = Output.empty();
+        this.ip = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -62,7 +63,7 @@ public final class LiveEventInputAccessControlArgs extends io.pulumi.resources.R
             return this;
         }
         public Builder ip(@Nullable IPAccessControlArgs ip) {
-            this.ip = Output.ofNullable(ip);
+            this.ip = Codegen.ofNullable(ip);
             return this;
         }        public LiveEventInputAccessControlArgs build() {
             return new LiveEventInputAccessControlArgs(ip);

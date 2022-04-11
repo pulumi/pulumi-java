@@ -5,6 +5,7 @@ package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -47,8 +48,8 @@ public final class DockerExecutorArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private DockerExecutorArgs() {
-        this.cmd = Output.empty();
-        this.imageName = Output.empty();
+        this.cmd = Codegen.empty();
+        this.imageName = Codegen.empty();
     }
 
     public static Builder builder() {

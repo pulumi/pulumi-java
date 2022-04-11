@@ -6,6 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -33,7 +34,7 @@ public final class PrivateEndpointConnectionPropertiesArgs extends io.pulumi.res
     }
 
     private PrivateEndpointConnectionPropertiesArgs() {
-        this.privateLinkServiceConnectionState = Output.empty();
+        this.privateLinkServiceConnectionState = Codegen.empty();
     }
 
     public static Builder builder() {

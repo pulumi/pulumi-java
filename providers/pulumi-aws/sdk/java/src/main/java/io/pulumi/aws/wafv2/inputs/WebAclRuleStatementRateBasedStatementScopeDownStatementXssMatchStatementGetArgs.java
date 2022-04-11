@@ -7,6 +7,7 @@ import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDown
 import io.pulumi.aws.wafv2.inputs.WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformationGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +25,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementXssMat
       private final @Nullable Output<WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementFieldToMatchGetArgs> fieldToMatch;
 
     public Output<WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementFieldToMatchGetArgs> getFieldToMatch() {
-        return this.fieldToMatch == null ? Output.empty() : this.fieldToMatch;
+        return this.fieldToMatch == null ? Codegen.empty() : this.fieldToMatch;
     }
 
     /**
@@ -46,8 +47,8 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementXssMat
     }
 
     private WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementGetArgs() {
-        this.fieldToMatch = Output.empty();
-        this.textTransformations = Output.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -77,7 +78,7 @@ public final class WebAclRuleStatementRateBasedStatementScopeDownStatementXssMat
             return this;
         }
         public Builder fieldToMatch(@Nullable WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementFieldToMatchGetArgs fieldToMatch) {
-            this.fieldToMatch = Output.ofNullable(fieldToMatch);
+            this.fieldToMatch = Codegen.ofNullable(fieldToMatch);
             return this;
         }
         public Builder textTransformations(Output<List<WebAclRuleStatementRateBasedStatementScopeDownStatementXssMatchStatementTextTransformationGetArgs>> textTransformations) {

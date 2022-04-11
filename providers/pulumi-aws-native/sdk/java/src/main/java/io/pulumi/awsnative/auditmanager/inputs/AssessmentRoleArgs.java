@@ -6,6 +6,7 @@ package io.pulumi.awsnative.auditmanager.inputs;
 import io.pulumi.awsnative.auditmanager.enums.AssessmentRoleType;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +24,14 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> roleArn;
 
     public Output<String> getRoleArn() {
-        return this.roleArn == null ? Output.empty() : this.roleArn;
+        return this.roleArn == null ? Codegen.empty() : this.roleArn;
     }
 
     @Import(name="roleType")
       private final @Nullable Output<AssessmentRoleType> roleType;
 
     public Output<AssessmentRoleType> getRoleType() {
-        return this.roleType == null ? Output.empty() : this.roleType;
+        return this.roleType == null ? Codegen.empty() : this.roleType;
     }
 
     public AssessmentRoleArgs(
@@ -41,8 +42,8 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private AssessmentRoleArgs() {
-        this.roleArn = Output.empty();
-        this.roleType = Output.empty();
+        this.roleArn = Codegen.empty();
+        this.roleType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -72,7 +73,7 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleArn(@Nullable String roleArn) {
-            this.roleArn = Output.ofNullable(roleArn);
+            this.roleArn = Codegen.ofNullable(roleArn);
             return this;
         }
         public Builder roleType(@Nullable Output<AssessmentRoleType> roleType) {
@@ -80,7 +81,7 @@ public final class AssessmentRoleArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder roleType(@Nullable AssessmentRoleType roleType) {
-            this.roleType = Output.ofNullable(roleType);
+            this.roleType = Codegen.ofNullable(roleType);
             return this;
         }        public AssessmentRoleArgs build() {
             return new AssessmentRoleArgs(roleArn, roleType);

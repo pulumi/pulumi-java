@@ -5,6 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
       private final @Nullable Output<String> associationName;
 
     public Output<String> getAssociationName() {
-        return this.associationName == null ? Output.empty() : this.associationName;
+        return this.associationName == null ? Codegen.empty() : this.associationName;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
       private final @Nullable Output<String> location;
 
     public Output<String> getLocation() {
-        return this.location == null ? Output.empty() : this.location;
+        return this.location == null ? Codegen.empty() : this.location;
     }
 
     /**
@@ -67,7 +68,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public GuestDiagnosticsSettingsAssociationArgs(
@@ -84,11 +85,11 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
     }
 
     private GuestDiagnosticsSettingsAssociationArgs() {
-        this.associationName = Output.empty();
-        this.guestDiagnosticSettingsName = Output.empty();
-        this.location = Output.empty();
-        this.resourceUri = Output.empty();
-        this.tags = Output.empty();
+        this.associationName = Codegen.empty();
+        this.guestDiagnosticSettingsName = Codegen.empty();
+        this.location = Codegen.empty();
+        this.resourceUri = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -124,7 +125,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
             return this;
         }
         public Builder associationName(@Nullable String associationName) {
-            this.associationName = Output.ofNullable(associationName);
+            this.associationName = Codegen.ofNullable(associationName);
             return this;
         }
         public Builder guestDiagnosticSettingsName(Output<String> guestDiagnosticSettingsName) {
@@ -140,7 +141,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
             return this;
         }
         public Builder location(@Nullable String location) {
-            this.location = Output.ofNullable(location);
+            this.location = Codegen.ofNullable(location);
             return this;
         }
         public Builder resourceUri(Output<String> resourceUri) {
@@ -156,7 +157,7 @@ public final class GuestDiagnosticsSettingsAssociationArgs extends io.pulumi.res
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public GuestDiagnosticsSettingsAssociationArgs build() {
             return new GuestDiagnosticsSettingsAssociationArgs(associationName, guestDiagnosticSettingsName, location, resourceUri, tags);

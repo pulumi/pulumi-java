@@ -5,6 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +26,7 @@ public final class TopicRulePutItemInputArgs extends io.pulumi.resources.Resourc
     }
 
     private TopicRulePutItemInputArgs() {
-        this.tableName = Output.empty();
+        this.tableName = Codegen.empty();
     }
 
     public static Builder builder() {

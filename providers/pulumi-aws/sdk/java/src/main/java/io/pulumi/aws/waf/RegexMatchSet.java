@@ -10,6 +10,7 @@ import io.pulumi.aws.waf.outputs.RegexMatchSetRegexMatchTuple;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -95,7 +96,7 @@ public class RegexMatchSet extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public RegexMatchSet(String name, @Nullable RegexMatchSetArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("aws:waf/regexMatchSet:RegexMatchSet", name, args == null ? RegexMatchSetArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("aws:waf/regexMatchSet:RegexMatchSet", name, args == null ? RegexMatchSetArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private RegexMatchSet(String name, Output<String> id, @Nullable RegexMatchSetState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

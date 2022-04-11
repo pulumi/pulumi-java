@@ -7,6 +7,7 @@ import io.pulumi.aws.ec2.enums.PlacementStrategy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +27,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -39,7 +40,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Integer> partitionCount;
 
     public Output<Integer> getPartitionCount() {
-        return this.partitionCount == null ? Output.empty() : this.partitionCount;
+        return this.partitionCount == null ? Codegen.empty() : this.partitionCount;
     }
 
     /**
@@ -61,7 +62,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Map<String,String>> tags;
 
     public Output<Map<String,String>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public PlacementGroupArgs(
@@ -76,10 +77,10 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private PlacementGroupArgs() {
-        this.name = Output.empty();
-        this.partitionCount = Output.empty();
-        this.strategy = Output.empty();
-        this.tags = Output.empty();
+        this.name = Codegen.empty();
+        this.partitionCount = Codegen.empty();
+        this.strategy = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -113,7 +114,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
@@ -121,7 +122,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder partitionCount(@Nullable Integer partitionCount) {
-            this.partitionCount = Output.ofNullable(partitionCount);
+            this.partitionCount = Codegen.ofNullable(partitionCount);
             return this;
         }
         public Builder strategy(Output<Either<String,PlacementStrategy>> strategy) {
@@ -137,7 +138,7 @@ public final class PlacementGroupArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable Map<String,String> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }        public PlacementGroupArgs build() {
             return new PlacementGroupArgs(name, partitionCount, strategy, tags);

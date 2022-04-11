@@ -6,6 +6,7 @@ package io.pulumi.gcp.bigquery;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Export;
 import io.pulumi.core.annotations.ResourceType;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.IamBindingArgs;
 import io.pulumi.gcp.bigquery.inputs.IamBindingState;
@@ -167,7 +168,7 @@ public class IamBinding extends io.pulumi.resources.CustomResource {
      * @param options A bag of options that control this resource's behavior.
      */
     public IamBinding(String name, IamBindingArgs args, @Nullable io.pulumi.resources.CustomResourceOptions options) {
-        super("gcp:bigquery/iamBinding:IamBinding", name, args == null ? IamBindingArgs.Empty : args, makeResourceOptions(options, Output.empty()));
+        super("gcp:bigquery/iamBinding:IamBinding", name, args == null ? IamBindingArgs.Empty : args, makeResourceOptions(options, Codegen.empty()));
     }
 
     private IamBinding(String name, Output<String> id, @Nullable IamBindingState state, @Nullable io.pulumi.resources.CustomResourceOptions options) {

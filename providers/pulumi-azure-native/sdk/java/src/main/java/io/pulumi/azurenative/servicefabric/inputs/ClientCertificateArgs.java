@@ -5,6 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> commonName;
 
     public Output<String> getCommonName() {
-        return this.commonName == null ? Output.empty() : this.commonName;
+        return this.commonName == null ? Codegen.empty() : this.commonName;
     }
 
     /**
@@ -49,7 +50,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> issuerThumbprint;
 
     public Output<String> getIssuerThumbprint() {
-        return this.issuerThumbprint == null ? Output.empty() : this.issuerThumbprint;
+        return this.issuerThumbprint == null ? Codegen.empty() : this.issuerThumbprint;
     }
 
     /**
@@ -60,7 +61,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
       private final @Nullable Output<String> thumbprint;
 
     public Output<String> getThumbprint() {
-        return this.thumbprint == null ? Output.empty() : this.thumbprint;
+        return this.thumbprint == null ? Codegen.empty() : this.thumbprint;
     }
 
     public ClientCertificateArgs(
@@ -75,10 +76,10 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
     }
 
     private ClientCertificateArgs() {
-        this.commonName = Output.empty();
-        this.isAdmin = Output.empty();
-        this.issuerThumbprint = Output.empty();
-        this.thumbprint = Output.empty();
+        this.commonName = Codegen.empty();
+        this.isAdmin = Codegen.empty();
+        this.issuerThumbprint = Codegen.empty();
+        this.thumbprint = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -112,7 +113,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder commonName(@Nullable String commonName) {
-            this.commonName = Output.ofNullable(commonName);
+            this.commonName = Codegen.ofNullable(commonName);
             return this;
         }
         public Builder isAdmin(Output<Boolean> isAdmin) {
@@ -128,7 +129,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder issuerThumbprint(@Nullable String issuerThumbprint) {
-            this.issuerThumbprint = Output.ofNullable(issuerThumbprint);
+            this.issuerThumbprint = Codegen.ofNullable(issuerThumbprint);
             return this;
         }
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
@@ -136,7 +137,7 @@ public final class ClientCertificateArgs extends io.pulumi.resources.ResourceArg
             return this;
         }
         public Builder thumbprint(@Nullable String thumbprint) {
-            this.thumbprint = Output.ofNullable(thumbprint);
+            this.thumbprint = Codegen.ofNullable(thumbprint);
             return this;
         }        public ClientCertificateArgs build() {
             return new ClientCertificateArgs(commonName, isAdmin, issuerThumbprint, thumbprint);

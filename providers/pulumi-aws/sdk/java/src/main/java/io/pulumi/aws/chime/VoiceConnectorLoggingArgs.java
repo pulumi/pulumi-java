@@ -5,6 +5,7 @@ package io.pulumi.aws.chime;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
       private final @Nullable Output<Boolean> enableSipLogs;
 
     public Output<Boolean> getEnableSipLogs() {
-        return this.enableSipLogs == null ? Output.empty() : this.enableSipLogs;
+        return this.enableSipLogs == null ? Codegen.empty() : this.enableSipLogs;
     }
 
     /**
@@ -45,8 +46,8 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
     }
 
     private VoiceConnectorLoggingArgs() {
-        this.enableSipLogs = Output.empty();
-        this.voiceConnectorId = Output.empty();
+        this.enableSipLogs = Codegen.empty();
+        this.voiceConnectorId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class VoiceConnectorLoggingArgs extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder enableSipLogs(@Nullable Boolean enableSipLogs) {
-            this.enableSipLogs = Output.ofNullable(enableSipLogs);
+            this.enableSipLogs = Codegen.ofNullable(enableSipLogs);
             return this;
         }
         public Builder voiceConnectorId(Output<String> voiceConnectorId) {

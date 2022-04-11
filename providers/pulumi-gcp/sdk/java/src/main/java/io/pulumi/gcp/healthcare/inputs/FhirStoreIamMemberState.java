@@ -5,6 +5,7 @@ package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +20,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<FhirStoreIamMemberConditionGetArgs> condition;
 
     public Output<FhirStoreIamMemberConditionGetArgs> getCondition() {
-        return this.condition == null ? Output.empty() : this.condition;
+        return this.condition == null ? Codegen.empty() : this.condition;
     }
 
     /**
@@ -30,7 +31,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> etag;
 
     public Output<String> getEtag() {
-        return this.etag == null ? Output.empty() : this.etag;
+        return this.etag == null ? Codegen.empty() : this.etag;
     }
 
     /**
@@ -44,14 +45,14 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> fhirStoreId;
 
     public Output<String> getFhirStoreId() {
-        return this.fhirStoreId == null ? Output.empty() : this.fhirStoreId;
+        return this.fhirStoreId == null ? Codegen.empty() : this.fhirStoreId;
     }
 
     @Import(name="member")
       private final @Nullable Output<String> member;
 
     public Output<String> getMember() {
-        return this.member == null ? Output.empty() : this.member;
+        return this.member == null ? Codegen.empty() : this.member;
     }
 
     /**
@@ -64,7 +65,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
       private final @Nullable Output<String> role;
 
     public Output<String> getRole() {
-        return this.role == null ? Output.empty() : this.role;
+        return this.role == null ? Codegen.empty() : this.role;
     }
 
     public FhirStoreIamMemberState(
@@ -81,11 +82,11 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
     }
 
     private FhirStoreIamMemberState() {
-        this.condition = Output.empty();
-        this.etag = Output.empty();
-        this.fhirStoreId = Output.empty();
-        this.member = Output.empty();
-        this.role = Output.empty();
+        this.condition = Codegen.empty();
+        this.etag = Codegen.empty();
+        this.fhirStoreId = Codegen.empty();
+        this.member = Codegen.empty();
+        this.role = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -121,7 +122,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder condition(@Nullable FhirStoreIamMemberConditionGetArgs condition) {
-            this.condition = Output.ofNullable(condition);
+            this.condition = Codegen.ofNullable(condition);
             return this;
         }
         public Builder etag(@Nullable Output<String> etag) {
@@ -129,7 +130,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder etag(@Nullable String etag) {
-            this.etag = Output.ofNullable(etag);
+            this.etag = Codegen.ofNullable(etag);
             return this;
         }
         public Builder fhirStoreId(@Nullable Output<String> fhirStoreId) {
@@ -137,7 +138,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder fhirStoreId(@Nullable String fhirStoreId) {
-            this.fhirStoreId = Output.ofNullable(fhirStoreId);
+            this.fhirStoreId = Codegen.ofNullable(fhirStoreId);
             return this;
         }
         public Builder member(@Nullable Output<String> member) {
@@ -145,7 +146,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder member(@Nullable String member) {
-            this.member = Output.ofNullable(member);
+            this.member = Codegen.ofNullable(member);
             return this;
         }
         public Builder role(@Nullable Output<String> role) {
@@ -153,7 +154,7 @@ public final class FhirStoreIamMemberState extends io.pulumi.resources.ResourceA
             return this;
         }
         public Builder role(@Nullable String role) {
-            this.role = Output.ofNullable(role);
+            this.role = Codegen.ofNullable(role);
             return this;
         }        public FhirStoreIamMemberState build() {
             return new FhirStoreIamMemberState(condition, etag, fhirStoreId, member, role);

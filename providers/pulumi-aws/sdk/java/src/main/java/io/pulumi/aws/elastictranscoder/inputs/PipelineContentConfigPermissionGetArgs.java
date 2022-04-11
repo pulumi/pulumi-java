@@ -5,6 +5,7 @@ package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
       private final @Nullable Output<List<String>> accesses;
 
     public Output<List<String>> getAccesses() {
-        return this.accesses == null ? Output.empty() : this.accesses;
+        return this.accesses == null ? Codegen.empty() : this.accesses;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> grantee;
 
     public Output<String> getGrantee() {
-        return this.grantee == null ? Output.empty() : this.grantee;
+        return this.grantee == null ? Codegen.empty() : this.grantee;
     }
 
     /**
@@ -45,7 +46,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
       private final @Nullable Output<String> granteeType;
 
     public Output<String> getGranteeType() {
-        return this.granteeType == null ? Output.empty() : this.granteeType;
+        return this.granteeType == null ? Codegen.empty() : this.granteeType;
     }
 
     public PipelineContentConfigPermissionGetArgs(
@@ -58,9 +59,9 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
     }
 
     private PipelineContentConfigPermissionGetArgs() {
-        this.accesses = Output.empty();
-        this.grantee = Output.empty();
-        this.granteeType = Output.empty();
+        this.accesses = Codegen.empty();
+        this.grantee = Codegen.empty();
+        this.granteeType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -92,7 +93,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder accesses(@Nullable List<String> accesses) {
-            this.accesses = Output.ofNullable(accesses);
+            this.accesses = Codegen.ofNullable(accesses);
             return this;
         }
         public Builder accesses(String... accesses) {
@@ -103,7 +104,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder grantee(@Nullable String grantee) {
-            this.grantee = Output.ofNullable(grantee);
+            this.grantee = Codegen.ofNullable(grantee);
             return this;
         }
         public Builder granteeType(@Nullable Output<String> granteeType) {
@@ -111,7 +112,7 @@ public final class PipelineContentConfigPermissionGetArgs extends io.pulumi.reso
             return this;
         }
         public Builder granteeType(@Nullable String granteeType) {
-            this.granteeType = Output.ofNullable(granteeType);
+            this.granteeType = Codegen.ofNullable(granteeType);
             return this;
         }        public PipelineContentConfigPermissionGetArgs build() {
             return new PipelineContentConfigPermissionGetArgs(accesses, grantee, granteeType);

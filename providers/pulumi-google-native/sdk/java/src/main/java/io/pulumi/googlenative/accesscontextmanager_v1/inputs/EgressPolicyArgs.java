@@ -5,6 +5,7 @@ package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressFromArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.EgressToArgs;
 import java.util.Objects;
@@ -27,7 +28,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EgressFromArgs> egressFrom;
 
     public Output<EgressFromArgs> getEgressFrom() {
-        return this.egressFrom == null ? Output.empty() : this.egressFrom;
+        return this.egressFrom == null ? Codegen.empty() : this.egressFrom;
     }
 
     /**
@@ -38,7 +39,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<EgressToArgs> egressTo;
 
     public Output<EgressToArgs> getEgressTo() {
-        return this.egressTo == null ? Output.empty() : this.egressTo;
+        return this.egressTo == null ? Codegen.empty() : this.egressTo;
     }
 
     public EgressPolicyArgs(
@@ -49,8 +50,8 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private EgressPolicyArgs() {
-        this.egressFrom = Output.empty();
-        this.egressTo = Output.empty();
+        this.egressFrom = Codegen.empty();
+        this.egressTo = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -80,7 +81,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egressFrom(@Nullable EgressFromArgs egressFrom) {
-            this.egressFrom = Output.ofNullable(egressFrom);
+            this.egressFrom = Codegen.ofNullable(egressFrom);
             return this;
         }
         public Builder egressTo(@Nullable Output<EgressToArgs> egressTo) {
@@ -88,7 +89,7 @@ public final class EgressPolicyArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder egressTo(@Nullable EgressToArgs egressTo) {
-            this.egressTo = Output.ofNullable(egressTo);
+            this.egressTo = Codegen.ofNullable(egressTo);
             return this;
         }        public EgressPolicyArgs build() {
             return new EgressPolicyArgs(egressFrom, egressTo);

@@ -5,6 +5,7 @@ package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +27,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
       private final @Nullable Output<String> fsType;
 
     public Output<String> getFsType() {
-        return this.fsType == null ? Output.empty() : this.fsType;
+        return this.fsType == null ? Codegen.empty() : this.fsType;
     }
 
     /**
@@ -37,7 +38,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
       private final @Nullable Output<String> storagePolicyID;
 
     public Output<String> getStoragePolicyID() {
-        return this.storagePolicyID == null ? Output.empty() : this.storagePolicyID;
+        return this.storagePolicyID == null ? Codegen.empty() : this.storagePolicyID;
     }
 
     /**
@@ -48,7 +49,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
       private final @Nullable Output<String> storagePolicyName;
 
     public Output<String> getStoragePolicyName() {
-        return this.storagePolicyName == null ? Output.empty() : this.storagePolicyName;
+        return this.storagePolicyName == null ? Codegen.empty() : this.storagePolicyName;
     }
 
     /**
@@ -74,10 +75,10 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
     }
 
     private VsphereVirtualDiskVolumeSourceArgs() {
-        this.fsType = Output.empty();
-        this.storagePolicyID = Output.empty();
-        this.storagePolicyName = Output.empty();
-        this.volumePath = Output.empty();
+        this.fsType = Codegen.empty();
+        this.storagePolicyID = Codegen.empty();
+        this.storagePolicyName = Codegen.empty();
+        this.volumePath = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -111,7 +112,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
             return this;
         }
         public Builder fsType(@Nullable String fsType) {
-            this.fsType = Output.ofNullable(fsType);
+            this.fsType = Codegen.ofNullable(fsType);
             return this;
         }
         public Builder storagePolicyID(@Nullable Output<String> storagePolicyID) {
@@ -119,7 +120,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
             return this;
         }
         public Builder storagePolicyID(@Nullable String storagePolicyID) {
-            this.storagePolicyID = Output.ofNullable(storagePolicyID);
+            this.storagePolicyID = Codegen.ofNullable(storagePolicyID);
             return this;
         }
         public Builder storagePolicyName(@Nullable Output<String> storagePolicyName) {
@@ -127,7 +128,7 @@ public final class VsphereVirtualDiskVolumeSourceArgs extends io.pulumi.resource
             return this;
         }
         public Builder storagePolicyName(@Nullable String storagePolicyName) {
-            this.storagePolicyName = Output.ofNullable(storagePolicyName);
+            this.storagePolicyName = Codegen.ofNullable(storagePolicyName);
             return this;
         }
         public Builder volumePath(Output<String> volumePath) {

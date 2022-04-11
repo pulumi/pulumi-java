@@ -6,6 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.X12OneWayAgreementArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.util.Objects;
 
 
@@ -47,8 +48,8 @@ public final class X12AgreementContentArgs extends io.pulumi.resources.ResourceA
     }
 
     private X12AgreementContentArgs() {
-        this.receiveAgreement = Output.empty();
-        this.sendAgreement = Output.empty();
+        this.receiveAgreement = Codegen.empty();
+        this.sendAgreement = Codegen.empty();
     }
 
     public static Builder builder() {

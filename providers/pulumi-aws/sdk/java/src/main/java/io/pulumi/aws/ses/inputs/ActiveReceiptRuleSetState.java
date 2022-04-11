@@ -5,6 +5,7 @@ package io.pulumi.aws.ses.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> arn;
 
     public Output<String> getArn() {
-        return this.arn == null ? Output.empty() : this.arn;
+        return this.arn == null ? Codegen.empty() : this.arn;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
       private final @Nullable Output<String> ruleSetName;
 
     public Output<String> getRuleSetName() {
-        return this.ruleSetName == null ? Output.empty() : this.ruleSetName;
+        return this.ruleSetName == null ? Codegen.empty() : this.ruleSetName;
     }
 
     public ActiveReceiptRuleSetState(
@@ -44,8 +45,8 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
     }
 
     private ActiveReceiptRuleSetState() {
-        this.arn = Output.empty();
-        this.ruleSetName = Output.empty();
+        this.arn = Codegen.empty();
+        this.ruleSetName = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder arn(@Nullable String arn) {
-            this.arn = Output.ofNullable(arn);
+            this.arn = Codegen.ofNullable(arn);
             return this;
         }
         public Builder ruleSetName(@Nullable Output<String> ruleSetName) {
@@ -83,7 +84,7 @@ public final class ActiveReceiptRuleSetState extends io.pulumi.resources.Resourc
             return this;
         }
         public Builder ruleSetName(@Nullable String ruleSetName) {
-            this.ruleSetName = Output.ofNullable(ruleSetName);
+            this.ruleSetName = Codegen.ofNullable(ruleSetName);
             return this;
         }        public ActiveReceiptRuleSetState build() {
             return new ActiveReceiptRuleSetState(arn, ruleSetName);

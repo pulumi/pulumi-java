@@ -6,6 +6,7 @@ package io.pulumi.aws.glue.inputs;
 import io.pulumi.aws.glue.inputs.DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +24,7 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
       private final @Nullable Output<String> catalogId;
 
     public Output<String> getCatalogId() {
-        return this.catalogId == null ? Output.empty() : this.catalogId;
+        return this.catalogId == null ? Codegen.empty() : this.catalogId;
     }
 
     /**
@@ -34,7 +35,7 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
       private final @Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings;
 
     public Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> getDataCatalogEncryptionSettings() {
-        return this.dataCatalogEncryptionSettings == null ? Output.empty() : this.dataCatalogEncryptionSettings;
+        return this.dataCatalogEncryptionSettings == null ? Codegen.empty() : this.dataCatalogEncryptionSettings;
     }
 
     public DataCatalogEncryptionSettingsState(
@@ -45,8 +46,8 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
     }
 
     private DataCatalogEncryptionSettingsState() {
-        this.catalogId = Output.empty();
-        this.dataCatalogEncryptionSettings = Output.empty();
+        this.catalogId = Codegen.empty();
+        this.dataCatalogEncryptionSettings = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -76,7 +77,7 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
             return this;
         }
         public Builder catalogId(@Nullable String catalogId) {
-            this.catalogId = Output.ofNullable(catalogId);
+            this.catalogId = Codegen.ofNullable(catalogId);
             return this;
         }
         public Builder dataCatalogEncryptionSettings(@Nullable Output<DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs> dataCatalogEncryptionSettings) {
@@ -84,7 +85,7 @@ public final class DataCatalogEncryptionSettingsState extends io.pulumi.resource
             return this;
         }
         public Builder dataCatalogEncryptionSettings(@Nullable DataCatalogEncryptionSettingsDataCatalogEncryptionSettingsGetArgs dataCatalogEncryptionSettings) {
-            this.dataCatalogEncryptionSettings = Output.ofNullable(dataCatalogEncryptionSettings);
+            this.dataCatalogEncryptionSettings = Codegen.ofNullable(dataCatalogEncryptionSettings);
             return this;
         }        public DataCatalogEncryptionSettingsState build() {
             return new DataCatalogEncryptionSettingsState(catalogId, dataCatalogEncryptionSettings);

@@ -6,6 +6,7 @@ package io.pulumi.aws.s3.inputs;
 import io.pulumi.aws.s3.inputs.BucketObjectLockConfigurationRuleGetArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +35,7 @@ public final class BucketObjectLockConfigurationGetArgs extends io.pulumi.resour
       private final @Nullable Output<BucketObjectLockConfigurationRuleGetArgs> rule;
 
     public Output<BucketObjectLockConfigurationRuleGetArgs> getRule() {
-        return this.rule == null ? Output.empty() : this.rule;
+        return this.rule == null ? Codegen.empty() : this.rule;
     }
 
     public BucketObjectLockConfigurationGetArgs(
@@ -45,8 +46,8 @@ public final class BucketObjectLockConfigurationGetArgs extends io.pulumi.resour
     }
 
     private BucketObjectLockConfigurationGetArgs() {
-        this.objectLockEnabled = Output.empty();
-        this.rule = Output.empty();
+        this.objectLockEnabled = Codegen.empty();
+        this.rule = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -84,7 +85,7 @@ public final class BucketObjectLockConfigurationGetArgs extends io.pulumi.resour
             return this;
         }
         public Builder rule(@Nullable BucketObjectLockConfigurationRuleGetArgs rule) {
-            this.rule = Output.ofNullable(rule);
+            this.rule = Codegen.ofNullable(rule);
             return this;
         }        public BucketObjectLockConfigurationGetArgs build() {
             return new BucketObjectLockConfigurationGetArgs(objectLockEnabled, rule);

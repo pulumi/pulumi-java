@@ -5,6 +5,7 @@ package io.pulumi.aws.elastictranscoder.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +23,7 @@ public final class PipelineContentConfigGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> bucket;
 
     public Output<String> getBucket() {
-        return this.bucket == null ? Output.empty() : this.bucket;
+        return this.bucket == null ? Codegen.empty() : this.bucket;
     }
 
     /**
@@ -33,7 +34,7 @@ public final class PipelineContentConfigGetArgs extends io.pulumi.resources.Reso
       private final @Nullable Output<String> storageClass;
 
     public Output<String> getStorageClass() {
-        return this.storageClass == null ? Output.empty() : this.storageClass;
+        return this.storageClass == null ? Codegen.empty() : this.storageClass;
     }
 
     public PipelineContentConfigGetArgs(
@@ -44,8 +45,8 @@ public final class PipelineContentConfigGetArgs extends io.pulumi.resources.Reso
     }
 
     private PipelineContentConfigGetArgs() {
-        this.bucket = Output.empty();
-        this.storageClass = Output.empty();
+        this.bucket = Codegen.empty();
+        this.storageClass = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -75,7 +76,7 @@ public final class PipelineContentConfigGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder bucket(@Nullable String bucket) {
-            this.bucket = Output.ofNullable(bucket);
+            this.bucket = Codegen.ofNullable(bucket);
             return this;
         }
         public Builder storageClass(@Nullable Output<String> storageClass) {
@@ -83,7 +84,7 @@ public final class PipelineContentConfigGetArgs extends io.pulumi.resources.Reso
             return this;
         }
         public Builder storageClass(@Nullable String storageClass) {
-            this.storageClass = Output.ofNullable(storageClass);
+            this.storageClass = Codegen.ofNullable(storageClass);
             return this;
         }        public PipelineContentConfigGetArgs build() {
             return new PipelineContentConfigGetArgs(bucket, storageClass);

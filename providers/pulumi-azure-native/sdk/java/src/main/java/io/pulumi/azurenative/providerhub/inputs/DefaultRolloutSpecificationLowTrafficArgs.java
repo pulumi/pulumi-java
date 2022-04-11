@@ -5,6 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,14 +20,14 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
       private final @Nullable Output<List<String>> regions;
 
     public Output<List<String>> getRegions() {
-        return this.regions == null ? Output.empty() : this.regions;
+        return this.regions == null ? Codegen.empty() : this.regions;
     }
 
     @Import(name="waitDuration")
       private final @Nullable Output<String> waitDuration;
 
     public Output<String> getWaitDuration() {
-        return this.waitDuration == null ? Output.empty() : this.waitDuration;
+        return this.waitDuration == null ? Codegen.empty() : this.waitDuration;
     }
 
     public DefaultRolloutSpecificationLowTrafficArgs(
@@ -37,8 +38,8 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
     }
 
     private DefaultRolloutSpecificationLowTrafficArgs() {
-        this.regions = Output.empty();
-        this.waitDuration = Output.empty();
+        this.regions = Codegen.empty();
+        this.waitDuration = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -68,7 +69,7 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
             return this;
         }
         public Builder regions(@Nullable List<String> regions) {
-            this.regions = Output.ofNullable(regions);
+            this.regions = Codegen.ofNullable(regions);
             return this;
         }
         public Builder regions(String... regions) {
@@ -79,7 +80,7 @@ public final class DefaultRolloutSpecificationLowTrafficArgs extends io.pulumi.r
             return this;
         }
         public Builder waitDuration(@Nullable String waitDuration) {
-            this.waitDuration = Output.ofNullable(waitDuration);
+            this.waitDuration = Codegen.ofNullable(waitDuration);
             return this;
         }        public DefaultRolloutSpecificationLowTrafficArgs build() {
             return new DefaultRolloutSpecificationLowTrafficArgs(regions, waitDuration);

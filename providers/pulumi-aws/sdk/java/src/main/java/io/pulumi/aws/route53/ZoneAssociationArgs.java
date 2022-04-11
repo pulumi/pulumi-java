@@ -5,6 +5,7 @@ package io.pulumi.aws.route53;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -33,7 +34,7 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
       private final @Nullable Output<String> vpcRegion;
 
     public Output<String> getVpcRegion() {
-        return this.vpcRegion == null ? Output.empty() : this.vpcRegion;
+        return this.vpcRegion == null ? Codegen.empty() : this.vpcRegion;
     }
 
     /**
@@ -57,9 +58,9 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
     }
 
     private ZoneAssociationArgs() {
-        this.vpcId = Output.empty();
-        this.vpcRegion = Output.empty();
-        this.zoneId = Output.empty();
+        this.vpcId = Codegen.empty();
+        this.vpcRegion = Codegen.empty();
+        this.zoneId = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -99,7 +100,7 @@ public final class ZoneAssociationArgs extends io.pulumi.resources.ResourceArgs 
             return this;
         }
         public Builder vpcRegion(@Nullable String vpcRegion) {
-            this.vpcRegion = Output.ofNullable(vpcRegion);
+            this.vpcRegion = Codegen.ofNullable(vpcRegion);
             return this;
         }
         public Builder zoneId(Output<String> zoneId) {

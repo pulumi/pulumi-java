@@ -6,6 +6,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ReadinessCheckTagArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> readinessCheckName;
 
     public Output<String> getReadinessCheckName() {
-        return this.readinessCheckName == null ? Output.empty() : this.readinessCheckName;
+        return this.readinessCheckName == null ? Codegen.empty() : this.readinessCheckName;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<String> resourceSetName;
 
     public Output<String> getResourceSetName() {
-        return this.resourceSetName == null ? Output.empty() : this.resourceSetName;
+        return this.resourceSetName == null ? Codegen.empty() : this.resourceSetName;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<ReadinessCheckTagArgs>> tags;
 
     public Output<List<ReadinessCheckTagArgs>> getTags() {
-        return this.tags == null ? Output.empty() : this.tags;
+        return this.tags == null ? Codegen.empty() : this.tags;
     }
 
     public ReadinessCheckArgs(
@@ -59,9 +60,9 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private ReadinessCheckArgs() {
-        this.readinessCheckName = Output.empty();
-        this.resourceSetName = Output.empty();
-        this.tags = Output.empty();
+        this.readinessCheckName = Codegen.empty();
+        this.resourceSetName = Codegen.empty();
+        this.tags = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -93,7 +94,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder readinessCheckName(@Nullable String readinessCheckName) {
-            this.readinessCheckName = Output.ofNullable(readinessCheckName);
+            this.readinessCheckName = Codegen.ofNullable(readinessCheckName);
             return this;
         }
         public Builder resourceSetName(@Nullable Output<String> resourceSetName) {
@@ -101,7 +102,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder resourceSetName(@Nullable String resourceSetName) {
-            this.resourceSetName = Output.ofNullable(resourceSetName);
+            this.resourceSetName = Codegen.ofNullable(resourceSetName);
             return this;
         }
         public Builder tags(@Nullable Output<List<ReadinessCheckTagArgs>> tags) {
@@ -109,7 +110,7 @@ public final class ReadinessCheckArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder tags(@Nullable List<ReadinessCheckTagArgs> tags) {
-            this.tags = Output.ofNullable(tags);
+            this.tags = Codegen.ofNullable(tags);
             return this;
         }
         public Builder tags(ReadinessCheckTagArgs... tags) {

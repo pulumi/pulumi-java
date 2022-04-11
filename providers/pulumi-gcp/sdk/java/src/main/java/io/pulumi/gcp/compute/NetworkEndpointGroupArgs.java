@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<Integer> defaultPort;
 
     public Output<Integer> getDefaultPort() {
-        return this.defaultPort == null ? Output.empty() : this.defaultPort;
+        return this.defaultPort == null ? Codegen.empty() : this.defaultPort;
     }
 
     /**
@@ -36,7 +37,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> description;
 
     public Output<String> getDescription() {
-        return this.description == null ? Output.empty() : this.description;
+        return this.description == null ? Codegen.empty() : this.description;
     }
 
     /**
@@ -53,7 +54,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> name;
 
     public Output<String> getName() {
-        return this.name == null ? Output.empty() : this.name;
+        return this.name == null ? Codegen.empty() : this.name;
     }
 
     /**
@@ -78,7 +79,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> networkEndpointType;
 
     public Output<String> getNetworkEndpointType() {
-        return this.networkEndpointType == null ? Output.empty() : this.networkEndpointType;
+        return this.networkEndpointType == null ? Codegen.empty() : this.networkEndpointType;
     }
 
     /**
@@ -90,7 +91,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> project;
 
     public Output<String> getProject() {
-        return this.project == null ? Output.empty() : this.project;
+        return this.project == null ? Codegen.empty() : this.project;
     }
 
     /**
@@ -101,7 +102,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> subnetwork;
 
     public Output<String> getSubnetwork() {
-        return this.subnetwork == null ? Output.empty() : this.subnetwork;
+        return this.subnetwork == null ? Codegen.empty() : this.subnetwork;
     }
 
     /**
@@ -112,7 +113,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
       private final @Nullable Output<String> zone;
 
     public Output<String> getZone() {
-        return this.zone == null ? Output.empty() : this.zone;
+        return this.zone == null ? Codegen.empty() : this.zone;
     }
 
     public NetworkEndpointGroupArgs(
@@ -135,14 +136,14 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
     }
 
     private NetworkEndpointGroupArgs() {
-        this.defaultPort = Output.empty();
-        this.description = Output.empty();
-        this.name = Output.empty();
-        this.network = Output.empty();
-        this.networkEndpointType = Output.empty();
-        this.project = Output.empty();
-        this.subnetwork = Output.empty();
-        this.zone = Output.empty();
+        this.defaultPort = Codegen.empty();
+        this.description = Codegen.empty();
+        this.name = Codegen.empty();
+        this.network = Codegen.empty();
+        this.networkEndpointType = Codegen.empty();
+        this.project = Codegen.empty();
+        this.subnetwork = Codegen.empty();
+        this.zone = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -184,7 +185,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder defaultPort(@Nullable Integer defaultPort) {
-            this.defaultPort = Output.ofNullable(defaultPort);
+            this.defaultPort = Codegen.ofNullable(defaultPort);
             return this;
         }
         public Builder description(@Nullable Output<String> description) {
@@ -192,7 +193,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder description(@Nullable String description) {
-            this.description = Output.ofNullable(description);
+            this.description = Codegen.ofNullable(description);
             return this;
         }
         public Builder name(@Nullable Output<String> name) {
@@ -200,7 +201,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder name(@Nullable String name) {
-            this.name = Output.ofNullable(name);
+            this.name = Codegen.ofNullable(name);
             return this;
         }
         public Builder network(Output<String> network) {
@@ -216,7 +217,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder networkEndpointType(@Nullable String networkEndpointType) {
-            this.networkEndpointType = Output.ofNullable(networkEndpointType);
+            this.networkEndpointType = Codegen.ofNullable(networkEndpointType);
             return this;
         }
         public Builder project(@Nullable Output<String> project) {
@@ -224,7 +225,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder project(@Nullable String project) {
-            this.project = Output.ofNullable(project);
+            this.project = Codegen.ofNullable(project);
             return this;
         }
         public Builder subnetwork(@Nullable Output<String> subnetwork) {
@@ -232,7 +233,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder subnetwork(@Nullable String subnetwork) {
-            this.subnetwork = Output.ofNullable(subnetwork);
+            this.subnetwork = Codegen.ofNullable(subnetwork);
             return this;
         }
         public Builder zone(@Nullable Output<String> zone) {
@@ -240,7 +241,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             return this;
         }
         public Builder zone(@Nullable String zone) {
-            this.zone = Output.ofNullable(zone);
+            this.zone = Codegen.ofNullable(zone);
             return this;
         }        public NetworkEndpointGroupArgs build() {
             return new NetworkEndpointGroupArgs(defaultPort, description, name, network, networkEndpointType, project, subnetwork, zone);

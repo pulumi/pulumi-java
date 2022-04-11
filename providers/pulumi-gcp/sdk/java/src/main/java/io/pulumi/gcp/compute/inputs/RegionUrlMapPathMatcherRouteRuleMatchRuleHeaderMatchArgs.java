@@ -5,6 +5,7 @@ package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +27,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<String> exactMatch;
 
     public Output<String> getExactMatch() {
-        return this.exactMatch == null ? Output.empty() : this.exactMatch;
+        return this.exactMatch == null ? Codegen.empty() : this.exactMatch;
     }
 
     /**
@@ -50,7 +51,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<Boolean> invertMatch;
 
     public Output<Boolean> getInvertMatch() {
-        return this.invertMatch == null ? Output.empty() : this.invertMatch;
+        return this.invertMatch == null ? Codegen.empty() : this.invertMatch;
     }
 
     /**
@@ -63,7 +64,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<String> prefixMatch;
 
     public Output<String> getPrefixMatch() {
-        return this.prefixMatch == null ? Output.empty() : this.prefixMatch;
+        return this.prefixMatch == null ? Codegen.empty() : this.prefixMatch;
     }
 
     /**
@@ -76,7 +77,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<Boolean> presentMatch;
 
     public Output<Boolean> getPresentMatch() {
-        return this.presentMatch == null ? Output.empty() : this.presentMatch;
+        return this.presentMatch == null ? Codegen.empty() : this.presentMatch;
     }
 
     /**
@@ -96,7 +97,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> rangeMatch;
 
     public Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> getRangeMatch() {
-        return this.rangeMatch == null ? Output.empty() : this.rangeMatch;
+        return this.rangeMatch == null ? Codegen.empty() : this.rangeMatch;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<String> regexMatch;
 
     public Output<String> getRegexMatch() {
-        return this.regexMatch == null ? Output.empty() : this.regexMatch;
+        return this.regexMatch == null ? Codegen.empty() : this.regexMatch;
     }
 
     /**
@@ -123,7 +124,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
       private final @Nullable Output<String> suffixMatch;
 
     public Output<String> getSuffixMatch() {
-        return this.suffixMatch == null ? Output.empty() : this.suffixMatch;
+        return this.suffixMatch == null ? Codegen.empty() : this.suffixMatch;
     }
 
     public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(
@@ -146,14 +147,14 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
     }
 
     private RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs() {
-        this.exactMatch = Output.empty();
-        this.headerName = Output.empty();
-        this.invertMatch = Output.empty();
-        this.prefixMatch = Output.empty();
-        this.presentMatch = Output.empty();
-        this.rangeMatch = Output.empty();
-        this.regexMatch = Output.empty();
-        this.suffixMatch = Output.empty();
+        this.exactMatch = Codegen.empty();
+        this.headerName = Codegen.empty();
+        this.invertMatch = Codegen.empty();
+        this.prefixMatch = Codegen.empty();
+        this.presentMatch = Codegen.empty();
+        this.rangeMatch = Codegen.empty();
+        this.regexMatch = Codegen.empty();
+        this.suffixMatch = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -195,7 +196,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder exactMatch(@Nullable String exactMatch) {
-            this.exactMatch = Output.ofNullable(exactMatch);
+            this.exactMatch = Codegen.ofNullable(exactMatch);
             return this;
         }
         public Builder headerName(Output<String> headerName) {
@@ -211,7 +212,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder invertMatch(@Nullable Boolean invertMatch) {
-            this.invertMatch = Output.ofNullable(invertMatch);
+            this.invertMatch = Codegen.ofNullable(invertMatch);
             return this;
         }
         public Builder prefixMatch(@Nullable Output<String> prefixMatch) {
@@ -219,7 +220,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder prefixMatch(@Nullable String prefixMatch) {
-            this.prefixMatch = Output.ofNullable(prefixMatch);
+            this.prefixMatch = Codegen.ofNullable(prefixMatch);
             return this;
         }
         public Builder presentMatch(@Nullable Output<Boolean> presentMatch) {
@@ -227,7 +228,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder presentMatch(@Nullable Boolean presentMatch) {
-            this.presentMatch = Output.ofNullable(presentMatch);
+            this.presentMatch = Codegen.ofNullable(presentMatch);
             return this;
         }
         public Builder rangeMatch(@Nullable Output<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> rangeMatch) {
@@ -235,7 +236,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder rangeMatch(@Nullable RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs rangeMatch) {
-            this.rangeMatch = Output.ofNullable(rangeMatch);
+            this.rangeMatch = Codegen.ofNullable(rangeMatch);
             return this;
         }
         public Builder regexMatch(@Nullable Output<String> regexMatch) {
@@ -243,7 +244,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder regexMatch(@Nullable String regexMatch) {
-            this.regexMatch = Output.ofNullable(regexMatch);
+            this.regexMatch = Codegen.ofNullable(regexMatch);
             return this;
         }
         public Builder suffixMatch(@Nullable Output<String> suffixMatch) {
@@ -251,7 +252,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs exte
             return this;
         }
         public Builder suffixMatch(@Nullable String suffixMatch) {
-            this.suffixMatch = Output.ofNullable(suffixMatch);
+            this.suffixMatch = Codegen.ofNullable(suffixMatch);
             return this;
         }        public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);

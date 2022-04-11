@@ -6,6 +6,7 @@ package io.pulumi.awsnative.apigateway.inputs;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +25,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<MethodIntegrationResponseContentHandling> contentHandling;
 
     public Output<MethodIntegrationResponseContentHandling> getContentHandling() {
-        return this.contentHandling == null ? Output.empty() : this.contentHandling;
+        return this.contentHandling == null ? Codegen.empty() : this.contentHandling;
     }
 
     /**
@@ -35,7 +36,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> responseParameters;
 
     public Output<Object> getResponseParameters() {
-        return this.responseParameters == null ? Output.empty() : this.responseParameters;
+        return this.responseParameters == null ? Codegen.empty() : this.responseParameters;
     }
 
     /**
@@ -46,7 +47,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<Object> responseTemplates;
 
     public Output<Object> getResponseTemplates() {
-        return this.responseTemplates == null ? Output.empty() : this.responseTemplates;
+        return this.responseTemplates == null ? Codegen.empty() : this.responseTemplates;
     }
 
     /**
@@ -57,7 +58,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
       private final @Nullable Output<String> selectionPattern;
 
     public Output<String> getSelectionPattern() {
-        return this.selectionPattern == null ? Output.empty() : this.selectionPattern;
+        return this.selectionPattern == null ? Codegen.empty() : this.selectionPattern;
     }
 
     /**
@@ -85,11 +86,11 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
     }
 
     private MethodIntegrationResponseArgs() {
-        this.contentHandling = Output.empty();
-        this.responseParameters = Output.empty();
-        this.responseTemplates = Output.empty();
-        this.selectionPattern = Output.empty();
-        this.statusCode = Output.empty();
+        this.contentHandling = Codegen.empty();
+        this.responseParameters = Codegen.empty();
+        this.responseTemplates = Codegen.empty();
+        this.selectionPattern = Codegen.empty();
+        this.statusCode = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -125,7 +126,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder contentHandling(@Nullable MethodIntegrationResponseContentHandling contentHandling) {
-            this.contentHandling = Output.ofNullable(contentHandling);
+            this.contentHandling = Codegen.ofNullable(contentHandling);
             return this;
         }
         public Builder responseParameters(@Nullable Output<Object> responseParameters) {
@@ -133,7 +134,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder responseParameters(@Nullable Object responseParameters) {
-            this.responseParameters = Output.ofNullable(responseParameters);
+            this.responseParameters = Codegen.ofNullable(responseParameters);
             return this;
         }
         public Builder responseTemplates(@Nullable Output<Object> responseTemplates) {
@@ -141,7 +142,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder responseTemplates(@Nullable Object responseTemplates) {
-            this.responseTemplates = Output.ofNullable(responseTemplates);
+            this.responseTemplates = Codegen.ofNullable(responseTemplates);
             return this;
         }
         public Builder selectionPattern(@Nullable Output<String> selectionPattern) {
@@ -149,7 +150,7 @@ public final class MethodIntegrationResponseArgs extends io.pulumi.resources.Res
             return this;
         }
         public Builder selectionPattern(@Nullable String selectionPattern) {
-            this.selectionPattern = Output.ofNullable(selectionPattern);
+            this.selectionPattern = Codegen.ofNullable(selectionPattern);
             return this;
         }
         public Builder statusCode(Output<String> statusCode) {

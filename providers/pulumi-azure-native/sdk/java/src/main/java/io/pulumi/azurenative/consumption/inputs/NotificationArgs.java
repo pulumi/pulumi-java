@@ -9,6 +9,7 @@ import io.pulumi.azurenative.consumption.enums.ThresholdType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -44,7 +45,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> contactGroups;
 
     public Output<List<String>> getContactGroups() {
-        return this.contactGroups == null ? Output.empty() : this.contactGroups;
+        return this.contactGroups == null ? Codegen.empty() : this.contactGroups;
     }
 
     /**
@@ -55,7 +56,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<List<String>> contactRoles;
 
     public Output<List<String>> getContactRoles() {
-        return this.contactRoles == null ? Output.empty() : this.contactRoles;
+        return this.contactRoles == null ? Codegen.empty() : this.contactRoles;
     }
 
     /**
@@ -77,7 +78,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,CultureCode>> locale;
 
     public Output<Either<String,CultureCode>> getLocale() {
-        return this.locale == null ? Output.empty() : this.locale;
+        return this.locale == null ? Codegen.empty() : this.locale;
     }
 
     /**
@@ -110,7 +111,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
       private final @Nullable Output<Either<String,ThresholdType>> thresholdType;
 
     public Output<Either<String,ThresholdType>> getThresholdType() {
-        return this.thresholdType == null ? Output.empty() : this.thresholdType;
+        return this.thresholdType == null ? Codegen.empty() : this.thresholdType;
     }
 
     public NotificationArgs(
@@ -133,14 +134,14 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
     }
 
     private NotificationArgs() {
-        this.contactEmails = Output.empty();
-        this.contactGroups = Output.empty();
-        this.contactRoles = Output.empty();
-        this.enabled = Output.empty();
-        this.locale = Output.empty();
-        this.operator = Output.empty();
-        this.threshold = Output.empty();
-        this.thresholdType = Output.empty();
+        this.contactEmails = Codegen.empty();
+        this.contactGroups = Codegen.empty();
+        this.contactRoles = Codegen.empty();
+        this.enabled = Codegen.empty();
+        this.locale = Codegen.empty();
+        this.operator = Codegen.empty();
+        this.threshold = Codegen.empty();
+        this.thresholdType = Codegen.empty();
     }
 
     public static Builder builder() {
@@ -193,7 +194,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactGroups(@Nullable List<String> contactGroups) {
-            this.contactGroups = Output.ofNullable(contactGroups);
+            this.contactGroups = Codegen.ofNullable(contactGroups);
             return this;
         }
         public Builder contactGroups(String... contactGroups) {
@@ -204,7 +205,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder contactRoles(@Nullable List<String> contactRoles) {
-            this.contactRoles = Output.ofNullable(contactRoles);
+            this.contactRoles = Codegen.ofNullable(contactRoles);
             return this;
         }
         public Builder contactRoles(String... contactRoles) {
@@ -223,7 +224,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder locale(@Nullable Either<String,CultureCode> locale) {
-            this.locale = Output.ofNullable(locale);
+            this.locale = Codegen.ofNullable(locale);
             return this;
         }
         public Builder operator(Output<Either<String,OperatorType>> operator) {
@@ -247,7 +248,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             return this;
         }
         public Builder thresholdType(@Nullable Either<String,ThresholdType> thresholdType) {
-            this.thresholdType = Output.ofNullable(thresholdType);
+            this.thresholdType = Codegen.ofNullable(thresholdType);
             return this;
         }        public NotificationArgs build() {
             return new NotificationArgs(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);

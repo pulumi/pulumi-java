@@ -8,6 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Output;
 import io.pulumi.core.annotations.Import;
+import io.pulumi.core.internal.Codegen;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -61,10 +62,10 @@ public final class RuleGroupSizeConstraintStatementArgs extends io.pulumi.resour
     }
 
     private RuleGroupSizeConstraintStatementArgs() {
-        this.comparisonOperator = Output.empty();
-        this.fieldToMatch = Output.empty();
-        this.size = Output.empty();
-        this.textTransformations = Output.empty();
+        this.comparisonOperator = Codegen.empty();
+        this.fieldToMatch = Codegen.empty();
+        this.size = Codegen.empty();
+        this.textTransformations = Codegen.empty();
     }
 
     public static Builder builder() {
