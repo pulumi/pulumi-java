@@ -8,11 +8,9 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io/ioutil"
 	"math/rand"
 	"os"
 	"os/exec"
-	"path/filepath"
 	"strings"
 	"syscall"
 
@@ -68,7 +66,11 @@ func main() {
 			cmdutil.Exit(err)
 		}
 	default:
-		pathExec, err := probeExecutor()
+		pwd, err := os.Getwd()
+		if err != nil {
+			cmdutil.Exit(errors.Wrap(err, "could not get the working directory"))
+		}
+		pathExec, err := probeExecutor(pwd)
 		if err != nil {
 			cmdutil.Exit(err)
 		}
@@ -104,12 +106,6 @@ func main() {
 	if err := <-done; err != nil {
 		cmdutil.Exit(errors.Wrapf(err, "language host RPC stopped serving"))
 	}
-}
-
-type jvmExecutor struct {
-	cmd        string
-	runArgs    []string
-	pluginArgs []string
 }
 
 // jvmLanguageHost implements the LanguageRuntimeServer interface
@@ -439,96 +435,6 @@ func (host *jvmLanguageHost) InstallDependencies(
 	req *pulumirpc.InstallDependenciesRequest,
 	srv pulumirpc.LanguageRuntime_InstallDependenciesServer) error {
 	return nil
-}
-
-func probeExecutor() (string, error) {
-	pwd, err := os.Getwd()
-	if err != nil {
-		return "", errors.Wrap(err, "could not get the working directory")
-	}
-	files, err := ioutil.ReadDir(pwd)
-	if err != nil {
-		return "", errors.Wrap(err, "could not read the working directory")
-	}
-	mvn := "mvn"
-	// detect mvn wrapper
-	for _, file := range files {
-		if !file.IsDir() && file.Name() == "mvnw" {
-			mvn = "./mvnw"
-		}
-	}
-	gradle := "gradle"
-	// detect gradle wrapper
-	for _, file := range files {
-		if !file.IsDir() && file.Name() == "gradlew" {
-			gradle = "./gradlew"
-		}
-	}
-	// detect maven or gradle
-	for _, file := range files {
-		if !file.IsDir() {
-			switch file.Name() {
-			case "pom.xml":
-				return mvn, nil
-			case "settings.gradle", "settings.gradle.kts":
-				return gradle, nil
-			}
-		}
-	}
-	return "", errors.New("did not found an executor, expected one of: gradle (settings.gradle), maven (pom.xml)")
-}
-
-func resolveExecutor(exec string) (*jvmExecutor, error) {
-	switch exec {
-	case "gradle", "./gradlew":
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newGradleExecutor(cmd)
-	case "mvn", "./mvnw":
-		cmd, err := lookupPath(exec)
-		if err != nil {
-			return nil, err
-		}
-		return newMavenExecutor(cmd)
-	default:
-		return nil, errors.Errorf("did not recognize executor '%s', "+
-			"expected one of: gradle, mvn, gradlew, mvnw", exec)
-	}
-}
-
-func newGradleExecutor(cmd string) (*jvmExecutor, error) {
-	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"run", "--console=plain"},
-		pluginArgs: []string{
-			"-q", // must first due to a bug https://github.com/gradle/gradle/issues/5098
-			"run", "--console=plain",
-			"-PmainClass=io.pulumi.bootstrap.internal.Main",
-			"--args=packages",
-		},
-	}, nil
-}
-
-func newMavenExecutor(cmd string) (*jvmExecutor, error) {
-	return &jvmExecutor{
-		cmd:     cmd,
-		runArgs: []string{"--no-transfer-progress", "compile", "exec:java"},
-		pluginArgs: []string{
-			"--quiet", "--no-transfer-progress", "compile", "exec:java",
-			"-DmainClass=io.pulumi.bootstrap.internal.Main",
-			"-DmainArgs=packages",
-		},
-	}, nil
-}
-
-func newJarExecutor(cmd string, path string) (*jvmExecutor, error) {
-	return &jvmExecutor{
-		cmd:        cmd,
-		runArgs:    []string{"-jar", filepath.Clean(path)},
-		pluginArgs: []string{"-cp", filepath.Clean(path), "io.pulumi.bootstrap.internal.Main", "packages"},
-	}, nil
 }
 
 func lookupPath(file string) (string, error) {
