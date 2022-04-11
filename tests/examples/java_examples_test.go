@@ -16,12 +16,16 @@ import (
 )
 
 func MakeProvider(providers []string) error {
-	err := exec.Command("make", "install_sdk").Run()
+	cmd := exec.Command("make", "install_sdk")
+	cmd.Dir = "../"
+	err := cmd.Run()
 	if err != nil {
 		return err
 	}
 	for _, provider := range providers {
-		err := exec.Command("make", fmt.Sprintf("provider.%s.install", provider)).Run()
+		cmd := exec.Command("make", fmt.Sprintf("provider.%s.install", provider))
+		cmd.Dir = "../"
+		err := cmd.Run()
 		if err != nil {
 			return err
 		}
@@ -35,7 +39,7 @@ func TestExamples(t *testing.T) {
 			"random",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := getJvmBase(t, "random").
 			With(integration.ProgramTestOptions{
@@ -71,7 +75,7 @@ func TestExamples(t *testing.T) {
 			"azure-native",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := getJvmBase(t, "azure-java-static-website").
 			With(integration.ProgramTestOptions{
@@ -95,7 +99,7 @@ func TestExamples(t *testing.T) {
 			"aws",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := getJvmBase(t, "aws-java-webserver").
 			With(integration.ProgramTestOptions{
@@ -119,7 +123,7 @@ func TestExamples(t *testing.T) {
 			"azure-native",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := previewOnlyJvmBase(t, "azure-java-appservice-sql").
 			With(integration.ProgramTestOptions{
@@ -137,7 +141,7 @@ func TestExamples(t *testing.T) {
 			"aws",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := previewOnlyJvmBase(t, "eks-minimal").
 			With(integration.ProgramTestOptions{
@@ -154,7 +158,7 @@ func TestExamples(t *testing.T) {
 			"kubernetes",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := previewOnlyJvmBase(t, "gcp-java-gke-hello-world").
 			With(integration.ProgramTestOptions{
@@ -197,7 +201,7 @@ func TestExamples(t *testing.T) {
 			"aws-native",
 		})
 		if err != nil {
-			t.Fail()
+			t.FailNow()
 		}
 		test := getJvmBase(t, "aws-native-java-s3-folder").
 			With(integration.ProgramTestOptions{
